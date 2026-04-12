@@ -2,19 +2,21 @@
 
 A fast search algorithm for finding [Pomerance triples](https://github.com/AndrewVSutherland/DANGER3) $(p, A, x_0)$, developed for the data challenge at the [DANGER: Data, Numbers, and Geometry](https://www.birs.ca/events/2026/5-day-workshops/26w5525) workshop at BIRS, April 6–10, 2026.
 
-The challenge was to find a Pomerance Triple for $10^19+51$, which is an order of magnitude larger than the currently known world record. The code found the triple
+The challenge was to find a Pomerance Triple for $10^19+51$, which was an order of magnitude larger than the known world record. The code found the triple
 ```
 10000000000000000051 238792350205097889 9647351248508855176
 ```
-after around 400 seconds and 3.8B tries.
+after around 400 seconds and 3.8 billion tries.
 
-## Background
+## Background 
 
 A **Pomerance triple** is a triple of integers $(p, A, x_0)$ where $p$ is an odd prime, $A$ and $x_0$ are nonneg integers less than $p$ with $A \not\equiv \pm 2 \pmod{p}$, such that doubling the projective point $(x_0 : 1)$ on the Montgomery curve $By^2 = x^3 + Ax^2 + x$ exactly $k$ times yields a $Z$-coordinate congruent to zero modulo $p$. Here $k$ is the least integer with $2^k > q + 1 + 2\lfloor\sqrt{q}\rfloor$, where $q = \lfloor\sqrt{p}\rfloor$.
 
 The challenge is to find a Pomerance triple with $p$ as large as possible without exploiting supersingular curves or CM.
 
 See Andrew Sutherland's [DANGER3 repository](https://github.com/AndrewVSutherland/DANGER3) for the full problem definition, verification scripts, and precomputed data.
+
+The solution was vibe-coded with Claude Opus 4.6 with extended thinking. It took 12 iterations to get this working code. The initial challenge asked to beat the $\sqrt{p}$-scaling, which this code does not achieve. It won the challenge via a very fast C implementation of the algorithm and using small tricks like the 2-Sylow projection. 
 
 ## Algorithm
 
@@ -85,8 +87,8 @@ The search requires $\sim\sqrt{p}$ random trials, each consisting of a Montgomer
 |---|---|---|---|
 | $10^{15}$ | u64 | ~8M | <1s |
 | $10^{19}$ | u64 | ~8M | ~1 min |
-| $10^{20}$ | u128 | ~1M | ~3 hr |
-| $10^{30}$ | u128 | ~1M | years |
+| $10^{20}$ | u128 | ~1M | ~1 hr |
+| $10^{30}$ | u128 | ~1M | ~years |
 
 For $p > 2^{127}$, a GMP-based implementation would be needed.
 
