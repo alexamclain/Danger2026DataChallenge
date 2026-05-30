@@ -1,0 +1,34 @@
+DANGER3 p22 Success Summary
+
+Prime:
+  p = 10000000000000000000009
+
+Verified triple:
+  p  = 10000000000000000000009
+  A  = 9992566338662824267458
+  x0 = 3694769590833803032125
+
+Search method:
+  Ruehle 2-Sylow projection search, with local constant-factor optimizations
+  in this fork.
+
+Production run:
+  10 independent single-thread worker processes
+  successful worker: 7
+  successful worker elapsed: 56761.05 seconds
+  successful worker local trials: 5863950013
+  log-derived aggregate observed trials at capture: 58651950013
+  observed aggregate rate near success: about 1030000 trials/sec
+
+Important rate note:
+  The 1.03M trials/sec production rate is aggregate across 10 workers, not
+  single-threaded. A separate same-machine single-thread benchmark is recorded
+  in p22-benchmark-comparison.txt.
+
+Provenance:
+  Base implementation: https://github.com/ruehlef/Danger2026DataChallenge
+  Search algorithm: Ruehle 2-Sylow projection search
+  Local perf fork and p22 run: Alexa, Codex-assisted
+
+Triple line for vpp.py:
+  10000000000000000000009 9992566338662824267458 3694769590833803032125

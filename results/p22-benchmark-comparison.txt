@@ -1,0 +1,50 @@
+DANGER3 p22 Benchmark Comparison
+
+Machine and compiler:
+  OS: Darwin agent-mini.local 25.5.0 arm64
+  logical workers reported by getconf _NPROCESSORS_ONLN: 10
+  CPU brand string: unavailable in this sandbox; sysctl returned Operation not permitted
+  compiler: Apple clang version 21.0.0 (clang-2100.1.1.101)
+  target: arm64-apple-darwin25.5.0
+
+Benchmark target:
+  p = 10000000000000000000009
+  fixed budget = 5000000 trials
+  mode = single-threaded clang -O3 build, no OpenMP
+
+Fresh upstream:
+  source: ruehlef/Danger2026DataChallenge at de3c80f
+  note: upstream CLI does not accept a fixed trial budget, so the benchmark
+        used a harness copy that only adds max_trials_override and fflush.
+
+Command:
+  clang -O3 -o fresh_upstream_bench_O3 pomerance_bench.c -lm
+  /usr/bin/time -p ./fresh_upstream_bench_O3 10000000000000000000009 5000000
+
+Output excerpt:
+  Not found in 38.45s. Re-run or increase budget.
+  real 38.69
+  user 38.39
+  sys 0.06
+
+Throughput:
+  5000000 / 38.69 = about 129000 trials/sec
+
+Perf fork:
+  source: this fork, branch perf/p22-optimizations, commit 18f2b8f
+
+Command:
+  clang -O3 -o pomerance pomerance.c -lm
+  /usr/bin/time -p ./pomerance 10000000000000000000009 0 5000000
+
+Output excerpt:
+  Not found in 27.40s. Re-run or increase budget.
+  real 27.39
+  user 27.35
+  sys 0.03
+
+Throughput:
+  5000000 / 27.39 = about 183000 trials/sec
+
+Observed single-thread speedup:
+  38.69 / 27.39 = about 1.41x wall-clock speedup

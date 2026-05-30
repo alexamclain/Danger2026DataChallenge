@@ -1,0 +1,71 @@
+DANGER3 p22 Verification
+
+Triple:
+  p  = 10000000000000000000009
+  A  = 9992566338662824267458
+  x0 = 3694769590833803032125
+
+1. DANGER3 verifier
+
+Command:
+  python3 external/DANGER3/vpp.py 10000000000000000000009 9992566338662824267458 3694769590833803032125
+
+Output:
+  True
+
+2. OpenSSL primality check
+
+Command:
+  openssl prime -checks 128 10000000000000000000009
+
+Output:
+  10000000000000000000009 is prime
+
+3. Independent Python doubling replay
+
+Command:
+  python3 - <<'PY'
+  import math
+  p=10000000000000000000009
+  A=9992566338662824267458
+  x0=3694769590833803032125
+  q=math.isqrt(p)
+  s=math.isqrt(q)
+  bound=q+1+2*s
+  k=0
+  v=1
+  while v <= bound:
+      k += 1
+      v <<= 1
+  X=x0%p
+  Z=1
+  Zprev=None
+  zero_steps=[]
+  for i in range(1,k+1):
+      X2=X*X%p
+      Z2=Z*Z%p
+      XZ=X*Z%p
+      Xn=(X2-Z2)**2%p
+      Zn=(4*XZ%p)*(X2 + A*XZ + Z2)%p
+      X,Z=Xn,Zn
+      if i == k-1:
+          Zprev=Z
+      if Z == 0:
+          zero_steps.append(i)
+  print(f"q={q}")
+  print(f"s={s}")
+  print(f"bound={bound}")
+  print(f"k={k}")
+  print(f"zero_steps={zero_steps}")
+  print(f"final_Z={Z}")
+  print(f"gcd_Zprev_p={math.gcd(Zprev,p)}")
+  PY
+
+Output:
+  q=100000000000
+  s=316227
+  bound=100000632455
+  k=37
+  zero_steps=[37]
+  final_Z=0
+  gcd_Zprev_p=1

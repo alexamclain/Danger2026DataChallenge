@@ -1,0 +1,14 @@
+Successful worker log tail, worker 07:
+
+  trials=5860500000 percent=8.790750 elapsed=56727.6 rate_Mps=0.103
+  trials=5861000000 percent=8.791500 elapsed=56732.5 rate_Mps=0.103
+  trials=5861500000 percent=8.792250 elapsed=56737.3 rate_Mps=0.103
+  trials=5862000000 percent=8.793000 elapsed=56742.2 rate_Mps=0.103
+  trials=5862500000 percent=8.793750 elapsed=56747.1 rate_Mps=0.103
+  trials=5863000000 percent=8.794500 elapsed=56751.9 rate_Mps=0.103
+  trials=5863500000 percent=8.795250 elapsed=56756.7 rate_Mps=0.103
+Found after 56761.05s (~5863950013 trials)
+
+10000000000000000000009 9992566338662824267458 3694769590833803032125
+
+Verified: PASS  (56761.05s)
