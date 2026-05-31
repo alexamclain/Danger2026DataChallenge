@@ -44,7 +44,7 @@ The approach that worked was not a new asymptotic algorithm. It was to build dir
 
 The status workflow mattered because this was a long-running randomized computation. A human needed to be able to answer, at any point, whether the workers were still alive, how many trials had been observed, what rate they were sustaining, whether any success condition had fired, and what evidence would count as "done."
 
-The result is therefore best understood as Ruehle's search strategy plus a small Codex-assisted C performance fork, with Alexa directing the operating constraints, benchmark decisions, production-run management, and verification handoff. It took 
+The result is therefore best understood as Ruehle's search strategy plus a small Codex-assisted C performance fork, with Alexa directing the operating constraints, benchmark decisions, production-run management, and verification handoff.
 
 The original upstream README continues below.
 
