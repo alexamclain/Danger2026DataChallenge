@@ -2,7 +2,7 @@
 
 This fork records a verified Pomerance triple for `p = 10^22 + 9` and a
 small Codex-assisted performance branch derived from Ruehle's 2-Sylow
-projection search.
+projection search. This work was undertaken as part of a collaboration across teams in DARPA's expMath program.
 
 The goal of this run was to find a Pomerance triple for `p = 10^22 + 9`.
 The run found the triple
