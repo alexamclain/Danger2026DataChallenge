@@ -14,6 +14,12 @@ This note is the full local write-up of the p23 campaign: what mathematical
 idea was tested, how the operational test was run, what failed, what passed,
 and how strong the final result is.
 
+For centralized literature references and attribution, start with
+`research/p23/references.md`. In short: the winning method combines
+Sutherland's `X1(16)` prescribed-torsion construction, standard 2-Sylow
+successive halving, classical Montgomery split/nonsplit structure, and the
+local p23 y-level nonsplit pullback.
+
 ## Executive Result
 
 Final Pomerance triple:
