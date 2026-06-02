@@ -96,9 +96,9 @@ after 15.77 hours on the successful worker, with about 58.65 billion
 aggregate observed trials across 10 workers. The observed rate near success was
 about 1.03M trials/sec aggregate across those workers, not single-threaded. A
 same-machine single-thread benchmark against fresh upstream is recorded in
-`results/p22-benchmark-comparison.txt`.
+`results/p22/p22-benchmark-comparison.txt`.
 
-Reproducibility artifacts are in `results/`:
+Reproducibility artifacts are in `results/p22/`:
 
 - `p22-success-summary.txt`
 - `p22-verification.txt`

@@ -125,7 +125,7 @@ Optional verification watcher:
 scripts/p23_watch_and_verify.sh --run-dir runs/p23_x16halve_20260601_110154
 ```
 
-It waits for the first worker `Verified: PASS` line, runs `scripts/verify_pomerance_triple.py --log ...`, and writes a verification transcript into the run directory. It was validated on `results/p22-worker07-tail.txt`.
+It waits for the first worker `Verified: PASS` line, runs `scripts/verify_pomerance_triple.py --log ...`, and writes a verification transcript into the run directory. It was validated on `results/p22/p22-worker07-tail.txt`.
 
 ## Probability Model
 
@@ -223,7 +223,7 @@ Hit:
    scripts/verify_pomerance_triple.py --log runs/p23_x16halve_20260601_110154/workerNN.log
    ```
 
-   This helper was validated on the known p22 triple and on `results/p22-worker07-tail.txt`.
+   This helper was validated on the known p22 triple and on `results/p22/p22-worker07-tail.txt`.
 
 4. Or run the one-command finalizer, which verifies, copies the worker log, writes a transcript, and generates the Lean certificate artifact:
 
