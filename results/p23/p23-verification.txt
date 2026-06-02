@@ -1,0 +1,40 @@
+DANGER3 p23 Verification
+
+Triple:
+  p  = 100000000000000000000117
+  A  = 24163028207499560363686
+  x0 = 64911014007772963770218
+
+1. DANGER3 verifier
+
+Command:
+  python3 external/DANGER3/vpp.py 100000000000000000000117 24163028207499560363686 64911014007772963770218
+
+Output:
+  True
+
+2. OpenSSL primality check
+
+Command:
+  openssl prime -checks 128 100000000000000000000117
+
+Output:
+  100000000000000000000117 is prime
+
+3. Independent Python doubling replay
+
+Replay summary:
+  sqrt_floor = 316227766016
+  sqrt_sqrt_floor = 562341
+  bound = 316228890699
+  k = 39
+  zero_steps = [39]
+  final_X = 44839297471447980302367
+  final_Z = 0
+  gcd_Zprev_p = 1
+  independent_replay_pass = True
+
+4. Final verification status
+
+Output:
+  verification_status = PASS

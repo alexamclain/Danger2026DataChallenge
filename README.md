@@ -1,8 +1,90 @@
-# DANGER3 p22 Pomerance Search Handoff
+# DANGER3 Pomerance Search Results
+
+This fork records verified DANGER3 Pomerance triples for `p = 10^23 + 117`
+and `p = 10^22 + 9`, plus the local Codex-assisted experimental work used to
+find and verify them. This work was undertaken as part of a collaboration
+across teams in DARPA's expMath program.
+
+## p23 Result: X1(16) Nonsplit Search
+
+For
+
+```text
+p = 100000000000000000000117 = 10^23 + 117
+```
+
+the run found the triple:
+
+```text
+100000000000000000000117 24163028207499560363686 64911014007772963770218
+```
+
+Equivalently:
+
+```text
+p  = 100000000000000000000117
+A  = 24163028207499560363686
+x0 = 64911014007772963770218
+```
+
+The successful method was a y-filtered nonsplit `X1(16)` first-branch halving
+search:
+
+1. sample curves from Sutherland's `X1(16)` prescribed-torsion construction;
+2. map them to Montgomery form with a marked rational point of order 16;
+3. pre-filter the `X1(16)` y-parameter to the nonsplit Montgomery
+   discriminant class;
+4. use first-branch successive halving in the cyclic nonsplit rational
+   2-Sylow case.
+
+The key y-level classifier used by the production run was:
+
+```text
+chi(A^2 - 4) = chi((y^2 - 2)(y^2 - 4y + 2)).
+```
+
+The final nonsplit shard found the triple after about 31.05B aggregate
+accepted trials in just over 8 hours:
+
+```text
+successful shard trials       = 31.046588500B
+sqrt_floor(p)                 = 316.227766016B
+fraction of sqrt_floor(p)     = 0.098177933
+speedup vs sqrt-floor trials  = about 10.19x
+```
+
+The full p23 discovery campaign also included an earlier all-`X1(16)` shard
+that ran 50B aggregate accepted trials and missed. Charging that miss to the
+campaign gives:
+
+```text
+full campaign trials          = 81.046588500B
+fraction of sqrt_floor(p)     = 0.256291816
+speedup vs sqrt-floor trials  = about 3.90x
+```
+
+Interpretation: this is a substantial fixed-prime win over the sqrt-scale
+search yardstick. It is best understood as a literature-backed constant-factor
+strategy, not by itself as a proof of asymptotic sub-sqrt scaling.
+
+Reproducibility artifacts are in `results/p23/`:
+
+- `triple.txt`
+- `p23-success-summary.txt`
+- `p23-verification.txt`
+- `p23-worker03-tail.txt`
+- `pomerance_100000000000000000000117.lean`
+
+A curated research ledger is in `research/p23/`. The source file
+`pomerance.c` now includes the p23 experimental `X1(16)` modes and many
+diagnostic modes used to test alternatives before the nonsplit route graduated
+to production.
+
+## p22 Result: 2-Sylow Projection Search
 
 This fork records a verified Pomerance triple for `p = 10^22 + 9` and a
 small Codex-assisted performance branch derived from Ruehle's 2-Sylow
-projection search. This work was undertaken as part of a collaboration across teams in DARPA's expMath program.
+projection search.
 
 The run found the triple:
 
@@ -14,9 +96,9 @@ after 15.77 hours on the successful worker, with about 58.65 billion
 aggregate observed trials across 10 workers. The observed rate near success was
 about 1.03M trials/sec aggregate across those workers, not single-threaded. A
 same-machine single-thread benchmark against fresh upstream is recorded in
-`results/p22-benchmark-comparison.txt`.
+`results/p22/p22-benchmark-comparison.txt`.
 
-Reproducibility artifacts are in `results/`:
+Reproducibility artifacts are in `results/p22/`:
 
 - `p22-success-summary.txt`
 - `p22-verification.txt`

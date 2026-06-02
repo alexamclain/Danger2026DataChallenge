@@ -1,0 +1,48 @@
+DANGER3 p23 Success Summary
+
+Prime:
+  p = 100000000000000000000117
+
+Verified triple:
+  p  = 100000000000000000000117
+  A  = 24163028207499560363686
+  x0 = 64911014007772963770218
+
+Search method:
+  X1(16) prescribed torsion using Sutherland's modular-curve construction,
+  mapped to Montgomery form, with a y-level nonsplit discriminant filter and
+  first-branch successive halving.
+
+Successful production shard:
+  run mode: x16halvenonsplit
+  workers: 10 independent single-thread worker processes
+  successful worker: worker03
+  successful worker elapsed: 28878.93 seconds
+  successful worker local accepted trials: 3104658850
+  reconstructed aggregate accepted trials at hit: 31046588500
+  observed aggregate rate near success: about 1.08M accepted trials/sec
+
+Full campaign accounting:
+  first all-X1(16) shard: 50.000B aggregate accepted trials, clean miss
+  successful nonsplit shard at hit: 31.046588500B aggregate accepted trials
+  total campaign accepted trials: 81.046588500B
+
+Comparison to sqrt scale:
+  sqrt_floor(p) = 316227766016
+  successful shard fraction of sqrt_floor(p): 0.098177933
+  successful shard speedup versus sqrt-floor trials: about 10.19x
+  full campaign fraction of sqrt_floor(p): 0.256291816
+  full campaign speedup versus sqrt-floor trials: about 3.90x
+
+Interpretation:
+  This is a substantial fixed-prime win over the sqrt(p)-scale search
+  yardstick. It is a literature-backed constant-factor strategy, not by itself
+  a proof of asymptotic sub-sqrt scaling.
+
+Provenance:
+  Prescribed torsion: Andrew V. Sutherland, X1(N) construction/tables
+  Halving / 2-Sylow layer: standard elliptic-curve 2-Sylow halving methods
+  Local synthesis and p23 run: Alexa, Codex-assisted
+
+Triple line for vpp.py:
+  100000000000000000000117 24163028207499560363686 64911014007772963770218
