@@ -10,6 +10,21 @@ Some notes were written while the p23 run was still active, so live-run
 instructions such as "keep waiting" or "do not restart" should be read as
 time-stamped research context. The verified final outcome supersedes them.
 
+## Start Here: References And Attribution
+
+Read `references.md` first for the literature and provenance behind the p23
+method. It separates:
+
+- Sutherland `X1(N)` prescribed-torsion construction and equation tables.
+- Miret-Moreno-Rio-Valls 2-Sylow halving perspective.
+- Classical Montgomery split/nonsplit 2-torsion structure.
+- The local p23 synthesis: the `X1(16)` y-level nonsplit pullback and cyclic
+  nonsplit first-branch halving.
+- Gonality references explaining why fixed `X1(16)` is a constant-factor win,
+  not by itself an asymptotic sub-sqrt proof.
+- The prior short-certificate experiments repo's role as a discriminant-axis
+  clue, not the direct winning search method.
+
 ## Core Result
 
 - `p23_full_experiment_result_20260602.md`: full experiment/result write-up.
