@@ -65,6 +65,82 @@ def valueSideFromReducedJacobiCarry
   inversionComplementConstantOffCZero :=
     obligations.quotientInversionComplementConstantOffCZero
 
+structure HeckeRatioLocalDataObligations where
+  sameInfinityType : Prop
+  sameFiniteLocalTypeOnKilledConductorPart : Prop
+  killedLocalRayPartHasNoPostBCCharacterSupport : Prop
+  ratioFactorsThroughUnramifiedPostBCQuotient : Prop
+
+def SatisfiesHeckeRatioLocalDataObligations
+    (obligations : HeckeRatioLocalDataObligations) : Prop :=
+  obligations.sameInfinityType ∧
+  obligations.sameFiniteLocalTypeOnKilledConductorPart ∧
+  obligations.killedLocalRayPartHasNoPostBCCharacterSupport ∧
+  obligations.ratioFactorsThroughUnramifiedPostBCQuotient
+
+def ratioIsUnramifiedFiniteOrderFromLocalData
+    (obligations : HeckeRatioLocalDataObligations) : Prop :=
+  SatisfiesHeckeRatioLocalDataObligations obligations
+
+structure HeckeRatioAxisValueObligations where
+  ratioMatchesRightAxisSelector : Prop
+  ratioMatchesCAxisSelector : Prop
+
+def SatisfiesHeckeRatioAxisValueObligations
+    (obligations : HeckeRatioAxisValueObligations) : Prop :=
+  obligations.ratioMatchesRightAxisSelector ∧
+  obligations.ratioMatchesCAxisSelector
+
+def ratioMatchesSelectorOnRhoFromAxisValues
+    (obligations : HeckeRatioAxisValueObligations) : Prop :=
+  SatisfiesHeckeRatioAxisValueObligations obligations
+
+structure HeckeRatioArtinCoordinateObligations where
+  postBCQuotientGeneratedByRho : Prop
+  localDataMakesRatioUnramifiedFiniteOrder :
+    HeckeRatioLocalDataObligations
+  axisValuesDetermineRatioOnRho : HeckeRatioAxisValueObligations
+
+def SatisfiesHeckeRatioArtinCoordinateObligations
+    (obligations : HeckeRatioArtinCoordinateObligations) : Prop :=
+  obligations.postBCQuotientGeneratedByRho ∧
+  ratioIsUnramifiedFiniteOrderFromLocalData
+    obligations.localDataMakesRatioUnramifiedFiniteOrder ∧
+  ratioMatchesSelectorOnRhoFromAxisValues
+    obligations.axisValuesDetermineRatioOnRho
+
+theorem hecke_ratio_unramified_finite_order_from_local_data
+    (obligations : HeckeRatioLocalDataObligations)
+    (h_local : SatisfiesHeckeRatioLocalDataObligations obligations) :
+    ratioIsUnramifiedFiniteOrderFromLocalData obligations := by
+  exact h_local
+
+theorem ratio_matches_selector_on_rho_from_axis_values
+    (obligations : HeckeRatioAxisValueObligations)
+    (h_axis : SatisfiesHeckeRatioAxisValueObligations obligations) :
+    ratioMatchesSelectorOnRhoFromAxisValues obligations := by
+  exact h_axis
+
+structure UnramifiedTwistedJacobiProducerObligations where
+  unramifiedTwistSelectsPostBCQuotient : Prop
+  heckeRatioGivesArtinCoordinatePullback :
+    HeckeRatioArtinCoordinateObligations
+  selectedTraceGcdEqualsTwistedJacobiPacket : Prop
+  twistedReducedCarry : ReducedJacobiCarryObligations
+
+def SatisfiesUnramifiedTwistedJacobiProducerObligations
+    (obligations : UnramifiedTwistedJacobiProducerObligations) : Prop :=
+  obligations.unramifiedTwistSelectsPostBCQuotient ∧
+  SatisfiesHeckeRatioArtinCoordinateObligations
+    obligations.heckeRatioGivesArtinCoordinatePullback ∧
+  obligations.selectedTraceGcdEqualsTwistedJacobiPacket ∧
+  SatisfiesReducedJacobiCarryObligations obligations.twistedReducedCarry
+
+def reducedJacobiCarryFromUnramifiedTwistedJacobi
+    (obligations : UnramifiedTwistedJacobiProducerObligations) :
+    ReducedJacobiCarryObligations :=
+  obligations.twistedReducedCarry
+
 structure DualFourierFamilies where
   forbiddenCTrivialVanishes : Prop
   conjugatePairSkew : Prop
@@ -88,6 +164,12 @@ def AllRobertProducerObligations {Character : Type}
 def AllReducedJacobiCarryObligations {Character : Type}
     (obligations : Character → ReducedJacobiCarryObligations) : Prop :=
   ∀ chi, SatisfiesReducedJacobiCarryObligations (obligations chi)
+
+def AllUnramifiedTwistedJacobiProducerObligations {Character : Type}
+    (obligations :
+      Character → UnramifiedTwistedJacobiProducerObligations) : Prop :=
+  ∀ chi, SatisfiesUnramifiedTwistedJacobiProducerObligations
+    (obligations chi)
 
 def AllFourDualFamilies {Character : Type}
     (families : Character → DualFourierFamilies) : Prop :=
@@ -120,6 +202,35 @@ theorem value_side_from_reduced_jacobi_carry_obligations
   intro chi
   rcases h_carry chi with ⟨h_rows, h_zero, h_inversion⟩
   exact ⟨h_rows, h_zero, h_inversion⟩
+
+theorem reduced_jacobi_carry_from_unramified_twisted_jacobi_obligations
+    {Character : Type}
+    (obligations :
+      Character → UnramifiedTwistedJacobiProducerObligations)
+    (h_twisted : AllUnramifiedTwistedJacobiProducerObligations obligations) :
+    AllReducedJacobiCarryObligations
+      (fun chi =>
+        reducedJacobiCarryFromUnramifiedTwistedJacobi (obligations chi)) := by
+  intro chi
+  rcases h_twisted chi with
+    ⟨_h_selector, _h_ratio, _h_identification, h_carry⟩
+  exact h_carry
+
+theorem value_side_from_unramified_twisted_jacobi_obligations
+    {Character : Type}
+    (obligations :
+      Character → UnramifiedTwistedJacobiProducerObligations)
+    (h_twisted : AllUnramifiedTwistedJacobiProducerObligations obligations) :
+    AllValueSideIdentities
+      (fun chi =>
+        valueSideFromReducedJacobiCarry
+          (reducedJacobiCarryFromUnramifiedTwistedJacobi
+            (obligations chi))) := by
+  exact value_side_from_reduced_jacobi_carry_obligations
+    (fun chi =>
+      reducedJacobiCarryFromUnramifiedTwistedJacobi (obligations chi))
+    (reduced_jacobi_carry_from_unramified_twisted_jacobi_obligations
+      obligations h_twisted)
 
 theorem four_dual_families_from_value_side_identities
     {Character : Type}
@@ -164,6 +275,28 @@ theorem four_dual_families_from_reduced_jacobi_carry_obligations
     (fun chi => valueSideFromReducedJacobiCarry (obligations chi))
     families h_value_to_dual
     (value_side_from_reduced_jacobi_carry_obligations obligations h_carry)
+
+theorem four_dual_families_from_unramified_twisted_jacobi_obligations
+    {Character : Type}
+    (obligations :
+      Character → UnramifiedTwistedJacobiProducerObligations)
+    (families : Character → DualFourierFamilies)
+    (h_value_to_dual :
+      ∀ chi,
+        SatisfiesValueSideIdentities
+          (valueSideFromReducedJacobiCarry
+            (reducedJacobiCarryFromUnramifiedTwistedJacobi
+              (obligations chi))) →
+        SatisfiesFourDualFamilies (families chi))
+    (h_twisted : AllUnramifiedTwistedJacobiProducerObligations obligations) :
+    AllFourDualFamilies families := by
+  exact four_dual_families_from_value_side_identities
+    (fun chi =>
+      valueSideFromReducedJacobiCarry
+        (reducedJacobiCarryFromUnramifiedTwistedJacobi (obligations chi)))
+    families h_value_to_dual
+    (value_side_from_unramified_twisted_jacobi_obligations
+      obligations h_twisted)
 
 theorem admissible_decomposition_from_value_side_identities
     {Character : Type}
@@ -365,6 +498,61 @@ theorem hcoset_verifier_from_reduced_jacobi_carry_obligations
     h_admissible_support h_final h_right h_product h_character
     h_character_collect h_hcoset
     (value_side_from_reduced_jacobi_carry_obligations obligations h_carry)
+    h_centered
+
+theorem hcoset_verifier_from_unramified_twisted_jacobi_obligations
+    {Character Row Coset : Type}
+    (obligations :
+      Character → UnramifiedTwistedJacobiProducerObligations)
+    (families : Character → DualFourierFamilies)
+    (inAdmissibleSpan forbiddenBidegreeZero finalTraceZero rightCoboundary :
+      Character → Prop)
+    (productCoboundary characterZero : Character → Row → Prop)
+    (centered : Row → Prop)
+    (hcosetZero : Row → Coset → Prop)
+    (allRowsCentered : (Row → Prop) → Prop)
+    (allCharacterPayloadZero : (Character → Row → Prop) → Prop)
+    (h_value_to_dual :
+      ∀ chi,
+        SatisfiesValueSideIdentities
+          (valueSideFromReducedJacobiCarry
+            (reducedJacobiCarryFromUnramifiedTwistedJacobi
+              (obligations chi))) →
+        SatisfiesFourDualFamilies (families chi))
+    (h_dual_complete :
+      ∀ chi, SatisfiesFourDualFamilies (families chi) →
+        inAdmissibleSpan chi)
+    (h_admissible_support :
+      ∀ chi, inAdmissibleSpan chi → forbiddenBidegreeZero chi)
+    (h_final :
+      ∀ chi, forbiddenBidegreeZero chi → finalTraceZero chi)
+    (h_right :
+      ∀ chi, finalTraceZero chi → rightCoboundary chi)
+    (h_product :
+      ∀ chi row, rightCoboundary chi → productCoboundary chi row)
+    (h_character :
+      ∀ chi row, productCoboundary chi row → characterZero chi row)
+    (h_character_collect :
+      (∀ chi row, characterZero chi row) →
+        allCharacterPayloadZero characterZero)
+    (h_hcoset :
+      allRowsCentered centered →
+      allCharacterPayloadZero characterZero →
+      AllHCosetSumsZero hcosetZero)
+    (h_twisted : AllUnramifiedTwistedJacobiProducerObligations obligations)
+    (h_centered : allRowsCentered centered) :
+    AllHCosetSumsZero hcosetZero := by
+  exact hcoset_verifier_from_value_side_identities
+    (fun chi =>
+      valueSideFromReducedJacobiCarry
+        (reducedJacobiCarryFromUnramifiedTwistedJacobi (obligations chi)))
+    families inAdmissibleSpan forbiddenBidegreeZero finalTraceZero
+    rightCoboundary productCoboundary characterZero centered hcosetZero
+    allRowsCentered allCharacterPayloadZero h_value_to_dual h_dual_complete
+    h_admissible_support h_final h_right h_product h_character
+    h_character_collect h_hcoset
+    (value_side_from_unramified_twisted_jacobi_obligations
+      obligations h_twisted)
     h_centered
 
 def p24RightQuotientDegree : Nat := 7

@@ -92,10 +92,44 @@ RobertProducerObligations
 ReducedJacobiCarryObligations
 ```
 
-The second is the current sharpest one.  If the arithmetic proof identifies
-the surviving post-`Tr_{B/C}` selected quotient packet with a reduced
-right-mixed Jacobi carry, the symbolic Jacobi gate supplies the three
-value-side identities and Lean carries them to the verifier.
+It now also has the sharper current theorem-contract entrance:
+
+```text
+UnramifiedTwistedJacobiProducerObligations
+```
+
+This splits the surviving proof into:
+
+```text
+unramifiedTwistSelectsPostBCQuotient;
+heckeRatioGivesArtinCoordinatePullback:
+  postBCQuotientGeneratedByRho;
+  localDataMakesRatioUnramifiedFiniteOrder:
+    sameInfinityType;
+    sameFiniteLocalTypeOnKilledConductorPart;
+    killedLocalRayPartHasNoPostBCCharacterSupport;
+    ratioFactorsThroughUnramifiedPostBCQuotient;
+  axisValuesDetermineRatioOnRho:
+    ratioMatchesRightAxisSelector;
+    ratioMatchesCAxisSelector;
+selectedTraceGcdEqualsTwistedJacobiPacket;
+twistedReducedCarry satisfies the three reduced-carry identities.
+```
+
+The first item is now a finite p24 gate in the symbolic Jacobi file: the
+unramified class-character twist has exact post-`B/C` order `1253` and axes
+`7` and `179`.  The `postBCQuotientGeneratedByRho` sub-item is also finite:
+the image of `rho` generates the cyclic quotient, so matching the ratio value
+on `rho` determines the whole quotient character.  The remaining arithmetic
+sub-items are now explicitly local: matching infinity type, matching finite
+local type on the killed conductor/ray part, factoring through the unramified
+post-`B/C` quotient, matching the selector on the two axes, and the
+packet-identification statement.  The killed local/ray part has order
+coprime to `1253`, so it has no character support on the selector axes.  The
+two axis checks imply the `rho` check because
+`rho = (rho^179)^2 * (rho^7)^128` in the post-`B/C` quotient.  Once these are
+proved, the symbolic Jacobi gate supplies the three value-side identities and
+Lean carries them to the verifier.
 
 This is likely the best packet-facing version of the missing theorem.  It
 separates three arithmetic inputs:

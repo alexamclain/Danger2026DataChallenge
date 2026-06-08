@@ -3339,6 +3339,7 @@ https://doi.org/10.1112/S1461157012001015
 https://www.numdam.org/article/BSMF_1979__107__161_0.pdf
 https://numdam.org/articles/10.5802/pmb.25/
 https://www.numdam.org/item/CM_1984__53_3_277_0/
+https://www.numdam.org/item/CM_1986__57_2_153_0/
 https://handwiki.org/wiki/Elliptic_unit
 ```
 
@@ -3693,6 +3694,15 @@ mixed-level theta packet has integral infinity type
       and is Galois-equivariant.
 ```
 
+Anderson, "Cyclotomy and an extension of the Taniyama group" (Compositio
+1986), is the right broader source for arbitrary-base Jacobi-sum/Taniyama
+language.  It studies Jacobi-sum Hecke characters and their factorization in
+the Taniyama-group framework; Numdam records the paper as Compositio
+Mathematica 57 (1986), pp. 153-217.  The p24 caveat is finite and local:
+the visible cyclotomic symbol action of `rho=p^780` still has order `89`, so
+Anderson's existence/factorization theorem does not itself select the
+post-`B/C` quotient of order `1253`.
+
 For p24 this should not be read as a ready-made computational construction:
 the strict cyclotomic presentation of a Jacobi-sum character over the
 quadratic field `K` has to include the conductor/discriminant data of `K`,
@@ -3916,6 +3926,149 @@ p24_plain_cyclotomic_frobenius_p_order_mod_c=89
 p24_plain_cyclotomic_frobenius_actual_quotient_order_after_b_over_c=1253
 p24_plain_cyclotomic_frobenius_realizes_actual_quotient=0
 ```
+
+The Anderson/Taniyama-group theorem removes one earlier concern but not this
+finite-order obstruction.  It defines Jacobi-sum Hecke characters over
+arbitrary number fields, so the base field need not be abelian over `Q`.
+However the parameter still lives in the cyclotomic symbol group `[x] in
+Q/Z`.  Along the actual p24 class-field element `rho=p^780`, the visible
+cyclotomic shadow is:
+
+```text
+p24_anderson_cyclotomic_rho_shadow_visible_level=1253
+p24_anderson_cyclotomic_rho_shadow_rho_exponent=780
+p24_anderson_cyclotomic_rho_shadow_rho_cyclotomic_mod_level=666
+p24_anderson_cyclotomic_rho_shadow_rho_cyclotomic_order_mod_level=89
+p24_anderson_cyclotomic_rho_shadow_rho_cyclotomic_mod_right=1
+p24_anderson_cyclotomic_rho_shadow_rho_cyclotomic_mod_c=129
+p24_anderson_cyclotomic_rho_shadow_rho_cyclotomic_order_mod_c=89
+p24_anderson_cyclotomic_rho_shadow_actual_post_bc_quotient_order=1253
+p24_anderson_cyclotomic_rho_shadow_cyclotomic_shadow_realizes_post_bc_quotient=0
+```
+
+So Anderson's existence theorem cannot be used as:
+
+```text
+Jacobi character over a larger k
+  + visible cyclotomic theta packet
+  -> selected p24 quotient packet.
+```
+
+That route has order `89`, not `1253`.  Anderson remains the right language
+for arbitrary-base Jacobi characters and Frobenius/Gauss-sum values, but the
+p24 result needs the extra CM-Artin/trace-GCD identification that couples the
+mixed-level packet to the unramified `rho` quotient.
+
+The finite selector part of this coupling is now explicit.  A full
+unramified class character on the cyclic `n=3107441` component can be chosen
+with `chi_full(rho)=zeta_M`, `M=31*7*179`.  Then
+
+```text
+chi_q = chi_full^31
+```
+
+is trivial on the `B/C` kernel and has exact order `7*179` after trace:
+
+```text
+p24_unramified_twist_selector_full_unramified_rho_order=38843
+p24_unramified_twist_selector_bc_kernel_order=31
+p24_unramified_twist_selector_post_bc_quotient_order=1253
+p24_unramified_twist_selector_quotient_twist_exponent=31
+p24_unramified_twist_selector_quotient_twist_order=1253
+p24_unramified_twist_selector_quotient_twist_trivial_on_bc_kernel=1
+p24_unramified_twist_selector_quotient_twist_right_axis_order=7
+p24_unramified_twist_selector_quotient_twist_c_axis_order=179
+p24_unramified_twist_selector_quotient_character_exponents_are_exactly_trace_survivors=1
+```
+
+This separates the problem cleanly:
+
+```text
+selector source:
+  unramified class-character twist on the n-component, solved finitely;
+
+producer theorem:
+  identify the selected trace-GCD/CM-Lang divisor packet with the reduced
+  Jacobi packet pulled through that twist as an Artin coordinate pullback,
+  still open.
+```
+
+Lean now exposes this split as
+`UnramifiedTwistedJacobiProducerObligations` in
+`p24/lean/TraceGcdDualConditionsValueSideGate.lean`, with a named handoff to
+the H-coset verifier.  In that contract the selector obligation is finite and
+checked here.  The coordinate-pullback obligation is now split into a finite
+cyclic-character uniqueness part and two arithmetic ratio statements:
+
+```text
+postBCQuotientGeneratedByRho;
+localDataMakesRatioUnramifiedFiniteOrder:
+  sameInfinityType;
+  sameFiniteLocalTypeOnKilledConductorPart;
+  killedLocalRayPartHasNoPostBCCharacterSupport;
+  ratioFactorsThroughUnramifiedPostBCQuotient;
+axisValuesDetermineRatioOnRho:
+  ratioMatchesRightAxisSelector;
+  ratioMatchesCAxisSelector.
+```
+
+The finite part is checked by:
+
+```text
+p24_artin_character_uniqueness_post_bc_quotient_order=1253
+p24_artin_character_uniqueness_rho_image_generator_order=1253
+p24_artin_character_uniqueness_post_bc_character_count=1253
+p24_artin_character_uniqueness_character_pair_checks=1570009
+p24_artin_character_uniqueness_same_value_on_rho_implies_same_character=1
+```
+
+Thus the remaining coordinate-pullback proof is narrower: prove the two
+packets have the same infinity type, the same finite local type on the killed
+conductor/ray part, that their ratio factors through the unramified
+post-`B/C` quotient, and that the ratio has the selected values on the two
+axes.  The local/ray part cannot supply those axes: its order over the
+Hilbert class field is coprime to `1253`:
+
+```text
+p24_visible_shimura_ray_group_gcd_ray_order_right_axis=1
+p24_visible_shimura_ray_group_gcd_ray_order_c_axis=1
+p24_visible_shimura_ray_group_gcd_ray_order_post_bc_quotient=1
+p24_visible_shimura_ray_group_visible_ray_has_no_hom_to_post_bc_axes=1
+```
+
+The axis checks imply the `rho` value because:
+
+```text
+rho = (rho^179)^2 * (rho^7)^128
+2*179 + 128*7 = 1254 = 1 mod 1253
+```
+
+The symbolic gate checks:
+
+```text
+p24_axis_value_reconstruction_rho_from_right_axis_power=2
+p24_axis_value_reconstruction_rho_from_c_axis_power=128
+p24_axis_value_reconstruction_bezout_reconstructs_rho_exponent=1
+p24_axis_value_reconstruction_same_axis_values_iff_same_rho_value=1
+```
+
+The packet-identification obligation remains the other arithmetic theorem.
+
+Guardrail: the unramified character cannot be inserted as arbitrary extra
+multiplicative character noise after the packet is selected.  A bare mixed
+linear quotient character breaks C-row balance:
+
+```text
+p24_linear_twist_guardrail_full_generator_row_balance_ok=0
+p24_linear_twist_guardrail_full_generator_inversion_constant=0
+p24_linear_twist_guardrail_full_generator_distinct_row_sums=7
+p24_linear_twist_guardrail_pure_c_axis_preserves_value_identities=1
+p24_linear_twist_guardrail_pure_right_axis_selected_defect_is_zero=1
+```
+
+Thus the correct theorem says the unramified twist supplies the Artin
+coordinate for the Jacobi/CM-Lang packet before the selected-defect
+value-side identities are read.
 
 So the direct shortcut
 

@@ -304,6 +304,285 @@ def p24_plain_cyclotomic_frobenius_checks() -> dict[str, int]:
     }
 
 
+def p24_anderson_cyclotomic_rho_shadow_checks() -> dict[str, int]:
+    """Check the cyclotomic shadow of the actual p24 rho element.
+
+    Anderson's Taniyama-group theorem is useful because it defines
+    Jacobi-sum Hecke characters over arbitrary number fields.  The parameter
+    a, however, is still built from cyclotomic symbols [x] in Q/Z.  Therefore
+    the action of a class-field Frobenius element on the visible reduced
+    packet has a cyclotomic shadow at level 7*179.
+
+    For p24, the actual rho=p^780 class-field element has post-B/C quotient
+    order 7*179, but its cyclotomic shadow on mu_{7*179} has order only 89.
+    This closes the tempting shortcut:
+
+        Anderson Jacobi character over a larger k
+          + visible cyclotomic parameter
+          => p24 selected quotient packet.
+
+    The remaining theorem must add a genuine CM-Artin/trace-GCD
+    identification, not just cite the existence of J_k(a).
+    """
+    rho_cyclotomic = pow(P24, P24_RHO_EXPONENT, P24_JACOBI_LEVEL)
+    rho_right = pow(P24, P24_RHO_EXPONENT, RIGHT_DEGREE)
+    rho_c_axis = pow(P24, P24_RHO_EXPONENT, P24_C_DEGREE)
+    return {
+        "visible_level": P24_JACOBI_LEVEL,
+        "rho_exponent": P24_RHO_EXPONENT,
+        "rho_cyclotomic_mod_level": rho_cyclotomic,
+        "rho_cyclotomic_order_mod_level": order_by_known_factors(
+            rho_cyclotomic,
+            P24_JACOBI_LEVEL,
+            (RIGHT_DEGREE - 1) * (P24_C_DEGREE - 1),
+        ),
+        "rho_cyclotomic_mod_right": rho_right,
+        "rho_cyclotomic_order_mod_right": order_by_known_factors(
+            rho_right,
+            RIGHT_DEGREE,
+            RIGHT_DEGREE - 1,
+        ),
+        "rho_cyclotomic_mod_c": rho_c_axis,
+        "rho_cyclotomic_order_mod_c": order_by_known_factors(
+            rho_c_axis,
+            P24_C_DEGREE,
+            P24_C_DEGREE - 1,
+        ),
+        "actual_rho_order_on_class_component": P24_RHO_ORDER,
+        "actual_post_bc_quotient_order": P24_JACOBI_LEVEL,
+        "cyclotomic_shadow_realizes_post_bc_quotient": int(
+            order_by_known_factors(
+                rho_cyclotomic,
+                P24_JACOBI_LEVEL,
+                (RIGHT_DEGREE - 1) * (P24_C_DEGREE - 1),
+            )
+            == P24_JACOBI_LEVEL
+        ),
+        "visible_cyclotomic_parameter_alone_selects_p24_packet": 0,
+    }
+
+
+def p24_unramified_twist_selector_checks() -> dict[str, int]:
+    """Check that the unramified class-character twist has the right size.
+
+    The visible cyclotomic parameter is too small, but class field theory
+    gives finite-order unramified characters of the cyclic n-component.  If
+    chi_full(rho)=zeta_M for M=31*7*179, then chi_q=chi_full^31 is trivial on
+    the B/C kernel and has exact order 7*179 on the post-trace quotient.
+
+    This is a positive selector statement, not the final producer theorem:
+    it explains where the non-cyclotomic p24 quotient can live, while the
+    missing work is still to identify the trace-GCD/CM-Lang packet with the
+    Jacobi packet twisted through this quotient character.
+    """
+    quotient_order = P24_JACOBI_LEVEL
+    full_order = P24_RHO_ORDER
+    quotient_exponent = P24_B_OVER_C_DEGREE
+    kernel_generator_exponent = quotient_order
+    right_axis_exponent = P24_C_DEGREE
+    c_axis_exponent = RIGHT_DEGREE
+
+    quotient_character_exponents = {
+        (quotient_exponent * a_value) % full_order
+        for a_value in range(quotient_order)
+    }
+    return {
+        "full_unramified_rho_order": full_order,
+        "bc_kernel_order": P24_B_OVER_C_DEGREE,
+        "post_bc_quotient_order": quotient_order,
+        "quotient_twist_exponent": quotient_exponent,
+        "quotient_twist_order": full_order // gcd(full_order, quotient_exponent),
+        "quotient_twist_trivial_on_bc_kernel": int(
+            (quotient_exponent * kernel_generator_exponent) % full_order == 0
+        ),
+        "quotient_twist_right_axis_order": full_order
+        // gcd(full_order, quotient_exponent * right_axis_exponent),
+        "quotient_twist_c_axis_order": full_order
+        // gcd(full_order, quotient_exponent * c_axis_exponent),
+        "quotient_character_exponents_count": len(quotient_character_exponents),
+        "quotient_character_exponents_are_exactly_trace_survivors": int(
+            quotient_character_exponents
+            == {
+                exponent
+                for exponent in range(full_order)
+                if exponent % P24_B_OVER_C_DEGREE == 0
+            }
+        ),
+        "unramified_twist_supplies_post_bc_selector": 1,
+        "unramified_twist_alone_supplies_embedded_trace_gcd_packet": 0,
+    }
+
+
+def p24_artin_character_uniqueness_checks() -> dict[str, int]:
+    """Check finite uniqueness of characters on the post-B/C rho quotient.
+
+    The post-B/C quotient is cyclic, generated by the image of rho, and has
+    order N=7*179.  A finite-order unramified Hecke/class character on this
+    quotient is therefore determined by its value on rho.  This turns the
+    coordinate-pullback obligation into an arithmetic Hecke-ratio statement:
+
+        ratio is unramified on the post-B/C quotient
+        and ratio(rho) is the selected zeta_N
+        => ratio is the selected Artin coordinate character.
+    """
+    quotient_order = P24_JACOBI_LEVEL
+    pair_checks = 0
+    generator_mismatches = 0
+    character_mismatches = 0
+
+    for a_value in range(quotient_order):
+        for b_value in range(quotient_order):
+            same_on_generator = a_value == b_value
+            same_character = True
+            if same_on_generator:
+                for exponent in range(quotient_order):
+                    if (a_value * exponent - b_value * exponent) % quotient_order != 0:
+                        same_character = False
+                        break
+            else:
+                same_character = False
+            generator_mismatches += int(same_on_generator != (a_value == b_value))
+            character_mismatches += int(same_on_generator != same_character)
+            pair_checks += 1
+
+    return {
+        "post_bc_quotient_order": quotient_order,
+        "rho_image_generator_order": quotient_order,
+        "post_bc_character_count": quotient_order,
+        "character_pair_checks": pair_checks,
+        "same_value_on_rho_iff_same_exponent": int(generator_mismatches == 0),
+        "same_value_on_rho_implies_same_character": int(character_mismatches == 0),
+        "ratio_unramified_plus_rho_value_determines_artin_coordinate": 1,
+        "remaining_arithmetic_input_is_ratio_unramified_and_rho_value": 1,
+    }
+
+
+def p24_axis_value_reconstruction_checks() -> dict[str, int]:
+    """Reconstruct the rho-value from the right and C-axis values.
+
+    The post-B/C quotient has coordinates
+
+        rho^e = (rho^179)^r * (rho^7)^c,  e=179*r+7*c mod 1253.
+
+    Solving e=1 gives r=2 and c=128.  Therefore, for any quotient character,
+    knowing the values on the right axis rho^179 and the C-axis rho^7
+    determines the value on rho.  This lets the arithmetic proof replace the
+    single primitive 1253rd-root value check by separate order-7 and
+    order-179 axis checks.
+    """
+    quotient_order = P24_JACOBI_LEVEL
+    right_axis_step = P24_C_DEGREE
+    c_axis_step = RIGHT_DEGREE
+    right_axis_power = 2
+    c_axis_power = 128
+    rho_exponent = (
+        right_axis_power * right_axis_step
+        + c_axis_power * c_axis_step
+    ) % quotient_order
+
+    pair_checks = 0
+    axis_mismatches = 0
+    for a_value in range(quotient_order):
+        for b_value in range(quotient_order):
+            same_axes = (
+                (a_value * right_axis_step - b_value * right_axis_step)
+                % quotient_order
+                == 0
+                and (a_value * c_axis_step - b_value * c_axis_step)
+                % quotient_order
+                == 0
+            )
+            same_rho = (a_value - b_value) % quotient_order == 0
+            axis_mismatches += int(same_axes != same_rho)
+            pair_checks += 1
+
+    return {
+        "quotient_order": quotient_order,
+        "right_axis_step": right_axis_step,
+        "c_axis_step": c_axis_step,
+        "rho_from_right_axis_power": right_axis_power,
+        "rho_from_c_axis_power": c_axis_power,
+        "bezout_integer_sum": right_axis_power * right_axis_step
+        + c_axis_power * c_axis_step,
+        "bezout_reconstructs_rho_exponent": int(rho_exponent == 1),
+        "axis_character_pair_checks": pair_checks,
+        "same_axis_values_iff_same_rho_value": int(axis_mismatches == 0),
+        "ratio_rho_value_reduces_to_two_axis_value_checks": 1,
+    }
+
+
+def selected_defect_linear_twist_stats(c_degree: int, exponent: int) -> dict[str, int]:
+    """Check value-side identities for a bare linear quotient character.
+
+    This is a guardrail.  The unramified class character supplies the Artin
+    coordinate on C_7 x C_c, but multiplying the selected packet by an
+    arbitrary finite-order quotient character would add a linear residue
+    term.  After selected-defect subtraction, pure right-axis terms vanish
+    and pure C-axis terms preserve the value identities, but a mixed
+    full-generator term leaks C-row balance.
+    """
+    order = RIGHT_DEGREE * c_degree
+
+    def raw_value(right: int, c_index: int) -> int:
+        return (exponent * (c_degree * right + RIGHT_DEGREE * c_index)) % order
+
+    def defect(right: int, c_index: int) -> int:
+        return raw_value(right, c_index) - raw_value(right, 0)
+
+    c_zero_ok = all(defect(right, 0) == 0 for right in range(RIGHT_DEGREE))
+    row_sums = [
+        sum(defect(right, c_index) for c_index in range(c_degree))
+        for right in range(RIGHT_DEGREE)
+    ]
+    inversion_values = {
+        defect(right, c_index)
+        + defect((-right) % RIGHT_DEGREE, (-c_index) % c_degree)
+        for right in range(RIGHT_DEGREE)
+        for c_index in range(1, c_degree)
+    }
+    all_zero = all(
+        defect(right, c_index) == 0
+        for right in range(RIGHT_DEGREE)
+        for c_index in range(c_degree)
+    )
+    return {
+        "exponent": exponent,
+        "c_zero_ok": int(c_zero_ok),
+        "row_balance_ok": int(len(set(row_sums)) == 1),
+        "inversion_complement_constant": int(len(inversion_values) == 1),
+        "selected_defect_is_zero": int(all_zero),
+        "distinct_row_sums": len(set(row_sums)),
+        "distinct_inversion_complements": len(inversion_values),
+    }
+
+
+def p24_linear_twist_guardrail_checks(c_degree: int) -> dict[str, int]:
+    """Separate Artin coordinate pullback from character-noise multiplication."""
+    full_generator = selected_defect_linear_twist_stats(c_degree, 1)
+    pure_c_axis = selected_defect_linear_twist_stats(c_degree, RIGHT_DEGREE)
+    pure_right_axis = selected_defect_linear_twist_stats(c_degree, c_degree)
+    return {
+        "c_degree": c_degree,
+        "full_generator_row_balance_ok": full_generator["row_balance_ok"],
+        "full_generator_inversion_constant": full_generator[
+            "inversion_complement_constant"
+        ],
+        "full_generator_distinct_row_sums": full_generator["distinct_row_sums"],
+        "pure_c_axis_preserves_value_identities": int(
+            pure_c_axis["c_zero_ok"] == 1
+            and pure_c_axis["row_balance_ok"] == 1
+            and pure_c_axis["inversion_complement_constant"] == 1
+        ),
+        "pure_right_axis_selected_defect_is_zero": pure_right_axis[
+            "selected_defect_is_zero"
+        ],
+        "mixed_linear_character_noise_breaks_value_side": int(
+            full_generator["row_balance_ok"] == 0
+        ),
+        "twist_must_be_artin_coordinate_pullback_not_extra_linear_noise": 1,
+    }
+
+
 def p24_quadratic_conductor_lift_checks(c_degree: int) -> dict[str, int]:
     """Check the infinity-type obstruction for lifting to the p24 CM field.
 
@@ -364,11 +643,20 @@ def p24_visible_shimura_ray_group_checks() -> dict[str, int]:
         "kronecker_7": legendre_symbol(-P24_CM_DISCRIMINANT_ABS, RIGHT_DEGREE),
         "kronecker_179": legendre_symbol(-P24_CM_DISCRIMINANT_ABS, P24_C_DEGREE),
         "ray_order_over_hilbert": ray_order_over_hilbert,
+        "gcd_ray_order_right_axis": gcd(ray_order_over_hilbert, RIGHT_DEGREE),
+        "gcd_ray_order_c_axis": gcd(ray_order_over_hilbert, P24_C_DEGREE),
+        "gcd_ray_order_post_bc_quotient": gcd(
+            ray_order_over_hilbert, RIGHT_DEGREE * P24_C_DEGREE
+        ),
         "ray_order_has_7_primary": int(ray_order_over_hilbert % RIGHT_DEGREE == 0),
         "ray_order_has_179_primary": int(ray_order_over_hilbert % P24_C_DEGREE == 0),
         "ray_order_has_post_bc_order": int(
             ray_order_over_hilbert % (RIGHT_DEGREE * P24_C_DEGREE) == 0
         ),
+        "visible_ray_has_no_hom_to_post_bc_axes": int(
+            gcd(ray_order_over_hilbert, RIGHT_DEGREE * P24_C_DEGREE) == 1
+        ),
+        "local_ray_ratio_cannot_supply_selector_axis": 1,
         "unramified_class_component_prime": P24_N,
         "unramified_rho_cycle_order": P24_RHO_ORDER,
         "post_bc_quotient_order": RIGHT_DEGREE * P24_C_DEGREE,
@@ -689,6 +977,21 @@ def main() -> None:
     p24_cyclotomic = p24_plain_cyclotomic_frobenius_checks()
     for key, value in p24_cyclotomic.items():
         print(f"p24_plain_cyclotomic_frobenius_{key}={value}")
+    p24_anderson_shadow = p24_anderson_cyclotomic_rho_shadow_checks()
+    for key, value in p24_anderson_shadow.items():
+        print(f"p24_anderson_cyclotomic_rho_shadow_{key}={value}")
+    p24_unramified_twist = p24_unramified_twist_selector_checks()
+    for key, value in p24_unramified_twist.items():
+        print(f"p24_unramified_twist_selector_{key}={value}")
+    p24_artin_uniqueness = p24_artin_character_uniqueness_checks()
+    for key, value in p24_artin_uniqueness.items():
+        print(f"p24_artin_character_uniqueness_{key}={value}")
+    p24_axis_reconstruction = p24_axis_value_reconstruction_checks()
+    for key, value in p24_axis_reconstruction.items():
+        print(f"p24_axis_value_reconstruction_{key}={value}")
+    p24_linear_twist = p24_linear_twist_guardrail_checks(P24_C_DEGREE)
+    for key, value in p24_linear_twist.items():
+        print(f"p24_linear_twist_guardrail_{key}={value}")
     p24_conductor_lift = p24_quadratic_conductor_lift_checks(P24_C_DEGREE)
     for key, value in p24_conductor_lift.items():
         print(f"p24_quadratic_conductor_lift_{key}={value}")
@@ -714,9 +1017,17 @@ def main() -> None:
     print("  p24_C7_x_C179_is_actual_rho_cycle_mod_B_over_C_trace=1")
     print("  kubert_lichtenbaum_mixed_level_jacobi_theorem_is_relevant=1")
     print("  plain_cyclotomic_jacobi_frobenius_does_not_realize_p24_quotient=1")
+    print("  anderson_taniyama_existence_does_not_by_itself_select_p24_quotient=1")
+    print("  unramified_class_character_twist_has_exact_post_bc_selector_size=1")
+    print("  unramified_twist_selector_still_needs_embedded_trace_gcd_identification=1")
+    print("  finite_unramified_ratio_character_determined_by_rho_value=1")
+    print("  ratio_rho_value_reduces_to_right_and_c_axis_value_checks=1")
+    print("  arbitrary_linear_character_noise_can_break_value_side_identities=1")
+    print("  unramified_twist_must_act_as_artin_coordinate_pullback=1")
     print("  visible_packet_lifts_to_integral_equal_quadratic_infinity_type=1")
     print("  quadratic_infinity_type_does_not_select_p24_rho_quotient=1")
     print("  visible_ray_level_has_no_7_or_179_primary_post_bc_axes=1")
+    print("  visible_ray_local_part_has_no_hom_to_post_bc_selector_axes=1")
     print("  p24_post_bc_axes_come_from_unramified_rho_frobenius=1")
     print("  artin_pullback_coordinate_is_e_equals_179r_plus_7c_mod_1253=1")
     print("  bc_trace_of_inflated_quotient_packet_is_clean_31_power=1")
@@ -771,6 +1082,71 @@ def main() -> None:
         "realizes_actual_quotient": 0,
     }:
         raise SystemExit(1)
+    if p24_anderson_shadow != {
+        "visible_level": P24_JACOBI_LEVEL,
+        "rho_exponent": P24_RHO_EXPONENT,
+        "rho_cyclotomic_mod_level": 666,
+        "rho_cyclotomic_order_mod_level": 89,
+        "rho_cyclotomic_mod_right": 1,
+        "rho_cyclotomic_order_mod_right": 1,
+        "rho_cyclotomic_mod_c": 129,
+        "rho_cyclotomic_order_mod_c": 89,
+        "actual_rho_order_on_class_component": P24_RHO_ORDER,
+        "actual_post_bc_quotient_order": P24_JACOBI_LEVEL,
+        "cyclotomic_shadow_realizes_post_bc_quotient": 0,
+        "visible_cyclotomic_parameter_alone_selects_p24_packet": 0,
+    }:
+        raise SystemExit(1)
+    if p24_unramified_twist != {
+        "full_unramified_rho_order": P24_RHO_ORDER,
+        "bc_kernel_order": P24_B_OVER_C_DEGREE,
+        "post_bc_quotient_order": P24_JACOBI_LEVEL,
+        "quotient_twist_exponent": P24_B_OVER_C_DEGREE,
+        "quotient_twist_order": P24_JACOBI_LEVEL,
+        "quotient_twist_trivial_on_bc_kernel": 1,
+        "quotient_twist_right_axis_order": RIGHT_DEGREE,
+        "quotient_twist_c_axis_order": P24_C_DEGREE,
+        "quotient_character_exponents_count": P24_JACOBI_LEVEL,
+        "quotient_character_exponents_are_exactly_trace_survivors": 1,
+        "unramified_twist_supplies_post_bc_selector": 1,
+        "unramified_twist_alone_supplies_embedded_trace_gcd_packet": 0,
+    }:
+        raise SystemExit(1)
+    if p24_artin_uniqueness != {
+        "post_bc_quotient_order": P24_JACOBI_LEVEL,
+        "rho_image_generator_order": P24_JACOBI_LEVEL,
+        "post_bc_character_count": P24_JACOBI_LEVEL,
+        "character_pair_checks": P24_JACOBI_LEVEL * P24_JACOBI_LEVEL,
+        "same_value_on_rho_iff_same_exponent": 1,
+        "same_value_on_rho_implies_same_character": 1,
+        "ratio_unramified_plus_rho_value_determines_artin_coordinate": 1,
+        "remaining_arithmetic_input_is_ratio_unramified_and_rho_value": 1,
+    }:
+        raise SystemExit(1)
+    if p24_axis_reconstruction != {
+        "quotient_order": P24_JACOBI_LEVEL,
+        "right_axis_step": P24_C_DEGREE,
+        "c_axis_step": RIGHT_DEGREE,
+        "rho_from_right_axis_power": 2,
+        "rho_from_c_axis_power": 128,
+        "bezout_integer_sum": 1254,
+        "bezout_reconstructs_rho_exponent": 1,
+        "axis_character_pair_checks": P24_JACOBI_LEVEL * P24_JACOBI_LEVEL,
+        "same_axis_values_iff_same_rho_value": 1,
+        "ratio_rho_value_reduces_to_two_axis_value_checks": 1,
+    }:
+        raise SystemExit(1)
+    if p24_linear_twist != {
+        "c_degree": P24_C_DEGREE,
+        "full_generator_row_balance_ok": 0,
+        "full_generator_inversion_constant": 0,
+        "full_generator_distinct_row_sums": RIGHT_DEGREE,
+        "pure_c_axis_preserves_value_identities": 1,
+        "pure_right_axis_selected_defect_is_zero": 1,
+        "mixed_linear_character_noise_breaks_value_side": 1,
+        "twist_must_be_artin_coordinate_pullback_not_extra_linear_noise": 1,
+    }:
+        raise SystemExit(1)
     if p24_conductor_lift["visible_level"] != P24_JACOBI_LEVEL:
         raise SystemExit(1)
     if p24_conductor_lift["cm_conductor_coprime_to_visible_level"] != 1:
@@ -789,9 +1165,14 @@ def main() -> None:
         "kronecker_7": -1,
         "kronecker_179": -1,
         "ray_order_over_hilbert": 768960,
+        "gcd_ray_order_right_axis": 1,
+        "gcd_ray_order_c_axis": 1,
+        "gcd_ray_order_post_bc_quotient": 1,
         "ray_order_has_7_primary": 0,
         "ray_order_has_179_primary": 0,
         "ray_order_has_post_bc_order": 0,
+        "visible_ray_has_no_hom_to_post_bc_axes": 1,
+        "local_ray_ratio_cannot_supply_selector_axis": 1,
         "unramified_class_component_prime": P24_N,
         "unramified_rho_cycle_order": P24_RHO_ORDER,
         "post_bc_quotient_order": RIGHT_DEGREE * P24_C_DEGREE,
