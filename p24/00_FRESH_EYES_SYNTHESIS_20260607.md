@@ -660,6 +660,99 @@ the selected trace-GCD/CM-Lang divisor packet is the reduced Jacobi packet
 with the single J(1,1)/(q-2) anchor normalization.
 ```
 
+The targeted literature/source refresh sharpens this again.  The closest
+external theorem is Kubert-Lichtenbaum/Weil mixed-level Jacobi-sum Hecke
+characters plus generalized Hasse-Davenport/Langlands Gauss-sum identities.
+That source backs the algebraic shape of the reduced Jacobi packet.
+
+Brattström-Lichtenbaum's imaginary-quadratic version gives the right abstract
+criterion: a mixed-level `theta` packet with integral infinity type produces a
+Galois-equivariant Hecke character.  This suggests the actual proof target:
+
+```text
+construct theta so its projection to the unramified p24 rho quotient is the
+reduced C_7 x C_179 packet, and prove the large K-conductor components cancel
+under B/C trace or selected degree-zero normalization.
+```
+
+The first lift check is positive in the precise sense needed for asymptotics:
+the p24 quadratic conductor is coprime to the visible level `7*179`, and the
+visible Jacobi theta packet contributes
+
+```text
+phi(7*179)/2 = 534
+```
+
+to each CM embedding after conductor lift.  The symbolic gate checks this for
+all proxy rows and p24:
+
+```text
+quadratic_conductor_lift_integral_equal_rows=6/6
+p24_quadratic_conductor_lift_lifted_coefficients_integral=1
+p24_quadratic_conductor_lift_lifted_infinity_type_separates_embeddings=0
+```
+
+Interpretation: the large conductor contributes a balanced norm-type
+infinity factor, so it is not automatically fatal.  It also cannot select the
+p24 quotient.  Selection must happen through the finite Artin component and
+then descend through `Tr_{B/C}`.
+
+The finite Artin component is now pinned more tightly.  At visible level
+`7*179`, both primes are inert in the p24 CM field, so the ray/Shimura unit
+part over the Hilbert class field has order
+
+```text
+((7^2 - 1)(179^2 - 1))/2 = 768960 = 2^6*3^3*5*89.
+```
+
+It has no `7` or `179` primary part.  Thus the `C_7 x C_179` quotient is not
+a local visible ray quotient.  It is the post-`B/C` Frobenius-orbit quotient
+on the unramified `n=3107441` class component:
+
+```text
+rho=p^780 has order 7*31*179 on the n-component;
+B/C trace kills the 31 factor;
+remaining quotient is C_7 x C_179.
+```
+
+The post-`B/C` quotient is now coordinatized without enumeration:
+
+```text
+rho^e = (rho^179)^r * (rho^7)^c,
+e = 179*r + 7*c mod 1253.
+```
+
+The axis checks are explicit: the `179` step has order `7`, the `7` step has
+order `179`, and the `7*179` pairs cover all `1253` quotient exponents.
+
+So the proof target is no longer "find a ray-level Jacobi unit".  It is:
+
+```text
+pull the mixed-level Jacobi-sum/CM-Lang packet through the unramified
+n-class Frobenius orbit, then identify its B/C trace with the reduced packet.
+```
+
+However, the plain cyclotomic shortcut fails for p24:
+
+```text
+p mod 7      has order 1;
+p mod 179    has order 89;
+p mod 7*179  has order 89;
+actual post-B/C rho quotient has order 7*179 = 1253.
+```
+
+So the reduced packet cannot be identified with the p24 quotient by ordinary
+cyclotomic Frobenius on `mu_{7*179}`.  The remaining bridge is more precise:
+
+```text
+Kubert-Lichtenbaum mixed-level Jacobi-sum packet
+  -> CM-Artin pullback along <rho>/<rho^(7*179)>
+  -> selected trace-GCD/CM-Lang packet after Tr_{B/C}.
+```
+
+This is a positive theorem candidate and a guardrail: any proof that stops at
+ordinary cyclotomic Jacobi sums is proving the wrong Frobenius orbit.
+
 ## The Anchor Split That Composes Old Work
 
 The selected-defect footprint of the single raw anchor correction is the

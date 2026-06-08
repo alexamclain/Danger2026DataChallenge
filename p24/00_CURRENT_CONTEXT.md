@@ -3672,6 +3672,197 @@ longer asks for a classical ray-class modulus `179`; it asks for a
 CM/Lang specialization on a concrete Frobenius-orbit quotient already present
 inside the p24 relative class layer.
 
+Targeted web/source refresh, 2026-06-08:
+
+Kubert-Lichtenbaum, "Jacobi-sum Hecke characters and Gauss-sum identities"
+(Compositio 1983), is a much closer literature target than the plain
+Schertz/Shin ray-class generator theorems.  It extends Weil/Deligne
+Jacobi-sum Hecke characters to mixed level and derives generalized
+Hasse-Davenport/Langlands Gauss-sum identities.  That matches the formal
+shape of our reduced `C_7 x C_179` Jacobi packet and explains why the
+symbolic gate is the correct finite algebra.
+
+Brattström-Lichtenbaum, "Jacobi-sum Hecke characters of imaginary quadratic
+fields" (Compositio 1984), is even closer conceptually.  Their Theorem 1.1
+packages the exact test we need in abstract form:
+
+```text
+mixed-level theta packet has integral infinity type
+  <=> J(theta,k) is a Hecke character,
+      takes values in k,
+      and is Galois-equivariant.
+```
+
+For p24 this should not be read as a ready-made computational construction:
+the strict cyclotomic presentation of a Jacobi-sum character over the
+quadratic field `K` has to include the conductor/discriminant data of `K`,
+not just the small visible level `7*179`.  The useful theorem candidate is
+therefore:
+
+```text
+find a mixed-level Jacobi/CM-Lang theta packet whose projection to the
+unramified p24 rho quotient is the reduced C_7 x C_179 packet, while the
+large K-conductor components are killed by the B/C trace or by the selected
+degree-zero normalization.
+```
+
+The first finite lift check is positive but deliberately not decisive.  Since
+the p24 quadratic conductor is coprime to the visible level `7*179`, lifting a
+visible `theta=[u]+[v]-[u+v]` packet to a strict level containing the
+quadratic conductor makes the conductor units split evenly between the two
+CM embeddings.  For every right-mixed admissible pair, the visible
+infinity-type sum is
+
+```text
+sum_{b in (Z/(7*179)Z)^*} < -a b / (7*179) >
+  = phi(7*179)/2
+  = 1068/2
+  = 534,
+```
+
+because each nonzero exponent contributes `phi(level)/2`, and
+`[u]+[v]-[u+v]` has three nonzero terms with signs `+,+,-`.
+
+The gate now checks this across the small proxy rows and p24:
+
+```text
+quadratic_conductor_lift_integral_equal_rows=6/6
+p24_quadratic_conductor_lift_visible_level=1253
+p24_quadratic_conductor_lift_cm_conductor_coprime_to_visible_level=1
+p24_quadratic_conductor_lift_visible_theta_infinity_sum=534
+p24_quadratic_conductor_lift_expected_visible_theta_infinity_sum=534
+p24_quadratic_conductor_lift_lifted_identity_embedding_coefficient=
+  174015840695068591393327296
+p24_quadratic_conductor_lift_lifted_conjugate_embedding_coefficient=
+  174015840695068591393327296
+p24_quadratic_conductor_lift_lifted_coefficients_integral=1
+p24_quadratic_conductor_lift_lifted_infinity_type_separates_embeddings=0
+```
+
+So the large conductor is not by itself an asymptotic killer for the
+Jacobi-sum theorem: it contributes a balanced norm-type infinity factor.
+But this also proves that the archimedean/infinity type does not select the
+`C_7 x C_179` rho quotient.  The quotient selection must be in the finite
+Artin component and then descend through `Tr_{B/C}`.
+
+The next finite-Artin check rules out the visible ray-unit source as well.
+At level `7*179`, both primes are inert in the p24 CM field:
+
+```text
+(D_K / 7) = -1
+(D_K / 179) = -1
+```
+
+Thus the Shimura reciprocity/ray-unit part over the Hilbert class field has
+order
+
+```text
+((7^2 - 1) * (179^2 - 1)) / 2
+  = 768960
+  = 2^6 * 3^3 * 5 * 89,
+```
+
+which has no `7`- or `179`-primary quotient.  The strengthened gate prints:
+
+```text
+p24_visible_shimura_ray_group_level=1253
+p24_visible_shimura_ray_group_kronecker_7=-1
+p24_visible_shimura_ray_group_kronecker_179=-1
+p24_visible_shimura_ray_group_ray_order_over_hilbert=768960
+p24_visible_shimura_ray_group_ray_order_has_7_primary=0
+p24_visible_shimura_ray_group_ray_order_has_179_primary=0
+p24_visible_shimura_ray_group_ray_order_has_post_bc_order=0
+p24_visible_shimura_ray_group_unramified_class_component_prime=3107441
+p24_visible_shimura_ray_group_unramified_rho_cycle_order=38843
+p24_visible_shimura_ray_group_post_bc_quotient_order=1253
+p24_visible_shimura_ray_group_visible_ray_supplies_post_bc_axes=0
+p24_visible_shimura_ray_group_unramified_frobenius_supplies_post_bc_axes=1
+```
+
+So the selected packet theorem cannot be:
+
+```text
+visible ray-level local units produce C_7 x C_179.
+```
+
+That is false.  The correct finite part is:
+
+```text
+the unramified n=3107441 class component is acted on by rho=p^780 with
+cycle order 7*31*179; after B/C trace, this Frobenius orbit quotient is
+C_7 x C_179.
+```
+
+The quotient coordinates are now explicit.  In the post-`B/C` quotient,
+write
+
+```text
+rho^e = (rho^179)^r * (rho^7)^c,
+e = 179*r + 7*c mod 1253.
+```
+
+Here `rho^179` has order `7`, `rho^7` has order `179`, and the `7*179`
+exponents cover the whole quotient:
+
+```text
+p24_artin_quotient_coordinate_quotient_modulus=1253
+p24_artin_quotient_coordinate_bc_trace_subgroup_exponent=1253
+p24_artin_quotient_coordinate_right_axis_exponent_step=179
+p24_artin_quotient_coordinate_c_axis_exponent_step=7
+p24_artin_quotient_coordinate_coordinate_exponents_count=1253
+p24_artin_quotient_coordinate_coordinate_exponents_cover_modulus=1
+p24_artin_quotient_coordinate_right_axis_step_has_order_7=1
+p24_artin_quotient_coordinate_c_axis_step_has_order_179=1
+```
+
+Therefore the mixed-level Jacobi-sum/CM-Lang packet has to be pulled back
+through the unramified `n`-class Frobenius orbit and only then compared with
+the reduced Jacobi packet.  This is the current sharp theorem target.
+
+But it also exposes a necessary correction: the p24 packet is not realized by
+ordinary cyclotomic Frobenius on `mu_{7*179}`.  The strengthened symbolic gate
+now prints:
+
+```text
+p24_plain_cyclotomic_frobenius_level=1253
+p24_plain_cyclotomic_frobenius_p_mod_level=435
+p24_plain_cyclotomic_frobenius_p_order_mod_level=89
+p24_plain_cyclotomic_frobenius_p_mod_right=1
+p24_plain_cyclotomic_frobenius_p_order_mod_right=1
+p24_plain_cyclotomic_frobenius_p_mod_c=77
+p24_plain_cyclotomic_frobenius_p_order_mod_c=89
+p24_plain_cyclotomic_frobenius_actual_quotient_order_after_b_over_c=1253
+p24_plain_cyclotomic_frobenius_realizes_actual_quotient=0
+```
+
+So the direct shortcut
+
+```text
+reduced Jacobi packet over Q(mu_{7*179})
+  + ordinary rational Frobenius p
+  -> p24 post-B/C quotient
+```
+
+is false.  The remaining theorem must instead be stated as a CM-Artin
+pullback/identification:
+
+```text
+the mixed-level Jacobi-sum Hecke packet, after the CM/Lang Artin pullback
+along the actual rho quotient <rho>/<rho^(7*179)>, equals the selected
+trace-GCD packet after Tr_{B/C}.
+```
+
+This is useful progress because it prevents a wrong "just use cyclotomic
+Jacobi sums" proof and leaves a sharper, source-backed bridge:
+
+```text
+Kubert-Lichtenbaum mixed-level Jacobi-sum packet
+  -> CM-Artin pullback to p24 rho quotient
+  -> selected trace-GCD/CM-Lang packet
+  -> value-side identities
+  -> 1092 H-coset verifier.
+```
+
 Sutherland Algorithm 2 maps cleanly onto the selected-chain fallback surface:
 take the subgroup `G` to have order `n=3107441`, so the intermediate
 polynomial `V` has degree `m=66254` and the specialized recovery polynomial

@@ -242,6 +242,14 @@ def p24RhoCycleOrder : Nat :=
   p24RightHCosets * p24BOverCDegree * p24COverEDegree
 def p24AfterBOverCQuotientOrder : Nat :=
   p24RhoCycleOrder / p24BOverCDegree
+def p24VisibleJacobiLevel : Nat :=
+  p24RightHCosets * p24COverEDegree
+def p24VisibleJacobiPhi : Nat :=
+  (p24RightHCosets - 1) * (p24COverEDegree - 1)
+def p24VisibleThetaInfinitySum : Nat :=
+  p24VisibleJacobiPhi / 2
+def p24PlainCyclotomicFrobeniusOrder : Nat := 89
+def p24VisibleRayOrderOverHilbert : Nat := 768960
 def p24InternalCosetBalanceCount : Nat := 560
 def p24RecombinedCosetBalanceCount : Nat := 8
 def p24CompressedVerifierEquations : Nat := 48
@@ -288,6 +296,34 @@ theorem p24_after_b_over_c_trace_is_jacobi_quotient :
 
 theorem p24_after_b_over_c_trace_quotient_count :
     p24AfterBOverCQuotientOrder = 1253 := by
+  decide
+
+theorem p24_visible_jacobi_level_matches_post_bc_quotient :
+    p24VisibleJacobiLevel = p24AfterBOverCQuotientOrder := by
+  decide
+
+theorem p24_visible_jacobi_phi_count :
+    p24VisibleJacobiPhi = 1068 := by
+  decide
+
+theorem p24_visible_theta_infinity_sum_count :
+    p24VisibleThetaInfinitySum = 534 := by
+  decide
+
+theorem p24_plain_cyclotomic_frobenius_not_post_bc_quotient :
+    p24PlainCyclotomicFrobeniusOrder ≠ p24AfterBOverCQuotientOrder := by
+  decide
+
+theorem p24_visible_ray_order_has_no_right_axis_primary :
+    p24VisibleRayOrderOverHilbert % p24RightHCosets ≠ 0 := by
+  decide
+
+theorem p24_visible_ray_order_has_no_c_axis_primary :
+    p24VisibleRayOrderOverHilbert % p24COverEDegree ≠ 0 := by
+  decide
+
+theorem p24_visible_ray_order_not_post_bc_quotient_source :
+    p24VisibleRayOrderOverHilbert % p24AfterBOverCQuotientOrder ≠ 0 := by
   decide
 
 theorem p24_compressed_equation_split :
