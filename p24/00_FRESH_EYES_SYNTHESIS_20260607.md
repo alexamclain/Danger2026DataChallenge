@@ -341,6 +341,136 @@ right-zero row:     one selected degenerate-anchor correction
 The missing p24 object is the selected trace-GCD/CM-Lang analogue of this
 degenerate anchor after `Tr_{B/C}`.
 
+2026-06-08 rerun: the positive finite/Jacobi stack still passes, including
+the full p24 `c=179` symbolic Hasse-Davenport gate over `189036`
+right-mixed admissible pairs, the cyclotomic divisor gate, the local-unit
+criterion, and the Lean gates for anchor correction, reduced-anchor divisor,
+admissible dual conditions, product coboundary, resultant avoidance, local
+unit, and kernel-polynomial accounting.
+
+The same rerun also sharpened the negative boundary.  In faithful small
+actual-CM data, generic packets do not satisfy the target identities:
+
+```text
+D=-5000 projector row:
+  admissible Jacobi span = 0/30 origins;
+  all three value identities = 0/30 origins.
+
+D=-13319 right-combo row:
+  right-combo resolvent admissible/value hits = 0/140;
+  weighted coefficients admissible/value hits = 0/140;
+  selected-defect coefficients admissible hits = 0/140;
+  selected-defect coefficients force only C-zero fiber = 140/140,
+    but row-sum balance and inversion-complement remain 0/140.
+```
+
+Thus the live theorem is not a generic actual-CM symmetry.  It must construct
+the special selected p-integral CM/Lang unit/section whose divisor is the
+reduced Jacobi anchor and whose selected weighting supplies the row-sum and
+inversion-complement identities that the nearby actual-CM packets lack.
+
+Follow-up on the same date: an origin-section scan on the pinned
+`D=-13319, q=13463, h=140, m=28, n=5` actual-CM row checked every rotated
+embedded section.  It found `0/140` anchor-zero sections and `140` distinct
+nonzero anchor defects.  So section choice alone is closed as a rescue.
+
+The producer target now has a clean algebraic dictionary.  For raw `g`, the
+selected defect `f(r,c)=g(r,c)-g(r,0)` is admissible exactly when `g` has:
+
+```text
+two-level inversion complement, and
+selected affine row balance.
+```
+
+Equivalently, for `U=omega^g`, the arithmetic producer must give:
+
+```text
+constant pair-products on c=0 and c!=0 fibers, and
+constant selected row-product ratio prod_c U(r,c)/U(r,0)^c.
+```
+
+Each condition alone is insufficient in exact controls.  The weighted-Gauss
+reduction then says the p24 object is not a raw CM period packet but the
+six named weighted relative polynomials
+
+```text
+G_chi(X) = sum_k c_k^chi X^k,
+c_k^chi = sum_{r != 0 mod 211} chi^{-1}(r mod 211) F_{r,k}.
+```
+
+The live theorem should therefore be stated as a weighted CM/Lang
+coset-balance theorem for these six `chi`: prove their internal/recombined
+Gaussian-period coset balances, with the explicit `rho=p^780` twist, rather
+than looking for a generic section or generic actual-CM symmetry.
+
+The finite bridge from this weighted theorem to the verifier is no longer the
+unknown part.  The multiplicative-resolvent and H-coboundary gates identify
+the six projections with H-coset sums after centering; the product-coboundary
+and raw-transfer gates show that a matching right twisted coboundary
+`G_chi=sigma(V_chi)-epsilon_chi V_chi` would imply the needed trace/coset
+vanishing.  They also mark the trap: constructing `V_chi` by Hilbert-90 only
+after knowing trace zero is circular.  The producer must build the potential
+or product formula directly from CM/Lang data.
+
+This weighted-potential handoff is now represented in
+`p24/lean/TraceGcdProjectorTracePipelineGate.lean`: all six weighted right
+potentials imply the character payload and then the `1092` H-coset verifier
+after centering.  The construction of those potentials remains the arithmetic
+input.
+
+The equivalent minimal obstruction is now:
+
+```text
+Tr_{C/E}(Tr_{B/C}(G_chi)) = 0
+for each of the six nontrivial right characters chi.
+```
+
+In coefficient language this is the Gaussian-period pairing
+
+```text
+sum_k c_k^chi * eta_{a k} = 0,
+eta_t = sum_{u in <p^5460>} zeta_n^(t u).
+```
+
+In character language it says: after `B/C` trace, the selected weighted
+obstruction has no trivial `C/E` character component in any nontrivial right
+channel.  The recombined version is the same `48`-equation target:
+
+```text
+42 mixed right-order-7 / relative-octic equations
++ 6 trace-defect anchor equations.
+```
+
+Plain cyclic or right-axis Stickelberger distributions leak all six forbidden
+bidegrees, so any successful Jacobi/Stickelberger proof must produce genuine
+C-centering from the selected weighted CM/Lang packet.
+
+The positive finite target is C-axis admissible Jacobi carry, not generic
+Jacobi carry and not just forbidden-support deletion.  The C-centering gate
+shows C-axis carries kill the forbidden bidegrees while generic carries leak;
+the spectral/value gates show the full rank-`621` target also needs
+conjugate-pair compatibility and three global row-sum balances.  The mixed
+spectrum bridge says the `42` octic equations are Gauss-weighted sums of
+additive resolvents, not individual resolvent vanishings.  The arithmetic
+producer must explain all of that structure at once from the selected
+weighted CM/Lang packet.
+
+Latest right-difference/projector controls do not remove that arithmetic
+producer burden.  They show:
+
+```text
+covariance + telescope + anchor is enough in the formal model;
+covariance/telescope without anchor is not;
+trace-defect anchor and C-centering are independent inputs;
+one factor cycle does not descend, only complete factor recombination can;
+projectors commute with B/C trace, so the target is no trivial C-component in
+each nontrivial projected right channel.
+```
+
+So the adjacent-difference route is now a useful equivalent verifier shape,
+not a substitute proof.  The missing theorem remains the C-centered selected
+weighted CM/Lang packet.
+
 ## The Anchor Split That Composes Old Work
 
 The selected-defect footprint of the single raw anchor correction is the

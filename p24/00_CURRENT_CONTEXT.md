@@ -3026,6 +3026,286 @@ degree-`3107441` embedded recovery object at sub-sqrt scale, or prove a
 stronger phase-aware p-unit/determinant identity that avoids selecting the
 class-set child explicitly.
 
+2026-06-08 continuation check: the Jacobi/p-unit proof surface was rerun
+against the exact gates that matter for the surviving theorem.  The positive
+finite stack is still intact:
+
+```text
+anchor correction gate:
+  raw right-mixed Jacobi packets fail only by J(1,1)=q-2;
+  replacing that single anchor by 1 repairs pair-products and row-ratios
+  in the exhaustive c=5,11,13 checks.
+
+symbolic Hasse-Davenport gate:
+  c=5,11,13,17,19,179 all pass;
+  p24 covers 189036 right-mixed admissible pairs.
+
+cyclotomic-divisor/local-unit gates:
+  the cleared C/E-nontrivial anchor residual is div R_179;
+  R_179(X) is a unit exactly when X avoids the 179 forbidden roots.
+
+Lean gates:
+  reduced anchor divisor, anchor correction, admissible Jacobi dual
+  conditions, product coboundary, resultant avoidance, local unit, and kernel
+  polynomial gates all pass.
+```
+
+The faithful small actual-CM falsifiers also reran and are important:
+
+```text
+actual-CM admissible Jacobi span:
+  D=-5000 projector row: 0/30 origins;
+  D=-13319 right-combo/weighted/selected-defect rows: 0/140 origins each.
+
+actual-CM value identities:
+  generic projector/right-combo/weighted packets: 0 origins for all three
+  identities;
+  selected-defect packets: C-zero fiber forced in 140/140, but row-sum and
+  inversion-complement are still 0/140.
+```
+
+So the theorem is not "nearby actual CM packets are automatically admissible."
+The remaining theorem is narrower and less ambiguous:
+
+```text
+construct a special selected p-integral CM/Lang unit or divisor packet whose
+Tr_{B/C} specialization is the reduced Jacobi packet:
+  nonzero rows from punctured Hasse-Davenport,
+  right-zero row from the R_179 principal anchor,
+  plus the selected weighting/section that supplies row balance and inversion
+  complement not present in generic actual-CM packets.
+```
+
+This check does not complete the certificate, but it usefully prevents the
+wrong proof path: a generic actual-CM symmetry is already falsified.  A valid
+proof must build the explicit selected unit/section.
+
+Second 2026-06-08 refinement: the "selected section" loophole was tested
+directly on the pinned small actual-CM right-combo row
+`D=-13319, q=13463, h=140, m=28=4*7, n=5`.  Rotating through all embedded
+origin/section choices gives:
+
+```text
+anchor_zero_sections = 0/140
+anchor_nonzero_sections = 140/140
+distinct_anchor_defects = 140
+```
+
+So the missing theorem is not "choose the right origin."  It must supply a
+real product-formula/weighted-unit object.
+
+The finite producer dictionary was also rerun.  For a raw packet `g(r,c)`,
+the selected defect `f(r,c)=g(r,c)-g(r,0)` satisfies the admissible value
+identities exactly when the raw packet has both:
+
+```text
+two-level inversion complement:
+  g(r,0)+g(-r,0) = A0,
+  g(r,c)+g(-r,-c) = A1 for c != 0;
+
+selected affine row balance:
+  sum_c g(r,c) - c*g(r,0) = B independent of r.
+```
+
+Multiplicatively, for `U=omega^g`, this is exactly:
+
+```text
+U(r,0)U(-r,0) = alpha0,
+U(r,c)U(-r,-c) = alpha1 for c != 0,
+prod_c U(r,c) / U(r,0)^c = beta independent of r.
+```
+
+The controls show each half alone is insufficient: pair-products without the
+row ratio leak row sums, and row ratio without pair-products leaks inversion
+symmetry.
+
+The p24-specific right-character reduction gives the most concrete theorem
+target.  For a nontrivial order-7 right character `chi`,
+
+```text
+R_{chi,-a} = sum_v chi(v) T_{0,v,-a}
+```
+
+is a nonzero Gauss sum times the weighted relative polynomial
+
+```text
+G_chi(X) = sum_k c_k^chi X^k,
+c_k^chi = sum_{r != 0 mod 211} chi^{-1}(r mod 211) F_{r,k}.
+```
+
+Residue `r=0 mod 211` drops out by character orthogonality.  Therefore the
+remaining fixed-frequency theorem is not about raw periods; it is:
+
+```text
+for each of the six nontrivial chi, prove the named weighted CM/Lang
+coefficient sequence c_k^chi satisfies the required internal/recombined
+coset-balance equations.
+```
+
+The Gaussian-period balance gate turns this into exact p24 counts:
+
+```text
+internal per-factor balance: 560 U-coset equations;
+complete recombination:      8 p-coset balances;
+compressed verifier form:    48 equations = 42 octic + 6 anchor.
+```
+
+The p24 character/twist bookkeeping is also fixed:
+
+```text
+rho = p^780 fixes the left 157-frequency;
+raw right quotient shift = 6;
+lambda_chi exponent = 6k;
+epsilon_chi exponent = k;
+1092 verifier scalars = 936 nontrivial character scalars + 156 centering.
+```
+
+Thus the next proof theorem can be named more sharply:
+
+```text
+Weighted CM/Lang Coset-Balance Theorem:
+the selected p-integral product-formula unit produces the six weighted
+sequences c_k^chi above, and these sequences satisfy the explicit
+recombined p-coset balances with the rho-twist bookkeeping.
+```
+
+The finite coboundary bridge is also closed around this theorem.  Reruns of
+the multiplicative-resolvent, product-coboundary Leibniz, raw-coboundary
+transfer, and base-field H-coboundary gates give:
+
+```text
+H-coboundary = six multiplicative-resolvent projections = seven H-coset sums
+after centering;
+
+left covariance plus a matching right twisted coboundary implies the raw
+product coboundary;
+
+nested internal trace commutes with the twisted coboundary transfer;
+
+ordinary centering or Frobenius covariance alone leaves false positives;
+
+constructing a Hilbert-90 potential only after trace zero is circular.
+```
+
+Therefore the proof burden is now exactly:
+
+```text
+construct, from selected p-integral CM/Lang/product-formula data, a right
+potential V_chi such that
+  G_chi = sigma(V_chi) - epsilon_chi * V_chi
+with epsilon_chi fixed by the p^780 twist,
+or equivalently prove the same weighted sequences satisfy the explicit
+recombined coset balances noncircularly.
+```
+
+`p24/lean/TraceGcdProjectorTracePipelineGate.lean` now includes the matching
+weighted-right-potential handoff: six weighted potentials imply the character
+payload and, with centering, the `1092` H-coset verifier.  The same Lean gate
+records the p24 counts `31*179=5549`, `42+6=48`, and six nontrivial weighted
+characters.
+
+Third 2026-06-08 refinement: the weighted-potential theorem has an equivalent
+minimal obstruction statement.  The right-coboundary/internal-trace gate shows:
+
+```text
+G_chi is a matching right coboundary
+  iff its nested internal trace is zero
+  iff Tr_{C/E}(Tr_{B/C}(G_chi)) = 0.
+```
+
+The Gaussian-functional gate expands this as a single Gaussian-period pairing
+for each right character:
+
+```text
+sum_k c_k^chi * eta_{a k} = 0,
+eta_t = sum_{u in <p^5460>} zeta_n^(t u),
+|<p^5460>| = 5549.
+```
+
+The p24 sample periods are all nonzero, so this is not a formal cyclotomic
+vanishing.  The internal-character and bidegree gates give the cleanest
+theorem statement:
+
+```text
+after B/C trace, the weighted obstruction has no trivial C/E character
+component in any of the six nontrivial right channels.
+```
+
+Equivalently, the recombined balance gate splits the target into:
+
+```text
+42 right-order-7 by relative-octic mixed-spectrum equations
++ 6 trace-defect anchor equations
+= 48 compressed equations.
+```
+
+This also sharpens the negative evidence:
+
+```text
+plain cyclic Stickelberger distributions leak all six forbidden bidegrees;
+plain right-axis Stickelberger distributions leak all six forbidden bidegrees;
+only a deliberately C-centered product shape avoids the trivial C component.
+```
+
+Therefore a successful Jacobi/Stickelberger/CM-Lang proof must explain
+C-centering of the selected weighted packet itself.  It cannot be only
+Hasse-Davenport, only Frobenius covariance, only ordinary centering, or a
+generic ray-unit distribution.
+
+The adjacent Jacobi-carry gates make the positive version more specific:
+
+```text
+C-axis Jacobi carries kill the six forbidden bidegrees;
+generic Jacobi carries leak them;
+pure right partners destroy the C-axis cancellation.
+```
+
+The admissible spectral boundary adds that support vanishing is still weaker
+than the full target: the rank-`621` admissible span has spectral formula
+
+```text
+1 + 7*88 + 4 = 621,
+```
+
+so the proof must also supply the conjugate-pair compatibility and three
+global balance constraints.  The value-side strength gate expresses the same
+point as:
+
+```text
+C-zero plus inversion complement leaves three global row-sum balances.
+```
+
+Finally, the mixed-spectrum bridge shows the `42` octic equations are
+Gauss-weighted combinations of additive resolvents, not individual
+class-character resolvent vanishings.  Thus the current best theorem is:
+
+```text
+selected weighted CM/Lang packet after B/C trace
+  lands in the C-axis admissible Jacobi-carry span,
+or equivalently satisfies the six C-centered weighted Gaussian-period
+  cancellations plus the three global balances/anchor conditions.
+```
+
+The right-difference/projector rerun adds one more boundary, without changing
+the proof target:
+
+```text
+right-difference covariance + telescope + anchor implies trace zero in the
+formal model, but covariance/telescope alone does not;
+
+trace-defect anchors and C-centering are independent inputs in controls;
+
+single factor-cycle covariance does not descend, and complete factor
+recombination is required;
+
+quotient projectors commute with B/C trace, so the arithmetic statement is
+exactly no trivial C-component in each projected nontrivial right channel.
+```
+
+This closes the adjacent-difference route as a finite equivalence, not as an
+arithmetic proof replacement.  Any successful proof still has to create the
+C-centered selected weighted CM/Lang packet itself.
+
 Sutherland Algorithm 2 maps cleanly onto the selected-chain fallback surface:
 take the subgroup `G` to have order `n=3107441`, so the intermediate
 polynomial `V` has degree `m=66254` and the specialized recovery polynomial
