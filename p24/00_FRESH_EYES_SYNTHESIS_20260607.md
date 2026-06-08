@@ -573,6 +573,93 @@ Robert unit plus ordinary norm loses the needed phase/anchor data.  The live
 producer has to construct the selected p-integral Robert factor first, then
 use the `179` diamond orbit.
 
+The value-side Lean gate now records this as a checked finite contract:
+
+```text
+selectedDefectSubtraction        -> C-zero fiber vanishes;
+degreeZeroAfterRightProjection   -> C-row sums are independent;
+inversionPairCompatibility       -> off-C-zero inversion complement constant;
+
+RobertProducerObligations
+  -> ValueSideIdentities
+  -> four dual Fourier families
+  -> admissible C-axis Jacobi span
+  -> final internal trace zero
+  -> H-coset verifier.
+```
+
+Validated by:
+
+```text
+lean p24/lean/TraceGcdDualConditionsValueSideGate.lean
+PYTHONPATH=p24 python3 \
+  p24/trace_gcd_fixed_frequency_p24_selected_defect_value_producer_gate.py
+PYTHONPATH=p24 python3 \
+  p24/trace_gcd_fixed_frequency_p24_dual_conditions_value_side_gate.py
+```
+
+Schertz/Shin do supply exactly the right external machinery in broad strokes:
+elliptic/Siegel-Ramachandra unit generators, Frobenius/Artin action, and
+Shimura reciprocity.  They do not by themselves select the p24 trace-GCD
+packet.  Their proofs also expose the relevant conductor-support obstruction:
+character sums can vanish for the wrong packet/conductor.  That aligns with
+our local controls, where generic actual-CM selected defects fail row balance
+and inversion.  Thus the next theorem is an identification theorem, not a
+literature lookup:
+
+```text
+selected trace-GCD B/C packet
+  = selected p-integral Robert/KL exponent packet
+    with correct 157/211 unramified phase
+    and 179 diamond/unit orientation.
+```
+
+But the local TeX source audit closes one tempting misread: the `179` here is
+not literal ray conductor `179` in the CM field.  For the p24 discriminant,
+`179` is inert, so
+
+```text
+|(O_K/179 O_K)^*| = 179^2 - 1 = 32040,
+norm-one kernel size = 180,
+source prime-conductor quotient order = 90.
+```
+
+That does not match the p24 finite objects:
+
+```text
+C_179 additive/Fourier internal axis size = 179,
+diamond residual orbit size              = 178.
+```
+
+So the Robert/KL source quotient theorem is a model for unit quotients and
+Artin action, not a direct `N=179` substitution.  The live theorem must place
+the cyclotomic/modular-unit divisor algebra after the trace-GCD Fourier
+quotient.
+
+The positive replacement is now checked: the `C_7 x C_179` Jacobi surface is
+the actual p24 post-`B/C` quotient of the `rho=p^780` cycle:
+
+```text
+ord_n(rho) = 38843 = 7 * 31 * 179,
+rho^7 = p^5460,  ord_n(p^5460)=31*179,
+B/C trace subgroup = <(p^5460)^179>, order 31,
+<rho>/<B/C subgroup> has order 1253 = 7*179.
+```
+
+In that quotient, `rho^179` gives the right order-7 axis, and `p^5460` gives
+the `C_179` axis; their product cosets cover all `1253` classes.  The
+strengthened symbolic Hasse-Davenport gate verifies this p24 quotient while
+also checking all `189036` right-mixed admissible pairs.  Lean records the
+same count in `TraceGcdProjectorTracePipelineGate.lean`.
+
+So the live theorem is now narrower:
+
+```text
+after B/C trace on the actual rho quotient <rho>/<rho^(7*179)>,
+the selected trace-GCD/CM-Lang divisor packet is the reduced Jacobi packet
+with the single J(1,1)/(q-2) anchor normalization.
+```
+
 ## The Anchor Split That Composes Old Work
 
 The selected-defect footprint of the single raw anchor correction is the

@@ -3501,6 +3501,177 @@ The proof must instead build a selected p-integral Robert factor attached to
 the correct unramified `157/211` phase, then apply the diamond/unit orbit on
 the `179` kernel side.
 
+Lean value-side contract update, 2026-06-08:
+
+```text
+p24/lean/TraceGcdDualConditionsValueSideGate.lean
+```
+
+now records the Robert-producer obligation as three finite shadows:
+
+```text
+selectedDefectSubtraction        -> C-zero fiber vanishes;
+degreeZeroAfterRightProjection   -> C-row sums are independent;
+inversionPairCompatibility       -> off-C-zero inversion complement constant.
+```
+
+Lean then checks the whole remaining formal chain:
+
+```text
+RobertProducerObligations
+  -> ValueSideIdentities
+  -> four dual Fourier families
+  -> admissible C-axis Jacobi span
+  -> forbidden bidegrees vanish
+  -> final internal trace zero
+  -> right/product coboundaries
+  -> H-coset verifier.
+```
+
+Verified:
+
+```text
+lean p24/lean/TraceGcdDualConditionsValueSideGate.lean
+PYTHONPATH=p24 python3 \
+  p24/trace_gcd_fixed_frequency_p24_selected_defect_value_producer_gate.py
+PYTHONPATH=p24 python3 \
+  p24/trace_gcd_fixed_frequency_p24_dual_conditions_value_side_gate.py
+```
+
+This is useful because it removes another layer of ambiguity from the missing
+theorem.  We do not need a vague "Robert unit helps" statement.  We need the
+selected p-integral Robert/KL factor to supply exactly those three finite
+shadows for each nontrivial right channel.
+
+The targeted source refresh also explains why plain literature search has not
+closed the gap.  Schertz gives Frobenius/Artin action formulas for elliptic
+units and proves that suitable single Klein/Siegel values or quotients
+generate ray class fields in many cases.  Shin's Siegel-Ramachandra paper
+packages this with explicit Shimura reciprocity and primitive-generator
+criteria.  But both lines are generator theorems over the relevant class field;
+they do not hand us the p24 selected trace-GCD packet.  Schertz's proof itself
+uses character sums whose nonvanishing depends on the correct conductor and
+character support.  That is the same obstruction our finite gates see:
+generic actual-CM packets have the selected zero fiber but fail row balance
+and inversion.  The missing theorem is therefore the identification theorem,
+not a missing citation:
+
+```text
+selected trace-GCD B/C packet
+  = selected p-integral Robert/KL exponent packet
+    with correct 157/211 unramified phase
+    and 179 diamond/unit orientation.
+```
+
+Important correction from the local TeX source audit: do not identify the
+p24 `C_179` axis with literal ray conductor `179` in the CM field.  For the
+p24 discriminant,
+
+```text
+D_K mod 179 = 44
+(D_K/179) = -1, so 179 is inert in K
+|((O_K/179 O_K)^*)| = 179^2 - 1 = 32040
+norm-one kernel size = 180
+source prime-conductor quotient order = 90
+```
+
+This does not match either:
+
+```text
+C_179 additive/Fourier internal axis size = 179
+diamond residual orbit size              = 178
+```
+
+The extended ray-kernel audit now prints:
+
+```text
+literal_ray_conductor_179_has_source_order_90_not_C179_or_diamond178=1
+p24_C179_axis_is_a_fourier_internal_axis_not_classical_ray_modulus_179=1
+```
+
+So the Robert/Kubert-Lang import must be understood as cyclotomic/modular-unit
+divisor algebra after the trace-GCD Fourier quotient, not as the classical
+Siegel-Ramachandra ray class field of modulus `179`.  The source quotient
+theorem
+
+```text
+g_[s/N,t/N](theta)^m / g_[0,1/N](theta)^m
+```
+
+is still a valuable model for Artin action and unit quotients, but setting
+`N=179` literally is the wrong object for the p24 reduced anchor.
+
+Positive quotient bridge after that correction: the abstract Jacobi surface
+`C_7 x C_179` is not detached from p24.  It is exactly the quotient of the
+actual p24 Frobenius cycle after the `B/C` trace.  With
+
+```text
+rho = p^780 mod n,
+ord_n(rho) = 38843 = 7 * 31 * 179,
+rho^7 = p^5460,
+ord_n(p^5460) = 5549 = 31 * 179,
+B/C trace subgroup = <(p^5460)^179>, order 31,
+```
+
+the quotient
+
+```text
+<rho> / <(p^5460)^179>
+```
+
+has order
+
+```text
+38843 / 31 = 1253 = 7 * 179.
+```
+
+Inside that quotient:
+
+```text
+image of rho^179 has order 7;
+image of p^5460 has order 179;
+their product cosets cover all 1253 quotient classes.
+```
+
+So the symbolic Hasse-Davenport/Jacobi packet on `C_7 x C_179` is now checked
+to live on the real post-`Tr_{B/C}` p24 quotient:
+
+```text
+PYTHONPATH=p24 python3 \
+  p24/trace_gcd_fixed_frequency_jacobi_sum_symbolic_hd_gate.py
+
+p24_internal_jacobi_quotient_rho_order=38843
+p24_internal_jacobi_quotient_rho7_equals_internal=1
+p24_internal_jacobi_quotient_internal_order=5549
+p24_internal_jacobi_quotient_b_over_c_generator_order=31
+p24_internal_jacobi_quotient_quotient_order_after_b_over_c_trace=1253
+p24_internal_jacobi_quotient_right_axis_quotient_order=7
+p24_internal_jacobi_quotient_c_axis_quotient_order=179
+p24_internal_jacobi_quotient_product_cosets_cover_quotient=1
+```
+
+Lean also records the count:
+
+```text
+lean p24/lean/TraceGcdProjectorTracePipelineGate.lean
+
+p24RhoCycleOrder = 38843
+p24AfterBOverCQuotientOrder = 7 * 179 = 1253
+```
+
+This is the current best formulation of the remaining theorem:
+
+```text
+after B/C trace on the actual rho quotient <rho>/<rho^(7*179)>,
+the selected trace-GCD/CM-Lang divisor packet is the reduced Jacobi packet
+with the single J(1,1)/(q-2) anchor normalization.
+```
+
+That is materially narrower than the earlier Robert/KL statement.  It no
+longer asks for a classical ray-class modulus `179`; it asks for a
+CM/Lang specialization on a concrete Frobenius-orbit quotient already present
+inside the p24 relative class layer.
+
 Sutherland Algorithm 2 maps cleanly onto the selected-chain fallback surface:
 take the subgroup `G` to have order `n=3107441`, so the intermediate
 polynomial `V` has degree `m=66254` and the specialized recovery polynomial

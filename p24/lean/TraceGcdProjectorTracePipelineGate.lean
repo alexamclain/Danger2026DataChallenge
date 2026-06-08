@@ -238,6 +238,10 @@ def p24QuotientCycleLength : Nat := 7
 def p24BOverCDegree : Nat := 31
 def p24COverEDegree : Nat := 179
 def p24InternalDegree : Nat := 5549
+def p24RhoCycleOrder : Nat :=
+  p24RightHCosets * p24BOverCDegree * p24COverEDegree
+def p24AfterBOverCQuotientOrder : Nat :=
+  p24RhoCycleOrder / p24BOverCDegree
 def p24InternalCosetBalanceCount : Nat := 560
 def p24RecombinedCosetBalanceCount : Nat := 8
 def p24CompressedVerifierEquations : Nat := 48
@@ -271,6 +275,19 @@ theorem p24_projector_trace_payload_subsqrt :
 
 theorem p24_internal_degree_factorization_named :
     p24BOverCDegree * p24COverEDegree = p24InternalDegree := by
+  decide
+
+theorem p24_rho_cycle_order_named :
+    p24RhoCycleOrder = 38843 := by
+  decide
+
+theorem p24_after_b_over_c_trace_is_jacobi_quotient :
+    p24AfterBOverCQuotientOrder =
+      p24RightHCosets * p24COverEDegree := by
+  decide
+
+theorem p24_after_b_over_c_trace_quotient_count :
+    p24AfterBOverCQuotientOrder = 1253 := by
   decide
 
 theorem p24_compressed_equation_split :
