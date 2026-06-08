@@ -471,6 +471,108 @@ So the adjacent-difference route is now a useful equivalent verifier shape,
 not a substitute proof.  The missing theorem remains the C-centered selected
 weighted CM/Lang packet.
 
+Targeted literature refresh: Sutherland's accelerated CM method justifies the
+selected-chain output surface (`m+n`) but still enumerates `G`-orbits of CM
+roots at CRT primes, so it does not solve the class-set-free producer.  The
+more relevant literature signal is Kubert-Lang/Robert modular units:
+specialized CM Siegel/Robert units are controlled by cyclotomic exponent sums
+with p-unit/parity congruence conditions plus a separate degree-zero quotient
+condition:
+
+```text
+sum n(d)*d = 0 mod c      reciprocity / p-unit congruence
+sum n(d) = 0 mod 2        root-of-unity hygiene
+sum n(d) = 0              degree-zero quotient
+```
+
+For p24 this points to a sharper theorem:
+
+```text
+after Tr_{B/C}, the selected trace-GCD weighted packet is the exponent packet
+of a degree-zero Robert/Kubert-Lang p-unit on the C_179 axis.
+```
+
+If that identification holds, the known centering conditions should give the
+missing "no trivial C/E component" statement: degree-zero after right
+projection is exactly the finite shadow of C-trivial-character vanishing.  The
+reciprocity congruence is a separate candidate source for the selected affine
+row balance / anchor scalar.  The rerun finite gates match this: plain
+cyclic/right-axis Stickelberger leaks all six forbidden bidegrees, while
+C-axis centered Stickelberger has `0/6` forbidden leaks, and C-axis Jacobi
+carry has `48/48` forbidden vanishings.  The immediate microscope is therefore
+an honest exponent-level identification; comparing KL exponents directly to
+finite-field `j`-value packets without a logarithmic/divisor map would be fake
+evidence.
+
+The selected-defect gate now checks the finite translation directly:
+
+```text
+KL/Robert degree-zero after right projection
+  iff row sums are independent
+  iff the forbidden C-trivial/right-nontrivial component vanishes.
+
+c=5,11,13:
+  kl_degree_zero_equiv_row_balance=3/3
+  affine_balance_forces_kl_degree_zero=3/3
+  inversion_complement_does_not_force_kl_degree_zero=3/3
+```
+
+The actual-CM value boundary remains a negative genericity control:
+selected-defect coefficients have `c_zero_fiber_origins=140/140`, but
+`row_sum_independent_origins=0/140` and `inversion_constant_origins=0/140`.
+Thus the Robert/Kubert-Lang route has to prove a real exponent/divisor
+identification for the selected weighted packet; it cannot be replaced by
+ordinary CM period symmetry or selected-section subtraction.
+
+The Robert route also composes with the reduced-anchor work.  The standard
+elliptic-unit product over nonzero kernel points has divisor shape
+
+```text
+sum_{Q in ker(a), Q != O}[Q] - (N(a)-1)[O],
+```
+
+up to the usual power/scalar normalization.  That is the same divisor already
+isolated by the reduced-anchor gates:
+
+```text
+p24_subgroup_order=179
+p24_kernel_polynomial_degree=89
+p24_kernel_divisor_pole_order=178
+whole_nonzero_subgroup_divisor_is_principal_for_odd_c=1
+```
+
+So the live theorem can be split more cleanly:
+
+```text
+1. Robert/KL degree-zero exponent packet gives C-trivial vanishing.
+2. Robert elliptic-unit kernel divisor gives the R_179 / K_H anchor unit.
+3. Missing: Shimura-reciprocity / trace-GCD specialization selecting the
+   correct p24 C_179 subgroup and identifying the B/C-traced weighted packet
+   with that Robert unit packet.
+```
+
+The distribution relation for Robert units is now the likely source of the
+selected affine row balance:
+
+```text
+prod_{bR=0} Theta_a(P+R) = Theta_a(beta P).
+```
+
+Evenness of the `x`-kernel product should supply inversion-pair compatibility.
+However, the norm has to be the diamond/unit norm on the `179` kernel side,
+not the cyclic `C/E` translation norm:
+
+```text
+diamond norm orbit size 178 -> R_179 residual;
+cyclic translation orbit size 179 -> telescopes to the trivial divisor.
+```
+
+The ray-kernel audit also says squarefree ray-unit distribution does not see
+the unramified `157/211` phases.  So the bad shortcut is closed: generic
+Robert unit plus ordinary norm loses the needed phase/anchor data.  The live
+producer has to construct the selected p-integral Robert factor first, then
+use the `179` diamond orbit.
+
 ## The Anchor Split That Composes Old Work
 
 The selected-defect footprint of the single raw anchor correction is the

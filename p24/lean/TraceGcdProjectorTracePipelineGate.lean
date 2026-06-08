@@ -28,6 +28,18 @@ def AllWeightedRightPotentials {Character : Type}
     (weightedPotential : Character → Prop) : Prop :=
   ∀ chi, weightedPotential chi
 
+def AllRobertCaxisCentered {Character : Type}
+    (robertCentered : Character → Prop) : Prop :=
+  ∀ chi, robertCentered chi
+
+def AllRobertDegreeZero {Character : Type}
+    (robertDegreeZero : Character → Prop) : Prop :=
+  ∀ chi, robertDegreeZero chi
+
+def AllCTrivialComponentsZero {Character : Type}
+    (cTrivialZero : Character → Prop) : Prop :=
+  ∀ chi, cTrivialZero chi
+
 def AllRowsCentered {Row : Type}
     (centered : Row → Prop) : Prop :=
   ∀ row, centered row
@@ -120,6 +132,104 @@ theorem hcoset_verifier_from_weighted_right_potentials
       weightedPotential rightCoboundary productCoboundary characterZero
       h_potential h_product h_character h_potentials)
 
+theorem projector_internal_trace_from_robert_caxis_centering
+    {Character : Type}
+    (robertCentered cTrivialZero finalTraceZero : Character → Prop)
+    (h_robert_c :
+      ∀ chi, robertCentered chi → cTrivialZero chi)
+    (h_c_trace :
+      ∀ chi, cTrivialZero chi → finalTraceZero chi)
+    (h_robert : AllRobertCaxisCentered robertCentered) :
+    AllProjectorInternalTraceZero finalTraceZero := by
+  intro chi
+  exact h_c_trace chi (h_robert_c chi (h_robert chi))
+
+theorem c_trivial_components_from_robert_degree_zero
+    {Character : Type}
+    (robertDegreeZero cTrivialZero : Character → Prop)
+    (h_degree_zero :
+      ∀ chi, robertDegreeZero chi → cTrivialZero chi)
+    (h_robert : AllRobertDegreeZero robertDegreeZero) :
+    AllCTrivialComponentsZero cTrivialZero := by
+  intro chi
+  exact h_degree_zero chi (h_robert chi)
+
+theorem projector_internal_trace_from_robert_degree_zero
+    {Character : Type}
+    (robertDegreeZero cTrivialZero finalTraceZero : Character → Prop)
+    (h_degree_zero :
+      ∀ chi, robertDegreeZero chi → cTrivialZero chi)
+    (h_c_trace :
+      ∀ chi, cTrivialZero chi → finalTraceZero chi)
+    (h_robert : AllRobertDegreeZero robertDegreeZero) :
+    AllProjectorInternalTraceZero finalTraceZero := by
+  intro chi
+  exact h_c_trace chi (h_degree_zero chi (h_robert chi))
+
+theorem hcoset_verifier_from_robert_caxis_centering
+    {Character Row Coset : Type}
+    (robertCentered cTrivialZero finalTraceZero rightCoboundary :
+      Character → Prop)
+    (productCoboundary characterZero : Character → Row → Prop)
+    (centered : Row → Prop)
+    (hcosetZero : Row → Coset → Prop)
+    (h_robert_c :
+      ∀ chi, robertCentered chi → cTrivialZero chi)
+    (h_c_trace :
+      ∀ chi, cTrivialZero chi → finalTraceZero chi)
+    (h_right :
+      ∀ chi, finalTraceZero chi → rightCoboundary chi)
+    (h_product :
+      ∀ chi row, rightCoboundary chi → productCoboundary chi row)
+    (h_character :
+      ∀ chi row, productCoboundary chi row → characterZero chi row)
+    (h_hcoset :
+      AllRowsCentered centered →
+      AllCharacterPayloadZero characterZero →
+      AllHCosetSumsZero hcosetZero)
+    (h_robert : AllRobertCaxisCentered robertCentered)
+    (h_centered : AllRowsCentered centered) :
+    AllHCosetSumsZero hcosetZero := by
+  exact hcoset_verifier_from_projector_internal_trace
+    finalTraceZero rightCoboundary productCoboundary characterZero
+    centered hcosetZero h_right h_product h_character h_hcoset
+    (projector_internal_trace_from_robert_caxis_centering
+      robertCentered cTrivialZero finalTraceZero
+      h_robert_c h_c_trace h_robert)
+    h_centered
+
+theorem hcoset_verifier_from_robert_degree_zero
+    {Character Row Coset : Type}
+    (robertDegreeZero cTrivialZero finalTraceZero rightCoboundary :
+      Character → Prop)
+    (productCoboundary characterZero : Character → Row → Prop)
+    (centered : Row → Prop)
+    (hcosetZero : Row → Coset → Prop)
+    (h_degree_zero :
+      ∀ chi, robertDegreeZero chi → cTrivialZero chi)
+    (h_c_trace :
+      ∀ chi, cTrivialZero chi → finalTraceZero chi)
+    (h_right :
+      ∀ chi, finalTraceZero chi → rightCoboundary chi)
+    (h_product :
+      ∀ chi row, rightCoboundary chi → productCoboundary chi row)
+    (h_character :
+      ∀ chi row, productCoboundary chi row → characterZero chi row)
+    (h_hcoset :
+      AllRowsCentered centered →
+      AllCharacterPayloadZero characterZero →
+      AllHCosetSumsZero hcosetZero)
+    (h_robert : AllRobertDegreeZero robertDegreeZero)
+    (h_centered : AllRowsCentered centered) :
+    AllHCosetSumsZero hcosetZero := by
+  exact hcoset_verifier_from_projector_internal_trace
+    finalTraceZero rightCoboundary productCoboundary characterZero
+    centered hcosetZero h_right h_product h_character h_hcoset
+    (projector_internal_trace_from_robert_degree_zero
+      robertDegreeZero cTrivialZero finalTraceZero
+      h_degree_zero h_c_trace h_robert)
+    h_centered
+
 def p24LeftRows : Nat := 156
 def p24NontrivialRightCharacters : Nat := 6
 def p24RightHCosets : Nat := 7
@@ -133,6 +243,8 @@ def p24RecombinedCosetBalanceCount : Nat := 8
 def p24CompressedVerifierEquations : Nat := 48
 def p24CompressedOcticEquations : Nat := 42
 def p24CompressedAnchorEquations : Nat := 6
+def p24RobertCaxisPrime : Nat := 179
+def p24RobertCaxisHalfDegree : Nat := 89
 def p24RawPacketTerms : Nat :=
   p24NontrivialRightCharacters * p24QuotientCycles * p24QuotientCycleLength
 
@@ -168,6 +280,14 @@ theorem p24_compressed_equation_split :
 
 theorem p24_weighted_character_potential_count :
     p24NontrivialRightCharacters = 6 := by
+  decide
+
+theorem p24_robert_caxis_nonzero_terms :
+    p24RobertCaxisPrime - 1 = 178 := by
+  decide
+
+theorem p24_robert_caxis_real_half_degree :
+    2 * p24RobertCaxisHalfDegree = p24RobertCaxisPrime - 1 := by
   decide
 
 theorem p24_recombined_balance_target_subsqrt :

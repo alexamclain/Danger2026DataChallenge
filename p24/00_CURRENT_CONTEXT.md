@@ -3306,6 +3306,201 @@ This closes the adjacent-difference route as a finite equivalence, not as an
 arithmetic proof replacement.  Any successful proof still has to create the
 C-centered selected weighted CM/Lang packet itself.
 
+Targeted literature refresh, 2026-06-08:
+
+```text
+Sutherland, Accelerating the CM method:
+  decomposed class equations explain the selected-chain surface exactly
+  (V of degree m, U_y of degree n, payload m+n), but the algorithm still
+  obtains these data by enumerating G-orbits of CM roots at CRT primes.
+  It validates the sub-sqrt output/space surface, not the class-set-free
+  producer theorem.
+
+Kubert-Lang / Robert modular units:
+  CM values of Siegel/Robert units are expressed through cyclotomic unit
+  exponent sums.  There are two layers to keep separate:
+      p-unit / reciprocity congruence: sum n(d)*d = 0 mod c
+      parity / root-of-unity hygiene:  sum n(d) = 0 mod 2
+      degree-zero quotient condition:  sum n(d) = 0
+  The last condition is the one whose finite shadow is "no trivial C
+  character"; the congruence condition is a separate candidate source for
+  the selected affine/anchor bookkeeping.
+
+Weil/Jacobi-sum Hecke characters:
+  Jacobi sums naturally provide Hecke characters and Gauss-normalized
+  weights, but this only supplies the ambient language; it does not choose
+  the selected p24 packet.
+```
+
+Sources checked:
+
+```text
+https://doi.org/10.1112/S1461157012001015
+https://www.numdam.org/article/BSMF_1979__107__161_0.pdf
+https://numdam.org/articles/10.5802/pmb.25/
+https://www.numdam.org/item/CM_1984__53_3_277_0/
+https://handwiki.org/wiki/Elliptic_unit
+```
+
+This gives a more concrete theorem candidate:
+
+```text
+Robert/Kubert-Lang C-axis identification theorem:
+  after Tr_{B/C}, the selected trace-GCD weighted packet is the logarithmic
+  / divisor exponent packet of a degree-zero Robert/Kubert-Lang modular
+  p-unit on the C_179 axis.
+```
+
+If this identification is proved, the literature's two exponent-centering
+layers should imply the missing p24 statement as follows:
+
+```text
+degree-zero on each projected C-axis packet
+  -> no trivial C/E component in each nontrivial right channel;
+
+reciprocity / first-moment congruence
+  -> expected source of the selected affine row balance / anchor scalar.
+```
+
+The local finite gates agree with exactly this level of strength:
+
+```text
+plain cyclic Stickelberger:        forbidden nonzero = 6/6
+plain right-axis Stickelberger:    forbidden nonzero = 6/6
+C-axis centered Stickelberger:     forbidden nonzero = 0/6
+C-axis Jacobi carry:               forbidden zero    = 48/48
+generic Jacobi carry:              leaks             = 48/48
+internal character filter:         zero trivial C component iff final
+                                   nested internal trace zero
+```
+
+So the next proof is no longer "find any Stickelberger/Jacobi relation."  It
+is the very specific identification of the selected trace-GCD packet with the
+Robert/Kubert-Lang C-axis unit packet, with degree-zero attached after the
+right projector.  This is also the crisp failure point to test in faithful
+small CM data, but only if an honest logarithmic/divisor exponent map is
+available: comparing KL exponents directly to finite-field `j`-value packets
+without that map would be fake evidence.  The existing actual-CM value gates
+therefore remain negative genericity tests, not a Robert-exponent comparison.
+
+The selected-defect producer gate now includes this finite bridge:
+
+```text
+KL/Robert degree-zero after right projection
+  iff row sums are independent across right classes
+  iff the forbidden C-trivial / right-nontrivial component vanishes.
+
+checked for c=5,11,13:
+  kl_degree_zero_equiv_row_balance=3/3
+  affine_balance_forces_kl_degree_zero=3/3
+  inversion_complement_does_not_force_kl_degree_zero=3/3
+```
+
+This separates the Robert/KL obligations:
+
+```text
+degree-zero exponent identity         -> C-trivial vanishing / affine row sum
+inversion or pair-product identity    -> conjugate-pair compatibility
+reciprocity / first-moment congruence -> likely anchor scalar/sign source
+```
+
+The actual-CM value boundary rerun still gives:
+
+```text
+selected_defect_coefficients:
+  c_zero_fiber_origins=140/140
+  row_sum_independent_origins=0/140
+  inversion_constant_origins=0/140
+```
+
+So the next arithmetic theorem is not generic actual CM, and not merely
+selected-defect subtraction.  It must identify the selected weighted packet
+with a genuine Robert/Kubert-Lang exponent/divisor packet after `Tr_{B/C}`.
+
+Robert elliptic units also reconnect this abstract exponent language to the
+existing reduced-anchor kernel-polynomial surface.  The standard elliptic-unit
+product formula has the shape
+
+```text
+Theta_a(P) = scalar * Delta_E^(N(a)-1)
+             * prod_{aQ=0, Q != O} (x(P)-x(Q))^(-6),
+```
+
+so its divisor is exactly the nonzero kernel divisor plus the matching pole at
+`O`, up to the conventional power/scalar normalization.  The existing gates
+verify that this is the p24 reduced-anchor object:
+
+```text
+reduced_anchor_kernel_polynomial_gate:
+  p24_subgroup_order=179
+  p24_kernel_polynomial_degree=89
+  p24_kernel_divisor_pole_order=178
+  unsquared_kernel_polynomial_matches_R_c_not_R_c_squared=1
+
+reduced_anchor_elliptic_subgroup_divisor_gate:
+  p24_nonzero_subgroup_divisor_degree=178
+  p24_nonzero_subgroup_sum_mod_c=0
+  whole_nonzero_subgroup_divisor_is_principal_for_odd_c=1
+```
+
+This gives the cleanest current composition:
+
+```text
+Robert/KL degree-zero exponent packet
+  -> C-trivial/right-nontrivial vanishing;
+
+Robert elliptic-unit kernel divisor
+  -> reduced-anchor R_179 / K_H local-unit payload;
+
+Shimura reciprocity / trace-GCD specialization
+  -> still missing: select the correct p24 C_179 subgroup and prove the
+     B/C-traced weighted packet is this Robert unit packet.
+```
+
+The Robert distribution relation suggests where the selected affine row
+balance should come from: for an auxiliary ideal `b=(beta)`,
+
+```text
+prod_{bR=0} Theta_a(P+R) = Theta_a(beta P)
+```
+
+so a translated kernel-product row has a controlled norm/product over the
+`C_179` translations.  This is the right conceptual source for the selected
+row-product ratio, while evenness of the `x`-kernel product is the right
+source for inversion-pair compatibility.
+
+But the norm must be the correct one.  Reruns of the reduced-anchor norm gates
+show:
+
+```text
+diamond/unit norm over (Z/179Z)^*:
+  p24_diamond_orbit_size=178
+  diamond_norm_of_one_point_factor_is_the_R_c_residual=1
+
+ordinary cyclic C/E translation norm:
+  p24_cyclic_translation_orbit_size=179
+  cyclic_C_over_E_translation_norm_of_one_point_factor_is_trivial=1
+  ordinary_cyclic_trace_norm_erases_the_selected_anchor_residual=1
+```
+
+Together with the ray-kernel audit:
+
+```text
+modulo_ell_ray_kernel_has_no_ell_primary_factor_for_ell=157_or_211=1
+ray_distribution_relations_do_not_collapse_the_p24_odd_relative_class_phases
+```
+
+this rules out the tempting but wrong Robert-unit shortcut:
+
+```text
+take an ordinary ray/cyclic norm of a generic Robert unit
+  -> phase data dies and/or the R_179 anchor residual telescopes away.
+```
+
+The proof must instead build a selected p-integral Robert factor attached to
+the correct unramified `157/211` phase, then apply the diamond/unit orbit on
+the `179` kernel side.
+
 Sutherland Algorithm 2 maps cleanly onto the selected-chain fallback surface:
 take the subgroup `G` to have order `n=3107441`, so the intermediate
 polynomial `V` has degree `m=66254` and the specialized recovery polynomial
