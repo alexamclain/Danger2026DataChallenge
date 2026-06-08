@@ -135,6 +135,27 @@ rational `179`-isogeny: for the selected trace, `179` is Atkin and does not
 divide `#E(F_p)`.  The `179`-kernel object must live in the auxiliary
 CM/Lang/cyclotomic layer.
 
+## Literature Gap After Targeted Search
+
+Sutherland's accelerated CM decomposition is the closest known analogue to our
+desired sub-sqrt scale.  It obtains a root of `H_D mod q` from a decomposition
+`mn=h(D)` and has space proportional to `m+n`.  The construction of the
+intermediate polynomial uses symmetric functions of subgroup orbits, and the
+paper explicitly notes that it need not know the coefficients of the full
+class polynomial, but must be able to enumerate the relevant subgroup orbits
+of the roots.
+
+That distinction is exactly our gap.  The accelerated-CM machinery looks like
+a good fit for a degree-`3107441` recovery object or a selected-chain surface.
+It is not yet a proof of the smaller four-element p-unit payload, because our
+payload needs a selected embedded phase or equivalent determinant/unit
+identity without first materializing the class-set orbit.
+
+Classical elliptic/Siegel/Ramachandra-unit papers similarly provide explicit
+ray-class generators and useful unit certification, but the route from those
+generators to a conductor-one unramified `157/211` phase selector is not
+visible from the standard statements.
+
 ## Current Non-Enumerative Selector Candidate
 
 The only plausible selector route we have besides a direct CM/Lang producer is

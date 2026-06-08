@@ -2993,3 +2993,35 @@ interpretation: classical elliptic/Siegel/Ramachandra units are relevant to
 ray-class generators and post-selection unit certification, but they do not
 automatically supply the p24 conductor-one unramified `157/211` Hilbert-class
 phase selection.  This is the precise point to ask a human expert about.
+
+2026-06-08 targeted literature refresh:
+
+Sutherland's "Accelerating the CM method" is the closest known published
+analogue to the p24 selected-chain scale.  It decomposes the ring class field
+with `mn=h(D)` and obtains a root of `H_D mod q` without necessarily computing
+the coefficients of `H_D`; the asymptotic space is `O((m+n) log q)`.  However,
+the construction of the intermediate decomposition polynomials uses symmetric
+functions of subgroup orbits and explicitly still requires enumerating the
+relevant `G`-orbits of roots.  Therefore it plausibly supplies or validates a
+degree-`3107441` recovery-object route, but it is not by itself the
+four-element p-unit producer.
+
+The finite selector lower-bound gate was sharpened accordingly:
+
+```text
+lean p24/lean/SelectorDegreeLowerBoundGate.lean
+PASS, with only the usual Lean release-query warning
+
+new guardrails:
+  2 + 157 + 211 + 3107441 + 179 + 89 < 10^12
+  89 < 3107441
+  179 < 3107441
+  5549 < 3107441
+```
+
+Interpretation: the `R_179` / kernel-polynomial anchor is a small
+post-producer p-unit check.  Its degree is too small to be the recovery-coset
+selector.  A surviving positive route must either carry the growing
+degree-`3107441` embedded recovery object at sub-sqrt scale, or prove a
+stronger phase-aware p-unit/determinant identity that avoids selecting the
+class-set child explicitly.
