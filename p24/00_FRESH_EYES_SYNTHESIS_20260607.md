@@ -856,16 +856,27 @@ Hecke-ratio statement:
 
 ```text
 sameInfinityType
-sameFiniteLocalTypeOnKilledConductorPart
-killedLocalRayPartHasNoPostBCCharacterSupport
+ratioOrderDividesPostBCQuotient
+killedLocalRayOrderCoprimeToPostBCQuotient
+restrictionOrderDividesKilledLocalRayOrder
+restrictionTrivialByCoprimeOrders
 ratioFactorsThroughUnramifiedPostBCQuotient
-ratioMatchesRightAxisSelector
-ratioMatchesCAxisSelector
+rightAxisSelectorFromShift6Convention
+cAxisResidualSelector:
+  rightAxisFixedLeavesPureC179Residual
+  cAxisSeparatesResidualCharacters
+  pureC179ResidualPreservesValueSideIdentities
 ```
 
-The `killedLocalRayPartHasNoPostBCCharacterSupport` line is finite: the
-visible ray/local order `768960` is coprime to `1253`, and the symbolic gate
-records gcd `1` with the right axis, C-axis, and full post-`B/C` quotient.
+The killed local/ray line is finite once the ratio has post-`B/C` order.  The
+visible ray/local order `768960` is coprime to `1253`, so any ratio character
+of order dividing `1253` has trivial restriction to that killed local part.
+The symbolic gate now records the order bound, gcd `1`, and the forced
+triviality; Lean records the p24 count as
+`p24_visible_ray_restriction_forced_trivial_by_coprime_orders`.
+The B/C trace projection supplies the order-bound side: ratios of two
+surviving quotient packets have order dividing `1253`, checked over all
+`1253^2` survivor pairs.
 
 The two axis checks imply the single `rho` value check because
 
@@ -875,7 +886,31 @@ rho = (rho^179)^2 * (rho^7)^128
 ```
 
 The symbolic gate checks this reconstruction and all `1253^2` quotient
-character pairs.  The separate packet-identification statement still remains.
+character pairs.  The right-axis check has now been reduced to convention
+bookkeeping: `rho` shifts the right-H quotient by `6`, has post-`B/C` right
+coordinate `2`, and the C-axis fixes the right-H quotient, so `rho^179`
+corresponds to right-H shift `3`.  After fixing that right residue, the
+residual quotient characters are exactly the `179` exponents `1+7s`; dividing
+by the selected Artin coordinate leaves a pure `C_179` character, and the
+C-axis separates those `179` possibilities.  The new exhaustive gate checks
+that all `179` pure `C_179` residuals preserve the value-side identities, so
+the exact pure `C_179` selector value is not needed for the H-coset verifier.
+The separate packet-identification statement remains, weakened to equality up
+to verifier-invisible pure `C_179` residual.
+
+That weakened statement now has a named Lean handoff:
+
+```text
+punctured Hasse-Davenport rows
++ selected R_179 / kernel-polynomial degenerate anchor
++ selected-child subtraction compatibility
+=> verifier-equivalent reduced Jacobi carry.
+```
+
+The p24 accounting is `189036` right-mixed pairs, `1246` nontrivial residual
+Fourier channels, and a degree-`89` kernel-polynomial anchor.  The remaining
+arithmetic theorem is the selected p-integral CM/Lang specialization of that
+`R_179` anchor, not an exact full Artin-character equality.
 
 ```text
 Kubert-Lichtenbaum mixed-level Jacobi-sum packet

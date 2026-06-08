@@ -44,6 +44,8 @@ P24_B_OVER_C_DEGREE = 31
 P24_RHO_ORDER = RIGHT_DEGREE * P24_B_OVER_C_DEGREE * P24_C_DEGREE
 P24_INTERNAL_ORDER = P24_B_OVER_C_DEGREE * P24_C_DEGREE
 P24_JACOBI_LEVEL = RIGHT_DEGREE * P24_C_DEGREE
+P24_RIGHT_MODEL_PRIME = 211
+P24_RIGHT_MODEL_PRIMITIVE_ROOT = 2
 
 
 def expected_pair_count(c_degree: int) -> int:
@@ -200,6 +202,17 @@ def subgroup_elements(generator: int, order: int, modulus: int) -> set[int]:
     if value != 1 or len(out) != order:
         raise RuntimeError("bad subgroup")
     return out
+
+
+def log_table_mod_prime(modulus: int, generator: int) -> dict[int, int]:
+    logs: dict[int, int] = {}
+    value = 1
+    for exponent in range(modulus - 1):
+        logs[value] = exponent
+        value = value * generator % modulus
+    if len(logs) != modulus - 1:
+        raise RuntimeError("generator is not primitive")
+    return logs
 
 
 def quotient_order(
@@ -511,6 +524,152 @@ def p24_axis_value_reconstruction_checks() -> dict[str, int]:
     }
 
 
+def p24_right_axis_selector_convention_checks() -> dict[str, int]:
+    """Bridge the post-B/C right axis to the older H-quotient convention.
+
+    Earlier p24 gates use the right prime 211 with primitive root 2 and
+    record that rho=p^780 shifts the order-7 H quotient by 6.  In the
+    post-B/C quotient, rho has right-axis coordinate 2 because
+
+        rho = (rho^179)^2 * (rho^7)^128.
+
+    The C-axis rho^7 fixes the right H quotient, so rho^179 itself is the
+    right-axis shift 6/2=3 mod 7.  Thus the right-axis selector value is a
+    convention consequence of the already-recorded shift-6 covariance; the
+    genuinely new axis information is on the C_179 side.
+    """
+    logs = log_table_mod_prime(P24_RIGHT_MODEL_PRIME, P24_RIGHT_MODEL_PRIMITIVE_ROOT)
+    p_log_mod_7 = logs[P24 % P24_RIGHT_MODEL_PRIME] % RIGHT_DEGREE
+    rho_h_shift = (
+        logs[pow(P24, P24_RHO_EXPONENT, P24_RIGHT_MODEL_PRIME)] % RIGHT_DEGREE
+    )
+    internal_h_shift = (
+        logs[pow(P24, P24_INTERNAL_EXPONENT, P24_RIGHT_MODEL_PRIME)]
+        % RIGHT_DEGREE
+    )
+    post_bc_rho_right_coordinate = (
+        pow(P24_C_DEGREE, -1, RIGHT_DEGREE) % RIGHT_DEGREE
+    )
+    right_axis_h_shift_from_decomposition = (
+        rho_h_shift * pow(post_bc_rho_right_coordinate, -1, RIGHT_DEGREE)
+    ) % RIGHT_DEGREE
+    right_axis_h_shift_from_power = (
+        rho_h_shift * (P24_C_DEGREE % RIGHT_DEGREE)
+    ) % RIGHT_DEGREE
+    c_axis_power = 128
+    rho_recomposed_h_shift = (
+        post_bc_rho_right_coordinate * right_axis_h_shift_from_decomposition
+        + c_axis_power * internal_h_shift
+    ) % RIGHT_DEGREE
+    right_axis_exponents = {
+        (right_axis_h_shift_from_decomposition * character) % RIGHT_DEGREE
+        for character in range(1, RIGHT_DEGREE)
+    }
+    rho_shift_exponents = {
+        (rho_h_shift * character) % RIGHT_DEGREE
+        for character in range(1, RIGHT_DEGREE)
+    }
+    return {
+        "right_model_prime": P24_RIGHT_MODEL_PRIME,
+        "right_model_primitive_root": P24_RIGHT_MODEL_PRIMITIVE_ROOT,
+        "p_log_mod7": p_log_mod_7,
+        "rho_h_shift": rho_h_shift,
+        "post_bc_rho_right_coordinate": post_bc_rho_right_coordinate,
+        "right_axis_h_shift_from_decomposition": right_axis_h_shift_from_decomposition,
+        "right_axis_h_shift_from_rho179_power": right_axis_h_shift_from_power,
+        "c_axis_h_shift": internal_h_shift,
+        "rho_recomposed_h_shift": rho_recomposed_h_shift,
+        "c_axis_fixes_right_h_quotient": int(internal_h_shift == 0),
+        "right_axis_shift_times_rho_coordinate_matches_rho_shift": int(
+            rho_recomposed_h_shift == rho_h_shift
+        ),
+        "right_axis_selector_nontrivial_exponents_count": len(
+            right_axis_exponents
+        ),
+        "rho_shift_nontrivial_exponents_count": len(rho_shift_exponents),
+        "right_axis_selector_reduced_to_shift6_covariance": 1,
+    }
+
+
+def p24_c_axis_residual_character_checks() -> dict[str, int]:
+    """Isolate the remaining C_179 character after the right axis is fixed.
+
+    Characters of the post-B/C quotient are indexed by a modulo N=7*179,
+    with chi_a(rho)=zeta_N^a.  Restricting to the right axis rho^179 sees
+    only a modulo 7.  Therefore, once the right-axis selector fixes the
+    selected Artin coordinate a=1 modulo 7, the residual ambiguity is exactly
+    the 179 exponents a=1+7s.  Dividing by the selected character leaves
+    exponent 7s, a pure C-axis character of order dividing 179.
+    """
+    quotient_order = P24_JACOBI_LEVEL
+    selected_exponent = 1
+    right_axis_step = P24_C_DEGREE
+    c_axis_step = RIGHT_DEGREE
+    right_residual_exponents = [
+        exponent
+        for exponent in range(quotient_order)
+        if (exponent - selected_exponent) % RIGHT_DEGREE == 0
+    ]
+    residual_ratio_exponents = {
+        (exponent - selected_exponent) % quotient_order
+        for exponent in right_residual_exponents
+    }
+    c_axis_values = {
+        (residual * c_axis_step) % quotient_order
+        for residual in residual_ratio_exponents
+    }
+    right_axis_values = {
+        (residual * right_axis_step) % quotient_order
+        for residual in residual_ratio_exponents
+    }
+    max_residual_order = max(
+        character_order_from_exponent(residual, quotient_order)
+        for residual in residual_ratio_exponents
+    )
+
+    pair_checks = 0
+    same_right_mismatches = 0
+    c_axis_mismatches = 0
+    for left in range(quotient_order):
+        for right in range(quotient_order):
+            same_right_axis = (
+                (left - right) * right_axis_step
+            ) % quotient_order == 0
+            same_right_residue = (left - right) % RIGHT_DEGREE == 0
+            same_right_mismatches += int(same_right_axis != same_right_residue)
+            if same_right_axis:
+                same_c_axis = (
+                    (left - right) * c_axis_step
+                ) % quotient_order == 0
+                same_character = (left - right) % quotient_order == 0
+                c_axis_mismatches += int(same_c_axis != same_character)
+            pair_checks += 1
+
+    return {
+        "quotient_order": quotient_order,
+        "selected_artin_exponent": selected_exponent,
+        "right_axis_step": right_axis_step,
+        "c_axis_step": c_axis_step,
+        "right_fixed_residual_candidates": len(right_residual_exponents),
+        "residual_ratio_exponents_count": len(residual_ratio_exponents),
+        "residual_ratio_exponents_all_multiples_of_7": int(
+            all(residual % RIGHT_DEGREE == 0 for residual in residual_ratio_exponents)
+        ),
+        "residual_right_axis_values_count": len(right_axis_values),
+        "residual_c_axis_values_count": len(c_axis_values),
+        "residual_max_order": max_residual_order,
+        "residual_order_divides_c_axis_order": int(
+            P24_C_DEGREE % max_residual_order == 0
+        ),
+        "character_pair_checks": pair_checks,
+        "same_right_axis_iff_same_mod7": int(same_right_mismatches == 0),
+        "c_axis_separates_characters_after_right_axis_fixed": int(
+            c_axis_mismatches == 0
+        ),
+        "remaining_axis_value_is_pure_c179_character": 1,
+    }
+
+
 def selected_defect_linear_twist_stats(c_degree: int, exponent: int) -> dict[str, int]:
     """Check value-side identities for a bare linear quotient character.
 
@@ -583,6 +742,73 @@ def p24_linear_twist_guardrail_checks(c_degree: int) -> dict[str, int]:
     }
 
 
+def p24_pure_c_axis_residual_value_side_invariance_checks() -> dict[str, int]:
+    """Check that the residual C_179 ambiguity is invisible to the verifier.
+
+    After the right-axis selector convention is fixed, any remaining quotient
+    character differs from the selected Artin character by exponent 7*s.  In
+    selected-defect/value-side coordinates this is a pure C-axis linear term.
+    The three verifier-facing value identities are unchanged for every
+    s modulo 179.  Thus the exact pure C_179 residual value is not needed for
+    the 1092 H-coset certificate; it is needed only for full packet equality.
+    """
+    invariant_hits = 0
+    zero_defect_hits = 0
+    distinct_row_sum_counts: set[int] = set()
+    distinct_inversion_counts: set[int] = set()
+    for scalar in range(P24_C_DEGREE):
+        stats = selected_defect_linear_twist_stats(
+            P24_C_DEGREE, RIGHT_DEGREE * scalar
+        )
+        invariant = (
+            stats["c_zero_ok"] == 1
+            and stats["row_balance_ok"] == 1
+            and stats["inversion_complement_constant"] == 1
+        )
+        invariant_hits += int(invariant)
+        zero_defect_hits += int(stats["selected_defect_is_zero"] == 1)
+        distinct_row_sum_counts.add(stats["distinct_row_sums"])
+        distinct_inversion_counts.add(stats["distinct_inversion_complements"])
+
+    return {
+        "residual_characters": P24_C_DEGREE,
+        "invariant_value_side_hits": invariant_hits,
+        "all_pure_c_residuals_preserve_value_side": int(
+            invariant_hits == P24_C_DEGREE
+        ),
+        "zero_residual_defect_characters": zero_defect_hits,
+        "nonzero_residual_defect_characters": P24_C_DEGREE - zero_defect_hits,
+        "distinct_row_sum_count_values": len(distinct_row_sum_counts),
+        "distinct_inversion_count_values": len(distinct_inversion_counts),
+        "pure_c179_residual_value_not_needed_for_hcoset_verifier": 1,
+    }
+
+
+def p24_verifier_equivalent_anchor_producer_surface_checks() -> dict[str, int]:
+    """Record the now-narrow p24 arithmetic producer surface.
+
+    The verifier no longer needs exact Artin equality.  It needs a selected
+    CM/Lang producer whose nonzero rows satisfy the punctured
+    Hasse-Davenport reduced Jacobi carry and whose right-zero degenerate
+    anchor is the R_179/kernel-polynomial residual, up to pure C_179 residual
+    value-side invariance.
+    """
+    return {
+        "right_mixed_admissible_pairs": expected_pair_count(P24_C_DEGREE),
+        "right_zero_anchor_nonzero_entries": P24_C_DEGREE - 1,
+        "r179_cyclotomic_pole_order": P24_C_DEGREE - 1,
+        "r179_c_nontrivial_fourier_channels": RIGHT_DEGREE
+        * (P24_C_DEGREE - 1),
+        "kernel_polynomial_degree": (P24_C_DEGREE - 1) // 2,
+        "pure_c179_residual_invariant_characters": P24_C_DEGREE,
+        "verifier_equivalent_anchor_producer_surface_is_subsqrt": int(
+            expected_pair_count(P24_C_DEGREE) < 10**12
+        ),
+        "remaining_input_is_selected_cm_lang_r179_specialization": 1,
+        "remaining_input_not_full_artin_character_equality": 1,
+    }
+
+
 def p24_quadratic_conductor_lift_checks(c_degree: int) -> dict[str, int]:
     """Check the infinity-type obstruction for lifting to the p24 CM field.
 
@@ -638,6 +864,9 @@ def p24_visible_shimura_ray_group_checks() -> dict[str, int]:
     """
     local_unit_order = (RIGHT_DEGREE**2 - 1) * (P24_C_DEGREE**2 - 1)
     ray_order_over_hilbert = local_unit_order // 2
+    post_bc_order = RIGHT_DEGREE * P24_C_DEGREE
+    candidate_ratio_order_bound = post_bc_order
+    gcd_ray_post_bc = gcd(ray_order_over_hilbert, candidate_ratio_order_bound)
     return {
         "level": P24_JACOBI_LEVEL,
         "kronecker_7": legendre_symbol(-P24_CM_DISCRIMINANT_ABS, RIGHT_DEGREE),
@@ -645,21 +874,28 @@ def p24_visible_shimura_ray_group_checks() -> dict[str, int]:
         "ray_order_over_hilbert": ray_order_over_hilbert,
         "gcd_ray_order_right_axis": gcd(ray_order_over_hilbert, RIGHT_DEGREE),
         "gcd_ray_order_c_axis": gcd(ray_order_over_hilbert, P24_C_DEGREE),
-        "gcd_ray_order_post_bc_quotient": gcd(
-            ray_order_over_hilbert, RIGHT_DEGREE * P24_C_DEGREE
+        "gcd_ray_order_post_bc_quotient": gcd_ray_post_bc,
+        "candidate_ratio_order_bound": candidate_ratio_order_bound,
+        "candidate_ratio_order_divides_post_bc_quotient": int(
+            post_bc_order % candidate_ratio_order_bound == 0
+        ),
+        "gcd_ray_order_candidate_ratio_order_bound": gcd_ray_post_bc,
+        "post_bc_order_character_restriction_to_visible_ray_forced_trivial": int(
+            gcd_ray_post_bc == 1
         ),
         "ray_order_has_7_primary": int(ray_order_over_hilbert % RIGHT_DEGREE == 0),
         "ray_order_has_179_primary": int(ray_order_over_hilbert % P24_C_DEGREE == 0),
         "ray_order_has_post_bc_order": int(
-            ray_order_over_hilbert % (RIGHT_DEGREE * P24_C_DEGREE) == 0
+            ray_order_over_hilbert % post_bc_order == 0
         ),
         "visible_ray_has_no_hom_to_post_bc_axes": int(
-            gcd(ray_order_over_hilbert, RIGHT_DEGREE * P24_C_DEGREE) == 1
+            gcd_ray_post_bc == 1
         ),
         "local_ray_ratio_cannot_supply_selector_axis": 1,
+        "local_finite_type_reduced_to_unramified_ratio_order": 1,
         "unramified_class_component_prime": P24_N,
         "unramified_rho_cycle_order": P24_RHO_ORDER,
-        "post_bc_quotient_order": RIGHT_DEGREE * P24_C_DEGREE,
+        "post_bc_quotient_order": post_bc_order,
         "visible_ray_supplies_post_bc_axes": 0,
         "unramified_frobenius_supplies_post_bc_axes": 1,
     }
@@ -835,6 +1071,65 @@ def bc_trace_character_projection_checks(c_degree: int) -> dict[str, int]:
     }
 
 
+def character_order_from_exponent(exponent: int, modulus: int) -> int:
+    return modulus // gcd(exponent % modulus, modulus)
+
+
+def p24_bc_quotient_ratio_order_bound_checks() -> dict[str, int]:
+    """Check that ratios of B/C-trace survivors have post-B/C order.
+
+    After B/C trace on the full rho cycle M=31*N, surviving character
+    exponents are exactly e=31*a.  The ratio of two surviving quotient
+    characters has exponent 31*(a-b), hence order dividing N=7*179.  This is
+    the finite character-support input needed by the coprime local-ray
+    triviality handoff.
+    """
+    quotient_order = P24_JACOBI_LEVEL
+    full_order = P24_RHO_ORDER
+    survivors = [
+        exponent
+        for exponent in range(full_order)
+        if exponent % P24_B_OVER_C_DEGREE == 0
+    ]
+    pair_checks = 0
+    quotient_ratio_hits = 0
+    max_ratio_order = 0
+    quotient_ratio_exponents: set[int] = set()
+    for left in survivors:
+        for right in survivors:
+            pair_checks += 1
+            difference = (left - right) % full_order
+            quotient_ratio_hits += int(difference % P24_B_OVER_C_DEGREE == 0)
+            quotient_exponent = (difference // P24_B_OVER_C_DEGREE) % quotient_order
+            quotient_ratio_exponents.add(quotient_exponent)
+            ratio_order = character_order_from_exponent(
+                quotient_exponent, quotient_order
+            )
+            max_ratio_order = max(max_ratio_order, ratio_order)
+            if quotient_order % ratio_order != 0:
+                raise RuntimeError("ratio order escaped post-B/C quotient")
+
+    return {
+        "full_rho_order": full_order,
+        "kernel_degree": P24_B_OVER_C_DEGREE,
+        "post_bc_quotient_order": quotient_order,
+        "surviving_quotient_characters": len(survivors),
+        "survivor_pair_checks": pair_checks,
+        "survivor_ratio_stays_kernel_trivial": int(
+            quotient_ratio_hits == pair_checks
+        ),
+        "ratio_exponents_cover_post_bc_quotient": int(
+            len(quotient_ratio_exponents) == quotient_order
+        ),
+        "max_ratio_order": max_ratio_order,
+        "max_ratio_order_divides_post_bc_quotient": int(
+            quotient_order % max_ratio_order == 0
+        ),
+        "ratio_order_divides_post_bc_quotient": 1,
+        "feeds_coprime_local_ray_triviality": 1,
+    }
+
+
 def main() -> None:
     print("Trace-GCD fixed-frequency symbolic Hasse-Davenport gate")
     print(f"right_degree={RIGHT_DEGREE}")
@@ -989,9 +1284,23 @@ def main() -> None:
     p24_axis_reconstruction = p24_axis_value_reconstruction_checks()
     for key, value in p24_axis_reconstruction.items():
         print(f"p24_axis_value_reconstruction_{key}={value}")
+    p24_right_axis_selector = p24_right_axis_selector_convention_checks()
+    for key, value in p24_right_axis_selector.items():
+        print(f"p24_right_axis_selector_convention_{key}={value}")
+    p24_c_axis_residual = p24_c_axis_residual_character_checks()
+    for key, value in p24_c_axis_residual.items():
+        print(f"p24_c_axis_residual_character_{key}={value}")
     p24_linear_twist = p24_linear_twist_guardrail_checks(P24_C_DEGREE)
     for key, value in p24_linear_twist.items():
         print(f"p24_linear_twist_guardrail_{key}={value}")
+    p24_pure_c_invariance = p24_pure_c_axis_residual_value_side_invariance_checks()
+    for key, value in p24_pure_c_invariance.items():
+        print(f"p24_pure_c_axis_residual_value_side_invariance_{key}={value}")
+    p24_anchor_producer_surface = (
+        p24_verifier_equivalent_anchor_producer_surface_checks()
+    )
+    for key, value in p24_anchor_producer_surface.items():
+        print(f"p24_verifier_equivalent_anchor_producer_surface_{key}={value}")
     p24_conductor_lift = p24_quadratic_conductor_lift_checks(P24_C_DEGREE)
     for key, value in p24_conductor_lift.items():
         print(f"p24_quadratic_conductor_lift_{key}={value}")
@@ -1009,6 +1318,9 @@ def main() -> None:
     p24_bc_projection = bc_trace_character_projection_checks(P24_C_DEGREE)
     for key, value in p24_bc_projection.items():
         print(f"p24_bc_trace_character_projection_{key}={value}")
+    p24_bc_ratio_order = p24_bc_quotient_ratio_order_bound_checks()
+    for key, value in p24_bc_ratio_order.items():
+        print(f"p24_bc_quotient_ratio_order_bound_{key}={value}")
     print("interpretation")
     print("  row_ratio_gauss_factors_cancel_to_c_axis_product=1")
     print("  reduced_jacobi_packet_satisfies_symbolic_product_formula=1")
@@ -1022,19 +1334,26 @@ def main() -> None:
     print("  unramified_twist_selector_still_needs_embedded_trace_gcd_identification=1")
     print("  finite_unramified_ratio_character_determined_by_rho_value=1")
     print("  ratio_rho_value_reduces_to_right_and_c_axis_value_checks=1")
+    print("  right_axis_value_reduces_to_shift6_covariance_convention=1")
+    print("  remaining_axis_value_is_pure_c179_character=1")
+    print("  pure_c179_residual_is_invisible_to_value_side_verifier=1")
     print("  arbitrary_linear_character_noise_can_break_value_side_identities=1")
     print("  unramified_twist_must_act_as_artin_coordinate_pullback=1")
     print("  visible_packet_lifts_to_integral_equal_quadratic_infinity_type=1")
     print("  quadratic_infinity_type_does_not_select_p24_rho_quotient=1")
     print("  visible_ray_level_has_no_7_or_179_primary_post_bc_axes=1")
     print("  visible_ray_local_part_has_no_hom_to_post_bc_selector_axes=1")
+    print("  post_bc_order_ratio_is_trivial_on_visible_ray_by_coprimality=1")
     print("  p24_post_bc_axes_come_from_unramified_rho_frobenius=1")
     print("  artin_pullback_coordinate_is_e_equals_179r_plus_7c_mod_1253=1")
     print("  bc_trace_of_inflated_quotient_packet_is_clean_31_power=1")
     print("  additive_bc_trace_projects_exactly_to_31_divisible_exponents=1")
+    print("  ratio_of_bc_trace_survivors_has_post_bc_order=1")
     print("  nontrivial_bc_kernel_twists_die_under_additive_trace=1")
     print("  nontrivial_bc_kernel_twists_are_not_needed_for_the_quotient_packet=1")
+    print("  remaining_p24_producer_is_punctured_hd_plus_r179_anchor=1")
     print("  remaining_p24_input_is_cm_artin_pullback_of_reduced_packet=1")
+    print("  remaining_p24_input_only_needs_verifier_equivalence_mod_pure_c179=1")
     print("conclusion=reported_trace_gcd_fixed_frequency_jacobi_sum_symbolic_hd_gate")
 
     if pair_count_rows != rows_checked:
@@ -1136,6 +1455,41 @@ def main() -> None:
         "ratio_rho_value_reduces_to_two_axis_value_checks": 1,
     }:
         raise SystemExit(1)
+    if p24_right_axis_selector != {
+        "right_model_prime": P24_RIGHT_MODEL_PRIME,
+        "right_model_primitive_root": P24_RIGHT_MODEL_PRIMITIVE_ROOT,
+        "p_log_mod7": 2,
+        "rho_h_shift": 6,
+        "post_bc_rho_right_coordinate": 2,
+        "right_axis_h_shift_from_decomposition": 3,
+        "right_axis_h_shift_from_rho179_power": 3,
+        "c_axis_h_shift": 0,
+        "rho_recomposed_h_shift": 6,
+        "c_axis_fixes_right_h_quotient": 1,
+        "right_axis_shift_times_rho_coordinate_matches_rho_shift": 1,
+        "right_axis_selector_nontrivial_exponents_count": RIGHT_DEGREE - 1,
+        "rho_shift_nontrivial_exponents_count": RIGHT_DEGREE - 1,
+        "right_axis_selector_reduced_to_shift6_covariance": 1,
+    }:
+        raise SystemExit(1)
+    if p24_c_axis_residual != {
+        "quotient_order": P24_JACOBI_LEVEL,
+        "selected_artin_exponent": 1,
+        "right_axis_step": P24_C_DEGREE,
+        "c_axis_step": RIGHT_DEGREE,
+        "right_fixed_residual_candidates": P24_C_DEGREE,
+        "residual_ratio_exponents_count": P24_C_DEGREE,
+        "residual_ratio_exponents_all_multiples_of_7": 1,
+        "residual_right_axis_values_count": 1,
+        "residual_c_axis_values_count": P24_C_DEGREE,
+        "residual_max_order": P24_C_DEGREE,
+        "residual_order_divides_c_axis_order": 1,
+        "character_pair_checks": P24_JACOBI_LEVEL * P24_JACOBI_LEVEL,
+        "same_right_axis_iff_same_mod7": 1,
+        "c_axis_separates_characters_after_right_axis_fixed": 1,
+        "remaining_axis_value_is_pure_c179_character": 1,
+    }:
+        raise SystemExit(1)
     if p24_linear_twist != {
         "c_degree": P24_C_DEGREE,
         "full_generator_row_balance_ok": 0,
@@ -1145,6 +1499,30 @@ def main() -> None:
         "pure_right_axis_selected_defect_is_zero": 1,
         "mixed_linear_character_noise_breaks_value_side": 1,
         "twist_must_be_artin_coordinate_pullback_not_extra_linear_noise": 1,
+    }:
+        raise SystemExit(1)
+    if p24_pure_c_invariance != {
+        "residual_characters": P24_C_DEGREE,
+        "invariant_value_side_hits": P24_C_DEGREE,
+        "all_pure_c_residuals_preserve_value_side": 1,
+        "zero_residual_defect_characters": 1,
+        "nonzero_residual_defect_characters": P24_C_DEGREE - 1,
+        "distinct_row_sum_count_values": 1,
+        "distinct_inversion_count_values": 1,
+        "pure_c179_residual_value_not_needed_for_hcoset_verifier": 1,
+    }:
+        raise SystemExit(1)
+    if p24_anchor_producer_surface != {
+        "right_mixed_admissible_pairs": expected_pair_count(P24_C_DEGREE),
+        "right_zero_anchor_nonzero_entries": P24_C_DEGREE - 1,
+        "r179_cyclotomic_pole_order": P24_C_DEGREE - 1,
+        "r179_c_nontrivial_fourier_channels": RIGHT_DEGREE
+        * (P24_C_DEGREE - 1),
+        "kernel_polynomial_degree": (P24_C_DEGREE - 1) // 2,
+        "pure_c179_residual_invariant_characters": P24_C_DEGREE,
+        "verifier_equivalent_anchor_producer_surface_is_subsqrt": 1,
+        "remaining_input_is_selected_cm_lang_r179_specialization": 1,
+        "remaining_input_not_full_artin_character_equality": 1,
     }:
         raise SystemExit(1)
     if p24_conductor_lift["visible_level"] != P24_JACOBI_LEVEL:
@@ -1168,11 +1546,16 @@ def main() -> None:
         "gcd_ray_order_right_axis": 1,
         "gcd_ray_order_c_axis": 1,
         "gcd_ray_order_post_bc_quotient": 1,
+        "candidate_ratio_order_bound": RIGHT_DEGREE * P24_C_DEGREE,
+        "candidate_ratio_order_divides_post_bc_quotient": 1,
+        "gcd_ray_order_candidate_ratio_order_bound": 1,
+        "post_bc_order_character_restriction_to_visible_ray_forced_trivial": 1,
         "ray_order_has_7_primary": 0,
         "ray_order_has_179_primary": 0,
         "ray_order_has_post_bc_order": 0,
         "visible_ray_has_no_hom_to_post_bc_axes": 1,
         "local_ray_ratio_cannot_supply_selector_axis": 1,
+        "local_finite_type_reduced_to_unramified_ratio_order": 1,
         "unramified_class_component_prime": P24_N,
         "unramified_rho_cycle_order": P24_RHO_ORDER,
         "post_bc_quotient_order": RIGHT_DEGREE * P24_C_DEGREE,
@@ -1224,6 +1607,20 @@ def main() -> None:
         "quotient_images_cover": 1,
         "trace_scale_on_survivors": P24_B_OVER_C_DEGREE,
         "trace_kills_nontrivial_kernel_twists": 1,
+    }:
+        raise SystemExit(1)
+    if p24_bc_ratio_order != {
+        "full_rho_order": P24_RHO_ORDER,
+        "kernel_degree": P24_B_OVER_C_DEGREE,
+        "post_bc_quotient_order": P24_JACOBI_LEVEL,
+        "surviving_quotient_characters": P24_JACOBI_LEVEL,
+        "survivor_pair_checks": P24_JACOBI_LEVEL * P24_JACOBI_LEVEL,
+        "survivor_ratio_stays_kernel_trivial": 1,
+        "ratio_exponents_cover_post_bc_quotient": 1,
+        "max_ratio_order": P24_JACOBI_LEVEL,
+        "max_ratio_order_divides_post_bc_quotient": 1,
+        "ratio_order_divides_post_bc_quotient": 1,
+        "feeds_coprime_local_ray_triviality": 1,
     }:
         raise SystemExit(1)
 

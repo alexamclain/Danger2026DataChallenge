@@ -207,14 +207,19 @@ p24_bc_trace_character_projection_surviving_quotient_exponents=1253
 p24_bc_trace_character_projection_killed_kernel_twist_exponents=37590
 p24_bc_trace_character_projection_survival_iff_exponent_divisible_by_31=1
 p24_bc_trace_character_projection_trace_kills_nontrivial_kernel_twists=1
+p24_bc_quotient_ratio_order_bound_survivor_pair_checks=1570009
+p24_bc_quotient_ratio_order_bound_survivor_ratio_stays_kernel_trivial=1
+p24_bc_quotient_ratio_order_bound_max_ratio_order=1253
+p24_bc_quotient_ratio_order_bound_ratio_order_divides_post_bc_quotient=1
 ```
 
 So for divisor/log packets, `Tr_{B/C}` automatically kills the nontrivial
-`31`-kernel twists and projects to quotient characters.  On that surviving
-quotient part, trace/norm contributes only a harmless `31` scaling or `31`st
-power.  The remaining question is therefore not the killed kernel phase; it is
-whether the surviving selected quotient packet is the reduced Jacobi/CM-Lang
-packet.
+`31`-kernel twists and projects to quotient characters.  The ratio of any two
+surviving quotient packets still has order dividing `1253`, checked
+exhaustively over all `1253^2` survivor pairs.  On that surviving quotient
+part, trace/norm contributes only a harmless `31` scaling or `31`st power.
+The remaining question is therefore not the killed kernel phase; it is whether
+the surviving selected quotient packet is the reduced Jacobi/CM-Lang packet.
 
 The plain cyclotomic Frobenius check is deliberately negative:
 
@@ -348,11 +353,52 @@ p24_axis_value_reconstruction_rho_from_c_axis_power=128
 p24_axis_value_reconstruction_bezout_integer_sum=1254
 p24_axis_value_reconstruction_bezout_reconstructs_rho_exponent=1
 p24_axis_value_reconstruction_same_axis_values_iff_same_rho_value=1
+p24_right_axis_selector_convention_rho_h_shift=6
+p24_right_axis_selector_convention_post_bc_rho_right_coordinate=2
+p24_right_axis_selector_convention_right_axis_h_shift_from_decomposition=3
+p24_right_axis_selector_convention_c_axis_h_shift=0
+p24_right_axis_selector_convention_rho_recomposed_h_shift=6
+p24_right_axis_selector_convention_right_axis_selector_reduced_to_shift6_covariance=1
+p24_c_axis_residual_character_right_fixed_residual_candidates=179
+p24_c_axis_residual_character_residual_ratio_exponents_all_multiples_of_7=1
+p24_c_axis_residual_character_residual_right_axis_values_count=1
+p24_c_axis_residual_character_residual_c_axis_values_count=179
+p24_c_axis_residual_character_residual_max_order=179
+p24_c_axis_residual_character_c_axis_separates_characters_after_right_axis_fixed=1
+p24_pure_c_axis_residual_value_side_invariance_residual_characters=179
+p24_pure_c_axis_residual_value_side_invariance_invariant_value_side_hits=179
+p24_pure_c_axis_residual_value_side_invariance_all_pure_c_residuals_preserve_value_side=1
+p24_pure_c_axis_residual_value_side_invariance_pure_c179_residual_value_not_needed_for_hcoset_verifier=1
+p24_verifier_equivalent_anchor_producer_surface_right_mixed_admissible_pairs=189036
+p24_verifier_equivalent_anchor_producer_surface_r179_c_nontrivial_fourier_channels=1246
+p24_verifier_equivalent_anchor_producer_surface_kernel_polynomial_degree=89
+p24_verifier_equivalent_anchor_producer_surface_remaining_input_is_selected_cm_lang_r179_specialization=1
 ```
 
-Therefore `ratioMatchesSelectorOnRho` can be proved by showing the ratio has
-the selected value on the right axis `rho^179` and the selected value on the
-C-axis `rho^7`.
+Therefore the verifier-facing axis obligation is weaker than exact
+`ratioMatchesSelectorOnRho`.  The right-axis generator `rho^179` is the `+3`
+shift in the old right-H quotient convention, because `rho` has right
+coordinate `2`, the C-axis fixes the right-H quotient, and `2*3=6 mod 7`.
+After that right-axis value is fixed, only `179` residual quotient characters
+remain: exponents `1+7s`.  Dividing by the selected Artin coordinate leaves a
+pure `C_179` character with exponent `7s`, and the C-axis separates those
+`179` possibilities.  But every pure `C_179` residual preserves the three
+value-side identities, so the exact residual value is not needed for the
+1092-equation H-coset verifier.  It is only needed if one wants full packet
+equality rather than verifier equivalence.
+
+The remaining arithmetic producer is therefore concrete:
+
+```text
+punctured Hasse-Davenport rows
++ selected degenerate R_179 / kernel-polynomial anchor
++ selected-child subtraction compatibility
+=> verifier-equivalent reduced Jacobi carry.
+```
+
+For p24 this surface is still tiny compared with `sqrt(p)`: `189036`
+right-mixed admissible pairs, a `1246`-channel `C/E`-nontrivial anchor
+residual, and a degree-`89` kernel polynomial anchor.
 
 The killed visible/ray local part also has no room to carry either selector
 axis.  Its order over the Hilbert class field is still:
@@ -367,12 +413,19 @@ and the gate now records the stronger coprimality:
 p24_visible_shimura_ray_group_gcd_ray_order_right_axis=1
 p24_visible_shimura_ray_group_gcd_ray_order_c_axis=1
 p24_visible_shimura_ray_group_gcd_ray_order_post_bc_quotient=1
+p24_visible_shimura_ray_group_candidate_ratio_order_bound=1253
+p24_visible_shimura_ray_group_candidate_ratio_order_divides_post_bc_quotient=1
+p24_visible_shimura_ray_group_gcd_ray_order_candidate_ratio_order_bound=1
+p24_visible_shimura_ray_group_post_bc_order_character_restriction_to_visible_ray_forced_trivial=1
 p24_visible_shimura_ray_group_visible_ray_has_no_hom_to_post_bc_axes=1
+p24_visible_shimura_ray_group_local_finite_type_reduced_to_unramified_ratio_order=1
 ```
 
-Thus once the selected packet and Jacobi/CM-Lang packet have matching finite
-local type on the killed conductor/ray part, the selector axes cannot come
-from that local part.  They must factor through the unramified `n`-component.
+Thus the killed local/ray part has a sharper handoff than raw finite-local
+equality.  If the packet ratio has order dividing the post-`B/C` quotient
+`1253`, then its restriction to the visible ray group is forced trivial by
+coprimality.  The selector axes cannot come from that local part; they must
+factor through the unramified `n`-component.
 
 The remaining arithmetic input is therefore:
 

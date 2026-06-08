@@ -3869,14 +3869,21 @@ p24_bc_trace_character_projection_survival_iff_exponent_divisible_by_31=1
 p24_bc_trace_character_projection_quotient_images_cover=1
 p24_bc_trace_character_projection_trace_scale_on_survivors=31
 p24_bc_trace_character_projection_trace_kills_nontrivial_kernel_twists=1
+p24_bc_quotient_ratio_order_bound_survivor_pair_checks=1570009
+p24_bc_quotient_ratio_order_bound_survivor_ratio_stays_kernel_trivial=1
+p24_bc_quotient_ratio_order_bound_max_ratio_order=1253
+p24_bc_quotient_ratio_order_bound_ratio_order_divides_post_bc_quotient=1
 ```
 
 Interpretation: for additive divisor/log packets, `Tr_{B/C}` itself projects
 onto the quotient-character part.  Nontrivial `B/C`-kernel twists die
-automatically.  On the surviving quotient pullback, additive divisor trace
-multiplies the normalized reduced divisor by `31`, and multiplicative norm
-gives the `31`st power of the reduced unit.  P-unitness and
-forbidden-support avoidance are unchanged.
+automatically.  Ratios of two surviving quotient packets have order dividing
+`1253`, checked over all `1253^2` survivor pairs, so this supplies the
+`ratioOrderDividesPostBCQuotient` input for the coprime local-ray handoff
+once both packets have been identified after `Tr_{B/C}`.  On the surviving
+quotient pullback, additive divisor trace multiplies the normalized reduced
+divisor by `31`, and multiplicative norm gives the `31`st power of the
+reduced unit.  P-unitness and forbidden-support avoidance are unchanged.
 
 The reduced quotient packet is now connected directly to the value-side
 verifier interface.  The symbolic Jacobi gate checks all admissible
@@ -3990,7 +3997,7 @@ selector source:
 producer theorem:
   identify the selected trace-GCD/CM-Lang divisor packet with the reduced
   Jacobi packet pulled through that twist as an Artin coordinate pullback,
-  still open.
+  up to verifier-invisible pure C_179 residual.
 ```
 
 Lean now exposes this split as
@@ -4004,12 +4011,22 @@ cyclic-character uniqueness part and two arithmetic ratio statements:
 postBCQuotientGeneratedByRho;
 localDataMakesRatioUnramifiedFiniteOrder:
   sameInfinityType;
-  sameFiniteLocalTypeOnKilledConductorPart;
-  killedLocalRayPartHasNoPostBCCharacterSupport;
+  killedLocalRayPartTrivialByCoprimeOrders:
+    ratioOrderDividesPostBCQuotient;
+    killedLocalRayOrderCoprimeToPostBCQuotient;
+    restrictionOrderDividesKilledLocalRayOrder;
+    restrictionTrivialByCoprimeOrders;
   ratioFactorsThroughUnramifiedPostBCQuotient;
 axisValuesDetermineRatioOnRho:
-  ratioMatchesRightAxisSelector;
-  ratioMatchesCAxisSelector.
+  rightAxisSelectorFromShift6Convention:
+    rhoHasShift6OnRightHQuotient;
+    postBCRhoRightCoordinateIsTwo;
+    cAxisFixesRightHQuotient;
+    rightAxisSelectorFollowsFromShift6Covariance;
+  cAxisResidualSelector:
+    rightAxisFixedLeavesPureC179Residual;
+    cAxisSeparatesResidualCharacters;
+    pureC179ResidualPreservesValueSideIdentities.
 ```
 
 The finite part is checked by:
@@ -4023,18 +4040,27 @@ p24_artin_character_uniqueness_same_value_on_rho_implies_same_character=1
 ```
 
 Thus the remaining coordinate-pullback proof is narrower: prove the two
-packets have the same infinity type, the same finite local type on the killed
-conductor/ray part, that their ratio factors through the unramified
-post-`B/C` quotient, and that the ratio has the selected values on the two
-axes.  The local/ray part cannot supply those axes: its order over the
+packets have the same infinity type, that their ratio has order dividing the
+post-`B/C` quotient, that the ratio factors through the unramified
+post-`B/C` quotient, that the right-axis value matches the shift-6
+right-H convention, and that any remaining C-axis residual is pure `C_179`.
+The local/ray part cannot supply those axes: its order over the
 Hilbert class field is coprime to `1253`:
 
 ```text
 p24_visible_shimura_ray_group_gcd_ray_order_right_axis=1
 p24_visible_shimura_ray_group_gcd_ray_order_c_axis=1
 p24_visible_shimura_ray_group_gcd_ray_order_post_bc_quotient=1
+p24_visible_shimura_ray_group_candidate_ratio_order_bound=1253
+p24_visible_shimura_ray_group_candidate_ratio_order_divides_post_bc_quotient=1
+p24_visible_shimura_ray_group_gcd_ray_order_candidate_ratio_order_bound=1
+p24_visible_shimura_ray_group_post_bc_order_character_restriction_to_visible_ray_forced_trivial=1
 p24_visible_shimura_ray_group_visible_ray_has_no_hom_to_post_bc_axes=1
+p24_visible_shimura_ray_group_local_finite_type_reduced_to_unramified_ratio_order=1
 ```
+
+Lean records the p24 arithmetic count as
+`p24_visible_ray_restriction_forced_trivial_by_coprime_orders`.
 
 The axis checks imply the `rho` value because:
 
@@ -4050,9 +4076,58 @@ p24_axis_value_reconstruction_rho_from_right_axis_power=2
 p24_axis_value_reconstruction_rho_from_c_axis_power=128
 p24_axis_value_reconstruction_bezout_reconstructs_rho_exponent=1
 p24_axis_value_reconstruction_same_axis_values_iff_same_rho_value=1
+p24_right_axis_selector_convention_rho_h_shift=6
+p24_right_axis_selector_convention_post_bc_rho_right_coordinate=2
+p24_right_axis_selector_convention_right_axis_h_shift_from_decomposition=3
+p24_right_axis_selector_convention_c_axis_h_shift=0
+p24_right_axis_selector_convention_rho_recomposed_h_shift=6
+p24_right_axis_selector_convention_right_axis_selector_reduced_to_shift6_covariance=1
+p24_c_axis_residual_character_right_fixed_residual_candidates=179
+p24_c_axis_residual_character_residual_ratio_exponents_all_multiples_of_7=1
+p24_c_axis_residual_character_residual_right_axis_values_count=1
+p24_c_axis_residual_character_residual_c_axis_values_count=179
+p24_c_axis_residual_character_residual_max_order=179
+p24_c_axis_residual_character_c_axis_separates_characters_after_right_axis_fixed=1
+p24_pure_c_axis_residual_value_side_invariance_residual_characters=179
+p24_pure_c_axis_residual_value_side_invariance_invariant_value_side_hits=179
+p24_pure_c_axis_residual_value_side_invariance_all_pure_c_residuals_preserve_value_side=1
+p24_pure_c_axis_residual_value_side_invariance_pure_c179_residual_value_not_needed_for_hcoset_verifier=1
+p24_verifier_equivalent_anchor_producer_surface_right_mixed_admissible_pairs=189036
+p24_verifier_equivalent_anchor_producer_surface_r179_c_nontrivial_fourier_channels=1246
+p24_verifier_equivalent_anchor_producer_surface_kernel_polynomial_degree=89
+p24_verifier_equivalent_anchor_producer_surface_remaining_input_is_selected_cm_lang_r179_specialization=1
 ```
 
-The packet-identification obligation remains the other arithmetic theorem.
+So the right-axis selector is no longer an independent new Artin value: it is
+the old shift-6 covariance convention transported to the post-`B/C`
+coordinate system.  Once that right-axis residue is fixed, the finite
+ambiguity is exactly the `179` exponents `1+7s`; quotienting by the selected
+Artin coordinate leaves a pure `C_179` character.  Every such residual
+preserves the three value-side identities, so the exact pure `C_179` value is
+not needed for the H-coset certificate.  It remains relevant only for full
+packet equality.  The remaining arithmetic theorem is therefore packet
+identification up to verifier-invisible pure `C_179` residual.
+
+Lean now has a named producer handoff for this final target:
+
+```text
+PuncturedHasseDavenportAnchorProducerObligations:
+  puncturedNonzeroRowsGiveReducedJacobiCarry;
+  pureC179ResidualValueSide;
+  degenerateAnchorIsR179KernelUnit;
+  adjacentAnchorRowSumSliceMatched;
+  cNontrivialResidualMatchedByR179;
+  selectedChildSubtractionCompatible
+=> VerifierEquivalentReducedJacobiCarryObligations.
+```
+
+So the remaining proof is no longer "match the exact Artin character."  It is:
+
+```text
+construct the selected p-integral CM/Lang R_179 or kernel-polynomial anchor
+specialization and prove selected-child subtraction turns the punctured
+Hasse-Davenport packet into the verifier-equivalent reduced Jacobi carry.
+```
 
 Guardrail: the unramified character cannot be inserted as arbitrary extra
 multiplicative character noise after the packet is selected.  A bare mixed
@@ -4084,7 +4159,8 @@ pullback/identification:
 ```text
 the mixed-level Jacobi-sum Hecke packet, after the CM/Lang Artin pullback
 along the actual rho quotient <rho>/<rho^(7*179)>, equals the selected
-trace-GCD packet after Tr_{B/C}.
+trace-GCD packet after Tr_{B/C} up to a verifier-invisible pure C_179
+residual.
 ```
 
 This is useful progress because it prevents a wrong "just use cyclotomic

@@ -65,33 +65,147 @@ def valueSideFromReducedJacobiCarry
   inversionComplementConstantOffCZero :=
     obligations.quotientInversionComplementConstantOffCZero
 
+structure PureC179ResidualValueSideObligations where
+  residualCRowSumsIndependent : Prop
+  residualCZeroFiberVanishes : Prop
+  residualInversionComplementConstantOffCZero : Prop
+
+def SatisfiesPureC179ResidualValueSideObligations
+    (obligations : PureC179ResidualValueSideObligations) : Prop :=
+  obligations.residualCRowSumsIndependent ∧
+  obligations.residualCZeroFiberVanishes ∧
+  obligations.residualInversionComplementConstantOffCZero
+
+structure VerifierEquivalentReducedJacobiCarryObligations where
+  reducedJacobiCarry : ReducedJacobiCarryObligations
+  pureC179ResidualValueSide : PureC179ResidualValueSideObligations
+
+def SatisfiesVerifierEquivalentReducedJacobiCarryObligations
+    (obligations : VerifierEquivalentReducedJacobiCarryObligations) : Prop :=
+  SatisfiesReducedJacobiCarryObligations obligations.reducedJacobiCarry ∧
+  SatisfiesPureC179ResidualValueSideObligations
+    obligations.pureC179ResidualValueSide
+
+def valueSideFromVerifierEquivalentReducedJacobiCarry
+    (obligations : VerifierEquivalentReducedJacobiCarryObligations) :
+    ValueSideIdentities where
+  cRowSumsIndependent :=
+    obligations.reducedJacobiCarry.quotientCRowSumsIndependent ∧
+    obligations.pureC179ResidualValueSide.residualCRowSumsIndependent
+  cZeroFiberVanishes :=
+    obligations.reducedJacobiCarry.quotientCZeroFiberVanishes ∧
+    obligations.pureC179ResidualValueSide.residualCZeroFiberVanishes
+  inversionComplementConstantOffCZero :=
+    obligations.reducedJacobiCarry.quotientInversionComplementConstantOffCZero ∧
+    obligations.pureC179ResidualValueSide.residualInversionComplementConstantOffCZero
+
+structure PuncturedHasseDavenportAnchorProducerObligations where
+  puncturedNonzeroRowsGiveReducedJacobiCarry :
+    ReducedJacobiCarryObligations
+  pureC179ResidualValueSide :
+    PureC179ResidualValueSideObligations
+  degenerateAnchorIsR179KernelUnit : Prop
+  adjacentAnchorRowSumSliceMatched : Prop
+  cNontrivialResidualMatchedByR179 : Prop
+  selectedChildSubtractionCompatible : Prop
+
+def SatisfiesPuncturedHasseDavenportAnchorProducerObligations
+    (obligations : PuncturedHasseDavenportAnchorProducerObligations) :
+    Prop :=
+  SatisfiesReducedJacobiCarryObligations
+    obligations.puncturedNonzeroRowsGiveReducedJacobiCarry ∧
+  SatisfiesPureC179ResidualValueSideObligations
+    obligations.pureC179ResidualValueSide ∧
+  obligations.degenerateAnchorIsR179KernelUnit ∧
+  obligations.adjacentAnchorRowSumSliceMatched ∧
+  obligations.cNontrivialResidualMatchedByR179 ∧
+  obligations.selectedChildSubtractionCompatible
+
+def verifierEquivalentReducedJacobiCarryFromPuncturedHasseDavenportAnchor
+    (obligations : PuncturedHasseDavenportAnchorProducerObligations) :
+    VerifierEquivalentReducedJacobiCarryObligations where
+  reducedJacobiCarry := obligations.puncturedNonzeroRowsGiveReducedJacobiCarry
+  pureC179ResidualValueSide := obligations.pureC179ResidualValueSide
+
+structure CoprimeLocalRayTrivialityObligations where
+  ratioOrderDividesPostBCQuotient : Prop
+  killedLocalRayOrderCoprimeToPostBCQuotient : Prop
+  restrictionOrderDividesKilledLocalRayOrder : Prop
+  restrictionTrivialByCoprimeOrders : Prop
+
+def SatisfiesCoprimeLocalRayTrivialityObligations
+    (obligations : CoprimeLocalRayTrivialityObligations) : Prop :=
+  obligations.ratioOrderDividesPostBCQuotient ∧
+  obligations.killedLocalRayOrderCoprimeToPostBCQuotient ∧
+  obligations.restrictionOrderDividesKilledLocalRayOrder ∧
+  obligations.restrictionTrivialByCoprimeOrders
+
+def ratioTrivialOnKilledLocalRayPartFromCoprimeOrders
+    (obligations : CoprimeLocalRayTrivialityObligations) : Prop :=
+  SatisfiesCoprimeLocalRayTrivialityObligations obligations
+
 structure HeckeRatioLocalDataObligations where
   sameInfinityType : Prop
-  sameFiniteLocalTypeOnKilledConductorPart : Prop
-  killedLocalRayPartHasNoPostBCCharacterSupport : Prop
+  killedLocalRayPartTrivialByCoprimeOrders :
+    CoprimeLocalRayTrivialityObligations
   ratioFactorsThroughUnramifiedPostBCQuotient : Prop
 
 def SatisfiesHeckeRatioLocalDataObligations
     (obligations : HeckeRatioLocalDataObligations) : Prop :=
   obligations.sameInfinityType ∧
-  obligations.sameFiniteLocalTypeOnKilledConductorPart ∧
-  obligations.killedLocalRayPartHasNoPostBCCharacterSupport ∧
+  ratioTrivialOnKilledLocalRayPartFromCoprimeOrders
+    obligations.killedLocalRayPartTrivialByCoprimeOrders ∧
   obligations.ratioFactorsThroughUnramifiedPostBCQuotient
 
 def ratioIsUnramifiedFiniteOrderFromLocalData
     (obligations : HeckeRatioLocalDataObligations) : Prop :=
   SatisfiesHeckeRatioLocalDataObligations obligations
 
+structure RightAxisSelectorConventionObligations where
+  rhoHasShift6OnRightHQuotient : Prop
+  postBCRhoRightCoordinateIsTwo : Prop
+  cAxisFixesRightHQuotient : Prop
+  rightAxisSelectorFollowsFromShift6Covariance : Prop
+
+def SatisfiesRightAxisSelectorConventionObligations
+    (obligations : RightAxisSelectorConventionObligations) : Prop :=
+  obligations.rhoHasShift6OnRightHQuotient ∧
+  obligations.postBCRhoRightCoordinateIsTwo ∧
+  obligations.cAxisFixesRightHQuotient ∧
+  obligations.rightAxisSelectorFollowsFromShift6Covariance
+
+def ratioMatchesRightAxisSelectorFromShift6Convention
+    (obligations : RightAxisSelectorConventionObligations) : Prop :=
+  SatisfiesRightAxisSelectorConventionObligations obligations
+
+structure CAxisResidualSelectorObligations where
+  rightAxisFixedLeavesPureC179Residual : Prop
+  cAxisSeparatesResidualCharacters : Prop
+  pureC179ResidualPreservesValueSideIdentities : Prop
+
+def SatisfiesCAxisResidualSelectorObligations
+    (obligations : CAxisResidualSelectorObligations) : Prop :=
+  obligations.rightAxisFixedLeavesPureC179Residual ∧
+  obligations.cAxisSeparatesResidualCharacters ∧
+  obligations.pureC179ResidualPreservesValueSideIdentities
+
+def pureC179ResidualVerifierInvisibleFromPureResidual
+    (obligations : CAxisResidualSelectorObligations) : Prop :=
+  SatisfiesCAxisResidualSelectorObligations obligations
+
 structure HeckeRatioAxisValueObligations where
-  ratioMatchesRightAxisSelector : Prop
-  ratioMatchesCAxisSelector : Prop
+  rightAxisSelectorFromShift6Convention :
+    RightAxisSelectorConventionObligations
+  cAxisResidualVerifierInvisible : CAxisResidualSelectorObligations
 
 def SatisfiesHeckeRatioAxisValueObligations
     (obligations : HeckeRatioAxisValueObligations) : Prop :=
-  obligations.ratioMatchesRightAxisSelector ∧
-  obligations.ratioMatchesCAxisSelector
+  ratioMatchesRightAxisSelectorFromShift6Convention
+    obligations.rightAxisSelectorFromShift6Convention ∧
+  pureC179ResidualVerifierInvisibleFromPureResidual
+    obligations.cAxisResidualVerifierInvisible
 
-def ratioMatchesSelectorOnRhoFromAxisValues
+def ratioVerifierEquivalentFromAxisData
     (obligations : HeckeRatioAxisValueObligations) : Prop :=
   SatisfiesHeckeRatioAxisValueObligations obligations
 
@@ -106,7 +220,7 @@ def SatisfiesHeckeRatioArtinCoordinateObligations
   obligations.postBCQuotientGeneratedByRho ∧
   ratioIsUnramifiedFiniteOrderFromLocalData
     obligations.localDataMakesRatioUnramifiedFiniteOrder ∧
-  ratioMatchesSelectorOnRhoFromAxisValues
+  ratioVerifierEquivalentFromAxisData
     obligations.axisValuesDetermineRatioOnRho
 
 theorem hecke_ratio_unramified_finite_order_from_local_data
@@ -115,31 +229,59 @@ theorem hecke_ratio_unramified_finite_order_from_local_data
     ratioIsUnramifiedFiniteOrderFromLocalData obligations := by
   exact h_local
 
-theorem ratio_matches_selector_on_rho_from_axis_values
+theorem killed_local_ray_trivial_from_coprime_orders
+    (obligations : CoprimeLocalRayTrivialityObligations)
+    (h_coprime :
+      SatisfiesCoprimeLocalRayTrivialityObligations obligations) :
+    ratioTrivialOnKilledLocalRayPartFromCoprimeOrders obligations := by
+  exact h_coprime
+
+theorem ratio_verifier_equivalent_from_axis_data
     (obligations : HeckeRatioAxisValueObligations)
     (h_axis : SatisfiesHeckeRatioAxisValueObligations obligations) :
-    ratioMatchesSelectorOnRhoFromAxisValues obligations := by
+    ratioVerifierEquivalentFromAxisData obligations := by
   exact h_axis
+
+theorem right_axis_selector_from_shift6_convention
+    (obligations : RightAxisSelectorConventionObligations)
+    (h_right :
+      SatisfiesRightAxisSelectorConventionObligations obligations) :
+    ratioMatchesRightAxisSelectorFromShift6Convention obligations := by
+  exact h_right
+
+theorem pure_c179_residual_verifier_invisible_from_pure_residual
+    (obligations : CAxisResidualSelectorObligations)
+    (h_caxis :
+      SatisfiesCAxisResidualSelectorObligations obligations) :
+    pureC179ResidualVerifierInvisibleFromPureResidual obligations := by
+  exact h_caxis
 
 structure UnramifiedTwistedJacobiProducerObligations where
   unramifiedTwistSelectsPostBCQuotient : Prop
   heckeRatioGivesArtinCoordinatePullback :
     HeckeRatioArtinCoordinateObligations
-  selectedTraceGcdEqualsTwistedJacobiPacket : Prop
-  twistedReducedCarry : ReducedJacobiCarryObligations
+  selectedTraceGcdEqualsTwistedJacobiPacketUpToPureC179Residual : Prop
+  verifierEquivalentReducedCarry :
+    VerifierEquivalentReducedJacobiCarryObligations
 
 def SatisfiesUnramifiedTwistedJacobiProducerObligations
     (obligations : UnramifiedTwistedJacobiProducerObligations) : Prop :=
   obligations.unramifiedTwistSelectsPostBCQuotient ∧
   SatisfiesHeckeRatioArtinCoordinateObligations
     obligations.heckeRatioGivesArtinCoordinatePullback ∧
-  obligations.selectedTraceGcdEqualsTwistedJacobiPacket ∧
-  SatisfiesReducedJacobiCarryObligations obligations.twistedReducedCarry
+  obligations.selectedTraceGcdEqualsTwistedJacobiPacketUpToPureC179Residual ∧
+  SatisfiesVerifierEquivalentReducedJacobiCarryObligations
+    obligations.verifierEquivalentReducedCarry
 
 def reducedJacobiCarryFromUnramifiedTwistedJacobi
     (obligations : UnramifiedTwistedJacobiProducerObligations) :
     ReducedJacobiCarryObligations :=
-  obligations.twistedReducedCarry
+  obligations.verifierEquivalentReducedCarry.reducedJacobiCarry
+
+def verifierEquivalentReducedJacobiCarryFromUnramifiedTwistedJacobi
+    (obligations : UnramifiedTwistedJacobiProducerObligations) :
+    VerifierEquivalentReducedJacobiCarryObligations :=
+  obligations.verifierEquivalentReducedCarry
 
 structure DualFourierFamilies where
   forbiddenCTrivialVanishes : Prop
@@ -164,6 +306,12 @@ def AllRobertProducerObligations {Character : Type}
 def AllReducedJacobiCarryObligations {Character : Type}
     (obligations : Character → ReducedJacobiCarryObligations) : Prop :=
   ∀ chi, SatisfiesReducedJacobiCarryObligations (obligations chi)
+
+def AllVerifierEquivalentReducedJacobiCarryObligations {Character : Type}
+    (obligations :
+      Character → VerifierEquivalentReducedJacobiCarryObligations) : Prop :=
+  ∀ chi, SatisfiesVerifierEquivalentReducedJacobiCarryObligations
+    (obligations chi)
 
 def AllUnramifiedTwistedJacobiProducerObligations {Character : Type}
     (obligations :
@@ -203,6 +351,52 @@ theorem value_side_from_reduced_jacobi_carry_obligations
   rcases h_carry chi with ⟨h_rows, h_zero, h_inversion⟩
   exact ⟨h_rows, h_zero, h_inversion⟩
 
+theorem value_side_from_verifier_equivalent_reduced_jacobi_carry_obligations
+    {Character : Type}
+    (obligations :
+      Character → VerifierEquivalentReducedJacobiCarryObligations)
+    (h_equiv : AllVerifierEquivalentReducedJacobiCarryObligations
+      obligations) :
+    AllValueSideIdentities
+      (fun chi =>
+        valueSideFromVerifierEquivalentReducedJacobiCarry
+          (obligations chi)) := by
+  intro chi
+  rcases h_equiv chi with ⟨h_carry, h_residual⟩
+  rcases h_carry with ⟨h_rows, h_zero, h_inversion⟩
+  rcases h_residual with ⟨h_res_rows, h_res_zero, h_res_inversion⟩
+  exact
+    ⟨⟨h_rows, h_res_rows⟩,
+      ⟨h_zero, h_res_zero⟩,
+      ⟨h_inversion, h_res_inversion⟩⟩
+
+theorem verifier_equivalent_reduced_jacobi_carry_from_punctured_hasse_davenport_anchor
+    (obligations : PuncturedHasseDavenportAnchorProducerObligations)
+    (h_producer :
+      SatisfiesPuncturedHasseDavenportAnchorProducerObligations
+        obligations) :
+    SatisfiesVerifierEquivalentReducedJacobiCarryObligations
+      (verifierEquivalentReducedJacobiCarryFromPuncturedHasseDavenportAnchor
+        obligations) := by
+  rcases h_producer with
+    ⟨h_carry, h_residual, _h_anchor, _h_row_sum, _h_c_residual,
+      _h_selected⟩
+  exact ⟨h_carry, h_residual⟩
+
+theorem verifier_equivalent_reduced_jacobi_carry_from_unramified_twisted_jacobi_obligations
+    {Character : Type}
+    (obligations :
+      Character → UnramifiedTwistedJacobiProducerObligations)
+    (h_twisted : AllUnramifiedTwistedJacobiProducerObligations obligations) :
+    AllVerifierEquivalentReducedJacobiCarryObligations
+      (fun chi =>
+        verifierEquivalentReducedJacobiCarryFromUnramifiedTwistedJacobi
+          (obligations chi)) := by
+  intro chi
+  rcases h_twisted chi with
+    ⟨_h_selector, _h_ratio, _h_identification, h_equiv⟩
+  exact h_equiv
+
 theorem reduced_jacobi_carry_from_unramified_twisted_jacobi_obligations
     {Character : Type}
     (obligations :
@@ -213,8 +407,8 @@ theorem reduced_jacobi_carry_from_unramified_twisted_jacobi_obligations
         reducedJacobiCarryFromUnramifiedTwistedJacobi (obligations chi)) := by
   intro chi
   rcases h_twisted chi with
-    ⟨_h_selector, _h_ratio, _h_identification, h_carry⟩
-  exact h_carry
+    ⟨_h_selector, _h_ratio, _h_identification, h_equiv⟩
+  exact h_equiv.1
 
 theorem value_side_from_unramified_twisted_jacobi_obligations
     {Character : Type}
@@ -223,13 +417,14 @@ theorem value_side_from_unramified_twisted_jacobi_obligations
     (h_twisted : AllUnramifiedTwistedJacobiProducerObligations obligations) :
     AllValueSideIdentities
       (fun chi =>
-        valueSideFromReducedJacobiCarry
-          (reducedJacobiCarryFromUnramifiedTwistedJacobi
+        valueSideFromVerifierEquivalentReducedJacobiCarry
+          (verifierEquivalentReducedJacobiCarryFromUnramifiedTwistedJacobi
             (obligations chi))) := by
-  exact value_side_from_reduced_jacobi_carry_obligations
+  exact value_side_from_verifier_equivalent_reduced_jacobi_carry_obligations
     (fun chi =>
-      reducedJacobiCarryFromUnramifiedTwistedJacobi (obligations chi))
-    (reduced_jacobi_carry_from_unramified_twisted_jacobi_obligations
+      verifierEquivalentReducedJacobiCarryFromUnramifiedTwistedJacobi
+        (obligations chi))
+    (verifier_equivalent_reduced_jacobi_carry_from_unramified_twisted_jacobi_obligations
       obligations h_twisted)
 
 theorem four_dual_families_from_value_side_identities
@@ -284,16 +479,17 @@ theorem four_dual_families_from_unramified_twisted_jacobi_obligations
     (h_value_to_dual :
       ∀ chi,
         SatisfiesValueSideIdentities
-          (valueSideFromReducedJacobiCarry
-            (reducedJacobiCarryFromUnramifiedTwistedJacobi
+          (valueSideFromVerifierEquivalentReducedJacobiCarry
+            (verifierEquivalentReducedJacobiCarryFromUnramifiedTwistedJacobi
               (obligations chi))) →
         SatisfiesFourDualFamilies (families chi))
     (h_twisted : AllUnramifiedTwistedJacobiProducerObligations obligations) :
     AllFourDualFamilies families := by
   exact four_dual_families_from_value_side_identities
     (fun chi =>
-      valueSideFromReducedJacobiCarry
-        (reducedJacobiCarryFromUnramifiedTwistedJacobi (obligations chi)))
+      valueSideFromVerifierEquivalentReducedJacobiCarry
+        (verifierEquivalentReducedJacobiCarryFromUnramifiedTwistedJacobi
+          (obligations chi)))
     families h_value_to_dual
     (value_side_from_unramified_twisted_jacobi_obligations
       obligations h_twisted)
@@ -515,8 +711,8 @@ theorem hcoset_verifier_from_unramified_twisted_jacobi_obligations
     (h_value_to_dual :
       ∀ chi,
         SatisfiesValueSideIdentities
-          (valueSideFromReducedJacobiCarry
-            (reducedJacobiCarryFromUnramifiedTwistedJacobi
+          (valueSideFromVerifierEquivalentReducedJacobiCarry
+            (verifierEquivalentReducedJacobiCarryFromUnramifiedTwistedJacobi
               (obligations chi))) →
         SatisfiesFourDualFamilies (families chi))
     (h_dual_complete :
@@ -544,8 +740,9 @@ theorem hcoset_verifier_from_unramified_twisted_jacobi_obligations
     AllHCosetSumsZero hcosetZero := by
   exact hcoset_verifier_from_value_side_identities
     (fun chi =>
-      valueSideFromReducedJacobiCarry
-        (reducedJacobiCarryFromUnramifiedTwistedJacobi (obligations chi)))
+      valueSideFromVerifierEquivalentReducedJacobiCarry
+        (verifierEquivalentReducedJacobiCarryFromUnramifiedTwistedJacobi
+          (obligations chi)))
     families inAdmissibleSpan forbiddenBidegreeZero finalTraceZero
     rightCoboundary productCoboundary characterZero centered hcosetZero
     allRowsCentered allCharacterPayloadZero h_value_to_dual h_dual_complete
