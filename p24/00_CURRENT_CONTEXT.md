@@ -3025,3 +3025,28 @@ selector.  A surviving positive route must either carry the growing
 degree-`3107441` embedded recovery object at sub-sqrt scale, or prove a
 stronger phase-aware p-unit/determinant identity that avoids selecting the
 class-set child explicitly.
+
+Sutherland Algorithm 2 maps cleanly onto the selected-chain fallback surface:
+take the subgroup `G` to have order `n=3107441`, so the intermediate
+polynomial `V` has degree `m=66254` and the specialized recovery polynomial
+`U_y` has degree `n`.  The output-scale accounting is:
+
+```text
+V plus U_y slots:         m+n = 3173695 = 3.173695e-6 * sqrt(p)
+full relative table:            3174011 = 3.174011e-6 * sqrt(p)
+selected chain:                 3107811 = 3.107811e-6 * sqrt(p)
+full class table:          205880396014 = 0.205880396014 * sqrt(p)
+```
+
+This is evidence that the selected-chain certificate surface is the right
+sub-sqrt fallback, not that the producer theorem is solved.  The accelerated
+CM algorithm still enumerates subgroup orbits of roots at CRT primes; its
+published asymptotic win is space/output and root-finding decomposition, not a
+class-set-free p24 producer.  Therefore the remaining fork is now crisp:
+
+```text
+1. adapt accelerated-CM-style decomposition into a producer that carries only
+   the selected embedded orbit data, without class-scale traversal; or
+2. prove the smaller p-unit/determinant identity that bypasses selected-chain
+   root production entirely.
+```
