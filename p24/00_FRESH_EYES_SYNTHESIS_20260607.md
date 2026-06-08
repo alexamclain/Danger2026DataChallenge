@@ -725,6 +725,37 @@ e = 179*r + 7*c mod 1253.
 The axis checks are explicit: the `179` step has order `7`, the `7` step has
 order `179`, and the `7*179` pairs cover all `1253` quotient exponents.
 
+The killed `B/C` layer no longer appears to be a separate obstruction for a
+true quotient pullback.  With `N=1253`, `B=31`, and `M=38843`, inflating a
+quotient character by multiplying its dual exponent by `31` makes it trivial
+on the kernel `<rho^N>`, and the gate checks
+
+```text
+(31*a*(t+jN) mod M) = 31*(a*t mod N)
+```
+
+for representative p24 right-mixed packets across all quotient points and all
+kernel lifts.  Thus the full raw carry is `31` times the reduced raw carry on
+each lift; additive divisor trace scales the normalized divisor by `31`, and
+multiplicative norm gives a `31`st power.  This preserves p-unitness and
+forbidden-support zeroes.
+
+Even better, the additive trace is itself the quotient-character projector:
+among all `38843` full-cycle character exponents, exactly the `1253`
+exponents divisible by `31` survive, and the other `37590` nontrivial
+`B/C`-kernel twists die.  Thus a divisor/log packet after `Tr_{B/C}` is
+automatically quotient-level; the remaining theorem is identification of the
+surviving quotient packet with the reduced Jacobi/CM-Lang packet, not control
+of extra `31`-kernel phases.
+
+The reduced Jacobi packet now lands directly in the value-side verifier
+interface.  Symbolically, every admissible right-mixed carry satisfies
+`theta(r,0)=0`, has one constant inversion complement off the C-zero fiber,
+and has C-row sums independent of `r`.  For p24 this covers all `189036`
+right-mixed pairs.  Lean now has a `ReducedJacobiCarryObligations` entrance
+from these three identities to the `632` dual equations and `1092` H-coset
+verifier.
+
 So the proof target is no longer "find a ray-level Jacobi unit".  It is:
 
 ```text

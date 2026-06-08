@@ -3815,6 +3815,88 @@ p24_artin_quotient_coordinate_right_axis_step_has_order_7=1
 p24_artin_quotient_coordinate_c_axis_step_has_order_179=1
 ```
 
+The `B/C` layer itself now has a clean inflation/norm gate.  Let
+`N=7*179=1253`, `B=31`, and `M=B*N=38843`.  If a reduced quotient character
+with exponent `a mod N` is inflated to the full rho cycle by the dual exponent
+`B*a mod M`, then for every kernel lift `T=t+jN`,
+
+```text
+(B*a*T mod M) = B*(a*t mod N).
+```
+
+For a right-mixed Jacobi packet this gives, pointwise on sampled p24
+representatives and all kernel lifts,
+
+```text
+full raw carry = 31 * reduced raw carry.
+```
+
+Consequently:
+
+```text
+p24_bc_trace_inflation_full_rho_order=38843
+p24_bc_trace_inflation_kernel_degree=31
+p24_bc_trace_inflation_sampled_point_checks=116529
+p24_bc_trace_inflation_sampled_inflated_residue_identity=1
+p24_bc_trace_inflation_sampled_inflated_carry_identity=1
+p24_bc_trace_inflation_raw_carry_scale_per_lift=31
+p24_bc_trace_inflation_raw_carry_pushforward_scale=961
+p24_bc_trace_inflation_normalized_divisor_trace_scale=31
+p24_bc_trace_inflation_multiplicative_norm_power=31
+p24_bc_trace_inflation_bc_layer_introduces_new_character_support=0
+```
+
+The additive character-projection version is stronger and removes a possible
+ambiguity.  On the full cycle `M=38843`, `Tr_{B/C}` sums over
+`T, T+N, ..., T+30N`.  For a character exponent `e`, the kernel geometric sum
+is nonzero exactly when `31 | e`.  The gate checks all full-cycle exponents:
+
+```text
+p24_bc_trace_character_projection_full_character_exponents=38843
+p24_bc_trace_character_projection_surviving_quotient_exponents=1253
+p24_bc_trace_character_projection_killed_kernel_twist_exponents=37590
+p24_bc_trace_character_projection_survival_iff_exponent_divisible_by_31=1
+p24_bc_trace_character_projection_quotient_images_cover=1
+p24_bc_trace_character_projection_trace_scale_on_survivors=31
+p24_bc_trace_character_projection_trace_kills_nontrivial_kernel_twists=1
+```
+
+Interpretation: for additive divisor/log packets, `Tr_{B/C}` itself projects
+onto the quotient-character part.  Nontrivial `B/C`-kernel twists die
+automatically.  On the surviving quotient pullback, additive divisor trace
+multiplies the normalized reduced divisor by `31`, and multiplicative norm
+gives the `31`st power of the reduced unit.  P-unitness and
+forbidden-support avoidance are unchanged.
+
+The reduced quotient packet is now connected directly to the value-side
+verifier interface.  The symbolic Jacobi gate checks all admissible
+right-mixed pairs for `c=5,11,13,17,19,179`; for p24 this is all
+`189036` pairs.  For the carry
+
+```text
+theta(t) = [u t] + [v t] - [(u+v)t],
+```
+
+the checked symbolic identities are:
+
+```text
+theta(r,0)=0,
+theta(t)+theta(-t)=7*179 off the C-zero fiber,
+sum_c theta(r,c) is independent of r.
+```
+
+These are exactly the three value-side identities that feed the
+`632`-equation dual Fourier target and then the `1092` H-coset verifier.
+`TraceGcdDualConditionsValueSideGate.lean` now exposes this as a
+`ReducedJacobiCarryObligations` path parallel to the older Robert-producer
+path.  Thus the remaining arithmetic theorem can be stated in its cleanest
+form:
+
+```text
+after Tr_{B/C}, the surviving selected quotient packet is the reduced
+right-mixed Jacobi/CM-Lang carry on C_7 x C_179.
+```
+
 Therefore the mixed-level Jacobi-sum/CM-Lang packet has to be pulled back
 through the unramified `n`-class Frobenius orbit and only then compared with
 the reduced Jacobi packet.  This is the current sharp theorem target.

@@ -250,6 +250,15 @@ def p24VisibleThetaInfinitySum : Nat :=
   p24VisibleJacobiPhi / 2
 def p24PlainCyclotomicFrobeniusOrder : Nat := 89
 def p24VisibleRayOrderOverHilbert : Nat := 768960
+def p24FullRhoLevel : Nat := p24RhoCycleOrder
+def p24BCKernelDegree : Nat := p24BOverCDegree
+def p24BCInflatedRawCarryScale : Nat := p24BOverCDegree
+def p24BCInflatedRawPushforwardScale : Nat :=
+  p24BOverCDegree * p24BOverCDegree
+def p24BCMultiplicativeNormPower : Nat := p24BOverCDegree
+def p24BCTraceSurvivingCharacters : Nat := p24VisibleJacobiLevel
+def p24BCTraceKilledKernelTwists : Nat :=
+  (p24BOverCDegree - 1) * p24VisibleJacobiLevel
 def p24InternalCosetBalanceCount : Nat := 560
 def p24RecombinedCosetBalanceCount : Nat := 8
 def p24CompressedVerifierEquations : Nat := 48
@@ -324,6 +333,35 @@ theorem p24_visible_ray_order_has_no_c_axis_primary :
 
 theorem p24_visible_ray_order_not_post_bc_quotient_source :
     p24VisibleRayOrderOverHilbert % p24AfterBOverCQuotientOrder ≠ 0 := by
+  decide
+
+theorem p24_full_rho_level_is_bc_extension_of_visible_quotient :
+    p24FullRhoLevel = p24BCKernelDegree * p24VisibleJacobiLevel := by
+  decide
+
+theorem p24_bc_inflated_raw_carry_scale_count :
+    p24BCInflatedRawCarryScale = 31 := by
+  decide
+
+theorem p24_bc_inflated_raw_pushforward_scale_count :
+    p24BCInflatedRawPushforwardScale = 961 := by
+  decide
+
+theorem p24_bc_multiplicative_norm_power_count :
+    p24BCMultiplicativeNormPower = 31 := by
+  decide
+
+theorem p24_bc_trace_surviving_character_count :
+    p24BCTraceSurvivingCharacters = 1253 := by
+  decide
+
+theorem p24_bc_trace_killed_kernel_twist_count :
+    p24BCTraceKilledKernelTwists = 37590 := by
+  decide
+
+theorem p24_bc_trace_survivors_plus_killed_exhaust_full_rho :
+    p24BCTraceSurvivingCharacters + p24BCTraceKilledKernelTwists =
+      p24FullRhoLevel := by
   decide
 
 theorem p24_compressed_equation_split :

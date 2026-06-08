@@ -47,6 +47,24 @@ def valueSideFromRobertProducer
   inversionComplementConstantOffCZero :=
     obligations.inversionPairCompatibility
 
+structure ReducedJacobiCarryObligations where
+  quotientCRowSumsIndependent : Prop
+  quotientCZeroFiberVanishes : Prop
+  quotientInversionComplementConstantOffCZero : Prop
+
+def SatisfiesReducedJacobiCarryObligations
+    (obligations : ReducedJacobiCarryObligations) : Prop :=
+  obligations.quotientCRowSumsIndependent ∧
+  obligations.quotientCZeroFiberVanishes ∧
+  obligations.quotientInversionComplementConstantOffCZero
+
+def valueSideFromReducedJacobiCarry
+    (obligations : ReducedJacobiCarryObligations) : ValueSideIdentities where
+  cRowSumsIndependent := obligations.quotientCRowSumsIndependent
+  cZeroFiberVanishes := obligations.quotientCZeroFiberVanishes
+  inversionComplementConstantOffCZero :=
+    obligations.quotientInversionComplementConstantOffCZero
+
 structure DualFourierFamilies where
   forbiddenCTrivialVanishes : Prop
   conjugatePairSkew : Prop
@@ -66,6 +84,10 @@ def AllValueSideIdentities {Character : Type}
 def AllRobertProducerObligations {Character : Type}
     (obligations : Character → RobertProducerObligations) : Prop :=
   ∀ chi, SatisfiesRobertProducerObligations (obligations chi)
+
+def AllReducedJacobiCarryObligations {Character : Type}
+    (obligations : Character → ReducedJacobiCarryObligations) : Prop :=
+  ∀ chi, SatisfiesReducedJacobiCarryObligations (obligations chi)
 
 def AllFourDualFamilies {Character : Type}
     (families : Character → DualFourierFamilies) : Prop :=
@@ -88,6 +110,16 @@ theorem value_side_from_robert_producer_obligations
   intro chi
   rcases h_robert chi with ⟨h_selected, h_degree_zero, h_inversion⟩
   exact ⟨h_degree_zero, h_selected, h_inversion⟩
+
+theorem value_side_from_reduced_jacobi_carry_obligations
+    {Character : Type}
+    (obligations : Character → ReducedJacobiCarryObligations)
+    (h_carry : AllReducedJacobiCarryObligations obligations) :
+    AllValueSideIdentities
+      (fun chi => valueSideFromReducedJacobiCarry (obligations chi)) := by
+  intro chi
+  rcases h_carry chi with ⟨h_rows, h_zero, h_inversion⟩
+  exact ⟨h_rows, h_zero, h_inversion⟩
 
 theorem four_dual_families_from_value_side_identities
     {Character : Type}
@@ -116,6 +148,22 @@ theorem four_dual_families_from_robert_producer_obligations
     (fun chi => valueSideFromRobertProducer (obligations chi))
     families h_value_to_dual
     (value_side_from_robert_producer_obligations obligations h_robert)
+
+theorem four_dual_families_from_reduced_jacobi_carry_obligations
+    {Character : Type}
+    (obligations : Character → ReducedJacobiCarryObligations)
+    (families : Character → DualFourierFamilies)
+    (h_value_to_dual :
+      ∀ chi,
+        SatisfiesValueSideIdentities
+          (valueSideFromReducedJacobiCarry (obligations chi)) →
+        SatisfiesFourDualFamilies (families chi))
+    (h_carry : AllReducedJacobiCarryObligations obligations) :
+    AllFourDualFamilies families := by
+  exact four_dual_families_from_value_side_identities
+    (fun chi => valueSideFromReducedJacobiCarry (obligations chi))
+    families h_value_to_dual
+    (value_side_from_reduced_jacobi_carry_obligations obligations h_carry)
 
 theorem admissible_decomposition_from_value_side_identities
     {Character : Type}
@@ -152,6 +200,26 @@ theorem admissible_decomposition_from_robert_producer_obligations
   exact h_dual_complete chi
     (h_value_to_dual chi
       ((value_side_from_robert_producer_obligations obligations h_robert) chi))
+
+theorem admissible_decomposition_from_reduced_jacobi_carry_obligations
+    {Character : Type}
+    (obligations : Character → ReducedJacobiCarryObligations)
+    (families : Character → DualFourierFamilies)
+    (inAdmissibleSpan : Character → Prop)
+    (h_value_to_dual :
+      ∀ chi,
+        SatisfiesValueSideIdentities
+          (valueSideFromReducedJacobiCarry (obligations chi)) →
+        SatisfiesFourDualFamilies (families chi))
+    (h_dual_complete :
+      ∀ chi, SatisfiesFourDualFamilies (families chi) →
+        inAdmissibleSpan chi)
+    (h_carry : AllReducedJacobiCarryObligations obligations) :
+    AllAdmissibleDecomposed inAdmissibleSpan := by
+  intro chi
+  exact h_dual_complete chi
+    (h_value_to_dual chi
+      ((value_side_from_reduced_jacobi_carry_obligations obligations h_carry) chi))
 
 theorem hcoset_verifier_from_value_side_identities
     {Character Row Coset : Type}
@@ -250,12 +318,64 @@ theorem hcoset_verifier_from_robert_producer_obligations
     (value_side_from_robert_producer_obligations obligations h_robert)
     h_centered
 
+theorem hcoset_verifier_from_reduced_jacobi_carry_obligations
+    {Character Row Coset : Type}
+    (obligations : Character → ReducedJacobiCarryObligations)
+    (families : Character → DualFourierFamilies)
+    (inAdmissibleSpan forbiddenBidegreeZero finalTraceZero rightCoboundary :
+      Character → Prop)
+    (productCoboundary characterZero : Character → Row → Prop)
+    (centered : Row → Prop)
+    (hcosetZero : Row → Coset → Prop)
+    (allRowsCentered : (Row → Prop) → Prop)
+    (allCharacterPayloadZero : (Character → Row → Prop) → Prop)
+    (h_value_to_dual :
+      ∀ chi,
+        SatisfiesValueSideIdentities
+          (valueSideFromReducedJacobiCarry (obligations chi)) →
+        SatisfiesFourDualFamilies (families chi))
+    (h_dual_complete :
+      ∀ chi, SatisfiesFourDualFamilies (families chi) →
+        inAdmissibleSpan chi)
+    (h_admissible_support :
+      ∀ chi, inAdmissibleSpan chi → forbiddenBidegreeZero chi)
+    (h_final :
+      ∀ chi, forbiddenBidegreeZero chi → finalTraceZero chi)
+    (h_right :
+      ∀ chi, finalTraceZero chi → rightCoboundary chi)
+    (h_product :
+      ∀ chi row, rightCoboundary chi → productCoboundary chi row)
+    (h_character :
+      ∀ chi row, productCoboundary chi row → characterZero chi row)
+    (h_character_collect :
+      (∀ chi row, characterZero chi row) →
+        allCharacterPayloadZero characterZero)
+    (h_hcoset :
+      allRowsCentered centered →
+      allCharacterPayloadZero characterZero →
+      AllHCosetSumsZero hcosetZero)
+    (h_carry : AllReducedJacobiCarryObligations obligations)
+    (h_centered : allRowsCentered centered) :
+    AllHCosetSumsZero hcosetZero := by
+  exact hcoset_verifier_from_value_side_identities
+    (fun chi => valueSideFromReducedJacobiCarry (obligations chi))
+    families inAdmissibleSpan forbiddenBidegreeZero finalTraceZero
+    rightCoboundary productCoboundary characterZero centered hcosetZero
+    allRowsCentered allCharacterPayloadZero h_value_to_dual h_dual_complete
+    h_admissible_support h_final h_right h_product h_character
+    h_character_collect h_hcoset
+    (value_side_from_reduced_jacobi_carry_obligations obligations h_carry)
+    h_centered
+
 def p24RightQuotientDegree : Nat := 7
 def p24COverEDegree : Nat := 179
 def p24ConjugateCPairCount : Nat := 89
 def p24DualConditionCount : Nat := 632
 def p24FourierAmbientDim : Nat := 1253
 def p24AdmissibleCaxisCarryRank : Nat := 621
+def p24RightMixedReducedJacobiPairs : Nat :=
+  (p24RightQuotientDegree - 1) *
+    (p24COverEDegree - 1) * (p24COverEDegree - 2)
 def p24LeftRows : Nat := 156
 def p24RightHCosets : Nat := 7
 def p24NontrivialRightCharacters : Nat := 6
@@ -272,6 +392,10 @@ theorem p24_dual_condition_count_expanded :
 theorem p24_dual_solution_dim_matches_admissible_rank :
     p24FourierAmbientDim - p24DualConditionCount =
       p24AdmissibleCaxisCarryRank := by
+  decide
+
+theorem p24_right_mixed_reduced_jacobi_pair_count :
+    p24RightMixedReducedJacobiPairs = 189036 := by
   decide
 
 theorem p24_hcoset_verifier_count :

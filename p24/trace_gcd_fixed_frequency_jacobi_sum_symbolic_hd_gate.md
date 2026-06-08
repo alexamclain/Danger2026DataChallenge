@@ -93,6 +93,27 @@ No finite-field sums and no p24 class-set enumeration are used.
 The p24 missing theorem is not the finite Jacobi/Hasse-Davenport algebra
 anymore.  That algebra is isolated.
 
+The gate now also checks the verifier-facing value identities directly for
+the reduced Jacobi carry.  For every right-mixed admissible pair, including
+all `189036` p24 pairs, the carry
+
+```text
+theta(t) = [u t] + [v t] - [(u+v)t]
+```
+
+satisfies:
+
+```text
+theta(r,0)=0,
+theta(t)+theta(-t)=7*c off the C-zero fiber,
+sum_c theta(r,c) is independent of r.
+```
+
+Thus a selected quotient packet identified with this reduced carry feeds the
+value-side verifier gate without any further finite algebra.  The Lean file
+`TraceGcdDualConditionsValueSideGate.lean` now records this as a
+`ReducedJacobiCarryObligations` handoff.
+
 The targeted source refresh gives the right name for this algebra:
 Kubert-Lichtenbaum/Weil mixed-level Jacobi-sum Hecke characters and the
 Langlands/Hasse-Davenport Gauss-sum identities.  That source validates the
@@ -149,6 +170,51 @@ e = 179*r + 7*c mod 1253.
 Equivalently, the `179` exponent step is the right `C_7` axis, the `7`
 exponent step is the `C_179` axis, and the pairs `(r,c)` cover the full
 post-`B/C` quotient.
+
+The gate also separates quotient inflation from possible nontrivial
+`B/C`-kernel twists.  For a reduced character exponent `a mod N`, where
+`N=7*179`, the quotient pullback to the full `M=31*N` rho cycle uses exponent
+`31*a`.  Then every kernel lift `T=t+jN` satisfies:
+
+```text
+(31*a*T mod M) = 31*(a*t mod N).
+```
+
+For the Jacobi carry this means:
+
+```text
+full raw carry on each lift = 31 * reduced raw carry.
+```
+
+The p24 check samples representative right-mixed packets over all `1253`
+quotient points and all `31` kernel lifts:
+
+```text
+p24_bc_trace_inflation_sampled_point_checks=116529
+p24_bc_trace_inflation_sampled_inflated_residue_identity=1
+p24_bc_trace_inflation_sampled_inflated_carry_identity=1
+p24_bc_trace_inflation_normalized_divisor_trace_scale=31
+p24_bc_trace_inflation_multiplicative_norm_power=31
+p24_bc_trace_inflation_bc_layer_introduces_new_character_support=0
+```
+
+The additive trace projection is exact across all full-cycle character
+exponents:
+
+```text
+p24_bc_trace_character_projection_full_character_exponents=38843
+p24_bc_trace_character_projection_surviving_quotient_exponents=1253
+p24_bc_trace_character_projection_killed_kernel_twist_exponents=37590
+p24_bc_trace_character_projection_survival_iff_exponent_divisible_by_31=1
+p24_bc_trace_character_projection_trace_kills_nontrivial_kernel_twists=1
+```
+
+So for divisor/log packets, `Tr_{B/C}` automatically kills the nontrivial
+`31`-kernel twists and projects to quotient characters.  On that surviving
+quotient part, trace/norm contributes only a harmless `31` scaling or `31`st
+power.  The remaining question is therefore not the killed kernel phase; it is
+whether the surviving selected quotient packet is the reduced Jacobi/CM-Lang
+packet.
 
 The plain cyclotomic Frobenius check is deliberately negative:
 

@@ -85,6 +85,18 @@ the existing verifier pipeline:
 p24/lean/TraceGcdDualConditionsValueSideGate.lean
 ```
 
+It now has two equivalent producer-facing entrances:
+
+```text
+RobertProducerObligations
+ReducedJacobiCarryObligations
+```
+
+The second is the current sharpest one.  If the arithmetic proof identifies
+the surviving post-`Tr_{B/C}` selected quotient packet with a reduced
+right-mixed Jacobi carry, the symbolic Jacobi gate supplies the three
+value-side identities and Lean carries them to the verifier.
+
 This is likely the best packet-facing version of the missing theorem.  It
 separates three arithmetic inputs:
 
