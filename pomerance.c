@@ -4280,6 +4280,48 @@ static int search128(u128 p) {
                         }
                     }
                 }
+            } else if (nms == 3 && ms[0] + 1 == 2*ms[1] && ms[1] == 2*ms[2] + 1) {
+                u128 QX, QZ, RX, RZ, SX, SZ, TX, TZ, UX, UZ, xR;
+
+                xMULPAIR128(&QX, &QZ, &RX, &RZ, x0m, ms[2], a24m, &mt);
+                if (projected_hit128(&xR, p, A, k, max_v2s[2], QX, QZ, a24m, &mt)) {
+#pragma omp critical
+                    {
+                        if (!found) {
+                            found=1; found_A=A; found_x0=xR;
+                            double el = now_sec()-t0;
+                            printf("Found after %.2fs (~%llu trials)\n\n",
+                                   el, (unsigned long long)(lc * nthr));
+                        }
+                    }
+                }
+
+                xADD128(&SX, &SZ, QX, QZ, RX, RZ, x0m, &mt);
+                if (!found && projected_hit128(&xR, p, A, k, max_v2s[1], SX, SZ, a24m, &mt)) {
+#pragma omp critical
+                    {
+                        if (!found) {
+                            found=1; found_A=A; found_x0=xR;
+                            double el = now_sec()-t0;
+                            printf("Found after %.2fs (~%llu trials)\n\n",
+                                   el, (unsigned long long)(lc * nthr));
+                        }
+                    }
+                }
+
+                xDBL128(&TX, &TZ, QX, QZ, a24m, &mt);
+                xADD128(&UX, &UZ, TX, TZ, SX, SZ, x0m, &mt);
+                if (!found && projected_hit128(&xR, p, A, k, max_v2s[0], UX, UZ, a24m, &mt)) {
+#pragma omp critical
+                    {
+                        if (!found) {
+                            found=1; found_A=A; found_x0=xR;
+                            double el = now_sec()-t0;
+                            printf("Found after %.2fs (~%llu trials)\n\n",
+                                   el, (unsigned long long)(lc * nthr));
+                        }
+                    }
+                }
             } else if (nms == 3 && ms[1] == 2*ms[0] + 1 && ms[2] == 2*ms[0] - 1) {
                 u128 QX, QZ, RX, RZ, SX, SZ, xR;
 
