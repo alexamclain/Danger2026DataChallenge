@@ -5,6 +5,13 @@ and `p = 10^22 + 9`, plus the local Codex-assisted experimental work used to
 find and verify them. This work was undertaken as part of a collaboration
 across teams in DARPA's expMath program.
 
+Curated research notes now live in:
+
+- `research/p23/` for the p23 campaign and its supporting audits;
+- `research/p24/` for the p24 research wiki and archived exploration;
+- `research/p25/` for the p25 research wiki imported from the separate
+  `pomerance-p25-run` workspace.
+
 ## p23 Result: X1(16) Nonsplit Search
 
 For
@@ -75,10 +82,11 @@ Reproducibility artifacts are in `results/p23/`:
 - `p23-worker03-tail.txt`
 - `pomerance_100000000000000000000117.lean`
 
-A curated research ledger is in `research/p23/`. The source file
-`pomerance.c` now includes the p23 experimental `X1(16)` modes and many
-diagnostic modes used to test alternatives before the nonsplit route graduated
-to production.
+A curated research ledger is in `research/p23/`. Related later-stage research
+material is now also tracked in `research/p24/` and `research/p25/`. The
+source file `pomerance.c` now includes the p23 experimental `X1(16)` modes and
+many diagnostic modes used to test alternatives before the nonsplit route
+graduated to production.
 
 ## p22 Result: 2-Sylow Projection Search
 
