@@ -1,0 +1,36 @@
+{
+  "cm_discriminant": -7,
+  "curve": {
+    "a": "873015873015873015873020",
+    "b": "915343915343915343915349",
+    "model": "short_weierstrass"
+  },
+  "danger_k": 40,
+  "j": -3375,
+  "kind": "near_square_cm_non_danger_ecpp_certificate",
+  "large_prime_factor": "71229627932369",
+  "large_prime_gt_sqrt_p": true,
+  "large_prime_is_prime": true,
+  "large_prime_minus_1_factorization": {
+    "2": 4,
+    "4451851745773": 1
+  },
+  "order": "999999999998000000000008",
+  "order_factorization": {
+    "2": 3,
+    "250698247": 1,
+    "7": 1,
+    "71229627932369": 1
+  },
+  "p": "1000000000000000000000007",
+  "point": {
+    "x": "38631440976935977356837",
+    "y": "716386917392088115064353"
+  },
+  "q_torsion_point": {
+    "x": "587768493878776623339056",
+    "y": "859647925492382669088844"
+  },
+  "trace": "2000000000000",
+  "v2_order": 3
+}

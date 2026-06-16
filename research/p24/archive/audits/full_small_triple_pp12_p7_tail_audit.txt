@@ -1,0 +1,69 @@
+full small-triple halving audit
+source=p24/upstream_DANGER3/pp12.txt.gz
+filters=min_p=2048 max_p=9223372036854775808 mod=8 residue=7 limit=None
+branch_depth=-1 branch_sample_mod=1 branch_sample_residue=0 max_prefix=6
+rows=539616
+primes=62
+distinct_prefixes=12011
+branch_rows=539616
+triple_loglog_exponent=1.395351
+prefix_loglog_exponent=0.548752
+x_per_A_quantiles_10_25_50_75_90_99=32.000,32.000,32.000,64.000,64.000,64.000
+min_x_over_p_quantiles_1_10_25_50_75_90_99=0.005557,0.051312,0.125866,0.250571,0.375667,0.450329,0.494864
+min_A_over_p_quantiles_1_10_25_50_75_90_99=0.006252,0.052847,0.126430,0.249756,0.374212,0.447622,0.494426
+row_split_counts={-1: 184544, 1: 355072}
+sampled_terminal_counts={'quadratic': 177536, 'zero': 362080}
+sampled_prefix_terminal_masks={zero:8877, quadratic:2936, quadratic+zero:198}
+fiber_size_hist_top={32:6012, 64:5099, 16:842, 128:58}
+fiber_by_split_top={(-1, 32):4852, (1, 64):4852, (1, 32):1160, (-1, 16):842, (-1, 64):247, (1, 128):58}
+symmetry_closure_rates=reciprocal:539616/539616=1.000000 negA_negx:539616/539616=1.000000 orbit4:539616/539616=1.000000
+low_degree_character_captures
+  feature=A-2 best=-1 count=362080/539616 capture=0.670996 signed_bias=0.341991 counts={-1: 362080, 1: 177536}
+  feature=A+2 best=1 count=362080/539616 capture=0.670996 signed_bias=0.341991 counts={-1: 177536, 1: 362080}
+  feature=A2-4 best=1 count=355072/539616 capture=0.658009 signed_bias=0.316017 counts={-1: 184544, 1: 355072}
+  feature=A*x+1 best=-1 count=270522/539616 capture=0.501323 signed_bias=0.002918 counts={-1: 270522, 0: 146, 1: 268948}
+  feature=x-1 best=-1 count=270028/539616 capture=0.500408 signed_bias=0.000815 counts={-1: 270028, 1: 269588}
+  feature=x+1 best=1 count=270028/539616 capture=0.500408 signed_bias=0.000815 counts={-1: 269588, 1: 270028}
+  feature=x2-1 best=1 count=269808/539616 capture=0.500000 signed_bias=0.000000 counts={-1: 269808, 1: 269808}
+  feature=x best=1 count=269808/539616 capture=0.500000 signed_bias=0.000000 counts={-1: 269808, 1: 269808}
+  feature=s=x+1/x best=1 count=269808/539616 capture=0.500000 signed_bias=0.000000 counts={-1: 269808, 1: 269808}
+  feature=s-2 best=1 count=269808/539616 capture=0.500000 signed_bias=0.000000 counts={-1: 269808, 1: 269808}
+  feature=s+A best=1 count=269808/539616 capture=0.500000 signed_bias=0.000000 counts={-1: 269808, 1: 269808}
+  feature=s+2 best=1 count=269808/539616 capture=0.500000 signed_bias=0.000000 counts={-1: 269808, 1: 269808}
+inverse_depth_four_symbol_captures
+  depth=0 best=-0 count=181040/539616 capture=0.335498 counts={'+0': 181040, '0-': 88768, '-0': 181040, '0+': 88768}
+  depth=1 best=-+ count=135080/539616 capture=0.250326 counts={'-+': 135080, '--': 134728, '++': 134728, '+-': 135080}
+  depth=2 best=-+ count=135248/539616 capture=0.250637 counts={'--': 134560, '++': 134560, '-+': 135248, '+-': 135248}
+  depth=3 best=-+ count=134976/539616 capture=0.250133 counts={'-+': 134976, '--': 134832, '+-': 134976, '++': 134832}
+  depth=4 best=-- count=134916/539616 capture=0.250022 counts={'+-': 134892, '++': 134916, '--': 134916, '-+': 134892}
+  depth=5 best=-- count=117600/470400 capture=0.250000 counts={'++': 117600, '+-': 117600, '-+': 117600, '--': 117600}
+inverse_depth_s_symbol_captures
+  depth=0 best=- count=181040/539616 capture=0.335498 counts={'+': 181040, '0': 177536, '-': 181040}
+  depth=1 best=- count=269808/539616 capture=0.500000 counts={'-': 269808, '+': 269808}
+  depth=2 best=- count=269808/539616 capture=0.500000 counts={'-': 269808, '+': 269808}
+  depth=3 best=- count=269808/539616 capture=0.500000 counts={'-': 269808, '+': 269808}
+  depth=4 best=- count=269808/539616 capture=0.500000 counts={'+': 269808, '-': 269808}
+  depth=5 best=- count=235200/470400 capture=0.500000 counts={'+': 235200, '-': 235200}
+inverse_depth_x_symbol_captures
+  depth=0 best=0 count=362080/539616 capture=0.670996 counts={'0': 362080, '-': 88768, '+': 88768}
+  depth=1 best=- count=269808/539616 capture=0.500000 counts={'+': 269808, '-': 269808}
+  depth=2 best=- count=269808/539616 capture=0.500000 counts={'-': 269808, '+': 269808}
+  depth=3 best=- count=269808/539616 capture=0.500000 counts={'+': 269808, '-': 269808}
+  depth=4 best=- count=269808/539616 capture=0.500000 counts={'-': 269808, '+': 269808}
+  depth=5 best=- count=235200/470400 capture=0.500000 counts={'+': 235200, '-': 235200}
+inverse_four_prefix_captures
+  length=1 best=-0 count=181040/539616 capture=0.335498 uniform4_expected=0.250000
+  length=2 best=-0.-- count=47008/539616 capture=0.087114 uniform4_expected=0.062500
+  length=3 best=-0.--.-- count=12020/539616 capture=0.022275 uniform4_expected=0.015625
+  length=4 best=-0.-+.++.-- count=3052/539616 capture=0.005656 uniform4_expected=0.003906
+  length=5 best=-0.++.+-.--.-- count=847/539616 capture=0.001570 uniform4_expected=0.000977
+  length=6 best=-0.++.+-.--.--.+- count=205/470400 capture=0.000436 uniform4_expected=0.000244
+inverse_s_prefix_captures
+  length=1 best=- count=181040/539616 capture=0.335498 uniform2_expected=0.500000
+  length=2 best=-- count=94016/539616 capture=0.174228 uniform2_expected=0.250000
+  length=3 best=--- count=47704/539616 capture=0.088404 uniform2_expected=0.125000
+  length=4 best=---- count=24076/539616 capture=0.044617 uniform2_expected=0.062500
+  length=5 best=----- count=12162/539616 capture=0.022538 uniform2_expected=0.031250
+  length=6 best=-----+ count=5406/470400 capture=0.011492 uniform2_expected=0.015625
+terminal_by_first_inverse_symbol={('zero', '+0'):181040, ('zero', '-0'):181040, ('quadratic', '0-'):88768, ('quadratic', '0+'):88768}
+conclusion=x0_data_shows_exact_constant_symmetries_and_near_uniform_inverse_branch_entropy; no growing statistical_or_algebraic_selector_was_detected

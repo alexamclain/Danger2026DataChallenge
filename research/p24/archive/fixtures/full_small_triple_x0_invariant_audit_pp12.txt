@@ -1,0 +1,146 @@
+path=p24/upstream_DANGER3/pp12.txt.gz
+rows=3083880
+prime_count=562
+prefix_count=80263
+high_p_threshold=2048
+high_rows=2249184
+p_mod8_filter=7
+p_mod8_rows=761612
+terminal_preimage_counts={'+1': 456, '-1': 456, 'other': 448, 'quadratic': 1014728, 'zero': 2067792}
+prefix_terminal_branch_masks={'+1': 9, '+1+-1': 14, '-1': 9, 'other': 14, 'quadratic': 15856, 'quadratic+zero': 520, 'zero': 63841}
+x_per_prefix_hist_top={32: 35165, 16: 22844, 64: 16685, 128: 2890, 8: 2073, 256: 426, 4: 127, 512: 45, 1024: 6, 2: 2}
+top_x0_character_lifts_all
+  feature=quad=x2+A*x+1@x2 best_sign=+1 total=3083880 neg=0 zero=8 pos=3083872 capture_all=0.999997 capture_nonzero=1.000000 lift_nonzero=2.000000
+  feature=quad=x2+A*x+1@x1 best_sign=+1 total=3083880 neg=0 zero=0 pos=3083880 capture_all=1.000000 capture_nonzero=1.000000 lift_nonzero=2.000000
+  feature=quad=x2+A*x+1@pre2 best_sign=+1 total=3083880 neg=0 zero=0 pos=3083880 capture_all=1.000000 capture_nonzero=1.000000 lift_nonzero=2.000000
+  feature=quad=x2+A*x+1@pre1 best_sign=+1 total=3083880 neg=0 zero=1014728 pos=2069152 capture_all=0.670957 capture_nonzero=1.000000 lift_nonzero=2.000000
+  feature=x+1@pre1 best_sign=+1 total=3083880 neg=511980 zero=456 pos=2571444 capture_all=0.833834 capture_nonzero=0.833957 lift_nonzero=1.667915
+  feature=x2+1@pre1 best_sign=+1 total=3083880 neg=515760 zero=0 pos=2568120 capture_all=0.832756 capture_nonzero=0.832756 lift_nonzero=1.665512
+  feature=A*x+1@pre1 best_sign=+1 total=3083880 neg=525232 zero=0 pos=2558648 capture_all=0.829685 capture_nonzero=0.829685 lift_nonzero=1.659369
+  feature=x+2@pre2 best_sign=+1 total=3083880 neg=1019184 zero=696 pos=2064000 capture_all=0.669287 capture_nonzero=0.669438 lift_nonzero=1.338876
+  feature=f=x*quad@x2 best_sign=+1 total=3083880 neg=1035036 zero=32 pos=2048812 capture_all=0.664362 capture_nonzero=0.664369 lift_nonzero=1.328737
+  feature=x@x2 best_sign=+1 total=3083880 neg=1035040 zero=24 pos=2048816 capture_all=0.664363 capture_nonzero=0.664368 lift_nonzero=1.328736
+  feature=x@x1 best_sign=+1 total=3083880 neg=1035050 zero=0 pos=2048830 capture_all=0.664368 capture_nonzero=0.664368 lift_nonzero=1.328735
+  feature=x@pre2 best_sign=+1 total=3083880 neg=1035050 zero=0 pos=2048830 capture_all=0.664368 capture_nonzero=0.664368 lift_nonzero=1.328735
+  feature=f=x*quad@x1 best_sign=+1 total=3083880 neg=1035050 zero=0 pos=2048830 capture_all=0.664368 capture_nonzero=0.664368 lift_nonzero=1.328735
+  feature=f=x*quad@pre2 best_sign=+1 total=3083880 neg=1035050 zero=0 pos=2048830 capture_all=0.664368 capture_nonzero=0.664368 lift_nonzero=1.328735
+  feature=f=x*quad best_sign=+1 total=3083880 neg=1035050 zero=0 pos=2048830 capture_all=0.664368 capture_nonzero=0.664368 lift_nonzero=1.328735
+  feature=(x2-1)*(A2-4)@pre1 best_sign=+1 total=3083880 neg=1042732 zero=912 pos=2040236 capture_all=0.661581 capture_nonzero=0.661777 lift_nonzero=1.323553
+  feature=x2-1@pre1 best_sign=+1 total=3083880 neg=1045260 zero=912 pos=2037708 capture_all=0.660761 capture_nonzero=0.660957 lift_nonzero=1.321913
+  feature=x2-1@pre2 best_sign=-1 total=3083880 neg=520056 zero=2067792 pos=496032 capture_all=0.168637 capture_nonzero=0.511822 lift_nonzero=1.023644
+  feature=(x2-1)*(A2-4)@pre2 best_sign=-1 total=3083880 neg=520040 zero=2067792 pos=496048 capture_all=0.168632 capture_nonzero=0.511806 lift_nonzero=1.023612
+  feature=x2+1@pre2 best_sign=-1 total=3083880 neg=1571932 zero=0 pos=1511948 capture_all=0.509725 capture_nonzero=0.509725 lift_nonzero=1.019451
+top_x0_character_lifts_high
+  feature=quad=x2+A*x+1@x2 best_sign=+1 total=2249184 neg=0 zero=0 pos=2249184 capture_all=1.000000 capture_nonzero=1.000000 lift_nonzero=2.000000
+  feature=quad=x2+A*x+1@x1 best_sign=+1 total=2249184 neg=0 zero=0 pos=2249184 capture_all=1.000000 capture_nonzero=1.000000 lift_nonzero=2.000000
+  feature=quad=x2+A*x+1@pre2 best_sign=+1 total=2249184 neg=0 zero=0 pos=2249184 capture_all=1.000000 capture_nonzero=1.000000 lift_nonzero=2.000000
+  feature=quad=x2+A*x+1@pre1 best_sign=+1 total=2249184 neg=0 zero=744960 pos=1504224 capture_all=0.668787 capture_nonzero=1.000000 lift_nonzero=2.000000
+  feature=x+1@pre1 best_sign=+1 total=2249184 neg=374784 zero=0 pos=1874400 capture_all=0.833369 capture_nonzero=0.833369 lift_nonzero=1.666738
+  feature=A*x+1@pre1 best_sign=+1 total=2249184 neg=376320 zero=0 pos=1872864 capture_all=0.832686 capture_nonzero=0.832686 lift_nonzero=1.665372
+  feature=x2+1@pre1 best_sign=+1 total=2249184 neg=379392 zero=0 pos=1869792 capture_all=0.831320 capture_nonzero=0.831320 lift_nonzero=1.662640
+  feature=x+2@pre2 best_sign=+1 total=2249184 neg=744384 zero=416 pos=1504384 capture_all=0.668858 capture_nonzero=0.668981 lift_nonzero=1.337963
+  feature=x@x2 best_sign=+1 total=2249184 neg=750768 zero=0 pos=1498416 capture_all=0.666204 capture_nonzero=0.666204 lift_nonzero=1.332409
+  feature=x@x1 best_sign=+1 total=2249184 neg=750768 zero=0 pos=1498416 capture_all=0.666204 capture_nonzero=0.666204 lift_nonzero=1.332409
+  feature=x@pre2 best_sign=+1 total=2249184 neg=750768 zero=0 pos=1498416 capture_all=0.666204 capture_nonzero=0.666204 lift_nonzero=1.332409
+  feature=f=x*quad@x2 best_sign=+1 total=2249184 neg=750768 zero=0 pos=1498416 capture_all=0.666204 capture_nonzero=0.666204 lift_nonzero=1.332409
+  feature=f=x*quad@x1 best_sign=+1 total=2249184 neg=750768 zero=0 pos=1498416 capture_all=0.666204 capture_nonzero=0.666204 lift_nonzero=1.332409
+  feature=f=x*quad@pre2 best_sign=+1 total=2249184 neg=750768 zero=0 pos=1498416 capture_all=0.666204 capture_nonzero=0.666204 lift_nonzero=1.332409
+  feature=f=x*quad best_sign=+1 total=2249184 neg=750768 zero=0 pos=1498416 capture_all=0.666204 capture_nonzero=0.666204 lift_nonzero=1.332409
+  feature=x2-1@pre1 best_sign=+1 total=2249184 neg=751968 zero=0 pos=1497216 capture_all=0.665671 capture_nonzero=0.665671 lift_nonzero=1.331341
+  feature=(x2-1)*(A2-4)@pre1 best_sign=+1 total=2249184 neg=755072 zero=0 pos=1494112 capture_all=0.664291 capture_nonzero=0.664291 lift_nonzero=1.328581
+  feature=quad=x2+A*x+1 best_sign=-1 total=2249184 neg=1147744 zero=0 pos=1101440 capture_all=0.510294 capture_nonzero=0.510294 lift_nonzero=1.020587
+  feature=x2-1@pre2 best_sign=-1 total=2249184 neg=379520 zero=1504224 pos=365440 capture_all=0.168737 capture_nonzero=0.509450 lift_nonzero=1.018900
+  feature=(x2-1)*(A2-4)@pre2 best_sign=-1 total=2249184 neg=379520 zero=1504224 pos=365440 capture_all=0.168737 capture_nonzero=0.509450 lift_nonzero=1.018900
+top_x0_character_lifts_mod8
+  feature=quad=x2+A*x+1@x2 best_sign=+1 total=761612 neg=0 zero=0 pos=761612 capture_all=1.000000 capture_nonzero=1.000000 lift_nonzero=2.000000
+  feature=quad=x2+A*x+1@x1 best_sign=+1 total=761612 neg=0 zero=0 pos=761612 capture_all=1.000000 capture_nonzero=1.000000 lift_nonzero=2.000000
+  feature=quad=x2+A*x+1@pre2 best_sign=+1 total=761612 neg=0 zero=0 pos=761612 capture_all=1.000000 capture_nonzero=1.000000 lift_nonzero=2.000000
+  feature=quad=x2+A*x+1@pre1 best_sign=+1 total=761612 neg=0 zero=252000 pos=509612 capture_all=0.669123 capture_nonzero=1.000000 lift_nonzero=2.000000
+  feature=x2+1@pre2 best_sign=+1 total=761612 neg=480 zero=0 pos=761132 capture_all=0.999370 capture_nonzero=0.999370 lift_nonzero=1.998740
+  feature=x2-1@pre2 best_sign=+1 total=761612 neg=576 zero=508268 pos=252768 capture_all=0.331886 capture_nonzero=0.997726 lift_nonzero=1.995453
+  feature=(x2-1)*(A2-4)@pre2 best_sign=+1 total=761612 neg=576 zero=508268 pos=252768 capture_all=0.331886 capture_nonzero=0.997726 lift_nonzero=1.995453
+  feature=x-2@pre1 best_sign=-1 total=761612 neg=636084 zero=192 pos=125336 capture_all=0.835181 capture_nonzero=0.835392 lift_nonzero=1.670784
+  feature=x+2@pre1 best_sign=+1 total=761612 neg=125336 zero=192 pos=636084 capture_all=0.835181 capture_nonzero=0.835392 lift_nonzero=1.670784
+  feature=x2+1@pre1 best_sign=+1 total=761612 neg=125664 zero=0 pos=635948 capture_all=0.835003 capture_nonzero=0.835003 lift_nonzero=1.670005
+  feature=x-1@pre1 best_sign=-1 total=761612 neg=634940 zero=448 pos=126224 capture_all=0.833679 capture_nonzero=0.834170 lift_nonzero=1.668340
+  feature=x+1@pre1 best_sign=+1 total=761612 neg=126224 zero=448 pos=634940 capture_all=0.833679 capture_nonzero=0.834170 lift_nonzero=1.668340
+  feature=(x-1)*(A+2)@pre1 best_sign=-1 total=761612 neg=634812 zero=448 pos=126352 capture_all=0.833511 capture_nonzero=0.834002 lift_nonzero=1.668003
+  feature=(x+1)*(A-2)@pre1 best_sign=-1 total=761612 neg=634812 zero=448 pos=126352 capture_all=0.833511 capture_nonzero=0.834002 lift_nonzero=1.668003
+  feature=A*x-1@pre1 best_sign=-1 total=761612 neg=633884 zero=0 pos=127728 capture_all=0.832293 capture_nonzero=0.832293 lift_nonzero=1.664585
+  feature=x-1@pre2 best_sign=-1 total=761612 neg=380902 zero=254134 pos=126576 capture_all=0.500126 capture_nonzero=0.750578 lift_nonzero=1.501157
+  feature=x+1@pre2 best_sign=+1 total=761612 neg=126576 zero=254134 pos=380902 capture_all=0.500126 capture_nonzero=0.750578 lift_nonzero=1.501157
+  feature=(x2-1)*(A2-4)@pre1 best_sign=+1 total=761612 neg=252000 zero=896 pos=508716 capture_all=0.667946 capture_nonzero=0.668733 lift_nonzero=1.337466
+  feature=A*x+1@pre1 best_sign=+1 total=761612 neg=252736 zero=0 pos=508876 capture_all=0.668156 capture_nonzero=0.668156 lift_nonzero=1.336313
+  feature=x2-1@pre1 best_sign=-1 total=761612 neg=508268 zero=896 pos=252448 capture_all=0.667358 capture_nonzero=0.668144 lift_nonzero=1.336288
+top_tail_code_counts_all
+  count=17610 sig=((1, -1, 1, 1), (1, 1, -1, 1), (1, 0, -1, 1), (0, 1, 1, 1), 'inf')
+  count=17610 sig=((1, 1, -1, 1), (1, -1, 1, 1), (1, -1, 0, 1), (0, 1, 1, 1), 'inf')
+  count=17222 sig=((1, 1, 1, 1), (1, 1, -1, 1), (1, 0, -1, 1), (0, -1, 1, 1), 'inf')
+  count=17222 sig=((1, -1, 1, 1), (1, 1, -1, 1), (1, 0, -1, 1), (0, -1, 1, 1), 'inf')
+  count=17222 sig=((-1, -1, 1, 1), (-1, 1, -1, 1), (-1, 1, 0, 1), (0, -1, 1, 1), 'inf')
+  count=17222 sig=((-1, -1, -1, 1), (-1, 1, -1, 1), (-1, 1, 0, 1), (0, -1, 1, 1), 'inf')
+  count=17206 sig=((1, 1, -1, 1), (1, 1, 1, 1), (1, 0, -1, 1), (0, 1, 1, 1), 'inf')
+  count=17206 sig=((1, -1, 1, 1), (1, 1, 1, 1), (1, -1, 0, 1), (0, 1, 1, 1), 'inf')
+  count=17094 sig=((1, -1, -1, 1), (1, -1, 1, 1), (1, 0, -1, 1), (0, -1, 1, 1), 'inf')
+  count=17094 sig=((1, 1, -1, 1), (1, -1, 1, 1), (1, 0, -1, 1), (0, -1, 1, 1), 'inf')
+  count=17094 sig=((-1, 1, -1, 1), (-1, -1, 1, 1), (-1, 1, 0, 1), (0, -1, 1, 1), 'inf')
+  count=17094 sig=((-1, 1, 1, 1), (-1, -1, 1, 1), (-1, 1, 0, 1), (0, -1, 1, 1), 'inf')
+  count=17034 sig=((1, -1, -1, 1), (1, 1, -1, 1), (1, 1, 0, 1), (0, 1, 1, 1), 'inf')
+  count=17034 sig=((1, -1, -1, 1), (1, -1, 1, 1), (1, 0, 1, 1), (0, 1, 1, 1), 'inf')
+  count=16986 sig=((1, 1, -1, 1), (1, 1, -1, 1), (1, 1, 0, 1), (0, 1, 1, 1), 'inf')
+  count=16986 sig=((1, -1, 1, 1), (1, -1, 1, 1), (1, 0, 1, 1), (0, 1, 1, 1), 'inf')
+  count=16984 sig=((1, 1, -1, 1), (1, 1, -1, 1), (1, -1, 0, 1), (0, 1, 1, 1), 'inf')
+  count=16984 sig=((1, -1, 1, 1), (1, -1, 1, 1), (1, 0, -1, 1), (0, 1, 1, 1), 'inf')
+  count=16919 sig=((1, 1, -1, 1), (1, -1, -1, 1), (1, 0, -1, 1), (0, -1, 1, 1), 'inf')
+  count=16919 sig=((1, -1, -1, 1), (1, -1, -1, 1), (1, 0, -1, 1), (0, -1, 1, 1), 'inf')
+top_tail_code_counts_high
+  count=13264 sig=((1, 1, -1, 1), (1, 1, -1, 1), (1, 1, 0, 1), (0, 1, 1, 1), 'inf')
+  count=13264 sig=((1, -1, 1, 1), (1, -1, 1, 1), (1, 0, 1, 1), (0, 1, 1, 1), 'inf')
+  count=13152 sig=((1, 1, 1, 1), (1, 1, -1, 1), (1, 1, 0, 1), (0, 1, 1, 1), 'inf')
+  count=13152 sig=((1, 1, 1, 1), (1, -1, 1, 1), (1, 0, 1, 1), (0, 1, 1, 1), 'inf')
+  count=13024 sig=((1, -1, -1, 1), (1, 1, -1, 1), (1, 1, 0, 1), (0, 1, 1, 1), 'inf')
+  count=13024 sig=((1, -1, -1, 1), (1, -1, 1, 1), (1, 0, 1, 1), (0, 1, 1, 1), 'inf')
+  count=12912 sig=((1, -1, 1, 1), (1, 1, -1, 1), (1, 1, 0, 1), (0, 1, 1, 1), 'inf')
+  count=12912 sig=((1, 1, -1, 1), (1, -1, 1, 1), (1, 0, 1, 1), (0, 1, 1, 1), 'inf')
+  count=12912 sig=((1, -1, -1, 1), (1, -1, -1, 1), (1, 0, 1, 1), (0, 1, 1, 1), 'inf')
+  count=12912 sig=((1, -1, -1, 1), (1, -1, -1, 1), (1, 1, 0, 1), (0, 1, 1, 1), 'inf')
+  count=12792 sig=((1, -1, 1, 1), (1, 1, -1, 1), (1, 0, -1, 1), (0, 1, 1, 1), 'inf')
+  count=12792 sig=((1, 1, -1, 1), (1, -1, 1, 1), (1, -1, 0, 1), (0, 1, 1, 1), 'inf')
+  count=12704 sig=((1, 1, -1, 1), (1, -1, -1, 1), (1, 1, 0, 1), (0, 1, 1, 1), 'inf')
+  count=12704 sig=((1, -1, 1, 1), (1, -1, -1, 1), (1, 0, 1, 1), (0, 1, 1, 1), 'inf')
+  count=12620 sig=((-1, -1, 1, 1), (-1, 1, -1, 1), (-1, 1, 0, 1), (0, -1, 1, 1), 'inf')
+  count=12620 sig=((-1, -1, -1, 1), (-1, 1, -1, 1), (-1, 1, 0, 1), (0, -1, 1, 1), 'inf')
+  count=12620 sig=((1, -1, 1, 1), (1, 1, -1, 1), (1, 0, -1, 1), (0, -1, 1, 1), 'inf')
+  count=12620 sig=((1, 1, 1, 1), (1, 1, -1, 1), (1, 0, -1, 1), (0, -1, 1, 1), 'inf')
+  count=12480 sig=((-1, 1, 1, 1), (-1, -1, 1, 1), (-1, 1, 0, 1), (0, -1, 1, 1), 'inf')
+  count=12480 sig=((-1, 1, -1, 1), (-1, -1, 1, 1), (-1, 1, 0, 1), (0, -1, 1, 1), 'inf')
+triple_symmetry_counts
+  negA_neg_recip:True=3083880
+  negA_negx:True=3083880
+  negA_recip:False=2996360
+  negA_recip:True=87520
+  same_A_neg:False=2996360
+  same_A_neg:True=87520
+  same_A_neg_recip:False=2996360
+  same_A_neg_recip:True=87520
+  same_A_recip:True=3083880
+prefix_symmetry_counts
+  negA_neg_recip:all:True=80263
+  negA_neg_recip:any:True=80263
+  negA_negx:all:True=80263
+  negA_negx:any:True=80263
+  negA_recip:all:False=80232
+  negA_recip:all:True=31
+  negA_recip:any:False=67856
+  negA_recip:any:True=12407
+  same_A_neg:all:False=80232
+  same_A_neg:all:True=31
+  same_A_neg:any:False=67856
+  same_A_neg:any:True=12407
+  same_A_neg_recip:all:False=80232
+  same_A_neg_recip:all:True=31
+  same_A_neg_recip:any:False=67856
+  same_A_neg_recip:any:True=12407
+  same_A_recip:all:True=80263
+  same_A_recip:any:True=80263
+conclusion=no_x0_or_inverse_branch_low_degree_feature_exceeds_fixed_constant_lift

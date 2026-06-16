@@ -1,0 +1,69 @@
+full small-triple halving audit
+source=p24/upstream_DANGER3/pp12.txt.gz
+filters=min_p=0 max_p=9223372036854775808 mod=8 residue=None limit=None
+branch_depth=-1 branch_sample_mod=1 branch_sample_residue=0 max_prefix=6
+rows=3083880
+primes=562
+distinct_prefixes=80263
+branch_rows=3083880
+triple_loglog_exponent=1.054954
+prefix_loglog_exponent=0.608511
+x_per_A_quantiles_10_25_50_75_90_99=16.000,16.000,32.000,32.000,64.000,128.000
+min_x_over_p_quantiles_1_10_25_50_75_90_99=0.005737,0.050814,0.125907,0.250750,0.375623,0.450226,0.494966
+min_A_over_p_quantiles_1_10_25_50_75_90_99=0.005086,0.048339,0.122263,0.247670,0.372313,0.449065,0.495188
+row_split_counts={-1: 1039480, 1: 2044400}
+sampled_terminal_counts={'other': 1360, 'quadratic': 1014728, 'zero': 2067792}
+sampled_prefix_terminal_masks={zero:63841, quadratic:15856, quadratic+zero:520, other:46}
+fiber_size_hist_top={32:35165, 16:22844, 64:16685, 128:2890, 8:2073, 256:426, 4:127, 512:45, 1024:6, 2:2}
+fiber_by_split_top={(-1, 16):21608, (-1, 32):20671, (1, 64):16438, (1, 32):14494, (1, 128):2890, (-1, 8):1997, (1, 16):1236, (1, 256):426, (-1, 64):247, (-1, 4):123, (1, 8):76, (1, 512):45, ...(+3)}
+symmetry_closure_rates=reciprocal:3083880/3083880=1.000000 negA_negx:3083880/3083880=1.000000 orbit4:3083880/3083880=1.000000
+low_degree_character_captures
+  feature=A+2 best=1 count=2050310/3083880 capture=0.664848 signed_bias=0.329695 counts={-1: 1033570, 1: 2050310}
+  feature=s+A best=1 count=2048830/3083880 capture=0.664368 signed_bias=0.328735 counts={-1: 1035050, 1: 2048830}
+  feature=curve_rhs best=1 count=2048830/3083880 capture=0.664368 signed_bias=0.328735 counts={-1: 1035050, 1: 2048830}
+  feature=A2-4 best=1 count=2044400/3083880 capture=0.662931 signed_bias=0.325862 counts={-1: 1039480, 1: 2044400}
+  feature=x best=-1 count=1566894/3083880 capture=0.508092 signed_bias=0.016184 counts={-1: 1566894, 1: 1516986}
+  feature=s-2 best=-1 count=1566894/3083880 capture=0.508092 signed_bias=0.016184 counts={-1: 1566894, 1: 1516986}
+  feature=s+2 best=-1 count=1566894/3083880 capture=0.508092 signed_bias=0.016184 counts={-1: 1566894, 1: 1516986}
+  feature=A-2 best=-1 count=1554790/3083880 capture=0.504167 signed_bias=0.008334 counts={-1: 1554790, 1: 1529090}
+  feature=s=x+1/x best=1 count=1545938/3083880 capture=0.501296 signed_bias=0.003107 counts={-1: 1536362, 0: 1580, 1: 1545938}
+  feature=x+1 best=-1 count=1543363/3083880 capture=0.500461 signed_bias=0.000923 counts={-1: 1543363, 1: 1540517}
+  feature=x-1 best=-1 count=1542749/3083880 capture=0.500262 signed_bias=0.000525 counts={-1: 1542749, 1: 1541131}
+  feature=A*x+1 best=-1 count=1542548/3083880 capture=0.500197 signed_bias=0.000888 counts={-1: 1542548, 0: 1520, 1: 1539812}
+inverse_depth_four_symbol_captures
+  depth=0 best=-0 count=1033896/3083880 capture=0.335258 counts={'-0': 1033896, '+0': 1033896, '0+': 507364, '0-': 507364, '-+': 324, '--': 356, '+-': 324, '++': 356}
+  depth=1 best=-+ count=771890/3083880 capture=0.250298 counts={'+-': 771890, '++': 770050, '--': 770050, '-+': 771890}
+  depth=2 best=-+ count=772306/3083832 capture=0.250437 counts={'+-': 772306, '++': 769610, '--': 769610, '-+': 772306}
+  depth=3 best=-- count=771764/3081936 capture=0.250415 counts={'--': 771764, '-+': 769204, '+-': 769204, '++': 771764}
+  depth=4 best=-- count=757812/3029440 capture=0.250149 counts={'+-': 756908, '--': 757812, '++': 757812, '-+': 756908}
+  depth=5 best=-- count=476752/1907008 capture=0.250000 counts={'--': 476752, '-+': 476752, '+-': 476752, '++': 476752}
+inverse_depth_s_symbol_captures
+  depth=0 best=- count=1034576/3083880 capture=0.335479 counts={'-': 1034576, '+': 1034576, '0': 1014728}
+  depth=1 best=- count=1541940/3083880 capture=0.500000 counts={'+': 1541940, '-': 1541940}
+  depth=2 best=- count=1541916/3083832 capture=0.500000 counts={'+': 1541916, '-': 1541916}
+  depth=3 best=- count=1540968/3081936 capture=0.500000 counts={'-': 1540968, '+': 1540968}
+  depth=4 best=- count=1514720/3029440 capture=0.500000 counts={'+': 1514720, '-': 1514720}
+  depth=5 best=- count=953504/1907008 capture=0.500000 counts={'-': 953504, '+': 953504}
+inverse_depth_x_symbol_captures
+  depth=0 best=0 count=2067792/3083880 capture=0.670516 counts={'0': 2067792, '+': 508044, '-': 508044}
+  depth=1 best=- count=1541940/3083880 capture=0.500000 counts={'-': 1541940, '+': 1541940}
+  depth=2 best=- count=1541916/3083832 capture=0.500000 counts={'-': 1541916, '+': 1541916}
+  depth=3 best=- count=1540968/3081936 capture=0.500000 counts={'-': 1540968, '+': 1540968}
+  depth=4 best=- count=1514720/3029440 capture=0.500000 counts={'-': 1514720, '+': 1514720}
+  depth=5 best=- count=953504/1907008 capture=0.500000 counts={'-': 953504, '+': 953504}
+inverse_four_prefix_captures
+  length=1 best=-0 count=1033896/3083880 capture=0.335258 uniform4_expected=0.250000
+  length=2 best=-0.+- count=261035/3083880 capture=0.084645 uniform4_expected=0.062500
+  length=3 best=-0.++.+- count=65492/3083832 capture=0.021237 uniform4_expected=0.015625
+  length=4 best=-0.++.+-.-- count=16851/3081936 capture=0.005468 uniform4_expected=0.003906
+  length=5 best=-0.++.+-.--.-- count=4333/3029440 capture=0.001430 uniform4_expected=0.000977
+  length=6 best=-0.++.-+.-+.++.+- count=709/1907008 capture=0.000372 uniform4_expected=0.000244
+inverse_s_prefix_captures
+  length=1 best=- count=1034576/3083880 capture=0.335479 uniform2_expected=0.500000
+  length=2 best=-+ count=522458/3083880 capture=0.169416 uniform2_expected=0.250000
+  length=3 best=-++ count=261862/3083832 capture=0.084914 uniform2_expected=0.125000
+  length=4 best=-+-- count=131430/3081936 capture=0.042645 uniform2_expected=0.062500
+  length=5 best=-+--+ count=64728/3029440 capture=0.021366 uniform2_expected=0.031250
+  length=6 best=--+--- count=20534/1907008 capture=0.010768 uniform2_expected=0.015625
+terminal_by_first_inverse_symbol={('zero', '-0'):1033896, ('zero', '+0'):1033896, ('quadratic', '0+'):507364, ('quadratic', '0-'):507364, ('other', '--'):356, ('other', '++'):356, ('other', '-+'):324, ('other', '+-'):324}
+conclusion=x0_data_shows_exact_constant_symmetries_and_near_uniform_inverse_branch_entropy; no growing statistical_or_algebraic_selector_was_detected

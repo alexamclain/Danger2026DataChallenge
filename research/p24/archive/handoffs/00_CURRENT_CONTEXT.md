@@ -1,0 +1,4811 @@
+# p24 Current Context
+
+Date: 2026-06-06 / 2026-06-07, updated 2026-06-08
+
+Read `p24/00_HANDOFF_INDEX_20260607.md` first on future turns.  If the next
+move is external expert synthesis, read
+`p24/00_DREW_SUTHERLAND_ASK_MEMO.md` immediately after that.  Then read this
+file only when more detail is needed.  It is meant to avoid reloading the full
+`p24/` research folder, which currently contains hundreds of exploratory notes
+and scripts.
+
+After the handoff index, read
+`p24/00_DREW_SUTHERLAND_ASK_MEMO.md` for the current targeted expert ask.
+For local proof work, read `p24/00_FRESH_EYES_SYNTHESIS_20260607.md` first if
+context is tight, then `p24/00_FRESH_AGENT_HANDOFF_20260607.md` and
+`p24/00_GLOBAL_SYNTHESIS_HANDOFF.md`.  The fresh-eyes note is the compact
+restart point; the older handoffs have more chronological detail.
+
+## Goal
+
+Find a certificate for `p = 10^24 + 7` that beats `sqrt(p)` scaling.  The live
+route is still mathematical: prove p-unit determinant/crossed-norm identities,
+then use a constant-size verifier payload.  Do not commit.
+
+2026-06-08 admissibility caveat: the source text is split.  The current
+`AndrewVSutherland/DANGER3` README and the local
+`p24/upstream_DANGER3/README.md` state the Pomerance-triple problem but do not
+visibly include the phrase "without exploiting supersingular curves or CM".
+The top-level `README.md` in this fork does include that phrase in the copied
+challenge writeup.  Until Drew/challenge ownership clarifies this, treat every
+CM/Lang/Jacobi route below as conditional or diagnostic, not automatically a
+challenge-final method.  Under the stricter reading, the final route must
+avoid CM/supersingular exploitation or be reframed as a non-CM finite-field
+identity whose proof no longer depends on selecting CM classes.
+
+2026-06-08 strict/no-CM audit refresh: the existing strict frontier still has
+no asymptotic DANGER3 speedup once CM is excluded.  Reruns confirmed:
+
+```text
+fixed-frequency ordinary gate:
+  descent leaves 1260 stable supports;
+  no-fixed-defect theorem would reduce this to 35;
+  the needed theorem is still arithmetic tail-in-prefix, not bookkeeping.
+
+exact trace-residue selector at d=28:
+  ell=199,191,37 isolate the six target traces as an oracle;
+  product=1406333;
+  constructive level 2^28*1406333 has gamma0/sqrt=587.551526.
+
+level pricing:
+  exact trace-residue oracle best sampled level is pure 2^40;
+  gamma0/sqrt = oracle_proxy/sqrt = 1.649267.
+
+mixed CRT trace-residue optimizer:
+  best remains pure 2^40;
+  proxy/sqrt = 1.649267.
+
+small exact additive/residue audit:
+  no stable low-frequency or small-residue selector visible;
+  median low-energy(|h|<=32)=0.002214 on the rerun.
+
+Montgomery trace-transform sharpening:
+  additive transform equals -chi(-h)G(chi)Kl(-4,-h^2/4);
+  direct six-row identity error < 2.8e-11;
+  additive sparsity would require Kloosterman-family zeros.
+```
+
+So the strict-admissible track is not "add more cheap filters."  It needs a
+new finite-field identity that constructively forces the target trace or
+strict 2-adic Frobenius orientation.  None is currently known from the local
+data.  The CM/Lang work remains the strongest conditional sub-sqrt route, but
+its admissibility depends on the rule clarification or on reframing it as a
+non-CM finite-field identity.
+
+As of 2026-06-07, the sharpest local frontier is the selected
+CM/Lang/Jacobi product identity after `Tr_{B/C}` on `C_7 x C_179`, including
+the single degenerate-anchor correction identified by the finite-field Jacobi
+model.  The four-field-element p-unit payload remains the best conditional
+certificate surface after the arithmetic producer is proved.
+
+2026-06-08 refinement: the external Jacobi-sum literature now splits the
+frontier more cleanly.  Kubert-Lichtenbaum/Weil mixed-level Jacobi-sum Hecke
+characters and the Langlands/Hasse-Davenport Gauss-product identities supply
+the visible reduced Jacobi packet and explain the `R_179` orbit anchor shape.
+For p24:
+
+```text
+p mod 179 = 77
+ord_179(p) = 89
+nonzero 179-cyclotomic exponents split into two Frobenius orbits of size 89
+inversion swaps the two half-products
+the real/inversion quotient is one degree-89 orbit
+```
+
+This matches the `deg K_H=89` reduced-anchor kernel polynomial.  But ordinary
+cyclotomic Frobenius is still the wrong selector for the p24 quotient:
+
+```text
+ordinary cyclotomic order on level 7*179 = 89
+ordinary cyclotomic order on the right 7-axis = 1
+actual post-B/C rho quotient order = 1253 = 7*179
+```
+
+So the remaining theorem is no longer "make the Jacobi/Hasse-Davenport packet
+exist."  It is specifically:
+
+```text
+Kubert-Lichtenbaum/Langlands reduced packet and R_179 degree-89 anchor
++ p-integral selected finite coordinate / resultant or basepoint avoidance
++ CM-Artin pullback along the unramified rho quotient after Tr_{B/C}
++ selected-child subtraction compatibility
+=> verifier-equivalent reduced Jacobi carry, up to pure C_179 residual.
+```
+
+Lean now names this handoff as
+`SelectedKLPuncturedHasseDavenportProducerInputs` and proves that it feeds the
+existing punctured-Hasse-Davenport verifier-equivalent carry route.
+
+Parallel-compute status: the selected-chain surface is not an executable
+search job yet.  The local artifact
+`p24/phase_chain_certificate_verifier.py` is a verifier for a supplied
+certificate, and `p24/phase_lifted_tower_certificate_toy.py` is a small
+`D=-5000` shape experiment.  They confirm the `3107811`-coefficient p24
+surface, but they do not produce the p24 degree-`3107441` selected recovery
+polynomial or the selected relative child polynomials.  So there is no honest
+`3.1M`-sample p24 job to kick off without the same missing embedded
+class-field/CM-Lang producer theorem.  The useful parallel computation remains
+small exact falsifier/proof-gate runs, not a root search.
+
+2026-06-08 operational refinement: there is, however, a better CPU-friendly
+theorem microscope than the selected-chain root search.  The low-moment
+selector route says the verifier/anti-collision constraints are:
+
+```text
+first layer:  P_1..P_4      = 4 constraints
+second layer: P_1..P_26     = 26 constraints
+selected path total         = 30 constraints
+```
+
+The first moment on each layer is the already-known parent period, so the
+new producer burden is:
+
+```text
+first layer:  P_2..P_4      = 3 new selected relative traces
+second layer: P_2..P_26     = 25 new selected relative traces
+selected path total         = 28 new values
+```
+
+Equivalently, by Newton identities, this is `28` next coefficients of the two
+selected child polynomials.  If constructed as parent-field functions rather
+than only selected evaluations, the current coefficient surface is:
+
+```text
+2*4 + 314*26 = 8172 parent-field coefficients
+```
+
+This is `8.172e-9 * sqrt(p)`, so it is safely sub-sqrt and worth testing in
+small/medium faithful models.  It is not itself a p24 certificate search:
+one still needs an intrinsic relative-trace producer and a CM sparse-relation
+anti-collision theorem.  But it is the best parallel compute target right
+now, because it can falsify/support an asymptotic selector theorem without
+enumerating the p24 class set.
+
+2026-06-08 scalar/content refinement: the `L1` axis route gives a second
+sub-sqrt theorem microscope.  Define
+
+```text
+W_axis = {a0 + g_2(r mod 2) + g_157(r mod 157) + g_211(r mod 211)}
+dim W_axis = 1 + 1 + 156 + 210 = 368.
+```
+
+For each p24 packet factor `f_a | Phi_3107441`, with
+`deg f_a = ord_n(p) = 388430`, the target is injectivity of
+
+```text
+T_a : W_axis -> F_p[X]/(f_a),
+T_a(w) = sum_r w(r) F_r(X).
+```
+
+Across all eight p24 packets the finite rank surface is:
+
+```text
+8 * 368 * 388430 = 1143537920 < 10^12 = sqrt_floor(p).
+```
+
+The latest bounded actual-CM controls are clean: `191/191` wider eligible
+packets and `630/630` all-origin eligible packets were injective, with no L1
+zeros.  This is still a selected-prime p-unit / hyperplane-avoidance theorem,
+not a certificate by itself, but it is small enough to audit without
+class-set enumeration.
+
+2026-06-08 rank-safe falsifier refresh: the boundary-style command from
+`p24/rank_safe_axis_theorem_target.md`,
+`l1_axis_injectivity_scan.py --max-cases 5 --min-h 24 --max-h 120
+--max-abs-D 20000 --q-stop 150000 --scan-origins
+--require-deg-ge-axis-dim --random-trials 0 --summary-only`, reported
+`packet_rows=386`, `injective_rows=386`, `injective_failures=0`,
+`block_internal_failure_rows=0`, `pair_directness_failure_rows=0`,
+`cross_directness_failure_rows=0`, `full_k_injective_rows=386`, and
+`l1_zero_rows=0`.  This is still empirical support, not a proof, but it says
+the first rank-safe failure is not appearing near the eligible small-CM
+boundary.
+
+2026-06-08 Lean annihilator refinement: `p24/lean/AxisInjectivityGate.lean`
+now includes `kernel_trivial_from_annihilator_avoidance`,
+`axis_injective_from_annihilator_avoidance`,
+`annihilator_avoidance_from_axis_injective`, and
+`axis_injective_iff_annihilator_avoidance`.  This formalizes the
+group-algebra statement from `p24/l1_axis_annihilator_theorem.md`: assuming
+the annihilator predicate is exactly the full-evaluation kernel, the
+restricted axis map is injective iff the packet annihilator has trivial
+intersection with the embedded axis space.  In p24 terms, this is the
+proof-friendly version of `gcd(A_a(Z), Q_axis(Z))=1`, where
+`Q_axis=Phi_1 Phi_2 Phi_157 Phi_211`.  The same Lean file now pins the p24
+packet-field module arithmetic:
+`1+1+2*78+210*1=368` and `214` packet-field axis modules.  The file compiles
+under Lean `v4.30.0` with only the existing release-query warning.
+
+2026-06-08 semisimple component refinement: the same Lean gate now includes
+`component_action_injective_from_cancellable_scales` and
+`axis_injective_from_semisimple_component_scales`.  This formalizes the
+componentwise version of the annihilator target: after projecting the
+semisimple axis algebra to its packet-field components, the axis action is
+injective if each packet component acts by a cancellable scalar map.  Over
+fields this is exactly the statement that every packet component on the
+smooth axis support is nonzero.  Thus the current proof target can be stated
+as `214` packet-field component nonvanishings:
+`1` constant, `1` order-2, `2` order-157 components of dimension `78`, and
+`210` order-211 lines.
+
+Sharper 2026-06-08 proof reduction: after adjoining
+`E=F_p(mu_m)`, `[E:F_p]=5460`, every degree-`388430` p24 packet splits as
+
+```text
+A_a tensor E ~= product_{70} B_i,      [B_i:E] = 5549.
+```
+
+Since `368 < 5549`, one tensor factor has enough room to certify the whole
+axis map.  The component character degrees are `1`, `156`, and `35`, and each
+has trivial intersection with a single degree-`5549` factor.  Lean now checks
+the formal descent:
+
+```text
+one B_i axis map injective
+  => base-field packet axis map injective.
+```
+
+Latest bounded tensor-factor controls: `130` tensor rows, `0` full tensor
+axis failures, `6/6` one-factor dimension-possible rows with a full axis
+factor, equal factor ranks in `130/130`, and no unforced block/pair/full
+directness failures.  The missing theorem is therefore the nonvanishing of a
+degree-`5549` Moore determinant over `E`, not a full degree-`388430` rank
+search.
+
+2026-06-08 continuation refresh: the one-factor target should be phrased as
+Moore/normality, not merely nonzero character support.  A fresh holdout run
+with seed `20260609`,
+`tensor_factor_moore_audit.py --max-cases 10 --min-h 12 --max-h 180
+--max-abs-D 50000 --max-prime-quotients 8 --max-composite-quotients 12
+--min-n 3 --max-n 180 --max-m 40 --q-stop 500000 --include-linear
+--max-factor-degree 40 --max-extension-degree 8
+--max-tensor-factor-degree 24 --summary-only`, reported `rows=25`,
+`coordinate_moore_mismatch_rows=0`,
+`one_factor_dimension_possible_rows=2`, and
+`one_factor_dimension_possible_moore_failure_rows=0`.  The matching block
+scan reported `dimension_possible_block_failure_rows=0`,
+`dimension_possible_pair_failure_rows=0`, and
+`dimension_possible_full_failure_rows=0`; all failures outside the
+dimension-possible rows were dimension-forced.  `AxisInjectivityGate.lean`
+now also includes `factor_kernel_trivial_from_coordinate_projection`,
+`base_injective_from_tensor_factor_coordinates`, and
+`base_injective_from_tensor_factor_moore_coordinates`, giving a named Lean
+bridge:
+
+```text
+one-factor Moore-coordinate injection
+  => tensor-factor kernel trivial
+  => base packet axis injectivity
+  => L1/content nonvanishing gate.
+```
+
+This still does not prove the p24 arithmetic determinant; it sharpens exactly
+what has to be proved: nonzero Moore determinant
+`det(R_s^(Q^j))_{s in S_axis, 0 <= j < 368}` in one degree-`5549`
+tensor factor over `E=F_p(mu_m)`.
+
+2026-06-08 selected-leading/tail compression refresh: the denominator-safe
+trace-frame route is now the cleanest proof-facing surface.  The raw
+one-factor Moore determinant can be replaced by the leading trace-frame
+coordinate
+
+```text
+Top_3,lead = 179 coordinates from T_0
+           + 179 coordinates from T_1
+           + 10 coordinates from T_2.
+```
+
+Equivalently, prove the full leading Plucker determinant `Delta_lead` is a
+p-unit, or prove the prefix Schubert factors `Delta_A, Delta_B, Delta_AB`
+plus denominator-safe `Delta_lead`.  A fresh selected-tail tensor-factor
+equivariance holdout,
+`trace_frame_selected_tail_tensor_factor_equivariance_audit.py --max-cases 5
+--max-h 180 --max-abs-D 40000 --max-n 180 --max-m 48 --q-stop 400000
+--include-linear --max-factor-degree 48 --max-extension-degree 10
+--max-tensor-factor-degree 24 --target axis --seed 20260610`, returned
+`14` rows in `6` row-groups.  In every group,
+`selected_tail_transport_survives=1`: full and tail zero/nonzero status were
+uniform across tensor factors.  Raw tail norms often differed, so the correct
+compression theorem is determinant-line p-unit transport, not literal equality
+of tail determinants in packetwise kernel-basis charts.  This keeps the
+one-representative degree-8 p-unit compression alive but does not prove the
+representative p-unit.
+
+2026-06-08 norm-compressed Lean accounting:
+`TraceFrameNormCompressedCertificateGate.lean` now pins the p24 scale facts:
+
+```text
+560 = 8*70 beta/tensor-factor orbits
+179+179+10 = 368 selected leading coordinates
+single-leading all H-packets:      5915320320 < 10^12 Fp slots
+single-leading all 70 factors:   414072422400 < 10^12 Fp slots
+factorized all 70 factors:       333779846400 < 10^12 Fp slots
+norm-compressed payload:              10920 < 10^12 Fp slots
+full beta four-element payload:       21840 < 10^12 Fp slots
+orbitwise norm payload:             6115200 < 10^12 Fp slots
+```
+
+The same Lean gate now includes the actual verifier-payload implication:
+
+```text
+N_lead * U_lead = 1 in E
+  => N_lead != 0
+  => all beta orbits good
+  => no harmful nonzero beta orbit
+```
+
+as `all_beta_orbits_good_from_degree8_inverse_payload` and
+`no_harmful_beta_orbits_from_degree8_inverse_payload`.  This still assumes the
+external arithmetic hypotheses: construction of the selected degree-8 norm,
+zero-detection, p-unit determinant-line transport, and the local implication
+`BetaGood beta => not Harmful beta`.
+
+2026-06-08 zero/nonzero beta guardrail: the same Lean gate now also includes
+`no_harmful_all_beta_orbits_from_zero_gate_and_nonzero_inverse_payload`.  It
+models the full beta set as `Sum ZeroOrbit NonzeroBetaOrbit`, applies the
+degree-8 inverse payload only to the `560` nonzero beta/tensor-factor orbits,
+and requires a separate no-harmful proof for the beta-zero determinant `D_0`.
+So the current compressed theorem cannot silently absorb the zero orbit.
+
+2026-06-08 four-element payload bridge: `TraceFrameNormCompressedCertificateGate.lean`
+now proves `no_harmful_zero_orbits_from_inverse_payload` and
+`no_harmful_all_beta_orbits_from_four_element_payload`.  The exact finite
+verifier surface is:
+
+```text
+D_0 * U_0 = 1 in E
+N_lead * U_lead = 1 in E
+zero-harmful => D_0 = 0
+nonzero determinant-line hypotheses for N_lead
+=> no harmful beta orbit in {zero orbit} union {560 nonzero orbits}.
+```
+
+Lean also pins the size of this full-beta payload as `4` E-elements,
+`21840` Fp slots, still far below `sqrt(p)=10^12`.
+
+2026-06-08 full beta-norm bridge: `TraceFrameBetaResultantGate.lean` now also
+has the two-element global-product endpoint
+`all_trace_frames_good_from_global_reduced_norm_inverse_payload` and
+`no_harmful_from_global_reduced_norm_inverse_payload`.  If a single
+full-beta norm value and inverse satisfy:
+
+```text
+G_all * U_all = 1 in E,
+any reduced-norm factor zero => G_all = 0,
+lead determinant zero => its orbit product factor is zero,
+lead determinant nonzero => TraceFrameGood,
+TraceFrameGood => not Harmful,
+```
+
+then every beta orbit, including the zero orbit, is non-harmful.  This is a
+cleaner theorem target if the arithmetic proof can produce the full
+`Norm_{A_all/E}(delta_all)` p-unit directly; it is not a sparse literal
+inverse certificate.
+
+2026-06-08 base-field descent check: direct pinned-row probe of the full beta
+product on the same `D=-10919, m=12` rows found `product_in_base=0` and
+`product_frob_fixed=0` for all `12` `axis`, `constant_plus_4`, and
+`constant_plus_3` full/tail rows.  Thus the scalar global-product payload
+should be treated as two `E` elements, not two `F_p` elements; the tempting
+base-field descent shortcut is false in the faithful small model.
+
+p24 quotient-action recomputation:
+
+```text
+n = 3107441 prime
+p mod n = 2509452
+ord_n(p) = 388430
+Q = p^5460 mod n = 209035
+ord_n(Q) = 5549 = 31*179
+(F_n^*)/<Q> has 560 nonzero beta cosets
+p acts on these cosets as 8 orbits of length 70
+rho = p^780 mod n = 3039535
+ord_n(rho) = 38843 = 7*5549
+rho acts on these cosets as 80 orbits of length 7
+```
+
+This confirms that the length-7 quotient/Hilbert-90 structure is real, but it
+does not by itself shrink the nonzero norm theorem: previous gates show it
+only applies after the internal degree-5549 trace/norm has produced
+`E`-valued seeds.
+
+2026-06-08 D0 proof split: the beta-zero determinant should now be treated as
+a selected-origin leading-prefix residual theorem, not as part of the nonzero
+beta crossed-product difficulty.  The pinned axis residual-value rerun
+reported `zero_block_products=0` in every displayed row; the toy full-axis
+determinant norm is origin-invariant only in the dimension-forced full-rank
+case, while lower-rank analogues have moving norms.  Current D0 target:
+
+```text
+selected-origin prefix/block residual p-unit
++ determinant-line alpha transport by explicit p-units
+=> D_0 is a p-unit.
+```
+
+The nonzero beta side remains:
+
+```text
+degree-8 representative leading norm p-unit
++ tensor-factor determinant-line transport
+=> all 560 nonzero beta/tensor-factor orbits are good.
+```
+
+2026-06-08 selected-tail tensor-factor transport rerun: pinned
+`D=-10919, m=12` with `axis`, `constant_plus_4`, and `constant_plus_3`
+under seed `20260611` returned `12` rows in `6` groups.  Every group had
+`full_zero_status_uniform=1`, `tail_zero_status_uniform=1`,
+`selected_tail_transport_survives=1`, and `full_norm_equal=1`.  Raw
+selected-tail norms differed across tensor factors in five groups; only the
+one-block `constant_plus_3, subdegree=3` row had literal `tail_norm_equal=1`.
+This supports the p-unit determinant-line transport theorem and again rejects
+literal raw-tail norm equality as the p24 compression statement.
+
+Pinned local-unit/cyclic-resultant refresh: reran the compact
+`D=-10919, m=12` resultant audit for `axis`, `constant_plus_4`, and
+`constant_plus_3`.  It returned `12` rows with `resultant_match=1`,
+`resultant_in_E=1`, `resultant_zero=0`, `coeff_semilin_fail=0`,
+`trace_recon_fail=0`, `zeros=0`, and `orbit_zero_products=0`.  This supports
+the exact crossed-product packaging of the full beta determinant product,
+including the fixed beta-zero factor `D_0`, while still showing nonconstant
+value orbits and therefore ruling out ordinary norm collapse.
+
+2026-06-08 inverse-witness refresh: reran
+`trace_frame_beta_inverse_witness_audit.py` on the same pinned
+`D=-10919, m=12` rows with `axis`, `constant_plus_4`, and `constant_plus_3`.
+It returned `12` rows with `inverse_identity=1` throughout.  Degenerate
+full-axis rows had `distinct=1 support=1 inv_support=1`, but the
+nondegenerate component/tail rows still used all coefficient orbits
+(`inv_orbit_support=3/3`) and mostly dense beta inverse support
+(`inv_support=13` for `n=13`; axis-tail had `inv_support=7` but only because
+the toy is dimension-forced).  Conclusion unchanged: a literal inverse in
+`B[Y]/(Y^n-1)` is not the sub-sqrt artifact; the useful certificate is the
+scalar p-unit norm value/inverse after proving the p-unit theorem.
+
+Targeted literature check: Gross-Zagier/Borcherds-style CM-value
+factorization, twisted Borcherds products, local Borcherds products, and
+p-adic theta/CM-value analogues are relevant only after the current leading
+determinant-line section is identified as a p-integral modular/Borcherds or
+Fitting object with a controlled divisor.  Thus the exact missing
+construction is:
+
+```text
+Xi_lead as a p-integral determinant-line/modular object
++ known divisor or local-unit criterion
++ zero local intersection at the selected p24 CM prime
+=> Xi_lead is a p-unit.
+```
+
+No source checked gives this construction for the current `Xi_lead`; they
+clarify the proof mechanism and the remaining gap.
+
+2026-06-08 pinned dual-basis refresh: reran the direct
+`D=-10919, q=11243, deg=12, ext=2, tensor factor degree=6` rows for
+`m=3,4,12`.  The dual-basis window audit gave zero
+`trace_window_rank_mismatch_targets` and zero `max_rank_profile_failures` in
+all three runs; axis rows full by tested window were `2/2`, `2/2`, and `1/1`
+respectively.  The paired CRT marginal audit on `m=12` with
+`--subdegree 3 --windows 2` again gave `rank_identity_mismatches=0`,
+`component_capacity_failures=0`, and `combined_capacity_failures=0`, with
+`constantplus4plus3` rank `6/6`.  The twisted trace-frame audit on `m=12`
+also recovered full axis rank by short proper trace frames.  Interpretation:
+the top-relative-coefficient formulation is still the right finite theorem
+surface.  Blind composite scanning is slower than direct row selection and
+should not be used as a background compute sink.
+
+End-of-day testing update: we can test inside the theorem/proof search space,
+but not yet inside a completed p24 certificate search space.  The missing
+input is still the selected p-integral CM/Lang coordinate/subgroup polynomial.
+The new local-unit criterion says that once this input exists, the p-unit test
+is exactly avoidance of the forbidden anchor/subgroup locus:
+`R_c(x)` is a unit iff `x notin mu_c`, and `K_H(T)` is a unit iff `T` avoids
+`O` and the nonzero subgroup `H`.  For p24, `c=179`, so the forbidden
+cyclotomic anchor count is `179`.
+
+The newest refinement packages this avoidance as a finite resultant/Bezout
+certificate.  If the selected coordinate is represented in `F_q[T]/(M(T))` by
+`X(T)`, then:
+
+```text
+R_c(X) unit
+  iff X(T)^c - 1 is a unit mod M(T)
+  iff Res(M(T), X(T)^c - 1) != 0
+  iff a Bezout identity A*M + B*(X^c-1)=1 exists.
+```
+
+For p24 this is the one-resultant post-producer check against `X^179-1`.
+
+Fresh arithmetic sharpening for the reduced-anchor target: in the actual p24
+base field,
+
+```text
+p mod 179 = 77
+ord_179(p) = 89 = (179 - 1)/2
+-1 is not in <p> mod 179
+```
+
+Thus Frobenius on the nonzero `179`-cyclotomic exponents has two orbits of
+size `89`, and each orbit contains exactly one element from each `{a,-a}`
+pair.  Equivalently, the `178`-term diamond residual over `F_p` splits into
+two reciprocal degree-`89` half-products.  This matches the unsquared
+kernel-polynomial degree:
+
+```text
+deg K_H = 89
+div(K_H) = sum_{Q in H, Q != O}[Q] - 178[O].
+```
+
+So the live producer can be sharpened from "realize 178 diamond factors" to
+"construct the selected Frobenius half-product / inversion-quotient
+kernel-polynomial and certify the one-resultant avoidance."  This is still
+only a post-producer reduction: it does not construct the selected CM/Lang
+coordinate or prove p-integrality by itself.
+
+This finite selector arithmetic was also checked with an ephemeral
+`lean --stdin` gate: `q=77`, `q^89=1 mod 179`, the Frobenius orbit has
+`89` distinct elements, and it contains exactly one member from every
+`{a,-a}` pair.
+
+Class-field interpretation: in `Q(zeta_179)`, the selected `p` has residue
+degree `89` and hence two primes above `p`; in the real/inversion quotient
+`Q(zeta_179+zeta_179^{-1})`, the subgroup generated by `p` and `-1` is all of
+`(Z/179Z)^*`, so the prime is inert of degree `89`.  The two half-products are
+therefore conjugate local orientations in the full cyclotomic layer, while the
+kernel-polynomial quotient is the single real/inversion object.
+
+The real cyclotomic quotient gives an even cleaner post-producer resultant.
+For odd prime `c`, let `S_0=2`, `S_1=Y`, and
+`S_{k+1}=Y*S_k-S_{k-1}`.  Then
+
+```text
+Psi_c(Y) = 1 + sum_{k=1}^{(c-1)/2} S_k(Y)
+Phi_c(X) = X^((c-1)/2) * Psi_c(X + X^{-1}).
+```
+
+For p24, `Psi_179` has degree `89`, was checked irreducible over `F_p`, and
+the Frobenius check gave `gcd(Psi_179, Y^p-Y)=1` and
+`Y^(p^89)=Y mod Psi_179`.  Therefore if the selected producer supplies an
+inversion coordinate `Y` in `F_p[T]/(M)`, the nontrivial forbidden-anchor
+avoidance can be certified as
+
+```text
+Res(M(T), Psi_179(Y(T))) != 0
+```
+
+instead of the oriented primitive-root part of the `X^179-1` test.  The
+basepoint/denominator condition remains separate: `Psi_179(2)=179`, so
+`Psi_179` does not detect `X=1` (or the elliptic `O` pole).  In kernel
+language this is the usual requirement that the selected point is not `O`.
+This gives the same degree-`89` kernel-polynomial obstruction in
+real-cyclotomic coordinates, plus one denominator/basepoint unit check.
+
+Related Kummer-descent refinement after reduction: because `ord_179(p)=89`
+and none of the named p24 finite-field degrees is divisible by `89`,
+
+```text
+degrees 1,4,156,5460,5460*179,5460*5549,31,179 are all nonzero mod 89,
+so gcd(179, p^d - 1)=1 for each named field F_{p^d}.
+```
+
+Thus the `179`th-power map is an automorphism on the multiplicative group of
+each named reduction field, and the row-sum / `R_179` residual split can be
+performed by unique `179`th-root exponentiation after reduction.  This was
+also checked with `lean --stdin`.  Caution: this is a finite-field testing and
+certificate simplification, not by itself a p-integral algebraic producer;
+the selected CM/Lang object still has to be constructed before taking this
+root is meaningful.
+
+This also collapses the nontrivial forbidden-root check for any selected
+coordinate that truly lands in the named p24 class-field reductions.  In such
+a field,
+
+```text
+X^179 = 1  iff  X = 1,
+```
+
+so the nontrivial `mu_179` avoidance is automatic and the reduced-anchor
+local-unit check is only the basepoint/denominator condition (`X != 1`, or
+`T` not `O` in kernel language).  The degree-`89` `Psi_179` resultant remains
+the right finite check only if the producer works in a deliberately adjoined
+real-cyclotomic/inversion auxiliary algebra whose residue degree can contain
+the nontrivial `179` roots.
+
+Conditional basepoint simplification: keep the two Jacobi scalars separate.
+The corrected/reduced degenerate anchor value is
+
+```text
+x = +/-1,
+```
+
+while the Kummer descent scalar underneath the row-sum/residual split is
+
+```text
+s = (q-2)/x = +/- (q-2).
+```
+
+In characteristic `p`, this reduces to `s in {-2,+2} mod p`.  Since `s != 1`,
+any named-field element `beta` with `beta^179=s` is automatically
+`beta != 1`.  The unique roots in `F_p` were checked explicitly:
+
+```text
+(-2)^(1/179) = 78834351773820436165480   mod p
+( 2)^(1/179) = 921165648226179563834527  mod p
+```
+
+and both are non-`1`.  Thus if the missing CM/Lang producer proves that its
+corrected anchor value is `x=+/-1`, its Kummer descent scalar is the Jacobi
+`(q-2)/x` analogue, and the coordinate lies in the named reduction field, then
+the entire reduced-anchor local-unit condition is automatic.  The
+still-missing work is exactly the p-integral selected CM/Lang producer and
+this sign/scalar identification.
+
+The newest adjacent-anchor compression says the six nontrivial anchor
+projectors are equivalent to one cyclic condition.  If the selected
+adjacent-trace anchor has rho-orbit polynomial `A(y)=a_0+...+a_6y^6`, then:
+
+```text
+rho(T_0)=T_0
+  iff A(y) == 0 mod Phi_7(y)=1+y+...+y^6.
+```
+
+With pointwise covariance and telescoping, this proves the `48` compressed
+right-difference equations once the selected CM/Lang anchor polynomial is
+constructed.
+
+## Fixed p24 Data
+
+```text
+p = 10^24 + 7
+t = -1178414874616
+D_K = -652834595820939249713143
+h = 205880396014 = 2 * 157 * 211 * 3107441
+m = 66254 = 2 * 157 * 211
+n = 3107441
+
+D_K = -599 * 1089874116562502921057 is squarefree, and h is squarefree.
+Thus the CM class group is cyclic as an abstract abelian group, so the
+`2`, `157`, `211`, and `3107441` layers are unique cyclic subquotients.  The
+genus quotient only accounts for the order-2 layer; the odd layers are
+non-genus class-field structure.
+
+The finite obstruction is now pinned in
+`p24/cyclic_class_tower_selector_obstruction.md`,
+`p24/cyclic_class_tower_selector_obstruction.py`, and
+`p24/lean/CyclicTowerSectionObstructionGate.lean`: cyclicity removes subgroup
+ambiguity but does not choose compatible child roots or a pairing with the
+embedded `j` torsor at the split prime above `p`.
+The positive replacement is norm language, not child labels:
+`p24/crossed_norm_torsor_invariance.md` and
+`p24/lean/TraceGcdCrossedCoinvariantNormGate.lean` record that p-unitness of
+a crossed norm is choice-independent once admissible choices differ only by
+p-unit determinant-line scaling.
+For diamond/unit-2 transport, denominator hygiene is now separated from the
+structural equivariance theorem in `p24/diamond_transport_unit_criterion.md`,
+`p24/diamond_transport_unit_denominator_audit.py`, and
+`p24/lean/TraceGcdDiamondEquivarianceGate.lean`: if the producer constructs
+p-integral source/target transports, their determinant comparison factors are
+p-units because all visible p24 transport denominators are prime to `p`.
+The finite support/window part is checked in
+`p24/diamond_support_transport_audit.py`: unit `2` carries the representative
+row `delete O4, tail O1, prefix O2,O3,O5,O6` around all six nonzero orbits,
+preserves four prefix blocks, and keeps each size-16 tail window
+Frobenius-contiguous.  The full unit cycle returns to `O1` with rotation start
+`17`, so internal Frobenius rotations must be part of the determinant-line
+transport theorem.
+The Lean theorem `punit_arrow_from_commuting_integral_det_transport` packages
+the desired single-step handoff: commuting determinant-line transport plus
+p-unit source and target determinant factors carries p-unitness from `Xi_O`
+to `Xi_2O`.
+The remaining structural diamond theorem is now stated explicitly in
+`p24/full_product_determinant_line_equivariance_theorem.md` and guarded by
+`p24/full_product_determinant_transport_toy.py`: a full `A_211` p-integral
+construction with functorial prefix kernels/tails gives commuting squares
+`B_2O d_K = d_T B_O`; exterior powers give
+`Xi_2O = det(d_T) det(d_K)^(-1) Xi_O`, and the six-step closure uses the
+internal Frobenius rotation `2^6 = p^17 mod 211`.
+
+E = F_p(mu_m),          [E:F_p] = 5460
+B/E degree = 5549 = 31 * 179
+C/E degree = 179
+B/C degree = 31
+Q = p^5460 mod n = 209035, ord_n(Q) = 5549
+h_31 = Q^179 mod n = 1293662, ord_n(h_31) = 31
+```
+
+## Certificate Surface
+
+Best current verifier shape:
+
+```text
+Xi_O0, Xi_O0^{-1}, Xi_O1, Xi_O1^{-1}
+```
+
+That is `4` field elements, about `4e-12 * sqrt_floor`.  The remaining proof
+obligation is not the verifier; it is proving the two p-unit producers:
+
+```text
+1. fixed orbit:      det(Psi_RS) is a p-unit;
+2. one nonzero orbit: crossed norm Nrd_O(Phi_t) is a p-unit.
+```
+
+Unit-2/diamond transport then supplies the remaining nonzero orbits.
+
+Count convention: the `1092` number belongs to a different fixed-frequency
+H-coset verifier interface (`156` left rows times `7` right H-cosets, or
+`936+156` character/centering equations).  It is not a count of samples,
+class elements, or Fitting orbit payload elements.  The current diamond/Fitting
+payload count is `4` field elements after the two p-unit producers and
+determinant-line transport are proved.
+
+Latest cheap verification:
+
+```text
+trace_gcd_fast_falsifier_harness.py --workers 4 --skip-spectral --no-danger3-inventory
+task_count=264
+passed=264
+failed=0
+```
+
+Latest producer-facing bounded computations:
+
+```text
+low-moment CM selector sweep:
+  rows=218
+  rows_all_unique_within_degree_bound=218
+  rows_unique_at_degree_one=131
+  rows_unique_no_later_than_random_entropy=173
+
+additional low-moment control:
+  rows=103
+  rows_all_unique_within_degree_bound=103
+  rows_unique_at_degree_one=65
+  rows_unique_no_later_than_random_entropy=82
+
+2026-06-08 spot reruns:
+  documented default sweep: rows=19, unique_within_bound=19
+  documented wider sweep:  rows=65, unique_within_bound=65
+  bounded larger sweep:    rows=134, unique_within_bound=134,
+                           unique_no_later_than_random_entropy=107
+
+relative/resultant selected-prime scans:
+  packet_rows=23906
+  unique_packet_rows_ignoring_origin=1248
+  coord_zero=0
+  distinguished_zero=0
+  content_zero=0
+  energy_zero=0
+  hermitian_zero=0
+
+additional relative/resultant control:
+  packet_rows=12211
+  unique_packet_rows_ignoring_origin=755
+  coord_zero=0
+  distinguished_zero=0
+  content_zero=0
+
+packet-factor vanishing shape:
+  zero_hits=0
+
+upstream DANGER3 pp24 small-prime control:
+  pp24.txt.gz ends at p=16777213 and contains no p=10^24+7 candidate
+  direct point-count recovery for p<30000:
+    rows=3243, misses=0
+    trace-bucket ranks={0:328, 1:2371, 2:544}
+    for p congruent to p24 mod 64:
+      n=104, ranks={0:13, 1:83, 2:8}
+  residue scans over m<=128 show only small-sample enrichments, not a robust
+    filter for the p24 lower trace bucket.
+```
+
+Interpretation: these support the current low-moment/product-resultant theorem
+surface and show no cheap selected-prime counterexamples in the widened small
+CM window.  The upstream small-prime triples are useful controls but do not
+give a p24 DANGER triple or a reliable direct-search filter.
+
+## Fixed-Orbit Map
+
+The fixed determinant is represented by
+
+```text
+Psi_RS : F_p^28 + K^28 + F_p^16 -> L,
+L = F_p(mu_157), [L:F_p]=156,
+K = F_p(mu_35)=F_{p^4}.
+```
+
+Columns:
+
+```text
+fixed frequency prefix:
+  V_{a,j}, a in {0,5,...,30}, j in {2,3,5,6}             = 28 F_p columns
+
+length-4 orbit prefix:
+  U_{a,j}(c)=sum_{r=0..3} c^{p^r} V_{p^r a,j}            = 28 K variables
+                                                                  = 112 F_p columns
+
+RS tail:
+  W_s = sum_{a in Z/35Z} omega^(a*s) V_{a,1}, 0<=s<16    = 16 F_p columns
+
+total = 28 + 112 + 16 = 156.
+```
+
+Moore/Schur split:
+
+```text
+Delta_156(C_RS) != 0
+iff Delta_140(C_prefix) != 0
+and Delta_16(P_prefix(W_0),...,P_prefix(W_15)) != 0.
+```
+
+## Current Best Missing Theorem
+
+The selected fixed square uses `156` of the `210` natural fixed-source
+columns, leaving `54` omitted columns.  If the selected columns are a basis,
+the omitted columns define a Plucker chart
+
+```text
+C in Mat_{156 x 54}(F_p).
+```
+
+The live strengthening is no longer the visible scalar Cauchy shortcut.  It is
+the block/skew Sylvester displacement theorem:
+
+```text
+A C - C B = R S,       rank(R S) = small,
+```
+
+where `A` and `B` must be p-integral transported CM/Lang operators, not fitted
+after seeing `C`.  A proof of the right arithmetic identity should imply a
+hidden MSRD/LRS erasure theorem for `54 < 55 = 210 - 156 + 1`, hence
+`det(Psi_RS)` is a p-unit.
+
+The newest concrete candidate identifies `A` and `B` as the selected and
+omitted blocks `M_SS`, `M_OO` of the common cyclic/Lang shift on the six full
+right blocks.  For a shift-invariant graph chart the exact identity is
+
+```text
+M_SS C + C M_OS C - C M_OO - M_SO = 0,
+```
+
+so the pure displacement `M_SS C - C M_OO` should have rank bounded by the two
+tail cut-edge blocks.
+
+The non-circular determinant gate is now sharper and basis-free: diagonalize
+the common cyclic shift.  The selected `156` coordinates are a p-unit basis if
+the frequency profile has `19` ordinary local 4-dimensional projections that
+are p-unit isomorphisms, `16` defect local spaces where projection to the four
+prefix blocks has rank `4` but projection to prefix plus tail has rank `5`,
+and the resulting `16 x 16` tail Fourier/Vandermonde gate is a p-unit.  In a
+chosen local basis this is the older Plucker/tail-residue statement; the
+basis-free rank-jump form is the one to prove from CM/Lang sections.  The next
+compression packages those local checks as cyclic resultants once the
+corresponding CM/Lang polynomial sections are identified.  A separate descent
+gate now records that those sections must be semilinear Frobenius-compatible;
+arbitrary splitting-field interpolants are rejected as post-fit evidence.  For
+p24, Frobenius-stable size-16 defect supports are not automatically four
+length-4 orbits: descent allows `35` pure moving supports and `1225` mixed
+supports with four fixed frequencies.  The next arithmetic fork is to prove
+fixed frequencies are ordinary, or explicitly identify the stable support.  The
+fixed-frequency ordinary gate records the exact local form of that theorem:
+for each fixed `a in 5Z/35Z`, the tail local value must lie in the prefix image,
+equivalently `rank(P_a,tau_a)=rank(P_a)`.  The fixed-frequency annihilator
+bridge converts this to the trace-dual target
+`Ann(V_{a,2},V_{a,3},V_{a,5},V_{a,6}) subset Ann(V_{a,1})`; equivalently,
+produce seven fixed-frequency linear relations expressing the tail value in
+the four prefix values.  Since `p = 1 mod 7`, the seven relations are
+equivalent, as finite algebra, to one cyclic syzygy over
+`R_7 = F_p[y]/(y^7-1)`.  Interpolation is automatic in the split 7-part, so the
+arithmetic target is an intrinsic CM/Lang construction of the cyclic
+coefficient sections, not post-fit pointwise coefficients.
+
+The finite order-7 handoff is now Lean-gated in
+`p24/lean/TraceGcdFixedFrequencyOrder7Gate.lean`: order-7 augmentation,
+negation covariance `P4=y^(-2)T`, and the denominator unit imply the seven
+tail-in-prefix fixed-frequency relations; together with the prefix Plucker
+p-units this gives no fixed defects and reduces the Frobenius-stable size-16
+support choices from `1260` to the `35` pure moving-orbit supports.  This is
+not a proof of the augmentation identity itself; that arithmetic vanishing is
+still the missing theorem.
+
+The current positive p24-specific refinement of this target is the
+`p^780` factor-cycle cancellation candidate: over `E=F_p(mu_66254)`, the
+relative packet splits into `70` degree-5549 factors, `p^780` fixes the left
+157-character, shifts the right order-7 quotient nontrivially, and cycles the
+70 factors as ten 7-cycles.  The refined semilinear gate shows covariance
+alone gives a nontrivial Frobenius eigenspace, not zero; the zero follows if
+the total packet product sum also descends to the `p^780`-fixed left field
+`L=F_p(mu_157)`.  The current sharper sufficient target is a raw
+product-coboundary theorem: for packet terms
+`T_{1,0,a} * R_{chi,-a}`, prove left covariance
+`sigma(T_{1,0,a})=alpha_a*T_{1,0,a}` and a matching right-resolvent
+coboundary
+`R_{chi,-a}=sigma(V_{chi,a})-(epsilon_chi/alpha_a)*V_{chi,a}`.  Then the
+formal product rule supplies the raw full-order coboundary, nested internal
+trace descends it, and the quotient Hilbert-90/character payload gives the
+1092 scalar equations `C P_H = 0`.  The p24 twist bookkeeping gate now fixes
+the raw convention: `alpha_a=1` and, for `chi_k(2)=zeta_7^k`, the matching
+right twist is `epsilon_chi=zeta_7^k` because `p^780` has right quotient shift
+`6 mod 7`.  A new obstruction gate shows that formal right-character
+covariance has exactly this same eigenvalue, so it is the obstruction
+eigenspace of `sigma - epsilon_chi`, not a potential.  Thus the remaining
+product-coboundary theorem needs extra CM/Lang internal-trace cancellation;
+pure cyclotomic internal Gaussian periods over the degree-5549 subgroup do
+not vanish automatically.  The positive replacement is now exact in the
+finite tower model: a matching right coboundary exists iff the nested internal
+trace obstruction vanishes.  Thus the next theorem is
+`Tr_{B/E}(R_obstruction)=0`, with `Tr_{B/E}=Tr_{C/E} o Tr_{B/C}`, proved from
+CM/Lang packet structure before any Hilbert-90 inversion.  The stage-target
+gate shows the proof should not aim for the stronger
+`Tr_{B/C}(R_obstruction)=0`: that is rank/codimension `179` in the p24
+analogue.  The minimal target is the final `C/E` trace of the `B/C` trace,
+codimension `1`.  The Gaussian-functional gate expands this final trace as
+`sum_k c_k eta_{a k}=0`, where
+`eta_t=sum_{r in <p^5460>} zeta_n^(t r)`.  The internal-character filter gate
+rewrites this same codimension-one condition as: after
+`Y_C=Tr_{B/C}(R_obstruction)`, the trivial `C/E` character projection of
+`Y_C` is zero.  The order-7 quotient twist cannot force this, because seven
+raw `p^780` steps are already the internal generator and the order-7 scalar
+has disappeared.  Thus the theorem is weighted CM/Lang Gaussian-period
+cancellation, equivalently no trivial internal `C/E` component after the
+`B/C` trace; augmentation/content nonvanishing does not imply it, and trace
+zero does not imply packet vanishing.  A small actual-CM boundary shows this
+internal filter is not generic for raw embedded CM periods: in the
+`D=-5000`, `h=30=2*5*3` calibration, all `60` rotated/top raw period packets
+have nonzero trivial `C` projection.  The proof must use the specific
+right-obstruction/product-coboundary structure.  The right Gauss weighted
+polynomial gate now names that structure explicitly: after dividing by the
+nonzero right Gauss sum,
+`R_{chi,-a}=tau(chi)*G_chi(zeta_n^{-a})`, where
+`G_chi(X)=sum_r chi^{-1}(r mod 211) F_r(X)` and
+`F_r(X)=sum_k j_{r+m*k}X^k`; the `r == 0 mod 211` fibers drop out by
+character orthogonality.  The missing theorem is internal trace zero for this
+specific weighted CM polynomial.  The right-axis spectrum gate further shows
+that `p^5460` fixes the right `211` axis, so the internal `B/C` and `C/E`
+traces do not average the seven right `H=<2^7>` cosets.  The same theorem is:
+after internally tracing the `G_chi` profile, its seven H-coset sums on
+`F_211^*` are equal, or equivalently its order-7 multiplicative spectrum is
+zero.  A seven-coset covariance/descent gate gives the sharpened finite
+target: `p^780` covariance around those seven sums plus descent of one anchor
+sum to the `p^780`-fixed field forces equality; under covariance this anchor
+descent is equivalent to vanishing of the order-7 spectrum.  The fixed-field
+refinement gate shows this exact field has degree `780=156*5` over `F_p`, so
+descent all the way to `F_p(mu_157)` is sufficient but stronger than needed.
+The right-axis anchor projector gate makes the descent target explicit:
+for `rho=p^780` and `omega in mu_7`, the anchor condition is the six
+vanishings
+`Pi_k(Y_0)=(1/7) sum_{j=0}^6 omega^(-k*j) rho^j(Y_0)=0`, `k=1,...,6`.
+Pure right H-periods are covariant but not anchor-descended and leak all six
+nontrivial projectors.  Covariance alone and descent alone both generically
+leak.  The projector-character bridge closes the convention gap: under the
+p24 shift `6`, anchor projector index `m` is H-quotient character index
+`6m mod 7`, so the six anchor-projector equations are exactly the six
+nontrivial character equations in the `1092` scalar payload.  The combined
+projector/internal-character gate further sharpens the arithmetic theorem:
+for each nontrivial projector channel, after the `B/C` trace the trivial
+`C/E` component must vanish,
+`Tr_{C/E}(Tr_{B/C}(Pi_m(packet)))=0`.  Quotient projectors commute with
+`B/C` trace but do not force this final trace zero; nontrivial `C`-character
+support would.  The actual-CM projector/internal-character boundary shows
+the generic projector shortcut is false: for `D=-5000, q=3851, h=30`,
+all `30/30` nontrivial top-projected packets have nonzero final trace, so
+the theorem must use the special weighted `G_chi` CM/Lang packet.  The pinned
+actual-CM right-combo boundary shows the
+right-combo shape alone is not enough: for `D=-13319, q=13463, m=28, n=5`,
+both internal traces of the actual right-combo obstruction are nonzero.  The
+actual-CM product/internal-trace boundary sharpens this: the full weighted
+product analogue also has `0/2` zero internal traces and nonzero total
+projection, so even the product packet shape is not a generic proof.
+
+## Key Evidence
+
+Verified fast harness counts after the block/skew, cyclic-shift,
+frequency-defect/resultant, actual-CM frequency-profile boundary tasks, the
+p24 H-coset scalar verifier, the p24 factor-cycle cancellation gate, and the
+p24 semilinear factor-cycle gate, the p24 Gauss-normalization boundary, the
+p24 idempotent-covariance circularity boundary, the limited relation-shape
+index, the p24 character-payload contract, the p24 twisted Hilbert-90 payload
+gate, the p24 internal-trace/Hilbert-90 boundary, the p24 nested internal
+trace gate, the p24 raw-coboundary transfer gate, and the Lean semilinear
+eigen-descent gate, the p24 product-coboundary Leibniz gate, the p24
+matching-twist bookkeeping gate, the p24 right-coboundary obstruction gate,
+the p24 right-coboundary internal-trace gate, and the Lean
+product-coboundary/projector-trace/pre-recombination-covariance/paired-kernel gates, the p24 normalized-covariance obstruction gate, the p24 internal-trace stage target gate, the
+p24 internal-trace Gaussian functional gate, the p24 period-coset balance
+gate, the p24 recombined mixed-spectrum gate, the Lean recombined
+mixed-spectrum gate, the p24 affine quotient-profile gate plus Lean handoff,
+the p24 mixed-spectrum resolvent bridge, the actual-CM
+mixed-spectrum boundary, the p24 anchor trace-defect/payload gates, the p24 section-choice
+obstruction gate, and the p24 Lean anchor trace-average payload gate, and
+the p24 sub-sqrt scale-discipline gate, the centered full-origin
+phase-sensitivity/one-edge/short-path boundary gates, the centered
+orbit-Fitting block-cycle audit, and the p24 internal-character filter
+gate, plus the actual-CM
+internal-character boundary, the p24 right-axis anchor
+projector/projector-character gates, the combined projector/internal-character
+target gate, and the actual-CM projector/internal-character boundary, plus
+the actual-CM right-axis covariance boundary, the actual-CM left-paired
+H-coboundary boundary, the DANGER anchor-condition boundary, and the
+actual-CM right-combo anchor/section boundaries and product/internal-trace
+boundary, plus the p24 Stickelberger bidegree boundary and the anchor-vs-
+`C/E`-centering boundary, plus the Jacobi-carry `C/E`-centering gate:
+
+```text
+earlier baseline full sweep, superseded by later entries:
+  PYTHONPYCACHEPREFIX=/private/tmp/codex-pycache PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONPATH=p24 python3 \
+    p24/trace_gcd_fast_falsifier_harness.py \
+    --workers 4 --skip-spectral --no-danger3-inventory
+  task_count=216, passed=216
+
+latest integrated outputs include:
+  p24_admissible_c_axis_carry_rank_formula=621
+  p24_broad_c_axis_carry_rank_formula=625
+  p24_broad_minus_admissible_rank=4
+  admissible_support_zero=5/5
+  leaky_controls_forbidden_nonzero=5/5
+  actual_cm_projector_admissible_span_origins=0/30
+  actual_cm_right_combo_resolvent_admissible_span_origins=0/140
+  actual_cm_weighted_coefficients_admissible_span_origins=0/140
+  actual_cm_selected_defect_admissible_span_origins=0/140
+  actual_cm_projector_broad_span_origins=0/30
+  actual_cm_right_combo_resolvent_broad_span_origins=0/140
+  actual_cm_weighted_coefficients_broad_span_origins=0/140
+  actual_cm_selected_defect_broad_span_origins=0/140
+  p24_spectral_rank_formula=1+7*88+4=621
+  spectral_pattern_matches=3/3
+  raw_off_c_pair_product_rows=3/3
+  right_mixed_no_row_ratio_rows=3/3
+
+focused addition after that full sweep:
+  PYTHONPYCACHEPREFIX=/private/tmp/codex-pycache PYTHONDONTWRITEBYTECODE=1 \
+  PYTHONPATH=p24 python3 \
+    p24/trace_gcd_fixed_frequency_jacobi_sum_row_ratio_miner.py
+  right_mixed_nonzero_right_constant_row_ratio_rows=3/3
+  right_mixed_universal_anchor_defect_rows=3/3
+  right_mixed_anchor_defect_formula_rows=3/3
+  later entries supersede this task-count snapshot
+
+focused anchor-correction addition:
+  PYTHONPYCACHEPREFIX=/private/tmp/codex-pycache PYTHONDONTWRITEBYTECODE=1 \
+  PYTHONPATH=p24 python3 \
+    p24/trace_gcd_fixed_frequency_jacobi_sum_anchor_correction_gate.py
+  exhaustive_right_mixed_pairs=72 for c=5
+  exhaustive_right_mixed_pairs=540 for c=11
+  exhaustive_right_mixed_pairs=792 for c=13
+  raw_full_pair_failure_rows=3/3
+  raw_row_ratio_failure_rows=3/3
+  expected_zero_fiber_degeneracy_rows=3/3
+  single_anchor_correction_rows=3/3
+  corrected_pair_product_rows=3/3
+  corrected_row_ratio_rows=3/3
+  corrected_product_formula_rows=3/3
+  anchor_scale_formula_rows=3/3
+
+focused anchor scalar-search addition:
+  PYTHONPYCACHEPREFIX=/private/tmp/codex-pycache PYTHONDONTWRITEBYTECODE=1 \
+  PYTHONPATH=p24 python3 \
+    p24/trace_gcd_fixed_frequency_jacobi_sum_anchor_scalar_search.py
+  exhaustive_anchor_scalar_search_rows=3/3
+  valid_anchor_scalars_are_plus_minus_one_rows=3/3
+  reduced_packet_plus_one_anchor_rows=3/3
+  raw_q_minus_2_anchor_rejected_rows=3/3
+
+focused anchor residual-factor search addition:
+  PYTHONPYCACHEPREFIX=/private/tmp/codex-pycache PYTHONDONTWRITEBYTECODE=1 \
+  PYTHONPATH=p24 python3 \
+    p24/trace_gcd_fixed_frequency_jacobi_anchor_residual_factor_search.py
+  plus_one_branch_has_no_base_field_residual_split_rows=3/3
+  minus_one_branch_has_no_base_field_residual_split_rows=3/3
+  no_valid_sign_has_base_field_residual_split_rows=3/3
+  c_power_root_criterion_rows=3/3
+
+focused anchor Kummer-descent addition:
+  PYTHONPYCACHEPREFIX=/private/tmp/codex-pycache PYTHONDONTWRITEBYTECODE=1 \
+  PYTHONPATH=p24 python3 \
+    p24/trace_gcd_fixed_frequency_jacobi_anchor_kummer_descent_gate.py
+  kummer_selected_descent_rows=6/6
+  kummer_Rc_exponent_unique_e_one_rows=6/6
+  kummer_row_sum_and_residual_nonbase_rows=6/6
+  kummer_no_base_field_split_rows=6/6
+  p24_kummer_auxiliary_degree=179
+  p24_R179_exponent_for_selected_correction=1
+
+Lean anchor Kummer-descent addition:
+  lean p24/lean/TraceGcdAnchorKummerDescentGate.lean
+  compiles with warning only about latest release query
+
+full cheap sweep after anchor-correction addition:
+  PYTHONPYCACHEPREFIX=/private/tmp/codex-pycache PYTHONDONTWRITEBYTECODE=1 \
+  PYTHONPATH=p24 python3 p24/trace_gcd_fast_falsifier_harness.py \
+    --workers 4 --skip-spectral --no-danger3-inventory
+  task_count=218
+  passed=218
+  failed=0
+
+focused symbolic Hasse-Davenport addition:
+  PYTHONPYCACHEPREFIX=/private/tmp/codex-pycache PYTHONDONTWRITEBYTECODE=1 \
+  PYTHONPATH=p24 python3 \
+    p24/trace_gcd_fixed_frequency_jacobi_sum_symbolic_hd_gate.py
+  symbolic_pair_count_rows=6/6
+  symbolic_pair_product_rows=6/6
+  symbolic_row_ratio_rows=6/6
+  symbolic_reduced_anchor_rows=6/6
+  symbolic_producer_rows=6/6
+  p24_symbolic_right_mixed_pairs=189036
+
+full cheap sweep after symbolic Hasse-Davenport addition:
+  PYTHONPYCACHEPREFIX=/private/tmp/codex-pycache PYTHONDONTWRITEBYTECODE=1 \
+  PYTHONPATH=p24 python3 p24/trace_gcd_fast_falsifier_harness.py \
+    --workers 4 --skip-spectral --no-danger3-inventory
+  task_count=219
+  passed=219
+  failed=0
+
+focused reduced-anchor fingerprint addition:
+  PYTHONPYCACHEPREFIX=/private/tmp/codex-pycache PYTHONDONTWRITEBYTECODE=1 \
+  PYTHONPATH=p24 python3 \
+    p24/trace_gcd_fixed_frequency_reduced_anchor_fingerprint_gate.py
+  anchor_selected_defect_rows=6/6
+  anchor_fourier_profile_rows=6/6
+  anchor_forbidden_c_trivial_leak_rows=6/6
+  anchor_right_difference_profile_rows=6/6
+  p24_anchor_nonzero_entries=178
+
+focused reduced-anchor / adjacent-anchor bridge addition:
+  PYTHONPYCACHEPREFIX=/private/tmp/codex-pycache PYTHONDONTWRITEBYTECODE=1 \
+  PYTHONPATH=p24 python3 \
+    p24/trace_gcd_fixed_frequency_reduced_anchor_adjacent_bridge_gate.py
+  b0_slice_matches_row_sum_rows=6/6
+  anchor_b0_forbidden_leak_rows=6/6
+  adjacent_difference_multiplier_rows=6/6
+  adjacent_difference_nonfixed_invertible_rows=6/6
+  opposite_raw_leak_cancel_rows=6/6
+  p24_anchor_b0_nontrivial_projectors=6
+
+Lean reduced-anchor adjacent bridge addition:
+  lean p24/lean/TraceGcdReducedAnchorAdjacentBridgeGate.lean
+  compiles with warning only about latest release query
+
+focused reduced-anchor C-slice decomposition addition:
+  PYTHONPYCACHEPREFIX=/private/tmp/codex-pycache PYTHONDONTWRITEBYTECODE=1 \
+  PYTHONPATH=p24 python3 \
+    p24/trace_gcd_fixed_frequency_reduced_anchor_slice_decomposition_gate.py
+  c_trivial_slice_profile_rows=6/6
+  c_nontrivial_slice_profile_rows=6/6
+  old_adjacent_anchor_invisible_c_nontrivial_rows=6/6
+  full_remaining_nontrivial_channel_rows=6/6
+  p24_remaining_c_nontrivial_fourier_channels=1246
+
+Lean reduced-anchor C-slice decomposition addition:
+  lean p24/lean/TraceGcdReducedAnchorSliceDecompositionGate.lean
+  compiles with warning only about latest release query
+
+focused reduced-anchor cyclotomic divisor addition:
+  PYTHONPYCACHEPREFIX=/private/tmp/codex-pycache PYTHONDONTWRITEBYTECODE=1 \
+  PYTHONPATH=p24 python3 \
+    p24/trace_gcd_fixed_frequency_reduced_anchor_cyclotomic_divisor_gate.py
+  integral_residual_matches_cyclotomic_divisor_rows=6/6
+  cyclotomic_residual_degree_zero_rows=6/6
+  cyclotomic_residual_fourier_profile_rows=6/6
+  principal_cyclotomic_divisor_profile_rows=6/6
+  p24_residual_integral_fourier_channels=1246
+
+Lean reduced-anchor cyclotomic divisor addition:
+  lean p24/lean/TraceGcdReducedAnchorCyclotomicDivisorGate.lean
+  compiles with warning only about latest release query
+
+full cheap sweep after reduced-anchor cyclotomic divisor + scalar/factor/Kummer addition:
+  PYTHONPYCACHEPREFIX=/private/tmp/codex-pycache PYTHONDONTWRITEBYTECODE=1 \
+  PYTHONPATH=p24 python3 p24/trace_gcd_fast_falsifier_harness.py \
+    --workers 4 --skip-spectral --no-danger3-inventory
+  task_count=230
+  passed=230
+  failed=0
+
+focused reduced-anchor diamond norm addition:
+  PYTHONPYCACHEPREFIX=/private/tmp/codex-pycache PYTHONDONTWRITEBYTECODE=1 \
+  PYTHONPATH=p24 python3 \
+    p24/trace_gcd_fixed_frequency_reduced_anchor_diamond_norm_gate.py
+  diamond_norm_divisor_rows=6/6
+  diamond_norm_polynomial_rows=6/6
+  diamond_norm_fourier_profile_rows=6/6
+  p24_diamond_norm_orbit_size=178
+  p24_diamond_norm_residual_fourier_channels=1246
+  R_c_residual_is_diamond_norm_of_single_point_divisor=1
+  this_is_diamond_norm_not_cyclic_C_over_E_trace_norm=1
+
+focused reduced-anchor cyclic-vs-diamond norm addition:
+  PYTHONPYCACHEPREFIX=/private/tmp/codex-pycache PYTHONDONTWRITEBYTECODE=1 \
+  PYTHONPATH=p24 python3 \
+    p24/trace_gcd_fixed_frequency_reduced_anchor_cyclic_vs_diamond_norm_gate.py
+  cyclic_translation_trace_zero_rows=6/6
+  cyclic_product_telescopes_rows=6/6
+  diamond_norm_residual_rows=6/6
+  diamond_product_residual_rows=6/6
+  cyclic_translation_not_residual_rows=6/6
+  cyclic_and_diamond_orbit_sizes_distinct_rows=6/6
+  p24_cyclic_translation_orbit_size=179
+  p24_diamond_orbit_size=178
+  cyclic_C_over_E_translation_norm_of_one_point_factor_is_trivial=1
+  diamond_unit_norm_of_one_point_factor_is_the_R_c_residual=1
+  ordinary_cyclic_trace_norm_erases_the_selected_anchor_residual=1
+  p24_producer_must_use_diamond_norm_not_cyclic_C_over_E_norm=1
+
+Lean reduced-anchor cyclic-vs-diamond norm addition:
+  lean p24/lean/TraceGcdReducedAnchorCyclicVsDiamondNormGate.lean
+  compiles with warning only about latest release query
+
+focused reduced-anchor elliptic subgroup divisor addition:
+  PYTHONPYCACHEPREFIX=/private/tmp/codex-pycache PYTHONDONTWRITEBYTECODE=1 \
+  PYTHONPATH=p24 python3 \
+    p24/trace_gcd_fixed_frequency_reduced_anchor_elliptic_subgroup_divisor_gate.py
+  single_point_elliptic_nonprincipal_rows=6/6
+  miller_c_power_principal_rows=6/6
+  nonzero_subgroup_sum_zero_rows=6/6
+  diamond_subgroup_residual_principal_rows=6/6
+  diamond_subgroup_matches_cyclotomic_residual_rows=6/6
+  miller_diamond_is_c_times_residual_rows=6/6
+  direct_subgroup_divisor_target_rows=6/6
+  p24_subgroup_order=179
+  p24_nonzero_subgroup_divisor_degree=178
+  p24_nonzero_subgroup_sum_mod_c=0
+  individual_one_point_divisor_is_not_an_elliptic_unit_divisor=1
+  whole_nonzero_subgroup_divisor_is_principal_for_odd_c=1
+  p24_target_can_be_direct_diamond_subgroup_divisor_not_single_point_factor=1
+  remaining_problem_is_cm_lang_specialization_and_p_integrality_of_this_subgroup_divisor=1
+
+Lean reduced-anchor elliptic subgroup divisor addition:
+  lean p24/lean/TraceGcdReducedAnchorEllipticSubgroupDivisorGate.lean
+  compiles with warning only about latest release query
+
+focused reduced-anchor kernel polynomial addition:
+  PYTHONPYCACHEPREFIX=/private/tmp/codex-pycache PYTHONDONTWRITEBYTECODE=1 \
+  PYTHONPATH=p24 python3 \
+    p24/trace_gcd_fixed_frequency_reduced_anchor_kernel_polynomial_gate.py
+  actual_kernel_root_pair_rows=6/6
+  actual_kernel_paired_x_rows=6/6
+  actual_kernel_subgroup_sum_zero_rows=6/6
+  actual_kernel_pole_order_rows=6/6
+  actual_kernel_divisor_degree_zero_rows=6/6
+  formal_kernel_degree_rows=6/6
+  formal_kernel_pole_order_rows=6/6
+  formal_kernel_divisor_degree_zero_rows=6/6
+  formal_velu_x_denominator_degree_rows=6/6
+  p24_kernel_polynomial_degree=89
+  p24_kernel_divisor_pole_order=178
+  p24_velu_x_denominator_degree=178
+  kernel_polynomial_has_exact_subgroup_residual_divisor=1
+  unsquared_kernel_polynomial_matches_R_c_not_R_c_squared=1
+  p24_target_can_be_kernel_polynomial_for_selected_179_subgroup=1
+  remaining_problem_is_constructing_selected_cm_lang_kernel_polynomial_without_class_enumeration=1
+
+Lean reduced-anchor kernel polynomial addition:
+  lean p24/lean/TraceGcdReducedAnchorKernelPolynomialGate.lean
+  compiles with warning only about latest release query
+
+focused reduced-anchor kernel generator-invariance addition:
+  PYTHONPYCACHEPREFIX=/private/tmp/codex-pycache PYTHONDONTWRITEBYTECODE=1 \
+  PYTHONPATH=p24 python3 \
+    p24/trace_gcd_fixed_frequency_reduced_anchor_kernel_generator_invariance_gate.py
+  actual_generator_invariance_rows=6/6
+  actual_root_pair_count_rows=6/6
+  formal_generator_invariance_rows=6/6
+  formal_root_pair_count_rows=6/6
+  p24_oriented_one_point_diamond_choices=178
+  p24_x_coordinate_generator_pairs=89
+  p24_kernel_polynomial_generator_orbits=1
+  p24_conditional_kernel_search_cases=2
+  p24_178_diamond_one_point_choices_collapse_to_one_kernel_polynomial=1
+  p24_conditional_search_after_kernel_generator_collapse_is_two_signs=1
+  constructing_the_selected_cm_lang_subgroup_polynomial_remains_the_producer_problem=1
+
+Lean reduced-anchor kernel generator-invariance addition:
+  lean p24/lean/TraceGcdReducedAnchorKernelGeneratorInvarianceGate.lean
+  compiles with warning only about latest release query
+
+focused reduced-anchor kernel final-curve guardrail:
+  PYTHONPYCACHEPREFIX=/private/tmp/codex-pycache PYTHONDONTWRITEBYTECODE=1 \
+  PYTHONPATH=p24 python3 \
+    p24/trace_gcd_fixed_frequency_reduced_anchor_kernel_final_curve_guardrail.py
+  p24_c_degree=179
+  p24_c_divides_selected_group_order=0
+  p24_c_frobenius_discriminant_legendre=-1
+  p24_c_frobenius_roots_mod_c=[]
+  p24_c_final_curve_rational_isogeny_available=0
+  p24_mu_c_field_degree_over_Fp=89
+  p24_179_kernel_is_not_rational_torsion_on_final_curve=1
+  p24_179_kernel_is_not_an_Fp_rational_Velu_isogeny=1
+  do_not_enumerate_final_curve_179_subgroups_as_the_compressed_search=1
+  kernel_polynomial_target_must_live_in_auxiliary_cm_lang_or_cyclotomic_layer=1
+
+Lean reduced-anchor kernel final-curve guardrail:
+  lean p24/lean/TraceGcdReducedAnchorKernelFinalCurveGuardrail.lean
+  compiles with warning only about latest release query
+
+focused reduced-anchor kernel section-pairing guardrail:
+  PYTHONPYCACHEPREFIX=/private/tmp/codex-pycache PYTHONDONTWRITEBYTECODE=1 \
+  PYTHONPATH=p24 python3 \
+    p24/trace_gcd_fixed_frequency_reduced_anchor_kernel_section_pairing_guardrail.py
+  actual_toy_parent_sum_unique_rows=2/2
+  random_control_same_sum_subset_count=1820
+  first_layer_log10_unordered_child_subsets=93.176548
+  first_layer_log10_expected_same_trace_subsets=69.176548
+  second_layer_log10_local_child_subsets=616.781509
+  kernel_generator_invariance_collapses_generators_inside_a_fixed_fiber=1
+  kernel_generator_invariance_does_not_pair_the_fiber_with_the_selected_section=1
+  trace_sum_alone_is_not_an_asymptotic_section_selector=1
+  selected_auxiliary_kernel_still_needs_section_pairing_or_relative_traces=1
+
+Lean reduced-anchor kernel section-pairing guardrail:
+  lean p24/lean/TraceGcdReducedAnchorKernelSectionPairingGuardrail.lean
+  compiles with warning only about latest release query
+
+focused compressed-search readiness addition:
+  PYTHONPYCACHEPREFIX=/private/tmp/codex-pycache PYTHONDONTWRITEBYTECODE=1 \
+  PYTHONPATH=p24 python3 \
+    p24/trace_gcd_p24_compressed_search_readiness.py
+  p_mod_8=7
+  x16_p23_sampler_available_for_p24=0
+  p24_symbolic_right_mixed_pairs=189036
+  p24_diamond_orbit_size=178
+  p24_oriented_one_point_diamond_choices=178
+  p24_x_coordinate_generator_pairs=89
+  p24_kernel_polynomial_generator_orbits=1
+  p24_c_divides_selected_group_order=0
+  p24_c_frobenius_discriminant_legendre=-1
+  p24_c_final_curve_rational_isogeny_available=0
+  p24_kummer_selected_e_values=[1]
+  p24_h_coset_equations=1092
+  p24_compressed_independent_equations=48
+  selected_chain_slots=3107811
+  conclusion=compressed_search_surface_ready_but_producer_missing
+
+p24 executable-search smoke:
+  command:
+    p24/pomerance_probe 1000000000000000000000007 100000 1000000
+  result:
+    k=40
+    odd parts = 909494701773, 454747350887, 227373675443
+    threads=1
+    no hit in 1000000 trials / 7.67s
+    rate ~= 0.130M trials/sec/core
+  interpretation:
+    generic Pomerance search remains a lottery and does not exploit the
+    178-term diamond residual surface; useful only for throughput accounting.
+
+2026-06-08 live sqrt-scale baseline update:
+  The first `p24_generic_p22fast_20260608_110038` tranche was stopped after
+  a small warm-up because the p24 odd parts were not entering the intended
+  three-part ladder reuse branch.  The actual p24 relation is
+  `m0+1=2*m1` and `m1=2*m2+1` for
+  `m0=909494701773`, `m1=454747350887`, `m2=227373675443`.  `pomerance.c`
+  now has a descending three-part branch: compute `m2P,(m2+1)P`, derive
+  `m1P` by differential addition, derive `m0P` from `2*m2P` and `m1P`.
+  A Python affine/x-only check verified the identity on 8 random samples over
+  the actual p24 field.  Benchmark:
+  `/tmp/pomerance_p24_ladderfix ... 1000000` ran 1M trials in 8.39s
+  (`0.119M/s/core`) versus live old-worker rates around `0.073M/s/core`.
+  Replacement run:
+  `runs/p24_generic_ladderfix_1p65sqrt_20260608_111143`, 10 workers,
+  aggregate budget `1.65e12 = 1.65*sqrt(p)`, watcher PID recorded in
+  `watcher.pid`, and `/tmp/p24_run_dir.txt` points to this run.  Early
+  aggregate rate was about `1.27M/s`, giving rough ETAs of 22h to `100B`
+  and 15d to `1.65*sqrt(p)`.  This remains a sqrt-scale lottery, not the
+  requested asymptotic certificate.
+
+full cheap sweep after diamond-norm/readiness addition:
+  PYTHONPYCACHEPREFIX=/private/tmp/codex-pycache PYTHONDONTWRITEBYTECODE=1 \
+  PYTHONPATH=p24 python3 p24/trace_gcd_fast_falsifier_harness.py \
+    --workers 4 --skip-spectral --no-danger3-inventory
+  task_count=233
+  passed=233
+  failed=0
+
+full cheap sweep after cyclic-vs-diamond norm addition:
+  PYTHONPYCACHEPREFIX=/private/tmp/codex-pycache PYTHONDONTWRITEBYTECODE=1 \
+  PYTHONPATH=p24 python3 p24/trace_gcd_fast_falsifier_harness.py \
+    --workers 4 --skip-spectral --no-danger3-inventory
+  task_count=235
+  passed=235
+  failed=0
+
+full cheap sweep after elliptic subgroup divisor addition:
+  PYTHONPYCACHEPREFIX=/private/tmp/codex-pycache PYTHONDONTWRITEBYTECODE=1 \
+  PYTHONPATH=p24 python3 p24/trace_gcd_fast_falsifier_harness.py \
+    --workers 4 --skip-spectral --no-danger3-inventory
+  task_count=237
+  passed=237
+  failed=0
+
+full cheap sweep after kernel-polynomial addition:
+  PYTHONPYCACHEPREFIX=/private/tmp/codex-pycache PYTHONDONTWRITEBYTECODE=1 \
+  PYTHONPATH=p24 python3 p24/trace_gcd_fast_falsifier_harness.py \
+    --workers 4 --skip-spectral --no-danger3-inventory
+  task_count=239
+  passed=239
+  failed=0
+
+full cheap sweep after kernel-generator-invariance addition:
+  PYTHONPYCACHEPREFIX=/private/tmp/codex-pycache PYTHONDONTWRITEBYTECODE=1 \
+  PYTHONPATH=p24 python3 p24/trace_gcd_fast_falsifier_harness.py \
+    --workers 4 --skip-spectral --no-danger3-inventory
+  task_count=241
+  passed=241
+  failed=0
+
+full cheap sweep after kernel-final-curve guardrail addition:
+  PYTHONPYCACHEPREFIX=/private/tmp/codex-pycache PYTHONDONTWRITEBYTECODE=1 \
+  PYTHONPATH=p24 python3 p24/trace_gcd_fast_falsifier_harness.py \
+    --workers 4 --skip-spectral --no-danger3-inventory
+  task_count=243
+  passed=243
+  failed=0
+
+full cheap sweep after kernel-section-pairing guardrail addition:
+  PYTHONPYCACHEPREFIX=/private/tmp/codex-pycache PYTHONDONTWRITEBYTECODE=1 \
+  PYTHONPATH=p24 python3 p24/trace_gcd_fast_falsifier_harness.py \
+    --workers 4 --skip-spectral --no-danger3-inventory
+  task_count=245
+  passed=245
+  failed=0
+
+two-resultant holdout:
+  PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=p24 python3 \
+    p24/trace_gcd_fast_falsifier_harness.py \
+    --workers 4 --skip-spectral --no-danger3-inventory \
+    --include-two-resultant-holdouts
+  task_count is larger than 220 when rerun with the current task list; the optional
+  two-resultant payload was not rerun in the latest focused verification.
+```
+
+The displacement toys verify:
+
+```text
+scalar Cauchy => displacement rank 1;
+entrywise-inverse rank <= 2 is only the scalar shadow;
+block resolvent/skew Cauchy => low Sylvester displacement rank;
+transported basis changes preserve the displacement rank;
+random charts fail the gate;
+shift-invariant graph chart => exact Riccati residual rank 0;
+p24 tail split predicts two boundary cut edges;
+frequency-defect gate proves selected basis before the Plucker chart exists.
+frequency-defect failing controls are still cyclic-invariant, so basis-free
+  local projection-rank and prefix-to-prefix-plus-tail rank-jump p-unit gates
+  are the missing determinant input.
+basis-free frequency gate survives arbitrary local row-basis changes, so the
+  theorem no longer depends on a friendly frequency basis.
+frequency-resultant gate packages those local checks into global cyclic
+  resultants once the CM/Lang sections P_24,T_24,S_24 are constructed.
+cyclic-section descent gate proves that Frobenius-compatible local values
+  descend to base cyclic sections and rejects arbitrary post-fit interpolants.
+defect-support accounting shows p24 has 1260 Frobenius-stable size-16 supports:
+  35 pure length-4 supports and 1225 mixed fixed-plus-length-4 supports.
+fixed-frequency ordinary gate shows the mixed supports still pass descent and
+  Vandermonde; only the local theorem `tau_a in image(P_a)` at fixed
+  frequencies reduces the selector set to 35.
+fixed-frequency annihilator bridge shows `tau_a in image(P_a)` is equivalent
+  to the trace-adjoint inclusion `Ann(P_a) subset Ann(tau_a)`, while prefix
+  Plucker p-unitness remains a separate ordinary local condition.
+fixed-frequency relation-section/cyclic-syzygy gates package the seven fixed
+  relations into coefficient sections over `F_p[y]/(y^7-1)`, and warn that
+  post-fit interpolation is finite algebra rather than arithmetic proof.
+fixed-frequency Cramer/Bezout gate sharpens that target to
+  `D*T = sum N_j*P_j` in `R_7 tensor L`, with `D in R_7^*`; this separates
+  the prefix Plucker denominator unit from the full vector identity.
+fixed-frequency order-5 collapse gate shows the seven fixed frequencies of a
+  length-35 right orbit depend only on the seven sums
+  `Y_s=sum_{t=0..4} X_{s+7t}`; nonfixed frequencies are not determined by this
+  collapse.  This is the finite reason a fixed-only audit/proof can work in
+  the 7-part instead of adjoining full 35th roots.
+fixed-frequency symmetry boundary shows centering plus right sign/Hermitian
+  symmetry only forces the trivial `a=0` fixed relation; the six nontrivial
+  order-7 fixed frequencies need extra CM/Lang arithmetic.
+fixed-frequency order-7 augmentation gate identifies a sharper candidate:
+  prove `T+P_2+P_3+P_4+P_5+P_6=0` over `R_7`; with the finite negation
+  covariance `P_4=y^{-2}T`, the unit `1+y^{-2}` gives the no-fixed syzygy.
+fixed-frequency order-7 coset dictionary shows this augmentation is exactly
+  vanishing of all seven quotient-character components for the order-7
+  quotient of `(Z/211Z)^*` by the order-30 subgroup whose discrete logs are
+  multiples of `7`.  Ordinary centering is only the trivial quotient
+  character; the six nontrivial quotient characters are the new arithmetic
+  target.
+fixed-frequency order-7 character-projection gate sharpens that statement:
+  for `S_v=sum_s zeta_211^(v*s)G_s`, the nontrivial augmentation components
+  are nonzero Gauss sums times
+  `sum_{s != 0} chi_k(s)^(-1)G_s`.  A centered random profile can have the
+  trivial component zero while all six nontrivial components are nonzero, so
+  the missing theorem is a genuine right order-7 profile-vanishing identity.
+fixed-frequency multiplicative-resolvent bridge rewrites this as the
+  orthogonality `<A_1, sum_v chi_k(v)B_v>=0` against six right order-7
+  multiplicative resolvents.  It also closes a tempting Frobenius shortcut:
+  `p^156 mod 211 = 82` and shifts the H-quotient by `4`, but the nontrivial
+  eigenvalue is carried by the Gauss-sum factor, so a divided `L`-valued
+  projection can be nonzero while Frobenius covariance holds.
+fixed-frequency p24 factor-cycle cancellation gate records the live
+  p24-specific refinement: `p^780` fixes the left 157-character, shifts the
+  right order-7 quotient by `6`, and cycles the 70 E-factors as ten 7-cycles;
+  it is only the scalar shadow of the proof.
+fixed-frequency p24 semilinear factor-cycle gate corrects that shadow:
+  semilinear covariance alone can be nonzero, but it puts the total in a
+  nontrivial `p^780` Frobenius eigenspace; descent to the fixed left field
+  then forces all six nontrivial H-coset character sums to vanish.
+fixed-frequency p24 complete-factor descent gate separates the formal descent
+  input from the arithmetic one: the descended object is the complete
+  recombination over all 70 E-tensor idempotents; covariance of one factor or
+  one 7-cycle is not a valid certificate.
+fixed-frequency p24 pre-recombination covariance gate is now only a
+  conditional finite handoff: if a nontrivial component covariance were
+  proved before recombination, descent would force the six character
+  projections to zero.  The normalized covariance obstruction gate shows the
+  natural Gauss-normalized covariance is actually trivial under the same
+  factor shift; imposing a nontrivial normalized covariance would force
+  componentwise zero.  The preferred live target is therefore the specific
+  weighted internal-trace/right-coboundary theorem, not normalized covariance.
+fixed-frequency p24 internal-trace/Hilbert-90 boundary corrects the raw
+  operator: `p^780` has order `38843 = 7*5549` on a raw relative factor
+  cycle, and after seven steps `p^5460` acts internally with order `5549`.
+  Therefore the length-7 potential applies only after the internal
+  degree-5549 trace/norm produces an E-valued seed, or else one must construct
+  a full-order coboundary.
+fixed-frequency p24 nested internal trace gate splits that internal stage as
+  `Tr_{B/E}=Tr_{C/E} o Tr_{B/C}` with degrees `179` and `31`; either partial
+  trace alone still fails the quotient Hilbert-90 target.
+fixed-frequency p24 raw-coboundary transfer gate shows a noncircular
+  sufficient target: construct a raw full-order CM/Lang potential
+  `x=sigma(Y)-epsilon*Y` before tracing.  The nested internal trace commutes
+  with this coboundary and supplies the quotient potential automatically.
+  Solving for `Y` only after proving trace zero is Hilbert-90 circular.
+fixed-frequency p24 product-coboundary Leibniz gate sharpens the raw target:
+  if the product term has left covariance
+  `sigma(A)=alpha*A` and the right factor is the matching coboundary
+  `B=sigma(V)-(epsilon/alpha)*V`, then
+  `A*B=alpha^(-1)*(sigma(A*V)-epsilon*(A*V))`.  Wrong twists and random
+  right factors fail, so the remaining arithmetic source is a
+  right-resolvent coboundary with the exact matching twist.
+fixed-frequency p24 matching-twist bookkeeping gate computes that exact twist:
+  in the raw convention `chi_k(2)=zeta_7^k`, `p^780` fixes the left
+  157-frequency, has right quotient shift `6`, and therefore the product
+  coboundary has `alpha=1` and matching `epsilon_k=zeta_7^k`.
+fixed-frequency p24 right-coboundary obstruction gate rules out the tempting
+  shortcut from formal right-character covariance: the right resolvent has
+  eigenvalue `epsilon_k`, hence is in the obstruction eigenspace of
+  `sigma-epsilon_k` and is not a matching coboundary unless extra internal
+  trace cancellation removes that component.  Pure cyclotomic degree-5549
+  Gaussian periods are nonzero in the split-prime audit, so this cancellation
+  must be genuine CM/Lang packet structure.
+fixed-frequency p24 right-coboundary internal-trace gate supplies the exact
+  positive replacement: in the raw tower model, matching right coboundary is
+  equivalent to nested internal-trace zero.  The remaining arithmetic theorem
+  is therefore a CM/Lang proof of that internal trace identity; Hilbert-90
+  inversion is formal only after it.
+fixed-frequency p24 internal-trace stage target gate sharpens the stage:
+  `Tr_{B/C}=0` is sufficient but far too strong; the certificate-shaped target
+  is `Tr_{C/E}(Tr_{B/C}(R_obstruction))=0`, a codimension-one condition.
+fixed-frequency p24 internal-trace Gaussian functional gate identifies that
+  codimension-one condition as the weighted Gaussian-period pairing
+  `sum_k c_k eta_{ak}=0`; it is independent from relative content
+  nonvanishing and needs genuine CM/Lang cancellation.
+fixed-frequency p24 period-coset balance gate inverts that functional:
+  for the strong per-factor target, the nonzero `<p^5460>`-coset sums of
+  `c_k(chi)=sum_r chi^{-1}(r mod 211) j_{r+m*k}` must all equal
+  `5549*c_0(chi)`.  Since `(n-1)/5549=560`, this is a 560-coset balance
+  theorem for the ordered weighted CM sequence, not a formal period identity.
+  Respecting complete recombination over the `70` E-idempotents replaces
+  `<p^5460>` by `<p>` and weakens this to an 8-coset balance:
+  `sum_{k in D} c_k(chi)=388430*c_0(chi)` for each nonzero `<p>`-coset
+  `D`.  This is now the cleaner coefficient-side theorem surface.  Across
+  the six nontrivial right quotient characters this is a `6*8=48` scalar
+  compressed verifier, split as `42` nontrivial octic quotient equations plus
+  `6` anchor equations, once the tower proof supplies the eight coset sums
+  and the `c_0` anchor for each character.  In characteristic-zero language, this
+  is `Tr_{Q(zeta_n)/Q(zeta_n)^<p>}(G_chi(zeta_n)) == 0` modulo the selected
+  prime, for each of the six Gauss-normalized right quotient characters.
+fixed-frequency p24 recombined mixed-spectrum gate names the Fourier split:
+  the `42` nontrivial octic equations are mixed character sums
+  `sum_{k != 0} lambda(k) sum_r chi^{-1}(r mod 211) j_{r+m*k}=0`,
+  with `chi` a nontrivial right order-7 character and `lambda` a nontrivial
+  character of `F_n^*/<p>` of order dividing `8`.  The remaining `6`
+  equations are exactly the trace-defect anchors.  Random ordered sequences
+  fail, so the proof target is specific CM/Lang mixed-spectrum vanishing, not
+  formal quotient Fourier algebra.
+Lean recombined mixed-spectrum gate packages the finite handoff contract:
+  assuming the quotient Fourier split, mixed-spectrum zero plus anchor zero is
+  equivalent to all eight recombined balance equations per right character,
+  and the p24 accounting is `42 + 6 = 48` with `54` compressed values if
+  `c_0` is carried.  2026-06-08 refresh: the same Lean gate now pins
+  `560 = 70*8` and `388430 = 70*5549`, matching the period-coset gate output
+  `complete_recombination_reduces_balance_cosets_560_to_8=1`.  This is the
+  currently preferred arithmetic compression: prove the eight recombined
+  `<p>`-coset balances after complete 70-idempotent recombination, not the
+  stronger 560 per-factor balances.
+fixed-frequency p24 affine quotient-profile gate gives the cleanest current
+  proof surface for those same `48` equations.  Let `M_i(D)` be the quotient
+  trace profile for right `H=<2^7>` coset `i` and nonzero relative `<p>`-coset
+  `D`, and let `b_i` be the selected-child right profile.  The whole
+  recombined target is equivalent to offsets `gamma_D`, independent of `i`,
+  with
+  `M_i(D)=388430*b_i+gamma_D`.  Mixed zero alone only removes interaction;
+  the anchors tie the surviving row profile to the selected child.  Thus the
+  next arithmetic theorem should construct these column offsets, or an
+  equivalent explicit potential, from the trace-GCD weighted CM/Lang packet.
+fixed-frequency p24 right-difference gate eliminates those offsets.  The same
+  `48` equations are equivalent to
+  `M_{i+1}(D)-M_i(D)=388430*(b_{i+1}-b_i)` for every relative `<p>`-coset
+  `D`, with the redundant cyclic form giving `7*8=56` equations but only
+  `6*8=48` independent ones.  Offsets are recovered by
+  `gamma_D=(1/7) sum_i (M_i(D)-388430*b_i)`.  This is now the most concrete
+  finite target for an explicit CM/Lang potential: prove equality of right
+  derivatives, then average.
+fixed-frequency p24 right-difference trace gate identifies the corresponding
+  arithmetic object.  For `A_i(k)=sum_{r in H_i}j_{r+m*k}`, define adjacent
+  difference polynomials
+  `P_i(X)=sum_k (A_{i+1}(k)-A_i(k))X^k`.  The right-difference theorem is
+  equivalent, by the same Gaussian-period inversion, to
+  `Tr_{Q(zeta_n)/Q(zeta_n)^<p>}(P_i(zeta_n))=0` for the seven adjacent
+  `i`s.  The seven traces have one cyclic dependency, so this is still the
+  `48`-equation compressed target.  This is the preferred proof object now:
+  construct `P_i` from the embedded CM/Lang packet and prove its degree-8
+  decomposition trace vanishes.
+fixed-frequency p24 right-difference covariance-telescope gate shrinks that
+  target again.  Let
+  `T_i=Tr_{Q(zeta_n)/Q(zeta_n)^<p>}(P_i(zeta_n))`.  Telescoping gives
+  `sum_i T_i=0`.  Since `rho=p^780` shifts the right quotient by `6`, the
+  sufficient theorem is now `T_{i+6}=rho(T_i)` plus one anchor descent
+  `rho(T_0)=T_0`; then all `T_i` are equal, and the telescoping sum forces
+  `T_i=0`.  Covariance alone and descent alone both leak in the finite
+  controls, so the remaining arithmetic work is exactly covariance plus one
+  descended adjacent-trace anchor.
+fixed-frequency p24 trace-covariance functorial gate makes the covariance
+  input formal from pointwise Frobenius functoriality: if
+  `P_{i+6}(zeta_n^(rho*a))=rho(P_i(zeta_n^a))` and `rho mod n` lies in
+  the trace subgroup `<p>`, then the eight decomposition-trace cosets are not
+  permuted and `T_{i+6}=rho(T_i)`.  The outside-subgroup control only gives
+  permuted coset covariance.  Thus the live arithmetic proof has two inputs:
+  pointwise CM/Lang Frobenius functoriality for `P_i`, plus the single anchor
+  descent `rho(T_0)=T_0`.
+fixed-frequency p24 adjacent-anchor descent gate names that remaining descent
+  input exactly.  The object is the single adjacent trace
+  `T_0=Tr_{Q(zeta_n)/Q(zeta_n)^<p>}(P_0(zeta_n))`; descent is equivalent in
+  the order-7 rho quotient to six nontrivial projector vanishings
+  `Pi_k(T_0)=0`, `k=1,...,6`.  Negative controls show covariance+telescope
+  without anchor and covariance+anchor without telescope both leak, so this
+  is a real arithmetic input, not the raw `1092` H-coset verifier.
+fixed-frequency p24 adjacent-anchor cyclic divisibility gate compresses these
+  six projectors to one condition: write the rho-orbit coordinates of `T_0`
+  as `A(y)=a_0+...+a_6y^6`; then descent is equivalent to
+  `A(y) == 0 mod Phi_7(y)`.  With covariance and telescoping this is exactly
+  the one remaining finite identity behind the `48` compressed equations.
+fixed-frequency p24 adjacent-difference operator gate identifies
+  `T_0=(rho^6-1)Y_0` for the internally traced right H-coset profile because
+  the p24 right shift is `6=-1 mod 7`.  The operator has rank `6`, kernel the
+  fixed line, and nonzero multipliers on all six nontrivial rho-projector
+  channels.  So adjacent-anchor descent is equivalent to the older
+  right-axis equal-H-coset/zero-projector theorem; the remaining arithmetic is
+  the same selected trace-GCD weighted profile theorem.
+fixed-frequency actual-CM adjacent-anchor boundary tests this same shape on
+  the small right-axis CM row `D=-6719`, `q=6863`, `h=105`, `m=21=3*7`,
+  `n=5`.  Adjacent H-coset trace differences satisfy covariance and
+  telescope, but the anchor descends in `0/2` relative trace cosets.  So the
+  missing p24 theorem must use the special trace-GCD weighted/selected
+  adjacent packet; ordinary actual CM covariance is insufficient.
+fixed-frequency p24 mixed-spectrum resolvent bridge expands each mixed
+  equation by two finite Gauss transforms into a weighted linear combination
+  of additive resolvents
+  `R(v,a)=sum_{r,k} zeta_211^(v*r) zeta_n^(a*k) j_{r+m*k}`.  Thus the mixed
+  target is not one class-character resolvent.  Toy controls show all additive
+  resolvents can be nonzero while the mixed spectrum is zero, and conversely;
+  reduced normality neither proves nor refutes the target.  The viable proof
+  needs a Stickelberger/Jacobi-sum/CM-Lang relation among resolvents.
+fixed-frequency actual-CM mixed-spectrum boundary gives the first cheap
+  two-axis real CM calibration: `D=-4751`, `q=4787`, `h=91=7*13`, right
+  quotient order `3`, relative quotient order `4`, full cycle prime `ell=2`.
+  Across all `91` global origin shifts, it has `0/91` full mixed-zero shifts,
+  `0/91` full anchor-zero shifts, and `0/91` full recombined-balance shifts
+  (indeed the best mixed count is `0/6`).  Thus two quotient axes plus an
+  embedded cyclic CM torsor still do not generically supply the identity.
+fixed-frequency p24 anchor trace-defect gate rewrites those six anchor
+  equations as right quotient-character vanishings of
+  `D_r=Tr_relative(j_{r+m*bullet})-n*j_r`.  Equivalently, the relative trace
+  defect of the chosen embedded child section has equal `H=<2^7>` coset sums
+  on the right axis.  This is the sharper arithmetic target for the anchor.
+fixed-frequency p24 trace-average anchor payload gate records the verifier
+  accounting for that target: seven honest defect H-coset sums suffice, while
+  the fuller quotient-trace plus selected-child profile costs `2*m=132508`
+  field elements, about `1.32508e-7*sqrt(p)`.  Both surfaces still require an
+  embedded CM/Lang producer; fake equal sums are trivial to pass.
+fixed-frequency p24 anchor-vs-C-centering boundary separates the anchor from
+  the internal bidegree theorem.  In the exact quotient dimensions
+  `C_7 x C_179 x C_31`, trace-defect anchor zero can be forced while the
+  forbidden `C/E`-trivial bidegree still leaks (`32/32` controls), and
+  `C/E`-centering can hold while the section-aware anchor fails (`32/32`).
+  Thus selected-section subtraction can mask a forbidden bidegree; the proof
+  must control the selected child right profile or prove `C/E`-centering
+  directly.
+fixed-frequency p24 section-choice obstruction gate kills the trace-only
+  compression: the same quotient trace profile can pass or fail the anchor
+  depending on the selected child section, random child shifts change the
+  defect sums in `48/48` toy trials, and the pinned actual-CM row has `0/5`
+  globally shifted child anchors passing with `5/5` distinct defects.  Thus
+  the p24 anchor producer must be section-aware; unordered relative trace
+  coefficients are not enough.
+p24 sub-sqrt scale-discipline gate separates real quotient/recovery-scale
+  surfaces from constant-factor sqrt-scale mirages: selected chain
+  `3107811 = 3.107811e-6*sqrt(p)` and full relative table
+  `3174011 = 3.174011e-6*sqrt(p)` are genuine p24 sub-sqrt surfaces, while
+  the optimistic composite seeded correspondence proxy
+  `311808*3107441 = 0.968924963328*sqrt(p)` is still sqrt-scale and
+  `3.1177e5` times larger than the selected-chain surface.
+oriented recovery-cycle payload gate records a fallback finite surface if a
+  producer lands at one honest composite recovery cycle rather than a selected
+  recovery polynomial.  For the oriented class `2*463*223^(-1)`, one step can
+  be verified as `j_i --Phi_2-- u_i --Phi_463-- v_i <--Phi_223-- j_{i+1}`.
+  Carrying all `n=3107441` vertices and two intermediates per edge plus
+  `A,x0` takes `9322325 = 9.322325e-6*sqrt(p)` field elements; even densely
+  serializing the three modular-polynomial tables gives
+  `9589191 = 9.589191e-6*sqrt(p)`.  This is larger than selected-chain but
+  still sub-sqrt; it does not solve the seedless target-cycle problem.
+Lean anchor trace-average payload gate proves the finite slot inequalities:
+  `7 < 132508 < 3107811 < sqrt(p)` for the anchor sub-surface versus the
+  selected-chain surface, and packages the contract as sub-sqrt payload plus
+  an explicit producer-soundness hypothesis.
+fixed-frequency p24 internal-character filter gate identifies the same
+  codimension-one condition as zero trivial `C/E` character support after
+  `Tr_{B/C}`.  It also records that the order-7 quotient twist dies after
+  seven raw `p^780` steps, so the proof needs a new internal `31/179`-layer
+  CM/Lang character-support input.
+fixed-frequency actual-CM internal-character boundary shows that the new
+  filter is not a generic raw-period property: in the `D=-5000`, `h=30`
+  calibration, `0/60` raw period packets have zero trivial `C` projection.
+  The theorem must use the special right-obstruction/product-coboundary
+  expression.
+fixed-frequency p24 right Gauss weighted-polynomial gate reduces
+  `R_{chi,-a}` to `tau(chi)*G_chi(zeta_n^{-a})`, with
+  `G_chi(X)=sum_r chi^{-1}(r mod 211)F_r(X)`.  Random weighted polynomials
+  fail the internal trace target, so the remaining theorem is exactly the
+  CM/Lang cancellation for this named weighted polynomial.
+fixed-frequency p24 right-axis spectrum gate records that `p^5460` fixes the
+  right `211` axis.  Therefore the internal trace does not average right
+  H-cosets; the target is no order-7 multiplicative spectrum, equivalently
+  equal H-coset sums, in the internally traced `G_chi` profile.
+fixed-frequency p24 right-axis covariance/descent gate records the strongest
+  finite implication now worth proving for that profile: `p^780`-covariance
+  shifts the seven H-cosets by `6`, and descent of one anchor coset sum
+  forces equal H-coset sums.  Under covariance this anchor descent is
+  equivalent to zero order-7 spectrum.  The controls show covariance alone
+  and descent alone both leave nontrivial order-7 spectrum.
+fixed-frequency actual-CM right-axis covariance boundary checks the closest
+  small actual-CM clone of that implication found so far:
+  `D=-6719, q=6863, h=105, m=21=3*7, n=5`.  There `rho=Frob_q^2`
+  fixes the left component and moves the right quotient; actual additive
+  resolvent covariance holds with `0` failures, and all four
+  Gauss-normalized quotient projections are `rho`-fixed.  But all four are
+  nonzero, with `anchor_coset_descended=0/2` and `equal_H_coset_sums=0/2`.
+  So Gauss-normalized covariance is not the missing theorem; the p24 proof
+  still needs section-aware anchor descent/equal-H-coset sums for the actual
+  weighted `G_chi` packet.
+fixed-frequency actual-CM left-paired H-coboundary boundary tests the
+  immediate repair that nontrivial left pairing might kill the right-axis
+  leakage.  On the same `D=-6719` row, all three left frequencies preserve
+  covariance, but the two nontrivial left frequencies have
+  `nontrivial_left_equal_H_coset_sums=0/4` and
+  `nontrivial_left_gauss_normalized_nonzero=8/8`.  Thus paired-profile
+  potential is not forced by left character insertion alone; the missing
+  theorem must use the trace-GCD weighted product/section structure.
+fixed-frequency DANGER anchor-condition boundary tests whether the strict
+  large-2-adic curve-order condition itself might force anchor descent.  On
+  Sutherland's local `pp10` all-triples data, the first ten materializable
+  DANGER-compatible CM trace classes give `19` coprime decompositions and
+  `385` global child-section tests, with `0` anchor passes.  Thus the p24
+  anchor theorem needs more than the target trace congruence/large
+  2-power order condition.
+fixed-frequency p24 right-axis fixed-field refinement gate corrects the
+  target field: the anchor only needs to be fixed by `rho=p^780`.  The
+  `rho`-fixed part of `E=F_p(mu_66254)` has degree `780=156*5`; descent to
+  `F_p(mu_157)` is sufficient but stronger.  Pure right H-periods are
+  covariant but not anchor-fixed, so the CM/Lang `G_chi` coefficients must
+  cancel the nonfixed right-period part.
+fixed-frequency p24 right-axis anchor projector gate expresses that exact
+  anchor fixedness as six nontrivial rho-eigenprojector vanishings.  It uses
+  a small order-7 quotient model for the projector algebra and a split
+  `F_8863` pure-period control; the pure H anchor has all six nonfixed
+  projectors nonzero, so the missing theorem is real CM/Lang cancellation,
+  not formal period covariance.
+fixed-frequency p24 right-axis projector-character bridge proves the index
+  convention: with shift `6`, `Pi_m(Y_0)` is one seventh of quotient character
+  `k=6m mod 7`.  Thus proving the six anchor projectors vanish is exactly
+  proving the six nontrivial H-quotient character equations in the verifier
+  payload.
+fixed-frequency p24 projector/internal-character target gate combines the
+  right-projector and nested-internal-trace formulations: the missing theorem
+  is `Tr_{C/E}(Tr_{B/C}(Pi_m(packet)))=0` in each nontrivial projector
+  channel.  The gate verifies quotient projectors commute with the `B/C`
+  trace, but random projected packets still have final trace leakage; the
+  arithmetic input must place the actual weighted CM/Lang packet away from
+  the trivial `C/E` character.
+fixed-frequency p24 right/C bidegree support gate names the exact forbidden
+  Fourier slots: after `Tr_{B/C}`, the bidegrees
+  `(right character k, C/E character 0)` for `k=1,...,6` must vanish.  This
+  is equivalent to final internal trace zero for all nontrivial right
+  projectors.  Since `gcd(7,179)=1`, this support separation is not a
+  quotient-homomorphism artifact; it must come from the selected trace-GCD
+  weighted/section-aware CM packet.
+fixed-frequency p24 Stickelberger bidegree boundary checks the first
+  Stickelberger/Jacobi-sum shortcut against that exact `C_7 x C_179`
+  support condition.  Plain cyclic Stickelberger on `C_(7*179)` and plain
+  right-axis Stickelberger both have nonzero Fourier coefficient in all six
+  forbidden slots, even after centering: `6/6` leaks.  Only deliberately
+  `C/E`-centered product distributions avoid the forbidden bidegrees, so a
+  successful Jacobi/Stickelberger proof must construct that `C/E` centering
+  from the selected weighted packet itself.
+fixed-frequency p24 Jacobi-carry C-centering gate gives the first positive
+  support pattern for that idea.  For
+  `theta_{u,v}(t)=[ut]+[vt]-[(u+v)t]` on `C_7 x C_179`, a carry with one
+  right-trivial nontrivial `C/E` input kills all six forbidden bidegrees
+  (`48/48`), and two C-axis inputs also pass.  Generic Jacobi carries,
+  pure-right partners, and C-cancelled sums all leak (`48/48`).  Thus the
+  next plausible proof target is not a generic Jacobi slogan.
+fixed-frequency p24 admissible Jacobi-carry span boundary corrects the exact
+  target: the termwise-safe family requires the partner and `u+v` to keep
+  nontrivial `C/E` component.  Its p24 rank is `621`; the broader C-axis
+  family has rank `625` but includes four leaky directions.  Therefore the
+  clean theorem is an honest decomposition of the weighted trace-GCD
+  obstruction after `Tr_{B/C}` into the rank-`621` admissible C-axis
+  Jacobi-carry span.  A broad rank-`625` decomposition is usable only with a
+  separate proof that the four leaky directions cancel.
+fixed-frequency p24 admissible Jacobi spectral boundary gives the rank-`621`
+  target a Fourier fingerprint: the `C/E`-trivial slice has rank `1`, every
+  nontrivial `C/E` slice has full right rank `7`, every conjugate `C/E` pair
+  has rank `8` rather than `14`, and cumulative increments are
+  `1,7,...,7,4`.  For p24 this is `1 + 7*88 + 4 = 621`.  The proof should
+  target conjugate-`C/E` pair compatibility, not just forbidden support.
+fixed-frequency p24 admissible Jacobi dual-conditions gate makes that target
+  explicit in Fourier coordinates `F(a,b)` on `C_7 x C_179`.  In small exact
+  models the admissible span is exactly the solution space of four condition
+  families: `F(a,0)=0` for `a=1..6`; pair skew
+  `F(a,b)+F(-a,-b)=0`; right-trivial pair sums
+  `F(0,b)+F(0,-b)=lambda*F(0,0)`; and three global balances
+  `sum_{b>0}(F(-a,b)-F(a,b))=0` for `a=1,2,3`.  For p24 this gives
+  `6+6*89+89+3=632` independent equations and solution dimension
+  `1253-632=621`.  The live proof target can therefore be stated as proving
+  these four families for the selected weighted packet after `Tr_{B/C}`.
+  The Lean companion
+  `p24/lean/TraceGcdAdmissibleJacobiDualConditionsGate.lean` packages the
+  formal implication from these four families to admissible span membership
+  and then through the existing forbidden-bidegree, final-trace,
+  product-coboundary, and `1092` H-coset verifier pipeline.
+  The source map
+  `p24/trace_gcd_fixed_frequency_p24_dual_condition_source_map.md` records
+  that family 1 is direct `C/E`-centering, family 2 requires true
+  anti-invariance rather than generic inversion symmetry, family 3 is likely
+  a normalization/product-formula identity, and family 4 is the likely
+  interface with right-difference telescope/global residue relations.
+fixed-frequency p24 Jacobi-carry Fourier formula gate gives symbolic
+  explanations for those four families on each admissible carry.  For
+  `g_m(t)=[m*t]_N`, the DFT is
+  `-d^2*M/(1-zeta_M^(-k/d*(m/d)^(-1)))` on supported nonzero frequencies.
+  This yields `lambda_c=-2/(c-1)`, hence p24 `lambda_179=-1/89`; conjugate
+  skew follows because `hat g_m(k)+hat g_m(-k)=-d*N` cancels between the
+  `v` and `u+v` terms; and the three global balances come from vanishing of
+  admissible carries on the `C`-zero fiber.  The arithmetic target is now:
+  construct the selected packet as a p-integral admissible-carry combination,
+  or prove the same sawtooth identities directly for it.
+fixed-frequency p24 dual-conditions value-side gate converts the `632`
+  Fourier equations into three packet-facing identities: C-row sums are
+  independent of the right coordinate; the packet vanishes on the C-zero
+  fiber; and `f(r,c)+f(-r,-c)` is a single constant for all `c != 0`.  This
+  is now the cleanest direct CM/Lang theorem surface for the selected packet
+  after `Tr_{B/C}`.  The Lean companion
+  `p24/lean/TraceGcdDualConditionsValueSideGate.lean` records the formal
+  handoff from these identities to the existing verifier pipeline.
+fixed-frequency p24 value-identity strength gate sharpens that target:
+  the structural conditions `f(r,0)=0` and constant
+  `f(r,c)+f(-r,-c)` off the C-zero fiber have p24 rank `629`; only three
+  independent row-sum/global-balance equations remain to reach the full
+  `632`-equation admissible target.  This suggests a split proof strategy:
+  product-formula/involution symmetry for the structural part, plus three
+  global balance identities.
+fixed-frequency p24 selected-defect value producer gate rewrites the target
+  in terms of a raw packet `g` and selected defect `f(r,c)=g(r,c)-g(r,0)`.
+  It is equivalent to prove raw two-level inversion complement
+  `g(r,0)+g(-r,0)=A_0`, `g(r,c)+g(-r,-c)=A_1` for `c != 0`, plus selected
+  affine row balance `sum_c g(r,c)-179*g(r,0)` independent of `r`.  Defect
+  alone, inversion alone, and affine balance alone all leak in finite
+  controls.
+fixed-frequency p24 multiplicative producer dictionary gate translates this
+  into the product-formula target: construct `U(r,c)=omega^g(r,c)` with
+  constant pair-products `U(r,0)U(-r,0)`, `U(r,c)U(-r,-c)` for `c != 0`, and
+  constant selected row-product ratio `prod_c U(r,c)/U(r,0)^179`.  Pair-product
+  constancy without the row ratio and row-ratio constancy without pair-products
+  both leak in controls.
+fixed-frequency Jacobi-sum product-formula probe tests the most literal
+  arithmetic source for those pair-products: actual finite-field Jacobi sums
+  `J(chi^(u*t),chi^(v*t))` in small `N=7c` models.  They supply the off-`C=0`
+  inversion pair-product complement in `3/3` small rows, but do not supply the
+  selected row-product ratio: the only sampled row-ratio hit is the
+  right-trivial `(u,v)=(7,7)` case, and the right-mixed samples have
+  `0/7` row-ratio hits in each small degree.  Thus a Jacobi-sum proof still
+  needs an extra C-axis distribution/Hasse-Davenport/residue or selected
+  correction identity for the three global balances.
+fixed-frequency Jacobi-sum row-ratio miner sharpens this: for right-mixed
+  Jacobi sums, the selected row-product ratio is already constant on the six
+  nonzero right rows (`32/32` sampled pairs for each of c=5,11,13).  The only
+  failure is the right-zero anchor, and its defect is universal across sampled
+  admissible pairs for each c, with exact finite-field formula
+  `delta_c=(q-2)^(-(c-1))`.  That defect is not in `mu_(7c)`, `mu_7`, or
+  `mu_c`, and has no c-th root in the sampled value fields.  So the next
+  theorem target is a Hasse-Davenport punctured-right theorem plus a genuine
+  selected-anchor correction, not a generic row-balance theorem.
+fixed-frequency Jacobi-sum anchor-correction gate sharpens the previous item
+  further in the literal finite-field model.  For right-mixed admissible
+  Jacobi packets, changing only `U(0,0)=J(1,1)=q-2` to
+  `U'(0,0)=U(0,0)/(q-2)=1` repairs both failures: the C-zero pair-products
+  become constant and the selected row-product ratio becomes constant.  This
+  passed exhaustively for all right-mixed admissible pairs for c=5,11,13
+  (`72`, `540`, `792` pairs respectively).  The
+  p24 missing theorem is now the selected trace-GCD/CM-Lang analogue of this
+  single degenerate-anchor unit after `Tr_{B/C}`.
+fixed-frequency Jacobi-sum punctured Hasse-Davenport theorem note packages
+  this as a clean finite-field theorem candidate: with reduced convention
+  `Jdagger(1,1)=1`, the corrected packet has C-zero pair-product `1`,
+  off-C-zero pair-product `q`, and selected row-product ratio independent of
+  the right row.  The p24 lift obligation is now: realize the selected
+  weighted trace-GCD packet after `Tr_{B/C}` as the p-integral
+  specialization/log/divisor of the reduced Jacobi/CM-Lang packet, including
+  the analogue of the `J(1,1)/(q-2)` anchor normalization.
+fixed-frequency symbolic Hasse-Davenport gate proves the finite Jacobi algebra
+  no longer needs finite-field summation.  For all small rows c=5,11,13,17,19
+  and for p24 c=179, the residue conditions imply that `B_k` and
+  `(A+B)_k` run through the same punctured C-coset, so their Gauss factors
+  cancel in the selected row ratio, leaving only the C-axis product of
+  `G(A_k)`.  This covers all `189036` p24 right-mixed admissible pairs.  The
+  remaining input is now specifically the CM/Lang realization of the reduced
+  packet, not the Hasse-Davenport finite algebra.
+fixed-frequency reduced-anchor fingerprint gate identifies the selected
+  additive effect of the reduced anchor.  The raw correction `-e_(0,0)` becomes
+  the punctured right-zero row `h(r,k)=1` for `r=0,k!=0` and `0` otherwise
+  after selected-child subtraction.  For p24 this has `178` nonzero entries,
+  Fourier profile `H(a,0)=178`, `H(a,b)=-1` for `b!=0`, and right difference
+  supported only on the two adjacent rows around right-zero.  It also leaks
+  forbidden C-trivial bidegrees by itself, so the CM/Lang anchor must cancel
+  the matching raw-packet leak rather than serve as a standalone admissible
+  packet.
+fixed-frequency reduced-anchor adjacent bridge gate identifies exactly how
+  this new anchor composes with the old adjacent-anchor/covariance branch.
+  The old branch sees only the `C/E`-trivial row-sum slice
+  `A=(c-1)e_0` of the punctured right-zero row.  For p24 this is
+  `178*e_0` on `C_7`; it has all six nontrivial right projectors nonzero,
+  and adjacent difference multiplies each such channel by a nonzero scalar.
+  Thus the adjacent-anchor descent theorem is cancellation of the reduced
+  anchor's `b=0` leak, not a separate condition on the full punctured row.
+fixed-frequency reduced-anchor C-slice decomposition gate separates the
+  already-bridged `b=0` row-sum leak from the still-open `C/E`-nontrivial
+  residual.  The residual has zero row sums and Fourier profile
+  `H(a,0)=0`, `H(a,b)=-1` for `b!=0`; for p24 this is `1246` nonzero
+  `C/E`-nontrivial Fourier channels.  This is invisible to the old
+  adjacent-anchor theorem and must be produced by the selected CM/Lang
+  degenerate-anchor unit.
+fixed-frequency p24 admissible Jacobi decomposition theorem note records the
+  current confidence split: the finite handoff to the verifier is high
+  confidence, but existence of the selected CM/Lang decomposition is still
+  highly uncertain.  It also records the useful-compute plan: materialize
+  small two-axis weighted packets, test admissible-span membership, mine
+  coefficients for a Jacobi/Stickelberger/Lang formula, and avoid p24
+  class-set enumeration or support-only jobs.
+fixed-frequency actual-CM admissible Jacobi-span boundary tests the new
+  rank-`621` condition on nearby real CM rows.  The raw `D=-5000` projector
+  row has `0/30` admissible-span origins.  On the pinned `D=-13319` row,
+  right-combo resolvents, raw weighted coefficients, and selected-child
+  defect coefficients all have `0/140` admissible-span and broad-span origins.
+  Thus ordinary embedded CM projector/right-combo/coefficient packets do not
+  generically supply the admissible Jacobi decomposition.  The next useful
+  positive computation must materialize the selected weighted trace-GCD packet
+  or a faithful small analogue.
+fixed-frequency actual-CM value-identity boundary refines this failure:
+  generic projector/right-combo/weighted coefficient rows fail all three
+  packet-facing identities.  Selected-child defects force only the C-zero
+  fiber (`140/140`) and still fail inversion-complement and row-sum balance
+  (`0/140`), so section subtraction alone is not enough.
+Lean admissible Jacobi decomposition gate packages the corrected formal
+  implication: admissible decomposition implies no forbidden bidegrees, while
+  a broad decomposition needs explicit leak cancellation.  It then feeds the
+  existing final-trace/product-coboundary/character-payload/H-coset pipeline
+  and records the corrected p24 ranks `621`, `625`, and `1092`.
+Lean projector-trace pipeline gate composes the formal layers after that
+  arithmetic input: final internal trace zero gives matching right
+  coboundary; matching right coboundary plus left covariance gives product
+  coboundary; product coboundaries kill the six nontrivial character
+  payloads; ordinary centering plus those characters gives the `1092`
+  H-coset scalar verifier.  Thus the remaining theorem is exactly the
+  six projected weighted-packet final trace identities, not another finite
+  handoff.
+fixed-frequency paired-kernel criterion gate packages the surviving paired
+  theorem after the left-paired boundary: if `L_Q=sum_{s in Q}B_s` is the
+  H-trace leakage before pairing and `A` is the selected trace-GCD left
+  functional, then paired H-trace zero is exactly `A(L_Q)=0`.  Under p24
+  covariance this is the six compressed equations `A(Pi_k L_0)=0`,
+  `k=1,...,6`; proving those kernel memberships is the remaining arithmetic.
+fixed-frequency actual-CM projector/internal-character boundary rules out
+  the generic projector strengthening: on the `D=-5000`, `h=30=2*5*3`
+  calibration, the nontrivial top projector has nonzero final internal trace
+  in `30/30` origins.  Projector nontriviality alone does not remove the
+  trivial `C/E` component.
+Lean right-axis anchor-descent gate formalizes the seven-coset implication:
+  shift-by-6 covariance plus one anchor fixed by `rho` forces all seven
+  H-coset sums equal.  The arithmetic work is exactly proving those two
+  hypotheses for the internally traced `G_chi` profile.
+fixed-frequency actual-CM right-combo internal-trace boundary shows the
+  right-combo obstruction shape alone is not enough: the pinned actual-CM
+  analogue has `0/2` zero internal traces.
+fixed-frequency actual-CM right-combo anchor boundary isolates the recombined
+  anchor equation in the same pinned row.  Since `n=5` and `<q>` has order
+  `4`, there are no nontrivial quotient equations; the recombined balance is
+  exactly `sum_{k=1}^4 c_k=4*c_0`.  The actual right-combo `G_chi` analogue
+  fails it, so the p24 anchor equation is not generic decomposition-field
+  trace language.  The section scan rotates all `140` global origins in this
+  row and still finds `0/140` anchor passes with `140` distinct nonzero
+  defects, so section choice alone does not rescue this generic shortcut.
+  A follow-up inline linear test also rules out a universal relative-coordinate
+  multiplier repair on this row: no polynomial multiplier of degree `<5`
+  over either the base field or the full value field makes the anchor balance
+  hold across all `140` sections.  So the correction is not a simple
+  low-degree function of the relative coordinate.
+fixed-frequency actual-CM product internal-trace boundary shows the full
+  weighted product packet shape alone is also not enough: the same pinned
+  analogue has `0/2` zero product internal traces, `0/1` zero recombined
+  `<q>` traces, and a nonzero full projection.
+fixed-frequency p24 twisted Hilbert-90 payload gate sharpens the descent
+  theorem to an explicit potential target on each of the ten length-7 quotient
+  cycles after that internal trace: for nontrivial eigenvalue `epsilon`, the
+  Gauss-normalized E-valued seed must lie in
+  `im(sigma - epsilon) = ker(Tr_epsilon)`.  Random seeds usually give nonzero
+  twisted traces, while coboundary seeds give zero; the remaining CM/Lang work
+  is construction of this coboundary potential.
+fixed-frequency p24 idempotent covariance theorem target now states the exact
+  remaining arithmetic identity, in Gauss-normalized form:
+  `rho(Z_delta(chi))=lambda_chi^(-1)Z_{delta+10}(chi)` for the complete
+  70-idempotent decomposition, with
+  `lambda_chi=chi(p^780 mod 211) != 1`.
+fixed-frequency p24 Gauss-normalization boundary records why the normalization
+  is essential: formal additive-resolvent Frobenius covariance is exactly the
+  Gauss-sum eigenvalue, and the divided `L`-valued projection can remain
+  nonzero even after ordinary centering.
+fixed-frequency p24 idempotent-covariance circularity boundary records why the
+  order of proof matters: after complete descent, idempotent components have
+  eigenvalue `1`; nontrivial covariance is then equivalent to vanishing.  The
+  proof must establish Gauss-normalized covariance on trace-resolvent summands
+  before complete recombination/descent.
+limited fixed-frequency relation-shape index found no cheap small actual-CM
+  calibration row for the p24 geometry: with 3000 q-tests in the bounded scan,
+  `hits=0` and `right_component_cases=0`.
+Lean semilinear eigen-descent gate formalizes the tiny core implication:
+  fixed by `rho` plus nontrivial `rho`-eigenvalue implies zero.  The arithmetic
+  work is now exactly construction of the descended covariant packet sum.
+Lean product-coboundary gate formalizes the product rule above, separating the
+  finite algebra from the still-missing CM/Lang construction of the matching
+  right potential.
+fixed-frequency class-character expansion gate rewrites the same scalar as
+  `sum_a T_{1,0,a} * R_{chi,-a}` over the relative packet.  Random split
+  models have every left trace, every right multiplicative packet combo, and
+  every product term nonzero while the projection is nonzero, so nonzero
+  relative class-character data is not enough.  The p24 proof needs a named
+  packet cancellation or a stronger termwise right-combo vanishing theorem.
+fixed-frequency actual-CM right-combo boundary checks the stronger termwise
+  option on the pinned `D=-13319, q=13463, m=28=4*7, n=5` analogue.  All
+  primitive relative right-combos are nonzero and the packet projection is
+  nonzero, while a right-neutral control kills them termwise.  Therefore
+  termwise right-combo vanishing is sufficient but not generic CM structure;
+  p24 should target exact packet cancellation unless a new p24-specific
+  symmetry appears.
+fixed-frequency actual-CM product internal-trace boundary checks the full
+  weighted product analogue on the same pinned row; both internal product
+  traces and the recombined `<q>` trace are nonzero, so the missing theorem
+  is not generic weighted-product or generic decomposition-field trace
+  cancellation.
+fixed-frequency p24 factor-cycle cancellation candidate finds such a
+  p24-specific alignment: `p^780` fixes the left `157` character, shifts the
+  right H-quotient by `6 mod 7`, and shifts the `70` E-tensor factors by
+  `10 mod 70`, giving ten 7-cycles.  The semilinear correction shows the new
+  missing theorem is p24 factor-cycle covariance plus descent of the packet
+  product terms, not scalar geometric cancellation by itself.
+fixed-frequency order-7 H-coboundary gate gives the tower-native form: with
+  `H=<2^7> <= (Z/211Z)^*`, all seven H-coset traces vanish iff the right
+  profile is an additive Hilbert-90 coboundary
+  `G_s = Y_s - Y_{2^7 s}`.  Ordinary centering fails this condition in the
+  control, so the next proof target is to prove `e_HG=0`; then the CM/Lang
+  potential is the deterministic `Y=UG`.
+fixed-frequency H-Bezout operator gate makes the potential deterministic:
+  for `T(s)=2^7 s` and `e_H=(1/30)sum_i T^i`, the fixed operator
+  `U=(1/30)sum_{i=0}^{29}(29-i)T^i` satisfies `(1-T)U=1-e_H`.  Therefore
+  once the arithmetic identity `e_H G=0` is proved, `Y=UG` gives the
+  H-potential with no sampling.
+fixed-frequency paired-potential boundary shows that a full right-resolvent
+  coboundary `B_s=Z_s-Z_{2^7s}` is sufficient but stronger than needed:
+  H-trace leakage can live in the kernel of the Hermitian pairing while the
+  paired `L`-profile still has a coboundary.  The exact theorem target is the
+  paired `L`-valued potential unless later arithmetic gives the stronger
+  right-resolvent potential naturally.
+fixed-frequency H-coboundary base-field boundary identifies the exact
+  marginal identity: for the centered `156 x 210` mixed matrix `C(r,s)`,
+  the seven multiplicative Gaussian-period column sums over `H=<2^7>` must
+  vanish row-wise.  A pinned actual-CM analogue has coset-sum rank `2` and
+  `0/6` zero coset sums, so this is not generic Hermitian packet structure.
+fixed-frequency p24 H-coset verifier records the exact finite check if the
+  tower proof supplies the compressed sums: `156*7 = 1092` scalar equations,
+  versus `sqrt_floor=10^12`; it rejects random centered and corrupted controls
+  and deliberately does not compute the CM class set.
+fixed-frequency p24 character payload contract proves the exact handoff from
+  the live tower theorem to that verifier: ordinary centering plus the six
+  nontrivial `L`-valued order-7 quotient-character sums is equivalent to the
+  seven H-coset sums per left coordinate.  This is `936 + 156 = 1092` scalar
+  coordinates, while materializing the full `156 x 210` marginal is not a
+  sub-sqrt certificate.
+fixed-frequency H-kernel inclusion gate packages the same target as
+  `C P_H=0`, where `P_H` is the `210 x 7` H-coset indicator matrix.  This
+  inclusion is compatible with full `156` rank because `dim(P_H^perp)=203`,
+  but a random centered full-rank control has six-dimensional H-leak.  The
+  tempting `p^156` right-multiplier invariance would imply the inclusion, but
+  is only a stronger sufficient symmetry, not the CM theorem.
+fixed-frequency left-descent marginal gate rewrites `C P_H=0` in the
+  uncentered Hermitian marginal `M`: for each right H-coset `Q`,
+  `D_Q(a)=sum_{b in Q}M(a,b)-|Q|M(a,0)` must be independent of the left
+  residue `a`.  The pinned `D=-13319` Hermitian marginal has
+  `actual_centered_H_sum_zeroes=0/6` and `actual_left_descent_failures=6/6`,
+  so this left descent is a real p24 trace-GCD packet theorem, not generic
+  marginal structure.
+fixed-frequency H-coset selector boundary shows this marginal identity is
+  full-support in additive right frequency: each nontrivial quotient-character
+  selector has all `210` nonzero additive Fourier coefficients nonzero.  The
+  proof cannot be a sparse right-frequency or single-orbit shortcut.
+fixed-frequency order-7 rank-compatibility gate checks the exact `210 -> 156`
+  dimensions: augmentation adds six independent equations beyond centering,
+  but leaves dimension `203`, so it is compatible with a full-rank `156`
+  fixed square.  A centered full-rank control has quotient-leak rank `6`, and
+  unit-2 transport preserves centering without forcing augmentation.
+fixed-frequency unit-symmetry boundary rejects the naive diamond shortcut:
+  multiplier invariance would force quotient-character vanishing, but the
+  pinned actual-CM analogue `D=-13319, q=13463, left=4, right=7` has
+  `actual_projection_nonzero=1` and `18` multiplier-invariance failures.
+  Right-unit action is p-unit determinant-line transport, not literal
+  invariance of the embedded mixed Hermitian profile.
+fixed-frequency relation-shape index looked for smaller p24-like actual-CM
+  calibration rows with `right_len=35`, `q mod 35 = 22`, and a non-tail-only
+  `left_len > 35` prefix/tail shape.  In the bounded relaxed scan
+  (`max_abs_D=600000`, `q<200000`) it found `223` right-component cases but
+  `0` usable left source orbits, so current computation should use controlled
+  fixed-frequency identities rather than broad actual-CM row hunting.
+tensor-factor top-coefficient route sharpens the one-factor Moore target:
+  for `B/E` of degree `5549=31*179` and `C=F_{Q^179}`, the deterministic map
+  `x -> Top_3(g'(theta)*x)` is exactly the three-twist trace frame against
+  `1,theta,theta^2`.  The p24 theorem target is now
+  `Top_1(constant+2+157)` rank `158`, `Top_2(211)` rank `210`, and
+  `Top_3(full axis)` rank `368`.  The dual-basis audit found `8/8` small
+  actual-CM axis rows full by the tested top window, with `0/128`
+  max-rank-profile failures; this makes the tensor certificate a canonical
+  top-coefficient avoidance theorem rather than an arbitrary Moore minor.
+CS/MDS follow-up on the pinned `D=-10919, m=12` tensor row: the current
+  two-window `constant+4+3` marginal matrix is full `6/6`, and the component
+  rectangular checks have all tested maximal minors nonzero, but matching
+  random tensor-factor controls have the same full-rank/superregular behavior
+  and all Toeplitz/Hankel/cyclic displacement ranks are maximal.  Therefore
+  MDS/rank-condenser language is useful theorem packaging, not a standalone
+  proof of the selected CM p-unit.
+orbit zero-lemma degree boundary: a single crossed-product beta orbit gives
+  only `|Omega|=5549` zeros, so divisor counting can prove orbit p-unitness
+  only from a phase function with pole degree `<5549`.  The moving
+  `D=-10919, m=4` trace-frame toy has orbit size `12` but plain-`j`
+  rational degree `78`; the analogous p24 half-class scale
+  `102940198007` is far above `5549`.  Thus the Borcherds/Fitting route must
+  retain beta/tensor phase or use a local-intersection formula, not a large
+  plain-`j` divisor count.
+centered full-origin phase-sensitivity gate tests the most plausible compact
+  centered p-unit route on the pinned `D=-13319, q=13463, m=28, n=5,
+  pair=(4,7)` row.  Genuine cyclic origin shifts preserve the full-origin
+  product `4/4`, but shuffling child order inside each unordered recovery
+  fiber preserves fiber multisets `8/8` while changing the alpha product and
+  right sequence `8/8`.  Thus the full-origin Borcherds/Fitting producer
+  cannot be replaced by unordered relative fiber data; it must construct a
+  phase-aware Chow/Fitting divisor or retain embedded phase/order data.
+centered full-origin one-edge boundary tests the next tempting local norm
+  shortcut on the same pinned row: representing the origin product by a
+  bounded low-bidegree function of one oriented adjacent edge
+  `(j_i,j_{i+1})`.  The row has `140/140` distinct oriented edges but only
+  `14` determinant values, and interpolation finds no polynomial or rational
+  bidegree-`<=4` rule.  Thus a surviving local-intersection theorem needs a
+  longer path, richer phase coordinate, or a direct Chow/Fitting divisor;
+  one adjacent edge is not enough.
+centered full-origin short-path boundary tests that next longer-path shortcut
+  on the same row.  Two-edge coordinates `(j_i,j_{i+1},j_{i+2})` have no
+  polynomial formula through total degree `7` and no rational formula through
+  total degree `5`, below the generic thresholds `120 < 140` and
+  `112 < 140`.  Three-edge coordinates through four vertices likewise have
+  no polynomial formula through total degree `5` and no rational formula
+  through total degree `3`, below `126 < 140` and `70 < 140`.  So a local
+  theorem must use richer embedded phase data or a direct Fitting/Chow
+  divisor; short adjacent paths are not enough.
+centered orbit-Fitting block-cycle audit checks the positive determinant-line
+  plumbing for the same actual-CM row.  The centered Schubert window matrices
+  assemble into direct-sum and signed block-cycle orbit determinants on all
+  three right Frobenius orbits, with `determinant_mismatches=0`,
+  `zero_detection_failures=0`, and singular controls forcing determinant
+  zero.  Thus crossed-product Fitting assembly is sound; the missing theorem
+  is arithmetic p-unitness of the phase-aware section.
+phase-recurrence boundary: the same moving trace-frame rows have determinant
+  norm period `13` and orbit size `12`, but Berlekamp-Massey gives maximal
+  order `13` for `m=4` factor `0`, `m=4` factor `1`, and `m=3` factor `0`,
+  exactly matching period-preserving random controls.  Thus low linear
+  recurrence in the phase coordinate is another closed shortcut; only the
+  tautological periodicity `a_{t+13}=a_t` is visible.
+```
+
+Important negative/boundary facts:
+
+```text
+natural-coordinate visible LRS/GRS signature is rejected;
+selected-block directness is only compatibility, not proof;
+current small actual-CM rows do not contain a nontrivial selected-basis
+  calibration row for the full Plucker chart;
+bounded p24-like relation-shape scans found right-side analogues but no
+  matching non-tail-only left source orbit, so the uploaded smaller rows still
+  do not provide a clean fixed-frequency relation-section calibration;
+relative Kummer powers are not a complete selected-chain child selector in
+  multi-orbit layers: the ambiguity gate shows the p24 `211` layer needs
+  five cross-orbit glue invariants such as `T_a/T_1^a` or selected child/full
+  morphism data, because six independent Kummer orbits leave `211^5` phase
+  choices.  The finite implication is Lean-checked in
+  `KummerCrossOrbitGlueGate.lean`; the gate records both the `3107816`
+  extension-object count and the conservative `3107986` base-field slot count;
+cross-orbit Kummer glue invariants also look full-complexity in small
+  actual-CM rows: the glue scan found `8/8` full-degree coordinates in the
+  harness run and `15/15` in a parent-count-forced run; its Frobenius descent
+  audit found `21/21` and `45/45` glue values at full Frobenius degree, with
+  `0` proper descents, so glue is a payload object rather than a cheap
+  parent-period formula or smaller-subfield object;
+actual-CM frequency-profile audit shows current rows are not p24-like
+  calibrations, and prefix-plus-tail singular rows fail the local gate;
+actual-CM basis-free section audit shows the current local rank profiles are
+  Frobenius-covariant (`10/10`), but no row is a basis-free section candidate;
+  the nontrivial prefix+tail rows fail by wrong defect-support size (`4/4`),
+  not by descent;
+descent alone does not prove the defect support is four length-4 orbits;
+  a no-fixed-defect arithmetic theorem is still needed for that reduction;
+the easy explanation using right centering and sign symmetry is insufficient
+  for the nontrivial fixed frequencies;
+the order-7 augmentation identity is currently only a theorem candidate, not
+  proved from the CM/Lang packet;
+Frobenius covariance plus ordinary centering does not prove the H-coboundary
+  theorem; the Gauss-sum factor absorbs the nontrivial `p^156` eigenvalue;
+simple roots/squarefree class-polynomial splits do not imply determinant
+  p-unitness;
+ordinary base-polynomial equality for nonzero crossed norms is false.
+```
+
+## Read-Next Rule
+
+For a future turn, read only:
+
+```text
+p24/00_CURRENT_CONTEXT.md
+p24/00_THEOREM_ATTEMPTS_LEDGER.md
+p24/00_ROUTE_MAP.md
+```
+
+Then choose one route and read only the files listed there.  Check the ledger
+before reviving an old idea.  Avoid broad `rg` over `p24/*.md` unless a route
+map entry is missing or stale.
+
+## 2026-06-07 Low-Moment Selector Testing
+
+Added:
+
+```text
+p24/trace_gcd_fixed_frequency_reduced_anchor_low_moment_pairing_window.py
+p24/trace_gcd_fixed_frequency_reduced_anchor_low_moment_pairing_window.md
+p24/lean/TraceGcdReducedAnchorLowMomentPairingWindow.lean
+p24/trace_gcd_low_moment_cm_selector_sweep.py
+p24/trace_gcd_low_moment_cm_selector_sweep.md
+p24/trace_gcd_low_moment_sparse_relation_gate.py
+p24/trace_gcd_low_moment_sparse_relation_gate.md
+p24/lean/TraceGcdLowMomentSparseRelationGate.lean
+p24/trace_gcd_low_moment_relative_trace_gate.py
+p24/trace_gcd_low_moment_relative_trace_gate.md
+p24/lean/TraceGcdLowMomentRelativeTraceGate.lean
+```
+
+Focused low-moment entropy gate:
+
+```text
+PYTHONPYCACHEPREFIX=/private/tmp/codex-pycache PYTHONDONTWRITEBYTECODE=1 \
+PYTHONPATH=p24 python3 \
+  p24/trace_gcd_fixed_frequency_reduced_anchor_low_moment_pairing_window.py
+
+actual_toy_degree_1_matching_counts=[1, 1]
+random_degree_1_matching_count=1820
+random_degree_2_matching_count=20
+random_degree_3_matching_count=1
+first_layer_moments_for_random_unique=4
+second_layer_moments_for_random_unique=26
+p24_low_moment_pairing_constraints=30
+```
+
+Lean handoff:
+
+```text
+lean p24/lean/TraceGcdReducedAnchorLowMomentPairingWindow.lean
+PASS
+```
+
+Actual-CM selector sweep:
+
+```text
+PYTHONPYCACHEPREFIX=/private/tmp/codex-pycache PYTHONDONTWRITEBYTECODE=1 \
+PYTHONPATH=p24 python3 p24/trace_gcd_low_moment_cm_selector_sweep.py
+
+rows=19
+rows_all_unique_within_degree_bound=19
+rows_unique_at_degree_one=14
+rows_unique_no_later_than_random_entropy=16
+```
+
+Wider selector sweep:
+
+```text
+PYTHONPYCACHEPREFIX=/private/tmp/codex-pycache PYTHONDONTWRITEBYTECODE=1 \
+PYTHONPATH=p24 python3 p24/trace_gcd_low_moment_cm_selector_sweep.py \
+  --max-cases 24 --max-h 120 --max-child-count 22 \
+  --max-combinations 1000000 --max-refinements-per-case 10 --max-degree 6
+
+rows=65
+rows_all_unique_within_degree_bound=65
+rows_unique_at_degree_one=43
+rows_unique_no_later_than_random_entropy=52
+```
+
+Bounded larger selector sweep, 2026-06-08 spot rerun:
+
+```text
+PYTHONPYCACHEPREFIX=/private/tmp/codex-pycache PYTHONDONTWRITEBYTECODE=1 \
+PYTHONPATH=p24 python3 p24/trace_gcd_low_moment_cm_selector_sweep.py \
+  --max-cases 48 --max-h 160 --max-child-count 24 \
+  --max-combinations 1000000 --max-refinements-per-case 8 --max-degree 7
+
+rows=134
+rows_all_unique_within_degree_bound=134
+rows_unique_at_degree_one=86
+rows_unique_no_later_than_random_entropy=107
+```
+
+Sparse-relation dictionary:
+
+```text
+PYTHONPYCACHEPREFIX=/private/tmp/codex-pycache PYTHONDONTWRITEBYTECODE=1 \
+PYTHONPATH=p24 python3 p24/trace_gcd_low_moment_sparse_relation_gate.py
+
+random F_101:
+  degree=1 matches=1820 min_reduced_collision_size=2
+  degree=2 matches=20 min_reduced_collision_size=3
+  degree=3 matches=1
+
+actual CM examples:
+  D=-200:  degree 1 collision reduced size 2, degree 2 isolates
+  D=-239:  degree 1 collisions reduced size >=2, degree 2 isolates
+  D=-5000: degree 1 collision reduced size >=3, degree 2 isolates
+
+p24 entropy:
+  first_layer_union_over_two_parents_log10=-2.522422
+  second_layer_union_over_314_parents_log10=-4.721562
+
+markers:
+  equal_moment_subsets_are_sparse_signed_moment_curve_relations=1
+  newton_identities_forbid_reduced_collisions_of_size_at_most_k=1
+  p24_low_moment_theorem_is_cm_sparse_relation_avoidance=1
+```
+
+Lean sparse-relation handoff:
+
+```text
+lean p24/lean/TraceGcdLowMomentSparseRelationGate.lean
+PASS
+```
+
+Relative-trace constructor target:
+
+```text
+PYTHONPYCACHEPREFIX=/private/tmp/codex-pycache PYTHONDONTWRITEBYTECODE=1 \
+PYTHONPATH=p24 python3 p24/trace_gcd_low_moment_relative_trace_gate.py
+
+full_newton_recovery_rows=2/2
+degree_one_low_moment_unique_rows=2/2
+moment_parent_interpolation_rows=3/3
+p24_first_layer_low_relative_traces=4
+p24_second_layer_low_relative_traces=26
+p24_selected_path_low_relative_traces=30
+p24_parent_field_trace_coefficients=8172
+
+markers:
+  child_power_sums_are_relative_traces_of_quotient_period_powers=1
+  all_relative_degree_many_traces_recover_child_polynomial_by_newton=1
+  low_traces_plus_sparse_relation_avoidance_can_replace_full_child_polynomial=1
+  moment_values_are_parent_field_elements_not_postfit_subset_labels=1
+  p24_low_moment_constructor_target_is_30_selected_relative_traces=1
+```
+
+Lean relative-trace handoff:
+
+```text
+lean p24/lean/TraceGcdLowMomentRelativeTraceGate.lean
+PASS
+```
+
+Operational conclusion:
+
+```text
+Yes, computation is now useful, but as theorem testing rather than final
+triple search.  The best executable lane is to scale actual-CM low-moment
+selector sweeps and try to extract/prove an intrinsic moment construction.
+Generic p24 Pomerance search benchmarked at about 0.133M trials/sec/core here;
+the old X1(16) nonsplit speedup is unavailable because p mod 8 = 7.
+```
+
+Full cheap sweep after wiring low-moment gates:
+
+```text
+PYTHONPYCACHEPREFIX=/private/tmp/codex-pycache PYTHONDONTWRITEBYTECODE=1 \
+PYTHONPATH=p24 python3 p24/trace_gcd_fast_falsifier_harness.py \
+  --workers 4 --skip-spectral --no-danger3-inventory
+
+task_count=258
+passed=258
+failed=0
+```
+
+Low-moment automatic-P1 refinement:
+
+```text
+PYTHONPYCACHEPREFIX=/private/tmp/codex-pycache PYTHONDONTWRITEBYTECODE=1 \
+PYTHONPATH=p24 python3 p24/trace_gcd_low_moment_function_complexity_gate.py
+
+rows=125
+p1_parent_identity_rows=25/25
+nontrivial_moment_rows=100
+nontrivial_parent_ge3_rows=40
+nontrivial_full_interp_rows=100
+nontrivial_parent_ge3_low_interp_rows=0
+nontrivial_high_bm_rows=100
+p24_selected_path_nominal_low_moments=30
+p24_selected_path_nontrivial_new_low_moments=28
+conclusion=reported_trace_gcd_low_moment_function_complexity_gate
+
+lean p24/lean/TraceGcdLowMomentAutomaticP1Gate.lean
+PASS
+```
+
+Meaning: the low-moment route still has 30 nominal constraints, but `P_1` on
+each of the two selected layers is already the parent period.  The producer
+must construct 28 genuinely new higher moments, and small-CM controls do not
+show a cheap low-degree parent-period formula for those higher moments.
+
+L1 / axis-content injectivity control:
+
+```text
+p24/l1_axis_injectivity_scan.py
+
+W_axis dimension = 368
+packet degree = 388430
+all-packet rank surface = 1143537920 < 10^12
+
+wider eligible bounded scan:
+  packet_rows=191
+  injective=191
+  failures=0
+  m0_zero=0
+  l1_zero=0
+
+all-origin eligible bounded scan:
+  packet_rows=630
+  injective=630
+  failures=0
+  m0_zero=0
+  l1_zero=0
+```
+
+Meaning: in these actual-CM windows the tower-native `W_axis` scalar space
+does not collapse inside any tested p24-shaped packet.  The missing theorem is
+selected-prime p-unit / hyperplane avoidance for the actual p24 packet, not
+more brute-force root enumeration.
+
+Automatic-P1 entropy check:
+
+```text
+PYTHONPYCACHEPREFIX=/private/tmp/codex-pycache PYTHONDONTWRITEBYTECODE=1 \
+PYTHONPATH=p24 python3 p24/trace_gcd_low_moment_automatic_p1_entropy_gate.py
+
+random_control=F_101_20_choose_10 ... p1_only=1820 higher_only=17 full_with_p1=1
+D=-239_parent3_child5 ... p1_only=13 higher_only=4 full_with_p1=1
+first_layer_higher_only_target_collision_log10=21.176548
+first_layer_with_parent_p1_target_collision_log10=-2.823452
+second_layer_higher_only_target_collision_log10=16.781509
+second_layer_with_parent_p1_target_collision_log10=-7.218491
+p24_full_selector_still_uses_30_constraints_but_only_28_new_values=1
+conclusion=reported_trace_gcd_low_moment_automatic_p1_entropy_gate
+```
+
+Bounded p24-real split-cycle gap closure:
+
+```text
+PYTHONPYCACHEPREFIX=/private/tmp/codex-pycache PYTHONDONTWRITEBYTECODE=1 \
+PYTHONPATH=p24 python3 p24/composite_split_cycle_audit.py \
+  --prime-bound 206497 --max-factors 0 --max-norm 1 \
+  --exhaustive-norm 206497 --show 8
+
+split_prime_logs=9265
+exhaustive_signed_prime_power_products_norm_le_206497
+  index_314: hits exist
+  index_422: hits exist
+  index_66254: none
+conclusion=reported_composite_split_cycle_candidates
+```
+
+Interpretation: no signed split-prime-power representative of the
+order-`3107441` recovery class exists below the known norm `206498`.
+
+Ramified p24-real split-cycle gap closure:
+
+```text
+PYTHONPYCACHEPREFIX=/private/tmp/codex-pycache PYTHONDONTWRITEBYTECODE=1 \
+PYTHONPATH=p24 python3 \
+  p24/composite_split_cycle_ramified_norm_gap_206498.py \
+  --norm-bound 206497 --show 8
+
+split_prime_logs=9265
+ramified_prime=599 log=102940198007 index=102940198007 order=2
+rows_with_ramified=9266
+exhaustive_signed_split_or_ramified_prime_power_products_norm_le_206497
+  index_314: hits exist
+  index_422: hits exist
+  index_66254: none
+no_order_3107441_representative_below_known_norm_with_599=1
+conclusion=reported_composite_split_cycle_ramified_norm_gap_206498
+```
+
+Low-moment truncated-polynomial refinement:
+
+```text
+PYTHONPYCACHEPREFIX=/private/tmp/codex-pycache PYTHONDONTWRITEBYTECODE=1 \
+PYTHONPATH=p24 python3 p24/trace_gcd_low_moment_truncated_polynomial_gate.py
+
+p24_first_layer_new_coefficients=e2_to_e4_count=3
+p24_second_layer_new_coefficients=e2_to_e26_count=25
+p24_selected_path_new_coefficients=28
+low_power_sums_equivalent_to_truncated_child_polynomial_by_newton=1
+p24_low_moment_producer_can_target_28_new_child_polynomial_coefficients=1
+conclusion=reported_trace_gcd_low_moment_truncated_polynomial_gate
+
+lean p24/lean/TraceGcdLowMomentTruncatedPolynomialGate.lean
+PASS
+```
+
+Abstract-to-embedded low-bidegree pairing scan:
+
+```text
+PYTHONPYCACHEPREFIX=/private/tmp/codex-pycache PYTHONDONTWRITEBYTECODE=1 \
+PYTHONPATH=p24 python3 p24/abstract_embedded_pairing_low_bidegree_scan.py
+
+D=-2239, q=2243, quotient n=7:
+  support 6 bidegree (2,1)/(1,2): 0/5040 matchings in both orientations
+  support 9 bidegree (2,2): 5040/5040 matchings, same as random controls
+
+summary:
+  rows=16
+  low_support_rows=8
+  actual_low_support_rows_with_pairing=0
+  random_low_support_control_hits=0
+
+conclusion=reported_abstract_embedded_pairing_low_bidegree_scan
+```
+
+Interpretation: abstract quotient coordinates still do not provide a
+below-generic embedded phase pairing in the non-genus controls.  The producer
+must construct relative fibers/class-character traces directly, or bypass
+that phase with the p-unit/divisor identity.
+
+Widened abstract tower fiber-map scan:
+
+```text
+PYTHONPYCACHEPREFIX=/private/tmp/codex-pycache PYTHONDONTWRITEBYTECODE=1 \
+PYTHONPATH=p24 python3 \
+  p24/abstract_tower_fiber_map_scan.py \
+  --degrees 1 2 --polynomial-degrees 1 2 \
+  --max-found 5 --random-controls 30 --random-combos 40
+
+D=-671, q=1571 and D=-815, q=2111, both orientations:
+  rational map degree 1: maps_found=0, random controls 0/30
+  rational map degree 2: maps_found=0, random controls 0/30
+  polynomial degree 1: polynomial_maps_found=0
+  polynomial degree 2: polynomial_maps_found=0
+
+conclusion=abstract_roots_unpaired_even_before_embedding_degree_le_2
+```
+
+Focused continuation with `--degrees --polynomial-degrees 3`:
+
+```text
+D=-671 and D=-815, both orientations:
+  polynomial degree 3: polynomial_maps_found=0
+  anchor_tuple_count=625, skipped=0
+
+conclusion=abstract_roots_unpaired_by_polynomial_maps_degree_le_3
+```
+
+Interpretation: cyclic squarefree tower data can support the
+`3107811`-slot selected-chain verifier, but small universal fiber maps do not
+turn it into an embedded selector.  The route still needs the selected
+CM/Lang phase theorem or the p-unit/divisor identity.
+
+Classical-unit/ray-distribution recheck:
+
+```text
+PYTHONPYCACHEPREFIX=/private/tmp/codex-pycache PYTHONDONTWRITEBYTECODE=1 \
+PYTHONPATH=p24 python3 p24/ray_kernel_distribution_audit.py
+
+ell=157:
+  Kronecker(D,ell)=-1
+  local_units_mod_ell=24648={2^3 * 3 * 13 * 79}
+  ell_divides_mod_ell_kernel=0
+
+ell=211:
+  Kronecker(D,ell)=-1
+  local_units_mod_ell=44520={2^3 * 3 * 5 * 7 * 53}
+  ell_divides_mod_ell_kernel=0
+
+squarefree levels 157*211, 2*157*211, 223*463, 2*223*463:
+  local unit parts contain neither 157 nor 211
+
+conclusion=ray_distribution_relations_do_not_collapse_the_p24_odd_relative_class_phases
+```
+
+Interpretation: the new `R_179` residual matches the kind of unit classical
+Siegel/Ramachandra/Robert distribution relations can certify, but those
+relations are vertical over a selected ray/fiber.  They do not select the
+conductor-one unramified `157/211` embedded Hilbert-class phases.
+
+Finite selector lower-bound Lean gate:
+
+```text
+lean p24/lean/SelectorDegreeLowerBoundGate.lean
+PASS
+```
+
+The gate formalizes the boundary: if one invariant is constant on a selected
+`H`-coset, its degree is at least `|H|`.  For the third p24 trace this lower
+bound is `3107441`, and Lean checks
+`2+157+211+3107441 < 10^12`.  Thus the surviving sub-sqrt route is a
+growing-degree embedded recovery object of degree about `3107441`, or an
+equivalent p-unit/divisor identity, not a bounded-level ray/Siegel shortcut.
+
+Relative coset recovery rerun:
+
+```text
+PYTHONPYCACHEPREFIX=/private/tmp/codex-pycache PYTHONDONTWRITEBYTECODE=1 \
+PYTHONPATH=p24 python3 p24/relative_coset_phase_toy.py
+
+D=-5000, q=1259, h=30, quotient_size=6, subgroup_size=5:
+  distinct_recovery_polynomial_coeff_tuples=6
+  product_of_coset_polys_equals_full_class_poly_mod_q=1
+
+conclusion=relative_recovery_polynomial_needs_the_same_embedded_quotient_phase_selector
+```
+
+Height rerun:
+
+```text
+PYTHONPATH=p24 python3 p24/relative_coset_polynomial_height_audit.py
+
+third_trace_composite_principal_H:
+  degree=3107441
+  quotient=66254
+  degree_over_sqrt=3.107441e-06
+  raw_log_principal=5.076699400239e12
+
+third_trace_composite_height_1_over_28:
+  scaled_log_principal=1.813106928657e11
+
+conclusion=relative_coset_polynomial_degree_is_attractive_but_ordinary_height_based_computation_does_not_give_a_subsqrt_selector
+```
+
+Interpretation: the degree-`3107441` recovery polynomial is the right
+sub-sqrt scale, but computing one conjugate by ordinary complex/CRT methods
+still needs the missing embedded quotient phase or height-scale work.  A
+successful route must construct that phase directly modulo `p`, or bypass it
+via the p-unit/divisor certificate.
+
+Centered p-unit / phase-divisor holdout:
+
+```text
+PYTHONPYCACHEPREFIX=/private/tmp/codex-pycache PYTHONDONTWRITEBYTECODE=1 \
+PYTHONPATH=p24 python3 p24/trace_gcd_phase_divisor_identity_holdout.py
+
+D=-13319, q=13463, m=28, n=5, pair=(4,7):
+  unit_dictionary_size=78
+  nonrandom_span_hits=0
+  full_rank_interpolation_hits=4
+  target_misses=2
+  coordinate_payload_zero_detection_failure=1
+  failures=0
+
+conclusion=reported_trace_gcd_phase_divisor_identity_holdout
+```
+
+Meaning: bounded right-binomial/Heegner phase-unit dictionaries do not give a
+nonrandom product formula for the determinant-line phase.  Full-rank hits are
+interpolation, and coordinatewise/Kummer-only nonzero payloads can fail to
+detect determinant zero.
+
+Centered orbit-Fitting block-cycle audit:
+
+```text
+PYTHONPATH=p24 python3 p24/centered_marginal_orbit_fitting_block_cycle_audit.py
+
+D=-13319, q=13463, pair=(4,7):
+  orbit_count=3
+  determinant_mismatches=0
+  direct_sum_mismatches=0
+  zero_detection_failures=0
+  full_rank_iff_failures=0
+  singular_control_failures=0
+
+conclusion=reported_centered_marginal_orbit_fitting_block_cycle_audit
+```
+
+Lean finite handoff rerun:
+
+```text
+lean p24/lean/CenteredArcProductGate.lean
+lean p24/lean/CenteredBorcherdsPUnitGate.lean
+lean p24/lean/CenteredFullOriginBorcherdsGate.lean
+PASS
+```
+
+Interpretation: the centered p-unit route is formally well assembled, but the
+arithmetic theorem must prove p-unitness/local nonintersection for the
+phase-aware Schubert/Fitting determinant section.  It cannot be replaced by a
+bounded elementary phase-unit product or entrywise Kummer certificate.
+
+Ordinary Fitting/local-intersection criterion refresh:
+
+```text
+lean p24/lean/TraceGcdOrdinaryFittingCriterionGate.lean
+PASS
+
+PYTHONPATH=p24 python3 p24/trace_gcd_p24_local_invariants.py
+PYTHONPATH=p24 python3 p24/trace_gcd_principal_cyclotomic_split_audit.py
+
+p_is_split_unramified_in_K=1
+selected_prime_above_p_has_explicit_sqrtD_orientation=1
+all_trace_gcd_levels_are_prime_to_p=1
+prime_above_p_is_principal=1
+hilbert_class_frobenius_order=1
+principal_frobenius_selects_one_root=0
+zeta_211_coordinates_are_moved_by_Frobenius_order_35=1
+zeta_157_coordinates_are_moved_by_Frobenius_order_156=1
+ordinary_base_polynomial_descent_is_not_forced=1
+crossed_product_orbit_norm_is_the_honest_phase_payload=1
+```
+
+Interpretation: local denominator/orientation issues are not the obstruction.
+The p24 ordinary prime is friendly, but principal Hilbert Frobenius fixes the
+whole CM torsor rather than selecting a root, while cyclotomic phase
+coordinates remain semilinear.  The local theorem must prove reduced
+isomorphism/zero local intersection for the actual crossed-product
+Schubert/Fitting section.
+
+Local-intersection boundary refresh:
+
+```text
+PYTHONPATH=p24 python3 p24/cm_simple_root_different_boundary.py
+
+D=-13319, q=13463:
+  class_polynomial_split_squarefree=1
+  zero_derivative_count=0
+  simple_root_derivative_units_do_not_detect_Fitting_determinant_units=1
+
+PYTHONPATH=p24 python3 p24/centered_marginal_transversality_baseline.py
+
+p24 centered plateau Schubert baseline:
+  fixed_plateau_failure_probability=1.0e-24
+  union_bound_any_plateau_failure=2.11e-22
+  probability_is_not_a_certificate_without_arithmetic_lift=1
+```
+
+So etaleness/simple-root and random transversality both remain hygiene or
+motivation, not a proof of the selected Schubert p-unit.
+
+Selected Schubert determinant-level refresh:
+
+```text
+lean p24/lean/TraceGcdSelectedSchubertPUnitGate.lean
+PASS
+
+PYTHONPATH=p24 python3 p24/orbit_exterior_schubert_toy.py
+
+found_cancellation=1
+all_fixed_coefficients_nonzero=1
+all_plucker_coordinates_nonzero=1
+zero_delta_count=1
+orbit_product=0
+
+PYTHONPATH=p24 python3 p24/trace_gcd_actual_cm_norm_triangle_audit.py
+
+product_equals_signed_block_cycle=1
+product_equals_split_norm=1
+naive_base_polynomial_possible=0
+failures=0
+```
+
+Meaning: coordinatewise Plucker/Kummer nonvanishing cannot replace the
+selected Schubert p-unit theorem, but scalar orbit products, Fitting
+block-cycle determinants, and split norms are the same honest object on the
+pinned actual-CM row.
+
+Phase-aware Chow/Borcherds bounded checks:
+
+```text
+PYTHONPATH=p24 python3 p24/trace_gcd_chow_phase_divisor_span_scan.py
+  unit_dictionary_size=149
+  mod 2: dictionary_rank=3/7, target_in_span=0 for both omitted rows
+  mod 53,127: rank=7/7, target_in_span=1 only by full-rank interpolation
+  failures=0
+
+PYTHONPATH=p24 python3 p24/trace_gcd_global_product_miner.py
+  scalar_match_without_vector_match=1 for omitted=0
+  low_weight_vector_matches=[] for both omitted rows
+  failures=0
+
+PYTHONPATH=p24 python3 p24/trace_gcd_chow_phase_coordinate_scan.py
+  right_class_mismatches=0
+  one_full_nonzero_orbit_support=1 in the pinned right-7 row
+  p24 distinct_subset_sum_size_k3=211
+  p24 full_support_by_k3=1
+```
+
+Interpretation: the right phase coordinate is genuinely helpful in small CM
+data, but the easy right-binomial/Heegner special-divisor dictionary is
+demoted, and scalar global-product matches are not divisor evidence.  For p24
+the exterior support is already full at subset size `3`, so the safe theorem
+remains seven phase-aware orbit Chow/Fitting norms unless a new arithmetic
+cancellation theorem is proved.
+
+Residual Moore/Chow bridge refresh:
+
+```text
+PYTHONPATH=p24 python3 p24/trace_gcd_residual_moore_chow_toy.py
+  full_residual_mismatches=0
+  full_chow_mismatches=0
+  norm_chow_mismatches=0
+  prefix_tail_mismatches=0
+  residual_product_equals_moore_determinant=1
+  full_moore_equals_basis_unit_times_chow_coordinate_det=1
+  tail_residual_product_equals_moore_of_prefix_annihilator_images=1
+  prefix_tail_sections_multiply_to_full_section=1
+
+PYTHONPATH=p24 python3 p24/trace_gcd_residual_schur_complement_toy.py
+  determinant_mismatches=0
+  prefix_zero_mismatches=0
+  tail_zero_mismatches=0
+  full_zero_mismatches=0
+  prefix_rank_punit_iff_prefix_moore_nonzero=1
+  tail_quotient_moore_nonzero_iff_schur_complement_nonzero=1
+  ordered_coordinate_det_equals_prefix_pivot_times_schur=1
+
+PYTHONPATH=p24 python3 p24/trace_gcd_trace_pairing_subspace_bridge_audit.py
+  rows=10
+  trace_rank_mismatches=0
+  nonzero_event_mismatches=0
+  missing_residual_norm_products=0
+  full_rank_rows=10/10
+  trace_pairing_matrix_is_dual_to_same_leading_coordinates=1
+  residual_norm_product_detects_the_same_punit_event=1
+  p24_missing_theorem_can_be_stated_as_either_trace_gcd_or_moore_punit=1
+```
+
+Interpretation: the trace-gcd determinant, trace-pairing matrix, residual
+Moore product, Chow/Fitting section, and Schur-complement pivot formulation are
+now the same local p-unit event in tested faithful models and actual-CM rows.
+This does not prove the p24 arithmetic theorem, but it prevents backtracking:
+the next proof can target whichever representative is easiest, especially a
+named prefix Moore p-unit plus quotient-tail Moore/Schur p-unit after the
+prefix annihilator.
+
+Prefix/RS-tail proof split refresh:
+
+```text
+PYTHONPATH=p24 python3 p24/orbitwise_schur_bridge_falsifier.py \
+  --metric-aware --include-linear --max-factor-degree 12 \
+  --max-extension-degree 12 --min-left-orbit-len 2 \
+  --require-square-tail --min-prefix-len 1 --max-rows 20 \
+  --max-cases 80 --max-abs-D 120000 --q-stop 500000 \
+  --max-origin-shifts 80
+  rows=20
+  tail_zero=0, schur_fail=0, prefixGram0=0, fullGram0=0, kernelGram0=0
+  right_class_mismatches=0 in every reported orbit block
+
+PYTHONPATH=p24 python3 p24/trace_gcd_prefix_normal_basis_toy.py
+  rows=43
+  dual_pairing_failures=0
+  dual_reconstruction_failures=0
+  basis_rank_mismatches=0
+  found_normal_coefficient_independent=1
+  p24_prefix_target_is_rank_140_of_right_normal_coefficients=1
+
+PYTHONPATH=p24 python3 p24/trace_gcd_prefix_gaussian_normal_basis_toy.py
+  gaussian_period_rank=3
+  frobenius_cycle_failures=0
+  dual_pairing_failures=0
+  p24_ord_211_p=35
+  p24_gaussian_type=6
+  p24_coset_cover_size=210
+  p24_right_field_has_type6_gaussian_normal_basis=1
+
+lean p24/lean/PrefixSubcodeDistanceGate.lean
+lean p24/lean/PrefixGramErasureBridgeGate.lean
+lean p24/lean/TraceGcdSchurBridgeGate.lean
+lean p24/lean/TraceGcdResidualPrefixTailGate.lean
+PASS
+```
+
+Actual RS-tail plumbing:
+
+```text
+PYTHONPATH=p24 python3 p24/trace_gcd_actual_cm_gaussian_rs_tail_audit.py
+  rows=10
+  rank_mismatches=0
+  tail_reconstruction_failures=0
+  full_rank_rows=6/10
+  singular_control_rows=4/10
+  actual_cm_lang_blocks_match_gaussian_dft_rs_tail_rank=1
+
+PYTHONPATH=p24 python3 p24/trace_gcd_actual_cm_rs_tail_semilinear_core_audit.py
+  rows=10
+  explicit_column_count_mismatches=0
+  rank_mismatches=0
+  full_rank_rows=6/10
+  singular_control_rows=4/10
+  actual_cm_rs_tail_fixed_columns_match_time_rank=1
+  actual_cm_rs_tail_schur_split_measured=1
+
+PYTHONPATH=p24 python3 p24/trace_gcd_rs_tail_syndrome_moore_schur_toy.py
+  p24_rs_tail_prefix_coordinate_count=140
+  p24_rs_tail_tail_coordinate_count=16
+  prefix_full_plus_tail_quotient_full_iff_full_syndrome_unit=1
+  prefix_failure_and_tail_quotient_failure_controls_detected=1
+```
+
+Interpretation: the fixed-orbit producer can now be stated as two explicit
+arithmetic p-unit statements, not as an opaque `156 x 156` determinant:
+
+```text
+1. Prefix theorem:
+   rank_Fp Tr_{E/L}(eta_i * H_{157,211}(1,v_j)) = 140
+   for the type-6 Gaussian normal basis eta_i of F_p(mu_211)/F_p,
+   j in {2,3,5,6}.
+
+2. Quotient-tail theorem:
+   after a named p-unit prefix pivot, the 16 RS-tail Schur-complement columns
+   are independent modulo the prefix span.
+```
+
+The widened Schur scan found no small-CM counterexample, while the singular
+controls show why the theorem still needs actual p24 arithmetic; the split is
+faithful but not automatic from dimensions alone.
+
+Prefix theorem sharpened to a semilinear fixed-adjoint syndrome:
+
+```text
+PYTHONPATH=p24 python3 p24/trace_gcd_prefix_tensor_component_rank_toy.py
+  same_component_rank_profile_different_global_rank=1
+  global_full_rank_iff_component_kernel_intersection_zero=1
+  p24_prefix_tensor_components_require_kernel_transversality=1
+
+PYTHONPATH=p24 python3 p24/trace_gcd_prefix_component_frobenius_toy.py
+  component_mismatches=0
+  relation_reindex_mismatches=0
+  p24_p_mod_35=22
+  p24_ord_35_p=4
+
+PYTHONPATH=p24 python3 p24/trace_gcd_prefix_semilinear_core_toy.py
+  global_relation_iff_T_orbit_stays_in_first_component_kernel=1
+  first_component_kernel_large_but_semilinear_core_must_be_zero=1
+  forced_fixed_frequency_core_detected=1
+
+PYTHONPATH=p24 python3 p24/trace_gcd_prefix_semilinear_descent_toy.py
+  semilinear_descent_core_kdim_equals_fixed_kernel_fpdim=1
+  zero_core_iff_no_nonzero_T_fixed_relation=1
+  p24_fixed_relation_shape_Fp28_plus_K28_to_L=1
+
+PYTHONPATH=p24 python3 p24/trace_gcd_prefix_semilinear_fixed_adjoint_toy.py
+  pairing_mismatches=0
+  fixed_adjoint_pairing_formula_verified=1
+  fixed_relation_injective_iff_adjoint_syndrome_surjective=1
+  p24_syndrome_shape_Fp28_plus_K28=1
+
+PYTHONPATH=p24 python3 p24/trace_gcd_prefix_syndrome_moore_toy.py
+  p24_syndrome_coordinate_count=140
+  trace_pairing_rank_equals_coordinate_span_rank=1
+  syndrome_moore_residual_nonzero_iff_full_rank=1
+
+lean p24/lean/TraceGcdPrefixAdjointGate.lean
+lean p24/lean/TraceGcdPrefixSyndromeResultantBridgeGate.lean
+PASS
+```
+
+Thus the prefix half is now best attacked as:
+
+```text
+Let V_{a,j} be the first collapsed Gaussian frequency table.
+M_0 : K^{35*4} -> L,  M_0(x)=sum x_{a,j} V_{a,j}.
+T(x)_{b,j}=x_{p^{-1}b,j}^p has order 4.
+
+Prefix p-unit
+  <=> core_T(ker M_0)=0
+  <=> no nonzero fixed relation in F_p^28 + K^28 -> L
+  <=> the fixed-adjoint syndrome L -> F_p^28 + K^28 is surjective
+  <=> the 140 syndrome-coordinate Moore residual is a p-unit.
+```
+
+This is the best CS/rank-metric import surface: prove the actual CM Gaussian
+frequency kernel is subspace-evasive for the order-4 semilinear motion, or
+prove the equivalent Moore residual p-unit by class-field/product formulas.
+
+Prefix-to-tail resultant handoff:
+
+```text
+PYTHONPATH=p24 python3 p24/trace_gcd_prefix_syndrome_resultant_bridge_toy.py
+  prefix_syndrome_surjective_gives_kernel_dim_16=1
+  tail_resultant_nonzero_iff_tail_injective_on_kernel=1
+  full_140_plus_16_residual_nonzero_iff_prefix_and_tail=1
+  dependent_prefix_and_bad_tail_controls_detected=1
+
+PYTHONPATH=p24 python3 p24/trace_gcd_rs_tail_semilinear_core_toy.py
+  global_relation_iff_T_orbit_stays_in_RS_tail_kernel=1
+  semilinear_descent_core_kdim_equals_fixed_kernel_fpdim=1
+  zero_core_iff_no_nonzero_T_fixed_RS_tail_relation=1
+  forced_prefix_fixed_core_detected=1
+  forced_rs_tail_fixed_core_detected=1
+  p24_fixed_relation_shape_Fp28_plus_K28_plus_Fp16_to_L=1
+
+lean p24/lean/TraceGcdPrefixSyndromeResultantBridgeGate.lean
+PASS
+```
+
+So the fixed-orbit producer has the following exact current target:
+
+```text
+Xi_O0_prefix = Norm_L/Fp(Delta_140(C_prefix)) in F_p^*
+Xi_O0_tail   = Norm_L/Fp(Delta_16(P_prefix(T_tail))) in F_p^*
+
+Xi_O0 = Xi_O0_prefix * Xi_O0_tail
+```
+
+where `C_prefix` is the `140` fixed-adjoint syndrome coordinate family and
+`P_prefix` is its p-linearized annihilator.  Proving the first p-unit gives
+the expected `16`-dimensional residual kernel; proving the second says the
+RS tail separates that kernel.  This is the clean fixed-orbit certificate
+surface to pair with the nonzero-orbit crossed norm.
+
+2026-06-07 continuation check, with no new files:
+
+```text
+PYTHONPATH=p24 python3 p24/trace_gcd_two_resultant_theorem_manifest.py
+  finite_payload.field_elements=4
+  representative_support.prefix_dim=140
+  representative_support.tail_len=16
+  missing_theorem=two p-unit nonvanishing statements plus p-unit diamond
+    determinant-line transport from embedded 157/211 phase-aware Fitting data
+
+PYTHONPATH=p24 python3 p24/trace_gcd_two_resultant_holdout_audit.py
+  selected_two_punit_groups=4/4
+  all_nonzero_groups=4/4
+  punit_transport_edges=8/8
+  literal_equal_nonzero_edges=0/8
+  split_norm_matches=12/12
+  naive_base_polynomial_groups=0/4
+
+PYTHONPATH=p24 python3 p24/trace_gcd_actual_cm_square_coinvariant_audit.py
+  rows=10
+  gram_relation_failures=0
+  nonzero_event_mismatches=0
+  prefix_tail_event_mismatches=0
+  actual_nontrivial_prefix_tail_rows=4/10
+
+PYTHONPATH=p24 python3 p24/trace_gcd_actual_cm_gaussian_rs_tail_audit.py
+  rows=10
+  rank_mismatches=0
+  tail_reconstruction_failures=0
+  full_rank_rows=6/10
+  singular_control_rows=4/10
+
+PYTHONPATH=p24 python3 p24/trace_gcd_actual_cm_rs_tail_semilinear_core_audit.py
+  rows=10
+  explicit_column_count_mismatches=0
+  rank_mismatches=0
+  prefix_failures_on_prefix_tail_rows=4
+  tail_quotient_failures_on_prefix_tail_rows=4
+
+lean p24/lean/TraceGcdFullCoinvariantTailGate.lean
+lean p24/lean/TraceGcdResidualPrefixTailGate.lean
+lean p24/lean/TraceGcdPrefixAdjointGate.lean
+lean p24/lean/TraceGcdPrefixSyndromeResultantBridgeGate.lean
+lean p24/lean/TraceGcdSchurBridgeGate.lean
+PASS
+```
+
+Interpretation: the two-resultant theorem remains the best route for a
+today-result.  The fixed orbit should be attacked through the explicit
+coinvariant / Gaussian-DFT / semilinear syndrome identity, not through a new
+Jacobi branch.  The actual-CM singular control shows the prefix-plus-tail
+rank is not automatic: in the only nontrivial prefix/tail small row, both the
+prefix and quotient-tail pieces fail.  Therefore the missing p24 theorem is
+not "RS-tail form always works"; it is a p24-specific phase-aware Fitting
+p-unit for the actual `S_j=H_{157,211}(1,v_j)` periods.
+
+The current proof target can be stated in its most compact fixed-orbit form:
+
+```text
+Phi_full : R^4 + C_tail -> E/(tau_R - 1)E
+Phi_full((y_j), z) =
+  [sum_{j in {2,3,5,6}} y_j*S_j + z*S_1]
+
+det(Phi_full) in O_p^*
+```
+
+Equivalently, after Gaussian DFT and semilinear descent:
+
+```text
+Psi_RS : F_p^28 + K^28 + F_p^16 -> L
+is an isomorphism,
+
+K = F_p(mu_35), L = F_p(mu_157).
+```
+
+Equivalently, split into the two Moore p-units:
+
+```text
+Norm_L/Fp(Delta_140(C_prefix)) != 0
+Norm_L/Fp(Delta_16(P_prefix(T_tail))) != 0.
+```
+
+The first is the order-4 semilinear subspace-evasiveness theorem
+
+```text
+core_T(ker M_0)=0,
+M_0 : K^{35*4} -> L,
+T(x)_{b,j}=x_{p^{-1}b,j}^p.
+```
+
+The second is quotient-tail RS separation on the resulting `16`-dimensional
+kernel.  The nonzero orbit remains the crossed norm `Xi_O1`; holdout data
+continues to support p-unit determinant-line transport and to reject literal
+unit equality or ordinary base-polynomial descent.
+
+CS/block-subspace imports are useful theorem language but did not remove the
+arithmetic step.  Reruns of `lang_block_subspace_design_audit.py` on
+`D=-13319` and `D=-5444` passed, but random controls passed at the same rate,
+so they show generic-position behavior, not a special identity.  The proof
+still has to identify a class-field/Fitting/Moore section whose selected p24
+CM value is a p-unit.
+
+2026-06-08 continuation synthesis, no new files:
+
+The compact handoff and fresh-eyes notes refine the proof-frontier.  The
+four-element surface and the fixed-orbit determinant remain the final
+certificate wrapper:
+
+```text
+Xi_O0, Xi_O0^{-1}, Xi_O1, Xi_O1^{-1}
+det(Psi_RS) in O_p^*
+```
+
+However, the best current arithmetic producer target is not a generic
+`Psi_RS` determinant proof.  It is the selected CM/Lang/Jacobi packet after
+`Tr_{B/C}` on
+
+```text
+C_7 x C_179.
+```
+
+For the raw packet `g(r,c)` and selected defect
+`f(r,c)=g(r,c)-g(r,0)`, the live value-side theorem is:
+
+```text
+g(r,0)+g(-r,0)=A_0,
+g(r,c)+g(-r,-c)=A_1 for c != 0,
+sum_c g(r,c)-179*g(r,0)=B independent of r.
+```
+
+Equivalently, `f` lies in the rank-621 admissible C-axis Jacobi-carry span.
+The finite chain from this statement to forbidden bidegree vanishing, internal
+trace zero, product/right coboundary, and the `156*7=1092` H-coset verifier is
+strongly gated.  The hard missing input is still the selected arithmetic
+producer for `g`, not the downstream verifier.
+
+The reduced finite-field Jacobi model now explains the target exactly:
+
+```text
+punctured Hasse-Davenport algebra
++ one degenerate anchor correction
+=> constant pair-products and constant selected row-product ratio.
+```
+
+The single reduced-anchor correction has selected-defect footprint
+
+```text
+h(r,c)=1 if r=0 and c != 0, else 0,
+```
+
+so for p24 it has `178` nonzero spatial entries and Fourier profile
+`H(a,0)=178`, `H(a,b)=-1` for `b != 0`.
+
+The C/E-nontrivial residual is now a principal divisor after clearing the
+factor `179`:
+
+```text
+R_179(X)=Phi_179(X)/(X-1)^178.
+```
+
+Equivalently, on the elliptic/subgroup side the correct target is the whole
+179-subgroup kernel polynomial
+
+```text
+K_H(x)=prod_{Q in (H\{O})/{+-1}} (x-x(Q)),
+deg K_H=89,
+div(K_H)=sum_{Q in H, Q != O}[Q]-178[O].
+```
+
+Do not search over 178 oriented generators: once a selected auxiliary
+CM/Lang subgroup polynomial is produced, generator choices collapse to one
+kernel polynomial and only the two anchor signs remain.  Also do not try to
+compute this on the final curve over `F_p`: for the selected trace,
+`179` is Atkin (`179` does not divide `#E(F_p)` and the Frobenius polynomial
+has no roots mod `179`).  The subgroup/kernel object must live in the
+auxiliary CM/Lang/cyclotomic layer.
+
+Post-producer p-unit certification is now finite and small.  If the selected
+coordinate is represented in an etale algebra
+
+```text
+A=F_q[T]/(M(T)),  x=X(T),
+```
+
+then reduced-anchor avoidance is equivalent to
+
+```text
+gcd(M(T), X(T)^179-1)=1,
+Res(M, X^179-1) != 0,
+```
+
+or a Bezout identity.  This is the exact certificate check after the missing
+producer supplies `M` and `X`.
+
+Rerun gates in this continuation:
+
+```text
+lean p24/lean/TraceGcdDualConditionsValueSideGate.lean
+lean p24/lean/TraceGcdAdmissibleJacobiDualConditionsGate.lean
+lean p24/lean/TraceGcdJacobiAnchorCorrectionGate.lean
+lean p24/lean/TraceGcdReducedAnchorCyclotomicDivisorGate.lean
+lean p24/lean/TraceGcdReducedAnchorDiamondNormGate.lean
+lean p24/lean/TraceGcdReducedAnchorEllipticSubgroupDivisorGate.lean
+lean p24/lean/TraceGcdReducedAnchorKernelPolynomialGate.lean
+lean p24/lean/TraceGcdReducedAnchorLocalUnitCriterionGate.lean
+lean p24/lean/TraceGcdReducedAnchorResultantAvoidanceGate.lean
+PASS, with only the usual Lean release-query warning.
+
+PYTHONPATH=p24 python3 p24/trace_gcd_fixed_frequency_jacobi_sum_symbolic_hd_gate.py
+  p24_symbolic_right_mixed_pairs=189036
+  symbolic_producer_rows=6/6
+
+PYTHONPATH=p24 python3 p24/trace_gcd_fixed_frequency_reduced_anchor_cyclotomic_divisor_gate.py
+  p24_residual_integral_fourier_channels=1246
+  p24_candidate_unit_is_R_179_equals_Phi_179_over_X_minus_1_power_178=1
+
+PYTHONPATH=p24 python3 p24/trace_gcd_fixed_frequency_reduced_anchor_resultant_avoidance_gate.py
+  p24_c_degree=179
+  p24_forbidden_polynomial_degree=179
+  p24_reduced_anchor_can_be_certified_by_one_resultant_or_bezout_punit=1
+
+PYTHONPATH=p24 python3 p24/trace_gcd_fixed_frequency_reduced_anchor_kernel_generator_invariance_gate.py
+  p24_kernel_polynomial_generator_orbits=1
+  p24_anchor_sign_choices=2
+  p24_conditional_search_after_kernel_generator_collapse_is_two_signs=1
+```
+
+Calibration search for smaller actual-CM fixed-frequency analogues was also
+rerun wider:
+
+```text
+trace_gcd_fixed_frequency_relation_shape_index.py
+  --max-h 500000 --max-abs-D 2000000 --q-stop 500000
+  --max-q-tests-per-D 120 --max-component 800 --max-left-len 180
+
+q_tests=5854920
+kronecker_splits=2914003
+right_component_cases=18541
+left_source_orbits=0
+hits=0
+```
+
+Thus the small uploaded-style rows still do not provide a non-tail-only
+fixed-frequency calibration.  This branch is proof-heavy: computation is
+useful for exact gates and falsifiers, but it is not currently finding a
+small positive analogue of the p24 producer.
+
+Next proof target:
+
+```text
+Construct the selected p-integral auxiliary CM/Lang coordinate or
+179-subgroup kernel polynomial whose reduced-anchor divisor is
+R_179/K_H, prove it matches the punctured reduced Jacobi anchor after
+Tr_{B/C} and selected-child subtraction, and certify forbidden-locus
+avoidance by Res(M, X^179-1) or a Bezout p-unit.
+```
+
+2026-06-08 producer split refinement:
+
+The reduced-anchor/Kummer pieces compose into two separate missing inputs.
+They should not be conflated.
+
+1. Phase/section selection:
+
+```text
+select the auxiliary CM/Lang fiber or subgroup object inside the unramified
+157/211 Hilbert-class layers.
+```
+
+Classical Siegel/Ramachandra/Robert distribution relations do not perform this
+selection for p24.  The rerun
+
+```text
+PYTHONPATH=p24 python3 p24/ray_kernel_distribution_audit.py
+```
+
+again reports:
+
+```text
+ell=157: ell_divides_mod_ell_kernel=0
+ell=211: ell_divides_mod_ell_kernel=0
+levels 157*211, 2*157*211, 223*463, 2*223*463:
+  local unit parts contain neither 157 nor 211
+conclusion=ray_distribution_relations_do_not_collapse_the_p24_odd_relative_class_phases
+```
+
+So bounded-level ray-unit distribution can certify a unit over an already
+selected fiber, but it does not choose the conductor-one unramified
+`157/211` phases.
+
+The only current non-enumerative selector candidate is the low-moment route:
+
+```text
+first layer:  P_1..P_4  with P_1 automatic from the parent
+second layer: P_1..P_26 with P_1 automatic from the parent
+
+new producer values:
+  first layer  e_2..e_4      = 3
+  second layer e_2..e_26     = 25
+  total                         28
+
+selector constraints, including P_1:
+  4 + 26 = 30.
+```
+
+Rerun gates:
+
+```text
+PYTHONPATH=p24 python3 p24/trace_gcd_low_moment_relative_trace_gate.py
+  full_newton_recovery_rows=2/2
+  p24_selected_path_low_relative_traces=30
+  p24_parent_field_trace_coefficients=8172
+
+PYTHONPATH=p24 python3 p24/trace_gcd_low_moment_automatic_p1_entropy_gate.py
+  first_layer_higher_only_target_collision_log10=21.176548
+  first_layer_with_parent_p1_target_collision_log10=-2.823452
+  second_layer_higher_only_target_collision_log10=16.781509
+  second_layer_with_parent_p1_target_collision_log10=-7.218491
+
+PYTHONPATH=p24 python3 p24/trace_gcd_low_moment_truncated_polynomial_gate.py
+  p24_selected_path_new_coefficients=28
+```
+
+Thus low moments are a plausible phase-selector theorem surface, but still
+need two real arithmetic inputs:
+
+```text
+construct the 28 higher relative traces / truncated coefficients
+prove sparse moment-curve anti-collision for the p24 embedded quotient roots.
+```
+
+2. Anchor/unit realization after selection:
+
+Once the selected auxiliary fiber or subgroup object is available, the anchor
+side is very tight:
+
+```text
+R_179(X)=Phi_179(X)/(X-1)^178
+K_H(x)=prod_{Q in (H\{O})/{+-1}} (x-x(Q)), deg K_H=89
+```
+
+The Kummer gate says the selected correction forces the residual exponent:
+
+```text
+PYTHONPATH=p24 python3 p24/trace_gcd_fixed_frequency_jacobi_anchor_kummer_descent_gate.py
+  p24_kummer_auxiliary_degree=179
+  p24_R179_exponent_for_selected_correction=1
+  selected_correction_forces_R_c_exponent_e_equals_1=1
+```
+
+The adjacent bridge accounts only for the `C/E`-trivial row-sum slice:
+
+```text
+PYTHONPATH=p24 python3 p24/trace_gcd_fixed_frequency_reduced_anchor_adjacent_bridge_gate.py
+  p24_anchor_b0_nontrivial_projectors=6
+  old_adjacent_anchor_target_is_cancellation_of_reduced_anchor_b0_leak=1
+```
+
+The full anchor still needs the `C/E`-nontrivial residual:
+
+```text
+PYTHONPATH=p24 python3 p24/trace_gcd_fixed_frequency_reduced_anchor_slice_decomposition_gate.py
+  p24_remaining_c_nontrivial_fourier_channels=1246
+  cm_lang_unit_must_realize_full_punctured_row_not_only_b0_slice=1
+```
+
+Lean gates rerun and pass, with only the release-query warning:
+
+```text
+lean p24/lean/TraceGcdAnchorKummerDescentGate.lean
+lean p24/lean/TraceGcdReducedAnchorAdjacentBridgeGate.lean
+lean p24/lean/TraceGcdReducedAnchorSliceDecompositionGate.lean
+lean p24/lean/TraceGcdLowMomentAutomaticP1Gate.lean
+lean p24/lean/TraceGcdLowMomentTruncatedPolynomialGate.lean
+```
+
+So the next proof attempt should be stated as either:
+
+```text
+A. a direct selected CM/Lang subgroup-kernel producer with resultant/Bezout
+   avoidance; or
+B. a low-moment phase-selector theorem producing the selected fiber, followed
+   by the same subgroup-kernel / R_179 anchor unit.
+```
+
+Route B is a possible way to get the selected fiber; it does not replace the
+anchor-unit theorem.  Route A is a cleaner final certificate if the selected
+auxiliary object can be built directly.
+
+Low-moment sparse-relation rerun:
+
+```text
+PYTHONPATH=p24 python3 p24/trace_gcd_low_moment_sparse_relation_gate.py
+  random F_101 20 choose 10:
+    degree=1 matches=1820 min_reduced_collision_size=2
+    degree=2 matches=20   min_reduced_collision_size=3
+    degree=3 matches=1
+
+  actual CM:
+    D=-200  degree 1 collision size 2, degree 2 isolates
+    D=-239  degree 1 collision size 2, degree 2 isolates
+    D=-5000 degree 1 collision size 3, degree 2 isolates
+
+  p24 first_layer_target_collision_log10=-2.823452
+  p24 first_layer_union_over_two_parents_log10=-2.522422
+  p24 second_layer_target_collision_log10=-7.218491
+  p24 second_layer_union_over_314_parents_log10=-4.721562
+
+lean p24/lean/TraceGcdLowMomentSparseRelationGate.lean
+PASS, with only the usual Lean release-query warning.
+```
+
+The exact theorem shape is now:
+
+```text
+no disjoint equal-cardinality signed moment-curve relations
+for the embedded CM quotient roots, beyond the Newton boundary:
+
+first layer:  sizes 5..157 with 4 moments
+second layer: sizes 27..211 with 26 moments.
+```
+
+Primary-source sanity check:
+
+```text
+Schertz 1997, "Construction of Ray class fields by elliptic units":
+  elliptic units generate ray class fields and can give small generators.
+
+Jung-Koo-Shin 2010/2011 and Shin 2010/2014:
+  Siegel/Siegel-Ramachandra invariants generate ray class fields of
+  imaginary quadratic fields.
+
+Yoon 2019 "On the Schertz Conjecture":
+  asks for finite abelian extensions to be generated by norms of
+  Siegel-Ramachandra invariants.
+```
+
+These sources reinforce the local `ray_kernel_distribution_audit.py`
+interpretation: classical elliptic/Siegel/Ramachandra units are relevant to
+ray-class generators and post-selection unit certification, but they do not
+automatically supply the p24 conductor-one unramified `157/211` Hilbert-class
+phase selection.  This is the precise point to ask a human expert about.
+
+2026-06-08 targeted literature refresh:
+
+Sutherland's "Accelerating the CM method" is the closest known published
+analogue to the p24 selected-chain scale.  It decomposes the ring class field
+with `mn=h(D)` and obtains a root of `H_D mod q` without necessarily computing
+the coefficients of `H_D`; the asymptotic space is `O((m+n) log q)`.  However,
+the construction of the intermediate decomposition polynomials uses symmetric
+functions of subgroup orbits and explicitly still requires enumerating the
+relevant `G`-orbits of roots.  Therefore it plausibly supplies or validates a
+degree-`3107441` recovery-object route, but it is not by itself the
+four-element p-unit producer.
+
+The finite selector lower-bound gate was sharpened accordingly:
+
+```text
+lean p24/lean/SelectorDegreeLowerBoundGate.lean
+PASS, with only the usual Lean release-query warning
+
+new guardrails:
+  2 + 157 + 211 + 3107441 + 179 + 89 < 10^12
+  89 < 3107441
+  179 < 3107441
+  5549 < 3107441
+```
+
+Interpretation: the `R_179` / kernel-polynomial anchor is a small
+post-producer p-unit check.  Its degree is too small to be the recovery-coset
+selector.  A surviving positive route must either carry the growing
+degree-`3107441` embedded recovery object at sub-sqrt scale, or prove a
+stronger phase-aware p-unit/determinant identity that avoids selecting the
+class-set child explicitly.
+
+2026-06-08 continuation check: the Jacobi/p-unit proof surface was rerun
+against the exact gates that matter for the surviving theorem.  The positive
+finite stack is still intact:
+
+```text
+anchor correction gate:
+  raw right-mixed Jacobi packets fail only by J(1,1)=q-2;
+  replacing that single anchor by 1 repairs pair-products and row-ratios
+  in the exhaustive c=5,11,13 checks.
+
+symbolic Hasse-Davenport gate:
+  c=5,11,13,17,19,179 all pass;
+  p24 covers 189036 right-mixed admissible pairs.
+
+cyclotomic-divisor/local-unit gates:
+  the cleared C/E-nontrivial anchor residual is div R_179;
+  R_179(X) is a unit exactly when X avoids the 179 forbidden roots.
+
+Lean gates:
+  reduced anchor divisor, anchor correction, admissible Jacobi dual
+  conditions, product coboundary, resultant avoidance, local unit, and kernel
+  polynomial gates all pass.
+```
+
+The faithful small actual-CM falsifiers also reran and are important:
+
+```text
+actual-CM admissible Jacobi span:
+  D=-5000 projector row: 0/30 origins;
+  D=-13319 right-combo/weighted/selected-defect rows: 0/140 origins each.
+
+actual-CM value identities:
+  generic projector/right-combo/weighted packets: 0 origins for all three
+  identities;
+  selected-defect packets: C-zero fiber forced in 140/140, but row-sum and
+  inversion-complement are still 0/140.
+```
+
+So the theorem is not "nearby actual CM packets are automatically admissible."
+The remaining theorem is narrower and less ambiguous:
+
+```text
+construct a special selected p-integral CM/Lang unit or divisor packet whose
+Tr_{B/C} specialization is the reduced Jacobi packet:
+  nonzero rows from punctured Hasse-Davenport,
+  right-zero row from the R_179 principal anchor,
+  plus the selected weighting/section that supplies row balance and inversion
+  complement not present in generic actual-CM packets.
+```
+
+This check does not complete the certificate, but it usefully prevents the
+wrong proof path: a generic actual-CM symmetry is already falsified.  A valid
+proof must build the explicit selected unit/section.
+
+Second 2026-06-08 refinement: the "selected section" loophole was tested
+directly on the pinned small actual-CM right-combo row
+`D=-13319, q=13463, h=140, m=28=4*7, n=5`.  Rotating through all embedded
+origin/section choices gives:
+
+```text
+anchor_zero_sections = 0/140
+anchor_nonzero_sections = 140/140
+distinct_anchor_defects = 140
+```
+
+So the missing theorem is not "choose the right origin."  It must supply a
+real product-formula/weighted-unit object.
+
+The finite producer dictionary was also rerun.  For a raw packet `g(r,c)`,
+the selected defect `f(r,c)=g(r,c)-g(r,0)` satisfies the admissible value
+identities exactly when the raw packet has both:
+
+```text
+two-level inversion complement:
+  g(r,0)+g(-r,0) = A0,
+  g(r,c)+g(-r,-c) = A1 for c != 0;
+
+selected affine row balance:
+  sum_c g(r,c) - c*g(r,0) = B independent of r.
+```
+
+Multiplicatively, for `U=omega^g`, this is exactly:
+
+```text
+U(r,0)U(-r,0) = alpha0,
+U(r,c)U(-r,-c) = alpha1 for c != 0,
+prod_c U(r,c) / U(r,0)^c = beta independent of r.
+```
+
+The controls show each half alone is insufficient: pair-products without the
+row ratio leak row sums, and row ratio without pair-products leaks inversion
+symmetry.
+
+The p24-specific right-character reduction gives the most concrete theorem
+target.  For a nontrivial order-7 right character `chi`,
+
+```text
+R_{chi,-a} = sum_v chi(v) T_{0,v,-a}
+```
+
+is a nonzero Gauss sum times the weighted relative polynomial
+
+```text
+G_chi(X) = sum_k c_k^chi X^k,
+c_k^chi = sum_{r != 0 mod 211} chi^{-1}(r mod 211) F_{r,k}.
+```
+
+Residue `r=0 mod 211` drops out by character orthogonality.  Therefore the
+remaining fixed-frequency theorem is not about raw periods; it is:
+
+```text
+for each of the six nontrivial chi, prove the named weighted CM/Lang
+coefficient sequence c_k^chi satisfies the required internal/recombined
+coset-balance equations.
+```
+
+The Gaussian-period balance gate turns this into exact p24 counts:
+
+```text
+internal per-factor balance: 560 U-coset equations;
+complete recombination:      8 p-coset balances;
+compressed verifier form:    48 equations = 42 octic + 6 anchor.
+```
+
+The p24 character/twist bookkeeping is also fixed:
+
+```text
+rho = p^780 fixes the left 157-frequency;
+raw right quotient shift = 6;
+lambda_chi exponent = 6k;
+epsilon_chi exponent = k;
+1092 verifier scalars = 936 nontrivial character scalars + 156 centering.
+```
+
+Thus the next proof theorem can be named more sharply:
+
+```text
+Weighted CM/Lang Coset-Balance Theorem:
+the selected p-integral product-formula unit produces the six weighted
+sequences c_k^chi above, and these sequences satisfy the explicit
+recombined p-coset balances with the rho-twist bookkeeping.
+```
+
+The finite coboundary bridge is also closed around this theorem.  Reruns of
+the multiplicative-resolvent, product-coboundary Leibniz, raw-coboundary
+transfer, and base-field H-coboundary gates give:
+
+```text
+H-coboundary = six multiplicative-resolvent projections = seven H-coset sums
+after centering;
+
+left covariance plus a matching right twisted coboundary implies the raw
+product coboundary;
+
+nested internal trace commutes with the twisted coboundary transfer;
+
+ordinary centering or Frobenius covariance alone leaves false positives;
+
+constructing a Hilbert-90 potential only after trace zero is circular.
+```
+
+Therefore the proof burden is now exactly:
+
+```text
+construct, from selected p-integral CM/Lang/product-formula data, a right
+potential V_chi such that
+  G_chi = sigma(V_chi) - epsilon_chi * V_chi
+with epsilon_chi fixed by the p^780 twist,
+or equivalently prove the same weighted sequences satisfy the explicit
+recombined coset balances noncircularly.
+```
+
+`p24/lean/TraceGcdProjectorTracePipelineGate.lean` now includes the matching
+weighted-right-potential handoff: six weighted potentials imply the character
+payload and, with centering, the `1092` H-coset verifier.  The same Lean gate
+records the p24 counts `31*179=5549`, `42+6=48`, and six nontrivial weighted
+characters.
+
+Third 2026-06-08 refinement: the weighted-potential theorem has an equivalent
+minimal obstruction statement.  The right-coboundary/internal-trace gate shows:
+
+```text
+G_chi is a matching right coboundary
+  iff its nested internal trace is zero
+  iff Tr_{C/E}(Tr_{B/C}(G_chi)) = 0.
+```
+
+The Gaussian-functional gate expands this as a single Gaussian-period pairing
+for each right character:
+
+```text
+sum_k c_k^chi * eta_{a k} = 0,
+eta_t = sum_{u in <p^5460>} zeta_n^(t u),
+|<p^5460>| = 5549.
+```
+
+The p24 sample periods are all nonzero, so this is not a formal cyclotomic
+vanishing.  The internal-character and bidegree gates give the cleanest
+theorem statement:
+
+```text
+after B/C trace, the weighted obstruction has no trivial C/E character
+component in any of the six nontrivial right channels.
+```
+
+Equivalently, the recombined balance gate splits the target into:
+
+```text
+42 right-order-7 by relative-octic mixed-spectrum equations
++ 6 trace-defect anchor equations
+= 48 compressed equations.
+```
+
+This also sharpens the negative evidence:
+
+```text
+plain cyclic Stickelberger distributions leak all six forbidden bidegrees;
+plain right-axis Stickelberger distributions leak all six forbidden bidegrees;
+only a deliberately C-centered product shape avoids the trivial C component.
+```
+
+Therefore a successful Jacobi/Stickelberger/CM-Lang proof must explain
+C-centering of the selected weighted packet itself.  It cannot be only
+Hasse-Davenport, only Frobenius covariance, only ordinary centering, or a
+generic ray-unit distribution.
+
+The adjacent Jacobi-carry gates make the positive version more specific:
+
+```text
+C-axis Jacobi carries kill the six forbidden bidegrees;
+generic Jacobi carries leak them;
+pure right partners destroy the C-axis cancellation.
+```
+
+The admissible spectral boundary adds that support vanishing is still weaker
+than the full target: the rank-`621` admissible span has spectral formula
+
+```text
+1 + 7*88 + 4 = 621,
+```
+
+so the proof must also supply the conjugate-pair compatibility and three
+global balance constraints.  The value-side strength gate expresses the same
+point as:
+
+```text
+C-zero plus inversion complement leaves three global row-sum balances.
+```
+
+Finally, the mixed-spectrum bridge shows the `42` octic equations are
+Gauss-weighted combinations of additive resolvents, not individual
+class-character resolvent vanishings.  Thus the current best theorem is:
+
+```text
+selected weighted CM/Lang packet after B/C trace
+  lands in the C-axis admissible Jacobi-carry span,
+or equivalently satisfies the six C-centered weighted Gaussian-period
+  cancellations plus the three global balances/anchor conditions.
+```
+
+The right-difference/projector rerun adds one more boundary, without changing
+the proof target:
+
+```text
+right-difference covariance + telescope + anchor implies trace zero in the
+formal model, but covariance/telescope alone does not;
+
+trace-defect anchors and C-centering are independent inputs in controls;
+
+single factor-cycle covariance does not descend, and complete factor
+recombination is required;
+
+quotient projectors commute with B/C trace, so the arithmetic statement is
+exactly no trivial C-component in each projected nontrivial right channel.
+```
+
+This closes the adjacent-difference route as a finite equivalence, not as an
+arithmetic proof replacement.  Any successful proof still has to create the
+C-centered selected weighted CM/Lang packet itself.
+
+Targeted literature refresh, 2026-06-08:
+
+```text
+Sutherland, Accelerating the CM method:
+  decomposed class equations explain the selected-chain surface exactly
+  (V of degree m, U_y of degree n, payload m+n), but the algorithm still
+  obtains these data by enumerating G-orbits of CM roots at CRT primes.
+  It validates the sub-sqrt output/space surface, not the class-set-free
+  producer theorem.
+
+Kubert-Lang / Robert modular units:
+  CM values of Siegel/Robert units are expressed through cyclotomic unit
+  exponent sums.  There are two layers to keep separate:
+      p-unit / reciprocity congruence: sum n(d)*d = 0 mod c
+      parity / root-of-unity hygiene:  sum n(d) = 0 mod 2
+      degree-zero quotient condition:  sum n(d) = 0
+  The last condition is the one whose finite shadow is "no trivial C
+  character"; the congruence condition is a separate candidate source for
+  the selected affine/anchor bookkeeping.
+
+Weil/Jacobi-sum Hecke characters:
+  Jacobi sums naturally provide Hecke characters and Gauss-normalized
+  weights, but this only supplies the ambient language; it does not choose
+  the selected p24 packet.
+```
+
+Sources checked:
+
+```text
+https://doi.org/10.1112/S1461157012001015
+https://www.numdam.org/article/BSMF_1979__107__161_0.pdf
+https://numdam.org/articles/10.5802/pmb.25/
+https://www.numdam.org/item/CM_1984__53_3_277_0/
+https://www.numdam.org/item/CM_1986__57_2_153_0/
+https://handwiki.org/wiki/Elliptic_unit
+```
+
+This gives a more concrete theorem candidate:
+
+```text
+Robert/Kubert-Lang C-axis identification theorem:
+  after Tr_{B/C}, the selected trace-GCD weighted packet is the logarithmic
+  / divisor exponent packet of a degree-zero Robert/Kubert-Lang modular
+  p-unit on the C_179 axis.
+```
+
+If this identification is proved, the literature's two exponent-centering
+layers should imply the missing p24 statement as follows:
+
+```text
+degree-zero on each projected C-axis packet
+  -> no trivial C/E component in each nontrivial right channel;
+
+reciprocity / first-moment congruence
+  -> expected source of the selected affine row balance / anchor scalar.
+```
+
+The local finite gates agree with exactly this level of strength:
+
+```text
+plain cyclic Stickelberger:        forbidden nonzero = 6/6
+plain right-axis Stickelberger:    forbidden nonzero = 6/6
+C-axis centered Stickelberger:     forbidden nonzero = 0/6
+C-axis Jacobi carry:               forbidden zero    = 48/48
+generic Jacobi carry:              leaks             = 48/48
+internal character filter:         zero trivial C component iff final
+                                   nested internal trace zero
+```
+
+So the next proof is no longer "find any Stickelberger/Jacobi relation."  It
+is the very specific identification of the selected trace-GCD packet with the
+Robert/Kubert-Lang C-axis unit packet, with degree-zero attached after the
+right projector.  This is also the crisp failure point to test in faithful
+small CM data, but only if an honest logarithmic/divisor exponent map is
+available: comparing KL exponents directly to finite-field `j`-value packets
+without that map would be fake evidence.  The existing actual-CM value gates
+therefore remain negative genericity tests, not a Robert-exponent comparison.
+
+The selected-defect producer gate now includes this finite bridge:
+
+```text
+KL/Robert degree-zero after right projection
+  iff row sums are independent across right classes
+  iff the forbidden C-trivial / right-nontrivial component vanishes.
+
+checked for c=5,11,13:
+  kl_degree_zero_equiv_row_balance=3/3
+  affine_balance_forces_kl_degree_zero=3/3
+  inversion_complement_does_not_force_kl_degree_zero=3/3
+```
+
+This separates the Robert/KL obligations:
+
+```text
+degree-zero exponent identity         -> C-trivial vanishing / affine row sum
+inversion or pair-product identity    -> conjugate-pair compatibility
+reciprocity / first-moment congruence -> likely anchor scalar/sign source
+```
+
+The actual-CM value boundary rerun still gives:
+
+```text
+selected_defect_coefficients:
+  c_zero_fiber_origins=140/140
+  row_sum_independent_origins=0/140
+  inversion_constant_origins=0/140
+```
+
+So the next arithmetic theorem is not generic actual CM, and not merely
+selected-defect subtraction.  It must identify the selected weighted packet
+with a genuine Robert/Kubert-Lang exponent/divisor packet after `Tr_{B/C}`.
+
+Robert elliptic units also reconnect this abstract exponent language to the
+existing reduced-anchor kernel-polynomial surface.  The standard elliptic-unit
+product formula has the shape
+
+```text
+Theta_a(P) = scalar * Delta_E^(N(a)-1)
+             * prod_{aQ=0, Q != O} (x(P)-x(Q))^(-6),
+```
+
+so its divisor is exactly the nonzero kernel divisor plus the matching pole at
+`O`, up to the conventional power/scalar normalization.  The existing gates
+verify that this is the p24 reduced-anchor object:
+
+```text
+reduced_anchor_kernel_polynomial_gate:
+  p24_subgroup_order=179
+  p24_kernel_polynomial_degree=89
+  p24_kernel_divisor_pole_order=178
+  unsquared_kernel_polynomial_matches_R_c_not_R_c_squared=1
+
+reduced_anchor_elliptic_subgroup_divisor_gate:
+  p24_nonzero_subgroup_divisor_degree=178
+  p24_nonzero_subgroup_sum_mod_c=0
+  whole_nonzero_subgroup_divisor_is_principal_for_odd_c=1
+```
+
+This gives the cleanest current composition:
+
+```text
+Robert/KL degree-zero exponent packet
+  -> C-trivial/right-nontrivial vanishing;
+
+Robert elliptic-unit kernel divisor
+  -> reduced-anchor R_179 / K_H local-unit payload;
+
+Shimura reciprocity / trace-GCD specialization
+  -> still missing: select the correct p24 C_179 subgroup and prove the
+     B/C-traced weighted packet is this Robert unit packet.
+```
+
+The Robert distribution relation suggests where the selected affine row
+balance should come from: for an auxiliary ideal `b=(beta)`,
+
+```text
+prod_{bR=0} Theta_a(P+R) = Theta_a(beta P)
+```
+
+so a translated kernel-product row has a controlled norm/product over the
+`C_179` translations.  This is the right conceptual source for the selected
+row-product ratio, while evenness of the `x`-kernel product is the right
+source for inversion-pair compatibility.
+
+But the norm must be the correct one.  Reruns of the reduced-anchor norm gates
+show:
+
+```text
+diamond/unit norm over (Z/179Z)^*:
+  p24_diamond_orbit_size=178
+  diamond_norm_of_one_point_factor_is_the_R_c_residual=1
+
+ordinary cyclic C/E translation norm:
+  p24_cyclic_translation_orbit_size=179
+  cyclic_C_over_E_translation_norm_of_one_point_factor_is_trivial=1
+  ordinary_cyclic_trace_norm_erases_the_selected_anchor_residual=1
+```
+
+Together with the ray-kernel audit:
+
+```text
+modulo_ell_ray_kernel_has_no_ell_primary_factor_for_ell=157_or_211=1
+ray_distribution_relations_do_not_collapse_the_p24_odd_relative_class_phases
+```
+
+this rules out the tempting but wrong Robert-unit shortcut:
+
+```text
+take an ordinary ray/cyclic norm of a generic Robert unit
+  -> phase data dies and/or the R_179 anchor residual telescopes away.
+```
+
+The proof must instead build a selected p-integral Robert factor attached to
+the correct unramified `157/211` phase, then apply the diamond/unit orbit on
+the `179` kernel side.
+
+Lean value-side contract update, 2026-06-08:
+
+```text
+p24/lean/TraceGcdDualConditionsValueSideGate.lean
+```
+
+now records the Robert-producer obligation as three finite shadows:
+
+```text
+selectedDefectSubtraction        -> C-zero fiber vanishes;
+degreeZeroAfterRightProjection   -> C-row sums are independent;
+inversionPairCompatibility       -> off-C-zero inversion complement constant.
+```
+
+Lean then checks the whole remaining formal chain:
+
+```text
+RobertProducerObligations
+  -> ValueSideIdentities
+  -> four dual Fourier families
+  -> admissible C-axis Jacobi span
+  -> forbidden bidegrees vanish
+  -> final internal trace zero
+  -> right/product coboundaries
+  -> H-coset verifier.
+```
+
+Verified:
+
+```text
+lean p24/lean/TraceGcdDualConditionsValueSideGate.lean
+PYTHONPATH=p24 python3 \
+  p24/trace_gcd_fixed_frequency_p24_selected_defect_value_producer_gate.py
+PYTHONPATH=p24 python3 \
+  p24/trace_gcd_fixed_frequency_p24_dual_conditions_value_side_gate.py
+```
+
+This is useful because it removes another layer of ambiguity from the missing
+theorem.  We do not need a vague "Robert unit helps" statement.  We need the
+selected p-integral Robert/KL factor to supply exactly those three finite
+shadows for each nontrivial right channel.
+
+The targeted source refresh also explains why plain literature search has not
+closed the gap.  Schertz gives Frobenius/Artin action formulas for elliptic
+units and proves that suitable single Klein/Siegel values or quotients
+generate ray class fields in many cases.  Shin's Siegel-Ramachandra paper
+packages this with explicit Shimura reciprocity and primitive-generator
+criteria.  But both lines are generator theorems over the relevant class field;
+they do not hand us the p24 selected trace-GCD packet.  Schertz's proof itself
+uses character sums whose nonvanishing depends on the correct conductor and
+character support.  That is the same obstruction our finite gates see:
+generic actual-CM packets have the selected zero fiber but fail row balance
+and inversion.  The missing theorem is therefore the identification theorem,
+not a missing citation:
+
+```text
+selected trace-GCD B/C packet
+  = selected p-integral Robert/KL exponent packet
+    with correct 157/211 unramified phase
+    and 179 diamond/unit orientation.
+```
+
+Important correction from the local TeX source audit: do not identify the
+p24 `C_179` axis with literal ray conductor `179` in the CM field.  For the
+p24 discriminant,
+
+```text
+D_K mod 179 = 44
+(D_K/179) = -1, so 179 is inert in K
+|((O_K/179 O_K)^*)| = 179^2 - 1 = 32040
+norm-one kernel size = 180
+source prime-conductor quotient order = 90
+```
+
+This does not match either:
+
+```text
+C_179 additive/Fourier internal axis size = 179
+diamond residual orbit size              = 178
+```
+
+The extended ray-kernel audit now prints:
+
+```text
+literal_ray_conductor_179_has_source_order_90_not_C179_or_diamond178=1
+p24_C179_axis_is_a_fourier_internal_axis_not_classical_ray_modulus_179=1
+```
+
+So the Robert/Kubert-Lang import must be understood as cyclotomic/modular-unit
+divisor algebra after the trace-GCD Fourier quotient, not as the classical
+Siegel-Ramachandra ray class field of modulus `179`.  The source quotient
+theorem
+
+```text
+g_[s/N,t/N](theta)^m / g_[0,1/N](theta)^m
+```
+
+is still a valuable model for Artin action and unit quotients, but setting
+`N=179` literally is the wrong object for the p24 reduced anchor.
+
+Positive quotient bridge after that correction: the abstract Jacobi surface
+`C_7 x C_179` is not detached from p24.  It is exactly the quotient of the
+actual p24 Frobenius cycle after the `B/C` trace.  With
+
+```text
+rho = p^780 mod n,
+ord_n(rho) = 38843 = 7 * 31 * 179,
+rho^7 = p^5460,
+ord_n(p^5460) = 5549 = 31 * 179,
+B/C trace subgroup = <(p^5460)^179>, order 31,
+```
+
+the quotient
+
+```text
+<rho> / <(p^5460)^179>
+```
+
+has order
+
+```text
+38843 / 31 = 1253 = 7 * 179.
+```
+
+Inside that quotient:
+
+```text
+image of rho^179 has order 7;
+image of p^5460 has order 179;
+their product cosets cover all 1253 quotient classes.
+```
+
+So the symbolic Hasse-Davenport/Jacobi packet on `C_7 x C_179` is now checked
+to live on the real post-`Tr_{B/C}` p24 quotient:
+
+```text
+PYTHONPATH=p24 python3 \
+  p24/trace_gcd_fixed_frequency_jacobi_sum_symbolic_hd_gate.py
+
+p24_internal_jacobi_quotient_rho_order=38843
+p24_internal_jacobi_quotient_rho7_equals_internal=1
+p24_internal_jacobi_quotient_internal_order=5549
+p24_internal_jacobi_quotient_b_over_c_generator_order=31
+p24_internal_jacobi_quotient_quotient_order_after_b_over_c_trace=1253
+p24_internal_jacobi_quotient_right_axis_quotient_order=7
+p24_internal_jacobi_quotient_c_axis_quotient_order=179
+p24_internal_jacobi_quotient_product_cosets_cover_quotient=1
+```
+
+Lean also records the count:
+
+```text
+lean p24/lean/TraceGcdProjectorTracePipelineGate.lean
+
+p24RhoCycleOrder = 38843
+p24AfterBOverCQuotientOrder = 7 * 179 = 1253
+```
+
+This is the current best formulation of the remaining theorem:
+
+```text
+after B/C trace on the actual rho quotient <rho>/<rho^(7*179)>,
+the selected trace-GCD/CM-Lang divisor packet is the reduced Jacobi packet
+with the single J(1,1)/(q-2) anchor normalization.
+```
+
+That is materially narrower than the earlier Robert/KL statement.  It no
+longer asks for a classical ray-class modulus `179`; it asks for a
+CM/Lang specialization on a concrete Frobenius-orbit quotient already present
+inside the p24 relative class layer.
+
+Targeted web/source refresh, 2026-06-08:
+
+Kubert-Lichtenbaum, "Jacobi-sum Hecke characters and Gauss-sum identities"
+(Compositio 1983), is a much closer literature target than the plain
+Schertz/Shin ray-class generator theorems.  It extends Weil/Deligne
+Jacobi-sum Hecke characters to mixed level and derives generalized
+Hasse-Davenport/Langlands Gauss-sum identities.  That matches the formal
+shape of our reduced `C_7 x C_179` Jacobi packet and explains why the
+symbolic gate is the correct finite algebra.
+
+Brattström-Lichtenbaum, "Jacobi-sum Hecke characters of imaginary quadratic
+fields" (Compositio 1984), is even closer conceptually.  Their Theorem 1.1
+packages the exact test we need in abstract form:
+
+```text
+mixed-level theta packet has integral infinity type
+  <=> J(theta,k) is a Hecke character,
+      takes values in k,
+      and is Galois-equivariant.
+```
+
+Anderson, "Cyclotomy and an extension of the Taniyama group" (Compositio
+1986), is the right broader source for arbitrary-base Jacobi-sum/Taniyama
+language.  It studies Jacobi-sum Hecke characters and their factorization in
+the Taniyama-group framework; Numdam records the paper as Compositio
+Mathematica 57 (1986), pp. 153-217.  The p24 caveat is finite and local:
+the visible cyclotomic symbol action of `rho=p^780` still has order `89`, so
+Anderson's existence/factorization theorem does not itself select the
+post-`B/C` quotient of order `1253`.
+
+For p24 this should not be read as a ready-made computational construction:
+the strict cyclotomic presentation of a Jacobi-sum character over the
+quadratic field `K` has to include the conductor/discriminant data of `K`,
+not just the small visible level `7*179`.  The useful theorem candidate is
+therefore:
+
+```text
+find a mixed-level Jacobi/CM-Lang theta packet whose projection to the
+unramified p24 rho quotient is the reduced C_7 x C_179 packet, while the
+large K-conductor components are killed by the B/C trace or by the selected
+degree-zero normalization.
+```
+
+The first finite lift check is positive but deliberately not decisive.  Since
+the p24 quadratic conductor is coprime to the visible level `7*179`, lifting a
+visible `theta=[u]+[v]-[u+v]` packet to a strict level containing the
+quadratic conductor makes the conductor units split evenly between the two
+CM embeddings.  For every right-mixed admissible pair, the visible
+infinity-type sum is
+
+```text
+sum_{b in (Z/(7*179)Z)^*} < -a b / (7*179) >
+  = phi(7*179)/2
+  = 1068/2
+  = 534,
+```
+
+because each nonzero exponent contributes `phi(level)/2`, and
+`[u]+[v]-[u+v]` has three nonzero terms with signs `+,+,-`.
+
+The gate now checks this across the small proxy rows and p24:
+
+```text
+quadratic_conductor_lift_integral_equal_rows=6/6
+p24_quadratic_conductor_lift_visible_level=1253
+p24_quadratic_conductor_lift_cm_conductor_coprime_to_visible_level=1
+p24_quadratic_conductor_lift_visible_theta_infinity_sum=534
+p24_quadratic_conductor_lift_expected_visible_theta_infinity_sum=534
+p24_quadratic_conductor_lift_lifted_identity_embedding_coefficient=
+  174015840695068591393327296
+p24_quadratic_conductor_lift_lifted_conjugate_embedding_coefficient=
+  174015840695068591393327296
+p24_quadratic_conductor_lift_lifted_coefficients_integral=1
+p24_quadratic_conductor_lift_lifted_infinity_type_separates_embeddings=0
+```
+
+So the large conductor is not by itself an asymptotic killer for the
+Jacobi-sum theorem: it contributes a balanced norm-type infinity factor.
+But this also proves that the archimedean/infinity type does not select the
+`C_7 x C_179` rho quotient.  The quotient selection must be in the finite
+Artin component and then descend through `Tr_{B/C}`.
+
+The next finite-Artin check rules out the visible ray-unit source as well.
+At level `7*179`, both primes are inert in the p24 CM field:
+
+```text
+(D_K / 7) = -1
+(D_K / 179) = -1
+```
+
+Thus the Shimura reciprocity/ray-unit part over the Hilbert class field has
+order
+
+```text
+((7^2 - 1) * (179^2 - 1)) / 2
+  = 768960
+  = 2^6 * 3^3 * 5 * 89,
+```
+
+which has no `7`- or `179`-primary quotient.  The strengthened gate prints:
+
+```text
+p24_visible_shimura_ray_group_level=1253
+p24_visible_shimura_ray_group_kronecker_7=-1
+p24_visible_shimura_ray_group_kronecker_179=-1
+p24_visible_shimura_ray_group_ray_order_over_hilbert=768960
+p24_visible_shimura_ray_group_ray_order_has_7_primary=0
+p24_visible_shimura_ray_group_ray_order_has_179_primary=0
+p24_visible_shimura_ray_group_ray_order_has_post_bc_order=0
+p24_visible_shimura_ray_group_unramified_class_component_prime=3107441
+p24_visible_shimura_ray_group_unramified_rho_cycle_order=38843
+p24_visible_shimura_ray_group_post_bc_quotient_order=1253
+p24_visible_shimura_ray_group_visible_ray_supplies_post_bc_axes=0
+p24_visible_shimura_ray_group_unramified_frobenius_supplies_post_bc_axes=1
+```
+
+So the selected packet theorem cannot be:
+
+```text
+visible ray-level local units produce C_7 x C_179.
+```
+
+That is false.  The correct finite part is:
+
+```text
+the unramified n=3107441 class component is acted on by rho=p^780 with
+cycle order 7*31*179; after B/C trace, this Frobenius orbit quotient is
+C_7 x C_179.
+```
+
+The quotient coordinates are now explicit.  In the post-`B/C` quotient,
+write
+
+```text
+rho^e = (rho^179)^r * (rho^7)^c,
+e = 179*r + 7*c mod 1253.
+```
+
+Here `rho^179` has order `7`, `rho^7` has order `179`, and the `7*179`
+exponents cover the whole quotient:
+
+```text
+p24_artin_quotient_coordinate_quotient_modulus=1253
+p24_artin_quotient_coordinate_bc_trace_subgroup_exponent=1253
+p24_artin_quotient_coordinate_right_axis_exponent_step=179
+p24_artin_quotient_coordinate_c_axis_exponent_step=7
+p24_artin_quotient_coordinate_coordinate_exponents_count=1253
+p24_artin_quotient_coordinate_coordinate_exponents_cover_modulus=1
+p24_artin_quotient_coordinate_right_axis_step_has_order_7=1
+p24_artin_quotient_coordinate_c_axis_step_has_order_179=1
+```
+
+The `B/C` layer itself now has a clean inflation/norm gate.  Let
+`N=7*179=1253`, `B=31`, and `M=B*N=38843`.  If a reduced quotient character
+with exponent `a mod N` is inflated to the full rho cycle by the dual exponent
+`B*a mod M`, then for every kernel lift `T=t+jN`,
+
+```text
+(B*a*T mod M) = B*(a*t mod N).
+```
+
+For a right-mixed Jacobi packet this gives, pointwise on sampled p24
+representatives and all kernel lifts,
+
+```text
+full raw carry = 31 * reduced raw carry.
+```
+
+Consequently:
+
+```text
+p24_bc_trace_inflation_full_rho_order=38843
+p24_bc_trace_inflation_kernel_degree=31
+p24_bc_trace_inflation_sampled_point_checks=116529
+p24_bc_trace_inflation_sampled_inflated_residue_identity=1
+p24_bc_trace_inflation_sampled_inflated_carry_identity=1
+p24_bc_trace_inflation_raw_carry_scale_per_lift=31
+p24_bc_trace_inflation_raw_carry_pushforward_scale=961
+p24_bc_trace_inflation_normalized_divisor_trace_scale=31
+p24_bc_trace_inflation_multiplicative_norm_power=31
+p24_bc_trace_inflation_bc_layer_introduces_new_character_support=0
+```
+
+The additive character-projection version is stronger and removes a possible
+ambiguity.  On the full cycle `M=38843`, `Tr_{B/C}` sums over
+`T, T+N, ..., T+30N`.  For a character exponent `e`, the kernel geometric sum
+is nonzero exactly when `31 | e`.  The gate checks all full-cycle exponents:
+
+```text
+p24_bc_trace_character_projection_full_character_exponents=38843
+p24_bc_trace_character_projection_surviving_quotient_exponents=1253
+p24_bc_trace_character_projection_killed_kernel_twist_exponents=37590
+p24_bc_trace_character_projection_survival_iff_exponent_divisible_by_31=1
+p24_bc_trace_character_projection_quotient_images_cover=1
+p24_bc_trace_character_projection_trace_scale_on_survivors=31
+p24_bc_trace_character_projection_trace_kills_nontrivial_kernel_twists=1
+p24_bc_quotient_ratio_order_bound_survivor_pair_checks=1570009
+p24_bc_quotient_ratio_order_bound_survivor_ratio_stays_kernel_trivial=1
+p24_bc_quotient_ratio_order_bound_max_ratio_order=1253
+p24_bc_quotient_ratio_order_bound_ratio_order_divides_post_bc_quotient=1
+```
+
+Interpretation: for additive divisor/log packets, `Tr_{B/C}` itself projects
+onto the quotient-character part.  Nontrivial `B/C`-kernel twists die
+automatically.  Ratios of two surviving quotient packets have order dividing
+`1253`, checked over all `1253^2` survivor pairs, so this supplies the
+`ratioOrderDividesPostBCQuotient` input for the coprime local-ray handoff
+once both packets have been identified after `Tr_{B/C}`.  On the surviving
+quotient pullback, additive divisor trace multiplies the normalized reduced
+divisor by `31`, and multiplicative norm gives the `31`st power of the
+reduced unit.  P-unitness and forbidden-support avoidance are unchanged.
+
+The reduced quotient packet is now connected directly to the value-side
+verifier interface.  The symbolic Jacobi gate checks all admissible
+right-mixed pairs for `c=5,11,13,17,19,179`; for p24 this is all
+`189036` pairs.  For the carry
+
+```text
+theta(t) = [u t] + [v t] - [(u+v)t],
+```
+
+the checked symbolic identities are:
+
+```text
+theta(r,0)=0,
+theta(t)+theta(-t)=7*179 off the C-zero fiber,
+sum_c theta(r,c) is independent of r.
+```
+
+These are exactly the three value-side identities that feed the
+`632`-equation dual Fourier target and then the `1092` H-coset verifier.
+`TraceGcdDualConditionsValueSideGate.lean` now exposes this as a
+`ReducedJacobiCarryObligations` path parallel to the older Robert-producer
+path.  Thus the remaining arithmetic theorem can be stated in its cleanest
+form:
+
+```text
+after Tr_{B/C}, the surviving selected quotient packet is the reduced
+right-mixed Jacobi/CM-Lang carry on C_7 x C_179.
+```
+
+Therefore the mixed-level Jacobi-sum/CM-Lang packet has to be pulled back
+through the unramified `n`-class Frobenius orbit and only then compared with
+the reduced Jacobi packet.  This is the current sharp theorem target.
+
+But it also exposes a necessary correction: the p24 packet is not realized by
+ordinary cyclotomic Frobenius on `mu_{7*179}`.  The strengthened symbolic gate
+now prints:
+
+```text
+p24_plain_cyclotomic_frobenius_level=1253
+p24_plain_cyclotomic_frobenius_p_mod_level=435
+p24_plain_cyclotomic_frobenius_p_order_mod_level=89
+p24_plain_cyclotomic_frobenius_p_mod_right=1
+p24_plain_cyclotomic_frobenius_p_order_mod_right=1
+p24_plain_cyclotomic_frobenius_p_mod_c=77
+p24_plain_cyclotomic_frobenius_p_order_mod_c=89
+p24_plain_cyclotomic_frobenius_actual_quotient_order_after_b_over_c=1253
+p24_plain_cyclotomic_frobenius_realizes_actual_quotient=0
+```
+
+The Anderson/Taniyama-group theorem removes one earlier concern but not this
+finite-order obstruction.  It defines Jacobi-sum Hecke characters over
+arbitrary number fields, so the base field need not be abelian over `Q`.
+However the parameter still lives in the cyclotomic symbol group `[x] in
+Q/Z`.  Along the actual p24 class-field element `rho=p^780`, the visible
+cyclotomic shadow is:
+
+```text
+p24_anderson_cyclotomic_rho_shadow_visible_level=1253
+p24_anderson_cyclotomic_rho_shadow_rho_exponent=780
+p24_anderson_cyclotomic_rho_shadow_rho_cyclotomic_mod_level=666
+p24_anderson_cyclotomic_rho_shadow_rho_cyclotomic_order_mod_level=89
+p24_anderson_cyclotomic_rho_shadow_rho_cyclotomic_mod_right=1
+p24_anderson_cyclotomic_rho_shadow_rho_cyclotomic_mod_c=129
+p24_anderson_cyclotomic_rho_shadow_rho_cyclotomic_order_mod_c=89
+p24_anderson_cyclotomic_rho_shadow_actual_post_bc_quotient_order=1253
+p24_anderson_cyclotomic_rho_shadow_cyclotomic_shadow_realizes_post_bc_quotient=0
+```
+
+So Anderson's existence theorem cannot be used as:
+
+```text
+Jacobi character over a larger k
+  + visible cyclotomic theta packet
+  -> selected p24 quotient packet.
+```
+
+That route has order `89`, not `1253`.  Anderson remains the right language
+for arbitrary-base Jacobi characters and Frobenius/Gauss-sum values, but the
+p24 result needs the extra CM-Artin/trace-GCD identification that couples the
+mixed-level packet to the unramified `rho` quotient.
+
+The finite selector part of this coupling is now explicit.  A full
+unramified class character on the cyclic `n=3107441` component can be chosen
+with `chi_full(rho)=zeta_M`, `M=31*7*179`.  Then
+
+```text
+chi_q = chi_full^31
+```
+
+is trivial on the `B/C` kernel and has exact order `7*179` after trace:
+
+```text
+p24_unramified_twist_selector_full_unramified_rho_order=38843
+p24_unramified_twist_selector_bc_kernel_order=31
+p24_unramified_twist_selector_post_bc_quotient_order=1253
+p24_unramified_twist_selector_quotient_twist_exponent=31
+p24_unramified_twist_selector_quotient_twist_order=1253
+p24_unramified_twist_selector_quotient_twist_trivial_on_bc_kernel=1
+p24_unramified_twist_selector_quotient_twist_right_axis_order=7
+p24_unramified_twist_selector_quotient_twist_c_axis_order=179
+p24_unramified_twist_selector_quotient_character_exponents_are_exactly_trace_survivors=1
+```
+
+This separates the problem cleanly:
+
+```text
+selector source:
+  unramified class-character twist on the n-component, solved finitely;
+
+producer theorem:
+  identify the selected trace-GCD/CM-Lang divisor packet with the reduced
+  Jacobi packet pulled through that twist as an Artin coordinate pullback,
+  up to verifier-invisible pure C_179 residual.
+```
+
+Lean now exposes this split as
+`UnramifiedTwistedJacobiProducerObligations` in
+`p24/lean/TraceGcdDualConditionsValueSideGate.lean`, with a named handoff to
+the H-coset verifier.  In that contract the selector obligation is finite and
+checked here.  The coordinate-pullback obligation is now split into a finite
+cyclic-character uniqueness part and two arithmetic ratio statements:
+
+```text
+postBCQuotientGeneratedByRho;
+localDataMakesRatioUnramifiedFiniteOrder:
+  sameInfinityType;
+  killedLocalRayPartTrivialByCoprimeOrders:
+    ratioOrderDividesPostBCQuotient;
+    killedLocalRayOrderCoprimeToPostBCQuotient;
+    restrictionOrderDividesKilledLocalRayOrder;
+    restrictionTrivialByCoprimeOrders;
+  ratioFactorsThroughUnramifiedPostBCQuotient;
+axisValuesDetermineRatioOnRho:
+  rightAxisSelectorFromShift6Convention:
+    rhoHasShift6OnRightHQuotient;
+    postBCRhoRightCoordinateIsTwo;
+    cAxisFixesRightHQuotient;
+    rightAxisSelectorFollowsFromShift6Covariance;
+  cAxisResidualSelector:
+    rightAxisFixedLeavesPureC179Residual;
+    cAxisSeparatesResidualCharacters;
+    pureC179ResidualPreservesValueSideIdentities.
+```
+
+The finite part is checked by:
+
+```text
+p24_artin_character_uniqueness_post_bc_quotient_order=1253
+p24_artin_character_uniqueness_rho_image_generator_order=1253
+p24_artin_character_uniqueness_post_bc_character_count=1253
+p24_artin_character_uniqueness_character_pair_checks=1570009
+p24_artin_character_uniqueness_same_value_on_rho_implies_same_character=1
+```
+
+Thus the remaining coordinate-pullback proof is narrower: prove the two
+packets have the same infinity type, that their ratio has order dividing the
+post-`B/C` quotient, that the ratio factors through the unramified
+post-`B/C` quotient, that the right-axis value matches the shift-6
+right-H convention, and that any remaining C-axis residual is pure `C_179`.
+The local/ray part cannot supply those axes: its order over the
+Hilbert class field is coprime to `1253`:
+
+```text
+p24_visible_shimura_ray_group_gcd_ray_order_right_axis=1
+p24_visible_shimura_ray_group_gcd_ray_order_c_axis=1
+p24_visible_shimura_ray_group_gcd_ray_order_post_bc_quotient=1
+p24_visible_shimura_ray_group_candidate_ratio_order_bound=1253
+p24_visible_shimura_ray_group_candidate_ratio_order_divides_post_bc_quotient=1
+p24_visible_shimura_ray_group_gcd_ray_order_candidate_ratio_order_bound=1
+p24_visible_shimura_ray_group_post_bc_order_character_restriction_to_visible_ray_forced_trivial=1
+p24_visible_shimura_ray_group_visible_ray_has_no_hom_to_post_bc_axes=1
+p24_visible_shimura_ray_group_local_finite_type_reduced_to_unramified_ratio_order=1
+```
+
+Lean records the p24 arithmetic count as
+`p24_visible_ray_restriction_forced_trivial_by_coprime_orders`.
+
+The axis checks imply the `rho` value because:
+
+```text
+rho = (rho^179)^2 * (rho^7)^128
+2*179 + 128*7 = 1254 = 1 mod 1253
+```
+
+The symbolic gate checks:
+
+```text
+p24_axis_value_reconstruction_rho_from_right_axis_power=2
+p24_axis_value_reconstruction_rho_from_c_axis_power=128
+p24_axis_value_reconstruction_bezout_reconstructs_rho_exponent=1
+p24_axis_value_reconstruction_same_axis_values_iff_same_rho_value=1
+p24_right_axis_selector_convention_rho_h_shift=6
+p24_right_axis_selector_convention_post_bc_rho_right_coordinate=2
+p24_right_axis_selector_convention_right_axis_h_shift_from_decomposition=3
+p24_right_axis_selector_convention_c_axis_h_shift=0
+p24_right_axis_selector_convention_rho_recomposed_h_shift=6
+p24_right_axis_selector_convention_right_axis_selector_reduced_to_shift6_covariance=1
+p24_c_axis_residual_character_right_fixed_residual_candidates=179
+p24_c_axis_residual_character_residual_ratio_exponents_all_multiples_of_7=1
+p24_c_axis_residual_character_residual_right_axis_values_count=1
+p24_c_axis_residual_character_residual_c_axis_values_count=179
+p24_c_axis_residual_character_residual_max_order=179
+p24_c_axis_residual_character_c_axis_separates_characters_after_right_axis_fixed=1
+p24_pure_c_axis_residual_value_side_invariance_residual_characters=179
+p24_pure_c_axis_residual_value_side_invariance_invariant_value_side_hits=179
+p24_pure_c_axis_residual_value_side_invariance_all_pure_c_residuals_preserve_value_side=1
+p24_pure_c_axis_residual_value_side_invariance_pure_c179_residual_value_not_needed_for_hcoset_verifier=1
+p24_verifier_equivalent_anchor_producer_surface_right_mixed_admissible_pairs=189036
+p24_verifier_equivalent_anchor_producer_surface_r179_c_nontrivial_fourier_channels=1246
+p24_verifier_equivalent_anchor_producer_surface_kernel_polynomial_degree=89
+p24_verifier_equivalent_anchor_producer_surface_remaining_input_is_selected_cm_lang_r179_specialization=1
+```
+
+So the right-axis selector is no longer an independent new Artin value: it is
+the old shift-6 covariance convention transported to the post-`B/C`
+coordinate system.  Once that right-axis residue is fixed, the finite
+ambiguity is exactly the `179` exponents `1+7s`; quotienting by the selected
+Artin coordinate leaves a pure `C_179` character.  Every such residual
+preserves the three value-side identities, so the exact pure `C_179` value is
+not needed for the H-coset certificate.  It remains relevant only for full
+packet equality.  The remaining arithmetic theorem is therefore packet
+identification up to verifier-invisible pure `C_179` residual.
+
+Lean now has a named producer handoff for this final target:
+
+```text
+PuncturedHasseDavenportAnchorProducerObligations:
+  puncturedNonzeroRowsGiveReducedJacobiCarry;
+  pureC179ResidualValueSide;
+  degenerateAnchorIsR179KernelUnit;
+  adjacentAnchorRowSumSliceMatched;
+  cNontrivialResidualMatchedByR179;
+  selectedChildSubtractionCompatible
+=> VerifierEquivalentReducedJacobiCarryObligations.
+```
+
+2026-06-08 continuation: the Lean bridge is now all-character, not just
+single-character.  `TraceGcdDualConditionsValueSideGate.lean` adds
+`AllSelectedKLPuncturedHasseDavenportProducerInputs` and proves:
+
+```text
+all selected KL/R179 punctured-HD producer inputs
+  -> all verifier-equivalent reduced Jacobi carry obligations
+  -> all value-side identities
+  -> all four dual Fourier families
+  -> 1092 H-coset verifier equations.
+```
+
+The file compiles under Lean `v4.30.0`.  The focused producer-shadow gates were
+also rerun:
+
+```text
+selected_defect_producer_equivalence=3/3
+forced_raw_producer_hits=3/3
+kl_degree_zero_equiv_row_balance=3/3
+matching_right_resolvent_twist_is_now_explicit=1
+rho_raw_h_quotient_shift=6
+raw_matching_epsilon_exponent_is_k=1
+corrected_product_formula_rows=3/3
+valid_anchor_scalars_are_plus_minus_one_rows=3/3
+actual_cm_selected_defects_fail_value_identities_generically=1
+```
+
+This closes another formal bookkeeping gap.  It does not construct the
+selected CM/Lang/R179 specialization; it confirms that such a construction,
+for the six nontrivial right characters, now feeds the verifier directly.
+The guardrail remains: raw Jacobi sums need the single degenerate-anchor
+normalization, and generic actual-CM selected defects still fail row balance
+and inversion-complement.  The missing producer is therefore the special
+selected product-formula/CM-Artin pullback, not generic CM symmetry.
+
+2026-06-10 interruption-resume refinement: the selected-product-formula
+contract is now explicit in Lean.  `TraceGcdDualConditionsValueSideGate.lean`
+adds `SelectedProductFormulaProducerObligations` with exactly the three
+packet-facing hypotheses:
+
+```text
+selectedDefectCZeroFiber;
+rawTwoLevelInversionComplement;
+selectedAffineRowBalance.
+```
+
+Lean proves:
+
+```text
+all selected product-formula producer obligations
+  -> all value-side identities
+  -> all four dual Fourier families
+  -> 1092 H-coset verifier equations.
+```
+
+The file compiles.  The matching finite gates were rerun:
+
+```text
+selected_defect_producer_equivalence=3/3
+multiplicative_additive_equivalence=3/3
+forced_product_formula_hits=3/3
+```
+
+So the remaining arithmetic producer can be stated in either additive/log
+language or multiplicative unit language.  Multiplicatively, it must prove:
+
+```text
+U(r,0)U(-r,0) is constant;
+U(r,c)U(-r,-c) is constant for c != 0;
+prod_c U(r,c)/U(r,0)^179 is independent of r;
+the selected degenerate anchor is the normalized R_179/kernel unit.
+```
+
+So the remaining proof is no longer "match the exact Artin character."  It is:
+
+```text
+construct the selected p-integral CM/Lang R_179 or kernel-polynomial anchor
+specialization and prove selected-child subtraction turns the punctured
+Hasse-Davenport packet into the verifier-equivalent reduced Jacobi carry.
+```
+
+Guardrail: the unramified character cannot be inserted as arbitrary extra
+multiplicative character noise after the packet is selected.  A bare mixed
+linear quotient character breaks C-row balance:
+
+```text
+p24_linear_twist_guardrail_full_generator_row_balance_ok=0
+p24_linear_twist_guardrail_full_generator_inversion_constant=0
+p24_linear_twist_guardrail_full_generator_distinct_row_sums=7
+p24_linear_twist_guardrail_pure_c_axis_preserves_value_identities=1
+p24_linear_twist_guardrail_pure_right_axis_selected_defect_is_zero=1
+```
+
+Thus the correct theorem says the unramified twist supplies the Artin
+coordinate for the Jacobi/CM-Lang packet before the selected-defect
+value-side identities are read.
+
+So the direct shortcut
+
+```text
+reduced Jacobi packet over Q(mu_{7*179})
+  + ordinary rational Frobenius p
+  -> p24 post-B/C quotient
+```
+
+is false.  The remaining theorem must instead be stated as a CM-Artin
+pullback/identification:
+
+```text
+the mixed-level Jacobi-sum Hecke packet, after the CM/Lang Artin pullback
+along the actual rho quotient <rho>/<rho^(7*179)>, equals the selected
+trace-GCD packet after Tr_{B/C} up to a verifier-invisible pure C_179
+residual.
+```
+
+This is useful progress because it prevents a wrong "just use cyclotomic
+Jacobi sums" proof and leaves a sharper, source-backed bridge:
+
+```text
+Kubert-Lichtenbaum mixed-level Jacobi-sum packet
+  -> CM-Artin pullback to p24 rho quotient
+  -> selected trace-GCD/CM-Lang packet
+  -> value-side identities
+  -> 1092 H-coset verifier.
+```
+
+Sutherland Algorithm 2 maps cleanly onto the selected-chain fallback surface:
+take the subgroup `G` to have order `n=3107441`, so the intermediate
+polynomial `V` has degree `m=66254` and the specialized recovery polynomial
+`U_y` has degree `n`.  The output-scale accounting is:
+
+```text
+V plus U_y slots:         m+n = 3173695 = 3.173695e-6 * sqrt(p)
+full relative table:            3174011 = 3.174011e-6 * sqrt(p)
+selected chain:                 3107811 = 3.107811e-6 * sqrt(p)
+full class table:          205880396014 = 0.205880396014 * sqrt(p)
+```
+
+This is evidence that the selected-chain certificate surface is the right
+sub-sqrt fallback, not that the producer theorem is solved.  The accelerated
+CM algorithm still enumerates subgroup orbits of roots at CRT primes; its
+published asymptotic win is space/output and root-finding decomposition, not a
+class-set-free p24 producer.  Therefore the remaining fork is now crisp:
+
+```text
+1. adapt accelerated-CM-style decomposition into a producer that carries only
+   the selected embedded orbit data, without class-scale traversal; or
+2. prove the smaller p-unit/determinant identity that bypasses selected-chain
+   root production entirely.
+```
