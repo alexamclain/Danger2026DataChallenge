@@ -1,0 +1,16 @@
+{
+  "name": "exactP_direct_A_xP16_surface",
+  "bridge_fixture_filename": "exactP_same_curve_bridge.json",
+  "current_evidence": false,
+  "same_j_bridge_accepted": true,
+  "same_curve_p16": true,
+  "y_parameter": false,
+  "model_root_x": false,
+  "A_and_xP16": true,
+  "optional_first_half_dgate": false,
+  "active_first_branch_chain": false,
+  "any_valid_halving_chain": false,
+  "direct_x0": false,
+  "internal_verify": false,
+  "official_vpp": false
+}

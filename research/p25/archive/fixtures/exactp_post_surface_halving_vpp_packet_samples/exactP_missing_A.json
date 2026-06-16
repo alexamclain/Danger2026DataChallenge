@@ -1,0 +1,15 @@
+{
+  "name": "exactP_missing_A",
+  "surface_sample_filename": "exactP_direct_A_xP16_surface.json",
+  "current_evidence": false,
+  "A": null,
+  "xP16": 5641277106015054878246206,
+  "chain": [
+    5641277106015054878246206,
+    8473620875806245623307779
+  ],
+  "x0": null,
+  "start_depth": 4,
+  "final_depth": 42,
+  "run_vpp": false
+}

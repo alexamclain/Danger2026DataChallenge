@@ -1,0 +1,15 @@
+{
+  "name": "curved_corner_bridge",
+  "theorem_body_verified": true,
+  "odd_payload_object": "curved_corner",
+  "exact_p25_specialization": true,
+  "odd_level_value_or_divisor": true,
+  "fiber_product_or_modular_correspondence": true,
+  "preserves_j_gluing": true,
+  "x16_surface_relation": false,
+  "emits_x16_y": false,
+  "emits_model_root_or_xp16": false,
+  "emits_halving_chain_or_x0": false,
+  "danger3_framing": true,
+  "concrete_vpp_verified_triple": false
+}
