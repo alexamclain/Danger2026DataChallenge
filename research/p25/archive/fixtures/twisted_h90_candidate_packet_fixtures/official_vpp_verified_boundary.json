@@ -1,0 +1,21 @@
+{
+  "name": "official_vpp_verified_boundary",
+  "theorem_body_verified": true,
+  "uses_degree6_orbit": true,
+  "uses_pure_norm": false,
+  "uses_pair_sum": false,
+  "uses_signed_shadow": false,
+  "uses_quotient_or_ratio": true,
+  "uses_hilbert90_boundary": true,
+  "finite_value_or_divisor_theorem": true,
+  "period156_context": true,
+  "arithmetic_source_theorem": true,
+  "finite_field_identity_for_p": true,
+  "generic_cm_or_class_field_generation": false,
+  "explicit_non_cm_finite_field_framing": false,
+  "danger3_policy_accepts_identity": true,
+  "same_j_x18112_bridge": true,
+  "x16_surface_or_A_xP16": true,
+  "concrete_A_x0": true,
+  "official_vpp": true
+}

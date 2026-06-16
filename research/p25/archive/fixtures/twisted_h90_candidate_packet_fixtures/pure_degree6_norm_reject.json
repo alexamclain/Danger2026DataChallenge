@@ -1,0 +1,21 @@
+{
+  "name": "pure_degree6_norm_reject",
+  "theorem_body_verified": true,
+  "uses_degree6_orbit": true,
+  "uses_pure_norm": true,
+  "uses_pair_sum": false,
+  "uses_signed_shadow": false,
+  "uses_quotient_or_ratio": false,
+  "uses_hilbert90_boundary": false,
+  "finite_value_or_divisor_theorem": true,
+  "period156_context": true,
+  "arithmetic_source_theorem": true,
+  "finite_field_identity_for_p": true,
+  "generic_cm_or_class_field_generation": false,
+  "explicit_non_cm_finite_field_framing": false,
+  "danger3_policy_accepts_identity": false,
+  "same_j_x18112_bridge": false,
+  "x16_surface_or_A_xP16": false,
+  "concrete_A_x0": false,
+  "official_vpp": false
+}
