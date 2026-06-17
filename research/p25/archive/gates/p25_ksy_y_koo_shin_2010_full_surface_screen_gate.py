@@ -33,8 +33,11 @@ from p25_laneB_square_axis_bridge_raw_source_character_gate import (
 )
 
 
-REPO = Path(__file__).resolve().parents[2]
-TEXT_PATH = REPO / "incoming" / "extracted" / "s00209-008-0456-9.pdf.extract.txt"
+TEXT_PATH_CANDIDATES = (
+    Path("incoming/extracted/s00209-008-0456-9.pdf.extract.txt"),
+    Path("research/p25/incoming/extracted/s00209-008-0456-9.pdf.extract.txt"),
+)
+TEXT_PATH = next((path for path in TEXT_PATH_CANDIDATES if path.exists()), TEXT_PATH_CANDIDATES[0])
 QUOTIENT_RIGHT_ORDER = 3
 
 Coord = tuple[int, int]

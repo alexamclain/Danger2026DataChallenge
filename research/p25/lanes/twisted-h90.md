@@ -1,6 +1,6 @@
 ---
 type: lane
-status: active
+status: background
 updated: 2026-06-16
 canonical: true
 owner: llm
@@ -10,13 +10,13 @@ owner: llm
 
 ## Purpose
 
-Track the conductor-39 twisted/Hilbert-90 value route as a compact alternate
-to the first-pass divisor/additive asks.
+Track the conductor-39 twisted/Hilbert-90 value route as a compact support
+surface behind the first-pass divisor/additive asks.
 
 ## Current Claim
 
-The twisted/H90 route is still live, but only in a narrow form. The smallest
-useful yes is:
+The twisted/H90 route is a support surface, not a first-pass front door. It is
+still useful only in one narrow form. The smallest useful yes is:
 
 ```text
 twisted quotient/ratio or Hilbert-90 finite value/divisor theorem
@@ -26,10 +26,19 @@ twisted quotient/ratio or Hilbert-90 finite value/divisor theorem
 
 Anything weaker is helper structure, not a source-stage close.
 
+Do not continue this lane on broad H90 or norm vocabulary alone. It only
+advances when the source snippet already contains the exact source object plus
+period-156 branch/root/telescoping context and can enter the period-156 value
+source hook plus source-snippet intake.
+
 ## Decisive Evidence
 
 - [Twisted/H90 minimal closing-ask packet](../evidence/p25_ksy_y_twisted_h90_minimal_closing_ask_packet_20260614.md)
   gives the explicit reject/helper/conditional ladder.
+- [V2 support lane status demotion](../evidence/p25_v2_support_lane_status_demotion_20260616.md)
+  demotes twisted-H90 to a background support surface unless an incoming
+  theorem-shaped snippet already satisfies the period-156 value source hook and
+  source-snippet intake.
 - [External source-theorem obligation matrix](../evidence/p25_ksy_y_external_source_theorem_obligation_matrix_20260614.md)
   keeps twisted/H90 live, but behind H0 and conductor 39.
 
@@ -49,4 +58,5 @@ Anything weaker is helper structure, not a source-stage close.
 ## Linked Artifacts
 
 - [Twisted/H90 ask packet](../evidence/p25_ksy_y_twisted_h90_minimal_closing_ask_packet_20260614.md)
+- [V2 support lane status demotion](../evidence/p25_v2_support_lane_status_demotion_20260616.md)
 - [Schertz/Shin period-value scout](../evidence/p25_ksy_y_siegel_robert_period_value_primary_source_scout_20260613.md)

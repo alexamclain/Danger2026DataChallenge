@@ -59,6 +59,21 @@ Every canonical page inside `lanes/`, `sources/`, `concepts/`, and
 Default rule: update canonical pages first. Create a new gate or dated note only
 when executable checking or archival provenance is genuinely needed.
 
+## P25 v2 Operating Discipline
+
+- Treat the local private p25 workspace as the live cockpit.
+- Treat this public `Danger2026DataChallenge/research/p25` copy as a mirror
+  that is updated only after meaningful canonical changes.
+- Organize work by canonical artifact: operations/practical-search, H0,
+  conductor 39, exact-P, or a named support microscope.
+- Every artifact-producing pass must name pages read, commands or probes run,
+  and one continue/kill recommendation.
+- Expert and literature asks must be lane-shaped, never broad: H0
+  divisor/additive with H90 boundary; conductor-39 mixed `U_chi/W` with Yang
+  lift/descent; exact-P 75-atom product, orientation, or period-156 bridge.
+- Keep Lane A killed as a literal p24 CM/Lang transfer; use Lane B and Lane C
+  only as support microscopes tied to a live theorem idea.
+
 ## Workflow: Ingest
 
 Use this when a raw source arrives in `incoming/` or by external absolute path.
@@ -97,6 +112,17 @@ Run this check whenever the wiki feels drifted:
 5. Find canonical pages that still mention removed paths, especially `/tmp`.
 6. Confirm `frontier.md` still tells the full current story without archive
    notes.
+7. Prefer the lightweight v2 cockpit gate:
+   `python3 research/p25/archive/gates/p25_v2_wiki_cockpit_lightweight_check_gate.py`.
+   Its marker list includes the first-class-run v2 plan guard, which checks
+   that practical search remains primary, H0/conductor 39 remain the first-pass
+   theorem fronts, exact-P remains second-pass, support microscopes stay
+   subordinate, and the private/public mirror boundary remains documented.
+   Do not run a broad `p25_v2_*_gate.py` glob during production-search-first
+   work. These archived recomputation gates are intentionally heavy and should
+   be run only when that lane is the active object:
+   - `archive/gates/p25_v2_exactp_to_unified_target_spine_gate.py`
+   - `archive/gates/p25_v2_h0_conductor39_unified_target_gate.py`
 
 ## Editing Rules
 

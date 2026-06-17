@@ -85,6 +85,8 @@ def artifact_present(path: Path) -> bool:
 
 
 def marker_present(path: Path, marker: str) -> bool:
+    if not path.exists() and path.parent == RESEARCH:
+        path = RESEARCH / "archive" / "notes" / path.name
     return artifact_present(path) and marker in path.read_text()
 
 

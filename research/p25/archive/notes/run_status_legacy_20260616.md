@@ -5,15 +5,15 @@ Updated: 2026-06-16 05:14 PDT
 ## Production Fleet
 
 ```text
-run_dir = /Users/agent/Documents/Codex/pomerance-p25-run/runs/p25_x16hn_20260616_051158_py_seed26047290
+run_dir = runs/p25_x16hn_20260616_051158_py_seed26047290
 p = 10000000000000000000000013
 mode = x16halvenonsplit
 workers = 10
 trials_per_worker = 50000000000
 seed_base = 26047290
 seed_step = 104729
-watch_pid = 40126
-status_heartbeat_pid = 40143
+watch_pid = private-local
+status_heartbeat_pid = private-local
 ```
 
 Current status:
@@ -31,7 +31,7 @@ exhausted_file = none yet
 Previous production chunk:
 
 ```text
-run_dir = /Users/agent/Documents/Codex/pomerance-p25-run/runs/p25_x16hn_20260612_085118_py
+run_dir = runs/p25_x16hn_20260612_085118_py
 seed_base = 25000000
 last_heartbeat = 2026-06-14T23:15:39-0700
 last_heartbeat_trials = 266467000000

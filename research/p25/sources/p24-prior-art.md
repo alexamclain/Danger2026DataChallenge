@@ -26,11 +26,11 @@ Use these curated handoffs first, not the full p24 artifact forest.
 
 ## Decisive Evidence
 
-- [00_HANDOFF_INDEX_20260607](/Users/agent/Documents/Codex/Danger2026DataChallenge/p24/00_HANDOFF_INDEX_20260607.md)
-- [00_FRESH_EYES_SYNTHESIS_20260607](/Users/agent/Documents/Codex/Danger2026DataChallenge/p24/00_FRESH_EYES_SYNTHESIS_20260607.md)
-- [00_GLOBAL_SYNTHESIS_HANDOFF](/Users/agent/Documents/Codex/Danger2026DataChallenge/p24/00_GLOBAL_SYNTHESIS_HANDOFF.md)
-- [00_THEOREM_ATTEMPTS_LEDGER](/Users/agent/Documents/Codex/Danger2026DataChallenge/p24/00_THEOREM_ATTEMPTS_LEDGER.md)
-- [strict_danger3_frontier](/Users/agent/Documents/Codex/Danger2026DataChallenge/p24/strict_danger3_frontier.md)
+- [00_HANDOFF_INDEX_20260607](../../p24/00_HANDOFF_INDEX_20260607.md)
+- [00_FRESH_EYES_SYNTHESIS_20260607](../../p24/00_FRESH_EYES_SYNTHESIS_20260607.md)
+- [00_GLOBAL_SYNTHESIS_HANDOFF](../../p24/00_GLOBAL_SYNTHESIS_HANDOFF.md)
+- [00_THEOREM_ATTEMPTS_LEDGER](../../p24/00_THEOREM_ATTEMPTS_LEDGER.md)
+- [strict_danger3_frontier](../../p24/strict_danger3_frontier.md)
 
 ## Open Blockers
 

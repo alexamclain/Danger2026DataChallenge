@@ -16,6 +16,16 @@ from __future__ import annotations
 from dataclasses import dataclass
 from hashlib import sha256
 from pathlib import Path
+import sys
+
+
+HARNESS_DIR = Path(__file__).resolve().parent
+ARCHIVE_DIR = HARNESS_DIR.parent
+GATE_DIR = ARCHIVE_DIR / "gates"
+FIXTURE_DIR = ARCHIVE_DIR / "fixtures" / "h0_product_fixtures"
+for import_dir in (GATE_DIR, HARNESS_DIR):
+    if str(import_dir) not in sys.path:
+        sys.path.insert(0, str(import_dir))
 
 from p25_ksy_y_h0_source_theorem_candidate_matcher_gate import (
     H0SourceTheoremCandidate,
@@ -26,9 +36,6 @@ from p25_ksy_y_h0_translate_exact_product_query_packet_gate import (
     H0ExactProductQueryRow,
     profile_h0_translate_exact_product_query_packet,
 )
-
-
-FIXTURE_DIR = Path(__file__).with_name("h0_product_fixtures")
 
 
 @dataclass(frozen=True)
@@ -123,8 +130,9 @@ def commands_text(rows: tuple[H0ExactProductQueryRow, ...]) -> str:
     ]
     for row in rows:
         base = (
-            "PYTHONPATH=research/p25 PYTHONDONTWRITEBYTECODE=1 python3 "
-            "research/p25/p25_ksy_y_h0_source_theorem_candidate_matcher_gate.py "
+            "PYTHONPATH=research/p25/archive/gates:research/p25/archive/harness "
+            "PYTHONDONTWRITEBYTECODE=1 python3 "
+            "research/p25/archive/gates/p25_ksy_y_h0_source_theorem_candidate_matcher_gate.py "
             f"--product-multiplier {row.multiplier_from_canonical} "
             "--residue-exact --source-theorem"
         )
