@@ -17,6 +17,14 @@ import tempfile
 from dataclasses import dataclass
 from hashlib import sha256
 from pathlib import Path
+import sys
+
+
+GATE_DIR = Path(__file__).resolve().parent
+HARNESS_DIR = GATE_DIR.parent / "harness"
+for import_dir in (GATE_DIR, HARNESS_DIR):
+    if str(import_dir) not in sys.path:
+        sys.path.insert(0, str(import_dir))
 
 from p25_ksy_y_h0_exact_product_fixture_export import (
     FIXTURE_DIR,

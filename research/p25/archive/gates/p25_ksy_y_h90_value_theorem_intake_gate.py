@@ -17,8 +17,8 @@ from dataclasses import dataclass
 from pathlib import Path
 
 
-REPO = Path(__file__).resolve().parents[2]
-BRIDGE_SPINE = REPO / "research" / "p25" / "p25_ksy_y_yang_ksy_product_h90_bridge_spine_20260614.md"
+RESEARCH = Path("research/p25")
+BRIDGE_SPINE = RESEARCH / "archive" / "notes" / "p25_ksy_y_yang_ksy_product_h90_bridge_spine_20260614.md"
 BRIDGE_SPINE_MARKER = "ksy_y_yang_ksy_product_h90_bridge_spine_rows=1/1"
 ATOM_COUNT = 75
 RAW_SIEGEL_TERM_COUNT = 300

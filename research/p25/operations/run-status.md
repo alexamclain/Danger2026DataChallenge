@@ -1,7 +1,7 @@
 ---
 type: operations
 status: active
-updated: 2026-06-16
+updated: 2026-06-17
 canonical: true
 owner: llm
 ---
@@ -25,15 +25,40 @@ workers = 10
 run_dir = runs/p25_x16hn_20260616_051158_py_seed26047290
 ```
 
-Latest observed watcher snapshot (`2026-06-16 05:44:02 PDT`):
+Latest public-safe status from the private cockpit (`2026-06-17`):
 
 ```text
 workers_alive = 10/10
 watcher_alive = yes
-trials = 2320500000
-rate_Mps = 1.210
+heartbeat_alive = yes
+trials = redacted in public mirror
+rate_Mps = 1.200
 marker = none
 ```
+
+Standard launch/relaunch path:
+
+```bash
+cc -O3 -o src/pomerance src/pomerance.c
+python3 src/launch_fleet_detached.py \
+  10000000000000000000000013 \
+  x16halvenonsplit \
+  10 \
+  50000000000 \
+  <seed_base> \
+  104729 \
+  runs/p25_x16hn_<timestamp>
+python3 src/launch_status_heartbeat.py runs/p25_x16hn_<timestamp> --interval 60
+```
+
+For this lineage, the next 10-worker relaunch seed base is:
+
+```text
+next_seed_base = 27094580
+```
+
+Do not start a separate manual watcher for a launcher-managed run; the detached
+launcher already starts `watch_hit.sh`.
 
 Previous production chunk boundary:
 
@@ -48,10 +73,18 @@ verdict = partial unexplained termination, not exhausted and not a hit
 
 ## Decisive Evidence
 
-- The live watcher snapshots recorded in the original `pomerance-p25-run`
-  workspace showed the current worker count, rate, and marker state.
+- `runs/p25_x16hn_20260616_051158_py_seed26047290/watch.log` shows the live
+  worker count, rate, and marker state in the private cockpit.
+- `runs/LATEST_P25_RUN.txt` pins the active run directory in the private
+  cockpit.
+- A fresh private live-run smoke check on `2026-06-17` found ten
+  `src/pomerance` workers plus watcher and status-heartbeat processes alive;
+  fresh heartbeat and trial-count telemetry is intentionally not mirrored.
 - [Strict practical improvement evidence](../evidence/lane_D_strict_practical_improvement.md)
   explains why the fleet is still on `x16halvenonsplit`.
+- [First-class-run v2 plan guard](../evidence/p25_v2_first_class_run_v2_plan_guard_20260617.md)
+  checks that this launcher/heartbeat/relaunch policy remains synchronized
+  with the theorem-front ordering and the public/private mirror boundary.
 
 ## Open Blockers
 
@@ -59,6 +92,8 @@ verdict = partial unexplained termination, not exhausted and not a hit
 - The earlier chunk died without a clean exhausted marker, so operational
   continuity is still worth watching.
 - No alternate mode has yet produced better expected hits per CPU-hour.
+- If this run dies, classify it as `HIT`, `EXHAUSTED`, or partial unexplained
+  termination before launching the next chunk.
 
 ## Next Reads
 
@@ -68,7 +103,10 @@ verdict = partial unexplained termination, not exhausted and not a hit
 
 ## Linked Artifacts
 
-- The original run-specific `LATEST_P25_RUN.txt` and `watch.log` files lived in
-  the separate run workspace and are summarized here rather than vendored into
-  this repository copy.
+- `runs/LATEST_P25_RUN.txt`
+- `runs/p25_x16hn_20260616_051158_py_seed26047290/watch.log`
+- `runs/p25_x16hn_20260616_051158_py_seed26047290/COMMAND.txt`
+- `runs/p25_x16hn_20260616_051158_py_seed26047290/status_heartbeat.pid`
+- `runs/p25_x16hn_20260612_085118_py/watch.log`
 - [Legacy run ledger](../archive/notes/run_status_legacy_20260616.md)
+- [First-class-run v2 plan guard](../evidence/p25_v2_first_class_run_v2_plan_guard_20260617.md)

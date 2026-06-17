@@ -25,15 +25,16 @@ This index lists canonical pages only.
 
 - [Practical Search](lanes/practical-search.md): active `x16halvenonsplit`
   fleet and operational decision boundary.
-- [H0](lanes/h0.md): first-pass divisor/additive theorem target on the H0 side.
+- [H0](lanes/h0.md): first-pass source language for the unified
+  H0/conductor-39 finite target.
 - [Conductor 39](lanes/conductor39.md): first-pass mixed `U_chi/W` theorem
-  target.
-- [Exact P](lanes/exact-p.md): headline 75-atom moonshot, now treated as the
-  heavier second-pass route.
-- [Twisted H90](lanes/twisted-h90.md): conductor-39 twisted/Hilbert-90 value
-  route with period-156 requirements.
-- [Curved Corner](lanes/curved-corner.md): unit-triangle curved-corner route
-  with period-156 requirements.
+  source language for the same finite target.
+- [Exact P](lanes/exact-p.md): headline 75-atom moonshot, now treated as a
+  stronger upstream producer for the unified target.
+- [Twisted H90](lanes/twisted-h90.md): background support surface routed
+  through period-156 value intake.
+- [Curved Corner](lanes/curved-corner.md): background support route with
+  period-156 requirements.
 
 ## Sources
 
