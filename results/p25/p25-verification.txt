@@ -1,0 +1,31 @@
+DANGER3 p25 Verification
+
+Triple:
+  p  = 10000000000000000000000013
+  A  = 5863342488035851054212447
+  x0 = 9636258147581954669181726
+
+Independent replay:
+  sqrt_floor = 3162277660168
+  sqrt_sqrt_floor = 1778279
+  bound = 3162281216727
+  k = 42
+  zero_steps = [42]
+  final_X = 5402152861902155335641091
+  final_Z = 0
+  gcd_Zprev_p = 1
+  independent_replay_pass = True
+
+OpenSSL primality check:
+  returncode = 0
+  output = 10000000000000000000000013 is prime
+
+Official DANGER3 verifier:
+  command = python3 vpp.py 10000000000000000000000013 5863342488035851054212447 9636258147581954669181726
+  returncode = 0
+  output = True
+
+Lean certificate:
+  pomerance_10000000000000000000000013.lean generated with DANGER3 lean_vpp.py
+
+verification_status = PASS

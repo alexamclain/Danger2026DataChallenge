@@ -1,0 +1,53 @@
+DANGER3 p25 Success Summary
+
+Prime:
+  p = 10000000000000000000000013
+
+Verified triple:
+  p  = 10000000000000000000000013
+  A  = 5863342488035851054212447
+  x0 = 9636258147581954669181726
+
+Search method:
+  X1(16) prescribed torsion using Sutherland's modular-curve construction,
+  mapped to Montgomery form, with a y-level nonsplit discriminant filter and
+  first-branch successive halving.
+
+Successful production run:
+  run mode: x16halvenonsplit
+  workers: 10 independent single-thread worker processes
+  successful worker: worker08
+  found at: 2026-06-18 02:32:33 PDT
+  successful worker elapsed: 163234.41 seconds
+  successful worker local accepted trials: 19634415922
+  reconstructed aggregate accepted trials at hit: 196343915922
+  observed aggregate rate near success: about 1.20M accepted trials/sec
+
+Full campaign accounting:
+  prior partial chunk: 266.467B aggregate accepted trials, no marker
+  successful production run at hit: 196.343915922B aggregate accepted trials
+  total practical campaign accepted trials: 462.810915922B
+
+Comparison to sqrt scale:
+  sqrt_floor(p) = 3162277660168
+  successful run fraction of sqrt_floor(p): 0.062089398
+  successful run speedup versus sqrt-floor trials: about 16.11x
+  full campaign fraction of sqrt_floor(p): 0.146353662
+  full campaign speedup versus sqrt-floor trials: about 6.83x
+
+Interpretation:
+  This is another strong fixed-prime practical win over the sqrt(p)-scale
+  search yardstick. The technique is the same practical X1(16) nonsplit /
+  halving family as p23 and Jane Shi's p24 result, with p25 requiring no
+  p24-style square-root patch because p mod 8 = 5. The theorem-side p25
+  research narrowed future moonshot targets but did not produce the winning
+  certificate.
+
+Provenance:
+  Prescribed torsion: Andrew V. Sutherland, X1(N) construction/tables
+  Halving / 2-Sylow layer: standard elliptic-curve 2-Sylow halving methods
+  p24 practical template: Jane Shi's p24 x16halvenonsplit result
+  Local synthesis and p25 run: Alexa, Codex-assisted
+
+Triple line for vpp.py:
+  10000000000000000000000013 5863342488035851054212447 9636258147581954669181726

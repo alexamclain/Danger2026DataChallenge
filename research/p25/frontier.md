@@ -1,21 +1,39 @@
 # P25 Frontier
 
-Updated: 2026-06-17
+Updated: 2026-06-19
 
 ## Live Run
 
-- [Practical search](lanes/practical-search.md) is the only concrete route to a
-  certificate today.
-- The active fleet is a 10-worker `x16halvenonsplit` run on
-  `p = 10^25 + 13`. The private cockpit has a fresh 2026-06-17 smoke check
-  showing the detached launcher layout, workers, watcher, and heartbeat alive,
-  with no hit or exhausted marker. This public mirror records the operating
-  shape but intentionally omits fresh heartbeat and trial-count telemetry.
-- The previous production chunk died partway through. We are treating that as a
-  partial unexplained termination, not a completed search region.
-- The standard relaunch path is now the detached launcher plus heartbeat:
-  it writes `LATEST_P25_RUN.txt`, `COMMAND.txt`, `pids.txt`, `watch.pid`, and
-  `watch.log`; do not start a second manual watcher for launcher-managed runs.
+- [Practical search](lanes/practical-search.md) is closed for the p25 target:
+  the 10-worker `x16halvenonsplit` run on `p = 10^25 + 13` found a verified
+  triple on 2026-06-18 at 02:32:33 PDT.
+- Verified triple:
+
+  ```text
+  p  = 10000000000000000000000013
+  A  = 5863342488035851054212447
+  x0 = 9636258147581954669181726
+  ```
+
+- Official DANGER3 `vpp.py` returned `True`; the repo verification helper also
+  passed independent doubling replay, OpenSSL primality, and generated a Lean
+  certificate.
+- Candidate accounting:
+
+  ```text
+  winning worker local accepted trials       = 19634415922
+  reconstructed successful-run aggregate     = 196343915922
+  prior partial no-hit chunk                 = 266467000000
+  total practical campaign accounting        = 462810915922
+  ```
+
+- There is no active long-running p25 job now. The final heartbeat state is
+  `workers=0/10`, `watcher=dead`, and `marker=HIT`.
+- The previous production chunk remains classified as a partial unexplained
+  termination, not a completed search region.
+- The theorem-side pages below now serve as postmortem/future-work context.
+  They did not produce the winning certificate; the certificate came from the
+  practical `X1(16)` nonsplit/halving fleet.
 
 ## First-Pass Theorem Targets
 

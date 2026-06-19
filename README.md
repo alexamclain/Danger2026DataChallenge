@@ -1,9 +1,9 @@
 # DANGER3 Pomerance Search Results
 
-This fork records verified DANGER3 Pomerance triples for `p = 10^23 + 117`
-and `p = 10^22 + 9`, plus the local Codex-assisted experimental work used to
-find and verify them. This work was undertaken as part of a collaboration
-across teams in DARPA's expMath program.
+This fork records verified DANGER3 Pomerance triples for
+`p = 10^25 + 13`, `p = 10^23 + 117`, and `p = 10^22 + 9`, plus the local
+Codex-assisted experimental work used to find and verify them. This work was
+undertaken as part of a collaboration across teams in DARPA's expMath program.
 
 Curated research notes now live in:
 
@@ -11,6 +11,71 @@ Curated research notes now live in:
 - `research/p24/` for the p24 research wiki and archived exploration;
 - `research/p25/` for the p25 research wiki imported from the separate
   `pomerance-p25-run` workspace.
+
+## p25 Result: X1(16) Nonsplit Search
+
+For
+
+```text
+p = 10000000000000000000000013 = 10^25 + 13
+```
+
+the run found the triple:
+
+```text
+10000000000000000000000013 5863342488035851054212447 9636258147581954669181726
+```
+
+Equivalently:
+
+```text
+p  = 10000000000000000000000013
+A  = 5863342488035851054212447
+x0 = 9636258147581954669181726
+```
+
+The p25 hit used the same practical family that worked for p23 and Jane Shi's
+p24 result: Sutherland `X1(16)` prescribed torsion, a y-level nonsplit
+Montgomery discriminant filter, and first-branch successive halving. The p25
+target has `p mod 8 = 5`, so it did not need the p24 square-root patch for the
+`p mod 8 = 7` case.
+
+The successful 10-worker `x16halvenonsplit` run found the triple on
+2026-06-18 at 02:32:33 PDT. The winning worker reported about 19.63B local
+accepted candidates; reconstructing the aggregate across workers gives about
+196.34B accepted candidates at the hit:
+
+```text
+successful run accepted trials       = 196.343915922B
+sqrt_floor(p)                        = 3162.277660168B
+fraction of sqrt_floor(p)            = 0.062089398
+speedup vs sqrt-floor trials         = about 16.11x
+```
+
+Including an earlier partial no-hit production chunk that stopped without a
+clean exhausted marker gives the full p25 practical campaign accounting:
+
+```text
+prior partial chunk accepted trials  = 266.467000000B
+successful run accepted trials       = 196.343915922B
+total campaign accepted trials       = 462.810915922B
+fraction of sqrt_floor(p)            = 0.146353662
+speedup vs sqrt-floor trials         = about 6.83x
+```
+
+Interpretation: the p25 result is another strong fixed-prime practical win
+over the sqrt-scale search yardstick. The certificate came from the practical
+`X1(16)` nonsplit/halving fleet; the parallel theorem-side research did not
+produce the winning shortcut, but it substantially narrowed what a future
+moonshot would need to prove.
+
+Reproducibility artifacts are in `results/p25/`:
+
+- `triple.txt`
+- `p25-success-summary.txt`
+- `p25-verification.txt`
+- `p25-worker08-tail.txt`
+- `pomerance_10000000000000000000000013.lean`
 
 ## p23 Result: X1(16) Nonsplit Search
 

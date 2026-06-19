@@ -1,5 +1,15 @@
 # P25 Research Log
 
+## [2026-06-19] operations | p25 practical hit verified
+
+Updated the cockpit, practical-search lane, and run-status ledger after the
+10-worker `x16halvenonsplit` run found a verified p25 triple on 2026-06-18 at
+02:32:33 PDT. The public result artifacts now record the triple, independent
+doubling replay, OpenSSL primality, official DANGER3 `vpp.py` output, Lean
+certificate generation, worker08 tail, successful-run aggregate accounting
+`196343915922`, and full practical campaign accounting `462810915922`.
+There is no active long-running p25 job now; the final marker is `HIT`.
+
 ## [2026-06-17] theorem | matched aggregate feasibility narrowed
 
 Added a matched-quotient source-feasibility screen. It shows that standard
