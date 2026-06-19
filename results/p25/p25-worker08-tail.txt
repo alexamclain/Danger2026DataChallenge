@@ -1,0 +1,11 @@
+Thu Jun 18 02:32:33 PDT 2026
+worker08.log:Verified: PASS  (163234.41s)
+--- worker08.log tail ---
+  trials=19633000000 percent=39.266000 elapsed=163223.2 rate_Mps=0.120
+  trials=19633500000 percent=39.267000 elapsed=163227.2 rate_Mps=0.120
+  trials=19634000000 percent=39.268000 elapsed=163231.1 rate_Mps=0.120
+Found after 163234.41s (~19634415922 X1(16) curves)
+
+10000000000000000000000013 5863342488035851054212447 9636258147581954669181726
+
+Verified: PASS  (163234.41s)

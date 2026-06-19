@@ -3,6 +3,21 @@
 This directory records verified Pomerance triples and compact reproducibility
 artifacts for the local Codex-assisted DANGER3 runs.
 
+## p25 Result
+
+The p25 artifacts are in `p25/`.
+
+```text
+p  = 10000000000000000000000013
+A  = 5863342488035851054212447
+x0 = 9636258147581954669181726
+```
+
+The p25 run used y-filtered nonsplit `X1(16)` first-branch halving and found
+the triple after about 196.34B aggregate accepted trials in the successful
+production run. Including the earlier partial no-hit chunk, the full practical
+campaign used about 462.81B accepted trials. See `p25/README.md` for details.
+
 ## p23 Result
 
 The p23 artifacts are in `p23/`.

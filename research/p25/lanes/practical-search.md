@@ -1,7 +1,7 @@
 ---
 type: lane
-status: active
-updated: 2026-06-17
+status: archived
+updated: 2026-06-19
 canonical: true
 owner: llm
 ---
@@ -10,43 +10,52 @@ owner: llm
 
 ## Purpose
 
-Track the production search surface, the live run, and the decision boundary
-for changing modes.
+Track the production search surface, the verified p25 hit, and the accounting
+boundary for the practical campaign.
 
 ## Current Claim
 
-`x16halvenonsplit` remains the best practical route for `p = 10^25 + 13`.
-The active 10-worker fleet is healthy, `p mod 8 = 5` means no p24 square-root
-patch is needed, and there is still no measured alternative with better
-expected hits per CPU-hour.
+`x16halvenonsplit` found the p25 certificate for `p = 10^25 + 13`.
+The core technique is the same practical `X1(16)` nonsplit / first-branch
+halving route as p23 and Jane Shi's p24 result. For p25, `p mod 8 = 5`, so no
+p24 square-root patch was needed.
 
-As of the latest private smoke check on `2026-06-17`, the public-safe status is:
+Verified triple:
+
+```text
+p  = 10000000000000000000000013
+A  = 5863342488035851054212447
+x0 = 9636258147581954669181726
+```
+
+Successful run accounting:
 
 ```text
 run_dir = runs/p25_x16hn_20260616_051158_py_seed26047290
-workers_alive = 10/10
-watcher_alive = yes
-heartbeat_alive = yes
-accepted_candidates = redacted in public mirror
-aggregate_rate ~= 1.200 M/s
-marker = none
+workers = 10
+successful_worker = worker08
+found_at = 2026-06-18 02:32:33 PDT
+successful_worker_local_accepted_trials = 19634415922
+reconstructed_successful_run_aggregate_trials = 196343915922
+sqrt_floor(p) = 3162277660168
+successful_run_fraction_of_sqrt = 0.062089398
+successful_run_speedup_vs_sqrt = about 16.11x
 ```
 
-The immediately prior production chunk stopped partway through and is treated
-as a partial unexplained termination, not exhaustion and not a hit.
-
-Canonical relaunch uses `src/launch_fleet_detached.py` plus
-`src/launch_status_heartbeat.py`; the detached launcher already starts
-`watch_hit.sh`, so a second manual watcher is unnecessary. The next 10-worker
-chunk should start at `seed_base=27094580`.
+The immediately prior production chunk stopped partway through after
+266.467B accepted trials and is treated as a partial unexplained termination,
+not exhaustion and not a hit. Charging that chunk to the campaign gives
+462.810915922B total accepted trials, or 0.146353662 of `sqrt_floor(p)`.
 
 ## Decisive Evidence
 
-- [Run status](../operations/run-status.md) captures the active chunk and the
-  prior partial stop boundary.
-- The private live-run smoke audit verifies the detached launcher layout,
-  worker liveness, watcher liveness, heartbeat liveness, and marker state; it
-  is not mirrored here because it contains fresh local telemetry.
+- [Run status](../operations/run-status.md) captures the successful chunk and
+  the prior partial stop boundary.
+- `results/p25/triple.txt` records the official triple line.
+- `results/p25/p25-verification.txt` records independent doubling replay,
+  OpenSSL primality, official DANGER3 `vpp.py`, and Lean certificate
+  generation.
+- `results/p25/p25-worker08-tail.txt` records the successful worker tail.
 - [V2 post-theorem extraction router](../evidence/p25_v2_post_theorem_extraction_router_20260616.md)
   records the bridge from a theorem hit to the practical `x16halvenonsplit`
   surface: same-`j` `X_1(8112)`, `A,xP16`, 38 halvings or direct `x0`, and
@@ -74,16 +83,13 @@ chunk should start at `seed_base=27094580`.
 
 ## Open Blockers
 
-- A certificate still requires an actual hit.
-- The prior chunk died without a clean exhausted marker, so operational
-  monitoring still matters.
-- No alternate production mode has yet cleared the "better hits per CPU-hour"
-  bar.
+- No practical-search blocker remains for the p25 certificate.
+- The prior chunk died without a clean exhausted marker and remains recorded as
+  partial unexplained termination.
+- No alternate production mode needs promotion for p25 now that the certificate
+  is found.
 - A theorem-side bridge is not enough unless it passes the extraction minimal
   hook and emits the practical payload accepted by the extraction contract.
-- A mode change is accepted only if paired timing gives at least `0.85x`
-  baseline throughput and measured survivor lift clears the `1.75x` break-even
-  threshold with margin.
 
 ## Next Reads
 
@@ -94,8 +100,14 @@ chunk should start at `seed_base=27094580`.
 ## Linked Artifacts
 
 - `runs/LATEST_P25_RUN.txt`
+- `runs/p25_x16hn_20260616_051158_py_seed26047290/HIT.txt`
 - `runs/p25_x16hn_20260616_051158_py_seed26047290/watch.log`
 - `runs/p25_x16hn_20260616_051158_py_seed26047290/COMMAND.txt`
+- `results/p25/triple.txt`
+- `results/p25/p25-success-summary.txt`
+- `results/p25/p25-verification.txt`
+- `results/p25/p25-worker08-tail.txt`
+- `results/p25/pomerance_10000000000000000000000013.lean`
 - [Legacy run ledger](../archive/notes/run_status_legacy_20260616.md)
 - [Lane D evidence](../evidence/lane_D_strict_practical_improvement.md)
 - [V2 extraction payload contract](../evidence/p25_v2_extraction_payload_contract_20260616.md)
