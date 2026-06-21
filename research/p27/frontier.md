@@ -455,6 +455,16 @@ descend a named class back to the p27 sign regime.  Do not repeat plain `E'`
 low-pole or sparse-factor scans.  The online Magma `q=1471` check reports
 `RESULT p27_eprime_tcover_twist_q1471 ok -1 1660 0 0 0 0 0`.
 
+The first visible order-4 eigenspace packet is negative:
+[P27 E-Prime Twisted Eigenspace Screen](evidence/p27_eprime_twisted_eigenspace_screen_20260621.md).
+Using `j^2=-1` and `Z=T*(1-j/X^3)`, it tested `Z`, `Z^2`, `Z^4`,
+branch-factor shifts, products, and base-field components over
+`q=1471,1607,1847`.  There were no exact `d3` or `d4` packets.  The best
+scores were field-dependent or raw-majority artifacts, so no GPU sampler
+follows from this visible Hilbert-90 layer.  The remaining `E'` route is
+actual twisted-cover divisor/Kummer/Prym extraction for the `d3` and `d4`
+double covers, not more visible `Z/Z^2/Z^4` packet scans.
+
 The newest p26 GPU trace/norm result is positive structure but negative as a
 production prefilter:
 [P27 GPU Filter-Cost Lesson From P26](evidence/p27_gpu_filter_cost_lesson_from_p26_20260621.md).

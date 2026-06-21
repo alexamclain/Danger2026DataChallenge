@@ -545,6 +545,38 @@ Then ask whether the d3/d4 double covers become named order-4 eigenspace
 classes that descend back to the p27 sign regime.
 ```
 
+Visible eigenspace update:
+[P27 E-Prime Twisted Eigenspace Screen](p27_eprime_twisted_eigenspace_screen_20260621.md).
+
+```text
+Using j^2=-1 and Z=T*(1-j/X^3), the first packet screen tested:
+  Z, Z^2, Z^4
+  Z +/- branch_factor
+  Z^2 +/- branch_factor
+  Z^4 +/- branch_factor
+  Z * branch_factor
+  base-field components of Z^4
+
+Guard fields:
+  q=1471,1607,1847
+
+Result:
+  d3 exact packets = 0 in all three fields
+  d4 exact packets = 0 in all three fields
+
+The best scores were field-dependent or raw-majority artifacts, e.g. q1471
+d4 had 160/224 for Z4+U-1, while q1607/q1847 winners were often Z2/Z4/base
+components tracking raw target bias.
+```
+
+Updated kill rule:
+
+```text
+Stop visible Z/Z2/Z4 branch-factor packet scans.  The next meaningful test is
+the actual divisor/Kummer/Prym class of the d3 and d4 double covers on the
+twisted T-cover/eigenspace model, followed by a guard-field exactness check.
+```
+
 Promotion bar:
 
 ```text
