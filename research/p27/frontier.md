@@ -545,6 +545,17 @@ all have `chi(K)=+1` with no `-K` partner.  Therefore `lambda=-K^2/4` is a
 Belyi bookkeeping coordinate, not a standalone rational sampler.  Any
 sqrt-beating source must lift back to the K-level square stratum.
 
+That rational lift has now been tested:
+[P27 S-Root Branch-Divisor Screen](evidence/p27_sroot_branch_divisor_screen_20260621.md).
+On `E'`, write `S=(U^2-4)/(2V)`, so `K=S^2`.  This keeps the rational
+K-square stratum and restores the `S/-S` orientation that lambda quotients
+away.  The guard-field data has paired `S/-S` rows throughout, but there are no
+exact split branch divisors `z^2=f(S)` with `deg_S(f)<=4` for `d3` over
+`q=1471,1607,1847`; unlike K/lambda, `d4` also has no small-field local fits
+in this S family.  This kills the nearest rational square-root line sampler.
+The remaining K-square route is branch-class/genus extraction over K or S, not
+another low-degree split-divisor scan.
+
 The newest p26 GPU trace/norm result is positive structure but negative as a
 production prefilter:
 [P27 GPU Filter-Cost Lesson From P26](evidence/p27_gpu_filter_cost_lesson_from_p26_20260621.md).
