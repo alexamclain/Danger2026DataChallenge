@@ -138,6 +138,10 @@ unstructured line sweep.  The target is an exact function or a named cover,
 not a marginal in-sample lift.
 ```
 
+Status: completed for the named torsion/2-descent/order-4 basis.  No exact
+product explains d3 or d4, and train-best lifts do not replicate; see
+[P27 E-Quotient Kummer Basis Screen](p27_equotient_kummer_basis_screen_20260621.md).
+
 3. Larger validation field:
 
 ```text
@@ -171,6 +175,7 @@ kill = GPU sampler from d4 without an E-level source or recurrence
 - Gate: `research/p27/archive/gates/p27_reverse_source_d4_recurrence_probe.py`
 - Output: `research/p27/archive/probe_outputs/p27_reverse_source_d4_recurrence_probe_20260621.txt`
 - q991 output: `research/p27/archive/probe_outputs/p27_reverse_source_d4_recurrence_probe_q991_20260621.txt`
+- Follow-up: [P27 E-Quotient Kummer Basis Screen](p27_equotient_kummer_basis_screen_20260621.md)
 - Related: [P27 Reverse Source Quotient Screen](p27_reverse_source_quotient_screen_20260621.md)
 - Related: [P27 Label-2 Alpha/Branch Recurrence Probe](p27_label2_alpha_branch_recurrence_20260621.md)
 

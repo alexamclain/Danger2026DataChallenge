@@ -380,6 +380,26 @@ or Kummer classes, and ask whether f4 is a translate/pullback of f3 on a
 non-degenerate validation field.
 ```
 
+Named E-basis update:
+[P27 E-Quotient Kummer Basis Screen](p27_equotient_kummer_basis_screen_20260621.md).
+
+```text
+Visible torsion / 2-descent / order-4 H90 products are killed:
+  p27 d3 exact_combos = 0
+  p27 d4 exact_combos = 0
+  d3 train-best on heldout = 0.5044
+  d4 train-best on heldout = 0.5075
+  q=1087,1471,1607 exact_combos = 0 for d3 and d4
+```
+
+Updated remaining test:
+
+```text
+Use Magma/Sage function fields to extract the actual E-level double covers for
+d3 and d4, then compare their divisor/Kummer classes.  Do not spend more on
+visible product scans unless a new theorem supplies a named function.
+```
+
 Promotion bar:
 
 ```text

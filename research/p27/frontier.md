@@ -285,6 +285,18 @@ p27 theorem.  The active moonshot is now very specific: derive E-level
 functions/classes `f3(X,W)` and `f4(X,W)`, compare their divisors or Kummer
 classes, and look for a recurrence or sourceable walk there.
 
+The first named E-basis attempt is negative:
+[P27 E-Quotient Kummer Basis Screen](evidence/p27_equotient_kummer_basis_screen_20260621.md).
+The screened basis was the existing structural one:
+`X`, `W`, torsion factors `X±1`, 2-descent factors, and the order-4/H90
+functions `S`, `S_conj`, `m0`, `mt_coeff`, `prefactor`, and `L`.  No exact
+product explains d3 or d4 on p27.  Train-best products do not replicate:
+d3 train-best falls to `0.5044` on heldout, and d4 train-best to `0.5075`.
+Non-degenerate fields `q=1087,1471,1607` also have zero exact products.  This
+kills the visible named-basis route.  The remaining quotient moonshot now
+requires symbolic/function-field extraction of the actual E-level double
+covers, not more visible product scans.
+
 The newest p26 GPU trace/norm result is positive structure but negative as a
 production prefilter:
 [P27 GPU Filter-Cost Lesson From P26](evidence/p27_gpu_filter_cost_lesson_from_p26_20260621.md).
