@@ -440,6 +440,20 @@ fresh d3 samples.  This kills the visible branch-factor transfer.  The live
 `E'` route is now explicitly cover/divisor-class extraction, not a sparse
 visible factor product.
 
+The reason plain `E'` screens may be missing the real object is now explicit:
+[P27 E-Prime T-Cover Twist Obstruction](evidence/p27_eprime_tcover_twist_obstruction_20260621.md).
+For the `(0,0)` quotient involution
+`sigma(X,W)=(-1/X,W/X^2)`, the label-2 cover
+`T^2=X(X^2+1)(X^2+2X-1)` satisfies `sigma(S)/S=X^-6`, so
+`sigma(T)=+/-T/X^3`.  A rational `T`-linear invariant over `E'` would require
+`sigma(f)/f=+/-X^3`, but `Norm(+/-X^3)=-1`; over the p27-compatible guard
+fields `q=607,1471,1607,1847`, `chi(-1)=-1`, so the obstruction is not killed
+by a base-field constant.  This reframes the next quotient test: work on the
+twisted `T`-cover/Prym/Hilbert-90 class, possibly after adjoining `j^2=-1`,
+then descend a named class back to the p27 sign regime.  Do not repeat plain
+`E'` low-pole or sparse-factor scans.  The online Magma `q=1471` check reports
+`RESULT p27_eprime_tcover_twist_q1471 ok -1 1660 0 0 0 0 0`.
+
 The newest p26 GPU trace/norm result is positive structure but negative as a
 production prefilter:
 [P27 GPU Filter-Cost Lesson From P26](evidence/p27_gpu_filter_cost_lesson_from_p26_20260621.md).

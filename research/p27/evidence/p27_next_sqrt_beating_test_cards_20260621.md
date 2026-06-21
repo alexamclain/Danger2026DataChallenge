@@ -506,6 +506,41 @@ p26 branch packet on fresh p27 d3 = exactly 10000/20000 and 10000/20000
 This kills the visible p26 branch-factor transfer as a sqrt-beating source.
 The remaining quotient route is actual cover/divisor-class extraction on `E'`.
 
+E-prime twist-obstruction update:
+[P27 E-Prime T-Cover Twist Obstruction](p27_eprime_tcover_twist_obstruction_20260621.md).
+
+```text
+sigma(X,W)=(-1/X,W/X^2)
+T^2 = S = X*(X^2+1)*(X^2+2X-1)
+sigma(S)/S = X^-6
+sigma(T)=+/-T/X^3
+
+A rational T-linear invariant T*f over E' would need:
+  sigma(f)/f = +/-X^3
+
+But:
+  Norm(+X^3) = -1
+  Norm(-X^3) = -1
+```
+
+For the p27-compatible guard fields `q=607,1471,1607,1847`, `chi(-1)=-1`,
+so this obstruction is real over the base field.  This explains why plain
+`E'` searches can fail even if the quotient route is still alive.  The online
+Magma `q=1471` validation reports:
+
+```text
+RESULT p27_eprime_tcover_twist_q1471 ok -1 1660 0 0 0 0 0
+```
+
+Updated quotient test:
+
+```text
+Stop repeating plain E' low-pole or sparse branch-factor screens.
+Build the twisted T-cover quotient/Prym/Hilbert-90 class, allowing j^2=-1 over
+F_{q^2}, and then ask whether the d3/d4 double covers become named classes
+that descend back to the p27 sign regime.
+```
+
 Promotion bar:
 
 ```text
