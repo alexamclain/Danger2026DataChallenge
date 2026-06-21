@@ -1,0 +1,53 @@
+p27 Kummer-line branch-divisor probe
+factors = rational linear and irreducible quadratic over F_q
+small_primes = 1471
+max_degree = 4
+q=1471:
+  setup_stats:
+  d3_eprime_input_rows = 200
+  d3_eprime_minus = 44
+  d3_eprime_plus = 56
+  d3_eprime_quotient_rows = 100
+  d3_k_input_rows = 100
+  d3_k_k_rows = 50
+  d3_k_minus = 22
+  d3_k_plus = 28
+  d4_eprime_input_rows = 112
+  d4_eprime_minus = 28
+  d4_eprime_plus = 28
+  d4_eprime_quotient_rows = 56
+  d4_k_input_rows = 56
+  d4_k_k_rows = 28
+  d4_k_minus = 14
+  d4_k_plus = 14
+  enum_compact_not_target = 837
+  enum_no_label2_candidate = 424
+  quotient_d3_minus_E_points = 88
+  quotient_d3_missing_on_E_orbit = 0
+  quotient_d3_not_descended_to_E = 0
+  quotient_d3_plus_E_points = 112
+  quotient_d3_quotient_rows = 200
+  quotient_d4_minus_E_points_after_d3 = 56
+  quotient_d4_missing_on_E_orbit = 0
+  quotient_d4_not_descended_to_E = 0
+  quotient_d4_plus_E_points_after_d3 = 56
+  quotient_d4_quotient_rows_after_d3 = 112
+  quotient_orbit_size_4 = 200
+  quotient_oriented_candidates = 800
+  quotient_quotient_E_points = 200
+q1471_d3:
+  rows = 50
+  plus = 28
+  minus = 22
+q1471_d3_side_stats:
+  distinct_degree0_side_masks = 1
+  distinct_degree1_side_masks = 1421
+  distinct_degree2_side_masks = 2090095
+  linear_atoms = 1421
+  linear_pair_sides = 1008910
+  quadratic_atoms = 1081185
+q1471_d3_exact_stats:
+  left_sides_scanned = 2091517
+q1471_d3_exact_divisors:
+  none
+p27_kummer_branch_divisor_probe_rows=1/1

@@ -633,6 +633,33 @@ the d4 branch divisor after d3.  Promote only an exact branch polynomial/class
 or a recurrence/source relation that survives q=1471 and q=1607.
 ```
 
+Branch-divisor update:
+[P27 Kummer Branch-Divisor Screen](p27_kummer_branch_divisor_screen_20260621.md).
+
+```text
+Tested exact squarefree products of:
+  rational linear factors in K
+  irreducible quadratic factors in K over F_q
+with total degree <=4.
+
+d3:
+  q1471 exact divisors = none
+  q1607 exact divisors = none
+  q1847 exact divisors = none
+
+d4:
+  q1471/q1607 have degree-3 local fits
+  q1847 exact divisors = none
+```
+
+Updated kill rule:
+
+```text
+Kill the split degree <=4 K-line branch-divisor source.  The remaining K-line
+route is irreducible cubic/quartic extraction or Magma/Sage recovery of the
+actual branch divisor/genus, not more visible split-factor screens.
+```
+
 Promotion bar:
 
 ```text

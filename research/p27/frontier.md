@@ -486,6 +486,17 @@ minimum guard-field rates were only about `0.667` for `d3` degree 4 and
 but the next step should be branch-divisor/Kummer-class extraction on
 `P^1_K`, not blind coefficient-bound widening.
 
+The first exact K-line branch-divisor screen is also negative:
+[P27 Kummer Branch-Divisor Screen](evidence/p27_kummer_branch_divisor_screen_20260621.md).
+It tested all squarefree products of rational linear factors and irreducible
+quadratic factors in `K` with total degree `<=4`.  For the decisive `d3`
+source bit, there were no exact divisors over `q=1471,1607,1847`.  The d4
+screen produced degree-3 fits in q1471/q1607 but none in q1847, so those are
+small-row local interpolation artifacts.  This kills the first elliptic-source
+subcase `z^2=f(K)` with split branch divisor of degree `<=4`; the live K-line
+task is now irreducible cubic/quartic branch extraction or a Magma/Sage
+divisor/genus computation.
+
 The newest p26 GPU trace/norm result is positive structure but negative as a
 production prefilter:
 [P27 GPU Filter-Cost Lesson From P26](evidence/p27_gpu_filter_cost_lesson_from_p26_20260621.md).
