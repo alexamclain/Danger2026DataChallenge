@@ -3,6 +3,21 @@
 This directory records verified Pomerance triples and compact reproducibility
 artifacts for the local Codex-assisted DANGER3 runs.
 
+## p26 Result
+
+The p26 artifacts are in `p26/`.
+
+```text
+p  = 100000000000000000000000067
+A  = 78462973492772865017160395
+x0 = 27732450411057582323409556
+```
+
+The successful p26 run used the CUDA `x16halvenonsplit` port on a RunPod RTX
+6000 Ada GPU. It found the triple after about 139.934B X1(16) curves at about
+51.997M candidates/sec. The job was capped at 550B candidates and stopped
+early at the verified hit. See `p26/README.md` for details.
+
 ## p25 Result
 
 The p25 artifacts are in `p25/`.

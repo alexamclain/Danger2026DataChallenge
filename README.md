@@ -1,9 +1,10 @@
 # DANGER3 Pomerance Search Results
 
 This fork records verified DANGER3 Pomerance triples for
-`p = 10^25 + 13`, `p = 10^23 + 117`, and `p = 10^22 + 9`, plus the local
-Codex-assisted experimental work used to find and verify them. This work was
-undertaken as part of a collaboration across teams in DARPA's expMath program.
+`p = 10^26 + 67`, `p = 10^25 + 13`, `p = 10^23 + 117`, and
+`p = 10^22 + 9`, plus the local Codex-assisted experimental work used to find
+and verify them. This work was undertaken as part of a collaboration across
+teams in DARPA's expMath program.
 
 Curated research notes now live in:
 
@@ -11,6 +12,69 @@ Curated research notes now live in:
 - `research/p24/` for the p24 research wiki and archived exploration;
 - `research/p25/` for the p25 research wiki imported from the separate
   `pomerance-p25-run` workspace.
+
+## p26 Result: GPU X1(16) Nonsplit Search
+
+For
+
+```text
+p = 100000000000000000000000067 = 10^26 + 67
+```
+
+the GPU run found the triple:
+
+```text
+100000000000000000000000067 78462973492772865017160395 27732450411057582323409556
+```
+
+Equivalently:
+
+```text
+p  = 100000000000000000000000067
+A  = 78462973492772865017160395
+x0 = 27732450411057582323409556
+```
+
+The p26 hit used the same practical `X1(16)` nonsplit/halving family as p23
+and p25, but ran through the CUDA port in `pomerance_cuda.cu`. The target has
+`p mod 8 = 3`, so the GPU path uses the `p == 3 mod 4` square-root branch.
+
+The successful RunPod RTX 6000 Ada run found the triple on 2026-06-20 after
+139.934292088B X1(16) curves:
+
+```text
+successful GPU trials              = 139.934292088B
+sqrt_floor(p)                      = 10000.000000000B
+fraction of sqrt_floor(p)          = 0.013993429
+speedup vs sqrt-floor trials       = about 71.46x
+observed GPU rate near success     = about 51.997M candidates/sec
+wall time to hit                   = 2691.21 seconds
+```
+
+The run was explicitly capped at 550B candidates and stopped early at the hit.
+Reproducibility artifacts are in `results/p26/`.
+
+## CUDA GPU Search
+
+`pomerance_cuda.cu` is a GPU-compatible port of the production
+`x16halvenonsplit` path. It is intentionally narrow: the generic 2-Sylow
+search and exploratory diagnostic modes remain in `pomerance.c`.
+
+Compile on an Ada-generation NVIDIA GPU with:
+
+```sh
+nvcc -O3 -std=c++17 -arch=sm_89 -o pomerance_cuda pomerance_cuda.cu
+```
+
+Example p26 run:
+
+```sh
+./pomerance_cuda 100000000000000000000000067 121 550000000000 x16halvenonsplit 1000000000
+```
+
+The automatic backend uses a specialized 96-bit field path for `p < 2^96`,
+which covers p23, p25, and p26, and falls back to the generic 128-bit path for
+larger supported primes.
 
 ## p25 Result: X1(16) Nonsplit Search
 
