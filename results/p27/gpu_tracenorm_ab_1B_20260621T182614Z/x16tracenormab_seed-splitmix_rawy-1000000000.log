@@ -1,0 +1,29 @@
+Pomerance CUDA x16halvenonsplit prototype
+
+p = 1000000000000000000000000103
+mode = x16tracenormab
+seed_offset = 0
+seed_mode = splitmix
+max_trials = 1000000000
+chunk_trials = 1000000000
+k = 45
+backend = u96
+GPU = NVIDIA RTX 6000 Ada Generation  SMs=142  blocks=1136  threads=128  claim_batch=1
+
+  raw_y_draws=1000000000 elapsed=41.145 raw_y_Mps=24.304377 nonsplit=499990573 F_square=249981393 D_plus=124991135 ordinary_emit=500027448 candidate_emit=124997342 candidate_survive_26=98
+
+Trace/norm same-stream A/B summary:
+  backend=u96 GPU="NVIDIA RTX 6000 Ada Generation" seed_mode=splitmix seed_offset=0
+  raw_y_draws=1000000000 elapsed=41.145490 raw_y_per_sec=24304000.328
+  nonsplit_y=499990573 F_square=249981393 branch_sqrt_y=250013724 roots_valid=500027448
+  D_trace: plus=124991135 minus=124990258 zero_or_unusable=0
+  T_line: plus=124989154 minus=124992239 inconsistent=0 unusable=0
+  emitted_candidates: ordinary=500027448 candidate=124997342 ordinary_per_sec=12152667.260 candidate_per_sec=3037935.441
+  depth ordinary_survive ordinary_rate candidate_survive candidate_rate lift survivor_per_sec_candidate
+    20 7688 0.000015375 7688 0.000061505 4.000 186.849155
+    22 1830 0.000003660 1830 0.000014640 4.000 44.476321
+    24 450 0.000000900 450 0.000003600 4.000 10.936800
+    26 98 0.000000196 98 0.000000784 4.000 2.381792
+    28 28 0.000000056 28 0.000000224 4.000 0.680512
+    30 6 0.000000012 6 0.000000048 4.000 0.145824
+trace_norm_ab_jsonl={"mode":"x16tracenormab","p":"1000000000000000000000000103","backend":"u96","gpu":"NVIDIA RTX 6000 Ada Generation","seed_mode":"splitmix","seed_offset":0,"elapsed":41.145490,"raw_y_draws":1000000000,"nonsplit_y":499990573,"F_square":249981393,"D_plus":124991135,"D_minus":124990258,"D_zero":0,"T_line_plus":124989154,"T_line_minus":124992239,"T_line_inconsistent":0,"T_line_unusable":0,"ordinary_emitted_candidates":500027448,"candidate_emitted_candidates":124997342,"ordinary_survive_20":7688,"candidate_survive_20":7688,"ordinary_survive_22":1830,"candidate_survive_22":1830,"ordinary_survive_24":450,"candidate_survive_24":450,"ordinary_survive_26":98,"candidate_survive_26":98,"ordinary_survive_28":28,"candidate_survive_28":28,"ordinary_survive_30":6,"candidate_survive_30":6}

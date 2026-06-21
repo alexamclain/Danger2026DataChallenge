@@ -87,6 +87,45 @@ experiments:
 ./pomerance_cuda 100000000000000000000000067 121 1000000000 x16stratumprobe 1000000000 0 128 1 auto seed=mixed target_depth=26 bucket_bits=6
 ```
 
+For p27 search-space narrowing experiments, the CUDA binary also includes
+`x16domainprobe`, a first-halving/domain-line filter control, and
+`x16ecoverprobe`, a u96 aggregate probe that samples the first-lift elliptic
+cover
+
+```text
+E: W^2 = X^3 - X,  y = X + 1.
+```
+
+This is a source test, not just a throughput test: it reports accepted roots,
+raw source draws, depth survivor checkpoints, and prefix-vs-held-out bucket
+telemetry through `scope_probe_jsonl=...` rows.  A convenient p27 A/B runner is:
+
+```sh
+scripts/p27_gpu_scope_probe.sh
+```
+
+By default it compares `x16stratumprobe`, `x16domainprobe`, and
+`x16ecoverprobe` on `p = 10^27 + 103`, using paired `identity` and `splitmix`
+seed order runs. Override `TRIALS`, `TARGET_DEPTH`, `SEED_MODES`, `MODES`, or
+`OUT_DIR` in the environment for larger or narrower pilots.
+
+The scope harness also exposes fixed-prefix probes for the p27 second-gate
+question:
+
+```text
+x16d2probe        raw nonsplit/domain path, require selected gates d1,d2
+x16d3probe        raw nonsplit/domain path, require selected gates d1,d2,d3
+x16d4probe        raw nonsplit/domain path, require selected gates d1..d4
+x16ecoverd2probe  first-lift elliptic-cover source, then require d2
+x16ecoverd3probe  first-lift elliptic-cover source, then require d2,d3
+x16ecoverd4probe  first-lift elliptic-cover source, then require d2..d4
+```
+
+These modes are meant to price search-space narrowing, not to claim a theorem:
+`accepted_roots` is the post-prefix candidate count, while `source_draws` is
+still the raw source denominator.  The key promotion metric is therefore
+`target_per_source_draw`, alongside survivor/sec.
+
 The automatic backend uses a specialized 96-bit field path for `p < 2^96`,
 which covers p23, p25, and p26, and falls back to the generic 128-bit path for
 larger supported primes.

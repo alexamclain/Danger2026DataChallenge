@@ -1,0 +1,11 @@
+OUT_DIR=/workspace/Danger2026DataChallenge/results/p27/gpu_dprefix_depth24_20260621T181356Z
+P=1000000000000000000000000103
+TRIALS=100000000
+CHUNK_TRIALS=100000000
+TARGET_DEPTH=24
+BUCKET_BITS=6
+THREADS=128
+CLAIM_BATCH=64
+SEED_MODES=identity splitmix
+MODES=x16stratumprobe x16domainprobe x16ecoverprobe x16d2probe x16ecoverd2probe x16d3probe x16ecoverd3probe x16d4probe x16ecoverd4probe
+CUDA_ARCH=sm_89

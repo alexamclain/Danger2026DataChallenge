@@ -13,7 +13,7 @@
  *
  * Usage:
  *   ./pomerance_cuda <p> [seed_offset] [max_trials]
- *     [x16halvenonsplit|x16stratumprobe] [chunk_trials] [blocks]
+ *     [x16halvenonsplit|x16stratumprobe|x16domainprobe|x16d2probe|x16d3probe|x16d4probe|x16tracenormab|x16tracenormfilter|x16uprecheckprobe|x16ecoverprobe|x16ecoverd2probe|x16ecoverd3probe|x16ecoverd4probe] [chunk_trials] [blocks]
  *     [threads] [claim_batch] [auto|generic|u96]
  *     [seed=mixed|identity|splitmix] [start_chunk=N] [start_trial=N]
  *     [target_depth=N] [bucket_bits=N] [focus_bucket=N]
@@ -23,6 +23,8 @@
  * Example:
  *   ./pomerance_cuda 100000000000000000000117 0 1000000 x16halvenonsplit
  *   ./pomerance_cuda 100000000000000000000000067 121 550000000000 x16halvenonsplit 1000000000
+ *   ./pomerance_cuda 100000000000000000000000067 121 65536 x16tracenormab 32768 1 64 1 u96
+ *   ./pomerance_cuda 1000000000000000000000000103 0 1000000 x16ecoverprobe 1000000 0 128 64 u96 target_depth=26
  */
 
 #include <cuda_runtime.h>
@@ -60,6 +62,7 @@ enum SeedMode {
 static constexpr int PROBE_MAX_BUCKET_BITS = 8;
 static constexpr int PROBE_MAX_BUCKETS = 1 << (PROBE_MAX_BUCKET_BITS + 1);
 static constexpr int PROBE_MAX_DEPTH = 64;
+static constexpr int TRACE_AB_DEPTH_COUNT = 6;
 
 struct u256 {
     u128 lo;
@@ -149,6 +152,57 @@ struct ProbeStats {
     u64 bucket_held_survive[PROBE_MAX_BUCKETS];
 };
 
+struct TraceNormLineClass {
+    int valid;
+    int domain_line;
+    int d_class;
+    int t_class;
+    int t_line;
+    int a_chi;
+    int b_chi;
+};
+
+struct TraceNormABStats {
+    u64 raw_y_draws;
+    u64 nonsplit_y;
+    u64 f_square;
+    u64 d_plus;
+    u64 d_minus;
+    u64 d_zero;
+    u64 t_line_plus;
+    u64 t_line_minus;
+    u64 t_line_inconsistent;
+    u64 t_line_unusable;
+    u64 branch_sqrt_y;
+    u64 roots_valid;
+    u64 ordinary_emitted_candidates;
+    u64 candidate_emitted_candidates;
+    u64 ordinary_survive[TRACE_AB_DEPTH_COUNT];
+    u64 candidate_survive[TRACE_AB_DEPTH_COUNT];
+};
+
+struct UPrecheckCounters {
+    u64 d_sqrt_calls;
+    u64 d_sqrt_success;
+    u64 uplus_checks;
+    u64 uplus_pass;
+    u64 uplus_reject;
+    u64 w_sqrt_calls;
+    u64 w_sqrt_success;
+    u64 precheck_short_circuit;
+};
+
+struct UPrecheckStats {
+    u64 claimed;
+    u64 accepted_roots;
+    u64 y_draws;
+    u64 y_nonsplit;
+    u64 y_with_sqrt_D;
+    u64 roots_valid;
+    u64 depth_exact[PROBE_MAX_DEPTH + 1];
+    UPrecheckCounters counters;
+};
+
 HD static inline U128Parts pack128(u128 x) {
     U128Parts out;
     out.lo = (u64)x;
@@ -158,6 +212,17 @@ HD static inline U128Parts pack128(u128 x) {
 
 static inline u128 unpack128(U128Parts x) {
     return ((u128)x.hi << 64) | (u128)x.lo;
+}
+
+HD static int trace_ab_depth_value(int idx) {
+    switch (idx) {
+        case 0: return 20;
+        case 1: return 22;
+        case 2: return 24;
+        case 3: return 26;
+        case 4: return 28;
+        default: return 30;
+    }
 }
 
 HD static inline u256 wide_mul(u128 a, u128 b) {
@@ -414,6 +479,102 @@ HD static int x16_y_predicts_nonsplit128_mont(u128 y_m, u128 y2_m,
     if (f_m == 0) return 0;
     u128 leg_m = powmod128_mont_raw(f_m, (p - 1) >> 1, mt);
     return leg_m != mt->one;
+}
+
+HD static int chi128_mont(u128 f_m, const SearchParams *params) {
+    if (f_m == 0) return 0;
+    const u128 p = params->p;
+    const Mont128 *mt = &params->mt;
+    u128 chi_m = powmod128_mont_raw(f_m, (p - 1) >> 1, mt);
+    if (chi_m == mt->one) return 1;
+    if (chi_m == submod128(0, mt->one, p)) return -1;
+    return 0;
+}
+
+HD static int x16_trace_norm_line_class128(TraceNormLineClass *out,
+                                           u128 y_m, u128 y2_m,
+                                           const SearchParams *params) {
+    *out = TraceNormLineClass{0, 0, 0, 0, 0, 0, 0};
+    const u128 p = params->p;
+    const Mont128 *mt = &params->mt;
+    u128 two_y_m = addmod128(y_m, y_m, p);
+    u128 four_y_m = addmod128(two_y_m, two_y_m, p);
+    u128 B_m = addmod128(submod128(y2_m, two_y_m, p), params->two_m, p);
+    u128 C_m = submod128(y2_m, params->two_m, p);
+    u128 R_m = addmod128(submod128(y2_m, four_y_m, p), params->two_m, p);
+    u128 ym1_m = submod128(y_m, mt->one, p);
+    if (ym1_m == 0) return 0;
+
+    u128 F_m = mm128(mm128(ym1_m, C_m, mt), B_m, mt);
+    int domain = chi128_mont(F_m, params);
+    if (domain == 0) return 0;
+    out->valid = 1;
+    out->domain_line = domain;
+    if (domain != 1) return 1;
+
+    u128 K_m = submod128(0, mm128(C_m, R_m, mt), p);
+    if (K_m == 0) return 1;
+    u128 sqrt_K_m;
+    if (!sqrtmod_p5_128_mont(&sqrt_K_m, K_m, p, params->sqrtm1_m, mt)) return 1;
+    u128 sqrt_F_m;
+    if (!sqrtmod_p5_128_mont(&sqrt_F_m, F_m, p, params->sqrtm1_m, mt)) return 1;
+
+    u128 nh_scale_m = mm128(params->eight_m, ym1_m, mt);
+    u128 sqrt_Nh_m = mm128(nh_scale_m, sqrt_F_m, mt);
+    int nh_scale_chi = chi128_mont(nh_scale_m, params);
+    if (nh_scale_chi == 0) return 1;
+    if (nh_scale_chi < 0) sqrt_Nh_m = submod128(0, sqrt_Nh_m, p);
+
+    u128 nv_factor_m = mm128(y_m, C_m, mt);
+    int nv_scale_chi = chi128_mont(nv_factor_m, params);
+    if (nv_scale_chi == 0) return 1;
+    u128 sqrt_Nv_num_m = mm128(
+        mm128(mm128(params->four_m, y_m, mt), sqrt_F_m, mt), sqrt_K_m, mt);
+    if (nv_scale_chi < 0) sqrt_Nv_num_m = submod128(0, sqrt_Nv_num_m, p);
+
+    u128 Ch_m = mm128(mm128(C_m, B_m, mt), params->four_m, mt);
+    u128 h_arg_m = mm128(addmod128(Ch_m, sqrt_Nh_m, p), params->two_m, mt);
+    int H = chi128_mont(h_arg_m, params);
+    if (H == 0) return 1;
+
+    u128 ym1_2_m = mm128(ym1_m, ym1_m, mt);
+    u128 av_m = mm128(y_m, ym1_2_m, mt);
+    av_m = mm128(av_m, params->eight_m, mt);
+    u128 av_num_m = mm128(C_m, av_m, mt);
+    u128 v_arg_num_m = addmod128(av_num_m, sqrt_Nv_num_m, p);
+    int chi_C = chi128_mont(C_m, params);
+    int chi_2B = chi128_mont(mm128(B_m, params->two_m, mt), params);
+    int chi_v = chi128_mont(mm128(v_arg_num_m, params->two_m, mt), params);
+    if (chi_C == 0 || chi_2B == 0 || chi_v == 0) return 1;
+    chi_v *= chi_C;
+    int VQ = chi_2B * chi_v;
+
+    u128 y_minus_2_m = submod128(y_m, params->two_m, p);
+    u128 neg_x_num_m = submod128(0, mm128(y_m, y_minus_2_m, mt), p);
+    int X = chi128_mont(neg_x_num_m, params);
+    if (X == 0) return 1;
+
+    int d_class = -X * VQ * H;
+    int y_chi = chi128_mont(y_m, params);
+    if (y_chi == 0) return 1;
+
+    u128 t_inv_m = invert128_mont_raw(ym1_m, p, mt);
+    u128 a_m = submod128(ym1_m, t_inv_m, p);
+    int a_chi = chi128_mont(a_m, params);
+    int sqrt_K_chi = chi128_mont(sqrt_K_m, params);
+    int B_chi = chi128_mont(B_m, params);
+    if (a_chi == 0 || sqrt_K_chi == 0 || B_chi == 0) return 1;
+
+    int b_chi = sqrt_K_chi * B_chi;
+    int t_class = d_class * y_chi;
+    int t_line = (a_chi == 1) ? t_class : t_class * b_chi;
+
+    out->d_class = d_class;
+    out->t_class = t_class;
+    out->t_line = t_line;
+    out->a_chi = a_chi;
+    out->b_chi = b_chi;
+    return 1;
 }
 
 HD static int x16_root_to_montgomery_A128(u128 *Ao, u128 *xPo,
@@ -691,6 +852,11 @@ DEV static inline int probe_done_now(const ProbeStats *stats, u64 max_curves) {
     return *((volatile const u64 *)&stats->claimed) >= max_curves;
 }
 
+DEV static inline int uprecheck_done_now(const UPrecheckStats *stats,
+                                         u64 max_curves) {
+    return *((volatile const u64 *)&stats->claimed) >= max_curves;
+}
+
 DEV static inline void probe_record_candidate(ProbeStats *probe, u64 claim,
                                               u64 split_trial, int reached_depth,
                                               int target_depth, int root_index,
@@ -715,6 +881,13 @@ DEV static inline void probe_record_candidate(ProbeStats *probe, u64 claim,
         atomicAdd(&probe->bucket_held_total[bucket], 1ULL);
         if (survived) atomicAdd(&probe->bucket_held_survive[bucket], 1ULL);
     }
+}
+
+DEV static inline void uprecheck_record_candidate(UPrecheckStats *stats,
+                                                  int reached_depth) {
+    if (reached_depth < 0) reached_depth = 0;
+    if (reached_depth > PROBE_MAX_DEPTH) reached_depth = PROBE_MAX_DEPTH;
+    atomicAdd(&stats->depth_exact[reached_depth], 1ULL);
 }
 
 __global__ static void x16halvenonsplit_kernel(SearchParams params,
@@ -874,6 +1047,7 @@ __global__ static void x16stratumprobe_kernel(SearchParams params,
                                               u64 split_trial,
                                               u64 claim_batch,
                                               int seed_mode,
+                                              int first_gate_filter,
                                               int target_depth,
                                               int bucket_bits,
                                               ProbeStats *__restrict__ probe) {
@@ -901,6 +1075,17 @@ __global__ static void x16stratumprobe_kernel(SearchParams params,
         u128 y2_m = mm128(y_m, y_m, mt);
         if (!x16_y_predicts_nonsplit128_mont(y_m, y2_m, &params)) continue;
         local_y_nonsplit++;
+
+        if (first_gate_filter) {
+            u128 ym1_m = submod128(y_m, mt->one, p);
+            if (ym1_m == 0) continue;
+            u128 two_y_filter_m = addmod128(y_m, y_m, p);
+            u128 B_m = addmod128(submod128(y2_m, two_y_filter_m, p),
+                                 params.two_m, p);
+            u128 C_m = submod128(y2_m, params.two_m, p);
+            u128 F_m = mm128(mm128(ym1_m, C_m, mt), B_m, mt);
+            if (chi128_mont(F_m, &params) != 1) continue;
+        }
 
         u128 y3_m = mm128(y2_m, y_m, mt);
         u128 two_y_m = addmod128(y_m, y_m, p);
@@ -967,6 +1152,149 @@ __global__ static void x16stratumprobe_kernel(SearchParams params,
     atomicAdd(&probe->y_nonsplit, local_y_nonsplit);
     atomicAdd(&probe->y_with_sqrt_D, local_y_with_sqrt_D);
     atomicAdd(&probe->roots_valid, local_roots_valid);
+}
+
+__global__ static void x16tracenormab_kernel(SearchParams params,
+                                             u64 seed_offset,
+                                             u64 chunk_nonce,
+                                             u64 raw_y_draws,
+                                             int seed_mode,
+                                             int filter_only,
+                                             TraceNormABStats *__restrict__ stats) {
+    u64 tid = (u64)blockIdx.x * (u64)blockDim.x + (u64)threadIdx.x;
+    u64 total_threads = (u64)gridDim.x * (u64)blockDim.x;
+    Rng rng;
+    init_rng(&rng, seed_offset, chunk_nonce, tid, total_threads, seed_mode);
+
+    const u128 p = params.p;
+    const Mont128 *mt = &params.mt;
+    const int target_depth = trace_ab_depth_value(TRACE_AB_DEPTH_COUNT - 1);
+
+    u64 local_raw_y_draws = 0;
+    u64 local_nonsplit_y = 0;
+    u64 local_f_square = 0;
+    u64 local_d_plus = 0;
+    u64 local_d_minus = 0;
+    u64 local_d_zero = 0;
+    u64 local_t_line_plus = 0;
+    u64 local_t_line_minus = 0;
+    u64 local_t_line_inconsistent = 0;
+    u64 local_t_line_unusable = 0;
+    u64 local_branch_sqrt_y = 0;
+    u64 local_roots_valid = 0;
+    u64 local_ordinary_emitted = 0;
+    u64 local_candidate_emitted = 0;
+    u64 local_ordinary_survive[TRACE_AB_DEPTH_COUNT] = {0, 0, 0, 0, 0, 0};
+    u64 local_candidate_survive[TRACE_AB_DEPTH_COUNT] = {0, 0, 0, 0, 0, 0};
+
+    u64 draws_per_thread = (raw_y_draws + total_threads - 1) / total_threads;
+    for (u64 i = 0; i < draws_per_thread; i++) {
+        u64 draw_index = i * total_threads + tid;
+        if (draw_index >= raw_y_draws) break;
+
+        u128 y = rand_below128(&rng, p, params.rand_mask);
+        local_raw_y_draws++;
+        if (y == 0) continue;
+
+        u128 y_m = toM128_reduced(y, mt);
+        u128 y2_m = mm128(y_m, y_m, mt);
+        if (!x16_y_predicts_nonsplit128_mont(y_m, y2_m, &params)) continue;
+        local_nonsplit_y++;
+
+        TraceNormLineClass line{};
+        x16_trace_norm_line_class128(&line, y_m, y2_m, &params);
+        int candidate_gate = 0;
+        if (line.valid && line.domain_line == 1) {
+            local_f_square++;
+            if (line.d_class == 1) {
+                local_d_plus++;
+                candidate_gate = 1;
+            } else if (line.d_class == -1) {
+                local_d_minus++;
+            } else {
+                local_d_zero++;
+            }
+
+            if (line.t_line == 1) {
+                local_t_line_plus++;
+            } else if (line.t_line == -1) {
+                local_t_line_minus++;
+            } else {
+                local_t_line_unusable++;
+            }
+            if (line.t_line != 0 && line.a_chi != 0 && line.b_chi != 0) {
+                int expected = (line.a_chi == 1) ? line.t_class
+                                                 : line.t_class * line.b_chi;
+                if (line.t_line != expected) local_t_line_inconsistent++;
+            }
+        }
+        if (filter_only && !candidate_gate) continue;
+
+        u128 y3_m = mm128(y2_m, y_m, mt);
+        u128 two_y_m = addmod128(y_m, y_m, p);
+        u128 qa_m = submod128(y2_m, two_y_m, p);
+        if (qa_m == 0) continue;
+        u128 qb_m = submod128(addmod128(y2_m, y2_m, p), y3_m, p);
+        u128 qc_m = submod128(mt->one, y_m, p);
+        u128 D_m = submod128(
+            mm128(qb_m, qb_m, mt),
+            mm128(addmod128(qa_m, qa_m, p), addmod128(qc_m, qc_m, p), mt),
+            p);
+        u128 sd_m;
+        if (!sqrtmod_p5_128_mont(&sd_m, D_m, p, params.sqrtm1_m, mt)) continue;
+        local_branch_sqrt_y++;
+
+        u128 inv_2qa_m = invert128_mont_raw(addmod128(qa_m, qa_m, p), p, mt);
+        u128 roots_m[2] = {
+            mm128(submod128(sd_m, qb_m, p), inv_2qa_m, mt),
+            mm128(submod128(submod128(0, sd_m, p), qb_m, p), inv_2qa_m, mt),
+        };
+
+        for (int ri = 0; ri < 2; ri++) {
+            u128 A;
+            u128 A_m;
+            u128 xP16_m;
+            if (!x16_root_to_montgomery_A128_mont(&A, &A_m, &xP16_m, roots_m[ri],
+                                                  y_m, &params)) {
+                continue;
+            }
+            local_roots_valid++;
+            if (!filter_only) local_ordinary_emitted++;
+
+            u128 x_probe_m;
+            u128 first_w_m = 0;
+            u128 first_v_m = 0;
+            int reached_depth = halve_prefix_depth128_mont_trace(
+                &x_probe_m, &first_w_m, &first_v_m, A_m, xP16_m, 4,
+                target_depth, &params);
+            for (int di = 0; di < TRACE_AB_DEPTH_COUNT; di++) {
+                if (reached_depth >= trace_ab_depth_value(di)) {
+                    if (!filter_only) local_ordinary_survive[di]++;
+                    if (candidate_gate) local_candidate_survive[di]++;
+                }
+            }
+            if (candidate_gate) local_candidate_emitted++;
+        }
+    }
+
+    atomicAdd(&stats->raw_y_draws, local_raw_y_draws);
+    atomicAdd(&stats->nonsplit_y, local_nonsplit_y);
+    atomicAdd(&stats->f_square, local_f_square);
+    atomicAdd(&stats->d_plus, local_d_plus);
+    atomicAdd(&stats->d_minus, local_d_minus);
+    atomicAdd(&stats->d_zero, local_d_zero);
+    atomicAdd(&stats->t_line_plus, local_t_line_plus);
+    atomicAdd(&stats->t_line_minus, local_t_line_minus);
+    atomicAdd(&stats->t_line_inconsistent, local_t_line_inconsistent);
+    atomicAdd(&stats->t_line_unusable, local_t_line_unusable);
+    atomicAdd(&stats->branch_sqrt_y, local_branch_sqrt_y);
+    atomicAdd(&stats->roots_valid, local_roots_valid);
+    atomicAdd(&stats->ordinary_emitted_candidates, local_ordinary_emitted);
+    atomicAdd(&stats->candidate_emitted_candidates, local_candidate_emitted);
+    for (int di = 0; di < TRACE_AB_DEPTH_COUNT; di++) {
+        atomicAdd(&stats->ordinary_survive[di], local_ordinary_survive[di]);
+        atomicAdd(&stats->candidate_survive[di], local_candidate_survive[di]);
+    }
 }
 
 struct U96 {
@@ -1340,6 +1668,111 @@ HD static int x16_y_predicts_nonsplit96_mont(U96 y_m, U96 y2_m,
     return !eq96(leg_m, params->f.one);
 }
 
+HD static int chi96_mont(U96 f_m, const SearchParams96 *params) {
+    if (is_zero96(f_m)) return 0;
+    U96 chi_m = powmod96_mont(f_m, params->leg_exp, &params->f);
+    if (eq96(chi_m, params->f.one)) return 1;
+    if (eq96(chi_m, submod96(u96_from_u64(0), params->f.one, params->f.p))) return -1;
+    return 0;
+}
+
+HD static int x16_trace_norm_line_class96(TraceNormLineClass *out,
+                                          U96 y_m, U96 y2_m,
+                                          const SearchParams96 *params) {
+    *out = TraceNormLineClass{0, 0, 0, 0, 0, 0, 0};
+    U96 two_y_m = addmod96(y_m, y_m, params->f.p);
+    U96 four_y_m = addmod96(two_y_m, two_y_m, params->f.p);
+    U96 B_m = addmod96(submod96(y2_m, two_y_m, params->f.p),
+                       params->two_m, params->f.p);
+    U96 C_m = submod96(y2_m, params->two_m, params->f.p);
+    U96 R_m = addmod96(submod96(y2_m, four_y_m, params->f.p),
+                       params->two_m, params->f.p);
+    U96 ym1_m = submod96(y_m, params->f.one, params->f.p);
+    if (is_zero96(ym1_m)) return 0;
+
+    U96 F_m = mont_mul96(mont_mul96(ym1_m, C_m, &params->f), B_m, &params->f);
+    int domain = chi96_mont(F_m, params);
+    if (domain == 0) return 0;
+    out->valid = 1;
+    out->domain_line = domain;
+    if (domain != 1) return 1;
+
+    U96 K_m = submod96(u96_from_u64(0),
+                       mont_mul96(C_m, R_m, &params->f), params->f.p);
+    if (is_zero96(K_m)) return 1;
+    U96 sqrt_K_m;
+    if (!sqrtmod_p5_96_mont(&sqrt_K_m, K_m, params)) return 1;
+    U96 sqrt_F_m;
+    if (!sqrtmod_p5_96_mont(&sqrt_F_m, F_m, params)) return 1;
+
+    U96 nh_scale_m = mont_mul96(params->eight_m, ym1_m, &params->f);
+    U96 sqrt_Nh_m = mont_mul96(nh_scale_m, sqrt_F_m, &params->f);
+    int nh_scale_chi = chi96_mont(nh_scale_m, params);
+    if (nh_scale_chi == 0) return 1;
+    if (nh_scale_chi < 0) {
+        sqrt_Nh_m = submod96(u96_from_u64(0), sqrt_Nh_m, params->f.p);
+    }
+
+    U96 nv_factor_m = mont_mul96(y_m, C_m, &params->f);
+    int nv_scale_chi = chi96_mont(nv_factor_m, params);
+    if (nv_scale_chi == 0) return 1;
+    U96 sqrt_Nv_num_m = mont_mul96(
+        mont_mul96(mont_mul96(params->four_m, y_m, &params->f), sqrt_F_m, &params->f),
+        sqrt_K_m, &params->f);
+    if (nv_scale_chi < 0) {
+        sqrt_Nv_num_m = submod96(u96_from_u64(0), sqrt_Nv_num_m, params->f.p);
+    }
+
+    U96 Ch_m = mont_mul96(mont_mul96(C_m, B_m, &params->f),
+                          params->four_m, &params->f);
+    U96 h_arg_m = mont_mul96(addmod96(Ch_m, sqrt_Nh_m, params->f.p),
+                             params->two_m, &params->f);
+    int H = chi96_mont(h_arg_m, params);
+    if (H == 0) return 1;
+
+    U96 ym1_2_m = mont_mul96(ym1_m, ym1_m, &params->f);
+    U96 av_m = mont_mul96(y_m, ym1_2_m, &params->f);
+    av_m = mont_mul96(av_m, params->eight_m, &params->f);
+    U96 av_num_m = mont_mul96(C_m, av_m, &params->f);
+    U96 v_arg_num_m = addmod96(av_num_m, sqrt_Nv_num_m, params->f.p);
+    int chi_C = chi96_mont(C_m, params);
+    int chi_2B = chi96_mont(mont_mul96(B_m, params->two_m, &params->f), params);
+    int chi_v = chi96_mont(mont_mul96(v_arg_num_m, params->two_m, &params->f),
+                           params);
+    if (chi_C == 0 || chi_2B == 0 || chi_v == 0) return 1;
+    chi_v *= chi_C;
+    int VQ = chi_2B * chi_v;
+
+    U96 y_minus_2_m = submod96(y_m, params->two_m, params->f.p);
+    U96 neg_x_num_m = submod96(u96_from_u64(0),
+                               mont_mul96(y_m, y_minus_2_m, &params->f),
+                               params->f.p);
+    int X = chi96_mont(neg_x_num_m, params);
+    if (X == 0) return 1;
+
+    int d_class = -X * VQ * H;
+    int y_chi = chi96_mont(y_m, params);
+    if (y_chi == 0) return 1;
+
+    U96 t_inv_m = invert96_mont(ym1_m, params);
+    U96 a_m = submod96(ym1_m, t_inv_m, params->f.p);
+    int a_chi = chi96_mont(a_m, params);
+    int sqrt_K_chi = chi96_mont(sqrt_K_m, params);
+    int B_chi = chi96_mont(B_m, params);
+    if (a_chi == 0 || sqrt_K_chi == 0 || B_chi == 0) return 1;
+
+    int b_chi = sqrt_K_chi * B_chi;
+    int t_class = d_class * y_chi;
+    int t_line = (a_chi == 1) ? t_class : t_class * b_chi;
+
+    out->d_class = d_class;
+    out->t_class = t_class;
+    out->t_line = t_line;
+    out->a_chi = a_chi;
+    out->b_chi = b_chi;
+    return 1;
+}
+
 HD static int x16_root_to_montgomery_A96_mont(U96 *Ao, U96 *Amo, U96 *xPmo,
                                               U96 x_m, U96 y_m,
                                               const SearchParams96 *params) {
@@ -1442,6 +1875,63 @@ HD static int halve_once_first96_mont_trace(U96 *xo_m, U96 *first_w_m,
     return 0;
 }
 
+HD static int halve_once_first96_mont_uprecheck(U96 *xo_m, U96 A_m, U96 x_m,
+                                                int need_next_gate,
+                                                const SearchParams96 *params,
+                                                UPrecheckCounters *counters) {
+    U96 x2_m = mont_mul96(x_m, x_m, &params->f);
+    U96 d_m = addmod96(addmod96(x2_m, mont_mul96(A_m, x_m, &params->f),
+                                params->f.p),
+                       params->f.one, params->f.p);
+    U96 sd_m;
+    counters->d_sqrt_calls++;
+    if (!sqrtmod_p5_96_mont(&sd_m, d_m, params)) return 0;
+    counters->d_sqrt_success++;
+
+    int rejected_possible_w_branch = 0;
+    U96 roots_d[2] = {sd_m, submod96(u96_from_u64(0), sd_m, params->f.p)};
+    for (int i = 0; i < 2; i++) {
+        U96 u_m = addmod96(addmod96(x_m, x_m, params->f.p),
+                           addmod96(roots_d[i], roots_d[i], params->f.p),
+                           params->f.p);
+        if (need_next_gate) {
+            counters->uplus_checks++;
+            int uplus_chi = chi96_mont(addmod96(u_m, params->two_m,
+                                                params->f.p),
+                                       params);
+            if (uplus_chi != 1) {
+                counters->uplus_reject++;
+                rejected_possible_w_branch = 1;
+                continue;
+            }
+            counters->uplus_pass++;
+        }
+
+        U96 w_m = submod96(mont_mul96(u_m, u_m, &params->f), params->four_m,
+                           params->f.p);
+        U96 sw_m;
+        counters->w_sqrt_calls++;
+        if (!sqrtmod_p5_96_mont(&sw_m, w_m, params)) continue;
+        counters->w_sqrt_success++;
+
+        U96 candidates[2] = {
+            mont_mul96(addmod96(u_m, sw_m, params->f.p), params->inv2_m, &params->f),
+            mont_mul96(submod96(u_m, sw_m, params->f.p), params->inv2_m, &params->f),
+        };
+        for (int j = 0; j < 2; j++) {
+            if (!is_zero96(candidates[j])) {
+                *xo_m = candidates[j];
+                return 1;
+            }
+        }
+    }
+    if (need_next_gate && rejected_possible_w_branch) {
+        counters->precheck_short_circuit++;
+        return 2;
+    }
+    return 0;
+}
+
 HD static int halve_chain_from_depth96_mont(U96 *xout_m, U96 A_m, U96 x_m,
                                             int depth, const SearchParams96 *params) {
     for (; depth < params->k; depth++) {
@@ -1492,6 +1982,45 @@ HD static int halve_prefix_depth96_mont_trace(U96 *xout_m, U96 *first_w_m,
     while (depth < target_depth) {
         if (!halve_once_first96_mont(&x_m, A_m, x_m, params)) break;
         depth++;
+    }
+    *xout_m = x_m;
+    return depth;
+}
+
+HD static int halve_prefix_depth96_mont(U96 *xout_m, U96 A_m, U96 x_m,
+                                        int depth, int target_depth,
+                                        const SearchParams96 *params) {
+    if (target_depth > params->k) target_depth = params->k;
+    if (target_depth > PROBE_MAX_DEPTH) target_depth = PROBE_MAX_DEPTH;
+    while (depth < target_depth) {
+        if (!halve_once_first96_mont(&x_m, A_m, x_m, params)) break;
+        depth++;
+    }
+    *xout_m = x_m;
+    return depth;
+}
+
+HD static int halve_prefix_depth96_mont_uprecheck(U96 *xout_m, U96 A_m,
+                                                  U96 x_m, int depth,
+                                                  int target_depth,
+                                                  const SearchParams96 *params,
+                                                  UPrecheckCounters *counters) {
+    if (target_depth > params->k) target_depth = params->k;
+    if (target_depth > PROBE_MAX_DEPTH) target_depth = PROBE_MAX_DEPTH;
+    while (depth < target_depth) {
+        int need_next_gate = (depth + 1) < target_depth;
+        int step = halve_once_first96_mont_uprecheck(&x_m, A_m, x_m,
+                                                     need_next_gate, params,
+                                                     counters);
+        if (step == 1) {
+            depth++;
+            continue;
+        }
+        if (step == 2) {
+            *xout_m = x_m;
+            return depth + 1;
+        }
+        break;
     }
     *xout_m = x_m;
     return depth;
@@ -1689,6 +2218,8 @@ __global__ static void x16stratumprobe_kernel96(SearchParams96 params,
                                                 u64 split_trial,
                                                 u64 claim_batch,
                                                 int seed_mode,
+                                                int first_gate_filter,
+                                                int prefix_filter_depth,
                                                 int target_depth,
                                                 int bucket_bits,
                                                 ProbeStats *__restrict__ probe) {
@@ -1706,6 +2237,305 @@ __global__ static void x16stratumprobe_kernel96(SearchParams96 params,
     u64 claim_limit = 0;
 
     while (!probe_done_now(probe, max_curves)) {
+        U96 y = rand_below96(&rng, &params);
+        local_y_draws++;
+        if (is_zero96(y)) continue;
+
+        U96 y_m = to_mont96(y, &params.f);
+        U96 y2_m = mont_mul96(y_m, y_m, &params.f);
+        if (!x16_y_predicts_nonsplit96_mont(y_m, y2_m, &params)) continue;
+        local_y_nonsplit++;
+
+        if (first_gate_filter) {
+            U96 ym1_m = submod96(y_m, params.f.one, params.f.p);
+            if (is_zero96(ym1_m)) continue;
+            U96 two_y_filter_m = addmod96(y_m, y_m, params.f.p);
+            U96 B_m = addmod96(submod96(y2_m, two_y_filter_m, params.f.p),
+                               params.two_m, params.f.p);
+            U96 C_m = submod96(y2_m, params.two_m, params.f.p);
+            U96 F_m = mont_mul96(mont_mul96(ym1_m, C_m, &params.f),
+                                 B_m, &params.f);
+            if (chi96_mont(F_m, &params) != 1) continue;
+        }
+
+        U96 y3_m = mont_mul96(y2_m, y_m, &params.f);
+        U96 two_y_m = addmod96(y_m, y_m, params.f.p);
+        U96 qa_m = submod96(y2_m, two_y_m, params.f.p);
+        if (is_zero96(qa_m)) continue;
+        U96 qb_m = submod96(addmod96(y2_m, y2_m, params.f.p), y3_m, params.f.p);
+        U96 qc_m = submod96(params.f.one, y_m, params.f.p);
+        U96 D_m = submod96(
+            mont_mul96(qb_m, qb_m, &params.f),
+            mont_mul96(addmod96(qa_m, qa_m, params.f.p),
+                       addmod96(qc_m, qc_m, params.f.p), &params.f),
+            params.f.p);
+        U96 sd_m;
+        if (!sqrtmod_p5_96_mont(&sd_m, D_m, &params)) continue;
+        local_y_with_sqrt_D++;
+
+        U96 inv_2qa_m = invert96_mont(addmod96(qa_m, qa_m, params.f.p), &params);
+        U96 roots_m[2] = {
+            mont_mul96(submod96(sd_m, qb_m, params.f.p), inv_2qa_m, &params.f),
+            mont_mul96(submod96(submod96(u96_from_u64(0), sd_m, params.f.p), qb_m,
+                                params.f.p),
+                       inv_2qa_m, &params.f),
+        };
+
+        U96 A;
+        U96 A_m;
+        U96 xP16_m[2];
+        int root_valid[2] = {0, 0};
+        root_valid[0] = x16_root_to_montgomery_A96_mont(&A, &A_m, &xP16_m[0],
+                                                        roots_m[0], y_m, &params);
+        if (root_valid[0]) {
+            root_valid[1] = x16_root_to_montgomery_xP96_mont(&xP16_m[1],
+                                                             roots_m[1], y_m,
+                                                             &params);
+        } else {
+            root_valid[1] = x16_root_to_montgomery_A96_mont(&A, &A_m, &xP16_m[1],
+                                                            roots_m[1], y_m,
+                                                            &params);
+        }
+
+        int stop = 0;
+        for (int ri = 0; ri < 2; ri++) {
+            if (!root_valid[ri]) continue;
+            local_roots_valid++;
+
+            U96 x_start_m = xP16_m[ri];
+            U96 first_w_m = u96_from_u64(0);
+            U96 first_v_m = u96_from_u64(0);
+            int effective_prefix_depth = prefix_filter_depth;
+            if (effective_prefix_depth < 4) effective_prefix_depth = 4;
+            if (effective_prefix_depth > target_depth) {
+                effective_prefix_depth = target_depth;
+            }
+            if (effective_prefix_depth > 4) {
+                int prefix_reached = halve_prefix_depth96_mont_trace(
+                    &x_start_m, &first_w_m, &first_v_m, A_m, x_start_m, 4,
+                    effective_prefix_depth, &params);
+                if (prefix_reached < effective_prefix_depth) continue;
+            }
+
+            if (next_claim >= claim_limit) {
+                next_claim = atomicAdd(&probe->claimed, claim_batch);
+                claim_limit = next_claim + claim_batch;
+            }
+            u64 claim = next_claim++;
+            if (claim >= max_curves) {
+                stop = 1;
+                break;
+            }
+
+            local_accepted++;
+            U96 x_probe_m;
+            int reached_depth;
+            if (effective_prefix_depth > 4) {
+                reached_depth = halve_prefix_depth96_mont(
+                    &x_probe_m, A_m, x_start_m, effective_prefix_depth,
+                    target_depth, &params);
+            } else {
+                reached_depth = halve_prefix_depth96_mont_trace(
+                    &x_probe_m, &first_w_m, &first_v_m, A_m, x_start_m, 4,
+                    target_depth, &params);
+            }
+            U96 D = from_mont96(D_m, &params.f);
+            U96 first_w = from_mont96(first_w_m, &params.f);
+            U96 first_v = from_mont96(first_v_m, &params.f);
+            u64 source_hash = compact128(u96_to_u128(D)) ^
+                              (compact128(u96_to_u128(first_w)) *
+                               0x9e3779b97f4a7c15ULL) ^
+                              (compact128(u96_to_u128(first_v)) *
+                               0xd1342543de82ef95ULL) ^
+                              (compact128(u96_to_u128(y)) *
+                               0x94d049bb133111ebULL);
+            probe_record_candidate(probe, global_base + claim, split_trial,
+                                   reached_depth, target_depth, ri, source_hash,
+                                   bucket_bits);
+        }
+        if (stop) break;
+    }
+
+    atomicAdd(&probe->accepted_roots, local_accepted);
+    atomicAdd(&probe->y_draws, local_y_draws);
+    atomicAdd(&probe->y_nonsplit, local_y_nonsplit);
+    atomicAdd(&probe->y_with_sqrt_D, local_y_with_sqrt_D);
+    atomicAdd(&probe->roots_valid, local_roots_valid);
+}
+
+__global__ static void x16ecoverprobe_kernel96(SearchParams96 params,
+                                               u64 seed_offset,
+                                               u64 chunk_nonce,
+                                               u64 max_curves,
+                                               u64 global_base,
+                                               u64 split_trial,
+                                               u64 claim_batch,
+                                               int seed_mode,
+                                               int prefix_filter_depth,
+                                               int target_depth,
+                                               int bucket_bits,
+                                               ProbeStats *__restrict__ probe) {
+    u64 tid = (u64)blockIdx.x * (u64)blockDim.x + (u64)threadIdx.x;
+    u64 total_threads = (u64)gridDim.x * (u64)blockDim.x;
+    Rng rng;
+    init_rng(&rng, seed_offset, chunk_nonce, tid, total_threads, seed_mode);
+
+    u64 local_accepted = 0;
+    u64 local_x_draws = 0;
+    u64 local_y_nonsplit = 0;
+    u64 local_y_with_sqrt_D = 0;
+    u64 local_roots_valid = 0;
+    u64 next_claim = 0;
+    u64 claim_limit = 0;
+
+    while (!probe_done_now(probe, max_curves)) {
+        U96 X = rand_below96(&rng, &params);
+        local_x_draws++;
+
+        U96 X_m = to_mont96(X, &params.f);
+        U96 X2_m = mont_mul96(X_m, X_m, &params.f);
+        U96 rhs_m = submod96(mont_mul96(X2_m, X_m, &params.f), X_m,
+                             params.f.p);
+        U96 W_m;
+        if (!sqrtmod_p5_96_mont(&W_m, rhs_m, &params)) continue;
+
+        U96 y_m = addmod96(X_m, params.f.one, params.f.p);
+        if (is_zero96(y_m)) continue;
+        U96 y2_m = mont_mul96(y_m, y_m, &params.f);
+        if (!x16_y_predicts_nonsplit96_mont(y_m, y2_m, &params)) continue;
+        local_y_nonsplit++;
+
+        U96 y3_m = mont_mul96(y2_m, y_m, &params.f);
+        U96 two_y_m = addmod96(y_m, y_m, params.f.p);
+        U96 qa_m = submod96(y2_m, two_y_m, params.f.p);
+        if (is_zero96(qa_m)) continue;
+        U96 qb_m = submod96(addmod96(y2_m, y2_m, params.f.p), y3_m, params.f.p);
+        U96 qc_m = submod96(params.f.one, y_m, params.f.p);
+        U96 D_m = submod96(
+            mont_mul96(qb_m, qb_m, &params.f),
+            mont_mul96(addmod96(qa_m, qa_m, params.f.p),
+                       addmod96(qc_m, qc_m, params.f.p), &params.f),
+            params.f.p);
+        U96 sd_m;
+        if (!sqrtmod_p5_96_mont(&sd_m, D_m, &params)) continue;
+        local_y_with_sqrt_D++;
+
+        U96 inv_2qa_m = invert96_mont(addmod96(qa_m, qa_m, params.f.p), &params);
+        U96 roots_m[2] = {
+            mont_mul96(submod96(sd_m, qb_m, params.f.p), inv_2qa_m, &params.f),
+            mont_mul96(submod96(submod96(u96_from_u64(0), sd_m, params.f.p), qb_m,
+                                params.f.p),
+                       inv_2qa_m, &params.f),
+        };
+
+        U96 A;
+        U96 A_m;
+        U96 xP16_m[2];
+        int root_valid[2] = {0, 0};
+        root_valid[0] = x16_root_to_montgomery_A96_mont(&A, &A_m, &xP16_m[0],
+                                                        roots_m[0], y_m, &params);
+        if (root_valid[0]) {
+            root_valid[1] = x16_root_to_montgomery_xP96_mont(&xP16_m[1],
+                                                             roots_m[1], y_m,
+                                                             &params);
+        } else {
+            root_valid[1] = x16_root_to_montgomery_A96_mont(&A, &A_m, &xP16_m[1],
+                                                            roots_m[1], y_m,
+                                                            &params);
+        }
+
+        U96 y = from_mont96(y_m, &params.f);
+        int stop = 0;
+        for (int ri = 0; ri < 2; ri++) {
+            if (!root_valid[ri]) continue;
+            local_roots_valid++;
+
+            U96 x_start_m = xP16_m[ri];
+            U96 first_w_m = u96_from_u64(0);
+            U96 first_v_m = u96_from_u64(0);
+            int effective_prefix_depth = prefix_filter_depth;
+            if (effective_prefix_depth < 4) effective_prefix_depth = 4;
+            if (effective_prefix_depth > target_depth) {
+                effective_prefix_depth = target_depth;
+            }
+            if (effective_prefix_depth > 4) {
+                int prefix_reached = halve_prefix_depth96_mont_trace(
+                    &x_start_m, &first_w_m, &first_v_m, A_m, x_start_m, 4,
+                    effective_prefix_depth, &params);
+                if (prefix_reached < effective_prefix_depth) continue;
+            }
+
+            if (next_claim >= claim_limit) {
+                next_claim = atomicAdd(&probe->claimed, claim_batch);
+                claim_limit = next_claim + claim_batch;
+            }
+            u64 claim = next_claim++;
+            if (claim >= max_curves) {
+                stop = 1;
+                break;
+            }
+
+            local_accepted++;
+            U96 x_probe_m;
+            int reached_depth;
+            if (effective_prefix_depth > 4) {
+                reached_depth = halve_prefix_depth96_mont(
+                    &x_probe_m, A_m, x_start_m, effective_prefix_depth,
+                    target_depth, &params);
+            } else {
+                reached_depth = halve_prefix_depth96_mont_trace(
+                    &x_probe_m, &first_w_m, &first_v_m, A_m, x_start_m, 4,
+                    target_depth, &params);
+            }
+            U96 D = from_mont96(D_m, &params.f);
+            U96 first_w = from_mont96(first_w_m, &params.f);
+            U96 first_v = from_mont96(first_v_m, &params.f);
+            u64 source_hash = compact128(u96_to_u128(D)) ^
+                              (compact128(u96_to_u128(first_w)) *
+                               0x9e3779b97f4a7c15ULL) ^
+                              (compact128(u96_to_u128(first_v)) *
+                               0xd1342543de82ef95ULL) ^
+                              (compact128(u96_to_u128(X)) *
+                               0x94d049bb133111ebULL) ^
+                              (compact128(u96_to_u128(y)) *
+                               0x2545f4914f6cdd1dULL);
+            probe_record_candidate(probe, global_base + claim, split_trial,
+                                   reached_depth, target_depth, ri, source_hash,
+                                   bucket_bits);
+        }
+        if (stop) break;
+    }
+
+    atomicAdd(&probe->accepted_roots, local_accepted);
+    atomicAdd(&probe->y_draws, local_x_draws);
+    atomicAdd(&probe->y_nonsplit, local_y_nonsplit);
+    atomicAdd(&probe->y_with_sqrt_D, local_y_with_sqrt_D);
+    atomicAdd(&probe->roots_valid, local_roots_valid);
+}
+
+__global__ static void x16uprecheckprobe_kernel96(SearchParams96 params,
+                                                  u64 seed_offset,
+                                                  u64 chunk_nonce,
+                                                  u64 max_curves,
+                                                  u64 claim_batch,
+                                                  int seed_mode,
+                                                  int target_depth,
+                                                  UPrecheckStats *__restrict__ stats) {
+    u64 tid = (u64)blockIdx.x * (u64)blockDim.x + (u64)threadIdx.x;
+    u64 total_threads = (u64)gridDim.x * (u64)blockDim.x;
+    Rng rng;
+    init_rng(&rng, seed_offset, chunk_nonce, tid, total_threads, seed_mode);
+
+    u64 local_accepted = 0;
+    u64 local_y_draws = 0;
+    u64 local_y_nonsplit = 0;
+    u64 local_y_with_sqrt_D = 0;
+    u64 local_roots_valid = 0;
+    UPrecheckCounters local_counters{};
+    u64 next_claim = 0;
+    u64 claim_limit = 0;
+
+    while (!uprecheck_done_now(stats, max_curves)) {
         U96 y = rand_below96(&rng, &params);
         local_y_draws++;
         if (is_zero96(y)) continue;
@@ -1760,7 +2590,7 @@ __global__ static void x16stratumprobe_kernel96(SearchParams96 params,
             local_roots_valid++;
 
             if (next_claim >= claim_limit) {
-                next_claim = atomicAdd(&probe->claimed, claim_batch);
+                next_claim = atomicAdd(&stats->claimed, claim_batch);
                 claim_limit = next_claim + claim_batch;
             }
             u64 claim = next_claim++;
@@ -1771,33 +2601,182 @@ __global__ static void x16stratumprobe_kernel96(SearchParams96 params,
 
             local_accepted++;
             U96 x_probe_m;
+            int reached_depth = halve_prefix_depth96_mont_uprecheck(
+                &x_probe_m, A_m, xP16_m[ri], 4, target_depth, &params,
+                &local_counters);
+            uprecheck_record_candidate(stats, reached_depth);
+        }
+        if (stop) break;
+    }
+
+    atomicAdd(&stats->accepted_roots, local_accepted);
+    atomicAdd(&stats->y_draws, local_y_draws);
+    atomicAdd(&stats->y_nonsplit, local_y_nonsplit);
+    atomicAdd(&stats->y_with_sqrt_D, local_y_with_sqrt_D);
+    atomicAdd(&stats->roots_valid, local_roots_valid);
+    atomicAdd(&stats->counters.d_sqrt_calls, local_counters.d_sqrt_calls);
+    atomicAdd(&stats->counters.d_sqrt_success, local_counters.d_sqrt_success);
+    atomicAdd(&stats->counters.uplus_checks, local_counters.uplus_checks);
+    atomicAdd(&stats->counters.uplus_pass, local_counters.uplus_pass);
+    atomicAdd(&stats->counters.uplus_reject, local_counters.uplus_reject);
+    atomicAdd(&stats->counters.w_sqrt_calls, local_counters.w_sqrt_calls);
+    atomicAdd(&stats->counters.w_sqrt_success, local_counters.w_sqrt_success);
+    atomicAdd(&stats->counters.precheck_short_circuit,
+              local_counters.precheck_short_circuit);
+}
+
+__global__ static void x16tracenormab_kernel96(SearchParams96 params,
+                                               u64 seed_offset,
+                                               u64 chunk_nonce,
+                                               u64 raw_y_draws,
+                                               int seed_mode,
+                                               int filter_only,
+                                               TraceNormABStats *__restrict__ stats) {
+    u64 tid = (u64)blockIdx.x * (u64)blockDim.x + (u64)threadIdx.x;
+    u64 total_threads = (u64)gridDim.x * (u64)blockDim.x;
+    Rng rng;
+    init_rng(&rng, seed_offset, chunk_nonce, tid, total_threads, seed_mode);
+
+    const int target_depth = trace_ab_depth_value(TRACE_AB_DEPTH_COUNT - 1);
+
+    u64 local_raw_y_draws = 0;
+    u64 local_nonsplit_y = 0;
+    u64 local_f_square = 0;
+    u64 local_d_plus = 0;
+    u64 local_d_minus = 0;
+    u64 local_d_zero = 0;
+    u64 local_t_line_plus = 0;
+    u64 local_t_line_minus = 0;
+    u64 local_t_line_inconsistent = 0;
+    u64 local_t_line_unusable = 0;
+    u64 local_branch_sqrt_y = 0;
+    u64 local_roots_valid = 0;
+    u64 local_ordinary_emitted = 0;
+    u64 local_candidate_emitted = 0;
+    u64 local_ordinary_survive[TRACE_AB_DEPTH_COUNT] = {0, 0, 0, 0, 0, 0};
+    u64 local_candidate_survive[TRACE_AB_DEPTH_COUNT] = {0, 0, 0, 0, 0, 0};
+
+    u64 draws_per_thread = (raw_y_draws + total_threads - 1) / total_threads;
+    for (u64 i = 0; i < draws_per_thread; i++) {
+        u64 draw_index = i * total_threads + tid;
+        if (draw_index >= raw_y_draws) break;
+
+        U96 y = rand_below96(&rng, &params);
+        local_raw_y_draws++;
+        if (is_zero96(y)) continue;
+
+        U96 y_m = to_mont96(y, &params.f);
+        U96 y2_m = mont_mul96(y_m, y_m, &params.f);
+        if (!x16_y_predicts_nonsplit96_mont(y_m, y2_m, &params)) continue;
+        local_nonsplit_y++;
+
+        TraceNormLineClass line{};
+        x16_trace_norm_line_class96(&line, y_m, y2_m, &params);
+        int candidate_gate = 0;
+        if (line.valid && line.domain_line == 1) {
+            local_f_square++;
+            if (line.d_class == 1) {
+                local_d_plus++;
+                candidate_gate = 1;
+            } else if (line.d_class == -1) {
+                local_d_minus++;
+            } else {
+                local_d_zero++;
+            }
+
+            if (line.t_line == 1) {
+                local_t_line_plus++;
+            } else if (line.t_line == -1) {
+                local_t_line_minus++;
+            } else {
+                local_t_line_unusable++;
+            }
+            if (line.t_line != 0 && line.a_chi != 0 && line.b_chi != 0) {
+                int expected = (line.a_chi == 1) ? line.t_class
+                                                 : line.t_class * line.b_chi;
+                if (line.t_line != expected) local_t_line_inconsistent++;
+            }
+        }
+        if (filter_only && !candidate_gate) continue;
+
+        U96 y3_m = mont_mul96(y2_m, y_m, &params.f);
+        U96 two_y_m = addmod96(y_m, y_m, params.f.p);
+        U96 qa_m = submod96(y2_m, two_y_m, params.f.p);
+        if (is_zero96(qa_m)) continue;
+        U96 qb_m = submod96(addmod96(y2_m, y2_m, params.f.p), y3_m, params.f.p);
+        U96 qc_m = submod96(params.f.one, y_m, params.f.p);
+        U96 D_m = submod96(
+            mont_mul96(qb_m, qb_m, &params.f),
+            mont_mul96(addmod96(qa_m, qa_m, params.f.p),
+                       addmod96(qc_m, qc_m, params.f.p), &params.f),
+            params.f.p);
+        U96 sd_m;
+        if (!sqrtmod_p5_96_mont(&sd_m, D_m, &params)) continue;
+        local_branch_sqrt_y++;
+
+        U96 inv_2qa_m = invert96_mont(addmod96(qa_m, qa_m, params.f.p), &params);
+        U96 roots_m[2] = {
+            mont_mul96(submod96(sd_m, qb_m, params.f.p), inv_2qa_m, &params.f),
+            mont_mul96(submod96(submod96(u96_from_u64(0), sd_m, params.f.p), qb_m,
+                                params.f.p),
+                       inv_2qa_m, &params.f),
+        };
+
+        U96 A;
+        U96 A_m;
+        U96 xP16_m[2];
+        int root_valid[2] = {0, 0};
+        root_valid[0] = x16_root_to_montgomery_A96_mont(&A, &A_m, &xP16_m[0],
+                                                        roots_m[0], y_m, &params);
+        if (root_valid[0]) {
+            root_valid[1] = x16_root_to_montgomery_xP96_mont(&xP16_m[1],
+                                                             roots_m[1], y_m,
+                                                             &params);
+        } else {
+            root_valid[1] = x16_root_to_montgomery_A96_mont(&A, &A_m, &xP16_m[1],
+                                                            roots_m[1], y_m,
+                                                            &params);
+        }
+
+        for (int ri = 0; ri < 2; ri++) {
+            if (!root_valid[ri]) continue;
+            local_roots_valid++;
+            if (!filter_only) local_ordinary_emitted++;
+
+            U96 x_probe_m;
             U96 first_w_m = u96_from_u64(0);
             U96 first_v_m = u96_from_u64(0);
             int reached_depth = halve_prefix_depth96_mont_trace(
                 &x_probe_m, &first_w_m, &first_v_m, A_m, xP16_m[ri], 4,
                 target_depth, &params);
-            U96 D = from_mont96(D_m, &params.f);
-            U96 first_w = from_mont96(first_w_m, &params.f);
-            U96 first_v = from_mont96(first_v_m, &params.f);
-            u64 source_hash = compact128(u96_to_u128(D)) ^
-                              (compact128(u96_to_u128(first_w)) *
-                               0x9e3779b97f4a7c15ULL) ^
-                              (compact128(u96_to_u128(first_v)) *
-                               0xd1342543de82ef95ULL) ^
-                              (compact128(u96_to_u128(y)) *
-                               0x94d049bb133111ebULL);
-            probe_record_candidate(probe, global_base + claim, split_trial,
-                                   reached_depth, target_depth, ri, source_hash,
-                                   bucket_bits);
+            for (int di = 0; di < TRACE_AB_DEPTH_COUNT; di++) {
+                if (reached_depth >= trace_ab_depth_value(di)) {
+                    if (!filter_only) local_ordinary_survive[di]++;
+                    if (candidate_gate) local_candidate_survive[di]++;
+                }
+            }
+            if (candidate_gate) local_candidate_emitted++;
         }
-        if (stop) break;
     }
 
-    atomicAdd(&probe->accepted_roots, local_accepted);
-    atomicAdd(&probe->y_draws, local_y_draws);
-    atomicAdd(&probe->y_nonsplit, local_y_nonsplit);
-    atomicAdd(&probe->y_with_sqrt_D, local_y_with_sqrt_D);
-    atomicAdd(&probe->roots_valid, local_roots_valid);
+    atomicAdd(&stats->raw_y_draws, local_raw_y_draws);
+    atomicAdd(&stats->nonsplit_y, local_nonsplit_y);
+    atomicAdd(&stats->f_square, local_f_square);
+    atomicAdd(&stats->d_plus, local_d_plus);
+    atomicAdd(&stats->d_minus, local_d_minus);
+    atomicAdd(&stats->d_zero, local_d_zero);
+    atomicAdd(&stats->t_line_plus, local_t_line_plus);
+    atomicAdd(&stats->t_line_minus, local_t_line_minus);
+    atomicAdd(&stats->t_line_inconsistent, local_t_line_inconsistent);
+    atomicAdd(&stats->t_line_unusable, local_t_line_unusable);
+    atomicAdd(&stats->branch_sqrt_y, local_branch_sqrt_y);
+    atomicAdd(&stats->roots_valid, local_roots_valid);
+    atomicAdd(&stats->ordinary_emitted_candidates, local_ordinary_emitted);
+    atomicAdd(&stats->candidate_emitted_candidates, local_candidate_emitted);
+    for (int di = 0; di < TRACE_AB_DEPTH_COUNT; di++) {
+        atomicAdd(&stats->ordinary_survive[di], local_ordinary_survive[di]);
+        atomicAdd(&stats->candidate_survive[di], local_candidate_survive[di]);
+    }
 }
 
 static void die_cuda(cudaError_t err, const char *what) {
@@ -1946,7 +2925,11 @@ static const char *seed_mode_name(int seed_mode) {
 static void usage(const char *argv0) {
     std::fprintf(stderr,
                  "Usage: %s <p> [seed_offset] [max_trials] "
-                 "[x16halvenonsplit|x16stratumprobe] [chunk_trials] [blocks] "
+                 "[x16halvenonsplit|x16stratumprobe|x16domainprobe|"
+                 "x16d2probe|x16d3probe|x16d4probe|x16tracenormab|"
+                 "x16tracenormfilter|x16uprecheckprobe|x16ecoverprobe|"
+                 "x16ecoverd2probe|x16ecoverd3probe|x16ecoverd4probe] "
+                 "[chunk_trials] [blocks] "
                  "[threads] [claim_batch] [auto|generic|u96] "
                  "[seed=mixed|identity|splitmix] [start_chunk=N] "
                  "[start_trial=N] [target_depth=N] [bucket_bits=N] "
@@ -1972,6 +2955,200 @@ static void add_probe_stats(ProbeStats *dst, const ProbeStats *src) {
         dst->bucket_held_total[i] += src->bucket_held_total[i];
         dst->bucket_held_survive[i] += src->bucket_held_survive[i];
     }
+}
+
+static void add_trace_norm_ab_stats(TraceNormABStats *dst,
+                                    const TraceNormABStats *src) {
+    dst->raw_y_draws += src->raw_y_draws;
+    dst->nonsplit_y += src->nonsplit_y;
+    dst->f_square += src->f_square;
+    dst->d_plus += src->d_plus;
+    dst->d_minus += src->d_minus;
+    dst->d_zero += src->d_zero;
+    dst->t_line_plus += src->t_line_plus;
+    dst->t_line_minus += src->t_line_minus;
+    dst->t_line_inconsistent += src->t_line_inconsistent;
+    dst->t_line_unusable += src->t_line_unusable;
+    dst->branch_sqrt_y += src->branch_sqrt_y;
+    dst->roots_valid += src->roots_valid;
+    dst->ordinary_emitted_candidates += src->ordinary_emitted_candidates;
+    dst->candidate_emitted_candidates += src->candidate_emitted_candidates;
+    for (int i = 0; i < TRACE_AB_DEPTH_COUNT; i++) {
+        dst->ordinary_survive[i] += src->ordinary_survive[i];
+        dst->candidate_survive[i] += src->candidate_survive[i];
+    }
+}
+
+static void add_uprecheck_stats(UPrecheckStats *dst, const UPrecheckStats *src) {
+    dst->claimed += src->claimed;
+    dst->accepted_roots += src->accepted_roots;
+    dst->y_draws += src->y_draws;
+    dst->y_nonsplit += src->y_nonsplit;
+    dst->y_with_sqrt_D += src->y_with_sqrt_D;
+    dst->roots_valid += src->roots_valid;
+    for (int i = 0; i <= PROBE_MAX_DEPTH; i++) {
+        dst->depth_exact[i] += src->depth_exact[i];
+    }
+    dst->counters.d_sqrt_calls += src->counters.d_sqrt_calls;
+    dst->counters.d_sqrt_success += src->counters.d_sqrt_success;
+    dst->counters.uplus_checks += src->counters.uplus_checks;
+    dst->counters.uplus_pass += src->counters.uplus_pass;
+    dst->counters.uplus_reject += src->counters.uplus_reject;
+    dst->counters.w_sqrt_calls += src->counters.w_sqrt_calls;
+    dst->counters.w_sqrt_success += src->counters.w_sqrt_success;
+    dst->counters.precheck_short_circuit +=
+        src->counters.precheck_short_circuit;
+}
+
+static u64 uprecheck_depth_survive_ge(const UPrecheckStats *stats, int depth) {
+    if (depth < 0) depth = 0;
+    if (depth > PROBE_MAX_DEPTH) depth = PROBE_MAX_DEPTH;
+    u64 total = 0;
+    for (int d = depth; d <= PROBE_MAX_DEPTH; d++) total += stats->depth_exact[d];
+    return total;
+}
+
+static void print_uprecheck_summary(const UPrecheckStats *stats, u128 p,
+                                    const char *backend_name,
+                                    const char *gpu_name, int seed_mode,
+                                    u64 seed_offset, int target_depth,
+                                    double elapsed) {
+    double accepted_rate = elapsed > 0.0
+        ? (double)stats->accepted_roots / elapsed / 1e6
+        : 0.0;
+    u64 target_survive = uprecheck_depth_survive_ge(stats, target_depth);
+    double target_rate = stats->accepted_roots
+        ? (double)target_survive / (double)stats->accepted_roots
+        : 0.0;
+    const UPrecheckCounters *c = &stats->counters;
+
+    std::printf("\nU+2 precheck probe summary:\n");
+    std::printf("  backend=%s GPU=\"%s\" seed_mode=%s seed_offset=%llu\n",
+                backend_name, gpu_name, seed_mode_name(seed_mode), seed_offset);
+    std::printf("  accepted_roots=%llu y_draws=%llu nonsplit_y=%llu "
+                "sqrtD_y=%llu roots_valid=%llu\n",
+                stats->accepted_roots, stats->y_draws, stats->y_nonsplit,
+                stats->y_with_sqrt_D, stats->roots_valid);
+    std::printf("  target_depth=%d survivors=%llu rate=%.9f "
+                "elapsed=%.6f accepted_rate_Mps=%.6f\n",
+                target_depth, target_survive, target_rate, elapsed,
+                accepted_rate);
+    std::printf("  precheck counters: d_sqrt=%llu/%llu uplus=%llu "
+                "pass=%llu reject=%llu short_circuit=%llu "
+                "w_sqrt=%llu/%llu\n",
+                c->d_sqrt_success, c->d_sqrt_calls, c->uplus_checks,
+                c->uplus_pass, c->uplus_reject,
+                c->precheck_short_circuit,
+                c->w_sqrt_success, c->w_sqrt_calls);
+    std::printf("  depth survival checkpoints:\n");
+    for (int d = 4; d <= target_depth; d++) {
+        if (d == 4 || d == target_depth || (d % 2) == 0) {
+            u64 ge = uprecheck_depth_survive_ge(stats, d);
+            double rate = stats->accepted_roots
+                ? (double)ge / (double)stats->accepted_roots
+                : 0.0;
+            std::printf("    depth>=%d count=%llu rate=%.9f\n", d, ge, rate);
+        }
+    }
+    std::printf("uprecheck_jsonl={\"mode\":\"x16uprecheckprobe\","
+                "\"p\":\"%s\",\"backend\":\"%s\",\"gpu\":\"%s\","
+                "\"seed_mode\":\"%s\",\"seed_offset\":%llu,"
+                "\"target_depth\":%d,\"elapsed\":%.6f,"
+                "\"accepted_roots\":%llu,\"y_draws\":%llu,"
+                "\"target_survivors\":%llu,\"uplus_checks\":%llu,"
+                "\"uplus_pass\":%llu,\"uplus_reject\":%llu,"
+                "\"short_circuit\":%llu,\"w_sqrt_calls\":%llu,"
+                "\"w_sqrt_success\":%llu}\n",
+                sprint128(p).c_str(), backend_name, gpu_name,
+                seed_mode_name(seed_mode), seed_offset, target_depth, elapsed,
+                stats->accepted_roots, stats->y_draws, target_survive,
+                c->uplus_checks, c->uplus_pass, c->uplus_reject,
+                c->precheck_short_circuit, c->w_sqrt_calls,
+                c->w_sqrt_success);
+}
+
+static void print_trace_norm_ab_summary(const TraceNormABStats *stats,
+                                        const char *mode_name, u128 p,
+                                        const char *backend_name,
+                                        const char *gpu_name, int seed_mode,
+                                        u64 seed_offset, double elapsed) {
+    double raw_rate = elapsed > 0.0 ? (double)stats->raw_y_draws / elapsed : 0.0;
+    double ordinary_rate = elapsed > 0.0
+        ? (double)stats->ordinary_emitted_candidates / elapsed
+        : 0.0;
+    double candidate_rate = elapsed > 0.0
+        ? (double)stats->candidate_emitted_candidates / elapsed
+        : 0.0;
+
+    std::printf("\nTrace/norm %s summary:\n",
+                std::strcmp(mode_name, "x16tracenormfilter") == 0
+                    ? "filter-only"
+                    : "same-stream A/B");
+    std::printf("  backend=%s GPU=\"%s\" seed_mode=%s seed_offset=%llu\n",
+                backend_name, gpu_name, seed_mode_name(seed_mode), seed_offset);
+    std::printf("  raw_y_draws=%llu elapsed=%.6f raw_y_per_sec=%.3f\n",
+                stats->raw_y_draws, elapsed, raw_rate);
+    std::printf("  nonsplit_y=%llu F_square=%llu branch_sqrt_y=%llu roots_valid=%llu\n",
+                stats->nonsplit_y, stats->f_square, stats->branch_sqrt_y,
+                stats->roots_valid);
+    std::printf("  D_trace: plus=%llu minus=%llu zero_or_unusable=%llu\n",
+                stats->d_plus, stats->d_minus, stats->d_zero);
+    std::printf("  T_line: plus=%llu minus=%llu inconsistent=%llu unusable=%llu\n",
+                stats->t_line_plus, stats->t_line_minus,
+                stats->t_line_inconsistent, stats->t_line_unusable);
+    std::printf("  emitted_candidates: ordinary=%llu candidate=%llu "
+                "ordinary_per_sec=%.3f candidate_per_sec=%.3f\n",
+                stats->ordinary_emitted_candidates,
+                stats->candidate_emitted_candidates,
+                ordinary_rate, candidate_rate);
+    std::printf("  depth ordinary_survive ordinary_rate candidate_survive "
+                "candidate_rate lift survivor_per_sec_candidate\n");
+    for (int i = 0; i < TRACE_AB_DEPTH_COUNT; i++) {
+        int d = trace_ab_depth_value(i);
+        double ordinary_survive_rate = stats->ordinary_emitted_candidates
+            ? (double)stats->ordinary_survive[i] /
+              (double)stats->ordinary_emitted_candidates
+            : 0.0;
+        double candidate_survive_rate = stats->candidate_emitted_candidates
+            ? (double)stats->candidate_survive[i] /
+              (double)stats->candidate_emitted_candidates
+            : 0.0;
+        double lift = ordinary_survive_rate > 0.0
+            ? candidate_survive_rate / ordinary_survive_rate
+            : 0.0;
+        double candidate_survivor_sec = elapsed > 0.0
+            ? (double)stats->candidate_survive[i] / elapsed
+            : 0.0;
+        std::printf("    %d %llu %.9f %llu %.9f %.3f %.6f\n",
+                    d, stats->ordinary_survive[i], ordinary_survive_rate,
+                    stats->candidate_survive[i], candidate_survive_rate,
+                    lift, candidate_survivor_sec);
+    }
+
+    std::printf("trace_norm_ab_jsonl={\"mode\":\"%s\","
+                "\"p\":\"%s\",\"backend\":\"%s\",\"gpu\":\"%s\","
+                "\"seed_mode\":\"%s\",\"seed_offset\":%llu,"
+                "\"elapsed\":%.6f,\"raw_y_draws\":%llu,"
+                "\"nonsplit_y\":%llu,\"F_square\":%llu,"
+                "\"D_plus\":%llu,\"D_minus\":%llu,\"D_zero\":%llu,"
+                "\"T_line_plus\":%llu,\"T_line_minus\":%llu,"
+                "\"T_line_inconsistent\":%llu,\"T_line_unusable\":%llu,"
+                "\"ordinary_emitted_candidates\":%llu,"
+                "\"candidate_emitted_candidates\":%llu",
+                mode_name, sprint128(p).c_str(), backend_name, gpu_name,
+                seed_mode_name(seed_mode), seed_offset, elapsed,
+                stats->raw_y_draws, stats->nonsplit_y, stats->f_square,
+                stats->d_plus, stats->d_minus, stats->d_zero,
+                stats->t_line_plus, stats->t_line_minus,
+                stats->t_line_inconsistent, stats->t_line_unusable,
+                stats->ordinary_emitted_candidates,
+                stats->candidate_emitted_candidates);
+    for (int i = 0; i < TRACE_AB_DEPTH_COUNT; i++) {
+        std::printf(",\"ordinary_survive_%d\":%llu,\"candidate_survive_%d\":%llu",
+                    trace_ab_depth_value(i), stats->ordinary_survive[i],
+                    trace_ab_depth_value(i), stats->candidate_survive[i]);
+    }
+    std::printf("}\n");
 }
 
 static u64 depth_survive_ge(const ProbeStats *stats, int depth) {
@@ -2007,13 +3184,51 @@ static void print_bucket_row(const ProbeStats *stats, int bucket_bits, int bucke
                 promotion);
 }
 
-static void print_probe_summary(const ProbeStats *stats, int target_depth,
-                                int bucket_bits, int focus_bucket) {
+static void print_probe_summary(const ProbeStats *stats, const char *mode_name,
+                                u128 p, const char *backend_name,
+                                const char *gpu_name, int seed_mode,
+                                u64 seed_offset, int target_depth,
+                                int prefix_filter_depth, int bucket_bits,
+                                int focus_bucket, double elapsed) {
     int bucket_count = 1 << (bucket_bits + 1);
     u64 target_survive = depth_survive_ge(stats, target_depth);
     double target_rate = stats->accepted_roots
         ? (double)target_survive / (double)stats->accepted_roots
         : 0.0;
+    double accepted_rate = elapsed > 0.0
+        ? (double)stats->accepted_roots / elapsed / 1e6
+        : 0.0;
+    double source_per_accepted = stats->accepted_roots
+        ? (double)stats->y_draws / (double)stats->accepted_roots
+        : 0.0;
+    double target_per_source_draw = stats->y_draws
+        ? (double)target_survive / (double)stats->y_draws
+        : 0.0;
+    double target_survivor_per_sec = elapsed > 0.0
+        ? (double)target_survive / elapsed
+        : 0.0;
+    const int ecover_prefix =
+        std::strcmp(mode_name, "x16ecoverprefixprobe") == 0 ||
+        std::strcmp(mode_name, "x16ecoverd2probe") == 0 ||
+        std::strcmp(mode_name, "x16ecoverd3probe") == 0 ||
+        std::strcmp(mode_name, "x16ecoverd4probe") == 0;
+    const int raw_prefix =
+        std::strcmp(mode_name, "x16prefixprobe") == 0 ||
+        std::strcmp(mode_name, "x16d2probe") == 0 ||
+        std::strcmp(mode_name, "x16d3probe") == 0 ||
+        std::strcmp(mode_name, "x16d4probe") == 0;
+    const int source_sampler = std::strcmp(mode_name, "x16ecoverprobe") == 0 ||
+                               ecover_prefix;
+    const int scope_narrowing = source_sampler || raw_prefix ||
+                                std::strcmp(mode_name, "x16domainprobe") == 0;
+    const char *source_kind = source_sampler
+        ? (ecover_prefix ? "ecover_random_affine_xplus1_prefix_d"
+                         : "ecover_random_affine_xplus1")
+        : (raw_prefix
+               ? "raw_x16_domain_plus_prefix_d"
+               : (std::strcmp(mode_name, "x16domainprobe") == 0
+               ? "raw_x16_domain_line_plus_y"
+                  : "raw_x16_nonsplit_y"));
 
     u64 prefix_total = 0;
     u64 prefix_survive = 0;
@@ -2029,11 +3244,21 @@ static void print_probe_summary(const ProbeStats *stats, int target_depth,
     double held_rate = held_total ? (double)held_survive / (double)held_total : 0.0;
 
     std::printf("\nStratum probe summary:\n");
+    std::printf("  mode=%s source_kind=%s backend=%s GPU=\"%s\" "
+                "seed_mode=%s seed_offset=%llu\n",
+                mode_name, source_kind, backend_name, gpu_name,
+                seed_mode_name(seed_mode), seed_offset);
+    std::printf("  prefix_filter_depth=%d\n", prefix_filter_depth);
     std::printf("  accepted_roots=%llu y_draws=%llu nonsplit_y=%llu sqrtD_y=%llu roots_valid=%llu\n",
                 stats->accepted_roots, stats->y_draws, stats->y_nonsplit,
                 stats->y_with_sqrt_D, stats->roots_valid);
-    std::printf("  target_depth=%d survivors=%llu rate=%.9f\n",
-                target_depth, target_survive, target_rate);
+    std::printf("  target_depth=%d survivors=%llu rate=%.9f "
+                "elapsed=%.6f accepted_rate_Mps=%.6f "
+                "source_draws_per_accepted=%.6f target_per_source_draw=%.12f "
+                "target_survivor_per_sec=%.6f\n",
+                target_depth, target_survive, target_rate, elapsed,
+                accepted_rate, source_per_accepted, target_per_source_draw,
+                target_survivor_per_sec);
     std::printf("  prefix total=%llu survivors=%llu rate=%.9f\n",
                 prefix_total, prefix_survive, prefix_rate);
     std::printf("  heldout total=%llu survivors=%llu rate=%.9f\n",
@@ -2083,6 +3308,51 @@ static void print_probe_summary(const ProbeStats *stats, int target_depth,
                     "held_total held_surv held_lift promotion\n");
         print_bucket_row(stats, bucket_bits, focus_bucket, prefix_rate, held_rate);
     }
+
+    std::printf("scope_probe_jsonl={\"mode\":\"%s\","
+                "\"source_kind\":\"%s\",\"narrowing_source\":%s,"
+                "\"scope_narrowing\":%s,"
+                "\"p\":\"%s\",\"backend\":\"%s\",\"gpu\":\"%s\","
+                "\"seed_mode\":\"%s\",\"seed_offset\":%llu,"
+                "\"target_depth\":%d,\"prefix_filter_depth\":%d,"
+                "\"bucket_bits\":%d,"
+                "\"elapsed\":%.6f,\"accepted_rate_Mps\":%.6f,"
+                "\"accepted_roots\":%llu,\"source_draws\":%llu,"
+                "\"nonsplit_y\":%llu,\"sqrtD_y\":%llu,"
+                "\"roots_valid\":%llu,\"target_survivors\":%llu,"
+                "\"target_rate\":%.12f,\"source_draws_per_accepted\":%.12f,"
+                "\"target_per_source_draw\":%.12f,"
+                "\"target_survivor_per_sec\":%.6f,"
+                "\"prefix_total\":%llu,\"prefix_survive\":%llu,"
+                "\"held_total\":%llu,\"held_survive\":%llu",
+                mode_name, source_kind, source_sampler ? "true" : "false",
+                scope_narrowing ? "true" : "false",
+                sprint128(p).c_str(), backend_name, gpu_name,
+                seed_mode_name(seed_mode), seed_offset, target_depth,
+                prefix_filter_depth, bucket_bits, elapsed, accepted_rate,
+                stats->accepted_roots,
+                stats->y_draws, stats->y_nonsplit, stats->y_with_sqrt_D,
+                stats->roots_valid, target_survive, target_rate,
+                source_per_accepted, target_per_source_draw,
+                target_survivor_per_sec, prefix_total, prefix_survive,
+                held_total, held_survive);
+    for (int d = 4; d <= target_depth; d++) {
+        if (d == 4 || d == target_depth || (d % 2) == 0) {
+            std::printf(",\"survive_%d\":%llu", d, depth_survive_ge(stats, d));
+        }
+    }
+    if (focus_bucket >= 0 && focus_bucket < bucket_count) {
+        std::printf(",\"focus_bucket\":%d,"
+                    "\"focus_prefix_total\":%llu,"
+                    "\"focus_prefix_survive\":%llu,"
+                    "\"focus_held_total\":%llu,"
+                    "\"focus_held_survive\":%llu",
+                    focus_bucket, stats->bucket_prefix_total[focus_bucket],
+                    stats->bucket_prefix_survive[focus_bucket],
+                    stats->bucket_held_total[focus_bucket],
+                    stats->bucket_held_survive[focus_bucket]);
+    }
+    std::printf("}\n");
 }
 
 int main(int argc, char **argv) {
@@ -2093,10 +3363,31 @@ int main(int argc, char **argv) {
 
     const char *mode = argc >= 5 ? argv[4] : "x16halvenonsplit";
     bool probe_mode = std::strcmp(mode, "x16stratumprobe") == 0;
-    if (std::strcmp(mode, "x16halvenonsplit") != 0 && !probe_mode) {
+    bool domain_probe_mode = std::strcmp(mode, "x16domainprobe") == 0;
+    bool prefix_probe_mode = std::strcmp(mode, "x16prefixprobe") == 0 ||
+                             std::strcmp(mode, "x16d2probe") == 0 ||
+                             std::strcmp(mode, "x16d3probe") == 0 ||
+                             std::strcmp(mode, "x16d4probe") == 0;
+    bool trace_ab_mode = std::strcmp(mode, "x16tracenormab") == 0;
+    bool trace_filter_mode = std::strcmp(mode, "x16tracenormfilter") == 0;
+    bool uprecheck_mode = std::strcmp(mode, "x16uprecheckprobe") == 0;
+    bool ecover_probe_mode = std::strcmp(mode, "x16ecoverprobe") == 0;
+    bool ecover_prefix_probe_mode =
+        std::strcmp(mode, "x16ecoverprefixprobe") == 0 ||
+        std::strcmp(mode, "x16ecoverd2probe") == 0 ||
+        std::strcmp(mode, "x16ecoverd3probe") == 0 ||
+        std::strcmp(mode, "x16ecoverd4probe") == 0;
+    bool scope_probe_mode = probe_mode || domain_probe_mode || prefix_probe_mode ||
+                            ecover_probe_mode || ecover_prefix_probe_mode;
+    if (std::strcmp(mode, "x16halvenonsplit") != 0 && !probe_mode &&
+        !domain_probe_mode && !prefix_probe_mode && !trace_ab_mode &&
+        !trace_filter_mode && !uprecheck_mode && !ecover_probe_mode &&
+        !ecover_prefix_probe_mode) {
         std::fprintf(stderr,
-                     "Only x16halvenonsplit and x16stratumprobe are implemented "
-                     "in this CUDA prototype.\n");
+                     "Only x16halvenonsplit, x16stratumprobe/x16domainprobe, and "
+                     "x16tracenormab/x16tracenormfilter/x16uprecheckprobe/"
+                     "x16ecoverprobe plus d-prefix probe aliases "
+                     "are implemented in this CUDA prototype.\n");
         return 1;
     }
 
@@ -2134,6 +3425,15 @@ int main(int argc, char **argv) {
     int probe_target_depth = 26;
     int probe_bucket_bits = 6;
     int probe_focus_bucket = -1;
+    int probe_prefix_depth = 4;
+    if (prefix_probe_mode || ecover_prefix_probe_mode) probe_prefix_depth = 6;
+    if (std::strcmp(mode, "x16d3probe") == 0 ||
+        std::strcmp(mode, "x16ecoverd3probe") == 0) {
+        probe_prefix_depth = 7;
+    } else if (std::strcmp(mode, "x16d4probe") == 0 ||
+               std::strcmp(mode, "x16ecoverd4probe") == 0) {
+        probe_prefix_depth = 8;
+    }
     for (int i = 10; i < argc; i++) {
         const char *arg = argv[i];
         if (starts_with(arg, "seed=")) {
@@ -2154,6 +3454,8 @@ int main(int argc, char **argv) {
             start_trial_set = true;
         } else if (starts_with(arg, "target_depth=")) {
             probe_target_depth = (int)parse_u64_arg(arg + 13, 26);
+        } else if (starts_with(arg, "prefix_depth=")) {
+            probe_prefix_depth = (int)parse_u64_arg(arg + 13, 4);
         } else if (starts_with(arg, "bucket_bits=")) {
             probe_bucket_bits = (int)parse_u64_arg(arg + 12, 6);
         } else if (starts_with(arg, "focus_bucket=")) {
@@ -2169,6 +3471,9 @@ int main(int argc, char **argv) {
     if (!start_trial_set) start_trial_base = start_chunk_nonce * chunk_trials;
     if (probe_target_depth < 4) probe_target_depth = 4;
     if (probe_target_depth > PROBE_MAX_DEPTH) probe_target_depth = PROBE_MAX_DEPTH;
+    if (probe_prefix_depth < 4) probe_prefix_depth = 4;
+    if (probe_prefix_depth > PROBE_MAX_DEPTH) probe_prefix_depth = PROBE_MAX_DEPTH;
+    if (probe_prefix_depth > probe_target_depth) probe_prefix_depth = probe_target_depth;
     if (probe_bucket_bits < 0) probe_bucket_bits = 0;
     if (probe_bucket_bits > PROBE_MAX_BUCKET_BITS) {
         std::fprintf(stderr, "bucket_bits must be <= %d.\n", PROBE_MAX_BUCKET_BITS);
@@ -2227,7 +3532,7 @@ int main(int argc, char **argv) {
 
     std::printf("Pomerance CUDA x16halvenonsplit prototype\n\n");
     std::printf("p = %s\n", sprint128(p).c_str());
-    std::printf("mode = %s\n", probe_mode ? "x16stratumprobe" : "x16halvenonsplit");
+    std::printf("mode = %s\n", mode);
     std::printf("seed_offset = %llu\n", seed_offset);
     std::printf("seed_mode = %s\n", seed_mode_name(seed_mode));
     std::printf("max_trials = %llu\n", max_trials);
@@ -2236,19 +3541,168 @@ int main(int argc, char **argv) {
         std::printf("start_chunk = %llu\n", start_chunk_nonce);
         std::printf("start_trial = %llu\n", start_trial_base);
     }
-    if (probe_mode) {
+    if (scope_probe_mode) {
         std::printf("probe_target_depth = %d\n", probe_target_depth);
+        std::printf("probe_prefix_filter_depth = %d\n", probe_prefix_depth);
         std::printf("probe_bucket_bits = %d\n", probe_bucket_bits);
         if (probe_focus_bucket >= 0) {
             std::printf("probe_focus_bucket = %d\n", probe_focus_bucket);
         }
+    }
+    if (uprecheck_mode) {
+        std::printf("uprecheck_target_depth = %d\n", probe_target_depth);
     }
     std::printf("k = %d\n", params.k);
     std::printf("backend = %s\n", use_u96 ? "u96" : "generic-u128");
     std::printf("GPU = %s  SMs=%d  blocks=%d  threads=%d  claim_batch=%llu\n\n",
                 prop.name, prop.multiProcessorCount, blocks, threads, claim_batch);
 
-    if (probe_mode) {
+    if (trace_ab_mode || trace_filter_mode) {
+        TraceNormABStats *d_trace = nullptr;
+        die_cuda(cudaMalloc(&d_trace, sizeof(TraceNormABStats)),
+                 "cudaMalloc trace/norm A/B stats");
+
+        TraceNormABStats cumulative{};
+        u64 total = start_trial_base;
+        u64 chunk_nonce = start_chunk_nonce;
+        auto t0 = std::chrono::steady_clock::now();
+
+        while (total < max_trials) {
+            u64 remaining = max_trials - total;
+            u64 this_chunk = remaining < chunk_trials ? remaining : chunk_trials;
+            die_cuda(cudaMemset(d_trace, 0, sizeof(TraceNormABStats)),
+                     "cudaMemset trace/norm A/B stats");
+
+            if (use_u96) {
+                x16tracenormab_kernel96<<<blocks, threads>>>(
+                    params96, seed_offset, chunk_nonce, this_chunk, seed_mode,
+                    trace_filter_mode ? 1 : 0, d_trace);
+            } else {
+                x16tracenormab_kernel<<<blocks, threads>>>(
+                    params, seed_offset, chunk_nonce, this_chunk, seed_mode,
+                    trace_filter_mode ? 1 : 0, d_trace);
+            }
+            die_cuda(cudaGetLastError(), "trace/norm A/B kernel launch");
+            die_cuda(cudaDeviceSynchronize(), "trace/norm A/B kernel synchronize");
+
+            TraceNormABStats stats{};
+            die_cuda(cudaMemcpy(&stats, d_trace, sizeof(stats), cudaMemcpyDeviceToHost),
+                     "copy trace/norm A/B stats");
+            add_trace_norm_ab_stats(&cumulative, &stats);
+
+            u64 done = stats.raw_y_draws;
+            if (done > this_chunk) done = this_chunk;
+            total += done;
+            auto now = std::chrono::steady_clock::now();
+            double elapsed = std::chrono::duration<double>(now - t0).count();
+            double raw_rate = elapsed > 0.0
+                ? (double)(total - start_trial_base) / elapsed / 1e6
+                : 0.0;
+            std::printf("  raw_y_draws=%llu elapsed=%.3f raw_y_Mps=%.6f "
+                        "nonsplit=%llu F_square=%llu D_plus=%llu "
+                        "ordinary_emit=%llu candidate_emit=%llu "
+                        "candidate_survive_26=%llu\n",
+                        total, elapsed, raw_rate, cumulative.nonsplit_y,
+                        cumulative.f_square, cumulative.d_plus,
+                        cumulative.ordinary_emitted_candidates,
+                        cumulative.candidate_emitted_candidates,
+                        cumulative.candidate_survive[3]);
+            std::fflush(stdout);
+
+            if (done == 0) {
+                std::fprintf(stderr,
+                             "Trace/norm A/B kernel made no raw-y progress; stopping.\n");
+                break;
+            }
+            chunk_nonce++;
+        }
+
+        auto t1 = std::chrono::steady_clock::now();
+        double elapsed = std::chrono::duration<double>(t1 - t0).count();
+        print_trace_norm_ab_summary(&cumulative, mode, p,
+                                    use_u96 ? "u96" : "generic-u128",
+                                    prop.name, seed_mode, seed_offset, elapsed);
+        cudaFree(d_trace);
+        return 0;
+    }
+
+    if (uprecheck_mode) {
+        if (!use_u96) {
+            std::fprintf(stderr, "x16uprecheckprobe currently requires the u96 backend.\n");
+            return 1;
+        }
+
+        UPrecheckStats *d_uprecheck = nullptr;
+        die_cuda(cudaMalloc(&d_uprecheck, sizeof(UPrecheckStats)),
+                 "cudaMalloc U+2 precheck stats");
+
+        UPrecheckStats cumulative{};
+        u64 total = start_trial_base;
+        u64 chunk_nonce = start_chunk_nonce;
+        auto t0 = std::chrono::steady_clock::now();
+
+        while (total < max_trials) {
+            u64 remaining = max_trials - total;
+            u64 this_chunk = remaining < chunk_trials ? remaining : chunk_trials;
+            die_cuda(cudaMemset(d_uprecheck, 0, sizeof(UPrecheckStats)),
+                     "cudaMemset U+2 precheck stats");
+
+            x16uprecheckprobe_kernel96<<<blocks, threads>>>(
+                params96, seed_offset, chunk_nonce, this_chunk, claim_batch,
+                seed_mode, probe_target_depth, d_uprecheck);
+            die_cuda(cudaGetLastError(), "U+2 precheck kernel launch");
+            die_cuda(cudaDeviceSynchronize(), "U+2 precheck kernel synchronize");
+
+            UPrecheckStats stats{};
+            die_cuda(cudaMemcpy(&stats, d_uprecheck, sizeof(stats),
+                                cudaMemcpyDeviceToHost),
+                     "copy U+2 precheck stats");
+            add_uprecheck_stats(&cumulative, &stats);
+
+            u64 done = stats.accepted_roots;
+            if (done > this_chunk) done = this_chunk;
+            total += done;
+            auto now = std::chrono::steady_clock::now();
+            double elapsed = std::chrono::duration<double>(now - t0).count();
+            double rate = elapsed > 0.0
+                ? (double)(total - start_trial_base) / elapsed / 1e6
+                : 0.0;
+            u64 target_survive =
+                uprecheck_depth_survive_ge(&cumulative, probe_target_depth);
+            std::printf("  uprecheck_trials=%llu elapsed=%.3f rate_Mps=%.6f "
+                        "target_survivors=%llu uplus_reject=%llu "
+                        "w_sqrt_calls=%llu\n",
+                        total, elapsed, rate, target_survive,
+                        cumulative.counters.uplus_reject,
+                        cumulative.counters.w_sqrt_calls);
+            std::fflush(stdout);
+
+            if (done == 0) {
+                std::fprintf(stderr,
+                             "U+2 precheck kernel made no candidate progress; stopping.\n");
+                break;
+            }
+            chunk_nonce++;
+        }
+
+        auto t1 = std::chrono::steady_clock::now();
+        double elapsed = std::chrono::duration<double>(t1 - t0).count();
+        print_uprecheck_summary(&cumulative, p, use_u96 ? "u96" : "generic-u128",
+                                prop.name, seed_mode, seed_offset,
+                                probe_target_depth, elapsed);
+        cudaFree(d_uprecheck);
+        return 0;
+    }
+
+    if (scope_probe_mode) {
+        if ((ecover_probe_mode || ecover_prefix_probe_mode || prefix_probe_mode) &&
+            !use_u96) {
+            std::fprintf(stderr,
+                         "ecover and d-prefix scope probes currently require "
+                         "the u96 backend.\n");
+            return 1;
+        }
+
         ProbeStats *d_probe = nullptr;
         die_cuda(cudaMalloc(&d_probe, sizeof(ProbeStats)), "cudaMalloc probe stats");
 
@@ -2265,14 +3719,25 @@ int main(int argc, char **argv) {
                      "cudaMemset probe stats");
 
             if (use_u96) {
-                x16stratumprobe_kernel96<<<blocks, threads>>>(
-                    params96, seed_offset, chunk_nonce, this_chunk, total,
-                    split_trial, claim_batch, seed_mode, probe_target_depth,
-                    probe_bucket_bits, d_probe);
+                if (ecover_probe_mode || ecover_prefix_probe_mode) {
+                    x16ecoverprobe_kernel96<<<blocks, threads>>>(
+                        params96, seed_offset, chunk_nonce, this_chunk, total,
+                        split_trial, claim_batch, seed_mode,
+                        ecover_prefix_probe_mode ? probe_prefix_depth : 4,
+                        probe_target_depth, probe_bucket_bits, d_probe);
+                } else {
+                    x16stratumprobe_kernel96<<<blocks, threads>>>(
+                        params96, seed_offset, chunk_nonce, this_chunk, total,
+                        split_trial, claim_batch, seed_mode,
+                        (domain_probe_mode || prefix_probe_mode) ? 1 : 0,
+                        prefix_probe_mode ? probe_prefix_depth : 4,
+                        probe_target_depth, probe_bucket_bits, d_probe);
+                }
             } else {
                 x16stratumprobe_kernel<<<blocks, threads>>>(
                     params, seed_offset, chunk_nonce, this_chunk, total,
-                    split_trial, claim_batch, seed_mode, probe_target_depth,
+                    split_trial, claim_batch, seed_mode,
+                    domain_probe_mode ? 1 : 0, probe_target_depth,
                     probe_bucket_bits, d_probe);
             }
             die_cuda(cudaGetLastError(), "probe kernel launch");
@@ -2297,7 +3762,8 @@ int main(int argc, char **argv) {
             std::fflush(stdout);
 
             if (done == 0) {
-                std::fprintf(stderr, "Probe kernel made no candidate progress; stopping.\n");
+                std::fprintf(stderr,
+                             "Scope probe kernel made no candidate progress; stopping.\n");
                 break;
             }
             chunk_nonce++;
@@ -2307,8 +3773,11 @@ int main(int argc, char **argv) {
         double elapsed = std::chrono::duration<double>(t1 - t0).count();
         u64 interval_done = total - start_trial_base;
         double rate = elapsed > 0.0 ? (double)interval_done / elapsed / 1e6 : 0.0;
-        print_probe_summary(&cumulative, probe_target_depth, probe_bucket_bits,
-                            probe_focus_bucket);
+        print_probe_summary(&cumulative, mode, p, use_u96 ? "u96" : "generic-u128",
+                            prop.name, seed_mode, seed_offset, probe_target_depth,
+                            (prefix_probe_mode || ecover_prefix_probe_mode)
+                                ? probe_prefix_depth : 4,
+                            probe_bucket_bits, probe_focus_bucket, elapsed);
         std::printf("\nProbe completed in %.2fs. trials=%llu interval_trials=%llu "
                     "rate_Mps=%.6f\n",
                     elapsed, total, interval_done, rate);

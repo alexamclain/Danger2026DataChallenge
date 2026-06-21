@@ -1,0 +1,12 @@
+p=1000000000000000000000000103
+seed_offset=0
+trials=5000000
+chunk_trials=5000000
+blocks=0
+threads=128
+claim_batch=64
+backend=u96
+target_depth=18
+bucket_bits=6
+seed_modes=identity splitmix
+modes=x16stratumprobe x16domainprobe x16ecoverprobe

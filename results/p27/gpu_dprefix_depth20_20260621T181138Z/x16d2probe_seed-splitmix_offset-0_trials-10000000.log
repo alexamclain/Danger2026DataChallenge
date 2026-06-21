@@ -1,0 +1,132 @@
+Pomerance CUDA x16halvenonsplit prototype
+
+p = 1000000000000000000000000103
+mode = x16d2probe
+seed_offset = 0
+seed_mode = splitmix
+max_trials = 10000000
+chunk_trials = 10000000
+probe_target_depth = 20
+probe_prefix_filter_depth = 6
+probe_bucket_bits = 6
+k = 45
+backend = u96
+GPU = NVIDIA RTX 6000 Ada Generation  SMs=142  blocks=1136  threads=128  claim_batch=16
+
+  probe_trials=9502844 elapsed=1.860 rate_Mps=5.110206 target_survivors=616 y_draws=76021769
+  probe_trials=9582412 elapsed=1.877 rate_Mps=5.105401 target_survivors=618 y_draws=76711956
+  probe_trials=9645844 elapsed=1.891 rate_Mps=5.100685 target_survivors=622 y_draws=77273945
+  probe_trials=9697746 elapsed=1.903 rate_Mps=5.095816 target_survivors=626 y_draws=77750548
+  probe_trials=9740784 elapsed=1.913 rate_Mps=5.091656 target_survivors=630 y_draws=78160042
+  probe_trials=9776712 elapsed=1.922 rate_Mps=5.087290 target_survivors=630 y_draws=78513233
+  probe_trials=9807266 elapsed=1.929 rate_Mps=5.083009 target_survivors=632 y_draws=78826404
+  probe_trials=9833084 elapsed=1.936 rate_Mps=5.078344 target_survivors=632 y_draws=79105948
+  probe_trials=9855230 elapsed=1.943 rate_Mps=5.073012 target_survivors=636 y_draws=79356214
+  probe_trials=9874244 elapsed=1.949 rate_Mps=5.067467 target_survivors=642 y_draws=79582739
+  probe_trials=9890612 elapsed=1.954 rate_Mps=5.062688 target_survivors=642 y_draws=79792585
+  probe_trials=9904696 elapsed=1.958 rate_Mps=5.057725 target_survivors=642 y_draws=79983378
+  probe_trials=9916758 elapsed=1.962 rate_Mps=5.053490 target_survivors=642 y_draws=80149735
+  probe_trials=9927230 elapsed=1.966 rate_Mps=5.049400 target_survivors=642 y_draws=80304360
+  probe_trials=9936332 elapsed=1.970 rate_Mps=5.044822 target_survivors=642 y_draws=80442476
+  probe_trials=9944294 elapsed=1.973 rate_Mps=5.040180 target_survivors=642 y_draws=80580753
+  probe_trials=9951258 elapsed=1.976 rate_Mps=5.035301 target_survivors=642 y_draws=80718700
+  probe_trials=9957352 elapsed=1.979 rate_Mps=5.030564 target_survivors=642 y_draws=80855706
+  probe_trials=9962684 elapsed=1.982 rate_Mps=5.025623 target_survivors=642 y_draws=80992897
+  probe_trials=9967350 elapsed=1.985 rate_Mps=5.020534 target_survivors=642 y_draws=81129660
+  probe_trials=9971432 elapsed=1.988 rate_Mps=5.015457 target_survivors=642 y_draws=81266897
+  probe_trials=9975004 elapsed=1.991 rate_Mps=5.010391 target_survivors=642 y_draws=81403493
+  probe_trials=9978130 elapsed=1.994 rate_Mps=5.004459 target_survivors=642 y_draws=81540202
+  probe_trials=9980864 elapsed=1.997 rate_Mps=4.998970 target_survivors=642 y_draws=81677204
+  probe_trials=9983256 elapsed=1.999 rate_Mps=4.993742 target_survivors=642 y_draws=81814344
+  probe_trials=9985350 elapsed=2.002 rate_Mps=4.988684 target_survivors=642 y_draws=81951550
+  probe_trials=9987182 elapsed=2.004 rate_Mps=4.983265 target_survivors=642 y_draws=82088706
+  probe_trials=9988786 elapsed=2.007 rate_Mps=4.977280 target_survivors=642 y_draws=82225284
+  probe_trials=9990188 elapsed=2.009 rate_Mps=4.971867 target_survivors=642 y_draws=82362098
+  probe_trials=9991416 elapsed=2.012 rate_Mps=4.965966 target_survivors=642 y_draws=82499178
+  probe_trials=9992490 elapsed=2.015 rate_Mps=4.960183 target_survivors=642 y_draws=82636054
+  probe_trials=9993430 elapsed=2.017 rate_Mps=4.954604 target_survivors=642 y_draws=82772871
+  probe_trials=9994252 elapsed=2.019 rate_Mps=4.948918 target_survivors=642 y_draws=82909731
+  probe_trials=9994972 elapsed=2.022 rate_Mps=4.943150 target_survivors=642 y_draws=83046706
+  probe_trials=9995602 elapsed=2.024 rate_Mps=4.937925 target_survivors=642 y_draws=83183426
+  probe_trials=9996152 elapsed=2.027 rate_Mps=4.931858 target_survivors=642 y_draws=83320168
+  probe_trials=9996634 elapsed=2.029 rate_Mps=4.927428 target_survivors=642 y_draws=83441707
+  probe_trials=9997056 elapsed=2.031 rate_Mps=4.923246 target_survivors=642 y_draws=83563012
+  probe_trials=9997424 elapsed=2.033 rate_Mps=4.918279 target_survivors=642 y_draws=83684412
+  probe_trials=9997746 elapsed=2.035 rate_Mps=4.913460 target_survivors=642 y_draws=83805289
+  probe_trials=9998028 elapsed=2.037 rate_Mps=4.907952 target_survivors=642 y_draws=83926462
+  probe_trials=9998276 elapsed=2.039 rate_Mps=4.903622 target_survivors=642 y_draws=84047403
+  probe_trials=9998492 elapsed=2.041 rate_Mps=4.898347 target_survivors=642 y_draws=84168683
+  probe_trials=9998682 elapsed=2.043 rate_Mps=4.893726 target_survivors=642 y_draws=84289737
+  probe_trials=9998848 elapsed=2.045 rate_Mps=4.889291 target_survivors=642 y_draws=84410656
+  probe_trials=9998992 elapsed=2.047 rate_Mps=4.884982 target_survivors=642 y_draws=84531718
+  probe_trials=9999118 elapsed=2.049 rate_Mps=4.880085 target_survivors=642 y_draws=84652900
+  probe_trials=9999230 elapsed=2.051 rate_Mps=4.875702 target_survivors=642 y_draws=84773825
+  probe_trials=9999328 elapsed=2.053 rate_Mps=4.871470 target_survivors=642 y_draws=84894806
+  probe_trials=9999412 elapsed=2.055 rate_Mps=4.866679 target_survivors=642 y_draws=85015970
+  probe_trials=9999486 elapsed=2.057 rate_Mps=4.862017 target_survivors=642 y_draws=85137055
+  probe_trials=9999552 elapsed=2.058 rate_Mps=4.858003 target_survivors=642 y_draws=85258266
+  probe_trials=9999608 elapsed=2.060 rate_Mps=4.853762 target_survivors=642 y_draws=85379449
+  probe_trials=9999658 elapsed=2.062 rate_Mps=4.849319 target_survivors=642 y_draws=85501047
+  probe_trials=9999702 elapsed=2.064 rate_Mps=4.845261 target_survivors=642 y_draws=85622238
+  probe_trials=9999740 elapsed=2.066 rate_Mps=4.840825 target_survivors=642 y_draws=85743341
+  probe_trials=9999774 elapsed=2.067 rate_Mps=4.836813 target_survivors=642 y_draws=85864555
+  probe_trials=9999804 elapsed=2.070 rate_Mps=4.831617 target_survivors=642 y_draws=85985716
+  probe_trials=9999830 elapsed=2.071 rate_Mps=4.827525 target_survivors=642 y_draws=86106694
+  probe_trials=9999852 elapsed=2.073 rate_Mps=4.823402 target_survivors=642 y_draws=86227997
+  probe_trials=9999872 elapsed=2.075 rate_Mps=4.819155 target_survivors=642 y_draws=86348944
+  probe_trials=9999888 elapsed=2.077 rate_Mps=4.815140 target_survivors=642 y_draws=86470061
+  probe_trials=9999902 elapsed=2.078 rate_Mps=4.811187 target_survivors=642 y_draws=86591576
+  probe_trials=9999916 elapsed=2.080 rate_Mps=4.807244 target_survivors=642 y_draws=86712497
+  probe_trials=9999928 elapsed=2.082 rate_Mps=4.802475 target_survivors=642 y_draws=86833469
+  probe_trials=9999938 elapsed=2.084 rate_Mps=4.798506 target_survivors=642 y_draws=86954707
+  probe_trials=9999946 elapsed=2.086 rate_Mps=4.794491 target_survivors=642 y_draws=87076018
+  probe_trials=9999954 elapsed=2.087 rate_Mps=4.790531 target_survivors=642 y_draws=87197032
+  probe_trials=9999960 elapsed=2.089 rate_Mps=4.786348 target_survivors=642 y_draws=87317949
+  probe_trials=9999966 elapsed=2.091 rate_Mps=4.782259 target_survivors=642 y_draws=87438972
+  probe_trials=9999972 elapsed=2.093 rate_Mps=4.778235 target_survivors=642 y_draws=87559975
+  probe_trials=9999976 elapsed=2.095 rate_Mps=4.774306 target_survivors=642 y_draws=87681207
+  probe_trials=9999980 elapsed=2.096 rate_Mps=4.770083 target_survivors=642 y_draws=87802423
+  probe_trials=9999984 elapsed=2.098 rate_Mps=4.766267 target_survivors=642 y_draws=87923322
+  probe_trials=9999986 elapsed=2.100 rate_Mps=4.762410 target_survivors=642 y_draws=88044443
+  probe_trials=9999988 elapsed=2.102 rate_Mps=4.757885 target_survivors=642 y_draws=88165521
+  probe_trials=9999990 elapsed=2.104 rate_Mps=4.753807 target_survivors=642 y_draws=88286880
+  probe_trials=9999992 elapsed=2.106 rate_Mps=4.749240 target_survivors=642 y_draws=88407956
+  probe_trials=9999994 elapsed=2.107 rate_Mps=4.745270 target_survivors=642 y_draws=88528996
+  probe_trials=9999996 elapsed=2.109 rate_Mps=4.741344 target_survivors=642 y_draws=88650056
+  probe_trials=9999998 elapsed=2.111 rate_Mps=4.737218 target_survivors=642 y_draws=88771140
+  probe_trials=10000000 elapsed=2.113 rate_Mps=4.733046 target_survivors=642 y_draws=88892269
+
+Stratum probe summary:
+  mode=x16d2probe source_kind=raw_x16_domain_plus_prefix_d backend=u96 GPU="NVIDIA RTX 6000 Ada Generation" seed_mode=splitmix seed_offset=0
+  prefix_filter_depth=6
+  accepted_roots=10000000 y_draws=88892269 nonsplit_y=44454272 sqrtD_y=11118428 roots_valid=21679797
+  target_depth=20 survivors=642 rate=0.000064200 elapsed=2.112807 accepted_rate_Mps=4.733039 source_draws_per_accepted=8.889227 target_per_source_draw=0.000007222225 target_survivor_per_sec=303.861097
+  prefix total=5000000 survivors=322 rate=0.000064400
+  heldout total=5000000 survivors=320 rate=0.000064000
+  depth survival checkpoints:
+    depth>=4 count=10000000 rate=1.000000000
+    depth>=6 count=10000000 rate=1.000000000
+    depth>=8 count=2498772 rate=0.249877200
+    depth>=10 count=626726 rate=0.062672600
+    depth>=12 count=156768 rate=0.015676800
+    depth>=14 count=38978 rate=0.003897800
+    depth>=16 count=9722 rate=0.000972200
+    depth>=18 count=2436 rate=0.000243600
+    depth>=20 count=642 rate=0.000064200
+  top buckets selected by prefix lift (min prefix total 100):
+    bucket q_sheet key prefix_total prefix_surv prefix_lift held_total held_surv held_lift promotion
+    0 0 0 38945 9 3.588 39041 3 1.201 no
+    13 0 13 38835 7 2.799 39180 1 0.399 no
+    52 0 52 39166 7 2.775 38924 0 0.000 no
+    3 0 3 39228 7 2.771 38989 5 2.004 no
+    42 0 42 38719 6 2.406 38901 1 0.402 no
+    84 1 20 39017 6 2.388 38737 7 2.824 no
+    89 1 25 39113 6 2.382 38960 2 0.802 no
+    37 0 37 38835 5 1.999 39328 3 1.192 no
+    72 1 8 38903 5 1.996 39054 2 0.800 no
+    46 0 46 38985 5 1.992 39507 3 1.186 no
+    32 0 32 39008 5 1.990 39066 4 1.600 no
+    122 1 58 39017 5 1.990 39019 3 1.201 no
+scope_probe_jsonl={"mode":"x16d2probe","source_kind":"raw_x16_domain_plus_prefix_d","narrowing_source":false,"scope_narrowing":true,"p":"1000000000000000000000000103","backend":"u96","gpu":"NVIDIA RTX 6000 Ada Generation","seed_mode":"splitmix","seed_offset":0,"target_depth":20,"prefix_filter_depth":6,"bucket_bits":6,"elapsed":2.112807,"accepted_rate_Mps":4.733039,"accepted_roots":10000000,"source_draws":88892269,"nonsplit_y":44454272,"sqrtD_y":11118428,"roots_valid":21679797,"target_survivors":642,"target_rate":0.000064200000,"source_draws_per_accepted":8.889226900000,"target_per_source_draw":0.000007222225,"target_survivor_per_sec":303.861097,"prefix_total":5000000,"prefix_survive":322,"held_total":5000000,"held_survive":320,"survive_4":10000000,"survive_6":10000000,"survive_8":2498772,"survive_10":626726,"survive_12":156768,"survive_14":38978,"survive_16":9722,"survive_18":2436,"survive_20":642}
+
+Probe completed in 2.11s. trials=10000000 interval_trials=10000000 rate_Mps=4.733039

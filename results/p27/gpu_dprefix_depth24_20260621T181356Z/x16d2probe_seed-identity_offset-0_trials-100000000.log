@@ -1,0 +1,395 @@
+Pomerance CUDA x16halvenonsplit prototype
+
+p = 1000000000000000000000000103
+mode = x16d2probe
+seed_offset = 0
+seed_mode = identity
+max_trials = 100000000
+chunk_trials = 100000000
+probe_target_depth = 24
+probe_prefix_filter_depth = 6
+probe_bucket_bits = 6
+k = 45
+backend = u96
+GPU = NVIDIA RTX 6000 Ada Generation  SMs=142  blocks=1136  threads=128  claim_batch=64
+
+  probe_trials=97753478 elapsed=19.120 rate_Mps=5.112497 target_survivors=364 y_draws=781799910
+  probe_trials=97847084 elapsed=19.141 rate_Mps=5.112018 target_survivors=364 y_draws=782597667
+  probe_trials=97935664 elapsed=19.160 rate_Mps=5.111572 target_survivors=364 y_draws=783359668
+  probe_trials=98019128 elapsed=19.178 rate_Mps=5.111105 target_survivors=364 y_draws=784086575
+  probe_trials=98098212 elapsed=19.195 rate_Mps=5.110708 target_survivors=364 y_draws=784768810
+  probe_trials=98173234 elapsed=19.211 rate_Mps=5.110140 target_survivors=364 y_draws=785427194
+  probe_trials=98244598 elapsed=19.227 rate_Mps=5.109710 target_survivors=364 y_draws=786051916
+  probe_trials=98312140 elapsed=19.242 rate_Mps=5.109169 target_survivors=364 y_draws=786645758
+  probe_trials=98376496 elapsed=19.257 rate_Mps=5.108732 target_survivors=364 y_draws=787214880
+  probe_trials=98437734 elapsed=19.270 rate_Mps=5.108260 target_survivors=364 y_draws=787766336
+  probe_trials=98496492 elapsed=19.283 rate_Mps=5.107836 target_survivors=364 y_draws=788295648
+  probe_trials=98552496 elapsed=19.296 rate_Mps=5.107390 target_survivors=364 y_draws=788810631
+  probe_trials=98605734 elapsed=19.308 rate_Mps=5.106925 target_survivors=366 y_draws=789298368
+  probe_trials=98656638 elapsed=19.320 rate_Mps=5.106446 target_survivors=366 y_draws=789768472
+  probe_trials=98705540 elapsed=19.331 rate_Mps=5.105964 target_survivors=366 y_draws=790226565
+  probe_trials=98752206 elapsed=19.343 rate_Mps=5.105400 target_survivors=366 y_draws=790663872
+  probe_trials=98796738 elapsed=19.353 rate_Mps=5.104901 target_survivors=366 y_draws=791085787
+  probe_trials=98839438 elapsed=19.363 rate_Mps=5.104423 target_survivors=366 y_draws=791490742
+  probe_trials=98880566 elapsed=19.373 rate_Mps=5.103943 target_survivors=366 y_draws=791887688
+  probe_trials=98919828 elapsed=19.383 rate_Mps=5.103447 target_survivors=366 y_draws=792268984
+  probe_trials=98957434 elapsed=19.392 rate_Mps=5.102900 target_survivors=366 y_draws=792640142
+  probe_trials=98993778 elapsed=19.402 rate_Mps=5.102350 target_survivors=366 y_draws=792997990
+  probe_trials=99028466 elapsed=19.410 rate_Mps=5.101922 target_survivors=366 y_draws=793342566
+  probe_trials=99062072 elapsed=19.419 rate_Mps=5.101386 target_survivors=366 y_draws=793684920
+  probe_trials=99094132 elapsed=19.427 rate_Mps=5.100931 target_survivors=366 y_draws=794009011
+  probe_trials=99125100 elapsed=19.435 rate_Mps=5.100447 target_survivors=366 y_draws=794325455
+  probe_trials=99154844 elapsed=19.442 rate_Mps=5.099942 target_survivors=366 y_draws=794631970
+  probe_trials=99183462 elapsed=19.450 rate_Mps=5.099509 target_survivors=366 y_draws=794934487
+  probe_trials=99210922 elapsed=19.457 rate_Mps=5.099020 target_survivors=366 y_draws=795225865
+  probe_trials=99237398 elapsed=19.464 rate_Mps=5.098519 target_survivors=366 y_draws=795508237
+  probe_trials=99262988 elapsed=19.471 rate_Mps=5.098001 target_survivors=366 y_draws=795787829
+  probe_trials=99287658 elapsed=19.478 rate_Mps=5.097479 target_survivors=366 y_draws=796059539
+  probe_trials=99311346 elapsed=19.484 rate_Mps=5.097003 target_survivors=366 y_draws=796325665
+  probe_trials=99334088 elapsed=19.490 rate_Mps=5.096550 target_survivors=366 y_draws=796581202
+  probe_trials=99356150 elapsed=19.496 rate_Mps=5.096105 target_survivors=366 y_draws=796831566
+  probe_trials=99377454 elapsed=19.503 rate_Mps=5.095555 target_survivors=366 y_draws=797078582
+  probe_trials=99397948 elapsed=19.509 rate_Mps=5.095087 target_survivors=366 y_draws=797320541
+  probe_trials=99417770 elapsed=19.514 rate_Mps=5.094597 target_survivors=366 y_draws=797556375
+  probe_trials=99436876 elapsed=19.520 rate_Mps=5.094109 target_survivors=366 y_draws=797786783
+  probe_trials=99455362 elapsed=19.525 rate_Mps=5.093636 target_survivors=366 y_draws=798010370
+  probe_trials=99473060 elapsed=19.531 rate_Mps=5.093181 target_survivors=366 y_draws=798228670
+  probe_trials=99490236 elapsed=19.536 rate_Mps=5.092646 target_survivors=366 y_draws=798442854
+  probe_trials=99506866 elapsed=19.541 rate_Mps=5.092146 target_survivors=366 y_draws=798654301
+  probe_trials=99522868 elapsed=19.547 rate_Mps=5.091575 target_survivors=366 y_draws=798857127
+  probe_trials=99538358 elapsed=19.552 rate_Mps=5.091068 target_survivors=366 y_draws=799060867
+  probe_trials=99553268 elapsed=19.556 rate_Mps=5.090578 target_survivors=366 y_draws=799257947
+  probe_trials=99567694 elapsed=19.562 rate_Mps=5.089965 target_survivors=366 y_draws=799451988
+  probe_trials=99581564 elapsed=19.566 rate_Mps=5.089436 target_survivors=366 y_draws=799639965
+  probe_trials=99594976 elapsed=19.571 rate_Mps=5.089015 target_survivors=366 y_draws=799822182
+  probe_trials=99607878 elapsed=19.575 rate_Mps=5.088602 target_survivors=366 y_draws=800001997
+  probe_trials=99620380 elapsed=19.579 rate_Mps=5.088110 target_survivors=366 y_draws=800176168
+  probe_trials=99632400 elapsed=19.583 rate_Mps=5.087708 target_survivors=366 y_draws=800341729
+  probe_trials=99644056 elapsed=19.587 rate_Mps=5.087306 target_survivors=366 y_draws=800503853
+  probe_trials=99655282 elapsed=19.591 rate_Mps=5.086898 target_survivors=366 y_draws=800664114
+  probe_trials=99666114 elapsed=19.594 rate_Mps=5.086454 target_survivors=366 y_draws=800819341
+  probe_trials=99676596 elapsed=19.598 rate_Mps=5.086045 target_survivors=366 y_draws=800970742
+  probe_trials=99686772 elapsed=19.602 rate_Mps=5.085618 target_survivors=366 y_draws=801119658
+  probe_trials=99696582 elapsed=19.605 rate_Mps=5.085203 target_survivors=366 y_draws=801267503
+  probe_trials=99706076 elapsed=19.609 rate_Mps=5.084791 target_survivors=366 y_draws=801413422
+  probe_trials=99715272 elapsed=19.612 rate_Mps=5.084438 target_survivors=366 y_draws=801551608
+  probe_trials=99724174 elapsed=19.615 rate_Mps=5.084017 target_survivors=366 y_draws=801689926
+  probe_trials=99732794 elapsed=19.619 rate_Mps=5.083605 target_survivors=366 y_draws=801827941
+  probe_trials=99741150 elapsed=19.622 rate_Mps=5.083192 target_survivors=366 y_draws=801965902
+  probe_trials=99749240 elapsed=19.625 rate_Mps=5.082801 target_survivors=366 y_draws=802104275
+  probe_trials=99757080 elapsed=19.628 rate_Mps=5.082275 target_survivors=366 y_draws=802241937
+  probe_trials=99764674 elapsed=19.632 rate_Mps=5.081766 target_survivors=366 y_draws=802380365
+  probe_trials=99772028 elapsed=19.635 rate_Mps=5.081344 target_survivors=366 y_draws=802518168
+  probe_trials=99779154 elapsed=19.638 rate_Mps=5.080899 target_survivors=366 y_draws=802656232
+  probe_trials=99786056 elapsed=19.641 rate_Mps=5.080406 target_survivors=366 y_draws=802793858
+  probe_trials=99792742 elapsed=19.644 rate_Mps=5.079940 target_survivors=366 y_draws=802930654
+  probe_trials=99799220 elapsed=19.648 rate_Mps=5.079461 target_survivors=366 y_draws=803067878
+  probe_trials=99805496 elapsed=19.651 rate_Mps=5.079023 target_survivors=366 y_draws=803204925
+  probe_trials=99811576 elapsed=19.653 rate_Mps=5.078566 target_survivors=366 y_draws=803341661
+  probe_trials=99817466 elapsed=19.657 rate_Mps=5.078081 target_survivors=366 y_draws=803478638
+  probe_trials=99823172 elapsed=19.660 rate_Mps=5.077503 target_survivors=366 y_draws=803615489
+  probe_trials=99828698 elapsed=19.663 rate_Mps=5.076962 target_survivors=366 y_draws=803752441
+  probe_trials=99834052 elapsed=19.666 rate_Mps=5.076452 target_survivors=366 y_draws=803889497
+  probe_trials=99839238 elapsed=19.670 rate_Mps=5.075773 target_survivors=366 y_draws=804026422
+  probe_trials=99844262 elapsed=19.673 rate_Mps=5.075250 target_survivors=366 y_draws=804163973
+  probe_trials=99849130 elapsed=19.676 rate_Mps=5.074770 target_survivors=366 y_draws=804300928
+  probe_trials=99853846 elapsed=19.679 rate_Mps=5.074254 target_survivors=366 y_draws=804438301
+  probe_trials=99858414 elapsed=19.681 rate_Mps=5.073771 target_survivors=366 y_draws=804575446
+  probe_trials=99862840 elapsed=19.684 rate_Mps=5.073268 target_survivors=366 y_draws=804712089
+  probe_trials=99867128 elapsed=19.687 rate_Mps=5.072640 target_survivors=366 y_draws=804849083
+  probe_trials=99871282 elapsed=19.690 rate_Mps=5.072185 target_survivors=366 y_draws=804986027
+  probe_trials=99875306 elapsed=19.693 rate_Mps=5.071655 target_survivors=366 y_draws=805122805
+  probe_trials=99879204 elapsed=19.696 rate_Mps=5.071083 target_survivors=366 y_draws=805259624
+  probe_trials=99882980 elapsed=19.699 rate_Mps=5.070533 target_survivors=366 y_draws=805396418
+  probe_trials=99886638 elapsed=19.702 rate_Mps=5.069981 target_survivors=366 y_draws=805533266
+  probe_trials=99890182 elapsed=19.705 rate_Mps=5.069377 target_survivors=366 y_draws=805670369
+  probe_trials=99893614 elapsed=19.708 rate_Mps=5.068777 target_survivors=366 y_draws=805807554
+  probe_trials=99896940 elapsed=19.711 rate_Mps=5.068202 target_survivors=366 y_draws=805944151
+  probe_trials=99900162 elapsed=19.713 rate_Mps=5.067613 target_survivors=366 y_draws=806081378
+  probe_trials=99903282 elapsed=19.716 rate_Mps=5.067095 target_survivors=366 y_draws=806218483
+  probe_trials=99906306 elapsed=19.719 rate_Mps=5.066597 target_survivors=366 y_draws=806355395
+  probe_trials=99909234 elapsed=19.722 rate_Mps=5.065987 target_survivors=366 y_draws=806492201
+  probe_trials=99912072 elapsed=19.724 rate_Mps=5.065452 target_survivors=366 y_draws=806629233
+  probe_trials=99914820 elapsed=19.727 rate_Mps=5.064940 target_survivors=366 y_draws=806766388
+  probe_trials=99917482 elapsed=19.729 rate_Mps=5.064390 target_survivors=366 y_draws=806903547
+  probe_trials=99920062 elapsed=19.732 rate_Mps=5.063805 target_survivors=366 y_draws=807040566
+  probe_trials=99922562 elapsed=19.735 rate_Mps=5.063283 target_survivors=366 y_draws=807177511
+  probe_trials=99924982 elapsed=19.737 rate_Mps=5.062745 target_survivors=366 y_draws=807314493
+  probe_trials=99927328 elapsed=19.740 rate_Mps=5.062181 target_survivors=366 y_draws=807451692
+  probe_trials=99929600 elapsed=19.744 rate_Mps=5.061350 target_survivors=368 y_draws=807588777
+  probe_trials=99931800 elapsed=19.746 rate_Mps=5.060849 target_survivors=368 y_draws=807725773
+  probe_trials=99933932 elapsed=19.749 rate_Mps=5.060270 target_survivors=368 y_draws=807862627
+  probe_trials=99935998 elapsed=19.751 rate_Mps=5.059731 target_survivors=368 y_draws=807999688
+  probe_trials=99938000 elapsed=19.754 rate_Mps=5.059172 target_survivors=368 y_draws=808136707
+  probe_trials=99939938 elapsed=19.756 rate_Mps=5.058589 target_survivors=368 y_draws=808273578
+  probe_trials=99941816 elapsed=19.759 rate_Mps=5.058047 target_survivors=368 y_draws=808410449
+  probe_trials=99943636 elapsed=19.761 rate_Mps=5.057534 target_survivors=368 y_draws=808547391
+  probe_trials=99945398 elapsed=19.764 rate_Mps=5.057000 target_survivors=368 y_draws=808684116
+  probe_trials=99947106 elapsed=19.766 rate_Mps=5.056397 target_survivors=368 y_draws=808821349
+  probe_trials=99948760 elapsed=19.769 rate_Mps=5.055757 target_survivors=368 y_draws=808958220
+  probe_trials=99950362 elapsed=19.772 rate_Mps=5.055144 target_survivors=368 y_draws=809094859
+  probe_trials=99951914 elapsed=19.775 rate_Mps=5.054576 target_survivors=368 y_draws=809231489
+  probe_trials=99953418 elapsed=19.777 rate_Mps=5.054023 target_survivors=368 y_draws=809368206
+  probe_trials=99954874 elapsed=19.779 rate_Mps=5.053474 target_survivors=368 y_draws=809505327
+  probe_trials=99956286 elapsed=19.782 rate_Mps=5.052939 target_survivors=368 y_draws=809642138
+  probe_trials=99957654 elapsed=19.784 rate_Mps=5.052356 target_survivors=368 y_draws=809779099
+  probe_trials=99958978 elapsed=19.787 rate_Mps=5.051757 target_survivors=368 y_draws=809915919
+  probe_trials=99960260 elapsed=19.790 rate_Mps=5.051099 target_survivors=368 y_draws=810053035
+  probe_trials=99961502 elapsed=19.792 rate_Mps=5.050543 target_survivors=368 y_draws=810190279
+  probe_trials=99962706 elapsed=19.795 rate_Mps=5.050003 target_survivors=368 y_draws=810327177
+  probe_trials=99963872 elapsed=19.797 rate_Mps=5.049447 target_survivors=368 y_draws=810464128
+  probe_trials=99965002 elapsed=19.799 rate_Mps=5.048935 target_survivors=368 y_draws=810601265
+  probe_trials=99966096 elapsed=19.802 rate_Mps=5.048351 target_survivors=368 y_draws=810738463
+  probe_trials=99967156 elapsed=19.804 rate_Mps=5.047843 target_survivors=368 y_draws=810875187
+  probe_trials=99968184 elapsed=19.807 rate_Mps=5.047211 target_survivors=368 y_draws=811012115
+  probe_trials=99969180 elapsed=19.809 rate_Mps=5.046546 target_survivors=368 y_draws=811148813
+  probe_trials=99970144 elapsed=19.812 rate_Mps=5.045949 target_survivors=368 y_draws=811285621
+  probe_trials=99971078 elapsed=19.814 rate_Mps=5.045350 target_survivors=368 y_draws=811422544
+  probe_trials=99971982 elapsed=19.817 rate_Mps=5.044816 target_survivors=368 y_draws=811559357
+  probe_trials=99972858 elapsed=19.819 rate_Mps=5.044269 target_survivors=368 y_draws=811696071
+  probe_trials=99973708 elapsed=19.822 rate_Mps=5.043661 target_survivors=368 y_draws=811832749
+  probe_trials=99974530 elapsed=19.824 rate_Mps=5.043115 target_survivors=368 y_draws=811969183
+  probe_trials=99975326 elapsed=19.826 rate_Mps=5.042566 target_survivors=368 y_draws=812106174
+  probe_trials=99976098 elapsed=19.828 rate_Mps=5.042050 target_survivors=368 y_draws=812242866
+  probe_trials=99976846 elapsed=19.831 rate_Mps=5.041518 target_survivors=368 y_draws=812379627
+  probe_trials=99977570 elapsed=19.833 rate_Mps=5.040972 target_survivors=368 y_draws=812516297
+  probe_trials=99978272 elapsed=19.835 rate_Mps=5.040405 target_survivors=368 y_draws=812653355
+  probe_trials=99978952 elapsed=19.838 rate_Mps=5.039883 target_survivors=368 y_draws=812790172
+  probe_trials=99979610 elapsed=19.840 rate_Mps=5.039339 target_survivors=368 y_draws=812927042
+  probe_trials=99980248 elapsed=19.842 rate_Mps=5.038694 target_survivors=368 y_draws=813063836
+  probe_trials=99980866 elapsed=19.845 rate_Mps=5.038191 target_survivors=368 y_draws=813200691
+  probe_trials=99981464 elapsed=19.847 rate_Mps=5.037655 target_survivors=368 y_draws=813337430
+  probe_trials=99982044 elapsed=19.849 rate_Mps=5.037092 target_survivors=368 y_draws=813459257
+  probe_trials=99982606 elapsed=19.851 rate_Mps=5.036610 target_survivors=368 y_draws=813581256
+  probe_trials=99983150 elapsed=19.853 rate_Mps=5.036137 target_survivors=368 y_draws=813703069
+  probe_trials=99983678 elapsed=19.855 rate_Mps=5.035683 target_survivors=368 y_draws=813824156
+  probe_trials=99984190 elapsed=19.857 rate_Mps=5.035167 target_survivors=368 y_draws=813945696
+  probe_trials=99984686 elapsed=19.859 rate_Mps=5.034660 target_survivors=368 y_draws=814067144
+  probe_trials=99985166 elapsed=19.861 rate_Mps=5.034185 target_survivors=368 y_draws=814188214
+  probe_trials=99985630 elapsed=19.863 rate_Mps=5.033666 target_survivors=368 y_draws=814309401
+  probe_trials=99986080 elapsed=19.865 rate_Mps=5.033217 target_survivors=368 y_draws=814430714
+  probe_trials=99986516 elapsed=19.867 rate_Mps=5.032668 target_survivors=368 y_draws=814551891
+  probe_trials=99986938 elapsed=19.870 rate_Mps=5.032023 target_survivors=368 y_draws=814673076
+  probe_trials=99987348 elapsed=19.873 rate_Mps=5.031438 target_survivors=368 y_draws=814794373
+  probe_trials=99987744 elapsed=19.875 rate_Mps=5.030881 target_survivors=368 y_draws=814915522
+  probe_trials=99988128 elapsed=19.877 rate_Mps=5.030338 target_survivors=368 y_draws=815037303
+  probe_trials=99988500 elapsed=19.879 rate_Mps=5.029793 target_survivors=368 y_draws=815158569
+  probe_trials=99988860 elapsed=19.881 rate_Mps=5.029297 target_survivors=368 y_draws=815279710
+  probe_trials=99989210 elapsed=19.883 rate_Mps=5.028842 target_survivors=368 y_draws=815400956
+  probe_trials=99989548 elapsed=19.885 rate_Mps=5.028361 target_survivors=368 y_draws=815522387
+  probe_trials=99989876 elapsed=19.887 rate_Mps=5.027788 target_survivors=368 y_draws=815643626
+  probe_trials=99990194 elapsed=19.889 rate_Mps=5.027321 target_survivors=368 y_draws=815764701
+  probe_trials=99990502 elapsed=19.891 rate_Mps=5.026838 target_survivors=368 y_draws=815885750
+  probe_trials=99990800 elapsed=19.893 rate_Mps=5.026355 target_survivors=368 y_draws=816006820
+  probe_trials=99991088 elapsed=19.895 rate_Mps=5.025871 target_survivors=368 y_draws=816127845
+  probe_trials=99991368 elapsed=19.898 rate_Mps=5.025320 target_survivors=368 y_draws=816249279
+  probe_trials=99991638 elapsed=19.900 rate_Mps=5.024824 target_survivors=368 y_draws=816370634
+  probe_trials=99991900 elapsed=19.902 rate_Mps=5.024309 target_survivors=368 y_draws=816491883
+  probe_trials=99992154 elapsed=19.904 rate_Mps=5.023786 target_survivors=368 y_draws=816612930
+  probe_trials=99992400 elapsed=19.906 rate_Mps=5.023276 target_survivors=368 y_draws=816734284
+  probe_trials=99992638 elapsed=19.908 rate_Mps=5.022806 target_survivors=368 y_draws=816855490
+  probe_trials=99992870 elapsed=19.910 rate_Mps=5.022312 target_survivors=368 y_draws=816976697
+  probe_trials=99993094 elapsed=19.911 rate_Mps=5.021890 target_survivors=368 y_draws=817097785
+  probe_trials=99993310 elapsed=19.913 rate_Mps=5.021424 target_survivors=368 y_draws=817218763
+  probe_trials=99993520 elapsed=19.915 rate_Mps=5.020915 target_survivors=368 y_draws=817339962
+  probe_trials=99993724 elapsed=19.917 rate_Mps=5.020417 target_survivors=368 y_draws=817461349
+  probe_trials=99993922 elapsed=19.920 rate_Mps=5.019790 target_survivors=368 y_draws=817582823
+  probe_trials=99994112 elapsed=19.922 rate_Mps=5.019308 target_survivors=368 y_draws=817703913
+  probe_trials=99994296 elapsed=19.924 rate_Mps=5.018815 target_survivors=368 y_draws=817825001
+  probe_trials=99994476 elapsed=19.926 rate_Mps=5.018352 target_survivors=368 y_draws=817946227
+  probe_trials=99994650 elapsed=19.928 rate_Mps=5.017885 target_survivors=368 y_draws=818067327
+  probe_trials=99994818 elapsed=19.930 rate_Mps=5.017395 target_survivors=368 y_draws=818188465
+  probe_trials=99994980 elapsed=19.931 rate_Mps=5.016939 target_survivors=368 y_draws=818309201
+  probe_trials=99995138 elapsed=19.933 rate_Mps=5.016467 target_survivors=368 y_draws=818430207
+  probe_trials=99995290 elapsed=19.935 rate_Mps=5.016043 target_survivors=368 y_draws=818551176
+  probe_trials=99995438 elapsed=19.937 rate_Mps=5.015562 target_survivors=368 y_draws=818672455
+  probe_trials=99995582 elapsed=19.939 rate_Mps=5.015068 target_survivors=368 y_draws=818793604
+  probe_trials=99995722 elapsed=19.941 rate_Mps=5.014599 target_survivors=368 y_draws=818914695
+  probe_trials=99995856 elapsed=19.943 rate_Mps=5.014059 target_survivors=368 y_draws=819036148
+  probe_trials=99995986 elapsed=19.945 rate_Mps=5.013565 target_survivors=368 y_draws=819157302
+  probe_trials=99996112 elapsed=19.947 rate_Mps=5.013110 target_survivors=368 y_draws=819278117
+  probe_trials=99996234 elapsed=19.949 rate_Mps=5.012668 target_survivors=368 y_draws=819399343
+  probe_trials=99996352 elapsed=19.951 rate_Mps=5.012157 target_survivors=368 y_draws=819520084
+  probe_trials=99996466 elapsed=19.953 rate_Mps=5.011639 target_survivors=368 y_draws=819640848
+  probe_trials=99996578 elapsed=19.955 rate_Mps=5.011197 target_survivors=368 y_draws=819761897
+  probe_trials=99996686 elapsed=19.956 rate_Mps=5.010763 target_survivors=368 y_draws=819883022
+  probe_trials=99996790 elapsed=19.958 rate_Mps=5.010264 target_survivors=368 y_draws=820004460
+  probe_trials=99996892 elapsed=19.960 rate_Mps=5.009792 target_survivors=368 y_draws=820125587
+  probe_trials=99996990 elapsed=19.962 rate_Mps=5.009274 target_survivors=368 y_draws=820246934
+  probe_trials=99997086 elapsed=19.964 rate_Mps=5.008800 target_survivors=368 y_draws=820368095
+  probe_trials=99997178 elapsed=19.966 rate_Mps=5.008372 target_survivors=368 y_draws=820489447
+  probe_trials=99997268 elapsed=19.968 rate_Mps=5.007927 target_survivors=368 y_draws=820610634
+  probe_trials=99997354 elapsed=19.970 rate_Mps=5.007404 target_survivors=368 y_draws=820731733
+  probe_trials=99997438 elapsed=19.972 rate_Mps=5.006882 target_survivors=368 y_draws=820852825
+  probe_trials=99997520 elapsed=19.974 rate_Mps=5.006412 target_survivors=368 y_draws=820973991
+  probe_trials=99997598 elapsed=19.976 rate_Mps=5.005957 target_survivors=368 y_draws=821095117
+  probe_trials=99997674 elapsed=19.978 rate_Mps=5.005513 target_survivors=368 y_draws=821216446
+  probe_trials=99997748 elapsed=19.980 rate_Mps=5.004996 target_survivors=368 y_draws=821337632
+  probe_trials=99997820 elapsed=19.981 rate_Mps=5.004553 target_survivors=368 y_draws=821458888
+  probe_trials=99997890 elapsed=19.983 rate_Mps=5.004091 target_survivors=368 y_draws=821580019
+  probe_trials=99997956 elapsed=19.985 rate_Mps=5.003671 target_survivors=368 y_draws=821700764
+  probe_trials=99998020 elapsed=19.987 rate_Mps=5.003239 target_survivors=368 y_draws=821821823
+  probe_trials=99998082 elapsed=19.989 rate_Mps=5.002641 target_survivors=368 y_draws=821942985
+  probe_trials=99998142 elapsed=19.991 rate_Mps=5.002120 target_survivors=368 y_draws=822063971
+  probe_trials=99998202 elapsed=19.993 rate_Mps=5.001672 target_survivors=368 y_draws=822185214
+  probe_trials=99998260 elapsed=19.995 rate_Mps=5.001245 target_survivors=368 y_draws=822306334
+  probe_trials=99998316 elapsed=19.996 rate_Mps=5.000806 target_survivors=368 y_draws=822427592
+  probe_trials=99998370 elapsed=19.998 rate_Mps=5.000327 target_survivors=368 y_draws=822548808
+  probe_trials=99998422 elapsed=20.000 rate_Mps=4.999819 target_survivors=368 y_draws=822669807
+  probe_trials=99998472 elapsed=20.003 rate_Mps=4.999225 target_survivors=368 y_draws=822790946
+  probe_trials=99998520 elapsed=20.005 rate_Mps=4.998774 target_survivors=368 y_draws=822912093
+  probe_trials=99998568 elapsed=20.006 rate_Mps=4.998333 target_survivors=368 y_draws=823033248
+  probe_trials=99998614 elapsed=20.008 rate_Mps=4.997908 target_survivors=368 y_draws=823154128
+  probe_trials=99998658 elapsed=20.010 rate_Mps=4.997329 target_survivors=368 y_draws=823275314
+  probe_trials=99998700 elapsed=20.012 rate_Mps=4.996840 target_survivors=368 y_draws=823396416
+  probe_trials=99998742 elapsed=20.014 rate_Mps=4.996384 target_survivors=368 y_draws=823517540
+  probe_trials=99998782 elapsed=20.016 rate_Mps=4.995866 target_survivors=368 y_draws=823638881
+  probe_trials=99998822 elapsed=20.018 rate_Mps=4.995407 target_survivors=368 y_draws=823759924
+  probe_trials=99998860 elapsed=20.020 rate_Mps=4.994979 target_survivors=368 y_draws=823880955
+  probe_trials=99998896 elapsed=20.022 rate_Mps=4.994534 target_survivors=368 y_draws=824002176
+  probe_trials=99998932 elapsed=20.023 rate_Mps=4.994109 target_survivors=368 y_draws=824123232
+  probe_trials=99998966 elapsed=20.025 rate_Mps=4.993644 target_survivors=368 y_draws=824245003
+  probe_trials=99999000 elapsed=20.027 rate_Mps=4.993162 target_survivors=368 y_draws=824366269
+  probe_trials=99999032 elapsed=20.029 rate_Mps=4.992722 target_survivors=368 y_draws=824487238
+  probe_trials=99999064 elapsed=20.031 rate_Mps=4.992253 target_survivors=368 y_draws=824608469
+  probe_trials=99999094 elapsed=20.033 rate_Mps=4.991835 target_survivors=368 y_draws=824729512
+  probe_trials=99999124 elapsed=20.034 rate_Mps=4.991385 target_survivors=368 y_draws=824850595
+  probe_trials=99999152 elapsed=20.036 rate_Mps=4.990965 target_survivors=368 y_draws=824971785
+  probe_trials=99999180 elapsed=20.038 rate_Mps=4.990538 target_survivors=368 y_draws=825092932
+  probe_trials=99999206 elapsed=20.040 rate_Mps=4.990074 target_survivors=368 y_draws=825213970
+  probe_trials=99999232 elapsed=20.041 rate_Mps=4.989632 target_survivors=368 y_draws=825335007
+  probe_trials=99999256 elapsed=20.043 rate_Mps=4.989210 target_survivors=368 y_draws=825456185
+  probe_trials=99999280 elapsed=20.045 rate_Mps=4.988761 target_survivors=368 y_draws=825577303
+  probe_trials=99999304 elapsed=20.047 rate_Mps=4.988324 target_survivors=368 y_draws=825698785
+  probe_trials=99999326 elapsed=20.048 rate_Mps=4.987875 target_survivors=368 y_draws=825819845
+  probe_trials=99999348 elapsed=20.051 rate_Mps=4.987326 target_survivors=368 y_draws=825941009
+  probe_trials=99999370 elapsed=20.053 rate_Mps=4.986855 target_survivors=368 y_draws=826061974
+  probe_trials=99999390 elapsed=20.054 rate_Mps=4.986415 target_survivors=368 y_draws=826183075
+  probe_trials=99999410 elapsed=20.056 rate_Mps=4.985985 target_survivors=368 y_draws=826304101
+  probe_trials=99999430 elapsed=20.058 rate_Mps=4.985566 target_survivors=368 y_draws=826425253
+  probe_trials=99999448 elapsed=20.060 rate_Mps=4.985122 target_survivors=368 y_draws=826546221
+  probe_trials=99999466 elapsed=20.061 rate_Mps=4.984679 target_survivors=368 y_draws=826667331
+  probe_trials=99999484 elapsed=20.063 rate_Mps=4.984243 target_survivors=368 y_draws=826788441
+  probe_trials=99999502 elapsed=20.065 rate_Mps=4.983801 target_survivors=368 y_draws=826909442
+  probe_trials=99999518 elapsed=20.067 rate_Mps=4.983385 target_survivors=368 y_draws=827030978
+  probe_trials=99999534 elapsed=20.068 rate_Mps=4.982943 target_survivors=368 y_draws=827152307
+  probe_trials=99999550 elapsed=20.070 rate_Mps=4.982488 target_survivors=368 y_draws=827273705
+  probe_trials=99999566 elapsed=20.072 rate_Mps=4.982005 target_survivors=368 y_draws=827394766
+  probe_trials=99999580 elapsed=20.074 rate_Mps=4.981564 target_survivors=368 y_draws=827515819
+  probe_trials=99999594 elapsed=20.076 rate_Mps=4.981112 target_survivors=368 y_draws=827637231
+  probe_trials=99999608 elapsed=20.077 rate_Mps=4.980681 target_survivors=368 y_draws=827758306
+  probe_trials=99999622 elapsed=20.079 rate_Mps=4.980258 target_survivors=368 y_draws=827879493
+  probe_trials=99999634 elapsed=20.081 rate_Mps=4.979794 target_survivors=368 y_draws=828000562
+  probe_trials=99999646 elapsed=20.083 rate_Mps=4.979306 target_survivors=368 y_draws=828121424
+  probe_trials=99999658 elapsed=20.085 rate_Mps=4.978860 target_survivors=368 y_draws=828242409
+  probe_trials=99999670 elapsed=20.087 rate_Mps=4.978379 target_survivors=368 y_draws=828363540
+  probe_trials=99999682 elapsed=20.089 rate_Mps=4.977931 target_survivors=368 y_draws=828484585
+  probe_trials=99999692 elapsed=20.090 rate_Mps=4.977489 target_survivors=368 y_draws=828605722
+  probe_trials=99999702 elapsed=20.092 rate_Mps=4.977030 target_survivors=368 y_draws=828726869
+  probe_trials=99999712 elapsed=20.094 rate_Mps=4.976589 target_survivors=368 y_draws=828848093
+  probe_trials=99999722 elapsed=20.096 rate_Mps=4.976167 target_survivors=368 y_draws=828969518
+  probe_trials=99999732 elapsed=20.097 rate_Mps=4.975731 target_survivors=368 y_draws=829090441
+  probe_trials=99999742 elapsed=20.099 rate_Mps=4.975276 target_survivors=368 y_draws=829211480
+  probe_trials=99999752 elapsed=20.101 rate_Mps=4.974866 target_survivors=368 y_draws=829332644
+  probe_trials=99999760 elapsed=20.103 rate_Mps=4.974417 target_survivors=368 y_draws=829453795
+  probe_trials=99999768 elapsed=20.105 rate_Mps=4.973987 target_survivors=368 y_draws=829574605
+  probe_trials=99999776 elapsed=20.106 rate_Mps=4.973542 target_survivors=368 y_draws=829695652
+  probe_trials=99999784 elapsed=20.108 rate_Mps=4.973071 target_survivors=368 y_draws=829817091
+  probe_trials=99999792 elapsed=20.110 rate_Mps=4.972633 target_survivors=368 y_draws=829937972
+  probe_trials=99999800 elapsed=20.112 rate_Mps=4.972158 target_survivors=368 y_draws=830059065
+  probe_trials=99999808 elapsed=20.114 rate_Mps=4.971720 target_survivors=368 y_draws=830180322
+  probe_trials=99999814 elapsed=20.116 rate_Mps=4.971279 target_survivors=368 y_draws=830301443
+  probe_trials=99999820 elapsed=20.117 rate_Mps=4.970863 target_survivors=368 y_draws=830422422
+  probe_trials=99999826 elapsed=20.119 rate_Mps=4.970432 target_survivors=368 y_draws=830543383
+  probe_trials=99999832 elapsed=20.121 rate_Mps=4.970017 target_survivors=368 y_draws=830664399
+  probe_trials=99999838 elapsed=20.122 rate_Mps=4.969574 target_survivors=368 y_draws=830785472
+  probe_trials=99999844 elapsed=20.124 rate_Mps=4.969156 target_survivors=368 y_draws=830906605
+  probe_trials=99999850 elapsed=20.126 rate_Mps=4.968715 target_survivors=368 y_draws=831027536
+  probe_trials=99999856 elapsed=20.128 rate_Mps=4.968256 target_survivors=368 y_draws=831149028
+  probe_trials=99999862 elapsed=20.130 rate_Mps=4.967793 target_survivors=368 y_draws=831270146
+  probe_trials=99999868 elapsed=20.131 rate_Mps=4.967364 target_survivors=368 y_draws=831391388
+  probe_trials=99999874 elapsed=20.133 rate_Mps=4.966926 target_survivors=368 y_draws=831512735
+  probe_trials=99999878 elapsed=20.135 rate_Mps=4.966499 target_survivors=368 y_draws=831633885
+  probe_trials=99999882 elapsed=20.137 rate_Mps=4.966076 target_survivors=368 y_draws=831754723
+  probe_trials=99999886 elapsed=20.138 rate_Mps=4.965619 target_survivors=368 y_draws=831875966
+  probe_trials=99999890 elapsed=20.140 rate_Mps=4.965198 target_survivors=368 y_draws=831997120
+  probe_trials=99999894 elapsed=20.142 rate_Mps=4.964771 target_survivors=368 y_draws=832118208
+  probe_trials=99999898 elapsed=20.144 rate_Mps=4.964316 target_survivors=368 y_draws=832239313
+  probe_trials=99999902 elapsed=20.146 rate_Mps=4.963850 target_survivors=368 y_draws=832360447
+  probe_trials=99999906 elapsed=20.147 rate_Mps=4.963430 target_survivors=368 y_draws=832481438
+  probe_trials=99999910 elapsed=20.149 rate_Mps=4.962993 target_survivors=368 y_draws=832602750
+  probe_trials=99999914 elapsed=20.151 rate_Mps=4.962525 target_survivors=368 y_draws=832723777
+  probe_trials=99999918 elapsed=20.153 rate_Mps=4.962101 target_survivors=368 y_draws=832844911
+  probe_trials=99999922 elapsed=20.154 rate_Mps=4.961681 target_survivors=368 y_draws=832966191
+  probe_trials=99999926 elapsed=20.156 rate_Mps=4.961244 target_survivors=368 y_draws=833087215
+  probe_trials=99999930 elapsed=20.158 rate_Mps=4.960806 target_survivors=368 y_draws=833208062
+  probe_trials=99999934 elapsed=20.160 rate_Mps=4.960367 target_survivors=368 y_draws=833329219
+  probe_trials=99999938 elapsed=20.162 rate_Mps=4.959922 target_survivors=368 y_draws=833450095
+  probe_trials=99999940 elapsed=20.163 rate_Mps=4.959492 target_survivors=368 y_draws=833571336
+  probe_trials=99999942 elapsed=20.165 rate_Mps=4.959026 target_survivors=368 y_draws=833692266
+  probe_trials=99999944 elapsed=20.167 rate_Mps=4.958605 target_survivors=368 y_draws=833813434
+  probe_trials=99999946 elapsed=20.169 rate_Mps=4.958167 target_survivors=368 y_draws=833934598
+  probe_trials=99999948 elapsed=20.170 rate_Mps=4.957751 target_survivors=368 y_draws=834055849
+  probe_trials=99999950 elapsed=20.172 rate_Mps=4.957288 target_survivors=368 y_draws=834177119
+  probe_trials=99999952 elapsed=20.174 rate_Mps=4.956858 target_survivors=368 y_draws=834298217
+  probe_trials=99999954 elapsed=20.176 rate_Mps=4.956389 target_survivors=368 y_draws=834419096
+  probe_trials=99999956 elapsed=20.178 rate_Mps=4.955940 target_survivors=368 y_draws=834540287
+  probe_trials=99999958 elapsed=20.180 rate_Mps=4.955517 target_survivors=368 y_draws=834661347
+  probe_trials=99999960 elapsed=20.181 rate_Mps=4.955092 target_survivors=368 y_draws=834782808
+  probe_trials=99999962 elapsed=20.183 rate_Mps=4.954671 target_survivors=368 y_draws=834904470
+  probe_trials=99999964 elapsed=20.185 rate_Mps=4.954249 target_survivors=368 y_draws=835025478
+  probe_trials=99999966 elapsed=20.187 rate_Mps=4.953796 target_survivors=368 y_draws=835146458
+  probe_trials=99999968 elapsed=20.188 rate_Mps=4.953367 target_survivors=368 y_draws=835267133
+  probe_trials=99999970 elapsed=20.190 rate_Mps=4.952893 target_survivors=368 y_draws=835388278
+  probe_trials=99999972 elapsed=20.192 rate_Mps=4.952481 target_survivors=368 y_draws=835509202
+  probe_trials=99999974 elapsed=20.194 rate_Mps=4.952054 target_survivors=368 y_draws=835630422
+  probe_trials=99999976 elapsed=20.195 rate_Mps=4.951616 target_survivors=368 y_draws=835751812
+  probe_trials=99999978 elapsed=20.197 rate_Mps=4.951126 target_survivors=368 y_draws=835872692
+  probe_trials=99999980 elapsed=20.199 rate_Mps=4.950696 target_survivors=368 y_draws=835994010
+  probe_trials=99999982 elapsed=20.201 rate_Mps=4.950280 target_survivors=368 y_draws=836115220
+  probe_trials=99999984 elapsed=20.203 rate_Mps=4.949834 target_survivors=368 y_draws=836236317
+  probe_trials=99999986 elapsed=20.204 rate_Mps=4.949405 target_survivors=368 y_draws=836357502
+  probe_trials=99999988 elapsed=20.206 rate_Mps=4.948956 target_survivors=368 y_draws=836478624
+  probe_trials=99999990 elapsed=20.208 rate_Mps=4.948488 target_survivors=368 y_draws=836599607
+  probe_trials=99999992 elapsed=20.210 rate_Mps=4.948063 target_survivors=368 y_draws=836720765
+  probe_trials=99999994 elapsed=20.212 rate_Mps=4.947628 target_survivors=368 y_draws=836841823
+  probe_trials=99999996 elapsed=20.213 rate_Mps=4.947201 target_survivors=368 y_draws=836962892
+  probe_trials=99999998 elapsed=20.215 rate_Mps=4.946758 target_survivors=368 y_draws=837084032
+  probe_trials=100000000 elapsed=20.217 rate_Mps=4.946295 target_survivors=368 y_draws=837204966
+
+Stratum probe summary:
+  mode=x16d2probe source_kind=raw_x16_domain_plus_prefix_d backend=u96 GPU="NVIDIA RTX 6000 Ada Generation" seed_mode=identity seed_offset=0
+  prefix_filter_depth=6
+  accepted_roots=100000000 y_draws=837204966 nonsplit_y=418607903 sqrtD_y=104669045 roots_valid=206995738
+  target_depth=24 survivors=368 rate=0.000003680 elapsed=20.217156 accepted_rate_Mps=4.946294 source_draws_per_accepted=8.372050 target_per_source_draw=0.000000439558 target_survivor_per_sec=18.202362
+  prefix total=50000000 survivors=178 rate=0.000003560
+  heldout total=50000000 survivors=190 rate=0.000003800
+  depth survival checkpoints:
+    depth>=4 count=100000000 rate=1.000000000
+    depth>=6 count=100000000 rate=1.000000000
+    depth>=8 count=25012934 rate=0.250129340
+    depth>=10 count=6247860 rate=0.062478600
+    depth>=12 count=1564944 rate=0.015649440
+    depth>=14 count=390908 rate=0.003909080
+    depth>=16 count=96688 rate=0.000966880
+    depth>=18 count=24336 rate=0.000243360
+    depth>=20 count=6106 rate=0.000061060
+    depth>=22 count=1502 rate=0.000015020
+    depth>=24 count=368 rate=0.000003680
+  top buckets selected by prefix lift (min prefix total 100):
+    bucket q_sheet key prefix_total prefix_surv prefix_lift held_total held_surv held_lift promotion
+    0 0 0 390641 6 4.314 390725 2 1.347 no
+    98 1 34 390732 6 4.313 391291 2 1.345 no
+    121 1 57 390194 5 3.599 389783 2 1.350 no
+    44 0 44 389378 4 2.886 389998 2 1.350 no
+    22 0 22 390149 4 2.880 390403 4 2.696 no
+    54 0 54 390387 4 2.878 391377 2 1.345 no
+    63 0 63 390631 4 2.876 389837 1 0.675 no
+    120 1 56 390814 4 2.875 390521 0 0.000 no
+    11 0 11 389503 3 2.164 390944 0 0.000 no
+    10 0 10 389523 3 2.163 390638 3 2.021 no
+    117 1 53 390107 3 2.160 390227 3 2.023 no
+    18 0 18 390139 3 2.160 389583 0 0.000 no
+scope_probe_jsonl={"mode":"x16d2probe","source_kind":"raw_x16_domain_plus_prefix_d","narrowing_source":false,"scope_narrowing":true,"p":"1000000000000000000000000103","backend":"u96","gpu":"NVIDIA RTX 6000 Ada Generation","seed_mode":"identity","seed_offset":0,"target_depth":24,"prefix_filter_depth":6,"bucket_bits":6,"elapsed":20.217156,"accepted_rate_Mps":4.946294,"accepted_roots":100000000,"source_draws":837204966,"nonsplit_y":418607903,"sqrtD_y":104669045,"roots_valid":206995738,"target_survivors":368,"target_rate":0.000003680000,"source_draws_per_accepted":8.372049660000,"target_per_source_draw":0.000000439558,"target_survivor_per_sec":18.202362,"prefix_total":50000000,"prefix_survive":178,"held_total":50000000,"held_survive":190,"survive_4":100000000,"survive_6":100000000,"survive_8":25012934,"survive_10":6247860,"survive_12":1564944,"survive_14":390908,"survive_16":96688,"survive_18":24336,"survive_20":6106,"survive_22":1502,"survive_24":368}
+
+Probe completed in 20.22s. trials=100000000 interval_trials=100000000 rate_Mps=4.946294
