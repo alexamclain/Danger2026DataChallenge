@@ -1,0 +1,78 @@
+p27 E-prime exact L(4O) section probe
+Eprime = V^2 = U^3 + 4U
+basis = 1,U,U^2,V
+small_primes = 103
+q=103:
+  enum_stats:
+  enum_compact_not_target = 77
+  enum_no_label2_candidate = 24
+  original_quotient_stats:
+  d3_minus_E_points = 0
+  d3_missing_on_E_orbit = 0
+  d3_not_descended_to_E = 0
+  d3_plus_E_points = 0
+  d3_quotient_rows = 0
+  d4_minus_E_points_after_d3 = 0
+  d4_missing_on_E_orbit = 0
+  d4_not_descended_to_E = 0
+  d4_plus_E_points_after_d3 = 0
+  d4_quotient_rows_after_d3 = 0
+  eprime_d3_stats:
+  input_rows = 0
+  minus = 0
+  plus = 0
+  quotient_rows = 0
+  eprime_d4_stats:
+  input_rows = 0
+  minus = 0
+  plus = 0
+  quotient_rows = 0
+q103_d3_l4_stats:
+  best_good = 0
+  best_polarity = 1
+  best_zeros = 0
+  exact_sections = 6
+  minus = 0
+  plus = 0
+  projective_sections = 1103440
+  rows = 0
+  sections_tested = 1103440
+q103_d3_l4_best:
+  good=0/0 rate=0.000000000 zeros=0 polarity=1 section=0+0*U+0*U2+1*V
+  good=0/0 rate=0.000000000 zeros=0 polarity=1 section=0+0*U+1*U2+0*V
+  good=0/0 rate=0.000000000 zeros=0 polarity=1 section=0+1*U+0*U2+0*V
+  good=0/0 rate=0.000000000 zeros=0 polarity=1 section=1+0*U+0*U2+0*V
+  good=0/0 rate=0.000000000 zeros=0 polarity=1 section=0+0*U+1*U2+1*V
+  good=0/0 rate=0.000000000 zeros=0 polarity=1 section=0+0*U+2*U2+1*V
+q103_d3_l4_exact:
+  good=0/0 rate=0.000000000 zeros=0 polarity=1 section=0+0*U+0*U2+1*V
+  good=0/0 rate=0.000000000 zeros=0 polarity=1 section=0+0*U+1*U2+1*V
+  good=0/0 rate=0.000000000 zeros=0 polarity=1 section=0+0*U+2*U2+1*V
+  good=0/0 rate=0.000000000 zeros=0 polarity=1 section=0+0*U+3*U2+1*V
+  good=0/0 rate=0.000000000 zeros=0 polarity=1 section=0+0*U+4*U2+1*V
+  good=0/0 rate=0.000000000 zeros=0 polarity=1 section=0+0*U+5*U2+1*V
+q103_d4_l4_stats:
+  best_good = 0
+  best_polarity = 1
+  best_zeros = 0
+  exact_sections = 6
+  minus = 0
+  plus = 0
+  projective_sections = 1103440
+  rows = 0
+  sections_tested = 1103440
+q103_d4_l4_best:
+  good=0/0 rate=0.000000000 zeros=0 polarity=1 section=0+0*U+0*U2+1*V
+  good=0/0 rate=0.000000000 zeros=0 polarity=1 section=0+0*U+1*U2+0*V
+  good=0/0 rate=0.000000000 zeros=0 polarity=1 section=0+1*U+0*U2+0*V
+  good=0/0 rate=0.000000000 zeros=0 polarity=1 section=1+0*U+0*U2+0*V
+  good=0/0 rate=0.000000000 zeros=0 polarity=1 section=0+0*U+1*U2+1*V
+  good=0/0 rate=0.000000000 zeros=0 polarity=1 section=0+0*U+2*U2+1*V
+q103_d4_l4_exact:
+  good=0/0 rate=0.000000000 zeros=0 polarity=1 section=0+0*U+0*U2+1*V
+  good=0/0 rate=0.000000000 zeros=0 polarity=1 section=0+0*U+1*U2+1*V
+  good=0/0 rate=0.000000000 zeros=0 polarity=1 section=0+0*U+2*U2+1*V
+  good=0/0 rate=0.000000000 zeros=0 polarity=1 section=0+0*U+3*U2+1*V
+  good=0/0 rate=0.000000000 zeros=0 polarity=1 section=0+0*U+4*U2+1*V
+  good=0/0 rate=0.000000000 zeros=0 polarity=1 section=0+0*U+5*U2+1*V
+p27_eprime_l4_section_exact_probe_rows=1/1

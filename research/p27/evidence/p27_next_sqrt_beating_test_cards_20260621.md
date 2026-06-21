@@ -666,6 +666,7 @@ K/S first-half cover update:
 [P27 K/S First-Half E-Prime Descent](p27_ks_first_half_eprime_descent_20260621.md).
 [P27 E-Prime First-Half Pullback Magma Smoke](p27_eprime_first_half_pullback_magma_20260621.md).
 [P27 E-Prime D3 Z-Source Magma Smoke](p27_eprime_d3_zsource_magma_20260621.md).
+[P27 E-Prime L(4O) Exact Section Screen](p27_eprime_l4_section_exact_screen_20260621.md).
 
 ```text
 Full q7 reverse-source fixture: online Magma memory limit.
@@ -708,6 +709,10 @@ The actual d3 z-source is now staged:
   sequential saturation: memory limit
   first-half-saturation then reverse_z: `D3_Z_AFTER_FIRSTHALF_SCHEME 1 62 0`
 Genus/normalization of this curve is the concrete offline CAS ask.
+
+The nearest exact low-pole source family on E' is killed: sections
+`a+bU+cU^2+dV` in `L(4O)` have zero exact d3 formulas on q599/q727/q919.
+The q487 exact quadratic-U sections do not survive and are local artifacts.
 ```
 
 Updated K/S next test:
@@ -716,7 +721,7 @@ Updated K/S next test:
 Do not continue visible K/S coefficient or branch-product scans.
 Do offline Magma/Sage quotient/decomposition only with a sharper target:
   normalize the staged d3 z-source J = Iclean + <reverse_z> on E',
-  compute branch divisor / Kummer class / genus,
+  compute branch divisor / Kummer class / genus beyond L(4O),
   and d4 fresh-cover vs recurrence testing.
 Do not treat E' descent alone as a low-genus source; the staged first-half
 pullback remains genus 37.

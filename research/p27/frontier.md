@@ -641,6 +641,16 @@ genus/normalization for this curve, so the concrete next test is offline
 normalization of `J = Iclean + <reverse_z>` over q7 and p27-signature guard
 fields, then branch/Kummer-class comparison against d4.
 
+The nearest exact low-pole section family on E' is now killed:
+[P27 E-Prime L(4O) Exact Section Screen](evidence/p27_eprime_l4_section_exact_screen_20260621.md).
+The probe exhaustively tested projective sections
+`a+bU+cU^2+dV` on p27-signature fields.  q487 has local exact quadratic-U
+artifacts, but q599, q727, and q919 all have non-degenerate d3 splits and zero
+exact L(4O) sections.  So the E' source, if it exists, is not a single
+irreducible-conic-sized section; it must come from the actual normalized
+z-source curve, a higher divisor/Kummer class, or a recurrence visible only
+after the d3 class is named.
+
 The K-line now has a cleaner coordinate for that extraction:
 [P27 Kummer Belyi Structure Probe](evidence/p27_kummer_belyi_structure_probe_20260621.md).
 Symbolically,

@@ -1,0 +1,48 @@
+p27 E-prime bitset exact L(4O) section probe
+Eprime = V^2 = U^3 + 4U
+basis = 1,U,U^2,V
+small_primes = 599
+q=599:
+  enum_stats:
+  enum_compact_not_target = 217
+  enum_no_label2_candidate = 156
+  original_quotient_stats:
+  d3_minus_E_points = 76
+  d3_missing_on_E_orbit = 0
+  d3_not_descended_to_E = 0
+  d3_plus_E_points = 36
+  d3_quotient_rows = 112
+  d4_minus_E_points_after_d3 = 36
+  d4_missing_on_E_orbit = 0
+  d4_not_descended_to_E = 0
+  d4_plus_E_points_after_d3 = 0
+  d4_quotient_rows_after_d3 = 36
+  orbit_size_4 = 112
+  oriented_candidates = 448
+  quotient_E_points = 112
+  eprime_d3_stats:
+  input_rows = 112
+  minus = 38
+  plus = 18
+  quotient_rows = 56
+  eprime_d4_stats:
+  input_rows = 36
+  minus = 18
+  plus = 0
+  quotient_rows = 18
+q599_d3_l4_bitset_stats:
+  b1_bc_pairs = 1
+  c1_bc_pairs = 599
+  constant_tested = 1
+  d1_bc_pairs = 358801
+  exact_sections = 0
+  minus = 38
+  plus = 18
+  rows = 56
+q599_d3_l4_bitset_exact_samples:
+q599_d4_l4_bitset_stats:
+  minus = 18
+  plus = 0
+  rows = 18
+  skipped_one_sided = 1
+p27_eprime_l4_section_bitset_probe_rows=1/1

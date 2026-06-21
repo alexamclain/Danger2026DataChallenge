@@ -27,6 +27,7 @@ Latest evidence:
 [P27 K/S First-Half E-Prime Descent](p27_ks_first_half_eprime_descent_20260621.md).
 [P27 E-Prime First-Half Pullback Magma Smoke](p27_eprime_first_half_pullback_magma_20260621.md).
 [P27 E-Prime D3 Z-Source Magma Smoke](p27_eprime_d3_zsource_magma_20260621.md).
+[P27 E-Prime L(4O) Exact Section Screen](p27_eprime_l4_section_exact_screen_20260621.md).
 
 Key result over tiny p27-signature field `q=7`:
 
@@ -56,6 +57,8 @@ saturation, so E' is a quotient/extraction surface, not a direct source yet.
 The actual d3 z-source can be staged as `J = Iclean + <reverse_z>` after
 first-half saturation; q7 online Magma reports a dimension-1 scheme with
 62 basis polynomials, but genus/normalization exceeds the web memory limit.
+Exact single-section tests in `L(4O)=<1,U,U^2,V>` are killed on q599/q727/q919;
+q487 exact quadratic-U fits are local artifacts.
 ```
 
 Concrete next K/S test:
@@ -63,7 +66,7 @@ Concrete next K/S test:
 ```text
 offline Magma/Sage should now target E': V^2=U^3+4U:
   normalize the staged d3 z-source J = Iclean + <reverse_z>
-  compute genus / branch divisor / Kummer class over E'
+  compute genus / branch divisor / Kummer class over E' beyond L(4O)
   d4 fresh-cover falsifier vs recurrence/sourceable transform
 ```
 
