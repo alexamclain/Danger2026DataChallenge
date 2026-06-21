@@ -127,6 +127,10 @@ Use Magma/Sage to eliminate the compactD/T/branch variables and construct the
 actual E-level double cover for d3.  Repeat for d4 after d3.
 ```
 
+Status: still the preferred next step.  A broader low-pole random pilot did
+not produce a small explicit source function; see
+[P27 E-Quotient Low-Pole Random Screen](p27_equotient_lowpole_random_screen_20260621.md).
+
 2. Divisor-class comparison:
 
 ```text
@@ -159,6 +163,7 @@ kill = treating the current E-basis as a GPU sampler
 
 - Gate: `research/p27/archive/gates/p27_equotient_kummer_basis_probe.py`
 - Output: `research/p27/archive/probe_outputs/p27_equotient_kummer_basis_probe_20260621.txt`
+- Follow-up: [P27 E-Quotient Low-Pole Random Screen](p27_equotient_lowpole_random_screen_20260621.md)
 - Related: [P27 Reverse Source D4 Recurrence Screen](p27_reverse_source_d4_recurrence_20260621.md)
 - Related: [P27 Reverse Source Quotient Screen](p27_reverse_source_quotient_screen_20260621.md)
 - Related: [P27 Label-2 H90 / Order-4 Lift](p27_label2_h90_order4_lift_20260621.md)

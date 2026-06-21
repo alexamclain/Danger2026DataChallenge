@@ -297,6 +297,18 @@ kills the visible named-basis route.  The remaining quotient moonshot now
 requires symbolic/function-field extraction of the actual E-level double
 covers, not more visible product scans.
 
+A broader low-pole pilot also failed to produce a source:
+[P27 E-Quotient Low-Pole Random Screen](evidence/p27_equotient_lowpole_random_screen_20260621.md).
+It tested small-integer sections of `L(nO)` on `E` and products of two
+sections, modeling low-pole rational-function squareclasses.  On a p27
+train/heldout split there were no exact candidates; best heldout scores were
+only `0.5275` for d3 and `0.5390` for d4 in a 200-trial pilot.  This is not a
+proof of absence, but it kills the nearest cheap random low-pole route.  The
+next useful artifact should be a Magma/Sage function-field extraction of the
+actual E-level double covers, with online Magma acceptable for small-field
+validation in the p24 style, or a faster finite-field solver on
+non-degenerate small fields before p27 validation.
+
 The newest p26 GPU trace/norm result is positive structure but negative as a
 production prefilter:
 [P27 GPU Filter-Cost Lesson From P26](evidence/p27_gpu_filter_cost_lesson_from_p26_20260621.md).

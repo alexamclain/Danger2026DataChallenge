@@ -400,6 +400,22 @@ d3 and d4, then compare their divisor/Kummer classes.  Do not spend more on
 visible product scans unless a new theorem supplies a named function.
 ```
 
+Low-pole pilot update:
+[P27 E-Quotient Low-Pole Random Screen](p27_equotient_lowpole_random_screen_20260621.md).
+
+```text
+Small random L(nO) sections/products did not find f3/f4:
+  exact_candidates = 0 for p27 d3/d4 at pole bounds 5 and 7
+  best heldout d3 = 0.5275
+  best heldout d4 = 0.5390
+```
+
+This is a bounded negative, not a proof of absence.  It reinforces that the
+next serious extraction should be symbolic/function-field based, using the
+online Magma calculator for small-field validation when convenient, or use a
+faster finite-field solver on non-degenerate small fields before p27
+validation.
+
 Promotion bar:
 
 ```text
