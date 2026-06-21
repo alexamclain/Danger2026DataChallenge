@@ -1,0 +1,5 @@
+EPRIME_D3_ZSOURCE_RAW_SCHEME 3 6 196
+
+Current total memory usage: 365.9MB, failed memory request: 32.0MB
+System Error: User memory limit has been reached
+RESULT p27_eprime_d3_zsource_saturated_q7 done

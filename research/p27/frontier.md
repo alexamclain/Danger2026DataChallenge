@@ -630,6 +630,17 @@ coordinate, but not a direct low-genus source; the win must be a lower-genus
 factor, Kummer-class relation, or recurrence inside/under the genus-37 staged
 cover.
 
+The actual d3 z-source is now staged but still needs offline CAS:
+[P27 E-Prime D3 Z-Source Magma Smoke](evidence/p27_eprime_d3_zsource_magma_20260621.md).
+All-at-once saturation of the z-source ideal hits the online memory limit after
+showing raw dimension `3`.  Sequential saturation also exceeds the limit.  The
+successful staging is to first compute the saturated first-half ideal
+`Iclean`, then add the reverse-source equation `reverse_z`, producing
+`D3_Z_AFTER_FIRSTHALF_SCHEME 1 62 0` over q7.  Online Magma cannot compute
+genus/normalization for this curve, so the concrete next test is offline
+normalization of `J = Iclean + <reverse_z>` over q7 and p27-signature guard
+fields, then branch/Kummer-class comparison against d4.
+
 The K-line now has a cleaner coordinate for that extraction:
 [P27 Kummer Belyi Structure Probe](evidence/p27_kummer_belyi_structure_probe_20260621.md).
 Symbolically,

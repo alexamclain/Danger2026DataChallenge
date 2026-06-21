@@ -665,6 +665,7 @@ K/S first-half cover update:
 [P27 K/S First-Half Alpha-Lift Obstruction](p27_ks_first_half_alpha_lift_obstruction_20260621.md).
 [P27 K/S First-Half E-Prime Descent](p27_ks_first_half_eprime_descent_20260621.md).
 [P27 E-Prime First-Half Pullback Magma Smoke](p27_eprime_first_half_pullback_magma_20260621.md).
+[P27 E-Prime D3 Z-Source Magma Smoke](p27_eprime_d3_zsource_magma_20260621.md).
 
 ```text
 Full q7 reverse-source fixture: online Magma memory limit.
@@ -701,6 +702,12 @@ q=1607/q1847/q2087 tested.  Online Magma q1607 reports:
 However, the explicit E' pullback of the eta=+1 first-half layer still reports
 `EPRIME_PULLBACK_SAT_SCHEME 1 61 0` and `EPRIME_PULLBACK_SAT_CURVE 37 0`
 over q7 after saturation.
+
+The actual d3 z-source is now staged:
+  all-at-once saturation: memory limit after raw dimension 3
+  sequential saturation: memory limit
+  first-half-saturation then reverse_z: `D3_Z_AFTER_FIRSTHALF_SCHEME 1 62 0`
+Genus/normalization of this curve is the concrete offline CAS ask.
 ```
 
 Updated K/S next test:
@@ -708,8 +715,8 @@ Updated K/S next test:
 ```text
 Do not continue visible K/S coefficient or branch-product scans.
 Do offline Magma/Sage quotient/decomposition only with a sharper target:
-  actual d3/d4 double-cover extraction on E': V^2=U^3+4U,
-  branch divisor / Kummer class / genus comparison,
+  normalize the staged d3 z-source J = Iclean + <reverse_z> on E',
+  compute branch divisor / Kummer class / genus,
   and d4 fresh-cover vs recurrence testing.
 Do not treat E' descent alone as a low-genus source; the staged first-half
 pullback remains genus 37.

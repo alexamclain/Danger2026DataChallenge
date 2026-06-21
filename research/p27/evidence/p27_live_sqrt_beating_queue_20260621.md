@@ -26,6 +26,7 @@ Latest evidence:
 [P27 K/S First-Half Alpha-Lift Obstruction](p27_ks_first_half_alpha_lift_obstruction_20260621.md).
 [P27 K/S First-Half E-Prime Descent](p27_ks_first_half_eprime_descent_20260621.md).
 [P27 E-Prime First-Half Pullback Magma Smoke](p27_eprime_first_half_pullback_magma_20260621.md).
+[P27 E-Prime D3 Z-Source Magma Smoke](p27_eprime_d3_zsource_magma_20260621.md).
 
 Key result over tiny p27-signature field `q=7`:
 
@@ -52,14 +53,17 @@ In contrast, translation by (0,0) descends the T-cover by T -> +/-T/X^3 and
 preserves compactD plus the first-half B-branch squareclass on q=1607,1847,2087.
 But the explicit E' first-half pullback still has genus 37 over q7 after
 saturation, so E' is a quotient/extraction surface, not a direct source yet.
+The actual d3 z-source can be staged as `J = Iclean + <reverse_z>` after
+first-half saturation; q7 online Magma reports a dimension-1 scheme with
+62 basis polynomials, but genus/normalization exceeds the web memory limit.
 ```
 
 Concrete next K/S test:
 
 ```text
 offline Magma/Sage should now target E': V^2=U^3+4U:
-  actual d3/d4 double-cover extraction on E'
-  branch divisor / Kummer class / genus comparison
+  normalize the staged d3 z-source J = Iclean + <reverse_z>
+  compute genus / branch divisor / Kummer class over E'
   d4 fresh-cover falsifier vs recurrence/sourceable transform
 ```
 
