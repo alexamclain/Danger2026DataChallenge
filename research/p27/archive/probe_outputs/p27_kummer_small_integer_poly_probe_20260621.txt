@@ -1,0 +1,256 @@
+p27 Kummer-line small-integer polynomial probe
+K = x([2]P) on E': V^2=U^3+4U
+small_primes = 1471,1607,1847
+degrees = 3,4
+bound = 8
+field_rows:
+  q=1471 d3=50 d3_plus=28 d4=28 d4_plus=14
+  q=1607 d3=49 d3_plus=28 d4=28 d4_plus=19
+  q=1847 d3=63 d3_plus=45 d4=45 d4_plus=19
+setup_stats:
+  q1471_d3_eprime_input_rows = 200
+  q1471_d3_eprime_minus = 44
+  q1471_d3_eprime_plus = 56
+  q1471_d3_eprime_quotient_rows = 100
+  q1471_d3_k_input_rows = 100
+  q1471_d3_k_k_rows = 50
+  q1471_d3_k_minus = 22
+  q1471_d3_k_plus = 28
+  q1471_d4_eprime_input_rows = 112
+  q1471_d4_eprime_minus = 28
+  q1471_d4_eprime_plus = 28
+  q1471_d4_eprime_quotient_rows = 56
+  q1471_d4_k_input_rows = 56
+  q1471_d4_k_k_rows = 28
+  q1471_d4_k_minus = 14
+  q1471_d4_k_plus = 14
+  q1471_enum_compact_not_target = 837
+  q1471_enum_no_label2_candidate = 424
+  q1471_quotient_d3_minus_E_points = 88
+  q1471_quotient_d3_missing_on_E_orbit = 0
+  q1471_quotient_d3_not_descended_to_E = 0
+  q1471_quotient_d3_plus_E_points = 112
+  q1471_quotient_d3_quotient_rows = 200
+  q1471_quotient_d4_minus_E_points_after_d3 = 56
+  q1471_quotient_d4_missing_on_E_orbit = 0
+  q1471_quotient_d4_not_descended_to_E = 0
+  q1471_quotient_d4_plus_E_points_after_d3 = 56
+  q1471_quotient_d4_quotient_rows_after_d3 = 112
+  q1471_quotient_orbit_size_4 = 200
+  q1471_quotient_oriented_candidates = 800
+  q1471_quotient_quotient_E_points = 200
+  q1607_d3_eprime_input_rows = 196
+  q1607_d3_eprime_minus = 42
+  q1607_d3_eprime_plus = 56
+  q1607_d3_eprime_quotient_rows = 98
+  q1607_d3_k_input_rows = 98
+  q1607_d3_k_k_rows = 49
+  q1607_d3_k_minus = 21
+  q1607_d3_k_plus = 28
+  q1607_d4_eprime_input_rows = 112
+  q1607_d4_eprime_minus = 18
+  q1607_d4_eprime_plus = 38
+  q1607_d4_eprime_quotient_rows = 56
+  q1607_d4_k_input_rows = 56
+  q1607_d4_k_k_rows = 28
+  q1607_d4_k_minus = 9
+  q1607_d4_k_plus = 19
+  q1607_enum_compact_not_target = 805
+  q1607_enum_no_label2_candidate = 408
+  q1607_quotient_d3_minus_E_points = 84
+  q1607_quotient_d3_missing_on_E_orbit = 0
+  q1607_quotient_d3_not_descended_to_E = 0
+  q1607_quotient_d3_plus_E_points = 112
+  q1607_quotient_d3_quotient_rows = 196
+  q1607_quotient_d4_minus_E_points_after_d3 = 36
+  q1607_quotient_d4_missing_on_E_orbit = 0
+  q1607_quotient_d4_not_descended_to_E = 0
+  q1607_quotient_d4_plus_E_points_after_d3 = 76
+  q1607_quotient_d4_quotient_rows_after_d3 = 112
+  q1607_quotient_orbit_size_4 = 196
+  q1607_quotient_oriented_candidates = 784
+  q1607_quotient_quotient_E_points = 196
+  q1847_d3_eprime_input_rows = 252
+  q1847_d3_eprime_minus = 36
+  q1847_d3_eprime_plus = 90
+  q1847_d3_eprime_quotient_rows = 126
+  q1847_d3_k_input_rows = 126
+  q1847_d3_k_k_rows = 63
+  q1847_d3_k_minus = 18
+  q1847_d3_k_plus = 45
+  q1847_d4_eprime_input_rows = 180
+  q1847_d4_eprime_minus = 52
+  q1847_d4_eprime_plus = 38
+  q1847_d4_eprime_quotient_rows = 90
+  q1847_d4_k_input_rows = 90
+  q1847_d4_k_k_rows = 45
+  q1847_d4_k_minus = 26
+  q1847_d4_k_plus = 19
+  q1847_enum_compact_not_target = 873
+  q1847_enum_no_label2_candidate = 468
+  q1847_quotient_d3_minus_E_points = 72
+  q1847_quotient_d3_missing_on_E_orbit = 0
+  q1847_quotient_d3_not_descended_to_E = 0
+  q1847_quotient_d3_plus_E_points = 180
+  q1847_quotient_d3_quotient_rows = 252
+  q1847_quotient_d4_minus_E_points_after_d3 = 104
+  q1847_quotient_d4_missing_on_E_orbit = 0
+  q1847_quotient_d4_not_descended_to_E = 0
+  q1847_quotient_d4_plus_E_points_after_d3 = 76
+  q1847_quotient_d4_quotient_rows_after_d3 = 180
+  q1847_quotient_orbit_size_4 = 252
+  q1847_quotient_oriented_candidates = 1008
+  q1847_quotient_quotient_E_points = 252
+d3_degree3_bound8:
+  polys_tested = 36111
+  exact_all_fields = 0
+  best_count = 8
+d3_degree3_bound8_best:
+  exact_fields=0 min_rate=0.650793651 total=107/162 total_rate=0.660493827 zeros=0 poly=-2 + 7*K + 3*K^2 + 8*K^3
+    q=1471 good=33/50 rate=0.660000000 zeros=0 polarity=-1
+    q=1607 good=33/49 rate=0.673469388 zeros=0 polarity=-1
+    q=1847 good=41/63 rate=0.650793651 zeros=0 polarity=-1
+  exact_fields=0 min_rate=0.640000000 total=106/162 total_rate=0.654320988 zeros=0 poly=6 + 1*K + 7*K^2 + 6*K^3
+    q=1471 good=32/50 rate=0.640000000 zeros=0 polarity=-1
+    q=1607 good=33/49 rate=0.673469388 zeros=0 polarity=-1
+    q=1847 good=41/63 rate=0.650793651 zeros=0 polarity=-1
+  exact_fields=0 min_rate=0.634920635 total=106/162 total_rate=0.654320988 zeros=0 poly=3 + 8*K + 1*K^2 + 8*K^3
+    q=1471 good=34/50 rate=0.680000000 zeros=0 polarity=-1
+    q=1607 good=32/49 rate=0.653061224 zeros=0 polarity=1
+    q=1847 good=40/63 rate=0.634920635 zeros=0 polarity=-1
+  exact_fields=0 min_rate=0.632653061 total=109/162 total_rate=0.672839506 zeros=1 poly=6 + -2*K + -5*K^2 + 1*K^3
+    q=1471 good=31/49 rate=0.632653061 zeros=1 polarity=1
+    q=1607 good=32/49 rate=0.653061224 zeros=0 polarity=-1
+    q=1847 good=46/63 rate=0.730158730 zeros=0 polarity=1
+  exact_fields=0 min_rate=0.632653061 total=107/162 total_rate=0.660493827 zeros=0 poly=3 + 4*K + 6*K^2 + 2*K^3
+    q=1471 good=35/50 rate=0.700000000 zeros=0 polarity=1
+    q=1607 good=31/49 rate=0.632653061 zeros=0 polarity=1
+    q=1847 good=41/63 rate=0.650793651 zeros=0 polarity=-1
+  exact_fields=0 min_rate=0.632653061 total=103/162 total_rate=0.635802469 zeros=0 poly=-3 + -7*K + -2*K^2 + 4*K^3
+    q=1471 good=32/50 rate=0.640000000 zeros=0 polarity=-1
+    q=1607 good=31/49 rate=0.632653061 zeros=0 polarity=-1
+    q=1847 good=40/63 rate=0.634920635 zeros=0 polarity=-1
+  exact_fields=0 min_rate=0.620000000 total=105/162 total_rate=0.648148148 zeros=0 poly=6*K + -4*K^2 + 5*K^3
+    q=1471 good=31/50 rate=0.620000000 zeros=0 polarity=1
+    q=1607 good=32/49 rate=0.653061224 zeros=0 polarity=-1
+    q=1847 good=42/63 rate=0.666666667 zeros=0 polarity=-1
+  exact_fields=0 min_rate=0.620000000 total=104/162 total_rate=0.641975309 zeros=0 poly=7*K + -7*K^2 + 3*K^3
+    q=1471 good=31/50 rate=0.620000000 zeros=0 polarity=1
+    q=1607 good=31/49 rate=0.632653061 zeros=0 polarity=-1
+    q=1847 good=42/63 rate=0.666666667 zeros=0 polarity=-1
+d3_degree3_bound8_exact:
+d3_degree4_bound8:
+  polys_tested = 640593
+  exact_all_fields = 0
+  best_count = 8
+d3_degree4_bound8_best:
+  exact_fields=0 min_rate=0.666666667 total=109/162 total_rate=0.672839506 zeros=0 poly=5 + 7*K + -8*K^2 + 6*K^3 + 7*K^4
+    q=1471 good=34/50 rate=0.680000000 zeros=0 polarity=1
+    q=1607 good=33/49 rate=0.673469388 zeros=0 polarity=1
+    q=1847 good=42/63 rate=0.666666667 zeros=0 polarity=-1
+  exact_fields=0 min_rate=0.660000000 total=110/162 total_rate=0.679012346 zeros=0 poly=3 + 5*K + 3*K^2 + -2*K^3 + 7*K^4
+    q=1471 good=33/50 rate=0.660000000 zeros=0 polarity=-1
+    q=1607 good=33/49 rate=0.673469388 zeros=0 polarity=-1
+    q=1847 good=44/63 rate=0.698412698 zeros=0 polarity=1
+  exact_fields=0 min_rate=0.660000000 total=109/162 total_rate=0.672839506 zeros=0 poly=2 + 3*K + 1*K^2 + 5*K^3 + 6*K^4
+    q=1471 good=33/50 rate=0.660000000 zeros=0 polarity=-1
+    q=1607 good=33/49 rate=0.673469388 zeros=0 polarity=1
+    q=1847 good=43/63 rate=0.682539683 zeros=0 polarity=1
+  exact_fields=0 min_rate=0.660000000 total=108/162 total_rate=0.666666667 zeros=0 poly=3 + -7*K + -4*K^2 + -3*K^3 + 3*K^4
+    q=1471 good=33/50 rate=0.660000000 zeros=0 polarity=1
+    q=1607 good=33/49 rate=0.673469388 zeros=0 polarity=-1
+    q=1847 good=42/63 rate=0.666666667 zeros=0 polarity=1
+  exact_fields=0 min_rate=0.653061224 total=108/162 total_rate=0.666666667 zeros=0 poly=4 + -1*K + 1*K^2 + -1*K^3 + 2*K^4
+    q=1471 good=33/50 rate=0.660000000 zeros=0 polarity=1
+    q=1607 good=32/49 rate=0.653061224 zeros=0 polarity=1
+    q=1847 good=43/63 rate=0.682539683 zeros=0 polarity=1
+  exact_fields=0 min_rate=0.653061224 total=108/162 total_rate=0.666666667 zeros=0 poly=-5 + -2*K + -6*K^2 + 5*K^3 + 1*K^4
+    q=1471 good=34/50 rate=0.680000000 zeros=0 polarity=-1
+    q=1607 good=32/49 rate=0.653061224 zeros=0 polarity=1
+    q=1847 good=42/63 rate=0.666666667 zeros=0 polarity=-1
+  exact_fields=0 min_rate=0.653061224 total=107/162 total_rate=0.660493827 zeros=0 poly=-5 + -4*K + 5*K^2 + 1*K^3 + 7*K^4
+    q=1471 good=33/50 rate=0.660000000 zeros=0 polarity=1
+    q=1607 good=32/49 rate=0.653061224 zeros=0 polarity=-1
+    q=1847 good=42/63 rate=0.666666667 zeros=0 polarity=-1
+  exact_fields=0 min_rate=0.653061224 total=107/162 total_rate=0.660493827 zeros=0 poly=5 + -5*K + -4*K^2 + -6*K^3 + 6*K^4
+    q=1471 good=33/50 rate=0.660000000 zeros=0 polarity=-1
+    q=1607 good=32/49 rate=0.653061224 zeros=0 polarity=-1
+    q=1847 good=42/63 rate=0.666666667 zeros=0 polarity=-1
+d3_degree4_bound8_exact:
+d4_degree3_bound8:
+  polys_tested = 36111
+  exact_all_fields = 0
+  best_count = 8
+d4_degree3_bound8_best:
+  exact_fields=0 min_rate=0.711111111 total=72/101 total_rate=0.712871287 zeros=0 poly=-7 + 6*K + 8*K^2 + 4*K^3
+    q=1471 good=20/28 rate=0.714285714 zeros=0 polarity=1
+    q=1607 good=20/28 rate=0.714285714 zeros=0 polarity=1
+    q=1847 good=32/45 rate=0.711111111 zeros=0 polarity=-1
+  exact_fields=0 min_rate=0.678571429 total=70/101 total_rate=0.693069307 zeros=0 poly=8 + 4*K + -6*K^2 + 7*K^3
+    q=1471 good=19/28 rate=0.678571429 zeros=0 polarity=1
+    q=1607 good=19/28 rate=0.678571429 zeros=0 polarity=1
+    q=1847 good=32/45 rate=0.711111111 zeros=0 polarity=-1
+  exact_fields=0 min_rate=0.666666667 total=71/101 total_rate=0.702970297 zeros=0 poly=5 + 4*K + 6*K^3
+    q=1471 good=20/28 rate=0.714285714 zeros=0 polarity=-1
+    q=1607 good=21/28 rate=0.750000000 zeros=0 polarity=-1
+    q=1847 good=30/45 rate=0.666666667 zeros=0 polarity=-1
+  exact_fields=0 min_rate=0.666666667 total=71/101 total_rate=0.702970297 zeros=0 poly=-8 + 7*K + -3*K^2 + 8*K^3
+    q=1471 good=21/28 rate=0.750000000 zeros=0 polarity=-1
+    q=1607 good=20/28 rate=0.714285714 zeros=0 polarity=1
+    q=1847 good=30/45 rate=0.666666667 zeros=0 polarity=1
+  exact_fields=0 min_rate=0.666666667 total=70/101 total_rate=0.693069307 zeros=0 poly=-8 + -1*K + 1*K^2 + 1*K^3
+    q=1471 good=21/28 rate=0.750000000 zeros=0 polarity=1
+    q=1607 good=19/28 rate=0.678571429 zeros=0 polarity=-1
+    q=1847 good=30/45 rate=0.666666667 zeros=0 polarity=1
+  exact_fields=0 min_rate=0.666666667 total=70/101 total_rate=0.693069307 zeros=0 poly=5*K + -4*K^2 + 4*K^3
+    q=1471 good=21/28 rate=0.750000000 zeros=0 polarity=-1
+    q=1607 good=19/28 rate=0.678571429 zeros=0 polarity=-1
+    q=1847 good=30/45 rate=0.666666667 zeros=0 polarity=-1
+  exact_fields=0 min_rate=0.666666667 total=70/101 total_rate=0.693069307 zeros=0 poly=4 + 2*K + 7*K^2 + 8*K^3
+    q=1471 good=20/28 rate=0.714285714 zeros=0 polarity=-1
+    q=1607 good=20/28 rate=0.714285714 zeros=0 polarity=-1
+    q=1847 good=30/45 rate=0.666666667 zeros=0 polarity=1
+  exact_fields=0 min_rate=0.666666667 total=68/101 total_rate=0.673267327 zeros=0 poly=-8 + -6*K + -6*K^2 + 1*K^3
+    q=1471 good=19/28 rate=0.678571429 zeros=0 polarity=1
+    q=1607 good=19/28 rate=0.678571429 zeros=0 polarity=-1
+    q=1847 good=30/45 rate=0.666666667 zeros=0 polarity=-1
+d4_degree3_bound8_exact:
+d4_degree4_bound8:
+  polys_tested = 640593
+  exact_all_fields = 0
+  best_count = 8
+d4_degree4_bound8_best:
+  exact_fields=0 min_rate=0.714285714 total=73/101 total_rate=0.722772277 zeros=0 poly=6 + -7*K + -4*K^2 + 7*K^3 + 4*K^4
+    q=1471 good=20/28 rate=0.714285714 zeros=0 polarity=1
+    q=1607 good=20/28 rate=0.714285714 zeros=0 polarity=1
+    q=1847 good=33/45 rate=0.733333333 zeros=0 polarity=1
+  exact_fields=0 min_rate=0.711111111 total=76/101 total_rate=0.752475248 zeros=0 poly=-7 + -3*K + 5*K^2 + 6*K^3 + 7*K^4
+    q=1471 good=21/28 rate=0.750000000 zeros=0 polarity=-1
+    q=1607 good=23/28 rate=0.821428571 zeros=0 polarity=1
+    q=1847 good=32/45 rate=0.711111111 zeros=0 polarity=1
+  exact_fields=0 min_rate=0.711111111 total=73/101 total_rate=0.722772277 zeros=0 poly=-4 + 6*K + 3*K^2 + 2*K^4
+    q=1471 good=21/28 rate=0.750000000 zeros=0 polarity=-1
+    q=1607 good=20/28 rate=0.714285714 zeros=0 polarity=-1
+    q=1847 good=32/45 rate=0.711111111 zeros=0 polarity=-1
+  exact_fields=0 min_rate=0.711111111 total=72/101 total_rate=0.712871287 zeros=0 poly=-7*K + 6*K^2 + 8*K^3 + 4*K^4
+    q=1471 good=20/28 rate=0.714285714 zeros=0 polarity=1
+    q=1607 good=20/28 rate=0.714285714 zeros=0 polarity=1
+    q=1847 good=32/45 rate=0.711111111 zeros=0 polarity=-1
+  exact_fields=0 min_rate=0.711111111 total=72/101 total_rate=0.712871287 zeros=0 poly=6 + 8*K + -2*K^2 + -6*K^3 + 7*K^4
+    q=1471 good=20/28 rate=0.714285714 zeros=0 polarity=1
+    q=1607 good=20/28 rate=0.714285714 zeros=0 polarity=-1
+    q=1847 good=32/45 rate=0.711111111 zeros=0 polarity=1
+  exact_fields=0 min_rate=0.704545455 total=71/101 total_rate=0.702970297 zeros=1 poly=3 + -4*K + -5*K^2 + -3*K^3 + 1*K^4
+    q=1471 good=20/28 rate=0.714285714 zeros=0 polarity=1
+    q=1607 good=20/28 rate=0.714285714 zeros=0 polarity=1
+    q=1847 good=31/44 rate=0.704545455 zeros=1 polarity=-1
+  exact_fields=0 min_rate=0.688888889 total=73/101 total_rate=0.722772277 zeros=0 poly=-7 + 1*K + 8*K^2 + -6*K^3 + 3*K^4
+    q=1471 good=22/28 rate=0.785714286 zeros=0 polarity=-1
+    q=1607 good=20/28 rate=0.714285714 zeros=0 polarity=1
+    q=1847 good=31/45 rate=0.688888889 zeros=0 polarity=-1
+  exact_fields=0 min_rate=0.688888889 total=71/101 total_rate=0.702970297 zeros=0 poly=-5 + -6*K + 3*K^4
+    q=1471 good=20/28 rate=0.714285714 zeros=0 polarity=1
+    q=1607 good=20/28 rate=0.714285714 zeros=0 polarity=-1
+    q=1847 good=31/45 rate=0.688888889 zeros=0 polarity=-1
+d4_degree4_bound8_exact:
+p27_kummer_small_integer_poly_probe_rows=1/1

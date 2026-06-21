@@ -476,6 +476,16 @@ there is no rational source yet.  The next concrete sqrt-beating test is exact
 degree `3/4` extraction on the K-line; a surviving cubic or quartic would give
 an elliptic source candidate for the next all-plus gate.
 
+The first compact K-line formula screen is negative:
+[P27 Kummer Small-Integer Polynomial Screen](evidence/p27_kummer_small_integer_poly_screen_20260621.md).
+It tested shared primitive integer cubic/quartic polynomials in `K` with
+coefficients in `[-8,8]` across `q=1471,1607,1847`, allowing field-dependent
+overall polarity.  No `d3` or `d4` polynomial was exact in all fields.  Best
+minimum guard-field rates were only about `0.667` for `d3` degree 4 and
+`0.714` for `d4` degree 4.  This keeps the K-line as the best reduced target,
+but the next step should be branch-divisor/Kummer-class extraction on
+`P^1_K`, not blind coefficient-bound widening.
+
 The newest p26 GPU trace/norm result is positive structure but negative as a
 production prefilter:
 [P27 GPU Filter-Cost Lesson From P26](evidence/p27_gpu_filter_cost_lesson_from_p26_20260621.md).

@@ -606,6 +606,33 @@ If degree 3/4 fails on q=1471 and q=1607, move to divisor/Kummer extraction on
 the K-line rather than returning to plain E' visible scans.
 ```
 
+Small-integer K-polynomial update:
+[P27 Kummer Small-Integer Polynomial Screen](p27_kummer_small_integer_poly_screen_20260621.md).
+
+```text
+Tested one shared primitive integer polynomial shape across q=1471,1607,1847,
+with coefficients in [-8,8] and field-dependent polarity allowed.
+
+Exact all-field formulas:
+  d3 degree 3 = 0
+  d3 degree 4 = 0
+  d4 degree 3 = 0
+  d4 degree 4 = 0
+
+Best minimum guard-field rates:
+  d3 degree 4: about 0.667
+  d4 degree 4: about 0.714
+```
+
+Updated next test:
+
+```text
+Do not simply widen small coefficient bounds.  Recover the actual K-line
+branch divisor/Kummer class for d3, determine its minimal degree, then compare
+the d4 branch divisor after d3.  Promote only an exact branch polynomial/class
+or a recurrence/source relation that survives q=1471 and q=1607.
+```
+
 Promotion bar:
 
 ```text
