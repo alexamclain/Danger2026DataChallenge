@@ -563,6 +563,17 @@ have `0/49` and `0/63` present.  An online Magma q607/q1607 fixture confirms
 the contrast.  So Belyi automorphisms remain normalization data, not a
 sqrt-beating sampler or quotient shortcut.
 
+The K-line recurrence loophole is now closed for small Lattes maps:
+[P27 K-Line Lattes Recurrence Screen](evidence/p27_k_lattes_recurrence_20260621.md).
+It tested `d4(K) = +/- d3(x([m]Q))` and
+`d4(K) = +/- d3(x([m]Q+(0,0)))` for `m=1..16` on the reduced Kummer line.
+In the promotion fields, only identity has full coverage, except for the
+already-local q1471 `K -> 4/K` artifact; the scores are raw d4 bias
+(`14/28`, `19/28`, `26/45`).  Nontrivial maps cover at most `13/28` in q1607
+and `19/45` in q1847.  So a d4-from-d3 Lattes recurrence is not the
+sqrt-beating mechanism; compare d4 only after the actual d3 branch class is
+named.
+
 The first Belyi-normalized source family is now killed:
 [P27 Lambda Branch-Divisor Screen](evidence/p27_lambda_branch_divisor_screen_20260621.md).
 It tested `z^2=f(lambda)` with `deg_lambda(f)<=4`, where
