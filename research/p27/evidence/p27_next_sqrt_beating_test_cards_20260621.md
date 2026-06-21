@@ -462,6 +462,20 @@ This is the current best quotient-theory lead.  It does not beat sqrt by
 itself, but it moves the function-field extraction from `E` to the smaller
 2-isogenous quotient `E'`.
 
+E-prime low-pole update:
+[P27 E-Prime Low-Pole Random Screen](p27_eprime_lowpole_random_screen_20260621.md).
+
+```text
+P27 exact candidates on E' low-pole sections/products = 0
+best p27 heldout d3 lift = 1045/2000 = 0.522500000
+best p27 heldout d4 lift = 557/1052 = 0.529467681
+q1471/q1607 exact candidates = 0
+```
+
+This kills the random low-pole `E'` pilot as a sqrt-beating source.  The
+quotient remains valuable because it gives the right smaller curve for exact
+function-field extraction and divisor/Kummer class comparison.
+
 Promotion bar:
 
 ```text
@@ -690,6 +704,10 @@ phim1 = u*(u - 1)/(u + 1) + 2
 
 Status: negative.  The `65,536`-product span has no exact survivors for either
 `domain_line` or `T_line`; best lifts are only about `1.03x`.
+
+Follow-up: the first low-pole random screen on the 2-isogenous quotient `E'`
+is also negative.  Pole bounds `5,7,9` produced no exact p27 or guard-field
+candidate; best p27 heldout lifts remain below sampler promotion.
 
 Continue only with a named non-visible theta/divisor/additive identity.
 

@@ -339,6 +339,16 @@ translates, `O` and `(0,0)`, with `mixed_d3_orbits=0` and
 screens on this quotient are still negative over `q=1471` and `q=1607`, so the
 win is a sharper function-field target, not yet a sampler.
 
+The first low-pole random screen on the 2-isogenous quotient is also negative:
+[P27 E-Prime Low-Pole Random Screen](evidence/p27_eprime_lowpole_random_screen_20260621.md).
+It tested small-integer sections of `L(nO)` on `E': V^2=U^3+4U` and products
+of two sections, at pole bounds `5,7,9`.  On p27 train/heldout splits there
+were no exact candidates; best heldout scores were only `0.5225` for d3 and
+`0.5295` for d4.  Guard fields `q=1471` and `q=1607` also produced no exact
+candidate.  This kills the random low-pole `E'` pilot as a source.  The
+remaining quotient lead is exact function-field or divisor-class extraction,
+with online Magma suitable for small-field validation of named formulas.
+
 The newest p26 GPU trace/norm result is positive structure but negative as a
 production prefilter:
 [P27 GPU Filter-Cost Lesson From P26](evidence/p27_gpu_filter_cost_lesson_from_p26_20260621.md).
