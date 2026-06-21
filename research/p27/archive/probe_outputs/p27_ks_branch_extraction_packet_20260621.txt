@@ -1,0 +1,97 @@
+p27 K/S branch-extraction packet
+
+Purpose:
+  Recover the actual d3 branch class over P1_K or P1_Sroot.
+  Promote only if the class is low-genus, sourceable, or recurrent.
+  Kill if the normalized branch divisor is high/generic.
+
+Coordinates:
+  residual E:        W^2 = X^3 - X
+  2-isogenous E':    V^2 = U^3 + 4U
+  quotient map:      U = X - 1/X, V = W*(X^2+1)/X^2
+  K coordinate:      K = x([2]P) on E'
+  Sroot coordinate:  Sroot = (U^2 - 4)/(2V), K = Sroot^2
+
+K/S map formulas:
+  Sroot_formula: (X**2 - 2*X - 1)*(X**2 + 2*X - 1)/(2*W*(X**2 + 1))
+  K_formula: (X**2 - 2*X - 1)**2*(X**2 + 2*X - 1)**2/(4*X*(X - 1)*(X + 1)*(X**2 + 1)**2)
+  Sroot_num: (X**2 - 2*X - 1)*(X**2 + 2*X - 1)
+  K_num: (X**2 - 2*X - 1)**2*(X**2 + 2*X - 1)**2
+  K_den: 4*X*(X - 1)*(X + 1)*(X**2 + 1)**2
+  Sroot_linear_relation: 2*Sroot*W*X**2 + 2*Sroot*W - X**4 + 6*X**2 - 1
+  Sroot_relation: 4*Sroot**2*X**7 + 4*Sroot**2*X**5 - 4*Sroot**2*X**3 - 4*Sroot**2*X - X**8 + 12*X**6 - 38*X**4 + 12*X**2 - 1
+  K_relation: 4*K*X**7 + 4*K*X**5 - 4*K*X**3 - 4*K*X - X**8 + 12*X**6 - 38*X**4 + 12*X**2 - 1
+  lambda_relation: K**2 + 4*lambda
+
+Symbolic sanity checks:
+  Sroot_square_check_mod_E: 0
+  Sroot_branch_resultant: -4503599627370496*Sroot**8*(Sroot**2 - 2*Sroot + 2)**4*(Sroot**2 + 2*Sroot + 2)**4
+  K_branch_resultant: -4503599627370496*K**4*(K**2 + 4)**4
+  visible branch atoms are already prepaid or parity-killed
+
+Order-4 / H90 data to carry through extraction:
+  T2: X*(X**2 + 1)*(X**2 + 2*X - 1)
+  mt: (X + 1)*(2*W*X + X**3 + X**2 - X - 1)
+  m0: (X**2 + 1)*(X**2 + 2*X - 1)*(W*X + W + 2*X**2)
+  L: 4*W*X**2 + 4*W*X + X**4 + 6*X**3 - 2*X - 1
+  Salpha: W*X + W + 2*X**2
+  Salpha2_minus_XL: 0
+  norm_m_minus_4T2Salpha2: 0
+  T_deck_ratio_square_check: 0
+
+  alpha: T -> -T, R -> R*(m0 - mt*T)/(2*T*Salpha)
+  alpha^2 is the R-deck involution; alpha has order 4
+
+Reverse-source equations for d3 all-plus extraction:
+  variables: X, W, T, B, R, z, Y, eta, Sroot, K
+  add Sroot_linear_relation=0 and K-Sroot relation K-Sroot^2=0
+  eta^2=1 chooses the first-half branch sign
+  eta_branch: (eta - 1)*(eta + 1) = 0
+  E: W**2 - X**3 + X = 0
+  T_cover: T**2 - X**5 - 2*X**4 - 2*X**2 + X = 0
+  compactD_R: X*R^2 - criterion_num = 0
+  first_half_B: B^2*U_den^2 - (U_num^2 - 4*U_den^2) = 0
+  reverse_x: 4*z^2*H_num*(U_num + B*U_den)
+             - 2*U_den*A_den*(z^4 - 1)^2 = 0
+  reverse_Y: Y^2*A_den - H_num = 0
+
+Auxiliary rational functions:
+  A_num: -2*(X**8 - 4*X**6 - 26*X**4 - 4*X**2 + 1)
+  A_den: (X - 1)**4*(X + 1)**4
+  m0: (X**2 + 1)*(X**2 + 2*X - 1)*(W*X + W + 2*X**2)
+  mt: (X + 1)*(2*W*X + X**3 + X**2 - X - 1)
+  criterion_num: W*(X**2 + 1)*(2*T*W*X**2 + 2*T*W*X + T*X**4 + 2*T*X**3 - 2*T*X - T + W*X**5 + 3*W*X**4 + 2*W*X**3 + 2*W*X**2 + W*X - W + 2*X**6 + 4*X**5 + 4*X**3 - 2*X**2)
+  U_num: 2*(4*T*W*X*eta + T*X**3 + T*X**2 - T*X - T + 2*X**5 + 2*X**4 - 2*X**3 - 2*X**2)
+  U_den: (T - 2*X**2)*(X - 1)*(X + 1)**2
+  x5_num: B*T*X**3 + B*T*X**2 - B*T*X - B*T - 2*B*X**5 - 2*B*X**4 + 2*B*X**3 + 2*B*X**2 + 8*T*W*X*eta + 2*T*X**3 + 2*T*X**2 - 2*T*X - 2*T + 4*X**5 + 4*X**4 - 4*X**3 - 4*X**2
+  x5_den: 2*(T - 2*X**2)*(X - 1)*(X + 1)**2
+  H_num: X**8*z**4 - 2*X**8*z**2 + X**8 - 4*X**6*z**4 + 8*X**6*z**2 - 4*X**6 + 6*X**4*z**4 + 52*X**4*z**2 + 6*X**4 - 4*X**2*z**4 + 8*X**2*z**2 - 4*X**2 + z**4 - 2*z**2 + 1
+
+Magma/Sage extraction task:
+  1. Work over q=1471,1607,1847 guard fields first.
+  2. Define the function field from E, T_cover, compactD_R, first_half_B,
+     reverse_x, reverse_Y, eta_branch, and the K/Sroot map.
+  3. Normalize the d3 all-plus source cover over P1_K and P1_Sroot.
+  4. Compute branch divisor degree, support field degrees, genus, and
+     decomposition under Sroot -> -Sroot.
+  5. Carry the alpha order-4 action through the normalized model if feasible.
+  6. Repeat d4 only after a stable d3 class is named.
+
+Promotion bar:
+  - stable across q=1471 and q=1607, preferably q=1847
+  - genus <= 1, a named recurrence/sourceable walk, or a cheap character
+  - gives a source/sampler or scope shrink without fresh Legendre toll
+
+Kill condition:
+  - high/generic branch degree
+  - only visible K/S branch atoms appear
+  - d4 is an unrelated fresh half-cover
+  - only small-field local interpolation survives
+
+Do not rerun:
+  - K degree 1/2 screens
+  - small integer K degree 3/4 coefficient scans
+  - split K or S branch divisors of degree <=4
+  - odd Sroot semi-invariant classes in the p27 sign regime
+
+p27_ks_branch_extraction_packet_rows=1/1
