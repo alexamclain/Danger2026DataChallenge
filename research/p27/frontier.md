@@ -563,6 +563,18 @@ have `0/49` and `0/63` present.  An online Magma q607/q1607 fixture confirms
 the contrast.  So Belyi automorphisms remain normalization data, not a
 sqrt-beating sampler or quotient shortcut.
 
+The guard-field rule is now sharper:
+[P27 Guard-Field Signature Audit](evidence/p27_guard_field_signature_audit_20260621.md).
+Because p27 is `7 mod 16` and `v2(p+1)=3`, K/S orbit and recurrence positives
+must promote through fields with `q = 7 mod 16`, not merely `q = 7 mod 8`.
+In an audit of 144 primes `q = 7 mod 8` from 607 to 5000, every tested
+`q = 7 mod 16` field had `K -> 4/K` absent on selected `d3` and `d4` K rows.
+All full or partial `K -> 4/K` closures came from `q = 15 mod 16` fields with
+an extra 2-adic layer.  Thus q1471 is useful as a stress checksum, but q1471
+positives are no longer promotion evidence for 2-adic-sensitive K/S claims;
+future promotion fields should look like q1607, q1847, q2039, and other
+`7 mod 16` fields.
+
 The K-line recurrence loophole is now closed for small Lattes maps:
 [P27 K-Line Lattes Recurrence Screen](evidence/p27_k_lattes_recurrence_20260621.md).
 It tested `d4(K) = +/- d3(x([m]Q))` and
