@@ -87,8 +87,10 @@ alpha^2 = R-deck involution
 
 ## Online Magma Sanity Check
 
-The Magma fixture is a small guard-field validation, not the full
-normalization.  It was submitted to the online Magma calculator and emitted:
+The Magma fixture is a small algebraic sanity validation, not the full
+normalization and not a promotion-field test.  The later guard-field signature
+audit demotes q1471 for 2-adic-sensitive K/S positives.  This fixture was
+submitted to the online Magma calculator and emitted:
 
 ```text
 RESULT p27_ks_branch_sanity_q1471 ok 1468 0 0 0 0 0 -1
@@ -127,7 +129,8 @@ or recurrence, not from more visible branch atoms.
 Promote only if the CAS extraction finds one of:
 
 ```text
-stable branch class over q=1471 and q=1607, preferably q=1847
+stable branch class over p27-signature fields q = 7 mod 16
+first promotion set: q=1607, q=1847, q=2087
 genus <= 1
 named recurrence or sourceable walk
 cheap character/source sampler that avoids a fresh Legendre toll
@@ -147,7 +150,7 @@ only small-field local interpolation survives
 ## Continue / Kill
 
 ```text
-continue = Magma/Sage normalization over P1_K and P1_Sroot
+continue = Magma/Sage normalization over P1_K and P1_Sroot in q = 7 mod 16 fields
 continue = Sroot -> -Sroot decomposition of the recovered class
 continue = alpha-equivariant quotient/Prym extraction if the model is tractable
 

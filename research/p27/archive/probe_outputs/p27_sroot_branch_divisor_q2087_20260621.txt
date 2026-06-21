@@ -1,0 +1,71 @@
+p27 S-root branch-divisor probe
+S = (U^2 - 4)/(2V), K = S^2
+factors = rational linear and irreducible quadratic over F_q
+small_primes = 2087
+max_degree_S = 4
+q=2087:
+  setup_stats:
+  d3_eprime_input_rows = 228
+  d3_eprime_minus = 64
+  d3_eprime_plus = 50
+  d3_eprime_quotient_rows = 114
+  d3_s_input_rows = 114
+  d3_s_minus = 64
+  d3_s_paired_s_neg_s = 114
+  d3_s_plus = 50
+  d3_s_s_rows = 114
+  d4_eprime_input_rows = 100
+  d4_eprime_minus = 14
+  d4_eprime_plus = 36
+  d4_eprime_quotient_rows = 50
+  d4_s_input_rows = 50
+  d4_s_minus = 14
+  d4_s_paired_s_neg_s = 50
+  d4_s_plus = 36
+  d4_s_s_rows = 50
+  enum_compact_not_target = 1109
+  enum_no_label2_candidate = 520
+  quotient_d3_minus_E_points = 128
+  quotient_d3_missing_on_E_orbit = 0
+  quotient_d3_not_descended_to_E = 0
+  quotient_d3_plus_E_points = 100
+  quotient_d3_quotient_rows = 228
+  quotient_d4_minus_E_points_after_d3 = 28
+  quotient_d4_missing_on_E_orbit = 0
+  quotient_d4_not_descended_to_E = 0
+  quotient_d4_plus_E_points_after_d3 = 72
+  quotient_d4_quotient_rows_after_d3 = 100
+  quotient_orbit_size_4 = 228
+  quotient_oriented_candidates = 912
+  quotient_quotient_E_points = 228
+q2087_d3:
+  rows = 114
+  plus = 50
+  minus = 64
+q2087_d3_side_stats:
+  distinct_degree0_side_masks = 1
+  distinct_degree1_side_masks = 1973
+  distinct_degree2_side_masks = 4122118
+  linear_atoms = 1973
+  linear_pair_sides = 1945378
+  quadratic_atoms = 2176741
+q2087_d3_exact_stats:
+  left_sides_scanned = 4124092
+q2087_d3_exact_divisors:
+  none
+q2087_d4:
+  rows = 50
+  plus = 36
+  minus = 14
+q2087_d4_side_stats:
+  distinct_degree0_side_masks = 1
+  distinct_degree1_side_masks = 2037
+  distinct_degree2_side_masks = 4250406
+  linear_atoms = 2037
+  linear_pair_sides = 2073666
+  quadratic_atoms = 2176741
+q2087_d4_exact_stats:
+  left_sides_scanned = 4252444
+q2087_d4_exact_divisors:
+  none
+p27_sroot_branch_divisor_probe_rows=1/1

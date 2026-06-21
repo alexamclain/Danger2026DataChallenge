@@ -519,6 +519,15 @@ subcase `z^2=f(K)` with split branch divisor of degree `<=4`; the live K-line
 task is now irreducible cubic/quartic branch extraction or a Magma/Sage
 divisor/genus computation.
 
+The branch-divisor conclusion survives the corrected guard-field rule:
+[P27 Signature-Field Branch-Divisor Replay](evidence/p27_signature_field_branch_divisor_replay_20260621.md).
+Using only p27-signature fields `q = 7 mod 16`, `d3` has no exact K-line split
+branch divisor of degree `<=4` in q1607, q1847, q2039, or q2087, and no exact
+S-root split branch divisor of degree `<=4` in the same fields.  K-line `d4`
+has degree-3 local fits in q1607 and q2087, but not q1847; q2039 has constant
+`d4` and is not promotion evidence.  Thus the corrected replay keeps `d3`
+negative and demotes `d4` fits to local interpolation artifacts.
+
 The nearest monic cubic K-line subcase is negative on a small guard field:
 [P27 K-Line Cubic Exhaustive Pilot](evidence/p27_kline_cubic_exhaustive_20260621.md).
 Over the p27-compatible field `q=607`, the selected `d3` K rows are balanced
@@ -536,10 +545,10 @@ It records the map from the residual `E: W^2=X^3-X` through
 together with the reverse-source equations for the `d3` all-plus extraction.
 The next serious test is to normalize this cover over `P^1_K` in Magma/Sage
 and compute the actual branch divisor degree, support field degrees, and genus
-over guard fields `q=1471,1607,1847`.  This is the current best "could beat
-sqrt" theorem checkpoint: genus `<=1` or a named recurrence/sourceable walk
-promotes; high/generic branch degree with unrelated `d4` kills the K-line
-source route.
+over p27-signature guard fields such as `q=1607,1847,2087`.  This is the
+current best "could beat sqrt" theorem checkpoint: genus `<=1` or a named
+recurrence/sourceable walk promotes; high/generic branch degree with unrelated
+`d4` kills the K-line source route.
 
 The K-line now has a cleaner coordinate for that extraction:
 [P27 Kummer Belyi Structure Probe](evidence/p27_kummer_belyi_structure_probe_20260621.md).
@@ -647,8 +656,9 @@ order-4/H90 identities in one Magma/Sage-ready handoff.  Its symbolic checks
 recover `Sroot^2=K`, the branch resultants
 `Sroot^8*(Sroot^2-2Sroot+2)^4*(Sroot^2+2Sroot+2)^4` and
 `K^4*(K^2+4)^4`, and the H90 identities with zero remainders.  The attached
-online-Magma sanity fixture has now passed over `q=1471`; it is only a
-guard-field checksum, not the full extraction.  The real next test is
+online-Magma sanity fixture has now passed over `q=1471`; after the
+guard-field signature audit this is only an algebraic checksum, not promotion
+evidence.  The real next test is
 normalization of the `d3` source over `P^1_K` and
 `P^1_Sroot`.  Promote for genus `<=1`, a sourceable recurrence, or a cheap
 character/source sampler; kill for high/generic branch degree or an unrelated

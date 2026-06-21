@@ -83,7 +83,7 @@ compute:
 branch divisor degree
 support field degrees
 genus
-whether the class survives q=1471 and q=1607, preferably q=1847
+whether the class survives p27-signature fields q=1607, q=1847, and q=2087
 ```
 
 ## Promotion Bar
