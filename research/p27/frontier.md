@@ -610,6 +610,17 @@ The eta-swapped ratio is mixed on q1607/q1847/q2087.  Thus the generic
 `F_{p^2}` geometric quotient comes with an explicit `F_p` descent, or if the
 actual d3/d4 double covers produce a separate low-genus source.
 
+The right quotient for that separate source is now reinforced:
+[P27 K/S First-Half E-Prime Descent](evidence/p27_ks_first_half_eprime_descent_20260621.md).
+Translation by `(0,0)` sends `X -> -1/X`, `W -> W/X^2`, and
+`T -> +/-T/X^3`; symbolically `T2(-1/X)=T2(X)/X^6`, and over
+q1607/q1847/q2087 both T-lifts preserve compactD and the first-half
+`B`-branch squareclass on every compactD point tested.  This turns the next
+K/S extraction into a concrete E-prime task:
+extract the actual d3/d4 double covers on `E': V^2=U^3+4U`, compute their
+branch divisors/Kummer classes/genera, and decide whether d4 is a fresh cover
+or a recurrence/sourceable transform of d3.
+
 The K-line now has a cleaner coordinate for that extraction:
 [P27 Kummer Belyi Structure Probe](evidence/p27_kummer_belyi_structure_probe_20260621.md).
 Symbolically,

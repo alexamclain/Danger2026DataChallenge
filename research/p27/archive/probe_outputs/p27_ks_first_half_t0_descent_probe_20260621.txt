@@ -1,0 +1,35 @@
+p27_ks_first_half_t0_descent_probe
+deck = translation by (0,0): X -> -1/X, W -> W/X^2
+quotient = Eprime: U=X-1/X, V=W*(X^2+1)/X^2
+T_lifts = T -> +/- T/X^3
+T2_transform_diff=0
+branch_factorization_diff=0
+
+FIELD q=1607
+  bad_x=3
+  compactd_points=800
+  compactd_reject=800
+  intermediate_points=1600
+  t_lift_-1_bbranch_ratio_chi_1=800
+  t_lift_-1_compactd_chi_1=800
+  t_lift_1_bbranch_ratio_chi_1=800
+  t_lift_1_compactd_chi_1=800
+FIELD q=1847
+  bad_x=3
+  compactd_points=972
+  compactd_reject=868
+  intermediate_points=1840
+  t_lift_-1_bbranch_ratio_chi_1=972
+  t_lift_-1_compactd_chi_1=972
+  t_lift_1_bbranch_ratio_chi_1=972
+  t_lift_1_compactd_chi_1=972
+FIELD q=2087
+  bad_x=3
+  compactd_points=976
+  compactd_reject=1104
+  intermediate_points=2080
+  t_lift_-1_bbranch_ratio_chi_1=976
+  t_lift_-1_compactd_chi_1=976
+  t_lift_1_bbranch_ratio_chi_1=976
+  t_lift_1_compactd_chi_1=976
+p27_ks_first_half_t0_descent_probe_rows=1/1

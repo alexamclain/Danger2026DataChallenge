@@ -663,6 +663,7 @@ actual branch divisor/genus, not more visible split-factor screens.
 K/S first-half cover update:
 [P27 K/S First-Half Cover Magma Smoke](p27_ks_first_half_cover_magma_20260621.md).
 [P27 K/S First-Half Alpha-Lift Obstruction](p27_ks_first_half_alpha_lift_obstruction_20260621.md).
+[P27 K/S First-Half E-Prime Descent](p27_ks_first_half_eprime_descent_20260621.md).
 
 ```text
 Full q7 reverse-source fixture: online Magma memory limit.
@@ -688,6 +689,13 @@ The first-half B-cover branch class also factors exactly:
 For eta=+1, the same-eta alpha lift ratio is -1 times a square on the
 intermediate curve.  Since p27 is 3 mod 4, this lift is not F_p-rational.
 The eta-swapped ratio is mixed on q=1607, q=1847, and q=2087.
+
+Positive quotient update: translation by `(0,0)` sends
+`X -> -1/X`, `W -> W/X^2`, and `T -> +/-T/X^3`.  It preserves compactD and
+the first-half B-branch squareclass on every compactD point over
+q=1607/q1847/q2087 tested.  Online Magma q1607 reports:
+`BRANCH_FACTOR_DIFF_ZERO true`, `T2_TRANSFORM_ZERO true`, and
+`COUNTS 800 800 1600 0 0 0`.
 ```
 
 Updated K/S next test:
@@ -695,8 +703,9 @@ Updated K/S next test:
 ```text
 Do not continue visible K/S coefficient or branch-product scans.
 Do offline Magma/Sage quotient/decomposition only with a sharper target:
-  an F_p descent of the sqrt(-1)-twisted geometric alpha quotient, or
-  actual d3/d4 double-cover extraction on the E/K/S quotient.
+  actual d3/d4 double-cover extraction on E': V^2=U^3+4U,
+  branch divisor / Kummer class / genus comparison,
+  and d4 fresh-cover vs recurrence testing.
 Promote only if a low-genus quotient, named recurrence, or sourceable walk
 survives over F_p on p27-signature fields.
 ```
