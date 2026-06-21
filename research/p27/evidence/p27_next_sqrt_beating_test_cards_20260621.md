@@ -577,6 +577,35 @@ the actual divisor/Kummer/Prym class of the d3 and d4 double covers on the
 twisted T-cover/eigenspace model, followed by a guard-field exactness check.
 ```
 
+Signed-doubling Kummer update:
+[P27 E-Prime Signed-Doubling Kummer Screen](p27_eprime_signed_doubling_kummer_screen_20260621.md).
+
+```text
+On E': V^2=U^3+4U, both d3 and d4 descend to signed [2] projection classes in
+all 12 tested non-degenerate guard fields.
+
+The quotient coordinate is:
+  K = x([2]P) = (U^2-4)^2/(4*U*(U^2+4)).
+
+Main guard fields:
+  q=1471: d3 100 -> 50 K rows; d4 56 -> 28 K rows
+  q=1607: d3 98  -> 49 K rows; d4 56 -> 28 K rows
+  q=1847: d3 126 -> 63 K rows; d4 90 -> 45 K rows
+
+Exhaustive K-polynomial screens:
+  degree 1 exact = 0 for d3/d4 over q=1471,1607,1847
+  degree 2 exact = 0 for d3/d4 over q=1471,1607,1847
+```
+
+Updated concrete test:
+
+```text
+Search exact degree 3/4 K-polynomial characters for d3 and d4.
+An exact cubic or quartic gives z^2=f(K), a genus-1 source candidate.
+If degree 3/4 fails on q=1471 and q=1607, move to divisor/Kummer extraction on
+the K-line rather than returning to plain E' visible scans.
+```
+
 Promotion bar:
 
 ```text

@@ -465,6 +465,17 @@ follows from this visible Hilbert-90 layer.  The remaining `E'` route is
 actual twisted-cover divisor/Kummer/Prym extraction for the `d3` and `d4`
 double covers, not more visible `Z/Z^2/Z^4` packet scans.
 
+The quotient route now has a new positive reduction:
+[P27 E-Prime Signed-Doubling Kummer Screen](evidence/p27_eprime_signed_doubling_kummer_screen_20260621.md).
+Across twelve non-degenerate guard fields, both `d3` and `d4` are constant on
+signed `[2]` projection classes on `E': V^2=U^3+4U`.  Thus the active
+function-field target descends to the Kummer-line coordinate
+`K=x([2]P)=(U^2-4)^2/(4U(U^2+4))`.  Exhaustive degree-1 and degree-2
+polynomial-character screens in `K` are negative over `q=1471,1607,1847`, so
+there is no rational source yet.  The next concrete sqrt-beating test is exact
+degree `3/4` extraction on the K-line; a surviving cubic or quartic would give
+an elliptic source candidate for the next all-plus gate.
+
 The newest p26 GPU trace/norm result is positive structure but negative as a
 production prefilter:
 [P27 GPU Filter-Cost Lesson From P26](evidence/p27_gpu_filter_cost_lesson_from_p26_20260621.md).
