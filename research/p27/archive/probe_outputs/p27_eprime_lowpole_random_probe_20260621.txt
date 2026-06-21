@@ -1,0 +1,642 @@
+p27 E-prime low-pole random function probe
+Eprime = V^2 = U^3 + 4U
+trials_per_pole = 500
+coeff_bound = 3
+p27_train_original_quotient_stats:
+  d3_minus_E_points = 1008
+  d3_missing_on_E_orbit = 0
+  d3_not_descended_to_E = 0
+  d3_plus_E_points = 992
+  d3_quotient_rows = 2000
+  d4_minus_E_points_after_d3 = 476
+  d4_missing_on_E_orbit = 0
+  d4_not_descended_to_E = 0
+  d4_plus_E_points_after_d3 = 516
+  d4_quotient_rows_after_d3 = 992
+  orbit_size_4 = 2000
+  oriented_candidates = 8000
+  quotient_E_points = 2000
+  sample_candidate_invalid_not_nonsplit = 3984
+  sample_compact_not_target = 3882
+  sample_no_t = 4031
+  sample_no_w = 7945
+  sample_pair_incomplete = 1992
+  sample_x_draws = 15913
+  sampled_pairs = 2000
+p27_train_eprime_stats:
+  d3_input_rows = 2000
+  d3_minus = 1008
+  d3_plus = 992
+  d3_quotient_rows = 2000
+  d4_input_rows = 992
+  d4_minus = 476
+  d4_plus = 516
+  d4_quotient_rows = 992
+p27_heldout_original_quotient_stats:
+  d3_minus_E_points = 948
+  d3_missing_on_E_orbit = 0
+  d3_not_descended_to_E = 0
+  d3_plus_E_points = 1052
+  d3_quotient_rows = 2000
+  d4_minus_E_points_after_d3 = 550
+  d4_missing_on_E_orbit = 0
+  d4_not_descended_to_E = 0
+  d4_plus_E_points_after_d3 = 502
+  d4_quotient_rows_after_d3 = 1052
+  orbit_size_4 = 2000
+  oriented_candidates = 8000
+  quotient_E_points = 2000
+  sample_candidate_invalid_not_nonsplit = 3968
+  sample_compact_not_target = 4220
+  sample_no_t = 4042
+  sample_no_w = 8168
+  sample_pair_incomplete = 1984
+  sample_x_draws = 16312
+  sampled_pairs = 2000
+p27_heldout_eprime_stats:
+  d3_input_rows = 2000
+  d3_minus = 948
+  d3_plus = 1052
+  d3_quotient_rows = 2000
+  d4_input_rows = 1052
+  d4_minus = 550
+  d4_plus = 502
+  d4_quotient_rows = 1052
+p27_eprime_d3:
+  rows = 2000
+  heldout_rows = 2000
+p27_eprime_d3_pole5_train:
+  basis_dim = 5
+  best_good = 1079
+  best_polarity = 1
+  best_zeros = 0
+  coeff_bound = 3
+  exact_candidates = 0
+  pole_bound = 5
+  rows = 2000
+  trials = 500
+p27_eprime_d3_pole5_train_best:
+  good=1079/2000 rate=0.539500000 zeros=0 polarity=1 mode=section expr=3*1 + 1*U^1 + -3*V + 2*U^1V
+  good=1069/2000 rate=0.534500000 zeros=0 polarity=-1 mode=product expr=(3*1 + -1*U^1 + -3*U^2 + -1*V + 2*U^1V) * (-1*1 + 1*U^1 + 2*U^2 + 1*V + 1*U^1V)
+  good=1067/2000 rate=0.533500000 zeros=0 polarity=-1 mode=section expr=2*1 + -3*U^2 + 3*U^1V
+  good=1065/2000 rate=0.532500000 zeros=0 polarity=1 mode=section expr=1*1 + 3*U^1 + -2*U^2 + -2*V + 2*U^1V
+  good=1064/2000 rate=0.532000000 zeros=0 polarity=-1 mode=product expr=(-3*1 + -3*U^1 + -2*U^2 + -1*V + -1*U^1V) * (1*1 + -2*U^2 + 2*V + 2*U^1V)
+  good=1060/2000 rate=0.530000000 zeros=0 polarity=1 mode=product expr=(2*1 + -2*U^1 + -3*U^2 + -1*V) * (-3*1 + -3*U^1 + 2*U^2 + -3*V + 3*U^1V)
+  good=1060/2000 rate=0.530000000 zeros=0 polarity=-1 mode=product expr=(-2*1 + 3*U^1 + 3*U^2 + 1*V + -3*U^1V) * (-3*1 + -1*U^1 + 1*U^2 + 3*V + -2*U^1V)
+  good=1058/2000 rate=0.529000000 zeros=0 polarity=1 mode=product expr=(-3*U^1 + -3*U^2 + -1*V + -2*U^1V) * (-1*1 + -1*U^1 + -1*U^2 + -2*V + 3*U^1V)
+p27_eprime_d3_pole5_heldout_eval:
+  good=1032/2000 rate=0.516000000 zeros=0 polarity=-1 mode=section expr=2*1 + -3*U^2 + 3*U^1V
+  good=1031/2000 rate=0.515500000 zeros=0 polarity=-1 mode=product expr=(2*1 + -2*U^1 + -3*U^2 + -1*V) * (-3*1 + -3*U^1 + 2*U^2 + -3*V + 3*U^1V)
+  good=1028/2000 rate=0.514000000 zeros=0 polarity=1 mode=section expr=1*1 + 3*U^1 + -2*U^2 + -2*V + 2*U^1V
+  good=1022/2000 rate=0.511000000 zeros=0 polarity=1 mode=section expr=3*1 + 1*U^1 + -3*V + 2*U^1V
+  good=1020/2000 rate=0.510000000 zeros=0 polarity=-1 mode=product expr=(-2*1 + 3*U^1 + 3*U^2 + 1*V + -3*U^1V) * (-3*1 + -1*U^1 + 1*U^2 + 3*V + -2*U^1V)
+  good=1016/2000 rate=0.508000000 zeros=0 polarity=1 mode=product expr=(-3*U^1 + -3*U^2 + -1*V + -2*U^1V) * (-1*1 + -1*U^1 + -1*U^2 + -2*V + 3*U^1V)
+  good=1015/2000 rate=0.507500000 zeros=0 polarity=1 mode=product expr=(-3*1 + -3*U^1 + -2*U^2 + -1*V + -1*U^1V) * (1*1 + -2*U^2 + 2*V + 2*U^1V)
+  good=1008/2000 rate=0.504000000 zeros=0 polarity=-1 mode=product expr=(3*1 + -1*U^1 + -3*U^2 + -1*V + 2*U^1V) * (-1*1 + 1*U^1 + 2*U^2 + 1*V + 1*U^1V)
+p27_eprime_d3_pole7_train:
+  basis_dim = 7
+  best_good = 1060
+  best_polarity = 1
+  best_zeros = 0
+  coeff_bound = 3
+  exact_candidates = 0
+  pole_bound = 7
+  rows = 2000
+  trials = 500
+p27_eprime_d3_pole7_train_best:
+  good=1060/2000 rate=0.530000000 zeros=0 polarity=1 mode=section expr=-1*1 + -2*U^1 + 2*U^3 + 2*V + 2*U^1V + 3*U^2V
+  good=1059/2000 rate=0.529500000 zeros=0 polarity=-1 mode=section expr=-2*1 + -1*U^2 + 1*U^3 + 3*V + 3*U^1V + 3*U^2V
+  good=1052/2000 rate=0.526000000 zeros=0 polarity=1 mode=section expr=1*1 + -2*U^1 + 3*U^2 + -2*U^3 + 1*V + -2*U^2V
+  good=1051/2000 rate=0.525500000 zeros=0 polarity=1 mode=product expr=(-3*1 + 3*U^2 + 2*U^2V) * (2*U^1 + -2*U^2 + 2*U^3 + 3*U^1V)
+  good=1051/2000 rate=0.525500000 zeros=0 polarity=1 mode=section expr=-3*1 + -1*U^2 + -2*V + -3*U^1V + -3*U^2V
+  good=1050/2000 rate=0.525000000 zeros=0 polarity=1 mode=product expr=(-1*1 + 2*U^1 + -1*U^2 + 1*U^3 + 2*U^1V + -2*U^2V) * (1*1 + -2*U^1 + 1*U^2 + 1*U^3 + -1*V + -2*U^1V + -1*U^2V)
+  good=1050/2000 rate=0.525000000 zeros=0 polarity=-1 mode=section expr=-1*1 + 3*U^1 + -1*U^2 + 2*U^3 + 2*V + -2*U^2V
+  good=1050/2000 rate=0.525000000 zeros=0 polarity=1 mode=section expr=-2*U^1 + -1*U^2 + -3*U^3 + -1*V + 3*U^1V + 2*U^2V
+p27_eprime_d3_pole7_heldout_eval:
+  good=1045/2000 rate=0.522500000 zeros=0 polarity=1 mode=section expr=1*1 + -2*U^1 + 3*U^2 + -2*U^3 + 1*V + -2*U^2V
+  good=1041/2000 rate=0.520500000 zeros=0 polarity=1 mode=product expr=(-1*1 + 2*U^1 + -1*U^2 + 1*U^3 + 2*U^1V + -2*U^2V) * (1*1 + -2*U^1 + 1*U^2 + 1*U^3 + -1*V + -2*U^1V + -1*U^2V)
+  good=1027/2000 rate=0.513500000 zeros=0 polarity=-1 mode=section expr=-1*1 + -2*U^1 + 2*U^3 + 2*V + 2*U^1V + 3*U^2V
+  good=1023/2000 rate=0.511500000 zeros=0 polarity=1 mode=section expr=-3*1 + -1*U^2 + -2*V + -3*U^1V + -3*U^2V
+  good=1017/2000 rate=0.508500000 zeros=0 polarity=-1 mode=section expr=-2*U^1 + -1*U^2 + -3*U^3 + -1*V + 3*U^1V + 2*U^2V
+  good=1008/2000 rate=0.504000000 zeros=0 polarity=1 mode=section expr=-1*1 + 3*U^1 + -1*U^2 + 2*U^3 + 2*V + -2*U^2V
+  good=1004/2000 rate=0.502000000 zeros=0 polarity=1 mode=product expr=(-3*1 + 3*U^2 + 2*U^2V) * (2*U^1 + -2*U^2 + 2*U^3 + 3*U^1V)
+  good=1003/2000 rate=0.501500000 zeros=0 polarity=-1 mode=section expr=-2*1 + -1*U^2 + 1*U^3 + 3*V + 3*U^1V + 3*U^2V
+p27_eprime_d3_pole9_train:
+  basis_dim = 9
+  best_good = 1064
+  best_polarity = -1
+  best_zeros = 0
+  coeff_bound = 3
+  exact_candidates = 0
+  pole_bound = 9
+  rows = 2000
+  trials = 500
+p27_eprime_d3_pole9_train_best:
+  good=1064/2000 rate=0.532000000 zeros=0 polarity=-1 mode=product expr=(-3*1 + 2*U^1 + 2*U^2 + 3*U^3 + -1*U^4 + -1*V + 1*U^1V + -3*U^2V + -3*U^3V) * (-3*1 + -3*U^1 + -3*U^2 + -2*U^3 + -3*U^4 + 3*V + 2*U^2V + -2*U^3V)
+  good=1062/2000 rate=0.531000000 zeros=0 polarity=1 mode=section expr=2*U^2 + -2*U^3 + -3*V + 2*U^1V + 2*U^2V + -2*U^3V
+  good=1062/2000 rate=0.531000000 zeros=0 polarity=1 mode=section expr=-3*1 + 3*U^1 + -3*U^2 + 1*U^3 + 3*V + 3*U^1V + -1*U^2V
+  good=1060/2000 rate=0.530000000 zeros=0 polarity=1 mode=product expr=(2*1 + -3*U^1 + -3*U^3 + -1*U^4 + -3*V + 1*U^1V + 2*U^2V + -2*U^3V) * (3*1 + -2*U^1 + -1*U^2 + -2*U^3 + -2*U^4 + 2*V + 3*U^1V + -2*U^2V + 1*U^3V)
+  good=1057/2000 rate=0.528500000 zeros=0 polarity=1 mode=product expr=(-3*1 + -2*U^1 + -3*U^2 + -3*U^3 + 2*V + -1*U^1V + -3*U^2V + 1*U^3V) * (3*1 + 1*U^3 + 1*U^4 + 2*V + 1*U^1V + 2*U^2V + 1*U^3V)
+  good=1054/2000 rate=0.527000000 zeros=0 polarity=-1 mode=section expr=2*1 + -2*U^1 + 2*U^2 + -2*U^3 + -1*U^4 + 3*V + -1*U^1V + -3*U^3V
+  good=1054/2000 rate=0.527000000 zeros=0 polarity=-1 mode=section expr=-1*1 + 3*U^1 + -3*U^2 + -3*U^3 + 2*U^4 + -1*U^1V + -1*U^2V + 3*U^3V
+  good=1053/2000 rate=0.526500000 zeros=0 polarity=1 mode=section expr=3*1 + 1*U^1 + -1*U^2 + 3*U^3 + -2*U^4 + -1*U^2V + 1*U^3V
+p27_eprime_d3_pole9_heldout_eval:
+  good=1032/2000 rate=0.516000000 zeros=0 polarity=1 mode=section expr=2*U^2 + -2*U^3 + -3*V + 2*U^1V + 2*U^2V + -2*U^3V
+  good=1017/2000 rate=0.508500000 zeros=0 polarity=1 mode=section expr=2*1 + -2*U^1 + 2*U^2 + -2*U^3 + -1*U^4 + 3*V + -1*U^1V + -3*U^3V
+  good=1017/2000 rate=0.508500000 zeros=0 polarity=-1 mode=section expr=3*1 + 1*U^1 + -1*U^2 + 3*U^3 + -2*U^4 + -1*U^2V + 1*U^3V
+  good=1015/2000 rate=0.507500000 zeros=0 polarity=1 mode=product expr=(2*1 + -3*U^1 + -3*U^3 + -1*U^4 + -3*V + 1*U^1V + 2*U^2V + -2*U^3V) * (3*1 + -2*U^1 + -1*U^2 + -2*U^3 + -2*U^4 + 2*V + 3*U^1V + -2*U^2V + 1*U^3V)
+  good=1014/2000 rate=0.507000000 zeros=0 polarity=1 mode=product expr=(-3*1 + -2*U^1 + -3*U^2 + -3*U^3 + 2*V + -1*U^1V + -3*U^2V + 1*U^3V) * (3*1 + 1*U^3 + 1*U^4 + 2*V + 1*U^1V + 2*U^2V + 1*U^3V)
+  good=1013/2000 rate=0.506500000 zeros=0 polarity=1 mode=section expr=-1*1 + 3*U^1 + -3*U^2 + -3*U^3 + 2*U^4 + -1*U^1V + -1*U^2V + 3*U^3V
+  good=1006/2000 rate=0.503000000 zeros=0 polarity=-1 mode=section expr=-3*1 + 3*U^1 + -3*U^2 + 1*U^3 + 3*V + 3*U^1V + -1*U^2V
+  good=1003/2000 rate=0.501500000 zeros=0 polarity=-1 mode=product expr=(-3*1 + 2*U^1 + 2*U^2 + 3*U^3 + -1*U^4 + -1*V + 1*U^1V + -3*U^2V + -3*U^3V) * (-3*1 + -3*U^1 + -3*U^2 + -2*U^3 + -3*U^4 + 3*V + 2*U^2V + -2*U^3V)
+p27_eprime_d4:
+  rows = 992
+  heldout_rows = 1052
+p27_eprime_d4_pole5_train:
+  basis_dim = 5
+  best_good = 543
+  best_polarity = 1
+  best_zeros = 0
+  coeff_bound = 3
+  exact_candidates = 0
+  pole_bound = 5
+  rows = 992
+  trials = 500
+p27_eprime_d4_pole5_train_best:
+  good=543/992 rate=0.547379032 zeros=0 polarity=1 mode=section expr=2*1 + 3*U^2 + 3*U^1V
+  good=541/992 rate=0.545362903 zeros=0 polarity=-1 mode=product expr=(-1*1 + 3*U^1 + 1*U^2 + -1*V + -3*U^1V) * (-1*1 + -3*U^1 + 1*U^2 + -3*V + 2*U^1V)
+  good=538/992 rate=0.542338710 zeros=0 polarity=1 mode=section expr=1*1 + -1*U^1 + -3*U^2 + -1*V + -1*U^1V
+  good=538/992 rate=0.542338710 zeros=0 polarity=1 mode=product expr=(-1*1 + -3*U^1 + 3*U^2 + 2*V + 1*U^1V) * (-1*1 + 2*U^1 + 2*U^2 + 3*V + 1*U^1V)
+  good=538/992 rate=0.542338710 zeros=0 polarity=-1 mode=product expr=(-3*1 + 3*U^1 + 3*U^2 + 1*U^1V) * (-3*1 + -2*U^1 + 1*V + 3*U^1V)
+  good=536/992 rate=0.540322581 zeros=0 polarity=-1 mode=section expr=-1*1 + 2*U^1 + -3*U^2 + -2*U^1V
+  good=535/992 rate=0.539314516 zeros=0 polarity=1 mode=product expr=(1*U^1 + 1*U^2 + 2*V + 2*U^1V) * (-2*1 + 1*U^1 + -2*U^2 + 1*V + -1*U^1V)
+  good=535/992 rate=0.539314516 zeros=0 polarity=-1 mode=section expr=2*1 + -2*U^1 + 3*U^2 + 1*V + 1*U^1V
+p27_eprime_d4_pole5_heldout_eval:
+  good=554/1052 rate=0.526615970 zeros=0 polarity=-1 mode=product expr=(-1*1 + 3*U^1 + 1*U^2 + -1*V + -3*U^1V) * (-1*1 + -3*U^1 + 1*U^2 + -3*V + 2*U^1V)
+  good=554/1052 rate=0.526615970 zeros=0 polarity=-1 mode=section expr=-1*1 + 2*U^1 + -3*U^2 + -2*U^1V
+  good=549/1052 rate=0.521863118 zeros=0 polarity=1 mode=product expr=(-3*1 + 3*U^1 + 3*U^2 + 1*U^1V) * (-3*1 + -2*U^1 + 1*V + 3*U^1V)
+  good=539/1052 rate=0.512357414 zeros=0 polarity=-1 mode=product expr=(-1*1 + -3*U^1 + 3*U^2 + 2*V + 1*U^1V) * (-1*1 + 2*U^1 + 2*U^2 + 3*V + 1*U^1V)
+  good=536/1052 rate=0.509505703 zeros=0 polarity=-1 mode=section expr=2*1 + 3*U^2 + 3*U^1V
+  good=535/1052 rate=0.508555133 zeros=0 polarity=1 mode=section expr=2*1 + -2*U^1 + 3*U^2 + 1*V + 1*U^1V
+  good=534/1052 rate=0.507604563 zeros=0 polarity=1 mode=product expr=(1*U^1 + 1*U^2 + 2*V + 2*U^1V) * (-2*1 + 1*U^1 + -2*U^2 + 1*V + -1*U^1V)
+  good=526/1052 rate=0.500000000 zeros=0 polarity=1 mode=section expr=1*1 + -1*U^1 + -3*U^2 + -1*V + -1*U^1V
+p27_eprime_d4_pole7_train:
+  basis_dim = 7
+  best_good = 545
+  best_polarity = 1
+  best_zeros = 0
+  coeff_bound = 3
+  exact_candidates = 0
+  pole_bound = 7
+  rows = 992
+  trials = 500
+p27_eprime_d4_pole7_train_best:
+  good=545/992 rate=0.549395161 zeros=0 polarity=1 mode=product expr=(-2*1 + 2*U^1 + 2*U^2 + -3*U^3 + -3*V + 1*U^2V) * (3*1 + -3*U^1 + 1*U^2 + -2*U^3 + -2*V + 2*U^1V)
+  good=542/992 rate=0.546370968 zeros=0 polarity=-1 mode=product expr=(3*1 + 3*U^1 + -3*U^3 + -3*V + -2*U^1V + 2*U^2V) * (2*1 + 3*U^1 + -2*U^2 + -2*U^3 + -1*V + 2*U^1V + -1*U^2V)
+  good=538/992 rate=0.542338710 zeros=0 polarity=1 mode=section expr=-3*1 + -2*U^1 + -1*U^2 + -2*U^3 + -2*V + 1*U^1V + 3*U^2V
+  good=534/992 rate=0.538306452 zeros=0 polarity=-1 mode=section expr=-2*U^1 + 1*U^2 + 1*U^3 + -1*V + -3*U^1V + -2*U^2V
+  good=534/992 rate=0.538306452 zeros=0 polarity=-1 mode=section expr=-2*1 + 2*U^1 + -2*U^3 + -3*V + -1*U^1V + -1*U^2V
+  good=534/992 rate=0.538306452 zeros=0 polarity=1 mode=product expr=(-3*1 + 2*U^1 + -1*U^2 + 3*U^3 + -2*V + 2*U^1V) * (-2*1 + 1*U^1 + 2*U^2 + 2*U^3 + -2*V + 2*U^1V + -2*U^2V)
+  good=533/992 rate=0.537298387 zeros=0 polarity=1 mode=section expr=-3*1 + -1*U^1 + 1*U^2 + -1*U^3 + 1*V + 3*U^1V + 1*U^2V
+  good=533/992 rate=0.537298387 zeros=0 polarity=1 mode=product expr=(-3*1 + -1*U^1 + -1*U^3 + 3*V + -1*U^1V + -2*U^2V) * (-3*1 + 3*U^1 + -1*U^2 + 1*V + 2*U^1V + -2*U^2V)
+p27_eprime_d4_pole7_heldout_eval:
+  good=556/1052 rate=0.528517110 zeros=0 polarity=1 mode=section expr=-3*1 + -1*U^1 + 1*U^2 + -1*U^3 + 1*V + 3*U^1V + 1*U^2V
+  good=547/1052 rate=0.519961977 zeros=0 polarity=-1 mode=section expr=-3*1 + -2*U^1 + -1*U^2 + -2*U^3 + -2*V + 1*U^1V + 3*U^2V
+  good=542/1052 rate=0.515209125 zeros=0 polarity=1 mode=product expr=(-2*1 + 2*U^1 + 2*U^2 + -3*U^3 + -3*V + 1*U^2V) * (3*1 + -3*U^1 + 1*U^2 + -2*U^3 + -2*V + 2*U^1V)
+  good=533/1052 rate=0.506653992 zeros=0 polarity=-1 mode=section expr=-2*1 + 2*U^1 + -2*U^3 + -3*V + -1*U^1V + -1*U^2V
+  good=532/1052 rate=0.505703422 zeros=0 polarity=-1 mode=product expr=(-3*1 + -1*U^1 + -1*U^3 + 3*V + -1*U^1V + -2*U^2V) * (-3*1 + 3*U^1 + -1*U^2 + 1*V + 2*U^1V + -2*U^2V)
+  good=531/1052 rate=0.504752852 zeros=0 polarity=-1 mode=section expr=-2*U^1 + 1*U^2 + 1*U^3 + -1*V + -3*U^1V + -2*U^2V
+  good=530/1052 rate=0.503802281 zeros=0 polarity=-1 mode=product expr=(3*1 + 3*U^1 + -3*U^3 + -3*V + -2*U^1V + 2*U^2V) * (2*1 + 3*U^1 + -2*U^2 + -2*U^3 + -1*V + 2*U^1V + -1*U^2V)
+  good=528/1052 rate=0.501901141 zeros=0 polarity=-1 mode=product expr=(-3*1 + 2*U^1 + -1*U^2 + 3*U^3 + -2*V + 2*U^1V) * (-2*1 + 1*U^1 + 2*U^2 + 2*U^3 + -2*V + 2*U^1V + -2*U^2V)
+p27_eprime_d4_pole9_train:
+  basis_dim = 9
+  best_good = 539
+  best_polarity = 1
+  best_zeros = 0
+  coeff_bound = 3
+  exact_candidates = 0
+  pole_bound = 9
+  rows = 992
+  trials = 500
+p27_eprime_d4_pole9_train_best:
+  good=539/992 rate=0.543346774 zeros=0 polarity=1 mode=product expr=(-2*1 + -2*U^1 + -1*U^3 + 3*U^4 + -1*V + 2*U^1V + 1*U^2V + 3*U^3V) * (1*1 + 2*U^1 + -1*U^2 + 3*U^3 + 3*U^4 + -3*V + -2*U^1V + 1*U^2V + 3*U^3V)
+  good=536/992 rate=0.540322581 zeros=0 polarity=1 mode=section expr=-1*1 + 1*U^1 + 1*U^2 + 3*U^3 + -1*U^4 + 2*V + 3*U^3V
+  good=536/992 rate=0.540322581 zeros=0 polarity=-1 mode=product expr=(-3*1 + 3*U^1 + 3*U^2 + 3*U^3 + 2*V + 2*U^1V + -2*U^2V + 2*U^3V) * (-2*1 + -3*U^1 + 1*U^2 + 2*U^3 + -3*U^4 + 2*U^1V + 3*U^2V)
+  good=535/992 rate=0.539314516 zeros=0 polarity=-1 mode=section expr=-1*U^1 + -3*U^2 + -3*U^3 + 3*U^4 + 3*V + 1*U^1V
+  good=534/992 rate=0.538306452 zeros=0 polarity=-1 mode=section expr=-1*U^1 + 3*U^4 + -1*V + 3*U^1V + 1*U^3V
+  good=534/992 rate=0.538306452 zeros=0 polarity=1 mode=product expr=(-1*1 + 3*U^1 + 3*U^2 + -2*U^4 + -2*V + -1*U^3V) * (2*1 + -2*U^1 + 2*U^2 + -1*U^3 + 1*U^4 + -2*U^1V + 2*U^2V + 2*U^3V)
+  good=533/992 rate=0.537298387 zeros=0 polarity=-1 mode=section expr=-1*1 + 1*U^1 + -1*U^3 + 3*U^4 + 1*V + 3*U^1V + 2*U^2V + -2*U^3V
+  good=532/992 rate=0.536290323 zeros=0 polarity=-1 mode=section expr=2*1 + 2*U^2 + 2*U^3 + 3*V + 3*U^2V + 1*U^3V
+p27_eprime_d4_pole9_heldout_eval:
+  good=557/1052 rate=0.529467681 zeros=0 polarity=1 mode=product expr=(-1*1 + 3*U^1 + 3*U^2 + -2*U^4 + -2*V + -1*U^3V) * (2*1 + -2*U^1 + 2*U^2 + -1*U^3 + 1*U^4 + -2*U^1V + 2*U^2V + 2*U^3V)
+  good=542/1052 rate=0.515209125 zeros=0 polarity=1 mode=product expr=(-3*1 + 3*U^1 + 3*U^2 + 3*U^3 + 2*V + 2*U^1V + -2*U^2V + 2*U^3V) * (-2*1 + -3*U^1 + 1*U^2 + 2*U^3 + -3*U^4 + 2*U^1V + 3*U^2V)
+  good=539/1052 rate=0.512357414 zeros=0 polarity=1 mode=section expr=-1*1 + 1*U^1 + -1*U^3 + 3*U^4 + 1*V + 3*U^1V + 2*U^2V + -2*U^3V
+  good=537/1052 rate=0.510456274 zeros=0 polarity=-1 mode=section expr=-1*U^1 + 3*U^4 + -1*V + 3*U^1V + 1*U^3V
+  good=534/1052 rate=0.507604563 zeros=0 polarity=-1 mode=section expr=-1*1 + 1*U^1 + 1*U^2 + 3*U^3 + -1*U^4 + 2*V + 3*U^3V
+  good=532/1052 rate=0.505703422 zeros=0 polarity=-1 mode=product expr=(-2*1 + -2*U^1 + -1*U^3 + 3*U^4 + -1*V + 2*U^1V + 1*U^2V + 3*U^3V) * (1*1 + 2*U^1 + -1*U^2 + 3*U^3 + 3*U^4 + -3*V + -2*U^1V + 1*U^2V + 3*U^3V)
+  good=531/1052 rate=0.504752852 zeros=0 polarity=1 mode=section expr=-1*U^1 + -3*U^2 + -3*U^3 + 3*U^4 + 3*V + 1*U^1V
+  good=527/1052 rate=0.500950570 zeros=0 polarity=-1 mode=section expr=2*1 + 2*U^2 + 2*U^3 + 3*V + 3*U^2V + 1*U^3V
+small_prime_eprime_lowpole_screens:
+q=1471:
+  enum_stats:
+  enum_compact_not_target = 837
+  enum_no_label2_candidate = 424
+  original_quotient_stats:
+  d3_minus_E_points = 88
+  d3_missing_on_E_orbit = 0
+  d3_not_descended_to_E = 0
+  d3_plus_E_points = 112
+  d3_quotient_rows = 200
+  d4_minus_E_points_after_d3 = 56
+  d4_missing_on_E_orbit = 0
+  d4_not_descended_to_E = 0
+  d4_plus_E_points_after_d3 = 56
+  d4_quotient_rows_after_d3 = 112
+  orbit_size_4 = 200
+  oriented_candidates = 800
+  quotient_E_points = 200
+  eprime_stats:
+  d3_input_rows = 200
+  d3_minus = 44
+  d3_plus = 56
+  d3_quotient_rows = 100
+  d4_input_rows = 112
+  d4_minus = 28
+  d4_plus = 28
+  d4_quotient_rows = 56
+q1471_eprime_d3:
+  rows = 100
+  heldout_rows = 100
+q1471_eprime_d3_pole5_train:
+  basis_dim = 5
+  best_good = 67
+  best_polarity = 1
+  best_zeros = 0
+  coeff_bound = 3
+  exact_candidates = 0
+  pole_bound = 5
+  rows = 100
+  trials = 500
+q1471_eprime_d3_pole5_train_best:
+  good=67/100 rate=0.670000000 zeros=0 polarity=1 mode=section expr=3*1 + -2*U^1 + -3*V + 2*U^1V
+  good=67/100 rate=0.670000000 zeros=2 polarity=-1 mode=product expr=(3*1 + -3*U^1 + -2*U^2 + -3*V + -3*U^1V) * (-2*1 + 2*U^1 + 2*V + 2*U^1V)
+  good=65/100 rate=0.650000000 zeros=1 polarity=1 mode=product expr=(-3*U^2 + -2*V + -2*U^1V) * (-3*1 + 2*U^1 + 2*U^2 + 2*V + -1*U^1V)
+  good=65/100 rate=0.650000000 zeros=2 polarity=-1 mode=product expr=(-1*1 + 3*U^1 + -2*U^2 + 1*V + -1*U^1V) * (-2*1 + 1*U^1 + -1*U^2)
+  good=63/100 rate=0.630000000 zeros=0 polarity=-1 mode=section expr=2*1 + 1*U^1 + -1*U^2 + 2*V + -3*U^1V
+  good=62/100 rate=0.620000000 zeros=0 polarity=-1 mode=section expr=2*U^1 + -3*U^2 + 2*U^1V
+  good=62/100 rate=0.620000000 zeros=0 polarity=1 mode=section expr=-2*1 + -3*U^1 + -3*V + -2*U^1V
+  good=61/100 rate=0.610000000 zeros=0 polarity=1 mode=section expr=-1*1 + 2*U^1 + -1*U^2 + 2*V + 2*U^1V
+q1471_eprime_d3_pole5_heldout_eval:
+  good=67/100 rate=0.670000000 zeros=0 polarity=1 mode=section expr=3*1 + -2*U^1 + -3*V + 2*U^1V
+  good=67/100 rate=0.670000000 zeros=2 polarity=-1 mode=product expr=(3*1 + -3*U^1 + -2*U^2 + -3*V + -3*U^1V) * (-2*1 + 2*U^1 + 2*V + 2*U^1V)
+  good=65/100 rate=0.650000000 zeros=1 polarity=1 mode=product expr=(-3*U^2 + -2*V + -2*U^1V) * (-3*1 + 2*U^1 + 2*U^2 + 2*V + -1*U^1V)
+  good=65/100 rate=0.650000000 zeros=2 polarity=-1 mode=product expr=(-1*1 + 3*U^1 + -2*U^2 + 1*V + -1*U^1V) * (-2*1 + 1*U^1 + -1*U^2)
+  good=63/100 rate=0.630000000 zeros=0 polarity=-1 mode=section expr=2*1 + 1*U^1 + -1*U^2 + 2*V + -3*U^1V
+  good=62/100 rate=0.620000000 zeros=0 polarity=-1 mode=section expr=2*U^1 + -3*U^2 + 2*U^1V
+  good=62/100 rate=0.620000000 zeros=0 polarity=1 mode=section expr=-2*1 + -3*U^1 + -3*V + -2*U^1V
+  good=61/100 rate=0.610000000 zeros=0 polarity=1 mode=section expr=-1*1 + 2*U^1 + -1*U^2 + 2*V + 2*U^1V
+q1471_eprime_d3_pole7_train:
+  basis_dim = 7
+  best_good = 68
+  best_polarity = -1
+  best_zeros = 0
+  coeff_bound = 3
+  exact_candidates = 0
+  pole_bound = 7
+  rows = 100
+  trials = 500
+q1471_eprime_d3_pole7_train_best:
+  good=68/100 rate=0.680000000 zeros=0 polarity=-1 mode=section expr=-3*1 + -1*U^2 + 1*U^3 + -2*V + -1*U^1V + 1*U^2V
+  good=64/100 rate=0.640000000 zeros=0 polarity=-1 mode=section expr=1*1 + 1*U^1 + -3*U^3 + -1*U^1V + -3*U^2V
+  good=64/100 rate=0.640000000 zeros=0 polarity=-1 mode=section expr=-1*1 + -2*U^1 + 1*U^2 + -3*U^3 + -2*V + -3*U^1V + -2*U^2V
+  good=64/100 rate=0.640000000 zeros=0 polarity=1 mode=product expr=(2*1 + -3*U^1 + 1*U^2 + 2*U^3 + 3*V + 3*U^1V + -1*U^2V) * (1*U^3 + -3*U^1V + 2*U^2V)
+  good=63/100 rate=0.630000000 zeros=0 polarity=1 mode=section expr=2*U^1 + -1*U^2 + 2*U^3 + -2*U^1V + -2*U^2V
+  good=63/100 rate=0.630000000 zeros=0 polarity=-1 mode=product expr=(1*1 + -3*U^1 + 1*U^3 + 1*V + 2*U^1V + -1*U^2V) * (2*1 + 1*U^1 + 3*U^3 + 3*V + 3*U^1V + -3*U^2V)
+  good=63/100 rate=0.630000000 zeros=0 polarity=1 mode=product expr=(-2*1 + 3*U^3 + -2*V + -3*U^1V + -2*U^2V) * (-3*1 + 3*U^1 + -1*U^2 + -1*V + -2*U^1V)
+  good=63/100 rate=0.630000000 zeros=0 polarity=-1 mode=section expr=3*U^1 + -2*U^2 + -3*U^3 + 2*U^1V + -3*U^2V
+q1471_eprime_d3_pole7_heldout_eval:
+  good=68/100 rate=0.680000000 zeros=0 polarity=-1 mode=section expr=-3*1 + -1*U^2 + 1*U^3 + -2*V + -1*U^1V + 1*U^2V
+  good=64/100 rate=0.640000000 zeros=0 polarity=-1 mode=section expr=1*1 + 1*U^1 + -3*U^3 + -1*U^1V + -3*U^2V
+  good=64/100 rate=0.640000000 zeros=0 polarity=-1 mode=section expr=-1*1 + -2*U^1 + 1*U^2 + -3*U^3 + -2*V + -3*U^1V + -2*U^2V
+  good=64/100 rate=0.640000000 zeros=0 polarity=1 mode=product expr=(2*1 + -3*U^1 + 1*U^2 + 2*U^3 + 3*V + 3*U^1V + -1*U^2V) * (1*U^3 + -3*U^1V + 2*U^2V)
+  good=63/100 rate=0.630000000 zeros=0 polarity=1 mode=section expr=2*U^1 + -1*U^2 + 2*U^3 + -2*U^1V + -2*U^2V
+  good=63/100 rate=0.630000000 zeros=0 polarity=-1 mode=product expr=(1*1 + -3*U^1 + 1*U^3 + 1*V + 2*U^1V + -1*U^2V) * (2*1 + 1*U^1 + 3*U^3 + 3*V + 3*U^1V + -3*U^2V)
+  good=63/100 rate=0.630000000 zeros=0 polarity=1 mode=product expr=(-2*1 + 3*U^3 + -2*V + -3*U^1V + -2*U^2V) * (-3*1 + 3*U^1 + -1*U^2 + -1*V + -2*U^1V)
+  good=63/100 rate=0.630000000 zeros=0 polarity=-1 mode=section expr=3*U^1 + -2*U^2 + -3*U^3 + 2*U^1V + -3*U^2V
+q1471_eprime_d3_pole9_train:
+  basis_dim = 9
+  best_good = 66
+  best_polarity = 1
+  best_zeros = 0
+  coeff_bound = 3
+  exact_candidates = 0
+  pole_bound = 9
+  rows = 100
+  trials = 500
+q1471_eprime_d3_pole9_train_best:
+  good=66/100 rate=0.660000000 zeros=0 polarity=1 mode=product expr=(1*1 + -3*U^1 + 3*U^2 + -1*U^3 + -2*U^4 + 1*V + -3*U^2V + -2*U^3V) * (-1*1 + -2*U^1 + -3*U^2 + -2*U^3 + 1*U^4 + -3*V + -1*U^2V + -1*U^3V)
+  good=65/100 rate=0.650000000 zeros=0 polarity=1 mode=product expr=(3*1 + -2*U^1 + 2*U^2 + 3*U^3 + 3*U^1V + -1*U^2V + 2*U^3V) * (-2*1 + 1*U^1 + 3*U^2 + -1*U^3 + -1*U^4 + -2*V + 2*U^1V + 1*U^3V)
+  good=65/100 rate=0.650000000 zeros=0 polarity=-1 mode=product expr=(-2*U^1 + 2*U^2 + 3*U^4 + -3*V + -3*U^2V + 3*U^3V) * (-3*U^3 + 3*U^4 + 2*V + 3*U^1V + 2*U^2V + 3*U^3V)
+  good=65/100 rate=0.650000000 zeros=1 polarity=1 mode=product expr=(-2*1 + -2*U^1 + 3*U^2 + 1*U^3 + -1*U^4 + 2*V + -2*U^1V + 2*U^2V) * (-2*U^1 + 1*U^2 + -3*U^3 + -2*U^4 + -3*V + 3*U^1V + -3*U^3V)
+  good=64/100 rate=0.640000000 zeros=0 polarity=1 mode=section expr=-3*1 + -1*U^1 + 2*U^2 + 3*U^3 + 1*U^4 + -2*V + 2*U^2V
+  good=64/100 rate=0.640000000 zeros=0 polarity=-1 mode=product expr=(-2*1 + -1*U^1 + 3*U^2 + 2*U^3 + -1*U^1V + -3*U^2V + 2*U^3V) * (3*1 + -1*U^1 + 2*U^2 + -1*U^3 + 2*U^4 + 3*V + 2*U^1V + -3*U^2V + 3*U^3V)
+  good=64/100 rate=0.640000000 zeros=0 polarity=-1 mode=product expr=(1*1 + 2*U^1 + -1*U^2 + 2*U^3 + -1*U^4 + -3*V + 2*U^1V + 2*U^2V + -2*U^3V) * (-1*1 + -1*U^4 + 3*V + -3*U^1V + 2*U^2V + -3*U^3V)
+  good=63/100 rate=0.630000000 zeros=0 polarity=-1 mode=section expr=2*1 + -1*U^1 + -2*U^2 + -1*U^3 + 1*U^4 + 3*V + -3*U^1V + -2*U^2V + 2*U^3V
+q1471_eprime_d3_pole9_heldout_eval:
+  good=66/100 rate=0.660000000 zeros=0 polarity=1 mode=product expr=(1*1 + -3*U^1 + 3*U^2 + -1*U^3 + -2*U^4 + 1*V + -3*U^2V + -2*U^3V) * (-1*1 + -2*U^1 + -3*U^2 + -2*U^3 + 1*U^4 + -3*V + -1*U^2V + -1*U^3V)
+  good=65/100 rate=0.650000000 zeros=0 polarity=1 mode=product expr=(3*1 + -2*U^1 + 2*U^2 + 3*U^3 + 3*U^1V + -1*U^2V + 2*U^3V) * (-2*1 + 1*U^1 + 3*U^2 + -1*U^3 + -1*U^4 + -2*V + 2*U^1V + 1*U^3V)
+  good=65/100 rate=0.650000000 zeros=0 polarity=-1 mode=product expr=(-2*U^1 + 2*U^2 + 3*U^4 + -3*V + -3*U^2V + 3*U^3V) * (-3*U^3 + 3*U^4 + 2*V + 3*U^1V + 2*U^2V + 3*U^3V)
+  good=65/100 rate=0.650000000 zeros=1 polarity=1 mode=product expr=(-2*1 + -2*U^1 + 3*U^2 + 1*U^3 + -1*U^4 + 2*V + -2*U^1V + 2*U^2V) * (-2*U^1 + 1*U^2 + -3*U^3 + -2*U^4 + -3*V + 3*U^1V + -3*U^3V)
+  good=64/100 rate=0.640000000 zeros=0 polarity=1 mode=section expr=-3*1 + -1*U^1 + 2*U^2 + 3*U^3 + 1*U^4 + -2*V + 2*U^2V
+  good=64/100 rate=0.640000000 zeros=0 polarity=-1 mode=product expr=(-2*1 + -1*U^1 + 3*U^2 + 2*U^3 + -1*U^1V + -3*U^2V + 2*U^3V) * (3*1 + -1*U^1 + 2*U^2 + -1*U^3 + 2*U^4 + 3*V + 2*U^1V + -3*U^2V + 3*U^3V)
+  good=64/100 rate=0.640000000 zeros=0 polarity=-1 mode=product expr=(1*1 + 2*U^1 + -1*U^2 + 2*U^3 + -1*U^4 + -3*V + 2*U^1V + 2*U^2V + -2*U^3V) * (-1*1 + -1*U^4 + 3*V + -3*U^1V + 2*U^2V + -3*U^3V)
+  good=63/100 rate=0.630000000 zeros=0 polarity=-1 mode=section expr=2*1 + -1*U^1 + -2*U^2 + -1*U^3 + 1*U^4 + 3*V + -3*U^1V + -2*U^2V + 2*U^3V
+q1471_eprime_d4:
+  rows = 56
+  heldout_rows = 56
+q1471_eprime_d4_pole5_train:
+  basis_dim = 5
+  best_good = 40
+  best_polarity = -1
+  best_zeros = 0
+  coeff_bound = 3
+  exact_candidates = 0
+  pole_bound = 5
+  rows = 56
+  trials = 500
+q1471_eprime_d4_pole5_train_best:
+  good=40/56 rate=0.714285714 zeros=0 polarity=-1 mode=section expr=-2*1 + -1*U^1 + -1*U^2 + -2*V + -3*U^1V
+  good=37/56 rate=0.660714286 zeros=0 polarity=-1 mode=section expr=3*1 + 2*V
+  good=37/56 rate=0.660714286 zeros=0 polarity=1 mode=section expr=1*1 + 1*U^1 + 2*U^2 + -1*V + 1*U^1V
+  good=37/56 rate=0.660714286 zeros=0 polarity=-1 mode=product expr=(-2*1 + 1*U^1 + -2*U^2 + 1*U^1V) * (-1*1 + -2*U^1 + -3*U^2 + 3*V + 2*U^1V)
+  good=37/56 rate=0.660714286 zeros=0 polarity=1 mode=section expr=-1*1 + 3*V + 3*U^1V
+  good=37/56 rate=0.660714286 zeros=0 polarity=-1 mode=product expr=(2*U^1 + -1*U^2 + 1*V + 3*U^1V) * (3*1 + -2*U^1 + -2*U^2 + 3*V + 1*U^1V)
+  good=37/56 rate=0.660714286 zeros=0 polarity=-1 mode=section expr=-1*1 + 2*U^1 + -3*U^2 + -2*U^1V
+  good=37/56 rate=0.660714286 zeros=0 polarity=1 mode=product expr=(-2*1 + -3*U^2 + -2*V + -1*U^1V) * (-1*1 + 3*U^1 + -2*U^2 + -1*V + -3*U^1V)
+q1471_eprime_d4_pole5_heldout_eval:
+  good=40/56 rate=0.714285714 zeros=0 polarity=-1 mode=section expr=-2*1 + -1*U^1 + -1*U^2 + -2*V + -3*U^1V
+  good=37/56 rate=0.660714286 zeros=0 polarity=-1 mode=section expr=3*1 + 2*V
+  good=37/56 rate=0.660714286 zeros=0 polarity=1 mode=section expr=1*1 + 1*U^1 + 2*U^2 + -1*V + 1*U^1V
+  good=37/56 rate=0.660714286 zeros=0 polarity=-1 mode=product expr=(-2*1 + 1*U^1 + -2*U^2 + 1*U^1V) * (-1*1 + -2*U^1 + -3*U^2 + 3*V + 2*U^1V)
+  good=37/56 rate=0.660714286 zeros=0 polarity=1 mode=section expr=-1*1 + 3*V + 3*U^1V
+  good=37/56 rate=0.660714286 zeros=0 polarity=-1 mode=product expr=(2*U^1 + -1*U^2 + 1*V + 3*U^1V) * (3*1 + -2*U^1 + -2*U^2 + 3*V + 1*U^1V)
+  good=37/56 rate=0.660714286 zeros=0 polarity=-1 mode=section expr=-1*1 + 2*U^1 + -3*U^2 + -2*U^1V
+  good=37/56 rate=0.660714286 zeros=0 polarity=1 mode=product expr=(-2*1 + -3*U^2 + -2*V + -1*U^1V) * (-1*1 + 3*U^1 + -2*U^2 + -1*V + -3*U^1V)
+q1471_eprime_d4_pole7_train:
+  basis_dim = 7
+  best_good = 40
+  best_polarity = 1
+  best_zeros = 0
+  coeff_bound = 3
+  exact_candidates = 0
+  pole_bound = 7
+  rows = 56
+  trials = 500
+q1471_eprime_d4_pole7_train_best:
+  good=40/56 rate=0.714285714 zeros=0 polarity=1 mode=product expr=(-2*1 + -3*U^1 + 2*U^2 + 2*V + -3*U^1V + -1*U^2V) * (3*1 + 2*U^1 + -1*U^2 + -2*U^3 + 1*V + -2*U^1V + 2*U^2V)
+  good=39/56 rate=0.696428571 zeros=0 polarity=-1 mode=product expr=(-3*1 + -3*U^2 + 2*U^3 + -3*V + 3*U^1V + -3*U^2V) * (2*1 + -1*U^1 + -2*U^2 + -2*U^3 + -2*V + -2*U^2V)
+  good=38/56 rate=0.678571429 zeros=0 polarity=-1 mode=product expr=(3*U^1 + -1*U^2 + 1*U^3 + 3*V + -2*U^1V + 1*U^2V) * (2*1 + -2*U^1 + 1*U^2 + 1*U^3 + -1*V + 1*U^1V + 2*U^2V)
+  good=38/56 rate=0.678571429 zeros=0 polarity=-1 mode=section expr=1*1 + 3*U^1 + 3*U^2 + 2*U^3 + -2*V + 1*U^1V + 3*U^2V
+  good=38/56 rate=0.678571429 zeros=1 polarity=-1 mode=product expr=(3*1 + -1*U^1 + 1*U^2 + 1*U^3 + -2*V + -2*U^2V) * (2*1 + -2*U^1 + -1*U^2 + -1*U^3 + -3*V + 2*U^1V + 3*U^2V)
+  good=37/56 rate=0.660714286 zeros=0 polarity=1 mode=product expr=(-1*1 + -1*U^1 + 2*U^2 + -3*V + -2*U^1V + 1*U^2V) * (1*U^2 + 1*U^3 + 3*V + -2*U^2V)
+  good=37/56 rate=0.660714286 zeros=0 polarity=-1 mode=product expr=(-3*1 + 1*U^1 + 3*U^2 + -3*U^3 + -2*U^1V + 1*U^2V) * (-3*1 + 3*U^2 + -2*U^3 + 3*V + -3*U^1V + 1*U^2V)
+  good=37/56 rate=0.660714286 zeros=0 polarity=1 mode=section expr=1*1 + -3*U^1 + -1*U^2 + -2*U^3 + -1*V + -3*U^1V + -3*U^2V
+q1471_eprime_d4_pole7_heldout_eval:
+  good=40/56 rate=0.714285714 zeros=0 polarity=1 mode=product expr=(-2*1 + -3*U^1 + 2*U^2 + 2*V + -3*U^1V + -1*U^2V) * (3*1 + 2*U^1 + -1*U^2 + -2*U^3 + 1*V + -2*U^1V + 2*U^2V)
+  good=39/56 rate=0.696428571 zeros=0 polarity=-1 mode=product expr=(-3*1 + -3*U^2 + 2*U^3 + -3*V + 3*U^1V + -3*U^2V) * (2*1 + -1*U^1 + -2*U^2 + -2*U^3 + -2*V + -2*U^2V)
+  good=38/56 rate=0.678571429 zeros=0 polarity=-1 mode=product expr=(3*U^1 + -1*U^2 + 1*U^3 + 3*V + -2*U^1V + 1*U^2V) * (2*1 + -2*U^1 + 1*U^2 + 1*U^3 + -1*V + 1*U^1V + 2*U^2V)
+  good=38/56 rate=0.678571429 zeros=0 polarity=-1 mode=section expr=1*1 + 3*U^1 + 3*U^2 + 2*U^3 + -2*V + 1*U^1V + 3*U^2V
+  good=38/56 rate=0.678571429 zeros=1 polarity=-1 mode=product expr=(3*1 + -1*U^1 + 1*U^2 + 1*U^3 + -2*V + -2*U^2V) * (2*1 + -2*U^1 + -1*U^2 + -1*U^3 + -3*V + 2*U^1V + 3*U^2V)
+  good=37/56 rate=0.660714286 zeros=0 polarity=1 mode=product expr=(-1*1 + -1*U^1 + 2*U^2 + -3*V + -2*U^1V + 1*U^2V) * (1*U^2 + 1*U^3 + 3*V + -2*U^2V)
+  good=37/56 rate=0.660714286 zeros=0 polarity=-1 mode=product expr=(-3*1 + 1*U^1 + 3*U^2 + -3*U^3 + -2*U^1V + 1*U^2V) * (-3*1 + 3*U^2 + -2*U^3 + 3*V + -3*U^1V + 1*U^2V)
+  good=37/56 rate=0.660714286 zeros=0 polarity=1 mode=section expr=1*1 + -3*U^1 + -1*U^2 + -2*U^3 + -1*V + -3*U^1V + -3*U^2V
+q1471_eprime_d4_pole9_train:
+  basis_dim = 9
+  best_good = 41
+  best_polarity = -1
+  best_zeros = 0
+  coeff_bound = 3
+  exact_candidates = 0
+  pole_bound = 9
+  rows = 56
+  trials = 500
+q1471_eprime_d4_pole9_train_best:
+  good=41/56 rate=0.732142857 zeros=0 polarity=-1 mode=product expr=(1*U^1 + -2*U^2 + -3*U^3 + 1*U^4 + 2*V + -3*U^2V + -2*U^3V) * (1*1 + 1*U^1 + 1*U^2 + 2*V + -3*U^1V + 1*U^3V)
+  good=39/56 rate=0.696428571 zeros=0 polarity=1 mode=section expr=1*1 + 2*U^1 + 1*U^2 + -3*U^3 + -2*U^4 + 1*V + -1*U^1V + -1*U^2V
+  good=39/56 rate=0.696428571 zeros=1 polarity=1 mode=product expr=(2*1 + 2*U^1 + 2*U^2 + 3*U^3 + -3*U^4 + 1*V + 3*U^2V + -1*U^3V) * (-1*1 + -1*U^1 + -3*U^2 + 3*U^3 + -2*U^4 + -2*V + -2*U^1V + -3*U^2V + 1*U^3V)
+  good=38/56 rate=0.678571429 zeros=0 polarity=-1 mode=section expr=-2*U^1 + 3*U^2 + 1*U^1V + -2*U^2V + 3*U^3V
+  good=38/56 rate=0.678571429 zeros=0 polarity=1 mode=section expr=2*1 + -2*U^1 + 2*U^2 + -1*U^3 + 2*U^4 + -1*V + -3*U^1V
+  good=36/56 rate=0.642857143 zeros=0 polarity=1 mode=section expr=1*1 + -1*U^1 + 2*U^2 + 1*U^3 + 1*U^4 + 1*V + -3*U^1V + -2*U^2V
+  good=36/56 rate=0.642857143 zeros=0 polarity=1 mode=product expr=(2*1 + -1*U^1 + 1*U^2 + 2*U^3 + 2*U^4 + -1*V + -1*U^1V + -1*U^2V + -1*U^3V) * (-3*1 + -3*U^1 + -3*U^2 + -1*U^4 + -3*V)
+  good=36/56 rate=0.642857143 zeros=0 polarity=-1 mode=product expr=(2*1 + 2*U^1 + 2*U^2 + -3*U^4 + -1*V + -1*U^1V + 1*U^2V) * (2*1 + -1*U^1 + 3*U^2 + 2*U^3 + -3*U^4 + -3*V + 1*U^1V + 1*U^2V + -2*U^3V)
+q1471_eprime_d4_pole9_heldout_eval:
+  good=41/56 rate=0.732142857 zeros=0 polarity=-1 mode=product expr=(1*U^1 + -2*U^2 + -3*U^3 + 1*U^4 + 2*V + -3*U^2V + -2*U^3V) * (1*1 + 1*U^1 + 1*U^2 + 2*V + -3*U^1V + 1*U^3V)
+  good=39/56 rate=0.696428571 zeros=0 polarity=1 mode=section expr=1*1 + 2*U^1 + 1*U^2 + -3*U^3 + -2*U^4 + 1*V + -1*U^1V + -1*U^2V
+  good=39/56 rate=0.696428571 zeros=1 polarity=1 mode=product expr=(2*1 + 2*U^1 + 2*U^2 + 3*U^3 + -3*U^4 + 1*V + 3*U^2V + -1*U^3V) * (-1*1 + -1*U^1 + -3*U^2 + 3*U^3 + -2*U^4 + -2*V + -2*U^1V + -3*U^2V + 1*U^3V)
+  good=38/56 rate=0.678571429 zeros=0 polarity=-1 mode=section expr=-2*U^1 + 3*U^2 + 1*U^1V + -2*U^2V + 3*U^3V
+  good=38/56 rate=0.678571429 zeros=0 polarity=1 mode=section expr=2*1 + -2*U^1 + 2*U^2 + -1*U^3 + 2*U^4 + -1*V + -3*U^1V
+  good=36/56 rate=0.642857143 zeros=0 polarity=1 mode=section expr=1*1 + -1*U^1 + 2*U^2 + 1*U^3 + 1*U^4 + 1*V + -3*U^1V + -2*U^2V
+  good=36/56 rate=0.642857143 zeros=0 polarity=1 mode=product expr=(2*1 + -1*U^1 + 1*U^2 + 2*U^3 + 2*U^4 + -1*V + -1*U^1V + -1*U^2V + -1*U^3V) * (-3*1 + -3*U^1 + -3*U^2 + -1*U^4 + -3*V)
+  good=36/56 rate=0.642857143 zeros=0 polarity=-1 mode=product expr=(2*1 + 2*U^1 + 2*U^2 + -3*U^4 + -1*V + -1*U^1V + 1*U^2V) * (2*1 + -1*U^1 + 3*U^2 + 2*U^3 + -3*U^4 + -3*V + 1*U^1V + 1*U^2V + -2*U^3V)
+q=1607:
+  enum_stats:
+  enum_compact_not_target = 805
+  enum_no_label2_candidate = 408
+  original_quotient_stats:
+  d3_minus_E_points = 84
+  d3_missing_on_E_orbit = 0
+  d3_not_descended_to_E = 0
+  d3_plus_E_points = 112
+  d3_quotient_rows = 196
+  d4_minus_E_points_after_d3 = 36
+  d4_missing_on_E_orbit = 0
+  d4_not_descended_to_E = 0
+  d4_plus_E_points_after_d3 = 76
+  d4_quotient_rows_after_d3 = 112
+  orbit_size_4 = 196
+  oriented_candidates = 784
+  quotient_E_points = 196
+  eprime_stats:
+  d3_input_rows = 196
+  d3_minus = 42
+  d3_plus = 56
+  d3_quotient_rows = 98
+  d4_input_rows = 112
+  d4_minus = 18
+  d4_plus = 38
+  d4_quotient_rows = 56
+q1607_eprime_d3:
+  rows = 98
+  heldout_rows = 98
+q1607_eprime_d3_pole5_train:
+  basis_dim = 5
+  best_good = 68
+  best_polarity = 1
+  best_zeros = 0
+  coeff_bound = 3
+  exact_candidates = 0
+  pole_bound = 5
+  rows = 98
+  trials = 500
+q1607_eprime_d3_pole5_train_best:
+  good=68/98 rate=0.693877551 zeros=0 polarity=1 mode=product expr=(1*U^1 + -3*U^2 + 3*U^1V) * (1*1 + -1*U^1 + 3*U^2 + -1*V + -1*U^1V)
+  good=64/98 rate=0.653061224 zeros=0 polarity=1 mode=section expr=-1*1 + -2*U^2 + 2*V
+  good=62/98 rate=0.632653061 zeros=0 polarity=1 mode=section expr=2*1 + -2*U^1 + 3*U^2 + -1*V + -1*U^1V
+  good=61/98 rate=0.622448980 zeros=0 polarity=-1 mode=section expr=3*1 + 2*U^2 + -1*V + 3*U^1V
+  good=60/98 rate=0.612244898 zeros=0 polarity=1 mode=section expr=-2*U^1 + 2*U^2 + -2*V
+  good=60/98 rate=0.612244898 zeros=0 polarity=1 mode=section expr=-1*U^1 + -2*U^2 + 1*V + 2*U^1V
+  good=60/98 rate=0.612244898 zeros=0 polarity=-1 mode=product expr=(1*U^1 + 1*U^2 + -1*V + -3*U^1V) * (-1*1 + -2*U^1 + -3*U^2 + 2*U^1V)
+  good=60/98 rate=0.612244898 zeros=0 polarity=-1 mode=section expr=1*1 + 2*U^2 + -1*V + 3*U^1V
+q1607_eprime_d3_pole5_heldout_eval:
+  good=68/98 rate=0.693877551 zeros=0 polarity=1 mode=product expr=(1*U^1 + -3*U^2 + 3*U^1V) * (1*1 + -1*U^1 + 3*U^2 + -1*V + -1*U^1V)
+  good=64/98 rate=0.653061224 zeros=0 polarity=1 mode=section expr=-1*1 + -2*U^2 + 2*V
+  good=62/98 rate=0.632653061 zeros=0 polarity=1 mode=section expr=2*1 + -2*U^1 + 3*U^2 + -1*V + -1*U^1V
+  good=61/98 rate=0.622448980 zeros=0 polarity=-1 mode=section expr=3*1 + 2*U^2 + -1*V + 3*U^1V
+  good=60/98 rate=0.612244898 zeros=0 polarity=1 mode=section expr=-2*U^1 + 2*U^2 + -2*V
+  good=60/98 rate=0.612244898 zeros=0 polarity=1 mode=section expr=-1*U^1 + -2*U^2 + 1*V + 2*U^1V
+  good=60/98 rate=0.612244898 zeros=0 polarity=-1 mode=product expr=(1*U^1 + 1*U^2 + -1*V + -3*U^1V) * (-1*1 + -2*U^1 + -3*U^2 + 2*U^1V)
+  good=60/98 rate=0.612244898 zeros=0 polarity=-1 mode=section expr=1*1 + 2*U^2 + -1*V + 3*U^1V
+q1607_eprime_d3_pole7_train:
+  basis_dim = 7
+  best_good = 62
+  best_polarity = -1
+  best_zeros = 0
+  coeff_bound = 3
+  exact_candidates = 0
+  pole_bound = 7
+  rows = 98
+  trials = 500
+q1607_eprime_d3_pole7_train_best:
+  good=62/98 rate=0.632653061 zeros=0 polarity=-1 mode=section expr=1*1 + -2*U^1 + -3*U^3 + -2*V + -1*U^1V
+  good=62/98 rate=0.632653061 zeros=0 polarity=1 mode=section expr=1*1 + 3*U^1 + 1*U^3 + 1*V + -2*U^1V + 2*U^2V
+  good=62/98 rate=0.632653061 zeros=0 polarity=-1 mode=section expr=1*1 + 2*U^2 + -2*U^3 + -1*V + 3*U^1V + -2*U^2V
+  good=62/98 rate=0.632653061 zeros=0 polarity=1 mode=section expr=-2*1 + 1*U^1 + -2*U^2 + 3*U^3 + 1*V + 2*U^1V + 2*U^2V
+  good=61/98 rate=0.622448980 zeros=0 polarity=-1 mode=product expr=(1*1 + 2*U^1 + -2*U^2 + -3*U^3 + -1*U^1V + 2*U^2V) * (-2*U^1 + 1*U^2 + -3*V + 2*U^1V)
+  good=61/98 rate=0.622448980 zeros=0 polarity=-1 mode=section expr=-2*1 + 3*U^1 + 3*U^2 + -3*U^3 + -3*U^1V + -3*U^2V
+  good=60/98 rate=0.612244898 zeros=0 polarity=-1 mode=product expr=(1*U^1 + -2*U^2 + -1*U^3 + 1*V + -2*U^1V + -1*U^2V) * (-2*1 + -1*U^1 + 2*U^3 + 1*V)
+  good=60/98 rate=0.612244898 zeros=0 polarity=-1 mode=product expr=(-1*1 + 2*U^1 + 1*U^2 + -1*U^3 + 2*U^1V + -3*U^2V) * (-1*U^1 + -1*U^2 + 3*U^3 + -1*V + -2*U^1V)
+q1607_eprime_d3_pole7_heldout_eval:
+  good=62/98 rate=0.632653061 zeros=0 polarity=-1 mode=section expr=1*1 + -2*U^1 + -3*U^3 + -2*V + -1*U^1V
+  good=62/98 rate=0.632653061 zeros=0 polarity=1 mode=section expr=1*1 + 3*U^1 + 1*U^3 + 1*V + -2*U^1V + 2*U^2V
+  good=62/98 rate=0.632653061 zeros=0 polarity=-1 mode=section expr=1*1 + 2*U^2 + -2*U^3 + -1*V + 3*U^1V + -2*U^2V
+  good=62/98 rate=0.632653061 zeros=0 polarity=1 mode=section expr=-2*1 + 1*U^1 + -2*U^2 + 3*U^3 + 1*V + 2*U^1V + 2*U^2V
+  good=61/98 rate=0.622448980 zeros=0 polarity=-1 mode=product expr=(1*1 + 2*U^1 + -2*U^2 + -3*U^3 + -1*U^1V + 2*U^2V) * (-2*U^1 + 1*U^2 + -3*V + 2*U^1V)
+  good=61/98 rate=0.622448980 zeros=0 polarity=-1 mode=section expr=-2*1 + 3*U^1 + 3*U^2 + -3*U^3 + -3*U^1V + -3*U^2V
+  good=60/98 rate=0.612244898 zeros=0 polarity=-1 mode=product expr=(1*U^1 + -2*U^2 + -1*U^3 + 1*V + -2*U^1V + -1*U^2V) * (-2*1 + -1*U^1 + 2*U^3 + 1*V)
+  good=60/98 rate=0.612244898 zeros=0 polarity=-1 mode=product expr=(-1*1 + 2*U^1 + 1*U^2 + -1*U^3 + 2*U^1V + -3*U^2V) * (-1*U^1 + -1*U^2 + 3*U^3 + -1*V + -2*U^1V)
+q1607_eprime_d3_pole9_train:
+  basis_dim = 9
+  best_good = 64
+  best_polarity = 1
+  best_zeros = 0
+  coeff_bound = 3
+  exact_candidates = 0
+  pole_bound = 9
+  rows = 98
+  trials = 500
+q1607_eprime_d3_pole9_train_best:
+  good=64/98 rate=0.653061224 zeros=0 polarity=1 mode=section expr=1*1 + 1*U^1 + 1*U^3 + 1*U^4 + -3*V + 2*U^1V + -1*U^2V + -1*U^3V
+  good=64/98 rate=0.653061224 zeros=0 polarity=1 mode=section expr=-1*U^1 + 3*U^2 + -2*U^3 + 2*U^4 + -2*V + -2*U^1V + -3*U^2V + -1*U^3V
+  good=63/98 rate=0.642857143 zeros=0 polarity=-1 mode=section expr=3*1 + 1*U^1 + -1*U^3 + -1*U^4 + -3*V + -1*U^1V + 3*U^2V + -2*U^3V
+  good=63/98 rate=0.642857143 zeros=0 polarity=1 mode=product expr=(2*1 + -1*U^1 + -2*U^2 + 3*U^3 + 2*U^4 + 3*V + -3*U^1V + 1*U^2V + 1*U^3V) * (1*1 + -2*U^1 + -1*U^2 + 1*U^3 + -1*V + -3*U^1V + 1*U^2V + -2*U^3V)
+  good=62/98 rate=0.632653061 zeros=0 polarity=-1 mode=section expr=-1*1 + 1*U^1 + -2*U^2 + 2*U^3 + 1*U^4 + 3*U^1V + -3*U^2V + 1*U^3V
+  good=61/98 rate=0.622448980 zeros=0 polarity=1 mode=product expr=(-2*1 + -1*U^1 + -1*U^2 + -2*U^3 + 1*U^4 + 2*V + -3*U^1V + 1*U^2V + -1*U^3V) * (1*1 + 3*U^1 + 2*U^3 + -3*U^4 + 2*V + 3*U^1V + 2*U^2V + -1*U^3V)
+  good=61/98 rate=0.622448980 zeros=0 polarity=1 mode=product expr=(3*1 + 3*U^1 + 2*U^2 + -3*U^3 + -1*U^4 + 1*V + -1*U^1V + -1*U^2V + 2*U^3V) * (-1*U^1 + 2*U^3 + -2*U^4 + 2*V + -2*U^1V + 1*U^2V)
+  good=61/98 rate=0.622448980 zeros=0 polarity=-1 mode=section expr=-3*U^1 + 3*U^2 + -2*U^3 + -2*U^4 + -3*V + 2*U^1V + 2*U^2V + -1*U^3V
+q1607_eprime_d3_pole9_heldout_eval:
+  good=64/98 rate=0.653061224 zeros=0 polarity=1 mode=section expr=1*1 + 1*U^1 + 1*U^3 + 1*U^4 + -3*V + 2*U^1V + -1*U^2V + -1*U^3V
+  good=64/98 rate=0.653061224 zeros=0 polarity=1 mode=section expr=-1*U^1 + 3*U^2 + -2*U^3 + 2*U^4 + -2*V + -2*U^1V + -3*U^2V + -1*U^3V
+  good=63/98 rate=0.642857143 zeros=0 polarity=-1 mode=section expr=3*1 + 1*U^1 + -1*U^3 + -1*U^4 + -3*V + -1*U^1V + 3*U^2V + -2*U^3V
+  good=63/98 rate=0.642857143 zeros=0 polarity=1 mode=product expr=(2*1 + -1*U^1 + -2*U^2 + 3*U^3 + 2*U^4 + 3*V + -3*U^1V + 1*U^2V + 1*U^3V) * (1*1 + -2*U^1 + -1*U^2 + 1*U^3 + -1*V + -3*U^1V + 1*U^2V + -2*U^3V)
+  good=62/98 rate=0.632653061 zeros=0 polarity=-1 mode=section expr=-1*1 + 1*U^1 + -2*U^2 + 2*U^3 + 1*U^4 + 3*U^1V + -3*U^2V + 1*U^3V
+  good=61/98 rate=0.622448980 zeros=0 polarity=1 mode=product expr=(-2*1 + -1*U^1 + -1*U^2 + -2*U^3 + 1*U^4 + 2*V + -3*U^1V + 1*U^2V + -1*U^3V) * (1*1 + 3*U^1 + 2*U^3 + -3*U^4 + 2*V + 3*U^1V + 2*U^2V + -1*U^3V)
+  good=61/98 rate=0.622448980 zeros=0 polarity=1 mode=product expr=(3*1 + 3*U^1 + 2*U^2 + -3*U^3 + -1*U^4 + 1*V + -1*U^1V + -1*U^2V + 2*U^3V) * (-1*U^1 + 2*U^3 + -2*U^4 + 2*V + -2*U^1V + 1*U^2V)
+  good=61/98 rate=0.622448980 zeros=0 polarity=-1 mode=section expr=-3*U^1 + 3*U^2 + -2*U^3 + -2*U^4 + -3*V + 2*U^1V + 2*U^2V + -1*U^3V
+q1607_eprime_d4:
+  rows = 56
+  heldout_rows = 56
+q1607_eprime_d4_pole5_train:
+  basis_dim = 5
+  best_good = 41
+  best_polarity = -1
+  best_zeros = 0
+  coeff_bound = 3
+  exact_candidates = 0
+  pole_bound = 5
+  rows = 56
+  trials = 500
+q1607_eprime_d4_pole5_train_best:
+  good=41/56 rate=0.732142857 zeros=0 polarity=-1 mode=product expr=(-1*1 + -1*U^1 + 2*U^2 + 3*V + 1*U^1V) * (-2*1 + -3*U^1 + -1*U^2 + -1*U^1V)
+  good=40/56 rate=0.714285714 zeros=0 polarity=1 mode=product expr=(-3*1 + 2*U^1 + -3*U^2 + -3*V + -1*U^1V) * (-3*1 + 1*U^2 + 3*V + 3*U^1V)
+  good=38/56 rate=0.678571429 zeros=0 polarity=1 mode=section expr=-1*1 + 3*U^1 + -1*U^2 + 3*U^1V
+  good=37/56 rate=0.660714286 zeros=0 polarity=1 mode=section expr=2*1 + 3*U^2 + 1*V
+  good=37/56 rate=0.660714286 zeros=0 polarity=1 mode=product expr=(-2*1 + -1*U^1 + -2*U^2 + 1*V) * (3*1 + 3*U^1 + -3*U^2 + 1*V + -1*U^1V)
+  good=37/56 rate=0.660714286 zeros=0 polarity=1 mode=section expr=3*1 + 3*U^1 + 1*V
+  good=37/56 rate=0.660714286 zeros=0 polarity=1 mode=section expr=-3*U^1 + -1*U^2 + -2*V + 3*U^1V
+  good=37/56 rate=0.660714286 zeros=0 polarity=1 mode=product expr=(3*1 + 1*U^2 + 3*V + -2*U^1V) * (-3*1 + 2*U^1 + 2*V + -3*U^1V)
+q1607_eprime_d4_pole5_heldout_eval:
+  good=41/56 rate=0.732142857 zeros=0 polarity=-1 mode=product expr=(-1*1 + -1*U^1 + 2*U^2 + 3*V + 1*U^1V) * (-2*1 + -3*U^1 + -1*U^2 + -1*U^1V)
+  good=40/56 rate=0.714285714 zeros=0 polarity=1 mode=product expr=(-3*1 + 2*U^1 + -3*U^2 + -3*V + -1*U^1V) * (-3*1 + 1*U^2 + 3*V + 3*U^1V)
+  good=38/56 rate=0.678571429 zeros=0 polarity=1 mode=section expr=-1*1 + 3*U^1 + -1*U^2 + 3*U^1V
+  good=37/56 rate=0.660714286 zeros=0 polarity=1 mode=section expr=2*1 + 3*U^2 + 1*V
+  good=37/56 rate=0.660714286 zeros=0 polarity=1 mode=product expr=(-2*1 + -1*U^1 + -2*U^2 + 1*V) * (3*1 + 3*U^1 + -3*U^2 + 1*V + -1*U^1V)
+  good=37/56 rate=0.660714286 zeros=0 polarity=1 mode=section expr=3*1 + 3*U^1 + 1*V
+  good=37/56 rate=0.660714286 zeros=0 polarity=1 mode=section expr=-3*U^1 + -1*U^2 + -2*V + 3*U^1V
+  good=37/56 rate=0.660714286 zeros=0 polarity=1 mode=product expr=(3*1 + 1*U^2 + 3*V + -2*U^1V) * (-3*1 + 2*U^1 + 2*V + -3*U^1V)
+q1607_eprime_d4_pole7_train:
+  basis_dim = 7
+  best_good = 39
+  best_polarity = 1
+  best_zeros = 0
+  coeff_bound = 3
+  exact_candidates = 0
+  pole_bound = 7
+  rows = 56
+  trials = 500
+q1607_eprime_d4_pole7_train_best:
+  good=39/56 rate=0.696428571 zeros=0 polarity=1 mode=product expr=(-2*1 + -1*U^1 + 2*U^2 + -3*U^3 + -2*V + -1*U^1V + 2*U^2V) * (2*1 + -3*U^1 + 2*U^2 + 1*U^3 + 3*V + -3*U^1V + -1*U^2V)
+  good=38/56 rate=0.678571429 zeros=0 polarity=1 mode=section expr=1*1 + 1*U^1 + -1*U^3 + 1*V + -2*U^1V + -3*U^2V
+  good=38/56 rate=0.678571429 zeros=0 polarity=-1 mode=product expr=(2*U^2 + 2*U^3 + 2*V + 2*U^1V + -1*U^2V) * (3*U^1 + -2*U^3 + -1*V + -3*U^1V + 2*U^2V)
+  good=38/56 rate=0.678571429 zeros=0 polarity=1 mode=section expr=2*1 + -1*U^1 + -3*U^3 + 2*V + 2*U^1V + 2*U^2V
+  good=38/56 rate=0.678571429 zeros=0 polarity=1 mode=product expr=(-3*1 + -2*U^1 + -1*U^2 + 3*V + -2*U^1V + -1*U^2V) * (-1*1 + 1*U^1 + -1*U^2 + -2*U^3 + -1*V + 3*U^1V + -3*U^2V)
+  good=38/56 rate=0.678571429 zeros=0 polarity=-1 mode=section expr=-3*1 + -3*U^1 + -1*U^2 + 3*V + -3*U^1V + -1*U^2V
+  good=38/56 rate=0.678571429 zeros=1 polarity=-1 mode=section expr=1*1 + 3*U^1 + 2*U^2 + -1*U^3 + -1*U^1V
+  good=37/56 rate=0.660714286 zeros=0 polarity=1 mode=section expr=1*1 + 1*U^1 + -1*U^2 + 1*U^3 + 3*V + 1*U^1V + -3*U^2V
+q1607_eprime_d4_pole7_heldout_eval:
+  good=39/56 rate=0.696428571 zeros=0 polarity=1 mode=product expr=(-2*1 + -1*U^1 + 2*U^2 + -3*U^3 + -2*V + -1*U^1V + 2*U^2V) * (2*1 + -3*U^1 + 2*U^2 + 1*U^3 + 3*V + -3*U^1V + -1*U^2V)
+  good=38/56 rate=0.678571429 zeros=0 polarity=1 mode=section expr=1*1 + 1*U^1 + -1*U^3 + 1*V + -2*U^1V + -3*U^2V
+  good=38/56 rate=0.678571429 zeros=0 polarity=-1 mode=product expr=(2*U^2 + 2*U^3 + 2*V + 2*U^1V + -1*U^2V) * (3*U^1 + -2*U^3 + -1*V + -3*U^1V + 2*U^2V)
+  good=38/56 rate=0.678571429 zeros=0 polarity=1 mode=section expr=2*1 + -1*U^1 + -3*U^3 + 2*V + 2*U^1V + 2*U^2V
+  good=38/56 rate=0.678571429 zeros=0 polarity=1 mode=product expr=(-3*1 + -2*U^1 + -1*U^2 + 3*V + -2*U^1V + -1*U^2V) * (-1*1 + 1*U^1 + -1*U^2 + -2*U^3 + -1*V + 3*U^1V + -3*U^2V)
+  good=38/56 rate=0.678571429 zeros=0 polarity=-1 mode=section expr=-3*1 + -3*U^1 + -1*U^2 + 3*V + -3*U^1V + -1*U^2V
+  good=38/56 rate=0.678571429 zeros=1 polarity=-1 mode=section expr=1*1 + 3*U^1 + 2*U^2 + -1*U^3 + -1*U^1V
+  good=37/56 rate=0.660714286 zeros=0 polarity=1 mode=section expr=1*1 + 1*U^1 + -1*U^2 + 1*U^3 + 3*V + 1*U^1V + -3*U^2V
+q1607_eprime_d4_pole9_train:
+  basis_dim = 9
+  best_good = 40
+  best_polarity = -1
+  best_zeros = 0
+  coeff_bound = 3
+  exact_candidates = 0
+  pole_bound = 9
+  rows = 56
+  trials = 500
+q1607_eprime_d4_pole9_train_best:
+  good=40/56 rate=0.714285714 zeros=0 polarity=-1 mode=product expr=(2*1 + -3*U^1 + -2*U^3 + 2*U^4 + 1*V + 1*U^1V + 3*U^2V + -3*U^3V) * (-1*1 + -2*U^1 + -2*U^2 + -1*U^3 + 1*U^4 + -2*V + -2*U^1V + 3*U^3V)
+  good=39/56 rate=0.696428571 zeros=0 polarity=1 mode=product expr=(2*1 + 1*U^1 + 2*U^3 + -3*U^4 + -3*V + 2*U^1V + -2*U^2V) * (-2*1 + -2*U^1 + -1*U^2 + -3*U^3 + 1*U^4 + -3*V + -3*U^1V + -2*U^2V + -3*U^3V)
+  good=38/56 rate=0.678571429 zeros=0 polarity=-1 mode=section expr=-2*1 + -2*U^3 + -2*U^4 + -1*V + 3*U^1V + -2*U^2V + 1*U^3V
+  good=38/56 rate=0.678571429 zeros=0 polarity=-1 mode=section expr=2*1 + -1*U^1 + 2*U^2 + 1*U^3 + -3*U^4 + 2*V + -2*U^1V + 1*U^2V + -3*U^3V
+  good=37/56 rate=0.660714286 zeros=0 polarity=-1 mode=product expr=(-1*1 + 3*U^2 + 1*U^3 + -1*V + 2*U^1V + -3*U^2V + -1*U^3V) * (-3*1 + 3*U^1 + -3*U^2 + -1*U^4 + 2*V + -1*U^1V + -3*U^2V + 1*U^3V)
+  good=37/56 rate=0.660714286 zeros=0 polarity=1 mode=section expr=-3*1 + -3*U^1 + -2*U^2 + -1*U^3 + -2*U^4 + 1*U^1V + -1*U^2V + -3*U^3V
+  good=37/56 rate=0.660714286 zeros=0 polarity=1 mode=product expr=(-3*1 + 3*U^1 + 1*U^2 + -2*U^3 + -2*U^4 + -1*V + 3*U^1V + -1*U^2V + 2*U^3V) * (-2*1 + -3*U^1 + -3*U^2 + 2*U^3 + 3*U^4 + -3*V + 1*U^1V + -3*U^2V + -2*U^3V)
+  good=37/56 rate=0.660714286 zeros=0 polarity=-1 mode=product expr=(-1*1 + -3*U^1 + -2*U^2 + 2*U^3 + 3*U^4 + -2*V + -1*U^1V + -3*U^2V + -2*U^3V) * (3*1 + -3*U^1 + 2*U^2 + -3*U^3 + 2*U^4 + -2*V + 2*U^2V + 1*U^3V)
+q1607_eprime_d4_pole9_heldout_eval:
+  good=40/56 rate=0.714285714 zeros=0 polarity=-1 mode=product expr=(2*1 + -3*U^1 + -2*U^3 + 2*U^4 + 1*V + 1*U^1V + 3*U^2V + -3*U^3V) * (-1*1 + -2*U^1 + -2*U^2 + -1*U^3 + 1*U^4 + -2*V + -2*U^1V + 3*U^3V)
+  good=39/56 rate=0.696428571 zeros=0 polarity=1 mode=product expr=(2*1 + 1*U^1 + 2*U^3 + -3*U^4 + -3*V + 2*U^1V + -2*U^2V) * (-2*1 + -2*U^1 + -1*U^2 + -3*U^3 + 1*U^4 + -3*V + -3*U^1V + -2*U^2V + -3*U^3V)
+  good=38/56 rate=0.678571429 zeros=0 polarity=-1 mode=section expr=-2*1 + -2*U^3 + -2*U^4 + -1*V + 3*U^1V + -2*U^2V + 1*U^3V
+  good=38/56 rate=0.678571429 zeros=0 polarity=-1 mode=section expr=2*1 + -1*U^1 + 2*U^2 + 1*U^3 + -3*U^4 + 2*V + -2*U^1V + 1*U^2V + -3*U^3V
+  good=37/56 rate=0.660714286 zeros=0 polarity=-1 mode=product expr=(-1*1 + 3*U^2 + 1*U^3 + -1*V + 2*U^1V + -3*U^2V + -1*U^3V) * (-3*1 + 3*U^1 + -3*U^2 + -1*U^4 + 2*V + -1*U^1V + -3*U^2V + 1*U^3V)
+  good=37/56 rate=0.660714286 zeros=0 polarity=1 mode=section expr=-3*1 + -3*U^1 + -2*U^2 + -1*U^3 + -2*U^4 + 1*U^1V + -1*U^2V + -3*U^3V
+  good=37/56 rate=0.660714286 zeros=0 polarity=1 mode=product expr=(-3*1 + 3*U^1 + 1*U^2 + -2*U^3 + -2*U^4 + -1*V + 3*U^1V + -1*U^2V + 2*U^3V) * (-2*1 + -3*U^1 + -3*U^2 + 2*U^3 + 3*U^4 + -3*V + 1*U^1V + -3*U^2V + -2*U^3V)
+  good=37/56 rate=0.660714286 zeros=0 polarity=-1 mode=product expr=(-1*1 + -3*U^1 + -2*U^2 + 2*U^3 + 3*U^4 + -2*V + -1*U^1V + -3*U^2V + -2*U^3V) * (3*1 + -3*U^1 + 2*U^2 + -3*U^3 + 2*U^4 + -2*V + 2*U^2V + 1*U^3V)
+p27_eprime_lowpole_random_probe_rows=1/1

@@ -1,0 +1,64 @@
+p27_tline_component_descent_gate
+p=1000000000000000000000000103
+sample:
+  raw_draws=32768
+  nonsplit_y=16432
+  k_points=32864
+  component_rows=16096
+  component_unusable=16768
+  quotient_relation_fail=0
+b_flip_ratios:
+  component=x_pref pairs=8048 invariant=8048 anti_invariant=0 matches_chi_a=3982 anti_chi_a=4066 ratio_+1=8048 ratio_-1=0
+  component=y pairs=8048 invariant=8048 anti_invariant=0 matches_chi_a=3982 anti_chi_a=4066 ratio_+1=8048 ratio_-1=0
+  component=pref pairs=8048 invariant=8048 anti_invariant=0 matches_chi_a=3982 anti_chi_a=4066 ratio_+1=8048 ratio_-1=0
+  component=h pairs=8048 invariant=8048 anti_invariant=0 matches_chi_a=3982 anti_chi_a=4066 ratio_+1=8048 ratio_-1=0
+  component=vq pairs=8048 invariant=3982 anti_invariant=4066 matches_chi_a=8048 anti_chi_a=0 ratio_+1=3982 ratio_-1=4066
+  component=h_vq pairs=8048 invariant=3982 anti_invariant=4066 matches_chi_a=8048 anti_chi_a=0 ratio_+1=3982 ratio_-1=4066
+  component=pref_h pairs=8048 invariant=8048 anti_invariant=0 matches_chi_a=3982 anti_chi_a=4066 ratio_+1=8048 ratio_-1=0
+  component=pref_vq pairs=8048 invariant=3982 anti_invariant=4066 matches_chi_a=8048 anti_chi_a=0 ratio_+1=3982 ratio_-1=4066
+  component=D pairs=8048 invariant=3982 anti_invariant=4066 matches_chi_a=8048 anti_chi_a=0 ratio_+1=3982 ratio_-1=4066
+  component=T pairs=8048 invariant=3982 anti_invariant=4066 matches_chi_a=8048 anti_chi_a=0 ratio_+1=3982 ratio_-1=4066
+  component=line_norm pairs=8048 invariant=3982 anti_invariant=4066 matches_chi_a=8048 anti_chi_a=0 ratio_+1=3982 ratio_-1=4066
+  component=T_line pairs=8048 invariant=8048 anti_invariant=0 matches_chi_a=3982 anti_chi_a=4066 ratio_+1=8048 ratio_-1=0
+line_descent:
+  component=x_pref mode=raw line_rows=8048 line_+1=4010 line_-1=4038 exact_plus=0 exact_minus=0 best_lift=1.010891650 good=2049 total=4010
+  component=x_pref mode=a line_rows=8048 line_+1=4018 line_-1=4030 exact_plus=0 exact_minus=0 best_lift=1.009802099 good=2057 total=4030
+  component=y mode=raw line_rows=8048 line_+1=4145 line_-1=3903 exact_plus=0 exact_minus=0 best_lift=1.024741992 good=2147 total=4145
+  component=y mode=a line_rows=8048 line_+1=3995 line_-1=4053 exact_plus=0 exact_minus=0 best_lift=1.006024162 good=2061 total=4053
+  component=pref mode=raw line_rows=8048 line_+1=4005 line_-1=4043 exact_plus=0 exact_minus=0 best_lift=1.010959131 good=2066 total=4043
+  component=pref mode=a line_rows=8048 line_+1=4053 line_-1=3995 exact_plus=0 exact_minus=0 best_lift=1.007259074 good=2034 total=3995
+  component=h mode=raw line_rows=8048 line_+1=4035 line_-1=4013 exact_plus=0 exact_minus=0 best_lift=1.003157475 good=2046 total=4035
+  component=h mode=a line_rows=8048 line_+1=3991 line_-1=4057 exact_plus=0 exact_minus=0 best_lift=1.004302946 good=2026 total=3991
+  component=vq mode=p26line line_rows=8048 line_+1=4074 line_-1=3974 exact_plus=0 exact_minus=0 best_lift=1.007151377 good=2074 total=4074
+  component=h_vq mode=p26line line_rows=8048 line_+1=3979 line_-1=4069 exact_plus=0 exact_minus=0 best_lift=1.004499329 good=2066 total=4069
+  component=pref_h mode=raw line_rows=8048 line_+1=4054 line_-1=3994 exact_plus=0 exact_minus=0 best_lift=1.012120057 good=2074 total=4054
+  component=pref_h mode=a line_rows=8048 line_+1=4092 line_-1=3956 exact_plus=0 exact_minus=0 best_lift=1.008187407 good=2016 total=3956
+  component=pref_vq mode=p26line line_rows=8048 line_+1=4037 line_-1=4011 exact_plus=0 exact_minus=0 best_lift=1.002660494 good=2046 total=4037
+  component=D mode=p26line line_rows=8048 line_+1=4129 line_-1=3919 exact_plus=0 exact_minus=0 best_lift=1.028712898 good=2147 total=4129
+  component=T mode=p26line line_rows=8048 line_+1=4068 line_-1=3980 exact_plus=1 exact_minus=0 best_lift=1.978367748 good=4068 total=4068
+  component=line_norm mode=p26line line_rows=8048 line_+1=8048 line_-1=0 exact_plus=0 exact_minus=0 best_lift=1.000000000 good=4068 total=8048
+  component=T_line mode=raw line_rows=8048 line_+1=4068 line_-1=3980 exact_plus=1 exact_minus=0 best_lift=1.978367748 good=4068 total=4068
+  component=T_line mode=a line_rows=8048 line_+1=3986 line_-1=4062 exact_plus=0 exact_minus=0 best_lift=1.010126713 good=2074 total=4062
+top_against_T_line:
+  rank=1 component=T mode=p26line inconsistent=0 line_rows=8048 exact_plus=1 exact_minus=0 best_lift=1.978367748 good=4068 total=4068
+  rank=2 component=T_line mode=raw inconsistent=0 line_rows=8048 exact_plus=1 exact_minus=0 best_lift=1.978367748 good=4068 total=4068
+  rank=3 component=T mode=b inconsistent=3982 line_rows=8048 exact_plus=0 exact_minus=0 best_lift=1.498251673 good=3105 total=4100
+  rank=4 component=T mode=ab inconsistent=3982 line_rows=8048 exact_plus=0 exact_minus=0 best_lift=1.490894008 good=3037 total=4030
+  rank=5 component=T mode=raw inconsistent=4066 line_rows=8048 exact_plus=0 exact_minus=0 best_lift=1.490645144 good=3038 total=4032
+  rank=6 component=T_line mode=p26line inconsistent=4066 line_rows=8048 exact_plus=0 exact_minus=0 best_lift=1.490645144 good=3038 total=4032
+  rank=7 component=T mode=a inconsistent=4066 line_rows=8048 exact_plus=0 exact_minus=0 best_lift=1.487464960 good=3024 total=4022
+  rank=8 component=y mode=b inconsistent=8048 line_rows=8048 exact_plus=0 exact_minus=0 best_lift=1.038952575 good=2098 total=3995
+  rank=9 component=y mode=p26line inconsistent=4066 line_rows=8048 exact_plus=0 exact_minus=0 best_lift=1.035961324 good=2115 total=4039
+  rank=10 component=D mode=p26line inconsistent=0 line_rows=8048 exact_plus=0 exact_minus=0 best_lift=1.028712898 good=2147 total=4129
+  rank=11 component=y mode=raw inconsistent=0 line_rows=8048 exact_plus=0 exact_minus=0 best_lift=1.024741992 good=2147 total=4145
+  rank=12 component=pref mode=p26line inconsistent=4066 line_rows=8048 exact_plus=0 exact_minus=0 best_lift=1.023310842 good=2054 total=3971
+  rank=13 component=x_pref mode=b inconsistent=8048 line_rows=8048 exact_plus=0 exact_minus=0 best_lift=1.022483133 good=2088 total=4040
+  rank=14 component=vq mode=raw inconsistent=4066 line_rows=8048 exact_plus=0 exact_minus=0 best_lift=1.020462416 good=2088 total=4048
+  rank=15 component=D mode=a inconsistent=4066 line_rows=8048 exact_plus=0 exact_minus=0 best_lift=1.019431852 good=2039 total=3957
+  rank=16 component=D mode=b inconsistent=3982 line_rows=8048 exact_plus=0 exact_minus=0 best_lift=1.018101789 good=2130 total=4139
+  rank=17 component=D mode=ab inconsistent=3982 line_rows=8048 exact_plus=0 exact_minus=0 best_lift=1.017838124 good=2078 total=4039
+  rank=18 component=vq mode=ab inconsistent=3982 line_rows=8048 exact_plus=0 exact_minus=0 best_lift=1.017631644 good=2039 total=3964
+  rank=19 component=pref mode=ab inconsistent=8048 line_rows=8048 exact_plus=0 exact_minus=0 best_lift=1.014919145 good=2031 total=3959
+  rank=20 component=y mode=ab inconsistent=8048 line_rows=8048 exact_plus=0 exact_minus=0 best_lift=1.014217092 good=2046 total=3991
+target_line_rows=8048
+p27_tline_component_descent_gate_rows=1/1

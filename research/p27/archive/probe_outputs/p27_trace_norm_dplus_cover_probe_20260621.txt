@@ -1,0 +1,41 @@
+p27_trace_norm_dplus_cover_probe
+p=1000000000000000000000000103
+formula:
+  t=y-1
+  B=t^2+1
+  C=t^2+2t-1
+  z^2=t*C*B
+  eps_h=chi(t)
+  eps_v=chi((t+1)*C)
+  hcore=C*B+eps_h*2*t*z
+  vcore=2*C*t^2+eps_v*z*w
+  core=(1-t^2)*B*C*(t+1)*vcore*hcore
+  D=-chi(core)
+  D_plus iff -core is square, since p27 is 3 mod 4
+sample:
+  raw_draws=32768
+  nonsplit_y=16432
+  k_points=32864
+  component_unusable=16768
+  core_unusable=0
+  usable_rows=16096
+  D_+1=8128
+  D_-1=7968
+  core_+1=7968
+  core_-1=8128
+  dplus_cover_square=8128
+  dplus_cover_nonsquare=7968
+  dplus_cover_zero=0
+  D_core_mismatch=0
+  D_Tline_relation_mismatch=0
+  dplus_cover_mismatch=0
+orientation_counts:
+  orientation_+1_+1=3936
+  orientation_+1_-1=4124
+  orientation_-1_+1=3982
+  orientation_-1_-1=4054
+verdict:
+  D_core_exact=1
+  D_Tline_relation_exact=1
+  dplus_cover_exact=1
+p27_trace_norm_dplus_cover_probe_rows=1/1

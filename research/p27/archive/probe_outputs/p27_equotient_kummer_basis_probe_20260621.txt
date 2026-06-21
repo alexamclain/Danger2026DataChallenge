@@ -1,0 +1,387 @@
+p27 E-quotient Kummer/theta basis probe
+basis = X, W, X-1, X+1, X2+1, X2+2X-1, X2-2X-1, S, S_conj, mt_linear, m0, mt_coeff, prefactor, L
+p27_train_quotient_stats:
+  d3_minus_E_points = 2534
+  d3_missing_on_E_orbit = 0
+  d3_not_descended_to_E = 0
+  d3_plus_E_points = 2466
+  d3_quotient_rows = 5000
+  d4_minus_E_points_after_d3 = 1190
+  d4_missing_on_E_orbit = 0
+  d4_not_descended_to_E = 0
+  d4_plus_E_points_after_d3 = 1276
+  d4_quotient_rows_after_d3 = 2466
+  orbit_size_4 = 5000
+  oriented_candidates = 20000
+  quotient_E_points = 5000
+  sample_candidate_invalid_not_nonsplit = 9808
+  sample_compact_not_target = 9728
+  sample_no_t = 9900
+  sample_no_w = 19583
+  sample_pair_incomplete = 4904
+  sample_x_draws = 39299
+  sampled_pairs = 5000
+p27_train:
+  p = 1000000000000000000000000103
+  d3_rows = 5000
+  d4_rows_after_d3 = 2466
+p27_train_d3_mask_stats:
+  input_rows = 5000
+  usable_rows = 5000
+p27_train_d4_mask_stats:
+  input_rows = 2466
+  usable_rows = 2466
+p27_train_d3_basis_screen:
+  basis_size = 14
+  best_good = 2572
+  best_polarity = -1
+  best_weight = 1
+  combos_tested = 16384
+  exact_combos = 0
+  rows = 5000
+p27_train_d3_best_combos:
+  good=2572/5000 rate=0.514400000 weight=1 polarity=-1 combo=mt_coeff
+  good=2572/5000 rate=0.514400000 weight=2 polarity=-1 combo=X+1 * mt_linear
+  good=2572/5000 rate=0.514400000 weight=3 polarity=-1 combo=X * mt_coeff * L
+  good=2572/5000 rate=0.514400000 weight=3 polarity=-1 combo=X-1 * mt_linear * L
+  good=2572/5000 rate=0.514400000 weight=3 polarity=-1 combo=S * S_conj * mt_coeff
+  good=2572/5000 rate=0.514400000 weight=3 polarity=-1 combo=X2+2X-1 * X2-2X-1 * mt_coeff
+  good=2572/5000 rate=0.514400000 weight=3 polarity=-1 combo=W * X+1 * m0
+  good=2572/5000 rate=0.514400000 weight=3 polarity=-1 combo=X * X-1 * mt_linear
+  good=2572/5000 rate=0.514400000 weight=3 polarity=-1 combo=W * X-1 * S_conj
+  good=2572/5000 rate=0.514400000 weight=3 polarity=-1 combo=W * X-1 * S
+  good=2572/5000 rate=0.514400000 weight=4 polarity=-1 combo=S_conj * m0 * mt_coeff * L
+  good=2572/5000 rate=0.514400000 weight=4 polarity=-1 combo=S * m0 * mt_coeff * L
+p27_train_d4_basis_screen:
+  basis_size = 14
+  best_good = 1312
+  best_polarity = 1
+  best_weight = 1
+  combos_tested = 16384
+  exact_combos = 0
+  rows = 2466
+p27_train_d4_best_combos:
+  good=1312/2466 rate=0.532035685 weight=1 polarity=1 combo=X2-2X-1
+  good=1312/2466 rate=0.532035685 weight=1 polarity=1 combo=X2+2X-1
+  good=1312/2466 rate=0.532035685 weight=2 polarity=1 combo=X2+1 * L
+  good=1312/2466 rate=0.532035685 weight=2 polarity=1 combo=W * prefactor
+  good=1312/2466 rate=0.532035685 weight=2 polarity=1 combo=X2+1 * mt_coeff
+  good=1312/2466 rate=0.532035685 weight=2 polarity=1 combo=X * X2+1
+  good=1312/2466 rate=0.532035685 weight=3 polarity=1 combo=X2-2X-1 * mt_coeff * L
+  good=1312/2466 rate=0.532035685 weight=3 polarity=1 combo=X2+2X-1 * mt_coeff * L
+  good=1312/2466 rate=0.532035685 weight=3 polarity=1 combo=X * X2-2X-1 * L
+  good=1312/2466 rate=0.532035685 weight=3 polarity=1 combo=X * X2+2X-1 * L
+  good=1312/2466 rate=0.532035685 weight=3 polarity=1 combo=mt_linear * m0 * prefactor
+  good=1312/2466 rate=0.532035685 weight=3 polarity=1 combo=X-1 * m0 * prefactor
+p27_heldout_quotient_stats:
+  d3_minus_E_points = 2478
+  d3_missing_on_E_orbit = 0
+  d3_not_descended_to_E = 0
+  d3_plus_E_points = 2522
+  d3_quotient_rows = 5000
+  d4_minus_E_points_after_d3 = 1288
+  d4_missing_on_E_orbit = 0
+  d4_not_descended_to_E = 0
+  d4_plus_E_points_after_d3 = 1234
+  d4_quotient_rows_after_d3 = 2522
+  orbit_size_4 = 5000
+  oriented_candidates = 20000
+  quotient_E_points = 5000
+  sample_candidate_invalid_not_nonsplit = 9798
+  sample_compact_not_target = 10137
+  sample_no_t = 10143
+  sample_no_w = 20412
+  sample_pair_incomplete = 4899
+  sample_x_draws = 40573
+  sampled_pairs = 5000
+p27_heldout:
+  p = 1000000000000000000000000103
+  d3_rows = 5000
+  d4_rows_after_d3 = 2522
+p27_heldout_d3_mask_stats:
+  input_rows = 5000
+  usable_rows = 5000
+p27_heldout_d4_mask_stats:
+  input_rows = 2522
+  usable_rows = 2522
+p27_heldout_d3_basis_screen:
+  basis_size = 14
+  best_good = 2640
+  best_polarity = 1
+  best_weight = 2
+  combos_tested = 16384
+  exact_combos = 0
+  rows = 5000
+p27_heldout_d3_best_combos:
+  good=2640/5000 rate=0.528000000 weight=2 polarity=1 combo=m0 * prefactor
+  good=2640/5000 rate=0.528000000 weight=2 polarity=1 combo=X2-2X-1 * mt_linear
+  good=2640/5000 rate=0.528000000 weight=2 polarity=1 combo=X2+2X-1 * mt_linear
+  good=2640/5000 rate=0.528000000 weight=3 polarity=1 combo=S_conj * prefactor * L
+  good=2640/5000 rate=0.528000000 weight=3 polarity=1 combo=S * prefactor * L
+  good=2640/5000 rate=0.528000000 weight=3 polarity=1 combo=X2+1 * mt_linear * L
+  good=2640/5000 rate=0.528000000 weight=3 polarity=1 combo=W * mt_linear * prefactor
+  good=2640/5000 rate=0.528000000 weight=3 polarity=1 combo=X * S_conj * prefactor
+  good=2640/5000 rate=0.528000000 weight=3 polarity=1 combo=X * S * prefactor
+  good=2640/5000 rate=0.528000000 weight=3 polarity=1 combo=X+1 * X2-2X-1 * mt_coeff
+  good=2640/5000 rate=0.528000000 weight=3 polarity=1 combo=X+1 * X2+2X-1 * mt_coeff
+  good=2640/5000 rate=0.528000000 weight=3 polarity=1 combo=X-1 * X2+1 * mt_coeff
+p27_heldout_d4_basis_screen:
+  basis_size = 14
+  best_good = 1332
+  best_polarity = -1
+  best_weight = 1
+  combos_tested = 16384
+  exact_combos = 0
+  rows = 2522
+p27_heldout_d4_best_combos:
+  good=1332/2522 rate=0.528152260 weight=1 polarity=-1 combo=L
+  good=1332/2522 rate=0.528152260 weight=1 polarity=-1 combo=X
+  good=1332/2522 rate=0.528152260 weight=2 polarity=-1 combo=S_conj * m0
+  good=1332/2522 rate=0.528152260 weight=2 polarity=-1 combo=S * m0
+  good=1332/2522 rate=0.528152260 weight=2 polarity=-1 combo=X2+1 * X2-2X-1
+  good=1332/2522 rate=0.528152260 weight=2 polarity=-1 combo=X2+1 * X2+2X-1
+  good=1332/2522 rate=0.528152260 weight=2 polarity=-1 combo=X-1 * X+1
+  good=1332/2522 rate=0.528152260 weight=3 polarity=-1 combo=S * S_conj * L
+  good=1332/2522 rate=0.528152260 weight=3 polarity=-1 combo=X2+2X-1 * X2-2X-1 * L
+  good=1332/2522 rate=0.528152260 weight=3 polarity=-1 combo=W * X2+1 * prefactor
+  good=1332/2522 rate=0.528152260 weight=3 polarity=-1 combo=X-1 * mt_linear * mt_coeff
+  good=1332/2522 rate=0.528152260 weight=3 polarity=-1 combo=W * S_conj * mt_linear
+p27_train_best_on_heldout:
+  d3_train_best_eval:
+  good=2522/5000 rate=0.504400000 weight=1 polarity=-1 combo=mt_coeff
+  good=2522/5000 rate=0.504400000 weight=2 polarity=-1 combo=X+1 * mt_linear
+  good=2522/5000 rate=0.504400000 weight=3 polarity=-1 combo=X * mt_coeff * L
+  good=2522/5000 rate=0.504400000 weight=3 polarity=-1 combo=X-1 * mt_linear * L
+  good=2522/5000 rate=0.504400000 weight=3 polarity=-1 combo=S * S_conj * mt_coeff
+  good=2522/5000 rate=0.504400000 weight=3 polarity=-1 combo=X2+2X-1 * X2-2X-1 * mt_coeff
+  good=2522/5000 rate=0.504400000 weight=3 polarity=-1 combo=W * X+1 * m0
+  good=2522/5000 rate=0.504400000 weight=3 polarity=-1 combo=X * X-1 * mt_linear
+  good=2522/5000 rate=0.504400000 weight=3 polarity=-1 combo=W * X-1 * S_conj
+  good=2522/5000 rate=0.504400000 weight=3 polarity=-1 combo=W * X-1 * S
+  good=2522/5000 rate=0.504400000 weight=4 polarity=-1 combo=S_conj * m0 * mt_coeff * L
+  good=2522/5000 rate=0.504400000 weight=4 polarity=-1 combo=S * m0 * mt_coeff * L
+  d4_train_best_eval:
+  good=1280/2522 rate=0.507533703 weight=2 polarity=1 combo=X2+1 * mt_coeff
+  good=1280/2522 rate=0.507533703 weight=3 polarity=1 combo=X2-2X-1 * mt_coeff * L
+  good=1280/2522 rate=0.507533703 weight=3 polarity=1 combo=X2+2X-1 * mt_coeff * L
+  good=1280/2522 rate=0.507533703 weight=3 polarity=1 combo=X-1 * m0 * prefactor
+  good=1256/2522 rate=0.498017446 weight=1 polarity=1 combo=X2-2X-1
+  good=1256/2522 rate=0.498017446 weight=1 polarity=1 combo=X2+2X-1
+  good=1256/2522 rate=0.498017446 weight=2 polarity=1 combo=X2+1 * L
+  good=1256/2522 rate=0.498017446 weight=2 polarity=1 combo=W * prefactor
+  good=1256/2522 rate=0.498017446 weight=2 polarity=1 combo=X * X2+1
+  good=1256/2522 rate=0.498017446 weight=3 polarity=1 combo=X * X2-2X-1 * L
+  good=1256/2522 rate=0.498017446 weight=3 polarity=1 combo=X * X2+2X-1 * L
+  good=1256/2522 rate=0.498017446 weight=3 polarity=1 combo=mt_linear * m0 * prefactor
+small_prime_basis_screens:
+q=1087:
+  enum_stats:
+  enum_compact_not_target = 757
+  enum_no_label2_candidate = 312
+  quotient_stats:
+  d3_minus_E_points = 32
+  d3_missing_on_E_orbit = 0
+  d3_not_descended_to_E = 0
+  d3_plus_E_points = 40
+  d3_quotient_rows = 72
+  d4_minus_E_points_after_d3 = 20
+  d4_missing_on_E_orbit = 0
+  d4_not_descended_to_E = 0
+  d4_plus_E_points_after_d3 = 20
+  d4_quotient_rows_after_d3 = 40
+  orbit_size_4 = 72
+  oriented_candidates = 288
+  quotient_E_points = 72
+q1087:
+  p = 1087
+  d3_rows = 72
+  d4_rows_after_d3 = 40
+q1087_d3_mask_stats:
+  input_rows = 72
+  usable_rows = 72
+q1087_d4_mask_stats:
+  input_rows = 40
+  usable_rows = 40
+q1087_d3_basis_screen:
+  basis_size = 14
+  best_good = 54
+  best_polarity = -1
+  best_weight = 1
+  combos_tested = 16384
+  exact_combos = 0
+  rows = 72
+q1087_d3_best_combos:
+  good=54/72 rate=0.750000000 weight=1 polarity=-1 combo=mt_coeff
+  good=54/72 rate=0.750000000 weight=2 polarity=1 combo=S_conj * prefactor
+  good=54/72 rate=0.750000000 weight=2 polarity=1 combo=S * prefactor
+  good=54/72 rate=0.750000000 weight=2 polarity=1 combo=X2+1 * mt_linear
+  good=54/72 rate=0.750000000 weight=2 polarity=-1 combo=X+1 * mt_linear
+  good=54/72 rate=0.750000000 weight=3 polarity=1 combo=m0 * prefactor * L
+  good=54/72 rate=0.750000000 weight=3 polarity=1 combo=X2-2X-1 * mt_linear * L
+  good=54/72 rate=0.750000000 weight=3 polarity=1 combo=X2+2X-1 * mt_linear * L
+  good=54/72 rate=0.750000000 weight=3 polarity=1 combo=X * m0 * prefactor
+  good=54/72 rate=0.750000000 weight=3 polarity=1 combo=X-1 * X2-2X-1 * mt_coeff
+  good=54/72 rate=0.750000000 weight=3 polarity=1 combo=X-1 * X2+2X-1 * mt_coeff
+  good=54/72 rate=0.750000000 weight=3 polarity=1 combo=X+1 * X2+1 * mt_coeff
+q1087_d4_basis_screen:
+  basis_size = 14
+  best_good = 28
+  best_polarity = 1
+  best_weight = 2
+  combos_tested = 16384
+  exact_combos = 0
+  rows = 40
+q1087_d4_best_combos:
+  good=28/40 rate=0.700000000 weight=2 polarity=1 combo=mt_linear * L
+  good=28/40 rate=0.700000000 weight=2 polarity=1 combo=X2-2X-1 * mt_coeff
+  good=28/40 rate=0.700000000 weight=2 polarity=1 combo=X2+2X-1 * mt_coeff
+  good=28/40 rate=0.700000000 weight=2 polarity=1 combo=X-1 * mt_coeff
+  good=28/40 rate=0.700000000 weight=2 polarity=1 combo=X * mt_linear
+  good=28/40 rate=0.700000000 weight=2 polarity=1 combo=W * S_conj
+  good=28/40 rate=0.700000000 weight=2 polarity=1 combo=W * S
+  good=28/40 rate=0.700000000 weight=3 polarity=1 combo=X2+1 * mt_coeff * L
+  good=28/40 rate=0.700000000 weight=3 polarity=1 combo=X+1 * mt_coeff * L
+  good=28/40 rate=0.700000000 weight=3 polarity=1 combo=W * m0 * L
+  good=28/40 rate=0.700000000 weight=3 polarity=1 combo=W * mt_coeff * prefactor
+  good=28/40 rate=0.700000000 weight=3 polarity=1 combo=X2+1 * m0 * prefactor
+q=1471:
+  enum_stats:
+  enum_compact_not_target = 837
+  enum_no_label2_candidate = 424
+  quotient_stats:
+  d3_minus_E_points = 88
+  d3_missing_on_E_orbit = 0
+  d3_not_descended_to_E = 0
+  d3_plus_E_points = 112
+  d3_quotient_rows = 200
+  d4_minus_E_points_after_d3 = 56
+  d4_missing_on_E_orbit = 0
+  d4_not_descended_to_E = 0
+  d4_plus_E_points_after_d3 = 56
+  d4_quotient_rows_after_d3 = 112
+  orbit_size_4 = 200
+  oriented_candidates = 800
+  quotient_E_points = 200
+q1471:
+  p = 1471
+  d3_rows = 200
+  d4_rows_after_d3 = 112
+q1471_d3_mask_stats:
+  input_rows = 200
+  usable_rows = 200
+q1471_d4_mask_stats:
+  input_rows = 112
+  usable_rows = 112
+q1471_d3_basis_screen:
+  basis_size = 14
+  best_good = 124
+  best_polarity = -1
+  best_weight = 2
+  combos_tested = 16384
+  exact_combos = 0
+  rows = 200
+q1471_d3_best_combos:
+  good=124/200 rate=0.620000000 weight=2 polarity=-1 combo=X-1 * X2-2X-1
+  good=124/200 rate=0.620000000 weight=2 polarity=-1 combo=X-1 * X2+2X-1
+  good=124/200 rate=0.620000000 weight=2 polarity=-1 combo=X+1 * X2+1
+  good=124/200 rate=0.620000000 weight=3 polarity=-1 combo=X+1 * X2-2X-1 * L
+  good=124/200 rate=0.620000000 weight=3 polarity=-1 combo=X+1 * X2+2X-1 * L
+  good=124/200 rate=0.620000000 weight=3 polarity=-1 combo=X-1 * X2+1 * L
+  good=124/200 rate=0.620000000 weight=3 polarity=-1 combo=S_conj * mt_coeff * prefactor
+  good=124/200 rate=0.620000000 weight=3 polarity=-1 combo=S * mt_coeff * prefactor
+  good=124/200 rate=0.620000000 weight=3 polarity=-1 combo=W * X-1 * prefactor
+  good=124/200 rate=0.620000000 weight=3 polarity=-1 combo=X2+1 * mt_linear * mt_coeff
+  good=124/200 rate=0.620000000 weight=3 polarity=-1 combo=X * X+1 * X2-2X-1
+  good=124/200 rate=0.620000000 weight=3 polarity=-1 combo=X * X+1 * X2+2X-1
+q1471_d4_basis_screen:
+  basis_size = 14
+  best_good = 72
+  best_polarity = -1
+  best_weight = 1
+  combos_tested = 16384
+  exact_combos = 0
+  rows = 112
+q1471_d4_best_combos:
+  good=72/112 rate=0.642857143 weight=1 polarity=-1 combo=mt_coeff
+  good=72/112 rate=0.642857143 weight=2 polarity=1 combo=S_conj * prefactor
+  good=72/112 rate=0.642857143 weight=2 polarity=1 combo=S * prefactor
+  good=72/112 rate=0.642857143 weight=2 polarity=1 combo=X2+1 * mt_linear
+  good=72/112 rate=0.642857143 weight=2 polarity=-1 combo=X+1 * mt_linear
+  good=72/112 rate=0.642857143 weight=3 polarity=1 combo=m0 * prefactor * L
+  good=72/112 rate=0.642857143 weight=3 polarity=1 combo=X2-2X-1 * mt_linear * L
+  good=72/112 rate=0.642857143 weight=3 polarity=1 combo=X2+2X-1 * mt_linear * L
+  good=72/112 rate=0.642857143 weight=3 polarity=1 combo=X * m0 * prefactor
+  good=72/112 rate=0.642857143 weight=3 polarity=1 combo=X-1 * X2-2X-1 * mt_coeff
+  good=72/112 rate=0.642857143 weight=3 polarity=1 combo=X-1 * X2+2X-1 * mt_coeff
+  good=72/112 rate=0.642857143 weight=3 polarity=1 combo=X+1 * X2+1 * mt_coeff
+q=1607:
+  enum_stats:
+  enum_compact_not_target = 805
+  enum_no_label2_candidate = 408
+  quotient_stats:
+  d3_minus_E_points = 84
+  d3_missing_on_E_orbit = 0
+  d3_not_descended_to_E = 0
+  d3_plus_E_points = 112
+  d3_quotient_rows = 196
+  d4_minus_E_points_after_d3 = 36
+  d4_missing_on_E_orbit = 0
+  d4_not_descended_to_E = 0
+  d4_plus_E_points_after_d3 = 76
+  d4_quotient_rows_after_d3 = 112
+  orbit_size_4 = 196
+  oriented_candidates = 784
+  quotient_E_points = 196
+q1607:
+  p = 1607
+  d3_rows = 196
+  d4_rows_after_d3 = 112
+q1607_d3_mask_stats:
+  input_rows = 196
+  usable_rows = 196
+q1607_d4_mask_stats:
+  input_rows = 112
+  usable_rows = 112
+q1607_d3_basis_screen:
+  basis_size = 14
+  best_good = 120
+  best_polarity = 1
+  best_weight = 2
+  combos_tested = 16384
+  exact_combos = 0
+  rows = 196
+q1607_d3_best_combos:
+  good=120/196 rate=0.612244898 weight=2 polarity=1 combo=mt_linear * L
+  good=120/196 rate=0.612244898 weight=2 polarity=1 combo=X2-2X-1 * mt_coeff
+  good=120/196 rate=0.612244898 weight=2 polarity=1 combo=X2+2X-1 * mt_coeff
+  good=120/196 rate=0.612244898 weight=2 polarity=1 combo=X-1 * mt_coeff
+  good=120/196 rate=0.612244898 weight=2 polarity=1 combo=X * mt_linear
+  good=120/196 rate=0.612244898 weight=2 polarity=1 combo=W * S_conj
+  good=120/196 rate=0.612244898 weight=2 polarity=1 combo=W * S
+  good=120/196 rate=0.612244898 weight=3 polarity=1 combo=X2+1 * mt_coeff * L
+  good=120/196 rate=0.612244898 weight=3 polarity=1 combo=X+1 * mt_coeff * L
+  good=120/196 rate=0.612244898 weight=3 polarity=1 combo=W * m0 * L
+  good=120/196 rate=0.612244898 weight=3 polarity=1 combo=W * mt_coeff * prefactor
+  good=120/196 rate=0.612244898 weight=3 polarity=1 combo=X2+1 * m0 * prefactor
+q1607_d4_basis_screen:
+  basis_size = 14
+  best_good = 76
+  best_polarity = 1
+  best_weight = 0
+  combos_tested = 16384
+  exact_combos = 0
+  rows = 112
+q1607_d4_best_combos:
+  good=76/112 rate=0.678571429 weight=0 polarity=1 combo=1
+  good=76/112 rate=0.678571429 weight=2 polarity=1 combo=X * L
+  good=76/112 rate=0.678571429 weight=2 polarity=1 combo=S * S_conj
+  good=76/112 rate=0.678571429 weight=2 polarity=1 combo=X2+2X-1 * X2-2X-1
+  good=76/112 rate=0.678571429 weight=3 polarity=1 combo=S_conj * m0 * L
+  good=76/112 rate=0.678571429 weight=3 polarity=1 combo=S * m0 * L
+  good=76/112 rate=0.678571429 weight=3 polarity=1 combo=X2+1 * X2-2X-1 * L
+  good=76/112 rate=0.678571429 weight=3 polarity=1 combo=X2+1 * X2+2X-1 * L
+  good=76/112 rate=0.678571429 weight=3 polarity=1 combo=X-1 * X+1 * L
+  good=76/112 rate=0.678571429 weight=3 polarity=1 combo=W * X2-2X-1 * prefactor
+  good=76/112 rate=0.678571429 weight=3 polarity=1 combo=W * X2+2X-1 * prefactor
+  good=76/112 rate=0.678571429 weight=3 polarity=1 combo=X+1 * mt_linear * mt_coeff
+p27_equotient_kummer_basis_probe_rows=1/1

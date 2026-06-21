@@ -1,0 +1,15 @@
+Pomerance triple search
+
+p = 1000000000000000000000000103  (28 digits)
+seed_offset = 139  max_trials_override = 250000
+curve_mode = X1(16) prescribed torsion + nonsplit + elliptic first-lift-cover label-2 y sampler
+Using u128 path
+k = 45
+Odd parts (3): 28421709430405 7105427357601 28421709430403
+Trials: 250000  (heuristic: 20*sqrt(p)/3)
+Threads: 1
+
+Not found in 2.12s. Re-run or increase budget.
+real 2.36
+user 2.09
+sys 0.00

@@ -1,0 +1,7 @@
+p27_component_norm_top_product_heldout
+product=chi_B*chi_y_minus_2*chi_one_minus_t2
+tids=0:64 chunks=0,1 draws_per_thread=256
+seed=121 rows=8048 good=2098 total=3995 lift=1.038952575 exact_plus=0 exact_minus=0
+seed=122 rows=8181 good=2107 total=4189 lift=1.005353567 exact_plus=0 exact_minus=0
+seed=123 rows=8170 good=2066 total=4034 lift=1.005343337 exact_plus=0 exact_minus=0
+seed=124 rows=8161 good=2055 total=4145 lift=1.002737207 exact_plus=0 exact_minus=0

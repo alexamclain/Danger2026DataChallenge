@@ -1,0 +1,64 @@
+p27_component_norm_gate
+p=1000000000000000000000000103
+sample:
+  raw_draws=32768
+  nonsplit_y=16432
+  k_points=32864
+  component_rows=16096
+  component_unusable=16768
+  duplicate_ab=0
+formula_checks:
+  rows=16096
+  h_recompute_mismatch=0
+  vq_recompute_mismatch=0
+  h_norm_factor_mismatch=0
+  v_norm_factor_agree=16096
+  h_inner_anti_xpref=16096
+  v_inner_anti_xpref=16096
+  B_equals_a_plus_2=16096
+  B_anti_a_minus_2=16096
+  C_anti_R=16096
+  pref_formula_mismatch=0
+  q2_non_square=0
+named_atom_scores_against_T_line:
+  rank=1 atom=v_norm:p26line inconsistent=4066 zero=0 exact_plus=0 exact_minus=0 best_lift=1.011467154 good=1044 total=2042
+  rank=2 atom=chi_y_minus_2:raw inconsistent=0 zero=0 exact_plus=0 exact_minus=0 best_lift=1.010959131 good=2066 total=4043
+  rank=3 atom=chi_one_minus_t2:raw inconsistent=0 zero=0 exact_plus=0 exact_minus=0 best_lift=1.010891650 good=2049 total=4010
+  rank=4 atom=h_inner:raw inconsistent=0 zero=0 exact_plus=0 exact_minus=0 best_lift=1.010891650 good=2049 total=4010
+  rank=5 atom=v_inner:raw inconsistent=0 zero=0 exact_plus=0 exact_minus=0 best_lift=1.010891650 good=2049 total=4010
+  rank=6 atom=chi_B:raw inconsistent=0 zero=0 exact_plus=0 exact_minus=0 best_lift=1.009619547 good=2075 total=4066
+  rank=7 atom=chi_a_plus_2:raw inconsistent=0 zero=0 exact_plus=0 exact_minus=0 best_lift=1.009619547 good=2075 total=4066
+  rank=8 atom=chi_a_minus_2:raw inconsistent=0 zero=0 exact_plus=0 exact_minus=0 best_lift=1.009619547 good=2075 total=4066
+  rank=9 atom=h_norm:raw inconsistent=0 zero=0 exact_plus=0 exact_minus=0 best_lift=1.009132983 good=2074 total=4066
+  rank=10 atom=chi_q:p26line inconsistent=3982 zero=0 exact_plus=0 exact_minus=0 best_lift=1.006778054 good=1030 total=2024
+  rank=11 atom=chi_C:raw inconsistent=0 zero=0 exact_plus=0 exact_minus=0 best_lift=1.004995005 good=2034 total=4004
+  rank=12 atom=chi_R:raw inconsistent=0 zero=0 exact_plus=0 exact_minus=0 best_lift=1.004995005 good=2034 total=4004
+  rank=13 atom=domain_line:raw inconsistent=0 zero=0 exact_plus=0 exact_minus=0 best_lift=1.000000000 good=4068 total=8048
+  rank=14 atom=chi_a2_minus_4:raw inconsistent=0 zero=0 exact_plus=0 exact_minus=0 best_lift=1.000000000 good=4068 total=8048
+  rank=15 atom=chi_a2_plus_4:raw inconsistent=0 zero=0 exact_plus=0 exact_minus=0 best_lift=1.000000000 good=4068 total=8048
+named_product_span:
+  usable_atoms=13
+  product_count=1092
+  exact_products=0
+  rank=1 product=chi_B:raw*chi_y_minus_2:raw*chi_one_minus_t2:raw exact_plus=0 exact_minus=0 best_lift=1.038952575 good=2098 total=3995
+  rank=2 product=chi_B:raw*chi_y_minus_2:raw*h_inner:raw exact_plus=0 exact_minus=0 best_lift=1.038952575 good=2098 total=3995
+  rank=3 product=chi_B:raw*chi_y_minus_2:raw*v_inner:raw exact_plus=0 exact_minus=0 best_lift=1.038952575 good=2098 total=3995
+  rank=4 product=chi_C:raw*chi_y_minus_2:raw*h_norm:raw exact_plus=0 exact_minus=0 best_lift=1.038952575 good=2098 total=3995
+  rank=5 product=chi_R:raw*chi_y_minus_2:raw*h_norm:raw exact_plus=0 exact_minus=0 best_lift=1.038952575 good=2098 total=3995
+  rank=6 product=chi_a_plus_2:raw*chi_y_minus_2:raw*chi_one_minus_t2:raw exact_plus=0 exact_minus=0 best_lift=1.038952575 good=2098 total=3995
+  rank=7 product=chi_a_plus_2:raw*chi_y_minus_2:raw*h_inner:raw exact_plus=0 exact_minus=0 best_lift=1.038952575 good=2098 total=3995
+  rank=8 product=chi_a_plus_2:raw*chi_y_minus_2:raw*v_inner:raw exact_plus=0 exact_minus=0 best_lift=1.038952575 good=2098 total=3995
+  rank=9 product=chi_a_minus_2:raw*chi_y_minus_2:raw*chi_one_minus_t2:raw exact_plus=0 exact_minus=0 best_lift=1.038952575 good=2098 total=3995
+  rank=10 product=chi_a_minus_2:raw*chi_y_minus_2:raw*h_inner:raw exact_plus=0 exact_minus=0 best_lift=1.038952575 good=2098 total=3995
+  rank=11 product=chi_a_minus_2:raw*chi_y_minus_2:raw*v_inner:raw exact_plus=0 exact_minus=0 best_lift=1.038952575 good=2098 total=3995
+  rank=12 product=domain_line:raw*chi_B:raw*chi_y_minus_2:raw*chi_one_minus_t2:raw exact_plus=0 exact_minus=0 best_lift=1.038952575 good=2098 total=3995
+  rank=13 product=domain_line:raw*chi_B:raw*chi_y_minus_2:raw*h_inner:raw exact_plus=0 exact_minus=0 best_lift=1.038952575 good=2098 total=3995
+  rank=14 product=domain_line:raw*chi_B:raw*chi_y_minus_2:raw*v_inner:raw exact_plus=0 exact_minus=0 best_lift=1.038952575 good=2098 total=3995
+  rank=15 product=domain_line:raw*chi_C:raw*chi_y_minus_2:raw*h_norm:raw exact_plus=0 exact_minus=0 best_lift=1.038952575 good=2098 total=3995
+  rank=16 product=domain_line:raw*chi_R:raw*chi_y_minus_2:raw*h_norm:raw exact_plus=0 exact_minus=0 best_lift=1.038952575 good=2098 total=3995
+  rank=17 product=domain_line:raw*chi_a_plus_2:raw*chi_y_minus_2:raw*chi_one_minus_t2:raw exact_plus=0 exact_minus=0 best_lift=1.038952575 good=2098 total=3995
+  rank=18 product=domain_line:raw*chi_a_plus_2:raw*chi_y_minus_2:raw*h_inner:raw exact_plus=0 exact_minus=0 best_lift=1.038952575 good=2098 total=3995
+  rank=19 product=domain_line:raw*chi_a_plus_2:raw*chi_y_minus_2:raw*v_inner:raw exact_plus=0 exact_minus=0 best_lift=1.038952575 good=2098 total=3995
+  rank=20 product=domain_line:raw*chi_a_minus_2:raw*chi_y_minus_2:raw*chi_one_minus_t2:raw exact_plus=0 exact_minus=0 best_lift=1.038952575 good=2098 total=3995
+target_line_rows=8048
+p27_component_norm_gate_rows=1/1

@@ -1,0 +1,12 @@
+p25 second-lift pullback screen
+D16 = y*(y - 2)*(y**2 - 2)*(y**2 - 2*y + 2)
+H = (y - 1)*(y**2 - 2)*(y**2 - 2*y + 2)
+W1_num_terms = 18
+norm_r_num_terms = 53
+norm_r_den_terms = 24
+norm_r_depends_on_s = 1
+norm_r_depends_on_z = 1
+norm_y_num_factor = 256*y**20*(y - 2)**20*(y - 1)**4*(y**2 - 2)**4*(y**2 - 4*y + 2)**4*(y**2 - 2*y + 2)**8
+norm_y_den_factor = 16777216*y**4*(y - 2)**4*(y - 1)**36
+y_line_quadratic_character_gate = 0
+p25_v2_second_lift_pullback_gate_rows=1/1

@@ -1,0 +1,144 @@
+Pomerance triple search
+
+p = 1000000000000000000000000103  (28 digits)
+seed_offset = 126  max_trials_override = 100000
+curve_mode = X1(16) nonsplit filtered first-branch halving survival stats
+X1(16) first-branch halving survival stats
+p = 1000000000000000000000000103
+k = 45
+stats_max_depth = 45
+samples = 100000
+sample_class = nonsplit_trace_norm_line_strata
+elapsed_seconds = 1.394778  rate_Mps = 0.071696
+full_first_branch_depth_45 = 0/100000  rate = 0.000000000
+depth_histogram_nonzero:
+  depth=4 count=49574 rate=0.495740000
+  depth=5 count=25288 rate=0.252880000
+  depth=6 count=12508 rate=0.125080000
+  depth=7 count=6322 rate=0.063220000
+  depth=8 count=3192 rate=0.031920000
+  depth=9 count=1604 rate=0.016040000
+  depth=10 count=730 rate=0.007300000
+  depth=11 count=402 rate=0.004020000
+  depth=12 count=204 rate=0.002040000
+  depth=13 count=102 rate=0.001020000
+  depth=14 count=34 rate=0.000340000
+  depth=15 count=22 rate=0.000220000
+  depth=16 count=10 rate=0.000100000
+  depth=17 count=4 rate=0.000040000
+  depth=19 count=2 rate=0.000020000
+  depth=20 count=2 rate=0.000020000
+survive_by_depth:
+  depth=20 survive=2 rate=0.000020000
+  depth=19 survive=4 rate=0.000040000
+  depth=18 survive=4 rate=0.000040000
+  depth=17 survive=8 rate=0.000080000
+  depth=16 survive=18 rate=0.000180000
+  depth=15 survive=40 rate=0.000400000
+  depth=14 survive=74 rate=0.000740000
+  depth=13 survive=176 rate=0.001760000
+  depth=12 survive=380 rate=0.003800000
+  depth=11 survive=782 rate=0.007820000
+  depth=10 survive=1512 rate=0.015120000
+  depth=9 survive=3116 rate=0.031160000
+  depth=8 survive=6308 rate=0.063080000
+  depth=7 survive=12630 rate=0.126300000
+  depth=6 survive=25138 rate=0.251380000
+  depth=5 survive=50426 rate=0.504260000
+  depth=4 survive=100000 rate=1.000000000
+all_branch_options_at_first_stop:
+  options=0 count=100000 rate=1.000000000
+trace_norm_line_strata_survive_by_depth:
+  class=0 name=invalid_or_domain_plus_unclassified samples=0 rate=0.000000000
+    depth=5 survive=0 rate=0.000000000
+    depth=6 survive=0 rate=0.000000000
+    depth=7 survive=0 rate=0.000000000
+    depth=8 survive=0 rate=0.000000000
+    depth=9 survive=0 rate=0.000000000
+    depth=10 survive=0 rate=0.000000000
+    depth=12 survive=0 rate=0.000000000
+    depth=14 survive=0 rate=0.000000000
+    depth=16 survive=0 rate=0.000000000
+    depth=18 survive=0 rate=0.000000000
+    depth=20 survive=0 rate=0.000000000
+    depth=22 survive=0 rate=0.000000000
+    depth=24 survive=0 rate=0.000000000
+    depth=26 survive=0 rate=0.000000000
+    depth=28 survive=0 rate=0.000000000
+    depth=30 survive=0 rate=0.000000000
+  class=1 name=domain_minus samples=49574 rate=0.495740000
+    depth=5 survive=0 rate=0.000000000
+    depth=6 survive=0 rate=0.000000000
+    depth=7 survive=0 rate=0.000000000
+    depth=8 survive=0 rate=0.000000000
+    depth=9 survive=0 rate=0.000000000
+    depth=10 survive=0 rate=0.000000000
+    depth=12 survive=0 rate=0.000000000
+    depth=14 survive=0 rate=0.000000000
+    depth=16 survive=0 rate=0.000000000
+    depth=18 survive=0 rate=0.000000000
+    depth=20 survive=0 rate=0.000000000
+    depth=22 survive=0 rate=0.000000000
+    depth=24 survive=0 rate=0.000000000
+    depth=26 survive=0 rate=0.000000000
+    depth=28 survive=0 rate=0.000000000
+    depth=30 survive=0 rate=0.000000000
+  class=2 name=domain_plus_Tline_minus samples=25272 rate=0.252720000
+    depth=5 survive=25272 rate=1.000000000
+    depth=6 survive=12632 rate=0.499841722
+    depth=7 survive=6402 rate=0.253323837
+    depth=8 survive=3224 rate=0.127572016
+    depth=9 survive=1594 rate=0.063073758
+    depth=10 survive=796 rate=0.031497309
+    depth=12 survive=188 rate=0.007439063
+    depth=14 survive=38 rate=0.001503640
+    depth=16 survive=8 rate=0.000316556
+    depth=18 survive=0 rate=0.000000000
+    depth=20 survive=0 rate=0.000000000
+    depth=22 survive=0 rate=0.000000000
+    depth=24 survive=0 rate=0.000000000
+    depth=26 survive=0 rate=0.000000000
+    depth=28 survive=0 rate=0.000000000
+    depth=30 survive=0 rate=0.000000000
+  class=3 name=domain_plus_Tline_plus samples=25154 rate=0.251540000
+    depth=5 survive=25154 rate=1.000000000
+    depth=6 survive=12506 rate=0.497177387
+    depth=7 survive=6228 rate=0.247594816
+    depth=8 survive=3084 rate=0.122604755
+    depth=9 survive=1522 rate=0.060507275
+    depth=10 survive=716 rate=0.028464658
+    depth=12 survive=192 rate=0.007632981
+    depth=14 survive=36 rate=0.001431184
+    depth=16 survive=10 rate=0.000397551
+    depth=18 survive=4 rate=0.000159020
+    depth=20 survive=2 rate=0.000079510
+    depth=22 survive=0 rate=0.000000000
+    depth=24 survive=0 rate=0.000000000
+    depth=26 survive=0 rate=0.000000000
+    depth=28 survive=0 rate=0.000000000
+    depth=30 survive=0 rate=0.000000000
+trace_norm_post_domain_next_gate:
+  class=0 name=invalid_or_domain_plus_unclassified samples=0 rate=0.000000000
+    gate=first_gate_fail count=0 rate=0.000000000
+    gate=next_d_nonsquare count=0 rate=0.000000000
+    gate=next_d_square_w_none count=0 rate=0.000000000
+    gate=next_pass_one_w count=0 rate=0.000000000
+    gate=next_pass_two_w count=0 rate=0.000000000
+  class=1 name=domain_minus samples=49574 rate=0.495740000
+    gate=first_gate_fail count=49574 rate=1.000000000
+    gate=next_d_nonsquare count=0 rate=0.000000000
+    gate=next_d_square_w_none count=0 rate=0.000000000
+    gate=next_pass_one_w count=0 rate=0.000000000
+    gate=next_pass_two_w count=0 rate=0.000000000
+  class=2 name=domain_plus_Tline_minus samples=25272 rate=0.252720000
+    gate=first_gate_fail count=0 rate=0.000000000
+    gate=next_d_nonsquare count=12640 rate=0.500158278
+    gate=next_d_square_w_none count=0 rate=0.000000000
+    gate=next_pass_one_w count=12632 rate=0.499841722
+    gate=next_pass_two_w count=0 rate=0.000000000
+  class=3 name=domain_plus_Tline_plus samples=25154 rate=0.251540000
+    gate=first_gate_fail count=0 rate=0.000000000
+    gate=next_d_nonsquare count=12648 rate=0.502822613
+    gate=next_d_square_w_none count=0 rate=0.000000000
+    gate=next_pass_one_w count=12506 rate=0.497177387
+    gate=next_pass_two_w count=0 rate=0.000000000

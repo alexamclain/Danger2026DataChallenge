@@ -1,0 +1,58 @@
+Pomerance triple search
+
+p = 1000000000000000000000000103  (28 digits)
+seed_offset = 134  max_trials_override = 1000000
+curve_mode = X1(16) nonsplit filtered first-branch halving survival stats
+X1(16) first-branch halving survival stats
+p = 1000000000000000000000000103
+k = 45
+stats_max_depth = 45
+samples = 1000000
+sample_class = nonsplit_y_filtered
+elapsed_seconds = 6.608087  rate_Mps = 0.151330
+full_first_branch_depth_45 = 0/1000000  rate = 0.000000000
+depth_histogram_nonzero:
+  depth=4 count=500090 rate=0.500090000
+  depth=5 count=250028 rate=0.250028000
+  depth=6 count=125130 rate=0.125130000
+  depth=7 count=62526 rate=0.062526000
+  depth=8 count=31080 rate=0.031080000
+  depth=9 count=15532 rate=0.015532000
+  depth=10 count=7684 rate=0.007684000
+  depth=11 count=4140 rate=0.004140000
+  depth=12 count=1874 rate=0.001874000
+  depth=13 count=960 rate=0.000960000
+  depth=14 count=472 rate=0.000472000
+  depth=15 count=232 rate=0.000232000
+  depth=16 count=130 rate=0.000130000
+  depth=17 count=56 rate=0.000056000
+  depth=18 count=36 rate=0.000036000
+  depth=19 count=8 rate=0.000008000
+  depth=20 count=12 rate=0.000012000
+  depth=21 count=4 rate=0.000004000
+  depth=22 count=6 rate=0.000006000
+survive_by_depth:
+  depth=22 survive=6 rate=0.000006000
+  depth=21 survive=10 rate=0.000010000
+  depth=20 survive=22 rate=0.000022000
+  depth=19 survive=30 rate=0.000030000
+  depth=18 survive=66 rate=0.000066000
+  depth=17 survive=122 rate=0.000122000
+  depth=16 survive=252 rate=0.000252000
+  depth=15 survive=484 rate=0.000484000
+  depth=14 survive=956 rate=0.000956000
+  depth=13 survive=1916 rate=0.001916000
+  depth=12 survive=3790 rate=0.003790000
+  depth=11 survive=7930 rate=0.007930000
+  depth=10 survive=15614 rate=0.015614000
+  depth=9 survive=31146 rate=0.031146000
+  depth=8 survive=62226 rate=0.062226000
+  depth=7 survive=124752 rate=0.124752000
+  depth=6 survive=249882 rate=0.249882000
+  depth=5 survive=499910 rate=0.499910000
+  depth=4 survive=1000000 rate=1.000000000
+all_branch_options_at_first_stop:
+  options=0 count=1000000 rate=1.000000000
+real 6.61
+user 6.52
+sys 0.03

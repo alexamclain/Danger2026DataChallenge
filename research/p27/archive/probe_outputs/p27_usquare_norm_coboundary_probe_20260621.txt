@@ -1,0 +1,39 @@
+p27 u+2 norm/coboundary probe
+p = 1000000000000000000000000103
+target_pairs = 30000
+seed = 20260621
+sampled_pairs = 30000
+features = x, x-1, x+1, A-2, A+2, 2-A, -A-2, x*(2-A), -x*(A+2), A2-4
+sample_stat candidate_invalid_not_nonsplit = 59140
+sample_stat compact_not_target = 58926
+sample_stat no_t = 59078
+sample_stat no_w = 117563
+sample_stat pair_incomplete = 29570
+sample_stat x_draws = 235889
+norm_identity_stats:
+  none
+d2_to_d3_selected_uplus_span:
+  rows = 30000
+  exact_combo = none
+  best_combos:
+    good=15054/30000 rate=0.501800000 weight=1 combo=x-1
+    good=15054/30000 rate=0.501800000 weight=1 combo=x+1
+    good=15054/30000 rate=0.501800000 weight=2 combo=x * x-1
+    good=15054/30000 rate=0.501800000 weight=2 combo=x * x+1
+    good=15054/30000 rate=0.501800000 weight=2 combo=x-1 * A+2
+    good=15054/30000 rate=0.501800000 weight=2 combo=x+1 * A+2
+    good=15054/30000 rate=0.501800000 weight=2 combo=x-1 * 2-A
+    good=15054/30000 rate=0.501800000 weight=2 combo=x+1 * 2-A
+d3_to_d4_selected_uplus_span:
+  rows = 15004
+  exact_combo = none
+  best_combos:
+    good=7540/15004 rate=0.502532658 weight=1 combo=A-2
+    good=7540/15004 rate=0.502532658 weight=1 combo=-A-2
+    good=7540/15004 rate=0.502532658 weight=1 combo=-x*(A+2)
+    good=7540/15004 rate=0.502532658 weight=1 combo=A2-4
+    good=7540/15004 rate=0.502532658 weight=2 combo=x * A-2
+    good=7540/15004 rate=0.502532658 weight=2 combo=A-2 * A+2
+    good=7540/15004 rate=0.502532658 weight=2 combo=A-2 * 2-A
+    good=7540/15004 rate=0.502532658 weight=2 combo=x * -A-2
+p27_usquare_norm_coboundary_probe_rows=1/1

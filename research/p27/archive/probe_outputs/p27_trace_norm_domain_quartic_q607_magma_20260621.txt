@@ -1,0 +1,1 @@
+RESULT p27_domain_quartic_q607 true true 2 667 5

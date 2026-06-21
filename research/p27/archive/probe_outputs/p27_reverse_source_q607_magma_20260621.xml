@@ -1,0 +1,2 @@
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>22234622</seed><version>2.29-8</version><time>0.070</time><memory>32.09MB</memory></headers><results><line>RESULT p27_reverse_q607 ok 512 256 0 0 1024 2048</line><line></line></results></calculator>

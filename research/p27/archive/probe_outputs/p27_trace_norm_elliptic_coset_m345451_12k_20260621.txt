@@ -1,0 +1,31 @@
+p27_trace_norm_elliptic_coset_gate
+p=1000000000000000000000000103
+curve:
+  C: b^2=16-a^4
+  E: v^2=u^3-u
+  map: u=4/a^2, v=2b/a^3
+  expected_order=p+1=1000000000000000000000000104
+  observed_exponent_candidate=(p+1)/2=500000000000000000000000052
+sample:
+  raw_draws=32768
+  nonsplit_y=16432
+  k_points=32864
+  domain_records=12000
+  target_records=8048
+  domain_inconsistent=0
+  target_line_inconsistent=0
+  domain_a_zero_skipped=0
+  target_a_zero_skipped=0
+domain_order_check:
+  checked=64
+  p_plus_1_zero=64
+  half_order_zero=64
+target_order_check:
+  checked=64
+  p_plus_1_zero=64
+  half_order_zero=64
+domain_projection_scores:
+  m=345451 rows=12000 classes=11585 mixed_classes=205 singleton_classes=11179 largest_class=3 target_+1=5844 target_-1=6156 majority_score=0.982916667 baseline_score=0.513000000 class_lift=1.916016894 exact_nontrivial=0
+target_line_projection_scores:
+  m=345451 rows=8048 classes=7867 mixed_classes=99 singleton_classes=7689 largest_class=3 target_+1=4068 target_-1=3980 majority_score=0.987698807 baseline_score=0.505467197 class_lift=1.954031465 exact_nontrivial=0
+p27_trace_norm_elliptic_coset_gate_rows=1/1

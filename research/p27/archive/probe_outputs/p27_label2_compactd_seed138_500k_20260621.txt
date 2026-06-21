@@ -1,0 +1,42 @@
+Pomerance triple search
+
+p = 1000000000000000000000000103  (28 digits)
+seed_offset = 138  max_trials_override = 500000
+curve_mode = X1(16) nonsplit + elliptic first-lift-cover label-2 compact-D filtered first-branch halving survival stats
+X1(16) first-branch halving survival stats
+p = 1000000000000000000000000103
+k = 45
+stats_max_depth = 45
+samples = 500000
+sample_class = nonsplit_first_lift_ecoverlabel2_compactD
+elapsed_seconds = 13.863988  rate_Mps = 0.036065
+full_first_branch_depth_45 = 0/500000  rate = 0.000000000
+depth_histogram_nonzero:
+  depth=5 count=500000 rate=1.000000000
+survive_by_depth:
+  depth=5 survive=500000 rate=1.000000000
+  depth=4 survive=500000 rate=1.000000000
+all_branch_options_at_first_stop:
+  options=0 count=500000 rate=1.000000000
+orbit_label_survive_by_depth:
+  label=0 name=x+1 samples=0
+    depth=16 survive=0 rate=0.000000000
+    depth=18 survive=0 rate=0.000000000
+    depth=20 survive=0 rate=0.000000000
+    depth=22 survive=0 rate=0.000000000
+    depth=24 survive=0 rate=0.000000000
+  label=1 name=1-1/x samples=0
+    depth=16 survive=0 rate=0.000000000
+    depth=18 survive=0 rate=0.000000000
+    depth=20 survive=0 rate=0.000000000
+    depth=22 survive=0 rate=0.000000000
+    depth=24 survive=0 rate=0.000000000
+  label=2 name=2x/(x-1) samples=500000
+    depth=16 survive=0 rate=0.000000000
+    depth=18 survive=0 rate=0.000000000
+    depth=20 survive=0 rate=0.000000000
+    depth=22 survive=0 rate=0.000000000
+    depth=24 survive=0 rate=0.000000000
+real 13.86
+user 13.70
+sys 0.07

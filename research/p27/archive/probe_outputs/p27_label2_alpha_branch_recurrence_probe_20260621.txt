@@ -1,0 +1,53 @@
+p27 label2 alpha/T-deck branch recurrence probe
+p = 1000000000000000000000000103
+target_pairs = 5000
+seed = 20260621
+sampled_pairs = 5000
+sample_stat candidate_invalid_not_nonsplit = 9808
+sample_stat compact_not_target = 9728
+sample_stat no_t = 9900
+sample_stat no_w = 19583
+sample_stat pair_incomplete = 4904
+sample_stat x_draws = 39299
+total_roots = 10000
+d2_fail_after_compactDneg = 0
+total_x6_branches = 20000
+d3_plus_branches = 9864
+d3_zero_branches = 0
+d3_plus_branch_rate = 0.493200000
+root0_d3_plus_rate = 0.493200000
+root1_d3_plus_rate = 0.493200000
+paired_T_orbit_any_d3_plus_rate = 0.493200000
+paired_T_orbit_all_d3_plus_rate = 0.493200000
+per_root_branch_hist nbranches n_d3_plus n_d3_zero count rate
+  2 0 0 5068 0.506800000
+  2 2 0 4932 0.493200000
+paired_T_root_d3_plus_hist root0_plus root1_plus count rate
+  0 0 2534 0.506800000
+  2 2 2466 0.493200000
+total_d3plus_x6 = 9864
+total_x7_branches = 19728
+d4_plus_branches = 10208
+d4_zero_branches = 0
+d4_plus_branch_rate_after_d3 = 0.517437145
+per_d3plus_x6_d4_branch_hist nbranches n_d4_plus n_d4_zero count rate
+  2 0 0 4760 0.482562855
+  2 2 0 5104 0.517437145
+paired_T_orbit_d4_plus_hist x7_branches d4_plus count rate
+  8 0 1190 0.482562855
+  8 8 1276 0.517437145
+d3_visible_residual_E_character_screen:
+  features = X, W, X-1, X+1, X2+1, X2+2X-1, X2-2X-1, S, S_conj, mt_linear, m0, mt_coeff, prefactor, L
+  rows = 5000
+  zero_feature_skips = 0
+  exact_combo = none
+  best_combos:
+    good=2548/5000 rate=0.509600000 weight=1 combo=X
+    good=2548/5000 rate=0.509600000 weight=1 combo=L
+    good=2548/5000 rate=0.509600000 weight=2 combo=X-1 * X+1
+    good=2548/5000 rate=0.509600000 weight=2 combo=X2+1 * X2+2X-1
+    good=2548/5000 rate=0.509600000 weight=2 combo=X2+1 * X2-2X-1
+    good=2548/5000 rate=0.509600000 weight=2 combo=S * m0
+    good=2548/5000 rate=0.509600000 weight=2 combo=S_conj * m0
+    good=2548/5000 rate=0.509600000 weight=3 combo=X * X2+2X-1 * X2-2X-1
+p27_label2_alpha_branch_recurrence_probe_rows=1/1

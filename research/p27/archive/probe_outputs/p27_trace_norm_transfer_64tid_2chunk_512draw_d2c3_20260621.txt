@@ -1,0 +1,140 @@
+p27_trace_norm_transfer_gate
+p=1000000000000000000000000103
+normal_form:
+  F=(y-1)*(y^2-2)*(y^2-2y+2)
+  K=-(y^2-2)*(y^2-4y+2)
+  t=y-1
+  E_K: w^2=-t^4+6*t^2-1
+  quotient_coords: a=t-1/t, b=w*(t^2+1)/t^2
+  quotient_curve: b^2=16-a^4
+sample:
+  raw_draws=65536
+  duplicate_y=0
+  zero_y=0
+  nonsplit_y=32974
+  K_chi_+1=32974
+  K_chi_-1=0
+  F_chi_+1=32780
+  F_chi_-1=33168
+  F_chi_0=0
+  k_points=65948
+ek_automorphisms:
+  transform=neg_t
+    source_points=65948
+    defined=65948
+    K_preserved=65948
+    K_not_preserved=0
+    source_D_domain=32780
+    domain_to_domain=32780
+    domain_to_not_domain=0
+    compare_rows=32780
+    D_invariant=16390
+    D_anti_invariant=16390
+  transform=inv_t
+    source_points=65948
+    defined=65948
+    K_preserved=65948
+    K_not_preserved=0
+    source_D_domain=32780
+    domain_to_domain=32780
+    domain_to_not_domain=0
+    compare_rows=32780
+    D_invariant=16390
+    D_anti_invariant=16390
+  transform=neg_inv_t
+    source_points=65948
+    defined=65948
+    K_preserved=65948
+    K_not_preserved=0
+    source_D_domain=32780
+    domain_to_domain=32780
+    domain_to_not_domain=0
+    compare_rows=32780
+    D_invariant=16272
+    D_anti_invariant=16508
+    neg_inv_ratio_matches_chi_t_y_ym2=32780
+    neg_inv_ratio_anti_chi_t_y_ym2=0
+    neg_inv_ratio_matches_chi_image_y_over_y=32780
+    neg_inv_ratio_anti_chi_image_y_over_y=0
+quotient:
+  quotient_rows=32780
+  quotient_unique_rows=32780
+  quotient_undefined=0
+  quotient_relation_fail=0
+  target_+1=16516
+  target_-1=16264
+b_flip_cocycle:
+  b_flip_pairs=16390
+  b_flip_ratio_+1=8136
+  b_flip_ratio_-1=8254
+  b_flip_ratio_matches_chi_a=16390
+  b_flip_ratio_anti_chi_a=0
+  b_flip_ratio_matches_chi_b=8175
+  b_flip_ratio_anti_chi_b=8215
+domain_line:
+  quotient_undefined=0
+  quotient_relation_fail=0
+  F_line_raw_+1=32780
+  F_line_raw_-1=33168
+  F_line_raw_0=0
+  domain_line_rows=32974
+  F_line_inconsistent=0
+  domain_line_+1=16390
+  domain_line_-1=16584
+domain_line_basis_character_scan:
+  label=-a*a_minus_2 score=0.503851519 agree=16360 anti=16614 zero=0
+  label=a*a_plus_2 score=0.503851519 agree=16614 anti=16360 zero=0
+  label=a*a_minus_2*a2_minus_4 score=0.503851519 agree=16614 anti=16360 zero=0
+  label=-a*a_plus_2*a2_minus_4 score=0.503851519 agree=16360 anti=16614 zero=0
+  label=-a*a_minus_2*a2_plus_4 score=0.503851519 agree=16360 anti=16614 zero=0
+  label=a*a_plus_2*a2_plus_4 score=0.503851519 agree=16614 anti=16360 zero=0
+  label=a*a_minus_2*a2_minus_4*a2_plus_4 score=0.503851519 agree=16614 anti=16360 zero=0
+  label=-a*a_plus_2*a2_minus_4*a2_plus_4 score=0.503851519 agree=16360 anti=16614 zero=0
+  label=-1 score=0.502941712 agree=16390 anti=16584 zero=0
+  label=a_minus_2*a_plus_2 score=0.502941712 agree=16584 anti=16390 zero=0
+domain_line_polynomial_search:
+  candidate_count=26
+  prefix_rows=4096
+  prefix_exact_survivors=0
+  full_exact_count=0
+target_line_modes:
+  mode=p26_Tline line_rows=16390 line_inconsistent=0 line_unusable=0 line_target_+1=8284 line_target_-1=8106
+  mode=T line_rows=16390 line_inconsistent=8254 line_unusable=0 line_target_+1=8196 line_target_-1=8194
+  mode=T_b line_rows=16390 line_inconsistent=8136 line_unusable=0 line_target_+1=8242 line_target_-1=8148
+  mode=T_a line_rows=16390 line_inconsistent=8254 line_unusable=0 line_target_+1=8320 line_target_-1=8070
+  mode=T_ab line_rows=16390 line_inconsistent=8136 line_unusable=0 line_target_+1=8190 line_target_-1=8200
+target_line_p26_Tline:
+  a_chi_+1=16272
+  a_chi_-1=16508
+  b_chi_+1=16390
+  b_chi_-1=16390
+  line_rows=16390
+  line_inconsistent=0
+  line_unusable=0
+  line_target_+1=8284
+  line_target_-1=8106
+target_line_basis_character_scan:
+  label=1 score=0.505430140 agree=8284 anti=8106 zero=0
+  label=-a_minus_2*a_plus_2 score=0.505430140 agree=8106 anti=8284 zero=0
+  label=-a2_minus_4 score=0.505430140 agree=8106 anti=8284 zero=0
+  label=a_minus_2*a_plus_2*a2_minus_4 score=0.505430140 agree=8284 anti=8106 zero=0
+  label=a2_plus_4 score=0.505430140 agree=8284 anti=8106 zero=0
+  label=-a_minus_2*a_plus_2*a2_plus_4 score=0.505430140 agree=8106 anti=8284 zero=0
+  label=-a2_minus_4*a2_plus_4 score=0.505430140 agree=8106 anti=8284 zero=0
+  label=a_minus_2*a_plus_2*a2_minus_4*a2_plus_4 score=0.505430140 agree=8284 anti=8106 zero=0
+  label=-a*a_minus_2 score=0.505064063 agree=8112 anti=8278 zero=0
+  label=a*a_plus_2 score=0.505064063 agree=8278 anti=8112 zero=0
+target_line_polynomial_search:
+  candidate_count=26
+  prefix_rows=4096
+  prefix_exact_survivors=0
+  full_exact_count=0
+verdict:
+  neg_inv_cocycle_exact=1
+  quotient_relation_exact=1
+  b_flip_cocycle_exact=1
+  domain_line_consistent=1
+  target_line_p26_Tline_consistent=1
+  domain_line_polynomial_exact_found=0
+  target_line_polynomial_exact_found=0
+p27_trace_norm_transfer_gate_rows=1/1

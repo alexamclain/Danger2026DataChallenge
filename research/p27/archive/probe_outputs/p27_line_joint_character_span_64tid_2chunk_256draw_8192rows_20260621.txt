@@ -1,0 +1,57 @@
+p27_line_joint_character_span_gate
+p=1000000000000000000000000103
+sample:
+  raw_draws=32768
+  nonsplit_y=16432
+  k_points=32864
+  domain_records=16432
+  target_records=8048
+  joint_records=8048
+  joint_++=4068
+  joint_+-=3980
+  joint_-+=0
+  joint_--=0
+  domain_inconsistent=0
+  target_line_inconsistent=0
+usable:
+  rows=8048
+  unusable_rows=0
+joint_product_span:
+  rows=8048
+  product_+1=4068
+  product_-1=3980
+  candidate_count=65536
+  prefix_rows=2048
+  prefix_exact_survivors=0
+  full_exact_count=0
+  top rank=1 lift=1.029794807 good=2092 total=4019 exact=0 label=phi0_branch*phi1*phim1*phim1_branch
+  top rank=2 lift=1.029794807 good=2092 total=4019 exact=0 label=a_minus_2*a_plus_2*phi0_branch*phi1*phim1*phim1_branch
+  top rank=3 lift=1.029794807 good=2092 total=4019 exact=0 label=a_minus_2*a_plus_2*a2_minus_4*phi0_branch*phi1*phim1*phim1_branch
+  top rank=4 lift=1.029794807 good=2092 total=4019 exact=0 label=a2_minus_4*phi0_branch*phi1*phim1*phim1_branch
+  top rank=5 lift=1.029794807 good=2092 total=4019 exact=0 label=a2_minus_4*a2_plus_4*phi0_branch*phi1*phim1*phim1_branch
+  top rank=6 lift=1.029794807 good=2092 total=4019 exact=0 label=a_minus_2*a_plus_2*a2_minus_4*a2_plus_4*phi0_branch*phi1*phim1*phim1_branch
+  top rank=7 lift=1.029794807 good=2092 total=4019 exact=0 label=a_minus_2*a_plus_2*a2_plus_4*phi0_branch*phi1*phim1*phim1_branch
+  top rank=8 lift=1.029794807 good=2092 total=4019 exact=0 label=a2_plus_4*phi0_branch*phi1*phim1*phim1_branch
+  top rank=9 lift=1.029794807 good=2092 total=4019 exact=0 label=a2_plus_4*u*phi0_branch*phi1*phim1*phim1_branch
+  top rank=10 lift=1.029794807 good=2092 total=4019 exact=0 label=a_minus_2*a_plus_2*a2_plus_4*u*phi0_branch*phi1*phim1*phim1_branch
+  top rank=11 lift=1.029794807 good=2092 total=4019 exact=0 label=a_minus_2*a_plus_2*a2_minus_4*a2_plus_4*u*phi0_branch*phi1*phim1*phim1_branch
+  top rank=12 lift=1.029794807 good=2092 total=4019 exact=0 label=a2_minus_4*a2_plus_4*u*phi0_branch*phi1*phim1*phim1_branch
+joint_joint_pp_selector:
+  rows=8048
+  joint_pp=4068
+  baseline=0.505467197
+  prefix_rows=2048
+  prefix_baseline=0.504394531
+  top rank=1 prefix_lift=1.056758594 prefix_good=573 prefix_total=1075 full_lift=1.028947593 full_good=2096 full_total=4030 orientation=negative label=a*u2_minus_1*u2_plus_1*phi1_branch*phim1
+  top rank=2 prefix_lift=1.056758594 prefix_good=573 prefix_total=1075 full_lift=1.028947593 full_good=2096 full_total=4030 orientation=positive label=a*a_minus_2*a_plus_2*u2_minus_1*u2_plus_1*phi1_branch*phim1
+  top rank=3 prefix_lift=1.056758594 prefix_good=573 prefix_total=1075 full_lift=1.028947593 full_good=2096 full_total=4030 orientation=negative label=a*a_minus_2*a_plus_2*a2_minus_4*u2_minus_1*u2_plus_1*phi1_branch*phim1
+  top rank=4 prefix_lift=1.056758594 prefix_good=573 prefix_total=1075 full_lift=1.028947593 full_good=2096 full_total=4030 orientation=positive label=a*a2_minus_4*u2_minus_1*u2_plus_1*phi1_branch*phim1
+  top rank=5 prefix_lift=1.056758594 prefix_good=573 prefix_total=1075 full_lift=1.028947593 full_good=2096 full_total=4030 orientation=positive label=a*a2_minus_4*a2_plus_4*u2_minus_1*u2_plus_1*phi1_branch*phim1
+  top rank=6 prefix_lift=1.056758594 prefix_good=573 prefix_total=1075 full_lift=1.028947593 full_good=2096 full_total=4030 orientation=negative label=a*a_minus_2*a_plus_2*a2_minus_4*a2_plus_4*u2_minus_1*u2_plus_1*phi1_branch*phim1
+  top rank=7 prefix_lift=1.056758594 prefix_good=573 prefix_total=1075 full_lift=1.028947593 full_good=2096 full_total=4030 orientation=positive label=a*a_minus_2*a_plus_2*a2_plus_4*u2_minus_1*u2_plus_1*phi1_branch*phim1
+  top rank=8 prefix_lift=1.056758594 prefix_good=573 prefix_total=1075 full_lift=1.028947593 full_good=2096 full_total=4030 orientation=negative label=a*a2_plus_4*u2_minus_1*u2_plus_1*phi1_branch*phim1
+  top rank=9 prefix_lift=1.056758594 prefix_good=573 prefix_total=1075 full_lift=1.028947593 full_good=2096 full_total=4030 orientation=negative label=a*a2_plus_4*u*u2_minus_1*u2_plus_1*phi1_branch*phim1
+  top rank=10 prefix_lift=1.056758594 prefix_good=573 prefix_total=1075 full_lift=1.028947593 full_good=2096 full_total=4030 orientation=positive label=a*a_minus_2*a_plus_2*a2_plus_4*u*u2_minus_1*u2_plus_1*phi1_branch*phim1
+  top rank=11 prefix_lift=1.056758594 prefix_good=573 prefix_total=1075 full_lift=1.028947593 full_good=2096 full_total=4030 orientation=negative label=a*a_minus_2*a_plus_2*a2_minus_4*a2_plus_4*u*u2_minus_1*u2_plus_1*phi1_branch*phim1
+  top rank=12 prefix_lift=1.056758594 prefix_good=573 prefix_total=1075 full_lift=1.028947593 full_good=2096 full_total=4030 orientation=positive label=a*a2_minus_4*a2_plus_4*u*u2_minus_1*u2_plus_1*phi1_branch*phim1
+p27_line_joint_character_span_gate_rows=1/1

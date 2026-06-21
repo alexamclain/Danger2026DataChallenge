@@ -1,0 +1,72 @@
+p27 reverse-source quotient/orbit probe
+p = 1000000000000000000000000103
+target_pairs = 5000
+seed = 20260621
+p27_quotient_descent:
+  d3_minus_E_points = 2534
+  d3_missing_on_E_orbit = 0
+  d3_mixed_branch_squareclass = 0
+  d3_no_nonzero_on_E_orbit = 0
+  d3_not_descended_to_E = 0
+  d3_plus_E_points = 2466
+  orbit_size_4 = 5000
+  oriented_candidates = 20000
+  quotient_E_points = 5000
+  quotient_rows = 5000
+  sample_candidate_invalid_not_nonsplit = 9808
+  sample_compact_not_target = 9728
+  sample_no_t = 9900
+  sample_no_w = 19583
+  sample_pair_incomplete = 4904
+  sample_x_draws = 39299
+  sampled_pairs = 5000
+p27_small_coeff_line_screen:
+  best_good = 2564
+  best_polarity = 1
+  best_zeros = 0
+  exact_lines = 0
+  line_rows = 5000
+  small_coeff_bound = 2
+  small_coeff_lines_tested = 124
+p27_small_coeff_line_screen_top_lines:
+  good=2564/5000 rate=0.512800000 zeros=0 polarity=1 line=2+-2*X+0*W
+  good=2564/5000 rate=0.512800000 zeros=0 polarity=1 line=1+-1*X+0*W
+  good=2564/5000 rate=0.512800000 zeros=0 polarity=-1 line=-1+1*X+0*W
+  good=2564/5000 rate=0.512800000 zeros=0 polarity=-1 line=-2+2*X+0*W
+  good=2551/5000 rate=0.510200000 zeros=0 polarity=1 line=2+-1*X+1*W
+  good=2551/5000 rate=0.510200000 zeros=0 polarity=1 line=2+-1*X+-1*W
+  good=2551/5000 rate=0.510200000 zeros=0 polarity=-1 line=-2+1*X+1*W
+  good=2551/5000 rate=0.510200000 zeros=0 polarity=-1 line=-2+1*X+-1*W
+small_prime_quotient_line_screens:
+q=607:
+  enumeration:
+  enum_compact_not_target = 293
+  enum_no_label2_candidate = 184
+  quotient_descent:
+  d3_minus_E_points = 64
+  d3_missing_on_E_orbit = 0
+  d3_mixed_branch_squareclass = 0
+  d3_no_nonzero_on_E_orbit = 0
+  d3_not_descended_to_E = 0
+  d3_plus_E_points = 64
+  orbit_size_4 = 128
+  oriented_candidates = 512
+  quotient_E_points = 128
+  quotient_rows = 128
+  projective_line_screen:
+  best_good = 91
+  best_polarity = 1
+  best_zeros = 0
+  exact_lines = 0
+  line_rows = 128
+  projective_lines_tested = 369057
+  projective_line_screen_top_lines:
+  good=91/128 rate=0.710937500 zeros=0 polarity=1 line=6+178*X+1*W
+  good=91/128 rate=0.710937500 zeros=0 polarity=-1 line=601+429*X+1*W
+  good=91/128 rate=0.710937500 zeros=1 polarity=1 line=122+100*X+1*W
+  good=91/128 rate=0.710937500 zeros=1 polarity=-1 line=485+507*X+1*W
+  good=90/128 rate=0.703125000 zeros=0 polarity=1 line=439+578*X+1*W
+  good=90/128 rate=0.703125000 zeros=0 polarity=-1 line=168+29*X+1*W
+  good=88/128 rate=0.687500000 zeros=0 polarity=1 line=426+1*X+0*W
+  good=88/128 rate=0.687500000 zeros=0 polarity=-1 line=160+1*X+0*W
+p27_reverse_source_quotient_probe_rows=1/1

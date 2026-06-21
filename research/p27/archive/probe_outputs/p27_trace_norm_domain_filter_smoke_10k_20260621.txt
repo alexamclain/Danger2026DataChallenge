@@ -1,0 +1,53 @@
+Pomerance triple search
+
+p = 1000000000000000000000000103  (28 digits)
+seed_offset = 121  max_trials_override = 10000
+curve_mode = X1(16) nonsplit filtered first-branch halving survival stats
+X1(16) first-branch halving survival stats
+p = 1000000000000000000000000103
+k = 45
+stats_max_depth = 45
+samples = 10000
+sample_class = nonsplit_trace_norm_domain_prefilter
+elapsed_seconds = 0.101248  rate_Mps = 0.098767
+trace_norm_prefilter_stats:
+  raw_y_draws=39564 raw_y_rate_Mps=0.390763
+  nonsplit_y=19719 h_square=0 vq_square=0 both_square=0
+  D_plus=0 D_minus=0 D_zero=0 rejected_before_root=9839
+  square_precheck_plus=9880 square_precheck_reject=9839
+  root_sqrt_calls=9880 root_valid_decks=10000 emitted_candidates=10000
+  nonsplit_share=0.498407643 both_square_share_of_nonsplit=0.000000000 D_plus_share_of_both=0.000000000
+full_first_branch_depth_45 = 0/10000  rate = 0.000000000
+depth_histogram_nonzero:
+  depth=5 count=5052 rate=0.505200000
+  depth=6 count=2500 rate=0.250000000
+  depth=7 count=1232 rate=0.123200000
+  depth=8 count=640 rate=0.064000000
+  depth=9 count=266 rate=0.026600000
+  depth=10 count=162 rate=0.016200000
+  depth=11 count=62 rate=0.006200000
+  depth=12 count=50 rate=0.005000000
+  depth=13 count=14 rate=0.001400000
+  depth=14 count=8 rate=0.000800000
+  depth=15 count=6 rate=0.000600000
+  depth=16 count=4 rate=0.000400000
+  depth=17 count=2 rate=0.000200000
+  depth=18 count=2 rate=0.000200000
+survive_by_depth:
+  depth=18 survive=2 rate=0.000200000
+  depth=17 survive=4 rate=0.000400000
+  depth=16 survive=8 rate=0.000800000
+  depth=15 survive=14 rate=0.001400000
+  depth=14 survive=22 rate=0.002200000
+  depth=13 survive=36 rate=0.003600000
+  depth=12 survive=86 rate=0.008600000
+  depth=11 survive=148 rate=0.014800000
+  depth=10 survive=310 rate=0.031000000
+  depth=9 survive=576 rate=0.057600000
+  depth=8 survive=1216 rate=0.121600000
+  depth=7 survive=2448 rate=0.244800000
+  depth=6 survive=4948 rate=0.494800000
+  depth=5 survive=10000 rate=1.000000000
+  depth=4 survive=10000 rate=1.000000000
+all_branch_options_at_first_stop:
+  options=0 count=10000 rate=1.000000000
