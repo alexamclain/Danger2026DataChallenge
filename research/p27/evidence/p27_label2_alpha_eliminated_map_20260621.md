@@ -125,6 +125,8 @@ Positive:
 The order-4 action is now explicit on the eliminated genus-17 model.
 It validates over three q = 7 mod 16 fields.
 The next Magma/Sage quotient ask can use a concrete rational map.
+The projective q7 Magma smoke certifies alpha as an automorphism of order 4
+and the quotient projection to E as degree 4.
 ```
 
 Negative:
@@ -145,6 +147,7 @@ continue = test any extracted character against d3/d4 on q=1607/q1847/q2087 and 
 
 kill = treating compactD=-1 as a direct low-genus source
 kill = more visible H90 norm-one squareclass products
+kill = generic online-Magma CurveQuotient as the next bottleneck
 kill = GPU production promotion without quotient-derived recurrence or rate lift
 ```
 
@@ -152,6 +155,7 @@ kill = GPU production promotion without quotient-derived recurrence or rate lift
 
 - Parent: [P27 Label-2 H90 / Order-4 Lift](p27_label2_h90_order4_lift_20260621.md)
 - Component check: [P27 Label-2 Cyclic-Quartic Component Check](p27_label2_cyclic_components_magma_20260621.md)
+- Projective quotient smoke: [P27 Label-2 Alpha Projective Quotient Smoke](p27_label2_alpha_projective_quotient_magma_20260621.md)
 - Gate: `research/p27/archive/gates/p27_label2_alpha_eliminated_map_probe.py`
 - Output: `research/p27/archive/probe_outputs/p27_label2_alpha_eliminated_map_probe_20260621.txt`
 

@@ -165,6 +165,17 @@ to `R -> -R`, and fourth-powers to identity, with only four expected affine
 exceptional points per field.  The next concrete theorem/CAS test is therefore
 quotient/Prym decomposition using this explicit alpha map.
 
+That quotient test now has a small Magma smoke:
+[P27 Label-2 Alpha Projective Quotient Smoke](evidence/p27_label2_alpha_projective_quotient_magma_20260621.md).
+After homogenizing the alpha map, online Magma over tiny `q=7` finds the
+degree-30 genus-17 main component, certifies the projection to
+`E: W^2Z=X^3-XZ^2` as degree `4`, constructs the projective alpha isomorphism,
+and builds an automorphism group of order `4`.  The generic
+`CurveQuotient(G)` call times out, but the quotient coordinates are no longer
+the unknown: `D/<alpha>` is the residual elliptic curve `E`.  The live task is
+now the cyclic-quartic/Kummer class over `E` and its relation to the descended
+`d3`/`d4` classes, not a blind quotient computation.
+
 The first source attempt from that viewpoint is negative:
 [P27 Label-2 E[2] Packet Source Probe](evidence/p27_label2_e2_packet_source_probe_20260621.md).
 The rational `E[2]` packet selector is exact and gives the expected `~2x`
