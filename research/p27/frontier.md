@@ -553,6 +553,16 @@ all already square on the selected guard-field rows, so they do not explain
 normalization: the next Magma/Sage pass should mark these Belyi branch values
 when recovering the actual `d3` branch class.
 
+The visible Belyi involutions do not give a further quotient:
+[P27 K/S Belyi Involution Audit](evidence/p27_k_belyi_involution_audit_20260621.md).
+The tempting shortcut was `K -> 4/K`, equivalently
+`Sroot -> +/-2/Sroot`.  It is closed in some small fields but not stable:
+for `d3`, q607 has `32/32` present with opposite targets and q1471 has
+`49/50` present with same targets, while the promotion fields q1607 and q1847
+have `0/49` and `0/63` present.  An online Magma q607/q1607 fixture confirms
+the contrast.  So Belyi automorphisms remain normalization data, not a
+sqrt-beating sampler or quotient shortcut.
+
 The first Belyi-normalized source family is now killed:
 [P27 Lambda Branch-Divisor Screen](evidence/p27_lambda_branch_divisor_screen_20260621.md).
 It tested `z^2=f(lambda)` with `deg_lambda(f)<=4`, where

@@ -1,0 +1,409 @@
+p27 K/S Belyi involution audit
+K transforms = K, -K, 4/K, -4/K
+S transforms = S, -S, 2/S, -2/S
+promotion = closure plus invariant/anti-invariant target on d3
+q=1471:
+  q_mod_8 = 7
+  chi_minus_one = -1
+  setup_stats:
+  d3_eprime_input_rows = 200
+  d3_eprime_minus = 44
+  d3_eprime_plus = 56
+  d3_eprime_quotient_rows = 100
+  d3_k_input_rows = 100
+  d3_k_k_rows = 50
+  d3_k_minus = 22
+  d3_k_plus = 28
+  d3_s_input_rows = 100
+  d3_s_minus = 44
+  d3_s_paired_s_neg_s = 100
+  d3_s_plus = 56
+  d3_s_s_rows = 100
+  d4_eprime_input_rows = 112
+  d4_eprime_minus = 28
+  d4_eprime_plus = 28
+  d4_eprime_quotient_rows = 56
+  d4_k_input_rows = 56
+  d4_k_k_rows = 28
+  d4_k_minus = 14
+  d4_k_plus = 14
+  d4_s_input_rows = 56
+  d4_s_minus = 28
+  d4_s_paired_s_neg_s = 56
+  d4_s_plus = 28
+  d4_s_s_rows = 56
+  enum_compact_not_target = 837
+  enum_no_label2_candidate = 424
+  quotient_d3_minus_E_points = 88
+  quotient_d3_missing_on_E_orbit = 0
+  quotient_d3_not_descended_to_E = 0
+  quotient_d3_plus_E_points = 112
+  quotient_d3_quotient_rows = 200
+  quotient_d4_minus_E_points_after_d3 = 56
+  quotient_d4_missing_on_E_orbit = 0
+  quotient_d4_not_descended_to_E = 0
+  quotient_d4_plus_E_points_after_d3 = 56
+  quotient_d4_quotient_rows_after_d3 = 112
+  quotient_orbit_size_4 = 200
+  quotient_oriented_candidates = 800
+  quotient_quotient_E_points = 200
+  q1471_d3_K_row_stats:
+  chi_K2p4_1 = 50
+  chi_K_1 = 50
+  rows = 50
+  target_-1 = 22
+  target_1 = 28
+  q1471_d3_K_transform_stats:
+  -4/K_missing = 50
+  -K_missing = 50
+  4/K_missing = 1
+  4/K_orbit_pairs = 25
+  4/K_present = 49
+  4/K_same = 49
+  4/K_same_orbit_pairs = 25
+  K_orbit_pairs = 50
+  K_present = 50
+  K_same = 50
+  K_same_orbit_pairs = 50
+  q1471_d3_K_group_orbit_stats:
+  constant_target_orbits = 26
+  orbit_size_1 = 2
+  orbit_size_2 = 24
+  orbits = 26
+  q1471_d4_K_row_stats:
+  chi_K2p4_1 = 28
+  chi_K_1 = 28
+  rows = 28
+  target_-1 = 14
+  target_1 = 14
+  q1471_d4_K_transform_stats:
+  -4/K_missing = 28
+  -K_missing = 28
+  4/K_opposite = 28
+  4/K_opposite_orbit_pairs = 14
+  4/K_orbit_pairs = 14
+  4/K_present = 28
+  K_orbit_pairs = 28
+  K_present = 28
+  K_same = 28
+  K_same_orbit_pairs = 28
+  q1471_d4_K_group_orbit_stats:
+  mixed_target_orbits = 14
+  orbit_size_2 = 14
+  orbits = 14
+  q1471_d3_S_row_stats:
+  chi_S2m2Sp2_1 = 100
+  chi_S2p2Sp2_1 = 100
+  chi_S_-1 = 50
+  chi_S_1 = 50
+  rows = 100
+  target_-1 = 44
+  target_1 = 56
+  q1471_d3_S_transform_stats:
+  -2/S_missing = 2
+  -2/S_orbit_pairs = 49
+  -2/S_present = 98
+  -2/S_same = 98
+  -2/S_same_orbit_pairs = 49
+  -S_orbit_pairs = 50
+  -S_present = 100
+  -S_same = 100
+  -S_same_orbit_pairs = 50
+  2/S_missing = 2
+  2/S_orbit_pairs = 50
+  2/S_present = 98
+  2/S_same = 98
+  2/S_same_orbit_pairs = 50
+  S_orbit_pairs = 100
+  S_present = 100
+  S_same = 100
+  S_same_orbit_pairs = 100
+  q1471_d3_S_group_orbit_stats:
+  constant_target_orbits = 26
+  orbit_size_2 = 2
+  orbit_size_4 = 24
+  orbits = 26
+  q1471_d4_S_row_stats:
+  chi_S2m2Sp2_1 = 56
+  chi_S2p2Sp2_1 = 56
+  chi_S_-1 = 28
+  chi_S_1 = 28
+  rows = 56
+  target_-1 = 28
+  target_1 = 28
+  q1471_d4_S_transform_stats:
+  -2/S_opposite = 56
+  -2/S_opposite_orbit_pairs = 28
+  -2/S_orbit_pairs = 28
+  -2/S_present = 56
+  -S_orbit_pairs = 28
+  -S_present = 56
+  -S_same = 56
+  -S_same_orbit_pairs = 28
+  2/S_opposite = 56
+  2/S_opposite_orbit_pairs = 28
+  2/S_orbit_pairs = 28
+  2/S_present = 56
+  S_orbit_pairs = 56
+  S_present = 56
+  S_same = 56
+  S_same_orbit_pairs = 56
+  q1471_d4_S_group_orbit_stats:
+  mixed_target_orbits = 14
+  orbit_size_4 = 14
+  orbits = 14
+q=1607:
+  q_mod_8 = 7
+  chi_minus_one = -1
+  setup_stats:
+  d3_eprime_input_rows = 196
+  d3_eprime_minus = 42
+  d3_eprime_plus = 56
+  d3_eprime_quotient_rows = 98
+  d3_k_input_rows = 98
+  d3_k_k_rows = 49
+  d3_k_minus = 21
+  d3_k_plus = 28
+  d3_s_input_rows = 98
+  d3_s_minus = 42
+  d3_s_paired_s_neg_s = 98
+  d3_s_plus = 56
+  d3_s_s_rows = 98
+  d4_eprime_input_rows = 112
+  d4_eprime_minus = 18
+  d4_eprime_plus = 38
+  d4_eprime_quotient_rows = 56
+  d4_k_input_rows = 56
+  d4_k_k_rows = 28
+  d4_k_minus = 9
+  d4_k_plus = 19
+  d4_s_input_rows = 56
+  d4_s_minus = 18
+  d4_s_paired_s_neg_s = 56
+  d4_s_plus = 38
+  d4_s_s_rows = 56
+  enum_compact_not_target = 805
+  enum_no_label2_candidate = 408
+  quotient_d3_minus_E_points = 84
+  quotient_d3_missing_on_E_orbit = 0
+  quotient_d3_not_descended_to_E = 0
+  quotient_d3_plus_E_points = 112
+  quotient_d3_quotient_rows = 196
+  quotient_d4_minus_E_points_after_d3 = 36
+  quotient_d4_missing_on_E_orbit = 0
+  quotient_d4_not_descended_to_E = 0
+  quotient_d4_plus_E_points_after_d3 = 76
+  quotient_d4_quotient_rows_after_d3 = 112
+  quotient_orbit_size_4 = 196
+  quotient_oriented_candidates = 784
+  quotient_quotient_E_points = 196
+  q1607_d3_K_row_stats:
+  chi_K2p4_1 = 49
+  chi_K_1 = 49
+  rows = 49
+  target_-1 = 21
+  target_1 = 28
+  q1607_d3_K_transform_stats:
+  -4/K_missing = 49
+  -K_missing = 49
+  4/K_missing = 49
+  K_orbit_pairs = 49
+  K_present = 49
+  K_same = 49
+  K_same_orbit_pairs = 49
+  q1607_d3_K_group_orbit_stats:
+  constant_target_orbits = 49
+  orbit_size_1 = 49
+  orbits = 49
+  q1607_d4_K_row_stats:
+  chi_K2p4_1 = 28
+  chi_K_1 = 28
+  rows = 28
+  target_-1 = 9
+  target_1 = 19
+  q1607_d4_K_transform_stats:
+  -4/K_missing = 28
+  -K_missing = 28
+  4/K_missing = 28
+  K_orbit_pairs = 28
+  K_present = 28
+  K_same = 28
+  K_same_orbit_pairs = 28
+  q1607_d4_K_group_orbit_stats:
+  constant_target_orbits = 28
+  orbit_size_1 = 28
+  orbits = 28
+  q1607_d3_S_row_stats:
+  chi_S2m2Sp2_1 = 98
+  chi_S2p2Sp2_1 = 98
+  chi_S_-1 = 49
+  chi_S_1 = 49
+  rows = 98
+  target_-1 = 42
+  target_1 = 56
+  q1607_d3_S_transform_stats:
+  -2/S_missing = 98
+  -S_orbit_pairs = 49
+  -S_present = 98
+  -S_same = 98
+  -S_same_orbit_pairs = 49
+  2/S_missing = 98
+  S_orbit_pairs = 98
+  S_present = 98
+  S_same = 98
+  S_same_orbit_pairs = 98
+  q1607_d3_S_group_orbit_stats:
+  constant_target_orbits = 49
+  orbit_size_2 = 49
+  orbits = 49
+  q1607_d4_S_row_stats:
+  chi_S2m2Sp2_1 = 56
+  chi_S2p2Sp2_1 = 56
+  chi_S_-1 = 28
+  chi_S_1 = 28
+  rows = 56
+  target_-1 = 18
+  target_1 = 38
+  q1607_d4_S_transform_stats:
+  -2/S_missing = 56
+  -S_orbit_pairs = 28
+  -S_present = 56
+  -S_same = 56
+  -S_same_orbit_pairs = 28
+  2/S_missing = 56
+  S_orbit_pairs = 56
+  S_present = 56
+  S_same = 56
+  S_same_orbit_pairs = 56
+  q1607_d4_S_group_orbit_stats:
+  constant_target_orbits = 28
+  orbit_size_2 = 28
+  orbits = 28
+q=1847:
+  q_mod_8 = 7
+  chi_minus_one = -1
+  setup_stats:
+  d3_eprime_input_rows = 252
+  d3_eprime_minus = 36
+  d3_eprime_plus = 90
+  d3_eprime_quotient_rows = 126
+  d3_k_input_rows = 126
+  d3_k_k_rows = 63
+  d3_k_minus = 18
+  d3_k_plus = 45
+  d3_s_input_rows = 126
+  d3_s_minus = 36
+  d3_s_paired_s_neg_s = 126
+  d3_s_plus = 90
+  d3_s_s_rows = 126
+  d4_eprime_input_rows = 180
+  d4_eprime_minus = 52
+  d4_eprime_plus = 38
+  d4_eprime_quotient_rows = 90
+  d4_k_input_rows = 90
+  d4_k_k_rows = 45
+  d4_k_minus = 26
+  d4_k_plus = 19
+  d4_s_input_rows = 90
+  d4_s_minus = 52
+  d4_s_paired_s_neg_s = 90
+  d4_s_plus = 38
+  d4_s_s_rows = 90
+  enum_compact_not_target = 873
+  enum_no_label2_candidate = 468
+  quotient_d3_minus_E_points = 72
+  quotient_d3_missing_on_E_orbit = 0
+  quotient_d3_not_descended_to_E = 0
+  quotient_d3_plus_E_points = 180
+  quotient_d3_quotient_rows = 252
+  quotient_d4_minus_E_points_after_d3 = 104
+  quotient_d4_missing_on_E_orbit = 0
+  quotient_d4_not_descended_to_E = 0
+  quotient_d4_plus_E_points_after_d3 = 76
+  quotient_d4_quotient_rows_after_d3 = 180
+  quotient_orbit_size_4 = 252
+  quotient_oriented_candidates = 1008
+  quotient_quotient_E_points = 252
+  q1847_d3_K_row_stats:
+  chi_K2p4_1 = 63
+  chi_K_1 = 63
+  rows = 63
+  target_-1 = 18
+  target_1 = 45
+  q1847_d3_K_transform_stats:
+  -4/K_missing = 63
+  -K_missing = 63
+  4/K_missing = 63
+  K_orbit_pairs = 63
+  K_present = 63
+  K_same = 63
+  K_same_orbit_pairs = 63
+  q1847_d3_K_group_orbit_stats:
+  constant_target_orbits = 63
+  orbit_size_1 = 63
+  orbits = 63
+  q1847_d4_K_row_stats:
+  chi_K2p4_1 = 45
+  chi_K_1 = 45
+  rows = 45
+  target_-1 = 26
+  target_1 = 19
+  q1847_d4_K_transform_stats:
+  -4/K_missing = 45
+  -K_missing = 45
+  4/K_missing = 45
+  K_orbit_pairs = 45
+  K_present = 45
+  K_same = 45
+  K_same_orbit_pairs = 45
+  q1847_d4_K_group_orbit_stats:
+  constant_target_orbits = 45
+  orbit_size_1 = 45
+  orbits = 45
+  q1847_d3_S_row_stats:
+  chi_S2m2Sp2_1 = 126
+  chi_S2p2Sp2_1 = 126
+  chi_S_-1 = 63
+  chi_S_1 = 63
+  rows = 126
+  target_-1 = 36
+  target_1 = 90
+  q1847_d3_S_transform_stats:
+  -2/S_missing = 126
+  -S_orbit_pairs = 63
+  -S_present = 126
+  -S_same = 126
+  -S_same_orbit_pairs = 63
+  2/S_missing = 126
+  S_orbit_pairs = 126
+  S_present = 126
+  S_same = 126
+  S_same_orbit_pairs = 126
+  q1847_d3_S_group_orbit_stats:
+  constant_target_orbits = 63
+  orbit_size_2 = 63
+  orbits = 63
+  q1847_d4_S_row_stats:
+  chi_S2m2Sp2_1 = 90
+  chi_S2p2Sp2_1 = 90
+  chi_S_-1 = 45
+  chi_S_1 = 45
+  rows = 90
+  target_-1 = 52
+  target_1 = 38
+  q1847_d4_S_transform_stats:
+  -2/S_missing = 90
+  -S_orbit_pairs = 45
+  -S_present = 90
+  -S_same = 90
+  -S_same_orbit_pairs = 45
+  2/S_missing = 90
+  S_orbit_pairs = 90
+  S_present = 90
+  S_same = 90
+  S_same_orbit_pairs = 90
+  q1847_d4_S_group_orbit_stats:
+  constant_target_orbits = 45
+  orbit_size_2 = 45
+  orbits = 45
+p27_k_belyi_involution_probe_rows=1/1
