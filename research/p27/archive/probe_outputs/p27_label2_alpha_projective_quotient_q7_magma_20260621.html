@@ -115,6 +115,14 @@ catch e
     print e`Object;
 end try;
 
+try
+    Rdiv := RamificationDivisor(piE);
+    print &quot;RAMIFICATION_OK&quot;, Degree(Rdiv);
+catch e
+    print &quot;RAMIFICATION_ERROR&quot;;
+    print e`Object;
+end try;
+
 N := R*mth*(2*Ph*m0h - X*R^2*Z^6);
 D := 2*Sh*(X*R^2*Z^6 - Ph*m0h);
 
@@ -175,7 +183,7 @@ print &quot;RESULT p27_label2_alpha_projective_quotient_q7 done&quot;;
                 <li class="warning">The computation exceeded the time limit and so was terminated prematurely.</li>
               </ul>
             </div>
-            <textarea name="output" rows="10" cols="80" readonly="1" id="result">PROJ_COMPS 3
+            <textarea name="output" rows="11" cols="80" readonly="1" id="result">PROJ_COMPS 3
 PROJ_COMP 1 1 30 8
 PROJ_COMP 2 1 1 8
 PROJ_COMP 3 1 1 8
@@ -183,6 +191,7 @@ MAIN_IDX 1
 MAIN_GENUS 17 8
 E_PROJECTION_OK 1 8 true true
 E_PROJECTION_DEGREE 4
+RAMIFICATION_OK 32
 ISO_OK true
 AUT_GROUP_OK 4</textarea>
           </div>
@@ -195,7 +204,7 @@ AUT_GROUP_OK 4</textarea>
               <li>Calculations are restricted to 60 seconds.</li>
               <li>Input is limited to 50000 bytes.</li>
               <li>Running Magma V2.29-8.</li>
-              <li>Seed: 3786659571.</li>
+              <li>Seed: 2296022842.</li>
             </ul>
           </div>
         </td>

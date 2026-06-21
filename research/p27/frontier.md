@@ -169,12 +169,25 @@ That quotient test now has a small Magma smoke:
 [P27 Label-2 Alpha Projective Quotient Smoke](evidence/p27_label2_alpha_projective_quotient_magma_20260621.md).
 After homogenizing the alpha map, online Magma over tiny `q=7` finds the
 degree-30 genus-17 main component, certifies the projection to
-`E: W^2Z=X^3-XZ^2` as degree `4`, constructs the projective alpha isomorphism,
-and builds an automorphism group of order `4`.  The generic
+`E: W^2Z=X^3-XZ^2` as degree `4`, computes ramification degree `32`,
+constructs the projective alpha isomorphism, and builds an automorphism group
+of order `4`.  The generic
 `CurveQuotient(G)` call times out, but the quotient coordinates are no longer
 the unknown: `D/<alpha>` is the residual elliptic curve `E`.  The live task is
 now the cyclic-quartic/Kummer class over `E` and its relation to the descended
 `d3`/`d4` classes, not a blind quotient computation.
+
+The branch-class follow-up kills the nearest alpha shortcut:
+[P27 Alpha Branch-Class Screen](evidence/p27_alpha_branch_class_screen_20260621.md).
+For the quartic `R^4-2*a*R^2+b`, with
+`a=prefactor*m0` and `b=4*prefactor^2*T2*S^2`, the `R`-discriminant
+squareclass is just `T2`.  The probe verifies `T2_chi_1` on all active rows:
+p27 train `5000/5000` d3 and `2466/2466` d4, p27 heldout `5000/5000` d3 and
+`2522/2522` d4, and q1607/q1847/q2087 also all square.  Branch-atom product
+fits have zero exact combos and p27 train-best products collapse to
+`0.5044` for d3 and at most `0.5075` for d4 on heldout.  So the alpha branch
+divisor is not the missing post-compactD selector; the next serious test is
+actual `d3`/`d4` cover extraction on `E'` or `P^1_K`.
 
 The first source attempt from that viewpoint is negative:
 [P27 Label-2 E[2] Packet Source Probe](evidence/p27_label2_e2_packet_source_probe_20260621.md).

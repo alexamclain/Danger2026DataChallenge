@@ -53,6 +53,14 @@ catch e
     print e`Object;
 end try;
 
+try
+    Rdiv := RamificationDivisor(piE);
+    print "RAMIFICATION_OK", Degree(Rdiv);
+catch e
+    print "RAMIFICATION_ERROR";
+    print e`Object;
+end try;
+
 N := R*mth*(2*Ph*m0h - X*R^2*Z^6);
 D := 2*Sh*(X*R^2*Z^6 - Ph*m0h);
 
