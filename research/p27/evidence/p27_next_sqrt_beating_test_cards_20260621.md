@@ -667,6 +667,7 @@ K/S first-half cover update:
 [P27 E-Prime First-Half Pullback Magma Smoke](p27_eprime_first_half_pullback_magma_20260621.md).
 [P27 E-Prime D3 Z-Source Magma Smoke](p27_eprime_d3_zsource_magma_20260621.md).
 [P27 E-Prime L(4O) Exact Section Screen](p27_eprime_l4_section_exact_screen_20260621.md).
+[P27 E-Prime U-Cubic Exact Screen](p27_eprime_ucubic_exact_screen_20260621.md).
 
 ```text
 Full q7 reverse-source fixture: online Magma memory limit.
@@ -713,6 +714,10 @@ Genus/normalization of this curve is the concrete offline CAS ask.
 The nearest exact low-pole source family on E' is killed: sections
 `a+bU+cU^2+dV` in `L(4O)` have zero exact d3 formulas on q599/q727/q919.
 The q487 exact quadratic-U sections do not survive and are local artifacts.
+
+The next rational U-line loophole is also killed.  Exact U-cubics appear in
+some small fields, including one q599 formula and many q487/q727 formulas, but
+there are zero exact U-cubics on q919, q967, and q1063.
 ```
 
 Updated K/S next test:
@@ -725,6 +730,7 @@ Do offline Magma/Sage quotient/decomposition only with a sharper target:
   and d4 fresh-cover vs recurrence testing.
 Do not treat E' descent alone as a low-genus source; the staged first-half
 pullback remains genus 37.
+Do not widen univariate U coefficient searches without a divisor-class reason.
 Promote only if a low-genus quotient, named recurrence, or sourceable walk
 survives over F_p on p27-signature fields.
 ```

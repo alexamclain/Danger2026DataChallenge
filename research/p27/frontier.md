@@ -651,6 +651,14 @@ irreducible-conic-sized section; it must come from the actual normalized
 z-source curve, a higher divisor/Kummer class, or a recurrence visible only
 after the d3 class is named.
 
+The next rational U-line loophole is also closed:
+[P27 E-Prime U-Cubic Exact Screen](evidence/p27_eprime_ucubic_exact_screen_20260621.md).
+Exact U-cubic polynomials `a+bU+cU^2+dU^3` occur locally in q487, q599, and
+q727, but disappear on q919, q967, and q1063.  This demotes univariate U-line
+coefficient widening as another interpolation trap.  The surviving E' task is
+not "try degree 4"; it is normalize `J = Iclean + <reverse_z>` and recover the
+actual branch/Kummer class.
+
 The K-line now has a cleaner coordinate for that extraction:
 [P27 Kummer Belyi Structure Probe](evidence/p27_kummer_belyi_structure_probe_20260621.md).
 Symbolically,

@@ -28,6 +28,7 @@ Latest evidence:
 [P27 E-Prime First-Half Pullback Magma Smoke](p27_eprime_first_half_pullback_magma_20260621.md).
 [P27 E-Prime D3 Z-Source Magma Smoke](p27_eprime_d3_zsource_magma_20260621.md).
 [P27 E-Prime L(4O) Exact Section Screen](p27_eprime_l4_section_exact_screen_20260621.md).
+[P27 E-Prime U-Cubic Exact Screen](p27_eprime_ucubic_exact_screen_20260621.md).
 
 Key result over tiny p27-signature field `q=7`:
 
@@ -59,6 +60,8 @@ first-half saturation; q7 online Magma reports a dimension-1 scheme with
 62 basis polynomials, but genus/normalization exceeds the web memory limit.
 Exact single-section tests in `L(4O)=<1,U,U^2,V>` are killed on q599/q727/q919;
 q487 exact quadratic-U fits are local artifacts.
+Exact U-cubic tests also fail on q919/q967/q1063, despite local q487/q599/q727
+artifacts, so widening univariate U-polynomials is no longer a live source path.
 ```
 
 Concrete next K/S test:
