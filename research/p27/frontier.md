@@ -522,6 +522,17 @@ all already square on the selected guard-field rows, so they do not explain
 normalization: the next Magma/Sage pass should mark these Belyi branch values
 when recovering the actual `d3` branch class.
 
+The first Belyi-normalized source family is now killed:
+[P27 Lambda Branch-Divisor Screen](evidence/p27_lambda_branch_divisor_screen_20260621.md).
+It tested `z^2=f(lambda)` with `deg_lambda(f)<=4`, where
+`lambda=-K^2/4` and the branch divisor splits over each guard field into
+rational linear and irreducible quadratic factors.  For `d3` there are no
+exact divisors over `q=1471,1607,1847`; for `d4`, degree-3 fits appear in
+q1471/q1607 but disappear at q1847.  This rules out the nearest genus `<=1`
+lambda-line sampler for the decisive next bit.  The surviving K/lambda route
+is not coefficient-bound widening; it is actual branch-class/genus extraction,
+including possible irreducible cubic/quartic support or a higher-degree class.
+
 The newest p26 GPU trace/norm result is positive structure but negative as a
 production prefilter:
 [P27 GPU Filter-Cost Lesson From P26](evidence/p27_gpu_filter_cost_lesson_from_p26_20260621.md).
