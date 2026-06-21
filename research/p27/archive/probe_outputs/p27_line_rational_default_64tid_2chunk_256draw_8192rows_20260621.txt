@@ -1,0 +1,32 @@
+p27_line_rational_evaluator
+p=1000000000000000000000000103
+variables: a, a2, a4, u=4/a^2, u2
+sample:
+  raw_draws=32768
+  nonsplit_y=16432
+  k_points=32864
+  domain_records=8192
+  target_records=8048
+  domain_inconsistent=0
+  target_line_inconsistent=0
+expr_summary scope=domain_line name=a rows=8192 zero_eval=0 eval_errors=0 target_plus=4022 exact_plus=0 exact_minus=0 best_orientation=minus best_good=2032 best_total=4117 best_lift=1.005288499
+expr_summary scope=target_line name=a rows=8048 zero_eval=0 eval_errors=0 target_plus=4068 exact_plus=0 exact_minus=0 best_orientation=minus best_good=2074 best_total=4066 best_lift=1.009132983
+expr_summary scope=domain_line name=a_minus_2 rows=8192 zero_eval=0 eval_errors=0 target_plus=4022 exact_plus=0 exact_minus=0 best_orientation=minus best_good=2053 best_total=4103 best_lift=1.019143432
+expr_summary scope=target_line name=a_minus_2 rows=8048 zero_eval=0 eval_errors=0 target_plus=4068 exact_plus=0 exact_minus=0 best_orientation=minus best_good=2075 best_total=4066 best_lift=1.009619547
+expr_summary scope=domain_line name=a_plus_2 rows=8192 zero_eval=0 eval_errors=0 target_plus=4022 exact_plus=0 exact_minus=0 best_orientation=plus best_good=2053 best_total=4103 best_lift=1.019143432
+expr_summary scope=target_line name=a_plus_2 rows=8048 zero_eval=0 eval_errors=0 target_plus=4068 exact_plus=0 exact_minus=0 best_orientation=plus best_good=2075 best_total=4066 best_lift=1.009619547
+expr_summary scope=domain_line name=a2_minus_4 rows=8192 zero_eval=0 eval_errors=0 target_plus=4022 exact_plus=0 exact_minus=0 best_orientation=minus best_good=4022 best_total=8192 best_lift=1.000000000
+expr_summary scope=target_line name=a2_minus_4 rows=8048 zero_eval=0 eval_errors=0 target_plus=4068 exact_plus=0 exact_minus=0 best_orientation=minus best_good=4068 best_total=8048 best_lift=1.000000000
+expr_summary scope=domain_line name=a2_plus_4 rows=8192 zero_eval=0 eval_errors=0 target_plus=4022 exact_plus=0 exact_minus=0 best_orientation=plus best_good=4022 best_total=8192 best_lift=1.000000000
+expr_summary scope=target_line name=a2_plus_4 rows=8048 zero_eval=0 eval_errors=0 target_plus=4068 exact_plus=0 exact_minus=0 best_orientation=plus best_good=4068 best_total=8048 best_lift=1.000000000
+expr_summary scope=domain_line name=u rows=8192 zero_eval=0 eval_errors=0 target_plus=4022 exact_plus=0 exact_minus=0 best_orientation=plus best_good=4022 best_total=8192 best_lift=1.000000000
+expr_summary scope=target_line name=u rows=8048 zero_eval=0 eval_errors=0 target_plus=4068 exact_plus=0 exact_minus=0 best_orientation=plus best_good=4068 best_total=8048 best_lift=1.000000000
+expr_summary scope=domain_line name=u_minus_1 rows=8192 zero_eval=0 eval_errors=0 target_plus=4022 exact_plus=0 exact_minus=0 best_orientation=plus best_good=4022 best_total=8192 best_lift=1.000000000
+expr_summary scope=target_line name=u_minus_1 rows=8048 zero_eval=0 eval_errors=0 target_plus=4068 exact_plus=0 exact_minus=0 best_orientation=plus best_good=4068 best_total=8048 best_lift=1.000000000
+expr_summary scope=domain_line name=u_plus_1 rows=8192 zero_eval=0 eval_errors=0 target_plus=4022 exact_plus=0 exact_minus=0 best_orientation=plus best_good=4022 best_total=8192 best_lift=1.000000000
+expr_summary scope=target_line name=u_plus_1 rows=8048 zero_eval=0 eval_errors=0 target_plus=4068 exact_plus=0 exact_minus=0 best_orientation=plus best_good=4068 best_total=8048 best_lift=1.000000000
+expr_summary scope=domain_line name=u2_minus_1 rows=8192 zero_eval=0 eval_errors=0 target_plus=4022 exact_plus=0 exact_minus=0 best_orientation=plus best_good=4022 best_total=8192 best_lift=1.000000000
+expr_summary scope=target_line name=u2_minus_1 rows=8048 zero_eval=0 eval_errors=0 target_plus=4068 exact_plus=0 exact_minus=0 best_orientation=plus best_good=4068 best_total=8048 best_lift=1.000000000
+expr_summary scope=domain_line name=u2_plus_1 rows=8192 zero_eval=0 eval_errors=0 target_plus=4022 exact_plus=0 exact_minus=0 best_orientation=plus best_good=2007 best_total=4072 best_lift=1.003893126
+expr_summary scope=target_line name=u2_plus_1 rows=8048 zero_eval=0 eval_errors=0 target_plus=4068 exact_plus=0 exact_minus=0 best_orientation=plus best_good=2043 best_total=3992 best_lift=1.012476280
+p27_line_rational_evaluator_rows=1/1

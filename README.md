@@ -10,7 +10,10 @@ Curated research notes now live in:
 - `research/p23/` for the p23 campaign and its supporting audits;
 - `research/p24/` for the p24 research wiki and archived exploration;
 - `research/p25/` for the p25 research wiki imported from the separate
-  `pomerance-p25-run` workspace.
+  `pomerance-p25-run` workspace;
+- `research/p27/` for the current p27 moonshot cockpit, including the
+  trace/norm transfer, label-2 compactD frontier, U+2 scope-shrink evidence,
+  GPU handoff notes, and reverse-doubling source test cards.
 
 ## p25 Result: X1(16) Nonsplit Search
 

@@ -1,0 +1,38 @@
+p27 u+2 sequence recurrence probe
+p = 1000000000000000000000000103
+target_pairs = 30000
+seed = 20260621
+max_gates = 12
+sampled_pairs = 30000
+sample_stat candidate_invalid_not_nonsplit = 59140
+sample_stat compact_not_target = 58926
+sample_stat no_t = 59078
+sample_stat no_w = 117563
+sample_stat pair_incomplete = 29570
+sample_stat x_draws = 235889
+gate_prefix_rates:
+  gate=3 samples=30000 plus=15004 minus=14996 zero=0 continue=15004 plus_rate=0.500133333
+  gate=4 samples=15004 plus=7464 minus=7540 zero=0 continue=7464 plus_rate=0.497467342
+  gate=5 samples=7464 plus=3706 minus=3758 zero=0 continue=3706 plus_rate=0.496516613
+  gate=6 samples=3706 plus=1854 minus=1852 zero=0 continue=1854 plus_rate=0.500269833
+  gate=7 samples=1854 plus=964 minus=890 zero=0 continue=964 plus_rate=0.519956850
+  gate=8 samples=964 plus=516 minus=448 zero=0 continue=516 plus_rate=0.535269710
+  gate=9 samples=516 plus=220 minus=296 zero=0 continue=220 plus_rate=0.426356589
+  gate=10 samples=220 plus=114 minus=106 zero=0 continue=114 plus_rate=0.518181818
+  gate=11 samples=114 plus=54 minus=60 zero=0 continue=54 plus_rate=0.473684211
+  gate=12 samples=54 plus=22 minus=32 zero=0 continue=22 plus_rate=0.407407407
+prefix_success_length_hist:
+  plus_prefix_len=0 count=14996 rate=0.499866667
+  plus_prefix_len=1 count=7540 rate=0.251333333
+  plus_prefix_len=2 count=3758 rate=0.125266667
+  plus_prefix_len=3 count=1852 rate=0.061733333
+  plus_prefix_len=4 count=890 rate=0.029666667
+  plus_prefix_len=5 count=448 rate=0.014933333
+  plus_prefix_len=6 count=296 rate=0.009866667
+  plus_prefix_len=7 count=106 rate=0.003533333
+  plus_prefix_len=8 count=60 rate=0.002000000
+  plus_prefix_len=9 count=32 rate=0.001066667
+  plus_prefix_len=10 count=22 rate=0.000733333
+anomaly_stats:
+  none
+p27_usquare_sequence_recurrence_probe_rows=1/1

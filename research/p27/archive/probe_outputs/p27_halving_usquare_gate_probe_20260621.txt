@@ -1,0 +1,45 @@
+p27 halving u+2 x-square gate probe
+p = 1000000000000000000000000103
+target_pairs = 5000
+seed = 20260621
+sampled_pairs = 5000
+sample_stat candidate_invalid_not_nonsplit = 9808
+sample_stat compact_not_target = 9728
+sample_stat no_t = 9900
+sample_stat no_w = 19583
+sample_stat pair_incomplete = 4904
+sample_stat x_draws = 39299
+d2_to_d3_gate:
+  good_records = 10000
+  next_d_minus = 10136
+  next_d_mismatch = 0
+  next_d_plus = 9864
+  next_d_zero = 0
+  product_mismatch = 0
+  roots = 10000
+  uminus_mismatch = 0
+  uplus_mismatch = 0
+  uplus_uminus_mismatch = 0
+  x_count = 20000
+  prefilter_class_counts:
+    chi_u_plus_2=-1 count=5068
+    chi_u_plus_2=0 count=0
+    chi_u_plus_2=1 count=4932
+  reject_before_sqrt_w_share = 0.506800000
+d3_to_d4_gate:
+  good_records = 9864
+  next_d_minus = 9520
+  next_d_mismatch = 0
+  next_d_plus = 10208
+  next_d_zero = 0
+  product_mismatch = 0
+  uminus_mismatch = 0
+  uplus_mismatch = 0
+  uplus_uminus_mismatch = 0
+  x_count = 19728
+  prefilter_class_counts:
+    chi_u_plus_2=-1 count=4760
+    chi_u_plus_2=0 count=0
+    chi_u_plus_2=1 count=5104
+  reject_before_sqrt_w_share = 0.482562855
+p27_halving_usquare_gate_probe_rows=1/1

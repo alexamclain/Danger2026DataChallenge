@@ -1,0 +1,96 @@
+p27 selected orientation/cocycle span probe
+p = 1000000000000000000000000103
+target_pairs = 30000
+seed = 20260622
+max_target_gate = 6
+sampled_pairs = 30000
+sample_stat candidate_invalid_not_nonsplit = 60234
+sample_stat compact_not_target = 60449
+sample_stat no_t = 60115
+sample_stat no_w = 120453
+sample_stat pair_incomplete = 30117
+sample_stat x_draws = 240851
+anomaly_stats:
+  none
+gate_3_selected_uplus_from_prefix_orientation_span:
+  rows = 30000
+  target_minus_bits = 14836
+  target_plus_rate = 0.505466667
+  exact_combo = none
+  best_weight_le_3:
+    good=15302/30000 rate=0.510066667 weight=3 combo=g3:orient:u_sel * g3:orient:s_sel-1 * g3:orient:u_sel-A
+    good=15302/30000 rate=0.510066667 weight=3 combo=g3:orient:x+s_sel * g3:orient:s_sel-1 * g3:orient:u_sel-A
+    good=15298/30000 rate=0.509933333 weight=3 combo=g3:orient:u_other * g3:orient:A-s_sel * g3:orient:s_sel-1
+    good=15298/30000 rate=0.509933333 weight=3 combo=g3:orient:x-s_sel * g3:orient:A-s_sel * g3:orient:s_sel-1
+    good=15268/30000 rate=0.508933333 weight=2 combo=g3:orient:s_sel-1 * g3:orient:u_other-A
+    good=15268/30000 rate=0.508933333 weight=3 combo=g3:local:x * g3:orient:s_sel-1 * g3:orient:u_other-A
+    good=15268/30000 rate=0.508933333 weight=3 combo=g3:local:A+2 * g3:orient:s_sel-1 * g3:orient:u_other-A
+    good=15268/30000 rate=0.508933333 weight=3 combo=g3:local:2-A * g3:orient:s_sel-1 * g3:orient:u_other-A
+gate_4_selected_uplus_from_prefix_orientation_span:
+  rows = 15164
+  target_minus_bits = 7624
+  target_plus_rate = 0.497230282
+  exact_combo = none
+  best_weight_le_3:
+    good=7932/15164 rate=0.523080981 weight=2 combo=g3:orient:u_other * g4:orient:s_sel+1
+    good=7932/15164 rate=0.523080981 weight=2 combo=g3:orient:x-s_sel * g4:orient:s_sel+1
+    good=7932/15164 rate=0.523080981 weight=3 combo=g3:local:x * g3:orient:u_other * g4:orient:s_sel+1
+    good=7932/15164 rate=0.523080981 weight=3 combo=g3:local:A+2 * g3:orient:u_other * g4:orient:s_sel+1
+    good=7932/15164 rate=0.523080981 weight=3 combo=g3:local:2-A * g3:orient:u_other * g4:orient:s_sel+1
+    good=7932/15164 rate=0.523080981 weight=3 combo=g3:local:x*(2-A) * g3:orient:u_other * g4:orient:s_sel+1
+    good=7932/15164 rate=0.523080981 weight=3 combo=g3:local:x * g3:orient:x-s_sel * g4:orient:s_sel+1
+    good=7932/15164 rate=0.523080981 weight=3 combo=g3:local:A+2 * g3:orient:x-s_sel * g4:orient:s_sel+1
+gate_5_selected_uplus_from_prefix_orientation_span:
+  rows = 7540
+  target_minus_bits = 3716
+  target_plus_rate = 0.507161804
+  exact_combo = none
+  best_weight_le_3:
+    good=3980/7540 rate=0.527851459 weight=3 combo=g3:orient:s_sel * g4:orient:u_sel * g5:orient:s_sel
+    good=3980/7540 rate=0.527851459 weight=3 combo=g3:orient:s_sel * g4:orient:x+s_sel * g5:orient:s_sel
+    good=3980/7540 rate=0.527851459 weight=3 combo=g3:orient:s_other * g4:orient:u_sel * g5:orient:s_other
+    good=3980/7540 rate=0.527851459 weight=3 combo=g3:orient:s_other * g4:orient:x+s_sel * g5:orient:s_other
+    good=3970/7540 rate=0.526525199 weight=2 combo=g3:orient:A-s_sel * g5:orient:s_sel-1
+    good=3970/7540 rate=0.526525199 weight=3 combo=g3:local:x * g3:orient:A-s_sel * g5:orient:s_sel-1
+    good=3970/7540 rate=0.526525199 weight=3 combo=g3:local:A+2 * g3:orient:A-s_sel * g5:orient:s_sel-1
+    good=3970/7540 rate=0.526525199 weight=3 combo=g3:local:2-A * g3:orient:A-s_sel * g5:orient:s_sel-1
+gate_6_selected_uplus_from_prefix_orientation_span:
+  rows = 3824
+  target_minus_bits = 1964
+  target_plus_rate = 0.486401674
+  exact_combo = none
+  best_weight_le_3:
+    good=2088/3824 rate=0.546025105 weight=3 combo=g4:orient:u_other-A * g5:orient:s_sel+1 * g5:orient:u_sel-A
+    good=2076/3824 rate=0.542887029 weight=3 combo=g5:orient:s_other * g5:orient:s_sel-1 * g6:orient:s_sel
+    good=2076/3824 rate=0.542887029 weight=3 combo=g5:orient:s_sel * g5:orient:s_sel-1 * g6:orient:s_other
+    good=2062/3824 rate=0.539225941 weight=3 combo=g3:orient:u_other * g4:orient:s_other * g4:orient:A-s_sel
+    good=2062/3824 rate=0.539225941 weight=3 combo=g3:orient:x-s_sel * g4:orient:s_other * g4:orient:A-s_sel
+    good=2058/3824 rate=0.538179916 weight=3 combo=g4:local:x-1 * g4:orient:u_sel-A * g6:orient:s_other
+    good=2058/3824 rate=0.538179916 weight=3 combo=g4:local:x+1 * g4:orient:u_sel-A * g6:orient:s_other
+    good=2056/3824 rate=0.537656904 weight=3 combo=g4:local:x-1 * g5:orient:u_sel * g5:orient:s_sel-1
+feature_block:
+  00 x
+  01 x-1
+  02 x+1
+  03 A-2
+  04 A+2
+  05 2-A
+  06 -A-2
+  07 x*(2-A)
+  08 -x*(A+2)
+  09 A2-4
+  10 s_sel
+  11 s_other
+  12 u_sel
+  13 u_other
+  14 x+s_sel
+  15 x-s_sel
+  16 A+s_sel
+  17 A-s_sel
+  18 s_sel+1
+  19 s_sel-1
+  20 u_sel+A
+  21 u_sel-A
+  22 u_other+A
+  23 u_other-A
+p27_selected_orientation_cocycle_probe_rows=1/1

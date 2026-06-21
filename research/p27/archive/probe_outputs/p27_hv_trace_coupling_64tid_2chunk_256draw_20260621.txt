@@ -1,0 +1,44 @@
+p27_hv_trace_coupling_gate
+p=1000000000000000000000000103
+sample:
+  raw_draws=32768
+  nonsplit_y=16432
+  k_points=32864
+  rows=16096
+  source_unusable=16768
+  image_unusable=0
+  sigma_not_same_quotient=0
+  duplicate_ab=0
+scores_against_T_line:
+  rank=1 candidate=T_arg:raw mode=p26line line_rows=8048 inconsistent=0 zero=0 exact_plus=1 exact_minus=0 best_lift=1.978367748 good=4068 total=4068
+  rank=2 candidate=T_arg:sigma mode=p26line line_rows=8048 inconsistent=0 zero=0 exact_plus=1 exact_minus=0 best_lift=1.978367748 good=4068 total=4068
+  rank=3 candidate=T_arg:raw mode=b line_rows=8048 inconsistent=3982 zero=0 exact_plus=0 exact_minus=0 best_lift=1.498251673 good=3105 total=4100
+  rank=4 candidate=T_arg:sigma mode=b line_rows=8048 inconsistent=3982 zero=0 exact_plus=0 exact_minus=0 best_lift=1.498251673 good=3105 total=4100
+  rank=5 candidate=T_arg:raw mode=ab line_rows=8048 inconsistent=3982 zero=0 exact_plus=0 exact_minus=0 best_lift=1.490894008 good=3037 total=4030
+  rank=6 candidate=T_arg:sigma mode=ab line_rows=8048 inconsistent=3982 zero=0 exact_plus=0 exact_minus=0 best_lift=1.490894008 good=3037 total=4030
+  rank=7 candidate=T_arg:raw mode=raw line_rows=8048 inconsistent=4066 zero=0 exact_plus=0 exact_minus=0 best_lift=1.490645144 good=3038 total=4032
+  rank=8 candidate=T_arg:sigma mode=raw line_rows=8048 inconsistent=4066 zero=0 exact_plus=0 exact_minus=0 best_lift=1.490645144 good=3038 total=4032
+  rank=9 candidate=T_arg:raw mode=a line_rows=8048 inconsistent=4066 zero=0 exact_plus=0 exact_minus=0 best_lift=1.487464960 good=3024 total=4022
+  rank=10 candidate=T_arg:sigma mode=a line_rows=8048 inconsistent=4066 zero=0 exact_plus=0 exact_minus=0 best_lift=1.487464960 good=3024 total=4022
+  rank=11 candidate=HV:trace mode=ab line_rows=8048 inconsistent=4082 zero=0 exact_plus=0 exact_minus=0 best_lift=1.029608424 good=2114 total=4062
+  rank=12 candidate=HV:sigma mode=p26line line_rows=8048 inconsistent=0 zero=0 exact_plus=0 exact_minus=0 best_lift=1.028712898 good=2147 total=4129
+  rank=13 candidate=HV:anti_trace mode=a line_rows=8048 inconsistent=3995 zero=0 exact_plus=0 exact_minus=0 best_lift=1.027257389 good=2118 total=4079
+  rank=14 candidate=H:norm mode=a line_rows=8048 inconsistent=0 zero=0 exact_plus=0 exact_minus=0 best_lift=1.026483417 good=2064 total=3978
+  rank=15 candidate=V:norm mode=raw line_rows=8048 inconsistent=0 zero=0 exact_plus=0 exact_minus=0 best_lift=1.026483417 good=2064 total=3978
+  rank=16 candidate=HV:anti_trace mode=b line_rows=8048 inconsistent=4053 zero=0 exact_plus=0 exact_minus=0 best_lift=1.023801627 good=2085 total=4029
+  rank=17 candidate=HV:trace mode=a line_rows=8048 inconsistent=3966 zero=0 exact_plus=0 exact_minus=0 best_lift=1.022270201 good=2101 total=4066
+  rank=18 candidate=V:raw mode=ab line_rows=8048 inconsistent=3982 zero=0 exact_plus=0 exact_minus=0 best_lift=1.020901193 good=2060 total=3992
+  rank=19 candidate=HV:anti_trace mode=p26line line_rows=8048 inconsistent=4019 zero=0 exact_plus=0 exact_minus=0 best_lift=1.019676595 good=2090 total=4055
+  rank=20 candidate=HV:raw mode=raw line_rows=8048 inconsistent=4066 zero=0 exact_plus=0 exact_minus=0 best_lift=1.019431852 good=2039 total=3957
+  rank=21 candidate=HV:sigma mode=a line_rows=8048 inconsistent=4066 zero=0 exact_plus=0 exact_minus=0 best_lift=1.019431852 good=2039 total=3957
+  rank=22 candidate=HV:trace mode=b line_rows=8048 inconsistent=4082 zero=0 exact_plus=0 exact_minus=0 best_lift=1.018889096 good=2058 total=3996
+  rank=23 candidate=HV:raw mode=ab line_rows=8048 inconsistent=3982 zero=0 exact_plus=0 exact_minus=0 best_lift=1.018101789 good=2130 total=4139
+  rank=24 candidate=HV:sigma mode=b line_rows=8048 inconsistent=3982 zero=0 exact_plus=0 exact_minus=0 best_lift=1.018101789 good=2130 total=4139
+  rank=25 candidate=HV:raw mode=b line_rows=8048 inconsistent=3982 zero=0 exact_plus=0 exact_minus=0 best_lift=1.017838124 good=2078 total=4039
+  rank=26 candidate=HV:sigma mode=ab line_rows=8048 inconsistent=3982 zero=0 exact_plus=0 exact_minus=0 best_lift=1.017838124 good=2078 total=4039
+  rank=27 candidate=V:raw mode=raw line_rows=8048 inconsistent=4066 zero=0 exact_plus=0 exact_minus=0 best_lift=1.017600251 good=2077 total=4038
+  rank=28 candidate=H:sigma mode=ab line_rows=8048 inconsistent=8048 zero=0 exact_plus=0 exact_minus=0 best_lift=1.016558447 good=2061 total=4011
+  rank=29 candidate=H:anti_trace mode=b line_rows=8048 inconsistent=8048 zero=0 exact_plus=0 exact_minus=0 best_lift=1.015247690 good=2045 total=3985
+  rank=30 candidate=pref_HV:anti_trace mode=raw line_rows=8048 inconsistent=4053 zero=0 exact_plus=0 exact_minus=0 best_lift=1.015195471 good=2049 total=3993
+target_line_rows=8048
+p27_hv_trace_coupling_gate_rows=1/1

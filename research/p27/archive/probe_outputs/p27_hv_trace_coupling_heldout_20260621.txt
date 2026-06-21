@@ -1,0 +1,26 @@
+p27_hv_trace_coupling_heldout
+tids=0:64 chunks=0,1 draws_per_thread=256
+seed=121 target_rows=8048 rows=16096
+  candidate=HV:sigma mode=p26line inconsistent=0 zero=0 exact_plus=0 exact_minus=0 good=2147 total=4129 lift=1.028712898
+  candidate=H:norm mode=a inconsistent=0 zero=0 exact_plus=0 exact_minus=0 good=2064 total=3978 lift=1.026483417
+  candidate=V:norm mode=raw inconsistent=0 zero=0 exact_plus=0 exact_minus=0 good=2064 total=3978 lift=1.026483417
+  candidate=HV:trace mode=ab inconsistent=4082 zero=0 exact_plus=0 exact_minus=0 good=2114 total=4062 lift=1.029608424
+  candidate=HV:anti_trace mode=a inconsistent=3995 zero=0 exact_plus=0 exact_minus=0 good=2118 total=4079 lift=1.027257389
+seed=122 target_rows=8181 rows=16362
+  candidate=HV:sigma mode=p26line inconsistent=0 zero=0 exact_plus=0 exact_minus=0 good=2095 total=4085 lift=1.025077296
+  candidate=H:norm mode=a inconsistent=0 zero=0 exact_plus=0 exact_minus=0 good=2079 total=4120 lift=1.008606868
+  candidate=V:norm mode=raw inconsistent=0 zero=0 exact_plus=0 exact_minus=0 good=2079 total=4120 lift=1.008606868
+  candidate=HV:trace mode=ab inconsistent=4074 zero=0 exact_plus=0 exact_minus=0 good=2100 total=4168 lift=1.007062055
+  candidate=HV:anti_trace mode=a inconsistent=4079 zero=0 exact_plus=0 exact_minus=0 good=2095 total=4166 lift=1.005146604
+seed=123 target_rows=8170 rows=16340
+  candidate=HV:sigma mode=p26line inconsistent=0 zero=0 exact_plus=0 exact_minus=0 good=2098 total=4098 lift=1.004970955
+  candidate=H:norm mode=a inconsistent=0 zero=0 exact_plus=0 exact_minus=0 good=2090 total=4029 lift=1.018284186
+  candidate=V:norm mode=raw inconsistent=0 zero=0 exact_plus=0 exact_minus=0 good=2090 total=4029 lift=1.018284186
+  candidate=HV:trace mode=ab inconsistent=4061 zero=0 exact_plus=0 exact_minus=0 good=2116 total=4128 lift=1.006226974
+  candidate=HV:anti_trace mode=a inconsistent=4047 zero=0 exact_plus=0 exact_minus=0 good=2104 total=4120 lift=1.002463341
+seed=124 target_rows=8161 rows=16322
+  candidate=HV:sigma mode=p26line inconsistent=0 zero=0 exact_plus=0 exact_minus=0 good=2081 total=4174 lift=1.008368973
+  candidate=H:norm mode=a inconsistent=0 zero=0 exact_plus=0 exact_minus=0 good=2023 total=4065 lift=1.006549579
+  candidate=V:norm mode=raw inconsistent=0 zero=0 exact_plus=0 exact_minus=0 good=2023 total=4065 lift=1.006549579
+  candidate=HV:trace mode=ab inconsistent=4085 zero=0 exact_plus=0 exact_minus=0 good=2022 total=4019 lift=1.017566929
+  candidate=HV:anti_trace mode=a inconsistent=4130 zero=0 exact_plus=0 exact_minus=0 good=2044 total=4120 lift=1.003421759

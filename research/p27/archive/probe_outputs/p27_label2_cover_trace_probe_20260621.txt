@@ -1,0 +1,18 @@
+p27 label2 cover trace probe
+p #W aW #T aT #WT aWT aWT_common_branch_adj #C aC #D aD aPrym
+5 8 -2 8 -2 8 -2 -1 11 -5 8 -2 3
+7 8 0 8 0 8 0 1 7 1 12 -4 -5
+11 12 0 10 2 10 2 3 7 5 4 8 3
+13 8 6 16 -2 16 -2 -1 11 3 8 6 3
+17 16 2 22 -4 22 -4 -3 23 -5 24 -6 -1
+19 20 0 14 6 14 6 7 7 13 4 16 3
+23 24 0 24 0 24 0 1 23 1 20 4 3
+29 40 -10 24 6 24 6 7 27 3 24 6 3
+31 32 0 48 -16 48 -16 -15 63 -31 48 -16 15
+37 40 -2 32 6 32 6 7 27 11 24 14 3
+41 32 10 42 0 42 0 1 31 11 36 6 -5
+43 44 0 34 10 34 10 11 23 21 28 16 -5
+intermediate_raw_common_branch_offsets = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+intermediate_trace_decomposition_common_branch_adjusted_ok = 1
+prym_trace_small_combo_known_factors = none_bound_8
+p27_label2_cover_trace_probe_rows=1/1

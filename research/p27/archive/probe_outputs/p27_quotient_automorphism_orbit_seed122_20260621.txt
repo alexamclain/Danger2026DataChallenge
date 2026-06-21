@@ -1,0 +1,54 @@
+p27_quotient_automorphism_orbit_gate
+p=1000000000000000000000000103
+sample:
+  raw_draws=32768
+  nonsplit_y=16320
+  k_points=32640
+  rows=16362
+  component_unusable=16278
+  duplicate_ab=0
+line_neg_a_pairs:
+  key=domain_line line_rows=8181 pairs=0 missing_neg_a=8181 pair_+1+1=0 pair_+1-1=0 pair_-1+1=0 pair_-1-1=0 ratio_+1=0 ratio_-1=0
+  key=T_line line_rows=8181 pairs=0 missing_neg_a=8181 pair_+1+1=0 pair_+1-1=0 pair_-1+1=0 pair_-1-1=0 ratio_+1=0 ratio_-1=0
+transform_ratios:
+  transform=w_flip relations=a,-b:16362
+  transform=w_flip component=domain_line rows=16362 ratio_+1=16362 ratio_-1=0 exact_or_top=-chi_B*chi_a_minus_2,-chi_C*chi_R,-chi_a2_minus_4,-chi_a2_minus_4*chi_a2_plus_4,-chi_a2_minus_4*domain_line
+  transform=w_flip component=pref rows=16362 ratio_+1=16362 ratio_-1=0 exact_or_top=-chi_B*chi_a_minus_2,-chi_C*chi_R,-chi_a2_minus_4,-chi_a2_minus_4*chi_a2_plus_4,-chi_a2_minus_4*domain_line
+  transform=w_flip component=h rows=16362 ratio_+1=16362 ratio_-1=0 exact_or_top=-chi_B*chi_a_minus_2,-chi_C*chi_R,-chi_a2_minus_4,-chi_a2_minus_4*chi_a2_plus_4,-chi_a2_minus_4*domain_line
+  transform=w_flip component=vq rows=16362 ratio_+1=8236 ratio_-1=8126 exact_or_top=-a_chi*chi_a2_minus_4,-chi_a2_minus_4*h_norm,-chi_a2_minus_4*v_norm,-chi_one_minus_t2*chi_t,a_chi
+  transform=w_flip component=h_vq rows=16362 ratio_+1=8236 ratio_-1=8126 exact_or_top=-a_chi*chi_a2_minus_4,-chi_a2_minus_4*h_norm,-chi_a2_minus_4*v_norm,-chi_one_minus_t2*chi_t,a_chi
+  transform=w_flip component=D rows=16362 ratio_+1=8236 ratio_-1=8126 exact_or_top=-a_chi*chi_a2_minus_4,-chi_a2_minus_4*h_norm,-chi_a2_minus_4*v_norm,-chi_one_minus_t2*chi_t,a_chi
+  transform=w_flip component=T rows=16362 ratio_+1=8236 ratio_-1=8126 exact_or_top=-a_chi*chi_a2_minus_4,-chi_a2_minus_4*h_norm,-chi_a2_minus_4*v_norm,-chi_one_minus_t2*chi_t,a_chi
+  transform=w_flip component=T_line rows=16362 ratio_+1=16362 ratio_-1=0 exact_or_top=-chi_B*chi_a_minus_2,-chi_C*chi_R,-chi_a2_minus_4,-chi_a2_minus_4*chi_a2_plus_4,-chi_a2_minus_4*domain_line
+  transform=w_flip component=line_norm rows=16362 ratio_+1=8236 ratio_-1=8126 exact_or_top=-a_chi*chi_a2_minus_4,-chi_a2_minus_4*h_norm,-chi_a2_minus_4*v_norm,-chi_one_minus_t2*chi_t,a_chi
+  transform=neg_inv_t relations=a,b:16362
+  transform=neg_inv_t component=domain_line rows=16362 ratio_+1=16362 ratio_-1=0 exact_or_top=-chi_B*chi_a_minus_2,-chi_C*chi_R,-chi_a2_minus_4,-chi_a2_minus_4*chi_a2_plus_4,-chi_a2_minus_4*domain_line
+  transform=neg_inv_t component=pref rows=16362 ratio_+1=8126 ratio_-1=8236 exact_or_top=-a_chi,-a_chi*chi_a2_plus_4,-a_chi*domain_line,-chi_a2_plus_4*h_norm,-chi_a2_plus_4*v_norm
+  transform=neg_inv_t component=h rows=16362 ratio_+1=8342 ratio_-1=8020 exact_or_top=chi_R*chi_y_minus_2:12228,-chi_C*chi_y_minus_2:12228,chi_a_minus_2*chi_y_minus_2:12152,-chi_a_plus_2*chi_y_minus_2:12152,-chi_B*chi_y_minus_2:12152
+  transform=neg_inv_t component=vq rows=16362 ratio_+1=8122 ratio_-1=8240 exact_or_top=chi_C*chi_y_minus_2:12370,-chi_R*chi_y_minus_2:12370,chi_a_minus_2*chi_y_minus_2:12336,-chi_a_plus_2*chi_y_minus_2:12336,-chi_B*chi_y_minus_2:12336
+  transform=neg_inv_t component=h_vq rows=16362 ratio_+1=8126 ratio_-1=8236 exact_or_top=-a_chi,-a_chi*chi_a2_plus_4,-a_chi*domain_line,-chi_a2_plus_4*h_norm,-chi_a2_plus_4*v_norm
+  transform=neg_inv_t component=D rows=16362 ratio_+1=8236 ratio_-1=8126 exact_or_top=-a_chi*chi_a2_minus_4,-chi_a2_minus_4*h_norm,-chi_a2_minus_4*v_norm,-chi_one_minus_t2*chi_t,a_chi
+  transform=neg_inv_t component=T rows=16362 ratio_+1=16362 ratio_-1=0 exact_or_top=-chi_B*chi_a_minus_2,-chi_C*chi_R,-chi_a2_minus_4,-chi_a2_minus_4*chi_a2_plus_4,-chi_a2_minus_4*domain_line
+  transform=neg_inv_t component=T_line rows=16362 ratio_+1=16362 ratio_-1=0 exact_or_top=-chi_B*chi_a_minus_2,-chi_C*chi_R,-chi_a2_minus_4,-chi_a2_minus_4*chi_a2_plus_4,-chi_a2_minus_4*domain_line
+  transform=neg_inv_t component=line_norm rows=16362 ratio_+1=16362 ratio_-1=0 exact_or_top=-chi_B*chi_a_minus_2,-chi_C*chi_R,-chi_a2_minus_4,-chi_a2_minus_4*chi_a2_plus_4,-chi_a2_minus_4*domain_line
+  transform=inv_t relations=-a,b:16362
+  transform=inv_t component=domain_line rows=16362 ratio_+1=16362 ratio_-1=0 exact_or_top=-chi_B*chi_a_minus_2,-chi_C*chi_R,-chi_a2_minus_4,-chi_a2_minus_4*chi_a2_plus_4,-chi_a2_minus_4*domain_line
+  transform=inv_t component=pref rows=16362 ratio_+1=8344 ratio_-1=8018 exact_or_top=-a_chi*h_inner,-a_chi*v_inner,-chi_B*chi_C,-chi_C*chi_a_plus_2,-chi_R*chi_a_minus_2
+  transform=inv_t component=h rows=16362 ratio_+1=8252 ratio_-1=8110 exact_or_top=chi_y_minus_2*v_inner:8334,chi_y_minus_2*h_inner:8334,-chi_one_minus_t2*chi_y_minus_2:8334,chi_t*chi_y_minus_2:8292,v_inner*v_norm:8276
+  transform=inv_t component=vq rows=16362 ratio_+1=8181 ratio_-1=8181 exact_or_top=b_chi*chi_C:8308,-b_chi*chi_R:8308,b_chi*chi_y_minus_2:8224,-b_chi*chi_t:8222,b_chi*chi_one_minus_t2:8212
+  transform=inv_t component=h_vq rows=16362 ratio_+1=8181 ratio_-1=8181 exact_or_top=b_chi*chi_one_minus_t2:8342,-b_chi*v_inner:8342,-b_chi*h_inner:8342,chi_a_minus_2*line_norm:8308,b_chi*v_norm:8308
+  transform=inv_t component=D rows=16362 ratio_+1=8181 ratio_-1=8181 exact_or_top=b_chi*v_inner:8342,b_chi*h_inner:8342,-b_chi*chi_one_minus_t2:8342,chi_a_plus_2*line_norm:8308,chi_B*line_norm:8308
+  transform=inv_t component=T rows=16362 ratio_+1=8181 ratio_-1=8181 exact_or_top=b_chi*v_norm:8342,b_chi*h_norm:8342,a_chi*b_chi:8342,chi_C*line_norm:8308,b_chi*chi_one_minus_t2:8308
+  transform=inv_t component=T_line rows=16362 ratio_+1=8240 ratio_-1=8122 exact_or_top=chi_R*chi_y_minus_2:12370,-chi_C*chi_y_minus_2:12370,chi_a_plus_2*chi_y_minus_2:12336,chi_B*chi_y_minus_2:12336,-chi_a_minus_2*chi_y_minus_2:12336
+  transform=inv_t component=line_norm rows=16362 ratio_+1=8181 ratio_-1=8181 exact_or_top=-b_chi*chi_a2_minus_4,b_chi,b_chi*chi_a2_plus_4,b_chi*domain_line
+  transform=neg_t relations=-a,b:16362
+  transform=neg_t component=domain_line rows=16362 ratio_+1=16362 ratio_-1=0 exact_or_top=-chi_B*chi_a_minus_2,-chi_C*chi_R,-chi_a2_minus_4,-chi_a2_minus_4*chi_a2_plus_4,-chi_a2_minus_4*domain_line
+  transform=neg_t component=pref rows=16362 ratio_+1=8202 ratio_-1=8160 exact_or_top=-a_chi*chi_t,-chi_a2_minus_4*chi_one_minus_t2,-chi_a2_plus_4*h_inner,-chi_a2_plus_4*v_inner,-chi_t*h_norm
+  transform=neg_t component=h rows=16362 ratio_+1=8150 ratio_-1=8212 exact_or_top=chi_a_plus_2*domain_line:8318,chi_a_plus_2:8318,chi_a2_plus_4*chi_a_plus_2:8318,chi_a2_minus_4*chi_a_minus_2:8318,chi_C*chi_t:8318
+  transform=neg_t component=vq rows=16362 ratio_+1=8181 ratio_-1=8181 exact_or_top=b_chi*chi_y_minus_2:8292,b_chi*domain_line:8276,b_chi*chi_a2_plus_4:8276,b_chi:8276,-b_chi*chi_a2_minus_4:8276
+  transform=neg_t component=h_vq rows=16362 ratio_+1=8181 ratio_-1=8181 exact_or_top=b_chi*chi_a_plus_2:8392,b_chi*chi_B:8392,-b_chi*chi_a_minus_2:8392,-b_chi*chi_t:8342,b_chi*chi_R:8334
+  transform=neg_t component=D rows=16362 ratio_+1=8181 ratio_-1=8181 exact_or_top=b_chi*chi_a_plus_2:8392,b_chi*chi_B:8392,-b_chi*chi_a_minus_2:8392,-b_chi*chi_t:8342,b_chi*chi_R:8334
+  transform=neg_t component=T rows=16362 ratio_+1=8181 ratio_-1=8181 exact_or_top=b_chi*v_norm:8342,b_chi*h_norm:8342,a_chi*b_chi:8342,chi_C*line_norm:8308,b_chi*chi_one_minus_t2:8308
+  transform=neg_t component=T_line rows=16362 ratio_+1=8240 ratio_-1=8122 exact_or_top=chi_R*chi_y_minus_2:12370,-chi_C*chi_y_minus_2:12370,chi_a_plus_2*chi_y_minus_2:12336,chi_B*chi_y_minus_2:12336,-chi_a_minus_2*chi_y_minus_2:12336
+  transform=neg_t component=line_norm rows=16362 ratio_+1=8181 ratio_-1=8181 exact_or_top=-b_chi*chi_a2_minus_4,b_chi,b_chi*chi_a2_plus_4,b_chi*domain_line
+p27_quotient_automorphism_orbit_gate_rows=1/1

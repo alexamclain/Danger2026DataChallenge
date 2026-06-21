@@ -1,0 +1,43 @@
+p27_component_involution_gate
+p=1000000000000000000000000103
+sample:
+  raw_draws=32768
+  nonsplit_y=16432
+  k_points=32864
+transform=neg_inv_t
+  comparable_rows=16096
+  component=pref ratio_+1=8132 ratio_-1=7964 exact=-a_chi,-h_norm,-v_norm top=-h_norm:16096,-v_norm:16096,-a_chi:16096,-line_norm:12030,domain_line:8132,h:8114,-chi_y_minus_2:8106,-pref:8106
+  component=h ratio_+1=7948 ratio_-1=8148 exact=none top=chi_C:8188,-chi_R:8188,-domain_line:8148,-chi_one_minus_t2:8144,h_inner:8144,v_inner:8144,h_norm:8140,v_norm:8140
+  component=vq ratio_+1=7956 ratio_-1=8140 exact=none top=chi_C:8208,-chi_R:8208,-h:8194,chi_B:8188,chi_a_plus_2:8188,-chi_a_minus_2:8188,h_norm:8148,v_norm:8148
+  component=h_vq ratio_+1=8132 ratio_-1=7964 exact=-a_chi,-h_norm,-v_norm top=-h_norm:16096,-v_norm:16096,-a_chi:16096,-line_norm:12030,domain_line:8132,h:8114,-chi_y_minus_2:8106,-pref:8106
+  component=pref_h ratio_+1=7956 ratio_-1=8140 exact=none top=chi_C:8208,-chi_R:8208,-h:8194,chi_B:8188,chi_a_plus_2:8188,-chi_a_minus_2:8188,h_norm:8148,v_norm:8148
+  component=pref_vq ratio_+1=7948 ratio_-1=8148 exact=none top=chi_C:8188,-chi_R:8188,-domain_line:8148,-chi_one_minus_t2:8144,h_inner:8144,v_inner:8144,h_norm:8140,v_norm:8140
+  component=D ratio_+1=7964 ratio_-1=8132 exact=a_chi,h_norm,v_norm top=h_norm:16096,v_norm:16096,a_chi:16096,line_norm:12030,-domain_line:8132,-h:8114,chi_y_minus_2:8106,pref:8106
+  component=T ratio_+1=16096 ratio_-1=0 exact=domain_line top=domain_line:16096,line_norm:12030,chi_B:8132,chi_a_plus_2:8132,-chi_a_minus_2:8132,-h_norm:8132,-v_norm:8132,-a_chi:8132
+  component=T_line ratio_+1=16096 ratio_-1=0 exact=domain_line top=domain_line:16096,line_norm:12030,chi_B:8132,chi_a_plus_2:8132,-chi_a_minus_2:8132,-h_norm:8132,-v_norm:8132,-a_chi:8132
+  component=line_norm ratio_+1=16096 ratio_-1=0 exact=domain_line top=domain_line:16096,line_norm:12030,chi_B:8132,chi_a_plus_2:8132,-chi_a_minus_2:8132,-h_norm:8132,-v_norm:8132,-a_chi:8132
+transform=inv_t
+  comparable_rows=16096
+  component=pref ratio_+1=8036 ratio_-1=8060 exact=-chi_t top=-chi_t:16096,-chi_C:8132,chi_R:8132,-chi_one_minus_t2:8132,h_inner:8132,v_inner:8132,chi_y_minus_2:8106,pref:8106
+  component=h ratio_+1=8046 ratio_-1=8050 exact=none top=chi_y_minus_2:8268,pref:8268,h:8212,-h_norm:8194,-v_norm:8194,-a_chi:8194,-chi_one_minus_t2:8138,h_inner:8138
+  component=vq ratio_+1=8048 ratio_-1=8048 exact=none top=b_chi:8102,vq:8092,-line_norm:8064,chi_t:8048,-chi_B:8048,chi_C:8048,-chi_R:8048,-chi_a_plus_2:8048
+  component=h_vq ratio_+1=8048 ratio_-1=8048 exact=none top=vq:8194,-b_chi:8144,-line_norm:8110,chi_t:8048,-chi_B:8048,chi_C:8048,-chi_R:8048,-chi_a_plus_2:8048
+  component=pref_h ratio_+1=7978 ratio_-1=8118 exact=none top=-chi_one_minus_t2:8194,h_inner:8194,v_inner:8194,-chi_y_minus_2:8156,-pref:8156,-h_norm:8138,-v_norm:8138,-a_chi:8138
+  component=pref_vq ratio_+1=8048 ratio_-1=8048 exact=none top=line_norm:8178,-vq:8074,b_chi:8066,chi_t:8048,-chi_B:8048,chi_C:8048,-chi_R:8048,-chi_a_plus_2:8048
+  component=D ratio_+1=8048 ratio_-1=8048 exact=none top=-vq:8194,b_chi:8144,line_norm:8110,-chi_t:8048,chi_B:8048,-chi_C:8048,chi_R:8048,chi_a_plus_2:8048
+  component=T ratio_+1=8048 ratio_-1=8048 exact=none top=line_norm:8144,b_chi:8140,vq:8064,chi_t:8048,-chi_B:8048,chi_C:8048,-chi_R:8048,-chi_a_plus_2:8048
+  component=T_line ratio_+1=8140 ratio_-1=7956 exact=none top=-chi_C:8208,chi_R:8208,h:8194,-chi_B:8188,-chi_a_plus_2:8188,chi_a_minus_2:8188,-h_norm:8148,-v_norm:8148
+  component=line_norm ratio_+1=8048 ratio_-1=8048 exact=b_chi top=b_chi:16096,line_norm:12114,vq:8130,-chi_t:8048,chi_B:8048,-chi_C:8048,chi_R:8048,chi_a_plus_2:8048
+transform=neg_t
+  comparable_rows=16096
+  component=pref ratio_+1=8020 ratio_-1=8076 exact=-h_inner,-v_inner,chi_one_minus_t2 top=chi_one_minus_t2:16096,-h_inner:16096,-v_inner:16096,-chi_y_minus_2:8290,-pref:8290,chi_t:8132,vq:8100,-chi_C:8096
+  component=h ratio_+1=8290 ratio_-1=7806 exact=none top=domain_line:8290,chi_B:8258,chi_a_plus_2:8258,-chi_a_minus_2:8258,chi_C:8166,-chi_R:8166,line_norm:8160,chi_t:8134
+  component=vq ratio_+1=8048 ratio_-1=8048 exact=none top=b_chi:8118,-vq:8118,-line_norm:8058,chi_t:8048,-chi_B:8048,chi_C:8048,-chi_R:8048,-chi_a_plus_2:8048
+  component=h_vq ratio_+1=8048 ratio_-1=8048 exact=none top=-vq:8194,line_norm:8110,b_chi:8076,-chi_t:8048,chi_B:8048,-chi_C:8048,chi_R:8048,chi_a_plus_2:8048
+  component=pref_h ratio_+1=7994 ratio_-1=8102 exact=none top=chi_one_minus_t2:8290,-h_inner:8290,-v_inner:8290,chi_C:8266,-chi_R:8266,-h:8200,chi_B:8154,chi_a_plus_2:8154
+  component=pref_vq ratio_+1=8048 ratio_-1=8048 exact=none top=b_chi:8194,vq:8180,line_norm:8120,-chi_t:8048,chi_B:8048,-chi_C:8048,chi_R:8048,chi_a_plus_2:8048
+  component=D ratio_+1=8048 ratio_-1=8048 exact=none top=-vq:8194,line_norm:8110,b_chi:8076,-chi_t:8048,chi_B:8048,-chi_C:8048,chi_R:8048,chi_a_plus_2:8048
+  component=T ratio_+1=8048 ratio_-1=8048 exact=none top=line_norm:8144,b_chi:8140,vq:8064,chi_t:8048,-chi_B:8048,chi_C:8048,-chi_R:8048,-chi_a_plus_2:8048
+  component=T_line ratio_+1=8140 ratio_-1=7956 exact=none top=-chi_C:8208,chi_R:8208,h:8194,-chi_B:8188,-chi_a_plus_2:8188,chi_a_minus_2:8188,-h_norm:8148,-v_norm:8148
+  component=line_norm ratio_+1=8048 ratio_-1=8048 exact=b_chi top=b_chi:16096,line_norm:12114,vq:8130,-chi_t:8048,chi_B:8048,-chi_C:8048,chi_R:8048,chi_a_plus_2:8048
+p27_component_involution_gate_rows=1/1

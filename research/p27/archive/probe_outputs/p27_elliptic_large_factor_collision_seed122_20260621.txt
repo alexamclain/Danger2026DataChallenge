@@ -1,0 +1,32 @@
+p27_elliptic_large_factor_collision_gate
+p=1000000000000000000000000103
+exponent=(p+1)/2=500000000000000000000000052
+sample:
+  raw_draws=32768
+  nonsplit_y=16320
+  k_points=32640
+  domain_records=16320
+  target_records=8181
+  domain_inconsistent=0
+  target_line_inconsistent=0
+domain_large_factor_collisions:
+  m=345451 key=unsigned rows=16320 classes=15597 singleton_classes=14894 non_singleton_classes=703 mixed_classes=332 mixed_rate=0.472261735 collision_pairs=744 disagree_pairs=345 disagree_rate=0.463709677
+  m=345451 key=signed rows=16320 classes=15970 singleton_classes=15624 non_singleton_classes=346 mixed_classes=151 mixed_rate=0.436416185 collision_pairs=354 disagree_pairs=151 disagree_rate=0.426553672
+  m=4145412 key=unsigned rows=16320 classes=16196 singleton_classes=16073 non_singleton_classes=123 mixed_classes=63 mixed_rate=0.512195122 collision_pairs=125 disagree_pairs=63 disagree_rate=0.504000000
+  m=4145412 key=signed rows=16320 classes=16251 singleton_classes=16182 non_singleton_classes=69 mixed_classes=31 mixed_rate=0.449275362 collision_pairs=69 disagree_pairs=31 disagree_rate=0.449275362
+target_line_large_factor_collisions:
+  m=345451 key=unsigned rows=8181 classes=7978 singleton_classes=7777 non_singleton_classes=201 mixed_classes=101 mixed_rate=0.502487562 collision_pairs=205 disagree_pairs=103 disagree_rate=0.502439024
+  m=345451 key=signed rows=8181 classes=8078 singleton_classes=7976 non_singleton_classes=102 mixed_classes=51 mixed_rate=0.500000000 collision_pairs=104 disagree_pairs=52 disagree_rate=0.500000000
+  m=4145412 key=unsigned rows=8181 classes=8149 singleton_classes=8118 non_singleton_classes=31 mixed_classes=13 mixed_rate=0.419354839 collision_pairs=33 disagree_pairs=14 disagree_rate=0.424242424
+  m=4145412 key=signed rows=8181 classes=8163 singleton_classes=8145 non_singleton_classes=18 mixed_classes=8 mixed_rate=0.444444444 collision_pairs=18 disagree_pairs=8 disagree_rate=0.444444444
+domain_projected_character_scores:
+  m=345451 char=y usable=16320 zero=0 exact_plus=0 exact_minus=0 best_lift=1.006732011 good=4114 total=8152
+  m=345451 char=x2_plus_1 usable=16320 zero=0 exact_plus=0 exact_minus=0 best_lift=1.001956305 good=4098 total=8159
+  m=4145412 char=x2_plus_1 usable=16320 zero=0 exact_plus=0 exact_minus=0 best_lift=1.012729640 good=4171 total=8216
+  m=4145412 char=y usable=16320 zero=0 exact_plus=0 exact_minus=0 best_lift=1.002413561 good=4126 total=8211
+target_line_projected_character_scores:
+  m=345451 char=y usable=8181 zero=0 exact_plus=0 exact_minus=0 best_lift=1.005705224 good=2070 total=4114
+  m=345451 char=x2_plus_1 usable=8181 zero=0 exact_plus=0 exact_minus=0 best_lift=1.001592116 good=2046 total=4083
+  m=4145412 char=x2_plus_1 usable=8181 zero=0 exact_plus=0 exact_minus=0 best_lift=1.005379307 good=2098 total=4171
+  m=4145412 char=y usable=8181 zero=0 exact_plus=0 exact_minus=0 best_lift=1.000621494 good=2030 total=4055
+p27_elliptic_large_factor_collision_gate_rows=1/1

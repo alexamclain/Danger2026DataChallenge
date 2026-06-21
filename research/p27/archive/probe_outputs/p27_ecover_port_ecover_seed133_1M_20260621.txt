@@ -1,0 +1,63 @@
+Pomerance triple search
+
+p = 1000000000000000000000000103  (28 digits)
+seed_offset = 133  max_trials_override = 1000000
+curve_mode = X1(16) nonsplit + elliptic first-lift-cover first-branch halving survival stats
+X1(16) first-branch halving survival stats
+p = 1000000000000000000000000103
+k = 45
+stats_max_depth = 45
+samples = 1000000
+sample_class = nonsplit_first_lift_ecover
+elapsed_seconds = 9.086100  rate_Mps = 0.110058
+full_first_branch_depth_45 = 0/1000000  rate = 0.000000000
+depth_histogram_nonzero:
+  depth=5 count=499114 rate=0.499114000
+  depth=6 count=251292 rate=0.251292000
+  depth=7 count=124500 rate=0.124500000
+  depth=8 count=62118 rate=0.062118000
+  depth=9 count=31818 rate=0.031818000
+  depth=10 count=15458 rate=0.015458000
+  depth=11 count=7824 rate=0.007824000
+  depth=12 count=3946 rate=0.003946000
+  depth=13 count=2054 rate=0.002054000
+  depth=14 count=988 rate=0.000988000
+  depth=15 count=452 rate=0.000452000
+  depth=16 count=216 rate=0.000216000
+  depth=17 count=80 rate=0.000080000
+  depth=18 count=66 rate=0.000066000
+  depth=19 count=38 rate=0.000038000
+  depth=20 count=16 rate=0.000016000
+  depth=21 count=10 rate=0.000010000
+  depth=22 count=6 rate=0.000006000
+  depth=23 count=2 rate=0.000002000
+  depth=26 count=2 rate=0.000002000
+survive_by_depth:
+  depth=26 survive=2 rate=0.000002000
+  depth=25 survive=2 rate=0.000002000
+  depth=24 survive=2 rate=0.000002000
+  depth=23 survive=4 rate=0.000004000
+  depth=22 survive=10 rate=0.000010000
+  depth=21 survive=20 rate=0.000020000
+  depth=20 survive=36 rate=0.000036000
+  depth=19 survive=74 rate=0.000074000
+  depth=18 survive=140 rate=0.000140000
+  depth=17 survive=220 rate=0.000220000
+  depth=16 survive=436 rate=0.000436000
+  depth=15 survive=888 rate=0.000888000
+  depth=14 survive=1876 rate=0.001876000
+  depth=13 survive=3930 rate=0.003930000
+  depth=12 survive=7876 rate=0.007876000
+  depth=11 survive=15700 rate=0.015700000
+  depth=10 survive=31158 rate=0.031158000
+  depth=9 survive=62976 rate=0.062976000
+  depth=8 survive=125094 rate=0.125094000
+  depth=7 survive=249594 rate=0.249594000
+  depth=6 survive=500886 rate=0.500886000
+  depth=5 survive=1000000 rate=1.000000000
+  depth=4 survive=1000000 rate=1.000000000
+all_branch_options_at_first_stop:
+  options=0 count=1000000 rate=1.000000000
+real 9.30
+user 8.99
+sys 0.03

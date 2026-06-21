@@ -1,0 +1,539 @@
+Pomerance triple search
+
+p = 1000000000000000000000000103  (28 digits)
+seed_offset = 137  max_trials_override = 1000000
+curve_mode = X1(16) nonsplit + elliptic first-lift-cover label-2 mixed second-lift character survival stats
+X1(16) first-branch halving survival stats
+p = 1000000000000000000000000103
+k = 45
+stats_max_depth = 45
+samples = 1000000
+sample_class = nonsplit_first_lift_ecoverlabel2
+elapsed_seconds = 19.669750  rate_Mps = 0.050839
+full_first_branch_depth_45 = 0/1000000  rate = 0.000000000
+depth_histogram_nonzero:
+  depth=5 count=499018 rate=0.499018000
+  depth=6 count=250326 rate=0.250326000
+  depth=7 count=125378 rate=0.125378000
+  depth=8 count=63042 rate=0.063042000
+  depth=9 count=30836 rate=0.030836000
+  depth=10 count=15594 rate=0.015594000
+  depth=11 count=7876 rate=0.007876000
+  depth=12 count=3944 rate=0.003944000
+  depth=13 count=1952 rate=0.001952000
+  depth=14 count=974 rate=0.000974000
+  depth=15 count=548 rate=0.000548000
+  depth=16 count=248 rate=0.000248000
+  depth=17 count=138 rate=0.000138000
+  depth=18 count=58 rate=0.000058000
+  depth=19 count=30 rate=0.000030000
+  depth=20 count=8 rate=0.000008000
+  depth=21 count=10 rate=0.000010000
+  depth=22 count=12 rate=0.000012000
+  depth=23 count=4 rate=0.000004000
+  depth=24 count=2 rate=0.000002000
+  depth=25 count=2 rate=0.000002000
+survive_by_depth:
+  depth=25 survive=2 rate=0.000002000
+  depth=24 survive=4 rate=0.000004000
+  depth=23 survive=8 rate=0.000008000
+  depth=22 survive=20 rate=0.000020000
+  depth=21 survive=30 rate=0.000030000
+  depth=20 survive=38 rate=0.000038000
+  depth=19 survive=68 rate=0.000068000
+  depth=18 survive=126 rate=0.000126000
+  depth=17 survive=264 rate=0.000264000
+  depth=16 survive=512 rate=0.000512000
+  depth=15 survive=1060 rate=0.001060000
+  depth=14 survive=2034 rate=0.002034000
+  depth=13 survive=3986 rate=0.003986000
+  depth=12 survive=7930 rate=0.007930000
+  depth=11 survive=15806 rate=0.015806000
+  depth=10 survive=31400 rate=0.031400000
+  depth=9 survive=62236 rate=0.062236000
+  depth=8 survive=125278 rate=0.125278000
+  depth=7 survive=250656 rate=0.250656000
+  depth=6 survive=500982 rate=0.500982000
+  depth=5 survive=1000000 rate=1.000000000
+  depth=4 survive=1000000 rate=1.000000000
+all_branch_options_at_first_stop:
+  options=0 count=1000000 rate=1.000000000
+orbit_label_survive_by_depth:
+  label=0 name=x+1 samples=0
+    depth=16 survive=0 rate=0.000000000
+    depth=18 survive=0 rate=0.000000000
+    depth=20 survive=0 rate=0.000000000
+    depth=22 survive=0 rate=0.000000000
+    depth=24 survive=0 rate=0.000000000
+  label=1 name=1-1/x samples=0
+    depth=16 survive=0 rate=0.000000000
+    depth=18 survive=0 rate=0.000000000
+    depth=20 survive=0 rate=0.000000000
+    depth=22 survive=0 rate=0.000000000
+    depth=24 survive=0 rate=0.000000000
+  label=2 name=2x/(x-1) samples=1000000
+    depth=16 survive=512 rate=0.000512000
+    depth=18 survive=126 rate=0.000126000
+    depth=20 survive=38 rate=0.000038000
+    depth=22 survive=20 rate=0.000020000
+    depth=24 survive=4 rate=0.000004000
+label2_root_index_survive_by_depth:
+  invalid=0
+  root=0 samples=500000
+    depth=16 survive=256 rate=0.000512000
+    depth=18 survive=63 rate=0.000126000
+    depth=20 survive=19 rate=0.000038000
+    depth=22 survive=10 rate=0.000020000
+    depth=24 survive=2 rate=0.000004000
+    depth=26 survive=0 rate=0.000000000
+    depth=28 survive=0 rate=0.000000000
+    depth=30 survive=0 rate=0.000000000
+  root=1 samples=500000
+    depth=16 survive=256 rate=0.000512000
+    depth=18 survive=63 rate=0.000126000
+    depth=20 survive=19 rate=0.000038000
+    depth=22 survive=10 rate=0.000020000
+    depth=24 survive=2 rate=0.000004000
+    depth=26 survive=0 rate=0.000000000
+    depth=28 survive=0 rate=0.000000000
+    depth=30 survive=0 rate=0.000000000
+label2_mixed_second_lift_survive_by_class:
+  unknown=0
+  class=chi=-1 samples=0
+    depth=16 survive=0 rate=0.000000000
+    depth=18 survive=0 rate=0.000000000
+    depth=20 survive=0 rate=0.000000000
+    depth=22 survive=0 rate=0.000000000
+    depth=24 survive=0 rate=0.000000000
+    depth=26 survive=0 rate=0.000000000
+    depth=28 survive=0 rate=0.000000000
+    depth=30 survive=0 rate=0.000000000
+  class=chi=0 samples=0
+    depth=16 survive=0 rate=0.000000000
+    depth=18 survive=0 rate=0.000000000
+    depth=20 survive=0 rate=0.000000000
+    depth=22 survive=0 rate=0.000000000
+    depth=24 survive=0 rate=0.000000000
+    depth=26 survive=0 rate=0.000000000
+    depth=28 survive=0 rate=0.000000000
+    depth=30 survive=0 rate=0.000000000
+  class=chi=+1 samples=1000000
+    depth=16 survive=512 rate=0.000512000
+    depth=18 survive=126 rate=0.000126000
+    depth=20 survive=38 rate=0.000038000
+    depth=22 survive=20 rate=0.000020000
+    depth=24 survive=4 rate=0.000004000
+    depth=26 survive=0 rate=0.000000000
+    depth=28 survive=0 rate=0.000000000
+    depth=30 survive=0 rate=0.000000000
+label2_mixed_component_survive_by_class:
+  component=quad=(X^2+1)(X^2+2X-1) unknown=0
+    class=chi=-1 samples=500198
+      depth=16 survive=228 rate=0.000455819
+      depth=18 survive=60 rate=0.000119952
+      depth=20 survive=18 rate=0.000035986
+      depth=22 survive=12 rate=0.000023990
+      depth=24 survive=0 rate=0.000000000
+      depth=26 survive=0 rate=0.000000000
+      depth=28 survive=0 rate=0.000000000
+      depth=30 survive=0 rate=0.000000000
+    class=chi=0 samples=0
+      depth=16 survive=0 rate=0.000000000
+      depth=18 survive=0 rate=0.000000000
+      depth=20 survive=0 rate=0.000000000
+      depth=22 survive=0 rate=0.000000000
+      depth=24 survive=0 rate=0.000000000
+      depth=26 survive=0 rate=0.000000000
+      depth=28 survive=0 rate=0.000000000
+      depth=30 survive=0 rate=0.000000000
+    class=chi=+1 samples=499802
+      depth=16 survive=284 rate=0.000568225
+      depth=18 survive=66 rate=0.000132052
+      depth=20 survive=20 rate=0.000040016
+      depth=22 survive=8 rate=0.000016006
+      depth=24 survive=4 rate=0.000008003
+      depth=26 survive=0 rate=0.000000000
+      depth=28 survive=0 rate=0.000000000
+      depth=30 survive=0 rate=0.000000000
+  component=mixed_core unknown=0
+    class=chi=-1 samples=0
+      depth=16 survive=0 rate=0.000000000
+      depth=18 survive=0 rate=0.000000000
+      depth=20 survive=0 rate=0.000000000
+      depth=22 survive=0 rate=0.000000000
+      depth=24 survive=0 rate=0.000000000
+      depth=26 survive=0 rate=0.000000000
+      depth=28 survive=0 rate=0.000000000
+      depth=30 survive=0 rate=0.000000000
+    class=chi=0 samples=0
+      depth=16 survive=0 rate=0.000000000
+      depth=18 survive=0 rate=0.000000000
+      depth=20 survive=0 rate=0.000000000
+      depth=22 survive=0 rate=0.000000000
+      depth=24 survive=0 rate=0.000000000
+      depth=26 survive=0 rate=0.000000000
+      depth=28 survive=0 rate=0.000000000
+      depth=30 survive=0 rate=0.000000000
+    class=chi=+1 samples=1000000
+      depth=16 survive=512 rate=0.000512000
+      depth=18 survive=126 rate=0.000126000
+      depth=20 survive=38 rate=0.000038000
+      depth=22 survive=20 rate=0.000020000
+      depth=24 survive=4 rate=0.000004000
+      depth=26 survive=0 rate=0.000000000
+      depth=28 survive=0 rate=0.000000000
+      depth=30 survive=0 rate=0.000000000
+  component=den_linear unknown=0
+    class=chi=-1 samples=499802
+      depth=16 survive=284 rate=0.000568225
+      depth=18 survive=66 rate=0.000132052
+      depth=20 survive=20 rate=0.000040016
+      depth=22 survive=8 rate=0.000016006
+      depth=24 survive=4 rate=0.000008003
+      depth=26 survive=0 rate=0.000000000
+      depth=28 survive=0 rate=0.000000000
+      depth=30 survive=0 rate=0.000000000
+    class=chi=0 samples=0
+      depth=16 survive=0 rate=0.000000000
+      depth=18 survive=0 rate=0.000000000
+      depth=20 survive=0 rate=0.000000000
+      depth=22 survive=0 rate=0.000000000
+      depth=24 survive=0 rate=0.000000000
+      depth=26 survive=0 rate=0.000000000
+      depth=28 survive=0 rate=0.000000000
+      depth=30 survive=0 rate=0.000000000
+    class=chi=+1 samples=500198
+      depth=16 survive=228 rate=0.000455819
+      depth=18 survive=60 rate=0.000119952
+      depth=20 survive=18 rate=0.000035986
+      depth=22 survive=12 rate=0.000023990
+      depth=24 survive=0 rate=0.000000000
+      depth=26 survive=0 rate=0.000000000
+      depth=28 survive=0 rate=0.000000000
+      depth=30 survive=0 rate=0.000000000
+label2_D_survive_by_depth:
+  invalid=0
+  class=D=-1 samples=499018
+    depth=16 survive=0 rate=0.000000000
+    depth=18 survive=0 rate=0.000000000
+    depth=20 survive=0 rate=0.000000000
+    depth=22 survive=0 rate=0.000000000
+    depth=24 survive=0 rate=0.000000000
+    depth=26 survive=0 rate=0.000000000
+    depth=28 survive=0 rate=0.000000000
+    depth=30 survive=0 rate=0.000000000
+  class=D=0 samples=0
+    depth=16 survive=0 rate=0.000000000
+    depth=18 survive=0 rate=0.000000000
+    depth=20 survive=0 rate=0.000000000
+    depth=22 survive=0 rate=0.000000000
+    depth=24 survive=0 rate=0.000000000
+    depth=26 survive=0 rate=0.000000000
+    depth=28 survive=0 rate=0.000000000
+    depth=30 survive=0 rate=0.000000000
+  class=D=+1 samples=500982
+    depth=16 survive=512 rate=0.001021993
+    depth=18 survive=126 rate=0.000251506
+    depth=20 survive=38 rate=0.000075851
+    depth=22 survive=20 rate=0.000039922
+    depth=24 survive=4 rate=0.000007984
+    depth=26 survive=0 rate=0.000000000
+    depth=28 survive=0 rate=0.000000000
+    depth=30 survive=0 rate=0.000000000
+label2_compact_D_survive_by_depth:
+  invalid=0 mismatch_vs_D=1000000
+  class=D=-1 samples=500982
+    depth=16 survive=512 rate=0.001021993
+    depth=18 survive=126 rate=0.000251506
+    depth=20 survive=38 rate=0.000075851
+    depth=22 survive=20 rate=0.000039922
+    depth=24 survive=4 rate=0.000007984
+    depth=26 survive=0 rate=0.000000000
+    depth=28 survive=0 rate=0.000000000
+    depth=30 survive=0 rate=0.000000000
+  class=D=0 samples=0
+    depth=16 survive=0 rate=0.000000000
+    depth=18 survive=0 rate=0.000000000
+    depth=20 survive=0 rate=0.000000000
+    depth=22 survive=0 rate=0.000000000
+    depth=24 survive=0 rate=0.000000000
+    depth=26 survive=0 rate=0.000000000
+    depth=28 survive=0 rate=0.000000000
+    depth=30 survive=0 rate=0.000000000
+  class=D=+1 samples=499018
+    depth=16 survive=0 rate=0.000000000
+    depth=18 survive=0 rate=0.000000000
+    depth=20 survive=0 rate=0.000000000
+    depth=22 survive=0 rate=0.000000000
+    depth=24 survive=0 rate=0.000000000
+    depth=26 survive=0 rate=0.000000000
+    depth=28 survive=0 rate=0.000000000
+    depth=30 survive=0 rate=0.000000000
+label2_Dplus_composition_survive_by_depth:
+  invalid=0 first_v_mismatch=0
+  feature=first_w
+    class=chi=-1 samples=250652
+      depth=16 survive=256 rate=0.001021336
+      depth=18 survive=66 rate=0.000263313
+      depth=20 survive=20 rate=0.000079792
+      depth=22 survive=12 rate=0.000047875
+      depth=24 survive=2 rate=0.000007979
+      depth=26 survive=0 rate=0.000000000
+      depth=28 survive=0 rate=0.000000000
+      depth=30 survive=0 rate=0.000000000
+    class=chi=0 samples=0
+      depth=16 survive=0 rate=0.000000000
+      depth=18 survive=0 rate=0.000000000
+      depth=20 survive=0 rate=0.000000000
+      depth=22 survive=0 rate=0.000000000
+      depth=24 survive=0 rate=0.000000000
+      depth=26 survive=0 rate=0.000000000
+      depth=28 survive=0 rate=0.000000000
+      depth=30 survive=0 rate=0.000000000
+    class=chi=+1 samples=250330
+      depth=16 survive=256 rate=0.001022650
+      depth=18 survive=60 rate=0.000239684
+      depth=20 survive=18 rate=0.000071905
+      depth=22 survive=8 rate=0.000031958
+      depth=24 survive=2 rate=0.000007989
+      depth=26 survive=0 rate=0.000000000
+      depth=28 survive=0 rate=0.000000000
+      depth=30 survive=0 rate=0.000000000
+  feature=V
+    class=chi=-1 samples=250652
+      depth=16 survive=256 rate=0.001021336
+      depth=18 survive=66 rate=0.000263313
+      depth=20 survive=20 rate=0.000079792
+      depth=22 survive=12 rate=0.000047875
+      depth=24 survive=2 rate=0.000007979
+      depth=26 survive=0 rate=0.000000000
+      depth=28 survive=0 rate=0.000000000
+      depth=30 survive=0 rate=0.000000000
+    class=chi=0 samples=0
+      depth=16 survive=0 rate=0.000000000
+      depth=18 survive=0 rate=0.000000000
+      depth=20 survive=0 rate=0.000000000
+      depth=22 survive=0 rate=0.000000000
+      depth=24 survive=0 rate=0.000000000
+      depth=26 survive=0 rate=0.000000000
+      depth=28 survive=0 rate=0.000000000
+      depth=30 survive=0 rate=0.000000000
+    class=chi=+1 samples=250330
+      depth=16 survive=256 rate=0.001022650
+      depth=18 survive=60 rate=0.000239684
+      depth=20 survive=18 rate=0.000071905
+      depth=22 survive=8 rate=0.000031958
+      depth=24 survive=2 rate=0.000007989
+      depth=26 survive=0 rate=0.000000000
+      depth=28 survive=0 rate=0.000000000
+      depth=30 survive=0 rate=0.000000000
+  feature=root_index
+    root=0 samples=250491
+      depth=16 survive=256 rate=0.001021993
+      depth=18 survive=63 rate=0.000251506
+      depth=20 survive=19 rate=0.000075851
+      depth=22 survive=10 rate=0.000039922
+      depth=24 survive=2 rate=0.000007984
+      depth=26 survive=0 rate=0.000000000
+      depth=28 survive=0 rate=0.000000000
+      depth=30 survive=0 rate=0.000000000
+    root=1 samples=250491
+      depth=16 survive=256 rate=0.001021993
+      depth=18 survive=63 rate=0.000251506
+      depth=20 survive=19 rate=0.000075851
+      depth=22 survive=10 rate=0.000039922
+      depth=24 survive=2 rate=0.000007984
+      depth=26 survive=0 rate=0.000000000
+      depth=28 survive=0 rate=0.000000000
+      depth=30 survive=0 rate=0.000000000
+  feature=residual_2descent
+    class=0 chi(X,X-1,X+1)=(+,+,+) samples=0
+      depth=16 survive=0 rate=0.000000000
+      depth=18 survive=0 rate=0.000000000
+      depth=20 survive=0 rate=0.000000000
+      depth=22 survive=0 rate=0.000000000
+      depth=24 survive=0 rate=0.000000000
+      depth=26 survive=0 rate=0.000000000
+      depth=28 survive=0 rate=0.000000000
+      depth=30 survive=0 rate=0.000000000
+    class=1 chi(X,X-1,X+1)=(+,-,-) samples=250696
+      depth=16 survive=284 rate=0.001132846
+      depth=18 survive=66 rate=0.000263267
+      depth=20 survive=20 rate=0.000079778
+      depth=22 survive=8 rate=0.000031911
+      depth=24 survive=4 rate=0.000015956
+      depth=26 survive=0 rate=0.000000000
+      depth=28 survive=0 rate=0.000000000
+      depth=30 survive=0 rate=0.000000000
+    class=2 chi(X,X-1,X+1)=(-,+,-) samples=0
+      depth=16 survive=0 rate=0.000000000
+      depth=18 survive=0 rate=0.000000000
+      depth=20 survive=0 rate=0.000000000
+      depth=22 survive=0 rate=0.000000000
+      depth=24 survive=0 rate=0.000000000
+      depth=26 survive=0 rate=0.000000000
+      depth=28 survive=0 rate=0.000000000
+      depth=30 survive=0 rate=0.000000000
+    class=3 chi(X,X-1,X+1)=(-,-,+) samples=250286
+      depth=16 survive=228 rate=0.000910958
+      depth=18 survive=60 rate=0.000239726
+      depth=20 survive=18 rate=0.000071918
+      depth=22 survive=12 rate=0.000047945
+      depth=24 survive=0 rate=0.000000000
+      depth=26 survive=0 rate=0.000000000
+      depth=28 survive=0 rate=0.000000000
+      depth=30 survive=0 rate=0.000000000
+    class=4 chi(X,X-1,X+1)=other samples=0
+      depth=16 survive=0 rate=0.000000000
+      depth=18 survive=0 rate=0.000000000
+      depth=20 survive=0 rate=0.000000000
+      depth=22 survive=0 rate=0.000000000
+      depth=24 survive=0 rate=0.000000000
+      depth=26 survive=0 rate=0.000000000
+      depth=28 survive=0 rate=0.000000000
+      depth=30 survive=0 rate=0.000000000
+  feature=residual_factor
+    factor=X2_plus_1
+      class=chi=-1 samples=250164
+        depth=16 survive=262 rate=0.001047313
+        depth=18 survive=58 rate=0.000231848
+        depth=20 survive=18 rate=0.000071953
+        depth=22 survive=6 rate=0.000023984
+        depth=24 survive=0 rate=0.000000000
+        depth=26 survive=0 rate=0.000000000
+        depth=28 survive=0 rate=0.000000000
+        depth=30 survive=0 rate=0.000000000
+      class=chi=0 samples=0
+        depth=16 survive=0 rate=0.000000000
+        depth=18 survive=0 rate=0.000000000
+        depth=20 survive=0 rate=0.000000000
+        depth=22 survive=0 rate=0.000000000
+        depth=24 survive=0 rate=0.000000000
+        depth=26 survive=0 rate=0.000000000
+        depth=28 survive=0 rate=0.000000000
+        depth=30 survive=0 rate=0.000000000
+      class=chi=+1 samples=250818
+        depth=16 survive=250 rate=0.000996739
+        depth=18 survive=68 rate=0.000271113
+        depth=20 survive=20 rate=0.000079739
+        depth=22 survive=14 rate=0.000055817
+        depth=24 survive=4 rate=0.000015948
+        depth=26 survive=0 rate=0.000000000
+        depth=28 survive=0 rate=0.000000000
+        depth=30 survive=0 rate=0.000000000
+    factor=X2_plus_2X_minus_1
+      class=chi=-1 samples=250286
+        depth=16 survive=250 rate=0.000998857
+        depth=18 survive=78 rate=0.000311643
+        depth=20 survive=16 rate=0.000063927
+        depth=22 survive=10 rate=0.000039954
+        depth=24 survive=0 rate=0.000000000
+        depth=26 survive=0 rate=0.000000000
+        depth=28 survive=0 rate=0.000000000
+        depth=30 survive=0 rate=0.000000000
+      class=chi=0 samples=0
+        depth=16 survive=0 rate=0.000000000
+        depth=18 survive=0 rate=0.000000000
+        depth=20 survive=0 rate=0.000000000
+        depth=22 survive=0 rate=0.000000000
+        depth=24 survive=0 rate=0.000000000
+        depth=26 survive=0 rate=0.000000000
+        depth=28 survive=0 rate=0.000000000
+        depth=30 survive=0 rate=0.000000000
+      class=chi=+1 samples=250696
+        depth=16 survive=262 rate=0.001045090
+        depth=18 survive=48 rate=0.000191467
+        depth=20 survive=22 rate=0.000087756
+        depth=22 survive=10 rate=0.000039889
+        depth=24 survive=4 rate=0.000015956
+        depth=26 survive=0 rate=0.000000000
+        depth=28 survive=0 rate=0.000000000
+        depth=30 survive=0 rate=0.000000000
+  feature=mixed_component
+    component=quad=(X^2+1)(X^2+2X-1)
+      class=chi=-1 samples=250286
+        depth=16 survive=228 rate=0.000910958
+        depth=18 survive=60 rate=0.000239726
+        depth=20 survive=18 rate=0.000071918
+        depth=22 survive=12 rate=0.000047945
+        depth=24 survive=0 rate=0.000000000
+        depth=26 survive=0 rate=0.000000000
+        depth=28 survive=0 rate=0.000000000
+        depth=30 survive=0 rate=0.000000000
+      class=chi=0 samples=0
+        depth=16 survive=0 rate=0.000000000
+        depth=18 survive=0 rate=0.000000000
+        depth=20 survive=0 rate=0.000000000
+        depth=22 survive=0 rate=0.000000000
+        depth=24 survive=0 rate=0.000000000
+        depth=26 survive=0 rate=0.000000000
+        depth=28 survive=0 rate=0.000000000
+        depth=30 survive=0 rate=0.000000000
+      class=chi=+1 samples=250696
+        depth=16 survive=284 rate=0.001132846
+        depth=18 survive=66 rate=0.000263267
+        depth=20 survive=20 rate=0.000079778
+        depth=22 survive=8 rate=0.000031911
+        depth=24 survive=4 rate=0.000015956
+        depth=26 survive=0 rate=0.000000000
+        depth=28 survive=0 rate=0.000000000
+        depth=30 survive=0 rate=0.000000000
+    component=mixed_core
+      class=chi=-1 samples=0
+        depth=16 survive=0 rate=0.000000000
+        depth=18 survive=0 rate=0.000000000
+        depth=20 survive=0 rate=0.000000000
+        depth=22 survive=0 rate=0.000000000
+        depth=24 survive=0 rate=0.000000000
+        depth=26 survive=0 rate=0.000000000
+        depth=28 survive=0 rate=0.000000000
+        depth=30 survive=0 rate=0.000000000
+      class=chi=0 samples=0
+        depth=16 survive=0 rate=0.000000000
+        depth=18 survive=0 rate=0.000000000
+        depth=20 survive=0 rate=0.000000000
+        depth=22 survive=0 rate=0.000000000
+        depth=24 survive=0 rate=0.000000000
+        depth=26 survive=0 rate=0.000000000
+        depth=28 survive=0 rate=0.000000000
+        depth=30 survive=0 rate=0.000000000
+      class=chi=+1 samples=500982
+        depth=16 survive=512 rate=0.001021993
+        depth=18 survive=126 rate=0.000251506
+        depth=20 survive=38 rate=0.000075851
+        depth=22 survive=20 rate=0.000039922
+        depth=24 survive=4 rate=0.000007984
+        depth=26 survive=0 rate=0.000000000
+        depth=28 survive=0 rate=0.000000000
+        depth=30 survive=0 rate=0.000000000
+    component=den_linear
+      class=chi=-1 samples=250696
+        depth=16 survive=284 rate=0.001132846
+        depth=18 survive=66 rate=0.000263267
+        depth=20 survive=20 rate=0.000079778
+        depth=22 survive=8 rate=0.000031911
+        depth=24 survive=4 rate=0.000015956
+        depth=26 survive=0 rate=0.000000000
+        depth=28 survive=0 rate=0.000000000
+        depth=30 survive=0 rate=0.000000000
+      class=chi=0 samples=0
+        depth=16 survive=0 rate=0.000000000
+        depth=18 survive=0 rate=0.000000000
+        depth=20 survive=0 rate=0.000000000
+        depth=22 survive=0 rate=0.000000000
+        depth=24 survive=0 rate=0.000000000
+        depth=26 survive=0 rate=0.000000000
+        depth=28 survive=0 rate=0.000000000
+        depth=30 survive=0 rate=0.000000000
+      class=chi=+1 samples=250286
+        depth=16 survive=228 rate=0.000910958
+        depth=18 survive=60 rate=0.000239726
+        depth=20 survive=18 rate=0.000071918
+        depth=22 survive=12 rate=0.000047945
+        depth=24 survive=0 rate=0.000000000
+        depth=26 survive=0 rate=0.000000000
+        depth=28 survive=0 rate=0.000000000
+        depth=30 survive=0 rate=0.000000000
+real 19.91
+user 19.48
+sys 0.09

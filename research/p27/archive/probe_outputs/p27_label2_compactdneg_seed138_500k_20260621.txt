@@ -1,0 +1,76 @@
+Pomerance triple search
+
+p = 1000000000000000000000000103  (28 digits)
+seed_offset = 138  max_trials_override = 500000
+curve_mode = X1(16) nonsplit + elliptic first-lift-cover label-2 compact-D filtered first-branch halving survival stats
+X1(16) first-branch halving survival stats
+p = 1000000000000000000000000103
+k = 45
+stats_max_depth = 45
+samples = 500000
+sample_class = nonsplit_first_lift_ecoverlabel2_compactD
+elapsed_seconds = 15.365091  rate_Mps = 0.032541
+full_first_branch_depth_45 = 0/500000  rate = 0.000000000
+depth_histogram_nonzero:
+  depth=6 count=249374 rate=0.498748000
+  depth=7 count=125200 rate=0.250400000
+  depth=8 count=62566 rate=0.125132000
+  depth=9 count=31232 rate=0.062464000
+  depth=10 count=15828 rate=0.031656000
+  depth=11 count=7818 rate=0.015636000
+  depth=12 count=4010 rate=0.008020000
+  depth=13 count=2002 rate=0.004004000
+  depth=14 count=972 rate=0.001944000
+  depth=15 count=520 rate=0.001040000
+  depth=16 count=262 rate=0.000524000
+  depth=17 count=116 rate=0.000232000
+  depth=18 count=52 rate=0.000104000
+  depth=19 count=22 rate=0.000044000
+  depth=20 count=14 rate=0.000028000
+  depth=21 count=10 rate=0.000020000
+  depth=23 count=2 rate=0.000004000
+survive_by_depth:
+  depth=23 survive=2 rate=0.000004000
+  depth=22 survive=2 rate=0.000004000
+  depth=21 survive=12 rate=0.000024000
+  depth=20 survive=26 rate=0.000052000
+  depth=19 survive=48 rate=0.000096000
+  depth=18 survive=100 rate=0.000200000
+  depth=17 survive=216 rate=0.000432000
+  depth=16 survive=478 rate=0.000956000
+  depth=15 survive=998 rate=0.001996000
+  depth=14 survive=1970 rate=0.003940000
+  depth=13 survive=3972 rate=0.007944000
+  depth=12 survive=7982 rate=0.015964000
+  depth=11 survive=15800 rate=0.031600000
+  depth=10 survive=31628 rate=0.063256000
+  depth=9 survive=62860 rate=0.125720000
+  depth=8 survive=125426 rate=0.250852000
+  depth=7 survive=250626 rate=0.501252000
+  depth=6 survive=500000 rate=1.000000000
+  depth=5 survive=500000 rate=1.000000000
+  depth=4 survive=500000 rate=1.000000000
+all_branch_options_at_first_stop:
+  options=0 count=500000 rate=1.000000000
+orbit_label_survive_by_depth:
+  label=0 name=x+1 samples=0
+    depth=16 survive=0 rate=0.000000000
+    depth=18 survive=0 rate=0.000000000
+    depth=20 survive=0 rate=0.000000000
+    depth=22 survive=0 rate=0.000000000
+    depth=24 survive=0 rate=0.000000000
+  label=1 name=1-1/x samples=0
+    depth=16 survive=0 rate=0.000000000
+    depth=18 survive=0 rate=0.000000000
+    depth=20 survive=0 rate=0.000000000
+    depth=22 survive=0 rate=0.000000000
+    depth=24 survive=0 rate=0.000000000
+  label=2 name=2x/(x-1) samples=500000
+    depth=16 survive=478 rate=0.000956000
+    depth=18 survive=100 rate=0.000200000
+    depth=20 survive=26 rate=0.000052000
+    depth=22 survive=2 rate=0.000004000
+    depth=24 survive=0 rate=0.000000000
+real 15.63
+user 15.21
+sys 0.07

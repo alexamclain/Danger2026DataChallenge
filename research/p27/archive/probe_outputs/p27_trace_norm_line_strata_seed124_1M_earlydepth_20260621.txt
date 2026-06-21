@@ -1,0 +1,126 @@
+Pomerance triple search
+
+p = 1000000000000000000000000103  (28 digits)
+seed_offset = 124  max_trials_override = 1000000
+curve_mode = X1(16) nonsplit filtered first-branch halving survival stats
+X1(16) first-branch halving survival stats
+p = 1000000000000000000000000103
+k = 45
+stats_max_depth = 45
+samples = 1000000
+sample_class = nonsplit_trace_norm_line_strata
+elapsed_seconds = 11.237878  rate_Mps = 0.088985
+full_first_branch_depth_45 = 0/1000000  rate = 0.000000000
+depth_histogram_nonzero:
+  depth=4 count=499630 rate=0.499630000
+  depth=5 count=250364 rate=0.250364000
+  depth=6 count=124994 rate=0.124994000
+  depth=7 count=62576 rate=0.062576000
+  depth=8 count=31102 rate=0.031102000
+  depth=9 count=15556 rate=0.015556000
+  depth=10 count=7864 rate=0.007864000
+  depth=11 count=3970 rate=0.003970000
+  depth=12 count=2016 rate=0.002016000
+  depth=13 count=962 rate=0.000962000
+  depth=14 count=478 rate=0.000478000
+  depth=15 count=238 rate=0.000238000
+  depth=16 count=134 rate=0.000134000
+  depth=17 count=66 rate=0.000066000
+  depth=18 count=32 rate=0.000032000
+  depth=19 count=8 rate=0.000008000
+  depth=20 count=4 rate=0.000004000
+  depth=21 count=2 rate=0.000002000
+  depth=22 count=2 rate=0.000002000
+  depth=23 count=2 rate=0.000002000
+survive_by_depth:
+  depth=23 survive=2 rate=0.000002000
+  depth=22 survive=4 rate=0.000004000
+  depth=21 survive=6 rate=0.000006000
+  depth=20 survive=10 rate=0.000010000
+  depth=19 survive=18 rate=0.000018000
+  depth=18 survive=50 rate=0.000050000
+  depth=17 survive=116 rate=0.000116000
+  depth=16 survive=250 rate=0.000250000
+  depth=15 survive=488 rate=0.000488000
+  depth=14 survive=966 rate=0.000966000
+  depth=13 survive=1928 rate=0.001928000
+  depth=12 survive=3944 rate=0.003944000
+  depth=11 survive=7914 rate=0.007914000
+  depth=10 survive=15778 rate=0.015778000
+  depth=9 survive=31334 rate=0.031334000
+  depth=8 survive=62436 rate=0.062436000
+  depth=7 survive=125012 rate=0.125012000
+  depth=6 survive=250006 rate=0.250006000
+  depth=5 survive=500370 rate=0.500370000
+  depth=4 survive=1000000 rate=1.000000000
+all_branch_options_at_first_stop:
+  options=0 count=1000000 rate=1.000000000
+trace_norm_line_strata_survive_by_depth:
+  class=0 name=invalid_or_domain_plus_unclassified samples=0 rate=0.000000000
+    depth=5 survive=0 rate=0.000000000
+    depth=6 survive=0 rate=0.000000000
+    depth=7 survive=0 rate=0.000000000
+    depth=8 survive=0 rate=0.000000000
+    depth=9 survive=0 rate=0.000000000
+    depth=10 survive=0 rate=0.000000000
+    depth=12 survive=0 rate=0.000000000
+    depth=14 survive=0 rate=0.000000000
+    depth=16 survive=0 rate=0.000000000
+    depth=18 survive=0 rate=0.000000000
+    depth=20 survive=0 rate=0.000000000
+    depth=22 survive=0 rate=0.000000000
+    depth=24 survive=0 rate=0.000000000
+    depth=26 survive=0 rate=0.000000000
+    depth=28 survive=0 rate=0.000000000
+    depth=30 survive=0 rate=0.000000000
+  class=1 name=domain_minus samples=499630 rate=0.499630000
+    depth=5 survive=0 rate=0.000000000
+    depth=6 survive=0 rate=0.000000000
+    depth=7 survive=0 rate=0.000000000
+    depth=8 survive=0 rate=0.000000000
+    depth=9 survive=0 rate=0.000000000
+    depth=10 survive=0 rate=0.000000000
+    depth=12 survive=0 rate=0.000000000
+    depth=14 survive=0 rate=0.000000000
+    depth=16 survive=0 rate=0.000000000
+    depth=18 survive=0 rate=0.000000000
+    depth=20 survive=0 rate=0.000000000
+    depth=22 survive=0 rate=0.000000000
+    depth=24 survive=0 rate=0.000000000
+    depth=26 survive=0 rate=0.000000000
+    depth=28 survive=0 rate=0.000000000
+    depth=30 survive=0 rate=0.000000000
+  class=2 name=domain_plus_Tline_minus samples=250204 rate=0.250204000
+    depth=5 survive=250204 rate=1.000000000
+    depth=6 survive=125110 rate=0.500031974
+    depth=7 survive=62670 rate=0.250475612
+    depth=8 survive=31740 rate=0.126856485
+    depth=9 survive=15772 rate=0.063036562
+    depth=10 survive=7912 rate=0.031622196
+    depth=12 survive=1942 rate=0.007761666
+    depth=14 survive=488 rate=0.001950408
+    depth=16 survive=114 rate=0.000455628
+    depth=18 survive=24 rate=0.000095922
+    depth=20 survive=6 rate=0.000023980
+    depth=22 survive=2 rate=0.000007993
+    depth=24 survive=0 rate=0.000000000
+    depth=26 survive=0 rate=0.000000000
+    depth=28 survive=0 rate=0.000000000
+    depth=30 survive=0 rate=0.000000000
+  class=3 name=domain_plus_Tline_plus samples=250166 rate=0.250166000
+    depth=5 survive=250166 rate=1.000000000
+    depth=6 survive=124896 rate=0.499252496
+    depth=7 survive=62342 rate=0.249202530
+    depth=8 survive=30696 rate=0.122702526
+    depth=9 survive=15562 rate=0.062206695
+    depth=10 survive=7866 rate=0.031443122
+    depth=12 survive=2002 rate=0.008002686
+    depth=14 survive=478 rate=0.001910731
+    depth=16 survive=136 rate=0.000543639
+    depth=18 survive=26 rate=0.000103931
+    depth=20 survive=4 rate=0.000015989
+    depth=22 survive=2 rate=0.000007995
+    depth=24 survive=0 rate=0.000000000
+    depth=26 survive=0 rate=0.000000000
+    depth=28 survive=0 rate=0.000000000
+    depth=30 survive=0 rate=0.000000000

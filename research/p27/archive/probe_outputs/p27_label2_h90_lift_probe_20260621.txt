@@ -1,0 +1,43 @@
+p27 label2 T-H90/order-4 lift probe
+T2 = X*(X**2 + 1)*(X**2 + 2*X - 1)
+mt_coeff = (X + 1)*(2*W*X + X**3 + X**2 - X - 1)
+m0 = (X**2 + 1)*(X**2 + 2*X - 1)*(W*X + W + 2*X**2)
+L = 4*W*X**2 + 4*W*X + X**4 + 6*X**3 - 2*X - 1
+S = W*X + W + 2*X**2
+S2_minus_XL = 0
+norm_m_minus_4T2S2 = 0
+T_deck_ratio_square_check = 0
+T_deck_multiplier = (m0 - mt_coeff*T)/(2*T*S)
+T_deck_lift_alpha_squared = R_deck_involution
+T_deck_lift_multiplier_square_product = -1
+prefactor = W*(X**2 + 1)/X
+cyclic_quartic_over_E = R^4 - 2*prefactor*m0*R^2 + 4*prefactor^2*T2*S^2
+alpha_fixed_points_inferred = 8
+R_deck_fixed_points_inferred = 16
+genus_D_input = 17
+genus_D_mod_alpha_by_RH = 1
+D_mod_alpha_identifies_residual_E = 1
+finite_field_deck_ratio_counts:
+p deck nonsquare zero_or_undefined square
+17 T 0 16 4
+17 W 0 20 0
+17 WT 0 20 0
+23 T 0 4 16
+23 W 8 4 8
+23 WT 8 4 8
+29 T 0 8 16
+29 W 16 8 0
+29 WT 16 8 0
+31 T 0 8 52
+31 W 24 12 24
+31 WT 24 12 24
+37 T 0 8 16
+37 W 16 8 0
+37 WT 16 8 0
+41 T 0 12 16
+41 W 16 12 0
+41 WT 16 12 0
+43 T 0 4 16
+43 W 8 4 8
+43 WT 8 4 8
+p27_label2_h90_lift_probe_rows=1/1

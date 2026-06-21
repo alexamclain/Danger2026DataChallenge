@@ -1,0 +1,53 @@
+p27 label2 visible residual-E character probe
+features = X, W, X-1, X+1, X2+1, X2+2X-1, X2-2X-1, S, S_conj, mt_linear, m0, mt_coeff, prefactor, L
+prime_summary p=17 rows=0 base_E=14 t2_square=14 target_plus=0 target_minus=2 zero_feature_skips=2 zero_target_skips=12 t_sign_mismatch=0 exact=none
+prime_summary p=23 rows=8 base_E=22 t2_square=10 target_plus=2 target_minus=6 zero_feature_skips=0 zero_target_skips=2 t_sign_mismatch=0 exact=W * X2+1 * X2-2X-1 * S
+prime_summary p=29 rows=8 base_E=38 t2_square=14 target_plus=4 target_minus=4 zero_feature_skips=0 zero_target_skips=6 t_sign_mismatch=0 exact=none
+prime_summary p=31 rows=24 base_E=30 t2_square=30 target_plus=8 target_minus=18 zero_feature_skips=2 zero_target_skips=4 t_sign_mismatch=0 exact=none
+prime_summary p=37 rows=8 base_E=38 t2_square=14 target_plus=4 target_minus=4 zero_feature_skips=0 zero_target_skips=6 t_sign_mismatch=0 exact=W * S
+prime_summary p=41 rows=8 base_E=30 t2_square=18 target_plus=4 target_minus=4 zero_feature_skips=0 zero_target_skips=10 t_sign_mismatch=0 exact=none
+prime_summary p=43 rows=8 base_E=42 t2_square=10 target_plus=6 target_minus=2 zero_feature_skips=0 zero_target_skips=2 t_sign_mismatch=0 exact=X * W * X2+1 * S
+prime_summary p=47 rows=0 base_E=46 t2_square=6 target_plus=0 target_minus=2 zero_feature_skips=2 zero_target_skips=4 t_sign_mismatch=0 exact=none
+prime_summary p=53 rows=24 base_E=38 t2_square=30 target_plus=16 target_minus=8 zero_feature_skips=0 zero_target_skips=6 t_sign_mismatch=0 exact=none
+prime_summary p=59 rows=32 base_E=58 t2_square=34 target_plus=8 target_minus=24 zero_feature_skips=0 zero_target_skips=2 t_sign_mismatch=0 exact=none
+prime_summary p=61 rows=48 base_E=70 t2_square=54 target_plus=32 target_minus=16 zero_feature_skips=0 zero_target_skips=6 t_sign_mismatch=0 exact=none
+prime_summary p=67 rows=40 base_E=66 t2_square=42 target_plus=10 target_minus=30 zero_feature_skips=0 zero_target_skips=2 t_sign_mismatch=0 exact=none
+prime_summary p=71 rows=32 base_E=70 t2_square=34 target_plus=24 target_minus=8 zero_feature_skips=0 zero_target_skips=2 t_sign_mismatch=0 exact=none
+prime_summary p=73 rows=32 base_E=78 t2_square=42 target_plus=16 target_minus=16 zero_feature_skips=0 zero_target_skips=10 t_sign_mismatch=0 exact=none
+prime_summary p=79 rows=32 base_E=78 t2_square=38 target_plus=16 target_minus=18 zero_feature_skips=2 zero_target_skips=4 t_sign_mismatch=0 exact=none
+prime_summary p=83 rows=40 base_E=82 t2_square=42 target_plus=30 target_minus=10 zero_feature_skips=0 zero_target_skips=2 t_sign_mismatch=0 exact=none
+prime_summary p=89 rows=32 base_E=78 t2_square=42 target_plus=16 target_minus=16 zero_feature_skips=0 zero_target_skips=10 t_sign_mismatch=0 exact=none
+prime_summary p=97 rows=32 base_E=78 t2_square=46 target_plus=18 target_minus=16 zero_feature_skips=2 zero_target_skips=12 t_sign_mismatch=0 exact=none
+prime_summary p=101 rows=24 base_E=102 t2_square=30 target_plus=12 target_minus=12 zero_feature_skips=0 zero_target_skips=6 t_sign_mismatch=0 exact=none
+prime_summary p=103 rows=48 base_E=102 t2_square=50 target_plus=12 target_minus=36 zero_feature_skips=0 zero_target_skips=2 t_sign_mismatch=0 exact=none
+prime_summary p=107 rows=64 base_E=106 t2_square=66 target_plus=44 target_minus=20 zero_feature_skips=0 zero_target_skips=2 t_sign_mismatch=0 exact=none
+prime_summary p=109 rows=40 base_E=102 t2_square=46 target_plus=16 target_minus=24 zero_feature_skips=0 zero_target_skips=6 t_sign_mismatch=0 exact=none
+prime_summary p=113 rows=64 base_E=126 t2_square=78 target_plus=32 target_minus=34 zero_feature_skips=2 zero_target_skips=12 t_sign_mismatch=0 exact=none
+prime_summary p=127 rows=40 base_E=126 t2_square=46 target_plus=32 target_minus=10 zero_feature_skips=2 zero_target_skips=4 t_sign_mismatch=0 exact=none
+prime_summary p=131 rows=40 base_E=130 t2_square=42 target_plus=10 target_minus=30 zero_feature_skips=0 zero_target_skips=2 t_sign_mismatch=0 exact=none
+prime_summary p=137 rows=72 base_E=158 t2_square=82 target_plus=28 target_minus=44 zero_feature_skips=0 zero_target_skips=10 t_sign_mismatch=0 exact=none
+prime_summary p=139 rows=72 base_E=138 t2_square=74 target_plus=34 target_minus=38 zero_feature_skips=0 zero_target_skips=2 t_sign_mismatch=0 exact=none
+prime_summary p=149 rows=48 base_E=134 t2_square=54 target_plus=20 target_minus=28 zero_feature_skips=0 zero_target_skips=6 t_sign_mismatch=0 exact=none
+prime_summary p=151 rows=72 base_E=150 t2_square=74 target_plus=22 target_minus=50 zero_feature_skips=0 zero_target_skips=2 t_sign_mismatch=0 exact=none
+prime_summary p=157 rows=32 base_E=134 t2_square=38 target_plus=16 target_minus=16 zero_feature_skips=0 zero_target_skips=6 t_sign_mismatch=0 exact=none
+prime_summary p=163 rows=80 base_E=162 t2_square=82 target_plus=60 target_minus=20 zero_feature_skips=0 zero_target_skips=2 t_sign_mismatch=0 exact=none
+prime_summary p=167 rows=80 base_E=166 t2_square=82 target_plus=32 target_minus=48 zero_feature_skips=0 zero_target_skips=2 t_sign_mismatch=0 exact=none
+prime_summary p=173 rows=96 base_E=198 t2_square=102 target_plus=60 target_minus=36 zero_feature_skips=0 zero_target_skips=6 t_sign_mismatch=0 exact=none
+prime_summary p=179 rows=120 base_E=178 t2_square=122 target_plus=50 target_minus=70 zero_feature_skips=0 zero_target_skips=2 t_sign_mismatch=0 exact=none
+prime_summary p=181 rows=112 base_E=198 t2_square=118 target_plus=72 target_minus=40 zero_feature_skips=0 zero_target_skips=6 t_sign_mismatch=0 exact=none
+prime_summary p=191 rows=104 base_E=190 t2_square=110 target_plus=80 target_minus=26 zero_feature_skips=2 zero_target_skips=4 t_sign_mismatch=0 exact=none
+prime_summary p=193 rows=64 base_E=206 t2_square=78 target_plus=34 target_minus=32 zero_feature_skips=2 zero_target_skips=12 t_sign_mismatch=0 exact=none
+prime_summary p=197 rows=128 base_E=198 t2_square=134 target_plus=84 target_minus=44 zero_feature_skips=0 zero_target_skips=6 t_sign_mismatch=0 exact=none
+prime_summary p=199 rows=96 base_E=198 t2_square=98 target_plus=56 target_minus=40 zero_feature_skips=0 zero_target_skips=2 t_sign_mismatch=0 exact=none
+combined_rows = 1904
+combined_exact_combo = none
+combined_best_combos:
+  good=1048/1904 rate=0.550420168 weight=3 combo=X * W * S_conj
+  good=1048/1904 rate=0.550420168 weight=3 combo=X2+2X-1 * X2-2X-1 * mt_linear
+  good=1048/1904 rate=0.550420168 weight=3 combo=S * S_conj * mt_linear
+  good=1048/1904 rate=0.550420168 weight=3 combo=X2+1 * S_conj * prefactor
+  good=1048/1904 rate=0.550420168 weight=3 combo=X2-2X-1 * m0 * prefactor
+  good=1048/1904 rate=0.550420168 weight=3 combo=W * S_conj * L
+  good=1048/1904 rate=0.550420168 weight=4 combo=W * X2+1 * X2-2X-1 * S
+  good=1048/1904 rate=0.550420168 weight=4 combo=W * X-1 * X+1 * S_conj
+p27_label2_visible_e_character_probe_rows=1/1

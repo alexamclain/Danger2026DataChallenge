@@ -1,0 +1,49 @@
+p27 label2 cover genus/ramification probe
+prime = 17
+genus_W = 1
+genus_T = 2
+genus_WT = 2
+genus_intermediate_C = 5
+finite_local_orders:
+  x=1, W=0, T=2: order=1 parity=1
+  x=1, W=0, T=15: order=1 parity=1
+  x=-1, W=0, T=2: order=1 parity=1
+  x=-1, W=0, T=15: order=1 parity=1
+  X2+1 root X=4, W=3, T=0: order=3 parity=1
+  X2+1 root X=4, W=14, T=0: order=5 parity=1
+  X2+1 root X=13, W=5, T=0: order=5 parity=1
+  X2+1 root X=13, W=12, T=0: order=3 parity=1
+  X2+2X-1 root X=5, W=1, T=0: order=1 parity=1
+  X2+2X-1 root X=5, W=16, T=0: order=1 parity=1
+  X2+2X-1 root X=10, W=2, T=0: order=1 parity=1
+  X2+2X-1 root X=10, W=15, T=0: order=1 parity=1
+  x=0 common branch, T/W=1: order=0 parity=0
+  x=0 common branch, T/W=16: order=2 parity=0
+  L double root X=7, W=9, T=5: order=1 parity=1
+  L double root X=7, W=9, T=12: order=1 parity=1
+  L double root X=12, W=4, T=4: order=1 parity=1
+  L double root X=12, W=4, T=13: order=1 parity=1
+finite_odd_local_orders = 16
+  odd: x=1, W=0, T=2
+  odd: x=1, W=0, T=15
+  odd: x=-1, W=0, T=2
+  odd: x=-1, W=0, T=15
+  odd: X2+1 root X=4, W=3, T=0
+  odd: X2+1 root X=4, W=14, T=0
+  odd: X2+1 root X=13, W=5, T=0
+  odd: X2+1 root X=13, W=12, T=0
+  odd: X2+2X-1 root X=5, W=1, T=0
+  odd: X2+2X-1 root X=5, W=16, T=0
+  odd: X2+2X-1 root X=10, W=2, T=0
+  odd: X2+2X-1 root X=10, W=15, T=0
+  odd: L double root X=7, W=9, T=5
+  odd: L double root X=7, W=9, T=12
+  odd: L double root X=12, W=4, T=4
+  odd: L double root X=12, W=4, T=13
+infinity_local_orders:
+  infinity_class=0 order=-18 parity=0
+  infinity_class=1 order=-12 parity=0
+infinity_odd_local_orders = 0
+ramification_points_for_R_cover = 16
+genus_R_cover_if_smooth = 17
+p27_label2_cover_genus_probe_rows=1/1
