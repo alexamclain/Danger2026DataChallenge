@@ -1,0 +1,2 @@
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>2428695377</seed><version>2.29-8</version><time>1.860</time><memory>32.09MB</memory></headers><results><line>RESULT source_orientation_base 21 16</line><line>RESULT source_branch_overlap 1 1 12 16 2 2 14 69</line><line>RESULT source_branch_overlap 1 -1 12 16 2 2 14 69</line><line>RESULT source_branch_overlap -1 1 12 16 2 2 14 69</line><line>RESULT source_branch_overlap -1 -1 12 16 2 2 14 69</line><line></line></results></calculator>

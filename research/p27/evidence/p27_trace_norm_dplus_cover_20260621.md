@@ -146,6 +146,13 @@ This is the right mathematical object for the GPU 4x structural narrowing
 lead.
 ```
 
+Follow-up source-orientation pricing:
+[P27 Trace/Norm Source-Orientation Cover](p27_trace_norm_source_orientation_cover_20260621.md).
+Making `eps_h` and `eps_v` available as square-root data produces a degree-16
+genus-21 base and predicted genus 69 after the final `D_plus` square root.  So
+the direct full-cover sampler is not the first production route; the live
+route is quotient/Prym extraction or recurrence/coupling telemetry.
+
 Negative:
 
 ```text

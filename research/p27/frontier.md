@@ -247,6 +247,16 @@ current classifier pays fresh Legendre costs.  The next sqrt-beating test is a
 Magma/Sage quotient/Prym decomposition of the four orientation components, or
 a direct GPU source sampler if such a quotient is found.
 
+The naive orientation-source cover is now priced:
+[P27 Trace/Norm Source-Orientation Cover](evidence/p27_trace_norm_source_orientation_cover_20260621.md).
+Adjoining roots for `eps_h` and `eps_v`, then the trace/domain roots, produces
+a degree-16 genus-21 source base.  Riemann-Hurwitz over `q=607` predicts genus
+`69` after adjoining the final `D_plus` square root, uniformly for all four
+sign components.  This kills "sample the full orientation cover" as the first
+production idea.  The live trace/norm moonshot is narrower: find a low-genus
+quotient/Prym factor of that genus-69 cover, or show by GPU telemetry that
+`D_plus` recurs/couples to later selected x-square gates.
+
 The local norm/coboundary screen is also negative but clarifying:
 [P27 U+2 Norm/Coboundary Screen](evidence/p27_usquare_norm_coboundary_20260621.md).
 The identities `Norm_s(u+2)=4*x*(2-A)`, `Norm_s(u-2)=-4*x*(A+2)`, and

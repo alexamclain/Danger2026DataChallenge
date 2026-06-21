@@ -686,6 +686,22 @@ Split the D_plus cover by eps_h,eps_v in {+1,-1}; ask Magma/Sage for genus,
 quotient maps, and Prym/Jacobian decomposition of each orientation component.
 ```
 
+Status update:
+
+```text
+The direct source-orientation cover is not cheap.
+Adding u_h^2=eps_h*t and u_v^2=eps_v*(t+1)C gives a degree-16 genus-21 base.
+After the final Dplus square root, Riemann-Hurwitz predicts genus 69 for every
+sign component.
+```
+
+So the next test is not "sample the full cover"; it is:
+
+```text
+find a low-genus quotient/Prym factor that still remembers Dplus, or test
+whether Dplus recurs/couples to later selected x-square gates.
+```
+
 Promotion bar:
 
 ```text
