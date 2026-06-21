@@ -29,6 +29,7 @@ Latest evidence:
 [P27 E-Prime D3 Z-Source Magma Smoke](p27_eprime_d3_zsource_magma_20260621.md).
 [P27 E-Prime L(4O) Exact Section Screen](p27_eprime_l4_section_exact_screen_20260621.md).
 [P27 E-Prime U-Cubic Exact Screen](p27_eprime_ucubic_exact_screen_20260621.md).
+[P27 E-Prime Reciprocal R-Quotient Branch Screen](p27_eprime_rquotient_branch_screen_20260621.md).
 
 Key result over tiny p27-signature field `q=7`:
 
@@ -62,14 +63,18 @@ Exact single-section tests in `L(4O)=<1,U,U^2,V>` are killed on q599/q727/q919;
 q487 exact quadratic-U fits are local artifacts.
 Exact U-cubic tests also fail on q919/q967/q1063, despite local q487/q599/q727
 artifacts, so widening univariate U-polynomials is no longer a live source path.
+The reciprocal quotient `r=z^2+z^-2` is real, but it is not the selector:
+on p27 train/heldout and q1607/q1847/q2087, the r-quadratic discriminant is
+always square and the remaining bit is exactly `d3=chi(r+2)=chi(r-2)`.
 ```
 
 Concrete next K/S test:
 
 ```text
 offline Magma/Sage should now target E': V^2=U^3+4U:
-  normalize the staged d3 z-source J = Iclean + <reverse_z>
-  compute genus / branch divisor / Kummer class over E' beyond L(4O)
+  normalize the staged reciprocal r quotient of J
+  compute the divisor / Kummer class of r+2 on that quotient
+  compare this to the already-known u+2 tower class
   d4 fresh-cover falsifier vs recurrence/sourceable transform
 ```
 
@@ -85,7 +90,7 @@ Kill condition:
 ```text
 no low-genus quotient of the genus-37 layer, or d4 is a fresh unrelated cover
 no F_p descent of the sqrt(-1)-twisted alpha quotient
-no useful low-genus/function-field structure after E' extraction
+no useful low-genus/function-field structure for the r+2 Kummer class
 ```
 
 ## Current Alpha Status

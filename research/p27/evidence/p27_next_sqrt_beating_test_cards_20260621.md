@@ -261,6 +261,37 @@ sqrt-beating test must be multi-gate and non-local: a Kummer/theta/H90
 relation or a source for the all-plus iterated 2-cover.
 ```
 
+E-prime reciprocal quotient update:
+[P27 E-Prime Reciprocal R-Quotient Branch Screen](p27_eprime_rquotient_branch_screen_20260621.md).
+
+```text
+The staged z-source equation is reciprocal in s=z^2.  With r=s+1/s, online
+Magma reaches a dimension-1 r-quotient curve:
+  D3_RQUOT_AFTER_FIRSTHALF_SCHEME 1 62 0
+
+But the quotient itself is not the d3 selector.  On p27 train/heldout and
+q1607/q1847/q2087:
+  single_r_value = all usable rows
+  r_discriminant_square = all usable rows
+  d3 = chi(r+2) = chi(r-2), zero mismatches
+```
+
+Updated test card:
+
+```text
+Do not spend the next pass trying to make r itself selective.  The concrete
+CAS target is the divisor/Kummer class of r+2 on the normalized r quotient,
+or a recurrence/source for the sequence of r_j+2 classes.
+```
+
+Updated kill rule:
+
+```text
+Kill reciprocal-r quotient as a standalone d3 source; it quotients away the
+squareclass.  Continue only if r+2 has a sourceable divisor class, low-genus
+quotient, or multi-gate recurrence.
+```
+
 U+2 norm/coboundary screen:
 
 ```text

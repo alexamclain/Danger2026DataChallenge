@@ -659,6 +659,18 @@ coefficient widening as another interpolation trap.  The surviving E' task is
 not "try degree 4"; it is normalize `J = Iclean + <reverse_z>` and recover the
 actual branch/Kummer class.
 
+That branch class is now partially named:
+[P27 E-Prime Reciprocal R-Quotient Branch Screen](evidence/p27_eprime_rquotient_branch_screen_20260621.md).
+The reverse-source equation is reciprocal in `s=z^2`; setting
+`r=s+1/s` gives a real quotient curve, and online Magma reaches
+`D3_RQUOT_AFTER_FIRSTHALF_SCHEME 1 62 0` before the same memory limit.  On two
+20,000-candidate p27 samples and guard fields q1607/q1847/q2087, every usable
+row has a single `r`, the r-quadratic discriminant is always square, and
+`d3 = chi(r+2) = chi(r-2)` with zero mismatches.  Thus the r quotient itself is
+not a d3 source; it quotients away the squareclass.  The sharper live CAS target
+is the divisor/Kummer class of `r+2` on the normalized r-quotient, or a
+recurrence/source for many `chi(r_j+2)` bits at once.
+
 The K-line now has a cleaner coordinate for that extraction:
 [P27 Kummer Belyi Structure Probe](evidence/p27_kummer_belyi_structure_probe_20260621.md).
 Symbolically,
