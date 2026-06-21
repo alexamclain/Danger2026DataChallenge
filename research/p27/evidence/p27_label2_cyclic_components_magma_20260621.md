@@ -30,6 +30,7 @@ Online outputs:
 ```text
 research/p27/archive/probe_outputs/p27_label2_cyclic_components_q607_magma_20260621.txt
 research/p27/archive/probe_outputs/p27_label2_cyclic_components_q1471_magma_20260621.txt
+research/p27/archive/probe_outputs/p27_label2_cyclic_components_q1607_magma_20260621.txt
 ```
 
 Raw calculator responses:
@@ -37,6 +38,7 @@ Raw calculator responses:
 ```text
 research/p27/archive/probe_outputs/p27_label2_cyclic_components_q607_magma_20260621.html
 research/p27/archive/probe_outputs/p27_label2_cyclic_components_q1471_magma_20260621.html
+research/p27/archive/probe_outputs/p27_label2_cyclic_components_q1607_magma_20260621.html
 ```
 
 ## Model
@@ -78,6 +80,14 @@ COMP 1 1 30 17 1656
 COMP 2 1 1 0 1472
 ```
 
+For `q=1607`, a p27-signature field with `q = 7 mod 16`:
+
+```text
+RESULT p27_label2_cyclic_components_q1607 2 true false
+COMP 1 1 30 17 1608
+COMP 2 1 1 0 1608
+```
+
 Interpretation:
 
 ```text
@@ -85,8 +95,9 @@ component 1 = degree-30 genus-17 main component
 component 2 = degree-1 genus-0 projection / denominator artifact
 ```
 
-The q=1471 field is one of the main p27 guard fields and has p27-compatible
-sign `chi(-1)=-1`.
+The q=607 and q=1471 checks are retained as historical sanity checks.  The
+q=1607 rerun is the promotion-field check after the guard-field signature
+audit, because it matches p27's `q = 7 mod 16` 2-adic sign regime.
 
 ## Consequence
 
@@ -101,8 +112,8 @@ test whether that character recurs or couples to d3/d4
 ```
 
 Do not spend more effort asking whether the raw eliminated cyclic-quartic
-model is low genus.  It is not, after reduction/decomposition over both
-tested p27-sign fields.
+model is low genus.  It is not, after reduction/decomposition including the
+q1607 p27-signature field.
 
 ## Continue / Kill
 
@@ -121,9 +132,11 @@ kill = GPU production use of compactD unless quotient or telemetry changes the r
 - H90 parent: [P27 Label-2 H90 / Order-4 Lift](p27_label2_h90_order4_lift_20260621.md)
 - Genus parent: [P27 Label-2 Cover Genus And Recurrence Probe](p27_label2_cover_genus_recurrence_20260621.md)
 - Fixture: `research/p27/archive/fixtures/p27_label2_cyclic_components_q1471_magma.m`
+- Fixture: `research/p27/archive/fixtures/p27_label2_cyclic_components_q1607_magma.m`
 - Output: `research/p27/archive/probe_outputs/p27_label2_cyclic_components_q607_magma_20260621.txt`
 - Output: `research/p27/archive/probe_outputs/p27_label2_cyclic_components_q1471_magma_20260621.txt`
+- Output: `research/p27/archive/probe_outputs/p27_label2_cyclic_components_q1607_magma_20260621.txt`
 
 ```text
-p27_label2_cyclic_components_magma_rows=2/2
+p27_label2_cyclic_components_magma_rows=3/3
 ```

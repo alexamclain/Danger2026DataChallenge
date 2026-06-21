@@ -240,7 +240,7 @@ def main() -> int:
     )
 
     print("Magma/Sage extraction task:")
-    print("  1. Work over q=1471,1607,1847 guard fields first.")
+    print("  1. Work over p27-signature q=7 mod 16 fields first, e.g. q=1607,1847,2087.")
     print("  2. Define the function field from E, T_cover, compactD_R, first_half_B,")
     print("     reverse_x, reverse_Y, eta_branch, and the K/Sroot map.")
     print("  3. Normalize the d3 all-plus source cover over P1_K and P1_Sroot.")
@@ -250,7 +250,7 @@ def main() -> int:
     print("  6. Repeat d4 only after a stable d3 class is named.")
     print()
     print("Promotion bar:")
-    print("  - stable across q=1471 and q=1607, preferably q=1847")
+    print("  - stable across q=7 mod 16 fields, starting with q=1607,1847,2087")
     print("  - genus <= 1, a named recurrence/sourceable walk, or a cheap character")
     print("  - gives a source/sampler or scope shrink without fresh Legendre toll")
     print()

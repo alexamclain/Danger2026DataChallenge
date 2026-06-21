@@ -68,7 +68,7 @@ Auxiliary rational functions:
   H_num: X**8*z**4 - 2*X**8*z**2 + X**8 - 4*X**6*z**4 + 8*X**6*z**2 - 4*X**6 + 6*X**4*z**4 + 52*X**4*z**2 + 6*X**4 - 4*X**2*z**4 + 8*X**2*z**2 - 4*X**2 + z**4 - 2*z**2 + 1
 
 Magma/Sage extraction task:
-  1. Work over q=1471,1607,1847 guard fields first.
+  1. Work over p27-signature q=7 mod 16 fields first, e.g. q=1607,1847,2087.
   2. Define the function field from E, T_cover, compactD_R, first_half_B,
      reverse_x, reverse_Y, eta_branch, and the K/Sroot map.
   3. Normalize the d3 all-plus source cover over P1_K and P1_Sroot.
@@ -78,7 +78,7 @@ Magma/Sage extraction task:
   6. Repeat d4 only after a stable d3 class is named.
 
 Promotion bar:
-  - stable across q=1471 and q=1607, preferably q=1847
+  - stable across q=7 mod 16 fields, starting with q=1607,1847,2087
   - genus <= 1, a named recurrence/sourceable walk, or a cheap character
   - gives a source/sampler or scope shrink without fresh Legendre toll
 

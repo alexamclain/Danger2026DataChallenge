@@ -1,0 +1,34 @@
+p27 label2 alpha eliminated-map probe
+alpha_R = R*mt*(2*pref*m0 - R^2)/(2*S*(R^2 - pref*m0))
+promotion = explicit order-4 map for CAS quotient/Prym extraction
+q=1607:
+  q_mod16 = 7
+  stats:
+  alpha_defined = 1600
+  alpha_undefined = 4
+  e_affine_points = 1607
+  quartic_affine_points = 1604
+  quartic_fiber_0 = 1203
+  quartic_fiber_1 = 4
+  quartic_fiber_4 = 400
+q=1847:
+  q_mod16 = 7
+  stats:
+  alpha_defined = 1944
+  alpha_undefined = 4
+  e_affine_points = 1847
+  quartic_affine_points = 1948
+  quartic_fiber_0 = 1357
+  quartic_fiber_1 = 4
+  quartic_fiber_4 = 486
+q=2087:
+  q_mod16 = 7
+  stats:
+  alpha_defined = 1952
+  alpha_undefined = 4
+  e_affine_points = 2087
+  quartic_affine_points = 1956
+  quartic_fiber_0 = 1595
+  quartic_fiber_1 = 4
+  quartic_fiber_4 = 488
+p27_label2_alpha_eliminated_map_probe_rows=1/1

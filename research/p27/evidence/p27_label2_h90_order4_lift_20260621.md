@@ -14,8 +14,8 @@ automorphism has genus `1`, identifying the cover as a cyclic quartic cover
 over the residual elliptic curve `E: W^2=X^3-X`.
 
 Follow-up online Magma component checks confirm the eliminated cyclic-quartic
-model has a degree-30 genus-17 main component over `q=607` and `q=1471`, plus
-a degree-1 genus-0 projection artifact.  See
+model has a degree-30 genus-17 main component over `q=607`, `q=1471`, and the
+p27-signature field `q=1607`, plus a degree-1 genus-0 projection artifact.  See
 [P27 Label-2 Cyclic-Quartic Component Check](p27_label2_cyclic_components_magma_20260621.md).
 Thus the open win is specifically the `alpha` quotient/Prym decomposition,
 not a low-genus raw eliminated model.
@@ -23,6 +23,19 @@ not a low-genus raw eliminated model.
 This does not by itself beat sqrt scaling, but it changes the concrete target:
 derive the elliptic cyclic-quartic character/source, and test whether that
 structure recurs for later `d_j` gates.
+
+Follow-up eliminated-map probe:
+[P27 Label-2 Alpha Eliminated-Map Probe](p27_label2_alpha_eliminated_map_20260621.md).
+On the eliminated cyclic-quartic model, the order-4 lift is the rational map
+
+```text
+R -> R*mt*(2*pref*m0 - R^2)/(2*S*(R^2 - pref*m0)).
+```
+
+It was validated over q1607, q1847, and q2087: the map preserves the curve,
+squares to the `R`-deck involution, and fourth-powers to identity away from
+the expected exceptional branch points.  The quotient/Prym request should use
+this explicit map.
 
 The p26 GPU trace/norm result adds an implementation guardrail: a real stratum
 with `4x` conditional enrichment can still lose if the classifier costs more
@@ -171,6 +184,8 @@ The visible character screen is recorded in
 [P27 Label-2 Visible Residual-E Character Screen](p27_label2_visible_e_character_screen_20260621.md).
 The alpha/branch recurrence screen is recorded in
 [P27 Label-2 Alpha/Branch Recurrence Probe](p27_label2_alpha_branch_recurrence_20260621.md).
+The eliminated alpha map is recorded in
+[P27 Label-2 Alpha Eliminated-Map Probe](p27_label2_alpha_eliminated_map_20260621.md).
 
 ## Decisive Next Tests
 
@@ -238,6 +253,7 @@ per-GPU-second survivor lift after throughput loss.
 
 ```text
 continue = Sage/Magma alpha quotient and alpha-equivariant Prym decomposition
+continue = use the eliminated alpha_R map as the quotient input
 continue = derive explicit cyclic quartic character over E
 continue = GPU compactD=-1 telemetry with d3/d4 inside the stratum
 
@@ -259,6 +275,7 @@ kill = generic visible-character scans unrelated to the alpha symmetry
 - Output: `research/p27/archive/probe_outputs/p27_label2_resid3_coset0_seed145_2M_20260621.txt`
 - Output: `research/p27/archive/probe_outputs/p27_label2_visible_e_character_probe_20260621.txt`
 - Output: `research/p27/archive/probe_outputs/p27_label2_alpha_branch_recurrence_probe_20260621.txt`
+- Output: `research/p27/archive/probe_outputs/p27_label2_alpha_eliminated_map_probe_20260621.txt`
 - Output: `research/p27/archive/probe_outputs/p27_label2_h90_normone_recurrence_probe_20260621.txt`
 - Related: [P27 Label-2 Cover Genus And Recurrence Probe](p27_label2_cover_genus_recurrence_20260621.md)
 - Related: [P27 Label-2 Cover Trace Decomposition Probe](p27_label2_cover_trace_decomposition_20260621.md)

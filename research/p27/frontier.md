@@ -147,12 +147,23 @@ be sourced cheaply or shown to recur for d3/d4?"
 The online Magma component check now confirms the genus warning:
 [P27 Label-2 Cyclic-Quartic Component Check](evidence/p27_label2_cyclic_components_magma_20260621.md).
 After eliminating `T`, the raw projective cyclic-quartic model must be
-reduced and decomposed.  Over both `q=607` and the main guard field `q=1471`,
-Magma finds two components: a degree-30 genus-17 main component and a degree-1
-genus-0 projection artifact.  This kills the hope that the eliminated model is
-itself secretly low genus.  It keeps exactly one serious H90 route alive:
+reduced and decomposed.  Online Magma now gives the same answer over `q=607`,
+`q=1471`, and the p27-signature field `q=1607`: two components, a degree-30
+genus-17 main component and a degree-1 genus-0 projection artifact.  This
+kills the hope that the eliminated model is itself secretly low genus.  It
+keeps exactly one serious H90 route alive:
 compute the `alpha` quotient/Prym decomposition of the genus-17 component and
 derive a cyclic-quartic character over `E` that recurs or couples to `d3/d4`.
+
+The alpha quotient ask is now executable rather than vague:
+[P27 Label-2 Alpha Eliminated-Map Probe](evidence/p27_label2_alpha_eliminated_map_20260621.md).
+On the eliminated quartic
+`R^4 - 2*pref*m0*R^2 + 4*pref^2*T2*S^2 = 0`, the order-4 lift descends to
+`R -> R*mt*(2*pref*m0 - R^2)/(2*S*(R^2 - pref*m0))`.  This rational map was
+validated over q1607, q1847, and q2087: it maps the curve to itself, squares
+to `R -> -R`, and fourth-powers to identity, with only four expected affine
+exceptional points per field.  The next concrete theorem/CAS test is therefore
+quotient/Prym decomposition using this explicit alpha map.
 
 The first source attempt from that viewpoint is negative:
 [P27 Label-2 E[2] Packet Source Probe](evidence/p27_label2_e2_packet_source_probe_20260621.md).
