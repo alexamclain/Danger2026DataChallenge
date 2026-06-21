@@ -519,6 +519,15 @@ subcase `z^2=f(K)` with split branch divisor of degree `<=4`; the live K-line
 task is now irreducible cubic/quartic branch extraction or a Magma/Sage
 divisor/genus computation.
 
+The nearest monic cubic K-line subcase is negative on a small guard field:
+[P27 K-Line Cubic Exhaustive Pilot](evidence/p27_kline_cubic_exhaustive_20260621.md).
+Over the p27-compatible field `q=607`, the selected `d3` K rows are balanced
+`16/16`.  An exhaustive check of all `223,648,543` monic cubics
+`K^3+aK^2+bK+c`, allowing global polarity, found no exact character match and
+no exact irreducible cubic.  The best miss was `31/32`.  This is only a local
+falsifier, not a p27 proof, but it reinforces the current rule: do actual
+K/S branch-class and genus extraction rather than widening blind cubic scans.
+
 That ask is now packaged as a concrete handoff:
 [P27 Kummer Branch-Extraction Handoff](evidence/p27_kummer_branch_extraction_handoff_20260621.md).
 It records the map from the residual `E: W^2=X^3-X` through

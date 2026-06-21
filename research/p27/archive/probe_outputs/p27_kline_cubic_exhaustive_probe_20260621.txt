@@ -1,0 +1,10 @@
+p27 K-line q607 monic cubic exhaustive probe
+q = 607
+rows = 32
+plus = 16
+minus = 16
+tested_monic_cubics = 223648543
+exact_cubics = 0
+exact_irreducible_cubics = 0
+best good=31/32 zeros=0 polarity=1 coeffs=K^3+16*K^2+234*K+378
+p27_kline_cubic_exhaustive_probe_rows=1/1
