@@ -566,6 +566,15 @@ S branch values and `chi(S)` are killed as selectors.  A future extraction
 should use these branch values as marked points, but the source class, if it
 exists, is non-visible.
 
+The S parity reduction is now explicit:
+[P27 S-Root Parity Reduction](evidence/p27_sroot_parity_reduction_20260621.md).
+The `d3/d4` targets are constant on every `S/-S` pair, while `chi(S)` flips
+because `chi(-1)=-1`.  Thus global even low-degree S classes are just
+K-classes already covered by the K-line screens, and global odd S classes
+cannot match the pair-even target.  This kills broad visible S coefficient
+scans as a useful next step.  The remaining test is function-field extraction
+of the actual non-visible branch class and its decomposition under `S -> -S`.
+
 The newest p26 GPU trace/norm result is positive structure but negative as a
 production prefilter:
 [P27 GPU Filter-Cost Lesson From P26](evidence/p27_gpu_filter_cost_lesson_from_p26_20260621.md).
