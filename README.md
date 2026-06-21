@@ -12,6 +12,8 @@ Curated research notes now live in:
 - `research/p24/` for the p24 research wiki and archived exploration;
 - `research/p25/` for the p25 research wiki imported from the separate
   `pomerance-p25-run` workspace.
+- `research/p26/` for the GPU throughput engineering report behind the p26
+  run.
 
 ## p26 Result: GPU X1(16) Nonsplit Search
 
