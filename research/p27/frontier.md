@@ -221,6 +221,29 @@ promotes trace/norm as a real structural stratum/source target, but not yet as
 a production filter: the current implementation still pays to classify the
 rejected raw-y draws.
 
+The follow-up interpretation is now sharper:
+[P27 Trace/Norm D_plus Prefix Identity](evidence/p27_trace_norm_dplus_prefix_identity_20260621.md).
+The C depth histogram shows `D_plus` has no stops before depth `6`; relative
+to the ordinary nonsplit stream it is exactly a two-gate prefix.  The GPU `4x`
+conditional lift is therefore the expected lift from pre-paying two
+half-density gates, not evidence by itself of a hidden late-depth recurrence.
+After depth `6`, the Dplus-conditioned stream returns to geometric half-loss.
+So trace/norm remains valuable as an algebraic description of early selected
+halving gates, but the moonshot must find a new trace/norm class, quotient, or
+recurrence that couples to post-Dplus gates.
+
+That immediate post-Dplus screen is now negative:
+[P27 Trace/Norm Post-Dplus Screen](evidence/p27_trace_norm_post_dplus_screen_20260621.md).
+On `16,398` C-style Dplus candidates there were zero first-two-gate prefix
+failures, confirming the reconstruction.  The next gate was flat:
+`d3_plus=8298/16398=0.5060`; after conditioning on d3, `d4_plus=4062/8298=0.4895`.
+All low-weight products of the named `H`, `VQ`, `X_pref`, root, quotient, and
+`T_line` atoms failed, with the best train lifts collapsing to about `0.49` to
+`0.50` on heldout.  This kills the cheap post-Dplus trace/norm-character route.
+The surviving trace/norm/quotient task is function-field extraction of the
+actual `d3`/`d4` double covers on `E: W^2=X^3-X` or the 2-isogenous quotient
+`E': V^2=U^3+4U`.
+
 The first exact small-field check of that trace/norm quotient changes the
 math ask:
 [P27 Trace/Norm Spin Obstruction](evidence/p27_trace_norm_spin_obstruction_20260621.md).
@@ -246,6 +269,16 @@ selectors `eps_h=chi(t)` and `eps_v=chi((t+1)C)`, which explains why the
 current classifier pays fresh Legendre costs.  The next sqrt-beating test is a
 Magma/Sage quotient/Prym decomposition of the four orientation components, or
 a direct GPU source sampler if such a quotient is found.
+
+The naive orientation-source cover is now priced:
+[P27 Trace/Norm Source-Orientation Cover](evidence/p27_trace_norm_source_orientation_cover_20260621.md).
+Adjoining roots for `eps_h` and `eps_v`, then the trace/domain roots, produces
+a degree-16 genus-21 source base.  Riemann-Hurwitz over `q=607` predicts genus
+`69` after adjoining the final `D_plus` square root, uniformly for all four
+sign components.  This kills "sample the full orientation cover" as the first
+production idea.  The live trace/norm moonshot is narrower: find a low-genus
+quotient/Prym factor of that genus-69 cover, or show by GPU telemetry that
+`D_plus` recurs/couples to later selected x-square gates.
 
 The local norm/coboundary screen is also negative but clarifying:
 [P27 U+2 Norm/Coboundary Screen](evidence/p27_usquare_norm_coboundary_20260621.md).
@@ -406,6 +439,63 @@ looked mildly promising, but fresh 20k p27 validation flattened it to
 fresh d3 samples.  This kills the visible branch-factor transfer.  The live
 `E'` route is now explicitly cover/divisor-class extraction, not a sparse
 visible factor product.
+
+The reason plain `E'` screens may be missing the real object is now explicit:
+[P27 E-Prime T-Cover Twist Obstruction](evidence/p27_eprime_tcover_twist_obstruction_20260621.md).
+For the `(0,0)` quotient involution
+`sigma(X,W)=(-1/X,W/X^2)`, the label-2 cover
+`T^2=X(X^2+1)(X^2+2X-1)` satisfies `sigma(S)/S=X^-6`, so
+`sigma(T)=+/-T/X^3`.  A rational `T`-linear invariant over `E'` would require
+`sigma(f)/f=+/-X^3`, but `Norm(+/-X^3)=-1`; over the p27-compatible guard
+fields `q=607,1471,1607,1847`, `chi(-1)=-1`, so the obstruction is not killed
+by a base-field constant.  This reframes the next quotient test: work on the
+twisted `T`-cover/Prym/Hilbert-90 class, possibly after adjoining `j^2=-1`,
+using the concrete eigenfunction `Z=T*(1-j/X^3)` with `sigma(Z)=jZ`, then
+descend a named class back to the p27 sign regime.  Do not repeat plain `E'`
+low-pole or sparse-factor scans.  The online Magma `q=1471` check reports
+`RESULT p27_eprime_tcover_twist_q1471 ok -1 1660 0 0 0 0 0`.
+
+The first visible order-4 eigenspace packet is negative:
+[P27 E-Prime Twisted Eigenspace Screen](evidence/p27_eprime_twisted_eigenspace_screen_20260621.md).
+Using `j^2=-1` and `Z=T*(1-j/X^3)`, it tested `Z`, `Z^2`, `Z^4`,
+branch-factor shifts, products, and base-field components over
+`q=1471,1607,1847`.  There were no exact `d3` or `d4` packets.  The best
+scores were field-dependent or raw-majority artifacts, so no GPU sampler
+follows from this visible Hilbert-90 layer.  The remaining `E'` route is
+actual twisted-cover divisor/Kummer/Prym extraction for the `d3` and `d4`
+double covers, not more visible `Z/Z^2/Z^4` packet scans.
+
+The quotient route now has a new positive reduction:
+[P27 E-Prime Signed-Doubling Kummer Screen](evidence/p27_eprime_signed_doubling_kummer_screen_20260621.md).
+Across twelve non-degenerate guard fields, both `d3` and `d4` are constant on
+signed `[2]` projection classes on `E': V^2=U^3+4U`.  Thus the active
+function-field target descends to the Kummer-line coordinate
+`K=x([2]P)=(U^2-4)^2/(4U(U^2+4))`.  Exhaustive degree-1 and degree-2
+polynomial-character screens in `K` are negative over `q=1471,1607,1847`, so
+there is no rational source yet.  The next concrete sqrt-beating test is exact
+degree `3/4` extraction on the K-line; a surviving cubic or quartic would give
+an elliptic source candidate for the next all-plus gate.
+
+The first compact K-line formula screen is negative:
+[P27 Kummer Small-Integer Polynomial Screen](evidence/p27_kummer_small_integer_poly_screen_20260621.md).
+It tested shared primitive integer cubic/quartic polynomials in `K` with
+coefficients in `[-8,8]` across `q=1471,1607,1847`, allowing field-dependent
+overall polarity.  No `d3` or `d4` polynomial was exact in all fields.  Best
+minimum guard-field rates were only about `0.667` for `d3` degree 4 and
+`0.714` for `d4` degree 4.  This keeps the K-line as the best reduced target,
+but the next step should be branch-divisor/Kummer-class extraction on
+`P^1_K`, not blind coefficient-bound widening.
+
+The first exact K-line branch-divisor screen is also negative:
+[P27 Kummer Branch-Divisor Screen](evidence/p27_kummer_branch_divisor_screen_20260621.md).
+It tested all squarefree products of rational linear factors and irreducible
+quadratic factors in `K` with total degree `<=4`.  For the decisive `d3`
+source bit, there were no exact divisors over `q=1471,1607,1847`.  The d4
+screen produced degree-3 fits in q1471/q1607 but none in q1847, so those are
+small-row local interpolation artifacts.  This kills the first elliptic-source
+subcase `z^2=f(K)` with split branch divisor of degree `<=4`; the live K-line
+task is now irreducible cubic/quartic branch extraction or a Magma/Sage
+divisor/genus computation.
 
 The newest p26 GPU trace/norm result is positive structure but negative as a
 production prefilter:

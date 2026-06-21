@@ -9,6 +9,11 @@ search-space narrowing lead: fixed `d2/d3/d4` prefixes do not shrink raw source
 scope, while `D_plus` captured all observed depth-20 through depth-30 survivors
 in the `1B + 1B` raw-y A/B.
 
+Follow-up:
+[P27 Trace/Norm D_plus Prefix Identity](p27_trace_norm_dplus_prefix_identity_20260621.md).
+The `4x` lift is now understood as an exact two-gate prefix.  Dplus is still a
+useful algebraic cover, but by itself it is not a hidden late-depth recurrence.
+
 This note names the exact p27 cover equation behind `D_plus`.  After the
 domain root is present, `D_plus` is exactly one combined squareclass:
 
@@ -145,6 +150,13 @@ selectors eps_h and eps_v are fixed.
 This is the right mathematical object for the GPU 4x structural narrowing
 lead.
 ```
+
+Follow-up source-orientation pricing:
+[P27 Trace/Norm Source-Orientation Cover](p27_trace_norm_source_orientation_cover_20260621.md).
+Making `eps_h` and `eps_v` available as square-root data produces a degree-16
+genus-21 base and predicted genus 69 after the final `D_plus` square root.  So
+the direct full-cover sampler is not the first production route; the live
+route is quotient/Prym extraction or recurrence/coupling telemetry.
 
 Negative:
 

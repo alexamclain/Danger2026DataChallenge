@@ -1,0 +1,1 @@
+RESULT p27_eprime_tcover_twist_q1471 ok -1 1660 0 0 0 0 0

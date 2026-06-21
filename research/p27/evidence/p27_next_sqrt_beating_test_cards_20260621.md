@@ -506,6 +506,160 @@ p26 branch packet on fresh p27 d3 = exactly 10000/20000 and 10000/20000
 This kills the visible p26 branch-factor transfer as a sqrt-beating source.
 The remaining quotient route is actual cover/divisor-class extraction on `E'`.
 
+E-prime twist-obstruction update:
+[P27 E-Prime T-Cover Twist Obstruction](p27_eprime_tcover_twist_obstruction_20260621.md).
+
+```text
+sigma(X,W)=(-1/X,W/X^2)
+T^2 = S = X*(X^2+1)*(X^2+2X-1)
+sigma(S)/S = X^-6
+sigma(T)=+/-T/X^3
+
+A rational T-linear invariant T*f over E' would need:
+  sigma(f)/f = +/-X^3
+
+But:
+  Norm(+X^3) = -1
+  Norm(-X^3) = -1
+```
+
+For the p27-compatible guard fields `q=607,1471,1607,1847`, `chi(-1)=-1`,
+so this obstruction is real over the base field.  This explains why plain
+`E'` searches can fail even if the quotient route is still alive.  The online
+Magma `q=1471` validation reports:
+
+```text
+RESULT p27_eprime_tcover_twist_q1471 ok -1 1660 0 0 0 0 0
+```
+
+Updated quotient test:
+
+```text
+Stop repeating plain E' low-pole or sparse branch-factor screens.
+Build the twisted T-cover quotient/Prym/Hilbert-90 class, allowing j^2=-1 over
+F_{q^2}.  The concrete first model is:
+  h = 1 - j/X^3
+  Z = T*h
+  sigma(Z) = jZ
+Then ask whether the d3/d4 double covers become named order-4 eigenspace
+classes that descend back to the p27 sign regime.
+```
+
+Visible eigenspace update:
+[P27 E-Prime Twisted Eigenspace Screen](p27_eprime_twisted_eigenspace_screen_20260621.md).
+
+```text
+Using j^2=-1 and Z=T*(1-j/X^3), the first packet screen tested:
+  Z, Z^2, Z^4
+  Z +/- branch_factor
+  Z^2 +/- branch_factor
+  Z^4 +/- branch_factor
+  Z * branch_factor
+  base-field components of Z^4
+
+Guard fields:
+  q=1471,1607,1847
+
+Result:
+  d3 exact packets = 0 in all three fields
+  d4 exact packets = 0 in all three fields
+
+The best scores were field-dependent or raw-majority artifacts, e.g. q1471
+d4 had 160/224 for Z4+U-1, while q1607/q1847 winners were often Z2/Z4/base
+components tracking raw target bias.
+```
+
+Updated kill rule:
+
+```text
+Stop visible Z/Z2/Z4 branch-factor packet scans.  The next meaningful test is
+the actual divisor/Kummer/Prym class of the d3 and d4 double covers on the
+twisted T-cover/eigenspace model, followed by a guard-field exactness check.
+```
+
+Signed-doubling Kummer update:
+[P27 E-Prime Signed-Doubling Kummer Screen](p27_eprime_signed_doubling_kummer_screen_20260621.md).
+
+```text
+On E': V^2=U^3+4U, both d3 and d4 descend to signed [2] projection classes in
+all 12 tested non-degenerate guard fields.
+
+The quotient coordinate is:
+  K = x([2]P) = (U^2-4)^2/(4*U*(U^2+4)).
+
+Main guard fields:
+  q=1471: d3 100 -> 50 K rows; d4 56 -> 28 K rows
+  q=1607: d3 98  -> 49 K rows; d4 56 -> 28 K rows
+  q=1847: d3 126 -> 63 K rows; d4 90 -> 45 K rows
+
+Exhaustive K-polynomial screens:
+  degree 1 exact = 0 for d3/d4 over q=1471,1607,1847
+  degree 2 exact = 0 for d3/d4 over q=1471,1607,1847
+```
+
+Updated concrete test:
+
+```text
+Search exact degree 3/4 K-polynomial characters for d3 and d4.
+An exact cubic or quartic gives z^2=f(K), a genus-1 source candidate.
+If degree 3/4 fails on q=1471 and q=1607, move to divisor/Kummer extraction on
+the K-line rather than returning to plain E' visible scans.
+```
+
+Small-integer K-polynomial update:
+[P27 Kummer Small-Integer Polynomial Screen](p27_kummer_small_integer_poly_screen_20260621.md).
+
+```text
+Tested one shared primitive integer polynomial shape across q=1471,1607,1847,
+with coefficients in [-8,8] and field-dependent polarity allowed.
+
+Exact all-field formulas:
+  d3 degree 3 = 0
+  d3 degree 4 = 0
+  d4 degree 3 = 0
+  d4 degree 4 = 0
+
+Best minimum guard-field rates:
+  d3 degree 4: about 0.667
+  d4 degree 4: about 0.714
+```
+
+Updated next test:
+
+```text
+Do not simply widen small coefficient bounds.  Recover the actual K-line
+branch divisor/Kummer class for d3, determine its minimal degree, then compare
+the d4 branch divisor after d3.  Promote only an exact branch polynomial/class
+or a recurrence/source relation that survives q=1471 and q=1607.
+```
+
+Branch-divisor update:
+[P27 Kummer Branch-Divisor Screen](p27_kummer_branch_divisor_screen_20260621.md).
+
+```text
+Tested exact squarefree products of:
+  rational linear factors in K
+  irreducible quadratic factors in K over F_q
+with total degree <=4.
+
+d3:
+  q1471 exact divisors = none
+  q1607 exact divisors = none
+  q1847 exact divisors = none
+
+d4:
+  q1471/q1607 have degree-3 local fits
+  q1847 exact divisors = none
+```
+
+Updated kill rule:
+
+```text
+Kill the split degree <=4 K-line branch-divisor source.  The remaining K-line
+route is irreducible cubic/quartic extraction or Magma/Sage recovery of the
+actual branch divisor/genus, not more visible split-factor screens.
+```
+
 Promotion bar:
 
 ```text
@@ -670,8 +824,10 @@ D_plus iff -core is square
 ```
 
 The p27 probe has zero mismatches on `16,096` rows, and the online Magma
-`q=607` validation has `mismatch=0`.  The domain spin quartic obtained by
-eliminating `t`,
+`q=607` validation has `mismatch=0`.  The C depth histogram now identifies
+`D_plus` as an exact two-gate prefix: all Dplus-filtered rows survive through
+depth `6`, then return to geometric half-loss.  The domain spin quartic
+obtained by eliminating `t`,
 
 ```text
 r^4 - (a+2)(a^2+1)(a^2+4)r^2 + (a+2)^2(a^2+4) = 0,
@@ -684,6 +840,47 @@ Next concrete test:
 ```text
 Split the D_plus cover by eps_h,eps_v in {+1,-1}; ask Magma/Sage for genus,
 quotient maps, and Prym/Jacobian decomposition of each orientation component.
+```
+
+Status update:
+
+```text
+The direct source-orientation cover is not cheap.
+Adding u_h^2=eps_h*t and u_v^2=eps_v*(t+1)C gives a degree-16 genus-21 base.
+After the final Dplus square root, Riemann-Hurwitz predicts genus 69 for every
+sign component.
+```
+
+So the next test is not "sample the full cover"; it is:
+
+```text
+find a low-genus quotient/Prym factor that still remembers Dplus and couples
+to later selected x-square gates.
+```
+
+Post-Dplus update:
+
+```text
+The immediate named-character version of that test is negative.
+On 16,398 C-style Dplus candidates, Dplus had zero first-two-gate failures,
+but d3_plus was 8298/16398 = 0.5060 and d4_plus after d3 was
+4062/8298 = 0.4895.
+
+All low-weight products of H,VQ,X_pref,T_line/root/quotient atoms failed for
+d3 and d4; train lifts collapsed to about 0.49-0.50 on heldout.
+```
+
+Updated next concrete test:
+
+```text
+Do not run another low-weight post-Dplus sign scan.
+Extract the actual d3 and d4 double-cover divisor/Kummer classes on
+  E:  W^2 = X^3 - X
+or on the 2-isogenous quotient
+  E': V^2 = U^3 + 4U, U = X - 1/X.
+
+Use online Magma for small-field validation once there is a named formula or
+component map, as in the p24 workflow.
 ```
 
 Promotion bar:

@@ -1,0 +1,52 @@
+p27 E-prime T-cover twist obstruction
+involution: sigma(X,W)=(-1/X, W/X^2)
+quotient: U=X-1/X, V=W*(X^2+1)/X^2, E': V^2=U^3+4U
+T-cover: T^2 = S = X*(X^2+1)*(X^2+2X-1)
+S = X*(X**2 + 1)*(X**2 + 2*X - 1)
+sigma_S = (X**2 + 1)*(X**2 + 2*X - 1)/X**5
+sigma_S_over_S = X**(-6)
+S_over_sigma_S = X**6
+norm_X3 = -1
+norm_minus_X3 = -1
+Eprime_relation_reduced_num_den = (0, 1)
+interpretation:
+  sigma(S)=S/X^6, so a lift has sigma(T)=+/-T/X^3
+  a T-linear invariant T*f would require sigma(f)/f=+/-X^3
+  every sigma(f)/f has norm 1, but Norm(+/-X^3)=-1
+  over p27-compatible fields q=3 mod 4, -1 is nonsquare, so the
+  obstruction is not removed by a base-field constant
+hilbert90_eigenfunction_over_Fq2:
+  let j^2=-1 and h=1-j/X^3
+  sigma(h)=j*X^3*h
+  Z=T*h satisfies sigma(Z)=j*Z
+  so the T phase is an order-4 eigenspace object; Z^4 is invariant
+finite_field_checks:
+q=607:
+  T_points = 732
+  minus_one_chi = -1
+  norm_X3_is_minus_one = 1
+  q = 607
+  rational_T_linear_invariant_possible_over_Fq = 0
+  x_zero_skip = 1
+q=1471:
+  T_points = 1660
+  minus_one_chi = -1
+  norm_X3_is_minus_one = 1
+  q = 1471
+  rational_T_linear_invariant_possible_over_Fq = 0
+  x_zero_skip = 1
+q=1607:
+  T_points = 1604
+  minus_one_chi = -1
+  norm_X3_is_minus_one = 1
+  q = 1607
+  rational_T_linear_invariant_possible_over_Fq = 0
+  x_zero_skip = 1
+q=1847:
+  T_points = 1844
+  minus_one_chi = -1
+  norm_X3_is_minus_one = 1
+  q = 1847
+  rational_T_linear_invariant_possible_over_Fq = 0
+  x_zero_skip = 1
+p27_eprime_tcover_twist_obstruction_rows=1/1

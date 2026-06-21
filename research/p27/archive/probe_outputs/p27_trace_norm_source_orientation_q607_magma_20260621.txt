@@ -1,0 +1,5 @@
+RESULT source_orientation_base 21 16
+RESULT source_branch_overlap 1 1 12 16 2 2 14 69
+RESULT source_branch_overlap 1 -1 12 16 2 2 14 69
+RESULT source_branch_overlap -1 1 12 16 2 2 14 69
+RESULT source_branch_overlap -1 -1 12 16 2 2 14 69

@@ -1,0 +1,323 @@
+p27 E-prime signed-doubling Kummer-line probe
+K = x([2]P) = (U^2-4)^2/(4*U*(U^2+4))
+small_primes = 1471,1607,1847
+max_degree = 2
+q=1471:
+  enum_compact_not_target = 837
+  enum_no_label2_candidate = 424
+  quotient_d3_minus_E_points = 88
+  quotient_d3_missing_on_E_orbit = 0
+  quotient_d3_not_descended_to_E = 0
+  quotient_d3_plus_E_points = 112
+  quotient_d3_quotient_rows = 200
+  quotient_d4_minus_E_points_after_d3 = 56
+  quotient_d4_missing_on_E_orbit = 0
+  quotient_d4_not_descended_to_E = 0
+  quotient_d4_plus_E_points_after_d3 = 56
+  quotient_d4_quotient_rows_after_d3 = 112
+  quotient_orbit_size_4 = 200
+  quotient_oriented_candidates = 800
+  quotient_quotient_E_points = 200
+  d3_eprime_input_rows = 200
+  d3_eprime_minus = 44
+  d3_eprime_plus = 56
+  d3_eprime_quotient_rows = 100
+  d4_eprime_input_rows = 112
+  d4_eprime_minus = 28
+  d4_eprime_plus = 28
+  d4_eprime_quotient_rows = 56
+q1471_d3_kummer_descent:
+  input_rows = 100
+  k_rows = 50
+  minus = 22
+  plus = 28
+q1471_d3_degree1_screen:
+  best_good = 37
+  best_total = 50
+  best_zeros = 0
+  degree = 1
+  exact_polys = 0
+  polys_tested = 1472
+  rows = 50
+q1471_d3_degree1_best:
+  good=37/50 rate=0.740000000 zeros=0 polarity=-1 poly=1437 + 1*K
+  good=36/50 rate=0.720000000 zeros=0 polarity=1 poly=157 + 1*K
+  good=36/50 rate=0.720000000 zeros=0 polarity=1 poly=346 + 1*K
+  good=36/50 rate=0.720000000 zeros=0 polarity=-1 poly=577 + 1*K
+  good=36/50 rate=0.720000000 zeros=0 polarity=-1 poly=1290 + 1*K
+  good=35/50 rate=0.700000000 zeros=0 polarity=-1 poly=35 + 1*K
+  good=35/50 rate=0.700000000 zeros=0 polarity=-1 poly=45 + 1*K
+  good=35/50 rate=0.700000000 zeros=0 polarity=1 poly=253 + 1*K
+q1471_d3_degree1_exact:
+q1471_d3_degree2_screen:
+  best_good = 43
+  best_total = 50
+  best_zeros = 0
+  degree = 2
+  exact_polys = 0
+  polys_tested = 2165313
+  rows = 50
+q1471_d3_degree2_best:
+  good=43/50 rate=0.860000000 zeros=0 polarity=-1 poly=147 + 1362*K + 1*K^2
+  good=43/50 rate=0.860000000 zeros=0 polarity=1 poly=1311 + 1418*K + 1*K^2
+  good=42/50 rate=0.840000000 zeros=0 polarity=-1 poly=1163 + 503*K + 1*K^2
+  good=42/50 rate=0.840000000 zeros=0 polarity=1 poly=663 + 1300*K + 1*K^2
+  good=42/50 rate=0.840000000 zeros=0 polarity=1 poly=1136 + 1450*K + 1*K^2
+  good=41/50 rate=0.820000000 zeros=0 polarity=-1 poly=923 + 11*K + 1*K^2
+  good=41/50 rate=0.820000000 zeros=0 polarity=1 poly=1131 + 254*K + 1*K^2
+  good=41/50 rate=0.820000000 zeros=0 polarity=-1 poly=745 + 643*K + 1*K^2
+q1471_d3_degree2_exact:
+q1471_d4_kummer_descent:
+  input_rows = 56
+  k_rows = 28
+  minus = 14
+  plus = 14
+q1471_d4_degree1_screen:
+  best_good = 22
+  best_total = 28
+  best_zeros = 0
+  degree = 1
+  exact_polys = 0
+  polys_tested = 1472
+  rows = 28
+q1471_d4_degree1_best:
+  good=22/28 rate=0.785714286 zeros=0 polarity=-1 poly=857 + 1*K
+  good=22/28 rate=0.785714286 zeros=0 polarity=-1 poly=1241 + 1*K
+  good=21/28 rate=0.750000000 zeros=0 polarity=1 poly=43 + 1*K
+  good=21/28 rate=0.750000000 zeros=0 polarity=-1 poly=795 + 1*K
+  good=21/28 rate=0.750000000 zeros=0 polarity=-1 poly=853 + 1*K
+  good=21/28 rate=0.750000000 zeros=0 polarity=-1 poly=854 + 1*K
+  good=21/28 rate=0.750000000 zeros=0 polarity=-1 poly=966 + 1*K
+  good=21/28 rate=0.750000000 zeros=0 polarity=1 poly=1004 + 1*K
+q1471_d4_degree1_exact:
+q1471_d4_degree2_screen:
+  best_good = 27
+  best_total = 28
+  best_zeros = 0
+  degree = 2
+  exact_polys = 0
+  polys_tested = 2165313
+  rows = 28
+q1471_d4_degree2_best:
+  good=27/28 rate=0.964285714 zeros=0 polarity=1 poly=211 + 719*K + 1*K^2
+  good=27/28 rate=0.964285714 zeros=0 polarity=-1 poly=509 + 1394*K + 1*K^2
+  good=26/28 rate=0.928571429 zeros=0 polarity=1 poly=116 + 184*K + 1*K^2
+  good=26/28 rate=0.928571429 zeros=0 polarity=-1 poly=873 + 354*K + 1*K^2
+  good=26/28 rate=0.928571429 zeros=0 polarity=-1 poly=405 + 415*K + 1*K^2
+  good=26/28 rate=0.928571429 zeros=0 polarity=1 poly=979 + 588*K + 1*K^2
+  good=26/28 rate=0.928571429 zeros=0 polarity=1 poly=1195 + 785*K + 1*K^2
+  good=26/28 rate=0.928571429 zeros=0 polarity=-1 poly=1238 + 927*K + 1*K^2
+q1471_d4_degree2_exact:
+q=1607:
+  enum_compact_not_target = 805
+  enum_no_label2_candidate = 408
+  quotient_d3_minus_E_points = 84
+  quotient_d3_missing_on_E_orbit = 0
+  quotient_d3_not_descended_to_E = 0
+  quotient_d3_plus_E_points = 112
+  quotient_d3_quotient_rows = 196
+  quotient_d4_minus_E_points_after_d3 = 36
+  quotient_d4_missing_on_E_orbit = 0
+  quotient_d4_not_descended_to_E = 0
+  quotient_d4_plus_E_points_after_d3 = 76
+  quotient_d4_quotient_rows_after_d3 = 112
+  quotient_orbit_size_4 = 196
+  quotient_oriented_candidates = 784
+  quotient_quotient_E_points = 196
+  d3_eprime_input_rows = 196
+  d3_eprime_minus = 42
+  d3_eprime_plus = 56
+  d3_eprime_quotient_rows = 98
+  d4_eprime_input_rows = 112
+  d4_eprime_minus = 18
+  d4_eprime_plus = 38
+  d4_eprime_quotient_rows = 56
+q1607_d3_kummer_descent:
+  input_rows = 98
+  k_rows = 49
+  minus = 21
+  plus = 28
+q1607_d3_degree1_screen:
+  best_good = 37
+  best_total = 49
+  best_zeros = 0
+  degree = 1
+  exact_polys = 0
+  polys_tested = 1608
+  rows = 49
+q1607_d3_degree1_best:
+  good=37/49 rate=0.755102041 zeros=0 polarity=1 poly=226 + 1*K
+  good=37/49 rate=0.755102041 zeros=0 polarity=1 poly=796 + 1*K
+  good=36/49 rate=0.734693878 zeros=0 polarity=1 poly=374 + 1*K
+  good=36/49 rate=0.734693878 zeros=0 polarity=-1 poly=666 + 1*K
+  good=36/49 rate=0.734693878 zeros=0 polarity=1 poly=1130 + 1*K
+  good=35/49 rate=0.714285714 zeros=0 polarity=1 poly=330 + 1*K
+  good=35/49 rate=0.714285714 zeros=0 polarity=-1 poly=584 + 1*K
+  good=35/49 rate=0.714285714 zeros=0 polarity=-1 poly=1429 + 1*K
+q1607_d3_degree1_exact:
+q1607_d3_degree2_screen:
+  best_good = 42
+  best_total = 49
+  best_zeros = 0
+  degree = 2
+  exact_polys = 0
+  polys_tested = 2584057
+  rows = 49
+q1607_d3_degree2_best:
+  good=42/49 rate=0.857142857 zeros=0 polarity=1 poly=698 + 439*K + 1*K^2
+  good=42/49 rate=0.857142857 zeros=0 polarity=-1 poly=1584 + 982*K + 1*K^2
+  good=41/49 rate=0.836734694 zeros=0 polarity=1 poly=974 + 548*K + 1*K^2
+  good=41/49 rate=0.836734694 zeros=0 polarity=1 poly=826 + 581*K + 1*K^2
+  good=41/49 rate=0.836734694 zeros=0 polarity=1 poly=1264 + 1460*K + 1*K^2
+  good=40/49 rate=0.816326531 zeros=0 polarity=-1 poly=788 + 15*K + 1*K^2
+  good=40/49 rate=0.816326531 zeros=0 polarity=1 poly=763 + 17*K + 1*K^2
+  good=40/49 rate=0.816326531 zeros=0 polarity=-1 poly=788 + 75*K + 1*K^2
+q1607_d3_degree2_exact:
+q1607_d4_kummer_descent:
+  input_rows = 56
+  k_rows = 28
+  minus = 9
+  plus = 19
+q1607_d4_degree1_screen:
+  best_good = 23
+  best_total = 28
+  best_zeros = 0
+  degree = 1
+  exact_polys = 0
+  polys_tested = 1608
+  rows = 28
+q1607_d4_degree1_best:
+  good=23/28 rate=0.821428571 zeros=0 polarity=-1 poly=132 + 1*K
+  good=23/28 rate=0.821428571 zeros=0 polarity=-1 poly=557 + 1*K
+  good=23/28 rate=0.821428571 zeros=0 polarity=1 poly=1057 + 1*K
+  good=22/28 rate=0.785714286 zeros=0 polarity=1 poly=99 + 1*K
+  good=22/28 rate=0.785714286 zeros=0 polarity=-1 poly=297 + 1*K
+  good=22/28 rate=0.785714286 zeros=0 polarity=-1 poly=355 + 1*K
+  good=22/28 rate=0.785714286 zeros=0 polarity=-1 poly=673 + 1*K
+  good=22/28 rate=0.785714286 zeros=0 polarity=-1 poly=1172 + 1*K
+q1607_d4_degree1_exact:
+q1607_d4_degree2_screen:
+  best_good = 27
+  best_total = 28
+  best_zeros = 0
+  degree = 2
+  exact_polys = 0
+  polys_tested = 2584057
+  rows = 28
+q1607_d4_degree2_best:
+  good=27/28 rate=0.964285714 zeros=0 polarity=1 poly=1337 + 1082*K + 1*K^2
+  good=26/28 rate=0.928571429 zeros=0 polarity=1 poly=164 + 216*K + 1*K^2
+  good=26/28 rate=0.928571429 zeros=0 polarity=-1 poly=701 + 224*K + 1*K^2
+  good=26/28 rate=0.928571429 zeros=0 polarity=1 poly=1348 + 250*K + 1*K^2
+  good=26/28 rate=0.928571429 zeros=0 polarity=-1 poly=104 + 272*K + 1*K^2
+  good=26/28 rate=0.928571429 zeros=0 polarity=-1 poly=294 + 324*K + 1*K^2
+  good=26/28 rate=0.928571429 zeros=0 polarity=1 poly=1403 + 330*K + 1*K^2
+  good=26/28 rate=0.928571429 zeros=0 polarity=-1 poly=400 + 405*K + 1*K^2
+q1607_d4_degree2_exact:
+q=1847:
+  enum_compact_not_target = 873
+  enum_no_label2_candidate = 468
+  quotient_d3_minus_E_points = 72
+  quotient_d3_missing_on_E_orbit = 0
+  quotient_d3_not_descended_to_E = 0
+  quotient_d3_plus_E_points = 180
+  quotient_d3_quotient_rows = 252
+  quotient_d4_minus_E_points_after_d3 = 104
+  quotient_d4_missing_on_E_orbit = 0
+  quotient_d4_not_descended_to_E = 0
+  quotient_d4_plus_E_points_after_d3 = 76
+  quotient_d4_quotient_rows_after_d3 = 180
+  quotient_orbit_size_4 = 252
+  quotient_oriented_candidates = 1008
+  quotient_quotient_E_points = 252
+  d3_eprime_input_rows = 252
+  d3_eprime_minus = 36
+  d3_eprime_plus = 90
+  d3_eprime_quotient_rows = 126
+  d4_eprime_input_rows = 180
+  d4_eprime_minus = 52
+  d4_eprime_plus = 38
+  d4_eprime_quotient_rows = 90
+q1847_d3_kummer_descent:
+  input_rows = 126
+  k_rows = 63
+  minus = 18
+  plus = 45
+q1847_d3_degree1_screen:
+  best_good = 47
+  best_total = 63
+  best_zeros = 0
+  degree = 1
+  exact_polys = 0
+  polys_tested = 1848
+  rows = 63
+q1847_d3_degree1_best:
+  good=47/63 rate=0.746031746 zeros=0 polarity=1 poly=1441 + 1*K
+  good=46/63 rate=0.730158730 zeros=0 polarity=1 poly=1467 + 1*K
+  good=45/63 rate=0.714285714 zeros=0 polarity=1 poly=1*K
+  good=45/63 rate=0.714285714 zeros=0 polarity=-1 poly=1480 + 1*K
+  good=45/63 rate=0.714285714 zeros=0 polarity=1 poly=1
+  good=44/63 rate=0.698412698 zeros=0 polarity=-1 poly=692 + 1*K
+  good=44/63 rate=0.698412698 zeros=0 polarity=-1 poly=934 + 1*K
+  good=44/63 rate=0.698412698 zeros=0 polarity=-1 poly=1647 + 1*K
+q1847_d3_degree1_exact:
+q1847_d3_degree2_screen:
+  best_good = 50
+  best_total = 63
+  best_zeros = 0
+  degree = 2
+  exact_polys = 0
+  polys_tested = 3413257
+  rows = 63
+q1847_d3_degree2_best:
+  good=50/63 rate=0.793650794 zeros=0 polarity=-1 poly=1295 + 298*K + 1*K^2
+  good=50/63 rate=0.793650794 zeros=0 polarity=-1 poly=266 + 660*K + 1*K^2
+  good=50/63 rate=0.793650794 zeros=0 polarity=1 poly=1508 + 1176*K + 1*K^2
+  good=50/63 rate=0.793650794 zeros=0 polarity=-1 poly=1812 + 1277*K + 1*K^2
+  good=50/63 rate=0.793650794 zeros=0 polarity=1 poly=316 + 1546*K + 1*K^2
+  good=50/63 rate=0.793650794 zeros=0 polarity=1 poly=1393 + 1825*K + 1*K^2
+  good=49/63 rate=0.777777778 zeros=0 polarity=-1 poly=356 + 72*K + 1*K^2
+  good=49/63 rate=0.777777778 zeros=0 polarity=1 poly=1533 + 114*K + 1*K^2
+q1847_d3_degree2_exact:
+q1847_d4_kummer_descent:
+  input_rows = 90
+  k_rows = 45
+  minus = 26
+  plus = 19
+q1847_d4_degree1_screen:
+  best_good = 35
+  best_total = 45
+  best_zeros = 0
+  degree = 1
+  exact_polys = 0
+  polys_tested = 1848
+  rows = 45
+q1847_d4_degree1_best:
+  good=35/45 rate=0.777777778 zeros=0 polarity=1 poly=694 + 1*K
+  good=34/45 rate=0.755555556 zeros=0 polarity=1 poly=913 + 1*K
+  good=33/45 rate=0.733333333 zeros=0 polarity=-1 poly=131 + 1*K
+  good=33/45 rate=0.733333333 zeros=0 polarity=-1 poly=323 + 1*K
+  good=33/45 rate=0.733333333 zeros=0 polarity=1 poly=512 + 1*K
+  good=32/45 rate=0.711111111 zeros=0 polarity=-1 poly=54 + 1*K
+  good=32/45 rate=0.711111111 zeros=0 polarity=-1 poly=148 + 1*K
+  good=32/45 rate=0.711111111 zeros=0 polarity=1 poly=289 + 1*K
+q1847_d4_degree1_exact:
+q1847_d4_degree2_screen:
+  best_good = 39
+  best_total = 45
+  best_zeros = 0
+  degree = 2
+  exact_polys = 0
+  polys_tested = 3413257
+  rows = 45
+q1847_d4_degree2_best:
+  good=39/45 rate=0.866666667 zeros=0 polarity=-1 poly=371 + 364*K + 1*K^2
+  good=38/45 rate=0.844444444 zeros=0 polarity=-1 poly=887 + 143*K + 1*K^2
+  good=38/45 rate=0.844444444 zeros=0 polarity=-1 poly=197 + 176*K + 1*K^2
+  good=38/45 rate=0.844444444 zeros=0 polarity=-1 poly=1767 + 333*K + 1*K^2
+  good=38/45 rate=0.844444444 zeros=0 polarity=-1 poly=201 + 353*K + 1*K^2
+  good=38/45 rate=0.844444444 zeros=0 polarity=1 poly=429 + 1573*K + 1*K^2
+  good=38/45 rate=0.844444444 zeros=0 polarity=-1 poly=709 + 1667*K + 1*K^2
+  good=37/45 rate=0.822222222 zeros=0 polarity=-1 poly=1453 + 3*K + 1*K^2
+q1847_d4_degree2_exact:
+p27_eprime_double_kummer_line_probe_rows=1/1

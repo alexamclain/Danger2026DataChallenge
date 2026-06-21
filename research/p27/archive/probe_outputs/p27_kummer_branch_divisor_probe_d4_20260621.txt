@@ -1,0 +1,165 @@
+p27 Kummer-line branch-divisor probe
+factors = rational linear and irreducible quadratic over F_q
+small_primes = 1471,1607,1847
+max_degree = 4
+q=1471:
+  setup_stats:
+  d3_eprime_input_rows = 200
+  d3_eprime_minus = 44
+  d3_eprime_plus = 56
+  d3_eprime_quotient_rows = 100
+  d3_k_input_rows = 100
+  d3_k_k_rows = 50
+  d3_k_minus = 22
+  d3_k_plus = 28
+  d4_eprime_input_rows = 112
+  d4_eprime_minus = 28
+  d4_eprime_plus = 28
+  d4_eprime_quotient_rows = 56
+  d4_k_input_rows = 56
+  d4_k_k_rows = 28
+  d4_k_minus = 14
+  d4_k_plus = 14
+  enum_compact_not_target = 837
+  enum_no_label2_candidate = 424
+  quotient_d3_minus_E_points = 88
+  quotient_d3_missing_on_E_orbit = 0
+  quotient_d3_not_descended_to_E = 0
+  quotient_d3_plus_E_points = 112
+  quotient_d3_quotient_rows = 200
+  quotient_d4_minus_E_points_after_d3 = 56
+  quotient_d4_missing_on_E_orbit = 0
+  quotient_d4_not_descended_to_E = 0
+  quotient_d4_plus_E_points_after_d3 = 56
+  quotient_d4_quotient_rows_after_d3 = 112
+  quotient_orbit_size_4 = 200
+  quotient_oriented_candidates = 800
+  quotient_quotient_E_points = 200
+q1471_d4:
+  rows = 28
+  plus = 14
+  minus = 14
+q1471_d4_side_stats:
+  distinct_degree0_side_masks = 1
+  distinct_degree1_side_masks = 1443
+  distinct_degree2_side_masks = 2113107
+  linear_atoms = 1443
+  linear_pair_sides = 1040403
+  quadratic_atoms = 1081185
+q1471_d4_exact_stats:
+  exact_degree_3 = 8
+  left_sides_scanned = 467
+q1471_d4_exact_divisors:
+  degree=3 polarity=-1 factors=K-11 * K^2+500K+1096
+  degree=3 polarity=-1 factors=K-118 * K^2+1439K+1170
+  degree=3 polarity=1 factors=K-166 * K-168 * K-529
+  degree=3 polarity=1 factors=K-1436 * K-203 * K-833
+  degree=3 polarity=1 factors=K-427 * K^2+471K+1358
+  degree=3 polarity=1 factors=K-1280 * K-437 * K-629
+  degree=3 polarity=-1 factors=K-468 * K^2+244K+385
+  degree=3 polarity=1 factors=K-1174 * K-478 * K-593
+q=1607:
+  setup_stats:
+  d3_eprime_input_rows = 196
+  d3_eprime_minus = 42
+  d3_eprime_plus = 56
+  d3_eprime_quotient_rows = 98
+  d3_k_input_rows = 98
+  d3_k_k_rows = 49
+  d3_k_minus = 21
+  d3_k_plus = 28
+  d4_eprime_input_rows = 112
+  d4_eprime_minus = 18
+  d4_eprime_plus = 38
+  d4_eprime_quotient_rows = 56
+  d4_k_input_rows = 56
+  d4_k_k_rows = 28
+  d4_k_minus = 9
+  d4_k_plus = 19
+  enum_compact_not_target = 805
+  enum_no_label2_candidate = 408
+  quotient_d3_minus_E_points = 84
+  quotient_d3_missing_on_E_orbit = 0
+  quotient_d3_not_descended_to_E = 0
+  quotient_d3_plus_E_points = 112
+  quotient_d3_quotient_rows = 196
+  quotient_d4_minus_E_points_after_d3 = 36
+  quotient_d4_missing_on_E_orbit = 0
+  quotient_d4_not_descended_to_E = 0
+  quotient_d4_plus_E_points_after_d3 = 76
+  quotient_d4_quotient_rows_after_d3 = 112
+  quotient_orbit_size_4 = 196
+  quotient_oriented_candidates = 784
+  quotient_quotient_E_points = 196
+q1607_d4:
+  rows = 28
+  plus = 19
+  minus = 9
+q1607_d4_side_stats:
+  distinct_degree0_side_masks = 1
+  distinct_degree1_side_masks = 1579
+  distinct_degree2_side_masks = 2524443
+  linear_atoms = 1579
+  linear_pair_sides = 1245831
+  quadratic_atoms = 1290421
+q1607_d4_exact_stats:
+  exact_degree_3 = 8
+  left_sides_scanned = 673
+q1607_d4_exact_divisors:
+  degree=3 polarity=1 factors=K-58 * K^2+943K+644
+  degree=3 polarity=1 factors=K-197 * K^2+1266K+1072
+  degree=3 polarity=-1 factors=K-277 * K^2+247K+757
+  degree=3 polarity=1 factors=K-365 * K^2+163K+1539
+  degree=3 polarity=1 factors=K-1554 * K-369 * K-692
+  degree=3 polarity=1 factors=K-516 * K-804 * K-920
+  degree=3 polarity=-1 factors=K-615 * K^2+1021K+427
+  degree=3 polarity=-1 factors=K-681 * K^2+539K+1445
+q=1847:
+  setup_stats:
+  d3_eprime_input_rows = 252
+  d3_eprime_minus = 36
+  d3_eprime_plus = 90
+  d3_eprime_quotient_rows = 126
+  d3_k_input_rows = 126
+  d3_k_k_rows = 63
+  d3_k_minus = 18
+  d3_k_plus = 45
+  d4_eprime_input_rows = 180
+  d4_eprime_minus = 52
+  d4_eprime_plus = 38
+  d4_eprime_quotient_rows = 90
+  d4_k_input_rows = 90
+  d4_k_k_rows = 45
+  d4_k_minus = 26
+  d4_k_plus = 19
+  enum_compact_not_target = 873
+  enum_no_label2_candidate = 468
+  quotient_d3_minus_E_points = 72
+  quotient_d3_missing_on_E_orbit = 0
+  quotient_d3_not_descended_to_E = 0
+  quotient_d3_plus_E_points = 180
+  quotient_d3_quotient_rows = 252
+  quotient_d4_minus_E_points_after_d3 = 104
+  quotient_d4_missing_on_E_orbit = 0
+  quotient_d4_not_descended_to_E = 0
+  quotient_d4_plus_E_points_after_d3 = 76
+  quotient_d4_quotient_rows_after_d3 = 180
+  quotient_orbit_size_4 = 252
+  quotient_oriented_candidates = 1008
+  quotient_quotient_E_points = 252
+q1847_d4:
+  rows = 45
+  plus = 19
+  minus = 26
+q1847_d4_side_stats:
+  distinct_degree0_side_masks = 1
+  distinct_degree1_side_masks = 1802
+  distinct_degree2_side_masks = 3327482
+  linear_atoms = 1802
+  linear_pair_sides = 1622701
+  quadratic_atoms = 1704781
+q1847_d4_exact_stats:
+  left_sides_scanned = 3329285
+q1847_d4_exact_divisors:
+  none
+p27_kummer_branch_divisor_probe_rows=1/1

@@ -1,0 +1,169 @@
+p27 E-prime twisted eigenspace screen
+j^2=-1, Z=T*(1-j/X^3), sigma(Z)=jZ
+screen = quadratic characters over F_{q^2} of named Z/Z2/Z4 packets
+q=1471:
+  row_stats:
+  d3_minus = 176
+  d3_plus = 224
+  d4_minus = 112
+  d4_plus = 112
+  d4_rows = 224
+  duplicate_eigenspace_row = 400
+  enum_compact_not_target = 837
+  enum_no_label2_candidate = 424
+  rows = 400
+  d3_screen_stats:
+  best_good = 272
+  best_total = 400
+  best_zeros = 0
+  exact_packets = 0
+  packet_names = 154
+  rows = 400
+  target = 3
+  d3_best_packets:
+  good=272/400 rate=0.680000000 zeros=0 polarity=1 packet=Z4-U2-1
+  good=264/400 rate=0.660000000 zeros=0 polarity=1 packet=Z4+U2-2U+4
+  good=264/400 rate=0.660000000 zeros=0 polarity=-1 packet=Z4-U
+  good=264/400 rate=0.660000000 zeros=0 polarity=1 packet=Z4-U-1
+  good=256/400 rate=0.640000000 zeros=0 polarity=-1 packet=Z4-U+2
+  good=248/400 rate=0.620000000 zeros=0 polarity=-1 packet=Z4+U-4
+  good=248/400 rate=0.620000000 zeros=0 polarity=1 packet=Z4-U2-4
+  good=240/400 rate=0.600000000 zeros=0 polarity=-1 packet=Z4+U+4
+  good=232/400 rate=0.580000000 zeros=0 polarity=-1 packet=Z4+U+2
+  good=232/400 rate=0.580000000 zeros=0 polarity=-1 packet=Z4+U2-4
+  good=232/400 rate=0.580000000 zeros=0 polarity=1 packet=Z4-U-2
+  good=232/400 rate=0.580000000 zeros=0 polarity=1 packet=Z4-U2+1
+  d3_exact_packets:
+  d4_screen_stats:
+  best_good = 160
+  best_total = 224
+  best_zeros = 0
+  exact_packets = 0
+  packet_names = 154
+  rows = 224
+  target = 4
+  d4_best_packets:
+  good=160/224 rate=0.714285714 zeros=0 polarity=1 packet=Z4+U-1
+  good=160/224 rate=0.714285714 zeros=0 polarity=-1 packet=Z4-U+2
+  good=152/224 rate=0.678571429 zeros=0 polarity=-1 packet=Z4+U+2
+  good=152/224 rate=0.678571429 zeros=0 polarity=-1 packet=Z4+U2+1
+  good=152/224 rate=0.678571429 zeros=0 polarity=1 packet=Z4+U2-2U+4
+  good=152/224 rate=0.678571429 zeros=0 polarity=1 packet=Z4+V+1U
+  good=152/224 rate=0.678571429 zeros=0 polarity=-1 packet=Z4-U2+2U+4
+  good=152/224 rate=0.678571429 zeros=0 polarity=1 packet=Z4-V-1U
+  good=144/216 rate=0.666666667 zeros=8 polarity=1 packet=Z*U-1
+  good=144/216 rate=0.666666667 zeros=8 polarity=1 packet=Z*U2-1
+  good=144/220 rate=0.654545455 zeros=4 polarity=1 packet=Z*V+1U
+  good=144/220 rate=0.654545455 zeros=4 polarity=1 packet=Z*V-1U
+  d4_exact_packets:
+q=1607:
+  row_stats:
+  d3_minus = 168
+  d3_plus = 224
+  d4_minus = 72
+  d4_plus = 152
+  d4_rows = 224
+  duplicate_eigenspace_row = 392
+  enum_compact_not_target = 805
+  enum_no_label2_candidate = 408
+  rows = 392
+  d3_screen_stats:
+  best_good = 248
+  best_total = 392
+  best_zeros = 0
+  exact_packets = 0
+  packet_names = 154
+  rows = 392
+  target = 3
+  d3_best_packets:
+  good=248/392 rate=0.632653061 zeros=0 polarity=-1 packet=Z4-U2+2U+4
+  good=248/392 rate=0.632653061 zeros=0 polarity=-1 packet=Z4-U2-2U+4
+  good=238/392 rate=0.607142857 zeros=0 polarity=-1 packet=Z+U-2
+  good=238/392 rate=0.607142857 zeros=0 polarity=-1 packet=Z-U-2
+  good=232/392 rate=0.591836735 zeros=0 polarity=1 packet=Z4+U-4
+  good=232/392 rate=0.591836735 zeros=0 polarity=1 packet=Z4-U
+  good=232/392 rate=0.591836735 zeros=0 polarity=1 packet=Z4-U2+4
+  good=228/392 rate=0.581632653 zeros=0 polarity=1 packet=Z2+V
+  good=228/392 rate=0.581632653 zeros=0 polarity=1 packet=Z2-V
+  good=224/392 rate=0.571428571 zeros=0 polarity=1 packet=Z
+  good=224/392 rate=0.571428571 zeros=0 polarity=1 packet=Z*1
+  good=224/392 rate=0.571428571 zeros=0 polarity=1 packet=Z*U
+  d3_exact_packets:
+  d4_screen_stats:
+  best_good = 152
+  best_total = 224
+  best_zeros = 0
+  exact_packets = 0
+  packet_names = 154
+  rows = 224
+  target = 4
+  d4_best_packets:
+  good=152/224 rate=0.678571429 zeros=0 polarity=1 packet=Z2
+  good=152/224 rate=0.678571429 zeros=0 polarity=1 packet=Z4
+  good=152/224 rate=0.678571429 zeros=0 polarity=1 packet=Z4+V-2U
+  good=152/224 rate=0.678571429 zeros=0 polarity=1 packet=Z4-U-1
+  good=152/224 rate=0.678571429 zeros=0 polarity=1 packet=Z4-V+2U
+  good=152/224 rate=0.678571429 zeros=0 polarity=1 packet=base_ImZ4
+  good=152/224 rate=0.678571429 zeros=0 polarity=1 packet=base_ReZ4
+  good=152/224 rate=0.678571429 zeros=0 polarity=1 packet=base_ReZ4+ImZ4
+  good=152/224 rate=0.678571429 zeros=0 polarity=1 packet=base_ReZ4-ImZ4
+  good=144/224 rate=0.642857143 zeros=0 polarity=-1 packet=Z4+U+1
+  good=144/224 rate=0.642857143 zeros=0 polarity=1 packet=Z4+U+4
+  good=144/224 rate=0.642857143 zeros=0 polarity=1 packet=Z4+U-4
+  d4_exact_packets:
+q=1847:
+  row_stats:
+  d3_minus = 144
+  d3_plus = 360
+  d4_minus = 208
+  d4_plus = 152
+  d4_rows = 360
+  duplicate_eigenspace_row = 504
+  enum_compact_not_target = 873
+  enum_no_label2_candidate = 468
+  rows = 504
+  d3_screen_stats:
+  best_good = 360
+  best_total = 504
+  best_zeros = 0
+  exact_packets = 0
+  packet_names = 154
+  rows = 504
+  target = 3
+  d3_best_packets:
+  good=360/504 rate=0.714285714 zeros=0 polarity=1 packet=Z2
+  good=360/504 rate=0.714285714 zeros=0 polarity=1 packet=Z4
+  good=360/504 rate=0.714285714 zeros=0 polarity=1 packet=base_ImZ4
+  good=360/504 rate=0.714285714 zeros=0 polarity=1 packet=base_ReZ4
+  good=360/504 rate=0.714285714 zeros=0 polarity=1 packet=base_ReZ4+ImZ4
+  good=360/504 rate=0.714285714 zeros=0 polarity=1 packet=base_ReZ4-ImZ4
+  good=304/504 rate=0.603174603 zeros=0 polarity=-1 packet=Z4+U+2
+  good=304/504 rate=0.603174603 zeros=0 polarity=-1 packet=Z4+U-4
+  good=304/504 rate=0.603174603 zeros=0 polarity=-1 packet=Z4+U2-4
+  good=304/504 rate=0.603174603 zeros=0 polarity=-1 packet=Z4-U+1
+  good=304/504 rate=0.603174603 zeros=0 polarity=1 packet=Z4-U2-4
+  good=296/504 rate=0.587301587 zeros=0 polarity=1 packet=Z
+  d3_exact_packets:
+  d4_screen_stats:
+  best_good = 232
+  best_total = 360
+  best_zeros = 0
+  exact_packets = 0
+  packet_names = 154
+  rows = 360
+  target = 4
+  d4_best_packets:
+  good=232/360 rate=0.644444444 zeros=0 polarity=-1 packet=Z4+U
+  good=232/360 rate=0.644444444 zeros=0 polarity=-1 packet=Z4+U+4
+  good=224/360 rate=0.622222222 zeros=0 polarity=-1 packet=Z4+U2+1
+  good=216/360 rate=0.600000000 zeros=0 polarity=1 packet=Z2+U+1
+  good=216/360 rate=0.600000000 zeros=0 polarity=1 packet=Z2-U+1
+  good=216/360 rate=0.600000000 zeros=0 polarity=-1 packet=Z4-U
+  good=216/360 rate=0.600000000 zeros=0 polarity=-1 packet=Z4-U+4
+  good=216/360 rate=0.600000000 zeros=0 polarity=-1 packet=Z4-U-1
+  good=208/360 rate=0.577777778 zeros=0 polarity=1 packet=Z+U2-1
+  good=208/360 rate=0.577777778 zeros=0 polarity=1 packet=Z-U2-1
+  good=208/360 rate=0.577777778 zeros=0 polarity=-1 packet=Z2
+  good=208/360 rate=0.577777778 zeros=0 polarity=-1 packet=Z4
+  d4_exact_packets:
+p27_eprime_twisted_eigenspace_screen_rows=1/1
