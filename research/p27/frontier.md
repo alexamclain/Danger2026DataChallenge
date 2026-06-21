@@ -585,6 +585,20 @@ current best "could beat sqrt" theorem checkpoint: genus `<=1` or a named
 recurrence/sourceable walk promotes; high/generic branch degree with unrelated
 `d4` kills the K-line source route.
 
+The first actual Magma normalization smoke is strongly cautionary:
+[P27 K/S First-Half Cover Magma Smoke](evidence/p27_ks_first_half_cover_magma_20260621.md).
+The full q7 reverse-source fixture and eta-component fixture both hit the
+online calculator memory limit.  Staging the equations shows why saturation is
+necessary: the raw first-half layer is dimension `2` with `77` affine points,
+so cleared-denominator artifacts remain.  After saturating by
+`X*(X-1)*(X+1)*(T-2X^2)`, the eta=`+1` first-half layer becomes a curve:
+`SAT_SCHEME_OK 1 42 3` and `SAT_CURVE_OK 37 3`.  This is not a promotion-field
+theorem, but it is a real obstruction to a direct low-genus K/S source: genus
+`37` appears before adding the final reverse-square variables.  The K/S route
+now needs an offline promotion-field normalization plus a non-obvious quotient
+or recurrence; online full-source normalization and coefficient widening are
+not the right next moves.
+
 The K-line now has a cleaner coordinate for that extraction:
 [P27 Kummer Belyi Structure Probe](evidence/p27_kummer_belyi_structure_probe_20260621.md).
 Symbolically,
