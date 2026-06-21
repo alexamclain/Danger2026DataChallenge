@@ -349,6 +349,14 @@ candidate.  This kills the random low-pole `E'` pilot as a source.  The
 remaining quotient lead is exact function-field or divisor-class extraction,
 with online Magma suitable for small-field validation of named formulas.
 
+The first affine-walk recurrence screen directly on `E'` is negative too:
+[P27 E-Prime Affine-Walk Recurrence](evidence/p27_eprime_affine_walk_recurrence_20260621.md).
+It tested every map `P -> [m]P + Q` for `m=+/-1,...,+/-8` and every
+`Q in E'(F_q)` over `q=1471,1607,1847`.  The only full-coverage maps are
+identity/negation, and they score like raw d4 bias: `28/56`, `38/56`, and
+`52/90`.  Nontrivial exact overlaps cover at most about `21%` of the d4 rows.
+This kills the small `E'` walk recurrence as a sqrt-beating source.
+
 The newest p26 GPU trace/norm result is positive structure but negative as a
 production prefilter:
 [P27 GPU Filter-Cost Lesson From P26](evidence/p27_gpu_filter_cost_lesson_from_p26_20260621.md).

@@ -1,0 +1,79 @@
+p27 E-prime affine-walk recurrence probe
+Eprime = V^2 = U^3 + 4U
+small_primes = 1847
+multipliers = 1,-1,2,-2,3,-3,4,-4,5,-5,6,-6,7,-7,8,-8
+min_coverage = 0.75
+q=1847:
+  Eprime_points = 1848
+  enum_stats:
+  enum_compact_not_target = 873
+  enum_no_label2_candidate = 468
+  original_quotient_stats:
+  d3_minus_E_points = 72
+  d3_missing_on_E_orbit = 0
+  d3_not_descended_to_E = 0
+  d3_plus_E_points = 180
+  d3_quotient_rows = 252
+  d4_minus_E_points_after_d3 = 104
+  d4_missing_on_E_orbit = 0
+  d4_not_descended_to_E = 0
+  d4_plus_E_points_after_d3 = 76
+  d4_quotient_rows_after_d3 = 180
+  orbit_size_4 = 252
+  oriented_candidates = 1008
+  quotient_E_points = 252
+  eprime_d3_stats:
+  input_rows = 252
+  minus = 36
+  plus = 90
+  quotient_rows = 126
+  eprime_d4_stats:
+  input_rows = 180
+  minus = 52
+  plus = 38
+  quotient_rows = 90
+  recurrence_stats:
+  best_covered = 12
+  best_full_coverage_good = 52
+  best_good = 12
+  best_min_coverage_covered = 90
+  best_min_coverage_good = 52
+  best_total = 90
+  d3_rows = 126
+  d4_rows = 90
+  full_coverage_transforms = 2
+  min_covered = 68
+  multipliers_tested = 16
+  transforms_meeting_min_coverage = 2
+  transforms_tested = 29568
+  translations_tested = 1848
+q1847_best_exact_overlap_eprime_affine_walks:
+  m=8 Q=(474,819) polarity=-1 good=12/12 rate=1.000000000 coverage=0.133333333
+  m=8 Q=(474,1028) polarity=-1 good=12/12 rate=1.000000000 coverage=0.133333333
+  m=-8 Q=(474,819) polarity=-1 good=12/12 rate=1.000000000 coverage=0.133333333
+  m=-8 Q=(474,1028) polarity=-1 good=12/12 rate=1.000000000 coverage=0.133333333
+  m=1 Q=(908,505) polarity=-1 good=10/10 rate=1.000000000 coverage=0.111111111
+  m=1 Q=(908,1342) polarity=-1 good=10/10 rate=1.000000000 coverage=0.111111111
+  m=-1 Q=(908,505) polarity=-1 good=10/10 rate=1.000000000 coverage=0.111111111
+  m=-1 Q=(908,1342) polarity=-1 good=10/10 rate=1.000000000 coverage=0.111111111
+  m=6 Q=(482,1400) polarity=-1 good=8/8 rate=1.000000000 coverage=0.088888889
+  m=6 Q=(482,447) polarity=-1 good=8/8 rate=1.000000000 coverage=0.088888889
+  m=-6 Q=(482,1400) polarity=-1 good=8/8 rate=1.000000000 coverage=0.088888889
+  m=-6 Q=(482,447) polarity=-1 good=8/8 rate=1.000000000 coverage=0.088888889
+q1847_best_coverage_eprime_affine_walks:
+  m=1 Q=O polarity=-1 good=52/90 rate=0.577777778 coverage=1.000000000
+  m=-1 Q=O polarity=-1 good=52/90 rate=0.577777778 coverage=1.000000000
+  m=1 Q=(662,942) polarity=1 good=13/26 rate=0.500000000 coverage=0.288888889
+  m=1 Q=(662,905) polarity=1 good=13/26 rate=0.500000000 coverage=0.288888889
+  m=-1 Q=(662,942) polarity=1 good=13/26 rate=0.500000000 coverage=0.288888889
+  m=-1 Q=(662,905) polarity=1 good=13/26 rate=0.500000000 coverage=0.288888889
+  m=6 Q=(392,231) polarity=1 good=14/25 rate=0.560000000 coverage=0.277777778
+  m=6 Q=(392,1616) polarity=1 good=14/25 rate=0.560000000 coverage=0.277777778
+  m=-6 Q=(392,231) polarity=1 good=14/25 rate=0.560000000 coverage=0.277777778
+  m=-6 Q=(392,1616) polarity=1 good=14/25 rate=0.560000000 coverage=0.277777778
+  m=1 Q=(1454,738) polarity=-1 good=13/25 rate=0.520000000 coverage=0.277777778
+  m=1 Q=(1454,1109) polarity=-1 good=13/25 rate=0.520000000 coverage=0.277777778
+q1847_full_coverage_eprime_affine_walks:
+  m=1 Q=O polarity=-1 good=52/90 rate=0.577777778
+  m=-1 Q=O polarity=-1 good=52/90 rate=0.577777778
+p27_eprime_affine_walk_recurrence_probe_rows=1/1

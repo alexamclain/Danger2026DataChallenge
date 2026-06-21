@@ -476,6 +476,21 @@ This kills the random low-pole `E'` pilot as a sqrt-beating source.  The
 quotient remains valuable because it gives the right smaller curve for exact
 function-field extraction and divisor/Kummer class comparison.
 
+E-prime affine-walk update:
+[P27 E-Prime Affine-Walk Recurrence](p27_eprime_affine_walk_recurrence_20260621.md).
+
+```text
+tested maps: P -> [m]P + Q on E', |m| <= 8, every Q in E'(F_q)
+fields: q=1471,1607,1847
+full-coverage maps: only m=+/-1, Q=O
+best full-coverage rates: 28/56, 38/56, 52/90
+nontrivial exact overlaps: low coverage only, at most about 21%
+```
+
+This kills the small `E'` affine-walk recurrence as a sqrt-beating source.
+The remaining quotient route is cover/divisor-class extraction, not a
+translated low-multiple walk.
+
 Promotion bar:
 
 ```text
@@ -708,6 +723,10 @@ Status: negative.  The `65,536`-product span has no exact survivors for either
 Follow-up: the first low-pole random screen on the 2-isogenous quotient `E'`
 is also negative.  Pole bounds `5,7,9` produced no exact p27 or guard-field
 candidate; best p27 heldout lifts remain below sampler promotion.
+
+Follow-up: the first affine-walk recurrence screen on `E'` is also negative.
+All maps `P -> [m]P+Q` with `|m|<=8` and every `Q` over
+`q=1471,1607,1847` fail to give a high-coverage d4-from-d3 recurrence.
 
 Continue only with a named non-visible theta/divisor/additive identity.
 
