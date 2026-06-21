@@ -309,6 +309,16 @@ actual E-level double covers, with online Magma acceptable for small-field
 validation in the p24 style, or a faster finite-field solver on
 non-degenerate small fields before p27 validation.
 
+The first exact small-field follow-up kills the reducible-conic subclass:
+[P27 E-Quotient Line-Product Screen](evidence/p27_equotient_line_product_screen_20260621.md).
+It exhaustively tested products of two projective-line characters on `E`.
+There are no exact d3 two-line products over `q=607`, `q=1087`, or `q=1471`,
+and no exact d4 two-line product over the decisive non-degenerate `q=1471`
+field.  The `q=1087` d4 exact pairs occur on only `40` rows and disappear at
+`q=1471`, so they are treated as a small-row coincidence.  This kills the
+visible reducible-conic source; the next cheap algebraic step is irreducible
+conics or direct function-field extraction.
+
 The newest p26 GPU trace/norm result is positive structure but negative as a
 production prefilter:
 [P27 GPU Filter-Cost Lesson From P26](evidence/p27_gpu_filter_cost_lesson_from_p26_20260621.md).

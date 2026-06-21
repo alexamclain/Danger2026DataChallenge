@@ -94,6 +94,13 @@ No exact candidate appeared in the pilot.  The small-field rates are useful
 only as smoke tests that the low-pole machinery runs on non-degenerate fields,
 not as evidence of a p27 recurrence.
 
+Follow-up:
+[P27 E-Quotient Line-Product Screen](p27_equotient_line_product_screen_20260621.md)
+exactly exhausts products of two projective lines over small fields.  It kills
+that reducible-conic subclass: no exact d3 two-line product over
+`q=607,1087,1471`, and no exact d4 two-line product over the decisive
+non-degenerate `q=1471` field.
+
 ## Interpretation
 
 Positive:
@@ -131,6 +138,11 @@ linear algebra / indexed search over L(nO) sections.  Use p27 only for final
 validation of a named candidate, not for broad random scoring.
 ```
 
+Status: first exact small-field finite-field solver completed for reducible
+conics/two-line products; it is negative.  Next finite-field solver should
+target irreducible conics or divisor-class extraction, not more two-line
+products.
+
 3. Validation standard:
 
 ```text
@@ -154,6 +166,7 @@ kill = GPU sampler from these marginal heldout lifts
 
 - Gate: `research/p27/archive/gates/p27_equotient_lowpole_random_probe.py`
 - Output: `research/p27/archive/probe_outputs/p27_equotient_lowpole_random_probe_20260621.txt`
+- Follow-up: [P27 E-Quotient Line-Product Screen](p27_equotient_line_product_screen_20260621.md)
 - Related: [P27 E-Quotient Kummer Basis Screen](p27_equotient_kummer_basis_screen_20260621.md)
 - Related: [P27 Reverse Source D4 Recurrence Screen](p27_reverse_source_d4_recurrence_20260621.md)
 

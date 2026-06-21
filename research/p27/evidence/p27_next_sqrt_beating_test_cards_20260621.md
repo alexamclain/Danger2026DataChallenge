@@ -416,6 +416,19 @@ online Magma calculator for small-field validation when convenient, or use a
 faster finite-field solver on non-degenerate small fields before p27
 validation.
 
+Exact two-line follow-up:
+[P27 E-Quotient Line-Product Screen](p27_equotient_line_product_screen_20260621.md).
+
+```text
+Products of two projective lines on E do not explain the quotient bits:
+  d3 exact pairs = 0 over q=607, q=1087, q=1471
+  d4 exact pairs = 0 over q=1471
+  q1087 d4 has 9 exact pairs on only 40 rows, killed by q1471
+```
+
+This kills the reducible-conic source subclass.  If the finite-field route
+continues, test irreducible conics or extract the divisor class directly.
+
 Promotion bar:
 
 ```text
