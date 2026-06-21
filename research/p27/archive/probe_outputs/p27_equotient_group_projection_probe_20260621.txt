@@ -1,0 +1,163 @@
+p27 E-quotient group-projection probe
+small_primes = 1087,1471,1607
+max_modulus = 256
+q=1087:
+  group_order_expected = 1088
+  moduli = 1,2,4,8,16,17,32,34,64,68,136
+  enum_compact_not_target = 757
+  enum_no_label2_candidate = 312
+  quotient_d3_minus_E_points = 32
+  quotient_d3_missing_on_E_orbit = 0
+  quotient_d3_not_descended_to_E = 0
+  quotient_d3_plus_E_points = 40
+  quotient_d3_quotient_rows = 72
+  quotient_d4_minus_E_points_after_d3 = 20
+  quotient_d4_missing_on_E_orbit = 0
+  quotient_d4_not_descended_to_E = 0
+  quotient_d4_plus_E_points_after_d3 = 20
+  quotient_d4_quotient_rows_after_d3 = 40
+  quotient_orbit_size_4 = 72
+  quotient_oriented_candidates = 288
+  quotient_quotient_E_points = 72
+q1087_d3:
+  rows = 72
+  plus = 40
+  minus = 32
+q1087_d3_exact_projection_classes:
+  unsigned m=136 classes=19 non_singleton=19 max_class=4 mixed=0 exact=1 majority=72/72 rate=1.000000000 collision_disagree=0.000000000
+  signed m=136 classes=10 non_singleton=10 max_class=8 mixed=0 exact=1 majority=72/72 rate=1.000000000 collision_disagree=0.000000000
+q1087_d3_best_projection_scores:
+  signed m=136 classes=10 non_singleton=10 max_class=8 mixed=0 exact=1 majority=72/72 rate=1.000000000 collision_disagree=0.000000000
+  unsigned m=136 classes=19 non_singleton=19 max_class=4 mixed=0 exact=1 majority=72/72 rate=1.000000000 collision_disagree=0.000000000
+  signed m=68 classes=8 non_singleton=8 max_class=16 mixed=2 exact=0 majority=60/72 rate=0.833333333 collision_disagree=0.289156627
+  unsigned m=68 classes=14 non_singleton=14 max_class=8 mixed=4 exact=0 majority=60/72 rate=0.833333333 collision_disagree=0.285714286
+  signed m=34 classes=7 non_singleton=7 max_class=16 mixed=3 exact=0 majority=56/72 rate=0.777777778 collision_disagree=0.351648352
+  signed m=17 classes=7 non_singleton=7 max_class=16 mixed=3 exact=0 majority=56/72 rate=0.777777778 collision_disagree=0.351648352
+  unsigned m=34 classes=13 non_singleton=13 max_class=12 mixed=5 exact=0 majority=56/72 rate=0.777777778 collision_disagree=0.400000000
+  unsigned m=17 classes=13 non_singleton=13 max_class=12 mixed=5 exact=0 majority=56/72 rate=0.777777778 collision_disagree=0.400000000
+  signed m=16 classes=5 non_singleton=5 max_class=20 mixed=3 exact=0 majority=52/72 rate=0.722222222 collision_disagree=0.366412214
+  unsigned m=16 classes=8 non_singleton=8 max_class=20 mixed=5 exact=0 majority=52/72 rate=0.722222222 collision_disagree=0.352941176
+q1087_d4:
+  rows = 40
+  plus = 20
+  minus = 20
+q1087_d4_exact_projection_classes:
+  none
+q1087_d4_best_projection_scores:
+  signed m=64 classes=16 non_singleton=16 max_class=4 mixed=4 exact=0 majority=32/40 rate=0.800000000 collision_disagree=0.444444444
+  unsigned m=64 classes=30 non_singleton=6 max_class=4 mixed=6 exact=0 majority=32/40 rate=0.800000000 collision_disagree=0.750000000
+  signed m=32 classes=7 non_singleton=7 max_class=8 mixed=3 exact=0 majority=28/40 rate=0.700000000 collision_disagree=0.444444444
+  unsigned m=32 classes=12 non_singleton=12 max_class=8 mixed=4 exact=0 majority=28/40 rate=0.700000000 collision_disagree=0.526315789
+  signed m=2 classes=1 non_singleton=1 max_class=40 mixed=1 exact=0 majority=20/40 rate=0.500000000 collision_disagree=0.512820513
+  unsigned m=2 classes=1 non_singleton=1 max_class=40 mixed=1 exact=0 majority=20/40 rate=0.500000000 collision_disagree=0.512820513
+  signed m=1 classes=1 non_singleton=1 max_class=40 mixed=1 exact=0 majority=20/40 rate=0.500000000 collision_disagree=0.512820513
+  unsigned m=1 classes=1 non_singleton=1 max_class=40 mixed=1 exact=0 majority=20/40 rate=0.500000000 collision_disagree=0.512820513
+  signed m=8 classes=2 non_singleton=2 max_class=24 mixed=2 exact=0 majority=20/40 rate=0.500000000 collision_disagree=0.525252525
+  signed m=4 classes=2 non_singleton=2 max_class=24 mixed=2 exact=0 majority=20/40 rate=0.500000000 collision_disagree=0.525252525
+q=1471:
+  group_order_expected = 1472
+  moduli = 1,2,4,8,16,23,32,46,64,92,184
+  enum_compact_not_target = 837
+  enum_no_label2_candidate = 424
+  quotient_d3_minus_E_points = 88
+  quotient_d3_missing_on_E_orbit = 0
+  quotient_d3_not_descended_to_E = 0
+  quotient_d3_plus_E_points = 112
+  quotient_d3_quotient_rows = 200
+  quotient_d4_minus_E_points_after_d3 = 56
+  quotient_d4_missing_on_E_orbit = 0
+  quotient_d4_not_descended_to_E = 0
+  quotient_d4_plus_E_points_after_d3 = 56
+  quotient_d4_quotient_rows_after_d3 = 112
+  quotient_orbit_size_4 = 200
+  quotient_oriented_candidates = 800
+  quotient_quotient_E_points = 200
+q1471_d3:
+  rows = 200
+  plus = 112
+  minus = 88
+q1471_d3_exact_projection_classes:
+  none
+q1471_d3_best_projection_scores:
+  signed m=184 classes=24 non_singleton=24 max_class=16 mixed=1 exact=0 majority=192/200 rate=0.960000000 collision_disagree=0.078817734
+  unsigned m=184 classes=47 non_singleton=47 max_class=8 mixed=2 exact=0 majority=192/200 rate=0.960000000 collision_disagree=0.088888889
+  signed m=92 classes=19 non_singleton=19 max_class=16 mixed=2 exact=0 majority=184/200 rate=0.920000000 collision_disagree=0.113074205
+  unsigned m=92 classes=36 non_singleton=36 max_class=8 mixed=4 exact=0 majority=184/200 rate=0.920000000 collision_disagree=0.119402985
+  signed m=46 classes=11 non_singleton=11 max_class=32 mixed=5 exact=0 majority=168/200 rate=0.840000000 collision_disagree=0.252465483
+  signed m=23 classes=11 non_singleton=11 max_class=32 mixed=5 exact=0 majority=168/200 rate=0.840000000 collision_disagree=0.252465483
+  unsigned m=46 classes=21 non_singleton=21 max_class=16 mixed=9 exact=0 majority=168/200 rate=0.840000000 collision_disagree=0.272000000
+  unsigned m=23 classes=21 non_singleton=21 max_class=16 mixed=9 exact=0 majority=168/200 rate=0.840000000 collision_disagree=0.272000000
+  signed m=64 classes=32 non_singleton=32 max_class=16 mixed=16 exact=0 majority=144/200 rate=0.720000000 collision_disagree=0.447761194
+  unsigned m=64 classes=62 non_singleton=50 max_class=8 mixed=32 exact=0 majority=144/200 rate=0.720000000 collision_disagree=0.500000000
+q1471_d4:
+  rows = 112
+  plus = 56
+  minus = 56
+q1471_d4_exact_projection_classes:
+  none
+q1471_d4_best_projection_scores:
+  signed m=64 classes=28 non_singleton=28 max_class=8 mixed=14 exact=0 majority=80/112 rate=0.714285714 collision_disagree=0.500000000
+  unsigned m=64 classes=54 non_singleton=26 max_class=4 mixed=26 exact=0 majority=80/112 rate=0.714285714 collision_disagree=0.640000000
+  signed m=32 classes=9 non_singleton=9 max_class=16 mixed=9 exact=0 majority=64/112 rate=0.571428571 collision_disagree=0.494382022
+  unsigned m=32 classes=16 non_singleton=16 max_class=8 mixed=16 exact=0 majority=64/112 rate=0.571428571 collision_disagree=0.533333333
+  signed m=2 classes=1 non_singleton=1 max_class=112 mixed=1 exact=0 majority=56/112 rate=0.500000000 collision_disagree=0.504504505
+  unsigned m=2 classes=1 non_singleton=1 max_class=112 mixed=1 exact=0 majority=56/112 rate=0.500000000 collision_disagree=0.504504505
+  signed m=1 classes=1 non_singleton=1 max_class=112 mixed=1 exact=0 majority=56/112 rate=0.500000000 collision_disagree=0.504504505
+  unsigned m=1 classes=1 non_singleton=1 max_class=112 mixed=1 exact=0 majority=56/112 rate=0.500000000 collision_disagree=0.504504505
+  signed m=4 classes=2 non_singleton=2 max_class=64 mixed=2 exact=0 majority=56/112 rate=0.500000000 collision_disagree=0.508905852
+  unsigned m=4 classes=2 non_singleton=2 max_class=64 mixed=2 exact=0 majority=56/112 rate=0.500000000 collision_disagree=0.508905852
+q=1607:
+  group_order_expected = 1608
+  moduli = 1,2,3,4,6,8,12,24,67,134,201
+  enum_compact_not_target = 805
+  enum_no_label2_candidate = 408
+  quotient_d3_minus_E_points = 84
+  quotient_d3_missing_on_E_orbit = 0
+  quotient_d3_not_descended_to_E = 0
+  quotient_d3_plus_E_points = 112
+  quotient_d3_quotient_rows = 196
+  quotient_d4_minus_E_points_after_d3 = 36
+  quotient_d4_missing_on_E_orbit = 0
+  quotient_d4_not_descended_to_E = 0
+  quotient_d4_plus_E_points_after_d3 = 76
+  quotient_d4_quotient_rows_after_d3 = 112
+  quotient_orbit_size_4 = 196
+  quotient_oriented_candidates = 784
+  quotient_quotient_E_points = 196
+q1607_d3:
+  rows = 196
+  plus = 112
+  minus = 84
+q1607_d3_exact_projection_classes:
+  unsigned m=201 classes=98 non_singleton=98 max_class=2 mixed=0 exact=1 majority=196/196 rate=1.000000000 collision_disagree=0.000000000
+  signed m=201 classes=49 non_singleton=49 max_class=4 mixed=0 exact=1 majority=196/196 rate=1.000000000 collision_disagree=0.000000000
+q1607_d3_best_projection_scores:
+  signed m=201 classes=49 non_singleton=49 max_class=4 mixed=0 exact=1 majority=196/196 rate=1.000000000 collision_disagree=0.000000000
+  unsigned m=201 classes=98 non_singleton=98 max_class=2 mixed=0 exact=1 majority=196/196 rate=1.000000000 collision_disagree=0.000000000
+  signed m=134 classes=30 non_singleton=30 max_class=12 mixed=8 exact=0 majority=164/196 rate=0.836734694 collision_disagree=0.222910217
+  signed m=67 classes=30 non_singleton=30 max_class=12 mixed=8 exact=0 majority=164/196 rate=0.836734694 collision_disagree=0.222910217
+  unsigned m=134 classes=60 non_singleton=60 max_class=6 mixed=16 exact=0 majority=164/196 rate=0.836734694 collision_disagree=0.262773723
+  unsigned m=67 classes=60 non_singleton=60 max_class=6 mixed=16 exact=0 majority=164/196 rate=0.836734694 collision_disagree=0.262773723
+  signed m=12 classes=4 non_singleton=4 max_class=80 mixed=4 exact=0 majority=124/196 rate=0.632653061 collision_disagree=0.476498027
+  unsigned m=12 classes=6 non_singleton=6 max_class=40 mixed=6 exact=0 majority=124/196 rate=0.632653061 collision_disagree=0.478996865
+  signed m=24 classes=14 non_singleton=14 max_class=32 mixed=14 exact=0 majority=124/196 rate=0.632653061 collision_disagree=0.497123130
+  unsigned m=24 classes=24 non_singleton=24 max_class=16 mixed=24 exact=0 majority=124/196 rate=0.632653061 collision_disagree=0.519540230
+q1607_d4:
+  rows = 112
+  plus = 76
+  minus = 36
+q1607_d4_exact_projection_classes:
+  unsigned m=201 classes=56 non_singleton=56 max_class=2 mixed=0 exact=1 majority=112/112 rate=1.000000000 collision_disagree=0.000000000
+  signed m=201 classes=28 non_singleton=28 max_class=4 mixed=0 exact=1 majority=112/112 rate=1.000000000 collision_disagree=0.000000000
+q1607_d4_best_projection_scores:
+  signed m=201 classes=28 non_singleton=28 max_class=4 mixed=0 exact=1 majority=112/112 rate=1.000000000 collision_disagree=0.000000000
+  unsigned m=201 classes=56 non_singleton=56 max_class=2 mixed=0 exact=1 majority=112/112 rate=1.000000000 collision_disagree=0.000000000
+  signed m=134 classes=20 non_singleton=20 max_class=12 mixed=2 exact=0 majority=104/112 rate=0.928571429 collision_disagree=0.146341463
+  signed m=67 classes=20 non_singleton=20 max_class=12 mixed=2 exact=0 majority=104/112 rate=0.928571429 collision_disagree=0.146341463
+  unsigned m=134 classes=40 non_singleton=40 max_class=6 mixed=4 exact=0 majority=104/112 rate=0.928571429 collision_disagree=0.176470588
+  unsigned m=67 classes=40 non_singleton=40 max_class=6 mixed=4 exact=0 majority=104/112 rate=0.928571429 collision_disagree=0.176470588
+  signed m=24 classes=14 non_singleton=14 max_class=18 mixed=8 exact=0 majority=80/112 rate=0.714285714 collision_disagree=0.458333333
+  unsigned m=24 classes=24 non_singleton=24 max_class=9 mixed=16 exact=0 majority=80/112 rate=0.714285714 collision_disagree=0.500000000
+  signed m=2 classes=1 non_singleton=1 max_class=112 mixed=1 exact=0 majority=76/112 rate=0.678571429 collision_disagree=0.440154440
+  unsigned m=2 classes=1 non_singleton=1 max_class=112 mixed=1 exact=0 majority=76/112 rate=0.678571429 collision_disagree=0.440154440
+p27_equotient_group_projection_probe_rows=1/1

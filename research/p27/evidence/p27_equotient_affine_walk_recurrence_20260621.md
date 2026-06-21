@@ -121,6 +121,13 @@ The q1607 full-coverage lift is raw d4 bias, not a map law.
 So the quotient route remains alive only as a cover/divisor-class extraction
 problem, not as a small elliptic walk recurrence.
 
+Follow-up:
+[P27 E-Quotient Kernel-8 / 2-Isogeny Screen](p27_equotient_kernel8_2isogeny_screen_20260621.md)
+found a positive descent under the rational `(0,0)` 2-torsion translation.
+This is not a recurrence of `d4` from `d3`, but it does move the remaining
+cover/divisor-class extraction to the 2-isogenous quotient
+`V^2 = U^3 + 4U`.
+
 ## Continue / Kill
 
 ```text
@@ -137,6 +144,7 @@ kill = treating low-coverage q1607 [4]P exactness as evidence
 
 - Gate: `research/p27/archive/gates/p27_equotient_translation_recurrence_probe.py`
 - Output: `research/p27/archive/probe_outputs/p27_equotient_translation_recurrence_probe_20260621.txt`
+- Follow-up: [P27 E-Quotient Kernel-8 / 2-Isogeny Screen](p27_equotient_kernel8_2isogeny_screen_20260621.md)
 - Related: [P27 Reverse Source D4 Recurrence Screen](p27_reverse_source_d4_recurrence_20260621.md)
 - Related: [P27 E-Quotient Line-Product Screen](p27_equotient_line_product_screen_20260621.md)
 - Related: [P27 E-Quotient Low-Pole Random Screen](p27_equotient_lowpole_random_screen_20260621.md)

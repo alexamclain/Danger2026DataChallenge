@@ -444,6 +444,24 @@ This kills the small elliptic-walk recurrence as a sqrt-beating source.  The
 remaining quotient work is cover/divisor-class extraction, not a translated
 low-multiple walk on `E`.
 
+Kernel-8 / 2-isogeny update:
+[P27 E-Quotient Kernel-8 / 2-Isogeny Screen](p27_equotient_kernel8_2isogeny_screen_20260621.md).
+
+```text
+Positive:
+  p27 d3/d4 are invariant under the rational (0,0) translation in-domain
+  quotient coordinates: U=X-1/X, V=W(X^2+1)/X^2
+  quotient curve: V^2 = U^3 + 4U
+
+Negative:
+  q1471/q1607 exact lines on E' = 0
+  q1471/q1607 exact two-line products on E' = 0
+```
+
+This is the current best quotient-theory lead.  It does not beat sqrt by
+itself, but it moves the function-field extraction from `E` to the smaller
+2-isogenous quotient `E'`.
+
 Promotion bar:
 
 ```text

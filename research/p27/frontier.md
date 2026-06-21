@@ -328,6 +328,17 @@ raw d4 distribution (`20/40`, `56/112`, `76/112`).  No nontrivial walk reached
 the `0.75` coverage threshold.  This kills the small elliptic-walk recurrence
 as a GPU/sqrt-beating source.
 
+The quotient route now has one positive descent:
+[P27 E-Quotient Kernel-8 / 2-Isogeny Screen](evidence/p27_equotient_kernel8_2isogeny_screen_20260621.md).
+Small-field projection screens pointed at `[8]P`; the p27 forced-collision
+test showed the actual invariant is the `(0,0)` rational 2-torsion orbit.
+On 1,000 p27 rows, each compactD orbit had exactly two in-domain kernel
+translates, `O` and `(0,0)`, with `mixed_d3_orbits=0` and
+`mixed_d4_orbits=0`.  Thus d3/d4 descend to the 2-isogenous quotient
+`V^2=U^3+4U`, where `U=X-1/X` and `V=W(X^2+1)/X^2`.  Exact line and two-line
+screens on this quotient are still negative over `q=1471` and `q=1607`, so the
+win is a sharper function-field target, not yet a sampler.
+
 The newest p26 GPU trace/norm result is positive structure but negative as a
 production prefilter:
 [P27 GPU Filter-Cost Lesson From P26](evidence/p27_gpu_filter_cost_lesson_from_p26_20260621.md).

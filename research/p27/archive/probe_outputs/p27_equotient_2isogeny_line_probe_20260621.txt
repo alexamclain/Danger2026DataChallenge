@@ -1,0 +1,455 @@
+p27 E-quotient 2-isogeny line probe
+quotient_curve = V^2 = U^3 + 4U
+small_primes = 1087,1471,1607
+p27_train_original_quotient_stats:
+  d3_minus_E_points = 516
+  d3_missing_on_E_orbit = 0
+  d3_not_descended_to_E = 0
+  d3_plus_E_points = 484
+  d3_quotient_rows = 1000
+  d4_minus_E_points_after_d3 = 240
+  d4_missing_on_E_orbit = 0
+  d4_not_descended_to_E = 0
+  d4_plus_E_points_after_d3 = 244
+  d4_quotient_rows_after_d3 = 484
+  orbit_size_4 = 1000
+  oriented_candidates = 4000
+  quotient_E_points = 1000
+  sample_candidate_invalid_not_nonsplit = 2070
+  sample_compact_not_target = 1977
+  sample_no_t = 2010
+  sample_no_w = 4083
+  sample_pair_incomplete = 1035
+  sample_x_draws = 8099
+  sampled_pairs = 1000
+p27_train:
+p27_train_d3_2isogeny_stats:
+  input_rows = 1000
+  minus = 516
+  plus = 484
+  quotient_rows = 1000
+p27_train_d4_2isogeny_stats:
+  input_rows = 484
+  minus = 240
+  plus = 244
+  quotient_rows = 484
+p27_train_d3_line_screen:
+  best_good = 560
+  best_polarity = 1
+  best_zeros = 0
+  exact_lines = 0
+  line_rows = 1000
+  small_coeff_bound = 2
+  small_coeff_lines_tested = 124
+p27_train_d3_line_screen_top_lines:
+  good=560/1000 rate=0.560000000 zeros=0 polarity=1 line=2+-2*U+0*V
+  good=560/1000 rate=0.560000000 zeros=0 polarity=1 line=1+-1*U+0*V
+  good=560/1000 rate=0.560000000 zeros=0 polarity=-1 line=-1+1*U+0*V
+  good=560/1000 rate=0.560000000 zeros=0 polarity=-1 line=-2+2*U+0*V
+  good=530/1000 rate=0.530000000 zeros=0 polarity=1 line=2+-1*U+0*V
+  good=530/1000 rate=0.530000000 zeros=0 polarity=1 line=-2+-1*U+0*V
+  good=530/1000 rate=0.530000000 zeros=0 polarity=-1 line=2+1*U+0*V
+  good=530/1000 rate=0.530000000 zeros=0 polarity=-1 line=-2+1*U+0*V
+p27_train_d4_line_screen:
+  best_good = 270
+  best_polarity = 1
+  best_zeros = 0
+  exact_lines = 0
+  line_rows = 484
+  small_coeff_bound = 2
+  small_coeff_lines_tested = 124
+p27_train_d4_line_screen_top_lines:
+  good=270/484 rate=0.557851240 zeros=0 polarity=1 line=-1+1*U+2*V
+  good=270/484 rate=0.557851240 zeros=0 polarity=1 line=-1+1*U+-2*V
+  good=270/484 rate=0.557851240 zeros=0 polarity=-1 line=1+-1*U+2*V
+  good=270/484 rate=0.557851240 zeros=0 polarity=-1 line=1+-1*U+-2*V
+  good=264/484 rate=0.545454545 zeros=0 polarity=1 line=2+-2*U+0*V
+  good=264/484 rate=0.545454545 zeros=0 polarity=1 line=1+-1*U+0*V
+  good=264/484 rate=0.545454545 zeros=0 polarity=-1 line=-1+1*U+0*V
+  good=264/484 rate=0.545454545 zeros=0 polarity=-1 line=-2+2*U+0*V
+p27_heldout_original_quotient_stats:
+  d3_minus_E_points = 474
+  d3_missing_on_E_orbit = 0
+  d3_not_descended_to_E = 0
+  d3_plus_E_points = 526
+  d3_quotient_rows = 1000
+  d4_minus_E_points_after_d3 = 294
+  d4_missing_on_E_orbit = 0
+  d4_not_descended_to_E = 0
+  d4_plus_E_points_after_d3 = 232
+  d4_quotient_rows_after_d3 = 526
+  orbit_size_4 = 1000
+  oriented_candidates = 4000
+  quotient_E_points = 1000
+  sample_candidate_invalid_not_nonsplit = 1934
+  sample_compact_not_target = 2117
+  sample_no_t = 2024
+  sample_no_w = 4060
+  sample_pair_incomplete = 967
+  sample_x_draws = 8126
+  sampled_pairs = 1000
+p27_heldout:
+p27_heldout_d3_2isogeny_stats:
+  input_rows = 1000
+  minus = 474
+  plus = 526
+  quotient_rows = 1000
+p27_heldout_d4_2isogeny_stats:
+  input_rows = 526
+  minus = 294
+  plus = 232
+  quotient_rows = 526
+p27_heldout_d3_line_screen:
+  best_good = 530
+  best_polarity = 1
+  best_zeros = 0
+  exact_lines = 0
+  line_rows = 1000
+  small_coeff_bound = 2
+  small_coeff_lines_tested = 124
+p27_heldout_d3_line_screen_top_lines:
+  good=530/1000 rate=0.530000000 zeros=0 polarity=1 line=1+-2*U+1*V
+  good=530/1000 rate=0.530000000 zeros=0 polarity=1 line=1+-2*U+-1*V
+  good=530/1000 rate=0.530000000 zeros=0 polarity=-1 line=-1+2*U+1*V
+  good=530/1000 rate=0.530000000 zeros=0 polarity=-1 line=-1+2*U+-1*V
+  good=528/1000 rate=0.528000000 zeros=0 polarity=1 line=2+2*U+0*V
+  good=528/1000 rate=0.528000000 zeros=0 polarity=1 line=1+1*U+0*V
+  good=528/1000 rate=0.528000000 zeros=0 polarity=-1 line=-1+-1*U+0*V
+  good=528/1000 rate=0.528000000 zeros=0 polarity=-1 line=-2+-2*U+0*V
+p27_heldout_d4_line_screen:
+  best_good = 294
+  best_polarity = 1
+  best_zeros = 0
+  exact_lines = 0
+  line_rows = 526
+  small_coeff_bound = 2
+  small_coeff_lines_tested = 124
+p27_heldout_d4_line_screen_top_lines:
+  good=294/526 rate=0.558935361 zeros=0 polarity=1 line=0+-1*U+0*V
+  good=294/526 rate=0.558935361 zeros=0 polarity=1 line=0+-2*U+0*V
+  good=294/526 rate=0.558935361 zeros=0 polarity=1 line=-1+0*U+0*V
+  good=294/526 rate=0.558935361 zeros=0 polarity=1 line=-2+0*U+0*V
+  good=294/526 rate=0.558935361 zeros=0 polarity=-1 line=2+0*U+0*V
+  good=294/526 rate=0.558935361 zeros=0 polarity=-1 line=1+0*U+0*V
+  good=294/526 rate=0.558935361 zeros=0 polarity=-1 line=0+2*U+0*V
+  good=294/526 rate=0.558935361 zeros=0 polarity=-1 line=0+1*U+0*V
+small_prime_2isogeny_screens:
+q=1087:
+  enum_stats:
+  enum_compact_not_target = 757
+  enum_no_label2_candidate = 312
+  quotient_stats:
+  d3_minus_E_points = 32
+  d3_missing_on_E_orbit = 0
+  d3_not_descended_to_E = 0
+  d3_plus_E_points = 40
+  d3_quotient_rows = 72
+  d4_minus_E_points_after_d3 = 20
+  d4_missing_on_E_orbit = 0
+  d4_not_descended_to_E = 0
+  d4_plus_E_points_after_d3 = 20
+  d4_quotient_rows_after_d3 = 40
+  orbit_size_4 = 72
+  oriented_candidates = 288
+  quotient_E_points = 72
+q1087:
+q1087_d3_2isogeny_stats:
+  input_rows = 72
+  minus = 16
+  plus = 20
+  quotient_rows = 36
+q1087_d4_2isogeny_stats:
+  input_rows = 40
+  minus = 10
+  plus = 10
+  quotient_rows = 20
+q1087_d3_line_screen:
+  best_good = 32
+  best_polarity = 1
+  best_zeros = 0
+  exact_lines = 0
+  line_rows = 36
+  projective_lines_tested = 1182657
+q1087_d3_line_screen_top_lines:
+  good=32/36 rate=0.888888889 zeros=0 polarity=1 line=499+961*U+1*V
+  good=32/36 rate=0.888888889 zeros=0 polarity=-1 line=588+126*U+1*V
+  good=31/36 rate=0.861111111 zeros=0 polarity=1 line=880+1006*U+1*V
+  good=31/36 rate=0.861111111 zeros=0 polarity=1 line=807+526*U+1*V
+  good=31/36 rate=0.861111111 zeros=0 polarity=1 line=775+763*U+1*V
+  good=31/36 rate=0.861111111 zeros=0 polarity=1 line=383+92*U+1*V
+  good=31/36 rate=0.861111111 zeros=0 polarity=1 line=244+836*U+1*V
+  good=31/36 rate=0.861111111 zeros=0 polarity=-1 line=843+251*U+1*V
+q1087_d4_line_screen:
+  best_good = 20
+  best_polarity = -1
+  best_zeros = 0
+  exact_lines = 3
+  line_rows = 20
+  projective_lines_tested = 1182657
+q1087_d4_line_screen_top_lines:
+  good=20/20 rate=1.000000000 zeros=0 polarity=-1 line=947+1*U+0*V
+  good=20/20 rate=1.000000000 zeros=0 polarity=-1 line=808+1*U+0*V
+  good=20/20 rate=1.000000000 zeros=0 polarity=-1 line=287+1*U+0*V
+q1087_d3_line_product:
+  rows = 36
+  best_one_line_good = 32
+  best_one_line_polarity = 1
+  distinct_signatures = 1143632
+  projective_lines_tested = 1182657
+  zero_free_lines = 1144115
+  zero_lines = 38542
+  exact_two_line_pairs_polarity_plus = 14
+  exact_two_line_pairs_polarity_minus = 22
+  exact_two_line_pairs_total = 36
+q1087_d3_best_one_lines_from_product_pass:
+  good=32/36 rate=0.888888889 mismatches=4 polarity=1 line=499+961*U+1*V
+  good=32/36 rate=0.888888889 mismatches=32 polarity=-1 line=588+126*U+1*V
+  good=31/36 rate=0.861111111 mismatches=5 polarity=1 line=880+1006*U+1*V
+  good=31/36 rate=0.861111111 mismatches=5 polarity=1 line=807+526*U+1*V
+  good=31/36 rate=0.861111111 mismatches=5 polarity=1 line=775+763*U+1*V
+  good=31/36 rate=0.861111111 mismatches=5 polarity=1 line=383+92*U+1*V
+  good=31/36 rate=0.861111111 mismatches=5 polarity=1 line=244+836*U+1*V
+  good=31/36 rate=0.861111111 mismatches=31 polarity=-1 line=843+251*U+1*V
+q1087_d3_exact_two_line_samples_polarity_plus:
+  (74+910*U+1*V) * (1013+177*U+1*V)
+  (134+299*U+1*V) * (270+685*U+1*V)
+  (153+391*U+1*V) * (746+463*U+1*V)
+  (180+162*U+1*V) * (907+925*U+1*V)
+q1087_d3_exact_two_line_samples_polarity_minus:
+  (50+967*U+1*V) * (663+417*U+1*V)
+  (72+464*U+1*V) * (683+160*U+1*V)
+  (105+47*U+1*V) * (614+400*U+1*V)
+  (113+861*U+1*V) * (477+480*U+1*V)
+q1087_d4_line_product:
+  rows = 20
+  best_one_line_good = 20
+  best_one_line_polarity = -1
+  distinct_signatures = 701899
+  projective_lines_tested = 1182657
+  zero_free_lines = 1161087
+  zero_lines = 21570
+  exact_two_line_pairs_polarity_plus = 643627
+  exact_two_line_pairs_polarity_minus = 640438
+  exact_two_line_pairs_total = 1284065
+q1087_d4_best_one_lines_from_product_pass:
+  good=20/20 rate=1.000000000 mismatches=20 polarity=-1 line=947+1*U+0*V
+  good=20/20 rate=1.000000000 mismatches=20 polarity=-1 line=808+1*U+0*V
+  good=20/20 rate=1.000000000 mismatches=20 polarity=-1 line=287+1*U+0*V
+  good=19/20 rate=0.950000000 mismatches=1 polarity=1 line=1019+3*U+1*V
+  good=19/20 rate=0.950000000 mismatches=1 polarity=1 line=993+1004*U+1*V
+  good=19/20 rate=0.950000000 mismatches=1 polarity=1 line=974+755*U+1*V
+  good=19/20 rate=0.950000000 mismatches=1 polarity=1 line=953+302*U+1*V
+  good=19/20 rate=0.950000000 mismatches=1 polarity=1 line=952+632*U+1*V
+q1087_d4_exact_two_line_samples_polarity_plus:
+  (0+0*U+1*V) * (86+868*U+1*V)
+  (0+1*U+1*V) * (50+561*U+1*V)
+  (0+3*U+1*V) * (110+992*U+1*V)
+  (0+6*U+1*V) * (938+476*U+1*V)
+q1087_d4_exact_two_line_samples_polarity_minus:
+  (0+1*U+1*V) * (497+744*U+1*V)
+  (0+3*U+1*V) * (1022+801*U+1*V)
+  (0+4*U+1*V) * (799+946*U+1*V)
+  (0+5*U+1*V) * (347+961*U+1*V)
+q=1471:
+  enum_stats:
+  enum_compact_not_target = 837
+  enum_no_label2_candidate = 424
+  quotient_stats:
+  d3_minus_E_points = 88
+  d3_missing_on_E_orbit = 0
+  d3_not_descended_to_E = 0
+  d3_plus_E_points = 112
+  d3_quotient_rows = 200
+  d4_minus_E_points_after_d3 = 56
+  d4_missing_on_E_orbit = 0
+  d4_not_descended_to_E = 0
+  d4_plus_E_points_after_d3 = 56
+  d4_quotient_rows_after_d3 = 112
+  orbit_size_4 = 200
+  oriented_candidates = 800
+  quotient_E_points = 200
+q1471:
+q1471_d3_2isogeny_stats:
+  input_rows = 200
+  minus = 44
+  plus = 56
+  quotient_rows = 100
+q1471_d4_2isogeny_stats:
+  input_rows = 112
+  minus = 28
+  plus = 28
+  quotient_rows = 56
+q1471_d3_line_screen:
+  best_good = 80
+  best_polarity = -1
+  best_zeros = 0
+  exact_lines = 0
+  line_rows = 100
+  projective_lines_tested = 2165313
+q1471_d3_line_screen_top_lines:
+  good=80/100 rate=0.800000000 zeros=0 polarity=-1 line=1063+1*U+0*V
+  good=74/100 rate=0.740000000 zeros=0 polarity=1 line=731+1012*U+1*V
+  good=74/100 rate=0.740000000 zeros=0 polarity=-1 line=740+459*U+1*V
+  good=73/100 rate=0.730000000 zeros=0 polarity=1 line=820+1333*U+1*V
+  good=73/100 rate=0.730000000 zeros=0 polarity=1 line=709+412*U+1*V
+  good=73/100 rate=0.730000000 zeros=0 polarity=1 line=676+152*U+1*V
+  good=73/100 rate=0.730000000 zeros=0 polarity=1 line=624+471*U+1*V
+  good=73/100 rate=0.730000000 zeros=0 polarity=1 line=313+536*U+1*V
+q1471_d4_line_screen:
+  best_good = 46
+  best_polarity = 1
+  best_zeros = 0
+  exact_lines = 0
+  line_rows = 56
+  projective_lines_tested = 2165313
+q1471_d4_line_screen_top_lines:
+  good=46/56 rate=0.821428571 zeros=0 polarity=1 line=1176+1*U+0*V
+  good=46/56 rate=0.821428571 zeros=0 polarity=1 line=879+1260*U+1*V
+  good=46/56 rate=0.821428571 zeros=0 polarity=1 line=209+1332*U+1*V
+  good=46/56 rate=0.821428571 zeros=0 polarity=-1 line=1262+139*U+1*V
+  good=46/56 rate=0.821428571 zeros=0 polarity=-1 line=592+211*U+1*V
+  good=45/56 rate=0.803571429 zeros=0 polarity=1 line=1226+166*U+1*V
+  good=45/56 rate=0.803571429 zeros=0 polarity=1 line=378+1179*U+1*V
+  good=45/56 rate=0.803571429 zeros=0 polarity=-1 line=1093+292*U+1*V
+q1471_d3_line_product:
+  rows = 100
+  best_one_line_good = 80
+  best_one_line_polarity = -1
+  distinct_signatures = 2022292
+  projective_lines_tested = 2165313
+  zero_free_lines = 2022841
+  zero_lines = 142472
+  exact_two_line_pairs_polarity_plus = 0
+  exact_two_line_pairs_polarity_minus = 0
+  exact_two_line_pairs_total = 0
+q1471_d3_best_one_lines_from_product_pass:
+  good=80/100 rate=0.800000000 mismatches=80 polarity=-1 line=1063+1*U+0*V
+  good=74/100 rate=0.740000000 mismatches=26 polarity=1 line=731+1012*U+1*V
+  good=74/100 rate=0.740000000 mismatches=74 polarity=-1 line=740+459*U+1*V
+  good=73/100 rate=0.730000000 mismatches=27 polarity=1 line=820+1333*U+1*V
+  good=73/100 rate=0.730000000 mismatches=27 polarity=1 line=709+412*U+1*V
+  good=73/100 rate=0.730000000 mismatches=27 polarity=1 line=676+152*U+1*V
+  good=73/100 rate=0.730000000 mismatches=27 polarity=1 line=624+471*U+1*V
+  good=73/100 rate=0.730000000 mismatches=27 polarity=1 line=313+536*U+1*V
+q1471_d4_line_product:
+  rows = 56
+  best_one_line_good = 46
+  best_one_line_polarity = 1
+  distinct_signatures = 2083754
+  projective_lines_tested = 2165313
+  zero_free_lines = 2084383
+  zero_lines = 80930
+  exact_two_line_pairs_polarity_plus = 0
+  exact_two_line_pairs_polarity_minus = 0
+  exact_two_line_pairs_total = 0
+q1471_d4_best_one_lines_from_product_pass:
+  good=46/56 rate=0.821428571 mismatches=10 polarity=1 line=1176+1*U+0*V
+  good=46/56 rate=0.821428571 mismatches=10 polarity=1 line=879+1260*U+1*V
+  good=46/56 rate=0.821428571 mismatches=10 polarity=1 line=209+1332*U+1*V
+  good=46/56 rate=0.821428571 mismatches=46 polarity=-1 line=1262+139*U+1*V
+  good=46/56 rate=0.821428571 mismatches=46 polarity=-1 line=592+211*U+1*V
+  good=45/56 rate=0.803571429 mismatches=11 polarity=1 line=1226+166*U+1*V
+  good=45/56 rate=0.803571429 mismatches=11 polarity=1 line=378+1179*U+1*V
+  good=45/56 rate=0.803571429 mismatches=45 polarity=-1 line=1093+292*U+1*V
+q=1607:
+  enum_stats:
+  enum_compact_not_target = 805
+  enum_no_label2_candidate = 408
+  quotient_stats:
+  d3_minus_E_points = 84
+  d3_missing_on_E_orbit = 0
+  d3_not_descended_to_E = 0
+  d3_plus_E_points = 112
+  d3_quotient_rows = 196
+  d4_minus_E_points_after_d3 = 36
+  d4_missing_on_E_orbit = 0
+  d4_not_descended_to_E = 0
+  d4_plus_E_points_after_d3 = 76
+  d4_quotient_rows_after_d3 = 112
+  orbit_size_4 = 196
+  oriented_candidates = 784
+  quotient_E_points = 196
+q1607:
+q1607_d3_2isogeny_stats:
+  input_rows = 196
+  minus = 42
+  plus = 56
+  quotient_rows = 98
+q1607_d4_2isogeny_stats:
+  input_rows = 112
+  minus = 18
+  plus = 38
+  quotient_rows = 56
+q1607_d3_line_screen:
+  best_good = 76
+  best_polarity = -1
+  best_zeros = 0
+  exact_lines = 0
+  line_rows = 98
+  projective_lines_tested = 2584057
+q1607_d3_line_screen_top_lines:
+  good=76/98 rate=0.775510204 zeros=0 polarity=-1 line=1020+1*U+0*V
+  good=74/98 rate=0.755102041 zeros=0 polarity=1 line=1211+736*U+1*V
+  good=74/98 rate=0.755102041 zeros=0 polarity=1 line=1080+1*U+0*V
+  good=74/98 rate=0.755102041 zeros=0 polarity=-1 line=396+871*U+1*V
+  good=73/98 rate=0.744897959 zeros=0 polarity=1 line=797+604*U+1*V
+  good=73/98 rate=0.744897959 zeros=0 polarity=1 line=201+397*U+1*V
+  good=73/98 rate=0.744897959 zeros=0 polarity=-1 line=1406+1210*U+1*V
+  good=73/98 rate=0.744897959 zeros=0 polarity=-1 line=810+1003*U+1*V
+q1607_d4_line_screen:
+  best_good = 46
+  best_polarity = 1
+  best_zeros = 0
+  exact_lines = 0
+  line_rows = 56
+  projective_lines_tested = 2584057
+q1607_d4_line_screen_top_lines:
+  good=46/56 rate=0.821428571 zeros=0 polarity=1 line=1096+242*U+1*V
+  good=46/56 rate=0.821428571 zeros=0 polarity=-1 line=511+1365*U+1*V
+  good=45/56 rate=0.803571429 zeros=0 polarity=1 line=1519+302*U+1*V
+  good=45/56 rate=0.803571429 zeros=0 polarity=1 line=1386+517*U+1*V
+  good=45/56 rate=0.803571429 zeros=0 polarity=1 line=1234+359*U+1*V
+  good=45/56 rate=0.803571429 zeros=0 polarity=1 line=1061+1606*U+1*V
+  good=45/56 rate=0.803571429 zeros=0 polarity=1 line=1005+606*U+1*V
+  good=45/56 rate=0.803571429 zeros=0 polarity=1 line=931+789*U+1*V
+q1607_d3_line_product:
+  rows = 98
+  best_one_line_good = 76
+  best_one_line_polarity = -1
+  distinct_signatures = 2430461
+  projective_lines_tested = 2584057
+  zero_free_lines = 2431090
+  zero_lines = 152967
+  exact_two_line_pairs_polarity_plus = 0
+  exact_two_line_pairs_polarity_minus = 0
+  exact_two_line_pairs_total = 0
+q1607_d3_best_one_lines_from_product_pass:
+  good=76/98 rate=0.775510204 mismatches=76 polarity=-1 line=1020+1*U+0*V
+  good=74/98 rate=0.755102041 mismatches=24 polarity=1 line=1211+736*U+1*V
+  good=74/98 rate=0.755102041 mismatches=24 polarity=1 line=1080+1*U+0*V
+  good=74/98 rate=0.755102041 mismatches=74 polarity=-1 line=396+871*U+1*V
+  good=73/98 rate=0.744897959 mismatches=25 polarity=1 line=797+604*U+1*V
+  good=73/98 rate=0.744897959 mismatches=25 polarity=1 line=201+397*U+1*V
+  good=73/98 rate=0.744897959 mismatches=73 polarity=-1 line=1406+1210*U+1*V
+  good=73/98 rate=0.744897959 mismatches=73 polarity=-1 line=810+1003*U+1*V
+q1607_d4_line_product:
+  rows = 56
+  best_one_line_good = 46
+  best_one_line_polarity = 1
+  distinct_signatures = 2494828
+  projective_lines_tested = 2584057
+  zero_free_lines = 2495527
+  zero_lines = 88530
+  exact_two_line_pairs_polarity_plus = 0
+  exact_two_line_pairs_polarity_minus = 0
+  exact_two_line_pairs_total = 0
+q1607_d4_best_one_lines_from_product_pass:
+  good=46/56 rate=0.821428571 mismatches=10 polarity=1 line=1096+242*U+1*V
+  good=46/56 rate=0.821428571 mismatches=46 polarity=-1 line=511+1365*U+1*V
+  good=45/56 rate=0.803571429 mismatches=11 polarity=1 line=1519+302*U+1*V
+  good=45/56 rate=0.803571429 mismatches=11 polarity=1 line=1386+517*U+1*V
+  good=45/56 rate=0.803571429 mismatches=11 polarity=1 line=1234+359*U+1*V
+  good=45/56 rate=0.803571429 mismatches=11 polarity=1 line=1061+1606*U+1*V
+  good=45/56 rate=0.803571429 mismatches=11 polarity=1 line=1005+606*U+1*V
+  good=45/56 rate=0.803571429 mismatches=11 polarity=1 line=931+789*U+1*V
+p27_equotient_2isogeny_line_probe_rows=1/1

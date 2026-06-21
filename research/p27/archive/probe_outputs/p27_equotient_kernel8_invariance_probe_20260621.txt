@@ -1,0 +1,50 @@
+p27 E-quotient [8]-kernel invariance probe
+p = 1000000000000000000000000103
+target = 1000
+seed = 20260621
+kernel8_stats:
+  kernel_points = 8
+  odd_part = 125000000000000000000000013
+  random_points = 16
+kernel8_points:
+  O
+  (0,0)
+  (1,0)
+  (52719296663953166495502511,52719296663953166495502512)
+  (52719296663953166495502511,947280703336046833504497591)
+  (947280703336046833504497594,52719296663953166495502508)
+  (947280703336046833504497594,947280703336046833504497595)
+  (1000000000000000000000000102,0)
+kernel8_invariance_stats:
+  base_d4_rows = 484
+  base_rows = 1000
+  bit_d3_minus_E_points = 1032
+  bit_d3_missing_on_E_orbit = 0
+  bit_d3_not_descended_to_E = 0
+  bit_d3_plus_E_points = 968
+  bit_d3_quotient_rows = 2000
+  bit_d4_minus_E_points_after_d3 = 480
+  bit_d4_missing_on_E_orbit = 0
+  bit_d4_not_descended_to_E = 0
+  bit_d4_plus_E_points_after_d3 = 488
+  bit_d4_quotient_rows_after_d3 = 968
+  bit_orbit_size_4 = 2000
+  bit_oriented_candidates = 8000
+  bit_quotient_E_points = 2000
+  d3_orbit_domain_size_2 = 1000
+  kernel_0_in_d3_domain = 1000
+  kernel_0_in_d4_domain = 484
+  kernel_1_in_d3_domain = 1000
+  kernel_1_in_d4_domain = 484
+  kernel_2_not_in_d3_domain = 1000
+  kernel_3_not_in_d3_domain = 1000
+  kernel_4_not_in_d3_domain = 1000
+  kernel_5_not_in_d3_domain = 1000
+  kernel_6_not_in_d3_domain = 1000
+  kernel_7_not_in_d3_domain = 1000
+  mixed_d3_orbits = 0
+  mixed_d4_orbits = 0
+  translated_in_d3_domain = 2000
+  translated_in_d4_domain = 968
+  translated_not_in_d3_domain = 6000
+p27_equotient_kernel8_invariance_probe_rows=1/1
