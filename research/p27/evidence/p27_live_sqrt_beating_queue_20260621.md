@@ -23,6 +23,7 @@ The K/S route is no longer a low-genus direct source candidate.
 
 Latest evidence:
 [P27 K/S First-Half Cover Magma Smoke](p27_ks_first_half_cover_magma_20260621.md).
+[P27 K/S First-Half Alpha-Lift Obstruction](p27_ks_first_half_alpha_lift_obstruction_20260621.md).
 
 Key result over tiny p27-signature field `q=7`:
 
@@ -42,15 +43,19 @@ Interpretation:
 The unsaturated handoff has denominator/projection artifacts.
 After saturating by X*(X-1)*(X+1)*(T-2X^2), the layer is a genus-37 curve.
 This occurs before adding the final reverse-square variables z,Y.
+The first-half B-branch factors cleanly, but the same-eta alpha lift ratio is
+exactly -1 times a square. Since p27 is 3 mod 4, the natural alpha quotient is
+not F_p-rational; the eta-swapped ratio is mixed on q=1607,1847,2087.
 ```
 
 Concrete next K/S test:
 
 ```text
-offline Magma/Sage over q=1607, q=1847, q=2087
-load saturated first-half ideal
-compute decomposition under Sroot -> -Sroot and alpha
-ask whether a low-genus quotient still remembers the d3 all-plus class
+offline Magma/Sage only if it targets a specific descent:
+  F_{p^2} alpha quotient -> F_p descent, or
+  actual d3/d4 E-level double-cover extraction
+ask whether a low-genus quotient/source remains over F_p, not merely
+geometrically after adjoining sqrt(-1)
 ```
 
 Promotion bar:
@@ -64,6 +69,7 @@ Kill condition:
 
 ```text
 no low-genus quotient of the genus-37 layer, or d4 is a fresh unrelated cover
+no F_p descent of the sqrt(-1)-twisted alpha quotient
 ```
 
 ## Current Alpha Status

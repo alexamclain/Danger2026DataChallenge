@@ -599,6 +599,17 @@ now needs an offline promotion-field normalization plus a non-obvious quotient
 or recurrence; online full-source normalization and coefficient widening are
 not the right next moves.
 
+The most obvious quotient shortcut is now obstructed over the p27 base field:
+[P27 K/S First-Half Alpha-Lift Obstruction](evidence/p27_ks_first_half_alpha_lift_obstruction_20260621.md).
+The first-half `B` branch class factors as
+`32*T*X*(eta*T*W + X*(X-1)*(X+1)^2)*(2*eta*W*X + X^3 + X^2 - X - 1)`.
+For `eta=+1`, the same-eta alpha lift ratio is exactly `-1` times a square on
+the intermediate curve; since p27 is `3 mod 4`, the lift is not `F_p`-rational.
+The eta-swapped ratio is mixed on q1607/q1847/q2087.  Thus the generic
+"quotient the genus-37 layer by alpha" test is demoted: it is useful only if an
+`F_{p^2}` geometric quotient comes with an explicit `F_p` descent, or if the
+actual d3/d4 double covers produce a separate low-genus source.
+
 The K-line now has a cleaner coordinate for that extraction:
 [P27 Kummer Belyi Structure Probe](evidence/p27_kummer_belyi_structure_probe_20260621.md).
 Symbolically,

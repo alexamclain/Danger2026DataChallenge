@@ -662,6 +662,7 @@ actual branch divisor/genus, not more visible split-factor screens.
 
 K/S first-half cover update:
 [P27 K/S First-Half Cover Magma Smoke](p27_ks_first_half_cover_magma_20260621.md).
+[P27 K/S First-Half Alpha-Lift Obstruction](p27_ks_first_half_alpha_lift_obstruction_20260621.md).
 
 ```text
 Full q7 reverse-source fixture: online Magma memory limit.
@@ -680,23 +681,33 @@ After saturating by X*(X-1)*(X+1)*(T-2X^2), the first post-alpha layer is a
 genus-37 curve over tiny p27-signature q=7, before adding final reverse-square
 variables z,Y.  This is not a promotion-field theorem, but it is strong
 negative pressure on a direct low-genus K/S source.
+
+The first-half B-cover branch class also factors exactly:
+  32*T*X*(eta*T*W + X*(X-1)*(X+1)^2)
+          *(2*eta*W*X + X^3 + X^2 - X - 1).
+For eta=+1, the same-eta alpha lift ratio is -1 times a square on the
+intermediate curve.  Since p27 is 3 mod 4, this lift is not F_p-rational.
+The eta-swapped ratio is mixed on q=1607, q=1847, and q=2087.
 ```
 
 Updated K/S next test:
 
 ```text
 Do not continue visible K/S coefficient or branch-product scans.
-Do offline Magma/Sage quotient/decomposition of the saturated genus-37 layer
-over q=1607, q=1847, q=2087.
+Do offline Magma/Sage quotient/decomposition only with a sharper target:
+  an F_p descent of the sqrt(-1)-twisted geometric alpha quotient, or
+  actual d3/d4 double-cover extraction on the E/K/S quotient.
 Promote only if a low-genus quotient, named recurrence, or sourceable walk
-survives the p27-signature fields.
+survives over F_p on p27-signature fields.
 ```
 
 Updated K/S kill condition:
 
 ```text
 No useful quotient of the genus-37 first-half layer, or d4 is a fresh
-unrelated cover after the d3 class is named.
+unrelated cover after the d3 class is named.  A quotient that exists only
+after adjoining sqrt(-1) is diagnostic but not a direct p27 sampler unless it
+comes with an explicit F_p descent.
 ```
 
 Promotion bar:
