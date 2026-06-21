@@ -235,6 +235,11 @@ Ask whether the reverse source factors through the order-4 compactD quotient
 D/<alpha> or through the residual elliptic curve E: W^2=X^3-X.
 ```
 
+Status: first-pass quotient screen completed.  The d3/reverse-source bit
+descends to the residual elliptic quotient, but is not an exact degree-1 line
+character there; see
+[P27 Reverse Source Quotient Screen](p27_reverse_source_quotient_screen_20260621.md).
+
 3. GPU rule:
 
 ```text
@@ -264,6 +269,9 @@ kill = using small-prime density fluctuations as promotion evidence
 - Symbolic handoff output: `research/p27/archive/probe_outputs/p27_reverse_source_symbolic_artifact_20260621.txt`
 - Online Magma output: `research/p27/archive/probe_outputs/p27_reverse_source_q607_magma_20260621.txt`
 - Online Magma raw XML: `research/p27/archive/probe_outputs/p27_reverse_source_q607_magma_20260621.xml`
+- Quotient screen: `research/p27/archive/gates/p27_reverse_source_quotient_probe.py`
+- Quotient screen output: `research/p27/archive/probe_outputs/p27_reverse_source_quotient_probe_20260621.txt`
+- Follow-up: [P27 Reverse Source Quotient Screen](p27_reverse_source_quotient_screen_20260621.md)
 - Related: [P27 Selected Orientation/Cocycle Span Screen](p27_selected_orientation_cocycle_span_20260621.md)
 - Related: [P27 Halving U+2 X-Square Gate](p27_halving_usquare_gate_20260621.md)
 - Related: [P27 Label-2 H90 / Order-4 Lift](p27_label2_h90_order4_lift_20260621.md)

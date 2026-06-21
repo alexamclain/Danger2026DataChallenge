@@ -259,6 +259,19 @@ precise source-cover equation, not yet a cheap source.  The next meaningful
 test is Sage/Magma component, genus, quotient, and factor-through-`D/<alpha>`
 analysis.
 
+That quotient question now has its first answer:
+[P27 Reverse Source Quotient Screen](evidence/p27_reverse_source_quotient_screen_20260621.md).
+On 5,000 p27 residual-elliptic quotient fibers, the d3/reverse-source bit
+descends perfectly to `E: W^2=X^3-X`: all `5,000` fibers had orbit size `4`,
+with zero non-descended fibers, and split `2466/2534` plus/minus.  That is
+positive structure: the next bit is quotient-level, not hidden in full
+compactD fiber data.  But it is not a cheap degree-1 line character on `E`:
+the p27 small-coefficient line screen had no exact line and best rate
+`0.5128`, while an exhaustive `GF(607)` projective line screen tested
+`369,057` lines and found `0` exact lines.  The next ask is therefore an
+E-level divisor/theta/Kummer class or recurrence, not another branch/T-choice
+or line scan.
+
 The newest p26 GPU trace/norm result is positive structure but negative as a
 production prefilter:
 [P27 GPU Filter-Cost Lesson From P26](evidence/p27_gpu_filter_cost_lesson_from_p26_20260621.md).

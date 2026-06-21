@@ -337,6 +337,26 @@ whether any component is dominated by an elliptic/rational walk or factors
 through D/<alpha>.
 ```
 
+First quotient update:
+[P27 Reverse Source Quotient Screen](p27_reverse_source_quotient_screen_20260621.md).
+
+```text
+The d3/reverse-source bit descends perfectly to the residual elliptic quotient
+E: W^2=X^3-X on 5,000 p27 fibers.
+
+But the cheap degree-1 line-character source is killed:
+  p27 small-coeff lines: exact_lines = 0, best = 0.5128
+  GF(607) all projective lines: exact_lines = 0 over 369,057 lines
+```
+
+Updated remaining test:
+
+```text
+Identify the actual E-level divisor/theta/Kummer class for the descended bit,
+or compute the E-level source-cover genus/quotients and show it is generic.
+Then test whether d4 reuses the same character after a named transformation.
+```
+
 Promotion bar:
 
 ```text
