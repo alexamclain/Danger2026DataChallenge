@@ -357,6 +357,17 @@ identity/negation, and they score like raw d4 bias: `28/56`, `38/56`, and
 `52/90`.  Nontrivial exact overlaps cover at most about `21%` of the d4 rows.
 This kills the small `E'` walk recurrence as a sqrt-beating source.
 
+The p26 visible branch/H90 packet also fails to transfer:
+[P27 E-Prime Branch-Factor Span](evidence/p27_eprime_branch_factor_span_20260621.md).
+It tested all sparse products of size `1..4` from the p26 branch-degree-6
+packet, vertical factors, tangent factors, and nearby lines on `E'`.  There are
+no exact p27 or `q=1471,1607,1847` products.  The best 2k d4 branch product
+looked mildly promising, but fresh 20k p27 validation flattened it to
+`0.5039` and `0.5048`; the p26 branch packet itself is exactly `0.500` on the
+fresh d3 samples.  This kills the visible branch-factor transfer.  The live
+`E'` route is now explicitly cover/divisor-class extraction, not a sparse
+visible factor product.
+
 The newest p26 GPU trace/norm result is positive structure but negative as a
 production prefilter:
 [P27 GPU Filter-Cost Lesson From P26](evidence/p27_gpu_filter_cost_lesson_from_p26_20260621.md).

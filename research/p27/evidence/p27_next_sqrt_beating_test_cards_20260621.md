@@ -491,6 +491,21 @@ This kills the small `E'` affine-walk recurrence as a sqrt-beating source.
 The remaining quotient route is cover/divisor-class extraction, not a
 translated low-multiple walk.
 
+E-prime branch-factor update:
+[P27 E-Prime Branch-Factor Span](p27_eprime_branch_factor_span_20260621.md).
+
+```text
+tested: sparse products of size 1..4 from p26 visible branch/H90 factors on E'
+p27 exact products = 0
+q1471/q1607/q1847 exact products = 0
+best 2k p27 d4 lift = 592/1052 heldout
+fresh 20k validation of that product = 5100/10122 and 5076/10056
+p26 branch packet on fresh p27 d3 = exactly 10000/20000 and 10000/20000
+```
+
+This kills the visible p26 branch-factor transfer as a sqrt-beating source.
+The remaining quotient route is actual cover/divisor-class extraction on `E'`.
+
 Promotion bar:
 
 ```text
@@ -727,6 +742,10 @@ candidate; best p27 heldout lifts remain below sampler promotion.
 Follow-up: the first affine-walk recurrence screen on `E'` is also negative.
 All maps `P -> [m]P+Q` with `|m|<=8` and every `Q` over
 `q=1471,1607,1847` fail to give a high-coverage d4-from-d3 recurrence.
+
+Follow-up: the p26 visible branch/H90 packet does not transfer to p27.  Sparse
+branch products of size `1..4` have no exact p27 or guard-field formula, and
+fresh 20k validation flattens the mild 2k d4 lift.
 
 Continue only with a named non-visible theta/divisor/additive identity.
 

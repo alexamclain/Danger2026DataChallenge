@@ -196,6 +196,9 @@ Best p27 heldout lifts are weak: 0.5225 for d3 and 0.5295 for d4.
 The first E' affine-walk recurrence screen is negative as well: for |m|<=8
 and all Q over q=1471,1607,1847, only identity/negation have full coverage,
 and they score like raw d4 bias.
+The p26 visible branch/H90 packet also fails to transfer: sparse products of
+size <=4 have no exact p27 or guard-field formula, and the best 2k d4 lift
+flattens on fresh 20k p27 validation.
 ```
 
 ## Concrete Next Tests
@@ -240,16 +243,20 @@ kill = promoting q1087 quotient exact lines/products without q1471/q1607 support
 - Gate: `research/p27/archive/gates/p27_equotient_2isogeny_line_probe.py`
 - Gate: `research/p27/archive/gates/p27_eprime_lowpole_random_probe.py`
 - Gate: `research/p27/archive/gates/p27_eprime_affine_walk_recurrence_probe.py`
+- Gate: `research/p27/archive/gates/p27_eprime_branch_factor_span_probe.py`
 - Output: `research/p27/archive/probe_outputs/p27_equotient_group_projection_probe_20260621.txt`
 - Output: `research/p27/archive/probe_outputs/p27_equotient_kernel8_invariance_probe_20260621.txt`
 - Output: `research/p27/archive/probe_outputs/p27_equotient_2isogeny_line_probe_20260621.txt`
 - Output: `research/p27/archive/probe_outputs/p27_eprime_lowpole_random_probe_20260621.txt`
 - Output: `research/p27/archive/probe_outputs/p27_eprime_affine_walk_recurrence_probe_20260621.txt`
 - Output: `research/p27/archive/probe_outputs/p27_eprime_affine_walk_recurrence_probe_q1847_20260621.txt`
+- Output: `research/p27/archive/probe_outputs/p27_eprime_branch_factor_span_probe_20260621.txt`
+- Output: `research/p27/archive/probe_outputs/p27_eprime_branch_factor_candidate_20k_20260621.txt`
 - Related: [P27 E-Quotient Affine-Walk Recurrence](p27_equotient_affine_walk_recurrence_20260621.md)
 - Related: [P27 E-Quotient Line-Product Screen](p27_equotient_line_product_screen_20260621.md)
 - Related: [P27 E-Prime Low-Pole Random Screen](p27_eprime_lowpole_random_screen_20260621.md)
 - Related: [P27 E-Prime Affine-Walk Recurrence](p27_eprime_affine_walk_recurrence_20260621.md)
+- Related: [P27 E-Prime Branch-Factor Span](p27_eprime_branch_factor_span_20260621.md)
 
 ```text
 p27_equotient_kernel8_2isogeny_screen_rows=1/1
