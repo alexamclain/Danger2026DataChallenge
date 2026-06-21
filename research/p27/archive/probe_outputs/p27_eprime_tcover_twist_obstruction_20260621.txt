@@ -15,6 +15,11 @@ interpretation:
   every sigma(f)/f has norm 1, but Norm(+/-X^3)=-1
   over p27-compatible fields q=3 mod 4, -1 is nonsquare, so the
   obstruction is not removed by a base-field constant
+hilbert90_eigenfunction_over_Fq2:
+  let j^2=-1 and h=1-j/X^3
+  sigma(h)=j*X^3*h
+  Z=T*h satisfies sigma(Z)=j*Z
+  so the T phase is an order-4 eigenspace object; Z^4 is invariant
 finite_field_checks:
 q=607:
   T_points = 732

@@ -134,6 +134,11 @@ def main() -> int:
     print("  every sigma(f)/f has norm 1, but Norm(+/-X^3)=-1")
     print("  over p27-compatible fields q=3 mod 4, -1 is nonsquare, so the")
     print("  obstruction is not removed by a base-field constant")
+    print("hilbert90_eigenfunction_over_Fq2:")
+    print("  let j^2=-1 and h=1-j/X^3")
+    print("  sigma(h)=j*X^3*h")
+    print("  Z=T*h satisfies sigma(Z)=j*Z")
+    print("  so the T phase is an order-4 eigenspace object; Z^4 is invariant")
     print("finite_field_checks:")
     for q in [int(part) for part in args.small_primes.split(",") if part.strip()]:
         stats = finite_field_check(q)

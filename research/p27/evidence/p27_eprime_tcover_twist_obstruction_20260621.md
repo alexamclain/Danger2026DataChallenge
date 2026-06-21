@@ -103,6 +103,20 @@ Norm(-X^3) = -1
 Thus there is no such rational invariant over the base field.  The obstruction
 would disappear only after adjoining a constant square root of `-1`.
 
+The explicit Hilbert-90 eigenfunction over `F_{q^2}` is:
+
+```text
+let j^2 = -1
+h = 1 - j/X^3
+sigma(h) = j*X^3*h
+Z = T*h
+sigma(Z) = j*Z
+```
+
+So the `T` phase is naturally an order-4 eigenspace object.  Its fourth power
+is invariant, but the phase itself is not represented by a plain `T`-linear
+function on `E'` over the p27 base field.
+
 ## Finite-Field Checks
 
 The guard fields used in the p27 quotient lane all match the p27 sign regime
@@ -181,9 +195,9 @@ Norm(X^3)=-1
 Concrete next tests:
 
 ```text
-1. Build the quotient/Prym of the label-2 T-cover by sigma, allowing the
-   constant twist j^2=-1 over F_{q^2}; then descend the resulting Kummer
-   class back to the p27 sign regime.
+1. Build the quotient/Prym of the label-2 T-cover using
+   `Z=T*(1-j/X^3)` over `F_{q^2}` with `j^2=-1`; decompose the d3/d4 double
+   covers by the resulting order-4 eigenspaces.
 
 2. In Magma/Sage, compute the divisor class of the d3 and d4 double covers on
    this twisted quotient, not on E' alone.

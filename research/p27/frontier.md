@@ -450,8 +450,9 @@ For the `(0,0)` quotient involution
 fields `q=607,1471,1607,1847`, `chi(-1)=-1`, so the obstruction is not killed
 by a base-field constant.  This reframes the next quotient test: work on the
 twisted `T`-cover/Prym/Hilbert-90 class, possibly after adjoining `j^2=-1`,
-then descend a named class back to the p27 sign regime.  Do not repeat plain
-`E'` low-pole or sparse-factor scans.  The online Magma `q=1471` check reports
+using the concrete eigenfunction `Z=T*(1-j/X^3)` with `sigma(Z)=jZ`, then
+descend a named class back to the p27 sign regime.  Do not repeat plain `E'`
+low-pole or sparse-factor scans.  The online Magma `q=1471` check reports
 `RESULT p27_eprime_tcover_twist_q1471 ok -1 1660 0 0 0 0 0`.
 
 The newest p26 GPU trace/norm result is positive structure but negative as a

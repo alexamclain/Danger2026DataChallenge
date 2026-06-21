@@ -537,8 +537,12 @@ Updated quotient test:
 ```text
 Stop repeating plain E' low-pole or sparse branch-factor screens.
 Build the twisted T-cover quotient/Prym/Hilbert-90 class, allowing j^2=-1 over
-F_{q^2}, and then ask whether the d3/d4 double covers become named classes
-that descend back to the p27 sign regime.
+F_{q^2}.  The concrete first model is:
+  h = 1 - j/X^3
+  Z = T*h
+  sigma(Z) = jZ
+Then ask whether the d3/d4 double covers become named order-4 eigenspace
+classes that descend back to the p27 sign regime.
 ```
 
 Promotion bar:
