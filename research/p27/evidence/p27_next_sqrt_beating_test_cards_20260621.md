@@ -650,7 +650,40 @@ construct the actual double covers / divisor classes over
   C: b^2=16-a^4
   E: v^2=u^3-u
 for domain_line and normalized T_line, then test whether their sum/product
-gives a sourceable selected trace/norm stratum.
+gives a sourceable D_plus stratum.
+```
+
+Current named D_plus cover:
+
+```text
+t = y - 1
+B = t^2 + 1
+C = t^2 + 2t - 1
+z^2 = t*C*B
+eps_h = chi(t)
+eps_v = chi((t+1)*C)
+hcore = C*B + eps_h*2*t*z
+vcore = 2*C*t^2 + eps_v*z*w
+core = (1-t^2)*B*C*(t+1)*vcore*hcore
+D = -chi(core)
+D_plus iff -core is square
+```
+
+The p27 probe has zero mismatches on `16,096` rows, and the online Magma
+`q=607` validation has `mismatch=0`.  The domain spin quartic obtained by
+eliminating `t`,
+
+```text
+r^4 - (a+2)(a^2+1)(a^2+4)r^2 + (a+2)^2(a^2+4) = 0,
+```
+
+has projective genus `2` in the q=607 check.
+
+Next concrete test:
+
+```text
+Split the D_plus cover by eps_h,eps_v in {+1,-1}; ask Magma/Sage for genus,
+quotient maps, and Prym/Jacobian decomposition of each orientation component.
 ```
 
 Promotion bar:

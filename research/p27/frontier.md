@@ -28,20 +28,6 @@ The p26 EK quotient, b-flip cocycle, domain-line descent, and target-line
 descent all survived on p27 with zero inconsistencies in a `65,536` raw-draw
 diagnostic.
 
-The first exact small-field check of that trace/norm quotient changes the
-math ask:
-[P27 Trace/Norm Spin Obstruction](evidence/p27_trace_norm_spin_obstruction_20260621.md).
-For `t=y-1`, `a=t-1/t`, and
-`F=t*(t^2+2t-1)*(t^2+1)`, online Magma confirms over `q=607` that
-`F(t)/F(-1/t)=t^6`, so the domain bit descends as a character, but the
-valuation of `F` at the ramification factor `t^2+1` is odd.  This explains why
-small `R(a)` rational-character screens were the wrong target for this bit:
-the natural object is a spin/half-divisor class on the trace/norm quotient.
-The next credible sqrt-beating trace/norm test is explicit
-double-cover/divisor-class extraction for `domain_line` and normalized
-`T_line`, looking for a shared quotient, Prym factor, or sourceable Kummer
-class that samples the selected stratum directly.
-
 The practical C path also smoke-tested on p27:
 [P27 Practical Trace/Norm Prefilter Smoke](evidence/p27_practical_trace_norm_prefilter_smoke_20260621.md).
 Baseline `x16halvestatsnonsplit` and trace/norm `x16halvestatsnonsplittraced`
@@ -221,6 +207,45 @@ At depth 8, the ordinary prefix probe ran at `36.89M` accepted
 roots/sec versus `29.96M` for `u+2`; at depth 10, `33.85M` versus `27.84M`.
 Do not promote independent `u+2` prechecking as the production implementation;
 look for a direct source or recurrence that exploits the smaller stratum.
+
+The GPU search-space narrowing audit is now explicit:
+[P27 GPU Search-Space Narrowing Probe](evidence/p27_gpu_search_space_narrowing_20260621.md).
+At depth 24, fixed-prefix modes through `d4` and their ecover variants gave the
+expected post-prefix survivor lift but only `1.00x` to `1.07x` on the raw
+`target/source_draw` denominator, below the `1.25x` promotion bar.  Held-out
+bucket telemetry did not promote any restart stratum.  In contrast, the
+trace/norm `D_plus` candidate gate captured every observed depth-20 through
+depth-30 survivor in a `1B+1B` raw-y GPU A/B, with `204` depth-26 survivors and
+an exact-looking `4x` conditional lift among ordinary emitted candidates.  This
+promotes trace/norm as a real structural stratum/source target, but not yet as
+a production filter: the current implementation still pays to classify the
+rejected raw-y draws.
+
+The first exact small-field check of that trace/norm quotient changes the
+math ask:
+[P27 Trace/Norm Spin Obstruction](evidence/p27_trace_norm_spin_obstruction_20260621.md).
+For `t=y-1`, `a=t-1/t`, and
+`F=t*(t^2+2t-1)*(t^2+1)`, Magma confirms over `q=607` that
+`F(t)/F(-1/t)=t^6`, so the domain bit descends as a character, but the
+valuation of `F` at the ramification factor `t^2+1` is odd.  This explains why
+small `R(a)` rational-character screens were the wrong target for this bit:
+the natural object is a spin/half-divisor class on the trace/norm quotient.
+The next credible sqrt-beating trace/norm test is therefore explicit
+double-cover/divisor-class extraction for `domain_line` and normalized
+`T_line`, looking for a shared quotient, Prym factor, or sourceable Kummer
+class that samples `D_plus` directly.
+
+That extraction now has a named `D_plus` cover:
+[P27 Trace/Norm D_plus Cover](evidence/p27_trace_norm_dplus_cover_20260621.md).
+On a 16,096-row p27 component sample,
+`D=-chi(core)` and `D_plus iff -core is square` had zero mismatches.  The
+online Magma `q=607` checks validate both the domain spin quartic and the
+combined `D_plus` cover: the domain quartic has genus `2`, and the D-plus
+enumeration reports `mismatch=0`.  The formula still contains orientation
+selectors `eps_h=chi(t)` and `eps_v=chi((t+1)C)`, which explains why the
+current classifier pays fresh Legendre costs.  The next sqrt-beating test is a
+Magma/Sage quotient/Prym decomposition of the four orientation components, or
+a direct GPU source sampler if such a quotient is found.
 
 The local norm/coboundary screen is also negative but clarifying:
 [P27 U+2 Norm/Coboundary Screen](evidence/p27_usquare_norm_coboundary_20260621.md).
@@ -559,20 +584,14 @@ not merely per raw tested curve.
 
 See [P27 Next Sqrt-Beating Test Cards](evidence/p27_next_sqrt_beating_test_cards_20260621.md).
 
-Current candidate: baseline vs `x16halvenonsplitecover`, with domain/dgate as
-the first-bit control.  The older trace-norm `D` prefilter is secondary.
-`T_line` is retained as a theorem/control bit but is not a next-gate filter
-from current CPU evidence.  `tracechar` is an equivalent full-D instrumentation
-variant; `tracesqrt` is not the preferred CPU-side path.
-
-The new GPU telemetry request is `domain_line + second-d`: report whether the
-native GPU code can compute `d2=x5^2+A*x5+1` cheaply enough to test baseline vs
-domain-only vs domain+second-d.  This remains practical filtering unless it
-leads to a reusable tower law for many `d_j` gates.
-
-Extend that request to prefix gates if cheap: `d1`, `d1+d2`, and
-`d1+d2+d3` filters, with explicit reporting of whether any `w_j` obstruction
-appears.
+Status: completed for the first GPU matrix.  Baseline, domain, ecover, fixed
+`d2/d3/d4` prefixes, and ecover-prefix variants all ran as same-seed GPU
+scope probes.  Fixed prefixes are exact continuation filters but not a raw
+source-space cut in the measured depth-24 matrix.  The trace/norm `D_plus`
+gate is the only promoted search-space narrowing lead: it captures all
+observed depth-20 through depth-30 survivors in the 1B+1B raw-y confirmation,
+but still needs a direct sampler or cheaper pretest before it is a production
+throughput win.
 
 Equivalent x-square request: report prefix filters as `x_4 square`,
 `x_4,x_5 square`, and `x_4,x_5,x_6 square`.  For nonsplit rows this is the same
