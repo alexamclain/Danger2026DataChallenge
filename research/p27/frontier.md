@@ -556,6 +556,16 @@ in this S family.  This kills the nearest rational square-root line sampler.
 The remaining K-square route is branch-class/genus extraction over K or S, not
 another low-degree split-divisor scan.
 
+The visible S-ramification is now priced too:
+[P27 S-Root Belyi Structure Probe](evidence/p27_sroot_belyi_structure_probe_20260621.md).
+The S-map branch resultant is
+`S^8*(S^2-2S+2)^4*(S^2+2S+2)^4`.  On selected rows, the quadratic branch atoms
+`S^2-2S+2`, `S^2+2S+2`, and `S^2` are already square, while `chi(S)` flips on
+every `S/-S` pair and the `d3/d4` target is constant on each pair.  So visible
+S branch values and `chi(S)` are killed as selectors.  A future extraction
+should use these branch values as marked points, but the source class, if it
+exists, is non-visible.
+
 The newest p26 GPU trace/norm result is positive structure but negative as a
 production prefilter:
 [P27 GPU Filter-Cost Lesson From P26](evidence/p27_gpu_filter_cost_lesson_from_p26_20260621.md).
