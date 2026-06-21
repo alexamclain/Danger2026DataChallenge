@@ -660,6 +660,45 @@ route is irreducible cubic/quartic extraction or Magma/Sage recovery of the
 actual branch divisor/genus, not more visible split-factor screens.
 ```
 
+K/S first-half cover update:
+[P27 K/S First-Half Cover Magma Smoke](p27_ks_first_half_cover_magma_20260621.md).
+
+```text
+Full q7 reverse-source fixture: online Magma memory limit.
+Eta=+1 component fixture: online Magma memory limit.
+Raw first-half layer: SCHEME_OK 2 4, AFFINE_POINTS 77.
+Saturated first-half layer:
+  SAT_SCHEME_OK 1 42 3
+  SAT_CURVE_OK 37 3
+```
+
+Updated K/S interpretation:
+
+```text
+The unsaturated handoff equations contain denominator/projection artifacts.
+After saturating by X*(X-1)*(X+1)*(T-2X^2), the first post-alpha layer is a
+genus-37 curve over tiny p27-signature q=7, before adding final reverse-square
+variables z,Y.  This is not a promotion-field theorem, but it is strong
+negative pressure on a direct low-genus K/S source.
+```
+
+Updated K/S next test:
+
+```text
+Do not continue visible K/S coefficient or branch-product scans.
+Do offline Magma/Sage quotient/decomposition of the saturated genus-37 layer
+over q=1607, q=1847, q=2087.
+Promote only if a low-genus quotient, named recurrence, or sourceable walk
+survives the p27-signature fields.
+```
+
+Updated K/S kill condition:
+
+```text
+No useful quotient of the genus-37 first-half layer, or d4 is a fresh
+unrelated cover after the d3 class is named.
+```
+
 Promotion bar:
 
 ```text
@@ -1131,7 +1170,20 @@ squareclasses killed by the H/V trace audit.
 
 ## Current Recommendation
 
-The first large GPU use should be Card 1, not a blind production cap.  If Card
-1 shows flat strata, the math effort should move to Card 3/9.  If Card 1 shows
-a real same-stream survivor lift, then the GPU agent should run a paired A/B
-cost model before any certificate hunt.
+The current compact queue is:
+[P27 Live Sqrt-Beating Queue](p27_live_sqrt_beating_queue_20260621.md).
+
+Ranked next moves:
+
+```text
+1. Theory/CAS: quotient decomposition of the saturated genus-37 K/S layer.
+2. Theory/lit/expert: trace/norm half-norm phase identity for pref vs h*vq.
+3. GPU: bounded same-stream telemetry only; no moonshot-scale run without
+   a quotient/source or heldout efficiency gain.
+```
+
+The first large GPU use should still be Card 1 rather than a blind production
+cap, but the moonshot bottleneck has moved: fixed-prefix and visible-character
+screens are no longer the scarce work.  The scarce work is a low-genus
+quotient/source or a non-visible theta/Kummer/Hilbert-90 identity that
+controls many selected `chi(d_j)` / `chi(u_j+2)` gates at once.
