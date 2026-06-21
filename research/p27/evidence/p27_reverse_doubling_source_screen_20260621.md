@@ -83,6 +83,61 @@ z-root and Y-root multiplicities for the source cover
 small-prime q == 7 mod 8 enumerations of the same label-2/compactD equations
 ```
 
+## Symbolic / Magma Handoff Check
+
+The first symbolic handoff artifact exposed one convention issue: the selected
+`x5` can come from either sign of the previous halving square root.  The
+correct affine handoff therefore includes a branch parameter:
+
+```text
+eta^2 = 1
+eta = selected first-half square-root sign
+```
+
+Command:
+
+```bash
+PYTHONDONTWRITEBYTECODE=1 \
+python3 research/p27/archive/gates/p27_reverse_source_symbolic_artifact.py \
+  --target 200 \
+  --max-draws 200000 \
+  | tee research/p27/archive/probe_outputs/p27_reverse_source_symbolic_artifact_20260621.txt
+```
+
+P27 verification:
+
+```text
+B_branch_minus = 200
+B_branch_plus = 200
+verified_oriented_candidates = 400
+verified_source_points = 384
+B_mismatch = 0
+```
+
+The tiny independent Magma check uses the online calculator only as the t24
+workflow allows: a small finite-field probe, not a throughput tool.  The input
+is `research/p27/archive/fixtures/p27_reverse_source_q607_magma.m`, and the
+saved result is:
+
+```text
+RESULT p27_reverse_q607 ok 512 256 0 0 1024 2048
+```
+
+This matches the local Python enumeration for `q=607`:
+
+```text
+oriented_candidates = 512
+d3_plus_candidates = 256
+reverse_mismatch = 0
+point_mismatch = 0
+reverse_z_points = 1024
+reverse_zy_points = 2048
+```
+
+Conclusion: the reverse-source formulas and the `eta` two-component convention
+survive an independent small Magma validation.  This validates the source
+equation handoff; it does not change the density conclusion.
+
 ## P27 Result
 
 Seed `20260621`, 5,000 compactD pairs:
@@ -202,8 +257,13 @@ kill = using small-prime density fluctuations as promotion evidence
 ## Linked Artifacts
 
 - Gate: `research/p27/archive/gates/p27_reverse_doubling_source_probe.py`
+- Symbolic handoff: `research/p27/archive/gates/p27_reverse_source_symbolic_artifact.py`
+- Online Magma input: `research/p27/archive/fixtures/p27_reverse_source_q607_magma.m`
 - Output: `research/p27/archive/probe_outputs/p27_reverse_doubling_source_probe_20260621.txt`
 - Replication output: `research/p27/archive/probe_outputs/p27_reverse_doubling_source_probe_seed20260622_20260621.txt`
+- Symbolic handoff output: `research/p27/archive/probe_outputs/p27_reverse_source_symbolic_artifact_20260621.txt`
+- Online Magma output: `research/p27/archive/probe_outputs/p27_reverse_source_q607_magma_20260621.txt`
+- Online Magma raw XML: `research/p27/archive/probe_outputs/p27_reverse_source_q607_magma_20260621.xml`
 - Related: [P27 Selected Orientation/Cocycle Span Screen](p27_selected_orientation_cocycle_span_20260621.md)
 - Related: [P27 Halving U+2 X-Square Gate](p27_halving_usquare_gate_20260621.md)
 - Related: [P27 Label-2 H90 / Order-4 Lift](p27_label2_h90_order4_lift_20260621.md)

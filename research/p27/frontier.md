@@ -251,9 +251,13 @@ The equations are exact and had zero reverse-doubling or rational-point
 mismatches, but p27 density remains random-half: `0.4932` on seed `20260621`
 and `0.5044` on seed `20260622`.  The z-source multiplicity also matches the
 generic expectation: about `2` z-points and `4` `(z,Y)` points per oriented
-compactD candidate.  So reverse doubling is a precise source-cover equation,
-not yet a cheap source.  The next meaningful test is Sage/Magma component,
-genus, quotient, and factor-through-`D/<alpha>` analysis.
+compactD candidate.  A follow-up handoff artifact made the required
+`eta^2=1` first-half branch sign explicit and passed both p27 point
+verification and an online Magma `q=607` validation:
+`RESULT p27_reverse_q607 ok 512 256 0 0 1024 2048`.  So reverse doubling is a
+precise source-cover equation, not yet a cheap source.  The next meaningful
+test is Sage/Magma component, genus, quotient, and factor-through-`D/<alpha>`
+analysis.
 
 The newest p26 GPU trace/norm result is positive structure but negative as a
 production prefilter:
