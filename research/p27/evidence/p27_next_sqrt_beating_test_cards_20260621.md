@@ -700,9 +700,33 @@ sign component.
 So the next test is not "sample the full cover"; it is:
 
 ```text
-find a low-genus quotient/Prym factor that still remembers Dplus, or test
-whether a new trace/norm class inside the Dplus-conditioned stream predicts
-later selected x-square gates.
+find a low-genus quotient/Prym factor that still remembers Dplus and couples
+to later selected x-square gates.
+```
+
+Post-Dplus update:
+
+```text
+The immediate named-character version of that test is negative.
+On 16,398 C-style Dplus candidates, Dplus had zero first-two-gate failures,
+but d3_plus was 8298/16398 = 0.5060 and d4_plus after d3 was
+4062/8298 = 0.4895.
+
+All low-weight products of H,VQ,X_pref,T_line/root/quotient atoms failed for
+d3 and d4; train lifts collapsed to about 0.49-0.50 on heldout.
+```
+
+Updated next concrete test:
+
+```text
+Do not run another low-weight post-Dplus sign scan.
+Extract the actual d3 and d4 double-cover divisor/Kummer classes on
+  E:  W^2 = X^3 - X
+or on the 2-isogenous quotient
+  E': V^2 = U^3 + 4U, U = X - 1/X.
+
+Use online Magma for small-field validation once there is a named formula or
+component map, as in the p24 workflow.
 ```
 
 Promotion bar:

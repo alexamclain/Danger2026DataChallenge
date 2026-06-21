@@ -232,6 +232,18 @@ So trace/norm remains valuable as an algebraic description of early selected
 halving gates, but the moonshot must find a new trace/norm class, quotient, or
 recurrence that couples to post-Dplus gates.
 
+That immediate post-Dplus screen is now negative:
+[P27 Trace/Norm Post-Dplus Screen](evidence/p27_trace_norm_post_dplus_screen_20260621.md).
+On `16,398` C-style Dplus candidates there were zero first-two-gate prefix
+failures, confirming the reconstruction.  The next gate was flat:
+`d3_plus=8298/16398=0.5060`; after conditioning on d3, `d4_plus=4062/8298=0.4895`.
+All low-weight products of the named `H`, `VQ`, `X_pref`, root, quotient, and
+`T_line` atoms failed, with the best train lifts collapsing to about `0.49` to
+`0.50` on heldout.  This kills the cheap post-Dplus trace/norm-character route.
+The surviving trace/norm/quotient task is function-field extraction of the
+actual `d3`/`d4` double covers on `E: W^2=X^3-X` or the 2-isogenous quotient
+`E': V^2=U^3+4U`.
+
 The first exact small-field check of that trace/norm quotient changes the
 math ask:
 [P27 Trace/Norm Spin Obstruction](evidence/p27_trace_norm_spin_obstruction_20260621.md).

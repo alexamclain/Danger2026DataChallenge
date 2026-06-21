@@ -1,0 +1,110 @@
+p27_trace_norm_post_dplus_probe
+p=1000000000000000000000000103
+sample:
+  raw_y_draws=131072
+  duplicate_y=0
+  zero_y=0
+  nonsplit_y=65766
+  D_zero=32965
+  D_+1=16485
+  D_-1=16316
+  Dplus_y=16485
+  Dplus_no_valid_candidate=8286
+  Dplus_candidates=16398
+  Dplus_prefix_failure=0
+  d1_+1=16398
+  d1_-1=0
+  d2_+1=16398
+  d2_-1=0
+  d3_+1=8298
+  d3_-1=8100
+  d4_+1=4062
+  d4_-1=4236
+usable_prefix_rows = 16398
+post_dplus_rates:
+  d3_plus = 8298/16398 0.506037322
+  d4_plus_after_d3 = 4062/8298 0.489515546
+pre_root_trace_norm_span_d3:
+  features = H, VQ, X_pref, chi_y, chi_t, chi_y_minus_2, chi_B, chi_C, chi_R, chi_F, chi_root_disc
+  target = d3
+  rows = 16398
+  skipped = 0
+  target_plus_rate = 0.506037322
+  exact_combo_weight_le_4 = none
+  best_low_weight_train_heldout max_weight=4:
+    train=4214/8199 0.513965118 heldout=4072/8199 0.496645932 weight=1 combo=chi_B
+    train=4214/8199 0.513965118 heldout=4072/8199 0.496645932 weight=2 combo=-X_pref * chi_C
+    train=4214/8199 0.513965118 heldout=4072/8199 0.496645932 weight=2 combo=chi_t * chi_C
+    train=4214/8199 0.513965118 heldout=4072/8199 0.496645932 weight=2 combo=X_pref * chi_R
+    train=4214/8199 0.513965118 heldout=4072/8199 0.496645932 weight=2 combo=-chi_t * chi_R
+    train=4214/8199 0.513965118 heldout=4072/8199 0.496645932 weight=2 combo=chi_B * chi_F
+    train=4214/8199 0.513965118 heldout=4072/8199 0.496645932 weight=2 combo=chi_B * chi_root_disc
+    train=4214/8199 0.513965118 heldout=4072/8199 0.496645932 weight=3 combo=-X_pref * chi_t * chi_B
+    train=4214/8199 0.513965118 heldout=4072/8199 0.496645932 weight=3 combo=H * VQ * chi_C
+    train=4214/8199 0.513965118 heldout=4072/8199 0.496645932 weight=3 combo=chi_y * chi_y_minus_2 * chi_C
+    train=4214/8199 0.513965118 heldout=4072/8199 0.496645932 weight=3 combo=-H * VQ * chi_R
+    train=4214/8199 0.513965118 heldout=4072/8199 0.496645932 weight=3 combo=-chi_y * chi_y_minus_2 * chi_R
+root_trace_norm_span_d3:
+  features = H, VQ, X_pref, chi_y, chi_t, chi_y_minus_2, chi_B, chi_C, chi_R, chi_F, chi_root_disc, root_index, chi_root, chi_root_minus_y, chi_A, chi_A_minus_2, chi_A_plus_2, chi_xP, chi_xP_minus_1, chi_xP_plus_1, chi_a, chi_b, T_line
+  target = d3
+  rows = 16398
+  skipped = 0
+  target_plus_rate = 0.506037322
+  exact_combo_weight_le_4 = none
+  best_low_weight_train_heldout max_weight=4:
+    train=4223/8199 0.515062813 heldout=4023/8199 0.490669594 weight=2 combo=chi_y_minus_2 * chi_A
+    train=4223/8199 0.515062813 heldout=4023/8199 0.490669594 weight=3 combo=-X_pref * chi_y * chi_A
+    train=4223/8199 0.515062813 heldout=4023/8199 0.490669594 weight=3 combo=chi_y * chi_t * chi_A
+    train=4223/8199 0.515062813 heldout=4023/8199 0.490669594 weight=3 combo=chi_y_minus_2 * chi_F * chi_A
+    train=4223/8199 0.515062813 heldout=4023/8199 0.490669594 weight=3 combo=chi_y_minus_2 * chi_root_disc * chi_A
+    train=4223/8199 0.515062813 heldout=4023/8199 0.490669594 weight=3 combo=-chi_y_minus_2 * chi_A * chi_A_minus_2
+    train=4223/8199 0.515062813 heldout=4023/8199 0.490669594 weight=3 combo=chi_y_minus_2 * chi_A * chi_A_plus_2
+    train=4223/8199 0.515062813 heldout=4023/8199 0.490669594 weight=3 combo=chi_y_minus_2 * chi_A * chi_xP
+    train=4223/8199 0.515062813 heldout=4023/8199 0.490669594 weight=3 combo=chi_y_minus_2 * chi_A * chi_a
+    train=4223/8199 0.515062813 heldout=4023/8199 0.490669594 weight=3 combo=-X_pref * chi_A * T_line
+    train=4223/8199 0.515062813 heldout=4023/8199 0.490669594 weight=3 combo=chi_t * chi_A * T_line
+    train=4223/8199 0.515062813 heldout=4023/8199 0.490669594 weight=4 combo=H * VQ * chi_y * chi_A
+pre_root_trace_norm_span_d4:
+  features = H, VQ, X_pref, chi_y, chi_t, chi_y_minus_2, chi_B, chi_C, chi_R, chi_F, chi_root_disc
+  target = d4
+  rows = 8298
+  skipped = 0
+  target_plus_rate = 0.489515546
+  exact_combo_weight_le_4 = none
+  best_low_weight_train_heldout max_weight=4:
+    train=2212/4149 0.533140516 heldout=2070/4149 0.498915401 weight=2 combo=-chi_y_minus_2 * chi_B
+    train=2212/4149 0.533140516 heldout=2070/4149 0.498915401 weight=2 combo=-chi_y * chi_C
+    train=2212/4149 0.533140516 heldout=2070/4149 0.498915401 weight=2 combo=chi_y * chi_R
+    train=2212/4149 0.533140516 heldout=2070/4149 0.498915401 weight=3 combo=X_pref * chi_y * chi_B
+    train=2212/4149 0.533140516 heldout=2070/4149 0.498915401 weight=3 combo=-chi_y * chi_t * chi_B
+    train=2212/4149 0.533140516 heldout=2070/4149 0.498915401 weight=3 combo=X_pref * chi_y_minus_2 * chi_C
+    train=2212/4149 0.533140516 heldout=2070/4149 0.498915401 weight=3 combo=-chi_t * chi_y_minus_2 * chi_C
+    train=2212/4149 0.533140516 heldout=2070/4149 0.498915401 weight=3 combo=-X_pref * chi_y_minus_2 * chi_R
+    train=2212/4149 0.533140516 heldout=2070/4149 0.498915401 weight=3 combo=chi_t * chi_y_minus_2 * chi_R
+    train=2212/4149 0.533140516 heldout=2070/4149 0.498915401 weight=3 combo=-chi_y_minus_2 * chi_B * chi_F
+    train=2212/4149 0.533140516 heldout=2070/4149 0.498915401 weight=3 combo=-chi_y * chi_C * chi_F
+    train=2212/4149 0.533140516 heldout=2070/4149 0.498915401 weight=3 combo=chi_y * chi_R * chi_F
+root_trace_norm_span_d4:
+  features = H, VQ, X_pref, chi_y, chi_t, chi_y_minus_2, chi_B, chi_C, chi_R, chi_F, chi_root_disc, root_index, chi_root, chi_root_minus_y, chi_A, chi_A_minus_2, chi_A_plus_2, chi_xP, chi_xP_minus_1, chi_xP_plus_1, chi_a, chi_b, T_line
+  target = d4
+  rows = 8298
+  skipped = 0
+  target_plus_rate = 0.489515546
+  exact_combo_weight_le_4 = none
+  best_low_weight_train_heldout max_weight=4:
+    train=2212/4149 0.533140516 heldout=2070/4149 0.498915401 weight=2 combo=-chi_y_minus_2 * chi_B
+    train=2212/4149 0.533140516 heldout=2070/4149 0.498915401 weight=2 combo=-chi_y * chi_C
+    train=2212/4149 0.533140516 heldout=2070/4149 0.498915401 weight=2 combo=chi_y * chi_R
+    train=2212/4149 0.533140516 heldout=2070/4149 0.498915401 weight=2 combo=-H * chi_xP_plus_1
+    train=2212/4149 0.533140516 heldout=2070/4149 0.498915401 weight=2 combo=-chi_y_minus_2 * chi_b
+    train=2212/4149 0.533140516 heldout=2070/4149 0.498915401 weight=2 combo=-chi_C * T_line
+    train=2212/4149 0.533140516 heldout=2070/4149 0.498915401 weight=2 combo=chi_R * T_line
+    train=2212/4149 0.533140516 heldout=2070/4149 0.498915401 weight=3 combo=X_pref * chi_y * chi_B
+    train=2212/4149 0.533140516 heldout=2070/4149 0.498915401 weight=3 combo=-chi_y * chi_t * chi_B
+    train=2212/4149 0.533140516 heldout=2070/4149 0.498915401 weight=3 combo=X_pref * chi_y_minus_2 * chi_C
+    train=2212/4149 0.533140516 heldout=2070/4149 0.498915401 weight=3 combo=-chi_t * chi_y_minus_2 * chi_C
+    train=2212/4149 0.533140516 heldout=2070/4149 0.498915401 weight=3 combo=-X_pref * chi_y_minus_2 * chi_R
+verdict:
+  Dplus_prefix_exact = 1
+  promote_named_post_dplus_character = 0 unless a listed low-weight exact combo is non-none
+p27_trace_norm_post_dplus_probe_rows=1/1
