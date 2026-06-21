@@ -497,6 +497,19 @@ subcase `z^2=f(K)` with split branch divisor of degree `<=4`; the live K-line
 task is now irreducible cubic/quartic branch extraction or a Magma/Sage
 divisor/genus computation.
 
+That ask is now packaged as a concrete handoff:
+[P27 Kummer Branch-Extraction Handoff](evidence/p27_kummer_branch_extraction_handoff_20260621.md).
+It records the map from the residual `E: W^2=X^3-X` through
+`E': V^2=U^3+4U` to
+`K=x([2]P)=((X^2-2X-1)^2*(X^2+2X-1)^2)/(4X(X-1)(X+1)(X^2+1)^2)`,
+together with the reverse-source equations for the `d3` all-plus extraction.
+The next serious test is to normalize this cover over `P^1_K` in Magma/Sage
+and compute the actual branch divisor degree, support field degrees, and genus
+over guard fields `q=1471,1607,1847`.  This is the current best "could beat
+sqrt" theorem checkpoint: genus `<=1` or a named recurrence/sourceable walk
+promotes; high/generic branch degree with unrelated `d4` kills the K-line
+source route.
+
 The newest p26 GPU trace/norm result is positive structure but negative as a
 production prefilter:
 [P27 GPU Filter-Cost Lesson From P26](evidence/p27_gpu_filter_cost_lesson_from_p26_20260621.md).
