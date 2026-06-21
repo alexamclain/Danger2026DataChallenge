@@ -163,6 +163,8 @@ The visible residual-E quadratic-character span was tested and did not match.
 
 The packet result is recorded in
 [P27 Label-2 E[2] Packet Source Probe](p27_label2_e2_packet_source_probe_20260621.md).
+The natural H90 norm-one feature screen is recorded in
+[P27 Label-2 H90 Norm-One Recurrence Screen](p27_label2_h90_normone_recurrence_20260621.md).
 The residual `[3]` result is recorded in
 [P27 Label-2 Residual E[3] Coset Screen](p27_label2_residual_e3_coset_screen_20260621.md).
 The visible character screen is recorded in
@@ -243,6 +245,7 @@ kill = treating compactD=-1 alone as sqrt-beating
 kill = branch-choice or T-deck choice as a d3/d4 selector
 kill = searching W/WT deck lifts as if they behaved like T
 kill = E[2] packet selector as a source-level sqrt-beating route
+kill = H90 norm-one squareclass products from the screened feature family
 kill = E[3] coset source as an active moonshot lane
 kill = visible residual-E quadratic character from the screened H90 factors
 kill = generic visible-character scans unrelated to the alpha symmetry
@@ -256,9 +259,11 @@ kill = generic visible-character scans unrelated to the alpha symmetry
 - Output: `research/p27/archive/probe_outputs/p27_label2_resid3_coset0_seed145_2M_20260621.txt`
 - Output: `research/p27/archive/probe_outputs/p27_label2_visible_e_character_probe_20260621.txt`
 - Output: `research/p27/archive/probe_outputs/p27_label2_alpha_branch_recurrence_probe_20260621.txt`
+- Output: `research/p27/archive/probe_outputs/p27_label2_h90_normone_recurrence_probe_20260621.txt`
 - Related: [P27 Label-2 Cover Genus And Recurrence Probe](p27_label2_cover_genus_recurrence_20260621.md)
 - Related: [P27 Label-2 Cover Trace Decomposition Probe](p27_label2_cover_trace_decomposition_20260621.md)
 - Related: [P27 Label-2 Cyclic-Quartic Component Check](p27_label2_cyclic_components_magma_20260621.md)
+- Related: [P27 Label-2 H90 Norm-One Recurrence Screen](p27_label2_h90_normone_recurrence_20260621.md)
 
 ```text
 p27_label2_h90_order4_lift_rows=1/1

@@ -1,0 +1,149 @@
+p27 label2 H90 norm-one recurrence probe
+p = 1000000000000000000000000103
+features = u, u+1, u-1, u2+1, u2-1, u+uinv, u-uinv, mplus, denom, mtT, m0, Salpha, prefactor, L
+train_stats:
+  d3_minus_rows = 3964
+  d3_plus_rows = 4036
+  d4_minus_rows = 1988
+  d4_plus_rows = 2048
+  d4_rows = 4036
+  invariant_feature_count = 7
+  sample_candidate_invalid_not_nonsplit = 15820
+  sample_compact_not_target = 15668
+  sample_no_t = 15757
+  sample_no_w = 31263
+  sample_pair_incomplete = 7910
+  sample_x_draws = 62809
+  sampled_pairs = 8000
+  sign_mismatch_L = 0
+  sign_mismatch_Salpha = 0
+  sign_mismatch_denom = 8000
+  sign_mismatch_m0 = 0
+  sign_mismatch_mplus = 0
+  sign_mismatch_mtT = 8000
+  sign_mismatch_prefactor = 0
+  sign_mismatch_u = 8000
+  sign_mismatch_u+1 = 4000
+  sign_mismatch_u+uinv = 8000
+  sign_mismatch_u-1 = 4000
+  sign_mismatch_u-uinv = 0
+  sign_mismatch_u2+1 = 0
+  sign_mismatch_u2-1 = 8000
+  sign_seen_L = 8000
+  sign_seen_Salpha = 8000
+  sign_seen_denom = 8000
+  sign_seen_m0 = 8000
+  sign_seen_mplus = 8000
+  sign_seen_mtT = 8000
+  sign_seen_prefactor = 8000
+  sign_seen_u = 8000
+  sign_seen_u+1 = 8000
+  sign_seen_u+uinv = 8000
+  sign_seen_u-1 = 8000
+  sign_seen_u-uinv = 8000
+  sign_seen_u2+1 = 8000
+  sign_seen_u2-1 = 8000
+  usable_rows = 8000
+heldout_stats:
+  d3_minus_rows = 3904
+  d3_plus_rows = 4096
+  d4_minus_rows = 2080
+  d4_plus_rows = 2016
+  d4_rows = 4096
+  invariant_feature_count = 7
+  sample_candidate_invalid_not_nonsplit = 15678
+  sample_compact_not_target = 16053
+  sample_no_t = 16048
+  sample_no_w = 32120
+  sample_pair_incomplete = 7839
+  sample_x_draws = 64114
+  sampled_pairs = 8000
+  sign_mismatch_L = 0
+  sign_mismatch_Salpha = 0
+  sign_mismatch_denom = 8000
+  sign_mismatch_m0 = 0
+  sign_mismatch_mplus = 0
+  sign_mismatch_mtT = 8000
+  sign_mismatch_prefactor = 0
+  sign_mismatch_u = 8000
+  sign_mismatch_u+1 = 4000
+  sign_mismatch_u+uinv = 8000
+  sign_mismatch_u-1 = 4000
+  sign_mismatch_u-uinv = 0
+  sign_mismatch_u2+1 = 0
+  sign_mismatch_u2-1 = 8000
+  sign_seen_L = 8000
+  sign_seen_Salpha = 8000
+  sign_seen_denom = 8000
+  sign_seen_m0 = 8000
+  sign_seen_mplus = 8000
+  sign_seen_mtT = 8000
+  sign_seen_prefactor = 8000
+  sign_seen_u = 8000
+  sign_seen_u+1 = 8000
+  sign_seen_u+uinv = 8000
+  sign_seen_u-1 = 8000
+  sign_seen_u-uinv = 8000
+  sign_seen_u2+1 = 8000
+  sign_seen_u2-1 = 8000
+  usable_rows = 8000
+train_invariant_features = u2+1 * u-uinv * mplus * m0 * Salpha * prefactor * L
+heldout_invariant_features = u2+1 * u-uinv * mplus * m0 * Salpha * prefactor * L
+shared_invariant_features = u2+1 * u-uinv * mplus * m0 * Salpha * prefactor * L
+d3_all_h90_features:
+  features = u * u+1 * u-1 * u2+1 * u2-1 * u+uinv * u-uinv * mplus * denom * mtT * m0 * Salpha * prefactor * L
+  train=4100/8000 rate=0.512500000 heldout=3928/8000 rate=0.491000000 weight=2 combo=u2+1 * mtT
+  train=4100/8000 rate=0.512500000 heldout=3928/8000 rate=0.491000000 weight=2 combo=u2-1 * m0
+  train=4100/8000 rate=0.512500000 heldout=3928/8000 rate=0.491000000 weight=3 combo=u2+1 * u2-1 * mplus
+  train=4100/8000 rate=0.512500000 heldout=3928/8000 rate=0.491000000 weight=3 combo=u+uinv * u-uinv * mplus
+  train=4100/8000 rate=0.512500000 heldout=3928/8000 rate=0.491000000 weight=3 combo=u2-1 * u+uinv * denom
+  train=4100/8000 rate=0.512500000 heldout=3928/8000 rate=0.491000000 weight=3 combo=u2+1 * u-uinv * denom
+  train=4100/8000 rate=0.512500000 heldout=3928/8000 rate=0.491000000 weight=3 combo=u * u+uinv * mtT
+  train=4100/8000 rate=0.512500000 heldout=3928/8000 rate=0.491000000 weight=3 combo=u+1 * u-1 * m0
+  train=4100/8000 rate=0.512500000 heldout=3928/8000 rate=0.491000000 weight=3 combo=u * u-uinv * m0
+  train=4100/8000 rate=0.512500000 heldout=3928/8000 rate=0.491000000 weight=3 combo=mplus * mtT * m0
+  train=4100/8000 rate=0.512500000 heldout=3928/8000 rate=0.491000000 weight=3 combo=u2-1 * u+uinv * Salpha
+  train=4100/8000 rate=0.512500000 heldout=3928/8000 rate=0.491000000 weight=3 combo=u2+1 * u-uinv * Salpha
+d3_Tsign_invariant_h90_features:
+  features = u2+1 * u-uinv * mplus * m0 * Salpha * prefactor * L
+  train=4100/8000 rate=0.512500000 heldout=3928/8000 rate=0.491000000 weight=3 combo=u2+1 * u-uinv * Salpha
+  train=4100/8000 rate=0.512500000 heldout=3928/8000 rate=0.491000000 weight=3 combo=u-uinv * mplus * L
+  train=4100/8000 rate=0.512500000 heldout=3928/8000 rate=0.491000000 weight=3 combo=u-uinv * prefactor * L
+  train=4100/8000 rate=0.512500000 heldout=3928/8000 rate=0.491000000 weight=4 combo=u-uinv * mplus * m0 * Salpha
+  train=4100/8000 rate=0.512500000 heldout=3928/8000 rate=0.491000000 weight=4 combo=u-uinv * m0 * Salpha * prefactor
+  train=4100/8000 rate=0.512500000 heldout=3928/8000 rate=0.491000000 weight=4 combo=u2+1 * u-uinv * m0 * L
+  train=4100/8000 rate=0.512500000 heldout=3928/8000 rate=0.491000000 weight=5 combo=u2+1 * u-uinv * mplus * Salpha * prefactor
+  train=4100/8000 rate=0.512500000 heldout=3928/8000 rate=0.491000000 weight=6 combo=u2+1 * u-uinv * mplus * m0 * prefactor * L
+  train=4046/8000 rate=0.505750000 heldout=3946/8000 rate=0.493250000 weight=2 combo=mplus * Salpha
+  train=4046/8000 rate=0.505750000 heldout=3946/8000 rate=0.493250000 weight=2 combo=Salpha * prefactor
+  train=4046/8000 rate=0.505750000 heldout=3946/8000 rate=0.493250000 weight=2 combo=u2+1 * L
+  train=4046/8000 rate=0.505750000 heldout=3946/8000 rate=0.493250000 weight=3 combo=u2+1 * m0 * Salpha
+d4_all_h90_features:
+  features = u * u+1 * u-1 * u2+1 * u2-1 * u+uinv * u-uinv * mplus * denom * mtT * m0 * Salpha * prefactor * L
+  train=2126/4036 rate=0.526759167 heldout=2023/4096 rate=0.493896484 weight=2 combo=u+1 * m0
+  train=2126/4036 rate=0.526759167 heldout=2023/4096 rate=0.493896484 weight=3 combo=u+1 * u2+1 * mplus
+  train=2126/4036 rate=0.526759167 heldout=2023/4096 rate=0.493896484 weight=3 combo=u+1 * u+uinv * denom
+  train=2126/4036 rate=0.526759167 heldout=2023/4096 rate=0.493896484 weight=3 combo=u-1 * u2+1 * mtT
+  train=2126/4036 rate=0.526759167 heldout=2023/4096 rate=0.493896484 weight=3 combo=u-1 * u2-1 * m0
+  train=2126/4036 rate=0.526759167 heldout=2023/4096 rate=0.493896484 weight=3 combo=u+1 * u+uinv * Salpha
+  train=2126/4036 rate=0.526759167 heldout=2023/4096 rate=0.493896484 weight=3 combo=u+1 * u2+1 * prefactor
+  train=2126/4036 rate=0.526759167 heldout=2023/4096 rate=0.493896484 weight=3 combo=u+1 * denom * L
+  train=2126/4036 rate=0.526759167 heldout=2023/4096 rate=0.493896484 weight=3 combo=u+1 * Salpha * L
+  train=2126/4036 rate=0.526759167 heldout=2023/4096 rate=0.493896484 weight=4 combo=u-1 * u2+1 * u2-1 * mplus
+  train=2126/4036 rate=0.526759167 heldout=2023/4096 rate=0.493896484 weight=4 combo=u * u+1 * u+uinv * mplus
+  train=2126/4036 rate=0.526759167 heldout=2023/4096 rate=0.493896484 weight=4 combo=u-1 * u+uinv * u-uinv * mplus
+d4_Tsign_invariant_h90_features:
+  features = u2+1 * u-uinv * mplus * m0 * Salpha * prefactor * L
+  train=2048/4036 rate=0.507433102 heldout=2016/4096 rate=0.492187500 weight=0 combo=1
+  train=2048/4036 rate=0.507433102 heldout=2016/4096 rate=0.492187500 weight=2 combo=mplus * prefactor
+  train=2048/4036 rate=0.507433102 heldout=2016/4096 rate=0.492187500 weight=3 combo=u2+1 * mplus * m0
+  train=2048/4036 rate=0.507433102 heldout=2016/4096 rate=0.492187500 weight=3 combo=u2+1 * m0 * prefactor
+  train=2048/4036 rate=0.507433102 heldout=2016/4096 rate=0.492187500 weight=3 combo=m0 * Salpha * L
+  train=2048/4036 rate=0.507433102 heldout=2016/4096 rate=0.492187500 weight=4 combo=u2+1 * mplus * Salpha * L
+  train=2048/4036 rate=0.507433102 heldout=2016/4096 rate=0.492187500 weight=4 combo=u2+1 * Salpha * prefactor * L
+  train=2048/4036 rate=0.507433102 heldout=2016/4096 rate=0.492187500 weight=5 combo=mplus * m0 * Salpha * prefactor * L
+  train=2032/4036 rate=0.503468781 heldout=2030/4096 rate=0.495605469 weight=2 combo=u-uinv * m0
+  train=2032/4036 rate=0.503468781 heldout=2030/4096 rate=0.495605469 weight=3 combo=u2+1 * u-uinv * mplus
+  train=2032/4036 rate=0.503468781 heldout=2030/4096 rate=0.495605469 weight=3 combo=u2+1 * u-uinv * prefactor
+  train=2032/4036 rate=0.503468781 heldout=2030/4096 rate=0.495605469 weight=3 combo=u-uinv * Salpha * L
+p27_label2_h90_normone_recurrence_probe_rows=1/1

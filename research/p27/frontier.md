@@ -162,6 +162,18 @@ unchanged through depth `24` on a 200k-source p27 run.  So the easy packet
 source is killed; the surviving tests are the alpha/cyclic-quartic
 decomposition and `d3/d4` recurrence telemetry.
 
+The natural H90 norm-one recurrence screen is also negative:
+[P27 Label-2 H90 Norm-One Recurrence Screen](evidence/p27_label2_h90_normone_recurrence_20260621.md).
+It tested squareclasses built from
+`u=(m0+mt*T)/(2*T*Salpha)` and its closest H90 companions on independent
+8,000-row train/heldout p27 samples.  The genuinely `T -> -T` invariant
+features are only `u^2+1`, `u-u^-1`, `mplus`, `m0`, `Salpha`, `prefactor`,
+and `L`.  Best apparent train lifts collapse on heldout: d3 best
+`0.5125 -> 0.4910`, d4 best `0.5268 -> 0.4939`, and invariant-only d4 is
+just raw bias.  This kills H90 norm-one squareclass products as `d3/d4`
+selectors.  The remaining H90 route is non-visible alpha/Prym decomposition,
+not canonical-`T` feature fitting.
+
 A residual `[3]` coset source screen is also negative:
 [P27 Label-2 Residual E[3] Coset Screen](evidence/p27_label2_residual_e3_coset_screen_20260621.md).
 Coset `0` briefly showed a tail lift, but an independent 2M replication did
