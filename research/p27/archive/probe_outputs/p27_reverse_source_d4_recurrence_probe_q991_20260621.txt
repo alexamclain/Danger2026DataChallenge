@@ -1,0 +1,88 @@
+p27 reverse-source d4 quotient/recurrence probe
+p = 1000000000000000000000000103
+target_pairs = 1000
+seed = 20260621
+p27_quotient_descent:
+  d3_minus_E_points = 516
+  d3_missing_on_E_orbit = 0
+  d3_not_descended_to_E = 0
+  d3_plus_E_points = 484
+  d3_quotient_rows = 1000
+  d4_minus_E_points_after_d3 = 240
+  d4_missing_on_E_orbit = 0
+  d4_not_descended_to_E = 0
+  d4_plus_E_points_after_d3 = 244
+  d4_quotient_rows_after_d3 = 484
+  orbit_size_4 = 1000
+  oriented_candidates = 4000
+  quotient_E_points = 1000
+  sample_candidate_invalid_not_nonsplit = 2070
+  sample_compact_not_target = 1977
+  sample_no_t = 2010
+  sample_no_w = 4083
+  sample_pair_incomplete = 1035
+  sample_x_draws = 8099
+  sampled_pairs = 1000
+p27_d4_small_coeff_line_screen:
+  best_good = 268
+  best_polarity = 1
+  best_zeros = 0
+  exact_lines = 0
+  line_rows = 484
+  small_coeff_bound = 1
+  small_coeff_lines_tested = 26
+p27_d4_small_coeff_line_screen_top_lines:
+  good=268/484 rate=0.553719008 zeros=0 polarity=1 line=-1+1*X+0*W
+  good=268/484 rate=0.553719008 zeros=0 polarity=-1 line=1+-1*X+0*W
+  good=264/484 rate=0.545454545 zeros=0 polarity=1 line=0+-1*X+0*W
+  good=264/484 rate=0.545454545 zeros=0 polarity=-1 line=0+1*X+0*W
+  good=260/484 rate=0.537190083 zeros=0 polarity=1 line=1+1*X+0*W
+  good=260/484 rate=0.537190083 zeros=0 polarity=1 line=0+1*X+1*W
+  good=260/484 rate=0.537190083 zeros=0 polarity=1 line=0+1*X+-1*W
+  good=260/484 rate=0.537190083 zeros=0 polarity=-1 line=0+-1*X+1*W
+small_prime_d4_recurrence_screens:
+q=991:
+  enumeration:
+  enum_compact_not_target = 357
+  enum_no_label2_candidate = 216
+  quotient_descent:
+  d3_minus_E_points = 72
+  d3_missing_on_E_orbit = 0
+  d3_not_descended_to_E = 0
+  d3_plus_E_points = 72
+  d3_quotient_rows = 144
+  d4_minus_E_points_after_d3 = 0
+  d4_missing_on_E_orbit = 0
+  d4_not_descended_to_E = 0
+  d4_plus_E_points_after_d3 = 72
+  d4_quotient_rows_after_d3 = 72
+  orbit_size_4 = 144
+  oriented_candidates = 576
+  quotient_E_points = 144
+  d4_projective_line_screen:
+  best_good = 72
+  best_polarity = 1
+  best_zeros = 0
+  exact_lines = 1
+  line_rows = 72
+  projective_lines_tested = 983073
+  d4_projective_line_screen_top_lines:
+  good=72/72 rate=1.000000000 zeros=0 polarity=1 line=1+0*X+0*W
+  simple_E_transform_recurrence_screen:
+  transform=neg_add_T0 polarity=1 good=72/72 rate=1.000000000 coverage=1.000000000
+  transform=neg polarity=1 good=72/72 rate=1.000000000 coverage=1.000000000
+  transform=id polarity=1 good=72/72 rate=1.000000000 coverage=1.000000000
+  transform=add_T0 polarity=1 good=72/72 rate=1.000000000 coverage=1.000000000
+  transform=neg_double_add_Tm1 polarity=1 good=4/4 rate=1.000000000 coverage=0.055555556
+  transform=neg_double_add_T1 polarity=1 good=4/4 rate=1.000000000 coverage=0.055555556
+  transform=neg_double_add_T0 polarity=-1 good=4/4 rate=1.000000000 coverage=0.055555556
+  transform=neg_double polarity=-1 good=4/4 rate=1.000000000 coverage=0.055555556
+  transform=double_add_Tm1 polarity=1 good=4/4 rate=1.000000000 coverage=0.055555556
+  transform=double_add_T1 polarity=1 good=4/4 rate=1.000000000 coverage=0.055555556
+  transform=double_add_T0 polarity=-1 good=4/4 rate=1.000000000 coverage=0.055555556
+  transform=double polarity=-1 good=4/4 rate=1.000000000 coverage=0.055555556
+  transform=neg_add_Tm1 polarity=1 good=0/0 rate=0.000000000 coverage=0.000000000
+  transform=neg_add_T1 polarity=1 good=0/0 rate=0.000000000 coverage=0.000000000
+  transform=add_Tm1 polarity=1 good=0/0 rate=0.000000000 coverage=0.000000000
+  transform=add_T1 polarity=1 good=0/0 rate=0.000000000 coverage=0.000000000
+p27_reverse_source_d4_recurrence_probe_rows=1/1

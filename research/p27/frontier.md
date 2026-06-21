@@ -272,6 +272,19 @@ the p27 small-coefficient line screen had no exact line and best rate
 E-level divisor/theta/Kummer class or recurrence, not another branch/T-choice
 or line scan.
 
+The d4 recurrence follow-up keeps the quotient lead alive but does not close
+it:
+[P27 Reverse Source D4 Recurrence Screen](evidence/p27_reverse_source_d4_recurrence_20260621.md).
+After conditioning on d3, d4 also descends perfectly to the same residual
+elliptic quotient: on the 5,000-fiber p27 sample, `2466` d3-positive fibers
+produced `1276/1190` d4 plus/minus with zero non-descended or missing fibers.
+The p27 small-coefficient d4 line screen found no exact line and best rate
+`0.5312`.  Tiny fields `q=607,863,991` make d4 constant on the d3-positive
+locus, so their exact simple-transform recurrences are degeneracies, not a
+p27 theorem.  The active moonshot is now very specific: derive E-level
+functions/classes `f3(X,W)` and `f4(X,W)`, compare their divisors or Kummer
+classes, and look for a recurrence or sourceable walk there.
+
 The newest p26 GPU trace/norm result is positive structure but negative as a
 production prefilter:
 [P27 GPU Filter-Cost Lesson From P26](evidence/p27_gpu_filter_cost_lesson_from_p26_20260621.md).

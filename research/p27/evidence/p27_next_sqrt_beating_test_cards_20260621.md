@@ -357,6 +357,29 @@ or compute the E-level source-cover genus/quotients and show it is generic.
 Then test whether d4 reuses the same character after a named transformation.
 ```
 
+D4 recurrence update:
+[P27 Reverse Source D4 Recurrence Screen](p27_reverse_source_d4_recurrence_20260621.md).
+
+```text
+d4 also descends to E after d3:
+  p27 d3-positive E fibers = 2466
+  d4 plus/minus = 1276/1190
+  d4_not_descended_to_E = 0
+
+But:
+  p27 small degree-1 line screen: exact_lines = 0, best = 0.5312
+  q=607,863,991 make d4 constant, so simple-transform exactness there is
+  degenerate and not promotion evidence.
+```
+
+Sharper remaining test:
+
+```text
+Derive explicit E-level functions/classes f3(X,W), f4(X,W), compare divisors
+or Kummer classes, and ask whether f4 is a translate/pullback of f3 on a
+non-degenerate validation field.
+```
+
 Promotion bar:
 
 ```text

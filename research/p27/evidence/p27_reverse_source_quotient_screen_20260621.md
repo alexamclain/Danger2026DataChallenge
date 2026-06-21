@@ -141,6 +141,11 @@ would be the first real sqrt-beating shape; a fresh unrelated half-cover keeps
 the route constant-factor only.
 ```
 
+Status: first recurrence screen completed.  d4 also descends to `E`, but no
+p27 degree-1 line character or non-degenerate small-field simple-transform
+recurrence was found; see
+[P27 Reverse Source D4 Recurrence Screen](p27_reverse_source_d4_recurrence_20260621.md).
+
 ## Continue / Kill
 
 ```text
@@ -157,6 +162,7 @@ kill = searching compactD-fiber branch/T choices for this bit
 
 - Gate: `research/p27/archive/gates/p27_reverse_source_quotient_probe.py`
 - Output: `research/p27/archive/probe_outputs/p27_reverse_source_quotient_probe_20260621.txt`
+- Follow-up: [P27 Reverse Source D4 Recurrence Screen](p27_reverse_source_d4_recurrence_20260621.md)
 - Related: [P27 Reverse-Doubling Source Screen](p27_reverse_doubling_source_screen_20260621.md)
 - Related: [P27 Label-2 H90 / Order-4 Lift](p27_label2_h90_order4_lift_20260621.md)
 - Related: [P27 Label-2 Alpha/Branch Recurrence Probe](p27_label2_alpha_branch_recurrence_20260621.md)
