@@ -670,8 +670,10 @@ D_plus iff -core is square
 ```
 
 The p27 probe has zero mismatches on `16,096` rows, and the online Magma
-`q=607` validation has `mismatch=0`.  The domain spin quartic obtained by
-eliminating `t`,
+`q=607` validation has `mismatch=0`.  The C depth histogram now identifies
+`D_plus` as an exact two-gate prefix: all Dplus-filtered rows survive through
+depth `6`, then return to geometric half-loss.  The domain spin quartic
+obtained by eliminating `t`,
 
 ```text
 r^4 - (a+2)(a^2+1)(a^2+4)r^2 + (a+2)^2(a^2+4) = 0,
@@ -699,7 +701,8 @@ So the next test is not "sample the full cover"; it is:
 
 ```text
 find a low-genus quotient/Prym factor that still remembers Dplus, or test
-whether Dplus recurs/couples to later selected x-square gates.
+whether a new trace/norm class inside the Dplus-conditioned stream predicts
+later selected x-square gates.
 ```
 
 Promotion bar:

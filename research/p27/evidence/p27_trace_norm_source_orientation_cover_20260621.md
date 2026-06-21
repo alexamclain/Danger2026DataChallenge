@@ -21,6 +21,13 @@ only current structural narrowing lead.  It does kill the naive direct sampler
 "just add the orientation roots and sample the full cover" unless a hidden
 quotient/Prym factor is found.
 
+Follow-up context:
+[P27 Trace/Norm D_plus Prefix Identity](p27_trace_norm_dplus_prefix_identity_20260621.md).
+Since `D_plus` is an exact two-gate prefix, this genus-69 cost should be read
+as the cost of directly sourcing that early prefix through the full
+orientation cover.  The sqrt-beating route still needs a quotient or recurrence
+that reaches post-Dplus gates.
+
 ## Cover
 
 Use:

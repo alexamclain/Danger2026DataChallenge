@@ -221,6 +221,17 @@ promotes trace/norm as a real structural stratum/source target, but not yet as
 a production filter: the current implementation still pays to classify the
 rejected raw-y draws.
 
+The follow-up interpretation is now sharper:
+[P27 Trace/Norm D_plus Prefix Identity](evidence/p27_trace_norm_dplus_prefix_identity_20260621.md).
+The C depth histogram shows `D_plus` has no stops before depth `6`; relative
+to the ordinary nonsplit stream it is exactly a two-gate prefix.  The GPU `4x`
+conditional lift is therefore the expected lift from pre-paying two
+half-density gates, not evidence by itself of a hidden late-depth recurrence.
+After depth `6`, the Dplus-conditioned stream returns to geometric half-loss.
+So trace/norm remains valuable as an algebraic description of early selected
+halving gates, but the moonshot must find a new trace/norm class, quotient, or
+recurrence that couples to post-Dplus gates.
+
 The first exact small-field check of that trace/norm quotient changes the
 math ask:
 [P27 Trace/Norm Spin Obstruction](evidence/p27_trace_norm_spin_obstruction_20260621.md).

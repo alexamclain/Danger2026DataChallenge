@@ -150,6 +150,22 @@ with no observed loss through depth 30 in this probe.  As implemented today, it
 does not reduce raw GPU work because rejected raw-y draws still have to be
 classified.
 
+## Follow-Up Interpretation
+
+The C depth histogram now identifies what the `4x` is:
+[P27 Trace/Norm D_plus Prefix Identity](p27_trace_norm_dplus_prefix_identity_20260621.md).
+Trace/norm `D_plus` has no stops before depth `6`; it is exactly the first two
+selected halving gates in trace/norm language.  After conditioning on Dplus,
+the later gates return to approximately geometric half-loss.
+
+So this GPU A/B should be read as:
+
+```text
+confirmed = trace/norm Dplus is an exact scalable two-gate prefix
+not confirmed = Dplus is a new late-depth recurrence or raw source shrink
+next = find a trace/norm quotient/class that predicts gates after Dplus
+```
+
 ## Decision
 
 ```text
@@ -157,16 +173,18 @@ promote as production throughput filter:
   none from fixed d-prefix / ecover-prefix
 
 promote as exact structural narrowing target:
-  trace/norm D_plus
+  trace/norm D_plus as an algebraic two-gate prefix
 
 next GPU-worthy implementation target:
-  direct sampler or cheaper early test for trace/norm D_plus
+  cheaper implementation of the same two-gate prefix, or telemetry for a
+  post-Dplus trace/norm class
 
 next math target:
-  explain D_plus as a source map / quotient stratum, then test whether that
-  stratum recurs or couples to later d_j gates
+  explain whether any quotient/Prym/trace-norm class couples Dplus to later
+  d_j gates
 ```
 
 The fixed-prefix family should remain useful telemetry, but it should not be
 sold as reducing the 550B raw candidate search by itself.  The trace/norm
-family is the one credible search-space narrowing lead from this GPU pass.
+family is the one credible algebraic handle from this GPU pass, now understood
+as a two-gate prefix unless a later-gate coupling is found.
