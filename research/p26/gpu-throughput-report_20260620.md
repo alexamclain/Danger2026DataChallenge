@@ -175,6 +175,48 @@ A no-hit result after 550B candidates would not have falsified the method, and
 this early hit does not prove an asymptotic sub-square-root algorithm. It is a
 strong fixed-prime practical outcome.
 
+## Seed Order And Source-Stratum Follow-Up
+
+The early p26 hit is not enough evidence for a usable seed law. It is, however,
+worth treating as a possible clue that seed order may have accidentally exposed
+a real `X1(16)` source stratum that should be learned and sampled directly.
+
+Future GPU-agent runs should log enough telemetry to distinguish seed-order
+effects from source-stratum effects. For every hit, and for selected near-hit
+controls, record:
+
+- `seed_offset`
+- `chunk_nonce`
+- thread id
+- raw and local draw counts
+- source `y`
+- root index
+- `root_x` / `xP16`
+- `A`
+- `x0`
+- first halving witness `first_w`
+- `V`
+- `D`
+- `compactD`
+- q-sheet or equivalent sheet label
+
+The comparison matrix should include:
+
+- identity seed order versus SplitMix seed order;
+- hit-neighborhood windows versus matched controls;
+- prefix behavior versus held-out behavior.
+
+Promotion bar:
+
+- held-out depth-24 or depth-26 lift should be at least 1.25x;
+- require at least 100 compared survivors before treating the signal as real;
+- require a direct way to sample or restart into the winning stratum, rather
+  than only changing seed order.
+
+In short: the next target is not "pick better seeds" by itself. The stronger
+target is to identify whether a real `X1(16)` source stratum is being exposed
+by the seed order, then sample that stratum directly.
+
 ## Cloud Operations
 
 RunPod pods were preferable to serverless for this experiment because the job
