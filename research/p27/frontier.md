@@ -510,6 +510,18 @@ sqrt" theorem checkpoint: genus `<=1` or a named recurrence/sourceable walk
 promotes; high/generic branch degree with unrelated `d4` kills the K-line
 source route.
 
+The K-line now has a cleaner coordinate for that extraction:
+[P27 Kummer Belyi Structure Probe](evidence/p27_kummer_belyi_structure_probe_20260621.md).
+Symbolically,
+`K_num=(X^2-2X-1)^2*(X^2+2X-1)^2` and
+`K_den=4X(X-1)(X+1)(X^2+1)^2`, with branch resultant
+`K^4*(K^2+4)^4`.  Thus `lambda=-K^2/4` has branch values
+`0,1,infinity`.  The cheap visible branch atoms `K`, `K^2+4`, and `K^2` are
+all already square on the selected guard-field rows, so they do not explain
+`d3/d4` and do not give a sampler.  The useful consequence is only the
+normalization: the next Magma/Sage pass should mark these Belyi branch values
+when recovering the actual `d3` branch class.
+
 The newest p26 GPU trace/norm result is positive structure but negative as a
 production prefilter:
 [P27 GPU Filter-Cost Lesson From P26](evidence/p27_gpu_filter_cost_lesson_from_p26_20260621.md).
