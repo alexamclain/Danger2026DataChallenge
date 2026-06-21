@@ -13,6 +13,13 @@ warning.  Riemann-Hurwitz predicts that the quotient by this order-4
 automorphism has genus `1`, identifying the cover as a cyclic quartic cover
 over the residual elliptic curve `E: W^2=X^3-X`.
 
+Follow-up online Magma component checks confirm the eliminated cyclic-quartic
+model has a degree-30 genus-17 main component over `q=607` and `q=1471`, plus
+a degree-1 genus-0 projection artifact.  See
+[P27 Label-2 Cyclic-Quartic Component Check](p27_label2_cyclic_components_magma_20260621.md).
+Thus the open win is specifically the `alpha` quotient/Prym decomposition,
+not a low-genus raw eliminated model.
+
 This does not by itself beat sqrt scaling, but it changes the concrete target:
 derive the elliptic cyclic-quartic character/source, and test whether that
 structure recurs for later `d_j` gates.
@@ -251,6 +258,7 @@ kill = generic visible-character scans unrelated to the alpha symmetry
 - Output: `research/p27/archive/probe_outputs/p27_label2_alpha_branch_recurrence_probe_20260621.txt`
 - Related: [P27 Label-2 Cover Genus And Recurrence Probe](p27_label2_cover_genus_recurrence_20260621.md)
 - Related: [P27 Label-2 Cover Trace Decomposition Probe](p27_label2_cover_trace_decomposition_20260621.md)
+- Related: [P27 Label-2 Cyclic-Quartic Component Check](p27_label2_cyclic_components_magma_20260621.md)
 
 ```text
 p27_label2_h90_order4_lift_rows=1/1

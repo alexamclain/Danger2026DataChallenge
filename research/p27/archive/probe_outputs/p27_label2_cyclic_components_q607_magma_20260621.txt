@@ -1,0 +1,3 @@
+RESULT p27_label2_cyclic_components_q607 2 true false
+COMP 1 1 30 17 888
+COMP 2 1 1 0 608

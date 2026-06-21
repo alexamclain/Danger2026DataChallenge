@@ -142,6 +142,18 @@ quartic cover over the residual elliptic curve E: W^2=X^3-X.
 
 See [P27 Label-2 H90 / Order-4 Lift](p27_label2_h90_order4_lift_20260621.md).
 
+Online Magma follow-up:
+
+```text
+q=607:  main component degree 30, genus 17; projection artifact degree 1, genus 0
+q=1471: main component degree 30, genus 17; projection artifact degree 1, genus 0
+```
+
+See [P27 Label-2 Cyclic-Quartic Component Check](p27_label2_cyclic_components_magma_20260621.md).
+This confirms the raw eliminated cyclic-quartic model is not secretly low
+genus; the remaining source-shaped test is the alpha quotient/Prym
+decomposition of the genus-17 component.
+
 ## Concrete Tests Left
 
 ### Sage/Magma Verification
@@ -219,9 +231,12 @@ kill = CPU production use of compactdneg at current speed
 - Output: `research/p27/archive/probe_outputs/p27_label2_cover_genus_probe_20260621.txt`
 - Output: `research/p27/archive/probe_outputs/p27_label2_cover_trace_probe_20260621.txt`
 - Output: `research/p27/archive/probe_outputs/p27_label2_h90_lift_probe_20260621.txt`
+- Output: `research/p27/archive/probe_outputs/p27_label2_cyclic_components_q607_magma_20260621.txt`
+- Output: `research/p27/archive/probe_outputs/p27_label2_cyclic_components_q1471_magma_20260621.txt`
 - Output: `research/p27/archive/probe_outputs/p27_label2_compactdneg_seed138_500k_20260621.txt`
 - Output: `research/p27/archive/probe_outputs/p27_label2_compactdneg_seed140_500k_20260621.txt`
 - Related: [P27 Label-2 Second-Gate Cover](p27_label2_second_gate_cover_20260621.md)
+- Related: [P27 Label-2 Cyclic-Quartic Component Check](p27_label2_cyclic_components_magma_20260621.md)
 
 ```text
 p27_label2_cover_genus_recurrence_rows=1/1

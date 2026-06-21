@@ -38,6 +38,12 @@ Online Magma sanity fixture:
 research/p27/archive/fixtures/p27_ks_branch_sanity_q1471_magma.m
 ```
 
+Online Magma output:
+
+```text
+research/p27/archive/probe_outputs/p27_ks_branch_sanity_q1471_magma_20260621.txt
+```
+
 Command:
 
 ```bash
@@ -79,10 +85,10 @@ alpha: T -> -T, R -> R*(m0 - mt*T)/(2*T*Salpha)
 alpha^2 = R-deck involution
 ```
 
-## Small Magma Sanity Check
+## Online Magma Sanity Check
 
 The Magma fixture is a small guard-field validation, not the full
-normalization.  It should emit:
+normalization.  It was submitted to the online Magma calculator and emitted:
 
 ```text
 RESULT p27_ks_branch_sanity_q1471 ok 1468 0 0 0 0 0 -1
@@ -158,6 +164,7 @@ kill = GPU production work until this yields a direct sampler or cheap test
 - Generator: `research/p27/archive/gates/p27_ks_branch_extraction_packet.py`
 - Output: `research/p27/archive/probe_outputs/p27_ks_branch_extraction_packet_20260621.txt`
 - Magma fixture: `research/p27/archive/fixtures/p27_ks_branch_sanity_q1471_magma.m`
+- Magma output: `research/p27/archive/probe_outputs/p27_ks_branch_sanity_q1471_magma_20260621.txt`
 
 ```text
 p27_ks_branch_extraction_packet_rows=1/1

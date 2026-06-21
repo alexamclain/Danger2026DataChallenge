@@ -144,6 +144,16 @@ second-gate cover as a cyclic quartic cover over the residual elliptic curve
 test from "is genus 17 generic?" to "can the cyclic quartic character over E
 be sourced cheaply or shown to recur for d3/d4?"
 
+The online Magma component check now confirms the genus warning:
+[P27 Label-2 Cyclic-Quartic Component Check](evidence/p27_label2_cyclic_components_magma_20260621.md).
+After eliminating `T`, the raw projective cyclic-quartic model must be
+reduced and decomposed.  Over both `q=607` and the main guard field `q=1471`,
+Magma finds two components: a degree-30 genus-17 main component and a degree-1
+genus-0 projection artifact.  This kills the hope that the eliminated model is
+itself secretly low genus.  It keeps exactly one serious H90 route alive:
+compute the `alpha` quotient/Prym decomposition of the genus-17 component and
+derive a cyclic-quartic character over `E` that recurs or couples to `d3/d4`.
+
 The first source attempt from that viewpoint is negative:
 [P27 Label-2 E[2] Packet Source Probe](evidence/p27_label2_e2_packet_source_probe_20260621.md).
 The rational `E[2]` packet selector is exact and gives the expected `~2x`
@@ -583,8 +593,9 @@ order-4/H90 identities in one Magma/Sage-ready handoff.  Its symbolic checks
 recover `Sroot^2=K`, the branch resultants
 `Sroot^8*(Sroot^2-2Sroot+2)^4*(Sroot^2+2Sroot+2)^4` and
 `K^4*(K^2+4)^4`, and the H90 identities with zero remainders.  The attached
-online-Magma sanity fixture is only a guard-field checksum over `q=1471`; the
-real next test is normalization of the `d3` source over `P^1_K` and
+online-Magma sanity fixture has now passed over `q=1471`; it is only a
+guard-field checksum, not the full extraction.  The real next test is
+normalization of the `d3` source over `P^1_K` and
 `P^1_Sroot`.  Promote for genus `<=1`, a sourceable recurrence, or a cheap
 character/source sampler; kill for high/generic branch degree or an unrelated
 fresh `d4` half-cover.
