@@ -1,9 +1,10 @@
 # DANGER3 Pomerance Search Results
 
 This fork records verified DANGER3 Pomerance triples for
-`p = 10^25 + 13`, `p = 10^23 + 117`, and `p = 10^22 + 9`, plus the local
-Codex-assisted experimental work used to find and verify them. This work was
-undertaken as part of a collaboration across teams in DARPA's expMath program.
+`p = 10^26 + 67`, `p = 10^25 + 13`, `p = 10^23 + 117`, and
+`p = 10^22 + 9`, plus the local Codex-assisted experimental work used to find
+and verify them. This work was undertaken as part of a collaboration across
+teams in DARPA's expMath program.
 
 Curated research notes now live in:
 

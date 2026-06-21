@@ -56,4 +56,5 @@ dkms.conf
 /notes/
 /pomerance
 /pomerance_*
+!/pomerance_cuda.cu
 __pycache__/

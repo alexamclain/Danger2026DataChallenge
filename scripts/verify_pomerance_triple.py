@@ -32,11 +32,13 @@ def first_existing(candidates: list[Path]) -> Path:
 
 DEFAULT_VPP = first_existing([
     REPO_ROOT / "external" / "DANGER3" / "vpp.py",
+    REPO_ROOT / "research" / "p24" / "archive" / "sources" / "upstream_DANGER3" / "vpp.py",
     CODEX_ROOT / "open-co-mathematician" / "external" / "DANGER3" / "vpp.py",
     CODEX_ROOT / "danger3-short-certificate-experiments" / "external" / "DANGER3" / "vpp.py",
 ])
 DEFAULT_LEAN_VPP = first_existing([
     REPO_ROOT / "external" / "DANGER3" / "lean_vpp.py",
+    REPO_ROOT / "research" / "p24" / "archive" / "sources" / "upstream_DANGER3" / "lean_vpp.py",
     CODEX_ROOT / "open-co-mathematician" / "external" / "DANGER3" / "lean_vpp.py",
     CODEX_ROOT / "danger3-short-certificate-experiments" / "external" / "DANGER3" / "lean_vpp.py",
 ])
