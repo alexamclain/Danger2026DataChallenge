@@ -157,8 +157,8 @@ scan.
 2. Low-genus all-plus source test:
 
 ```text
-Use reverse doubling with x_next=z^2, intersect with the label-2/compactD
-source, and compute whether any quotient stays low-genus.
+Use the reverse-doubling source equations already screened for density, and
+compute whether any quotient stays low-genus.
 ```
 
 3. GPU test remains practical:
@@ -172,11 +172,12 @@ Do not expect norm factors to remove the 1/2 loss.
 
 ```text
 continue = non-visible H90/theta quotient on the iterated cover
-continue = reverse-doubling all-plus source construction
+continue = Sage/Magma quotient/genus test for the reverse-doubling source
 continue = low-genus quotient/source for all-plus iterated 2-cover
 
 kill = local A,x norm-character selector for selected u+2
 kill = small selected-orientation GF(2) product at the screened feature depth
+kill = expecting reverse-doubling density alone to beat random half-loss
 kill = expecting compactD to bias the visible norm span
 kill = fixed-prefix u+2 filtering as sqrt-beating
 ```
@@ -188,6 +189,7 @@ kill = fixed-prefix u+2 filtering as sqrt-beating
 - Related: [P27 Halving U+2 X-Square Gate](p27_halving_usquare_gate_20260621.md)
 - Related: [P27 U+2 Sequence Recurrence Screen](p27_usquare_sequence_recurrence_20260621.md)
 - Related: [P27 Selected Orientation/Cocycle Span Screen](p27_selected_orientation_cocycle_span_20260621.md)
+- Related: [P27 Reverse-Doubling Source Screen](p27_reverse_doubling_source_screen_20260621.md)
 - Related: [P27 Nonsplit W-Obstruction Identity](p27_nonsplit_w_obstruction_identity_20260621.md)
 
 ```text

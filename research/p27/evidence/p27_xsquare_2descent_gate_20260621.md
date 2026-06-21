@@ -223,13 +223,14 @@ effort on seed-order laws unless a new mathematical invariant is proposed.
 continue = iterated 2-descent / x-square tower
 continue = GPU prefix x-square tests
 continue = GPU u+2 precheck before sqrt(w) for d3/d4 prefix filters
-continue = reverse-doubling all-plus source / non-visible H90 quotient
+continue = Sage/Magma quotient/genus test for the reverse-doubling source
 continue = expert ask about lifting X1(16) into an iterated 2-cover source
 
 kill = branch-choice selector for the next x-square bit
 kill = treating independent u+2 checks as sqrt-beating
 kill = local A,x norm-character selector for selected u+2
 kill = small selected-orientation product span for selected u+2
+kill = expecting reverse-doubling density alone to beat random half-loss
 kill = independent w_j predictor
 kill = u_j+A as a selector, since it is square on observed selected points
 kill = seed-order/bucket law without a mathematical invariant
@@ -241,6 +242,7 @@ kill = seed-order/bucket law without a mathematical invariant
 - Related: [P27 Nonsplit W-Obstruction Identity](p27_nonsplit_w_obstruction_identity_20260621.md)
 - Related: [P27 U+2 Norm/Coboundary Screen](p27_usquare_norm_coboundary_20260621.md)
 - Related: [P27 Selected Orientation/Cocycle Span Screen](p27_selected_orientation_cocycle_span_20260621.md)
+- Related: [P27 Reverse-Doubling Source Screen](p27_reverse_doubling_source_screen_20260621.md)
 - Related: [P27 Selected Halving Tower Profile](p27_halving_tower_profile_20260621.md)
 - Related: [P27 Label-2 Alpha/Branch Recurrence Probe](p27_label2_alpha_branch_recurrence_20260621.md)
 - Related: [P27 Halving U+2 X-Square Gate](p27_halving_usquare_gate_20260621.md)

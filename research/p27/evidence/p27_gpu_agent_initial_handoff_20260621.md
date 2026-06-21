@@ -179,6 +179,15 @@ orientation products as GPU filters.  If orientation columns are already
 available, log them only as diagnostics.  The next real source target is the
 reverse-doubled square-source construction, not another prefix-product scan.
 
+Reverse-doubling source warning:
+[P27 Reverse-Doubling Source Screen](p27_reverse_doubling_source_screen_20260621.md).
+The reverse equations are exact, but p27 density remains random-half on two
+5,000-pair CPU seeds (`0.4932` and `0.5044`).  The source multiplicity also
+matches the generic expectation of about `2` z-points and `4` `(z,Y)` points
+per oriented compactD candidate.  Do not implement a reverse-doubling GPU
+sampler until a quotient/source map is named by Sage/Magma or an expert.  GPU
+can log reverse-source columns only as diagnostics.
+
 GPU U+2 cost result:
 [P27 GPU U+2 Precheck Probe](p27_gpu_uprecheck_probe_20260621.md).
 CUDA `x16uprecheckprobe` confirmed the identity as a real continuation-scope

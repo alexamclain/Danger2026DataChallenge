@@ -191,12 +191,13 @@ d4 score was `0.5025`.
 ```text
 continue = GPU A/B for u+2 precheck before sqrt(w) in d3/d4 prefix filters
 continue = symbolic recurrence search for chi(u_j+2) across successive gates
-continue = reverse-doubling all-plus source / non-visible H90 quotient
+continue = Sage/Magma quotient/genus test for the reverse-doubling source
 continue = expert ask framed as iterated Kummer characters chi(u_j+2)
 
 kill = expecting compactD alone to bias the later u+2 sequence
 kill = local A,x norm-character selector for selected u+2
 kill = small selected-orientation product span for selected u+2
+kill = expecting reverse-doubling density alone to beat random half-loss
 kill = treating independent u+2 filters as sqrt-beating
 kill = branch-choice selector after the u+2 identity
 ```
@@ -209,6 +210,7 @@ kill = branch-choice selector after the u+2 identity
 - Related: [P27 U+2 Sequence Recurrence Screen](p27_usquare_sequence_recurrence_20260621.md)
 - Related: [P27 U+2 Norm/Coboundary Screen](p27_usquare_norm_coboundary_20260621.md)
 - Related: [P27 Selected Orientation/Cocycle Span Screen](p27_selected_orientation_cocycle_span_20260621.md)
+- Related: [P27 Reverse-Doubling Source Screen](p27_reverse_doubling_source_screen_20260621.md)
 - Related: [P27 X-Square / 2-Descent Gate](p27_xsquare_2descent_gate_20260621.md)
 - Related: [P27 GPU Filter-Cost Lesson From P26](p27_gpu_filter_cost_lesson_from_p26_20260621.md)
 

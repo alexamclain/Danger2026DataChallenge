@@ -240,10 +240,20 @@ Thus the next all-plus gate can be sourced by substituting `x_next=z^2`:
 x = (z^4 - 1)^2 / (4*z^2*(z^4 + A*z^2 + 1)).
 ```
 
-The next moonshot test is to intersect this reverse-doubled square source with
-the label-2/compactD source and ask Sage/Magma for components, genus,
-low-degree quotients, or a cheap walk.  That is the first-class route left
-that could beat random half-loss per gate.
+This gives a concrete reverse-source equation to intersect with the
+label-2/compactD source.  By itself it is only an equation; it needs
+Sage/Magma components, genus, low-degree quotients, or a cheap walk before it
+can beat random half-loss per gate.
+
+First reverse-source screen:
+[P27 Reverse-Doubling Source Screen](evidence/p27_reverse_doubling_source_screen_20260621.md).
+The equations are exact and had zero reverse-doubling or rational-point
+mismatches, but p27 density remains random-half: `0.4932` on seed `20260621`
+and `0.5044` on seed `20260622`.  The z-source multiplicity also matches the
+generic expectation: about `2` z-points and `4` `(z,Y)` points per oriented
+compactD candidate.  So reverse doubling is a precise source-cover equation,
+not yet a cheap source.  The next meaningful test is Sage/Magma component,
+genus, quotient, and factor-through-`D/<alpha>` analysis.
 
 The newest p26 GPU trace/norm result is positive structure but negative as a
 production prefilter:

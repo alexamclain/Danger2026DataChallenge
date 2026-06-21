@@ -303,6 +303,7 @@ cover, not a visible finite product of prefix characters.
 ```
 
 Reverse-doubling all-plus source card:
+[P27 Reverse-Doubling Source Screen](p27_reverse_doubling_source_screen_20260621.md).
 
 ```text
 For a Montgomery halving step:
@@ -310,14 +311,30 @@ For a Montgomery halving step:
 
 To source the next all-plus gate, set x_next=z^2:
   x = (z^4 - 1)^2 / (4*z^2*(z^4 + A*z^2 + 1)).
+
+For a legal rational half, also include:
+  Y^2 = z^4 + A*z^2 + 1.
 ```
 
-Concrete test:
+First screen:
+
+```text
+The equations are exact, but p27 density remains random-half:
+  seed 20260621: d3_plus_rate = 0.4932
+  seed 20260622: d3_plus_rate = 0.5044
+
+Reverse source multiplicity matches the generic expectation:
+  z-points per oriented compactD candidate ~= 2
+  (z,Y)-points per oriented compactD candidate ~= 4
+```
+
+Updated concrete test:
 
 ```text
 Intersect this reverse-doubled square source with the label-2 compactD=-1
 source.  Ask Sage/Magma for components, genus, low-degree quotients, and
-whether any component is dominated by an elliptic/rational walk.
+whether any component is dominated by an elliptic/rational walk or factors
+through D/<alpha>.
 ```
 
 Promotion bar:
@@ -331,7 +348,8 @@ Kill condition:
 
 ```text
 The reverse-doubled compactD source is a generic high-genus cover with no
-useful quotient and finite-field counts matching a random 1/2 cover.
+useful quotient.  The finite-field density screen alone already matches a
+random 1/2 cover, so do not promote reverse doubling without quotient data.
 ```
 
 Order-4 quotient card:

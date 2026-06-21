@@ -146,6 +146,12 @@ walk.
 
 This is a better next target than more finite products of visible characters.
 
+Follow-up screen:
+[P27 Reverse-Doubling Source Screen](p27_reverse_doubling_source_screen_20260621.md).
+The reverse-doubling equations are exact, but the first p27 density screen
+still behaves like a generic half cover.  The next step is therefore quotient
+and genus analysis of the reverse source, not more p27 density sampling.
+
 ## Concrete Next Tests
 
 1. Sage/Magma source-cover test:
@@ -156,12 +162,11 @@ the label-2 compactD=-1 equations.  Compute genus, components, and low-degree
 quotients for the resulting d3 all-plus source.
 ```
 
-2. Finite-field source-density test:
+2. Completed finite-field source-density test:
 
 ```text
-Over several split small primes, count points on the reverse-doubled
-compactD/d3 source and compare with the random 1/2 cover expectation.  Promote
-only if the counts suggest a low-genus quotient or decomposed source.
+done in the reverse-doubling source screen; p27 density matches random half
+and no stable small-prime point-count anomaly was found.
 ```
 
 3. GPU telemetry only if algebra names a source:
@@ -175,13 +180,13 @@ replicates out-of-sample.
 ## Continue / Kill
 
 ```text
-continue = reverse-doubling all-plus source construction
-continue = Sage/Magma genus and quotient test for the d3 square-source cover
+continue = Sage/Magma genus and quotient test for the reverse-doubling source
 continue = non-visible H90/theta quotient on the iterated 2-cover
 
 kill = small GF(2) product of selected orientation characters as the next bit
 kill = promoting the weak low-weight in-sample lifts without a named theorem
 kill = more local selected-s character scans at the same feature depth
+kill = expecting reverse-doubling density alone to beat random half-loss
 ```
 
 ## Linked Artifacts
@@ -192,6 +197,7 @@ kill = more local selected-s character scans at the same feature depth
 - Related: [P27 U+2 Norm/Coboundary Screen](p27_usquare_norm_coboundary_20260621.md)
 - Related: [P27 U+2 Sequence Recurrence Screen](p27_usquare_sequence_recurrence_20260621.md)
 - Related: [P27 X-Square / 2-Descent Gate](p27_xsquare_2descent_gate_20260621.md)
+- Related: [P27 Reverse-Doubling Source Screen](p27_reverse_doubling_source_screen_20260621.md)
 
 ```text
 p27_selected_orientation_cocycle_span_rows=1/1

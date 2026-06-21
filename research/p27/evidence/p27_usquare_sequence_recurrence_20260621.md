@@ -166,12 +166,13 @@ iterated 2-cover, then ask whether it has a low-genus quotient or cheap walk.
 ```text
 continue = GPU u+2 precheck as a cost optimization
 continue = symbolic multi-gate Kummer/theta recurrence for chi(u_j+2)
-continue = reverse-doubling all-plus source / non-visible H90 quotient
+continue = Sage/Magma quotient/genus test for the reverse-doubling source
 continue = low-genus/source test for the all-plus iterated 2-cover
 
 kill = expecting compactD alone to bias the later u+2 sequence
 kill = local A,x norm-character selector for selected u+2
 kill = small selected-orientation product span for selected u+2
+kill = expecting reverse-doubling density alone to beat random half-loss
 kill = claiming fixed-prefix u+2 filters beat sqrt scaling
 kill = branch-choice or T-deck-choice selector for the u+2 sequence
 ```
@@ -183,6 +184,7 @@ kill = branch-choice or T-deck-choice selector for the u+2 sequence
 - Related: [P27 Halving U+2 X-Square Gate](p27_halving_usquare_gate_20260621.md)
 - Related: [P27 U+2 Norm/Coboundary Screen](p27_usquare_norm_coboundary_20260621.md)
 - Related: [P27 Selected Orientation/Cocycle Span Screen](p27_selected_orientation_cocycle_span_20260621.md)
+- Related: [P27 Reverse-Doubling Source Screen](p27_reverse_doubling_source_screen_20260621.md)
 - Related: [P27 Label-2 Alpha/Branch Recurrence Probe](p27_label2_alpha_branch_recurrence_20260621.md)
 - Related: [P27 Selected Halving Tower Profile](p27_halving_tower_profile_20260621.md)
 
