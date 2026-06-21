@@ -429,6 +429,21 @@ Products of two projective lines on E do not explain the quotient bits:
 This kills the reducible-conic source subclass.  If the finite-field route
 continues, test irreducible conics or extract the divisor class directly.
 
+Affine-walk recurrence update:
+[P27 E-Quotient Affine-Walk Recurrence](p27_equotient_affine_walk_recurrence_20260621.md).
+
+```text
+All maps P -> [m]P + Q were tested for m=+/-1,...,+/-8 and all Q in E(F_q):
+  q=1087: best full coverage = 20/40 = 0.500000000
+  q=1471: best full coverage = 56/112 = 0.500000000
+  q=1607: best full coverage = 76/112 = raw d4 bias
+  nontrivial walks reaching 0.75 coverage = 0
+```
+
+This kills the small elliptic-walk recurrence as a sqrt-beating source.  The
+remaining quotient work is cover/divisor-class extraction, not a translated
+low-multiple walk on `E`.
+
 Promotion bar:
 
 ```text

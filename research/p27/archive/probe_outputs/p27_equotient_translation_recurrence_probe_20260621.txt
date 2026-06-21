@@ -1,0 +1,125 @@
+p27 E-quotient affine-walk recurrence probe
+small_primes = 1087,1471,1607
+multipliers = 1,-1,2,-2,3,-3,4,-4,5,-5,6,-6,7,-7,8,-8
+min_coverage = 0.75
+q=1087:
+  E_points = 1088
+  enum_compact_not_target = 757
+  enum_no_label2_candidate = 312
+  quotient_d3_minus_E_points = 32
+  quotient_d3_missing_on_E_orbit = 0
+  quotient_d3_not_descended_to_E = 0
+  quotient_d3_plus_E_points = 40
+  quotient_d3_quotient_rows = 72
+  quotient_d4_minus_E_points_after_d3 = 20
+  quotient_d4_missing_on_E_orbit = 0
+  quotient_d4_not_descended_to_E = 0
+  quotient_d4_plus_E_points_after_d3 = 20
+  quotient_d4_quotient_rows_after_d3 = 40
+  quotient_orbit_size_4 = 72
+  quotient_oriented_candidates = 288
+  quotient_quotient_E_points = 72
+  best_covered = 40
+  best_good = 20
+  best_total = 40
+  d3_rows = 72
+  d4_rows = 40
+  full_coverage_transforms = 4
+  multipliers_tested = 16
+  transforms_meeting_min_coverage = 4
+  transforms_tested = 17408
+  translations_tested = 1088
+q1087_best_affine_walks:
+  m=1 Q=O polarity=1 good=20/40 rate=0.500000000 coverage=1.000000000
+  m=1 Q=(0,0) polarity=1 good=20/40 rate=0.500000000 coverage=1.000000000
+  m=-1 Q=O polarity=1 good=20/40 rate=0.500000000 coverage=1.000000000
+  m=-1 Q=(0,0) polarity=1 good=20/40 rate=0.500000000 coverage=1.000000000
+  m=1 Q=(34,35) polarity=1 good=10/20 rate=0.500000000 coverage=0.500000000
+  m=1 Q=(34,1052) polarity=1 good=10/20 rate=0.500000000 coverage=0.500000000
+  m=1 Q=(1055,1056) polarity=1 good=10/20 rate=0.500000000 coverage=0.500000000
+  m=1 Q=(1055,31) polarity=1 good=10/20 rate=0.500000000 coverage=0.500000000
+  m=-1 Q=(34,35) polarity=1 good=10/20 rate=0.500000000 coverage=0.500000000
+  m=-1 Q=(34,1052) polarity=1 good=10/20 rate=0.500000000 coverage=0.500000000
+  m=-1 Q=(1055,1056) polarity=1 good=10/20 rate=0.500000000 coverage=0.500000000
+  m=-1 Q=(1055,31) polarity=1 good=10/20 rate=0.500000000 coverage=0.500000000
+q=1471:
+  E_points = 1472
+  enum_compact_not_target = 837
+  enum_no_label2_candidate = 424
+  quotient_d3_minus_E_points = 88
+  quotient_d3_missing_on_E_orbit = 0
+  quotient_d3_not_descended_to_E = 0
+  quotient_d3_plus_E_points = 112
+  quotient_d3_quotient_rows = 200
+  quotient_d4_minus_E_points_after_d3 = 56
+  quotient_d4_missing_on_E_orbit = 0
+  quotient_d4_not_descended_to_E = 0
+  quotient_d4_plus_E_points_after_d3 = 56
+  quotient_d4_quotient_rows_after_d3 = 112
+  quotient_orbit_size_4 = 200
+  quotient_oriented_candidates = 800
+  quotient_quotient_E_points = 200
+  best_covered = 112
+  best_good = 56
+  best_total = 112
+  d3_rows = 200
+  d4_rows = 112
+  full_coverage_transforms = 4
+  multipliers_tested = 16
+  transforms_meeting_min_coverage = 4
+  transforms_tested = 23552
+  translations_tested = 1472
+q1471_best_affine_walks:
+  m=1 Q=O polarity=1 good=56/112 rate=0.500000000 coverage=1.000000000
+  m=1 Q=(0,0) polarity=1 good=56/112 rate=0.500000000 coverage=1.000000000
+  m=-1 Q=O polarity=1 good=56/112 rate=0.500000000 coverage=1.000000000
+  m=-1 Q=(0,0) polarity=1 good=56/112 rate=0.500000000 coverage=1.000000000
+  m=1 Q=(303,304) polarity=1 good=28/56 rate=0.500000000 coverage=0.500000000
+  m=1 Q=(303,1167) polarity=1 good=28/56 rate=0.500000000 coverage=0.500000000
+  m=1 Q=(1170,1171) polarity=1 good=28/56 rate=0.500000000 coverage=0.500000000
+  m=1 Q=(1170,300) polarity=1 good=28/56 rate=0.500000000 coverage=0.500000000
+  m=-1 Q=(303,304) polarity=1 good=28/56 rate=0.500000000 coverage=0.500000000
+  m=-1 Q=(303,1167) polarity=1 good=28/56 rate=0.500000000 coverage=0.500000000
+  m=-1 Q=(1170,1171) polarity=1 good=28/56 rate=0.500000000 coverage=0.500000000
+  m=-1 Q=(1170,300) polarity=1 good=28/56 rate=0.500000000 coverage=0.500000000
+q=1607:
+  E_points = 1608
+  enum_compact_not_target = 805
+  enum_no_label2_candidate = 408
+  quotient_d3_minus_E_points = 84
+  quotient_d3_missing_on_E_orbit = 0
+  quotient_d3_not_descended_to_E = 0
+  quotient_d3_plus_E_points = 112
+  quotient_d3_quotient_rows = 196
+  quotient_d4_minus_E_points_after_d3 = 36
+  quotient_d4_missing_on_E_orbit = 0
+  quotient_d4_not_descended_to_E = 0
+  quotient_d4_plus_E_points_after_d3 = 76
+  quotient_d4_quotient_rows_after_d3 = 112
+  quotient_orbit_size_4 = 196
+  quotient_oriented_candidates = 784
+  quotient_quotient_E_points = 196
+  best_covered = 112
+  best_good = 76
+  best_total = 112
+  d3_rows = 196
+  d4_rows = 112
+  full_coverage_transforms = 4
+  multipliers_tested = 16
+  transforms_meeting_min_coverage = 4
+  transforms_tested = 25728
+  translations_tested = 1608
+q1607_best_affine_walks:
+  m=1 Q=O polarity=1 good=76/112 rate=0.678571429 coverage=1.000000000
+  m=1 Q=(0,0) polarity=1 good=76/112 rate=0.678571429 coverage=1.000000000
+  m=-1 Q=O polarity=1 good=76/112 rate=0.678571429 coverage=1.000000000
+  m=-1 Q=(0,0) polarity=1 good=76/112 rate=0.678571429 coverage=1.000000000
+  m=8 Q=O polarity=1 good=24/40 rate=0.600000000 coverage=0.357142857
+  m=8 Q=(0,0) polarity=1 good=24/40 rate=0.600000000 coverage=0.357142857
+  m=-8 Q=O polarity=1 good=24/40 rate=0.600000000 coverage=0.357142857
+  m=-8 Q=(0,0) polarity=1 good=24/40 rate=0.600000000 coverage=0.357142857
+  m=4 Q=O polarity=-1 good=24/24 rate=1.000000000 coverage=0.214285714
+  m=4 Q=(0,0) polarity=-1 good=24/24 rate=1.000000000 coverage=0.214285714
+  m=-4 Q=O polarity=-1 good=24/24 rate=1.000000000 coverage=0.214285714
+  m=-4 Q=(0,0) polarity=-1 good=24/24 rate=1.000000000 coverage=0.214285714
+p27_equotient_translation_recurrence_probe_rows=1/1

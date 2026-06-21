@@ -150,6 +150,11 @@ whether f4 is a translate/pullback of f3.  The q=607/863/991 constants are
 not enough.
 ```
 
+Status: first affine-walk recurrence screen completed.  All maps
+`P -> [m]P + Q` with `m=+/-1,...,+/-8` and all `Q in E(F_q)` were tested over
+`q=1087,1471,1607`; no exact or useful high-coverage recurrence appeared.  See
+[P27 E-Quotient Affine-Walk Recurrence](p27_equotient_affine_walk_recurrence_20260621.md).
+
 4. GPU telemetry framing:
 
 ```text
@@ -176,6 +181,7 @@ kill = GPU sampler from d4 without an E-level source or recurrence
 - Output: `research/p27/archive/probe_outputs/p27_reverse_source_d4_recurrence_probe_20260621.txt`
 - q991 output: `research/p27/archive/probe_outputs/p27_reverse_source_d4_recurrence_probe_q991_20260621.txt`
 - Follow-up: [P27 E-Quotient Kummer Basis Screen](p27_equotient_kummer_basis_screen_20260621.md)
+- Follow-up: [P27 E-Quotient Affine-Walk Recurrence](p27_equotient_affine_walk_recurrence_20260621.md)
 - Related: [P27 Reverse Source Quotient Screen](p27_reverse_source_quotient_screen_20260621.md)
 - Related: [P27 Label-2 Alpha/Branch Recurrence Probe](p27_label2_alpha_branch_recurrence_20260621.md)
 
