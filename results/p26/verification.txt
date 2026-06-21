@@ -1,0 +1,31 @@
+Sat Jun 20 18:49:23 PDT 2026
+source_worker_log=/Users/agent/Documents/Codex/2026-06-20/if-i-have-c-code-that/outputs/p26_550B_20260620T231924Z.log
+artifact_dir=results/p26
+triple=100000000000000000000000067 78462973492772865017160395 27732450411057582323409556
+
+triple:
+  p  = 100000000000000000000000067
+  A  = 78462973492772865017160395
+  x0 = 27732450411057582323409556
+
+independent_replay:
+  sqrt_floor = 10000000000000
+  sqrt_sqrt_floor = 3162277
+  bound = 10000006324555
+  k = 44
+  zero_steps = [44]
+  final_X = 11148366466068454197443147
+  final_Z = 0
+  gcd_Zprev_p = 1
+  independent_replay_pass = True
+
+openssl_prime:
+  returncode = 0
+  output = 100000000000000000000000067 is prime
+
+danger3_vpp:
+  returncode = 0
+True
+
+lean_certificate_written = results/p26/pomerance_100000000000000000000000067.lean
+verification_status = PASS
