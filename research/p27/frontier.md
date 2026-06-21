@@ -533,6 +533,18 @@ lambda-line sampler for the decisive next bit.  The surviving K/lambda route
 is not coefficient-bound widening; it is actual branch-class/genus extraction,
 including possible irreducible cubic/quartic support or a higher-degree class.
 
+There is also a rational-source obstruction to treating `lambda` as the next
+quotient:
+[P27 Lambda Rational-Quotient Obstruction](evidence/p27_lambda_rational_quotient_obstruction_20260621.md).
+On `E': V^2=U^3+4U`,
+`K=x([2]P)=((U^2-4)/(2V))^2`, so every nondegenerate rational doubled `K` is a
+square.  In the p27 sign regime `chi(-1)=-1`, hence `-K` is outside the same
+rational doubled stratum.  Across fifteen `q=7 mod 8` guard fields, the full
+doubled image has no nonzero `K/-K` paired values, and selected `d3/d4` rows
+all have `chi(K)=+1` with no `-K` partner.  Therefore `lambda=-K^2/4` is a
+Belyi bookkeeping coordinate, not a standalone rational sampler.  Any
+sqrt-beating source must lift back to the K-level square stratum.
+
 The newest p26 GPU trace/norm result is positive structure but negative as a
 production prefilter:
 [P27 GPU Filter-Cost Lesson From P26](evidence/p27_gpu_filter_cost_lesson_from_p26_20260621.md).
