@@ -7,6 +7,14 @@ is an operations and performance report, not a new mathematical shortcut.
 
 The verified p26 result is recorded in `results/p26/`.
 
+## Session Goal Prompt
+
+The GPU optimization and p26 run were carried out under this goal-mode prompt:
+
+```text
+Optimize the existing code so that a single GPU 550b search would run in as few hours as possible. You're authorized to start the pod when you need GPU tests and stop it when done. If the account runs out of money just stop there.
+```
+
 ## Executive Summary
 
 The CPU `x16halvenonsplit` path was ported to a narrow CUDA implementation
