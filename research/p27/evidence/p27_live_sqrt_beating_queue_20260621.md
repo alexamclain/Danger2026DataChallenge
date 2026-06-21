@@ -25,6 +25,7 @@ Latest evidence:
 [P27 K/S First-Half Cover Magma Smoke](p27_ks_first_half_cover_magma_20260621.md).
 [P27 K/S First-Half Alpha-Lift Obstruction](p27_ks_first_half_alpha_lift_obstruction_20260621.md).
 [P27 K/S First-Half E-Prime Descent](p27_ks_first_half_eprime_descent_20260621.md).
+[P27 E-Prime First-Half Pullback Magma Smoke](p27_eprime_first_half_pullback_magma_20260621.md).
 
 Key result over tiny p27-signature field `q=7`:
 
@@ -49,6 +50,8 @@ exactly -1 times a square. Since p27 is 3 mod 4, the natural alpha quotient is
 not F_p-rational; the eta-swapped ratio is mixed on q=1607,1847,2087.
 In contrast, translation by (0,0) descends the T-cover by T -> +/-T/X^3 and
 preserves compactD plus the first-half B-branch squareclass on q=1607,1847,2087.
+But the explicit E' first-half pullback still has genus 37 over q7 after
+saturation, so E' is a quotient/extraction surface, not a direct source yet.
 ```
 
 Concrete next K/S test:

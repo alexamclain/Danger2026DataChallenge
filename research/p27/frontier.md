@@ -621,6 +621,15 @@ extract the actual d3/d4 double covers on `E': V^2=U^3+4U`, compute their
 branch divisors/Kummer classes/genera, and decide whether d4 is a fresh cover
 or a recurrence/sourceable transform of d3.
 
+The first E-prime pullback smoke keeps the genus warning in force:
+[P27 E-Prime First-Half Pullback Magma Smoke](evidence/p27_eprime_first_half_pullback_magma_20260621.md).
+After substituting `W=V*X^2/(X^2+1)` and saturating by the known denominator
+divisors, online Magma over q7 reports `EPRIME_PULLBACK_SAT_SCHEME 1 61 0`
+and `EPRIME_PULLBACK_SAT_CURVE 37 0`.  Thus E-prime is the right extraction
+coordinate, but not a direct low-genus source; the win must be a lower-genus
+factor, Kummer-class relation, or recurrence inside/under the genus-37 staged
+cover.
+
 The K-line now has a cleaner coordinate for that extraction:
 [P27 Kummer Belyi Structure Probe](evidence/p27_kummer_belyi_structure_probe_20260621.md).
 Symbolically,

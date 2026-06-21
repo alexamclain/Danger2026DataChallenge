@@ -664,6 +664,7 @@ K/S first-half cover update:
 [P27 K/S First-Half Cover Magma Smoke](p27_ks_first_half_cover_magma_20260621.md).
 [P27 K/S First-Half Alpha-Lift Obstruction](p27_ks_first_half_alpha_lift_obstruction_20260621.md).
 [P27 K/S First-Half E-Prime Descent](p27_ks_first_half_eprime_descent_20260621.md).
+[P27 E-Prime First-Half Pullback Magma Smoke](p27_eprime_first_half_pullback_magma_20260621.md).
 
 ```text
 Full q7 reverse-source fixture: online Magma memory limit.
@@ -696,6 +697,10 @@ the first-half B-branch squareclass on every compactD point over
 q=1607/q1847/q2087 tested.  Online Magma q1607 reports:
 `BRANCH_FACTOR_DIFF_ZERO true`, `T2_TRANSFORM_ZERO true`, and
 `COUNTS 800 800 1600 0 0 0`.
+
+However, the explicit E' pullback of the eta=+1 first-half layer still reports
+`EPRIME_PULLBACK_SAT_SCHEME 1 61 0` and `EPRIME_PULLBACK_SAT_CURVE 37 0`
+over q7 after saturation.
 ```
 
 Updated K/S next test:
@@ -706,6 +711,8 @@ Do offline Magma/Sage quotient/decomposition only with a sharper target:
   actual d3/d4 double-cover extraction on E': V^2=U^3+4U,
   branch divisor / Kummer class / genus comparison,
   and d4 fresh-cover vs recurrence testing.
+Do not treat E' descent alone as a low-genus source; the staged first-half
+pullback remains genus 37.
 Promote only if a low-genus quotient, named recurrence, or sourceable walk
 survives over F_p on p27-signature fields.
 ```
