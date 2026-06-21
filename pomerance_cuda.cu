@@ -12,7 +12,11 @@
  * Add -DPOM_CUDA_DETAILED_STATS=1 to keep the per-stage diagnostic counters.
  *
  * Usage:
- *   ./pomerance_cuda <p> [seed_offset] [max_trials] [x16halvenonsplit] [chunk_trials] [blocks] [threads] [claim_batch] [auto|generic|u96]
+ *   ./pomerance_cuda <p> [seed_offset] [max_trials]
+ *     [x16halvenonsplit|x16stratumprobe] [chunk_trials] [blocks]
+ *     [threads] [claim_batch] [auto|generic|u96]
+ *     [seed=mixed|identity|splitmix] [start_chunk=N] [start_trial=N]
+ *     [target_depth=N] [bucket_bits=N] [focus_bucket=N]
  * The auto backend uses the specialized u96 path for p < 2^96 and the
  * generic u128 path otherwise.
  *
@@ -24,11 +28,13 @@
 #include <cuda_runtime.h>
 
 #include <chrono>
+#include <algorithm>
 #include <cmath>
 #include <cstdio>
 #include <cstdlib>
 #include <cstring>
 #include <string>
+#include <vector>
 
 using u32 = uint32_t;
 using u64 = unsigned long long;
@@ -40,6 +46,20 @@ using u128 = unsigned __int128;
 #ifndef POM_CUDA_DETAILED_STATS
 #define POM_CUDA_DETAILED_STATS 0
 #endif
+
+#ifndef POM_CUDA_HIT_TELEMETRY
+#define POM_CUDA_HIT_TELEMETRY 0
+#endif
+
+enum SeedMode {
+    SEED_MIXED = 0,
+    SEED_IDENTITY = 1,
+    SEED_SPLITMIX = 2,
+};
+
+static constexpr int PROBE_MAX_BUCKET_BITS = 8;
+static constexpr int PROBE_MAX_BUCKETS = 1 << (PROBE_MAX_BUCKET_BITS + 1);
+static constexpr int PROBE_MAX_DEPTH = 64;
 
 struct u256 {
     u128 lo;
@@ -95,9 +115,38 @@ struct GpuStats {
 
 struct GpuResult {
     int found;
+    int root_index;
+    int q_sheet;
     u64 trial_index;
+    u64 chunk_nonce;
+    u64 tid;
+    u64 raw_draw_count;
+    u64 local_draw_count;
+    u64 compactD;
     U128Parts A;
     U128Parts x0;
+    U128Parts y;
+    U128Parts root_x;
+    U128Parts xP16;
+    U128Parts first_w;
+    U128Parts V;
+    U128Parts D;
+};
+
+struct ProbeStats {
+    u64 claimed;
+    u64 accepted_roots;
+    u64 y_draws;
+    u64 y_nonsplit;
+    u64 y_with_sqrt_D;
+    u64 roots_valid;
+    u64 depth_exact[PROBE_MAX_DEPTH + 1];
+    u64 bucket_total[PROBE_MAX_BUCKETS];
+    u64 bucket_survive[PROBE_MAX_BUCKETS];
+    u64 bucket_prefix_total[PROBE_MAX_BUCKETS];
+    u64 bucket_prefix_survive[PROBE_MAX_BUCKETS];
+    u64 bucket_held_total[PROBE_MAX_BUCKETS];
+    u64 bucket_held_survive[PROBE_MAX_BUCKETS];
 };
 
 HD static inline U128Parts pack128(u128 x) {
@@ -469,6 +518,40 @@ HD static int halve_once_first128_mont(u128 *xo_m, u128 A_m, u128 x_m,
     return 0;
 }
 
+HD static int halve_once_first128_mont_trace(u128 *xo_m, u128 *first_w_m,
+                                             u128 *first_v_m, u128 A_m,
+                                             u128 x_m,
+                                             const SearchParams *params) {
+    const u128 p = params->p;
+    const Mont128 *mt = &params->mt;
+    u128 x2_m = mm128(x_m, x_m, mt);
+    u128 d_m = addmod128(addmod128(x2_m, mm128(A_m, x_m, mt), p), mt->one, p);
+    u128 sd_m;
+    if (!sqrtmod_p5_128_mont(&sd_m, d_m, p, params->sqrtm1_m, mt)) return 0;
+
+    u128 roots_d[2] = {sd_m, submod128(0, sd_m, p)};
+    for (int i = 0; i < 2; i++) {
+        u128 u_m = addmod128(addmod128(x_m, x_m, p),
+                             addmod128(roots_d[i], roots_d[i], p), p);
+        u128 w_m = submod128(mm128(u_m, u_m, mt), params->four_m, p);
+        u128 sw_m;
+        if (!sqrtmod_p5_128_mont(&sw_m, w_m, p, params->sqrtm1_m, mt)) continue;
+        u128 candidates[2] = {
+            mm128(addmod128(u_m, sw_m, p), params->inv2_m, mt),
+            mm128(submod128(u_m, sw_m, p), params->inv2_m, mt),
+        };
+        for (int j = 0; j < 2; j++) {
+            if (candidates[j] != 0) {
+                *xo_m = candidates[j];
+                *first_w_m = w_m;
+                *first_v_m = u_m;
+                return 1;
+            }
+        }
+    }
+    return 0;
+}
+
 HD static int halve_chain_from_depth128(u128 *xout, u128 p, u128 A, u128 x,
                                         int depth, int k, u128 sqrtm1,
                                         const Mont128 *mt) {
@@ -490,6 +573,51 @@ HD static int halve_chain_from_depth128_mont(u128 *xout_m, u128 A_m, u128 x_m,
     return 1;
 }
 
+HD static int halve_chain_from_depth128_mont_trace(u128 *xout_m, u128 *first_w_m,
+                                                   u128 *first_v_m, u128 A_m,
+                                                   u128 x_m, int depth,
+                                                   const SearchParams *params) {
+    int first = 1;
+    for (; depth < params->k; depth++) {
+        if (first) {
+            if (!halve_once_first128_mont_trace(&x_m, first_w_m, first_v_m,
+                                                A_m, x_m, params)) return 0;
+            first = 0;
+        } else if (!halve_once_first128_mont(&x_m, A_m, x_m, params)) {
+            return 0;
+        }
+    }
+    if (!verify128_mont_raw(A_m, x_m, params)) return 0;
+    *xout_m = x_m;
+    return 1;
+}
+
+HD static int halve_prefix_depth128_mont_trace(u128 *xout_m, u128 *first_w_m,
+                                               u128 *first_v_m, u128 A_m,
+                                               u128 x_m, int depth,
+                                               int target_depth,
+                                               const SearchParams *params) {
+    if (target_depth > params->k) target_depth = params->k;
+    if (target_depth > PROBE_MAX_DEPTH) target_depth = PROBE_MAX_DEPTH;
+    if (depth >= target_depth) {
+        *xout_m = x_m;
+        return depth;
+    }
+
+    if (!halve_once_first128_mont_trace(&x_m, first_w_m, first_v_m,
+                                        A_m, x_m, params)) {
+        *xout_m = x_m;
+        return depth;
+    }
+    depth++;
+    while (depth < target_depth) {
+        if (!halve_once_first128_mont(&x_m, A_m, x_m, params)) break;
+        depth++;
+    }
+    *xout_m = x_m;
+    return depth;
+}
+
 HD static inline u64 rng64(Rng *r) {
     u64 s1 = r->s0;
     u64 s0 = r->s1;
@@ -507,6 +635,16 @@ HD static inline u128 rand_below128(Rng *rng, u128 p, u128 mask) {
     }
 }
 
+HD static inline u128 rand_below128_counted(Rng *rng, u128 p, u128 mask,
+                                            u64 *raw_draw_count) {
+    for (;;) {
+        (*raw_draw_count)++;
+        u128 v = ((u128)rng64(rng) << 64) | (u128)rng64(rng);
+        v &= mask;
+        if (v < p) return v;
+    }
+}
+
 HD static inline u64 splitmix64_next(u64 *x) {
     u64 z = (*x += 0x9e3779b97f4a7c15ULL);
     z = (z ^ (z >> 30)) * 0xbf58476d1ce4e5b9ULL;
@@ -514,8 +652,69 @@ HD static inline u64 splitmix64_next(u64 *x) {
     return z ^ (z >> 31);
 }
 
+HD static inline u64 mix64_value(u64 x) {
+    x += 0x9e3779b97f4a7c15ULL;
+    x = (x ^ (x >> 30)) * 0xbf58476d1ce4e5b9ULL;
+    x = (x ^ (x >> 27)) * 0x94d049bb133111ebULL;
+    return x ^ (x >> 31);
+}
+
+HD static inline u64 compact128(u128 x) {
+    return mix64_value((u64)x) ^ mix64_value((u64)(x >> 64));
+}
+
+HD static inline void init_rng(Rng *rng, u64 seed_offset, u64 chunk_nonce,
+                               u64 tid, u64 total_threads, int seed_mode) {
+    if (seed_mode == SEED_IDENTITY) {
+        u64 stream = seed_offset + chunk_nonce * total_threads + tid;
+        rng->s0 = 7364529176530163ULL ^ stream;
+        rng->s1 = 1442695040888963407ULL ^ (stream << 1);
+    } else if (seed_mode == SEED_SPLITMIX) {
+        u64 seed = seed_offset + chunk_nonce * total_threads + tid;
+        rng->s0 = splitmix64_next(&seed);
+        rng->s1 = splitmix64_next(&seed);
+    } else {
+        u64 seed = seed_offset ^ (chunk_nonce * 0xd1342543de82ef95ULL) ^
+                   (tid * 0x9e3779b97f4a7c15ULL) ^ 0x7364529176530163ULL;
+        rng->s0 = splitmix64_next(&seed);
+        rng->s1 = splitmix64_next(&seed);
+    }
+    if ((rng->s0 | rng->s1) == 0) rng->s1 = 1442695040888963407ULL;
+    for (int i = 0; i < 200; i++) (void)rng64(rng);
+}
+
 DEV static inline int found_now(const GpuResult *result) {
     return *((volatile const int *)&result->found);
+}
+
+DEV static inline int probe_done_now(const ProbeStats *stats, u64 max_curves) {
+    return *((volatile const u64 *)&stats->claimed) >= max_curves;
+}
+
+DEV static inline void probe_record_candidate(ProbeStats *probe, u64 claim,
+                                              u64 split_trial, int reached_depth,
+                                              int target_depth, int root_index,
+                                              u64 source_hash,
+                                              int bucket_bits) {
+    if (reached_depth < 0) reached_depth = 0;
+    if (reached_depth > PROBE_MAX_DEPTH) reached_depth = PROBE_MAX_DEPTH;
+    if (target_depth > PROBE_MAX_DEPTH) target_depth = PROBE_MAX_DEPTH;
+
+    unsigned bucket_mask = (1u << bucket_bits) - 1u;
+    int bucket = ((root_index & 1) << bucket_bits) |
+                 (int)(source_hash & (u64)bucket_mask);
+    int survived = reached_depth >= target_depth;
+
+    atomicAdd(&probe->depth_exact[reached_depth], 1ULL);
+    atomicAdd(&probe->bucket_total[bucket], 1ULL);
+    if (survived) atomicAdd(&probe->bucket_survive[bucket], 1ULL);
+    if (claim < split_trial) {
+        atomicAdd(&probe->bucket_prefix_total[bucket], 1ULL);
+        if (survived) atomicAdd(&probe->bucket_prefix_survive[bucket], 1ULL);
+    } else {
+        atomicAdd(&probe->bucket_held_total[bucket], 1ULL);
+        if (survived) atomicAdd(&probe->bucket_held_survive[bucket], 1ULL);
+    }
 }
 
 __global__ static void x16halvenonsplit_kernel(SearchParams params,
@@ -524,20 +723,21 @@ __global__ static void x16halvenonsplit_kernel(SearchParams params,
                                                u64 max_curves,
                                                u64 global_base,
                                                u64 claim_batch,
+                                               int seed_mode,
                                                GpuStats *__restrict__ stats,
                                                GpuResult *__restrict__ result) {
     u64 tid = (u64)blockIdx.x * (u64)blockDim.x + (u64)threadIdx.x;
-    u64 seed = seed_offset ^ (chunk_nonce * 0xd1342543de82ef95ULL) ^
-               (tid * 0x9e3779b97f4a7c15ULL) ^ 0x7364529176530163ULL;
+    u64 total_threads = (u64)gridDim.x * (u64)blockDim.x;
     Rng rng;
-    rng.s0 = splitmix64_next(&seed);
-    rng.s1 = splitmix64_next(&seed);
-    if ((rng.s0 | rng.s1) == 0) rng.s1 = 1442695040888963407ULL;
-    for (int i = 0; i < 200; i++) (void)rng64(&rng);
+    init_rng(&rng, seed_offset, chunk_nonce, tid, total_threads, seed_mode);
 
     const u128 p = params.p;
     const Mont128 *mt = &params.mt;
     u64 local_processed = 0;
+#if POM_CUDA_HIT_TELEMETRY
+    u64 local_raw_draws = 0;
+    u64 local_y_draws_for_result = 0;
+#endif
 #if POM_CUDA_DETAILED_STATS
     u64 local_y_draws = 0;
     u64 local_y_nonsplit = 0;
@@ -550,7 +750,12 @@ __global__ static void x16halvenonsplit_kernel(SearchParams params,
     u64 claim_limit = 0;
 
     while (!found_now(result)) {
+#if POM_CUDA_HIT_TELEMETRY
+        u128 y = rand_below128_counted(&rng, p, params.rand_mask, &local_raw_draws);
+        local_y_draws_for_result++;
+#else
         u128 y = rand_below128(&rng, p, params.rand_mask);
+#endif
 #if POM_CUDA_DETAILED_STATS
         local_y_draws++;
 #endif
@@ -611,7 +816,14 @@ __global__ static void x16halvenonsplit_kernel(SearchParams params,
             local_halve_calls++;
 #endif
             u128 xR_m;
+#if POM_CUDA_HIT_TELEMETRY
+            u128 first_w_m = 0;
+            u128 first_v_m = 0;
+            if (halve_chain_from_depth128_mont_trace(&xR_m, &first_w_m, &first_v_m,
+                                                     A_m, xP16_m, 4, &params)) {
+#else
             if (halve_chain_from_depth128_mont(&xR_m, A_m, xP16_m, 4, &params)) {
+#endif
 #if POM_CUDA_DETAILED_STATS
                 local_chain_survivors++;
 #endif
@@ -619,6 +831,22 @@ __global__ static void x16halvenonsplit_kernel(SearchParams params,
                     result->trial_index = global_base + claim;
                     result->A = pack128(A);
                     result->x0 = pack128(frM128(xR_m, mt));
+#if POM_CUDA_HIT_TELEMETRY
+                    u128 D = frM128(D_m, mt);
+                    result->chunk_nonce = chunk_nonce;
+                    result->tid = tid;
+                    result->raw_draw_count = local_raw_draws;
+                    result->local_draw_count = local_y_draws_for_result;
+                    result->root_index = ri;
+                    result->q_sheet = ri;
+                    result->compactD = compact128(D);
+                    result->y = pack128(y);
+                    result->root_x = pack128(frM128(roots_m[ri], mt));
+                    result->xP16 = pack128(frM128(xP16_m, mt));
+                    result->first_w = pack128(frM128(first_w_m, mt));
+                    result->V = pack128(frM128(first_v_m, mt));
+                    result->D = pack128(D);
+#endif
                 }
                 stop = 1;
                 break;
@@ -636,6 +864,109 @@ __global__ static void x16halvenonsplit_kernel(SearchParams params,
     atomicAdd(&stats->halve_calls, local_halve_calls);
     atomicAdd(&stats->chain_survivors, local_chain_survivors);
 #endif
+}
+
+__global__ static void x16stratumprobe_kernel(SearchParams params,
+                                              u64 seed_offset,
+                                              u64 chunk_nonce,
+                                              u64 max_curves,
+                                              u64 global_base,
+                                              u64 split_trial,
+                                              u64 claim_batch,
+                                              int seed_mode,
+                                              int target_depth,
+                                              int bucket_bits,
+                                              ProbeStats *__restrict__ probe) {
+    u64 tid = (u64)blockIdx.x * (u64)blockDim.x + (u64)threadIdx.x;
+    u64 total_threads = (u64)gridDim.x * (u64)blockDim.x;
+    Rng rng;
+    init_rng(&rng, seed_offset, chunk_nonce, tid, total_threads, seed_mode);
+
+    const u128 p = params.p;
+    const Mont128 *mt = &params.mt;
+    u64 local_accepted = 0;
+    u64 local_y_draws = 0;
+    u64 local_y_nonsplit = 0;
+    u64 local_y_with_sqrt_D = 0;
+    u64 local_roots_valid = 0;
+    u64 next_claim = 0;
+    u64 claim_limit = 0;
+
+    while (!probe_done_now(probe, max_curves)) {
+        u128 y = rand_below128(&rng, p, params.rand_mask);
+        local_y_draws++;
+        if (y == 0) continue;
+
+        u128 y_m = toM128_reduced(y, mt);
+        u128 y2_m = mm128(y_m, y_m, mt);
+        if (!x16_y_predicts_nonsplit128_mont(y_m, y2_m, &params)) continue;
+        local_y_nonsplit++;
+
+        u128 y3_m = mm128(y2_m, y_m, mt);
+        u128 two_y_m = addmod128(y_m, y_m, p);
+        u128 qa_m = submod128(y2_m, two_y_m, p);
+        if (qa_m == 0) continue;
+        u128 qb_m = submod128(addmod128(y2_m, y2_m, p), y3_m, p);
+        u128 qc_m = submod128(mt->one, y_m, p);
+        u128 D_m = submod128(
+            mm128(qb_m, qb_m, mt),
+            mm128(addmod128(qa_m, qa_m, p), addmod128(qc_m, qc_m, p), mt),
+            p);
+        u128 sd_m;
+        if (!sqrtmod_p5_128_mont(&sd_m, D_m, p, params.sqrtm1_m, mt)) continue;
+        local_y_with_sqrt_D++;
+
+        u128 inv_2qa_m = invert128_mont_raw(addmod128(qa_m, qa_m, p), p, mt);
+        u128 roots_m[2] = {
+            mm128(submod128(sd_m, qb_m, p), inv_2qa_m, mt),
+            mm128(submod128(submod128(0, sd_m, p), qb_m, p), inv_2qa_m, mt),
+        };
+
+        int stop = 0;
+        for (int ri = 0; ri < 2; ri++) {
+            u128 A;
+            u128 A_m;
+            u128 xP16_m;
+            if (!x16_root_to_montgomery_A128_mont(&A, &A_m, &xP16_m, roots_m[ri],
+                                                  y_m, &params)) continue;
+            local_roots_valid++;
+
+            if (next_claim >= claim_limit) {
+                next_claim = atomicAdd(&probe->claimed, claim_batch);
+                claim_limit = next_claim + claim_batch;
+            }
+            u64 claim = next_claim++;
+            if (claim >= max_curves) {
+                stop = 1;
+                break;
+            }
+
+            local_accepted++;
+            u128 x_probe_m;
+            u128 first_w_m = 0;
+            u128 first_v_m = 0;
+            int reached_depth = halve_prefix_depth128_mont_trace(
+                &x_probe_m, &first_w_m, &first_v_m, A_m, xP16_m, 4,
+                target_depth, &params);
+            u128 D = frM128(D_m, mt);
+            u128 first_w = frM128(first_w_m, mt);
+            u128 first_v = frM128(first_v_m, mt);
+            u64 source_hash = compact128(D) ^
+                              (compact128(first_w) * 0x9e3779b97f4a7c15ULL) ^
+                              (compact128(first_v) * 0xd1342543de82ef95ULL) ^
+                              (compact128(y) * 0x94d049bb133111ebULL);
+            probe_record_candidate(probe, global_base + claim, split_trial,
+                                   reached_depth, target_depth, ri, source_hash,
+                                   bucket_bits);
+        }
+        if (stop) break;
+    }
+
+    atomicAdd(&probe->accepted_roots, local_accepted);
+    atomicAdd(&probe->y_draws, local_y_draws);
+    atomicAdd(&probe->y_nonsplit, local_y_nonsplit);
+    atomicAdd(&probe->y_with_sqrt_D, local_y_with_sqrt_D);
+    atomicAdd(&probe->roots_valid, local_roots_valid);
 }
 
 struct U96 {
@@ -1076,6 +1407,41 @@ HD static int halve_once_first96_mont(U96 *xo_m, U96 A_m, U96 x_m,
     return 0;
 }
 
+HD static int halve_once_first96_mont_trace(U96 *xo_m, U96 *first_w_m,
+                                            U96 *first_v_m, U96 A_m, U96 x_m,
+                                            const SearchParams96 *params) {
+    U96 x2_m = mont_mul96(x_m, x_m, &params->f);
+    U96 d_m = addmod96(addmod96(x2_m, mont_mul96(A_m, x_m, &params->f),
+                                params->f.p),
+                       params->f.one, params->f.p);
+    U96 sd_m;
+    if (!sqrtmod_p5_96_mont(&sd_m, d_m, params)) return 0;
+
+    U96 roots_d[2] = {sd_m, submod96(u96_from_u64(0), sd_m, params->f.p)};
+    for (int i = 0; i < 2; i++) {
+        U96 u_m = addmod96(addmod96(x_m, x_m, params->f.p),
+                           addmod96(roots_d[i], roots_d[i], params->f.p),
+                           params->f.p);
+        U96 w_m = submod96(mont_mul96(u_m, u_m, &params->f), params->four_m,
+                           params->f.p);
+        U96 sw_m;
+        if (!sqrtmod_p5_96_mont(&sw_m, w_m, params)) continue;
+        U96 candidates[2] = {
+            mont_mul96(addmod96(u_m, sw_m, params->f.p), params->inv2_m, &params->f),
+            mont_mul96(submod96(u_m, sw_m, params->f.p), params->inv2_m, &params->f),
+        };
+        for (int j = 0; j < 2; j++) {
+            if (!is_zero96(candidates[j])) {
+                *xo_m = candidates[j];
+                *first_w_m = w_m;
+                *first_v_m = u_m;
+                return 1;
+            }
+        }
+    }
+    return 0;
+}
+
 HD static int halve_chain_from_depth96_mont(U96 *xout_m, U96 A_m, U96 x_m,
                                             int depth, const SearchParams96 *params) {
     for (; depth < params->k; depth++) {
@@ -1086,8 +1452,65 @@ HD static int halve_chain_from_depth96_mont(U96 *xout_m, U96 A_m, U96 x_m,
     return 1;
 }
 
+HD static int halve_chain_from_depth96_mont_trace(U96 *xout_m, U96 *first_w_m,
+                                                  U96 *first_v_m, U96 A_m,
+                                                  U96 x_m, int depth,
+                                                  const SearchParams96 *params) {
+    int first = 1;
+    for (; depth < params->k; depth++) {
+        if (first) {
+            if (!halve_once_first96_mont_trace(&x_m, first_w_m, first_v_m,
+                                               A_m, x_m, params)) return 0;
+            first = 0;
+        } else if (!halve_once_first96_mont(&x_m, A_m, x_m, params)) {
+            return 0;
+        }
+    }
+    if (!verify96_mont(A_m, x_m, params)) return 0;
+    *xout_m = x_m;
+    return 1;
+}
+
+HD static int halve_prefix_depth96_mont_trace(U96 *xout_m, U96 *first_w_m,
+                                              U96 *first_v_m, U96 A_m,
+                                              U96 x_m, int depth,
+                                              int target_depth,
+                                              const SearchParams96 *params) {
+    if (target_depth > params->k) target_depth = params->k;
+    if (target_depth > PROBE_MAX_DEPTH) target_depth = PROBE_MAX_DEPTH;
+    if (depth >= target_depth) {
+        *xout_m = x_m;
+        return depth;
+    }
+
+    if (!halve_once_first96_mont_trace(&x_m, first_w_m, first_v_m,
+                                       A_m, x_m, params)) {
+        *xout_m = x_m;
+        return depth;
+    }
+    depth++;
+    while (depth < target_depth) {
+        if (!halve_once_first96_mont(&x_m, A_m, x_m, params)) break;
+        depth++;
+    }
+    *xout_m = x_m;
+    return depth;
+}
+
 DEV static U96 rand_below96(Rng *rng, const SearchParams96 *params) {
     for (;;) {
+        u64 a = rng64(rng);
+        u64 b = rng64(rng);
+        U96 v{{(u32)a, (u32)(a >> 32), (u32)b}};
+        v = and96(v, params->rand_mask);
+        if (cmp96(v, params->f.p) < 0) return v;
+    }
+}
+
+DEV static U96 rand_below96_counted(Rng *rng, const SearchParams96 *params,
+                                    u64 *raw_draw_count) {
+    for (;;) {
+        (*raw_draw_count)++;
         u64 a = rng64(rng);
         u64 b = rng64(rng);
         U96 v{{(u32)a, (u32)(a >> 32), (u32)b}};
@@ -1102,18 +1525,19 @@ __global__ static void x16halvenonsplit_kernel96(SearchParams96 params,
                                                  u64 max_curves,
                                                  u64 global_base,
                                                  u64 claim_batch,
+                                                 int seed_mode,
                                                  GpuStats *__restrict__ stats,
                                                  GpuResult *__restrict__ result) {
     u64 tid = (u64)blockIdx.x * (u64)blockDim.x + (u64)threadIdx.x;
-    u64 seed = seed_offset ^ (chunk_nonce * 0xd1342543de82ef95ULL) ^
-               (tid * 0x9e3779b97f4a7c15ULL) ^ 0x7364529176530163ULL;
+    u64 total_threads = (u64)gridDim.x * (u64)blockDim.x;
     Rng rng;
-    rng.s0 = splitmix64_next(&seed);
-    rng.s1 = splitmix64_next(&seed);
-    if ((rng.s0 | rng.s1) == 0) rng.s1 = 1442695040888963407ULL;
-    for (int i = 0; i < 200; i++) (void)rng64(&rng);
+    init_rng(&rng, seed_offset, chunk_nonce, tid, total_threads, seed_mode);
 
     u64 local_processed = 0;
+#if POM_CUDA_HIT_TELEMETRY
+    u64 local_raw_draws = 0;
+    u64 local_y_draws_for_result = 0;
+#endif
 #if POM_CUDA_DETAILED_STATS
     u64 local_y_draws = 0;
     u64 local_y_nonsplit = 0;
@@ -1126,7 +1550,12 @@ __global__ static void x16halvenonsplit_kernel96(SearchParams96 params,
     u64 claim_limit = 0;
 
     while (!found_now(result)) {
+#if POM_CUDA_HIT_TELEMETRY
+        U96 y = rand_below96_counted(&rng, &params, &local_raw_draws);
+        local_y_draws_for_result++;
+#else
         U96 y = rand_below96(&rng, &params);
+#endif
 #if POM_CUDA_DETAILED_STATS
         local_y_draws++;
 #endif
@@ -1202,7 +1631,14 @@ __global__ static void x16halvenonsplit_kernel96(SearchParams96 params,
             local_halve_calls++;
 #endif
             U96 xR_m;
+#if POM_CUDA_HIT_TELEMETRY
+            U96 first_w_m = u96_from_u64(0);
+            U96 first_v_m = u96_from_u64(0);
+            if (halve_chain_from_depth96_mont_trace(&xR_m, &first_w_m, &first_v_m,
+                                                    A_m, xP16_m[ri], 4, &params)) {
+#else
             if (halve_chain_from_depth96_mont(&xR_m, A_m, xP16_m[ri], 4, &params)) {
+#endif
 #if POM_CUDA_DETAILED_STATS
                 local_chain_survivors++;
 #endif
@@ -1210,6 +1646,22 @@ __global__ static void x16halvenonsplit_kernel96(SearchParams96 params,
                     result->trial_index = global_base + claim;
                     result->A = pack96(A);
                     result->x0 = pack96(from_mont96(xR_m, &params.f));
+#if POM_CUDA_HIT_TELEMETRY
+                    U96 D = from_mont96(D_m, &params.f);
+                    result->chunk_nonce = chunk_nonce;
+                    result->tid = tid;
+                    result->raw_draw_count = local_raw_draws;
+                    result->local_draw_count = local_y_draws_for_result;
+                    result->root_index = ri;
+                    result->q_sheet = ri;
+                    result->compactD = compact128(u96_to_u128(D));
+                    result->y = pack96(y);
+                    result->root_x = pack96(from_mont96(roots_m[ri], &params.f));
+                    result->xP16 = pack96(from_mont96(xP16_m[ri], &params.f));
+                    result->first_w = pack96(from_mont96(first_w_m, &params.f));
+                    result->V = pack96(from_mont96(first_v_m, &params.f));
+                    result->D = pack96(D);
+#endif
                 }
                 stop = 1;
                 break;
@@ -1227,6 +1679,125 @@ __global__ static void x16halvenonsplit_kernel96(SearchParams96 params,
     atomicAdd(&stats->halve_calls, local_halve_calls);
     atomicAdd(&stats->chain_survivors, local_chain_survivors);
 #endif
+}
+
+__global__ static void x16stratumprobe_kernel96(SearchParams96 params,
+                                                u64 seed_offset,
+                                                u64 chunk_nonce,
+                                                u64 max_curves,
+                                                u64 global_base,
+                                                u64 split_trial,
+                                                u64 claim_batch,
+                                                int seed_mode,
+                                                int target_depth,
+                                                int bucket_bits,
+                                                ProbeStats *__restrict__ probe) {
+    u64 tid = (u64)blockIdx.x * (u64)blockDim.x + (u64)threadIdx.x;
+    u64 total_threads = (u64)gridDim.x * (u64)blockDim.x;
+    Rng rng;
+    init_rng(&rng, seed_offset, chunk_nonce, tid, total_threads, seed_mode);
+
+    u64 local_accepted = 0;
+    u64 local_y_draws = 0;
+    u64 local_y_nonsplit = 0;
+    u64 local_y_with_sqrt_D = 0;
+    u64 local_roots_valid = 0;
+    u64 next_claim = 0;
+    u64 claim_limit = 0;
+
+    while (!probe_done_now(probe, max_curves)) {
+        U96 y = rand_below96(&rng, &params);
+        local_y_draws++;
+        if (is_zero96(y)) continue;
+
+        U96 y_m = to_mont96(y, &params.f);
+        U96 y2_m = mont_mul96(y_m, y_m, &params.f);
+        if (!x16_y_predicts_nonsplit96_mont(y_m, y2_m, &params)) continue;
+        local_y_nonsplit++;
+
+        U96 y3_m = mont_mul96(y2_m, y_m, &params.f);
+        U96 two_y_m = addmod96(y_m, y_m, params.f.p);
+        U96 qa_m = submod96(y2_m, two_y_m, params.f.p);
+        if (is_zero96(qa_m)) continue;
+        U96 qb_m = submod96(addmod96(y2_m, y2_m, params.f.p), y3_m, params.f.p);
+        U96 qc_m = submod96(params.f.one, y_m, params.f.p);
+        U96 D_m = submod96(
+            mont_mul96(qb_m, qb_m, &params.f),
+            mont_mul96(addmod96(qa_m, qa_m, params.f.p),
+                       addmod96(qc_m, qc_m, params.f.p), &params.f),
+            params.f.p);
+        U96 sd_m;
+        if (!sqrtmod_p5_96_mont(&sd_m, D_m, &params)) continue;
+        local_y_with_sqrt_D++;
+
+        U96 inv_2qa_m = invert96_mont(addmod96(qa_m, qa_m, params.f.p), &params);
+        U96 roots_m[2] = {
+            mont_mul96(submod96(sd_m, qb_m, params.f.p), inv_2qa_m, &params.f),
+            mont_mul96(submod96(submod96(u96_from_u64(0), sd_m, params.f.p), qb_m,
+                                params.f.p),
+                       inv_2qa_m, &params.f),
+        };
+
+        U96 A;
+        U96 A_m;
+        U96 xP16_m[2];
+        int root_valid[2] = {0, 0};
+        root_valid[0] = x16_root_to_montgomery_A96_mont(&A, &A_m, &xP16_m[0],
+                                                        roots_m[0], y_m, &params);
+        if (root_valid[0]) {
+            root_valid[1] = x16_root_to_montgomery_xP96_mont(&xP16_m[1],
+                                                             roots_m[1], y_m,
+                                                             &params);
+        } else {
+            root_valid[1] = x16_root_to_montgomery_A96_mont(&A, &A_m, &xP16_m[1],
+                                                            roots_m[1], y_m,
+                                                            &params);
+        }
+
+        int stop = 0;
+        for (int ri = 0; ri < 2; ri++) {
+            if (!root_valid[ri]) continue;
+            local_roots_valid++;
+
+            if (next_claim >= claim_limit) {
+                next_claim = atomicAdd(&probe->claimed, claim_batch);
+                claim_limit = next_claim + claim_batch;
+            }
+            u64 claim = next_claim++;
+            if (claim >= max_curves) {
+                stop = 1;
+                break;
+            }
+
+            local_accepted++;
+            U96 x_probe_m;
+            U96 first_w_m = u96_from_u64(0);
+            U96 first_v_m = u96_from_u64(0);
+            int reached_depth = halve_prefix_depth96_mont_trace(
+                &x_probe_m, &first_w_m, &first_v_m, A_m, xP16_m[ri], 4,
+                target_depth, &params);
+            U96 D = from_mont96(D_m, &params.f);
+            U96 first_w = from_mont96(first_w_m, &params.f);
+            U96 first_v = from_mont96(first_v_m, &params.f);
+            u64 source_hash = compact128(u96_to_u128(D)) ^
+                              (compact128(u96_to_u128(first_w)) *
+                               0x9e3779b97f4a7c15ULL) ^
+                              (compact128(u96_to_u128(first_v)) *
+                               0xd1342543de82ef95ULL) ^
+                              (compact128(u96_to_u128(y)) *
+                               0x94d049bb133111ebULL);
+            probe_record_candidate(probe, global_base + claim, split_trial,
+                                   reached_depth, target_depth, ri, source_hash,
+                                   bucket_bits);
+        }
+        if (stop) break;
+    }
+
+    atomicAdd(&probe->accepted_roots, local_accepted);
+    atomicAdd(&probe->y_draws, local_y_draws);
+    atomicAdd(&probe->y_nonsplit, local_y_nonsplit);
+    atomicAdd(&probe->y_with_sqrt_D, local_y_with_sqrt_D);
+    atomicAdd(&probe->roots_valid, local_roots_valid);
 }
 
 static void die_cuda(cudaError_t err, const char *what) {
@@ -1354,11 +1925,164 @@ static u64 parse_u64_arg(const char *s, u64 fallback) {
     return std::strtoull(s, nullptr, 10);
 }
 
+static int starts_with(const char *s, const char *prefix) {
+    return std::strncmp(s, prefix, std::strlen(prefix)) == 0;
+}
+
+static int parse_seed_mode(const char *s, int fallback) {
+    if (!s || !*s) return fallback;
+    if (std::strcmp(s, "mixed") == 0) return SEED_MIXED;
+    if (std::strcmp(s, "identity") == 0) return SEED_IDENTITY;
+    if (std::strcmp(s, "splitmix") == 0) return SEED_SPLITMIX;
+    return fallback;
+}
+
+static const char *seed_mode_name(int seed_mode) {
+    if (seed_mode == SEED_IDENTITY) return "identity";
+    if (seed_mode == SEED_SPLITMIX) return "splitmix";
+    return "mixed";
+}
+
 static void usage(const char *argv0) {
     std::fprintf(stderr,
-                 "Usage: %s <p> [seed_offset] [max_trials] [x16halvenonsplit] "
-                 "[chunk_trials] [blocks] [threads] [claim_batch] [auto|generic|u96]\n",
+                 "Usage: %s <p> [seed_offset] [max_trials] "
+                 "[x16halvenonsplit|x16stratumprobe] [chunk_trials] [blocks] "
+                 "[threads] [claim_batch] [auto|generic|u96] "
+                 "[seed=mixed|identity|splitmix] [start_chunk=N] "
+                 "[start_trial=N] [target_depth=N] [bucket_bits=N] "
+                 "[focus_bucket=N]\n",
                  argv0);
+}
+
+static void add_probe_stats(ProbeStats *dst, const ProbeStats *src) {
+    dst->claimed += src->claimed;
+    dst->accepted_roots += src->accepted_roots;
+    dst->y_draws += src->y_draws;
+    dst->y_nonsplit += src->y_nonsplit;
+    dst->y_with_sqrt_D += src->y_with_sqrt_D;
+    dst->roots_valid += src->roots_valid;
+    for (int i = 0; i <= PROBE_MAX_DEPTH; i++) {
+        dst->depth_exact[i] += src->depth_exact[i];
+    }
+    for (int i = 0; i < PROBE_MAX_BUCKETS; i++) {
+        dst->bucket_total[i] += src->bucket_total[i];
+        dst->bucket_survive[i] += src->bucket_survive[i];
+        dst->bucket_prefix_total[i] += src->bucket_prefix_total[i];
+        dst->bucket_prefix_survive[i] += src->bucket_prefix_survive[i];
+        dst->bucket_held_total[i] += src->bucket_held_total[i];
+        dst->bucket_held_survive[i] += src->bucket_held_survive[i];
+    }
+}
+
+static u64 depth_survive_ge(const ProbeStats *stats, int depth) {
+    if (depth < 0) depth = 0;
+    if (depth > PROBE_MAX_DEPTH) depth = PROBE_MAX_DEPTH;
+    u64 total = 0;
+    for (int d = depth; d <= PROBE_MAX_DEPTH; d++) total += stats->depth_exact[d];
+    return total;
+}
+
+static void print_bucket_row(const ProbeStats *stats, int bucket_bits, int bucket,
+                             double prefix_rate, double held_rate) {
+    double pr = stats->bucket_prefix_total[bucket]
+        ? (double)stats->bucket_prefix_survive[bucket] /
+          (double)stats->bucket_prefix_total[bucket]
+        : 0.0;
+    double hr = stats->bucket_held_total[bucket]
+        ? (double)stats->bucket_held_survive[bucket] /
+          (double)stats->bucket_held_total[bucket]
+        : 0.0;
+    double plift = prefix_rate > 0.0 ? pr / prefix_rate : 0.0;
+    double hlift = held_rate > 0.0 ? hr / held_rate : 0.0;
+    const char *promotion =
+        (stats->bucket_held_survive[bucket] >= 100 && hlift >= 1.25) ? "yes" : "no";
+    int q_sheet = bucket >> bucket_bits;
+    int key = bucket & ((1 << bucket_bits) - 1);
+    std::printf("    %d %d %d %llu %llu %.3f %llu %llu %.3f %s\n",
+                bucket, q_sheet, key,
+                stats->bucket_prefix_total[bucket],
+                stats->bucket_prefix_survive[bucket], plift,
+                stats->bucket_held_total[bucket],
+                stats->bucket_held_survive[bucket], hlift,
+                promotion);
+}
+
+static void print_probe_summary(const ProbeStats *stats, int target_depth,
+                                int bucket_bits, int focus_bucket) {
+    int bucket_count = 1 << (bucket_bits + 1);
+    u64 target_survive = depth_survive_ge(stats, target_depth);
+    double target_rate = stats->accepted_roots
+        ? (double)target_survive / (double)stats->accepted_roots
+        : 0.0;
+
+    u64 prefix_total = 0;
+    u64 prefix_survive = 0;
+    u64 held_total = 0;
+    u64 held_survive = 0;
+    for (int b = 0; b < bucket_count; b++) {
+        prefix_total += stats->bucket_prefix_total[b];
+        prefix_survive += stats->bucket_prefix_survive[b];
+        held_total += stats->bucket_held_total[b];
+        held_survive += stats->bucket_held_survive[b];
+    }
+    double prefix_rate = prefix_total ? (double)prefix_survive / (double)prefix_total : 0.0;
+    double held_rate = held_total ? (double)held_survive / (double)held_total : 0.0;
+
+    std::printf("\nStratum probe summary:\n");
+    std::printf("  accepted_roots=%llu y_draws=%llu nonsplit_y=%llu sqrtD_y=%llu roots_valid=%llu\n",
+                stats->accepted_roots, stats->y_draws, stats->y_nonsplit,
+                stats->y_with_sqrt_D, stats->roots_valid);
+    std::printf("  target_depth=%d survivors=%llu rate=%.9f\n",
+                target_depth, target_survive, target_rate);
+    std::printf("  prefix total=%llu survivors=%llu rate=%.9f\n",
+                prefix_total, prefix_survive, prefix_rate);
+    std::printf("  heldout total=%llu survivors=%llu rate=%.9f\n",
+                held_total, held_survive, held_rate);
+    std::printf("  depth survival checkpoints:\n");
+    for (int d = 4; d <= target_depth; d++) {
+        if (d == 4 || d == target_depth || (d % 2) == 0) {
+            u64 ge = depth_survive_ge(stats, d);
+            double rate = stats->accepted_roots
+                ? (double)ge / (double)stats->accepted_roots
+                : 0.0;
+            std::printf("    depth>=%d count=%llu rate=%.9f\n", d, ge, rate);
+        }
+    }
+
+    std::vector<int> buckets;
+    buckets.reserve(bucket_count);
+    for (int b = 0; b < bucket_count; b++) {
+        if (stats->bucket_prefix_total[b] >= 100) buckets.push_back(b);
+    }
+    std::sort(buckets.begin(), buckets.end(), [&](int a, int b) {
+        double ar = (double)stats->bucket_prefix_survive[a] /
+                    (double)stats->bucket_prefix_total[a];
+        double br = (double)stats->bucket_prefix_survive[b] /
+                    (double)stats->bucket_prefix_total[b];
+        double al = prefix_rate > 0.0 ? ar / prefix_rate : 0.0;
+        double bl = prefix_rate > 0.0 ? br / prefix_rate : 0.0;
+        if (al != bl) return al > bl;
+        return stats->bucket_prefix_survive[a] > stats->bucket_prefix_survive[b];
+    });
+
+    std::printf("  top buckets selected by prefix lift (min prefix total 100):\n");
+    std::printf("    bucket q_sheet key prefix_total prefix_surv prefix_lift "
+                "held_total held_surv held_lift promotion\n");
+    int rows = 0;
+    for (int b : buckets) {
+        if (rows >= 12) break;
+        print_bucket_row(stats, bucket_bits, b, prefix_rate, held_rate);
+        rows++;
+    }
+    if (rows == 0) {
+        std::printf("    no buckets reached the minimum prefix total\n");
+    }
+    if (focus_bucket >= 0 && focus_bucket < bucket_count) {
+        std::printf("  focus bucket:\n");
+        std::printf("    bucket q_sheet key prefix_total prefix_surv prefix_lift "
+                    "held_total held_surv held_lift promotion\n");
+        print_bucket_row(stats, bucket_bits, focus_bucket, prefix_rate, held_rate);
+    }
 }
 
 int main(int argc, char **argv) {
@@ -1368,8 +2092,11 @@ int main(int argc, char **argv) {
     }
 
     const char *mode = argc >= 5 ? argv[4] : "x16halvenonsplit";
-    if (std::strcmp(mode, "x16halvenonsplit") != 0) {
-        std::fprintf(stderr, "Only x16halvenonsplit is implemented in this CUDA prototype.\n");
+    bool probe_mode = std::strcmp(mode, "x16stratumprobe") == 0;
+    if (std::strcmp(mode, "x16halvenonsplit") != 0 && !probe_mode) {
+        std::fprintf(stderr,
+                     "Only x16halvenonsplit and x16stratumprobe are implemented "
+                     "in this CUDA prototype.\n");
         return 1;
     }
 
@@ -1400,6 +2127,61 @@ int main(int argc, char **argv) {
     u64 claim_batch = argc >= 9 ? parse_u64_arg(argv[8], 1ULL) : 1ULL;
     if (claim_batch == 0) claim_batch = 1ULL;
     const char *backend_arg = argc >= 10 ? argv[9] : "auto";
+    int seed_mode = SEED_MIXED;
+    u64 start_chunk_nonce = 0;
+    u64 start_trial_base = 0;
+    bool start_trial_set = false;
+    int probe_target_depth = 26;
+    int probe_bucket_bits = 6;
+    int probe_focus_bucket = -1;
+    for (int i = 10; i < argc; i++) {
+        const char *arg = argv[i];
+        if (starts_with(arg, "seed=")) {
+            int parsed = parse_seed_mode(arg + 5, -1);
+            if (parsed < 0) {
+                std::fprintf(stderr, "Unknown seed mode: %s\n", arg + 5);
+                return 1;
+            }
+            seed_mode = parsed;
+        } else if (std::strcmp(arg, "mixed") == 0 ||
+                   std::strcmp(arg, "identity") == 0 ||
+                   std::strcmp(arg, "splitmix") == 0) {
+            seed_mode = parse_seed_mode(arg, SEED_MIXED);
+        } else if (starts_with(arg, "start_chunk=")) {
+            start_chunk_nonce = parse_u64_arg(arg + 12, 0);
+        } else if (starts_with(arg, "start_trial=")) {
+            start_trial_base = parse_u64_arg(arg + 12, 0);
+            start_trial_set = true;
+        } else if (starts_with(arg, "target_depth=")) {
+            probe_target_depth = (int)parse_u64_arg(arg + 13, 26);
+        } else if (starts_with(arg, "bucket_bits=")) {
+            probe_bucket_bits = (int)parse_u64_arg(arg + 12, 6);
+        } else if (starts_with(arg, "focus_bucket=")) {
+            probe_focus_bucket = (int)parse_u64_arg(arg + 13, 0);
+        } else if (starts_with(arg, "bucket=")) {
+            probe_focus_bucket = (int)parse_u64_arg(arg + 7, 0);
+        } else {
+            std::fprintf(stderr, "Unknown option: %s\n", arg);
+            usage(argv[0]);
+            return 1;
+        }
+    }
+    if (!start_trial_set) start_trial_base = start_chunk_nonce * chunk_trials;
+    if (probe_target_depth < 4) probe_target_depth = 4;
+    if (probe_target_depth > PROBE_MAX_DEPTH) probe_target_depth = PROBE_MAX_DEPTH;
+    if (probe_bucket_bits < 0) probe_bucket_bits = 0;
+    if (probe_bucket_bits > PROBE_MAX_BUCKET_BITS) {
+        std::fprintf(stderr, "bucket_bits must be <= %d.\n", PROBE_MAX_BUCKET_BITS);
+        return 1;
+    }
+    if (probe_focus_bucket >= (1 << (probe_bucket_bits + 1))) {
+        std::fprintf(stderr, "focus_bucket is outside the selected bucket range.\n");
+        return 1;
+    }
+    if (start_trial_base > max_trials) {
+        std::fprintf(stderr, "start_trial must be <= max_trials.\n");
+        return 1;
+    }
 
     SearchParams params{};
     params.p = p;
@@ -1445,21 +2227,102 @@ int main(int argc, char **argv) {
 
     std::printf("Pomerance CUDA x16halvenonsplit prototype\n\n");
     std::printf("p = %s\n", sprint128(p).c_str());
+    std::printf("mode = %s\n", probe_mode ? "x16stratumprobe" : "x16halvenonsplit");
     std::printf("seed_offset = %llu\n", seed_offset);
+    std::printf("seed_mode = %s\n", seed_mode_name(seed_mode));
     std::printf("max_trials = %llu\n", max_trials);
     std::printf("chunk_trials = %llu\n", chunk_trials);
+    if (start_trial_base || start_chunk_nonce) {
+        std::printf("start_chunk = %llu\n", start_chunk_nonce);
+        std::printf("start_trial = %llu\n", start_trial_base);
+    }
+    if (probe_mode) {
+        std::printf("probe_target_depth = %d\n", probe_target_depth);
+        std::printf("probe_bucket_bits = %d\n", probe_bucket_bits);
+        if (probe_focus_bucket >= 0) {
+            std::printf("probe_focus_bucket = %d\n", probe_focus_bucket);
+        }
+    }
     std::printf("k = %d\n", params.k);
     std::printf("backend = %s\n", use_u96 ? "u96" : "generic-u128");
     std::printf("GPU = %s  SMs=%d  blocks=%d  threads=%d  claim_batch=%llu\n\n",
                 prop.name, prop.multiProcessorCount, blocks, threads, claim_batch);
+
+    if (probe_mode) {
+        ProbeStats *d_probe = nullptr;
+        die_cuda(cudaMalloc(&d_probe, sizeof(ProbeStats)), "cudaMalloc probe stats");
+
+        ProbeStats cumulative{};
+        u64 total = start_trial_base;
+        u64 chunk_nonce = start_chunk_nonce;
+        u64 split_trial = start_trial_base + (max_trials - start_trial_base) / 2;
+        auto t0 = std::chrono::steady_clock::now();
+
+        while (total < max_trials) {
+            u64 remaining = max_trials - total;
+            u64 this_chunk = remaining < chunk_trials ? remaining : chunk_trials;
+            die_cuda(cudaMemset(d_probe, 0, sizeof(ProbeStats)),
+                     "cudaMemset probe stats");
+
+            if (use_u96) {
+                x16stratumprobe_kernel96<<<blocks, threads>>>(
+                    params96, seed_offset, chunk_nonce, this_chunk, total,
+                    split_trial, claim_batch, seed_mode, probe_target_depth,
+                    probe_bucket_bits, d_probe);
+            } else {
+                x16stratumprobe_kernel<<<blocks, threads>>>(
+                    params, seed_offset, chunk_nonce, this_chunk, total,
+                    split_trial, claim_batch, seed_mode, probe_target_depth,
+                    probe_bucket_bits, d_probe);
+            }
+            die_cuda(cudaGetLastError(), "probe kernel launch");
+            die_cuda(cudaDeviceSynchronize(), "probe kernel synchronize");
+
+            ProbeStats stats{};
+            die_cuda(cudaMemcpy(&stats, d_probe, sizeof(stats), cudaMemcpyDeviceToHost),
+                     "copy probe stats");
+            add_probe_stats(&cumulative, &stats);
+
+            u64 done = stats.accepted_roots;
+            if (done > this_chunk) done = this_chunk;
+            total += done;
+            auto now = std::chrono::steady_clock::now();
+            double elapsed = std::chrono::duration<double>(now - t0).count();
+            u64 interval_done = total - start_trial_base;
+            double rate = elapsed > 0.0 ? (double)interval_done / elapsed / 1e6 : 0.0;
+            u64 target_survive = depth_survive_ge(&cumulative, probe_target_depth);
+            std::printf("  probe_trials=%llu elapsed=%.3f rate_Mps=%.6f "
+                        "target_survivors=%llu y_draws=%llu\n",
+                        total, elapsed, rate, target_survive, cumulative.y_draws);
+            std::fflush(stdout);
+
+            if (done == 0) {
+                std::fprintf(stderr, "Probe kernel made no candidate progress; stopping.\n");
+                break;
+            }
+            chunk_nonce++;
+        }
+
+        auto t1 = std::chrono::steady_clock::now();
+        double elapsed = std::chrono::duration<double>(t1 - t0).count();
+        u64 interval_done = total - start_trial_base;
+        double rate = elapsed > 0.0 ? (double)interval_done / elapsed / 1e6 : 0.0;
+        print_probe_summary(&cumulative, probe_target_depth, probe_bucket_bits,
+                            probe_focus_bucket);
+        std::printf("\nProbe completed in %.2fs. trials=%llu interval_trials=%llu "
+                    "rate_Mps=%.6f\n",
+                    elapsed, total, interval_done, rate);
+        cudaFree(d_probe);
+        return 0;
+    }
 
     GpuStats *d_stats = nullptr;
     GpuResult *d_result = nullptr;
     die_cuda(cudaMalloc(&d_stats, sizeof(GpuStats)), "cudaMalloc stats");
     die_cuda(cudaMalloc(&d_result, sizeof(GpuResult)), "cudaMalloc result");
 
-    u64 total = 0;
-    u64 chunk_nonce = 0;
+    u64 total = start_trial_base;
+    u64 chunk_nonce = start_chunk_nonce;
     GpuResult final_result{};
     auto t0 = std::chrono::steady_clock::now();
 
@@ -1472,10 +2335,12 @@ int main(int argc, char **argv) {
         if (use_u96) {
             x16halvenonsplit_kernel96<<<blocks, threads>>>(params96, seed_offset, chunk_nonce,
                                                            this_chunk, total, claim_batch,
+                                                           seed_mode,
                                                            d_stats, d_result);
         } else {
             x16halvenonsplit_kernel<<<blocks, threads>>>(params, seed_offset, chunk_nonce,
                                                          this_chunk, total, claim_batch,
+                                                         seed_mode,
                                                          d_stats, d_result);
         }
         die_cuda(cudaGetLastError(), "kernel launch");
@@ -1493,7 +2358,8 @@ int main(int argc, char **argv) {
         total += done;
         auto now = std::chrono::steady_clock::now();
         double elapsed = std::chrono::duration<double>(now - t0).count();
-        double rate = elapsed > 0.0 ? (double)total / elapsed / 1e6 : 0.0;
+        u64 interval_done = total - start_trial_base;
+        double rate = elapsed > 0.0 ? (double)interval_done / elapsed / 1e6 : 0.0;
 #if POM_CUDA_DETAILED_STATS
         std::printf("  trials=%llu elapsed=%.3f rate_Mps=%.6f y_draws=%llu "
                     "nonsplit_y=%llu sqrtD_y=%llu roots=%llu\n",
@@ -1528,13 +2394,33 @@ int main(int argc, char **argv) {
                     elapsed, final_result.trial_index + 1);
         std::printf("%s %s %s\n\n",
                     sprint128(p).c_str(), sprint128(A).c_str(), sprint128(x0).c_str());
+#if POM_CUDA_HIT_TELEMETRY
+        std::printf("Hit telemetry:\n");
+        std::printf("  seed_offset=%llu chunk_nonce=%llu tid=%llu "
+                    "raw_draw_count=%llu local_draw_count=%llu\n",
+                    seed_offset, final_result.chunk_nonce, final_result.tid,
+                    final_result.raw_draw_count, final_result.local_draw_count);
+        std::printf("  root_index=%d q_sheet=%d compactD=%016llx\n",
+                    final_result.root_index, final_result.q_sheet,
+                    final_result.compactD);
+        std::printf("  y=%s\n", sprint128(unpack128(final_result.y)).c_str());
+        std::printf("  root_x=%s\n", sprint128(unpack128(final_result.root_x)).c_str());
+        std::printf("  xP16=%s\n", sprint128(unpack128(final_result.xP16)).c_str());
+        std::printf("  first_w=%s\n", sprint128(unpack128(final_result.first_w)).c_str());
+        std::printf("  V=%s\n", sprint128(unpack128(final_result.V)).c_str());
+        std::printf("  D=%s\n\n", sprint128(unpack128(final_result.D)).c_str());
+#else
+        std::printf("Hit telemetry: disabled in this build "
+                    "(-DPOM_CUDA_HIT_TELEMETRY=1 enables it)\n\n");
+#endif
         std::printf("Verified: %s  (%.2fs)\n",
                     verify128_mont(p, A, x0, params.k, &params.mt) ? "PASS" : "FAIL",
                     elapsed);
     } else {
-        double rate = elapsed > 0.0 ? (double)total / elapsed / 1e6 : 0.0;
-        std::printf("Not found in %.2fs. trials=%llu rate_Mps=%.6f\n",
-                    elapsed, total, rate);
+        u64 interval_done = total - start_trial_base;
+        double rate = elapsed > 0.0 ? (double)interval_done / elapsed / 1e6 : 0.0;
+        std::printf("Not found in %.2fs. trials=%llu interval_trials=%llu rate_Mps=%.6f\n",
+                    elapsed, total, interval_done, rate);
     }
 
     cudaFree(d_stats);

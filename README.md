@@ -68,10 +68,23 @@ Compile on an Ada-generation NVIDIA GPU with:
 nvcc -O3 -std=c++17 -arch=sm_89 -o pomerance_cuda pomerance_cuda.cu
 ```
 
+For hit replay diagnostics, compile with:
+
+```sh
+nvcc -O3 -std=c++17 -arch=sm_89 -DPOM_CUDA_HIT_TELEMETRY=1 -o pomerance_cuda_telemetry pomerance_cuda.cu
+```
+
 Example p26 run:
 
 ```sh
 ./pomerance_cuda 100000000000000000000000067 121 550000000000 x16halvenonsplit 1000000000
+```
+
+The CUDA binary also includes a GPU probe mode for bounded-depth source-stratum
+experiments:
+
+```sh
+./pomerance_cuda 100000000000000000000000067 121 1000000000 x16stratumprobe 1000000000 0 128 1 auto seed=mixed target_depth=26 bucket_bits=6
 ```
 
 The automatic backend uses a specialized 96-bit field path for `p < 2^96`,

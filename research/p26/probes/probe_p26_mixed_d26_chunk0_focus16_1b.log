@@ -1,0 +1,54 @@
+Pomerance CUDA x16halvenonsplit prototype
+
+p = 100000000000000000000000067
+mode = x16stratumprobe
+seed_offset = 121
+seed_mode = mixed
+max_trials = 1000000000
+chunk_trials = 1000000000
+probe_target_depth = 26
+probe_bucket_bits = 6
+probe_focus_bucket = 16
+k = 44
+backend = u96
+GPU = NVIDIA RTX 6000 Ada Generation  SMs=142  blocks=1136  threads=128  claim_batch=1
+
+  probe_trials=1000000000 elapsed=30.368 rate_Mps=32.929083 target_survivors=260 y_draws=2000189273
+
+Stratum probe summary:
+  accepted_roots=1000000000 y_draws=2000189273 nonsplit_y=1000079115 sqrtD_y=500033432 roots_valid=1000041186
+  target_depth=26 survivors=260 rate=0.000000260
+  prefix total=500000000 survivors=118 rate=0.000000236
+  heldout total=500000000 survivors=142 rate=0.000000284
+  depth survival checkpoints:
+    depth>=4 count=1000000000 rate=1.000000000
+    depth>=6 count=250002195 rate=0.250002195
+    depth>=8 count=62497829 rate=0.062497829
+    depth>=10 count=15616681 rate=0.015616681
+    depth>=12 count=3903369 rate=0.003903369
+    depth>=14 count=975843 rate=0.000975843
+    depth>=16 count=243891 rate=0.000243891
+    depth>=18 count=60678 rate=0.000060678
+    depth>=20 count=15196 rate=0.000015196
+    depth>=22 count=3882 rate=0.000003882
+    depth>=24 count=962 rate=0.000000962
+    depth>=26 count=260 rate=0.000000260
+  top buckets selected by prefix lift (min prefix total 100):
+    bucket q_sheet key prefix_total prefix_surv prefix_lift held_total held_surv held_lift promotion
+    123 1 59 3904287 3 3.256 3905378 0 0.000 no
+    55 0 55 3904300 3 3.256 3905745 0 0.000 no
+    126 1 62 3905232 3 3.255 3908097 2 1.802 no
+    58 0 58 3906511 3 3.254 3909704 0 0.000 no
+    40 0 40 3908160 3 3.253 3907396 3 2.703 no
+    0 0 0 3908679 3 3.252 3905034 0 0.000 no
+    115 1 51 3901769 2 2.172 3909005 1 0.901 no
+    90 1 26 3903910 2 2.171 3911156 1 0.900 no
+    60 0 60 3904424 2 2.171 3910785 0 0.000 no
+    102 1 38 3904820 2 2.170 3904180 3 2.706 no
+    33 0 33 3905001 2 2.170 3904546 3 2.705 no
+    104 1 40 3905210 2 2.170 3908523 1 0.901 no
+  focus bucket:
+    bucket q_sheet key prefix_total prefix_surv prefix_lift held_total held_surv held_lift promotion
+    16 0 16 3906753 1 1.085 3908148 3 2.703 no
+
+Probe completed in 30.37s. trials=1000000000 interval_trials=1000000000 rate_Mps=32.929014

@@ -1,0 +1,50 @@
+Pomerance CUDA x16halvenonsplit prototype
+
+p = 100000000000000000000000067
+mode = x16stratumprobe
+seed_offset = 121
+seed_mode = splitmix
+max_trials = 1000000000
+chunk_trials = 1000000000
+probe_target_depth = 26
+probe_bucket_bits = 6
+k = 44
+backend = u96
+GPU = NVIDIA RTX 6000 Ada Generation  SMs=142  blocks=1136  threads=128  claim_batch=1
+
+  probe_trials=1000000000 elapsed=30.757 rate_Mps=32.513251 target_survivors=248 y_draws=1999956530
+
+Stratum probe summary:
+  accepted_roots=1000000000 y_draws=1999956530 nonsplit_y=1000010444 sqrtD_y=500033524 roots_valid=1000041389
+  target_depth=26 survivors=248 rate=0.000000248
+  prefix total=500000000 survivors=130 rate=0.000000260
+  heldout total=500000000 survivors=118 rate=0.000000236
+  depth survival checkpoints:
+    depth>=4 count=1000000000 rate=1.000000000
+    depth>=6 count=249999241 rate=0.249999241
+    depth>=8 count=62490548 rate=0.062490548
+    depth>=10 count=15621967 rate=0.015621967
+    depth>=12 count=3911946 rate=0.003911946
+    depth>=14 count=979380 rate=0.000979380
+    depth>=16 count=243974 rate=0.000243974
+    depth>=18 count=61333 rate=0.000061333
+    depth>=20 count=15350 rate=0.000015350
+    depth>=22 count=3938 rate=0.000003938
+    depth>=24 count=1016 rate=0.000001016
+    depth>=26 count=248 rate=0.000000248
+  top buckets selected by prefix lift (min prefix total 100):
+    bucket q_sheet key prefix_total prefix_surv prefix_lift held_total held_surv held_lift promotion
+    25 0 25 3904370 6 5.911 3904307 1 1.085 no
+    1 0 1 3907792 4 3.937 3905349 1 1.085 no
+    60 0 60 3908302 4 3.936 3909195 1 1.084 no
+    94 1 30 3902169 3 2.957 3908075 1 1.084 no
+    76 1 12 3903810 3 2.956 3909610 1 1.084 no
+    3 0 3 3904502 3 2.955 3905733 0 0.000 no
+    83 1 19 3905027 3 2.955 3904782 0 0.000 no
+    82 1 18 3906345 3 2.954 3907966 0 0.000 no
+    54 0 54 3906907 3 2.953 3904003 1 1.085 no
+    12 0 12 3907033 3 2.953 3907112 0 0.000 no
+    66 1 2 3904286 2 1.970 3908082 1 1.084 no
+    102 1 38 3904389 2 1.970 3906673 2 2.169 no
+
+Probe completed in 30.76s. trials=1000000000 interval_trials=1000000000 rate_Mps=32.513200

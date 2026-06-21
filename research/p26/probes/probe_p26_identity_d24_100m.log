@@ -1,0 +1,49 @@
+Pomerance CUDA x16halvenonsplit prototype
+
+p = 100000000000000000000000067
+mode = x16stratumprobe
+seed_offset = 121
+seed_mode = identity
+max_trials = 100000000
+chunk_trials = 100000000
+probe_target_depth = 24
+probe_bucket_bits = 6
+k = 44
+backend = u96
+GPU = NVIDIA RTX 6000 Ada Generation  SMs=142  blocks=1136  threads=128  claim_batch=1
+
+  probe_trials=100000000 elapsed=3.031 rate_Mps=32.994986 target_survivors=76 y_draws=200148760
+
+Stratum probe summary:
+  accepted_roots=100000000 y_draws=200148760 nonsplit_y=100072834 sqrtD_y=50033143 roots_valid=100040784
+  target_depth=24 survivors=76 rate=0.000000760
+  prefix total=50000000 survivors=38 rate=0.000000760
+  heldout total=50000000 survivors=38 rate=0.000000760
+  depth survival checkpoints:
+    depth>=4 count=100000000 rate=1.000000000
+    depth>=6 count=24999951 rate=0.249999510
+    depth>=8 count=6246607 rate=0.062466070
+    depth>=10 count=1562302 rate=0.015623020
+    depth>=12 count=391110 rate=0.003911100
+    depth>=14 count=97876 rate=0.000978760
+    depth>=16 count=24440 rate=0.000244400
+    depth>=18 count=6090 rate=0.000060900
+    depth>=20 count=1518 rate=0.000015180
+    depth>=22 count=394 rate=0.000003940
+    depth>=24 count=76 rate=0.000000760
+  top buckets selected by prefix lift (min prefix total 100):
+    bucket q_sheet key prefix_total prefix_surv prefix_lift held_total held_surv held_lift promotion
+    63 0 63 389809 2 6.751 390870 0 0.000 no
+    28 0 28 390401 2 6.741 389902 0 0.000 no
+    3 0 3 390838 2 6.733 390305 1 3.371 no
+    82 1 18 390859 2 6.733 390257 0 0.000 no
+    10 0 10 391704 2 6.718 391133 0 0.000 no
+    95 1 31 389375 1 3.379 391058 0 0.000 no
+    62 0 62 389439 1 3.379 389473 1 3.378 no
+    121 1 57 389650 1 3.377 390989 1 3.365 no
+    65 1 1 389878 1 3.375 390411 1 3.370 no
+    124 1 60 389930 1 3.374 389965 0 0.000 no
+    78 1 14 389935 1 3.374 390597 1 3.369 no
+    107 1 43 390037 1 3.373 390035 0 0.000 no
+
+Probe completed in 3.03s. trials=100000000 interval_trials=100000000 rate_Mps=32.994612

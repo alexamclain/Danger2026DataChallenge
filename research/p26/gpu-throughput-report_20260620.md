@@ -217,6 +217,10 @@ In short: the next target is not "pick better seeds" by itself. The stronger
 target is to identify whether a real `X1(16)` source stratum is being exposed
 by the seed order, then sample that stratum directly.
 
+Follow-up: `gpu-stratum-probe_20260621.md` records an initial GPU probe of this
+idea. It recovered hit-local telemetry, compared identity/splitmix/mixed seed
+orders, and did not find a held-out-promoted compact source bucket.
+
 ## Cloud Operations
 
 RunPod pods were preferable to serverless for this experiment because the job

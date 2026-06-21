@@ -46,4 +46,7 @@ Files:
 - `verification.txt`: independent replay, primality check, and DANGER3 verifier transcript.
 - `worker.log`: full GPU run log.
 - `worker-tail.txt`: final GPU run log tail.
+- `p26-hit-replay-telemetry.log`: replay of the hit chunk with
+  `POM_CUDA_HIT_TELEMETRY=1`, recording source `y`, root sheet, `D`,
+  `first_w`, `V`, and draw counters.
 - `pomerance_100000000000000000000000067.lean`: generated Lean certificate artifact.

@@ -6,5 +6,6 @@ This directory records the GPU-throughput engineering notes behind the p26
 Start with:
 
 - [GPU throughput report](gpu-throughput-report_20260620.md)
+- [GPU source-stratum probe](gpu-stratum-probe_20260621.md)
 
 The verified result artifacts live in `results/p26/`.
