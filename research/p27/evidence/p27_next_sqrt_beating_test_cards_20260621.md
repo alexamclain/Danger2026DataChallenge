@@ -604,9 +604,15 @@ identity/splitmix/mixed seed order and the hit compact bucket were negative.
 Do not assume p27 has a seed-order shortcut without a mathematical invariant.
 ```
 
-## Card 2: Named R(a) Candidate Evaluator
+## Card 2: Named Cover / Spin Candidate Evaluator
 
-Use the p27 evaluator that accepts a named rational function:
+The Magma spin check now says `domain_line` is not naturally a plain
+low-degree rational character on the `a`-line.  For
+`F=t*(t^2+2t-1)*(t^2+1)`, `F(t)/F(-1/t)=t^6`, so the character descends, but
+`F` has odd valuation at the ramification factor `t^2+1`.  Treat this as a
+half-divisor / spin class on the trace/norm quotient.
+
+The existing p27 evaluator is still useful for named rational functions:
 
 ```text
 R(a) = numerator(a) / denominator(a)
@@ -634,20 +640,32 @@ and their theta/divisor descendants on `b^2 = 16 - a^4`.
 
 Status: evaluator added as
 `research/p27/archive/gates/p27_line_rational_evaluator.py`.  Default visible
-branch functions are negative; use this only for named theorem/expert
-candidates.
+branch functions are negative, and the spin check explains why blind `R(a)`
+fitting is likely mis-targeted for `domain_line`.
+
+Updated first-class target:
+
+```text
+construct the actual double covers / divisor classes over
+  C: b^2=16-a^4
+  E: v^2=u^3-u
+for domain_line and normalized T_line, then test whether their sum/product
+gives a sourceable selected trace/norm stratum.
+```
 
 Promotion bar:
 
 ```text
-zero mismatches on prefix and held-out p27 line samples, plus a cheap way to
-sample or enumerate the selected line stratum without paying sqrt(p) again.
+zero mismatches on prefix and held-out p27 line samples or a small-field Magma
+cover validation, plus a cheap way to sample or enumerate the selected stratum
+without paying sqrt(p) again.
 ```
 
 Kill condition:
 
 ```text
-only post-hoc high-degree interpolation or a filter whose cost/loss cancels the lift.
+only post-hoc high-degree interpolation, another blind low-degree R(a) scan,
+or a filter whose cost/loss cancels the lift.
 ```
 
 ## Card 3: Branch-Divisor / Theta Ask

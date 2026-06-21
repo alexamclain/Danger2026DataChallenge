@@ -28,6 +28,20 @@ The p26 EK quotient, b-flip cocycle, domain-line descent, and target-line
 descent all survived on p27 with zero inconsistencies in a `65,536` raw-draw
 diagnostic.
 
+The first exact small-field check of that trace/norm quotient changes the
+math ask:
+[P27 Trace/Norm Spin Obstruction](evidence/p27_trace_norm_spin_obstruction_20260621.md).
+For `t=y-1`, `a=t-1/t`, and
+`F=t*(t^2+2t-1)*(t^2+1)`, online Magma confirms over `q=607` that
+`F(t)/F(-1/t)=t^6`, so the domain bit descends as a character, but the
+valuation of `F` at the ramification factor `t^2+1` is odd.  This explains why
+small `R(a)` rational-character screens were the wrong target for this bit:
+the natural object is a spin/half-divisor class on the trace/norm quotient.
+The next credible sqrt-beating trace/norm test is explicit
+double-cover/divisor-class extraction for `domain_line` and normalized
+`T_line`, looking for a shared quotient, Prym factor, or sourceable Kummer
+class that samples the selected stratum directly.
+
 The practical C path also smoke-tested on p27:
 [P27 Practical Trace/Norm Prefilter Smoke](evidence/p27_practical_trace_norm_prefilter_smoke_20260621.md).
 Baseline `x16halvestatsnonsplit` and trace/norm `x16halvestatsnonsplittraced`
