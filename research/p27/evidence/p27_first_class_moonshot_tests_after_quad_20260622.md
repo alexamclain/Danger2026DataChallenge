@@ -10,7 +10,7 @@ The remaining tests that could beat `sqrt(p)` are source or class tests:
 
 ```text
 1. Coordinated A/B/K/Sroot Kummer sequence extraction.
-2. trace/norm half-norm phase identity.
+2. trace/norm half-norm phase identity, now with post-Dplus d3/d4 routed to A.
 3. BSM only as a demoted coordinate view unless a non-inherited selector is added.
 4. bounded GPU telemetry only when it feeds one of the above.
 ```
@@ -45,6 +45,13 @@ visible branch dynamics:
 These results do not kill the A/B/K/Sroot Kummer route.  They kill the nearby
 coefficient buckets and map-family shortcuts, and the fixture bridges collapse
 the surviving coordinates to one class-extraction problem.
+The Dplus bridge now collapses one more apparent frontier:
+[P27 Trace/Norm Dplus A-Descent Bridge](p27_trace_norm_dplus_a_descent_20260622.md)
+shows zero mixed `A` groups for post-Dplus `d3` and `d4` after `d3=+1` across
+three p27 seed groups.  Thus Dplus later-gate class work should feed the
+A-level Kummer extraction lane; trace/norm remains separate for fused/source
+pricing and any non-visible half-norm identity that produces a source or
+low-genus quotient.
 
 ## Test 1: Coordinated A/B/K/Sroot Kummer Sequence
 

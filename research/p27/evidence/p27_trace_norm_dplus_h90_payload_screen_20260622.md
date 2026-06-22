@@ -171,11 +171,20 @@ test equality, recurrence, or Prym relation at the divisor/function-field level
 Do not run more low-weight H90 sign screens unless a new theorem names a
 specific finite-field class.
 
+Bridge update:
+[P27 Trace/Norm Dplus A-Descent Bridge](p27_trace_norm_dplus_a_descent_20260622.md)
+shows that post-Dplus `d3` and `d4` descend to whole `A` fibers in three p27
+seed groups, with zero mixed `A` groups.  Therefore the practical class
+comparison should first route through the normalized A-line Kummer classes.
+The H90 model remains useful only if it identifies the same A-level class,
+gives a lower-genus quotient, or supplies a direct Dplus source.
+
 ## Continue / Kill
 
 ```text
 continue = exact d3 Kummer/divisor extraction on E_h90(z)
 continue = compare d3 cover class with A_eta
+continue = route post-Dplus d3/d4 comparison through A-level Kummer extraction
 continue = GPU only for a named d3/A_eta telemetry class
 
 kill = H90 payload signs as a production GPU filter

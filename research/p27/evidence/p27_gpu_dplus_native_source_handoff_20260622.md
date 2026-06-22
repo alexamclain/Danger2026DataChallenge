@@ -182,10 +182,19 @@ Dplus-conditioned stream:
 
 ```text
 d3,d4,d5,... as far as cheap
+A coordinate / A hash for each emitted candidate
 pairwise and lagged correlations
 short sign-word bucket counts
 depth-conditioned transition rates
 ```
+
+Bridge baseline:
+[P27 Trace/Norm Dplus A-Descent Bridge](p27_trace_norm_dplus_a_descent_20260622.md)
+shows zero mixed `A` groups for post-Dplus `d3` and `d4` after `d3=+1` across
+three p27 seed groups.  So any fused Dplus telemetry should report whether the
+same A-descent persists at GPU scale, and should route later-gate class work
+to the A-level Kummer extraction packet unless it finds a genuine trace/norm
+class not visible on A.
 
 Promotion:
 
@@ -223,6 +232,7 @@ research note saved under research/p27/evidence/
 continue = Dplus-native/fused implementation if it improves effective deep
            survivor throughput or exposes later-gate coupling
 continue = direct source only if it names the source map and denominator
+continue = emit A with Dplus later-gate telemetry and compare to A-level classes
 
 kill = large p27 production run based only on the existing Dplus classifier
 kill = orientation bucket telemetry as a standalone GPU task

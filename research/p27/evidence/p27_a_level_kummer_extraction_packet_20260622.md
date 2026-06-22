@@ -176,6 +176,13 @@ exact signed bijection.  Thus the A packet is a quotient view of the same
 conditional classes as the B-line packet, not an independent moonshot lane.
 Use A as a CAS/check coordinate inside the coordinated A/B/K/Sroot extraction.
 
+Update: [P27 Trace/Norm Dplus A-Descent Bridge](p27_trace_norm_dplus_a_descent_20260622.md)
+checks the trace/norm `Dplus` raw-y stream directly.  On three independent p27
+seed groups, post-Dplus `d3` and `d4` after `d3=+1` have zero mixed `A`
+groups.  This routes Dplus later-gate class comparison into the same A-level
+Kummer extraction task; trace/norm remains separate only for fused/native
+Dplus pricing and possible source maps into the two-gate prefix.
+
 ```text
 p27_a_level_kummer_extraction_packet_rows=1/1
 ```

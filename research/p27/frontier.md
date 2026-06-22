@@ -394,6 +394,12 @@ squareclasses are already `+1`, including opposite-eta variants.  Products of
 weight-`<=3` predictor; train skews such as `U_actual` for `d3` and
 `-eta*U_other` for `d4` collapse on heldout.  The remaining Dplus-H90 test is
 actual d3 Kummer/divisor extraction on `E_h90(z)`, not more sign buckets.
+The class comparison now has a routing result:
+[P27 Trace/Norm Dplus A-Descent Bridge](evidence/p27_trace_norm_dplus_a_descent_20260622.md).
+Across three p27 seed groups, post-Dplus `d3` and `d4` after `d3=+1` have zero
+mixed `A` groups.  Thus Dplus post-gate work should feed the A-level Kummer
+extraction lane; trace/norm remains useful for exact two-gate prefix pricing
+and source questions, not as an independent later-gate bucket family.
 
 The naive orientation-source cover is now priced:
 [P27 Trace/Norm Source-Orientation Cover](evidence/p27_trace_norm_source_orientation_cover_20260621.md).
@@ -939,6 +945,12 @@ Across q1607/q1847/q2087 and gates d3/d4, `A=B^2-2` gives `267/267`
 row-level sign matches with no missing rows, uncovered A rows, or collisions.
 This folds A into the coordinated A/B/K/Sroot class-extraction problem; it is
 not a separate GPU A-bucket lane.
+The trace/norm bridge now points here too:
+[P27 Trace/Norm Dplus A-Descent Bridge](evidence/p27_trace_norm_dplus_a_descent_20260622.md).
+On three Dplus-conditioned p27 seed groups, `d3` and `d4` after `d3=+1`
+descend to whole `A` fibers with zero mixed groups.  This collapses the
+post-Dplus later-gate question into the same A-level Kummer class sequence,
+while leaving fused/native Dplus pricing as a separate engineering test.
 The cheap visible-transform recurrence is now closed:
 [P27 A-Line Named-Transform Recurrence Screen](evidence/p27_a_line_named_transform_recurrence_20260622.md).
 The S3 group preserving the visible A-branch set `{-2,2,infinity}` almost

@@ -485,9 +485,17 @@ Known facts:
 ```text
 Dplus = exact two-gate prefix
 post-Dplus d3/d4 rates are random-looking
+post-Dplus d3/d4 descend to whole A fibers in p27 seed groups
 full orientation source cover prices at genus 69
 low-weight post-Dplus H/VQ/X/T_line/root products failed
 ```
+
+Bridge:
+[P27 Trace/Norm Dplus A-Descent Bridge](p27_trace_norm_dplus_a_descent_20260622.md).
+Post-Dplus `d3` and `d4` after `d3=+1` have zero mixed `A` groups across
+three p27 seed groups.  So later-gate class comparison should route through
+the A-level Kummer extraction lane unless a new trace/norm theorem names a
+strictly smaller quotient or source map.
 
 Concrete next trace/norm test:
 
