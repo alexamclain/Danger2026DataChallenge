@@ -969,7 +969,8 @@ occurrences but only `8` distinct x-roots, closed under `x -> 1/x`, hence
 always square, power sums through exponent `64` have no exact or near
 selector, and the four-u coefficients are maximal-degree on the legal-B set.
 So the next CAS object is the reduced 4-u/8-x cover, not a GPU symmetric
-invariant sampler.
+invariant sampler.  The exact row-level fixture is
+`research/p27/archive/fixtures/p27_b_line_reduced_fiber_fixture_20260622.json`.
 The B-line visible two-gate quartic shortcut is closed as well:
 [P27 B-Line Gate4-Prefix Quartic q1847 Screen](evidence/p27_b_line_gate4_prefix_quartic_q1847_screen_20260622.md).
 It scans `6,300,872,423` q1847 coefficient triples for

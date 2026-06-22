@@ -30,10 +30,23 @@ Probe:
 research/p27/archive/gates/p27_b_line_fiber_invariant_probe.py
 ```
 
+Reduced-fiber fixture generator:
+
+```text
+research/p27/archive/gates/p27_b_line_reduced_fiber_fixture_packet.py
+```
+
 Output:
 
 ```text
 research/p27/archive/probe_outputs/p27_b_line_fiber_invariant_probe_20260622.txt
+research/p27/archive/probe_outputs/p27_b_line_reduced_fiber_fixture_packet_20260622.txt
+```
+
+JSON fixture:
+
+```text
+research/p27/archive/fixtures/p27_b_line_reduced_fiber_fixture_20260622.json
 ```
 
 ## Command
@@ -42,6 +55,14 @@ research/p27/archive/probe_outputs/p27_b_line_fiber_invariant_probe_20260622.txt
 PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=research/p27/archive/gates \
 python3 -u research/p27/archive/gates/p27_b_line_fiber_invariant_probe.py \
   | tee research/p27/archive/probe_outputs/p27_b_line_fiber_invariant_probe_20260622.txt
+
+PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=research/p27/archive/gates \
+python3 -u research/p27/archive/gates/p27_b_line_reduced_fiber_fixture_packet.py \
+  | tee research/p27/archive/probe_outputs/p27_b_line_reduced_fiber_fixture_packet_20260622.txt
+
+PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=research/p27/archive/gates \
+python3 -u research/p27/archive/gates/p27_b_line_reduced_fiber_fixture_packet.py --json \
+  > research/p27/archive/fixtures/p27_b_line_reduced_fiber_fixture_20260622.json
 ```
 
 ## Results
@@ -102,6 +123,7 @@ The d3 fiber over B has a concrete smaller model: an 8-root reciprocal x-cover
 or a 4-root u-cover.
 The equality f3=chi(u+2) holds uniformly on the reduced fiber.
 This is a better CAS target than the full 32-occurrence source fiber.
+The JSON fixture freezes every guard-field reduced fiber for CAS replay.
 ```
 
 Negative:

@@ -111,6 +111,8 @@ is always square, power sums through exponent `64` have no exact or near
 selector, and the four-u polynomial coefficients are maximal-degree on the
 legal-B set.  This makes the reduced 4-u/8-x cover the next CAS object, not a
 GPU symmetric-invariant sampler.
+The corresponding row-level CAS fixture is
+`research/p27/archive/fixtures/p27_b_line_reduced_fiber_fixture_20260622.json`.
 
 Required computation:
 

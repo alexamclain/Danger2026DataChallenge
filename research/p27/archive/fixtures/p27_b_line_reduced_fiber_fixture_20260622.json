@@ -1,0 +1,6690 @@
+{
+  "acceptance": {
+    "kill": "high-genus/generic reduced cover and fresh f4/f5 classes",
+    "promote": "genus <= 1, explicit sampler/sourceable walk, or multi-gate recurrence"
+  },
+  "cas_tasks": [
+    {
+      "compute": [
+        "function field for the 4-root u cover over legal B",
+        "genus and components",
+        "branch divisor degree and support field degrees",
+        "quotients or involutions beyond x -> 1/x"
+      ],
+      "kill_if": "generic high-genus cover with no quotient or recurrence",
+      "name": "Normalize reduced u-cover",
+      "priority": 10,
+      "promote_if": "low-genus/sourceable quotient or recurrence controlling f3 and later gates"
+    },
+    {
+      "compute": [
+        "pull back f4 to the reduced f3 cover",
+        "test whether f4/f3 is a coboundary, translate, iterate, or fresh cover"
+      ],
+      "kill_if": "f4 is a fresh independent half-cover on every useful quotient",
+      "name": "Compare f4 after reduced f3 cover",
+      "priority": 20,
+      "promote_if": "one class/correspondence controls multiple selected gates"
+    }
+  ],
+  "coordinates": {
+    "B": "8*X^2/(X^2 - 1)^2",
+    "selector": "f3(B) = chi(x) = chi(u + 2) on every reduced-fiber root",
+    "u": "x + 1/x",
+    "x": "next selected x-coordinate after the legal d2 source"
+  },
+  "date": "2026-06-22",
+  "field_signature": {
+    "chi_minus_one": -1,
+    "chi_two": 1,
+    "q_mod_16": 7
+  },
+  "fixtures": [
+    {
+      "field": 1607,
+      "row_count": 49,
+      "rows": [
+        {
+          "B": 32,
+          "occurrence_root_count": 32,
+          "sign": "plus",
+          "u_poly_coeffs_ascending": [
+            668,
+            1521,
+            54,
+            1023,
+            1
+          ],
+          "u_roots": [
+            640,
+            676,
+            1142,
+            1340
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            1023,
+            58,
+            1376,
+            782,
+            1376,
+            58,
+            1023,
+            1
+          ],
+          "x_roots": [
+            37,
+            266,
+            733,
+            876,
+            1096,
+            1151,
+            1303,
+            1550
+          ]
+        },
+        {
+          "B": 49,
+          "occurrence_root_count": 32,
+          "sign": "plus",
+          "u_poly_coeffs_ascending": [
+            717,
+            1551,
+            376,
+            854,
+            1
+          ],
+          "u_roots": [
+            427,
+            1011,
+            1107,
+            1422
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            854,
+            380,
+            899,
+            1475,
+            899,
+            380,
+            854,
+            1
+          ],
+          "x_roots": [
+            305,
+            477,
+            630,
+            729,
+            1117,
+            1264,
+            1305,
+            1354
+          ]
+        },
+        {
+          "B": 144,
+          "occurrence_root_count": 32,
+          "sign": "plus",
+          "u_poly_coeffs_ascending": [
+            28,
+            633,
+            498,
+            830,
+            1
+          ],
+          "u_roots": [
+            281,
+            375,
+            782,
+            946
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            830,
+            502,
+            1516,
+            1030,
+            1516,
+            502,
+            830,
+            1
+          ],
+          "x_roots": [
+            479,
+            781,
+            843,
+            1107,
+            1237,
+            1316,
+            1503,
+            1546
+          ]
+        },
+        {
+          "B": 157,
+          "occurrence_root_count": 32,
+          "sign": "minus",
+          "u_poly_coeffs_ascending": [
+            1036,
+            704,
+            666,
+            1418,
+            1
+          ],
+          "u_roots": [
+            1135,
+            1147,
+            1342,
+            1386
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            1418,
+            670,
+            137,
+            767,
+            137,
+            670,
+            1418,
+            1
+          ],
+          "x_roots": [
+            10,
+            20,
+            94,
+            405,
+            742,
+            1125,
+            1248,
+            1366
+          ]
+        },
+        {
+          "B": 190,
+          "occurrence_root_count": 32,
+          "sign": "plus",
+          "u_poly_coeffs_ascending": [
+            62,
+            336,
+            1488,
+            999,
+            1
+          ],
+          "u_roots": [
+            365,
+            970,
+            1140,
+            1347
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            999,
+            1492,
+            119,
+            1437,
+            119,
+            1492,
+            999,
+            1
+          ],
+          "x_roots": [
+            239,
+            438,
+            472,
+            532,
+            610,
+            875,
+            901,
+            1362
+          ]
+        },
+        {
+          "B": 200,
+          "occurrence_root_count": 32,
+          "sign": "minus",
+          "u_poly_coeffs_ascending": [
+            803,
+            687,
+            1412,
+            1222,
+            1
+          ],
+          "u_roots": [
+            377,
+            805,
+            998,
+            1419
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            1222,
+            1416,
+            1139,
+            419,
+            1139,
+            1416,
+            1222,
+            1
+          ],
+          "x_roots": [
+            120,
+            171,
+            644,
+            827,
+            1196,
+            1216,
+            1299,
+            1340
+          ]
+        },
+        {
+          "B": 266,
+          "occurrence_root_count": 32,
+          "sign": "minus",
+          "u_poly_coeffs_ascending": [
+            810,
+            193,
+            133,
+            1516,
+            1
+          ],
+          "u_roots": [
+            59,
+            485,
+            513,
+            641
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            1516,
+            137,
+            1527,
+            1082,
+            1527,
+            137,
+            1516,
+            1
+          ],
+          "x_roots": [
+            224,
+            252,
+            389,
+            776,
+            806,
+            1286,
+            1344,
+            1442
+          ]
+        },
+        {
+          "B": 286,
+          "occurrence_root_count": 32,
+          "sign": "minus",
+          "u_poly_coeffs_ascending": [
+            1034,
+            777,
+            1379,
+            1321,
+            1
+          ],
+          "u_roots": [
+            563,
+            622,
+            892,
+            1423
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            1321,
+            1383,
+            1526,
+            584,
+            1526,
+            1383,
+            1321,
+            1
+          ],
+          "x_roots": [
+            598,
+            825,
+            976,
+            1028,
+            1055,
+            1115,
+            1253,
+            1471
+          ]
+        },
+        {
+          "B": 337,
+          "occurrence_root_count": 32,
+          "sign": "minus",
+          "u_poly_coeffs_ascending": [
+            1444,
+            161,
+            1340,
+            1556,
+            1
+          ],
+          "u_roots": [
+            342,
+            405,
+            1108,
+            1410
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            1556,
+            1344,
+            8,
+            916,
+            8,
+            1344,
+            1556,
+            1
+          ],
+          "x_roots": [
+            30,
+            43,
+            299,
+            375,
+            622,
+            788,
+            1246,
+            1469
+          ]
+        },
+        {
+          "B": 354,
+          "occurrence_root_count": 32,
+          "sign": "minus",
+          "u_poly_coeffs_ascending": [
+            1387,
+            418,
+            1605,
+            1516,
+            1
+          ],
+          "u_roots": [
+            347,
+            805,
+            825,
+            1328
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            1516,
+            2,
+            145,
+            1389,
+            145,
+            2,
+            1516,
+            1
+          ],
+          "x_roots": [
+            61,
+            323,
+            623,
+            764,
+            1005,
+            1196,
+            1216,
+            1331
+          ]
+        },
+        {
+          "B": 384,
+          "occurrence_root_count": 32,
+          "sign": "minus",
+          "u_poly_coeffs_ascending": [
+            301,
+            52,
+            1301,
+            677,
+            1
+          ],
+          "u_roots": [
+            41,
+            346,
+            931,
+            1219
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            677,
+            1305,
+            476,
+            1302,
+            476,
+            1305,
+            677,
+            1
+          ],
+          "x_roots": [
+            57,
+            278,
+            593,
+            626,
+            874,
+            952,
+            1001,
+            1370
+          ]
+        },
+        {
+          "B": 390,
+          "occurrence_root_count": 32,
+          "sign": "minus",
+          "u_poly_coeffs_ascending": [
+            527,
+            51,
+            945,
+            270,
+            1
+          ],
+          "u_roots": [
+            28,
+            769,
+            1039,
+            1108
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            270,
+            949,
+            861,
+            816,
+            861,
+            949,
+            270,
+            1
+          ],
+          "x_roots": [
+            42,
+            86,
+            457,
+            727,
+            953,
+            1178,
+            1246,
+            1469
+          ]
+        },
+        {
+          "B": 398,
+          "occurrence_root_count": 32,
+          "sign": "minus",
+          "u_poly_coeffs_ascending": [
+            705,
+            54,
+            1587,
+            423,
+            1
+          ],
+          "u_roots": [
+            768,
+            999,
+            1135,
+            1496
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            423,
+            1591,
+            1323,
+            671,
+            1323,
+            1591,
+            423,
+            1
+          ],
+          "x_roots": [
+            10,
+            71,
+            230,
+            538,
+            689,
+            807,
+            928,
+            1125
+          ]
+        },
+        {
+          "B": 412,
+          "occurrence_root_count": 32,
+          "sign": "minus",
+          "u_poly_coeffs_ascending": [
+            905,
+            558,
+            492,
+            697,
+            1
+          ],
+          "u_roots": [
+            403,
+            825,
+            1387,
+            1509
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            697,
+            496,
+            1042,
+            288,
+            1042,
+            496,
+            697,
+            1
+          ],
+          "x_roots": [
+            61,
+            183,
+            480,
+            488,
+            764,
+            899,
+            1326,
+            1530
+          ]
+        },
+        {
+          "B": 444,
+          "occurrence_root_count": 32,
+          "sign": "minus",
+          "u_poly_coeffs_ascending": [
+            936,
+            438,
+            860,
+            803,
+            1
+          ],
+          "u_roots": [
+            407,
+            733,
+            1378,
+            1500
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            803,
+            864,
+            1240,
+            1055,
+            1240,
+            864,
+            803,
+            1
+          ],
+          "x_roots": [
+            516,
+            615,
+            743,
+            757,
+            763,
+            835,
+            1498,
+            1505
+          ]
+        },
+        {
+          "B": 450,
+          "occurrence_root_count": 32,
+          "sign": "plus",
+          "u_poly_coeffs_ascending": [
+            1560,
+            979,
+            1554,
+            815,
+            1
+          ],
+          "u_roots": [
+            221,
+            1116,
+            1234,
+            1435
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            815,
+            1558,
+            210,
+            1460,
+            210,
+            1558,
+            815,
+            1
+          ],
+          "x_roots": [
+            17,
+            169,
+            241,
+            256,
+            860,
+            1065,
+            1418,
+            1587
+          ]
+        },
+        {
+          "B": 607,
+          "occurrence_root_count": 32,
+          "sign": "plus",
+          "u_poly_coeffs_ascending": [
+            1527,
+            591,
+            1344,
+            36,
+            1
+          ],
+          "u_roots": [
+            156,
+            676,
+            1087,
+            1259
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            36,
+            1348,
+            699,
+            1007,
+            699,
+            1348,
+            36,
+            1
+          ],
+          "x_roots": [
+            9,
+            675,
+            733,
+            1088,
+            1120,
+            1250,
+            1550,
+            1574
+          ]
+        },
+        {
+          "B": 674,
+          "occurrence_root_count": 32,
+          "sign": "minus",
+          "u_poly_coeffs_ascending": [
+            842,
+            1360,
+            1024,
+            323,
+            1
+          ],
+          "u_roots": [
+            750,
+            1219,
+            1225,
+            1304
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            323,
+            1028,
+            722,
+            1289,
+            722,
+            1028,
+            323,
+            1
+          ],
+          "x_roots": [
+            80,
+            335,
+            593,
+            626,
+            969,
+            1044,
+            1145,
+            1313
+          ]
+        },
+        {
+          "B": 709,
+          "occurrence_root_count": 32,
+          "sign": "minus",
+          "u_poly_coeffs_ascending": [
+            1602,
+            1605,
+            1233,
+            1451,
+            1
+          ],
+          "u_roots": [
+            377,
+            381,
+            1034,
+            1578
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            1451,
+            1237,
+            1137,
+            860,
+            1137,
+            1237,
+            1451,
+            1
+          ],
+          "x_roots": [
+            19,
+            351,
+            449,
+            644,
+            1015,
+            1227,
+            1340,
+            1539
+          ]
+        },
+        {
+          "B": 734,
+          "occurrence_root_count": 32,
+          "sign": "plus",
+          "u_poly_coeffs_ascending": [
+            305,
+            1492,
+            794,
+            40,
+            1
+          ],
+          "u_roots": [
+            221,
+            494,
+            985,
+            1474
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            40,
+            798,
+            5,
+            292,
+            5,
+            798,
+            40,
+            1
+          ],
+          "x_roots": [
+            241,
+            354,
+            560,
+            587,
+            631,
+            887,
+            1541,
+            1587
+          ]
+        },
+        {
+          "B": 760,
+          "occurrence_root_count": 32,
+          "sign": "plus",
+          "u_poly_coeffs_ascending": [
+            1069,
+            1206,
+            758,
+            853,
+            1
+          ],
+          "u_roots": [
+            529,
+            802,
+            1070,
+            1567
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            853,
+            762,
+            551,
+            984,
+            551,
+            762,
+            853,
+            1
+          ],
+          "x_roots": [
+            218,
+            391,
+            411,
+            414,
+            656,
+            726,
+            1349,
+            1410
+          ]
+        },
+        {
+          "B": 829,
+          "occurrence_root_count": 32,
+          "sign": "plus",
+          "u_poly_coeffs_ascending": [
+            1340,
+            1123,
+            781,
+            256,
+            1
+          ],
+          "u_roots": [
+            197,
+            275,
+            1105,
+            1381
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            256,
+            785,
+            284,
+            1301,
+            284,
+            785,
+            256,
+            1
+          ],
+          "x_roots": [
+            50,
+            110,
+            225,
+            369,
+            736,
+            819,
+            985,
+            1271
+          ]
+        },
+        {
+          "B": 848,
+          "occurrence_root_count": 32,
+          "sign": "plus",
+          "u_poly_coeffs_ascending": [
+            581,
+            50,
+            29,
+            370,
+            1
+          ],
+          "u_roots": [
+            658,
+            884,
+            1388,
+            1521
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            370,
+            33,
+            1160,
+            645,
+            1160,
+            33,
+            370,
+            1
+          ],
+          "x_roots": [
+            154,
+            200,
+            458,
+            628,
+            760,
+            924,
+            1367,
+            1567
+          ]
+        },
+        {
+          "B": 865,
+          "occurrence_root_count": 32,
+          "sign": "minus",
+          "u_poly_coeffs_ascending": [
+            442,
+            357,
+            660,
+            119,
+            1
+          ],
+          "u_roots": [
+            698,
+            1068,
+            1362,
+            1574
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            119,
+            664,
+            714,
+            161,
+            714,
+            664,
+            119,
+            1
+          ],
+          "x_roots": [
+            173,
+            282,
+            416,
+            453,
+            1071,
+            1121,
+            1189,
+            1604
+          ]
+        },
+        {
+          "B": 880,
+          "occurrence_root_count": 32,
+          "sign": "plus",
+          "u_poly_coeffs_ascending": [
+            334,
+            691,
+            1102,
+            1240,
+            1
+          ],
+          "u_roots": [
+            703,
+            902,
+            920,
+            1056
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            1240,
+            1106,
+            1197,
+            937,
+            1197,
+            1106,
+            1240,
+            1
+          ],
+          "x_roots": [
+            16,
+            53,
+            829,
+            849,
+            904,
+            1170,
+            1481,
+            1493
+          ]
+        },
+        {
+          "B": 886,
+          "occurrence_root_count": 32,
+          "sign": "plus",
+          "u_poly_coeffs_ascending": [
+            1536,
+            205,
+            1293,
+            1303,
+            1
+          ],
+          "u_roots": [
+            72,
+            703,
+            1314,
+            1429
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            1303,
+            1297,
+            900,
+            914,
+            900,
+            1297,
+            1303,
+            1
+          ],
+          "x_roots": [
+            148,
+            247,
+            337,
+            829,
+            1067,
+            1092,
+            1481,
+            1531
+          ]
+        },
+        {
+          "B": 922,
+          "occurrence_root_count": 32,
+          "sign": "plus",
+          "u_poly_coeffs_ascending": [
+            103,
+            777,
+            663,
+            74,
+            1
+          ],
+          "u_roots": [
+            233,
+            590,
+            1090,
+            1227
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            74,
+            667,
+            999,
+            1435,
+            999,
+            667,
+            74,
+            1
+          ],
+          "x_roots": [
+            65,
+            204,
+            292,
+            386,
+            629,
+            798,
+            1162,
+            1211
+          ]
+        },
+        {
+          "B": 981,
+          "occurrence_root_count": 32,
+          "sign": "plus",
+          "u_poly_coeffs_ascending": [
+            19,
+            1263,
+            752,
+            58,
+            1
+          ],
+          "u_roots": [
+            148,
+            534,
+            1099,
+            1375
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            58,
+            756,
+            1437,
+            1529,
+            1437,
+            756,
+            58,
+            1
+          ],
+          "x_roots": [
+            280,
+            306,
+            364,
+            793,
+            882,
+            1011,
+            1259,
+            1475
+          ]
+        },
+        {
+          "B": 988,
+          "occurrence_root_count": 32,
+          "sign": "plus",
+          "u_poly_coeffs_ascending": [
+            698,
+            265,
+            1174,
+            985,
+            1
+          ],
+          "u_roots": [
+            212,
+            292,
+            810,
+            915
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            985,
+            1178,
+            6,
+            1445,
+            6,
+            1178,
+            985,
+            1
+          ],
+          "x_roots": [
+            534,
+            666,
+            909,
+            1176,
+            1233,
+            1285,
+            1346,
+            1508
+          ]
+        },
+        {
+          "B": 1009,
+          "occurrence_root_count": 32,
+          "sign": "plus",
+          "u_poly_coeffs_ascending": [
+            785,
+            1439,
+            657,
+            1234,
+            1
+          ],
+          "u_roots": [
+            245,
+            317,
+            561,
+            857
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            1234,
+            661,
+            320,
+            498,
+            320,
+            661,
+            1234,
+            1
+          ],
+          "x_roots": [
+            294,
+            418,
+            563,
+            741,
+            907,
+            1017,
+            1427,
+            1434
+          ]
+        },
+        {
+          "B": 1040,
+          "occurrence_root_count": 32,
+          "sign": "minus",
+          "u_poly_coeffs_ascending": [
+            246,
+            174,
+            44,
+            711,
+            1
+          ],
+          "u_roots": [
+            13,
+            117,
+            1131,
+            1242
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            711,
+            48,
+            700,
+            340,
+            700,
+            48,
+            711,
+            1
+          ],
+          "x_roots": [
+            181,
+            245,
+            561,
+            634,
+            950,
+            986,
+            997,
+            1163
+          ]
+        },
+        {
+          "B": 1052,
+          "occurrence_root_count": 32,
+          "sign": "plus",
+          "u_poly_coeffs_ascending": [
+            1565,
+            222,
+            1530,
+            136,
+            1
+          ],
+          "u_roots": [
+            510,
+            525,
+            925,
+            1118
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            136,
+            1534,
+            630,
+            1417,
+            630,
+            1534,
+            136,
+            1
+          ],
+          "x_roots": [
+            93,
+            195,
+            432,
+            923,
+            1040,
+            1077,
+            1242,
+            1290
+          ]
+        },
+        {
+          "B": 1062,
+          "occurrence_root_count": 32,
+          "sign": "plus",
+          "u_poly_coeffs_ascending": [
+            544,
+            233,
+            844,
+            403,
+            1
+          ],
+          "u_roots": [
+            225,
+            303,
+            1087,
+            1196
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            403,
+            848,
+            1442,
+            631,
+            1442,
+            848,
+            403,
+            1
+          ],
+          "x_roots": [
+            75,
+            150,
+            412,
+            638,
+            784,
+            1120,
+            1272,
+            1574
+          ]
+        },
+        {
+          "B": 1089,
+          "occurrence_root_count": 32,
+          "sign": "minus",
+          "u_poly_coeffs_ascending": [
+            522,
+            540,
+            1334,
+            363,
+            1
+          ],
+          "u_roots": [
+            722,
+            995,
+            1228,
+            1513
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            363,
+            1338,
+            22,
+            1589,
+            22,
+            1338,
+            363,
+            1
+          ],
+          "x_roots": [
+            714,
+            770,
+            799,
+            1209,
+            1371,
+            1393,
+            1464,
+            1559
+          ]
+        },
+        {
+          "B": 1150,
+          "occurrence_root_count": 32,
+          "sign": "plus",
+          "u_poly_coeffs_ascending": [
+            309,
+            580,
+            446,
+            454,
+            1
+          ],
+          "u_roots": [
+            52,
+            258,
+            1140,
+            1310
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            454,
+            450,
+            335,
+            1207,
+            335,
+            450,
+            454,
+            1
+          ],
+          "x_roots": [
+            137,
+            220,
+            239,
+            296,
+            901,
+            1173,
+            1439,
+            1569
+          ]
+        },
+        {
+          "B": 1174,
+          "occurrence_root_count": 32,
+          "sign": "plus",
+          "u_poly_coeffs_ascending": [
+            212,
+            947,
+            1153,
+            1215,
+            1
+          ],
+          "u_roots": [
+            499,
+            846,
+            905,
+            1356
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            1215,
+            1157,
+            1378,
+            917,
+            1378,
+            1157,
+            1215,
+            1
+          ],
+          "x_roots": [
+            138,
+            361,
+            669,
+            687,
+            1138,
+            1156,
+            1297,
+            1374
+          ]
+        },
+        {
+          "B": 1211,
+          "occurrence_root_count": 32,
+          "sign": "plus",
+          "u_poly_coeffs_ascending": [
+            1166,
+            1130,
+            247,
+            1132,
+            1
+          ],
+          "u_roots": [
+            413,
+            601,
+            1099,
+            1576
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            1132,
+            251,
+            1312,
+            59,
+            1312,
+            251,
+            1132,
+            1
+          ],
+          "x_roots": [
+            193,
+            306,
+            363,
+            408,
+            471,
+            793,
+            1213,
+            1549
+          ]
+        },
+        {
+          "B": 1212,
+          "occurrence_root_count": 32,
+          "sign": "minus",
+          "u_poly_coeffs_ascending": [
+            743,
+            267,
+            439,
+            267,
+            1
+          ],
+          "u_roots": [
+            78,
+            92,
+            377,
+            793
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            267,
+            443,
+            1068,
+            20,
+            1068,
+            443,
+            267,
+            1
+          ],
+          "x_roots": [
+            119,
+            152,
+            360,
+            433,
+            644,
+            1340,
+            1533,
+            1580
+          ]
+        },
+        {
+          "B": 1229,
+          "occurrence_root_count": 32,
+          "sign": "plus",
+          "u_poly_coeffs_ascending": [
+            1511,
+            648,
+            547,
+            1160,
+            1
+          ],
+          "u_roots": [
+            142,
+            983,
+            1066,
+            1470
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            1160,
+            551,
+            914,
+            1004,
+            914,
+            551,
+            1160,
+            1
+          ],
+          "x_roots": [
+            209,
+            277,
+            399,
+            584,
+            755,
+            789,
+            994,
+            1261
+          ]
+        },
+        {
+          "B": 1245,
+          "occurrence_root_count": 32,
+          "sign": "plus",
+          "u_poly_coeffs_ascending": [
+            925,
+            618,
+            1034,
+            210,
+            1
+          ],
+          "u_roots": [
+            138,
+            167,
+            356,
+            736
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            210,
+            1038,
+            1248,
+            1392,
+            1248,
+            1038,
+            210,
+            1
+          ],
+          "x_roots": [
+            206,
+            440,
+            526,
+            1131,
+            1212,
+            1219,
+            1523,
+            1568
+          ]
+        },
+        {
+          "B": 1282,
+          "occurrence_root_count": 32,
+          "sign": "minus",
+          "u_poly_coeffs_ascending": [
+            176,
+            1387,
+            814,
+            605,
+            1
+          ],
+          "u_roots": [
+            381,
+            508,
+            808,
+            912
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            605,
+            818,
+            1595,
+            203,
+            1595,
+            818,
+            605,
+            1
+          ],
+          "x_roots": [
+            347,
+            449,
+            565,
+            814,
+            1185,
+            1230,
+            1301,
+            1539
+          ]
+        },
+        {
+          "B": 1308,
+          "occurrence_root_count": 32,
+          "sign": "plus",
+          "u_poly_coeffs_ascending": [
+            1265,
+            433,
+            871,
+            757,
+            1
+          ],
+          "u_roots": [
+            609,
+            699,
+            1334,
+            1422
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            757,
+            875,
+            1097,
+            1406,
+            1097,
+            875,
+            757,
+            1
+          ],
+          "x_roots": [
+            106,
+            305,
+            780,
+            855,
+            1117,
+            1228,
+            1436,
+            1451
+          ]
+        },
+        {
+          "B": 1432,
+          "occurrence_root_count": 32,
+          "sign": "minus",
+          "u_poly_coeffs_ascending": [
+            407,
+            1107,
+            1448,
+            144,
+            1
+          ],
+          "u_roots": [
+            351,
+            387,
+            1135,
+            1197
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            144,
+            1452,
+            1539,
+            95,
+            1539,
+            1452,
+            144,
+            1
+          ],
+          "x_roots": [
+            10,
+            670,
+            933,
+            1061,
+            1125,
+            1288,
+            1359,
+            1445
+          ]
+        },
+        {
+          "B": 1466,
+          "occurrence_root_count": 32,
+          "sign": "plus",
+          "u_poly_coeffs_ascending": [
+            1198,
+            43,
+            913,
+            398,
+            1
+          ],
+          "u_roots": [
+            233,
+            1260,
+            1411,
+            1519
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            398,
+            917,
+            1237,
+            1423,
+            1237,
+            917,
+            398,
+            1
+          ],
+          "x_roots": [
+            207,
+            276,
+            523,
+            629,
+            888,
+            984,
+            1211,
+            1312
+          ]
+        },
+        {
+          "B": 1488,
+          "occurrence_root_count": 32,
+          "sign": "plus",
+          "u_poly_coeffs_ascending": [
+            1211,
+            865,
+            947,
+            1544,
+            1
+          ],
+          "u_roots": [
+            34,
+            274,
+            1420,
+            1549
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            1544,
+            951,
+            676,
+            1504,
+            676,
+            951,
+            1544,
+            1
+          ],
+          "x_roots": [
+            6,
+            210,
+            268,
+            577,
+            633,
+            787,
+            972,
+            1431
+          ]
+        },
+        {
+          "B": 1491,
+          "occurrence_root_count": 32,
+          "sign": "plus",
+          "u_poly_coeffs_ascending": [
+            612,
+            380,
+            189,
+            1223,
+            1
+          ],
+          "u_roots": [
+            224,
+            423,
+            460,
+            884
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            1223,
+            193,
+            835,
+            996,
+            835,
+            193,
+            1223,
+            1
+          ],
+          "x_roots": [
+            144,
+            279,
+            494,
+            865,
+            924,
+            1202,
+            1337,
+            1567
+          ]
+        },
+        {
+          "B": 1520,
+          "occurrence_root_count": 32,
+          "sign": "minus",
+          "u_poly_coeffs_ascending": [
+            31,
+            90,
+            1002,
+            799,
+            1
+          ],
+          "u_roots": [
+            251,
+            591,
+            661,
+            912
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            799,
+            1006,
+            880,
+            434,
+            880,
+            1006,
+            799,
+            1
+          ],
+          "x_roots": [
+            291,
+            347,
+            370,
+            565,
+            691,
+            920,
+            938,
+            1507
+          ]
+        },
+        {
+          "B": 1544,
+          "occurrence_root_count": 32,
+          "sign": "minus",
+          "u_poly_coeffs_ascending": [
+            710,
+            558,
+            738,
+            228,
+            1
+          ],
+          "u_roots": [
+            776,
+            1108,
+            1127,
+            1582
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            228,
+            742,
+            1242,
+            585,
+            1242,
+            742,
+            228,
+            1
+          ],
+          "x_roots": [
+            78,
+            251,
+            525,
+            1235,
+            1246,
+            1469,
+            1499,
+            1504
+          ]
+        },
+        {
+          "B": 1592,
+          "occurrence_root_count": 32,
+          "sign": "plus",
+          "u_poly_coeffs_ascending": [
+            1459,
+            695,
+            152,
+            934,
+            1
+          ],
+          "u_roots": [
+            33,
+            404,
+            714,
+            1129
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            934,
+            156,
+            283,
+            162,
+            283,
+            156,
+            934,
+            1
+          ],
+          "x_roots": [
+            46,
+            118,
+            286,
+            486,
+            1054,
+            1083,
+            1154,
+            1267
+          ]
+        }
+      ],
+      "stats": {
+        "B_groups": 49,
+        "deduped_candidates": 784,
+        "enum_compact_not_target": 805,
+        "enum_no_label2_candidate": 408,
+        "occurrence_roots_32": 49,
+        "sign_minus": 21,
+        "sign_plus": 28,
+        "u_roots_4": 49,
+        "x_roots_8": 49
+      }
+    },
+    {
+      "field": 1847,
+      "row_count": 63,
+      "rows": [
+        {
+          "B": 7,
+          "occurrence_root_count": 32,
+          "sign": "plus",
+          "u_poly_coeffs_ascending": [
+            1692,
+            1408,
+            1108,
+            1463,
+            1
+          ],
+          "u_roots": [
+            602,
+            774,
+            1101,
+            1601
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            1463,
+            1112,
+            256,
+            220,
+            256,
+            1112,
+            1463,
+            1
+          ],
+          "x_roots": [
+            665,
+            842,
+            936,
+            1132,
+            1186,
+            1263,
+            1779,
+            1816
+          ]
+        },
+        {
+          "B": 67,
+          "occurrence_root_count": 32,
+          "sign": "plus",
+          "u_poly_coeffs_ascending": [
+            93,
+            1135,
+            1518,
+            237,
+            1
+          ],
+          "u_roots": [
+            724,
+            1136,
+            1704,
+            1740
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            237,
+            1522,
+            1846,
+            1288,
+            1846,
+            1522,
+            237,
+            1
+          ],
+          "x_roots": [
+            302,
+            415,
+            422,
+            674,
+            680,
+            721,
+            1024,
+            1066
+          ]
+        },
+        {
+          "B": 121,
+          "occurrence_root_count": 32,
+          "sign": "plus",
+          "u_poly_coeffs_ascending": [
+            1344,
+            1538,
+            1153,
+            1123,
+            1
+          ],
+          "u_roots": [
+            263,
+            345,
+            858,
+            1105
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            1123,
+            1157,
+            1213,
+            1809,
+            1213,
+            1157,
+            1123,
+            1
+          ],
+          "x_roots": [
+            718,
+            915,
+            1076,
+            1195,
+            1423,
+            1474,
+            1529,
+            1629
+          ]
+        },
+        {
+          "B": 148,
+          "occurrence_root_count": 32,
+          "sign": "plus",
+          "u_poly_coeffs_ascending": [
+            1694,
+            1165,
+            523,
+            1825,
+            1
+          ],
+          "u_roots": [
+            77,
+            531,
+            567,
+            694
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            1825,
+            527,
+            1099,
+            899,
+            1099,
+            527,
+            1825,
+            1
+          ],
+          "x_roots": [
+            224,
+            470,
+            543,
+            961,
+            1089,
+            1289,
+            1381,
+            1453
+          ]
+        },
+        {
+          "B": 174,
+          "occurrence_root_count": 32,
+          "sign": "plus",
+          "u_poly_coeffs_ascending": [
+            217,
+            262,
+            139,
+            424,
+            1
+          ],
+          "u_roots": [
+            27,
+            192,
+            1259,
+            1792
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            424,
+            143,
+            1534,
+            501,
+            1534,
+            143,
+            424,
+            1
+          ],
+          "x_roots": [
+            128,
+            232,
+            365,
+            849,
+            1027,
+            1190,
+            1427,
+            1746
+          ]
+        },
+        {
+          "B": 190,
+          "occurrence_root_count": 32,
+          "sign": "plus",
+          "u_poly_coeffs_ascending": [
+            280,
+            1106,
+            1676,
+            598,
+            1
+          ],
+          "u_roots": [
+            52,
+            390,
+            946,
+            1708
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            598,
+            1680,
+            1053,
+            1791,
+            1053,
+            1680,
+            598,
+            1
+          ],
+          "x_roots": [
+            108,
+            251,
+            331,
+            838,
+            1029,
+            1208,
+            1457,
+            1568
+          ]
+        },
+        {
+          "B": 201,
+          "occurrence_root_count": 32,
+          "sign": "plus",
+          "u_poly_coeffs_ascending": [
+            192,
+            1287,
+            563,
+            443,
+            1
+          ],
+          "u_roots": [
+            175,
+            683,
+            1099,
+            1294
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            443,
+            567,
+            769,
+            1324,
+            769,
+            567,
+            443,
+            1
+          ],
+          "x_roots": [
+            235,
+            448,
+            984,
+            1038,
+            1287,
+            1446,
+            1659,
+            1695
+          ]
+        },
+        {
+          "B": 214,
+          "occurrence_root_count": 32,
+          "sign": "minus",
+          "u_poly_coeffs_ascending": [
+            1078,
+            1181,
+            250,
+            1758,
+            1
+          ],
+          "u_roots": [
+            392,
+            795,
+            1115,
+            1481
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            1758,
+            254,
+            914,
+            1584,
+            914,
+            254,
+            1758,
+            1
+          ],
+          "x_roots": [
+            125,
+            290,
+            907,
+            920,
+            990,
+            1191,
+            1319,
+            1735
+          ]
+        },
+        {
+          "B": 241,
+          "occurrence_root_count": 32,
+          "sign": "minus",
+          "u_poly_coeffs_ascending": [
+            583,
+            814,
+            1726,
+            1280,
+            1
+          ],
+          "u_roots": [
+            337,
+            1231,
+            1316,
+            1377
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            1280,
+            1730,
+            960,
+            347,
+            960,
+            1730,
+            1280,
+            1
+          ],
+          "x_roots": [
+            443,
+            555,
+            558,
+            699,
+            758,
+            788,
+            822,
+            1485
+          ]
+        },
+        {
+          "B": 276,
+          "occurrence_root_count": 32,
+          "sign": "plus",
+          "u_poly_coeffs_ascending": [
+            787,
+            1093,
+            1337,
+            1837,
+            1
+          ],
+          "u_roots": [
+            263,
+            548,
+            1418,
+            1475
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            1837,
+            1341,
+            1063,
+            1620,
+            1063,
+            1341,
+            1837,
+            1
+          ],
+          "x_roots": [
+            32,
+            104,
+            444,
+            594,
+            824,
+            915,
+            1195,
+            1443
+          ]
+        },
+        {
+          "B": 283,
+          "occurrence_root_count": 32,
+          "sign": "plus",
+          "u_poly_coeffs_ascending": [
+            1455,
+            1647,
+            274,
+            48,
+            1
+          ],
+          "u_roots": [
+            484,
+            736,
+            1101,
+            1325
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            48,
+            278,
+            1791,
+            162,
+            1791,
+            278,
+            48,
+            1
+          ],
+          "x_roots": [
+            417,
+            545,
+            908,
+            964,
+            1132,
+            1619,
+            1786,
+            1816
+          ]
+        },
+        {
+          "B": 297,
+          "occurrence_root_count": 32,
+          "sign": "minus",
+          "u_poly_coeffs_ascending": [
+            1164,
+            237,
+            694,
+            641,
+            1
+          ],
+          "u_roots": [
+            783,
+            1015,
+            1279,
+            1823
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            641,
+            698,
+            313,
+            711,
+            313,
+            698,
+            641,
+            1
+          ],
+          "x_roots": [
+            455,
+            1071,
+            1122,
+            1325,
+            1368,
+            1559,
+            1740,
+            1801
+          ]
+        },
+        {
+          "B": 308,
+          "occurrence_root_count": 32,
+          "sign": "minus",
+          "u_poly_coeffs_ascending": [
+            1275,
+            1093,
+            734,
+            1203,
+            1
+          ],
+          "u_roots": [
+            656,
+            742,
+            1380,
+            1560
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            1203,
+            738,
+            1008,
+            902,
+            1008,
+            738,
+            1203,
+            1
+          ],
+          "x_roots": [
+            19,
+            280,
+            318,
+            376,
+            424,
+            446,
+            1114,
+            1361
+          ]
+        },
+        {
+          "B": 319,
+          "occurrence_root_count": 32,
+          "sign": "minus",
+          "u_poly_coeffs_ascending": [
+            144,
+            1680,
+            58,
+            993,
+            1
+          ],
+          "u_roots": [
+            151,
+            1124,
+            1453,
+            1820
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            993,
+            62,
+            965,
+            266,
+            965,
+            62,
+            993,
+            1
+          ],
+          "x_roots": [
+            101,
+            205,
+            295,
+            689,
+            764,
+            919,
+            1703,
+            1719
+          ]
+        },
+        {
+          "B": 322,
+          "occurrence_root_count": 32,
+          "sign": "minus",
+          "u_poly_coeffs_ascending": [
+            1169,
+            209,
+            1377,
+            68,
+            1
+          ],
+          "u_roots": [
+            368,
+            760,
+            1121,
+            1377
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            68,
+            1381,
+            413,
+            235,
+            413,
+            1381,
+            68,
+            1
+          ],
+          "x_roots": [
+            405,
+            555,
+            716,
+            822,
+            827,
+            978,
+            1237,
+            1780
+          ]
+        },
+        {
+          "B": 334,
+          "occurrence_root_count": 32,
+          "sign": "plus",
+          "u_poly_coeffs_ascending": [
+            266,
+            1495,
+            850,
+            26,
+            1
+          ],
+          "u_roots": [
+            119,
+            431,
+            456,
+            815
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            26,
+            854,
+            1573,
+            125,
+            1573,
+            854,
+            26,
+            1
+          ],
+          "x_roots": [
+            211,
+            507,
+            604,
+            759,
+            906,
+            1207,
+            1372,
+            1796
+          ]
+        },
+        {
+          "B": 351,
+          "occurrence_root_count": 32,
+          "sign": "plus",
+          "u_poly_coeffs_ascending": [
+            830,
+            414,
+            967,
+            811,
+            1
+          ],
+          "u_roots": [
+            175,
+            244,
+            869,
+            1595
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            811,
+            971,
+            1000,
+            923,
+            1000,
+            971,
+            811,
+            1
+          ],
+          "x_roots": [
+            328,
+            614,
+            984,
+            1038,
+            1267,
+            1306,
+            1410,
+            1477
+          ]
+        },
+        {
+          "B": 359,
+          "occurrence_root_count": 32,
+          "sign": "plus",
+          "u_poly_coeffs_ascending": [
+            1430,
+            443,
+            1685,
+            1029,
+            1
+          ],
+          "u_roots": [
+            415,
+            758,
+            1595,
+            1744
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            1029,
+            1689,
+            1683,
+            1112,
+            1683,
+            1689,
+            1029,
+            1
+          ],
+          "x_roots": [
+            328,
+            465,
+            530,
+            1069,
+            1267,
+            1279,
+            1536,
+            1732
+          ]
+        },
+        {
+          "B": 412,
+          "occurrence_root_count": 32,
+          "sign": "plus",
+          "u_poly_coeffs_ascending": [
+            106,
+            84,
+            1194,
+            155,
+            1
+          ],
+          "u_roots": [
+            725,
+            1223,
+            1654,
+            1784
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            155,
+            1198,
+            549,
+            653,
+            549,
+            1198,
+            155,
+            1
+          ],
+          "x_roots": [
+            39,
+            177,
+            275,
+            450,
+            696,
+            958,
+            1184,
+            1607
+          ]
+        },
+        {
+          "B": 449,
+          "occurrence_root_count": 32,
+          "sign": "minus",
+          "u_poly_coeffs_ascending": [
+            1000,
+            1376,
+            292,
+            1734,
+            1
+          ],
+          "u_roots": [
+            49,
+            373,
+            566,
+            972
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            1734,
+            296,
+            1037,
+            1590,
+            1037,
+            296,
+            1734,
+            1
+          ],
+          "x_roots": [
+            517,
+            591,
+            1048,
+            1172,
+            1224,
+            1379,
+            1595,
+            1822
+          ]
+        },
+        {
+          "B": 468,
+          "occurrence_root_count": 32,
+          "sign": "plus",
+          "u_poly_coeffs_ascending": [
+            1168,
+            799,
+            715,
+            1391,
+            1
+          ],
+          "u_roots": [
+            298,
+            869,
+            1325,
+            1658
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            1391,
+            719,
+            1278,
+            757,
+            1278,
+            719,
+            1391,
+            1
+          ],
+          "x_roots": [
+            143,
+            155,
+            299,
+            417,
+            908,
+            1306,
+            1359,
+            1410
+          ]
+        },
+        {
+          "B": 502,
+          "occurrence_root_count": 32,
+          "sign": "plus",
+          "u_poly_coeffs_ascending": [
+            858,
+            1374,
+            189,
+            1240,
+            1
+          ],
+          "u_roots": [
+            39,
+            198,
+            927,
+            1290
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            1240,
+            193,
+            1400,
+            1242,
+            1400,
+            193,
+            1240,
+            1
+          ],
+          "x_roots": [
+            369,
+            783,
+            914,
+            921,
+            972,
+            1174,
+            1262,
+            1600
+          ]
+        },
+        {
+          "B": 519,
+          "occurrence_root_count": 32,
+          "sign": "minus",
+          "u_poly_coeffs_ascending": [
+            1723,
+            162,
+            1631,
+            1181,
+            1
+          ],
+          "u_roots": [
+            599,
+            686,
+            1315,
+            1760
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            1181,
+            1635,
+            11,
+            1297,
+            11,
+            1635,
+            1181,
+            1
+          ],
+          "x_roots": [
+            382,
+            480,
+            678,
+            789,
+            835,
+            1378,
+            1744,
+            1768
+          ]
+        },
+        {
+          "B": 565,
+          "occurrence_root_count": 32,
+          "sign": "plus",
+          "u_poly_coeffs_ascending": [
+            1513,
+            1454,
+            49,
+            37,
+            1
+          ],
+          "u_roots": [
+            175,
+            725,
+            1305,
+            1452
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            37,
+            53,
+            1565,
+            1617,
+            1565,
+            53,
+            37,
+            1
+          ],
+          "x_roots": [
+            275,
+            310,
+            322,
+            450,
+            984,
+            995,
+            1038,
+            1130
+          ]
+        },
+        {
+          "B": 593,
+          "occurrence_root_count": 32,
+          "sign": "minus",
+          "u_poly_coeffs_ascending": [
+            1701,
+            785,
+            1732,
+            287,
+            1
+          ],
+          "u_roots": [
+            143,
+            582,
+            921,
+            1761
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            287,
+            1736,
+            1646,
+            1477,
+            1646,
+            1736,
+            287,
+            1
+          ],
+          "x_roots": [
+            823,
+            918,
+            923,
+            1167,
+            1511,
+            1803,
+            1805,
+            1845
+          ]
+        },
+        {
+          "B": 621,
+          "occurrence_root_count": 32,
+          "sign": "plus",
+          "u_poly_coeffs_ascending": [
+            994,
+            877,
+            521,
+            96,
+            1
+          ],
+          "u_roots": [
+            11,
+            244,
+            298,
+            1198
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            96,
+            525,
+            1165,
+            195,
+            1165,
+            525,
+            96,
+            1
+          ],
+          "x_roots": [
+            143,
+            155,
+            237,
+            614,
+            1477,
+            1518,
+            1527,
+            1621
+          ]
+        },
+        {
+          "B": 642,
+          "occurrence_root_count": 32,
+          "sign": "plus",
+          "u_poly_coeffs_ascending": [
+            928,
+            115,
+            94,
+            1578,
+            1
+          ],
+          "u_roots": [
+            723,
+            727,
+            1009,
+            1504
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            1578,
+            98,
+            1155,
+            1122,
+            1155,
+            98,
+            1578,
+            1
+          ],
+          "x_roots": [
+            377,
+            632,
+            928,
+            966,
+            1521,
+            1608,
+            1642,
+            1830
+          ]
+        },
+        {
+          "B": 685,
+          "occurrence_root_count": 32,
+          "sign": "plus",
+          "u_poly_coeffs_ascending": [
+            1559,
+            1269,
+            736,
+            1090,
+            1
+          ],
+          "u_roots": [
+            446,
+            817,
+            1390,
+            1798
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            1090,
+            740,
+            845,
+            1190,
+            845,
+            740,
+            1090,
+            1
+          ],
+          "x_roots": [
+            91,
+            468,
+            595,
+            1065,
+            1299,
+            1330,
+            1599,
+            1698
+          ]
+        },
+        {
+          "B": 719,
+          "occurrence_root_count": 32,
+          "sign": "plus",
+          "u_poly_coeffs_ascending": [
+            423,
+            1800,
+            628,
+            674,
+            1
+          ],
+          "u_roots": [
+            520,
+            819,
+            1730,
+            1798
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            674,
+            632,
+            128,
+            1685,
+            128,
+            632,
+            674,
+            1
+          ],
+          "x_roots": [
+            54,
+            352,
+            467,
+            468,
+            730,
+            1330,
+            1637,
+            1676
+          ]
+        },
+        {
+          "B": 722,
+          "occurrence_root_count": 32,
+          "sign": "minus",
+          "u_poly_coeffs_ascending": [
+            1451,
+            35,
+            1579,
+            242,
+            1
+          ],
+          "u_roots": [
+            63,
+            391,
+            1256,
+            1742
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            242,
+            1583,
+            761,
+            921,
+            761,
+            1583,
+            242,
+            1
+          ],
+          "x_roots": [
+            57,
+            240,
+            262,
+            473,
+            994,
+            1670,
+            1685,
+            1765
+          ]
+        },
+        {
+          "B": 766,
+          "occurrence_root_count": 32,
+          "sign": "plus",
+          "u_poly_coeffs_ascending": [
+            575,
+            1845,
+            476,
+            646,
+            1
+          ],
+          "u_roots": [
+            900,
+            1167,
+            1209,
+            1619
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            646,
+            480,
+            89,
+            1533,
+            89,
+            480,
+            646,
+            1
+          ],
+          "x_roots": [
+            190,
+            565,
+            644,
+            993,
+            1312,
+            1429,
+            1702,
+            1754
+          ]
+        },
+        {
+          "B": 812,
+          "occurrence_root_count": 32,
+          "sign": "plus",
+          "u_poly_coeffs_ascending": [
+            1704,
+            543,
+            560,
+            1448,
+            1
+          ],
+          "u_roots": [
+            591,
+            1016,
+            1075,
+            1411
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            1448,
+            564,
+            1193,
+            983,
+            1193,
+            564,
+            1448,
+            1
+          ],
+          "x_roots": [
+            139,
+            853,
+            877,
+            1177,
+            1546,
+            1585,
+            1712,
+            1745
+          ]
+        },
+        {
+          "B": 856,
+          "occurrence_root_count": 32,
+          "sign": "plus",
+          "u_poly_coeffs_ascending": [
+            450,
+            660,
+            503,
+            666,
+            1
+          ],
+          "u_roots": [
+            338,
+            366,
+            698,
+            1626
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            666,
+            507,
+            811,
+            1462,
+            811,
+            507,
+            666,
+            1
+          ],
+          "x_roots": [
+            74,
+            624,
+            653,
+            656,
+            710,
+            973,
+            1475,
+            1557
+          ]
+        },
+        {
+          "B": 906,
+          "occurrence_root_count": 32,
+          "sign": "plus",
+          "u_poly_coeffs_ascending": [
+            1249,
+            1726,
+            1456,
+            924,
+            1
+          ],
+          "u_roots": [
+            622,
+            946,
+            1219,
+            1830
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            924,
+            1460,
+            804,
+            473,
+            804,
+            1460,
+            924,
+            1
+          ],
+          "x_roots": [
+            108,
+            285,
+            324,
+            337,
+            826,
+            838,
+            895,
+            1004
+          ]
+        },
+        {
+          "B": 982,
+          "occurrence_root_count": 32,
+          "sign": "plus",
+          "u_poly_coeffs_ascending": [
+            242,
+            1238,
+            1755,
+            1138,
+            1
+          ],
+          "u_roots": [
+            83,
+            612,
+            849,
+            1012
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            1138,
+            1759,
+            958,
+            64,
+            958,
+            1759,
+            1138,
+            1
+          ],
+          "x_roots": [
+            203,
+            646,
+            722,
+            815,
+            1115,
+            1261,
+            1598,
+            1737
+          ]
+        },
+        {
+          "B": 993,
+          "occurrence_root_count": 32,
+          "sign": "plus",
+          "u_poly_coeffs_ascending": [
+            145,
+            1828,
+            713,
+            760,
+            1
+          ],
+          "u_roots": [
+            314,
+            591,
+            683,
+            1346
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            760,
+            717,
+            414,
+            1577,
+            414,
+            717,
+            760,
+            1
+          ],
+          "x_roots": [
+            6,
+            194,
+            235,
+            308,
+            448,
+            853,
+            1152,
+            1585
+          ]
+        },
+        {
+          "B": 1008,
+          "occurrence_root_count": 32,
+          "sign": "plus",
+          "u_poly_coeffs_ascending": [
+            1613,
+            1522,
+            32,
+            1820,
+            1
+          ],
+          "u_roots": [
+            205,
+            895,
+            1265,
+            1356
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            1820,
+            36,
+            1441,
+            1683,
+            1441,
+            36,
+            1820,
+            1
+          ],
+          "x_roots": [
+            192,
+            243,
+            336,
+            368,
+            527,
+            929,
+            1164,
+            1809
+          ]
+        },
+        {
+          "B": 1065,
+          "occurrence_root_count": 32,
+          "sign": "plus",
+          "u_poly_coeffs_ascending": [
+            1323,
+            473,
+            948,
+            292,
+            1
+          ],
+          "u_roots": [
+            46,
+            213,
+            1425,
+            1718
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            292,
+            952,
+            1349,
+            1378,
+            1349,
+            952,
+            292,
+            1
+          ],
+          "x_roots": [
+            13,
+            242,
+            309,
+            672,
+            1183,
+            1388,
+            1584,
+            1705
+          ]
+        },
+        {
+          "B": 1095,
+          "occurrence_root_count": 32,
+          "sign": "plus",
+          "u_poly_coeffs_ascending": [
+            799,
+            530,
+            352,
+            788,
+            1
+          ],
+          "u_roots": [
+            145,
+            312,
+            1047,
+            1402
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            788,
+            356,
+            1047,
+            1509,
+            1047,
+            356,
+            788,
+            1
+          ],
+          "x_roots": [
+            138,
+            174,
+            234,
+            400,
+            677,
+            813,
+            1002,
+            1315
+          ]
+        },
+        {
+          "B": 1130,
+          "occurrence_root_count": 32,
+          "sign": "plus",
+          "u_poly_coeffs_ascending": [
+            1128,
+            44,
+            227,
+            1594,
+            1
+          ],
+          "u_roots": [
+            630,
+            774,
+            1039,
+            1504
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            1594,
+            231,
+            1132,
+            1588,
+            1132,
+            231,
+            1594,
+            1
+          ],
+          "x_roots": [
+            123,
+            181,
+            449,
+            842,
+            916,
+            1521,
+            1779,
+            1830
+          ]
+        },
+        {
+          "B": 1138,
+          "occurrence_root_count": 32,
+          "sign": "plus",
+          "u_poly_coeffs_ascending": [
+            1193,
+            1727,
+            708,
+            1349,
+            1
+          ],
+          "u_roots": [
+            323,
+            470,
+            626,
+            926
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            1349,
+            712,
+            233,
+            768,
+            233,
+            712,
+            1349,
+            1
+          ],
+          "x_roots": [
+            2,
+            116,
+            207,
+            745,
+            924,
+            1025,
+            1292,
+            1728
+          ]
+        },
+        {
+          "B": 1163,
+          "occurrence_root_count": 32,
+          "sign": "minus",
+          "u_poly_coeffs_ascending": [
+            53,
+            586,
+            1084,
+            1776,
+            1
+          ],
+          "u_roots": [
+            549,
+            818,
+            887,
+            1511
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            1776,
+            1088,
+            373,
+            380,
+            373,
+            1088,
+            1776,
+            1
+          ],
+          "x_roots": [
+            160,
+            391,
+            496,
+            658,
+            748,
+            763,
+            1123,
+            1273
+          ]
+        },
+        {
+          "B": 1174,
+          "occurrence_root_count": 32,
+          "sign": "minus",
+          "u_poly_coeffs_ascending": [
+            1310,
+            1263,
+            150,
+            1714,
+            1
+          ],
+          "u_roots": [
+            389,
+            808,
+            924,
+            1706
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            1714,
+            154,
+            864,
+            1616,
+            864,
+            154,
+            1714,
+            1
+          ],
+          "x_roots": [
+            220,
+            298,
+            626,
+            744,
+            931,
+            1486,
+            1492,
+            1724
+          ]
+        },
+        {
+          "B": 1206,
+          "occurrence_root_count": 32,
+          "sign": "plus",
+          "u_poly_coeffs_ascending": [
+            664,
+            37,
+            1741,
+            1740,
+            1
+          ],
+          "u_roots": [
+            577,
+            591,
+            893,
+            1740
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            1740,
+            1745,
+            1563,
+            458,
+            1563,
+            1745,
+            1740,
+            1
+          ],
+          "x_roots": [
+            96,
+            351,
+            481,
+            542,
+            674,
+            853,
+            1066,
+            1585
+          ]
+        },
+        {
+          "B": 1261,
+          "occurrence_root_count": 32,
+          "sign": "plus",
+          "u_poly_coeffs_ascending": [
+            789,
+            770,
+            1297,
+            301,
+            1
+          ],
+          "u_roots": [
+            152,
+            404,
+            1305,
+            1532
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            301,
+            1301,
+            1673,
+            1542,
+            1673,
+            1301,
+            301,
+            1
+          ],
+          "x_roots": [
+            27,
+            189,
+            215,
+            310,
+            484,
+            995,
+            1505,
+            1515
+          ]
+        },
+        {
+          "B": 1330,
+          "occurrence_root_count": 32,
+          "sign": "plus",
+          "u_poly_coeffs_ascending": [
+            444,
+            656,
+            1844,
+            1378,
+            1
+          ],
+          "u_roots": [
+            30,
+            419,
+            770,
+            1097
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            1378,
+            1,
+            1096,
+            444,
+            1096,
+            1,
+            1378,
+            1
+          ],
+          "x_roots": [
+            635,
+            723,
+            1150,
+            1242,
+            1307,
+            1310,
+            1543,
+            1794
+          ]
+        },
+        {
+          "B": 1331,
+          "occurrence_root_count": 32,
+          "sign": "plus",
+          "u_poly_coeffs_ascending": [
+            1351,
+            1058,
+            224,
+            1279,
+            1
+          ],
+          "u_roots": [
+            146,
+            1012,
+            1446,
+            1658
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            1279,
+            228,
+            1201,
+            1805,
+            1201,
+            228,
+            1279,
+            1
+          ],
+          "x_roots": [
+            14,
+            132,
+            299,
+            662,
+            784,
+            1261,
+            1359,
+            1598
+          ]
+        },
+        {
+          "B": 1400,
+          "occurrence_root_count": 32,
+          "sign": "plus",
+          "u_poly_coeffs_ascending": [
+            365,
+            1594,
+            564,
+            1209,
+            1
+          ],
+          "u_roots": [
+            361,
+            869,
+            1386,
+            1716
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            1209,
+            568,
+            1527,
+            1499,
+            1527,
+            568,
+            1209,
+            1
+          ],
+          "x_roots": [
+            392,
+            474,
+            1306,
+            1324,
+            1410,
+            1416,
+            1734,
+            1817
+          ]
+        },
+        {
+          "B": 1405,
+          "occurrence_root_count": 32,
+          "sign": "plus",
+          "u_poly_coeffs_ascending": [
+            293,
+            1042,
+            1050,
+            307,
+            1
+          ],
+          "u_roots": [
+            93,
+            234,
+            484,
+            729
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            307,
+            1054,
+            116,
+            552,
+            116,
+            1054,
+            307,
+            1
+          ],
+          "x_roots": [
+            323,
+            354,
+            406,
+            545,
+            587,
+            1353,
+            1727,
+            1786
+          ]
+        },
+        {
+          "B": 1408,
+          "occurrence_root_count": 32,
+          "sign": "minus",
+          "u_poly_coeffs_ascending": [
+            28,
+            1186,
+            534,
+            779,
+            1
+          ],
+          "u_roots": [
+            63,
+            760,
+            777,
+            1315
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            779,
+            538,
+            1676,
+            1102,
+            1676,
+            538,
+            779,
+            1
+          ],
+          "x_roots": [
+            240,
+            480,
+            827,
+            835,
+            1093,
+            1531,
+            1670,
+            1780
+          ]
+        },
+        {
+          "B": 1427,
+          "occurrence_root_count": 32,
+          "sign": "plus",
+          "u_poly_coeffs_ascending": [
+            1755,
+            340,
+            64,
+            1232,
+            1
+          ],
+          "u_roots": [
+            664,
+            849,
+            1264,
+            1532
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            1232,
+            68,
+            342,
+            42,
+            342,
+            68,
+            1232,
+            1
+          ],
+          "x_roots": [
+            27,
+            203,
+            646,
+            1104,
+            1407,
+            1481,
+            1505,
+            1630
+          ]
+        },
+        {
+          "B": 1437,
+          "occurrence_root_count": 32,
+          "sign": "plus",
+          "u_poly_coeffs_ascending": [
+            23,
+            840,
+            825,
+            879,
+            1
+          ],
+          "u_roots": [
+            234,
+            367,
+            1047,
+            1167
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            879,
+            829,
+            1630,
+            1679,
+            1630,
+            829,
+            879,
+            1
+          ],
+          "x_roots": [
+            234,
+            354,
+            813,
+            814,
+            1312,
+            1400,
+            1702,
+            1727
+          ]
+        },
+        {
+          "B": 1506,
+          "occurrence_root_count": 32,
+          "sign": "plus",
+          "u_poly_coeffs_ascending": [
+            1337,
+            510,
+            693,
+            1037,
+            1
+          ],
+          "u_roots": [
+            728,
+            1186,
+            1234,
+            1356
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            1037,
+            697,
+            1774,
+            882,
+            1774,
+            697,
+            1037,
+            1
+          ],
+          "x_roots": [
+            59,
+            192,
+            861,
+            1127,
+            1164,
+            1420,
+            1661,
+            1714
+          ]
+        },
+        {
+          "B": 1544,
+          "occurrence_root_count": 32,
+          "sign": "minus",
+          "u_poly_coeffs_ascending": [
+            166,
+            517,
+            1632,
+            335,
+            1
+          ],
+          "u_roots": [
+            582,
+            1396,
+            1457,
+            1771
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            335,
+            1636,
+            1522,
+            1589,
+            1522,
+            1636,
+            335,
+            1
+          ],
+          "x_roots": [
+            80,
+            639,
+            660,
+            818,
+            918,
+            1111,
+            1316,
+            1511
+          ]
+        },
+        {
+          "B": 1555,
+          "occurrence_root_count": 32,
+          "sign": "plus",
+          "u_poly_coeffs_ascending": [
+            495,
+            434,
+            117,
+            1354,
+            1
+          ],
+          "u_roots": [
+            5,
+            114,
+            1067,
+            1154
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            1354,
+            121,
+            802,
+            735,
+            802,
+            121,
+            1354,
+            1
+          ],
+          "x_roots": [
+            23,
+            483,
+            900,
+            1044,
+            1061,
+            1369,
+            1498,
+            1503
+          ]
+        },
+        {
+          "B": 1563,
+          "occurrence_root_count": 32,
+          "sign": "minus",
+          "u_poly_coeffs_ascending": [
+            1190,
+            666,
+            950,
+            1418,
+            1
+          ],
+          "u_roots": [
+            693,
+            838,
+            1212,
+            1380
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            1418,
+            954,
+            1226,
+            1249,
+            1226,
+            954,
+            1418,
+            1
+          ],
+          "x_roots": [
+            19,
+            344,
+            349,
+            1215,
+            1361,
+            1428,
+            1470,
+            1631
+          ]
+        },
+        {
+          "B": 1627,
+          "occurrence_root_count": 32,
+          "sign": "minus",
+          "u_poly_coeffs_ascending": [
+            495,
+            310,
+            289,
+            174,
+            1
+          ],
+          "u_roots": [
+            686,
+            1221,
+            1667,
+            1793
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            174,
+            293,
+            832,
+            1079,
+            832,
+            293,
+            174,
+            1
+          ],
+          "x_roots": [
+            73,
+            119,
+            410,
+            789,
+            1102,
+            1383,
+            1594,
+            1744
+          ]
+        },
+        {
+          "B": 1660,
+          "occurrence_root_count": 32,
+          "sign": "minus",
+          "u_poly_coeffs_ascending": [
+            729,
+            1174,
+            141,
+            921,
+            1
+          ],
+          "u_roots": [
+            151,
+            539,
+            852,
+            1231
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            921,
+            145,
+            243,
+            1017,
+            243,
+            145,
+            921,
+            1
+          ],
+          "x_roots": [
+            204,
+            295,
+            335,
+            443,
+            788,
+            1003,
+            1696,
+            1703
+          ]
+        },
+        {
+          "B": 1710,
+          "occurrence_root_count": 32,
+          "sign": "minus",
+          "u_poly_coeffs_ascending": [
+            1605,
+            1305,
+            1219,
+            97,
+            1
+          ],
+          "u_roots": [
+            495,
+            638,
+            892,
+            1572
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            97,
+            1223,
+            1596,
+            355,
+            1596,
+            1223,
+            97,
+            1
+          ],
+          "x_roots": [
+            140,
+            463,
+            513,
+            752,
+            1109,
+            1203,
+            1282,
+            1829
+          ]
+        },
+        {
+          "B": 1732,
+          "occurrence_root_count": 32,
+          "sign": "plus",
+          "u_poly_coeffs_ascending": [
+            276,
+            390,
+            175,
+            1561,
+            1
+          ],
+          "u_roots": [
+            531,
+            735,
+            1064,
+            1650
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            1561,
+            179,
+            1379,
+            632,
+            1379,
+            179,
+            1561,
+            1
+          ],
+          "x_roots": [
+            206,
+            288,
+            529,
+            776,
+            1089,
+            1289,
+            1684,
+            1813
+          ]
+        },
+        {
+          "B": 1774,
+          "occurrence_root_count": 32,
+          "sign": "plus",
+          "u_poly_coeffs_ascending": [
+            738,
+            283,
+            1626,
+            66,
+            1
+          ],
+          "u_roots": [
+            48,
+            706,
+            1063,
+            1811
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            66,
+            1630,
+            481,
+            302,
+            481,
+            1630,
+            66,
+            1
+          ],
+          "x_roots": [
+            227,
+            273,
+            433,
+            832,
+            979,
+            1408,
+            1502,
+            1668
+          ]
+        },
+        {
+          "B": 1800,
+          "occurrence_root_count": 32,
+          "sign": "plus",
+          "u_poly_coeffs_ascending": [
+            662,
+            405,
+            374,
+            485,
+            1
+          ],
+          "u_roots": [
+            114,
+            576,
+            940,
+            1579
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            485,
+            378,
+            13,
+            1416,
+            13,
+            378,
+            485,
+            1
+          ],
+          "x_roots": [
+            52,
+            760,
+            819,
+            858,
+            888,
+            900,
+            1061,
+            1565
+          ]
+        },
+        {
+          "B": 1807,
+          "occurrence_root_count": 32,
+          "sign": "plus",
+          "u_poly_coeffs_ascending": [
+            1235,
+            1554,
+            1420,
+            389,
+            1
+          ],
+          "u_roots": [
+            404,
+            536,
+            1106,
+            1259
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            389,
+            1424,
+            874,
+            387,
+            874,
+            1424,
+            389,
+            1
+          ],
+          "x_roots": [
+            95,
+            173,
+            189,
+            215,
+            232,
+            363,
+            1011,
+            1027
+          ]
+        }
+      ],
+      "stats": {
+        "B_groups": 63,
+        "deduped_candidates": 1008,
+        "enum_compact_not_target": 873,
+        "enum_no_label2_candidate": 468,
+        "occurrence_roots_32": 63,
+        "sign_minus": 18,
+        "sign_plus": 45,
+        "u_roots_4": 63,
+        "x_roots_8": 63
+      }
+    },
+    {
+      "field": 2087,
+      "row_count": 57,
+      "rows": [
+        {
+          "B": 9,
+          "occurrence_root_count": 32,
+          "sign": "minus",
+          "u_poly_coeffs_ascending": [
+            1699,
+            443,
+            1153,
+            640,
+            1
+          ],
+          "u_roots": [
+            88,
+            997,
+            1121,
+            1328
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            640,
+            1157,
+            276,
+            1924,
+            276,
+            1157,
+            640,
+            1
+          ],
+          "x_roots": [
+            28,
+            148,
+            525,
+            636,
+            803,
+            969,
+            973,
+            1539
+          ]
+        },
+        {
+          "B": 16,
+          "occurrence_root_count": 32,
+          "sign": "plus",
+          "u_poly_coeffs_ascending": [
+            327,
+            440,
+            1441,
+            1056,
+            1
+          ],
+          "u_roots": [
+            142,
+            524,
+            587,
+            1865
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            1056,
+            1445,
+            1521,
+            1128,
+            1521,
+            1445,
+            1056,
+            1
+          ],
+          "x_roots": [
+            155,
+            339,
+            760,
+            1197,
+            1414,
+            1710,
+            1890,
+            1914
+          ]
+        },
+        {
+          "B": 33,
+          "occurrence_root_count": 32,
+          "sign": "minus",
+          "u_poly_coeffs_ascending": [
+            1989,
+            498,
+            157,
+            442,
+            1
+          ],
+          "u_roots": [
+            446,
+            1776,
+            1792,
+            1805
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            442,
+            161,
+            1824,
+            222,
+            1824,
+            161,
+            442,
+            1
+          ],
+          "x_roots": [
+            523,
+            609,
+            721,
+            880,
+            1071,
+            1196,
+            1253,
+            1653
+          ]
+        },
+        {
+          "B": 79,
+          "occurrence_root_count": 32,
+          "sign": "minus",
+          "u_poly_coeffs_ascending": [
+            4,
+            1513,
+            788,
+            1271,
+            1
+          ],
+          "u_roots": [
+            331,
+            338,
+            846,
+            1388
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            1271,
+            792,
+            1152,
+            1586,
+            1152,
+            792,
+            1271,
+            1
+          ],
+          "x_roots": [
+            462,
+            1106,
+            1227,
+            1319,
+            1391,
+            1706,
+            1956,
+            2084
+          ]
+        },
+        {
+          "B": 121,
+          "occurrence_root_count": 32,
+          "sign": "minus",
+          "u_poly_coeffs_ascending": [
+            290,
+            1313,
+            420,
+            556,
+            1
+          ],
+          "u_roots": [
+            58,
+            441,
+            1121,
+            1998
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            556,
+            424,
+            894,
+            1136,
+            894,
+            424,
+            556,
+            1
+          ],
+          "x_roots": [
+            148,
+            250,
+            343,
+            854,
+            973,
+            1655,
+            1674,
+            1895
+          ]
+        },
+        {
+          "B": 136,
+          "occurrence_root_count": 32,
+          "sign": "minus",
+          "u_poly_coeffs_ascending": [
+            987,
+            1493,
+            1602,
+            610,
+            1
+          ],
+          "u_roots": [
+            58,
+            233,
+            1217,
+            2056
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            610,
+            1606,
+            1236,
+            23,
+            1236,
+            1606,
+            610,
+            1
+          ],
+          "x_roots": [
+            31,
+            202,
+            231,
+            250,
+            1593,
+            1711,
+            1825,
+            1895
+          ]
+        },
+        {
+          "B": 147,
+          "occurrence_root_count": 32,
+          "sign": "plus",
+          "u_poly_coeffs_ascending": [
+            1260,
+            1288,
+            1538,
+            86,
+            1
+          ],
+          "u_roots": [
+            1196,
+            1612,
+            1632,
+            1735
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            86,
+            1542,
+            1546,
+            168,
+            1546,
+            1542,
+            86,
+            1
+          ],
+          "x_roots": [
+            415,
+            528,
+            668,
+            1217,
+            1842,
+            1849,
+            1857,
+            1973
+          ]
+        },
+        {
+          "B": 167,
+          "occurrence_root_count": 32,
+          "sign": "plus",
+          "u_poly_coeffs_ascending": [
+            1126,
+            1125,
+            1669,
+            975,
+            1
+          ],
+          "u_roots": [
+            313,
+            391,
+            562,
+            1933
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            975,
+            1673,
+            1963,
+            296,
+            1963,
+            1673,
+            975,
+            1
+          ],
+          "x_roots": [
+            792,
+            1022,
+            1098,
+            1141,
+            1267,
+            1302,
+            1382,
+            1456
+          ]
+        },
+        {
+          "B": 182,
+          "occurrence_root_count": 32,
+          "sign": "minus",
+          "u_poly_coeffs_ascending": [
+            53,
+            39,
+            1505,
+            1965,
+            1
+          ],
+          "u_roots": [
+            502,
+            567,
+            1607,
+            1620
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            1965,
+            1509,
+            1760,
+            982,
+            1760,
+            1509,
+            1965,
+            1
+          ],
+          "x_roots": [
+            569,
+            692,
+            932,
+            1038,
+            1688,
+            1722,
+            1897,
+            2019
+          ]
+        },
+        {
+          "B": 214,
+          "occurrence_root_count": 32,
+          "sign": "minus",
+          "u_poly_coeffs_ascending": [
+            2083,
+            2027,
+            1591,
+            1396,
+            1
+          ],
+          "u_roots": [
+            335,
+            922,
+            1555,
+            2053
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            1396,
+            1595,
+            2041,
+            1097,
+            2041,
+            1595,
+            1396,
+            1
+          ],
+          "x_roots": [
+            346,
+            615,
+            940,
+            1102,
+            1232,
+            1320,
+            1707,
+            1777
+          ]
+        },
+        {
+          "B": 254,
+          "occurrence_root_count": 32,
+          "sign": "minus",
+          "u_poly_coeffs_ascending": [
+            97,
+            1364,
+            1301,
+            1293,
+            1
+          ],
+          "u_roots": [
+            357,
+            1136,
+            1495,
+            1980
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            1293,
+            1305,
+            1069,
+            618,
+            1069,
+            1305,
+            1293,
+            1
+          ],
+          "x_roots": [
+            438,
+            533,
+            603,
+            672,
+            823,
+            954,
+            1026,
+            2006
+          ]
+        },
+        {
+          "B": 260,
+          "occurrence_root_count": 32,
+          "sign": "minus",
+          "u_poly_coeffs_ascending": [
+            421,
+            1777,
+            612,
+            1613,
+            1
+          ],
+          "u_roots": [
+            707,
+            833,
+            1217,
+            1891
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            1613,
+            616,
+            355,
+            1651,
+            355,
+            616,
+            1613,
+            1
+          ],
+          "x_roots": [
+            135,
+            572,
+            698,
+            1193,
+            1221,
+            1593,
+            1699,
+            1711
+          ]
+        },
+        {
+          "B": 272,
+          "occurrence_root_count": 32,
+          "sign": "plus",
+          "u_poly_coeffs_ascending": [
+            1695,
+            1061,
+            430,
+            1355,
+            1
+          ],
+          "u_roots": [
+            34,
+            100,
+            262,
+            336
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            1355,
+            434,
+            952,
+            474,
+            952,
+            434,
+            1355,
+            1
+          ],
+          "x_roots": [
+            315,
+            380,
+            505,
+            588,
+            1682,
+            1741,
+            1835,
+            2034
+          ]
+        },
+        {
+          "B": 314,
+          "occurrence_root_count": 32,
+          "sign": "minus",
+          "u_poly_coeffs_ascending": [
+            115,
+            856,
+            131,
+            958,
+            1
+          ],
+          "u_roots": [
+            170,
+            1674,
+            1689,
+            1770
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            958,
+            135,
+            1643,
+            383,
+            1643,
+            135,
+            958,
+            1
+          ],
+          "x_roots": [
+            73,
+            320,
+            424,
+            502,
+            1265,
+            1268,
+            1601,
+            1937
+          ]
+        },
+        {
+          "B": 374,
+          "occurrence_root_count": 32,
+          "sign": "minus",
+          "u_poly_coeffs_ascending": [
+            1255,
+            714,
+            626,
+            1929,
+            1
+          ],
+          "u_roots": [
+            911,
+            1468,
+            1957,
+            2083
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            1929,
+            630,
+            240,
+            426,
+            240,
+            630,
+            1929,
+            1
+          ],
+          "x_roots": [
+            608,
+            616,
+            1099,
+            1349,
+            1467,
+            1500,
+            1899,
+            2055
+          ]
+        },
+        {
+          "B": 384,
+          "occurrence_root_count": 32,
+          "sign": "minus",
+          "u_poly_coeffs_ascending": [
+            554,
+            1859,
+            375,
+            1291,
+            1
+          ],
+          "u_roots": [
+            633,
+            872,
+            1503,
+            1962
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            1291,
+            379,
+            1558,
+            1310,
+            1558,
+            379,
+            1291,
+            1
+          ],
+          "x_roots": [
+            165,
+            468,
+            562,
+            583,
+            920,
+            1157,
+            1400,
+            1802
+          ]
+        },
+        {
+          "B": 397,
+          "occurrence_root_count": 32,
+          "sign": "minus",
+          "u_poly_coeffs_ascending": [
+            2021,
+            657,
+            440,
+            333,
+            1
+          ],
+          "u_roots": [
+            76,
+            1049,
+            1259,
+            1457
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            333,
+            444,
+            1656,
+            820,
+            1656,
+            444,
+            333,
+            1
+          ],
+          "x_roots": [
+            690,
+            1248,
+            1473,
+            1535,
+            1686,
+            1811,
+            1858,
+            1888
+          ]
+        },
+        {
+          "B": 411,
+          "occurrence_root_count": 32,
+          "sign": "plus",
+          "u_poly_coeffs_ascending": [
+            117,
+            166,
+            1547,
+            67,
+            1
+          ],
+          "u_roots": [
+            760,
+            798,
+            804,
+            1745
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            67,
+            1551,
+            367,
+            1130,
+            367,
+            1551,
+            67,
+            1
+          ],
+          "x_roots": [
+            95,
+            109,
+            651,
+            703,
+            1378,
+            1513,
+            1804,
+            2028
+          ]
+        },
+        {
+          "B": 518,
+          "occurrence_root_count": 32,
+          "sign": "plus",
+          "u_poly_coeffs_ascending": [
+            988,
+            1558,
+            1723,
+            90,
+            1
+          ],
+          "u_roots": [
+            546,
+            999,
+            1174,
+            1365
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            90,
+            1727,
+            1828,
+            266,
+            1828,
+            1727,
+            90,
+            1
+          ],
+          "x_roots": [
+            185,
+            210,
+            247,
+            289,
+            361,
+            752,
+            964,
+            1076
+          ]
+        },
+        {
+          "B": 667,
+          "occurrence_root_count": 32,
+          "sign": "minus",
+          "u_poly_coeffs_ascending": [
+            888,
+            2047,
+            1665,
+            1789,
+            1
+          ],
+          "u_roots": [
+            605,
+            825,
+            1337,
+            1705
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            1789,
+            1669,
+            1153,
+            50,
+            1153,
+            1669,
+            1789,
+            1
+          ],
+          "x_roots": [
+            115,
+            287,
+            490,
+            1306,
+            1418,
+            1606,
+            1628,
+            1796
+          ]
+        },
+        {
+          "B": 687,
+          "occurrence_root_count": 32,
+          "sign": "plus",
+          "u_poly_coeffs_ascending": [
+            2018,
+            2021,
+            1876,
+            1563,
+            1
+          ],
+          "u_roots": [
+            862,
+            974,
+            1076,
+            1786
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            1563,
+            1880,
+            449,
+            1602,
+            449,
+            1880,
+            1563,
+            1
+          ],
+          "x_roots": [
+            226,
+            306,
+            748,
+            1299,
+            1402,
+            1480,
+            1650,
+            1761
+          ]
+        },
+        {
+          "B": 787,
+          "occurrence_root_count": 32,
+          "sign": "plus",
+          "u_poly_coeffs_ascending": [
+            1187,
+            77,
+            369,
+            1897,
+            1
+          ],
+          "u_roots": [
+            48,
+            130,
+            1014,
+            1085
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            1897,
+            373,
+            1594,
+            1931,
+            1594,
+            373,
+            1897,
+            1
+          ],
+          "x_roots": [
+            284,
+            307,
+            707,
+            738,
+            801,
+            879,
+            1256,
+            1479
+          ]
+        },
+        {
+          "B": 792,
+          "occurrence_root_count": 32,
+          "sign": "minus",
+          "u_poly_coeffs_ascending": [
+            1924,
+            743,
+            377,
+            644,
+            1
+          ],
+          "u_roots": [
+            949,
+            1064,
+            1584,
+            2020
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            644,
+            381,
+            588,
+            597,
+            588,
+            381,
+            644,
+            1
+          ],
+          "x_roots": [
+            56,
+            74,
+            1396,
+            1528,
+            1548,
+            1603,
+            1640,
+            1946
+          ]
+        },
+        {
+          "B": 822,
+          "occurrence_root_count": 32,
+          "sign": "plus",
+          "u_poly_coeffs_ascending": [
+            912,
+            1984,
+            415,
+            439,
+            1
+          ],
+          "u_roots": [
+            155,
+            867,
+            1066,
+            1647
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            439,
+            419,
+            1214,
+            1748,
+            1214,
+            419,
+            439,
+            1
+          ],
+          "x_roots": [
+            517,
+            549,
+            630,
+            892,
+            1017,
+            1234,
+            1350,
+            1720
+          ]
+        },
+        {
+          "B": 850,
+          "occurrence_root_count": 32,
+          "sign": "minus",
+          "u_poly_coeffs_ascending": [
+            241,
+            472,
+            563,
+            839,
+            1
+          ],
+          "u_roots": [
+            55,
+            1318,
+            2010,
+            2039
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            839,
+            567,
+            902,
+            1373,
+            902,
+            567,
+            839,
+            1
+          ],
+          "x_roots": [
+            359,
+            831,
+            1013,
+            1129,
+            1208,
+            1613,
+            1651,
+            1792
+          ]
+        },
+        {
+          "B": 855,
+          "occurrence_root_count": 32,
+          "sign": "minus",
+          "u_poly_coeffs_ascending": [
+            1332,
+            1074,
+            154,
+            1125,
+            1
+          ],
+          "u_roots": [
+            170,
+            1472,
+            1601,
+            1893
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            1125,
+            158,
+            275,
+            1646,
+            275,
+            158,
+            1125,
+            1
+          ],
+          "x_roots": [
+            320,
+            679,
+            774,
+            791,
+            793,
+            810,
+            1119,
+            1937
+          ]
+        },
+        {
+          "B": 864,
+          "occurrence_root_count": 32,
+          "sign": "plus",
+          "u_poly_coeffs_ascending": [
+            2038,
+            2074,
+            1968,
+            1249,
+            1
+          ],
+          "u_roots": [
+            269,
+            329,
+            875,
+            1452
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            1249,
+            1972,
+            1647,
+            1806,
+            1647,
+            1972,
+            1249,
+            1
+          ],
+          "x_roots": [
+            8,
+            70,
+            261,
+            524,
+            805,
+            928,
+            1140,
+            1276
+          ]
+        },
+        {
+          "B": 865,
+          "occurrence_root_count": 32,
+          "sign": "plus",
+          "u_poly_coeffs_ascending": [
+            1383,
+            1386,
+            1219,
+            75,
+            1
+          ],
+          "u_roots": [
+            1112,
+            1586,
+            1740,
+            1748
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            75,
+            1223,
+            1611,
+            1740,
+            1611,
+            1223,
+            75,
+            1
+          ],
+          "x_roots": [
+            92,
+            140,
+            256,
+            856,
+            1446,
+            1656,
+            1859,
+            1968
+          ]
+        },
+        {
+          "B": 919,
+          "occurrence_root_count": 32,
+          "sign": "minus",
+          "u_poly_coeffs_ascending": [
+            755,
+            1573,
+            76,
+            1267,
+            1
+          ],
+          "u_roots": [
+            861,
+            1088,
+            1504,
+            1541
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            1267,
+            80,
+            1200,
+            913,
+            1200,
+            80,
+            1267,
+            1
+          ],
+          "x_roots": [
+            1008,
+            1335,
+            1555,
+            1726,
+            1840,
+            1902,
+            1940,
+            2036
+          ]
+        },
+        {
+          "B": 961,
+          "occurrence_root_count": 32,
+          "sign": "minus",
+          "u_poly_coeffs_ascending": [
+            1721,
+            269,
+            146,
+            2014,
+            1
+          ],
+          "u_roots": [
+            613,
+            845,
+            1289,
+            1500
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            2014,
+            150,
+            50,
+            2019,
+            50,
+            150,
+            2014,
+            1
+          ],
+          "x_roots": [
+            173,
+            710,
+            983,
+            1327,
+            1384,
+            1949,
+            1990,
+            1992
+          ]
+        },
+        {
+          "B": 1079,
+          "occurrence_root_count": 32,
+          "sign": "plus",
+          "u_poly_coeffs_ascending": [
+            2058,
+            703,
+            220,
+            906,
+            1
+          ],
+          "u_roots": [
+            77,
+            398,
+            1174,
+            1619
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            906,
+            224,
+            1334,
+            417,
+            1334,
+            224,
+            906,
+            1
+          ],
+          "x_roots": [
+            41,
+            210,
+            436,
+            822,
+            964,
+            1578,
+            1663,
+            1728
+          ]
+        },
+        {
+          "B": 1087,
+          "occurrence_root_count": 32,
+          "sign": "minus",
+          "u_poly_coeffs_ascending": [
+            333,
+            467,
+            1256,
+            1478,
+            1
+          ],
+          "u_roots": [
+            236,
+            353,
+            878,
+            1229
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            1478,
+            1260,
+            727,
+            764,
+            727,
+            1260,
+            1478,
+            1
+          ],
+          "x_roots": [
+            279,
+            536,
+            950,
+            1077,
+            1246,
+            1311,
+            1654,
+            1904
+          ]
+        },
+        {
+          "B": 1133,
+          "occurrence_root_count": 32,
+          "sign": "minus",
+          "u_poly_coeffs_ascending": [
+            1041,
+            924,
+            824,
+            829,
+            1
+          ],
+          "u_roots": [
+            12,
+            357,
+            1101,
+            1875
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            829,
+            828,
+            1324,
+            608,
+            1324,
+            828,
+            829,
+            1
+          ],
+          "x_roots": [
+            208,
+            438,
+            499,
+            724,
+            893,
+            1375,
+            1376,
+            2006
+          ]
+        },
+        {
+          "B": 1150,
+          "occurrence_root_count": 32,
+          "sign": "minus",
+          "u_poly_coeffs_ascending": [
+            1124,
+            427,
+            1217,
+            752,
+            1
+          ],
+          "u_roots": [
+            331,
+            549,
+            885,
+            1657
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            752,
+            1221,
+            596,
+            1477,
+            596,
+            1221,
+            752,
+            1
+          ],
+          "x_roots": [
+            462,
+            519,
+            1029,
+            1138,
+            1171,
+            1465,
+            1943,
+            1956
+          ]
+        },
+        {
+          "B": 1156,
+          "occurrence_root_count": 32,
+          "sign": "plus",
+          "u_poly_coeffs_ascending": [
+            1832,
+            1940,
+            492,
+            1550,
+            1
+          ],
+          "u_roots": [
+            274,
+            1188,
+            1602,
+            1647
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            1550,
+            496,
+            329,
+            735,
+            329,
+            496,
+            1550,
+            1
+          ],
+          "x_roots": [
+            71,
+            164,
+            630,
+            770,
+            1017,
+            1117,
+            1438,
+            1591
+          ]
+        },
+        {
+          "B": 1173,
+          "occurrence_root_count": 32,
+          "sign": "minus",
+          "u_poly_coeffs_ascending": [
+            1070,
+            745,
+            1347,
+            582,
+            1
+          ],
+          "u_roots": [
+            54,
+            407,
+            475,
+            569
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            582,
+            1351,
+            404,
+            1683,
+            404,
+            1351,
+            582,
+            1
+          ],
+          "x_roots": [
+            84,
+            159,
+            230,
+            245,
+            323,
+            977,
+            1679,
+            1982
+          ]
+        },
+        {
+          "B": 1189,
+          "occurrence_root_count": 32,
+          "sign": "plus",
+          "u_poly_coeffs_ascending": [
+            977,
+            1616,
+            978,
+            1631,
+            1
+          ],
+          "u_roots": [
+            278,
+            1046,
+            1335,
+            1971
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            1631,
+            982,
+            248,
+            852,
+            248,
+            982,
+            1631,
+            1
+          ],
+          "x_roots": [
+            2,
+            364,
+            619,
+            1044,
+            1352,
+            1373,
+            2001,
+            2049
+          ]
+        },
+        {
+          "B": 1207,
+          "occurrence_root_count": 32,
+          "sign": "plus",
+          "u_poly_coeffs_ascending": [
+            516,
+            645,
+            215,
+            940,
+            1
+          ],
+          "u_roots": [
+            142,
+            263,
+            1175,
+            1654
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            940,
+            219,
+            1378,
+            952,
+            1378,
+            219,
+            940,
+            1
+          ],
+          "x_roots": [
+            139,
+            339,
+            963,
+            1036,
+            1387,
+            1730,
+            1890,
+            2011
+          ]
+        },
+        {
+          "B": 1250,
+          "occurrence_root_count": 32,
+          "sign": "minus",
+          "u_poly_coeffs_ascending": [
+            32,
+            1135,
+            1471,
+            1702,
+            1
+          ],
+          "u_roots": [
+            700,
+            1136,
+            1259,
+            1464
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            1702,
+            1475,
+            2067,
+            893,
+            2067,
+            1475,
+            1702,
+            1
+          ],
+          "x_roots": [
+            251,
+            444,
+            449,
+            533,
+            603,
+            1020,
+            1535,
+            1811
+          ]
+        },
+        {
+          "B": 1267,
+          "occurrence_root_count": 32,
+          "sign": "minus",
+          "u_poly_coeffs_ascending": [
+            278,
+            195,
+            1760,
+            529,
+            1
+          ],
+          "u_roots": [
+            331,
+            446,
+            849,
+            2019
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            529,
+            1764,
+            1782,
+            1717,
+            1782,
+            1764,
+            529,
+            1
+          ],
+          "x_roots": [
+            39,
+            462,
+            880,
+            1063,
+            1653,
+            1873,
+            1956,
+            1980
+          ]
+        },
+        {
+          "B": 1297,
+          "occurrence_root_count": 32,
+          "sign": "minus",
+          "u_poly_coeffs_ascending": [
+            947,
+            292,
+            1944,
+            415,
+            1
+          ],
+          "u_roots": [
+            17,
+            899,
+            1052,
+            1791
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            415,
+            1948,
+            1537,
+            667,
+            1537,
+            1948,
+            415,
+            1
+          ],
+          "x_roots": [
+            111,
+            445,
+            970,
+            1346,
+            1517,
+            1622,
+            1993,
+            2016
+          ]
+        },
+        {
+          "B": 1413,
+          "occurrence_root_count": 32,
+          "sign": "minus",
+          "u_poly_coeffs_ascending": [
+            1556,
+            508,
+            1758,
+            669,
+            1
+          ],
+          "u_roots": [
+            226,
+            352,
+            1370,
+            1557
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            669,
+            1762,
+            428,
+            904,
+            428,
+            1762,
+            669,
+            1
+          ],
+          "x_roots": [
+            114,
+            238,
+            337,
+            624,
+            1220,
+            1502,
+            1689,
+            1955
+          ]
+        },
+        {
+          "B": 1441,
+          "occurrence_root_count": 32,
+          "sign": "minus",
+          "u_poly_coeffs_ascending": [
+            258,
+            1596,
+            605,
+            688,
+            1
+          ],
+          "u_roots": [
+            355,
+            1500,
+            1828,
+            1890
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            688,
+            609,
+            1573,
+            1474,
+            1573,
+            609,
+            688,
+            1
+          ],
+          "x_roots": [
+            104,
+            125,
+            173,
+            1168,
+            1274,
+            1327,
+            1703,
+            1786
+          ]
+        },
+        {
+          "B": 1513,
+          "occurrence_root_count": 32,
+          "sign": "minus",
+          "u_poly_coeffs_ascending": [
+            767,
+            1902,
+            880,
+            270,
+            1
+          ],
+          "u_roots": [
+            351,
+            375,
+            485,
+            606
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            270,
+            884,
+            625,
+            446,
+            625,
+            884,
+            270,
+            1
+          ],
+          "x_roots": [
+            224,
+            382,
+            649,
+            895,
+            1215,
+            1223,
+            1567,
+            1923
+          ]
+        },
+        {
+          "B": 1596,
+          "occurrence_root_count": 32,
+          "sign": "minus",
+          "u_poly_coeffs_ascending": [
+            861,
+            1341,
+            929,
+            671,
+            1
+          ],
+          "u_roots": [
+            327,
+            353,
+            1048,
+            1775
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            671,
+            933,
+            1267,
+            638,
+            1267,
+            933,
+            671,
+            1
+          ],
+          "x_roots": [
+            536,
+            644,
+            1131,
+            1160,
+            1254,
+            1498,
+            1637,
+            1904
+          ]
+        },
+        {
+          "B": 1610,
+          "occurrence_root_count": 32,
+          "sign": "plus",
+          "u_poly_coeffs_ascending": [
+            446,
+            640,
+            1998,
+            112,
+            1
+          ],
+          "u_roots": [
+            31,
+            823,
+            1196,
+            2012
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            112,
+            2002,
+            976,
+            274,
+            976,
+            2002,
+            112,
+            1
+          ],
+          "x_roots": [
+            108,
+            262,
+            528,
+            568,
+            668,
+            715,
+            1444,
+            1856
+          ]
+        },
+        {
+          "B": 1625,
+          "occurrence_root_count": 32,
+          "sign": "plus",
+          "u_poly_coeffs_ascending": [
+            620,
+            880,
+            1277,
+            1463,
+            1
+          ],
+          "u_roots": [
+            624,
+            1003,
+            1238,
+            1933
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            1463,
+            1281,
+            1095,
+            1093,
+            1095,
+            1281,
+            1463,
+            1
+          ],
+          "x_roots": [
+            214,
+            280,
+            723,
+            792,
+            1024,
+            1028,
+            1141,
+            1683
+          ]
+        },
+        {
+          "B": 1656,
+          "occurrence_root_count": 32,
+          "sign": "plus",
+          "u_poly_coeffs_ascending": [
+            305,
+            381,
+            1476,
+            1640,
+            1
+          ],
+          "u_roots": [
+            1174,
+            1748,
+            1753,
+            2033
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            1640,
+            1480,
+            1127,
+            1176,
+            1127,
+            1480,
+            1640,
+            1
+          ],
+          "x_roots": [
+            92,
+            105,
+            179,
+            210,
+            964,
+            1574,
+            1656,
+            1928
+          ]
+        },
+        {
+          "B": 1678,
+          "occurrence_root_count": 32,
+          "sign": "plus",
+          "u_poly_coeffs_ascending": [
+            358,
+            1297,
+            557,
+            1832,
+            1
+          ],
+          "u_roots": [
+            750,
+            869,
+            1160,
+            1650
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            1832,
+            561,
+            532,
+            1478,
+            532,
+            561,
+            1832,
+            1
+          ],
+          "x_roots": [
+            291,
+            411,
+            459,
+            993,
+            1200,
+            1239,
+            1963,
+            2047
+          ]
+        },
+        {
+          "B": 1741,
+          "occurrence_root_count": 32,
+          "sign": "plus",
+          "u_poly_coeffs_ascending": [
+            848,
+            1898,
+            1906,
+            1849,
+            1
+          ],
+          "u_roots": [
+            46,
+            312,
+            1979,
+            2075
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            1849,
+            1910,
+            1184,
+            492,
+            1184,
+            1910,
+            1849,
+            1
+          ],
+          "x_roots": [
+            712,
+            956,
+            972,
+            1007,
+            1064,
+            1069,
+            1363,
+            1443
+          ]
+        },
+        {
+          "B": 1765,
+          "occurrence_root_count": 32,
+          "sign": "plus",
+          "u_poly_coeffs_ascending": [
+            1261,
+            719,
+            492,
+            1856,
+            1
+          ],
+          "u_roots": [
+            241,
+            995,
+            1383,
+            1786
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            1856,
+            496,
+            26,
+            164,
+            26,
+            496,
+            1856,
+            1
+          ],
+          "x_roots": [
+            9,
+            232,
+            306,
+            356,
+            625,
+            639,
+            758,
+            1480
+          ]
+        },
+        {
+          "B": 1866,
+          "occurrence_root_count": 32,
+          "sign": "minus",
+          "u_poly_coeffs_ascending": [
+            928,
+            1372,
+            331,
+            820,
+            1
+          ],
+          "u_roots": [
+            203,
+            375,
+            997,
+            1779
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            820,
+            335,
+            1745,
+            1596,
+            1745,
+            335,
+            820,
+            1
+          ],
+          "x_roots": [
+            13,
+            28,
+            779,
+            895,
+            969,
+            1511,
+            1567,
+            1766
+          ]
+        },
+        {
+          "B": 1882,
+          "occurrence_root_count": 32,
+          "sign": "plus",
+          "u_poly_coeffs_ascending": [
+            1783,
+            1536,
+            1819,
+            1015,
+            1
+          ],
+          "u_roots": [
+            336,
+            1399,
+            1482,
+            2029
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            1015,
+            1823,
+            407,
+            1253,
+            407,
+            1823,
+            1015,
+            1
+          ],
+          "x_roots": [
+            192,
+            588,
+            1441,
+            1597,
+            1835,
+            1837,
+            1972,
+            2045
+          ]
+        },
+        {
+          "B": 1931,
+          "occurrence_root_count": 32,
+          "sign": "plus",
+          "u_poly_coeffs_ascending": [
+            975,
+            957,
+            882,
+            1071,
+            1
+          ],
+          "u_roots": [
+            554,
+            1160,
+            1516,
+            1960
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            1071,
+            886,
+            2083,
+            658,
+            2083,
+            886,
+            1071,
+            1
+          ],
+          "x_roots": [
+            717,
+            802,
+            1158,
+            1200,
+            1736,
+            1867,
+            1924,
+            2047
+          ]
+        },
+        {
+          "B": 1968,
+          "occurrence_root_count": 32,
+          "sign": "plus",
+          "u_poly_coeffs_ascending": [
+            1227,
+            688,
+            1796,
+            74,
+            1
+          ],
+          "u_roots": [
+            216,
+            870,
+            1035,
+            1979
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            74,
+            1800,
+            910,
+            651,
+            910,
+            1800,
+            74,
+            1
+          ],
+          "x_roots": [
+            376,
+            465,
+            494,
+            570,
+            821,
+            972,
+            1007,
+            1482
+          ]
+        },
+        {
+          "B": 2025,
+          "occurrence_root_count": 32,
+          "sign": "plus",
+          "u_poly_coeffs_ascending": [
+            825,
+            1472,
+            221,
+            280,
+            1
+          ],
+          "u_roots": [
+            1165,
+            1339,
+            1445,
+            2032
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            280,
+            225,
+            225,
+            1273,
+            225,
+            225,
+            280,
+            1
+          ],
+          "x_roots": [
+            22,
+            103,
+            310,
+            855,
+            958,
+            1074,
+            1236,
+            1423
+          ]
+        },
+        {
+          "B": 2028,
+          "occurrence_root_count": 32,
+          "sign": "minus",
+          "u_poly_coeffs_ascending": [
+            225,
+            514,
+            1317,
+            1412,
+            1
+          ],
+          "u_roots": [
+            437,
+            1362,
+            1521,
+            1529
+          ],
+          "x_poly_coeffs_ascending": [
+            1,
+            1412,
+            1321,
+            576,
+            778,
+            576,
+            1321,
+            1412,
+            1
+          ],
+          "x_roots": [
+            527,
+            535,
+            827,
+            848,
+            994,
+            1618,
+            1676,
+            1998
+          ]
+        }
+      ],
+      "stats": {
+        "B_groups": 57,
+        "deduped_candidates": 912,
+        "enum_compact_not_target": 1109,
+        "enum_no_label2_candidate": 520,
+        "occurrence_roots_32": 57,
+        "sign_minus": 32,
+        "sign_plus": 25,
+        "u_roots_4": 57,
+        "x_roots_8": 57
+      }
+    }
+  ],
+  "name": "p27_b_line_reduced_fiber_fixture",
+  "purpose": "CAS fixture for the reduced B-line d3 fiber: 8 distinct x roots or 4 u=x+1/x roots over each legal B.",
+  "sentinel": "p27_b_line_reduced_fiber_fixture_rows=1/1",
+  "target_prime": "1000000000000000000000000103"
+}
