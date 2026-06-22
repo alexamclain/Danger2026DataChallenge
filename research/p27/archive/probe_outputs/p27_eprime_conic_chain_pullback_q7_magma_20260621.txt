@@ -1,0 +1,10 @@
+
+Current total memory usage: 272.5MB, failed memory request: 160.0MB
+System Error: User memory limit has been reached
+
+Current total memory usage: 297.1MB, failed memory request: 101.4MB
+System Error: User memory limit has been reached
+
+Current total memory usage: 329.1MB, failed memory request: 52.5MB
+System Error: User memory limit has been reached
+RESULT p27_eprime_conic_chain_pullback_q7 done

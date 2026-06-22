@@ -694,6 +694,21 @@ next beat-sqrt test is to parametrize or pull back chains of conics
 `h_j^2=r_j^2+c*r_j+1` to the legal X1(16)/compactD starting surface, or prove
 that each step still introduces a fresh independent cover.
 
+The first source-screen for that chain is positive but incomplete:
+[P27 Conic-Chain Source Screen](evidence/p27_conic_chain_source_screen_20260621.md).
+Legal halving requires both conjugate conics
+`h_j^2=r_j^2+c*r_j+1` and `g_j^2=r_j^2-c*r_j+1`, with
+`r_{j+1}^2-(h_j+g_j)r_{j+1}+1=0`.  Online Magma over q7 reports dimension `2`
+for depth 1 and depth 2 chain ideals, while finite-field counts through depth
+4 over q103/q263/q607 and depth 2 over q1607 show zero xDBL mismatches and
+output projections staying near `0.5*q^2`.  This supports a genuine lifted
+two-dimensional chain object.  On actual label-2 / compactD rows in
+q1607/q1847/q2087, depth-1 conic-chain lifts are exactly the d3-plus rows and
+depth-2 lifts are exactly the d4-plus-after-d3 rows.  The full q7 E-prime
+legal pullback fixture still hits the web Magma memory limit, so the remaining
+decisive test is a staged elimination/normalization of the legal pullback,
+not another count check.
+
 The K-line now has a cleaner coordinate for that extraction:
 [P27 Kummer Belyi Structure Probe](evidence/p27_kummer_belyi_structure_probe_20260621.md).
 Symbolically,

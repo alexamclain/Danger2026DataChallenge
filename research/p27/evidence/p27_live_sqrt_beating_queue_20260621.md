@@ -32,6 +32,7 @@ Latest evidence:
 [P27 E-Prime Reciprocal R-Quotient Branch Screen](p27_eprime_rquotient_branch_screen_20260621.md).
 [P27 S-Map Quartic Recurrence Probe](p27_smap_quartic_recurrence_20260621.md).
 [P27 Quadratic Gate Recurrence](p27_quadratic_gate_recurrence_20260621.md).
+[P27 Conic-Chain Source Screen](p27_conic_chain_source_screen_20260621.md).
 
 Key result over tiny p27-signature field `q=7`:
 
@@ -77,16 +78,25 @@ The pair resolvent then collapses the tower to a repeated conic gate.  In
 coordinates `A=2-c^2`, `x=r^2`, the next gate is exactly
 `chi(r^2+c*r+1)`.  This matched p27 train/heldout through gates 3-8 and
 q1607/q1847/q2087 through gates 3-4, all with zero mismatches.
+The lifted legal conic-chain object is also dimension-stable in first probes:
+with both conjugate conics and the transition
+`r_next^2-(h+g)r_next+1=0`, q7 Magma gives dimension 2 at depths 1 and 2,
+and finite-field counts through depth 4 keep output projections near `0.5q^2`
+with zero xDBL mismatches.
+On legal label-2 / compactD rows over q1607/q1847/q2087, depth-1 conic lifts
+match exactly the d3-plus rows, and depth-2 lifts match exactly d4-plus after
+d3.  The full q7 E-prime pullback still exceeds web Magma memory.
 ```
 
 Concrete next K/S test:
 
 ```text
 offline Magma/Sage should now target E': V^2=U^3+4U:
-  build the conic-chain source/pullback with A=2-c^2 and x=r^2
-  impose one or two gates h_j^2=r_j^2+c*r_j+1
-  compute whether the pullback to the legal X1(16)/compactD surface is low
-    genus/sourceable, or whether each gate remains a fresh independent cover
+  do staged elimination for the legal pullback:
+    first A=2-c^2 and x5=r0^2,
+    then both conjugate conics and the r_next transition
+  compute whether the resulting legal source has low genus/sourceable
+    components, or remains a high-complexity cover
 ```
 
 Promotion bar:

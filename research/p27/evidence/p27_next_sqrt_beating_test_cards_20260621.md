@@ -367,6 +367,46 @@ is high/genus-generic or if deriving r_next still requires a fresh independent
 cover at every step.
 ```
 
+Conic-chain source update:
+[P27 Conic-Chain Source Screen](p27_conic_chain_source_screen_20260621.md).
+
+```text
+Legal halving needs both conjugate conics:
+  h_j^2 = r_j^2 + c*r_j + 1
+  g_j^2 = r_j^2 - c*r_j + 1
+  r_{j+1}^2 - (h_j+g_j)*r_{j+1} + 1 = 0
+
+q7 Magma:
+  depth 1 dimension = 2
+  depth 2 dimension = 2
+  depth 3 hits web memory
+
+finite-field counts:
+  q103/q263/q607 through depth 4: zero xDBL mismatches
+  q1607 through depth 2: zero xDBL mismatches
+  output projection stays near 0.5*q^2 rather than halving each depth
+
+legal-source counts:
+  q1607/q1847/q2087 depth 1 conic lift iff d3=+1
+  q1607/q1847/q2087 depth 2 conic lift iff d4=+1 after d3
+  full q7 E-prime pullback fixture hits web Magma memory before dimension
+```
+
+Updated test card:
+
+```text
+Do staged elimination for the label-2/compactD legal source equations:
+  A = 2 - c^2
+  x5 = r0^2
+  h0^2 = r0^2 + c*r0 + 1
+  g0^2 = r0^2 - c*r0 + 1
+  r1^2 - (h0+g0)*r1 + 1 = 0
+
+Avoid the all-at-once web-Magma pullback; it is too heavy.  The next decisive
+test is whether staged elimination/normalization yields low-genus or
+sourceable legal components.
+```
+
 U+2 norm/coboundary screen:
 
 ```text

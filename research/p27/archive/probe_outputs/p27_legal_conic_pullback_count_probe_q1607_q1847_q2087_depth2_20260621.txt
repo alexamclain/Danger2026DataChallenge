@@ -1,0 +1,52 @@
+p27 legal conic pullback count probe
+source = label-2 / compactD candidates
+depth = 2
+q1607:
+  d3_-1 = 336
+  d3_1 = 448
+  d4_after_d3_-1 = 144
+  d4_after_d3_1 = 304
+  depth1_candidates_with_lift = 448
+  depth1_matches_d3plus_indicator = 784
+  depth1_total_lifts = 14336
+  depth2_candidates_with_lift = 304
+  depth2_matches_d4plus_indicator_after_d3 = 448
+  depth2_total_lifts = 77824
+  enum_compact_not_target = 805
+  enum_no_label2_candidate = 408
+  legal_candidates = 784
+  depth1_candidate_lift_rate = 0.571428571
+  depth2_candidate_lift_rate = 0.387755102
+q1847:
+  d3_-1 = 288
+  d3_1 = 720
+  d4_after_d3_-1 = 416
+  d4_after_d3_1 = 304
+  depth1_candidates_with_lift = 720
+  depth1_matches_d3plus_indicator = 1008
+  depth1_total_lifts = 23040
+  depth2_candidates_with_lift = 304
+  depth2_matches_d4plus_indicator_after_d3 = 720
+  depth2_total_lifts = 77824
+  enum_compact_not_target = 873
+  enum_no_label2_candidate = 468
+  legal_candidates = 1008
+  depth1_candidate_lift_rate = 0.714285714
+  depth2_candidate_lift_rate = 0.301587302
+q2087:
+  d3_-1 = 512
+  d3_1 = 400
+  d4_after_d3_-1 = 112
+  d4_after_d3_1 = 288
+  depth1_candidates_with_lift = 400
+  depth1_matches_d3plus_indicator = 912
+  depth1_total_lifts = 12800
+  depth2_candidates_with_lift = 288
+  depth2_matches_d4plus_indicator_after_d3 = 400
+  depth2_total_lifts = 73728
+  enum_compact_not_target = 1109
+  enum_no_label2_candidate = 520
+  legal_candidates = 912
+  depth1_candidate_lift_rate = 0.438596491
+  depth2_candidate_lift_rate = 0.315789474
+p27_legal_conic_pullback_count_probe_rows=1/1
