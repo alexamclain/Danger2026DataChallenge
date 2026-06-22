@@ -985,6 +985,11 @@ It rewrites the d3 cover using `Unext=x6+1/x6` and
 source variables.  Validation over q1607/q1847/q2087 has zero reduced-equation
 or selector mismatches.  This is the first CAS normalization target before the
 full reverse `z,Y` cover.
+The first online Magma smoke for this reduced cover is cautionary:
+[P27 B-Line Reduced-Cover Magma Smoke](evidence/p27_b_line_reduced_cover_magma_smoke_20260622.md).
+Even over q7, the saturation-only fixture exceeds the online calculator memory
+limit during `Saturation(I,bad)`.  The reduced cover remains the right first
+offline CAS/expert object, but this is not a GPU-production green light.
 The B-line visible two-gate quartic shortcut is closed as well:
 [P27 B-Line Gate4-Prefix Quartic q1847 Screen](evidence/p27_b_line_gate4_prefix_quartic_q1847_screen_20260622.md).
 It scans `6,300,872,423` q1847 coefficient triples for

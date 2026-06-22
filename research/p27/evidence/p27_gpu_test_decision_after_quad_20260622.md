@@ -68,6 +68,12 @@ have no extra low-degree relation beyond the inherited BSM equation in
 q1607/q1847/q2087, so this remains a CAS/extraction surface rather than a GPU
 sampler.
 
+Update: [P27 B-Line Reduced-Cover Magma Smoke](p27_b_line_reduced_cover_magma_smoke_20260622.md)
+turns the best current A/B/K/Sroot lead into a concrete offline CAS ask.  The
+reduced q7 fixture hits the online Magma memory limit during saturation, so it
+does not yet provide a genus, quotient, recurrence, or direct sampler for GPU
+production.
+
 ## Interpretation
 
 The GPU has validated a mathematical coordinate system, not a production
@@ -85,6 +91,11 @@ come from either:
 1. sampling directly inside the legal recurrence-coordinate domain, or
 2. finding coupling among many s_j bits so the tower is not independent.
 ```
+
+The current reduced B-cover evidence points to offline Magma/Sage extraction
+before the next large GPU run.  The GPU should only be used now for bounded
+telemetry that reports source-normalized denominators, or for an A/B test
+after a named sampler/source map exists.
 
 ## Next GPU Tests
 

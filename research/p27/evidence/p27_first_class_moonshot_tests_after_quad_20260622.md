@@ -129,6 +129,13 @@ It gives the reduced equation
 validates `f3=chi(Unext+2)` with zero mismatches across q1607/q1847/q2087.
 This is the first CAS model to try before the full reverse `z,Y` cover.
 
+Online Magma smoke:
+[P27 B-Line Reduced-Cover Magma Smoke](p27_b_line_reduced_cover_magma_smoke_20260622.md).
+The q7 saturation-only fixture hits the online calculator memory limit during
+`Saturation(I,bad)`.  This keeps the reduced cover as the right first offline
+CAS object, but it means web Magma cannot answer genus/component/sourceability
+for this lane.
+
 Required computation:
 
 ```text
@@ -151,6 +158,7 @@ Kill if:
 ```text
 d3 is high-genus/generic after normalization
 and f4/f5 are fresh unrelated half-covers
+or online Magma is the only available extraction engine
 ```
 
 This is the top CAS/expert ask because the same active selected bits are now
@@ -304,6 +312,7 @@ not allowed:
   A/B/K/lambda quartic bucket production
   raw BSM surface sampling
   Bplus/core-B bucket search without a class recurrence
+  GPU production before reduced-cover genus/sourceability is known
 ```
 
 GPU promotion requires:
@@ -321,10 +330,12 @@ continue = coordinated A/B/K/Sroot normalized Kummer sequence extraction
 continue = BSM staged legal-pullback normalization
 continue = trace/norm half-norm phase expert ask
 continue = GPU only as bounded telemetry or for a named sampler
+continue = offline Magma/Sage for the reduced B-line cover
 
 kill = more one-bit filters as moonshots
 kill = norm/trace/power-sum selectors for the B-line d3 fiber
 kill = low-degree plane relations for the reduced B-line d3 fiber through degree 20
+kill = online Magma as the reduced-cover extraction engine
 kill = more visible quartic/branch-map bucket searches without a theorem
 kill = treating source-conditional 2x lift as sqrt-beating
 ```

@@ -121,6 +121,13 @@ It removes the reverse z/Y materialization from the first normalization pass.
 It preserves the exact f3 selector as chi(Unext+2).
 ```
 
+Online Magma follow-up:
+[P27 B-Line Reduced-Cover Magma Smoke](p27_b_line_reduced_cover_magma_smoke_20260622.md).
+The q7 saturation-only fixture is submit-ready, but the online calculator
+terminates at the memory limit during `Saturation(I, bad)`.  This moves the
+next step to offline Magma/Sage or specialized elimination; it does not promote
+GPU production.
+
 Negative:
 
 ```text
@@ -129,12 +136,14 @@ The prior reduced-fiber relation screen still kills visible plane models
 through degree 20.
 Promotion requires normalization/genus/quotient output from this symbolic
 cover.
+The online calculator cannot provide that output for the reduced q7 fixture.
 ```
 
 ## Continue / Kill
 
 ```text
 continue = run CAS normalization of the reduced_Unext cover over P1_Bline
+continue = use offline Magma/Sage or elimination; online Magma is too small
 continue = compute genus/components/quotients and compare against the fixture
 continue = only then pull back f4/f3
 
