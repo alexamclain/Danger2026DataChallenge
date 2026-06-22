@@ -4,11 +4,15 @@ Date: 2026-06-22
 
 ## Claim
 
-If the full B/K monic-quartic GPU suite is negative, the next credible
-sqrt-beating route is not another coefficient scan.  It is offline
-branch/genus/Kummer extraction over the K/S and B-line covers.
+The decisive q1847 d3 part of the full B/K monic-quartic suite is negative in
+both coordinates, so the next credible sqrt-beating route is not another
+coefficient scan.  It is offline branch/genus/Kummer extraction over the K/S
+and B-line covers.
 
 This handoff packages that fallback as an ordered CAS queue.
+
+Entry evidence:
+[P27 Full Quartic q1847 D3 Screen](p27_full_quartic_q1847_d3_screen_20260622.md).
 
 ## Manifest
 
@@ -21,7 +25,7 @@ research/p27/archive/fixtures/p27_post_quartic_cas_suite_20260622.json
 Entry condition:
 
 ```text
-full quartic GPU suite has no stable q1847/guard-field d3 hit
+decisive B/K q1847 d3 monic quartic screens have exact_quartics = 0
 or
 a quartic hit needs deeper sourceability/genus analysis
 ```

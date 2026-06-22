@@ -4,8 +4,8 @@ Date: 2026-06-22
 
 ## Claim
 
-The next bounded GPU math-structure test is now the full B-line/K-line monic
-quartic exact-support suite.
+The full B-line/K-line monic quartic suite is now locally executable, and the
+decisive q1847 d3 screens are complete and negative.
 
 Do not spend GPU time on smaller proxy families.  The obvious shortcuts are
 already killed:
@@ -17,11 +17,23 @@ B-line Belyi-involution quartics:  zero hits
 B/K signed-root plane shortcut:    zero low-degree relation
 ```
 
-So the remaining useful GPU question is exactly:
+The original useful GPU question was:
 
 ```text
 Does the descended p27 d3 class have a visible genus-1 quartic model in B or K?
 ```
+
+The q1847 answer is no in both visible coordinates:
+
+```text
+B q1847 d3_on_legalB: exact_quartics = 0
+K q1847 d3_on_K:      exact_quartics = 0
+```
+
+See [P27 Full Quartic q1847 D3 Screen](p27_full_quartic_q1847_d3_screen_20260622.md).
+This kills the decisive q1847 visible monic-quartic d3 promotion route.  The
+remaining quartic jobs are optional closure or verification surfaces, not the
+front-door sqrt-beating lane.
 
 ## Manifest
 
@@ -36,7 +48,7 @@ runners, run order, expected random counts, and killed subfamilies.
 
 ## Run Order
 
-Run these first:
+Original run order:
 
 ```text
 1. K q1471 d3_on_K
@@ -58,8 +70,15 @@ Run these first:
    independent guard field, 9,090,072,503 triples
 ```
 
-Run these only after the d3 screens are implemented and cheap enough, or after
-a d3 signal appears:
+Status:
+
+```text
+K q1847 d3_on_K:      done, exact_quartics = 0
+B q1847 d3_on_legalB: done, exact_quartics = 0
+```
+
+Run these only for closure bookkeeping, two-gate closure, or if another agent
+reports a candidate requiring verification:
 
 ```text
 B q1847 gate4_prefix_on_legalB
@@ -138,7 +157,7 @@ any implementation notes
 
 ## Interpretation
 
-Promote:
+Promote, if a future non-q1847 closure somehow changes the target:
 
 ```text
 stable d3 hit in q1847 with at least one guard-field companion
@@ -153,15 +172,15 @@ compare B/K pullback through K^2=(B-2)^4/(8B(B+2)^2)
 test whether the class recurs or couples to gate4/d4
 ```
 
-Kill:
+Current kill:
 
 ```text
-no stable q1847/guard-field d3 hit in the B-line and K-line screens
+no q1847 d3 hit in either the B-line or K-line decisive screens
 ```
 
-That would close the visible low-genus monic-quartic route.  The next route
-would be offline branch/genus/Kummer extraction over `P1_B`, `P1_K`, or the
-legal pullback cover, not more small proxy scans.
+This closes the visible low-genus monic-quartic d3 route in the decisive
+promotion field.  The next route is offline branch/genus/Kummer extraction
+over `P1_B`, `P1_K`, or the legal pullback cover, not more small proxy scans.
 
 Fallback handoff:
 [P27 Post-Quartic CAS Suite Handoff](p27_post_quartic_cas_suite_handoff_20260622.md)
@@ -171,6 +190,7 @@ packages that next route as an ordered CAS queue.
 
 - [P27 B-Line Quartic GPU Test Card](p27_b_line_quartic_gpu_test_card_20260622.md)
 - [P27 K-Line Quartic GPU Test Card](p27_kline_quartic_gpu_test_card_20260622.md)
+- [P27 Full Quartic q1847 D3 Screen](p27_full_quartic_q1847_d3_screen_20260622.md)
 - [P27 B-Line / K-Line Bridge](p27_b_kline_bridge_20260622.md)
 - [P27 K-Line Even-Quartic Screen](p27_kline_even_quartic_screen_20260622.md)
 - [P27 K-Line Belyi-Reciprocal Quartic Screen](p27_kline_reciprocal_quartic_screen_20260622.md)

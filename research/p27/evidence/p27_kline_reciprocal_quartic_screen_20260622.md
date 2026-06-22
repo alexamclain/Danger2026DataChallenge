@@ -78,15 +78,15 @@ q1847 d3: 7.40e-13
 ```
 
 As with the even-quartic screen, the negative result is not statistically
-surprising.  Its value is structural: the full GPU quartic search should not
-be replaced by the smaller Belyi-reciprocal subfamily.
+surprising.  Its value is structural: the later full q1847 d3 screen was the
+right decisive test, rather than the smaller Belyi-reciprocal subfamily.
 
 ## Interpretation
 
 Positive:
 
 ```text
-The K-line quartic handoff is now narrower and cleaner.
+The K-line quartic handoff became narrower and cleaner.
 The obvious low-dimensional reciprocal subfamilies inside the full quartic
 search are exhausted.
 ```

@@ -1829,6 +1829,10 @@ q863 exact cubics are expected interpolation, while q1471/q1607/q1847 d3
 cubic or quartic fits would be strong evidence if stable.
 The q1471 cubic promotion screen is now negative:
 [P27 K-Line q1471 Cubic Promotion Screen](p27_kline_q1471_cubic_promotion_screen_20260622.md).
+The decisive q1847 B/K monic quartic d3 screens are now negative too:
+[P27 Full Quartic q1847 D3 Screen](p27_full_quartic_q1847_d3_screen_20260622.md).
+This moves the K/B line task from visible low-degree fitting to normalized
+branch-cover/Kummer-class extraction.
 
 Promotion bar:
 

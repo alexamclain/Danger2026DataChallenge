@@ -267,25 +267,24 @@ q7 legal-cover saturation over `P1_B` succeeds as a dimension-1 scheme with
 legal+d3 fixture both return `504 Gateway Timeout`.  So use offline
 Magma/Sage or targeted elimination for B-line class extraction; online Magma is
 only a syntax/saturation sanity check here.
-There is one remaining bounded GPU-sized visible family worth testing before
-fully handing B-line to offline normalization:
+The bounded visible quartic family has now been tested in the decisive q1847
+d3 case:
 [P27 B-Line Quartic GPU Test Card](p27_b_line_quartic_gpu_test_card_20260622.md).
-Exact monic quartic support on `P1_B` would give a genus-1 double-cover source
-candidate for either `d3_on_legalB` or the combined gate4 prefix.  The random
-expected exact counts in q1847/q2087 are tiny on the primary rows, so a stable
-positive is real structure and a stable negative closes the visible quartic
-B-line route.
-The parallel K-line quotient test is now packetized too:
+[P27 Full Quartic q1847 D3 Screen](p27_full_quartic_q1847_d3_screen_20260622.md).
+Exact monic quartic support on `P1_B` would have given a genus-1 double-cover
+source candidate for `d3_on_legalB`; the full q1847 screen found zero exact
+quartics across `6,300,872,423` coefficient triples.
+The parallel K-line quotient test is negative in the same decisive field:
 [P27 K-Line Quartic GPU Test Card](p27_kline_quartic_gpu_test_card_20260622.md).
-This tests exact monic quartic support on
-`K=x([2]P)` for `d3_on_K` over q1471/q1607/q1847.  It is the remaining
-low-genus polynomial source shape after degree `<=2` and q1471 cubics are
-killed; q1847 has expected random exact count about `2.52e-6`.
+Exact monic quartic support on `K=x([2]P)` for `d3_on_K` over q1847 also found
+zero exact quartics across `6,300,872,423` coefficient triples.  Since q1847
+has expected random exact count about `2.52e-6`, this kills the visible
+monic-quartic d3 promotion route in both B and K coordinates.
 The bridge between the two line coordinates is exact:
 [P27 B-Line / K-Line Bridge](p27_b_kline_bridge_20260622.md).
 Under `K^2=(B-2)^4/(8B(B+2)^2)`, every B d3/d4 row maps to a present signed K
 class with matching target sign in q1471/q1607/q1847/q2087.  So B-line and
-K-line quartics are coordinated coordinate tests for one descended class, not
+K-line quartics were coordinated coordinate tests for one descended class, not
 independent moonshot lanes.
 The signed-root shortcut over this bridge is negative:
 [P27 B/K Signed-Root Relation Screen](p27_b_kline_signed_root_relation_20260622.md).

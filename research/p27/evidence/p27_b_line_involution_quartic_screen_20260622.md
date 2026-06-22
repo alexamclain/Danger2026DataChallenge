@@ -82,8 +82,8 @@ q2087 d3/gate4 rows=57: 1.81e-10
 ```
 
 As with the K-line reciprocal screen, the statistical miss is expected.  The
-structural point is that the full B-line quartic GPU screen should not be
-replaced by a branch-involution-only proxy.
+structural point is that the later full B-line q1847 d3 screen was the right
+decisive test, rather than a branch-involution-only proxy.
 
 ## Interpretation
 

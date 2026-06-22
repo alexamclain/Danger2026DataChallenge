@@ -584,13 +584,15 @@ no exact irreducible cubic.  The best miss was `31/32`.  This is only a local
 falsifier, not a p27 proof, but it reinforces the current rule: do actual
 K/S branch-class and genus extraction rather than widening blind cubic scans.
 
-The remaining visible K-polynomial source shape is now GPU-packetized:
+The visible K-polynomial source shape has now had its decisive q1847 d3
+screen:
 [P27 K-Line Quartic GPU Test Card](evidence/p27_kline_quartic_gpu_test_card_20260622.md).
-It freezes the `d3_on_K` and optional `d4_on_K_after_d3` rows for
-q1471/q1607/q1847 and tests exact monic quartic support
-`chi(K^4+aK^3+bK^2+cK+d)`.  A q1847 d3 hit would be highly non-random
-(`expected_exact ~= 2.52e-6`); no stable q1847/q1471/q1607 hit would close the
-visible degree-4 K-line source shape.
+The full monic quartic q1847 test for `d3_on_K` found zero exact quartics:
+[P27 Full Quartic q1847 D3 Screen](evidence/p27_full_quartic_q1847_d3_screen_20260622.md).
+A q1847 d3 hit would have been highly non-random
+(`expected_exact ~= 2.52e-6`), so this kills the decisive K-line visible
+degree-4 polynomial source shape.  q1471/q1607 closure is now bookkeeping
+rather than a promotion path unless a new named class changes the target.
 The B/K coordinate bridge is now explicit:
 [P27 B-Line / K-Line Bridge](evidence/p27_b_kline_bridge_20260622.md).
 For q1471/q1607/q1847/q2087, the relation
@@ -605,21 +607,26 @@ the inherited bridge cover in q1471/q1607/q1847/q2087.
 The descended even-quartic subcase is also dead:
 [P27 K-Line Even-Quartic Screen](evidence/p27_kline_even_quartic_screen_20260622.md).
 Over q1471/q1607/q1847, `chi(K^4+a*K^2+b)` has zero exact hits for both
-`d3_on_K` and `d4_on_K_after_d3`.  So a useful K-line quartic hit must use odd
-K terms and the signed K sheet; the GPU ask is the full quartic, not a
+`d3_on_K` and `d4_on_K_after_d3`.  So the completed q1847 screen correctly
+tested full quartics with odd K terms and the signed K sheet, not a
 `K^2`-only proxy.
 The visible Belyi reciprocal subcase is dead too:
 [P27 K-Line Belyi-Reciprocal Quartic Screen](evidence/p27_kline_reciprocal_quartic_screen_20260622.md).
 The two shapes preserved by `K -> 4/K`,
 `K^4+aK^3+bK^2+4aK+16` and `K^4+aK^3-4aK-16`, have zero exact hits over
-q1471/q1607/q1847.  Thus the remaining GPU quartic job is genuinely the full
-q^3 coefficient-triple screen.
-The full B/K quartic GPU handoff is now unified:
+q1471/q1607/q1847.  Thus the full q1847 coefficient-triple screen was the
+right decisive test.
+The full B/K quartic handoff is now partly executed and locally checkable:
 [P27 Full Quartic GPU Suite Handoff](evidence/p27_full_quartic_gpu_suite_handoff_20260622.md)
 and
 `research/p27/archive/fixtures/p27_full_quartic_gpu_suite_20260622.json`
 give the run order, verifier commands, exact packets, and promotion/kill
-rules for the remaining B-line/K-line monic-quartic test.
+rules for the B-line/K-line monic-quartic test.  The q1847 `d3` screens in
+both B and K coordinates are complete and negative, using a new fast local C
+oracle.  This closes the visible q1847 monic-quartic `d3` promotion route.
+Remaining quartic work is optional closure bookkeeping, gate4-prefix closure,
+or hit verification if another agent produces a candidate; it is no longer
+the front-door sqrt-beating lane.
 If a hit appears, the promotion-side verifier is also ready:
 [P27 Quartic Hit Geometry Promotion Tool](evidence/p27_quartic_hit_geometry_promotion_tool_20260622.md)
 checks the frozen target rows and classifies `z^2=f(B)` or `z^2=f(K)` by
@@ -1223,21 +1230,24 @@ lambda-line sampler for the decisive next bit.  The surviving K/lambda route
 is not coefficient-bound widening; it is actual branch-class/genus extraction,
 including possible irreducible cubic/quartic support or a higher-degree class.
 
-The remaining visible low-genus B-line family is now a GPU-sized exact screen,
-not a local Python job:
+The remaining visible low-genus B-line d3 family has now had its decisive
+q1847 exact screen:
 [P27 B-Line Quartic GPU Test Card](evidence/p27_b_line_quartic_gpu_test_card_20260622.md).
-Test exact monic quartic support
-`chi(B^4+aB^3+bB^2+cB+d)` for `d3_on_legalB` and the combined gate4 prefix
-over q1847/q2087.  Random expected exact counts are about `2.52e-6` for q1847
-and `2.63e-4` for q2087 on the primary rows, so a stable positive would be a
-real genus-1 source candidate.  A stable negative would close the visible
-quartic B-line branch-support route.
+The full q1847 monic quartic support test
+`chi(B^4+aB^3+bB^2+cB+d)` for `d3_on_legalB` found zero exact quartics:
+[P27 Full Quartic q1847 D3 Screen](evidence/p27_full_quartic_q1847_d3_screen_20260622.md).
+Since q1847 had expected random exact count about `2.52e-6`, this sharply
+downgrades the visible genus-1 B-line support route.  q2087/q1607 closure or
+gate4-prefix quartics are now optional closure tests; the live B-line work is
+normalization / branch-divisor / Kummer-class extraction, not another visible
+d3 quartic hunt.
 The visible Belyi-involution subfamilies are now dead:
 [P27 B-Line Belyi-Involution Quartic Screen](evidence/p27_b_line_involution_quartic_screen_20260622.md).
 The five small families attached to the three order-2 symmetries of
 `{0,-2,infinity}` have zero exact hits over q1607/q1847/q2087 for both
-`d3_on_legalB` and `gate4_prefix_on_legalB`.  The GPU ask is therefore the
-full B-line quartic, not a branch-symmetry proxy.
+`d3_on_legalB` and `gate4_prefix_on_legalB`.  The completed full q1847
+B-line screen was therefore the right decisive test, not a branch-symmetry
+proxy.
 
 There is also a rational-source obstruction to treating `lambda` as the next
 quotient:

@@ -4,8 +4,9 @@ Date: 2026-06-22
 
 ## Claim
 
-The next GPU-worthy p27 math test is not a production search.  It is an exact
-finite-field branch-support screen for the remaining genus-1 B-line family:
+This bounded p27 math test has now been run in the decisive q1847 d3 case.
+It was an exact finite-field branch-support screen for the remaining visible
+genus-1 B-line family:
 
 ```text
 chi(B^4 + aB^3 + bB^2 + cB + d)
@@ -13,11 +14,19 @@ chi(B^4 + aB^3 + bB^2 + cB + d)
 
 with global polarity allowed.
 
-This is the first bounded GPU test that would actually change the moonshot
-state.  A stable positive would give a concrete elliptic/quartic double-cover
-source candidate on `P1_B`.  A stable negative would close the last obvious
-visible low-genus B-line support family after rational linears, split
-quadratics, monic cubics, combined-prefix cubics, and Belyi orbits.
+The decisive result is negative:
+[P27 Full Quartic q1847 D3 Screen](p27_full_quartic_q1847_d3_screen_20260622.md).
+
+```text
+q1847 d3_on_legalB:
+  triples_scanned = 6300872423
+  exact_quartics = 0
+```
+
+This closes the visible q1847 monic-quartic B-line d3 promotion route after
+rational linears, split quadratics, monic cubics, combined-prefix cubics, and
+Belyi orbits.  The B-line remains a Kummer/divisor extraction surface, but not
+via this simple quartic source shape.
 
 Bridge update: [P27 B-Line / K-Line Bridge](p27_b_kline_bridge_20260622.md)
 shows that the B-line and signed-doubling K-line target rows are the same
@@ -30,16 +39,17 @@ Follow-up:
 exhausts the small quartic families preserved by the three visible order-2
 Belyi symmetries of `{0,-2,infinity}`.  It finds zero exact hits over
 q1607/q1847/q2087 for both `d3_on_legalB` and `gate4_prefix_on_legalB`.
-Therefore the GPU should test the full B-line quartic family, not a
-branch-involution-only proxy.
+Therefore the full B-line quartic family was the right bounded screen, not a
+branch-involution-only proxy; the decisive q1847 d3 screen is now negative.
 
-## Why This Is GPU-Worthy
+## Why This Was GPU-Worthy
 
 The exact cubic solver already uses the right method: hold all coefficients
 except the constant term fixed, then intersect shifted square/nonsquare masks.
 For quartics, the same method fixes `(a,b,c)` and solves for `d`.
 
-The work is too large for local Python but natural for GPU:
+The work is too large for local Python but suitable for a compiled bitset
+oracle or GPU:
 
 ```text
 q1607: q^3 = 4,150,168,943 coefficient triples
@@ -105,13 +115,16 @@ q1847, n=230: expected ~= 1.35e-56
 q2087, n=260: expected ~= 2.05e-65
 ```
 
-So:
+So, before the q1847 run:
 
 ```text
 positive in q1847 or q2087 primary screens = highly non-random
 positive in q1607 only = investigate, but treat as possible local artifact
 positive in legal_on_coreB = extremely strong, but this is a secondary test
 ```
+
+After the q1847 d3 run, the primary B-line d3 promotion path is negative in
+the decisive field.
 
 ## Algorithm
 
@@ -237,24 +250,29 @@ q2087 legal_on_coreB         rows=260 plus=57  minus=203
 
 ## Run Order
 
-Recommended bounded GPU order:
+Original bounded GPU order and current status:
 
 ```text
 1. q1607 d3_on_legalB
    Purpose: implementation smoke and first signal.
+   Status: optional bookkeeping; C oracle smoke/timing chunks were negative.
 
 2. q1847 d3_on_legalB
    Purpose: decisive promotion-field test.
+   Status: complete, exact_quartics = 0.
 
 3. q1847 gate4_prefix_on_legalB
    Purpose: direct two-gate source candidate.
+   Status: optional closure, not a d3 promotion path.
 
 4. q2087 d3_on_legalB and q2087 gate4_prefix_on_legalB
    Purpose: guard-field confirmation if q1847 or q1607 is positive, or final
    closure if q1847 is negative and runtime is acceptable.
+   Status: optional closure bookkeeping.
 
 5. q1607 legal_on_coreB
    Purpose: optional legal-domain quartic source test if the solver is fast.
+   Status: optional; not motivated by the q1847 d3 result.
 ```
 
 ## Report Back
@@ -303,13 +321,14 @@ only then consider a GPU sampler or p27 production mode
 Kill:
 
 ```text
-no exact quartic for d3_on_legalB in q1847 and q2087
-no exact quartic for gate4_prefix_on_legalB in q1847 and q2087
+no exact quartic for d3_on_legalB in decisive q1847
+no exact quartic for gate4_prefix_on_legalB in q1847 and q2087, if two-gate
+closure is still pursued
 ```
 
-That kill would close the visible genus-1 B-line branch-support route.  The
-remaining B-line moonshot would be actual offline normalization/class
-extraction, higher-genus structure, or a non-visible recurrence.
+The q1847 d3 kill closes the visible genus-1 B-line d3 promotion route.  The
+remaining B-line moonshot is actual offline normalization/class extraction,
+higher-genus structure, or a non-visible recurrence.
 
 ```text
 p27_b_line_quartic_gpu_test_card_rows=1/1

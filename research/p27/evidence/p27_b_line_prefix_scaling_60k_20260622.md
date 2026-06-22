@@ -130,12 +130,13 @@ Large GPU telemetry should not be promoted merely to chase B buckets.
 
 ```text
 continue = B-line Kummer/divisor sequence extraction f3(B), f4(B), ...
-continue = full B/K quartic GPU screen as the remaining visible genus-1 test
+continue = optional gate4/q2087 quartic closure only if needed for bookkeeping
 continue = bounded GPU B-line telemetry only if it feeds class extraction
 
 kill = Bplus prefix counts alone as a below-sqrt sampler
 kill = large B-bucket production run without a named source or recurrence
 kill = interpreting late single-digit tails as evidence of lift
+kill = visible monic quartic d3 promotion after the q1847 B/K negatives
 ```
 
 ```text

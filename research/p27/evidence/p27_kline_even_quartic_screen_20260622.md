@@ -79,8 +79,8 @@ descended-only subfamily.
 Positive:
 
 ```text
-The full K-line quartic GPU screen is now sharper.
-If it has a hit, that hit cannot be the trivial even quartic subcase.
+The full K-line q1847 d3 screen had to include odd K terms.
+The completed negative screen cannot be blamed on the trivial even subcase.
 ```
 
 Negative:
@@ -93,8 +93,8 @@ Do not treat K^2 alone as the current K-line source coordinate.
 Continue:
 
 ```text
-bounded GPU exact support for full monic quartics
-chi(K^4+aK^3+bK^2+cK+d)
+use full monic quartic oracle only for closure/hit verification
+otherwise move to normalized branch/genus/Kummer extraction
 ```
 
 Kill:

@@ -1,7 +1,7 @@
 {
   "name": "p27_full_quartic_gpu_suite",
   "date": "2026-06-22",
-  "purpose": "Unified bounded GPU exact-support suite for the remaining p27 B-line/K-line monic quartic source tests.",
+  "purpose": "Unified bounded exact-support suite for the p27 B-line/K-line monic quartic source tests; q1847 d3 decisive screens are now complete and negative.",
   "target_prime": "1000000000000000000000000103",
   "zero_policy": "Exclude quartics that vanish on any listed target row.",
   "global_polarity": true,
@@ -56,7 +56,18 @@
           "plus": 45,
           "minus": 18,
           "coefficient_triples": 6300872423,
-          "expected_random_exact": 0.000002523526
+          "expected_random_exact": 0.000002523526,
+          "status": "complete_negative",
+          "result": {
+            "triples_scanned": 6300872423,
+            "polarity_1_hits": 0,
+            "polarity_-1_hits": 0,
+            "exact_quartics": 0,
+            "wall_seconds": 501.012820,
+            "wall_throughput_triples_per_second": 12576269.851,
+            "summary": "research/p27/archive/probe_outputs/p27_quartic_full_B1847_d3_20260622/SUMMARY.txt",
+            "evidence": "research/p27/evidence/p27_full_quartic_q1847_d3_screen_20260622.md"
+          }
         },
         {
           "priority": 30,
@@ -147,7 +158,18 @@
           "plus": 45,
           "minus": 18,
           "coefficient_triples": 6300872423,
-          "expected_random_exact": 0.000002523526
+          "expected_random_exact": 0.000002523526,
+          "status": "complete_negative",
+          "result": {
+            "triples_scanned": 6300872423,
+            "polarity_1_hits": 0,
+            "polarity_-1_hits": 0,
+            "exact_quartics": 0,
+            "wall_seconds": 499.681562,
+            "wall_throughput_triples_per_second": 12609775.711,
+            "summary": "research/p27/archive/probe_outputs/p27_quartic_full_K1847_d3_20260622/SUMMARY.txt",
+            "evidence": "research/p27/evidence/p27_full_quartic_q1847_d3_screen_20260622.md"
+          }
         },
         {
           "priority": 60,
@@ -173,6 +195,12 @@
     "relation": "K^2 = (B - 2)^4 / (8*B*(B + 2)^2)",
     "interpretation": "B-line and K-line positives are coordinate alternatives for one descended class, not independent confirmation."
   },
-  "promotion_rule": "Promote a stable d3 hit in q1847 with at least one guard-field companion, then verify with the coordinate verifier and construct z^2=f(B) or z^2=f(K) for genus/sourceability.",
-  "kill_rule": "If the decisive B-line and K-line d3 screens have no stable q1847/guard-field hit, close the visible low-genus monic-quartic route and move to offline branch/genus/Kummer extraction."
+  "latest_result": {
+    "status": "q1847_d3_decisive_negative",
+    "evidence": "research/p27/evidence/p27_full_quartic_q1847_d3_screen_20260622.md",
+    "summary": "The decisive q1847 d3 monic quartic screens found exact_quartics=0 in both B and K coordinates.",
+    "interpretation": "Visible monic-quartic d3 promotion is dead in the decisive field; remaining work is optional closure, gate4-prefix closure, or offline branch/genus/Kummer extraction."
+  },
+  "promotion_rule": "Promote only a new named quartic/class result that overcomes the q1847 d3 negatives, then verify with the coordinate verifier and construct z^2=f(B) or z^2=f(K) for genus/sourceability.",
+  "kill_rule": "The decisive B-line and K-line q1847 d3 screens are complete negative, closing the visible low-genus monic-quartic d3 route and moving the live lane to offline branch/genus/Kummer extraction."
 }

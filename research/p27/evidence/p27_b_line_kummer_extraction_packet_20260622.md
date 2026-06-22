@@ -165,25 +165,28 @@ Update: the visible Belyi orbit shortcut is negative:
 Every non-identity automorphism of the branch set `{0,-2,infinity}` sends core
 B values outside the core bucket in q1607/q1847/q2087.
 
-Update: one bounded GPU-sized visible family remains before this route fully
-hands off to offline normalization:
+Update: the bounded visible quartic d3 family has now been tested in the
+decisive q1847 B/K screens:
 [P27 B-Line Quartic GPU Test Card](p27_b_line_quartic_gpu_test_card_20260622.md).
-Exact monic quartic support for `d3_on_legalB` or the combined gate4 prefix
-would give a genus-1 double-cover source candidate.  The q1847/q2087 expected
-random exact counts are tiny on the primary rows, so this is a real
-math-structure GPU test, not a production search.
+[P27 Full Quartic q1847 D3 Screen](p27_full_quartic_q1847_d3_screen_20260622.md).
+Exact monic quartic support for `d3_on_legalB` would have given a genus-1
+double-cover source candidate.  Instead, q1847 found zero exact quartics in
+both B and K coordinates.  That makes this packet's offline normalization /
+Kummer-class route active rather than a fallback behind the visible d3 quartic
+screen.
 
 Update: the deep-prefix B-line telemetry lane is now separately packaged:
 [P27 B-Line Deep-Prefix GPU Telemetry Handoff](p27_b_line_deep_prefix_gpu_telemetry_handoff_20260622.md).
 That run should emit `Bplus` and selected bits `d3..dN` from the same p27
 stream to stress-test no-mixed-B descent and feed Kummer-sequence extraction.
-It is not a replacement for the quartic screen and not a production hunt.
+It is not a replacement for the completed q1847 quartic screen and not a
+production hunt.
 
 ## Continue / Kill
 
 ```text
 continue = run Magma/Sage normalization over P1_Bline in q1607/q1847/q2087
-continue = bounded GPU exact quartic support screen for d3/gate4 on Bline
+continue = optional bounded gate4-prefix or q2087 quartic closure only if useful
 continue = bounded GPU deep-prefix telemetry if it feeds f3/f4/f5 extraction
 continue = if d3 is tractable, compare the B-line Kummer sequence f3,f4,f5
 continue = use GPU only after a source/sampler or recurrence is named
@@ -191,6 +194,7 @@ continue = use GPU only after a source/sampler or recurrence is named
 kill = more unguided B-bucket scoring
 kill = large GPU production from Bplus alone
 kill = treating one-bit conditional lift as sqrt-beating
+kill = visible monic quartic d3 promotion after the q1847 B/K negatives
 ```
 
 ```text
