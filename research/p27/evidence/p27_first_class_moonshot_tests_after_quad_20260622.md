@@ -291,6 +291,12 @@ Two irreducible one-parameter specializations of the visible `B/H/Y`
 transition have `Y=v+2` nonsquare while `Norm(Y)` remains the expected square.
 So the gamma class is not killed by a universal visible B/H square identity.
 
+Phase-orientation follow-up:
+[P27 B-Line Oriented Phase-Word Screen](p27_b_line_oriented_phase_word_screen_20260622.md).
+The natural materialized sheet `H=(x+1)/sqrt(x)` makes `alpha=+1` and `beta`
+the selected gate bit through gate 9 on `6000+6000` p27 starts.  This kills the
+main phase-orientation loophole: it is tautological, not a source law.
+
 GPU phase-sequence handoff:
 [P27 B-Line Phase GPU Telemetry Handoff](p27_b_line_phase_gpu_telemetry_handoff_20260622.md).
 The V4 factorization gives `f_{j+1}=alpha_j*beta_j`, but the small p27 phase
@@ -539,6 +545,7 @@ kill = treating rho/materialization as the gamma source law
 kill = alpha or beta alone as a canonical B-line bucket
 kill = current alpha/beta phase-state split as a production sampler
 kill = natural short alpha/beta phase words as production filters
+kill = materialization-oriented alpha/beta after alpha=+1 and beta=gate-bit
 kill = gamma^2=U+2 as a direct source sampler after the extension-count audit
 kill = online Magma as the reduced-cover extraction engine
 kill = more visible quartic/branch-map bucket searches without a theorem

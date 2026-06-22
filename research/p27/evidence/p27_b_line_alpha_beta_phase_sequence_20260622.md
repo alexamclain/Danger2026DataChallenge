@@ -149,6 +149,13 @@ The guard-field plateaus are inconsistent across q1607/q1847/q2087.
 The V4 factorization remains valuable as a class decomposition, but the first
 finite-field/p27 phase-sequence screen does not promote it to a sampler.
 
+Orientation follow-up:
+[P27 B-Line Oriented Phase-Word Screen](p27_b_line_oriented_phase_word_screen_20260622.md)
+tests the natural materialization sheet convention
+`H=(x+1)/sqrt(x)`.  This closes the main orientation loophole: under that
+choice `alpha=+1` and `beta` equals the actual next selected gate bit, so the
+phase decomposition becomes tautological rather than predictive.
+
 ## Continue / Kill
 
 ```text
@@ -158,6 +165,7 @@ continue = CAS class extraction may still use the V4 decomposition
 
 kill = alpha or beta as a standalone bucket
 kill = current phase-state split as a production mode
+kill = materialization-oriented alpha/beta as a source law
 kill = interpreting guard-field phase plateaus as p27 recurrence evidence
 kill = more CPU phase-word fitting without a named class or larger GPU telemetry
 ```

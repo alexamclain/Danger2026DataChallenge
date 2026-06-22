@@ -1165,6 +1165,12 @@ conditional and costs a half split, below the source-normalized promotion bar.
 Guard-field all-plus/all-minus plateaus stop at different gates, so they are
 field-tail artifacts.  Keep alpha/beta as optional telemetry columns, not a
 production mode.
+The natural sheet-orientation loophole is also closed:
+[P27 B-Line Oriented Phase-Word Screen](evidence/p27_b_line_oriented_phase_word_screen_20260622.md).
+With `H=(x+1)/sqrt(x)`, `alpha=+1` and `beta` equals the actual selected gate
+bit through gate 9 on `6000+6000` p27 starts.  The apparent conditional lifts
+keep the same target/source denominator as baseline, so this orientation is a
+tautological gate filter rather than a recurrence.
 The pre-registered phase-word source screen is negative too:
 [P27 B-Line Phase-Word Source Screen](evidence/p27_b_line_phase_word_source_screen_20260622.md).
 On `6000+6000` p27 train/heldout starts, natural V4 words

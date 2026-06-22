@@ -33,6 +33,12 @@ the `1.25x` conditional promotion bar, and every selected bucket has lower
 absolute target/source than baseline.  Treat GPU phase telemetry as diagnostic
 or class-discovery work, not as a likely production filter.
 
+The natural materialization orientation is also closed:
+[P27 B-Line Oriented Phase-Word Screen](p27_b_line_oriented_phase_word_screen_20260622.md).
+Using `H=(x+1)/sqrt(x)` makes `alpha=+1` and `beta` equal to the actual gate
+bit through gate 9 on `6000+6000` p27 starts.  The best conditional lifts keep
+exactly the same target/source as baseline, so this is not a source law.
+
 ## Manifest
 
 Machine-readable GPU contract:
@@ -69,6 +75,7 @@ Also do not promote:
 alpha alone
 beta alone
 natural short phase words from the CPU pre-screen
+materialization-oriented phase words
 Bplus buckets alone
 short phase words without raw source accounting
 conditional lift without target/source_draw lift
@@ -197,6 +204,7 @@ continue = use phase columns as support for B-line Kummer extraction
 continue = promote only source-normalized heldout recurrence or class evidence
 
 kill = natural short phase words as production filters after the CPU pre-screen
+kill = materialization-oriented phase words after alpha=+1, beta=gate-bit
 kill = compactD_R standalone GPU filter after reduced_U
 kill = alpha-only or beta-only bucket production
 kill = Bplus-only production from no-mixed-B evidence

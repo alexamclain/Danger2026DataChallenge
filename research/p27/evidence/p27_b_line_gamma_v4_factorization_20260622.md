@@ -154,6 +154,12 @@ In both, `Y=v+2` is nonsquare even though `Norm(Y)` has the expected square
 form `16*(B^2-4)^2`.  This confirms that the V4 norm-square pattern is not,
 by itself, a visible square/sampler law.
 
+Orientation follow-up:
+[P27 B-Line Oriented Phase-Word Screen](p27_b_line_oriented_phase_word_screen_20260622.md)
+tests the natural selected-coordinate sheet `H=(x+1)/sqrt(x)`.  In that
+orientation `alpha=+1` and `beta` is the actual gate bit, so the V4 split is
+not a hidden phase recurrence under the materialized x-sheet.
+
 ## Concrete Next Test
 
 The next meaningful GPU/CAS telemetry is not another B bucket.  It should emit
@@ -181,6 +187,7 @@ continue = look for telescoping or sheet-choice recurrence, not a one-factor buc
 
 kill = using alpha alone as a canonical selector
 kill = using beta alone as a canonical selector
+kill = materialization-oriented alpha/beta as a non-tautological selector
 kill = treating the V4 factorization itself as a below-sqrt sampler
 kill = more B/H/tau coordinate scans without phase-sequence data
 ```

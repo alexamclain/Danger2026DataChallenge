@@ -116,6 +116,13 @@ overhead is charged.
 The alpha/beta factorization remains useful as a Kummer-class decomposition.
 It is not currently a production filter or bucket sampler.
 
+Orientation follow-up:
+[P27 B-Line Oriented Phase-Word Screen](p27_b_line_oriented_phase_word_screen_20260622.md)
+checks the natural materialization convention `H=(x+1)/sqrt(x)`.  It makes
+`alpha=+1` and `beta` equal to the actual gate bit, so the best conditional
+lifts keep exactly the same target/source denominator as baseline.  This is a
+tautological gate filter, not a source shrink.
+
 ## Continue / Kill
 
 ```text
@@ -125,6 +132,7 @@ continue = promote GPU phase work only if it finds a new heldout recurrence,
 continue = offline Kummer/divisor extraction of the gamma class
 
 kill = natural short phase words as p27 production filters
+kill = materialization-oriented phase words as p27 production filters
 kill = larger CPU phase-word fitting without a named class
 kill = interpreting weak conditional phase lift as source shrink
 ```
