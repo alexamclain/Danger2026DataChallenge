@@ -193,6 +193,14 @@ The legal source is curve-sized over `GF(7^n)` and `GF(23^n)`, but selected
 prefixes do not produce a stable smaller source.  Treat local extension-field
 tails as geometry diagnostics, not as GPU source-enumeration targets.
 
+The obvious two-step Kummer quotient is also negative:
+[P27 Conic-Pair Two-Step Kummer Screen](p27_conic_pair_two_step_kummer_20260621.md).
+After adjoining `Z0`, `S1`, and `Z1`, selector/root pair systems are full-rank
+through degree 12 on q1607/q1847/q2087.  Do not use GPU time on bucket
+searches in simple `Z0/S1/Z1`, normalized-root, ratio, or product coordinates.
+The remaining GPU-relevant conic work is legal-pullback telemetry or a
+new theorem-specified tower coordinate.
+
 Report:
 
 ```text

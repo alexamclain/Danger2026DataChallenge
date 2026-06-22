@@ -800,6 +800,17 @@ curve-sized over extension fields, but selected prefixes still reduce unique
 `A` and unique `(A,x)` together.  Local Frobenius tails appear, but there is no
 stable source collapse that extrapolates to p27 or beats sqrt.
 
+The two-step Kummer shortcut is also killed:
+[P27 Conic-Pair Two-Step Kummer Screen](evidence/p27_conic_pair_two_step_kummer_20260621.md).
+After adjoining `Z0^2=-(L0+a0)(L0-a0)c*r1`, the next selector
+`S1=-(L1+a1)(L1-a1)c*r2`, and when available `Z1^2=S1`, all obvious
+selector/root pair systems are full-rank through degree `12` on
+q1607/q1847/q2087.  This rules out the simple `(Z0,S1)`, `(Z0,Z1)`,
+normalized-root, ratio, and product quotients.  The live conic-chain route is
+therefore staged normalization/components or a theorem-level repeated
+Kummer/Hilbert-90 identity, not a GPU bucket search in simple two-root
+coordinates.
+
 The K-line now has a cleaner coordinate for that extraction:
 [P27 Kummer Belyi Structure Probe](evidence/p27_kummer_belyi_structure_probe_20260621.md).
 Symbolically,

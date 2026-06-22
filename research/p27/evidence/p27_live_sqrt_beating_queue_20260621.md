@@ -133,6 +133,11 @@ memory-heavy online Magma pullback.  Over `GF(7^n)` and `GF(23^n)`, the legal
 label-2/compactD source is curve-sized, but selected prefixes still reduce
 unique `A` and `(A,x)` together.  Local Frobenius tails occur, but they do not
 look like p27 source laws.
+The two-step Kummer quotient screen is now negative too.  After adjoining the
+first root `Z0`, the next selector `S1`, and when available the second root
+`Z1`, all obvious selector/root pair systems are full-rank through degree 12 on
+q1607/q1847/q2087.  This kills simple `(Z0,S1)`, `(Z0,Z1)`, normalized-root,
+ratio, and product quotients as the next shortcut.
 ```
 
 Concrete next K/S test:
@@ -161,6 +166,7 @@ no F_p descent of the sqrt(-1)-twisted alpha quotient
 no useful low-genus/function-field structure for the conic-chain pullback
 another low-degree plane-curve screen in raw or obvious invariant coordinates
 another simple first-Z-layer pair scan without a new theorem-specified coordinate
+another simple two-step Kummer pair scan in `Z0,S1,Z1` coordinates
 an A-projection or A-bucket search based only on selected-prefix filters
 raw selected-prefix source enumeration based on extension-field tail artifacts
 ```
@@ -303,7 +309,7 @@ Ranked next moves:
 1. Theory/CAS: staged legal pullback / quotient decomposition of the repeated
    conic-chain Kummer tower with Z_j^2=-(L_j+a_j)(L_j-a_j)c*r_{j+1}.
 2. GPU/structure: recurrence telemetry and legal-pullback sampler only, not
-   raw random `(R,L)`.
+   raw random `(R,L)` and not simple `Z0/S1/Z1` bucket searches.
 3. Theory/lit/expert: trace/norm half-norm phase identity for pref vs h*vq.
 4. Production GPU: no moonshot-scale run without a quotient/source or measured
    heldout efficiency gain.
