@@ -836,6 +836,31 @@ K-line work must be actual branch-class/genus extraction, not affine or
 reciprocal-affine bucket searches.
 ```
 
+Reverse-root relation update:
+[P27 K-Line Reverse-Z Relation Screen](p27_kline_reverse_z_relation_20260621.md).
+
+```text
+Kept the actual d3 source root x6=z^2 and tested:
+  (K,z), (Sroot,z), (K,x6), (Sroot,x6),
+  (K,r), (Sroot,r), r=x6+1/x6,
+  (K,z+1/z), (Sroot,z+1/z),
+  (K,z-1/z), (Sroot,z-1/z).
+
+q1607/q1847/q2087:
+  all systems full-rank through degree 12
+
+p27 1000-row sample:
+  7744 z rows
+  all systems full-rank through degree 8
+```
+
+Updated kill rule:
+
+```text
+Kill obvious plane-model shortcuts for the K/Sroot branch cover.  The next
+K-line work must be normalization / branch divisor / genus extraction.
+```
+
 K/S first-half cover update:
 [P27 K/S First-Half Cover Magma Smoke](p27_ks_first_half_cover_magma_20260621.md).
 [P27 K/S First-Half Alpha-Lift Obstruction](p27_ks_first_half_alpha_lift_obstruction_20260621.md).

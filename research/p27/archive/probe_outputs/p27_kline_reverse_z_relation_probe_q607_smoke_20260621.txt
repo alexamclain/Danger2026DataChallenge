@@ -1,0 +1,80 @@
+p27 K-line reverse-z relation probe
+source rows: d2 square and d3 all-plus with x6=z^2
+coordinates: K=x([2]P), Sroot^2=K
+degrees = [2, 4]
+q=607:
+q607_enum_stats:
+  compact_not_target = 293
+  no_label2_candidate = 184
+q607_zrow_stats:
+  candidates = 512
+  unique_K = 16
+  unique_K_z = 256
+  unique_S = 32
+  unique_S_z = 512
+  x6_branches = 1024
+  x6_nonsquare = 512
+  z_rows = 1024
+q607:
+  rows = 1024
+q607_K_z:
+  transform_rows = 1024
+  transform_unique = 256
+  transform_degenerate = 0
+  deg2: monomials=6 rank=6 nullity=0 forced=0 extra=0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+q607_S_z:
+  transform_rows = 1024
+  transform_unique = 512
+  transform_degenerate = 0
+  deg2: monomials=6 rank=6 nullity=0 forced=0 extra=0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+q607_K_x6:
+  transform_rows = 1024
+  transform_unique = 128
+  transform_degenerate = 0
+  deg2: monomials=6 rank=6 nullity=0 forced=0 extra=0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+q607_S_x6:
+  transform_rows = 1024
+  transform_unique = 256
+  transform_degenerate = 0
+  deg2: monomials=6 rank=6 nullity=0 forced=0 extra=0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+q607_K_r:
+  transform_rows = 1024
+  transform_unique = 64
+  transform_degenerate = 0
+  deg2: monomials=6 rank=6 nullity=0 forced=0 extra=0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+q607_S_r:
+  transform_rows = 1024
+  transform_unique = 128
+  transform_degenerate = 0
+  deg2: monomials=6 rank=6 nullity=0 forced=0 extra=0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+q607_K_zsum:
+  transform_rows = 1024
+  transform_unique = 128
+  transform_degenerate = 0
+  deg2: monomials=6 rank=6 nullity=0 forced=0 extra=0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+q607_S_zsum:
+  transform_rows = 1024
+  transform_unique = 256
+  transform_degenerate = 0
+  deg2: monomials=6 rank=6 nullity=0 forced=0 extra=0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+q607_K_zdiff:
+  transform_rows = 1024
+  transform_unique = 128
+  transform_degenerate = 0
+  deg2: monomials=6 rank=6 nullity=0 forced=0 extra=0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+q607_S_zdiff:
+  transform_rows = 1024
+  transform_unique = 256
+  transform_degenerate = 0
+  deg2: monomials=6 rank=6 nullity=0 forced=0 extra=0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+p27_kline_reverse_z_relation_probe_rows=1/1
