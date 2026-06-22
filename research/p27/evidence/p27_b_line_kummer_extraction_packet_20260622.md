@@ -239,11 +239,20 @@ degree `20` in the screened B/A/lambda/mu coordinates.  The reduced cover
 still matters, but it needs normalization/genus extraction rather than more
 visible plane-relation scans.
 
+Update: the reduced cover now has an explicit symbolic packet:
+[P27 B-Line Reduced-Cover Symbolic Packet](p27_b_line_reduced_cover_symbolic_packet_20260622.md).
+It emits the B-line source equations plus
+`(Unext-2*x5)^2=4*(x5^2+A*x5+1)` in denominator-cleared form.  The selector is
+`chi(Unext+2)`, and q1607/q1847/q2087 validation has zero reduced-equation or
+selector mismatches.  This should be the first CAS normalization model before
+the full reverse `z,Y` cover.
+
 ## Continue / Kill
 
 ```text
 continue = run Magma/Sage normalization over P1_Bline in q1607/q1847/q2087
 continue = normalize the reduced 4-u / 8-x d3 fiber cover if easier than the full source cover
+continue = use the reduced_Unext symbolic packet as the first CAS model
 continue = optional q2087 quartic closure only if useful
 continue = use the B-line Kummer fixture rows as the compact CAS/expert input
 continue = bounded GPU deep-prefix telemetry if it feeds f3/f4/f5 extraction

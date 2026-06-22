@@ -978,6 +978,13 @@ Across q1607/q1847/q2087, `(B,u)`, `(B,u^2)`, `(B,u+2)`, `(A,u)`,
 `extra_nullity=0` through total degree `20`.  This kills the cheap plane-model
 route; the remaining test is actual normalization/genus/quotient extraction
 of the reduced cover.
+The reduced-cover symbolic handoff is now explicit:
+[P27 B-Line Reduced-Cover Symbolic Packet](evidence/p27_b_line_reduced_cover_symbolic_packet_20260622.md).
+It rewrites the d3 cover using `Unext=x6+1/x6` and
+`(Unext-2*x5)^2=4*(x5^2+A*x5+1)`, then emits that equation in the B-line
+source variables.  Validation over q1607/q1847/q2087 has zero reduced-equation
+or selector mismatches.  This is the first CAS normalization target before the
+full reverse `z,Y` cover.
 The B-line visible two-gate quartic shortcut is closed as well:
 [P27 B-Line Gate4-Prefix Quartic q1847 Screen](evidence/p27_b_line_gate4_prefix_quartic_q1847_screen_20260622.md).
 It scans `6,300,872,423` q1847 coefficient triples for

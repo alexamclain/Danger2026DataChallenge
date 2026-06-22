@@ -57,6 +57,14 @@ research/p27/archive/gates/p27_b_line_reduced_fiber_relation_probe.py
 research/p27/archive/probe_outputs/p27_b_line_reduced_fiber_relation_probe_20260622.txt
 ```
 
+Symbolic reduced-cover handoff:
+
+```text
+research/p27/evidence/p27_b_line_reduced_cover_symbolic_packet_20260622.md
+research/p27/archive/gates/p27_b_line_reduced_cover_symbolic_packet.py
+research/p27/archive/probe_outputs/p27_b_line_reduced_cover_symbolic_packet_20260622.txt
+```
+
 ## Command
 
 ```bash
@@ -132,6 +140,8 @@ or a 4-root u-cover.
 The equality f3=chi(u+2) holds uniformly on the reduced fiber.
 This is a better CAS target than the full 32-occurrence source fiber.
 The JSON fixture freezes every guard-field reduced fiber for CAS replay.
+The symbolic packet gives the reduced equation before reverse z/Y
+materialization.
 ```
 
 Negative:
@@ -150,6 +160,7 @@ plane relation through total degree 20 in the screened coordinates.
 
 ```text
 continue = normalize the 4-u / 8-x fiber cover over legal B
+continue = use the reduced_Unext symbolic packet as the first CAS model
 continue = compute genus, components, and quotient maps for this reduced cover
 continue = compare f4/f3 only after the reduced f3 cover is understood
 

@@ -122,6 +122,13 @@ through total degree `20` in `(B,u)`, `(B,u^2)`, `(B,u+2)`, `(A,u)`,
 remaining test is actual normalization/genus/quotient extraction of the
 reduced cover.
 
+Symbolic handoff:
+[P27 B-Line Reduced-Cover Symbolic Packet](p27_b_line_reduced_cover_symbolic_packet_20260622.md).
+It gives the reduced equation
+`(Unext - 2*x5)^2 = 4*(x5^2 + A*x5 + 1)` in the B-line source variables and
+validates `f3=chi(Unext+2)` with zero mismatches across q1607/q1847/q2087.
+This is the first CAS model to try before the full reverse `z,Y` cover.
+
 Required computation:
 
 ```text
