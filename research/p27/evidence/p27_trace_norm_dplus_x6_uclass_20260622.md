@@ -40,6 +40,18 @@ negative through degree `(20,20)` on a `100` train / `50` heldout screen.
 So the four-`U` object remains a CAS cover/class target, not a cheap visible
 base formula.
 
+Positive tower model:
+[P27 Trace/Norm Dplus Reciprocal Tower](p27_trace_norm_dplus_reciprocal_tower_20260622.md)
+shows that the right CAS object is not an unnamed four-`U` cloud.  The two
+candidate `xp` roots are reciprocal, with
+`X=xp+1/xp=t^3+2*t^2-1/t`, and the tower is:
+
+```text
+F_A(X,U5) = 0
+F_A(U5,U6) = 0
+x6^2 - U6*x6 + 1 = 0.
+```
+
 ## Probe
 
 Gate:
@@ -213,6 +225,7 @@ A-level classes.
 
 ```text
 continue = derive/eliminate the four-U cover over t or the H90 base
+continue = normalize the reciprocal tower F_A(X,U5), F_A(U5,U6)
 continue = compare the x6 squareclass with A_eta
 continue = route A-level d3 extraction through this Dplus pullback model
 continue = GPU fused-Dplus telemetry may emit U/x6 only as support for this
@@ -229,6 +242,7 @@ kill = GPU production from x6 buckets before a source/coboundary exists
 
 - [P27 Trace/Norm Dplus A-Coordinate Bridge](p27_trace_norm_dplus_a_coordinate_bridge_20260622.md)
 - [P27 Trace/Norm Dplus Four-U Rational Screen](p27_trace_norm_dplus_ucover_rational_screen_20260622.md)
+- [P27 Trace/Norm Dplus Reciprocal Tower](p27_trace_norm_dplus_reciprocal_tower_20260622.md)
 - [P27 Sqrt-Beating Test Queue After Coupling Kill](p27_sqrt_beating_test_queue_after_coupling_kill_20260622.md)
 - [P27 Trace/Norm Dplus H90 Branch Class](p27_trace_norm_dplus_h90_branch_class_20260622.md)
 - [P27 Trace/Norm Dplus H90 Payload Screen](p27_trace_norm_dplus_h90_payload_screen_20260622.md)

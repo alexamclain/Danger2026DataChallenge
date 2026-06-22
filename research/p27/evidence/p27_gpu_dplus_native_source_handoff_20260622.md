@@ -229,6 +229,10 @@ Follow-up [P27 Trace/Norm Dplus Four-U Rational Screen](p27_trace_norm_dplus_uco
 kills low-degree rational formulas for the four-`U` quartic coefficients in
 `t`, `a=t-1/t`, and `A` through degree `(20,20)`, so do not treat the four-`U`
 cover as a simple visible GPU source formula.
+Follow-up [P27 Trace/Norm Dplus Reciprocal Tower](p27_trace_norm_dplus_reciprocal_tower_20260622.md)
+names the CAS object: `X=t^3+2*t^2-1/t`, `F_A(X,U5)=0`, `F_A(U5,U6)=0`,
+and `x6^2-U6*x6+1=0`.  GPU telemetry should support this tower/class
+comparison; it is still not a standalone production mode.
 
 Promotion:
 

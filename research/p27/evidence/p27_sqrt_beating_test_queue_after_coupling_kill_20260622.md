@@ -206,6 +206,19 @@ degree `(20,20)` in `t`, `a=t-1/t`, or `A` on a `100` train / `50` heldout
 screen.  This kills the simple visible four-`U` source formula and leaves the
 work as cover normalization / class comparison.
 
+Fourth update:
+[P27 Trace/Norm Dplus Reciprocal Tower](p27_trace_norm_dplus_reciprocal_tower_20260622.md)
+gives the positive replacement for coefficient fitting:
+
+```text
+X = xp + 1/xp = t^3 + 2*t^2 - 1/t
+F_A(X,U5) = 0
+F_A(U5,U6) = 0
+x6^2 - U6*x6 + 1 = 0.
+```
+
+This is now the concrete CAS object for the x6 class.
+
 This is the most concrete bridge test after the coupling kill.  We know:
 
 ```text
@@ -235,6 +248,7 @@ Required analysis:
 ```text
 use the exact map A = (t - 1/t)^4/4 - 2
 use d3 = chi(x6) after U=x6+1/x6 and chi(U+A)=+1
+use the reciprocal tower F_A(X,U5)=0 and F_A(U5,U6)=0
 compare the x6 squareclass with A_eta = U_eta + z*W_eta
 record whether the pulled-back A-level d3 class equals, differs by coboundary,
 or shares a quotient/Prym factor with the H90 class

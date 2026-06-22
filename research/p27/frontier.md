@@ -2158,6 +2158,11 @@ The cheap visible formula for the four-`U` cover is negative:
 No elementary coefficient of `prod(Z-U_i)` is a rational function of degree
 `(20,20)` in `t`, `a=t-1/t`, or `A` on the train/heldout screen.  Continue with
 cover normalization and class comparison, not coefficient fishing.
+The positive replacement is the reciprocal tower:
+[P27 Trace/Norm Dplus Reciprocal Tower](evidence/p27_trace_norm_dplus_reciprocal_tower_20260622.md).
+The candidate `xp` roots are reciprocal with `X=t^3+2*t^2-1/t`, and the tower
+is `F_A(X,U5)=0`, `F_A(U5,U6)=0`, then `x6^2-U6*x6+1=0`.  This is now the
+CAS object for comparing `chi(x6)` with H90 `A_eta`.
 
 ### Card 4c: K-Line Fit Significance
 

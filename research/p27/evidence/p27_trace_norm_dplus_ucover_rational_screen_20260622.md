@@ -33,6 +33,17 @@ This kills the cheap visible-base version of the four-`U` source law.  It does
 not kill a higher-degree cover, quotient/Prym decomposition, or relation to the
 H90 payload class.
 
+Positive follow-up:
+[P27 Trace/Norm Dplus Reciprocal Tower](p27_trace_norm_dplus_reciprocal_tower_20260622.md)
+names the cover without coefficient fitting:
+
+```text
+X = t^3 + 2*t^2 - 1/t
+F_A(X,U5) = 0
+F_A(U5,U6) = 0
+x6^2 - U6*x6 + 1 = 0.
+```
+
 ## Probe
 
 Gate:
@@ -153,6 +164,7 @@ independent of A_eta and later A-level classes.
 
 ```text
 continue = CAS normalization of the four-U cover
+continue = use the reciprocal tower model instead of coefficient fitting
 continue = x6 squareclass versus H90 A_eta class comparison
 continue = use GPU only for same-stream rows if CAS needs scale
 
@@ -164,6 +176,7 @@ kill = broader coefficient fishing without a divisor/class reason
 ## Linked Artifacts
 
 - [P27 Trace/Norm Dplus X6/U-Class](p27_trace_norm_dplus_x6_uclass_20260622.md)
+- [P27 Trace/Norm Dplus Reciprocal Tower](p27_trace_norm_dplus_reciprocal_tower_20260622.md)
 - [P27 Trace/Norm Dplus A-Coordinate Bridge](p27_trace_norm_dplus_a_coordinate_bridge_20260622.md)
 - [P27 Trace/Norm Dplus H90 Branch Class](p27_trace_norm_dplus_h90_branch_class_20260622.md)
 - [P27 Sqrt-Beating Test Queue After Coupling Kill](p27_sqrt_beating_test_queue_after_coupling_kill_20260622.md)
