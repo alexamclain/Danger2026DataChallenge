@@ -225,6 +225,36 @@ rules out the other natural low-dimensional shortcut, the Belyi-reciprocal quart
 preserved by `K -> 4/K`.  The remaining K-line GPU test is the full q^3
 coefficient-triple search.
 
+### Test 5: B-Line Deep-Prefix Telemetry
+
+Run this only as bounded telemetry, not as a production hunt:
+[P27 B-Line Deep-Prefix GPU Telemetry Handoff](p27_b_line_deep_prefix_gpu_telemetry_handoff_20260622.md).
+
+The CPU/small-field frontier says original `Bplus` determines active selected
+bits through `d12` in tested rows.  Ask the GPU to stress-test that at scale
+and to emit data useful for Kummer/divisor extraction:
+
+```text
+Bplus
+legal d2/domain status
+selected bits d3..dN
+mixed B-group examples, if any
+all-plus prefix counts
+raw source denominator
+target/source_draw
+```
+
+Use the manifest:
+
+```text
+research/p27/archive/fixtures/p27_b_line_deep_prefix_gpu_telemetry_suite_20260622.json
+```
+
+Promotion requires no-mixed-B persistence plus a held-out recurrence,
+source-normalized prefix lift, or named B-line Kummer hypothesis.  Geometric
+half-loss after source normalization kills it as a GPU lane, even if the
+conditional groups look clean.
+
 ## Do Not Run Yet
 
 ```text
@@ -242,6 +272,9 @@ do not spend GPU time on the K-line even-quartic subfamily alone
 do not spend GPU time on the K-line Belyi-reciprocal subfamily alone
 
 do not spend GPU time on the B-line Belyi-involution subfamilies alone
+
+do not run B-line deep-prefix telemetry as a large production hunt; it is a
+bounded structural feeder for recurrence or Kummer extraction
 ```
 
 ## Continue / Kill
@@ -251,6 +284,7 @@ continue = bounded GPU recurrence-coupling telemetry
 continue = direct legal-pullback sampler only after a quotient/sampler exists
 continue = CAS/math normalization of the d3 legal cover over P1_Sroot or P1_B
 continue = full B-line/K-line quartic exact-support GPU screen
+continue = bounded B-line deep-prefix telemetry if it can emit Bplus plus d3..dN
 
 kill = production GPU run from the quadratic formula alone
 kill = interpreting conditional 2x lift as source shrink
@@ -259,6 +293,7 @@ kill = short conic sign-word bucket searches without a new invariant
 kill = K-line even-quartic-only GPU screen
 kill = K-line Belyi-reciprocal-only GPU screen
 kill = B-line Belyi-involution-only GPU screen
+kill = B-line telemetry that reports only bucket lift without raw-source accounting
 ```
 
 ```text

@@ -173,11 +173,18 @@ would give a genus-1 double-cover source candidate.  The q1847/q2087 expected
 random exact counts are tiny on the primary rows, so this is a real
 math-structure GPU test, not a production search.
 
+Update: the deep-prefix B-line telemetry lane is now separately packaged:
+[P27 B-Line Deep-Prefix GPU Telemetry Handoff](p27_b_line_deep_prefix_gpu_telemetry_handoff_20260622.md).
+That run should emit `Bplus` and selected bits `d3..dN` from the same p27
+stream to stress-test no-mixed-B descent and feed Kummer-sequence extraction.
+It is not a replacement for the quartic screen and not a production hunt.
+
 ## Continue / Kill
 
 ```text
 continue = run Magma/Sage normalization over P1_Bline in q1607/q1847/q2087
 continue = bounded GPU exact quartic support screen for d3/gate4 on Bline
+continue = bounded GPU deep-prefix telemetry if it feeds f3/f4/f5 extraction
 continue = if d3 is tractable, compare the B-line Kummer sequence f3,f4,f5
 continue = use GPU only after a source/sampler or recurrence is named
 

@@ -228,9 +228,14 @@ verify no mixed B buckets at much larger scale
 measure all-plus prefix bucket sizes on B
 ```
 
+This GPU target is now packaged as:
+[P27 B-Line Deep-Prefix GPU Telemetry Handoff](p27_b_line_deep_prefix_gpu_telemetry_handoff_20260622.md)
+and
+`research/p27/archive/fixtures/p27_b_line_deep_prefix_gpu_telemetry_suite_20260622.json`.
+
 Do not run a large GPU hunt merely from this result.  The useful GPU role is
-telemetry for B-line exactness and all-plus density after a concrete B-class
-representation exists.
+bounded telemetry for B-line exactness, all-plus density, and Kummer-sequence
+extraction.
 
 ## Continue / Kill
 

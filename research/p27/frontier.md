@@ -1,6 +1,6 @@
 # P27 Frontier
 
-Updated: 2026-06-21
+Updated: 2026-06-22
 
 ## Target
 
@@ -1122,6 +1122,14 @@ p27 train/heldout tests show no mixed B groups through `d12`: the original
 the live B moonshot from "find d3(B)" to "extract the B-line Kummer sequence
 `f3(B), f4(B), ...` and test whether those classes recur or couple."  That is
 the first B-lane mechanism that could genuinely amortize multiple half-losses.
+That GPU follow-up is now bounded and pre-registered:
+[P27 B-Line Deep-Prefix GPU Telemetry Handoff](evidence/p27_b_line_deep_prefix_gpu_telemetry_handoff_20260622.md)
+with manifest
+`research/p27/archive/fixtures/p27_b_line_deep_prefix_gpu_telemetry_suite_20260622.json`.
+It asks the GPU to emit `Bplus`, selected bits `d3..dN`, mixed-B examples, and
+source-normalized prefix counts from the same p27 stream.  Promotion requires
+large-scale no-mixed-B persistence plus either a source-normalized recurrence
+or a named Kummer/divisor hypothesis.  It is not a B-bucket production hunt.
 The first Magma staging smoke sets the extraction boundary:
 [P27 B-Line Magma Staging Smoke](evidence/p27_b_line_magma_staging_20260622.md).
 Over q7, the eta=`+1` legal B-cover saturation succeeds as a dimension-1

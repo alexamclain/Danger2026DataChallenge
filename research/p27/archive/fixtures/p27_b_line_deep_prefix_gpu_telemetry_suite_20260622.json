@@ -1,0 +1,91 @@
+{
+  "name": "p27_b_line_deep_prefix_gpu_telemetry_suite",
+  "date": "2026-06-22",
+  "purpose": "Bounded same-stream GPU telemetry for the p27 B-line deep-prefix descent. This is a structural data run, not a production certificate hunt.",
+  "target_prime": "1000000000000000000000000103",
+  "coordinate": {
+    "name": "Bplus",
+    "formula": "B = 8*X^2/(X^2 - 1)^2",
+    "relation": "A + 2 = B^2",
+    "branch_resultant": "16384*B^3*(B + 2)^2",
+    "parent_evidence": "research/p27/evidence/p27_b_line_extension_and_deep_descent_20260622.md"
+  },
+  "entry_condition": "Run only as bounded telemetry if the native GPU path can emit Bplus plus selected gate bits d3..dN from the same p27 candidate stream, or if the quartic/CAS work needs larger same-stream B-line data.",
+  "non_goal": "Do not use this as a large p27 production run or as B-bucket scoring. Constant-factor B buckets are already priced and are not sqrt-beating.",
+  "telemetry_contract": {
+    "emit_for_each_non_degenerate_row": [
+      "candidate stream identifier: seed/chunk/thread/lane or equivalent replay key",
+      "raw source draw count denominator",
+      "accepted candidate count denominator",
+      "Bplus value or stable hash plus enough data to reconstruct Bplus",
+      "legal d2/domain status",
+      "selected gate bits d3,d4,...,dN along the all-plus continuation path",
+      "first failing gate",
+      "degenerate/failure reason"
+    ],
+    "preferred_depths": [
+      "d3..d12 minimum, matching the CPU deep-descent frontier",
+      "d3..d16 if cheap enough",
+      "record the implemented maximum depth even if fewer than d12 are feasible"
+    ],
+    "same_stream_requirement": "All counts must use the same source stream and the same denominator as baseline so target/source_draw is meaningful."
+  },
+  "bounded_run_tiers": [
+    {
+      "tier": "implementation_smoke",
+      "target_rows": "at least 100000 legal d2 rows or the closest cheap equivalent",
+      "purpose": "Validate Bplus emission, selected-bit consistency, degeneracy accounting, and replayability."
+    },
+    {
+      "tier": "large_telemetry",
+      "target_rows": "at least 10000000 accepted/legal rows if runtime is reasonable",
+      "purpose": "Stress-test the no-mixed-B claim and collect prefix histograms with useful tails."
+    },
+    {
+      "tier": "optional_deep_tail",
+      "target_rows": "scale only if the first two tiers show non-geometric prefix behavior or a named recurrence candidate",
+      "purpose": "Confirm a promoted recurrence/coupling hypothesis, not to hunt blindly."
+    }
+  ],
+  "report_fields": [
+    "raw_source_draws",
+    "accepted_candidates",
+    "legal_d2_rows",
+    "unique_Bplus_values_or_hashes",
+    "B_group_size_histogram",
+    "for each gate j: active_B_groups, plus_groups, minus_groups, mixed_groups, missing_groups",
+    "all_plus_prefix_counts_by_gate",
+    "examples_of_any_mixed_B_groups_with_full_replay_payload",
+    "pairwise_and_lagged_correlations_between_gate_bits",
+    "short_sign_word_bucket_counts",
+    "target_survivors_per_raw_source_draw",
+    "target_survivors_per_gpu_second",
+    "overhead_vs_baseline_gpu_kernel",
+    "replay_command_or_build_commit"
+  ],
+  "promotion_rules": [
+    "Zero or explainable mixed B groups at large scale through a meaningful depth.",
+    "A held-out all-plus prefix density, sign-word state, or recurrence that improves target/source_draw by at least 1.25x over independent half-loss with margin.",
+    "Or a named Kummer/divisor/recurrence hypothesis that feeds exact CAS extraction of f3(B), f4(B), f5(B), ..."
+  ],
+  "kill_rules": [
+    "Material mixed B groups appear, so Bplus alone does not determine the selected bits.",
+    "Prefix counts remain geometric half-loss after source normalization and no recurrence/coupling appears.",
+    "Telemetry overhead is high and the emitted data cannot feed Kummer/divisor extraction.",
+    "The run reports only bucket lifts without raw source denominators."
+  ],
+  "links": {
+    "deep_descent_evidence": "research/p27/evidence/p27_b_line_extension_and_deep_descent_20260622.md",
+    "kummer_packet": "research/p27/evidence/p27_b_line_kummer_extraction_packet_20260622.md",
+    "quartic_gpu_suite": "research/p27/evidence/p27_full_quartic_gpu_suite_handoff_20260622.md",
+    "post_quartic_cas_suite": "research/p27/evidence/p27_post_quartic_cas_suite_handoff_20260622.md",
+    "gpu_decision_memo": "research/p27/evidence/p27_gpu_test_decision_after_quad_20260622.md"
+  },
+  "do_not_run": [
+    "Bplus-only production hunt",
+    "broad B-bucket scoring",
+    "fixed-prefix filters without target/source_draw accounting",
+    "visible atom products already killed by the B-line screens",
+    "large restart/hunt runs unless a sampler, recurrence, or source law is named"
+  ]
+}
