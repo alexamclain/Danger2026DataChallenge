@@ -113,6 +113,14 @@ shows that the frozen A-level `d3,d4` rows are exactly the B-line rows under
 p27-signature fields.  Treat A as another coordinate for the same class
 extraction problem.
 
+Fiber-invariant follow-up:
+[P27 B-Line Fiber Invariant Probe](p27_b_line_fiber_invariant_probe_20260622.md)
+shows that each legal B has `32` next-root occurrences, `8` distinct x-roots,
+and `4` reciprocal-quotient values `u=x+1/x`, with `f3=chi(u+2)` throughout.
+However, products/norms are square, power sums through exponent `64` do not
+select f3, and the four-u polynomial coefficients are not low-degree on the
+legal-B set.  The reduced 4-u/8-x cover is the next normalization target.
+
 Negative:
 
 ```text
@@ -137,11 +145,13 @@ denominator and a named class.
 continue = use JSON rows for B-line normalized Kummer/divisor extraction
 continue = recover f3 branch degree, support field degrees, genus, components
 continue = cross-check any class through the A/B/K/Sroot fixture bridges
+continue = normalize the reduced 4-u / 8-x d3 fiber cover
 continue = compare f4/f3 as a class relation after f3 is named
 continue = use f5/f6 rows only as tail/regression checks for an extracted class
 
 kill = treating one-sided guard-field f5/f6 tails as promotion evidence
 kill = counting A-level, B-line, and K/Sroot fixtures as independent positives
+kill = B-line norm/trace/power-sum selectors as a production sampler
 kill = more B-bucket GPU production before a source/recurrent class exists
 kill = widening visible low-degree B scans already killed by q1847
 ```

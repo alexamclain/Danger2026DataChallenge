@@ -961,6 +961,15 @@ For the frozen d3/d4 fixtures, A is exactly the quotient coordinate
 `A=B^2-2` with signs preserved.  The live CAS ask is therefore one
 A/B/K/Sroot normalized-class extraction, choosing whichever coordinate makes
 the branch divisor easiest.
+The first local fiber-invariant extraction is now done:
+[P27 B-Line Fiber Invariant Probe](evidence/p27_b_line_fiber_invariant_probe_20260622.md).
+For every legal B in q1607/q1847/q2087, the d3 next-root fiber has `32`
+occurrences but only `8` distinct x-roots, closed under `x -> 1/x`, hence
+`4` values of `u=x+1/x`; all satisfy `f3=chi(u+2)`.  The full product/norm is
+always square, power sums through exponent `64` have no exact or near
+selector, and the four-u coefficients are maximal-degree on the legal-B set.
+So the next CAS object is the reduced 4-u/8-x cover, not a GPU symmetric
+invariant sampler.
 The B-line visible two-gate quartic shortcut is closed as well:
 [P27 B-Line Gate4-Prefix Quartic q1847 Screen](evidence/p27_b_line_gate4_prefix_quartic_q1847_screen_20260622.md).
 It scans `6,300,872,423` q1847 coefficient triples for

@@ -70,10 +70,17 @@ Sroot^2 = K
 So A-level, B-line, K-line, and Sroot are coordinate views of the same
 selected-gate class problem, not independent lanes.
 
+The first reduced-fiber invariant screen is now in:
+[P27 B-Line Fiber Invariant Probe](p27_b_line_fiber_invariant_probe_20260622.md).
+It compresses the d3 fiber over legal B to an 8-root reciprocal x-cover and a
+4-root `u=x+1/x` cover with `f3=chi(u+2)`, but kills the norm/trace/power-sum
+shortcut and low-degree coefficient interpolation on legal B.
+
 Compute:
 
 ```text
 normalized cover carrying d3 over P1_A/P1_B/P1_Sroot
+or the reduced 4-u / 8-x d3 fiber cover
 branch divisor degree and support field degrees
 genus/component count
 f4/f3 and later classes on selected prefixes

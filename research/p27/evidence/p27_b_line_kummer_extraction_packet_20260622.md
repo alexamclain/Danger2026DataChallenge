@@ -222,10 +222,21 @@ meaningful first comparison is `f3` then `f4/f3`; the `f5/f6` rows are already
 small-field tail dominated and should be treated as regression data, not
 promotion evidence.
 
+Update: the first finite-field fiber-invariant extraction is now available:
+[P27 B-Line Fiber Invariant Probe](p27_b_line_fiber_invariant_probe_20260622.md).
+For every legal B in q1607/q1847/q2087, the d3 next-root fiber has `32`
+occurrences, `8` distinct x-roots, and `4` reciprocal-quotient values
+`u=x+1/x`; all four satisfy `f3=chi(u+2)`.  This gives a smaller normalization
+target than the full source fiber.  But the full product/norm is square, power
+sums through exponent `64` do not select f3, and the four-u polynomial
+coefficients are maximal-degree on legal B.  So this is not a GPU sampler; it
+is a sharper CAS model.
+
 ## Continue / Kill
 
 ```text
 continue = run Magma/Sage normalization over P1_Bline in q1607/q1847/q2087
+continue = normalize the reduced 4-u / 8-x d3 fiber cover if easier than the full source cover
 continue = optional q2087 quartic closure only if useful
 continue = use the B-line Kummer fixture rows as the compact CAS/expert input
 continue = bounded GPU deep-prefix telemetry if it feeds f3/f4/f5 extraction
@@ -234,6 +245,7 @@ continue = use GPU only after a source/sampler or recurrence is named
 
 kill = more unguided B-bucket scoring
 kill = large GPU production from Bplus alone
+kill = norm/trace/power-sum selectors for the B-line d3 fiber
 kill = treating one-bit conditional lift as sqrt-beating
 kill = visible monic quartic d3 promotion after the q1847 B/K negatives
 kill = degree-one rational B-line recurrence

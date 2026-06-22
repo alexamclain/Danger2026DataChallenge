@@ -102,10 +102,20 @@ views under `A=B^2-2`: `267/267` row-level sign matches and no collisions
 across q1607/q1847/q2087.  Treat A as a quotient/check coordinate for the same
 problem, not a separate GPU bucket or CAS lane.
 
+Reduced fiber check:
+[P27 B-Line Fiber Invariant Probe](p27_b_line_fiber_invariant_probe_20260622.md).
+For every legal B in q1607/q1847/q2087, the d3 next-root fiber compresses
+from `32` occurrences to `8` distinct x-roots and then `4` values of
+`u=x+1/x`, with `f3=chi(u+2)` on the whole fiber.  But the full norm/product
+is always square, power sums through exponent `64` have no exact or near
+selector, and the four-u polynomial coefficients are maximal-degree on the
+legal-B set.  This makes the reduced 4-u/8-x cover the next CAS object, not a
+GPU symmetric-invariant sampler.
+
 Required computation:
 
 ```text
-normalize the legal+d3 cover over P1_B/P1_A/P1_Sroot in q1607/q1847/q2087
+normalize the reduced 4-u / 8-x legal+d3 cover over P1_B/P1_A/P1_Sroot
 extract branch divisor degree, support field degrees, components, genus
 if d3 is tractable, compare f4/f3 in the Kummer group
 use f5/f6 only as regression checks until larger data supports them
@@ -296,6 +306,7 @@ continue = trace/norm half-norm phase expert ask
 continue = GPU only as bounded telemetry or for a named sampler
 
 kill = more one-bit filters as moonshots
+kill = norm/trace/power-sum selectors for the B-line d3 fiber
 kill = more visible quartic/branch-map bucket searches without a theorem
 kill = treating source-conditional 2x lift as sqrt-beating
 ```
