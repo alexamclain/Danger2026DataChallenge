@@ -201,9 +201,13 @@ The B quotient itself is now explicit and positive: on the residual source,
 `B=8X^2/(X^2-1)^2` on legal d2 rows in p27 train/heldout and
 q1607/q1847/q2087.  `d4` after d3 also descends to B in the tested samples.
 The nearest branch-support screens are negative: no degree-<=4 rational-linear
-support for d2 or d3 on the B-line, and no d3 support of the form one
-irreducible quadratic times <=2 rational linears in the promotion fields.  So
-the live B test is now exact Kummer-class/divisor extraction on `P1_B`.
+support for d2 or d3 on the B-line, no d3 support of the form one irreducible
+quadratic times <=2 rational linears, and no two-irreducible-quadratic support
+for d3 or the legal B-domain in the promotion fields.  The exact monic cubic
+screen is now negative too: q1607/q1847/q2087 have zero cubics for both the
+legal B-domain and `d3(B)`, while d4 local cubics fail at q1847.  So the live
+B test is now exact Kummer-class/divisor extraction on `P1_B`, not another
+visible low-degree support scan.
 The B-line result is now multi-gate: extension counts over `GF(7^n)` and
 `GF(23^n)` keep legal B inside the core bucket with no d3/d4 mixed groups,
 while p27 train/heldout deep-descent probes show no mixed B groups through

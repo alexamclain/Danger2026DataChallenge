@@ -1003,6 +1003,15 @@ The legal-domain split degree-4 screen is now negative too:
 Inside the core B bucket, the legal B subset is not a product of two
 irreducible quadratic branch factors in q1607/q1847/q2087.  This kills the
 nearest low-degree split-divisor sampler for the `core B -> legal B` step.
+The monic cubic genus-1 route is also closed:
+[P27 B-Line Cubic Support Screen](evidence/p27_b_line_cubic_support_20260622.md).
+The exact bitset solver tests every cubic `B^3+aB^2+bB+c`, with global
+polarity allowed.  In q1607/q1847/q2087, both the legal B-domain and the
+decisive `d3(B)` selector have `exact_cubics = 0`.  Local d4 cubics appear in
+q1607/q2087 on only 28/25 rows, but q1847 has 45 d4 rows and zero exact
+cubics, so those are interpolation artifacts.  This kills the visible cubic
+genus-1 B-line source; the remaining low-genus B cases must come from actual
+class extraction, not coefficient guessing.
 The visible Belyi orbit shortcut is also negative:
 [P27 B-Line Belyi-Orbit Screen](evidence/p27_b_line_belyi_orbit_20260622.md).
 The six Möbius transforms preserving `{0,-2,infinity}` send every non-identity

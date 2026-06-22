@@ -1,0 +1,79 @@
+p27 B-line exact monic cubic support probe
+family = chi(B^3+aB^2+bB+c), global polarity allowed
+small_primes = 1607,1847,2087
+families = d4
+q=1607:
+q1607_d4_b_line_source_stats:
+  core_B = 200
+  d3_labeled_B = 49
+  d4_labeled_B = 28
+  enum_compact_not_target = 805
+  enum_no_label2_candidate = 408
+  legal_B = 49
+  legal_B_in_core = 49
+  legal_B_missing_core = 0
+q1607_d4_monic_cubic_support_stats:
+  ab_pairs = 2582449
+  exact_cubics = 24
+  exact_polarity_-1 = 14
+  exact_polarity_1 = 10
+  minus_rows = 9
+  plus_rows = 19
+  rows = 28
+  target_weight = 9
+q1607_d4_monic_cubic_support_samples:
+  polarity=1 cubic=B^3+73*B^2+32*B+445
+  polarity=-1 cubic=B^3+92*B^2+323*B+219
+  polarity=1 cubic=B^3+137*B^2+439*B+1463
+  polarity=1 cubic=B^3+157*B^2+140*B+1405
+  polarity=-1 cubic=B^3+208*B^2+963*B+190
+  polarity=-1 cubic=B^3+229*B^2+1125*B+1082
+  polarity=-1 cubic=B^3+462*B^2+678*B+1255
+  polarity=-1 cubic=B^3+558*B^2+39*B+1577
+q=1847:
+q1847_d4_b_line_source_stats:
+  core_B = 230
+  d3_labeled_B = 63
+  d4_labeled_B = 45
+  enum_compact_not_target = 873
+  enum_no_label2_candidate = 468
+  legal_B = 63
+  legal_B_in_core = 63
+  legal_B_missing_core = 0
+q1847_d4_monic_cubic_support_stats:
+  ab_pairs = 3411409
+  exact_cubics = 0
+  minus_rows = 26
+  plus_rows = 19
+  rows = 45
+  target_weight = 26
+q1847_d4_monic_cubic_support_samples:
+q=2087:
+q2087_d4_b_line_source_stats:
+  core_B = 260
+  d3_labeled_B = 57
+  d4_labeled_B = 25
+  enum_compact_not_target = 1109
+  enum_no_label2_candidate = 520
+  legal_B = 57
+  legal_B_in_core = 57
+  legal_B_missing_core = 0
+q2087_d4_monic_cubic_support_stats:
+  ab_pairs = 4355569
+  exact_cubics = 520
+  exact_polarity_-1 = 295
+  exact_polarity_1 = 225
+  minus_rows = 7
+  plus_rows = 18
+  rows = 25
+  target_weight = 7
+q2087_d4_monic_cubic_support_samples:
+  polarity=-1 cubic=B^3+4*B^2+512*B+108
+  polarity=1 cubic=B^3+5*B^2+1116*B+1862
+  polarity=1 cubic=B^3+5*B^2+1694*B+1277
+  polarity=1 cubic=B^3+11*B^2+1766*B+1415
+  polarity=-1 cubic=B^3+12*B^2+84*B+1180
+  polarity=-1 cubic=B^3+12*B^2+216*B+614
+  polarity=-1 cubic=B^3+17*B^2+511*B+1359
+  polarity=-1 cubic=B^3+18*B^2+299*B+300
+p27_b_line_cubic_support_probe_rows=1/1
