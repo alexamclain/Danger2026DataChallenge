@@ -492,6 +492,12 @@ Its first sign-quotient sanity screen is
 [P27 Conic Tower Sign-Quotient Probe](p27_conic_tower_sign_quotient_20260622.md):
 the obvious sign quotient is selector-preserving but only a finite cover, not
 a source shrink.
+The continuation screen
+[P27 Conic Tower D6 A-Descent](p27_conic_tower_d6_a_descent_20260622.md)
+adds the current sharpest conic test: d6 also descends to A on p27
+train/heldout after d4-plus/d5-plus.  The next concrete sqrt-beating attempt is
+not GPU buckets; it is A-level Kummer class extraction for d4/d5/d6, looking
+for a repeated low-genus class, coboundary, or recurrence.
 
 The compact actionable version is the "Current Priority After Two-Step Kummer
 Screen" section of

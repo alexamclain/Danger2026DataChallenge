@@ -359,6 +359,17 @@ starting surface with low genus or a sourceable walk.  This is the current
 best candidate for a real sqrt-beating structure.
 ```
 
+D6 A-descent update:
+[P27 Conic Tower D6 A-Descent](p27_conic_tower_d6_a_descent_20260622.md).
+
+```text
+After d4-plus/d5-plus, d6 has zero mixed A-groups on p27 1000/1000
+train/heldout.  This promotes the conic test from generic pullback
+normalization to a sharper A-level Kummer sequence problem:
+extract and compare the d4, d5, and d6 quadratic classes on the normalized
+A-cover.
+```
+
 Updated kill rule:
 
 ```text
@@ -1667,6 +1678,10 @@ Z_j^2 = -(L_j+a_j)(L_j-a_j)c*r_{j+1}
 
 Report component genera, projection degrees to `E`, `E'`, and `K/lambda`,
 branch divisors, and whether any quotient controls two or more selected gates.
+The first sharpened target is now the A-level class sequence forced by
+[P27 Conic Tower D6 A-Descent](p27_conic_tower_d6_a_descent_20260622.md):
+compute the normalized A-cover carrying d4/d5/d6 and compare their quadratic
+branch divisor classes.
 
 Promotion bar:
 
@@ -1679,7 +1694,8 @@ Kill condition:
 
 ```text
 all components are high-genus/generic and the d4/d5 classes are independent in
-the divisor/Kummer group
+the divisor/Kummer group; after the d6 update, kill only after d6 is included
+in that class comparison too
 ```
 
 ### Test B: E/E' Double-Cover Class Extraction

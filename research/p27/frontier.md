@@ -833,6 +833,12 @@ The first quotient sanity screen is now in:
 The obvious sign quotients preserve d5 and even descend to `A`/`(A,x)` on p27
 samples, but they collapse only finite multiplicities.  A-space still thins
 like random half-loss, so this is CAS staging, not a GPU sign-bucket source.
+The d6 continuation is now positive too:
+[P27 Conic Tower D6 A-Descent](evidence/p27_conic_tower_d6_a_descent_20260622.md).
+On `1000 + 1000` p27 train/heldout rows, d6 has zero mixed `A` groups after
+d4-plus/d5-plus (`49` and `54` base-A groups respectively).  This promotes an
+A-level Kummer-class extraction for d4/d5/d6, but still not a GPU A-bucket run:
+the older A-prefix profile shows ordinary half-loss on A-space.
 The direct sign-word coupling telemetry now agrees:
 [P27 Conic Sign-Word Coupling Probe](evidence/p27_conic_signword_coupling_20260622.md).
 On `4000 + 4000` p27 train/heldout unique `(A,x5)` rows, the all-plus conic
