@@ -2128,6 +2128,11 @@ gates `3..16` validated the formulas with zero mismatches, but no sign-word
 bucket cleared promotion; max heldout all-plus lift was `1.053x` versus the
 `1.25x` bar.  This kills current sign-word/gamma GPU production and leaves
 CAS Kummer-class extraction plus separate `Dplus` fused pricing.
+The repeated-gamma CAS object is now executable:
+[P27 A/B/K Gamma4/Gamma5 CAS Fixture](evidence/p27_abk_gamma4_gamma5_cas_fixture_20260622.md).
+It stages `gamma4^2=V+2` and `gamma5^2=Wnext+2` on the localized no-R A/B/K
+chart.  Online Magma returned a gateway timeout, so this is an offline
+Magma/Sage normalization and Kummer-class comparison task.
 
 ### Card 4c: K-Line Fit Significance
 

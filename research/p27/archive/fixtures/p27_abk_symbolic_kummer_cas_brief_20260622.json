@@ -54,6 +54,13 @@
       "H^2 = Unext + 2",
       "F_A(Unext,V) = 0",
       "gamma^2 = V + 2"
+    ],
+    "gamma4_gamma5_magma_chart": [
+      "F_A(Unext,V) = 0",
+      "gamma4^2 = V + 2",
+      "F_A(V,Wnext) = 0",
+      "gamma5^2 = Wnext + 2",
+      "use the same localized no-R source equations and inverse-variable chart as first_magma_chart"
     ]
   },
   "positive_evidence": [
@@ -137,15 +144,21 @@
     "research/p27/evidence/p27_abk_f3_f4_chart_count_20260622.md",
     "research/p27/evidence/p27_abk_f4_f5_transition_count_20260622.md",
     "research/p27/evidence/p27_gamma_chain_p27_20k_telemetry_20260622.md",
-    "research/p27/evidence/p27_gpu_recurrence_coupling_20260622.md"
+    "research/p27/evidence/p27_gpu_recurrence_coupling_20260622.md",
+    "research/p27/evidence/p27_abk_gamma4_gamma5_cas_fixture_20260622.md"
   ],
   "magma_fixtures": [
-    "research/p27/archive/fixtures/p27_abk_f3_f4_localized_noR_q7_magma.m"
+    "research/p27/archive/fixtures/p27_abk_f3_f4_localized_noR_q7_magma.m",
+    "research/p27/archive/fixtures/p27_abk_gamma4_gamma5_localized_noR_q7_magma.m"
   ],
   "online_outputs": [
     {
       "path": "research/p27/archive/probe_outputs/p27_abk_f3_f4_localized_noR_q7_magma_20260622.xml",
       "status": "calculator temporarily disabled; no dimension/genus result yet"
+    },
+    {
+      "path": "research/p27/archive/probe_outputs/p27_abk_gamma4_gamma5_localized_noR_q7_magma_20260622.xml",
+      "status": "504 Gateway Timeout; no dimension/genus result yet"
     }
   ],
   "finite_field_count_outputs": [

@@ -29,6 +29,16 @@ First executable Magma chart:
 research/p27/archive/fixtures/p27_abk_f3_f4_localized_noR_q7_magma.m
 ```
 
+First repeated-gamma comparison chart:
+
+```text
+research/p27/archive/fixtures/p27_abk_gamma4_gamma5_localized_noR_q7_magma.m
+```
+
+Repeated-gamma fixture note:
+
+[P27 A/B/K Gamma4/Gamma5 CAS Fixture](p27_abk_gamma4_gamma5_cas_fixture_20260622.md)
+
 Online calculator output:
 
 ```text
@@ -245,6 +255,22 @@ same construction after f4-plus
 compare f5/f4 with the f4/f3 gamma class
 decide whether f3,f4,f5 are related by pullback, translate, coboundary, iterate, or recurrence
 ```
+
+The q7 repeated-gamma fixture stages this comparison directly:
+
+```text
+F_A(Unext,V) = 0
+gamma4^2 = V + 2
+F_A(V,Wnext) = 0
+gamma5^2 = Wnext + 2
+```
+
+It uses the same localized no-R source chart as the first executable fixture.
+The concrete CAS question is whether `gamma4` and `gamma5` become related
+after normalization and quotient/Prym decomposition, or whether they are fresh
+unrelated Kummer layers despite the repeated transition shape.
+The online calculator returned a `504 Gateway Timeout` for this fixture, so it
+must be run offline in Magma/Sage.
 
 4. If a relation appears, turn it into a source-denominator test.
 
