@@ -1776,6 +1776,14 @@ Under `sigma(t)=-1/t`, both `pref=chi(y-2)` and `h*vq` pick up the same
 boundary `-chi(a)`, so `T=pref*h*vq` descends.  This gives a narrow expert ask:
 identify or exploit the descended quotient of two same-boundary Hilbert-90 sign
 objects on `C: b^2=16-a^4` / `E: v^2=u^3-u`.
+The visible automorphism quotient follow-up is now negative:
+[P27 Trace/Norm Automorphism Quotient Obstruction](evidence/p27_trace_norm_automorphism_quotient_obstruction_20260622.md).
+On four heldout seeds, `T_line` is invariant under `t -> -1/t` on `65120`
+comparable rows, while `pref` and `h*vq` both have the exact `-chi(a)`
+boundary.  But under `t -> 1/t` and `t -> -t`, `T_line` is mixed
+`32568/32552` with no exact reference sign.  Thus the remaining identity must
+live on the `C/E` quotient; it does not descend to a smaller visible
+automorphism quotient.
 
 A direct trace/anti-trace follow-up is negative:
 [P27 H/V Trace Coupling Audit](evidence/p27_hv_trace_coupling_audit_20260621.md).
@@ -2027,9 +2035,11 @@ Status: active theorem ask, narrowed.  Explain or exploit the coupling
 `T = chi(y-2)*h*vq`, where `vq` carries the `chi(a)` b-flip cocycle and `h`
 is b-invariant.  One-factor explanations and visible norm/branch-product
 explanations are killed; the current positive handle is the same-boundary
-Hilbert-90 involution identity.  Simple trace/anti-trace/norm evaluations of
-the H/V sections are also killed.  The easy quotient automorphism orbit
-explains `domain_line` but not `T_line`.
+Hilbert-90 involution identity under `t -> -1/t`.  The other visible
+automorphisms `t -> 1/t` and `t -> -t` mix `T_line`, so there is no smaller
+automorphism quotient.  Simple trace/anti-trace/norm evaluations of the H/V
+sections are also killed.  The easy quotient automorphism orbit explains
+`domain_line` but not `T_line`.
 
 ## Active Interpretation
 

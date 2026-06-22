@@ -76,6 +76,14 @@ The individual factors `h` and `vq` still have no simple exact ratio against
 the named reference squareclasses.  The structure appears only after coupling
 them as `h*vq`.
 
+Heldout follow-up:
+[P27 Trace/Norm Automorphism Quotient Obstruction](p27_trace_norm_automorphism_quotient_obstruction_20260622.md)
+reruns the automorphism audit on seeds `121..124`.  The `t -> -1/t` boundary
+holds on `65120` comparable rows, but the other visible automorphisms mix
+`T_line`: both `t -> 1/t` and `t -> -t` give `32568/32552` for the
+`T_line` ratio with no exact reference sign.  This keeps the theorem target
+on the `C/E` quotient and kills smaller visible-automorphism quotients.
+
 ## Interpretation
 
 Positive:

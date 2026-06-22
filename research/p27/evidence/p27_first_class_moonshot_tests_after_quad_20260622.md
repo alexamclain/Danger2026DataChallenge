@@ -433,15 +433,20 @@ research/p27/evidence/p27_tline_component_descent_20260621.md
 research/p27/evidence/p27_hv_trace_coupling_audit_20260621.md
 research/p27/evidence/p27_trace_norm_elliptic_line_coset_20260621.md
 research/p27/evidence/p27_trace_norm_halfnorm_test_card_20260622.md
+research/p27/evidence/p27_trace_norm_automorphism_quotient_obstruction_20260622.md
 ```
 
 Ask narrowly for:
 
 ```text
 a theta/additive/Hilbert-90 identity coupling the h and vq half-norm phases
-on E: v^2 = u^3 - u
+on the t -> -1/t quotient / E: v^2 = u^3 - u
 that reduces to a finite-field squareclass, divisor, or source map
 ```
+
+The visible automorphism quotient is now bounded: `T_line` is invariant under
+`t -> -1/t` on heldout seeds `121..124`, but is mixed under `t -> 1/t` and
+`t -> -t`.  So do not ask for a smaller t-line automorphism quotient.
 
 Promote if:
 

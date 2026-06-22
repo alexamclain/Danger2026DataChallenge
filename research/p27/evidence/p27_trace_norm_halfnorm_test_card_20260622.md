@@ -32,6 +32,7 @@ research/p27/evidence/p27_trace_norm_elliptic_line_coset_20260621.md
 research/p27/evidence/p27_trace_norm_dplus_prefix_identity_20260621.md
 research/p27/evidence/p27_trace_norm_post_dplus_screen_20260621.md
 research/p27/evidence/p27_trace_norm_orientation_phase_screen_20260622.md
+research/p27/evidence/p27_trace_norm_automorphism_quotient_obstruction_20260622.md
 ```
 
 Evaluator:
@@ -107,6 +108,32 @@ For a non-rational theta/additive proposal, first provide the finite-field
 squareclass, divisor, or source map it predicts, then add an evaluator or probe
 for exactly that object.
 
+## Automorphism Boundary
+
+The visible automorphism quotient is now sharply bounded:
+[P27 Trace/Norm Automorphism Quotient Obstruction](p27_trace_norm_automorphism_quotient_obstruction_20260622.md).
+
+Heldout seeds `121..124` give:
+
+```text
+t -> -1/t:
+  T_line ratio +1/-1 = 65120/0
+  pref boundary = -chi(a)
+  h*vq boundary = -chi(a)
+
+t -> 1/t:
+  T_line ratio +1/-1 = 32568/32552
+  exact reference = none
+
+t -> -t:
+  T_line ratio +1/-1 = 32568/32552
+  exact reference = none
+```
+
+So the remaining identity should be formulated on the
+`C: b^2=16-a^4` / `E: v^2=u^3-u` quotient from `t -> -1/t`, not on a smaller
+visible automorphism quotient.
+
 ## Promotion
 
 Promote only if one of these holds:
@@ -125,6 +152,7 @@ Kill a proposal if:
 ```text
 it only rederives Dplus as the first-two-gate prefix
 it needs a killed visible branch/torsion/norm feature family
+it requires descent under t -> 1/t or t -> -t
 heldout lift is noise-scale or not stable across seeds 121..124
 it reports conditional lift without raw-source accounting
 it cannot be reduced to a finite-field squareclass, divisor, or source map
@@ -136,9 +164,10 @@ The narrow expert question is:
 
 ```text
 On C: b^2 = 16 - a^4, equivalently E: v^2 = u^3 - u with p = 3 mod 4,
-is there a theta/additive/Hilbert-90 identity coupling the h and vq
-half-norm phases so that chi(y-2)*h*vq predicts a later selected halving
-gate, or gives a direct source for the Dplus stratum plus a later gate?
+is there a theta/additive/Hilbert-90 identity on the t -> -1/t quotient
+coupling the h and vq half-norm phases so that chi(y-2)*h*vq predicts a later
+selected halving gate, or gives a direct source for the Dplus stratum plus a
+later gate?
 ```
 
 The answer is useful only if it yields a named finite-field test, divisor
