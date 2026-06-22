@@ -1,0 +1,183 @@
+p27 B-line no-R quadratic subcover classifier
+interpretation = classify q^2 mechanisms for CAS routing
+fields = 7^2,23^2,71^2,103^2,167^2
+
+GF(7^2) q=49
+  class_WT_only_zero = 8
+  class_WT_only_zero_gamma_0 = 8
+  points = 8
+  class_gamma:
+    WT_only_zero gamma 0 = 8
+  class_vectors_top:
+    columns = class B X W T beta x5 U selector gamma_chi
+    ('WT_only_zero', 1, 1, 2, 1, 1, 1, 1, 1, 0) = 4
+    ('WT_only_zero', 1, 1, 1, 2, 1, 1, 1, 1, 0) = 4
+
+GF(23^2) q=529
+  class_B_orbit = 384
+  class_B_orbit_gamma_-1 = 192
+  class_B_orbit_gamma_1 = 192
+  class_WT_only_zero = 8
+  class_WT_only_zero_gamma_0 = 8
+  class_beta_U_fixedB = 64
+  class_beta_U_fixedB_gamma_-1 = 64
+  class_hidden_mixed_fixedB = 192
+  class_hidden_mixed_fixedB_gamma_-1 = 128
+  class_hidden_mixed_fixedB_gamma_1 = 64
+  points = 648
+  class_gamma:
+    B_orbit gamma -1 = 192
+    B_orbit gamma 1 = 192
+    WT_only_zero gamma 0 = 8
+    beta_U_fixedB gamma -1 = 64
+    hidden_mixed_fixedB gamma -1 = 128
+    hidden_mixed_fixedB gamma 1 = 64
+  class_vectors_top:
+    columns = class B X W T beta x5 U selector gamma_chi
+    ('B_orbit', 2, 2, 2, 2, 2, 2, 2, 2, -1) = 176
+    ('B_orbit', 2, 2, 2, 2, 2, 2, 2, 2, 1) = 168
+    ('hidden_mixed_fixedB', 1, 2, 2, 2, 2, 2, 2, 2, -1) = 64
+    ('beta_U_fixedB', 1, 1, 1, 1, 2, 2, 2, 2, -1) = 48
+    ('hidden_mixed_fixedB', 1, 1, 2, 1, 2, 2, 2, 2, -1) = 32
+    ('hidden_mixed_fixedB', 1, 1, 2, 2, 2, 2, 2, 2, -1) = 32
+    ('hidden_mixed_fixedB', 1, 2, 2, 2, 2, 2, 2, 2, 1) = 32
+    ('hidden_mixed_fixedB', 1, 2, 1, 2, 2, 2, 2, 2, 1) = 32
+    ('B_orbit', 2, 2, 2, 2, 2, 2, 1, 1, 1) = 24
+    ('beta_U_fixedB', 1, 1, 1, 1, 1, 1, 2, 2, -1) = 16
+    ('B_orbit', 2, 2, 2, 2, 1, 1, 2, 2, -1) = 16
+    ('WT_only_zero', 1, 1, 2, 1, 1, 1, 1, 1, 0) = 4
+    ('WT_only_zero', 1, 1, 1, 2, 1, 1, 1, 1, 0) = 4
+
+GF(71^2) q=5041
+  class_B_orbit = 4352
+  class_B_orbit_gamma_-1 = 2176
+  class_B_orbit_gamma_1 = 2176
+  class_WT_only_zero = 8
+  class_WT_only_zero_gamma_0 = 8
+  class_base_point = 128
+  class_base_point_gamma_1 = 128
+  class_beta_U_fixedB = 128
+  class_beta_U_fixedB_gamma_1 = 128
+  class_hidden_mixed_fixedB = 768
+  class_hidden_mixed_fixedB_gamma_-1 = 256
+  class_hidden_mixed_fixedB_gamma_1 = 512
+  points = 5384
+  class_gamma:
+    B_orbit gamma -1 = 2176
+    B_orbit gamma 1 = 2176
+    WT_only_zero gamma 0 = 8
+    base_point gamma 1 = 128
+    beta_U_fixedB gamma 1 = 128
+    hidden_mixed_fixedB gamma -1 = 256
+    hidden_mixed_fixedB gamma 1 = 512
+  class_vectors_top:
+    columns = class B X W T beta x5 U selector gamma_chi
+    ('B_orbit', 2, 2, 2, 2, 2, 2, 2, 2, -1) = 2004
+    ('B_orbit', 2, 2, 2, 2, 2, 2, 2, 2, 1) = 1974
+    ('hidden_mixed_fixedB', 1, 2, 2, 2, 2, 2, 2, 2, 1) = 256
+    ('hidden_mixed_fixedB', 1, 2, 2, 2, 2, 2, 2, 2, -1) = 224
+    ('base_point', 1, 1, 1, 1, 1, 1, 1, 1, 1) = 128
+    ('hidden_mixed_fixedB', 1, 1, 2, 2, 2, 2, 2, 2, 1) = 128
+    ('hidden_mixed_fixedB', 1, 1, 2, 1, 2, 2, 2, 2, 1) = 128
+    ('B_orbit', 2, 2, 2, 2, 1, 1, 2, 2, -1) = 100
+    ('B_orbit', 2, 2, 2, 2, 1, 1, 2, 2, 1) = 92
+    ('beta_U_fixedB', 1, 1, 1, 1, 2, 2, 2, 2, 1) = 64
+    ('beta_U_fixedB', 1, 1, 1, 1, 1, 1, 2, 2, 1) = 64
+    ('B_orbit', 2, 2, 2, 1, 2, 2, 2, 2, -1) = 40
+    ('B_orbit', 2, 2, 2, 1, 2, 2, 2, 2, 1) = 38
+    ('B_orbit', 2, 2, 2, 2, 2, 2, 1, 1, 1) = 38
+    ('B_orbit', 2, 2, 1, 2, 2, 2, 2, 2, 1) = 32
+    ('B_orbit', 2, 2, 1, 2, 2, 2, 2, 2, -1) = 32
+    ('hidden_mixed_fixedB', 1, 2, 1, 2, 2, 2, 2, 2, -1) = 32
+    ('WT_only_zero', 1, 1, 2, 1, 1, 1, 1, 1, 0) = 4
+    ('WT_only_zero', 1, 1, 1, 2, 1, 1, 1, 1, 0) = 4
+    ('B_orbit', 2, 2, 2, 1, 2, 2, 1, 1, 1) = 2
+
+GF(103^2) q=10609
+  class_B_orbit = 8704
+  class_B_orbit_gamma_-1 = 4352
+  class_B_orbit_gamma_1 = 4352
+  class_WT_only_zero = 8
+  class_WT_only_zero_gamma_0 = 8
+  class_beta_U_fixedB = 384
+  class_beta_U_fixedB_gamma_-1 = 384
+  class_hidden_mixed_fixedB = 1152
+  class_hidden_mixed_fixedB_gamma_-1 = 768
+  class_hidden_mixed_fixedB_gamma_1 = 384
+  points = 10248
+  class_gamma:
+    B_orbit gamma -1 = 4352
+    B_orbit gamma 1 = 4352
+    WT_only_zero gamma 0 = 8
+    beta_U_fixedB gamma -1 = 384
+    hidden_mixed_fixedB gamma -1 = 768
+    hidden_mixed_fixedB gamma 1 = 384
+  class_vectors_top:
+    columns = class B X W T beta x5 U selector gamma_chi
+    ('B_orbit', 2, 2, 2, 2, 2, 2, 2, 2, -1) = 4160
+    ('B_orbit', 2, 2, 2, 2, 2, 2, 2, 2, 1) = 4074
+    ('hidden_mixed_fixedB', 1, 2, 2, 2, 2, 2, 2, 2, -1) = 384
+    ('hidden_mixed_fixedB', 1, 2, 2, 2, 2, 2, 2, 2, 1) = 384
+    ('beta_U_fixedB', 1, 1, 1, 1, 2, 2, 2, 2, -1) = 288
+    ('hidden_mixed_fixedB', 1, 1, 2, 1, 2, 2, 2, 2, -1) = 192
+    ('hidden_mixed_fixedB', 1, 1, 2, 2, 2, 2, 2, 2, -1) = 192
+    ('B_orbit', 2, 2, 2, 2, 2, 2, 1, 1, 1) = 118
+    ('beta_U_fixedB', 1, 1, 1, 1, 1, 1, 2, 2, -1) = 96
+    ('B_orbit', 2, 2, 2, 2, 1, 1, 2, 2, -1) = 80
+    ('B_orbit', 2, 2, 2, 2, 1, 1, 2, 2, 1) = 80
+    ('B_orbit', 2, 2, 2, 1, 2, 2, 2, 2, -1) = 56
+    ('B_orbit', 2, 2, 1, 2, 2, 2, 2, 2, -1) = 56
+    ('B_orbit', 2, 2, 2, 1, 2, 2, 2, 2, 1) = 50
+    ('B_orbit', 2, 2, 1, 2, 2, 2, 2, 2, 1) = 24
+    ('B_orbit', 2, 2, 2, 1, 2, 2, 1, 1, 1) = 6
+    ('WT_only_zero', 1, 1, 2, 1, 1, 1, 1, 1, 0) = 4
+    ('WT_only_zero', 1, 1, 1, 2, 1, 1, 1, 1, 0) = 4
+
+GF(167^2) q=27889
+  class_B_orbit = 24320
+  class_B_orbit_gamma_-1 = 11776
+  class_B_orbit_gamma_1 = 12544
+  class_WT_only_zero = 8
+  class_WT_only_zero_gamma_0 = 8
+  class_base_point = 96
+  class_base_point_gamma_1 = 96
+  class_beta_U_fixedB = 544
+  class_beta_U_fixedB_gamma_-1 = 448
+  class_beta_U_fixedB_gamma_1 = 96
+  class_hidden_mixed_fixedB = 1920
+  class_hidden_mixed_fixedB_gamma_-1 = 1088
+  class_hidden_mixed_fixedB_gamma_1 = 832
+  points = 26888
+  class_gamma:
+    B_orbit gamma -1 = 11776
+    B_orbit gamma 1 = 12544
+    WT_only_zero gamma 0 = 8
+    base_point gamma 1 = 96
+    beta_U_fixedB gamma -1 = 448
+    beta_U_fixedB gamma 1 = 96
+    hidden_mixed_fixedB gamma -1 = 1088
+    hidden_mixed_fixedB gamma 1 = 832
+  class_vectors_top:
+    columns = class B X W T beta x5 U selector gamma_chi
+    ('B_orbit', 2, 2, 2, 2, 2, 2, 2, 2, 1) = 12156
+    ('B_orbit', 2, 2, 2, 2, 2, 2, 2, 2, -1) = 11532
+    ('hidden_mixed_fixedB', 1, 2, 2, 2, 2, 2, 2, 2, 1) = 640
+    ('hidden_mixed_fixedB', 1, 2, 2, 2, 2, 2, 2, 2, -1) = 640
+    ('beta_U_fixedB', 1, 1, 1, 1, 2, 2, 2, 2, -1) = 336
+    ('hidden_mixed_fixedB', 1, 1, 2, 1, 2, 2, 2, 2, -1) = 224
+    ('hidden_mixed_fixedB', 1, 1, 2, 2, 2, 2, 2, 2, -1) = 224
+    ('B_orbit', 2, 2, 2, 2, 1, 1, 2, 2, 1) = 212
+    ('B_orbit', 2, 2, 2, 2, 1, 1, 2, 2, -1) = 156
+    ('B_orbit', 2, 2, 2, 2, 2, 2, 1, 1, 1) = 120
+    ('beta_U_fixedB', 1, 1, 1, 1, 1, 1, 2, 2, -1) = 112
+    ('hidden_mixed_fixedB', 1, 1, 2, 2, 2, 2, 2, 2, 1) = 96
+    ('hidden_mixed_fixedB', 1, 1, 2, 1, 2, 2, 2, 2, 1) = 96
+    ('base_point', 1, 1, 1, 1, 1, 1, 1, 1, 1) = 96
+    ('beta_U_fixedB', 1, 1, 1, 1, 1, 1, 2, 2, 1) = 48
+    ('beta_U_fixedB', 1, 1, 1, 1, 2, 2, 2, 2, 1) = 48
+    ('B_orbit', 2, 2, 1, 2, 2, 2, 2, 2, -1) = 48
+    ('B_orbit', 2, 2, 2, 1, 2, 2, 2, 2, -1) = 40
+    ('B_orbit', 2, 2, 2, 1, 2, 2, 2, 2, 1) = 40
+    ('B_orbit', 2, 2, 1, 2, 2, 2, 2, 2, 1) = 16
+
+p27_b_line_noR_quadratic_subcover_classifier_rows=1/1

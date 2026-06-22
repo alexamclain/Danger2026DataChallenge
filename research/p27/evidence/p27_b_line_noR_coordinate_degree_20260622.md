@@ -29,6 +29,12 @@ Output:
 research/p27/archive/probe_outputs/p27_b_line_noR_coordinate_degree_probe_20260622.txt
 ```
 
+Additional q2 guard-field output:
+
+```text
+research/p27/archive/probe_outputs/p27_b_line_noR_coordinate_degree_probe_q71_q103_q167_20260622.txt
+```
+
 Command:
 
 ```bash
@@ -95,6 +101,15 @@ extension only at `beta/x5/U/selector`, some already at hidden `X/W/T`, and
 the zero selector appears in the same small `W/T`-only pattern seen over
 `GF(7^2)`.
 
+Quadratic subcover classifier follow-up:
+[P27 B-Line No-R Quadratic Subcover Classifier](p27_b_line_noR_quadratic_subcover_classifier_20260622.md).
+Across `GF(q^2)` for `q = 7, 23, 71, 103, 167`, the `WT_only_zero` class is
+always exactly `8` points and always has `gamma_chi = 0`.  This kills the
+`W/T`-only fixed-`B` subcover as a selected-gamma source.  The surviving
+quadratic fixed-`B` subcovers are `beta_U_fixedB` and `hidden_mixed_fixedB`;
+both have guard-field-dependent gamma polarity and therefore still need
+divisor/Kummer extraction rather than bucket production.
+
 ## Interpretation
 
 Positive:
@@ -125,9 +140,8 @@ Split the no-R quotient/Prym task into two subtests:
    gamma or f4/f3 descends to a low-genus B-orbit quotient.
 
 2. Quadratic fixed-B fiber subtest:
-   for base-field B fibers, separate W/T-only extension from beta/x5/U
-   extension, then compute whether either quadratic subcover carries the
-   selected gamma class or is only a tower artifact.
+   kill the W/T-only zero-selector branch, then separately test
+   beta_U_fixedB and hidden_mixed_fixedB for gamma/f4 class descent.
 ```
 
 Promote only if one subtest produces a direct source map, recurrence, or
@@ -138,11 +152,13 @@ first-pass route if both subtests are generic fresh Kummer behavior.
 
 ```text
 continue = cubic B-orbit component/quotient test
-continue = quadratic fixed-B fiber subcover test split by W/T vs beta/x5/U
+continue = quadratic fixed-B beta_U_fixedB subcover test
+continue = quadratic fixed-B hidden_mixed_fixedB subcover test
 continue = compare gamma and f4/f3 separately in the cubic and quadratic mechanisms
 
 kill = one coordinate-degree selector law
 kill = treating degree-2 and degree-3 activity as the same mechanism
+kill = W/T-only fixed-B subcover as a selected-gamma source
 kill = GPU production without a named source map from one subtest
 ```
 

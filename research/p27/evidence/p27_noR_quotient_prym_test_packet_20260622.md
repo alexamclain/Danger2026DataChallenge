@@ -42,6 +42,7 @@ no-R genus pressure = genus <= 1 violated in 5/7 fields if one component
 no-R closed-point pressure = degree 2 and 3 closed points both nonzero
 no-R Frobenius fiber profile = degree-3 B orbits plus quadratic fiber splitting
 no-R coordinate degree profile = cubic B-orbit, quadratic fixed-B/fiber split
+no-R quadratic subcover classifier = W/T-only killed; beta_U and hidden_mixed remain
 reduced lift visible classifier = killed
 gamma visible square triviality = killed
 oriented alpha/beta word = tautological, not a source
@@ -125,9 +126,14 @@ Required subtests:
 
 ```text
 cubic B-orbit quotient/component test
-quadratic fixed-B W/T-only subcover test
-quadratic fixed-B beta/x5/U subcover test
+degree-2 B-orbit quotient/component comparison
+quadratic fixed-B beta_U_fixedB subcover test
+quadratic fixed-B hidden_mixed_fixedB subcover test
 ```
+
+Do not spend CAS/GPU effort on the `W/T`-only fixed-`B` subcover as a selected
+gamma source: the quadratic classifier finds it is always an 8-point
+zero-selector branch in the tested guard fields.
 
 4. Compute quotient/Prym structure under the available symmetries:
 
@@ -175,6 +181,7 @@ Kill this first-pass B-line route if:
 ```text
 all components and quotients carrying gamma are high-genus/generic
 gamma and f4/f3 are fresh unrelated Kummer classes
+the surviving beta_U/hidden_mixed fixed-B subcovers are fresh unrelated half-covers
 the only benefit is a constant-factor continuation filter
 the proposed GPU mode pays a new Legendre/classification toll
 ```
