@@ -150,6 +150,13 @@ The d5 tower screen shows the same selector repeats one level later:
 treat this as tower telemetry or legal-pullback work, not as a production
 source until a legal tower sampler exists.
 
+The legal source depth screen is also explicit now:
+[P27 Legal Conic Tower Depth](p27_legal_conic_tower_depth_20260621.md).
+On p27 train/heldout samples, the legal tower still thins roughly like
+successive selected half-gates through depth 4.  GPU should therefore look for
+a quotient/legal tower sampler, not just evaluate the original legal source
+with more depth gates.
+
 Report:
 
 ```text

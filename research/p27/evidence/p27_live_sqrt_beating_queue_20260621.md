@@ -104,6 +104,10 @@ d4 selector root, the same product law gives d5 with zero mismatches on
 q1607/q1847/q2087 and p27 train/heldout samples.  The source-side obstruction
 remains unchanged: selected two-step coordinates also do not re-enter the
 original legal source.
+The legal depth screen confirms the other half: conic-chain lift existence
+matches selected-prefix bits through depth 4, but p27 train/heldout prefix
+rates still thin roughly like successive half-gates.  So the tower is exact,
+not yet sqrt-beating without a quotient/source for the tower itself.
 ```
 
 Concrete next K/S test:

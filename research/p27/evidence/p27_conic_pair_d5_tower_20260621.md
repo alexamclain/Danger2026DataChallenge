@@ -161,3 +161,8 @@ kill = GPU production until a legal tower sampler or quotient exists
 ```text
 p27_conic_pair_d5_tower_rows=1/1
 ```
+
+Update: the legal-source depth screen is recorded in
+[P27 Legal Conic Tower Depth](p27_legal_conic_tower_depth_20260621.md).  Lift
+existence matches selected-prefix bits through depth 4, but p27 sample prefix
+rates still thin roughly like ordinary selected gates.

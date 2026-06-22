@@ -251,6 +251,12 @@ The same selector repeats at d5:
 legal-tower telemetry or CAS/source work; it is still not a production GPU
 path without a legal tower sampler or quotient.
 
+The legal-depth screen
+[P27 Legal Conic Tower Depth](p27_legal_conic_tower_depth_20260621.md)
+confirms the original legal source still thins like selected half-gates on
+p27 samples.  Do not spend GPU time merely evaluating deeper legal conic-chain
+prefixes unless a quotient or tower sampler is supplied.
+
 Packet source warning:
 [P27 Label-2 E[2] Packet Source Probe](p27_label2_e2_packet_source_probe_20260621.md).
 The easy rational `E[2]` packet source has already been tested on p27 and gives
