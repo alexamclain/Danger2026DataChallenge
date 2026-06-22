@@ -391,6 +391,16 @@ with normalized-cover divisor/Kummer class extraction or a named divisor
 reason from CAS.
 ```
 
+A-affine recurrence update:
+[P27 A-Line Affine Recurrence Screen](p27_a_line_affine_recurrence_screen_20260622.md).
+
+```text
+No full-coverage affine map A -> m*A+b carries d3 to d4 in q1607/q1847/q2087.
+Late exact identity maps are one-sided small-field tails with inconsistent
+signs.  Do not spend GPU or agent time on degree-one A recurrence scans unless
+a source theorem names a non-affine correspondence to test.
+```
+
 A-cover packet:
 [P27 A-Level Kummer Extraction Packet](p27_a_level_kummer_extraction_packet_20260622.md).
 

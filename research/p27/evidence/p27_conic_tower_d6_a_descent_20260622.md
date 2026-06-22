@@ -175,6 +175,13 @@ on `12000 + 12000` p27 train/heldout samples, gates d3..d14 all have zero
 mixed A groups.  The survivor counts remain geometric, so this promotes
 A-line class extraction but not A-bucket production.
 
+The first cheap A-line recurrence is also killed:
+[P27 A-Line Affine Recurrence Screen](p27_a_line_affine_recurrence_screen_20260622.md).
+There is no full-coverage affine recurrence from `d3` to `d4` in
+q1607/q1847/q2087.  This rules out the easiest sourceable-map interpretation
+of the A-descent and pushes the conic tower back to normalized class
+extraction or theorem-guided correspondences.
+
 3. GPU boundary.
 
 ```text
@@ -188,10 +195,11 @@ legal-pullback/A-level sampler after CAS produces one.
 ```text
 continue = A-level Kummer class extraction for d4,d5,d6
 continue = quotient finite signs before normalized A-cover computation
-continue = deeper A-prefix grouping as a cheap routing screen
+continue = theorem-guided non-affine correspondence tests only if sourced
 
 kill = GPU sign-bucket search in conic tower signs
 kill = A-prefix counts as a source shrink without a low-genus/source law
+kill = affine A-line recurrence d_{j+1}(A)=+/-d_j(m*A+b)
 kill = treating small-field constant tails as p27 production evidence
 ```
 

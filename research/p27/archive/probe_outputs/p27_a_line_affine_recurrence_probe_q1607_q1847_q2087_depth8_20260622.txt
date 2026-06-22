@@ -1,0 +1,252 @@
+p27 A-line affine recurrence probe
+screen = d_{j+1}(A) = +/- d_j(m*A+b) on selected prefix domains
+depth = 8
+min_rows = 20
+q1607_base:
+  enum_compact_not_target = 805
+  enum_no_label2_candidate = 408
+  unique_A = 49
+  unique_ax = 196
+q1607_d3_target:
+  domain_A = 49
+  domain_points = 196
+  gate_d = 3
+  groups = 49
+  minus_A = 21
+  plus_A = 28
+  rows = 49
+q1607_d4_target:
+  domain_A = 49
+  domain_points = 196
+  gate_d = 4
+  groups = 28
+  minus_A = 9
+  plus_A = 19
+  rows = 28
+q1607_d5_target:
+  domain_A = 49
+  domain_points = 196
+  gate_d = 5
+  groups = 19
+  plus_A = 19
+  rows = 19
+q1607_d6_target:
+  domain_A = 49
+  domain_points = 196
+  gate_d = 6
+  groups = 19
+  minus_A = 19
+  rows = 19
+q1607_d7_target:
+  domain_A = 49
+  domain_points = 196
+  gate_d = 7
+  groups = 0
+  rows = 0
+q1607_d8_target:
+  domain_A = 49
+  domain_points = 196
+  gate_d = 8
+  groups = 0
+  rows = 0
+q1607_d9_target:
+  domain_A = 49
+  domain_points = 196
+  gate_d = 9
+  groups = 0
+  rows = 0
+q1607_d10_target:
+  domain_A = 49
+  domain_points = 196
+  gate_d = 10
+  groups = 0
+  rows = 0
+q1607_d3_to_d4_affine_stats:
+  affine_maps_tested = 78694
+  best_coverage_x1000000 = 1000000
+  best_covered = 28
+  best_match_x1000000 = 678571
+  best_matches = 19
+  exact_affine_recurrences = 0
+  next_rows = 28
+  prev_rows = 49
+q1607_d3_to_d4_exact_affine:
+  none
+q1607_d3_to_d4_best_affine:
+  m=1 b=0 polarity=1 covered=28 matches=19
+  m=1 b=0 polarity=-1 covered=28 matches=9
+  m=393 b=186 polarity=-1 covered=7 matches=6
+  m=473 b=483 polarity=1 covered=7 matches=6
+  m=101 b=1441 polarity=1 covered=6 matches=6
+q1607_d4_to_d5_affine_result: skipped_rows_lt_20
+q1607_d5_to_d6_affine_result: skipped_rows_lt_20
+q1607_d6_to_d7_affine_result: skipped_rows_lt_20
+q1607_d7_to_d8_affine_result: skipped_rows_lt_20
+q1607_d8_to_d9_affine_result: skipped_rows_lt_20
+q1607_d9_to_d10_affine_result: skipped_rows_lt_20
+q1847_base:
+  enum_compact_not_target = 873
+  enum_no_label2_candidate = 468
+  unique_A = 63
+  unique_ax = 252
+q1847_d3_target:
+  domain_A = 63
+  domain_points = 252
+  gate_d = 3
+  groups = 63
+  minus_A = 18
+  plus_A = 45
+  rows = 63
+q1847_d4_target:
+  domain_A = 63
+  domain_points = 252
+  gate_d = 4
+  groups = 45
+  minus_A = 26
+  plus_A = 19
+  rows = 45
+q1847_d5_target:
+  domain_A = 63
+  domain_points = 252
+  gate_d = 5
+  groups = 19
+  minus_A = 19
+  rows = 19
+q1847_d6_target:
+  domain_A = 63
+  domain_points = 252
+  gate_d = 6
+  groups = 0
+  rows = 0
+q1847_d7_target:
+  domain_A = 63
+  domain_points = 252
+  gate_d = 7
+  groups = 0
+  rows = 0
+q1847_d8_target:
+  domain_A = 63
+  domain_points = 252
+  gate_d = 8
+  groups = 0
+  rows = 0
+q1847_d9_target:
+  domain_A = 63
+  domain_points = 252
+  gate_d = 9
+  groups = 0
+  rows = 0
+q1847_d10_target:
+  domain_A = 63
+  domain_points = 252
+  gate_d = 10
+  groups = 0
+  rows = 0
+q1847_d3_to_d4_affine_stats:
+  affine_maps_tested = 116298
+  best_coverage_x1000000 = 1000000
+  best_covered = 45
+  best_match_x1000000 = 577777
+  best_matches = 26
+  exact_affine_recurrences = 0
+  next_rows = 45
+  prev_rows = 63
+q1847_d3_to_d4_exact_affine:
+  none
+q1847_d3_to_d4_best_affine:
+  m=1 b=0 polarity=-1 covered=45 matches=26
+  m=1 b=0 polarity=1 covered=45 matches=19
+  m=508 b=695 polarity=-1 covered=9 matches=8
+  m=1528 b=738 polarity=1 covered=9 matches=8
+  m=1274 b=1673 polarity=1 covered=8 matches=8
+q1847_d4_to_d5_affine_result: skipped_rows_lt_20
+q1847_d5_to_d6_affine_result: skipped_rows_lt_20
+q1847_d6_to_d7_affine_result: skipped_rows_lt_20
+q1847_d7_to_d8_affine_result: skipped_rows_lt_20
+q1847_d8_to_d9_affine_result: skipped_rows_lt_20
+q1847_d9_to_d10_affine_result: skipped_rows_lt_20
+q2087_base:
+  enum_compact_not_target = 1109
+  enum_no_label2_candidate = 520
+  unique_A = 57
+  unique_ax = 228
+q2087_d3_target:
+  domain_A = 57
+  domain_points = 228
+  gate_d = 3
+  groups = 57
+  minus_A = 32
+  plus_A = 25
+  rows = 57
+q2087_d4_target:
+  domain_A = 57
+  domain_points = 228
+  gate_d = 4
+  groups = 25
+  minus_A = 7
+  plus_A = 18
+  rows = 25
+q2087_d5_target:
+  domain_A = 57
+  domain_points = 228
+  gate_d = 5
+  groups = 18
+  plus_A = 18
+  rows = 18
+q2087_d6_target:
+  domain_A = 57
+  domain_points = 228
+  gate_d = 6
+  groups = 18
+  plus_A = 18
+  rows = 18
+q2087_d7_target:
+  domain_A = 57
+  domain_points = 228
+  gate_d = 7
+  groups = 18
+  plus_A = 18
+  rows = 18
+q2087_d8_target:
+  domain_A = 57
+  domain_points = 228
+  gate_d = 8
+  groups = 18
+  minus_A = 18
+  rows = 18
+q2087_d9_target:
+  domain_A = 57
+  domain_points = 228
+  gate_d = 9
+  groups = 0
+  rows = 0
+q2087_d10_target:
+  domain_A = 57
+  domain_points = 228
+  gate_d = 10
+  groups = 0
+  rows = 0
+q2087_d3_to_d4_affine_stats:
+  affine_maps_tested = 118902
+  best_coverage_x1000000 = 1000000
+  best_covered = 25
+  best_match_x1000000 = 720000
+  best_matches = 18
+  exact_affine_recurrences = 0
+  next_rows = 25
+  prev_rows = 57
+q2087_d3_to_d4_exact_affine:
+  none
+q2087_d3_to_d4_best_affine:
+  m=1 b=0 polarity=1 covered=25 matches=18
+  m=1 b=0 polarity=-1 covered=25 matches=7
+  m=895 b=645 polarity=-1 covered=6 matches=6
+  m=17 b=1163 polarity=1 covered=7 matches=5
+  m=573 b=1663 polarity=-1 covered=6 matches=5
+q2087_d4_to_d5_affine_result: skipped_rows_lt_20
+q2087_d5_to_d6_affine_result: skipped_rows_lt_20
+q2087_d6_to_d7_affine_result: skipped_rows_lt_20
+q2087_d7_to_d8_affine_result: skipped_rows_lt_20
+q2087_d8_to_d9_affine_result: skipped_rows_lt_20
+q2087_d9_to_d10_affine_result: skipped_rows_lt_20
+p27_a_line_affine_recurrence_probe_rows=1/1

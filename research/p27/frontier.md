@@ -873,6 +873,16 @@ non-identity d3 coverage, and in p27 `4000 + 4000` train/heldout samples every
 non-identity transform has zero d3..d8 coverage.  So the A-line route cannot
 be promoted through a visible orbit or `d_{j+1}(A)=d_j(T(A))` shortcut; it
 still needs actual normalized-cover/Kummer-class extraction.
+The broader affine A-line recurrence is now killed too:
+[P27 A-Line Affine Recurrence Screen](evidence/p27_a_line_affine_recurrence_screen_20260622.md).
+It tests every full-coverage map `A -> m*A+b` for the meaningful
+`d3 -> d4` transition in q1607/q1847/q2087.  All three promotion fields have
+zero exact affine recurrences; the best full-coverage maps are identity and
+score only the raw d4 bias (`19/28`, `26/45`, `18/25`).  Later exact identity
+maps occur only in small-field one-sided tails with field-dependent signs and
+stop gates.  Thus an A-line win must be a normalized Kummer class,
+non-affine correspondence, coboundary, or higher structure, not a cheap
+degree-one A recurrence.
 The direct sign-word coupling telemetry now agrees:
 [P27 Conic Sign-Word Coupling Probe](evidence/p27_conic_signword_coupling_20260622.md).
 On `4000 + 4000` p27 train/heldout unique `(A,x5)` rows, the all-plus conic

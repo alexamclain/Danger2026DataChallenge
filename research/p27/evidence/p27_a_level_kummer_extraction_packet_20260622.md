@@ -10,7 +10,8 @@ then comparing d4/d5/d6.
 
 This packet is the replacement for blind A-polynomial scans.  It preserves the
 positive result that selected gates descend to whole A-fibers, plus the
-negative result that visible degree `<= 4` branch support on `P1_A` is killed.
+negative results that visible degree `<= 4` branch support on `P1_A` and
+affine A-line recurrences are killed.
 
 ## Artifacts
 
@@ -122,9 +123,11 @@ no low-genus/sourceable normalized A-level object exists
 continue = run Magma/Sage normalization/class extraction using the JSON rows
 continue = compare d3/d4/d5/d6 classes once a normalized model exists
 continue = use p27 d3..d10 prefix data as routing evidence, not as equations
+continue = non-affine correspondence tests only when theorem-shaped
 
 kill = blind A polynomial scans without a divisor reason
 kill = visible A-branch S3 orbit/recurrence shortcut
+kill = affine A-line recurrence d_{j+1}(A)=+/-d_j(m*A+b)
 kill = GPU A-bucket production before a source law exists
 kill = treating finite-field rows alone as a proof of recurrence
 ```
@@ -134,6 +137,13 @@ tests the fixed S3 action preserving `A in {-2,2,infinity}`.  Non-identity
 transforms have zero d3 coverage in q1847 and zero d3..d8 coverage in p27
 train/heldout samples, so the CAS pass should not spend time on visible
 branch-orbit recurrences.
+
+Update: [P27 A-Line Affine Recurrence Screen](p27_a_line_affine_recurrence_screen_20260622.md)
+tests all full-coverage affine maps `A -> m*A+b` for the first meaningful
+`d3 -> d4` transition in q1607/q1847/q2087.  It finds zero exact affine
+recurrences.  Later identity recurrences occur only in one-sided small-field
+tails with field-dependent signs, so this packet should focus on actual
+Kummer/divisor classes, coboundaries, or sourced non-affine correspondences.
 
 ```text
 p27_a_level_kummer_extraction_packet_rows=1/1

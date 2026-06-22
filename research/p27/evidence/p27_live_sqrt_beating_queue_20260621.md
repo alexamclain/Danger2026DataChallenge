@@ -192,6 +192,14 @@ the selected A-domain or relate successive selected gates.  q1847 has zero
 non-identity d3 coverage, while p27 train/heldout have zero non-identity
 d3..d8 coverage.  This kills visible A-orbit and branch-S3 recurrence
 shortcuts; continue only with normalized-cover/Kummer-class extraction.
+The broader affine A-line recurrence screen is negative too:
+[P27 A-Line Affine Recurrence Screen](p27_a_line_affine_recurrence_screen_20260622.md).
+No full-coverage affine map `A -> m*A+b` carries `d3` to `d4` in
+q1607/q1847/q2087; best full-coverage maps are identity and only score the raw
+d4 bias.  Later exact identity maps occur only in one-sided small-field tails
+with field-dependent signs.  Thus an A-line source law must be a normalized
+Kummer-class relation, non-affine correspondence, or coboundary, not a
+degree-one recurrence.
 The B/K-enhanced legal-pullback screen gives one positive staging coordinate:
 [P27 Conic-Pair B/K-Enhanced Pullback Screen](p27_conic_pair_b_enhanced_pullback_20260622.md).
 It finds the expected `B^2+c^2=4` and the stable surface
@@ -526,7 +534,8 @@ low-degree A polynomial scans.
 [P27 A-Level Kummer Extraction Packet](p27_a_level_kummer_extraction_packet_20260622.md)
 is the concrete CAS handoff for that task: it emits q1607/q1847/q2087
 A-labeled d3/d4 fixtures and the promote/kill criteria for normalized A-cover
-class extraction.
+class extraction.  The affine recurrence falsifier means the next A-line
+correspondence test should be theorem-shaped, not another degree-one map scan.
 
 The compact actionable version is the "Current Priority After Two-Step Kummer
 Screen" section of
