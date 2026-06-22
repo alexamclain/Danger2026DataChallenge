@@ -935,8 +935,9 @@ The compact synthesis after these closures is:
 [P27 Post-Branch-Dynamics Test Frontier](evidence/p27_post_branch_dynamics_test_frontier_20260622.md).
 It lists the closed branch-map families and the remaining first-class tests:
 coordinated A/B/K/Sroot Kummer extraction with the rational K-square stratum
-preserved, BSM staged legal-pullback normalization, and the trace/norm
-half-norm phase identity.  GPU is demoted to bounded telemetry or
+preserved and the trace/norm half-norm phase identity.  BSM is now demoted to
+a coordinate view of the one-step halving cover unless a non-inherited selector
+is added.  GPU is demoted to bounded telemetry or
 direct-sampler testing until one of those produces a named class or source.
 The K/Sroot density shortcut is now priced too:
 [P27 K/Sroot Prefix Profile](evidence/p27_sroot_prefix_profile_20260622.md).
@@ -1120,6 +1121,14 @@ staged surface.  Across q1607/q1847/q2087, `(B,s)`, `(B,m)`, and `(s,m)` have
 no `d4+` extra relation through degree `12`, and `(B,s,m)` degree `4` is again
 only the inherited BSM equation shared by legal, `d3+`, `d4+`, and `d4-`.
 So BSM remains CAS staging, not a visible two-gate coupling.
+The BSM surface is now identified with the ordinary halving cover:
+[P27 BSM Halving-Cover Identity](evidence/p27_bsm_halving_cover_identity_20260622.md).
+With `A=B^2-2`, `x=m^2/16`, and `z=s^2`, the BSM equation becomes
+`z^2 - 4*(x+1)*z - 4*x*(B^2-4)=0`, whose discriminant is
+`16*(x^2+A*x+1)`.  Every nondegenerate BSM point has `x` square and
+halving-discriminant square; canonical d3-plus rows have exactly eight BSM
+lifts, while d3-minus rows have none.  This demotes BSM from a peer moonshot
+lane to a coordinate view of the known one-step selected halving cover.
 
 The first raw quotient screen is negative:
 [P27 Conic-Pair Low-Degree Relation Screen](evidence/p27_conic_pair_lowdegree_relation_20260621.md).
@@ -1807,8 +1816,9 @@ The post-quad moonshot queue is now consolidated:
 [P27 First-Class Moonshot Tests After Quadratic Probe](evidence/p27_first_class_moonshot_tests_after_quad_20260622.md).
 After the GPU quadratic-gate validation and the q1847 B/K/lambda quartic
 closures, the first-class tests are coordinated A/B/K/Sroot Kummer-sequence
-extraction, BSM staged legal-pullback normalization, and the trace/norm
-half-norm phase identity.  GPU is reserved for bounded telemetry or a named
+extraction and the trace/norm half-norm phase identity.  BSM is demoted to
+halving-cover notation unless a non-inherited selector appears.  GPU is
+reserved for bounded telemetry or a named
 direct sampler; fixed one-bit filters and visible quartic buckets are not
 production moonshots.
 

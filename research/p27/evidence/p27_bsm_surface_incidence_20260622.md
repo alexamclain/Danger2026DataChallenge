@@ -122,16 +122,26 @@ The legal B-domain remains the real source denominator.
 Thus the next math test should add the legal B-cover or its normalized
 function-field class to this surface, rather than sampling the surface on GPU.
 
+Update:
+[P27 BSM Halving-Cover Identity](p27_bsm_halving_cover_identity_20260622.md)
+shows that this surface is exactly the ordinary selected-halving cover in
+different coordinates.  With `A=B^2-2`, `x=m^2/16`, and `z=s^2`, the equation
+has discriminant `16*(x^2+A*x+1)`.  So the incidence result should be read as
+"BSM repackages the x-square plus halving-discriminant-square condition," not
+as a new source surface.
+
 ## Continue / Kill
 
 ```text
 continue = staged CAS: surface + legal B-domain + next Kummer selector
 continue = look for low-genus quotient/components after imposing legal B
 continue = use the surface as a compact handoff equation for expert review
+continue = only use BSM after adding a genuinely non-inherited selector
 
 kill = GPU sampling of the raw BSM surface
 kill = treating legal-B restriction as a source unless legal B itself is sourced
 kill = further raw incidence counts without a new quotient or selector
+kill = BSM as an independent source surface
 ```
 
 ```text

@@ -10,8 +10,8 @@ The remaining tests that could beat `sqrt(p)` are source or class tests:
 
 ```text
 1. Coordinated A/B/K/Sroot Kummer sequence extraction.
-2. BSM staged legal-pullback normalization.
-3. trace/norm half-norm phase identity.
+2. trace/norm half-norm phase identity.
+3. BSM only as a demoted coordinate view unless a non-inherited selector is added.
 4. bounded GPU telemetry only when it feeds one of the above.
 ```
 
@@ -266,6 +266,7 @@ research/p27/evidence/p27_conic_pair_b_enhanced_pullback_20260622.md
 research/p27/evidence/p27_bsm_surface_incidence_20260622.md
 research/p27/evidence/p27_bsm_legal_restricted_relations_20260622.md
 research/p27/evidence/p27_bsm_next_selector_relation_20260622.md
+research/p27/evidence/p27_bsm_halving_cover_identity_20260622.md
 ```
 
 Staging equation:
@@ -281,14 +282,15 @@ surface size ~= q^2
 canonical d3-plus incidence remains constant/q
 legal-B-restricted relation screen finds no extra low-degree selector
 d4-plus next-selector screen finds no extra low-degree relation
+BSM is exactly x square plus x^2+A*x+1 square, with sign multiplicity
 ```
 
-Required computation:
+Required computation if this coordinate is revived:
 
 ```text
-add the legal B-cover/function field to the BSM surface
-compute quotient/components/genus after imposing legal B
-then add the next Kummer selector and compare with the B-line f_j sequence
+add a non-inherited Kummer selector to the BSM/halving-cover model
+prove the resulting quotient is not just the B-line f_j class in new notation
+compare any quotient/components/genus against the B-line Kummer sequence
 ```
 
 Promote if:
@@ -301,12 +303,13 @@ or a direct legal-pullback sampler with better target/source_draw
 Kill if:
 
 ```text
-the staged model keeps the same legal-B denominator
-and the next selector is a fresh independent half-cover
-or BSM only contributes the inherited surface equation
+the staged model only contributes x square plus x^2+A*x+1 square
+or keeps the same legal-B denominator
+or the next selector is a fresh independent half-cover
 ```
 
-This is the best conic-chain CAS coordinate, but not a GPU source by itself.
+This is now demoted from a peer first-class lane to a coordinate view of the
+known halving cover.  It is not a GPU source by itself.
 
 ## Coordinate View: K/Sroot Branch Class
 
@@ -422,8 +425,8 @@ or exact direct sampling into a named source stratum
 
 ```text
 continue = coordinated A/B/K/Sroot normalized Kummer sequence extraction
-continue = BSM staged legal-pullback normalization
 continue = trace/norm half-norm phase expert ask
+continue = BSM only if paired with a non-inherited selector beyond the halving cover
 continue = GPU only as bounded telemetry or for a named sampler
 continue = offline Magma/Sage for the reduced B-line cover
 continue = offline Magma/Sage comparison of the second reduced f4/f3 cover

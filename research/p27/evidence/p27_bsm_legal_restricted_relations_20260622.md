@@ -124,17 +124,26 @@ pair systems through degree `12`, and the degree-4 triple relation is again
 only the inherited BSM equation shared by legal, `d3+`, `d4+`, and `d4-`.
 Thus the BSM surface does not visibly couple two selected gates.
 
+Update:
+[P27 BSM Halving-Cover Identity](p27_bsm_halving_cover_identity_20260622.md)
+explains why.  The BSM equation is the usual `x`-square plus
+`x^2+A*x+1`-square halving cover after the substitution `x=m^2/16`,
+`A=B^2-2`, `z=s^2`.  It is inherited one-step structure, not a separate
+legal-pullback source.
+
 ## Continue / Kill
 
 ```text
 continue = legal B-cover/function-field normalization over the BSM surface
 continue = next Kummer selector after imposing the legal cover
 continue = use BSM as a handoff equation for CAS/expert review
+continue = only revive BSM with a non-inherited selector beyond the halving cover
 
 kill = GPU sampling of legal-B-restricted BSM without a legal-B source
 kill = low-degree relation scans in (B,s), (B,m), (s,m), or (B,s,m)
 kill = treating the inherited degree-4 BSM equation as a target selector
 kill = BSM next-selector low-degree relation for d4+ in the screened coordinates
+kill = BSM as an independent first-class moonshot lane
 ```
 
 ```text
