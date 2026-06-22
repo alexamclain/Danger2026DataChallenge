@@ -48,6 +48,7 @@ research/p27/evidence/p27_trace_norm_dplus_u6_rowbit_h90_group_coset_20260622.md
 research/p27/evidence/p27_trace_norm_dplus_u6_rowbit_h90_u_divisor_20260622.md
 research/p27/evidence/p27_trace_norm_dplus_u6_rowbit_h90_u_cubic_quartic_20260622.md
 research/p27/evidence/p27_trace_norm_dplus_u6_rowbit_local_magma_factor_split_20260622.md
+research/p27/evidence/p27_trace_norm_dplus_u6_rowbit_factor_label_20260622.md
 research/p27/evidence/p27_trace_norm_elliptic_line_divisor_screen_20260622.md
 ```
 
@@ -324,6 +325,20 @@ The q607/q1607 action probe shows `z -> -z` swaps the two domain-spin factors,
 tested factor.  This is not itself a GPU sampler.  It is a CAS-to-GPU bridge:
 if CAS extracts a cheap factor label or Kummer class from the degree-8 factors,
 GPU should emit that label against d3/d4/d5 in same-stream Dplus telemetry.
+
+Factor-label follow-up:
+[P27 Trace/Norm Dplus U6 Row-Bit Factor Label Probe](p27_trace_norm_dplus_u6_rowbit_factor_label_20260622.md)
+shows the degree-8 factors are quartics in `Y=S^2=U6+2`, and rho-paired
+quartics multiply back to the domain-spin factors.  GPU should not implement
+this yet as raw factorization; wait for CAS to provide a cheap quartic-label
+formula or resolvent class.  Once supplied, the GPU ask is same-stream telemetry:
+
+```text
+domain factor label
+Aeta quartic label / resolvent class
+d3,d4,d5
+source denominator and replay data
+```
 
 If cheap, fused telemetry should therefore emit:
 

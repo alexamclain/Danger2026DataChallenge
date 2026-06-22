@@ -436,6 +436,13 @@ is positive structure, not yet a sampler.  A q607/q1607 action probe shows
 factors in pairs, and `S -> -S` fixes each tested factor.  The next test is
 Kummer/Prym identification of these factor labels, then comparison to
 pulled-back A-level `d3=chi(x6)`.
+The factor-label follow-up makes that next test sharper:
+[P27 Trace/Norm Dplus U6 Row-Bit Factor Label Probe](evidence/p27_trace_norm_dplus_u6_rowbit_factor_label_20260622.md).
+In q607/q1607, all Aeta degree-8 factors are quartics in `Y=S^2=U6+2`; the
+rho-paired products are exactly the two domain-spin factors; and the quartic
+coefficient profile is stable with moderate numerator/denominator degrees.
+The immediate moonshot test is now an exact quartic-label Kummer extraction,
+then a same-stream comparison of that label with A-level `d3/d4/d5`.
 The point-fiber probe adds a positive compatibility signal:
 [P27 Trace/Norm Dplus U6 Row-Bit H90 Point-Fiber Probe](evidence/p27_trace_norm_dplus_u6_rowbit_h90_pointfiber_20260622.md).
 In small fields, the row bit can be mixed over `t` alone, but all mixed `t`
@@ -2283,6 +2290,11 @@ sign gives `8+8+8+8`.  The tested deck actions are stable:
 `z` swaps degree-16 factors, `rho` swaps degree-8 factors in pairs, and
 `S -> -S` fixes each tested factor.  Keep this as a factor-action/Kummer-class
 extraction lane; do not treat the split alone as a GPU sampler.
+The factor-label probe
+[P27 Trace/Norm Dplus U6 Row-Bit Factor Label Probe](evidence/p27_trace_norm_dplus_u6_rowbit_factor_label_20260622.md)
+then descends those degree-8 factors to quartics in `Y=S^2`, with rho-pairs
+multiplying back to the domain factors.  That is the concrete CAS object to
+extract before asking GPU for any row-bit label telemetry.
 The point-fiber companion
 [P27 Trace/Norm Dplus U6 Row-Bit H90 Point-Fiber Probe](evidence/p27_trace_norm_dplus_u6_rowbit_h90_pointfiber_20260622.md)
 keeps this alive by showing uniform rational H90/domain-spin/Aeta fibers in

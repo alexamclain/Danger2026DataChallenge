@@ -1,0 +1,56 @@
+Magma V2.29-1     Mon Jun 22 2026 13:25:10 on agent-mini [Seed = 1426498668]
+
++-------------------------------------------------------------------+
+|       This copy of Magma has been made available through a        |
+|                   generous initiative of the                      |
+|                                                                   |
+|                         Simons Foundation                         |
+|                                                                   |
+| covering U.S. Colleges, Universities, Nonprofit Research entities,|
+|               and their students, faculty, and staff              |
++-------------------------------------------------------------------+
+
+Type ? for help.  Type <Ctrl>-D to quit.
+
+Loading file "research/p27/archive/fixtures/p27_trace_norm_dplus_u6_rowbit_fact\
+or_label_q607_magma.m"
+RESULT factor_label_setup 607 2 [ 16, 16 ]
+4 [ 8, 8, 8, 8 ]
+RESULT factor_label_even_domain [ true, true ]
+RESULT factor_label_even_Aeta [ true, true, true, true ]
+RESULT factor_label_rho_perm [ 2, 1, 4, 3 ]
+RESULT factor_label_pair_domain_match [ 1, 2 ]
+1
+RESULT factor_label_pair_domain_match [ 3, 4 ]
+2
+RESULT factor_label_Aeta_Y_degree 1 true 4
+RESULT factor_label_Aeta_Y_degree 2 true 4
+RESULT factor_label_Aeta_Y_degree 3 true 4
+RESULT factor_label_Aeta_Y_degree 4 true 4
+RESULT factor_label_coeff_profile_start 607 1 true 4
+RESULT factor_label_coeff 1 0 nonzero_basis 1 max_num_degree 16 max_den_degree 8
+RESULT factor_label_coeff 1 1 nonzero_basis 6 max_num_degree 12 max_den_degree 8
+RESULT factor_label_coeff 1 2 nonzero_basis 7 max_num_degree 10 max_den_degree 6
+RESULT factor_label_coeff 1 3 nonzero_basis 6 max_num_degree 4 max_den_degree 6
+RESULT factor_label_coeff 1 4 nonzero_basis 1 max_num_degree 0 max_den_degree 0
+RESULT factor_label_coeff_profile_start 607 2 true 4
+RESULT factor_label_coeff 2 0 nonzero_basis 1 max_num_degree 16 max_den_degree 8
+RESULT factor_label_coeff 2 1 nonzero_basis 6 max_num_degree 12 max_den_degree 8
+RESULT factor_label_coeff 2 2 nonzero_basis 7 max_num_degree 10 max_den_degree 6
+RESULT factor_label_coeff 2 3 nonzero_basis 6 max_num_degree 4 max_den_degree 6
+RESULT factor_label_coeff 2 4 nonzero_basis 1 max_num_degree 0 max_den_degree 0
+RESULT factor_label_coeff_profile_start 607 3 true 4
+RESULT factor_label_coeff 3 0 nonzero_basis 1 max_num_degree 16 max_den_degree 8
+RESULT factor_label_coeff 3 1 nonzero_basis 6 max_num_degree 12 max_den_degree 10
+RESULT factor_label_coeff 3 2 nonzero_basis 7 max_num_degree 10 max_den_degree 8
+RESULT factor_label_coeff 3 3 nonzero_basis 6 max_num_degree 4 max_den_degree 8
+RESULT factor_label_coeff 3 4 nonzero_basis 1 max_num_degree 0 max_den_degree 0
+RESULT factor_label_coeff_profile_start 607 4 true 4
+RESULT factor_label_coeff 4 0 nonzero_basis 1 max_num_degree 16 max_den_degree 8
+RESULT factor_label_coeff 4 1 nonzero_basis 6 max_num_degree 12 max_den_degree 10
+RESULT factor_label_coeff 4 2 nonzero_basis 7 max_num_degree 10 max_den_degree 8
+RESULT factor_label_coeff 4 3 nonzero_basis 6 max_num_degree 4 max_den_degree 8
+RESULT factor_label_coeff 4 4 nonzero_basis 1 max_num_degree 0 max_den_degree 0
+RESULT p27_trace_norm_dplus_u6_rowbit_factor_label_q607 done
+
+Total time: 6.990 seconds, Total memory usage: 96.16MB

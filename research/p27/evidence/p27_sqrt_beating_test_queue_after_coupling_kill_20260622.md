@@ -290,6 +290,14 @@ and `S -> -S` fixing each tested factor.  This is the strongest positive
 row-bit structure so far.  The next queue item is Kummer/Prym identification
 of the factor labels, not another visible coordinate bucket.
 
+Tenth follow-up B:
+[P27 Trace/Norm Dplus U6 Row-Bit Factor Label Probe](p27_trace_norm_dplus_u6_rowbit_factor_label_20260622.md)
+descends the Aeta degree-8 factors to quartics in `Y=S^2=U6+2`.  The
+rho-paired quartics multiply exactly to the two domain-spin factors, and the
+coefficient profile is stable in q607/q1607.  The next accepted row-bit
+artifact should extract this quartic-label Kummer class and compare it to
+A-level `d3=chi(x6)`, not run another bucket scan.
+
 Eleventh update:
 [P27 Trace/Norm Dplus U6 Row-Bit H90 Point-Fiber Probe](p27_trace_norm_dplus_u6_rowbit_h90_pointfiber_20260622.md)
 finds a positive pointwise compatibility signal.  Over `q=263` and `q=607`,
@@ -378,6 +386,8 @@ monic cubic support is absent in q607/q1607/q1847/q2087, and q1847 monic
 quartic support is absent.
 local Magma shows domain-spin/Aeta factor-degree drops: 32 -> 16+16 -> 8x4,
 with stable z/rho/S factor-action permutations.
+the Aeta degree-8 factors are quartics in Y=S^2, paired by rho back to the
+domain-spin factors.
 ```
 
 The missing object is the map or obstruction between the H90 model and the
@@ -449,6 +459,7 @@ continue = use mixed-f5 guard fields as repeated-gamma regression data
 continue = fused/native Dplus pricing with A/d3 telemetry columns
 continue = Dplus/H90 A_eta versus pulled-back A-level d3 class comparison
 continue = factor-action/Kummer extraction from the U6 row-bit 16+16 and 8x4 splits
+continue = exact quartic-label extraction in Y=S^2 over the Aeta cover
 continue = explain H90 rational-point uniformity of the row bit
 continue = prove/extract the Ktrace local-solubility boundary
 continue = divisor/theta/Prym extraction after the small-coset kill

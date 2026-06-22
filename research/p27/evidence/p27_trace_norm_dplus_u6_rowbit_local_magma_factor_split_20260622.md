@@ -178,6 +178,14 @@ The row-bit lane should now focus on factor action, not blind buckets:
    obstruction.
 ```
 
+Follow-up:
+[P27 Trace/Norm Dplus U6 Row-Bit Factor Label Probe](p27_trace_norm_dplus_u6_rowbit_factor_label_20260622.md)
+shows that the four Aeta degree-8 factors are all even in `S`, hence quartics
+in `Y=S^2=U6+2`; rho-paired factor products multiply exactly back to the two
+domain-spin degree-16 factors; and the quartic coefficient profile is stable
+in q607/q1607.  The next extraction target is therefore a quartic-label
+Kummer class over the Aeta function field, not an arbitrary degree-8 factor.
+
 Promotion:
 
 ```text
