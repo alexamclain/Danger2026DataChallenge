@@ -218,6 +218,7 @@ Use:
 research/p27/evidence/p27_tline_component_descent_20260621.md
 research/p27/evidence/p27_hv_trace_coupling_audit_20260621.md
 research/p27/evidence/p27_trace_norm_elliptic_line_coset_20260621.md
+research/p27/evidence/p27_trace_norm_halfnorm_test_card_20260622.md
 ```
 
 Ask narrowly for:
@@ -225,6 +226,7 @@ Ask narrowly for:
 ```text
 a theta/additive/Hilbert-90 identity coupling the h and vq half-norm phases
 on E: v^2 = u^3 - u
+that reduces to a finite-field squareclass, divisor, or source map
 ```
 
 Promote if:
@@ -232,6 +234,7 @@ Promote if:
 ```text
 the identity predicts a post-Dplus selected gate
 or gives a direct sampler/source map
+or gives >=1.25x heldout target/source_draw lift with raw-source accounting
 ```
 
 Kill if:

@@ -297,9 +297,11 @@ failures, confirming the reconstruction.  The next gate was flat:
 All low-weight products of the named `H`, `VQ`, `X_pref`, root, quotient, and
 `T_line` atoms failed, with the best train lifts collapsing to about `0.49` to
 `0.50` on heldout.  This kills the cheap post-Dplus trace/norm-character route.
-The surviving trace/norm/quotient task is function-field extraction of the
-actual `d3`/`d4` double covers on `E: W^2=X^3-X` or the 2-isogenous quotient
-`E': V^2=U^3+4U`.
+The surviving trace/norm/quotient task is now formalized as a narrow test card:
+[P27 Trace/Norm Half-Norm Test Card](evidence/p27_trace_norm_halfnorm_test_card_20260622.md).
+It accepts only a finite-field squareclass, divisor/theta identity, or direct
+source map on `C: b^2=16-a^4` / `E: v^2=u^3-u`, with heldout evaluator checks
+and raw-source accounting.  Broad trace/norm feature searches remain killed.
 
 The first exact small-field check of that trace/norm quotient changes the
 math ask:
