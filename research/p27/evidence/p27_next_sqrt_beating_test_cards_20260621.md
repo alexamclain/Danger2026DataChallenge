@@ -1754,6 +1754,7 @@ split degree <=4 branch divisors from rational linears / irreducible
 quadratics are killed
 q607 and q991 monic cubics are killed, while q863 exact cubics are unstable
 local interpolation artifacts
+q1471 promotion-field monic cubics are killed
 ```
 
 See [P27 K-Line Cubic Stdin Probe](p27_kline_cubic_stdin_probe_20260622.md).
@@ -1761,6 +1762,8 @@ Use [P27 K-Line Fit Significance](p27_kline_fit_significance_20260622.md)
 to decide whether an exact finite-field fit is meaningful.  In particular,
 q863 exact cubics are expected interpolation, while q1471/q1607/q1847 d3
 cubic or quartic fits would be strong evidence if stable.
+The q1471 cubic promotion screen is now negative:
+[P27 K-Line q1471 Cubic Promotion Screen](p27_kline_q1471_cubic_promotion_screen_20260622.md).
 
 Promotion bar:
 

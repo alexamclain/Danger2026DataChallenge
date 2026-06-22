@@ -141,6 +141,11 @@ q863 d3 monic cubics have `expected_exact ~= 76.6`, while q1471/q1607/q1847
 d3 monic cubics have expected exact counts `5.65e-6`, `1.47e-5`, and
 `1.37e-9`.  Thus a stable d3 low-degree fit in the promotion fields would be
 meaningful; q863 fits and q1471/q1607 d4 fits are not enough.
+The first promotion-field cubic test is now complete:
+[P27 K-Line q1471 Cubic Promotion Screen](p27_kline_q1471_cubic_promotion_screen_20260622.md).
+It exhausts all `3,183,010,111` monic cubics over q1471 and finds no exact d3
+cubic.  Since degree <=2 was already killed, this removes `z^2=cubic(K)` as a
+K-line source candidate.  Continue with quartic/branch-cover/genus extraction.
 The extension-field source count now gives a staged-geometry substitute for the
 memory-heavy online Magma pullback.  Over `GF(7^n)` and `GF(23^n)`, the legal
 label-2/compactD source is curve-sized, but selected prefixes still reduce

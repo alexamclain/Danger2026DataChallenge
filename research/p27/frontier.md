@@ -1291,6 +1291,14 @@ q1847 expected ~= 1.37e-9
 Status: promote only stable promotion-field d3 low-degree formulas or
 branch-cover/genus extraction.  Demote q863 cubics and low-row d4 local fits.
 
+Promotion-field update:
+[P27 K-Line q1471 Cubic Promotion Screen](evidence/p27_kline_q1471_cubic_promotion_screen_20260622.md)
+exhausted all `3,183,010,111` monic cubics over q1471 and found no exact d3
+cubic.  Since degree `<=2` was already killed, the K-line source shape
+`z^2 = cubic(K)` is now dead in the first promotion field.  The K-line
+moonshot is reduced to quartic/non-polynomial branch-cover extraction and
+genus/sourceability.
+
 ### Card 5: Elliptic Line Identity
 
 Use the model:

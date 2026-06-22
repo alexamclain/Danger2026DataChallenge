@@ -108,6 +108,13 @@ q1471/q1607 d4 cubics without q1847 or a named d3 class
 near-miss best scores such as 31/32 or 34/36
 ```
 
+Promotion-field result:
+[P27 K-Line q1471 Cubic Promotion Screen](p27_kline_q1471_cubic_promotion_screen_20260622.md)
+now applies this rule to the first promotion field.  It finds no exact `d3`
+monic cubic over q1471.  Thus the cubic K-polynomial source shape is killed;
+the remaining low-genus K-line possibility is quartic or a non-polynomial
+branch class recovered by normalization.
+
 ## Interpretation
 
 Positive:

@@ -30,6 +30,14 @@ By contrast, q1471/q1607/q1847 d3 cubic exact fits have expected counts
 `5.65e-6`, `1.47e-5`, and `1.37e-9`; a stable promotion-field d3 fit would be
 real evidence.
 
+Promotion-field follow-up:
+[P27 K-Line q1471 Cubic Promotion Screen](p27_kline_q1471_cubic_promotion_screen_20260622.md)
+tests the first meaningful field directly.  It exhausts `3,183,010,111`
+monic cubics over `q=1471` and finds no exact `d3` cubic.  Since degree `<=2`
+was already killed and nonzero leading coefficients only change global
+polarity, this kills the cubic K-polynomial source shape in the first
+promotion field.
+
 ## Artifacts
 
 Probe:
