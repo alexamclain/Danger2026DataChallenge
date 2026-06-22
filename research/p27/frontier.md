@@ -979,6 +979,13 @@ q1607/q1847/q2087 and finds no pair whose product matches `d3(B)`.  The next
 serious test is Magma/Sage divisor extraction for the descended `d3(B)` class,
 including possible irreducible quartic, cubic-plus-linear, or higher
 non-visible support, not another B-bucket scan.
+That extraction now has a concrete packet:
+[P27 B-Line Kummer Extraction Packet](evidence/p27_b_line_kummer_extraction_packet_20260622.md).
+It packages the quotient `B=8X^2/(X^2-1)^2`, the branch resultant
+`16384*B^3*(B+2)^2`, the source equations for the d3 all-plus cover over
+`P1_B`, and a q1607 Magma sanity fixture.  The next accepted B-line result is
+a normalization/genus/branch-divisor computation over q1607/q1847/q2087, not
+another visible-factor or bucket screen.
 
 The B-line target is now stronger than a one-bit descent:
 [P27 B-Line Extension Counts And Deep Descent](evidence/p27_b_line_extension_and_deep_descent_20260622.md).
