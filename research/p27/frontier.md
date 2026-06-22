@@ -620,6 +620,11 @@ and
 `research/p27/archive/fixtures/p27_full_quartic_gpu_suite_20260622.json`
 give the run order, verifier commands, exact packets, and promotion/kill
 rules for the remaining B-line/K-line monic-quartic test.
+If a hit appears, the promotion-side verifier is also ready:
+[P27 Quartic Hit Geometry Promotion Tool](evidence/p27_quartic_hit_geometry_promotion_tool_20260622.md)
+checks the frozen target rows and classifies `z^2=f(B)` or `z^2=f(K)` by
+squarefree degree, factor degrees, finite-field point count, and normalization
+genus.
 
 The fallback branch-extraction ask remains packaged as a separate concrete
 handoff:

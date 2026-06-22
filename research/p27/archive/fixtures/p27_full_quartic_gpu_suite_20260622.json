@@ -24,6 +24,7 @@
     "sample_hits",
     "throughput_triples_per_second",
     "verifier_pass_count",
+    "quartic_hit_geometry_result",
     "notes"
   ],
   "coordinate_suites": {

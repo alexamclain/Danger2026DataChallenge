@@ -1,0 +1,33 @@
+p27 quartic hit geometry analyzer
+coordinate = K
+packet = research/p27/archive/fixtures/p27_kline_quartic_targets_20260622.json
+field = 1471
+family = d3_on_K
+coeffs = 0,0,0,1
+polarity = 1
+verify_stats:
+  matches = 22
+  minus_rows = 22
+  mismatches = 28
+  plus_rows = 28
+  rows = 50
+  zeros = 0
+verifier_pass = 0
+geometry:
+  degree = 4
+  discriminant_mod_q = 256
+  factor_degrees = [(2, 1), (2, 1)]
+  normalization_genus = 1
+  repeated_gcd_degree = 0
+  squarefree_degree = 4
+  squarefree_factor_degrees = [(2, 1), (2, 1)]
+point_count:
+  affine_points = 1470
+  infinity_points_model = 2
+  nonsquare_x_values = 736
+  projective_points_model = 1472
+  square_x_values = 735
+  zero_x_values = 0
+promotion_read:
+  status = not_a_verified_hit
+p27_quartic_hit_geometry_rows=1/1

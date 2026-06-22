@@ -107,6 +107,20 @@ python3 -u research/p27/archive/gates/p27_b_line_quartic_verify.py \
   --field <q> --family <family> --coeffs <a,b,c,d> --polarity <1-or--1>
 ```
 
+Then run the promotion-side geometry analyzer:
+
+```bash
+PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=research/p27/archive/gates \
+python3 -u research/p27/archive/gates/p27_quartic_hit_geometry.py \
+  --coordinate <B-or-K> \
+  --field <q> \
+  --family <family> \
+  --coeffs <a,b,c,d> \
+  --polarity <1-or--1>
+```
+
+See [P27 Quartic Hit Geometry Promotion Tool](p27_quartic_hit_geometry_promotion_tool_20260622.md).
+
 Report:
 
 ```text
@@ -117,6 +131,7 @@ triples scanned
 exact quartics
 hit coefficients and polarity
 verifier result
+geometry analyzer result
 throughput
 any implementation notes
 ```
@@ -156,6 +171,7 @@ legal pullback cover, not more small proxy scans.
 - [P27 K-Line Even-Quartic Screen](p27_kline_even_quartic_screen_20260622.md)
 - [P27 K-Line Belyi-Reciprocal Quartic Screen](p27_kline_reciprocal_quartic_screen_20260622.md)
 - [P27 B-Line Belyi-Involution Quartic Screen](p27_b_line_involution_quartic_screen_20260622.md)
+- [P27 Quartic Hit Geometry Promotion Tool](p27_quartic_hit_geometry_promotion_tool_20260622.md)
 
 ```text
 p27_full_quartic_gpu_suite_handoff_rows=1/1
