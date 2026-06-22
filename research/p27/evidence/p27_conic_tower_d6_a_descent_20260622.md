@@ -170,6 +170,11 @@ This is only a CAS-routing screen; it does not promote GPU production unless a
 source law appears.
 ```
 
+Completed by [P27 A-Level Prefix Descent](p27_a_level_prefix_descent_20260622.md):
+on `12000 + 12000` p27 train/heldout samples, gates d3..d14 all have zero
+mixed A groups.  The survivor counts remain geometric, so this promotes
+A-line class extraction but not A-bucket production.
+
 3. GPU boundary.
 
 ```text

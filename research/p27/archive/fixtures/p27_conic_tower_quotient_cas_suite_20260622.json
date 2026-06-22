@@ -37,7 +37,8 @@
       "research/p27/evidence/p27_conic_pair_d4_recurrence_20260621.md",
       "research/p27/evidence/p27_conic_pair_d5_tower_20260621.md",
       "research/p27/evidence/p27_conic_tower_sign_quotient_20260622.md",
-      "research/p27/evidence/p27_conic_tower_d6_a_descent_20260622.md"
+      "research/p27/evidence/p27_conic_tower_d6_a_descent_20260622.md",
+      "research/p27/evidence/p27_a_level_prefix_descent_20260622.md"
     ],
     "killed_shortcuts": [
       "research/p27/evidence/p27_conic_pair_lowdegree_relation_20260621.md",
@@ -77,16 +78,17 @@
     },
     {
       "priority": 25,
-      "name": "A-level d4/d5/d6 Kummer class extraction",
+      "name": "A-level selected-prefix Kummer class extraction",
       "construct": "normalized A-level cover after quotienting finite conic signs and conditioning on the selected prefix",
       "compute": [
-        "branch divisors/classes for the A-level d4, d5, and d6 quadratic characters",
-        "whether d5 or d6 is a pullback, translate, coboundary, or iterate of the d4 class",
+        "branch divisors/classes for the A-level d3 through d10 quadratic characters",
+        "whether later d_j classes are pullbacks, translates, coboundaries, or iterates of earlier classes",
         "genus/component count of the common A-level cover carrying these characters",
-        "whether the class sequence gives a recurrence or sourceable walk controlling multiple selected gates"
+        "whether the class sequence gives a recurrence or sourceable walk controlling multiple selected gates",
+        "treat d11 through d14 as low-count routing evidence, not the first CAS target"
       ],
       "promote_if": "one low-genus/sourceable class or recurrence controls multiple selected gates beyond independent half-loss",
-      "kill_if": "d4, d5, and d6 are independent fresh half-covers on the normalized A-level object"
+      "kill_if": "d3 through d10 are independent fresh half-covers on the normalized A-level object"
     },
     {
       "priority": 30,

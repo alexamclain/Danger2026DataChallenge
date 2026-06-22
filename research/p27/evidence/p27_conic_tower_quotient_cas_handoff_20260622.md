@@ -70,6 +70,7 @@ d5 selector product repeats with zero mismatches
 legal conic-chain lift existence matches selected-prefix bits through depth 5
 obvious sign quotients preserve d5 on p27 train/heldout samples
 d6 also descends to A after d4-plus/d5-plus on p27 train/heldout samples
+p27 selected gates d3..d14 have zero mixed A groups in 12000/12000 samples
 ```
 
 Negative boundary:
@@ -81,6 +82,7 @@ p27 conic prefixes still thin like independent half-gates through useful counts
 selected one-step and two-step coordinates do not re-enter the original legal source
 sign quotients collapse only finite multiplicity and do not shrink A-space
 d6 A-descent still thins like ordinary A-prefix half-loss without a source law
+deeper A-prefix descent also stays near geometric half-loss through robust counts
 ```
 
 ## CAS Tasks
@@ -121,6 +123,10 @@ their quadratic branch divisors/classes.  Promote only if the characters are
 pullbacks, translates, coboundaries, or iterates of one low-genus/sourceable
 class.  Kill if they are independent fresh half-covers.
 
+[P27 A-Level Prefix Descent](p27_a_level_prefix_descent_20260622.md) extends
+the target to d3..d14 in samples.  For a first CAS pass, compute d3..d10 where
+sample counts are still healthy; use d11..d14 as routing evidence only.
+
 If a quotient/source map appears, measure:
 
 ```text
@@ -156,6 +162,7 @@ sampler pays the same constant/q legal-incidence denominator as free (R,L)
 - [P27 Conic Sign-Word Coupling Probe](p27_conic_signword_coupling_20260622.md)
 - [P27 Conic Tower Sign-Quotient Probe](p27_conic_tower_sign_quotient_20260622.md)
 - [P27 Conic Tower D6 A-Descent](p27_conic_tower_d6_a_descent_20260622.md)
+- [P27 A-Level Prefix Descent](p27_a_level_prefix_descent_20260622.md)
 - [P27 Conic-Pair Two-Step Kummer Screen](p27_conic_pair_two_step_kummer_20260621.md)
 - [P27 Conic-Pair Two-Step Kummer Trivariate Screen](p27_conic_pair_two_step_kummer_trivar_20260621.md)
 

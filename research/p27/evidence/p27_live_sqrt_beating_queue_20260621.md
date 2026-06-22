@@ -498,6 +498,12 @@ adds the current sharpest conic test: d6 also descends to A on p27
 train/heldout after d4-plus/d5-plus.  The next concrete sqrt-beating attempt is
 not GPU buckets; it is A-level Kummer class extraction for d4/d5/d6, looking
 for a repeated low-genus class, coboundary, or recurrence.
+The cheap deeper sanity check
+[P27 A-Level Prefix Descent](p27_a_level_prefix_descent_20260622.md)
+extends the positive side: d3..d14 all have zero mixed A groups on `12000 +
+12000` p27 train/heldout samples.  The negative side remains decisive for
+operations: counts stay near geometric half-loss, so this is class-extraction
+evidence, not a source-space shrink.
 
 The compact actionable version is the "Current Priority After Two-Step Kummer
 Screen" section of

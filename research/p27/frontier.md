@@ -839,6 +839,12 @@ On `1000 + 1000` p27 train/heldout rows, d6 has zero mixed `A` groups after
 d4-plus/d5-plus (`49` and `54` base-A groups respectively).  This promotes an
 A-level Kummer-class extraction for d4/d5/d6, but still not a GPU A-bucket run:
 the older A-prefix profile shows ordinary half-loss on A-space.
+The cheap deeper follow-up is stronger:
+[P27 A-Level Prefix Descent](evidence/p27_a_level_prefix_descent_20260622.md).
+On `12000 + 12000` p27 train/heldout samples, selected gates d3..d14 all have
+zero mixed A groups.  Robust counts through about d10 stay near the geometric
+half-loss baseline, so the moonshot target is a normalized A-line Kummer
+sequence/class extraction, not a prefix-count source.
 The direct sign-word coupling telemetry now agrees:
 [P27 Conic Sign-Word Coupling Probe](evidence/p27_conic_signword_coupling_20260622.md).
 On `4000 + 4000` p27 train/heldout unique `(A,x5)` rows, the all-plus conic
