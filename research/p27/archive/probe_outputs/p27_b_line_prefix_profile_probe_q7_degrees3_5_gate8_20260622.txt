@@ -1,0 +1,143 @@
+p27 B-line extension prefix-profile probe
+question = do B-line all-plus prefixes thin randomly or show coupling?
+GF(7^3) N=343 max_gate=8:
+  collect_stats:
+  B_group_size_16 = 9
+  candidate_invalid_not_nonsplit = 168
+  candidates = 144
+  compact_not_target = 181
+  d2_plus_candidates = 144
+  legal_B = 9
+  skip_B_degenerate = 2
+  source_rows = 156
+  unique_A_x5 = 36
+  prefix_stats:
+  gate3_active_B = 9
+  gate3_minus_B = 9
+  gate3_prefix_plus_B = 0
+  gate3_scaled_x1000000 = 0
+  gate4_active_B = 0
+  gate4_prefix_plus_B = 0
+  gate4_scaled_x1000000 = 0
+  gate5_active_B = 0
+  gate5_prefix_plus_B = 0
+  gate5_scaled_x1000000 = 0
+  gate6_active_B = 0
+  gate6_prefix_plus_B = 0
+  gate6_scaled_x1000000 = 0
+  gate7_active_B = 0
+  gate7_prefix_plus_B = 0
+  gate7_scaled_x1000000 = 0
+  gate8_active_B = 0
+  gate8_prefix_plus_B = 0
+  gate8_scaled_x1000000 = 0
+  initial_legal_B = 9
+  pattern_stats:
+  first_stop_gate_3_minus = 9
+  pattern_minus,missing,missing,missing,missing,missing = 9
+  scaled_prefix:
+    gate3: plus=0 rate=0.000000000 scaled=0.000000000
+    gate4: plus=0 rate=0.000000000 scaled=0.000000000
+    gate5: plus=0 rate=0.000000000 scaled=0.000000000
+    gate6: plus=0 rate=0.000000000 scaled=0.000000000
+    gate7: plus=0 rate=0.000000000 scaled=0.000000000
+    gate8: plus=0 rate=0.000000000 scaled=0.000000000
+GF(7^4) N=2401 max_gate=8:
+  collect_stats:
+  B_group_size_8 = 72
+  candidate_invalid_not_nonsplit = 840
+  candidates = 1344
+  compact_not_target = 1197
+  d2_minus = 768
+  d2_plus_candidates = 576
+  legal_B = 72
+  skip_B_degenerate = 2
+  source_rows = 1092
+  unique_A_x5 = 288
+  prefix_stats:
+  gate3_active_B = 72
+  gate3_minus_B = 40
+  gate3_plus_B = 32
+  gate3_prefix_plus_B = 32
+  gate3_scaled_x1000000 = 888888
+  gate4_active_B = 32
+  gate4_minus_B = 32
+  gate4_prefix_plus_B = 0
+  gate4_scaled_x1000000 = 0
+  gate5_active_B = 0
+  gate5_prefix_plus_B = 0
+  gate5_scaled_x1000000 = 0
+  gate6_active_B = 0
+  gate6_prefix_plus_B = 0
+  gate6_scaled_x1000000 = 0
+  gate7_active_B = 0
+  gate7_prefix_plus_B = 0
+  gate7_scaled_x1000000 = 0
+  gate8_active_B = 0
+  gate8_prefix_plus_B = 0
+  gate8_scaled_x1000000 = 0
+  initial_legal_B = 72
+  pattern_stats:
+  first_stop_gate_3_minus = 40
+  first_stop_gate_4_minus = 32
+  pattern_minus,missing,missing,missing,missing,missing = 40
+  pattern_plus,minus,missing,missing,missing,missing = 32
+  scaled_prefix:
+    gate3: plus=32 rate=0.444444444 scaled=0.888888889
+    gate4: plus=0 rate=0.000000000 scaled=0.000000000
+    gate5: plus=0 rate=0.000000000 scaled=0.000000000
+    gate6: plus=0 rate=0.000000000 scaled=0.000000000
+    gate7: plus=0 rate=0.000000000 scaled=0.000000000
+    gate8: plus=0 rate=0.000000000 scaled=0.000000000
+GF(7^5) N=16807 max_gate=8:
+  collect_stats:
+  B_group_size_16 = 590
+  candidate_invalid_not_nonsplit = 8400
+  candidates = 9440
+  compact_not_target = 7881
+  d2_plus_candidates = 9440
+  legal_B = 590
+  skip_B_degenerate = 2
+  source_rows = 8920
+  unique_A_x5 = 2360
+  prefix_stats:
+  gate3_active_B = 590
+  gate3_minus_B = 275
+  gate3_plus_B = 315
+  gate3_prefix_plus_B = 315
+  gate3_scaled_x1000000 = 1067796
+  gate4_active_B = 315
+  gate4_minus_B = 175
+  gate4_plus_B = 140
+  gate4_prefix_plus_B = 140
+  gate4_scaled_x1000000 = 949152
+  gate5_active_B = 140
+  gate5_plus_B = 140
+  gate5_prefix_plus_B = 140
+  gate5_scaled_x1000000 = 1898305
+  gate6_active_B = 140
+  gate6_minus_B = 140
+  gate6_prefix_plus_B = 0
+  gate6_scaled_x1000000 = 0
+  gate7_active_B = 0
+  gate7_prefix_plus_B = 0
+  gate7_scaled_x1000000 = 0
+  gate8_active_B = 0
+  gate8_prefix_plus_B = 0
+  gate8_scaled_x1000000 = 0
+  initial_legal_B = 590
+  pattern_stats:
+  first_stop_gate_3_minus = 275
+  first_stop_gate_4_minus = 175
+  first_stop_gate_6_minus = 140
+  pattern_minus,missing,missing,missing,missing,missing = 275
+  pattern_plus,minus,missing,missing,missing,missing = 175
+  pattern_plus,plus,plus,minus,missing,missing = 140
+  scaled_prefix:
+    gate3: plus=315 rate=0.533898305 scaled=1.067796610
+    gate4: plus=140 rate=0.237288136 scaled=0.949152542
+    gate5: plus=140 rate=0.237288136 scaled=1.898305085
+    gate6: plus=0 rate=0.000000000 scaled=0.000000000
+    gate7: plus=0 rate=0.000000000 scaled=0.000000000
+    gate8: plus=0 rate=0.000000000 scaled=0.000000000
+p27_b_line_prefix_profile_probe_rows=1/1

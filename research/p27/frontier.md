@@ -1242,6 +1242,31 @@ Equivalent x-square request: report prefix filters as `x_4 square`,
 `x_4,x_5 square`, and `x_4,x_5,x_6 square`.  For nonsplit rows this is the same
 gate sequence and is the cleaner 2-descent language.
 
+### Card 4b: B-Line Prefix Profile
+
+The B-line quotient is exact structure but not a direct source win:
+[P27 B-Line Prefix Profile](evidence/p27_b_line_prefix_profile_20260622.md).
+
+The original `Bplus` value still determines the selected gate sequence in
+p27 samples, with no mixed B groups through `d16` in the latest
+`4000 + 4000` train/heldout check.  But the all-plus population thins close
+to one independent half-loss per gate through the meaningful range:
+
+```text
+p27 train gate3..gate10 plus counts:
+  2018, 1024, 505, 241, 126, 66, 28, 12 out of 4000
+
+p27 heldout gate3..gate10 plus counts:
+  2048, 1008, 500, 240, 110, 63, 31, 18 out of 4000
+```
+
+Small exact guard fields sometimes show late all-plus plateaus, but the
+collapse gate varies by field.  Treat those as finite-field artifacts unless a
+named divisor/Kummer relation explains them and survives p27 rows.
+
+Status: B-line remains a clean Kummer-class extraction surface; do not run a
+large GPU production search based only on Bplus buckets.
+
 ### Card 5: Elliptic Line Identity
 
 Use the model:

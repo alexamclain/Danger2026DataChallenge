@@ -189,6 +189,13 @@ while p27 train/heldout deep-descent probes show no mixed B groups through
 moonshot target is the sequence of B-line Kummer classes
 `f3(B), f4(B), f5(B), ...`; a recurrence or coupling among those classes is
 the first credible way for this lane to beat independent sqrt-scale half-loss.
+The B-line prefix profile now gives the next verdict:
+[P27 B-Line Prefix Profile](p27_b_line_prefix_profile_20260622.md).  Exact
+small fields show late all-plus plateaus, but the plateau/kill gate changes
+with the field.  On p27 itself, a `4000 + 4000` B-group train/heldout run
+through `d16` thins essentially by independent half-gates through the useful
+range.  This keeps B as a Kummer-class extraction surface but kills Bplus
+bucket counts as a direct scope-shrink or production GPU reason.
 The two-step Kummer quotient screen is now negative too.  After adjoining the
 first root `Z0`, the next selector `S1`, and when available the second root
 `Z1`, all obvious selector/root pair systems are full-rank through degree 12 on
@@ -372,11 +379,12 @@ Ranked next moves:
 ```text
 1. Theory/CAS: staged legal pullback / quotient decomposition of the repeated
    conic-chain Kummer tower with Z_j^2=-(L_j+a_j)(L_j-a_j)c*r_{j+1}.
-2. GPU/structure: recurrence telemetry and legal-pullback sampler only, not
-   raw random `(R,L)` and not simple two-step Kummer bucket searches.
+2. Theory/CAS: exact E/E' or B-line divisor/Kummer class extraction for
+   d3/d4, with class comparison rather than visible-factor scans.
 3. Theory/lit/expert: trace/norm half-norm phase identity for pref vs h*vq.
-4. Production GPU: no moonshot-scale run without a quotient/source or measured
-   heldout efficiency gain.
+4. GPU/structure: bounded recurrence telemetry and legal-pullback sampler
+   only; no raw `(R,L)`, no simple two-step bucket searches, and no Bplus-only
+   production run.
 ```
 
 The compact actionable version is the "Current Priority After Two-Step Kummer

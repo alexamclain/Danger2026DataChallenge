@@ -1642,6 +1642,14 @@ quotient family: pair systems are flat through degree 12, and the obvious
 trivariate systems are flat through degree 6.  The current test queue should
 now be this compact list:
 
+Update after B-line prefix profiling:
+[P27 B-Line Prefix Profile](p27_b_line_prefix_profile_20260622.md) keeps
+`Bplus` as an exact descent coordinate but demotes B-bucket counting.  Small
+exact fields have late all-plus plateaus, while p27 `4000 + 4000` B-group
+train/heldout samples thin like independent half-gates through the meaningful
+range.  B-line work should therefore be divisor/Kummer extraction, not GPU
+production or bucket scoring.
+
 ### Test A: Staged Legal Pullback Normalization
 
 Build the legal pullback in stages rather than as one web-Magma monolith:
@@ -1701,7 +1709,35 @@ d3 and d4 land in unrelated classes and no low-degree quotient/translation
 survives the guard fields
 ```
 
-### Test C: Bounded GPU Legal-Pullback Telemetry
+### Test C: B-Line Kummer-Class Extraction
+
+Use `B = 8X^2/(X^2-1)^2` and `A + 2 = B^2` as the rational line coordinate.
+Extract the actual Kummer classes:
+
+```text
+f3(B), f4(B), f5(B), ...
+```
+
+Do not continue rational-linear or small visible-factor product scans.  The
+needed output is branch divisor support, class degree, and a comparison such
+as translate, pullback, norm, recurrence, or independence.
+
+Promotion bar:
+
+```text
+a named divisor/Kummer relation that predicts at least one later gate from an
+earlier class with zero mismatches on q1607/q1847/q2087 and p27 heldout rows,
+plus a source/sampler interpretation that avoids a fresh half-loss
+```
+
+Kill condition:
+
+```text
+the classes remain independent in the divisor/Kummer group, or the only
+relations are small-field Frobenius artifacts that do not survive p27 samples
+```
+
+### Test D: Bounded GPU Legal-Pullback Telemetry
 
 Only run this if the GPU implementation samples legal pullback rows, not free
 random `(R,L)`.
@@ -1731,7 +1767,7 @@ the sampler is just free `(R,L)`, legal hits are still constant/q, or the
 pullback pays the same Legendre/square-root toll as ordinary halving
 ```
 
-### Test D: Trace/Norm Half-Norm Phase Identity
+### Test E: Trace/Norm Half-Norm Phase Identity
 
 Use this as an expert/theorem ask, not as another product scan.  The target is
 the same-boundary Hilbert-90 pair:
@@ -1759,6 +1795,8 @@ anti-trace squareclasses
 Current decision:
 
 ```text
-GPU is justified for Test C telemetry only after a legal pullback sampler
-exists.  Without that, the next best work is CAS/theory on Test A or Test B.
+GPU is justified for Test D telemetry only after a legal pullback sampler
+exists.  Without that, the next best work is CAS/theory on Test A, Test B, or
+Test C.  Bplus-only GPU telemetry is bounded validation, not a production
+moonshot.
 ```

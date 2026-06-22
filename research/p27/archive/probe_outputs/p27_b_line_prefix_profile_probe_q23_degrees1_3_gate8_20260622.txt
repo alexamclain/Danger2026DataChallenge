@@ -1,0 +1,128 @@
+p27 B-line extension prefix-profile probe
+question = do B-line all-plus prefixes thin randomly or show coupling?
+GF(23^1) N=23 max_gate=8:
+  collect_stats:
+  candidate_invalid_not_nonsplit = 8
+  compact_not_target = 13
+  legal_B = 0
+  skip_B_degenerate = 2
+  source_rows = 4
+  unique_A_x5 = 0
+  prefix_stats:
+  gate3_active_B = 0
+  gate3_prefix_plus_B = 0
+  gate4_active_B = 0
+  gate4_prefix_plus_B = 0
+  gate5_active_B = 0
+  gate5_prefix_plus_B = 0
+  gate6_active_B = 0
+  gate6_prefix_plus_B = 0
+  gate7_active_B = 0
+  gate7_prefix_plus_B = 0
+  gate8_active_B = 0
+  gate8_prefix_plus_B = 0
+  initial_legal_B = 0
+  pattern_stats:
+GF(23^2) N=529 max_gate=8:
+  collect_stats:
+  B_group_size_8 = 8
+  candidate_invalid_not_nonsplit = 320
+  candidates = 192
+  compact_not_target = 273
+  d2_minus = 128
+  d2_plus_candidates = 64
+  legal_B = 8
+  skip_B_degenerate = 2
+  source_rows = 256
+  unique_A_x5 = 32
+  prefix_stats:
+  gate3_active_B = 8
+  gate3_plus_B = 8
+  gate3_prefix_plus_B = 8
+  gate3_scaled_x1000000 = 2000000
+  gate4_active_B = 8
+  gate4_plus_B = 8
+  gate4_prefix_plus_B = 8
+  gate4_scaled_x1000000 = 4000000
+  gate5_active_B = 8
+  gate5_plus_B = 8
+  gate5_prefix_plus_B = 8
+  gate5_scaled_x1000000 = 8000000
+  gate6_active_B = 8
+  gate6_minus_B = 8
+  gate6_prefix_plus_B = 0
+  gate6_scaled_x1000000 = 0
+  gate7_active_B = 0
+  gate7_prefix_plus_B = 0
+  gate7_scaled_x1000000 = 0
+  gate8_active_B = 0
+  gate8_prefix_plus_B = 0
+  gate8_scaled_x1000000 = 0
+  initial_legal_B = 8
+  pattern_stats:
+  first_stop_gate_6_minus = 8
+  pattern_plus,plus,plus,minus,missing,missing = 8
+  scaled_prefix:
+    gate3: plus=8 rate=1.000000000 scaled=2.000000000
+    gate4: plus=8 rate=1.000000000 scaled=4.000000000
+    gate5: plus=8 rate=1.000000000 scaled=8.000000000
+    gate6: plus=0 rate=0.000000000 scaled=0.000000000
+    gate7: plus=0 rate=0.000000000 scaled=0.000000000
+    gate8: plus=0 rate=0.000000000 scaled=0.000000000
+GF(23^3) N=12167 max_gate=8:
+  collect_stats:
+  B_group_size_16 = 399
+  candidate_invalid_not_nonsplit = 6080
+  candidates = 6384
+  compact_not_target = 5929
+  d2_plus_candidates = 6384
+  legal_B = 399
+  skip_B_degenerate = 2
+  source_rows = 6232
+  unique_A_x5 = 1596
+  prefix_stats:
+  gate3_active_B = 399
+  gate3_minus_B = 183
+  gate3_plus_B = 216
+  gate3_prefix_plus_B = 216
+  gate3_scaled_x1000000 = 1082706
+  gate4_active_B = 216
+  gate4_minus_B = 96
+  gate4_plus_B = 120
+  gate4_prefix_plus_B = 120
+  gate4_scaled_x1000000 = 1203007
+  gate5_active_B = 120
+  gate5_minus_B = 36
+  gate5_plus_B = 84
+  gate5_prefix_plus_B = 84
+  gate5_scaled_x1000000 = 1684210
+  gate6_active_B = 84
+  gate6_plus_B = 84
+  gate6_prefix_plus_B = 84
+  gate6_scaled_x1000000 = 3368421
+  gate7_active_B = 84
+  gate7_plus_B = 84
+  gate7_prefix_plus_B = 84
+  gate7_scaled_x1000000 = 6736842
+  gate8_active_B = 84
+  gate8_plus_B = 84
+  gate8_prefix_plus_B = 84
+  gate8_scaled_x1000000 = 13473684
+  initial_legal_B = 399
+  pattern_stats:
+  first_stop_gate_3_minus = 183
+  first_stop_gate_4_minus = 96
+  first_stop_gate_5_minus = 36
+  pattern_minus,missing,missing,missing,missing,missing = 183
+  pattern_plus,minus,missing,missing,missing,missing = 96
+  pattern_plus,plus,minus,missing,missing,missing = 36
+  pattern_plus,plus,plus,plus,plus,plus = 84
+  survives_through_gate_8 = 84
+  scaled_prefix:
+    gate3: plus=216 rate=0.541353383 scaled=1.082706767
+    gate4: plus=120 rate=0.300751880 scaled=1.203007519
+    gate5: plus=84 rate=0.210526316 scaled=1.684210526
+    gate6: plus=84 rate=0.210526316 scaled=3.368421053
+    gate7: plus=84 rate=0.210526316 scaled=6.736842105
+    gate8: plus=84 rate=0.210526316 scaled=13.473684211
+p27_b_line_prefix_profile_probe_rows=1/1
