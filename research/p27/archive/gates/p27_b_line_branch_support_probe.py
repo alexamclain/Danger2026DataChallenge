@@ -1,10 +1,9 @@
 #!/usr/bin/env python3
-"""Rational-linear branch support screen on the p27 B-line.
+"""Branch support screen on the p27 B-line.
 
 The B-source descent probe shows that the d3 and d4 bits descend to Bplus on
 the legal source.  This probe asks whether those descended bits are low-degree
-Kummer characters supported on rational B-line points, i.e. products of a few
-linear factors B-a.
+Kummer characters on P1_B.
 """
 
 from __future__ import annotations
@@ -204,13 +203,74 @@ def irreducible_quadratic_plus_linear_search(
     return stats, None
 
 
+def squareclass_table(q: int) -> list[int]:
+    chars = [-1] * q
+    chars[0] = 0
+    for a in range(1, q):
+        chars[a * a % q] = 1
+    return chars
+
+
+def irreducible_quadratic_pair_search(
+    q: int, rows: list[tuple[int, int]]
+) -> tuple[Counter, tuple[tuple[int, int], tuple[int, int], int] | None]:
+    """Search products of two monic irreducible quadratics on P1_B.
+
+    This is the missing structured degree-4 Kummer-class test after rational
+    factors and one-quadratic-plus-linears.  It is a meet-in-the-middle over
+    character vectors on the legal B rows, not an unrestricted coefficient fit.
+    """
+
+    stats: Counter = Counter()
+    n = len(rows)
+    target = mask_for_rows(rows)
+    full = (1 << n) - 1
+    domain = [B for B, _bit in rows]
+    chars = squareclass_table(q)
+    seen: dict[int, tuple[int, int]] = {}
+    stats["rows"] = n
+    stats["plus_rows"] = sum(1 for _B, bit in rows if bit == 0)
+    stats["minus_rows"] = sum(1 for _B, bit in rows if bit == 1)
+    stats["target_weight"] = popcount(target)
+
+    for u in range(q):
+        for v in range(q):
+            disc = (u * u - 4 * v) % q
+            if chars[disc] != -1:
+                continue
+            mask = 0
+            for index, B in enumerate(domain):
+                value = (B * B + u * B + v) % q
+                if chars[value] == -1:
+                    mask |= 1 << index
+            stats["irreducible_quadratics_tested"] += 1
+
+            if mask == target:
+                return stats, ((u, v), (-1, -1), 1)
+            if (mask ^ full) == target:
+                return stats, ((u, v), (-1, -1), -1)
+
+            need = mask ^ target
+            if need in seen:
+                stats["unique_quadratic_masks_before_hit"] = len(seen)
+                return stats, ((u, v), seen[need], 1)
+            need = mask ^ (target ^ full)
+            if need in seen:
+                stats["unique_quadratic_masks_before_hit"] = len(seen)
+                return stats, ((u, v), seen[need], -1)
+            seen.setdefault(mask, (u, v))
+
+    stats["unique_quadratic_masks"] = len(seen)
+    return stats, None
+
+
 def print_counter(prefix: str, stats: Counter) -> None:
     print(f"{prefix}:")
     for key in sorted(stats):
         print(f"  {key} = {stats[key]}")
 
 
-def run_field(q: int, max_weight: int, quadratic_d3: bool) -> None:
+def run_field(q: int, max_weight: int, quadratic_d3: bool, quadratic_pair_d3: bool) -> None:
     d3, d4, stats = legal_b_maps(q)
     core = core_b_values(q)
     stats["core_B"] = len(core)
@@ -248,21 +308,38 @@ def run_field(q: int, max_weight: int, quadratic_d3: bool) -> None:
                     f"linear_factors={','.join(str(f) for f in factors) if factors else 'none'}"
                 )
 
+        if quadratic_pair_d3 and name == "d3_on_legalB":
+            pair_stats, pair_solution = irreducible_quadratic_pair_search(q, rows)
+            print_counter(f"q{q}_{name}_two_quadratic_support_stats", pair_stats)
+            if pair_solution is None:
+                print(f"q{q}_{name}_two_quadratic_support_result: none_two_irreducible_quadratics")
+            else:
+                q0, q1, polarity = pair_solution
+                q0_label = "single" if q1 == (-1, -1) else f"B^2+{q1[0]}B+{q1[1]}"
+                print(
+                    f"q{q}_{name}_two_quadratic_support_result: "
+                    f"polarity={polarity} "
+                    f"quadratic0=B^2+{q0[0]}B+{q0[1]} "
+                    f"quadratic1={q0_label}"
+                )
+
 
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--small-primes", default="607,1607,1847,2087")
     parser.add_argument("--max-weight", type=int, default=4)
     parser.add_argument("--quadratic-d3", action="store_true")
+    parser.add_argument("--quadratic-pair-d3", action="store_true")
     args = parser.parse_args()
 
-    print("p27 B-line rational-linear branch-support probe")
+    print("p27 B-line branch-support probe")
     print("screens = d2 legal on core B, d3 on legal B, d4 after d3 on legal B")
-    print("factor family = products of distinct rational factors B-a")
+    print("factor families = rational linears; optional irreducible quadratic tests")
     print(f"max_weight = {args.max_weight}")
     print(f"quadratic_d3 = {args.quadratic_d3}")
+    print(f"quadratic_pair_d3 = {args.quadratic_pair_d3}")
     for q in parse_ints(args.small_primes):
-        run_field(q, args.max_weight, args.quadratic_d3)
+        run_field(q, args.max_weight, args.quadratic_d3, args.quadratic_pair_d3)
     print("p27_b_line_branch_support_probe_rows=1/1")
     return 0
 

@@ -241,6 +241,14 @@ branch-support search such as two irreducible quadratic factors only if it is
 implemented as a structured Kummer-class computation rather than another
 bucket scan.
 
+Update: the structured two-quadratic follow-up is now complete:
+[P27 B-Line Two-Quadratic Support Screen](p27_b_line_two_quadratic_support_20260622.md).
+It enumerates every pair possibility by meet-in-the-middle over all monic
+irreducible quadratic character vectors in q1607/q1847/q2087 and finds no
+exact support for `d3(B)`.  This kills the split degree-4 B-line path, while
+leaving irreducible quartic, cubic-plus-linear, or higher/non-visible Kummer
+classes to actual divisor extraction.
+
 ## Continue / Kill
 
 ```text
@@ -251,6 +259,7 @@ continue = test whether the extracted class recurs for d4/d5
 kill = B-atom products as d3/d4 predictors
 kill = rational-linear branch support of degree <= 4
 kill = one irreducible quadratic plus <=2 rational linears for d3
+kill = two irreducible quadratic branch factors for d3
 kill = large GPU search from B without an extracted class or sampler
 ```
 
