@@ -883,6 +883,13 @@ maps occur only in small-field one-sided tails with field-dependent signs and
 stop gates.  Thus an A-line win must be a normalized Kummer class,
 non-affine correspondence, coboundary, or higher structure, not a cheap
 degree-one A recurrence.
+The full degree-one rational A-line recurrence is killed as well:
+[P27 A-Line PGL2 Recurrence Screen](evidence/p27_a_line_pgl2_recurrence_screen_20260622.md).
+It enumerates every full-coverage PGL2 map
+`A -> (aA+b)/(cA+d)` for the same `d3 -> d4` transition.  q1607, q1847, and
+q2087 all have zero exact PGL2 recurrences; again the best maps are identity
+with raw d4-bias scores.  Do not spend more agent or GPU time on degree-one
+A-line recurrence scans unless a theorem supplies a different object.
 The direct sign-word coupling telemetry now agrees:
 [P27 Conic Sign-Word Coupling Probe](evidence/p27_conic_signword_coupling_20260622.md).
 On `4000 + 4000` p27 train/heldout unique `(A,x5)` rows, the all-plus conic

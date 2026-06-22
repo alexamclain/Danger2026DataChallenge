@@ -401,6 +401,17 @@ signs.  Do not spend GPU or agent time on degree-one A recurrence scans unless
 a source theorem names a non-affine correspondence to test.
 ```
 
+Full PGL2 recurrence update:
+[P27 A-Line PGL2 Recurrence Screen](p27_a_line_pgl2_recurrence_screen_20260622.md).
+
+```text
+No full-coverage PGL2 map A -> (a*A+b)/(c*A+d) carries d3 to d4 in
+q1607/q1847/q2087.  The best full-coverage map is still identity with raw d4
+majority bias: 19/28, 26/45, and 18/25.  Do not spend GPU or agent time on
+degree-one rational A-line recurrence scans; next A-line work is normalized
+class extraction or a theorem-shaped higher correspondence.
+```
+
 A-cover packet:
 [P27 A-Level Kummer Extraction Packet](p27_a_level_kummer_extraction_packet_20260622.md).
 

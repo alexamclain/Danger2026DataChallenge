@@ -173,6 +173,10 @@ Completed recurrence falsifier:
 kills full-coverage affine maps `A -> m*A+b` for the first meaningful
 `d3 -> d4` transition in q1607/q1847/q2087.  Later exact identity maps occur
 only in one-sided small-field tails, so they do not promote a p27 recurrence.
+[P27 A-Line PGL2 Recurrence Screen](p27_a_line_pgl2_recurrence_screen_20260622.md)
+extends the falsifier to every full-coverage degree-one rational map
+`A -> (aA+b)/(cA+d)` and again finds zero exact `d3 -> d4` recurrences in the
+same promotion fields.
 
 Packetized as:
 [P27 A-Level Kummer Extraction Packet](p27_a_level_kummer_extraction_packet_20260622.md),
@@ -191,11 +195,12 @@ A-level/legal-pullback sampler or recurrence beats source-normalized half-loss.
 
 ```text
 continue = normalized A-level Kummer class extraction
-continue = theorem-guided non-affine correspondence tests only if sourced
+continue = theorem-guided higher correspondence tests only if sourced
 continue = bounded GPU A-prefix telemetry only if class extraction needs scale
 
 kill = A-prefix count as a source shrink
 kill = affine A-line recurrence d_{j+1}(A)=+/-d_j(m*A+b)
+kill = degree-one rational A-line recurrence
 kill = GPU A-bucket/sign-bucket production from zero mixed groups alone
 kill = small-field plateau extrapolation
 ```

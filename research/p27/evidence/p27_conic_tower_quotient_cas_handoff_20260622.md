@@ -85,6 +85,7 @@ d6 A-descent still thins like ordinary A-prefix half-loss without a source law
 deeper A-prefix descent also stays near geometric half-loss through robust counts
 visible degree <=4 A-line branch support is killed for d3 in q1607/q1847/q2087
 affine A-line recurrence d_{j+1}(A)=+/-d_j(m*A+b) is killed for d3 -> d4
+full PGL2 A-line recurrence is killed for d3 -> d4
 ```
 
 ## CAS Tasks
@@ -144,6 +145,9 @@ actual normalized-cover/Kummer classes, not an A-branch orbit quotient.
 also closes the broader degree-one recurrence shortcut: no full-coverage
 affine map carries `d3` to `d4` in q1607/q1847/q2087.  Any new correspondence
 test should therefore be theorem-shaped and non-affine.
+[P27 A-Line PGL2 Recurrence Screen](p27_a_line_pgl2_recurrence_screen_20260622.md)
+closes the full degree-one rational version as well: no full-coverage PGL2 map
+`A -> (aA+b)/(cA+d)` carries `d3` to `d4` in the same promotion fields.
 
 If a quotient/source map appears, measure:
 
@@ -170,7 +174,7 @@ Kill:
 high-genus/generic legal pullback after quotienting obvious symmetries
 d5 is a fresh independent half-cover on every low-genus quotient
 sampler pays the same constant/q legal-incidence denominator as free (R,L)
-only degree-one A-line recurrences or small-field identity tails appear
+only degree-one A-line/PGL2 recurrences or small-field identity tails appear
 ```
 
 ## Linked Artifacts
@@ -186,6 +190,7 @@ only degree-one A-line recurrences or small-field identity tails appear
 - [P27 A-Level Kummer Extraction Packet](p27_a_level_kummer_extraction_packet_20260622.md)
 - [P27 A-Line Named-Transform Recurrence Screen](p27_a_line_named_transform_recurrence_20260622.md)
 - [P27 A-Line Affine Recurrence Screen](p27_a_line_affine_recurrence_screen_20260622.md)
+- [P27 A-Line PGL2 Recurrence Screen](p27_a_line_pgl2_recurrence_screen_20260622.md)
 - [P27 Conic-Pair Two-Step Kummer Screen](p27_conic_pair_two_step_kummer_20260621.md)
 - [P27 Conic-Pair Two-Step Kummer Trivariate Screen](p27_conic_pair_two_step_kummer_trivar_20260621.md)
 

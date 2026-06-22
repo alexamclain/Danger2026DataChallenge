@@ -18,6 +18,12 @@ This kills the first nontrivial sourceable-map shortcut after A-prefix descent.
 The live A-line route remains normalized Kummer/divisor class extraction, not
 an affine A-map recurrence.
 
+Follow-up:
+[P27 A-Line PGL2 Recurrence Screen](p27_a_line_pgl2_recurrence_screen_20260622.md)
+extends this falsifier from affine maps to every full-coverage degree-one
+rational map on `P1_A`.  It also finds zero exact `d3 -> d4` recurrences in
+q1607/q1847/q2087.
+
 ## Artifacts
 
 Probe:
@@ -163,10 +169,11 @@ This does not justify an A-bucket GPU run.
 
 ```text
 continue = normalized A-level Kummer/divisor class extraction
-continue = theorem-guided correspondence tests if a source suggests one
+continue = theorem-guided higher correspondence tests if a source suggests one
 continue = bounded A-prefix telemetry only as class-extraction input
 
 kill = affine A-line recurrence d_{j+1}(A)=+/-d_j(m*A+b)
+kill = broader degree-one PGL2 A-line recurrence
 kill = interpreting later small-field identity plateaus as a p27 recurrence
 kill = GPU A-bucket production from A-prefix descent alone
 ```

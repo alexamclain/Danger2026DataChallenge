@@ -182,6 +182,13 @@ q1607/q1847/q2087.  This rules out the easiest sourceable-map interpretation
 of the A-descent and pushes the conic tower back to normalized class
 extraction or theorem-guided correspondences.
 
+The broader degree-one rational version is killed too:
+[P27 A-Line PGL2 Recurrence Screen](p27_a_line_pgl2_recurrence_screen_20260622.md).
+No full-coverage PGL2 map `A -> (a*A+b)/(c*A+d)` carries `d3` to `d4` in
+q1607/q1847/q2087; the best full-coverage maps are identity majority baselines.
+This closes the cheap PGL2 recurrence interpretation before CAS class
+extraction.
+
 3. GPU boundary.
 
 ```text
@@ -200,6 +207,7 @@ continue = theorem-guided non-affine correspondence tests only if sourced
 kill = GPU sign-bucket search in conic tower signs
 kill = A-prefix counts as a source shrink without a low-genus/source law
 kill = affine A-line recurrence d_{j+1}(A)=+/-d_j(m*A+b)
+kill = degree-one rational A-line recurrence d_{j+1}(A)=+/-d_j((a*A+b)/(c*A+d))
 kill = treating small-field constant tails as p27 production evidence
 ```
 
