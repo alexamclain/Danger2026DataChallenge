@@ -102,6 +102,14 @@ low-support side has no exact named atom, linear, or irreducible-quadratic
 `B` character.  Thus the norm-support profile is a branch/ramification target,
 not a B-bucket source.
 
+Next-gate quotient follow-up:
+[P27 B-Line No-R Beta_U Norm/F4 Descent](p27_b_line_noR_betaU_norm_f4_descent_20260622.md)
+shows that the norm map does not carry `f4`.  In
+`71^2,167^2,199^2,263^2,311^2`, `f4` is mixed on every active `B`, and remains
+mostly mixed even after grouping by the finer quotient `(B, Norm(Unext+2))`.
+So beta_U is a one-gate/materialization class unless a non-visible normalized
+Prym relation appears.
+
 ## Interpretation
 
 Positive:
@@ -144,10 +152,12 @@ for a fresh half-cover, not a GPU production mode.
 continue = beta_U quotient/Prym extraction using norm-support profile as a target
 continue = compare beta_U norm ramification with f4/f3 after normalization
 continue = include norm-value support counts in offline CAS regression
+continue = include (B,N) f4 mixed counts as a next-gate regression
 
 kill = treating distinct norm-value count as a production sampler
 kill = GPU beta_U buckets without a source map
 kill = atom/linear/quadratic B-character explanations for the low-support side
+kill = f4 as a function of B, N, or (B,N)
 kill = broad visible (B,Norm) plane-curve scans already killed through B12_N16
 ```
 
@@ -155,6 +165,7 @@ kill = broad visible (B,Norm) plane-curve scans already killed through B12_N16
 
 - [P27 B-Line No-R Beta_U Norm Descent](p27_b_line_noR_betaU_norm_descent_20260622.md)
 - [P27 B-Line No-R Beta_U B-Character Replay](p27_b_line_noR_betaU_b_character_replay_20260622.md)
+- [P27 B-Line No-R Beta_U Norm/F4 Descent](p27_b_line_noR_betaU_norm_f4_descent_20260622.md)
 - [P27 B-Line No-R Beta_U Norm Relation Screen](p27_b_line_noR_betaU_norm_relation_20260622.md)
 - [P27 B-Line No-R Beta_U Next-Gate Probe](p27_b_line_noR_betaU_next_gate_20260622.md)
 - [P27 No-R Quotient/Prym Test Packet](p27_noR_quotient_prym_test_packet_20260622.md)

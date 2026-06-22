@@ -50,6 +50,8 @@ no-R beta_U norm-fiber profile = gamma+ is exactly low norm-support degree
     1 or 8, while gamma- has support degree 9,12,14,16 in tested q^2 fields
 no-R beta_U B-character replay = q199/q263/q311 kill atom/linear/irreducible
     quadratic B-character explanations for gamma/low-support side
+no-R beta_U norm/f4 descent = f4 is mixed on B, N, and (B,N), so the norm map
+    is not a two-gate quotient
 no-R beta_U norm relation = no stable low-bidegree (B,Norm) plane curve
 no-R beta_U next-gate = gamma+ materializes cleanly but f4 is mixed inside every active B
 no-R beta_U f4 pair = x7-pair norm -4*(A*x6+1) exact, but no pair-level sampler
@@ -207,6 +209,18 @@ research/p27/evidence/p27_b_line_noR_betaU_b_character_replay_20260622.md
 adds that the low-support side is not an atom, linear, or irreducible
 quadratic base-`B` character in q199/q263/q311.  This keeps the beta_U target
 at divisor/Kummer/ramification extraction rather than bucket screening.
+
+The norm/f4 descent check:
+
+```text
+research/p27/evidence/p27_b_line_noR_betaU_norm_f4_descent_20260622.md
+```
+
+kills the closest two-gate quotient: after gamma-positive beta_U
+materialization, `f4` is mixed on `B`, on `N`, and on `(B,N)` in
+`71^2,167^2,199^2,263^2,311^2`.  Therefore beta_U should be treated as an
+f3/materialization class; `f4/f3` is a separate class unless normalized CAS
+finds a non-visible Prym/coboundary relation.
 
 Do not ask for a small visible `(B, N_B)` plane equation as the main route:
 the relation screen is negative through bidegree `B12_N16` in the stable guard

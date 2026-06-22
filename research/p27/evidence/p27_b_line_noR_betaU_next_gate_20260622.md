@@ -111,6 +111,13 @@ two x7 roots above a fixed x6 are same-sign or mixed, but it does not select
 same-plus versus same-minus, and the reciprocal x6-pair product pattern is not
 fixed.  So the finer pair structure also does not yield a sampler.
 
+Norm-quotient follow-up:
+[P27 B-Line No-R Beta_U Norm/F4 Descent](p27_b_line_noR_betaU_norm_f4_descent_20260622.md).
+The next sign `f4` remains mixed not only on `B`, but also on the finer
+quotient `(B, N)` with `N=Norm(Unext+2)`.  In the heldout fields
+`199^2,263^2,311^2`, `BN_f4_mixed_groups` is respectively `66/72`, `50/54`,
+and `63/72`.  Thus the beta_U norm map does not carry a two-gate quotient.
+
 ## Interpretation
 
 Positive:
@@ -158,6 +165,7 @@ continue = include x7-pair norm -4*(A*x6+1) as known CAS orientation data
 kill = beta_U gamma=+1 as a multi-gate sampler
 kill = GPU production from beta_U materialized rows
 kill = treating the 16/32 beta_U split as evidence for f4 coupling
+kill = f4 as a function of Norm(Unext+2) or the pair (B,Norm)
 kill = x6-pair product buckets as an f4 production filter
 ```
 

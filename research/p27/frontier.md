@@ -1288,6 +1288,12 @@ In q199/q263/q311, beta_U support is still exactly `chi(B)=+1`, but the
 `gamma=+1` / low-norm-support side is not any named atom, linear factor, or
 irreducible quadratic `B` character.  So the norm profile is CAS
 branch/ramification data, not a GPU B-bucket.
+The two-gate quotient is now killed too:
+[P27 B-Line No-R Beta_U Norm/F4 Descent](evidence/p27_b_line_noR_betaU_norm_f4_descent_20260622.md).
+After beta_U `gamma=+1`, `f4` remains mixed on `B`, on
+`N=Norm(Unext+2)`, and on the joint quotient `(B,N)` in
+`71^2,167^2,199^2,263^2,311^2`.  Thus beta_U is a clean f3/materialization
+class and norm-map branch target, but not a two-gate sampler.
 The obvious plane-curve shortcut is now screened:
 [P27 B-Line No-R Beta_U Norm Relation Screen](evidence/p27_b_line_noR_betaU_norm_relation_20260622.md).
 `(B, Norm(Unext+2))` has no stable extra bidegree relation through `B12_N16`;
