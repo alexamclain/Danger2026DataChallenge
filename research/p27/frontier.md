@@ -1103,6 +1103,16 @@ lambda-line sampler for the decisive next bit.  The surviving K/lambda route
 is not coefficient-bound widening; it is actual branch-class/genus extraction,
 including possible irreducible cubic/quartic support or a higher-degree class.
 
+The remaining visible low-genus B-line family is now a GPU-sized exact screen,
+not a local Python job:
+[P27 B-Line Quartic GPU Test Card](evidence/p27_b_line_quartic_gpu_test_card_20260622.md).
+Test exact monic quartic support
+`chi(B^4+aB^3+bB^2+cB+d)` for `d3_on_legalB` and the combined gate4 prefix
+over q1847/q2087.  Random expected exact counts are about `2.52e-6` for q1847
+and `2.63e-4` for q2087 on the primary rows, so a stable positive would be a
+real genus-1 source candidate.  A stable negative would close the visible
+quartic B-line branch-support route.
+
 There is also a rational-source obstruction to treating `lambda` as the next
 quotient:
 [P27 Lambda Rational-Quotient Obstruction](evidence/p27_lambda_rational_quotient_obstruction_20260621.md).

@@ -253,6 +253,14 @@ q7 legal-cover saturation over `P1_B` succeeds as a dimension-1 scheme with
 legal+d3 fixture both return `504 Gateway Timeout`.  So use offline
 Magma/Sage or targeted elimination for B-line class extraction; online Magma is
 only a syntax/saturation sanity check here.
+There is one remaining bounded GPU-sized visible family worth testing before
+fully handing B-line to offline normalization:
+[P27 B-Line Quartic GPU Test Card](p27_b_line_quartic_gpu_test_card_20260622.md).
+Exact monic quartic support on `P1_B` would give a genus-1 double-cover source
+candidate for either `d3_on_legalB` or the combined gate4 prefix.  The random
+expected exact counts in q1847/q2087 are tiny on the primary rows, so a stable
+positive is real structure and a stable negative closes the visible quartic
+B-line route.
 The first targeted B-line elimination proxy is negative:
 [P27 B-Line Reverse-Z Relation Screen](p27_b_line_reverse_z_relation_20260622.md).
 It keeps the actual d3 all-plus reverse-source root `z` with `x6=z^2` and

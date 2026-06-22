@@ -156,6 +156,21 @@ the sampler pays the same denominator as the original source or only produces
 a constant-factor conditional lift
 ```
 
+### Test 3: B-Line Exact Quartic Support
+
+Run this as a bounded math-structure screen, not as p27 production search:
+[P27 B-Line Quartic GPU Test Card](p27_b_line_quartic_gpu_test_card_20260622.md).
+
+Test exact monic quartic support
+
+```text
+chi(B^4 + aB^3 + bB^2 + cB + d)
+```
+
+for `d3_on_legalB` and `gate4_prefix_on_legalB` over q1847/q2087, with q1607
+as implementation smoke.  A stable positive gives a genus-1 B-line source
+candidate; a stable negative closes the visible quartic branch-support route.
+
 ## Do Not Run Yet
 
 ```text
