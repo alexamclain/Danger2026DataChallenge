@@ -10,7 +10,8 @@ three live test surfaces.  They should be treated differently:
 ```text
 1. K/S saturated first-half cover: live only as quotient/decomposition work.
 2. Trace/norm half-norm phase coupling: live theorem/expert front.
-3. GPU practical A/B: useful only as telemetry or once a source/quotient exists.
+3. GPU conic-chain A/B: useful now as a bounded source test, not as a giant
+   production search.
 ```
 
 Do not restart broad visible-character scans.  Do not promote a fixed prefix
@@ -194,13 +195,27 @@ identity only rederives visible norm/branch squareclasses already screened
 
 ## Current GPU Status
 
-GPU is valuable for telemetry and practical search, but current math does not
+GPU is valuable now for a bounded structure test, but current math does not
 yet justify a new large p27 production run as a moonshot.
 
-Concrete GPU test if used:
+Concrete GPU tests if used:
 
 ```text
-same-stream p27 A/B:
+1. conic-chain recurrence telemetry:
+  next_gate = chi(r_j^2 + c*r_j + 1)
+  expected mismatch count = 0
+
+2. direct one-step pair sampler:
+  a = R - 1/R
+  s = R + 1/R
+  d = (L - a^2/L)/2
+  r = -(L + a^2/L)/4
+  h = (s + d)/2
+  g = (s - d)/2
+  c = s*d/(2*r)
+  test whether outputs feed legal label-2/compactD rows cheaply
+
+3. same-stream practical controls:
   baseline raw X1(16)
   ecover first-lift source
   domain/dgate control
@@ -217,13 +232,15 @@ Promotion bar:
 
 ```text
 at least 1.25x target/source_draw or effective deep-survivor/sec improvement
-on heldout streams, or direct sampler into a named source stratum
+on heldout streams, direct sampler into a named source stratum, or two-step
+chain evidence that avoids a fresh independent half-loss
 ```
 
 Kill condition:
 
 ```text
 fixed-prefix filters give only constant factors and no recurrence/source
+conic-pair sampler does not pull back to legal rows at useful rate
 ```
 
 ## Current Recommendation
@@ -231,10 +248,12 @@ fixed-prefix filters give only constant factors and no recurrence/source
 Ranked next moves:
 
 ```text
-1. Theory/CAS: quotient decomposition of the saturated genus-37 K/S layer.
-2. Theory/lit/expert: trace/norm half-norm phase identity for pref vs h*vq.
-3. GPU: bounded same-stream telemetry only; no moonshot-scale run without
-   a quotient/source or measured heldout efficiency gain.
+1. GPU/structure: bounded conic-chain recurrence and direct-pair sampler test.
+2. Theory/CAS: staged legal pullback / quotient decomposition of the same
+   conic-chain/K/S layer.
+3. Theory/lit/expert: trace/norm half-norm phase identity for pref vs h*vq.
+4. Production GPU: no moonshot-scale run without a quotient/source or measured
+   heldout efficiency gain.
 ```
 
 The clearest possible sqrt-beating win would now be:

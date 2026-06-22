@@ -17,8 +17,11 @@ No p27 hit is known yet.
 ## Current Ask
 
 Do not start with a giant production run unless explicitly requested. The first
-useful GPU task is now a line-telemetry smoke for the transferred p26
-trace/norm structure.
+useful GPU task is now a bounded structure test for the conic-chain recurrence:
+[P27 GPU Conic-Chain Test Handoff](p27_gpu_conic_chain_test_handoff_20260621.md).
+Older line/trace telemetry remains useful as controls, but the conic-chain
+test is the first one that is plausibly source-shaped rather than just another
+fixed-prefix filter.
 
 CPU gate result:
 [P27 Trace/Norm Transfer Gate](p27_trace_norm_transfer_gate_20260621.md).
@@ -198,6 +201,37 @@ telemetry, but do not promote independent `u+2` Legendre prechecks as the
 production implementation.  The useful next question is whether there is a
 direct source or recurrence into the smaller `u+2` stratum.
 
+Conic-chain update:
+[P27 Quadratic Gate Recurrence](p27_quadratic_gate_recurrence_20260621.md)
+and [P27 Conic-Chain Source Screen](p27_conic_chain_source_screen_20260621.md)
+give the current best source-shaped GPU target.  In coordinates
+`A=2-c^2`, `x_j=r_j^2`, the next selected gate is exactly
+`chi(r_j^2+c*r_j+1)` in all tested p27 rows.  The legal one-step pair is:
+
+```text
+h_j^2 = r_j^2 + c*r_j + 1
+g_j^2 = r_j^2 - c*r_j + 1
+r_{j+1}^2 - (h_j + g_j)*r_{j+1} + 1 = 0
+```
+
+The one-step pair has a direct rational sampler.  For nonzero `R,L`, set:
+
+```text
+a = R - 1/R
+s = R + 1/R
+d = (L - a^2/L)/2
+r = -(L + a^2/L)/4
+h = (s + d)/2
+g = (s - d)/2
+c = s*d/(2*r)
+```
+
+Then `h^2=r^2+c*r+1`, `g^2=r^2-c*r+1`, and
+`R^2-(h+g)R+1=0`.  This is the current best bounded GPU structure test:
+instrument the formula, try the direct pair sampler, and report whether it
+feeds legal label-2/compactD rows or just reparametrizes the ordinary half
+loss.
+
 Packet source warning:
 [P27 Label-2 E[2] Packet Source Probe](p27_label2_e2_packet_source_probe_20260621.md).
 The easy rational `E[2]` packet source has already been tested on p27 and gives
@@ -273,6 +307,23 @@ any branch/sign mismatch count
 ```
 
 ## First Suggested GPU Experiments
+
+0. Bounded conic-chain structure test:
+
+```text
+baseline = raw p27 X1(16) nonsplit halving path
+candidate A = recurrence telemetry:
+              next_gate = chi(r_j^2 + c*r_j + 1)
+candidate B = direct one-step pair sampler from (R,L)
+candidate C = two-step chain pressure if B maps to legal rows
+```
+
+Report mismatch counts, legal pullback rate, d3/d4/d5 rates, and effective
+deep survivors/sec.  Promote only if the sampler/source gives a real heldout
+rate lift or controls more than one selected gate without paying a new
+independent Legendre/sqrt toll.  Use
+[P27 GPU Conic-Chain Test Handoff](p27_gpu_conic_chain_test_handoff_20260621.md)
+as the exact brief.
 
 1. Tiny p27 baseline smoke: confirm the GPU implementation accepts p27 and
    emits the same type of candidate telemetry as p26.

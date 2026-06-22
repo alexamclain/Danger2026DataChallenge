@@ -1,0 +1,8 @@
+P27_CONIC_PAIR_SAMPLER_IDENTITY_PROBE
+trials_per_field 10000
+seed 20260621
+FIELD 1607 ok 10000 bad 0 degenerate 0
+FIELD 1847 ok 10000 bad 0 degenerate 0
+FIELD 2087 ok 10000 bad 0 degenerate 0
+FIELD 1000000000000000000000000103 ok 10000 bad 0 degenerate 0
+RESULT p27_conic_pair_sampler_identity rows=1/1

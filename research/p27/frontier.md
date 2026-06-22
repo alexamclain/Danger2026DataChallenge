@@ -709,6 +709,18 @@ legal pullback fixture still hits the web Magma memory limit, so the remaining
 decisive test is a staged elimination/normalization of the legal pullback,
 not another count check.
 
+That source test now has a GPU-ready handoff:
+[P27 GPU Conic-Chain Test Handoff](evidence/p27_gpu_conic_chain_test_handoff_20260621.md).
+The one-step legal pair can be sampled directly from two nonzero parameters
+`R,L` by setting `a=R-1/R`, `s=R+1/R`, `d=(L-a^2/L)/2`,
+`r=-(L+a^2/L)/4`, `h=(s+d)/2`, `g=(s-d)/2`, and `c=s*d/(2*r)`.  This
+identically satisfies the two conjugate conics and the transition to `R`; it
+validated on q1607/q1847/q2087 and p27 random trials.  So the answer to
+"should GPU test this?" is yes, but only as a bounded conic-chain source and
+telemetry test.  A large production hunt should wait until the direct sampler
+either pulls back to legal rows at useful rate or controls more than one
+selected gate without paying a fresh half-loss.
+
 The K-line now has a cleaner coordinate for that extraction:
 [P27 Kummer Belyi Structure Probe](evidence/p27_kummer_belyi_structure_probe_20260621.md).
 Symbolically,
