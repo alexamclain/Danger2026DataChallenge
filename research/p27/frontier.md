@@ -1188,6 +1188,14 @@ The visible Belyi orbit shortcut is also negative:
 The six Möbius transforms preserving `{0,-2,infinity}` send every non-identity
 image of a core B value outside the core bucket in q1607/q1847/q2087.  Thus the
 B-line branch-set symmetry gives no orbit sampler or GPU reason.
+The broader degree-one rational recurrence shortcut is negative too:
+[P27 B-Line PGL2 Recurrence Screen](evidence/p27_b_line_pgl2_recurrence_screen_20260622.md).
+It tests every full-coverage map `B -> (aB+b)/(cB+d)` for
+`d4(B) = +/- d3(phi(B))` in q1607/q1847/q2087.  All three fields have zero
+exact recurrences; the best full-coverage maps are identity maps scoring raw
+d4 majority bias (`19/28`, `26/45`, `18/25`).  So the B-line coupling target
+is extracted Kummer classes or a theorem-shaped higher correspondence, not
+degree-one rational B maps.
 
 The B-line target is now stronger than a one-bit descent:
 [P27 B-Line Extension Counts And Deep Descent](evidence/p27_b_line_extension_and_deep_descent_20260622.md).

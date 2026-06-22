@@ -1126,6 +1126,23 @@ Do not continue visible B-factor bucket scans unless they are part of a
 structured divisor extraction.
 ```
 
+B-line PGL2 recurrence update:
+[P27 B-Line PGL2 Recurrence Screen](p27_b_line_pgl2_recurrence_screen_20260622.md).
+
+```text
+No full-coverage PGL2 map B -> (aB+b)/(cB+d) carries d3(B) to d4(B) in
+q1607/q1847/q2087.  Best full-coverage maps are identity/raw d4-majority
+baselines: 19/28, 26/45, 18/25.
+```
+
+Updated action:
+
+```text
+Do not spend GPU or agent time on degree-one rational B-line recurrence scans.
+Compare f4/f3 only after extracting the actual B-line Kummer class, or when a
+source theorem names a higher correspondence.
+```
+
 B-line deep descent update:
 [P27 B-Line Extension Counts And Deep Descent](p27_b_line_extension_and_deep_descent_20260622.md).
 

@@ -165,6 +165,14 @@ Update: the visible Belyi orbit shortcut is negative:
 Every non-identity automorphism of the branch set `{0,-2,infinity}` sends core
 B values outside the core bucket in q1607/q1847/q2087.
 
+Update: the full degree-one rational B-line recurrence shortcut is negative:
+[P27 B-Line PGL2 Recurrence Screen](p27_b_line_pgl2_recurrence_screen_20260622.md).
+It tests every full-coverage map `B -> (aB+b)/(cB+d)` for
+`d4(B) = +/- d3(phi(B))` in q1607/q1847/q2087 and finds zero exact
+recurrences.  The best full-coverage maps are identity/raw d4-bias baselines,
+so future B-line correspondence tests should be extracted or theorem-shaped,
+not PGL2 restarts.
+
 Update: the bounded visible quartic d3 family has now been tested in the
 decisive q1847 B/K screens:
 [P27 B-Line Quartic GPU Test Card](p27_b_line_quartic_gpu_test_card_20260622.md).
@@ -195,6 +203,7 @@ kill = more unguided B-bucket scoring
 kill = large GPU production from Bplus alone
 kill = treating one-bit conditional lift as sqrt-beating
 kill = visible monic quartic d3 promotion after the q1847 B/K negatives
+kill = degree-one rational B-line recurrence
 ```
 
 ```text

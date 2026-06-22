@@ -249,6 +249,15 @@ exact support for `d3(B)`.  This kills the split degree-4 B-line path, while
 leaving irreducible quartic, cubic-plus-linear, or higher/non-visible Kummer
 classes to actual divisor extraction.
 
+Update: the degree-one rational recurrence follow-up is also complete:
+[P27 B-Line PGL2 Recurrence Screen](p27_b_line_pgl2_recurrence_screen_20260622.md).
+It enumerates every full-coverage PGL2 map
+`B -> (aB+b)/(cB+d)` for the `d3(B) -> d4(B)` transition in
+q1607/q1847/q2087.  Exact recurrences are zero in all three fields; the best
+full-coverage maps are identity maps scoring only raw d4 majority bias.
+So the B-line recurrence/coboundary route must come from extracted classes or
+higher named correspondences, not degree-one rational maps.
+
 ## Continue / Kill
 
 ```text
@@ -258,6 +267,7 @@ continue = test whether the extracted class recurs for d4/d5
 
 kill = B-atom products as d3/d4 predictors
 kill = rational-linear branch support of degree <= 4
+kill = degree-one rational B-line recurrence d4(B)=+/-d3((aB+b)/(cB+d))
 kill = one irreducible quadratic plus <=2 rational linears for d3
 kill = two irreducible quadratic branch factors for d3
 kill = large GPU search from B without an extracted class or sampler

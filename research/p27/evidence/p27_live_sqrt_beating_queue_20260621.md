@@ -267,6 +267,13 @@ The combined-prefix cubic loophole is also closed: no monic cubic on `P1_B`
 selects the gate4 all-plus prefix in q1607/q1847/q2087, and the q1607/q2087
 gate5 plateau subsets also have zero exact cubics.  This kills the direct
 genus-1 "one source for multiple B gates" shortcut in the visible cubic family.
+The B-line degree-one rational recurrence loophole is now closed too:
+[P27 B-Line PGL2 Recurrence Screen](p27_b_line_pgl2_recurrence_screen_20260622.md).
+Every full-coverage PGL2 map `B -> (aB+b)/(cB+d)` was tested for
+`d4(B)=+/-d3(phi(B))` in q1607/q1847/q2087; exact recurrences are zero, and
+the best full-coverage maps are identity/raw d4-bias baselines.  This keeps
+the live B-line target on extracted Kummer classes `f3,f4,f5,...`, not
+degree-one B-map fitting.
 The B-line result is now multi-gate: extension counts over `GF(7^n)` and
 `GF(23^n)` keep legal B inside the core bucket with no d3/d4 mixed groups,
 while p27 train/heldout deep-descent probes show no mixed B groups through
