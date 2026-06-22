@@ -315,6 +315,13 @@ Ranked next moves:
    heldout efficiency gain.
 ```
 
+The compact actionable version is the "Current Priority After Two-Step Kummer
+Screen" section of
+[P27 Next Sqrt-Beating Test Cards](p27_next_sqrt_beating_test_cards_20260621.md):
+Test A staged legal pullback normalization, Test B direct `E/E'` double-cover
+class extraction, Test C bounded GPU legal-pullback telemetry only after a
+legal sampler exists, and Test D the trace/norm half-norm phase identity.
+
 The clearest possible sqrt-beating win would now be:
 
 ```text

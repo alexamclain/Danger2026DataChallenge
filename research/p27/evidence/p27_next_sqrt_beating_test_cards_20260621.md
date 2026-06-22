@@ -1378,3 +1378,130 @@ cap, but the moonshot bottleneck has moved: fixed-prefix and visible-character
 screens are no longer the scarce work.  The scarce work is a low-genus
 quotient/source or a non-visible theta/Kummer/Hilbert-90 identity that
 controls many selected `chi(d_j)` / `chi(u_j+2)` gates at once.
+
+## Current Priority After Two-Step Kummer Screen
+
+The latest conic-pair two-step Kummer screen kills the simple
+`Z0/S1/Z1` quotient family.  The current test queue should now be this compact
+list:
+
+### Test A: Staged Legal Pullback Normalization
+
+Build the legal pullback in stages rather than as one web-Magma monolith:
+
+```text
+residual E/T compactD source
+label-2 map to (A,x)
+A = 2-c^2
+x = r^2
+h^2 = r^2+c*r+1
+g^2 = r^2-c*r+1
+r_next^2 - (h+g)r_next + 1 = 0
+Z_j^2 = -(L_j+a_j)(L_j-a_j)c*r_{j+1}
+```
+
+Report component genera, projection degrees to `E`, `E'`, and `K/lambda`,
+branch divisors, and whether any quotient controls two or more selected gates.
+
+Promotion bar:
+
+```text
+genus <= 1 quotient, sourceable low-genus component, or a recurrence that
+forces d_{j+1} from the previous Kummer class without a fresh half-loss
+```
+
+Kill condition:
+
+```text
+all components are high-genus/generic and the d4/d5 classes are independent in
+the divisor/Kummer group
+```
+
+### Test B: E/E' Double-Cover Class Extraction
+
+Extract the actual double-cover classes for the descended d3 and d4 bits on:
+
+```text
+E:  W^2 = X^3 - X
+E': V^2 = U^3 + 4U
+```
+
+Do not use more visible factor products or random low-pole scans.  Compute the
+function-field/divisor classes directly, then compare whether `d4` is a
+translate, pullback, norm, or low-degree transform of `d3`.
+
+Promotion bar:
+
+```text
+named divisor/Kummer relation with zero mismatches on q1471/q1607/q1847 and
+p27 rows, plus a sourceable walk or quotient
+```
+
+Kill condition:
+
+```text
+d3 and d4 land in unrelated classes and no low-degree quotient/translation
+survives the guard fields
+```
+
+### Test C: Bounded GPU Legal-Pullback Telemetry
+
+Only run this if the GPU implementation samples legal pullback rows, not free
+random `(R,L)`.
+
+Report:
+
+```text
+source_draws/sec
+legal_pullback_rows/sec
+d3/d4/d5 survivor rates per source draw
+same-stream baseline raw X1(16) survivor rates
+effective deep survivors/sec
+identity mismatch counts for the conic-chain formulas
+```
+
+Promotion bar:
+
+```text
+>= 1.25x effective deep survivors/sec on heldout streams, or evidence that two
+successive gates are sourced without independent half-loss
+```
+
+Kill condition:
+
+```text
+the sampler is just free `(R,L)`, legal hits are still constant/q, or the
+pullback pays the same Legendre/square-root toll as ordinary halving
+```
+
+### Test D: Trace/Norm Half-Norm Phase Identity
+
+Use this as an expert/theorem ask, not as another product scan.  The target is
+the same-boundary Hilbert-90 pair:
+
+```text
+pref(sigma)/pref = -chi(a)
+(h*vq)(sigma)/(h*vq) = -chi(a)
+T(sigma)/T = 1
+```
+
+Promotion bar:
+
+```text
+non-visible theta/additive/Kummer identity that predicts a post-Dplus or
+T_line selector with zero mismatches and gives a cheaper source
+```
+
+Kill condition:
+
+```text
+the identity reduces to already-killed visible norm, branch, trace, or
+anti-trace squareclasses
+```
+
+Current decision:
+
+```text
+GPU is justified for Test C telemetry only after a legal pullback sampler
+exists.  Without that, the next best work is CAS/theory on Test A or Test B.
+```
