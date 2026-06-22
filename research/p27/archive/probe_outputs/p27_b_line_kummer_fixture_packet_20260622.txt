@@ -1,0 +1,35 @@
+p27 B-line Kummer fixture packet
+
+Purpose:
+  Freeze the guard-field rows for conditional B-line classes
+  f3(B), f4(B), f5(B), ... so CAS can compare actual Kummer
+  classes instead of running another bucket scan.
+
+Guard fields:
+  q=1607: core_B=200 legal_B=49 missing_core=0
+    f3_conditional: rows=49 plus=28 minus=21 mixed=0 missing=0
+    f4_conditional: rows=28 plus=19 minus=9 mixed=0 missing=0
+    f5_conditional: rows=19 plus=19 minus=0 mixed=0 missing=0
+    f6_conditional: rows=19 plus=0 minus=19 mixed=0 missing=0
+  q=1847: core_B=230 legal_B=63 missing_core=0
+    f3_conditional: rows=63 plus=45 minus=18 mixed=0 missing=0
+    f4_conditional: rows=45 plus=19 minus=26 mixed=0 missing=0
+    f5_conditional: rows=19 plus=0 minus=19 mixed=0 missing=0
+    f6_conditional: rows=0 plus=0 minus=0 mixed=0 missing=0
+  q=2087: core_B=260 legal_B=57 missing_core=0
+    f3_conditional: rows=57 plus=25 minus=32 mixed=0 missing=0
+    f4_conditional: rows=25 plus=18 minus=7 mixed=0 missing=0
+    f5_conditional: rows=18 plus=18 minus=0 mixed=0 missing=0
+    f6_conditional: rows=18 plus=18 minus=0 mixed=0 missing=0
+
+CAS task:
+  1. Recover the normalized B-line Kummer/divisor class for f3.
+  2. Compute branch degree, support field degrees, genus, components, and quotients.
+  3. Compare f4/f3 and f5/f4 as pullbacks/translates/coboundaries/iterates.
+  4. Promote only a sourceable/recurrent class that controls multiple gates.
+  5. Kill if f3 is generic and f4/f5 are fresh independent half-covers.
+
+Fixture JSON:
+  research/p27/archive/fixtures/p27_b_line_kummer_fixture_packet_20260622.json
+
+p27_b_line_kummer_fixture_packet_rows=1/1

@@ -82,12 +82,20 @@ Second follow-up:
 Relative trace+norm is exact only for quadratic extension quotients; prime
 degree fields are mixed.  This kills trace/norm bucket sampling as a p27 lane.
 
+Compact CAS input:
+[P27 B-Line Kummer Fixture Packet](p27_b_line_kummer_fixture_packet_20260622.md).
+It freezes the conditional rows for `f3(B), f4(B), f5(B), f6(B)` over
+q1607/q1847/q2087.  The actionable comparison is now `f3` and `f4/f3`; the
+later `f5/f6` guard-field rows are one-sided field tails unless a larger
+heldout run supplies a named class and raw-source denominator.
+
 Required computation:
 
 ```text
 normalize the legal+d3 cover over P1_B in q1607/q1847/q2087
 extract branch divisor degree, support field degrees, components, genus
-if d3 is tractable, compare f4/f3 and f5/f4 in the Kummer group
+if d3 is tractable, compare f4/f3 in the Kummer group
+use f5/f6 only as regression checks until larger data supports them
 ```
 
 Promote if:

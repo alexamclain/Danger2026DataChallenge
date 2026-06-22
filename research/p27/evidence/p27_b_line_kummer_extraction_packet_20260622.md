@@ -214,11 +214,20 @@ stream to stress-test no-mixed-B descent and feed Kummer-sequence extraction.
 It is not a replacement for the completed q1847 quartic screen and not a
 production hunt.
 
+Update: the compact guard-field fixture for the actual conditional Kummer
+sequence is now available:
+[P27 B-Line Kummer Fixture Packet](p27_b_line_kummer_fixture_packet_20260622.md).
+It freezes `f3(B), f4(B), f5(B), f6(B)` rows over q1607/q1847/q2087.  The
+meaningful first comparison is `f3` then `f4/f3`; the `f5/f6` rows are already
+small-field tail dominated and should be treated as regression data, not
+promotion evidence.
+
 ## Continue / Kill
 
 ```text
 continue = run Magma/Sage normalization over P1_Bline in q1607/q1847/q2087
 continue = optional q2087 quartic closure only if useful
+continue = use the B-line Kummer fixture rows as the compact CAS/expert input
 continue = bounded GPU deep-prefix telemetry if it feeds f3/f4/f5 extraction
 continue = if d3 is tractable, compare the B-line Kummer sequence f3,f4,f5
 continue = use GPU only after a source/sampler or recurrence is named
@@ -231,6 +240,7 @@ kill = degree-one rational B-line recurrence
 kill = hidden-X power-map B-line recurrence for m=2..6
 kill = monomial Belyi B-line recurrence u -> u^m for m=2..12
 kill = q1847 visible B-line monic quartic for d3+d4 all-plus
+kill = treating one-sided q1607/q1847/q2087 f5/f6 tails as recurrence evidence
 ```
 
 ```text
