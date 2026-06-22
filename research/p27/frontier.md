@@ -1064,6 +1064,15 @@ while the product is invariant and constant on active B.  This gives the next
 bounded GPU/CAS target: test the successive `alpha_j,beta_j` phase sequence
 for recurrence or telescoping; do not promote either factor as a standalone
 bucket.
+The first phase-sequence screen is negative:
+[P27 B-Line Alpha/Beta Phase Sequence Screen](evidence/p27_b_line_alpha_beta_phase_sequence_20260622.md).
+On `3000+3000` p27 train/heldout starts, the main next-product rates stay near
+random half-loss, and link products such as `alpha_j*alpha_{j+1}` remain near
+`1/2`.  The small gate4-to-gate5 phase-state skew is only about `1.1x`
+conditional and costs a half split, below the source-normalized promotion bar.
+Guard-field all-plus/all-minus plateaus stop at different gates, so they are
+field-tail artifacts.  Keep alpha/beta as optional telemetry columns, not a
+production mode.
 The B-line visible two-gate quartic shortcut is closed as well:
 [P27 B-Line Gate4-Prefix Quartic q1847 Screen](evidence/p27_b_line_gate4_prefix_quartic_q1847_screen_20260622.md).
 It scans `6,300,872,423` q1847 coefficient triples for

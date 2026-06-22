@@ -216,6 +216,13 @@ The quartic in `Y=v+2` has square discriminant and split resolvent.  With
 `alpha=chi(H+R)` and `beta=chi(H+S)`.  Both factors flip under `H -> -H`; the
 product is the canonical selected bit.
 
+Alpha/beta phase sequence follow-up:
+[P27 B-Line Alpha/Beta Phase Sequence Screen](p27_b_line_alpha_beta_phase_sequence_20260622.md).
+The first p27 train/heldout recurrence screen finds no source-normalized phase
+win.  Link products stay near `1/2`, the only stable-looking phase-state skew
+is about `1.1x` conditional after paying a half split, and guard-field
+plateaus disagree across q1607/q1847/q2087.
+
 Required computation:
 
 ```text
@@ -421,7 +428,7 @@ continue = GPU only as bounded telemetry or for a named sampler
 continue = offline Magma/Sage for the reduced B-line cover
 continue = offline Magma/Sage comparison of the second reduced f4/f3 cover
 continue = extract the gamma class from the staged handoff before any more B buckets
-continue = test alpha/beta phase recurrence or telescoping across gates
+continue = keep alpha/beta only as optional larger-GPU telemetry with raw-source accounting
 
 kill = more one-bit filters as moonshots
 kill = norm/trace/power-sum selectors for the B-line d3 fiber
@@ -433,6 +440,7 @@ kill = explicit H90 quotient as a standalone f4 source law
 kill = visible f3/H90-layer pair-coordinate source laws for gamma
 kill = treating rho/materialization as the gamma source law
 kill = alpha or beta alone as a canonical B-line bucket
+kill = current alpha/beta phase-state split as a production sampler
 kill = online Magma as the reduced-cover extraction engine
 kill = more visible quartic/branch-map bucket searches without a theorem
 kill = treating source-conditional 2x lift as sqrt-beating

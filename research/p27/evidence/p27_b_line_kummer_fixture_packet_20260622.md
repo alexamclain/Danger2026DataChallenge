@@ -176,6 +176,13 @@ After adjoining `R^2=H^2-4` and `S^2=B^2+H^2-4`, the roots are
 product is `f4`.  This turns the next test into phase-sequence recurrence or
 telescoping, not a standalone B bucket.
 
+Phase sequence follow-up:
+[P27 B-Line Alpha/Beta Phase Sequence Screen](p27_b_line_alpha_beta_phase_sequence_20260622.md)
+tests that recurrence idea on p27 train/heldout and q1607/q1847/q2087.  No
+alpha/beta phase state or link product clears the source-normalized promotion
+bar.  Keep the V4 decomposition for CAS class extraction and optional GPU
+telemetry, not as a production sampler.
+
 Negative:
 
 ```text
@@ -207,7 +214,7 @@ continue = compute an explicit H90 quotient for gamma^2=v+2
 continue = compute gamma over the f3/H90 layer as the remaining class
 continue = extract the gamma divisor/Kummer class over that layer
 continue = use the gamma class handoff as the current CAS/GPU packet
-continue = test the V4 alpha/beta phase sequence across f4/f5
+continue = keep the V4 alpha/beta phases as optional telemetry columns
 continue = compare f4/f3 as a class relation after f3 is named
 continue = use f5/f6 rows only as tail/regression checks for an extracted class
 
@@ -219,6 +226,7 @@ kill = chi(v^2-4) materialization as a production sampler
 kill = naive gamma norm or visible pair-invariant predictors as source laws
 kill = explicit H90 quotient as a standalone f4 source law
 kill = visible f3/H90-layer pair-coordinate source laws for gamma
+kill = current alpha/beta phase-state split as a production sampler
 kill = more B-bucket GPU production before a source/recurrent class exists
 kill = widening visible low-degree B scans already killed by q1847
 ```
