@@ -898,6 +898,16 @@ scale.  So K/Sroot enumeration is not a below-sqrt sampler by itself; the
 next useful work is the actual branch/genus/CAS extraction of this
 constant-degree cover, not a GPU bucket search on K or Sroot.
 
+The rational fiber profile is even cleaner:
+[P27 K-Line Reverse-Z Fiber Profile](evidence/p27_kline_reverse_z_fiber_profile_20260621.md).
+On q1607/q1847/q2087, every selected K fiber has `64` z-rows, one selected
+`A`, four `(A,x)` values, eight `x6` values, sixteen `z` values, and four
+`r=x6+1/x6` values.  Every selected Sroot fiber has exactly half the rows
+with the same one-`A` structure.  There are zero anomalous rational fibers in
+the promotion fields.  This makes Sroot the cleaner branch-extraction
+coordinate, but it also kills the hope that rational K/Sroot fiber anomalies
+are the sqrt-beating source.
+
 The first Belyi-normalized source family is now killed:
 [P27 Lambda Branch-Divisor Screen](evidence/p27_lambda_branch_divisor_screen_20260621.md).
 It tested `z^2=f(lambda)` with `deg_lambda(f)<=4`, where

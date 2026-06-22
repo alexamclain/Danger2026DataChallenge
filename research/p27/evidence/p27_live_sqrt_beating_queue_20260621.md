@@ -140,6 +140,11 @@ fields, the actual d3 all-plus cover has constant fibers
 This makes K/S a real branch-extraction target, but `unique_K` and `unique_S`
 still grow at field-size scale, so K/Sroot enumeration is not a below-sqrt
 source and should not become a GPU bucket search.
+The fiber-profile follow-up is completely flat in q1607/q1847/q2087: every K
+fiber has 64 rows and one selected A, while every Sroot fiber has 32 rows and
+one selected A; all tracked fiber histograms have zero anomalous fibers.  This
+promotes Sroot as the cleaner CAS coordinate and kills rational-fiber anomaly
+search as a source of sqrt beating.
 The two-step Kummer quotient screen is now negative too.  After adjoining the
 first root `Z0`, the next selector `S1`, and when available the second root
 `Z1`, all obvious selector/root pair systems are full-rank through degree 12 on
@@ -182,6 +187,7 @@ another ad hoc two-step Kummer trivariate bucket scan without a new coordinate
 K-line affine or reciprocal-affine recurrence scans
 K/Sroot reverse-root plane relation scans in `z`, `x6`, `r`, or `z +/- 1/z`
 K/Sroot bucket searches based only on the constant-fiber extension counts
+rational K/Sroot fiber-anomaly searches
 an A-projection or A-bucket search based only on selected-prefix filters
 raw selected-prefix source enumeration based on extension-field tail artifacts
 ```

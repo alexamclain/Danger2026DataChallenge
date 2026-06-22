@@ -1,0 +1,77 @@
+p27 K-line reverse-z fiber-profile probe
+source = residual E/T + compactD=-1 + label-2 candidate map
+reverse source = d2 square and d3 all-plus with x6=z^2
+branch proxy = rational K/Sroot fiber histograms
+GF(1607^1) N=1607:
+  source_rows = 800
+  candidates = 784
+  d2_plus_candidates = 784
+  x6_branches = 1568
+  x6_square_branches = 896
+  x6_nonsquare = 672
+  z_rows = 1792
+  unique_K = 28
+  unique_S = 56
+  K_to_S_values = 28
+  unique_S_all_seen = 56
+  K_to_S_size_hist_keys = 1
+  S_to_mixed_K = 0
+  candidate_invalid_degenerate_A = 16
+  candidate_invalid_not_nonsplit = 800
+  ks_degenerate = 1
+  compact_not_target = 800
+  unique_K/N = 0.017423771
+  unique_S/N = 0.034847542
+GF(1607_1)_K_fiber_profile:
+  fibers = 28
+  rows: 64:28
+  rows_modal = 64
+  rows_anomalous_fibers = 0
+  unique_A: 1:28
+  unique_A_modal = 1
+  unique_A_anomalous_fibers = 0
+  unique_Ax: 4:28
+  unique_Ax_modal = 4
+  unique_Ax_anomalous_fibers = 0
+  unique_x6: 8:28
+  unique_x6_modal = 8
+  unique_x6_anomalous_fibers = 0
+  unique_z: 16:28
+  unique_z_modal = 16
+  unique_z_anomalous_fibers = 0
+  unique_r: 4:28
+  unique_r_modal = 4
+  unique_r_anomalous_fibers = 0
+  unique_zsum: 8:28
+  unique_zsum_modal = 8
+  unique_zsum_anomalous_fibers = 0
+  unique_zdiff: 8:28
+  unique_zdiff_modal = 8
+  unique_zdiff_anomalous_fibers = 0
+GF(1607_1)_S_fiber_profile:
+  fibers = 56
+  rows: 32:56
+  rows_modal = 32
+  rows_anomalous_fibers = 0
+  unique_A: 1:56
+  unique_A_modal = 1
+  unique_A_anomalous_fibers = 0
+  unique_Ax: 4:56
+  unique_Ax_modal = 4
+  unique_Ax_anomalous_fibers = 0
+  unique_x6: 8:56
+  unique_x6_modal = 8
+  unique_x6_anomalous_fibers = 0
+  unique_z: 16:56
+  unique_z_modal = 16
+  unique_z_anomalous_fibers = 0
+  unique_r: 4:56
+  unique_r_modal = 4
+  unique_r_anomalous_fibers = 0
+  unique_zsum: 8:56
+  unique_zsum_modal = 8
+  unique_zsum_anomalous_fibers = 0
+  unique_zdiff: 8:56
+  unique_zdiff_modal = 8
+  unique_zdiff_anomalous_fibers = 0
+p27_kline_reverse_z_fiber_profile_probe_rows=1/1

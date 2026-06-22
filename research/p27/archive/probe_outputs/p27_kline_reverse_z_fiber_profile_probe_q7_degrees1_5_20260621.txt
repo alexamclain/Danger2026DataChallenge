@@ -1,0 +1,246 @@
+p27 K-line reverse-z fiber-profile probe
+source = residual E/T + compactD=-1 + label-2 candidate map
+reverse source = d2 square and d3 all-plus with x6=z^2
+branch proxy = rational K/Sroot fiber histograms
+GF(7^1) N=7:
+  unique_K = 0
+  unique_S = 0
+  K_to_S_values = 0
+  unique_S_all_seen = 0
+  K_to_S_size_hist_keys = 0
+  S_to_mixed_K = 0
+  ks_degenerate = 1
+  unique_K/N = 0.000000000
+  unique_S/N = 0.000000000
+GF(7_1)_K_fiber_profile:
+  fibers = 0
+  rows: empty
+  unique_A: empty
+  unique_Ax: empty
+  unique_x6: empty
+  unique_z: empty
+  unique_r: empty
+  unique_zsum: empty
+  unique_zdiff: empty
+GF(7_1)_S_fiber_profile:
+  fibers = 0
+  rows: empty
+  unique_A: empty
+  unique_Ax: empty
+  unique_x6: empty
+  unique_z: empty
+  unique_r: empty
+  unique_zsum: empty
+  unique_zdiff: empty
+GF(7^2) N=49:
+  unique_K = 0
+  unique_S = 0
+  K_to_S_values = 0
+  unique_S_all_seen = 0
+  K_to_S_size_hist_keys = 0
+  S_to_mixed_K = 0
+  ks_degenerate = 5
+  compact_not_target = 12
+  unique_K/N = 0.000000000
+  unique_S/N = 0.000000000
+GF(7_2)_K_fiber_profile:
+  fibers = 0
+  rows: empty
+  unique_A: empty
+  unique_Ax: empty
+  unique_x6: empty
+  unique_z: empty
+  unique_r: empty
+  unique_zsum: empty
+  unique_zdiff: empty
+GF(7_2)_S_fiber_profile:
+  fibers = 0
+  rows: empty
+  unique_A: empty
+  unique_Ax: empty
+  unique_x6: empty
+  unique_z: empty
+  unique_r: empty
+  unique_zsum: empty
+  unique_zdiff: empty
+GF(7^3) N=343:
+  source_rows = 156
+  candidates = 144
+  d2_plus_candidates = 144
+  x6_branches = 288
+  x6_nonsquare = 288
+  unique_K = 0
+  unique_S = 0
+  K_to_S_values = 0
+  unique_S_all_seen = 0
+  K_to_S_size_hist_keys = 0
+  S_to_mixed_K = 0
+  candidate_invalid_not_nonsplit = 168
+  ks_degenerate = 1
+  compact_not_target = 180
+  unique_K/N = 0.000000000
+  unique_S/N = 0.000000000
+GF(7_3)_K_fiber_profile:
+  fibers = 0
+  rows: empty
+  unique_A: empty
+  unique_Ax: empty
+  unique_x6: empty
+  unique_z: empty
+  unique_r: empty
+  unique_zsum: empty
+  unique_zdiff: empty
+GF(7_3)_S_fiber_profile:
+  fibers = 0
+  rows: empty
+  unique_A: empty
+  unique_Ax: empty
+  unique_x6: empty
+  unique_z: empty
+  unique_r: empty
+  unique_zsum: empty
+  unique_zdiff: empty
+GF(7^4) N=2401:
+  source_rows = 1092
+  candidates = 1344
+  d2_plus_candidates = 576
+  d2_minus = 768
+  x6_branches = 1152
+  x6_square_branches = 512
+  x6_nonsquare = 640
+  z_rows = 1024
+  unique_K = 16
+  unique_S = 32
+  K_to_S_values = 16
+  unique_S_all_seen = 32
+  K_to_S_size_hist_keys = 1
+  S_to_mixed_K = 0
+  candidate_invalid_not_nonsplit = 840
+  ks_degenerate = 5
+  compact_not_target = 1192
+  unique_K/N = 0.006663890
+  unique_S/N = 0.013327780
+GF(7_4)_K_fiber_profile:
+  fibers = 16
+  rows: 64:16
+  rows_modal = 64
+  rows_anomalous_fibers = 0
+  unique_A: 2:16
+  unique_A_modal = 2
+  unique_A_anomalous_fibers = 0
+  unique_Ax: 8:16
+  unique_Ax_modal = 8
+  unique_Ax_anomalous_fibers = 0
+  unique_x6: 16:16
+  unique_x6_modal = 16
+  unique_x6_anomalous_fibers = 0
+  unique_z: 32:16
+  unique_z_modal = 32
+  unique_z_anomalous_fibers = 0
+  unique_r: 8:16
+  unique_r_modal = 8
+  unique_r_anomalous_fibers = 0
+  unique_zsum: 16:16
+  unique_zsum_modal = 16
+  unique_zsum_anomalous_fibers = 0
+  unique_zdiff: 16:16
+  unique_zdiff_modal = 16
+  unique_zdiff_anomalous_fibers = 0
+GF(7_4)_S_fiber_profile:
+  fibers = 32
+  rows: 32:32
+  rows_modal = 32
+  rows_anomalous_fibers = 0
+  unique_A: 1:32
+  unique_A_modal = 1
+  unique_A_anomalous_fibers = 0
+  unique_Ax: 4:32
+  unique_Ax_modal = 4
+  unique_Ax_anomalous_fibers = 0
+  unique_x6: 8:32
+  unique_x6_modal = 8
+  unique_x6_anomalous_fibers = 0
+  unique_z: 16:32
+  unique_z_modal = 16
+  unique_z_anomalous_fibers = 0
+  unique_r: 4:32
+  unique_r_modal = 4
+  unique_r_anomalous_fibers = 0
+  unique_zsum: 8:32
+  unique_zsum_modal = 8
+  unique_zsum_anomalous_fibers = 0
+  unique_zdiff: 8:32
+  unique_zdiff_modal = 8
+  unique_zdiff_anomalous_fibers = 0
+GF(7^5) N=16807:
+  source_rows = 8920
+  candidates = 9440
+  d2_plus_candidates = 9440
+  x6_branches = 18880
+  x6_square_branches = 10080
+  x6_nonsquare = 8800
+  z_rows = 20160
+  unique_K = 315
+  unique_S = 630
+  K_to_S_values = 315
+  unique_S_all_seen = 630
+  K_to_S_size_hist_keys = 1
+  S_to_mixed_K = 0
+  candidate_invalid_not_nonsplit = 8400
+  ks_degenerate = 1
+  compact_not_target = 7880
+  unique_K/N = 0.018742191
+  unique_S/N = 0.037484382
+GF(7_5)_K_fiber_profile:
+  fibers = 315
+  rows: 64:315
+  rows_modal = 64
+  rows_anomalous_fibers = 0
+  unique_A: 1:315
+  unique_A_modal = 1
+  unique_A_anomalous_fibers = 0
+  unique_Ax: 4:315
+  unique_Ax_modal = 4
+  unique_Ax_anomalous_fibers = 0
+  unique_x6: 8:315
+  unique_x6_modal = 8
+  unique_x6_anomalous_fibers = 0
+  unique_z: 16:315
+  unique_z_modal = 16
+  unique_z_anomalous_fibers = 0
+  unique_r: 4:315
+  unique_r_modal = 4
+  unique_r_anomalous_fibers = 0
+  unique_zsum: 8:315
+  unique_zsum_modal = 8
+  unique_zsum_anomalous_fibers = 0
+  unique_zdiff: 8:315
+  unique_zdiff_modal = 8
+  unique_zdiff_anomalous_fibers = 0
+GF(7_5)_S_fiber_profile:
+  fibers = 630
+  rows: 32:630
+  rows_modal = 32
+  rows_anomalous_fibers = 0
+  unique_A: 1:630
+  unique_A_modal = 1
+  unique_A_anomalous_fibers = 0
+  unique_Ax: 4:630
+  unique_Ax_modal = 4
+  unique_Ax_anomalous_fibers = 0
+  unique_x6: 8:630
+  unique_x6_modal = 8
+  unique_x6_anomalous_fibers = 0
+  unique_z: 16:630
+  unique_z_modal = 16
+  unique_z_anomalous_fibers = 0
+  unique_r: 4:630
+  unique_r_modal = 4
+  unique_r_anomalous_fibers = 0
+  unique_zsum: 8:630
+  unique_zsum_modal = 8
+  unique_zsum_anomalous_fibers = 0
+  unique_zdiff: 8:630
+  unique_zdiff_modal = 8
+  unique_zdiff_anomalous_fibers = 0
+p27_kline_reverse_z_fiber_profile_probe_rows=1/1

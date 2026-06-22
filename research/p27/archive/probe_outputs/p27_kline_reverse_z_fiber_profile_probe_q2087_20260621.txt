@@ -1,0 +1,76 @@
+p27 K-line reverse-z fiber-profile probe
+source = residual E/T + compactD=-1 + label-2 candidate map
+reverse source = d2 square and d3 all-plus with x6=z^2
+branch proxy = rational K/Sroot fiber histograms
+GF(2087^1) N=2087:
+  source_rows = 976
+  candidates = 912
+  d2_plus_candidates = 912
+  x6_branches = 1824
+  x6_square_branches = 800
+  x6_nonsquare = 1024
+  z_rows = 1600
+  unique_K = 25
+  unique_S = 50
+  K_to_S_values = 25
+  unique_S_all_seen = 50
+  K_to_S_size_hist_keys = 1
+  S_to_mixed_K = 0
+  candidate_invalid_not_nonsplit = 1040
+  ks_degenerate = 1
+  compact_not_target = 1104
+  unique_K/N = 0.011978917
+  unique_S/N = 0.023957834
+GF(2087_1)_K_fiber_profile:
+  fibers = 25
+  rows: 64:25
+  rows_modal = 64
+  rows_anomalous_fibers = 0
+  unique_A: 1:25
+  unique_A_modal = 1
+  unique_A_anomalous_fibers = 0
+  unique_Ax: 4:25
+  unique_Ax_modal = 4
+  unique_Ax_anomalous_fibers = 0
+  unique_x6: 8:25
+  unique_x6_modal = 8
+  unique_x6_anomalous_fibers = 0
+  unique_z: 16:25
+  unique_z_modal = 16
+  unique_z_anomalous_fibers = 0
+  unique_r: 4:25
+  unique_r_modal = 4
+  unique_r_anomalous_fibers = 0
+  unique_zsum: 8:25
+  unique_zsum_modal = 8
+  unique_zsum_anomalous_fibers = 0
+  unique_zdiff: 8:25
+  unique_zdiff_modal = 8
+  unique_zdiff_anomalous_fibers = 0
+GF(2087_1)_S_fiber_profile:
+  fibers = 50
+  rows: 32:50
+  rows_modal = 32
+  rows_anomalous_fibers = 0
+  unique_A: 1:50
+  unique_A_modal = 1
+  unique_A_anomalous_fibers = 0
+  unique_Ax: 4:50
+  unique_Ax_modal = 4
+  unique_Ax_anomalous_fibers = 0
+  unique_x6: 8:50
+  unique_x6_modal = 8
+  unique_x6_anomalous_fibers = 0
+  unique_z: 16:50
+  unique_z_modal = 16
+  unique_z_anomalous_fibers = 0
+  unique_r: 4:50
+  unique_r_modal = 4
+  unique_r_anomalous_fibers = 0
+  unique_zsum: 8:50
+  unique_zsum_modal = 8
+  unique_zsum_anomalous_fibers = 0
+  unique_zdiff: 8:50
+  unique_zdiff_modal = 8
+  unique_zdiff_anomalous_fibers = 0
+p27_kline_reverse_z_fiber_profile_probe_rows=1/1

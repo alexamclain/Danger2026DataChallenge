@@ -885,6 +885,28 @@ Do not spend GPU time on K/S bucket searches unless a new quotient or
 recurrence is named first.
 ```
 
+Reverse-root fiber-profile update:
+[P27 K-Line Reverse-Z Fiber Profile](p27_kline_reverse_z_fiber_profile_20260621.md).
+
+```text
+q1607/q1847/q2087:
+  every K fiber has 64 rows, one selected A, four (A,x), eight x6,
+    sixteen z, and four r values
+  every Sroot fiber has 32 rows, one selected A, four (A,x), eight x6,
+    sixteen z, and four r values
+  anomalous_fibers = 0 for all tracked histograms
+
+Sroot is the cleaner extraction coordinate; K can merge A-values in small even
+extensions, while Sroot separates them.
+```
+
+Updated action:
+
+```text
+Prioritize offline normalization over P1_Sroot with K as a quotient check.
+Do not run rational K/Sroot fiber-anomaly searches or GPU K/S buckets.
+```
+
 K/S first-half cover update:
 [P27 K/S First-Half Cover Magma Smoke](p27_ks_first_half_cover_magma_20260621.md).
 [P27 K/S First-Half Alpha-Lift Obstruction](p27_ks_first_half_alpha_lift_obstruction_20260621.md).
