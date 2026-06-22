@@ -163,18 +163,27 @@ to `E: v^2=u^3-u`, small quotient projections `m <= 24` have no nontrivial
 exact separation in the fields with both signs present.  Thus the remaining
 sign is not a small elliptic coset character in the tested family.
 
+Follow-up
+[P27 Trace/Norm Dplus U6 Row-Bit H90 U-Divisor Screen](p27_trace_norm_dplus_u6_rowbit_h90_u_divisor_20260622.md)
+finds the next simplification: the soluble-side sign descends to
+`u=4/(t-1/t)^2` with zero mixed `u` groups.  However, monic linear and
+quadratic `u` divisors have no exact hits.  The generated target packet
+therefore sets up the next concrete cubic/quartic exact-support test.
+
 ## Continue / Kill
 
 ```text
 continue = prove/explain the Ktrace solubility boundary
 continue = extract the non-visible plus/minus class on H90-soluble fibers
 continue = divisor/theta/Prym extraction after the small-coset kill
+continue = exact monic cubic/quartic support on the u-line target packet
 continue = include Ktrace, row bit, A, and later gates in fused/native Dplus telemetry
 
 kill = treating mixed fibers as a materialization-filter artifact
 kill = treating H90 as only a weak correlation
 kill = GPU visible-character buckets from E_h90/Z/Aeta atoms
 kill = small E(F_q) quotient projections m <= 24 as a row-bit source
+kill = monic degree <= 2 u-divisors as the row-bit source
 ```
 
 ```text

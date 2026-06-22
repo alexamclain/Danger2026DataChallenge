@@ -326,6 +326,21 @@ exact_nontrivial_projection_total = 0
 So the row-bit lane remains a divisor/theta/Prym or higher-Kummer extraction
 problem, not a small group-coset GPU sampler.
 
+Fifteenth update:
+[P27 Trace/Norm Dplus U6 Row-Bit H90 U-Divisor Screen](p27_trace_norm_dplus_u6_rowbit_h90_u_divisor_20260622.md)
+finds that the soluble-side sign descends to the even elliptic coordinate
+`u=4/(t-1/t)^2` with zero mixed `u` groups, but has no monic linear or
+quadratic divisor in the tested fields.  It writes a frozen target packet:
+
+```text
+research/p27/archive/fixtures/p27_dplus_rowbit_u_divisor_targets_20260622.json
+```
+
+The next exact-support test is now concrete: monic cubic on
+`q1607,q1847,q2087`, then monic quartic on `q1847,q2087`.  An exact hit in
+`q1847` or `q2087` would be highly non-random; no hit kills visible low-degree
+`P^1_u` support.
+
 This is the most concrete bridge test after the coupling kill.  We know:
 
 ```text
@@ -343,6 +358,8 @@ Ktrace local solubility exactly predicts uniform versus mixed t-fibers in the
 tested fields.
 small elliptic group quotient projections do not explain the soluble-side
 plus/minus sign.
+the soluble-side sign descends to u=4/(t-1/t)^2, but not to monic degree <=2
+u-divisors.
 ```
 
 The missing object is the map or obstruction between the H90 model and the
@@ -416,6 +433,7 @@ continue = CAS/Prym extraction of the descended U6 row bit
 continue = explain H90 rational-point uniformity of the row bit
 continue = prove/extract the Ktrace local-solubility boundary
 continue = divisor/theta/Prym extraction after the small-coset kill
+continue = exact monic cubic/quartic support on the frozen u target packet
 
 kill = more sign-word/gamma bucket GPU scans
 kill = visible f5(B) B-atom/split-linear bucket searches
@@ -430,6 +448,7 @@ kill = standalone H90 payload sign screens
 kill = simple H90/rho coboundary bucket screens for chi(x6)
 kill = treating Ktrace solubility alone as a production source
 kill = small H90 elliptic group-coset projections m <= 24 as a row-bit source
+kill = monic degree <= 2 u-divisors as the row-bit source
 kill = searching for another low-degree Dplus-to-A coordinate map
 kill = visible low-degree A/B/K formula fishing without a divisor reason
 kill = large p27 production run based only on the current Dplus classifier

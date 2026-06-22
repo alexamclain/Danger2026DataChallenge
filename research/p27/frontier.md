@@ -2291,6 +2291,13 @@ kills the nearest sourceable shortcut for that sign: after mapping to
 `E: v^2=u^3-u`, small quotient projections through `m=24` have no nontrivial
 exact separation in the fields with both signs.  Keep the row-bit lane in
 divisor/theta/Prym extraction, not GPU coset buckets.
+The `u`-divisor follow-up
+[P27 Trace/Norm Dplus U6 Row-Bit H90 U-Divisor Screen](evidence/p27_trace_norm_dplus_u6_rowbit_h90_u_divisor_20260622.md)
+finds a sharper positive/negative split: the soluble-side sign descends to
+`u=4/(t-1/t)^2` with zero mixed `u` groups, but monic degree `<=2` divisors
+have no exact hits.  It creates
+`archive/fixtures/p27_dplus_rowbit_u_divisor_targets_20260622.json` for exact
+monic cubic/quartic support tests in the promotion fields.
 The small-field descent audit then sets the boundary:
 [P27 Trace/Norm Dplus Reciprocal Tower Small-Field Descent](evidence/p27_trace_norm_dplus_reciprocal_tower_smallfield_descent_20260622.md).
 Over q607/q1607/q1847, the naked reciprocal tower has mixed `A`/`B` fibers for

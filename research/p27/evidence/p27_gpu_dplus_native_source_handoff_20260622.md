@@ -45,6 +45,7 @@ research/p27/evidence/p27_trace_norm_dplus_h90_branch_class_20260622.md
 research/p27/evidence/p27_trace_norm_dplus_h90_payload_screen_20260622.md
 research/p27/evidence/p27_trace_norm_dplus_u6_rowbit_h90_solubility_boundary_20260622.md
 research/p27/evidence/p27_trace_norm_dplus_u6_rowbit_h90_group_coset_20260622.md
+research/p27/evidence/p27_trace_norm_dplus_u6_rowbit_h90_u_divisor_20260622.md
 research/p27/evidence/p27_trace_norm_elliptic_line_divisor_screen_20260622.md
 ```
 
@@ -274,6 +275,29 @@ exact_nontrivial_projection_total = 0
 So do not add GPU modes for small H90 elliptic coset buckets unless a new
 theorem names a projection outside the tested family.
 
+U-line divisor follow-up:
+[P27 Trace/Norm Dplus U6 Row-Bit H90 U-Divisor Screen](p27_trace_norm_dplus_u6_rowbit_h90_u_divisor_20260622.md)
+finds that the soluble-side sign descends to the even elliptic coordinate
+`u=4/(t-1/t)^2`, but has no monic linear or quadratic divisor in the tested
+fields.  It writes the exact-support packet:
+
+```text
+research/p27/archive/fixtures/p27_dplus_rowbit_u_divisor_targets_20260622.json
+```
+
+This packet is the next bounded GPU exact-support ask:
+
+```text
+degree 3: u^3 + a*u^2 + b*u + c
+degree 4: u^4 + a*u^3 + b*u^2 + c*u + d
+accept: chi(P(u)) = polarity * sign on every listed row, with no zero evals
+priority: q1847 and q2087, then q1607 for cross-check
+```
+
+Promote an exact cubic/quartic hit only if it appears in a promotion field and
+verifies on another guard field or yields a named divisor/class.  Do not treat
+q607 quartic fits as promotion evidence; random fits are expected there.
+
 If cheap, fused telemetry should therefore emit:
 
 ```text
@@ -328,6 +352,7 @@ kill = large p27 production run based only on the existing Dplus classifier
 kill = orientation bucket telemetry as a standalone GPU task
 kill = fixed-prefix filtering without source-normalized improvement
 kill = visible H90 row-bit products or small H90 elliptic coset buckets
+kill = monic degree <= 2 u-divisor support for the row bit
 ```
 
 ```text
