@@ -47,6 +47,14 @@ scope, and the conditional survivor rate is about doubled.  But
 `target/source_draw` is flat or slightly lower, so the current implementation
 does not beat the source-space denominator.
 
+Update: [P27 Conic Sign-Word Coupling Probe](p27_conic_signword_coupling_20260622.md)
+ran the CPU-side bounded version of Test 1.  On `4000 + 4000` p27
+train/heldout unique `(A,x5)` rows, all-plus conic prefixes thin like
+independent half-gates through meaningful counts; small-field plateaus do not
+transfer stably.  This lowers the priority of GPU sign-word bucket hunting
+unless the GPU run is explicitly a much larger confirmation with the same
+source-normalized accounting.
+
 ## Interpretation
 
 The GPU has validated a mathematical coordinate system, not a production
@@ -158,6 +166,7 @@ continue = CAS/math normalization of the d3 legal cover over P1_Sroot or P1_B
 kill = production GPU run from the quadratic formula alone
 kill = interpreting conditional 2x lift as source shrink
 kill = fixed-prefix GPU filters without target/source_draw improvement
+kill = short conic sign-word bucket searches without a new invariant
 ```
 
 ```text

@@ -768,6 +768,15 @@ bits through depth 4 with zero mismatches.  On p27 train/heldout samples,
 prefix rates through depths 1-4 are about `0.48/0.24/0.10/0.058` and
 `0.53/0.23/0.11/0.058`.  Thus the tower is exact, but not density-beating on
 the original legal source without a quotient or direct tower sampler.
+The direct sign-word coupling telemetry now agrees:
+[P27 Conic Sign-Word Coupling Probe](evidence/p27_conic_signword_coupling_20260622.md).
+On `4000 + 4000` p27 train/heldout unique `(A,x5)` rows, the all-plus conic
+prefix thins like independent half-gates through the meaningful range; scaled
+half-loss stays near `1` until tiny tails dominate.  Exact q1607/q1847/q2087
+again show local all-plus plateaus, but their stopping gates disagree.  This
+kills GPU sign-word bucket hunting from short conic words alone; GPU
+recurrence telemetry is now only a larger-scale confirmation unless a
+legal-pullback sampler or quotient appears.
 
 The first raw quotient screen is negative:
 [P27 Conic-Pair Low-Degree Relation Screen](evidence/p27_conic_pair_lowdegree_relation_20260621.md).

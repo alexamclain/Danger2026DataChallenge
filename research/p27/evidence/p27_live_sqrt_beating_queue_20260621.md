@@ -177,6 +177,14 @@ The GPU quadratic-gate pass then validated the recurrence formula
 mismatches across gates 3-8.  It still did not improve source-normalized
 target rate, because the recurrence-coordinate domain costs about the same
 factor that it recovers conditionally.
+The CPU sign-word follow-up is also negative as a promotion signal:
+[P27 Conic Sign-Word Coupling Probe](p27_conic_signword_coupling_20260622.md).
+On `4000 + 4000` p27 train/heldout unique `(A,x5)` rows, all-plus conic
+prefixes have scaled half-loss near `1` through meaningful counts; the late
+heldout depth-14 survivor tail has only two rows.  q1607/q1847/q2087 show
+local plateaus, but their kill gates disagree.  This kills GPU sign-word
+bucket hunting from short conic words alone; use GPU only for much larger
+bounded confirmation or for a direct legal-pullback sampler.
 The base-curve sampler test is negative.  In q1607/q1847/q2087 the base curve
 has exactly `q` affine `(K,A)` points and contains every realized legal d2
 point, but only `49/1607`, `63/1847`, and `57/2087` base points are realized

@@ -1,0 +1,50 @@
+p27 conic sign-word coupling probe
+depth d corresponds to selected gate d_{d+2}
+test = all-plus prefix scaling for s_j=chi(r_j^2+c*r_j+1)
+max_depth = 6
+q607_enum_stats:
+  enum_compact_not_target = 293
+  enum_no_label2_candidate = 184
+  legal_candidates = 512
+  unique_ax = 128
+q607:
+  depth1_prefix_plus = 64
+  depth1_prefix_rate_x1000000 = 500000
+  depth1_previous_prefix = 128
+  depth1_scaled_x1000000 = 1000000
+  depth1_transition_rate_x1000000 = 500000
+  depth2_prefix_plus = 0
+  depth2_prefix_rate_x1000000 = 0
+  depth2_previous_prefix = 64
+  depth2_scaled_x1000000 = 0
+  depth2_transition_rate_x1000000 = 0
+  depth3_prefix_plus = 0
+  depth3_prefix_rate_x1000000 = 0
+  depth3_previous_prefix = 0
+  depth3_scaled_x1000000 = 0
+  depth4_prefix_plus = 0
+  depth4_prefix_rate_x1000000 = 0
+  depth4_previous_prefix = 0
+  depth4_scaled_x1000000 = 0
+  depth5_prefix_plus = 0
+  depth5_prefix_rate_x1000000 = 0
+  depth5_previous_prefix = 0
+  depth5_scaled_x1000000 = 0
+  depth6_prefix_plus = 0
+  depth6_prefix_rate_x1000000 = 0
+  depth6_previous_prefix = 0
+  depth6_scaled_x1000000 = 0
+  first_stop_depth1 = 64
+  first_stop_depth2 = 64
+  pattern_+-.... = 64
+  pattern_-..... = 64
+  rows = 128
+q607_prefix_table:
+  depth previous plus transition_rate prefix_rate scaled_half_loss
+  1 128 64 0.500000000 0.500000000 1.000000000
+  2 64 0 0.000000000 0.000000000 0.000000000
+  3 0 0 0.000000000 0.000000000 0.000000000
+  4 0 0 0.000000000 0.000000000 0.000000000
+  5 0 0 0.000000000 0.000000000 0.000000000
+  6 0 0 0.000000000 0.000000000 0.000000000
+p27_conic_signword_coupling_probe_rows=1/1
