@@ -100,6 +100,15 @@ research/p27/archive/fixtures/p27_b_line_legal_cover_q7_magma.m
 research/p27/archive/fixtures/p27_b_line_d3_cover_q7_magma.m
 ```
 
+The current B-line first target is now the no-R localized reduced cover:
+
+[P27 No-R Quotient/Prym Test Packet](p27_noR_quotient_prym_test_packet_20260622.md)
+
+It packages the exact chart, denominator localization, component/genus output,
+quotient/Prym tests, and GPU promotion boundary.  Run it before adding
+compactD_R, because compactD_R has been demoted to a redundant/twinned layer
+after reduced_U.
+
 5. Compare any named class through the B/K bridge:
 
 ```text

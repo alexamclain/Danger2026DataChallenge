@@ -295,6 +295,13 @@ field-of-definition structure to extract.  Do not treat the no-R chart as a
 likely obvious rational/elliptic source; compute components, quotients, and
 Prym factors.
 
+Executable quotient/Prym packet:
+[P27 No-R Quotient/Prym Test Packet](p27_noR_quotient_prym_test_packet_20260622.md).
+This is now the B-line front-door CAS ask: normalize the no-R localized chart,
+compute components and quotients under the sign/reciprocal symmetries, then
+test whether `gamma^2=Unext+2` or the f4/f3 class descends to a sourceable
+low-genus factor.
+
 Gamma squareclass follow-up:
 [P27 B-Line Gamma Specialized Square Smoke](p27_b_line_gamma_specialized_square_smoke_20260622.md).
 Two irreducible one-parameter specializations of the visible `B/H/Y`
@@ -326,6 +333,7 @@ include x6^2-U*x6+1 and gamma^2=U+2 in the offline branch/class extraction
 impose the selected-source legal/core cut before using all-chart lift buckets
 extract branch divisor degree, support field degrees, components, genus
 compute no-R components, quotients, and Prym structure; do not assume genus 0/1
+use the no-R quotient/Prym packet as the executable CAS brief
 compute degree/reducedness/irreducibility offline; do not rely on online Magma
 normalize F_A(u,v)=0 over the f3-plus B-u-H layer and extract div(v+2) modulo squares
 do not retry visible B/H square triviality; the specialization smoke kills it

@@ -1229,6 +1229,11 @@ genus `<= 1` in `5/7` tested fields and reaches `g >= 11` under that reading.
 If the cover is reducible or field-of-definition sensitive, that is the next
 structure to compute.  The live CAS ask is components, quotients, and Prym
 decomposition of the no-R chart before compactD_R/gamma are added.
+That ask is now packaged as an executable packet:
+[P27 No-R Quotient/Prym Test Packet](evidence/p27_noR_quotient_prym_test_packet_20260622.md).
+Promote only a direct source map, a low-genus quotient carrying the selected
+class, or an f3/f4 coupling; kill constant-factor filters and GPU prechecks
+that pay a fresh classification toll.
 The B-line visible two-gate quartic shortcut is closed as well:
 [P27 B-Line Gate4-Prefix Quartic q1847 Screen](evidence/p27_b_line_gate4_prefix_quartic_q1847_screen_20260622.md).
 It scans `6,300,872,423` q1847 coefficient triples for
