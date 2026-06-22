@@ -792,6 +792,14 @@ lockstep through depth 8.  The scaled half-loss stays near `1`, and
 does not reveal a smaller A-bucket source; the univariate small-field
 polynomials are finite A-projection artifacts, not p27 laws.
 
+Extension-field counts give the first staged-geometry substitute:
+[P27 Extension-Field Selected-Prefix Counts](evidence/p27_extension_prefix_count_20260621.md).
+The trusted residual `E/T`, `compactD=-1`, label-2 map, and selected-prefix
+equations were counted over `GF(7^n)` and `GF(23^n)`.  The source is
+curve-sized over extension fields, but selected prefixes still reduce unique
+`A` and unique `(A,x)` together.  Local Frobenius tails appear, but there is no
+stable source collapse that extrapolates to p27 or beats sqrt.
+
 The K-line now has a cleaner coordinate for that extraction:
 [P27 Kummer Belyi Structure Probe](evidence/p27_kummer_belyi_structure_probe_20260621.md).
 Symbolically,

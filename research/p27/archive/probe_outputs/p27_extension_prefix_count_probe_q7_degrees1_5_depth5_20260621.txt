@@ -1,0 +1,61 @@
+p27 extension-field legal selected-prefix count probe
+source = residual E/T cover + compactD=-1 + label-2 candidate map
+GF(7^1) N=7:
+  source_rows = 0
+  oriented_candidates = 0
+  unique_ax = 0
+  unique_A = 0
+  depth0: ax=0 A=0 ax/N=0.000000000 A/N=0.000000000 scaled_ax=0.000000 scaled_A=0.000000
+  depth1: ax=0 A=0 ax/N=0.000000000 A/N=0.000000000 scaled_ax=0.000000 scaled_A=0.000000
+  depth2: ax=0 A=0 ax/N=0.000000000 A/N=0.000000000 scaled_ax=0.000000 scaled_A=0.000000
+  depth3: ax=0 A=0 ax/N=0.000000000 A/N=0.000000000 scaled_ax=0.000000 scaled_A=0.000000
+  depth4: ax=0 A=0 ax/N=0.000000000 A/N=0.000000000 scaled_ax=0.000000 scaled_A=0.000000
+  depth5: ax=0 A=0 ax/N=0.000000000 A/N=0.000000000 scaled_ax=0.000000 scaled_A=0.000000
+GF(7^2) N=49:
+  source_rows = 0
+  oriented_candidates = 0
+  unique_ax = 0
+  unique_A = 0
+  depth0: ax=0 A=0 ax/N=0.000000000 A/N=0.000000000 scaled_ax=0.000000 scaled_A=0.000000
+  depth1: ax=0 A=0 ax/N=0.000000000 A/N=0.000000000 scaled_ax=0.000000 scaled_A=0.000000
+  depth2: ax=0 A=0 ax/N=0.000000000 A/N=0.000000000 scaled_ax=0.000000 scaled_A=0.000000
+  depth3: ax=0 A=0 ax/N=0.000000000 A/N=0.000000000 scaled_ax=0.000000 scaled_A=0.000000
+  depth4: ax=0 A=0 ax/N=0.000000000 A/N=0.000000000 scaled_ax=0.000000 scaled_A=0.000000
+  depth5: ax=0 A=0 ax/N=0.000000000 A/N=0.000000000 scaled_ax=0.000000 scaled_A=0.000000
+GF(7^3) N=343:
+  source_rows = 156
+  oriented_candidates = 144
+  unique_ax = 36
+  unique_A = 9
+  candidate_invalid_not_nonsplit = 168
+  depth0: ax=36 A=9 ax/N=0.104956268 A/N=0.026239067 scaled_ax=1.000000 scaled_A=1.000000
+  depth1: ax=0 A=0 ax/N=0.000000000 A/N=0.000000000 scaled_ax=0.000000 scaled_A=0.000000
+  depth2: ax=0 A=0 ax/N=0.000000000 A/N=0.000000000 scaled_ax=0.000000 scaled_A=0.000000
+  depth3: ax=0 A=0 ax/N=0.000000000 A/N=0.000000000 scaled_ax=0.000000 scaled_A=0.000000
+  depth4: ax=0 A=0 ax/N=0.000000000 A/N=0.000000000 scaled_ax=0.000000 scaled_A=0.000000
+  depth5: ax=0 A=0 ax/N=0.000000000 A/N=0.000000000 scaled_ax=0.000000 scaled_A=0.000000
+GF(7^4) N=2401:
+  source_rows = 1092
+  oriented_candidates = 1344
+  unique_ax = 672
+  unique_A = 168
+  candidate_invalid_not_nonsplit = 840
+  depth0: ax=672 A=168 ax/N=0.279883382 A/N=0.069970845 scaled_ax=1.000000 scaled_A=1.000000
+  depth1: ax=128 A=32 ax/N=0.053311120 A/N=0.013327780 scaled_ax=0.380952 scaled_A=0.380952
+  depth2: ax=0 A=0 ax/N=0.000000000 A/N=0.000000000 scaled_ax=0.000000 scaled_A=0.000000
+  depth3: ax=0 A=0 ax/N=0.000000000 A/N=0.000000000 scaled_ax=0.000000 scaled_A=0.000000
+  depth4: ax=0 A=0 ax/N=0.000000000 A/N=0.000000000 scaled_ax=0.000000 scaled_A=0.000000
+  depth5: ax=0 A=0 ax/N=0.000000000 A/N=0.000000000 scaled_ax=0.000000 scaled_A=0.000000
+GF(7^5) N=16807:
+  source_rows = 8920
+  oriented_candidates = 9440
+  unique_ax = 2360
+  unique_A = 590
+  candidate_invalid_not_nonsplit = 8400
+  depth0: ax=2360 A=590 ax/N=0.140417683 A/N=0.035104421 scaled_ax=1.000000 scaled_A=1.000000
+  depth1: ax=1260 A=315 ax/N=0.074968763 A/N=0.018742191 scaled_ax=1.067797 scaled_A=1.067797
+  depth2: ax=560 A=140 ax/N=0.033319450 A/N=0.008329863 scaled_ax=0.949153 scaled_A=0.949153
+  depth3: ax=560 A=140 ax/N=0.033319450 A/N=0.008329863 scaled_ax=1.898305 scaled_A=1.898305
+  depth4: ax=0 A=0 ax/N=0.000000000 A/N=0.000000000 scaled_ax=0.000000 scaled_A=0.000000
+  depth5: ax=0 A=0 ax/N=0.000000000 A/N=0.000000000 scaled_ax=0.000000 scaled_A=0.000000
+p27_extension_prefix_count_probe_rows=1/1

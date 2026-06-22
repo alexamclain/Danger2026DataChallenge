@@ -34,6 +34,7 @@ research/p27/evidence/p27_gpu_uprecheck_probe_20260621.md
 research/p27/evidence/p27_conic_pair_invariant_relation_20260621.md
 research/p27/evidence/p27_conic_pair_kummer_z_relation_20260621.md
 research/p27/evidence/p27_a_projection_prefix_profile_20260621.md
+research/p27/evidence/p27_extension_prefix_count_20260621.md
 ```
 
 The recurrence is exact in the tested p27 tower:
@@ -185,6 +186,12 @@ The A-projection prefix profile is also negative:
 On p27 train/heldout samples through depth 8, unique `A` and unique `(A,x)`
 shrink in lockstep with ordinary half-loss.  Do not run GPU A-bucket searches
 from selected-prefix filters; they do not produce a smaller source space.
+
+Extension-field selected-prefix counts agree:
+[P27 Extension-Field Selected-Prefix Counts](p27_extension_prefix_count_20260621.md).
+The legal source is curve-sized over `GF(7^n)` and `GF(23^n)`, but selected
+prefixes do not produce a stable smaller source.  Treat local extension-field
+tails as geometry diagnostics, not as GPU source-enumeration targets.
 
 Report:
 

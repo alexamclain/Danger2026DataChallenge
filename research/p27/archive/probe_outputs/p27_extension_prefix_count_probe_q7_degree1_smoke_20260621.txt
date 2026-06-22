@@ -1,0 +1,13 @@
+p27 extension-field legal selected-prefix count probe
+source = residual E/T cover + compactD=-1 + label-2 candidate map
+GF(7^1) N=7:
+  source_rows = 0
+  oriented_candidates = 0
+  unique_ax = 0
+  unique_A = 0
+  depth0: ax=0 A=0 ax/N=0.000000000 A/N=0.000000000 scaled_ax=0.000000 scaled_A=0.000000
+  depth1: ax=0 A=0 ax/N=0.000000000 A/N=0.000000000 scaled_ax=0.000000 scaled_A=0.000000
+  depth2: ax=0 A=0 ax/N=0.000000000 A/N=0.000000000 scaled_ax=0.000000 scaled_A=0.000000
+  depth3: ax=0 A=0 ax/N=0.000000000 A/N=0.000000000 scaled_ax=0.000000 scaled_A=0.000000
+  depth4: ax=0 A=0 ax/N=0.000000000 A/N=0.000000000 scaled_ax=0.000000 scaled_A=0.000000
+p27_extension_prefix_count_probe_rows=1/1

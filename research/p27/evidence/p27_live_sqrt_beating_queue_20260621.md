@@ -128,6 +128,11 @@ The direct A-projection prefix profile confirms the demotion.  On 3,000-row
 p27 train/heldout samples through depth 8, unique `A` and unique `(A,x)` shrink
 in exact lockstep, with scaled half-loss near `1` and `avg_x_per_A=2` at every
 depth.  There is no A-bucket source hiding behind the selected prefixes.
+The extension-field source count now gives a staged-geometry substitute for the
+memory-heavy online Magma pullback.  Over `GF(7^n)` and `GF(23^n)`, the legal
+label-2/compactD source is curve-sized, but selected prefixes still reduce
+unique `A` and `(A,x)` together.  Local Frobenius tails occur, but they do not
+look like p27 source laws.
 ```
 
 Concrete next K/S test:
@@ -157,6 +162,7 @@ no useful low-genus/function-field structure for the conic-chain pullback
 another low-degree plane-curve screen in raw or obvious invariant coordinates
 another simple first-Z-layer pair scan without a new theorem-specified coordinate
 an A-projection or A-bucket search based only on selected-prefix filters
+raw selected-prefix source enumeration based on extension-field tail artifacts
 ```
 
 ## Current Alpha Status
