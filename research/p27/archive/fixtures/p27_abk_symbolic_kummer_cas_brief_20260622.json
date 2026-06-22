@@ -135,7 +135,9 @@
     "research/p27/evidence/p27_trace_norm_dplus_a_descent_20260622.md",
     "research/p27/evidence/p27_noR_quotient_prym_test_packet_20260622.md",
     "research/p27/evidence/p27_abk_f3_f4_chart_count_20260622.md",
-    "research/p27/evidence/p27_abk_f4_f5_transition_count_20260622.md"
+    "research/p27/evidence/p27_abk_f4_f5_transition_count_20260622.md",
+    "research/p27/evidence/p27_gamma_chain_p27_20k_telemetry_20260622.md",
+    "research/p27/evidence/p27_gpu_recurrence_coupling_20260622.md"
   ],
   "magma_fixtures": [
     "research/p27/archive/fixtures/p27_abk_f3_f4_localized_noR_q7_magma.m"
@@ -149,6 +151,18 @@
   "finite_field_count_outputs": [
     "research/p27/archive/probe_outputs/p27_abk_f3_f4_chart_count_probe_small_20260622.txt",
     "research/p27/archive/probe_outputs/p27_abk_f3_f4_chart_count_probe_20260622.txt",
-    "research/p27/archive/probe_outputs/p27_abk_f4_f5_transition_count_probe_20260622.txt"
+    "research/p27/archive/probe_outputs/p27_abk_f4_f5_transition_count_probe_20260622.txt",
+    "research/p27/archive/probe_outputs/p27_b_line_alpha_beta_phase_sequence_probe_p27_20k_20260622.txt"
+  ],
+  "gpu_result_references": [
+    {
+      "branch": "codex/add-cuda-p26-search",
+      "commit": "11c89c8 Add p27 recurrence coupling GPU telemetry",
+      "paths": [
+        "results/p27/gpu_coupling_20260622T120157Z/",
+        "results/p27/gpu_coupling_g16_20260622T120332Z/"
+      ],
+      "verdict": "no sign-word/gamma bucket promoted; max heldout all-plus residual lift 1.053x below 1.25x bar"
+    }
   ]
 }

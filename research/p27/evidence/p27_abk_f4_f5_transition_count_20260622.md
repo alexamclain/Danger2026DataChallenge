@@ -152,6 +152,21 @@ promote only if gamma_4/gamma_5 coupling improves target/source_draw;
 do not run large production from the guard-field one-sided f5 signs.
 ```
 
+P27 telemetry follow-up:
+[P27 Gamma-Chain 20k Telemetry](p27_gamma_chain_p27_20k_telemetry_20260622.md).
+On `20k + 20k` p27 train/heldout samples, the gamma products stay near
+ordinary half-gates and the V4 alpha/beta link products stay near `1/2`.
+This keeps the repeated gamma transition as a CAS class-comparison target, but
+kills immediate GPU production from gamma or phase buckets.
+
+GPU-scale follow-up:
+[P27 GPU Recurrence-Coupling Telemetry](p27_gpu_recurrence_coupling_20260622.md)
+then tests the sign-word coupling idea on an A40 with explicit raw-source
+denominators.  It finds zero formula/materialization mismatches through gates
+`3..16`, but no heldout promotion: max all-plus residual lift is `1.028x` for
+gates `3..12` and `1.053x` for gates `3..16`, below the `1.25x` bar.
+This is a clean kill for GPU production from the current sign-word coupling.
+
 ## Continue / Kill
 
 ```text

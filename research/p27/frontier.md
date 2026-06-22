@@ -2115,6 +2115,19 @@ On the selected `f4=+1` component, `chi(W+2)` is constant across
 `F_A(V,W)=0` and matches frozen `f5(B)` in q1607/q1847/q2087.  Because the
 guard-field `f5` rows are one-sided tails, this promotes CAS comparison of
 repeated gamma classes, not GPU production.
+P27 telemetry now sets the practical boundary:
+[P27 Gamma-Chain 20k Telemetry](evidence/p27_gamma_chain_p27_20k_telemetry_20260622.md).
+On `20k + 20k` train/heldout samples, gamma products and V4 phase links stay
+near ordinary half-gates.  The A/B/K gamma recurrence is therefore a CAS
+class-comparison lane, while GPU should stay limited to bounded named
+telemetry or `Dplus` fused pricing.
+The GPU-scale coupling run confirms the boundary:
+[P27 GPU Recurrence-Coupling Telemetry](evidence/p27_gpu_recurrence_coupling_20260622.md).
+On an A40, `200M` raw draws through gates `3..12` and `200M` raw draws through
+gates `3..16` validated the formulas with zero mismatches, but no sign-word
+bucket cleared promotion; max heldout all-plus lift was `1.053x` versus the
+`1.25x` bar.  This kills current sign-word/gamma GPU production and leaves
+CAS Kummer-class extraction plus separate `Dplus` fused pricing.
 
 ### Card 4c: K-Line Fit Significance
 

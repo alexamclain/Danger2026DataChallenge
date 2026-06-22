@@ -210,6 +210,21 @@ frozen `f5(B)` class in q1607/q1847/q2087.  Because those `f5` rows are
 one-sided field tails, this is a CAS class-comparison/regression result, not a
 source law yet.
 
+P27 sample telemetry:
+[P27 Gamma-Chain 20k Telemetry](p27_gamma_chain_p27_20k_telemetry_20260622.md).
+The repeated gamma transition does not currently produce a source-normalized
+p27 lift: gate products and alpha/beta phase links remain near half on
+`20k + 20k` train/heldout samples.  This makes CAS extraction the next
+required step before any production GPU run from the A/B/K gamma lane.
+
+GPU recurrence-coupling follow-up:
+[P27 GPU Recurrence-Coupling Telemetry](p27_gpu_recurrence_coupling_20260622.md).
+The A40 run validates the recurrence formulas at scale but kills current
+sign-word production: `200M` raw draws through gates `3..12` and another
+`200M` through gates `3..16` produce no heldout bucket above `1.053x`, below
+the `1.25x` promotion bar.  Keep this lane as offline Kummer/Prym/class
+comparison unless CAS supplies a new source coordinate.
+
 2. Extract the f4/f3 Kummer class.
 
 Required output:
