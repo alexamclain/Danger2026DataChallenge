@@ -2109,6 +2109,12 @@ They show that the f3-plus-only B fibers reproduce the prior gamma handoff,
 while all-chart mixed fibers are staging artifacts.  This keeps the live task
 as selected-component Kummer extraction and kills all-chart gamma buckets as a
 GPU source.
+The next-layer count is positive as structure:
+[P27 A/B/K F4/F5 Transition Count](evidence/p27_abk_f4_f5_transition_count_20260622.md).
+On the selected `f4=+1` component, `chi(W+2)` is constant across
+`F_A(V,W)=0` and matches frozen `f5(B)` in q1607/q1847/q2087.  Because the
+guard-field `f5` rows are one-sided tails, this promotes CAS comparison of
+repeated gamma classes, not GPU production.
 
 ### Card 4c: K-Line Fit Significance
 

@@ -202,6 +202,14 @@ field-dependent.  CAS should therefore normalize the selected f3-plus-only
 component and treat the other fibers as staging/component bookkeeping, not GPU
 buckets.
 
+Next-layer finite-field follow-up:
+[P27 A/B/K F4/F5 Transition Count](p27_abk_f4_f5_transition_count_20260622.md).
+The same gamma-transition form repeats on the selected `f4=+1` component:
+`chi(W+2)` is constant across the generic four-root transition and matches the
+frozen `f5(B)` class in q1607/q1847/q2087.  Because those `f5` rows are
+one-sided field tails, this is a CAS class-comparison/regression result, not a
+source law yet.
+
 2. Extract the f4/f3 Kummer class.
 
 Required output:

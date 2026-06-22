@@ -149,6 +149,14 @@ Normalize with the selected-source legal/core cut visible:
 Do not interpret all-chart mixed fibers as legal-source ambiguity.  They are
 chart/component bookkeeping for CAS, not GPU buckets.
 
+Next-layer follow-up:
+[P27 A/B/K F4/F5 Transition Count](p27_abk_f4_f5_transition_count_20260622.md).
+On every guard-field B row with `f4=+1`, all four generic roots of
+`F_A(V,W)=0` have `chi(W+2)` equal to the frozen `f5(B)` sign.  This shows the
+gamma-transition shape repeats one layer deeper, but the available `f5` rows
+are one-sided field tails, so it remains a CAS class-comparison target rather
+than a GPU production source.
+
 ## Continue / Kill
 
 ```text
