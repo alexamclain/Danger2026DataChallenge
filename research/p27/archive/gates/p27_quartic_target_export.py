@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Export frozen B/K quartic target rows for the fast C chunk oracle."""
+"""Export frozen B/K/lambda quartic target rows for the fast C chunk oracle."""
 
 from __future__ import annotations
 
@@ -9,11 +9,18 @@ from typing import Any
 
 import p27_b_line_quartic_verify as b_verify
 import p27_kline_quartic_verify as k_verify
+import p27_lambda_lowgenus_verify as lambda_verify
 
 
 COORDS = {
     "B": (b_verify.DEFAULT_PACKET, b_verify.load_packet, b_verify.target_entry, "B"),
     "K": (k_verify.DEFAULT_PACKET, k_verify.load_packet, k_verify.target_entry, "K"),
+    "lambda": (
+        lambda_verify.DEFAULT_PACKET,
+        lambda_verify.load_packet,
+        lambda_verify.target_entry,
+        "lambda",
+    ),
 }
 
 

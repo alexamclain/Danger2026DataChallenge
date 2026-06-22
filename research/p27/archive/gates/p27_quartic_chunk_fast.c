@@ -1,4 +1,4 @@
-// Fast chunk oracle for p27 B/K monic quartic exact-support screens.
+// Fast chunk oracle for p27 line-coordinate monic quartic exact-support screens.
 //
 // Input row file format:
 //   # comments allowed

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Run the fast C quartic chunk oracle over a full B/K target in shards."""
+"""Run the fast C quartic chunk oracle over a full line-coordinate target."""
 
 from __future__ import annotations
 

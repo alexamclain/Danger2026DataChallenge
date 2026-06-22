@@ -129,16 +129,18 @@ It tests S3-conjugated maps `lambda -> lambda^m` for `m=2..12` and finds no
 exact forward or reverse `d3/d4` recurrence in q1471/q1607/q1847.  The best
 forward coverages are only `4/28`, `5/28`, and `9/45`.
 
-The monic cubic low-genus family is now closed as well:
+The monic cubic low-genus family is closed as well:
 [P27 Lambda Low-Genus Screen](p27_lambda_lowgenus_screen_20260622.md).
 It exhausts all exact `chi(lambda^3+a lambda^2+b lambda+c)` candidates for
 `d3_on_lambda` in q1471/q1607/q1847 and finds zero exact cubics.  The remaining
-bounded lambda source screen is monic quartic support, which is GPU-sized.
+bounded lambda source screen was monic quartic support.  The decisive q1847
+quartic screen is now closed and negative:
+[P27 Lambda Quartic q1847 D3 Screen](p27_lambda_quartic_q1847_d3_screen_20260622.md).
 
 What remains:
 
 ```text
-monic quartic lambda support
+actual K-level branch-class extraction with the K-square stratum preserved
 non-split higher-degree branch support
 actual Magma/Sage normalization and genus computation from the source cover
 ```
@@ -166,10 +168,11 @@ fresh half-cover.
 
 ```text
 continue = Magma/Sage branch-class extraction over lambda
-continue = exact monic quartic lambda support as the remaining bounded low-genus screen
+continue = actual K-level branch-class extraction
 kill = split degree <=4 lambda branch divisors for d3
 kill = S3-conjugated lambda monomial recurrences for m=2..12
 kill = monic cubic lambda support for d3
+kill = q1847 monic quartic lambda support for d3
 kill = q1471/q1607-only d4 lambda fits as recurrence evidence
 ```
 

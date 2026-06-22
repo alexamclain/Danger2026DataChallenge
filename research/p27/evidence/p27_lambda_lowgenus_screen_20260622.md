@@ -4,9 +4,8 @@ Date: 2026-06-22
 
 ## Claim
 
-The lambda-line cubic source family is now closed for the decisive `d3` bit.
-The remaining bounded low-genus lambda test is monic quartic support, which is
-GPU-sized in the promotion fields.
+The lambda-line cubic source family is closed for the decisive `d3` bit, and
+the q1847 monic-quartic promotion-field screen is now closed too.
 
 The coordinate is:
 
@@ -24,6 +23,11 @@ chi(lambda^3 + a*lambda^2 + b*lambda + c)
 with global polarity allowed.  Exhausting all `q^2` `(a,b)` chunks and
 intersecting constants gives zero exact cubics for `d3_on_lambda` in
 q1471/q1607/q1847.
+
+Follow-up:
+[P27 Lambda Quartic q1847 D3 Screen](p27_lambda_quartic_q1847_d3_screen_20260622.md)
+then exhausts the exact monic quartic family in q1847 and also finds zero
+hits.
 
 ## Artifacts
 
@@ -58,6 +62,8 @@ research/p27/archive/probe_outputs/p27_lambda_lowgenus_chunk_probe_q1471_d3_deg3
 research/p27/archive/probe_outputs/p27_lambda_lowgenus_chunk_probe_q1607_d3_deg3_full_20260622.txt
 research/p27/archive/probe_outputs/p27_lambda_lowgenus_chunk_probe_q1847_d3_deg3_full_20260622.txt
 research/p27/archive/probe_outputs/p27_lambda_lowgenus_chunk_probe_q1471_d3_deg3_start0_count2000_20260622.txt
+research/p27/archive/probe_outputs/p27_lambda_lowgenus_chunk_probe_q1847_d3_deg4_start0_count2000_20260622.txt
+research/p27/archive/probe_outputs/p27_quartic_lambda1847_d3_full_20260622/SUMMARY.txt
 ```
 
 ## Target Rows
@@ -126,9 +132,9 @@ q1847 d3 cubic: 1.37e-9
 
 So a stable cubic would have been highly meaningful; none exists.
 
-## Remaining Quartic Test
+## Quartic Test
 
-The exact monic quartic family is still open:
+The exact monic quartic family was then tested in the decisive q1847 field:
 
 ```text
 chi(lambda^4 + a*lambda^3 + b*lambda^2 + c*lambda + d)
@@ -137,7 +143,7 @@ chi(lambda^4 + a*lambda^3 + b*lambda^2 + c*lambda + d)
 The existing chunk runner reduces this to `q^3` `(a,b,c)` chunks by
 intersecting possible constants `d`, matching the K/B quartic workflow.
 
-Expected exact counts for `d3_on_lambda`:
+Expected exact counts for `d3_on_lambda` before the run:
 
 ```text
 q1471 degree4: 8.32e-3
@@ -145,10 +151,20 @@ q1607 degree4: 2.37e-2
 q1847 degree4: 2.52e-6
 ```
 
-Thus a q1847 quartic hit would be a real low-genus clue, but it would still be
-diagnostic until it lifts to the rational K-square stratum.
+The q1847 full screen result is:
 
-GPU/C run shape:
+```text
+triples_scanned = 6300872423
+exact_quartics = 0
+wall_seconds = 502.863578
+wall_throughput_triples_per_second = 12529983.679
+```
+
+Thus the decisive q1847 low-genus lambda quartic clue is absent.  Smaller
+q1471/q1607 quartic runs are now bookkeeping only unless a new theorem changes
+the target family.
+
+Reference run shape:
 
 ```bash
 python3 -u research/p27/archive/gates/p27_lambda_lowgenus_chunk_probe.py \
@@ -162,7 +178,7 @@ python3 -u research/p27/archive/gates/p27_lambda_lowgenus_chunk_probe.py \
 Full q1847 degree-4 work size:
 
 ```text
-1847^3 = 6,300,985,823 coefficient triples before constant intersection
+1847^3 = 6,300,872,423 coefficient triples before constant intersection
 ```
 
 ## Interpretation
@@ -170,28 +186,29 @@ Full q1847 degree-4 work size:
 Positive:
 
 ```text
-The lambda low-genus screen now has frozen targets, verifier, and chunk runner.
+The lambda low-genus screen now has frozen targets, verifier, and runners.
 The decisive cubic family is closed locally in all three guard fields.
-The remaining quartic family is concrete and GPU-sized, not vague.
+The q1847 quartic promotion-field screen is closed and negative.
 ```
 
 Negative:
 
 ```text
 No genus-1 cubic lambda source exists for d3.
+No q1847 monic quartic lambda source exists for d3.
 Lambda is still not a rational p27 source quotient by itself.
-A quartic hit must be checked against the K-square lift before promotion.
+Any future lambda hit must be checked against the K-square lift before promotion.
 ```
 
 ## Continue / Kill
 
 ```text
-continue = GPU/C exact monic quartic screen for q1847 d3_on_lambda
-continue = verify any hit with p27_lambda_lowgenus_verify.py
-continue = if quartic hits, compute genus/sourceability and K-square lift
-continue = otherwise move to actual K-level branch-class extraction
+continue = move to actual K-level branch-class extraction
+continue = verify any future hit with p27_lambda_lowgenus_verify.py
+continue = if a new lambda family hits, compute genus/sourceability and K-square lift
 
 kill = monic cubic lambda d3 source
+kill = q1847 monic quartic lambda d3 source
 kill = lambda-only source promotion without K-square lift
 kill = d4 lambda fits before d3 is named
 ```

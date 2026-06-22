@@ -1,0 +1,17 @@
+p27 quartic fast shard summary
+coordinate = lambda
+field = 1847
+family = d3_on_lambda
+rows = 63
+plus = 45
+minus = 18
+total_triples = 10000000
+full_triples = 6300872423
+triples_scanned = 10000000
+polarity_-1_hits = 0
+polarity_1_hits = 0
+exact_quartics = 0
+wall_seconds = 0.999667
+wall_throughput_triples_per_second = 10003329.432
+hit_samples:
+p27_quartic_fast_shard_runner_rows=1/1

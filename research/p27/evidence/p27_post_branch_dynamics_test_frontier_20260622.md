@@ -34,6 +34,7 @@ K/lambda:
   split degree <=4 lambda branch divisors for d3
   lambda monomial Belyi maps lambda -> lambda^m, m=2..12
   monic cubic lambda support for d3
+  q1847 monic quartic lambda support for d3
 ```
 
 The common pattern is important:
@@ -129,7 +130,7 @@ genus/support field degrees
 whether lambda-level structure lifts back to the K-square stratum
 ```
 
-First bounded subtest:
+First bounded subtest, now closed in the decisive field:
 
 ```text
 exact monic quartic support on lambda for d3_on_lambda
@@ -137,8 +138,8 @@ exact monic quartic support on lambda for d3_on_lambda
 
 The cubic subfamily is already closed in q1471/q1607/q1847:
 [P27 Lambda Low-Genus Screen](p27_lambda_lowgenus_screen_20260622.md).
-The quartic subfamily has a frozen packet/verifier/chunk runner and is
-GPU-sized at q1847.
+The quartic q1847 promotion-field screen is also closed and negative:
+[P27 Lambda Quartic q1847 D3 Screen](p27_lambda_quartic_q1847_d3_screen_20260622.md).
 
 Promote only if:
 

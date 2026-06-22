@@ -916,9 +916,13 @@ standalone recurrence/source.
 The lambda low-genus subcase is sharpened:
 [P27 Lambda Low-Genus Screen](evidence/p27_lambda_lowgenus_screen_20260622.md).
 It freezes lambda targets and exhausts all monic cubic support for
-`d3_on_lambda` in q1471/q1607/q1847, finding zero exact cubics.  The remaining
-bounded lambda test is exact monic quartic support, which is GPU-sized at
-q1847 and diagnostic only until a K-square lift is verified.
+`d3_on_lambda` in q1471/q1607/q1847, finding zero exact cubics.  The decisive
+q1847 exact monic quartic screen is now closed too:
+[P27 Lambda Quartic q1847 D3 Screen](evidence/p27_lambda_quartic_q1847_d3_screen_20260622.md).
+It scans `6,300,872,423` coefficient triples and finds zero exact quartics.
+Thus lambda is no longer a GPU quartic target; it remains a normalization
+coordinate for actual K-level branch-class extraction with the K-square stratum
+preserved.
 The compact synthesis after these closures is:
 [P27 Post-Branch-Dynamics Test Frontier](evidence/p27_post_branch_dynamics_test_frontier_20260622.md).
 It lists the closed branch-map families and the remaining first-class tests:
