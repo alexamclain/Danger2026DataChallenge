@@ -898,6 +898,14 @@ There are no exact forward or reverse `d3/d4` recurrences in
 q1607/q1847/q2087.  The best forward coverage is only `9/28`, `17/45`, and
 `11/25`, so forgetting B sign does not recover a sourceable hidden-`X`
 recurrence.
+The canonical Chebyshev/Dickson self-maps of the A branch set are now negative:
+[P27 A-Line Chebyshev Recurrence Screen](evidence/p27_a_line_chebyshev_recurrence_screen_20260622.md).
+It tests `D_m(A)=2*T_m(A/2)` for `m=2..12`, conjugated by the six branch-S3
+symmetries.  No full-domain recurrence appears in q1607/q1847/q2087; the
+main `d3 -> d4` best coverages are only `10/28`, `17/45`, and `9/25`.  Later
+perfect-looking rows are low-coverage small-field one-sided tails.  This
+leaves normalized A-cover Kummer extraction, not A-line dynamics, as the live
+route.
 The direct sign-word coupling telemetry now agrees:
 [P27 Conic Sign-Word Coupling Probe](evidence/p27_conic_signword_coupling_20260622.md).
 On `4000 + 4000` p27 train/heldout unique `(A,x5)` rows, the all-plus conic

@@ -130,6 +130,7 @@ kill = visible A-branch S3 orbit/recurrence shortcut
 kill = affine A-line recurrence d_{j+1}(A)=+/-d_j(m*A+b)
 kill = degree-one rational A-line recurrence
 kill = hidden-X power-map A-level recurrence for m=2..6
+kill = S3-conjugated Chebyshev/Dickson A-line recurrence for m=2..12
 kill = GPU A-bucket production before a source law exists
 kill = treating finite-field rows alone as a proof of recurrence
 ```
@@ -160,6 +161,13 @@ uses the hidden B-line coordinate `B=8X^2/(X^2-1)^2`, projects through
 There are no exact forward or reverse `d3/d4` recurrences in
 q1607/q1847/q2087, so hidden-X power maps should not distract the CAS pass from
 actual normalized-cover Kummer classes.
+
+Update: [P27 A-Line Chebyshev Recurrence Screen](p27_a_line_chebyshev_recurrence_screen_20260622.md)
+tests the canonical self-maps of the A branch set,
+`D_m(A)=2*T_m(A/2)`, for `m=2..12`, with S3 conjugation on both sides.  No
+full-domain recurrence appears in q1607/q1847/q2087.  This closes the nearest
+postcritically finite A-line dynamics route and keeps the packet focused on
+actual normalized-cover Kummer extraction.
 
 ```text
 p27_a_level_kummer_extraction_packet_rows=1/1

@@ -213,6 +213,13 @@ No exact forward or reverse `d3/d4` recurrence appears in q1607/q1847/q2087;
 the best forward coverage is only `9/28`, `17/45`, and `11/25`.  So the next
 A-line correspondence must come from actual normalized-cover classes, not the
 hidden-X doubling/tripling family.
+The Chebyshev/Dickson self-map family is negative too:
+[P27 A-Line Chebyshev Recurrence Screen](p27_a_line_chebyshev_recurrence_screen_20260622.md).
+It tests the canonical maps `D_m(A)=2*T_m(A/2)` for `m=2..12`, with branch-S3
+conjugation on both sides.  There is no exact full-domain recurrence for
+`d3 -> d4` or later transitions in q1607/q1847/q2087.  The few perfect-looking
+later rows cover only small one-sided tails, so they do not promote an A-line
+dynamic sampler.
 The B/K-enhanced legal-pullback screen gives one positive staging coordinate:
 [P27 Conic-Pair B/K-Enhanced Pullback Screen](p27_conic_pair_b_enhanced_pullback_20260622.md).
 It finds the expected `B^2+c^2=4` and the stable surface
