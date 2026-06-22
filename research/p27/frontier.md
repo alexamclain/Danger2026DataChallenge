@@ -793,6 +793,15 @@ canonical d3-plus `(B,A,x)` rows at `constant/q` density
 (`rate*q` about `0.38..0.78`).  It captures all canonical d3-plus target rows
 and no canonical d3-minus rows, so it is a good staged model, but it does not
 solve the legal B-domain denominator.
+The legal-B-restricted relation follow-up is also negative:
+[P27 BSM Legal-Restricted Relation Screen](evidence/p27_bsm_legal_restricted_relations_20260622.md).
+In q1607/q1847/q2087, the target rows have no extra low-degree relation beyond
+the legal-B-restricted BSM surface in `(B,s)`, `(B,m)`, or `(s,m)` through
+degree `12`.  In `(B,s,m)`, degree `4` gives exactly the inherited BSM
+equation on both the full legal surface and the target subset
+(`target_minus_legal_extra=0`).  This kills the legal-B BSM surface as a
+GPU-promotable bucket/source until a true legal-B cover or next Kummer selector
+is added.
 
 The first raw quotient screen is negative:
 [P27 Conic-Pair Low-Degree Relation Screen](evidence/p27_conic_pair_lowdegree_relation_20260621.md).

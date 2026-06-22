@@ -198,6 +198,13 @@ The BSM surface is about `q^2`-sized in q1607/q1847/q2087 and hits canonical
 d3-plus `(B,A,x)` rows at `constant/q` density.  It captures the d3-plus side
 when a canonical legal row is already present, but does not source the sparse
 legal B-domain.
+The legal-B-restricted relation follow-up closes the nearest loophole:
+[P27 BSM Legal-Restricted Relation Screen](p27_bsm_legal_restricted_relations_20260622.md).
+After restricting the BSM surface to legal B values, q1607/q1847/q2087 show no
+extra target relation in `(B,s)`, `(B,m)`, or `(s,m)` through degree `12`, and
+the only degree-4 relation in `(B,s,m)` is the inherited BSM equation shared by
+the legal surface and target subset.  So legal-B BSM is still CAS staging, not
+a GPU source or bucket law.
 The base-curve sampler test is negative.  In q1607/q1847/q2087 the base curve
 has exactly `q` affine `(K,A)` points and contains every realized legal d2
 point, but only `49/1607`, `63/1847`, and `57/2087` base points are realized

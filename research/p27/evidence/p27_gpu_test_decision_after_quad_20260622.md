@@ -62,6 +62,11 @@ B-domain.  Treat it as CAS input, not as a direct GPU sampler.
 [P27 BSM Surface Incidence Probe](p27_bsm_surface_incidence_20260622.md)
 confirms this pricing: the surface is about `q^2`-sized and d3-plus incidence
 is still `constant/q`.
+[P27 BSM Legal-Restricted Relation Screen](p27_bsm_legal_restricted_relations_20260622.md)
+then tests the closest promotion path after imposing legal B.  The target rows
+have no extra low-degree relation beyond the inherited BSM equation in
+q1607/q1847/q2087, so this remains a CAS/extraction surface rather than a GPU
+sampler.
 
 ## Interpretation
 

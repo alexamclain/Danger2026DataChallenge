@@ -1,0 +1,183 @@
+p27 BSM legal-restricted relation probe
+legal surface = BSM surface with B in legal B-domain
+target = canonical d3-plus B/A/x rows inside that surface
+pair_degrees = [2, 4, 6, 8, 10, 12]
+triple_degrees = [2, 4]
+q1607_base:
+  data_d3minus_ax = 84
+  data_d3plus_ax = 112
+  data_d3plus_b = 28
+  data_enum_compact_not_target = 805
+  data_enum_no_label2_candidate = 408
+  data_legal_ax = 196
+  data_legal_b = 49
+  inconsistent_den0_pairs = 98
+  legal_B = 49
+  legal_surface_rows = 77368
+  skip_m0 = 147
+  surface_no_m_root_pairs = 39814
+  surface_rows_per_B_1528 = 19
+  surface_rows_per_B_1592 = 21
+  surface_rows_per_B_1656 = 9
+  target_B = 28
+  target_rows = 896
+  target_rows_per_B_32 = 28
+q1607_B_s:
+  legal_rows = 77368
+  legal_unique = 38684
+  target_rows = 896
+  target_unique = 448
+  deg2: legal_rank=6 legal_extra=0 target_rank=6 target_extra=0 target_minus_legal_extra=0
+  deg4: legal_rank=15 legal_extra=0 target_rank=15 target_extra=0 target_minus_legal_extra=0
+  deg6: legal_rank=28 legal_extra=0 target_rank=28 target_extra=0 target_minus_legal_extra=0
+  deg8: legal_rank=45 legal_extra=0 target_rank=45 target_extra=0 target_minus_legal_extra=0
+  deg10: legal_rank=66 legal_extra=0 target_rank=66 target_extra=0 target_minus_legal_extra=0
+  deg12: legal_rank=91 legal_extra=0 target_rank=91 target_extra=0 target_minus_legal_extra=0
+q1607_B_m:
+  legal_rows = 77368
+  legal_unique = 19342
+  target_rows = 896
+  target_unique = 224
+  deg2: legal_rank=6 legal_extra=0 target_rank=6 target_extra=0 target_minus_legal_extra=0
+  deg4: legal_rank=15 legal_extra=0 target_rank=15 target_extra=0 target_minus_legal_extra=0
+  deg6: legal_rank=28 legal_extra=0 target_rank=28 target_extra=0 target_minus_legal_extra=0
+  deg8: legal_rank=45 legal_extra=0 target_rank=45 target_extra=0 target_minus_legal_extra=0
+  deg10: legal_rank=66 legal_extra=0 target_rank=66 target_extra=0 target_minus_legal_extra=0
+  deg12: legal_rank=91 legal_extra=0 target_rank=91 target_extra=0 target_minus_legal_extra=0
+q1607_s_m:
+  legal_rows = 77368
+  legal_unique = 77368
+  target_rows = 896
+  target_unique = 896
+  deg2: legal_rank=6 legal_extra=0 target_rank=6 target_extra=0 target_minus_legal_extra=0
+  deg4: legal_rank=15 legal_extra=0 target_rank=15 target_extra=0 target_minus_legal_extra=0
+  deg6: legal_rank=28 legal_extra=0 target_rank=28 target_extra=0 target_minus_legal_extra=0
+  deg8: legal_rank=45 legal_extra=0 target_rank=45 target_extra=0 target_minus_legal_extra=0
+  deg10: legal_rank=66 legal_extra=0 target_rank=66 target_extra=0 target_minus_legal_extra=0
+  deg12: legal_rank=91 legal_extra=0 target_rank=91 target_extra=0 target_minus_legal_extra=0
+q1607_B_s_m:
+  legal_rows = 77368
+  legal_unique = 77368
+  target_rows = 896
+  target_unique = 896
+  deg2: legal_rank=10 legal_extra=0 target_rank=10 target_extra=0 target_minus_legal_extra=0
+  deg4: legal_rank=34 legal_extra=1 target_rank=34 target_extra=1 target_minus_legal_extra=0
+q1847_base:
+  data_d3minus_ax = 72
+  data_d3plus_ax = 180
+  data_d3plus_b = 45
+  data_enum_compact_not_target = 873
+  data_enum_no_label2_candidate = 468
+  data_legal_ax = 252
+  data_legal_b = 63
+  inconsistent_den0_pairs = 126
+  legal_B = 63
+  legal_surface_rows = 116872
+  skip_m0 = 189
+  surface_no_m_root_pairs = 57610
+  surface_rows_per_B_1784 = 19
+  surface_rows_per_B_1848 = 18
+  surface_rows_per_B_1912 = 26
+  target_B = 45
+  target_rows = 1440
+  target_rows_per_B_32 = 45
+q1847_B_s:
+  legal_rows = 116872
+  legal_unique = 58436
+  target_rows = 1440
+  target_unique = 720
+  deg2: legal_rank=6 legal_extra=0 target_rank=6 target_extra=0 target_minus_legal_extra=0
+  deg4: legal_rank=15 legal_extra=0 target_rank=15 target_extra=0 target_minus_legal_extra=0
+  deg6: legal_rank=28 legal_extra=0 target_rank=28 target_extra=0 target_minus_legal_extra=0
+  deg8: legal_rank=45 legal_extra=0 target_rank=45 target_extra=0 target_minus_legal_extra=0
+  deg10: legal_rank=66 legal_extra=0 target_rank=66 target_extra=0 target_minus_legal_extra=0
+  deg12: legal_rank=91 legal_extra=0 target_rank=91 target_extra=0 target_minus_legal_extra=0
+q1847_B_m:
+  legal_rows = 116872
+  legal_unique = 29218
+  target_rows = 1440
+  target_unique = 360
+  deg2: legal_rank=6 legal_extra=0 target_rank=6 target_extra=0 target_minus_legal_extra=0
+  deg4: legal_rank=15 legal_extra=0 target_rank=15 target_extra=0 target_minus_legal_extra=0
+  deg6: legal_rank=28 legal_extra=0 target_rank=28 target_extra=0 target_minus_legal_extra=0
+  deg8: legal_rank=45 legal_extra=0 target_rank=45 target_extra=0 target_minus_legal_extra=0
+  deg10: legal_rank=66 legal_extra=0 target_rank=66 target_extra=0 target_minus_legal_extra=0
+  deg12: legal_rank=91 legal_extra=0 target_rank=91 target_extra=0 target_minus_legal_extra=0
+q1847_s_m:
+  legal_rows = 116872
+  legal_unique = 116872
+  target_rows = 1440
+  target_unique = 1440
+  deg2: legal_rank=6 legal_extra=0 target_rank=6 target_extra=0 target_minus_legal_extra=0
+  deg4: legal_rank=15 legal_extra=0 target_rank=15 target_extra=0 target_minus_legal_extra=0
+  deg6: legal_rank=28 legal_extra=0 target_rank=28 target_extra=0 target_minus_legal_extra=0
+  deg8: legal_rank=45 legal_extra=0 target_rank=45 target_extra=0 target_minus_legal_extra=0
+  deg10: legal_rank=66 legal_extra=0 target_rank=66 target_extra=0 target_minus_legal_extra=0
+  deg12: legal_rank=91 legal_extra=0 target_rank=91 target_extra=0 target_minus_legal_extra=0
+q1847_B_s_m:
+  legal_rows = 116872
+  legal_unique = 116872
+  target_rows = 1440
+  target_unique = 1440
+  deg2: legal_rank=10 legal_extra=0 target_rank=10 target_extra=0 target_minus_legal_extra=0
+  deg4: legal_rank=34 legal_extra=1 target_rank=34 target_extra=1 target_minus_legal_extra=0
+q2087_base:
+  data_d3minus_ax = 128
+  data_d3plus_ax = 100
+  data_d3plus_b = 25
+  data_enum_compact_not_target = 1109
+  data_enum_no_label2_candidate = 520
+  data_legal_ax = 228
+  data_legal_b = 57
+  inconsistent_den0_pairs = 114
+  legal_B = 57
+  legal_surface_rows = 119224
+  skip_m0 = 171
+  surface_no_m_root_pairs = 59062
+  surface_rows_per_B_2040 = 18
+  surface_rows_per_B_2104 = 32
+  surface_rows_per_B_2168 = 7
+  target_B = 25
+  target_rows = 800
+  target_rows_per_B_32 = 25
+q2087_B_s:
+  legal_rows = 119224
+  legal_unique = 59612
+  target_rows = 800
+  target_unique = 400
+  deg2: legal_rank=6 legal_extra=0 target_rank=6 target_extra=0 target_minus_legal_extra=0
+  deg4: legal_rank=15 legal_extra=0 target_rank=15 target_extra=0 target_minus_legal_extra=0
+  deg6: legal_rank=28 legal_extra=0 target_rank=28 target_extra=0 target_minus_legal_extra=0
+  deg8: legal_rank=45 legal_extra=0 target_rank=45 target_extra=0 target_minus_legal_extra=0
+  deg10: legal_rank=66 legal_extra=0 target_rank=66 target_extra=0 target_minus_legal_extra=0
+  deg12: legal_rank=91 legal_extra=0 target_rank=91 target_extra=0 target_minus_legal_extra=0
+q2087_B_m:
+  legal_rows = 119224
+  legal_unique = 29806
+  target_rows = 800
+  target_unique = 200
+  deg2: legal_rank=6 legal_extra=0 target_rank=6 target_extra=0 target_minus_legal_extra=0
+  deg4: legal_rank=15 legal_extra=0 target_rank=15 target_extra=0 target_minus_legal_extra=0
+  deg6: legal_rank=28 legal_extra=0 target_rank=28 target_extra=0 target_minus_legal_extra=0
+  deg8: legal_rank=45 legal_extra=0 target_rank=45 target_extra=0 target_minus_legal_extra=0
+  deg10: legal_rank=66 legal_extra=0 target_rank=66 target_extra=0 target_minus_legal_extra=0
+  deg12: legal_rank=91 legal_extra=0 target_rank=91 target_extra=0 target_minus_legal_extra=0
+q2087_s_m:
+  legal_rows = 119224
+  legal_unique = 119224
+  target_rows = 800
+  target_unique = 800
+  deg2: legal_rank=6 legal_extra=0 target_rank=6 target_extra=0 target_minus_legal_extra=0
+  deg4: legal_rank=15 legal_extra=0 target_rank=15 target_extra=0 target_minus_legal_extra=0
+  deg6: legal_rank=28 legal_extra=0 target_rank=28 target_extra=0 target_minus_legal_extra=0
+  deg8: legal_rank=45 legal_extra=0 target_rank=45 target_extra=0 target_minus_legal_extra=0
+  deg10: legal_rank=66 legal_extra=0 target_rank=66 target_extra=0 target_minus_legal_extra=0
+  deg12: legal_rank=91 legal_extra=0 target_rank=91 target_extra=0 target_minus_legal_extra=0
+q2087_B_s_m:
+  legal_rows = 119224
+  legal_unique = 119224
+  target_rows = 800
+  target_unique = 800
+  deg2: legal_rank=10 legal_extra=0 target_rank=10 target_extra=0 target_minus_legal_extra=0
+  deg4: legal_rank=34 legal_extra=1 target_rank=34 target_extra=1 target_minus_legal_extra=0
+p27_bsm_legal_restricted_relation_probe_rows=1/1
