@@ -125,6 +125,12 @@ Hit verifier:
 research/p27/archive/gates/p27_b_line_quartic_verify.py
 ```
 
+CPU reference chunk runner:
+
+```text
+research/p27/archive/gates/p27_b_line_quartic_chunk_probe.py
+```
+
 Generation command:
 
 ```bash
@@ -151,6 +157,37 @@ for a in F_q:
         intersection &= masks[desired_i][offset_i]
         early exit if empty
       any remaining d gives an exact monic quartic
+```
+
+Flattened chunk convention:
+
+```text
+index = (a*q + b)*q + c
+a = index // q^2
+b = (index % q^2) // q
+c = index % q
+```
+
+Reference chunk command:
+
+```bash
+PYTHONDONTWRITEBYTECODE=1 \
+python3 -u research/p27/archive/gates/p27_b_line_quartic_chunk_probe.py \
+  --field 1607 \
+  --family d3_on_legalB \
+  --start 0 \
+  --count 2000 \
+  | tee research/p27/archive/probe_outputs/p27_b_line_quartic_chunk_probe_q1607_d3_start0_count2000_20260622.txt
+```
+
+Smoke result:
+
+```text
+field = 1607
+family = d3_on_legalB
+start = 0
+triples_scanned = 2000
+exact_quartics = 0
 ```
 
 Report both polarities.  Exclude zeros in the Legendre table as the existing
