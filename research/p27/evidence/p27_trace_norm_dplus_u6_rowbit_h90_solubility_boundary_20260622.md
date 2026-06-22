@@ -147,16 +147,34 @@ sqrt-beating candidate.  If it is a fresh independent half-cover or only a
 local solubility artifact, the Dplus row-bit lane remains structural telemetry
 rather than a production search-space shrink.
 
+Follow-up
+[P27 Trace/Norm Dplus U6 Row-Bit H90 Group-Coset Screen](p27_trace_norm_dplus_u6_rowbit_h90_group_coset_20260622.md)
+tests the nearest sourceable explanation for the soluble-side sign.  Mapping
+`E_h90` through
+
+```text
+a = t - 1/t
+b = w*(t^2+1)/t^2
+u = 4/a^2
+v = 2*b/a^3
+```
+
+to `E: v^2=u^3-u`, small quotient projections `m <= 24` have no nontrivial
+exact separation in the fields with both signs present.  Thus the remaining
+sign is not a small elliptic coset character in the tested family.
+
 ## Continue / Kill
 
 ```text
 continue = prove/explain the Ktrace solubility boundary
 continue = extract the non-visible plus/minus class on H90-soluble fibers
+continue = divisor/theta/Prym extraction after the small-coset kill
 continue = include Ktrace, row bit, A, and later gates in fused/native Dplus telemetry
 
 kill = treating mixed fibers as a materialization-filter artifact
 kill = treating H90 as only a weak correlation
 kill = GPU visible-character buckets from E_h90/Z/Aeta atoms
+kill = small E(F_q) quotient projections m <= 24 as a row-bit source
 ```
 
 ```text

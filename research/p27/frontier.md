@@ -2285,6 +2285,12 @@ with and without materialization filters, `Ktrace` square/zero exactly matches
 uniform row-bit `t`-fibers, while `Ktrace` nonsquare gives mixed fibers with
 `4` plus and `4` minus branches.  The next theorem target is the H90
 local-solubility boundary plus the non-visible soluble-side sign class.
+The small group-coset follow-up
+[P27 Trace/Norm Dplus U6 Row-Bit H90 Group-Coset Screen](evidence/p27_trace_norm_dplus_u6_rowbit_h90_group_coset_20260622.md)
+kills the nearest sourceable shortcut for that sign: after mapping to
+`E: v^2=u^3-u`, small quotient projections through `m=24` have no nontrivial
+exact separation in the fields with both signs.  Keep the row-bit lane in
+divisor/theta/Prym extraction, not GPU coset buckets.
 The small-field descent audit then sets the boundary:
 [P27 Trace/Norm Dplus Reciprocal Tower Small-Field Descent](evidence/p27_trace_norm_dplus_reciprocal_tower_smallfield_descent_20260622.md).
 Over q607/q1607/q1847, the naked reciprocal tower has mixed `A`/`B` fibers for

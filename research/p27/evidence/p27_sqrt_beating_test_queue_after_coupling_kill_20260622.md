@@ -312,6 +312,20 @@ then extract the non-visible plus/minus class on the soluble side.  It is not
 yet a GPU production source, because the soluble-side sign remains invisible
 to tested coordinate products.
 
+Fourteenth update:
+[P27 Trace/Norm Dplus U6 Row-Bit H90 Group-Coset Screen](p27_trace_norm_dplus_u6_rowbit_h90_group_coset_20260622.md)
+kills the nearest small elliptic-coset explanation for that soluble-side sign.
+After mapping `E_h90` to `E: v^2=u^3-u`, quotient projections with
+`m=2,3,4,6,8,12,16,24` have no nontrivial exact separation in the fields with
+both signs present.  The final marker is:
+
+```text
+exact_nontrivial_projection_total = 0
+```
+
+So the row-bit lane remains a divisor/theta/Prym or higher-Kummer extraction
+problem, not a small group-coset GPU sampler.
+
 This is the most concrete bridge test after the coupling kill.  We know:
 
 ```text
@@ -327,6 +341,8 @@ visible H90/domain-spin/Aeta coordinate products through weight 4 do not
 explain that uniformity.
 Ktrace local solubility exactly predicts uniform versus mixed t-fibers in the
 tested fields.
+small elliptic group quotient projections do not explain the soluble-side
+plus/minus sign.
 ```
 
 The missing object is the map or obstruction between the H90 model and the
@@ -399,6 +415,7 @@ continue = Dplus/H90 A_eta versus pulled-back A-level d3 class comparison
 continue = CAS/Prym extraction of the descended U6 row bit
 continue = explain H90 rational-point uniformity of the row bit
 continue = prove/extract the Ktrace local-solubility boundary
+continue = divisor/theta/Prym extraction after the small-coset kill
 
 kill = more sign-word/gamma bucket GPU scans
 kill = visible f5(B) B-atom/split-linear bucket searches
@@ -412,6 +429,7 @@ kill = online Magma for domain-spin/Aeta row-bit factorization
 kill = standalone H90 payload sign screens
 kill = simple H90/rho coboundary bucket screens for chi(x6)
 kill = treating Ktrace solubility alone as a production source
+kill = small H90 elliptic group-coset projections m <= 24 as a row-bit source
 kill = searching for another low-degree Dplus-to-A coordinate map
 kill = visible low-degree A/B/K formula fishing without a divisor reason
 kill = large p27 production run based only on the current Dplus classifier
