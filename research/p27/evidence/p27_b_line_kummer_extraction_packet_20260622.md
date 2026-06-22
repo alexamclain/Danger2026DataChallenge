@@ -256,6 +256,15 @@ localized complete-intersection model with inverse variables for all
 denominator factors is dimension 1 with 12 equations.  Offline CAS should use
 that localized model or normalize the X-inverted no-R base first.
 
+Update: the compactD_R layer is now demoted after reduced_U:
+[P27 B-Line Localized Cover Layer Count](p27_b_line_localized_cover_layer_count_20260622.md).
+Over `607, 7^3, 7^4, 7^5, 7^6, 23^2, 23^3`, the finite-field check has zero
+mismatches for
+`chi(compactD_R_rhs / beta_rhs) = chi(d_next)`.  Thus compactD_R is not a
+fresh Kummer layer once the reduced `U_next` cover makes `d_next` square.  The
+first normalization target should be the no-R reduced cover; then prove this
+square relation and add compactD_R as a redundant/twinned layer.
+
 ## Continue / Kill
 
 ```text
@@ -263,6 +272,8 @@ continue = run Magma/Sage normalization over P1_Bline in q1607/q1847/q2087
 continue = normalize the reduced 4-u / 8-x d3 fiber cover if easier than the full source cover
 continue = use the reduced_Unext symbolic packet as the first CAS model
 continue = use the localized reduced-cover chart to avoid product saturation
+continue = normalize no-R reduced cover before compactD_R
+continue = prove compactD_R/beta/d_next square relation
 continue = optional q2087 quartic closure only if useful
 continue = use the B-line Kummer fixture rows as the compact CAS/expert input
 continue = bounded GPU deep-prefix telemetry if it feeds f3/f4/f5 extraction
@@ -281,6 +292,7 @@ kill = monomial Belyi B-line recurrence u -> u^m for m=2..12
 kill = q1847 visible B-line monic quartic for d3+d4 all-plus
 kill = treating one-sided q1607/q1847/q2087 f5/f6 tails as recurrence evidence
 kill = saturation-first online Magma extraction of the reduced cover
+kill = compactD_R as an independent first-layer normalization target after reduced_U
 ```
 
 ```text

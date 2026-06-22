@@ -243,11 +243,20 @@ online endpoint cannot compute degree, reducedness, or irreducibility for this
 localized model either, so all normalization/component/branch invariants now
 belong to offline Magma/Sage.
 
+Layer-count follow-up:
+[P27 B-Line Localized Cover Layer Count](p27_b_line_localized_cover_layer_count_20260622.md).
+The finite-field layer count shows
+`chi(compactD_R_rhs / beta_rhs) = chi(d_next)` with zero mismatches across
+`607, 7^3, 7^4, 7^5, 7^6, 23^2, 23^3`.  Since the reduced `U_next` cover
+makes `d_next` square, compactD_R is not an independent first normalization
+layer.  Normalize the no-R reduced cover first.
+
 Required computation:
 
 ```text
 normalize the reduced 4-u / 8-x legal+d3 cover over P1_B/P1_A/P1_Sroot
-start from the localized complete-intersection chart rather than product saturation
+start from the no-R localized complete-intersection chart rather than product saturation
+prove compactD_R_rhs / beta_rhs = d_next * square before adding compactD_R
 include x6^2-U*x6+1 and gamma^2=U+2 in the offline branch/class extraction
 impose the selected-source legal/core cut before using all-chart lift buckets
 extract branch divisor degree, support field degrees, components, genus

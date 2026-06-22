@@ -138,6 +138,15 @@ for all denominator factors, is immediately dimension 1 with 12 equations.
 Thus the next offline attack should normalize the localized model or the
 X-inverted no-R base, not restart product saturation.
 
+Layer-count follow-up:
+[P27 B-Line Localized Cover Layer Count](p27_b_line_localized_cover_layer_count_20260622.md).
+Across the tested prime and extension fields,
+`chi(compactD_R_rhs / beta_rhs) = chi(d_next)` with zero mismatches.  Since
+the reduced `U_next` equation makes `d_next` square, compactD_R becomes a
+twinned beta layer on the reduced cover.  The first CAS model should therefore
+be the no-R reduced cover; compactD_R can be added only after that base is
+understood.
+
 Direct finite-field point-count follow-up:
 [P27 B-Line Reduced-Cover Point Count](p27_b_line_reduced_cover_pointcount_20260622.md).
 The `U_next` layer is a clean two-valued cover over the legal chart in the
@@ -162,6 +171,8 @@ The online calculator cannot provide that output for the reduced q7 fixture.
 continue = run CAS normalization of the reduced_Unext cover over P1_Bline
 continue = use offline Magma/Sage or elimination; online Magma is too small
 continue = prefer the localized complete-intersection chart over product saturation
+continue = normalize the no-R reduced cover before compactD_R
+continue = prove compactD_R_rhs / beta_rhs = d_next * square
 continue = attach x6-materialization and gamma^2=Unext+2 to the offline model
 continue = compute genus/components/quotients and compare against the fixture
 continue = only then pull back f4/f3

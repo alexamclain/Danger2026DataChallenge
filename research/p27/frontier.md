@@ -1162,6 +1162,14 @@ localized complete intersection, then compute compactD/gamma branch classes.
 Follow-up invariant probes show the web endpoint cannot compute even
 degree/reducedness/irreducibility on that localized chart, so these invariants
 must also be part of the offline CAS ask.
+The layer-count follow-up gives a sharper simplification:
+[P27 B-Line Localized Cover Layer Count](evidence/p27_b_line_localized_cover_layer_count_20260622.md).
+Across `607`, `7^3`, `7^4`, `7^5`, `7^6`, `23^2`, and `23^3`, the probe finds
+zero mismatches for `chi(compactD_R_rhs / beta_rhs)=chi(d_next)`.  Since the
+reduced `U_next` equation makes `d_next` square, compactD_R is a twinned beta
+layer on the reduced cover, not a fresh first CAS layer.  The B-line
+normalization target is now the no-R reduced cover plus a symbolic proof of
+that square relation.
 The B-line visible two-gate quartic shortcut is closed as well:
 [P27 B-Line Gate4-Prefix Quartic q1847 Screen](evidence/p27_b_line_gate4_prefix_quartic_q1847_screen_20260622.md).
 It scans `6,300,872,423` q1847 coefficient triples for

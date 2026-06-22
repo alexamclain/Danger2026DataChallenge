@@ -152,6 +152,24 @@ So the web calculator can certify dimension for the localized complete
 intersection, but not degree, reducedness, irreducibility, point count, curve
 conversion, or genus.
 
+### Layer-Count Follow-Up
+
+[P27 B-Line Localized Cover Layer Count](p27_b_line_localized_cover_layer_count_20260622.md)
+compares the no-R reduced cover with the full compactD_R cover over
+`GF(607)`, `GF(7^3)`, `GF(7^4)`, `GF(7^5)`, `GF(7^6)`, `GF(23^2)`, and
+`GF(23^3)`.
+
+The key finite-field identity is:
+
+```text
+chi(compactD_R_rhs / beta_rhs) = chi(d_next)
+```
+
+with zero mismatches in all tested fields.  Thus, after adjoining
+`U_next` and making `d_next` square, compactD_R has the same squareclass as
+the already-adjoined beta branch.  The full cover is a clean double of the
+no-R reduced cover up to zero-root degeneracies.
+
 ## Interpretation
 
 Positive:
@@ -160,6 +178,8 @@ Positive:
 The reduced-cover formula is CAS-staged more cleanly now.
 The no-R base can be saturated after charting away X=0.
 The full localized model is dimension 1 without saturation.
+compactD_R is not a fresh Kummer layer after reduced_U; the no-R cover is the
+right first normalization target.
 This gives an offline Magma/Sage agent a concrete attack order.
 ```
 
@@ -179,15 +199,15 @@ No GPU production mode follows from this result.
 Use this order:
 
 ```text
-1. Start from p27_b_line_reduced_cover_localized_q7_magma.m.
-2. Port the same localized chart to q1607/q1847/q2087 or characteristic 0.
-3. Normalize the 13-variable complete intersection directly, without
-   Saturation(I,bad).
+1. Start from p27_b_line_reduced_cover_noR_invX_q7_magma.m or an equivalent
+   fully localized no-R chart.
+2. Port the same no-R localized chart to q1607/q1847/q2087 or characteristic 0.
+3. Normalize the no-R reduced cover directly, without Saturation(I,bad).
 4. Compute degree/reducedness/irreducibility offline; the online endpoint
    cannot supply even these invariants.
-5. If that is too heavy, normalize the no-R X-inverted base first:
-   p27_b_line_reduced_cover_noR_invX_q7_magma.m.
-6. Add compactD_R as a quadratic cover and compute its branch divisor.
+5. Prove symbolically that compactD_R_rhs / beta_rhs differs from d_next by a square.
+6. Add compactD_R as a redundant/twinned quadratic cover only after the no-R
+   base is understood.
 7. Only after the reduced f3 cover is understood, attach
    x6^2 - U*x6 + 1 and gamma^2 = U + 2.
 ```
@@ -214,10 +234,12 @@ or the only available evidence remains point counts and finite-field buckets.
 ```text
 continue = offline normalize the localized reduced cover
 continue = use X-inverted no-R base as a fallback decomposition
+continue = prove compactD_R/beta/d_next square relation symbolically
 continue = compute branch divisor degrees for compactD_R and gamma only after normalization
 
 kill = online Magma as the extraction engine
 kill = saturation-first reduced-cover strategy on the web calculator
+kill = treating compactD_R as an independent first layer after reduced_U
 kill = GPU production before a sourceable quotient or recurrence is extracted
 ```
 
