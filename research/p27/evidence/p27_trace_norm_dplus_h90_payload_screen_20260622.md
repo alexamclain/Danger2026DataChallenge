@@ -179,6 +179,13 @@ comparison should first route through the normalized A-line Kummer classes.
 The H90 model remains useful only if it identifies the same A-level class,
 gives a lower-genus quotient, or supplies a direct Dplus source.
 
+Sharper bridge update:
+[P27 Trace/Norm Dplus H90-X6 Coboundary Probe](p27_trace_norm_dplus_h90_x6_coboundary_20260622.md)
+tests the post-Dplus `d3=chi(x6)` class directly against simple H90 atoms and
+first-order `rho +/- atom` branch divisors.  There is no exact weight-`<=3`
+product, and the best train skew falls to heldout noise.  This kills the
+cheap H90-root coboundary bucket version of the comparison.
+
 ## Continue / Kill
 
 ```text
@@ -189,6 +196,7 @@ continue = GPU only for a named d3/A_eta telemetry class
 
 kill = H90 payload signs as a production GPU filter
 kill = low-weight products of eta,U,W,rho orientations
+kill = simple rho +/- atom coboundary products as d3 predictors
 kill = treating A_eta squareclass as new information after Dplus
 ```
 
@@ -196,6 +204,7 @@ kill = treating A_eta squareclass as new information after Dplus
 
 - H90 branch class: [P27 Trace/Norm Dplus H90 Branch Class](p27_trace_norm_dplus_h90_branch_class_20260622.md)
 - H90 quartic model: [P27 Trace/Norm Dplus H90 Quartic Model](p27_trace_norm_dplus_h90_quartic_model_20260622.md)
+- H90/x6 coboundary: [P27 Trace/Norm Dplus H90-X6 Coboundary Probe](p27_trace_norm_dplus_h90_x6_coboundary_20260622.md)
 - Post-Dplus screen: [P27 Trace/Norm Post-Dplus Screen](p27_trace_norm_post_dplus_screen_20260621.md)
 - Orientation screen: [P27 Trace/Norm Orientation Phase Screen](p27_trace_norm_orientation_phase_screen_20260622.md)
 - GPU handoff: [P27 GPU Dplus-Native Source Handoff](p27_gpu_dplus_native_source_handoff_20260622.md)

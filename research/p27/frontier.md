@@ -394,6 +394,13 @@ squareclasses are already `+1`, including opposite-eta variants.  Products of
 weight-`<=3` predictor; train skews such as `U_actual` for `d3` and
 `-eta*U_other` for `d4` collapse on heldout.  The remaining Dplus-H90 test is
 actual d3 Kummer/divisor extraction on `E_h90(z)`, not more sign buckets.
+The sharper H90/x6 coboundary screen is negative too:
+[P27 Trace/Norm Dplus H90-X6 Coboundary Probe](evidence/p27_trace_norm_dplus_h90_x6_coboundary_20260622.md).
+On `8199` train and `8061` heldout Dplus `y` rows, simple H90 atoms and
+first-order `rho +/- atom` divisors have no exact weight-`<=3` product for
+`chi(x6)`.  The best train skew falls from `0.5229` to `0.4950` on heldout.
+This kills the cheap H90-root coboundary bucket; only exact CAS/Prym
+comparison remains.
 The class comparison now has a routing result:
 [P27 Trace/Norm Dplus A-Descent Bridge](evidence/p27_trace_norm_dplus_a_descent_20260622.md).
 Across three p27 seed groups, post-Dplus `d3` and `d4` after `d3=+1` have zero
@@ -2177,6 +2184,10 @@ After `Dplus`, every tested y has four `U=x6+1/x6` values and eight `x6`
 values; `chi(U+A)=+1`, so `d3=chi(x6)` across the whole second-halving sheet.
 This makes the next CAS comparison `x6` squareclass versus H90 `A_eta`, not an
 undifferentiated A-level sign.
+The cheap version of that comparison is now killed:
+[P27 Trace/Norm Dplus H90-X6 Coboundary Probe](evidence/p27_trace_norm_dplus_h90_x6_coboundary_20260622.md)
+finds no stable low-weight H90/rho product for `chi(x6)`.  Keep this as an
+exact Kummer/Prym comparison, not a GPU sign-bucket request.
 The cheap visible formula for the four-`U` cover is negative:
 [P27 Trace/Norm Dplus Four-U Rational Screen](evidence/p27_trace_norm_dplus_ucover_rational_screen_20260622.md).
 No elementary coefficient of `prod(Z-U_i)` is a rational function of degree

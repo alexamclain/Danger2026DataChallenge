@@ -228,12 +228,21 @@ materialization filters.  Therefore the tower is a local class-comparison
 object, not a source sampler.  Any CAS/GPU test must keep the selected
 legal/core source cut before interpreting A/B descent.
 
+Sixth update:
+[P27 Trace/Norm Dplus H90-X6 Coboundary Probe](p27_trace_norm_dplus_h90_x6_coboundary_20260622.md)
+tests the cheap class-comparison version directly.  Simple H90 atoms and
+first-order `rho +/- atom` branch divisors have no exact weight-`<=3` product
+for post-Dplus `chi(x6)`, and the best train skew collapses on heldout.  So
+the live Dplus/H90 bridge is exact CAS/Prym comparison, not another finite
+field sign-bucket screen.
+
 This is the most concrete bridge test after the coupling kill.  We know:
 
 ```text
 Dplus has a real H90/quotient model;
 post-Dplus d3/d4 descend to whole A fibers;
 H90 payload signs alone do not predict d3/d4.
+simple H90/rho coboundaries do not predict chi(x6).
 ```
 
 The missing object is the map or obstruction between the H90 model and the
@@ -265,6 +274,7 @@ record whether the pulled-back A-level d3 class equals, differs by coboundary,
 or shares a quotient/Prym factor with the H90 class
 do not retry low-degree rational coefficient fits for prod(Z-U_i) in t,a,A
 through degree 20
+do not retry low-weight H90/rho sign products for chi(x6)
 ```
 
 Promote:
@@ -287,7 +297,7 @@ through ordinary candidate materialization
 1. A-level Kummer extraction is the mathematical mainline.
 2. Dplus fused/native pricing is the only immediate GPU implementation ask.
 3. Dplus-to-A coordinate reconstruction is solved; the next cross-lane task is
-   class comparison between pulled-back A-level d3 and H90 A_eta.
+   exact CAS/Prym comparison between pulled-back A-level d3 and H90 A_eta.
 4. Gamma4/Gamma5 is offline CAS only until it names a quotient/source.
 ```
 
@@ -302,6 +312,7 @@ continue = Dplus/H90 A_eta versus pulled-back A-level d3 class comparison
 kill = more sign-word/gamma bucket GPU scans
 kill = naked reciprocal-tower source sampling
 kill = standalone H90 payload sign screens
+kill = simple H90/rho coboundary bucket screens for chi(x6)
 kill = searching for another low-degree Dplus-to-A coordinate map
 kill = visible low-degree A/B/K formula fishing without a divisor reason
 kill = large p27 production run based only on the current Dplus classifier

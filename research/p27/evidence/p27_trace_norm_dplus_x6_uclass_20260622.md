@@ -205,6 +205,13 @@ Compare this class with the Dplus H90 second-layer payload:
 A_eta = U_eta + z*W_eta.
 ```
 
+First comparison screen:
+[P27 Trace/Norm Dplus H90-X6 Coboundary Probe](p27_trace_norm_dplus_h90_x6_coboundary_20260622.md).
+On the same production-style Dplus stream, simple H90 atoms and first-order
+`rho +/- atom` branch divisors have no exact weight-`<=3` product for
+`chi(x6)`, and train skews do not hold out.  The comparison therefore remains
+an exact cover/Prym task, not a GPU sign-bucket task.
+
 Promote if:
 
 ```text
@@ -235,6 +242,7 @@ kill = searching U+A; it is already square in the tested Dplus domain
 kill = low-degree rational formulas for the four-U quartic coefficients in
        t,a,A through degree 20
 kill = treating d3 as an arbitrary eight-branch sign
+kill = simple H90/rho coboundary products as chi(x6) predictors
 kill = GPU production from x6 buckets before a source/coboundary exists
 ```
 
@@ -246,6 +254,7 @@ kill = GPU production from x6 buckets before a source/coboundary exists
 - [P27 Sqrt-Beating Test Queue After Coupling Kill](p27_sqrt_beating_test_queue_after_coupling_kill_20260622.md)
 - [P27 Trace/Norm Dplus H90 Branch Class](p27_trace_norm_dplus_h90_branch_class_20260622.md)
 - [P27 Trace/Norm Dplus H90 Payload Screen](p27_trace_norm_dplus_h90_payload_screen_20260622.md)
+- [P27 Trace/Norm Dplus H90-X6 Coboundary Probe](p27_trace_norm_dplus_h90_x6_coboundary_20260622.md)
 - [P27 A-Level Kummer Extraction Packet](p27_a_level_kummer_extraction_packet_20260622.md)
 
 ```text

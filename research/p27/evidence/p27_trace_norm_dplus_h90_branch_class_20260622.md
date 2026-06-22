@@ -31,6 +31,13 @@ already square, and low-weight products of `eta,U,W,rho` features do not
 predict `d3` or `d4` on heldout.  This closes the cheap finite-field bucket
 version of the branch-class idea.
 
+Follow-up branch comparison:
+[P27 Trace/Norm Dplus H90-X6 Coboundary Probe](p27_trace_norm_dplus_h90_x6_coboundary_20260622.md).
+Simple H90 atoms and first-order `rho +/- atom` branch divisors have no exact
+weight-`<=3` product for post-Dplus `chi(x6)`, and train skews do not hold out.
+The remaining comparison is therefore exact Kummer/Prym structure, not a
+finite-field sign bucket.
+
 ## Symbolic Probe
 
 Gate:
@@ -203,6 +210,7 @@ continue = use A_eta as the named payload for GPU telemetry only if cheap
 kill = searching for a new first quadratic resolvent
 kill = treating L_eta as branch support; it is square/even on E_h90
 kill = low-weight eta/U/W/rho payload sign buckets
+kill = simple rho +/- atom products as chi(x6) predictors
 kill = treating eta quartic as sourceable without d3 coupling or quotient split
 ```
 
@@ -210,6 +218,7 @@ kill = treating eta quartic as sourceable without d3 coupling or quotient split
 
 - Normalized quartic: [P27 Trace/Norm Dplus H90 Quartic Model](p27_trace_norm_dplus_h90_quartic_model_20260622.md)
 - Payload screen: [P27 Trace/Norm Dplus H90 Payload Screen](p27_trace_norm_dplus_h90_payload_screen_20260622.md)
+- H90/x6 coboundary: [P27 Trace/Norm Dplus H90-X6 Coboundary Probe](p27_trace_norm_dplus_h90_x6_coboundary_20260622.md)
 - H90 quotient: [P27 Trace/Norm Dplus H90 Quotient](p27_trace_norm_dplus_h90_quotient_20260622.md)
 - Relative descent: [P27 Trace/Norm Dplus Relative Descent](p27_trace_norm_dplus_relative_descent_20260622.md)
 - GPU handoff: [P27 GPU Dplus-Native Source Handoff](p27_gpu_dplus_native_source_handoff_20260622.md)

@@ -1,0 +1,74 @@
+p27 trace/norm Dplus H90-x6 coboundary probe
+question = does chi(x6) equal a simple H90/rho coboundary after Dplus?
+p = 1000000000000000000000000103
+seed_groups = 121,122;123,124
+chunks = 0,1
+tids = 0:64
+draws_per_thread = 512
+max_y = 0
+max_weight = 3
+group1_seeds_121_122:
+  D_+1 = 16485
+  D_-1 = 16316
+  D_0 = 32965
+  Dplus_candidates = 16398
+  Dplus_y = 16485
+  analyzed_y = 8199
+  chi_UplusA_+1 = 65592
+  chi_x6_+1 = 33192
+  chi_x6_-1 = 32400
+  d1_+1 = 16398
+  d2_+1 = 32796
+  missing_h90_elements = 8286
+  nonsplit_y = 65766
+  raw_y_draws = 131072
+  target_+1 = 4149
+  target_-1 = 4050
+  target_plus_rate = 0.506037322
+group2_seeds_123_124:
+  D_+1 = 16454
+  D_-1 = 16293
+  D_0 = 32723
+  Dplus_candidates = 16122
+  Dplus_y = 16454
+  analyzed_y = 8061
+  chi_UplusA_+1 = 64488
+  chi_x6_+1 = 31888
+  chi_x6_-1 = 32600
+  d1_+1 = 16122
+  d2_+1 = 32244
+  missing_h90_elements = 8393
+  nonsplit_y = 65470
+  raw_y_draws = 131072
+  target_+1 = 3986
+  target_-1 = 4075
+  target_plus_rate = 0.494479593
+feature_profile:
+  active_features = 59
+  constant_features = 12
+h90_x6_coboundary_span:
+  features = B, C, R, U_actual, U_other, W_actual, W_other, eps_h, eps_v, eta, rho_actual_minus_minus_B, rho_actual_minus_minus_C, rho_actual_minus_minus_one, rho_actual_minus_minus_t, rho_actual_minus_minus_w, rho_actual_minus_minus_z, rho_actual_minus_plus_B, rho_actual_minus_plus_C, rho_actual_minus_plus_one, rho_actual_minus_plus_t, rho_actual_minus_plus_w, rho_actual_minus_plus_z, rho_actual_plus_minus_B, rho_actual_plus_minus_C, rho_actual_plus_minus_one, rho_actual_plus_minus_t, rho_actual_plus_minus_w, rho_actual_plus_minus_z, rho_actual_plus_plus_B, rho_actual_plus_plus_C, rho_actual_plus_plus_one, rho_actual_plus_plus_t, rho_actual_plus_plus_w, rho_actual_plus_plus_z, rho_other_minus_minus_B, rho_other_minus_minus_C, rho_other_minus_minus_one, rho_other_minus_minus_t, rho_other_minus_minus_w, rho_other_minus_minus_z, rho_other_minus_plus_B, rho_other_minus_plus_C, rho_other_minus_plus_one, rho_other_minus_plus_t, rho_other_minus_plus_w, rho_other_minus_plus_z, rho_other_plus_minus_B, rho_other_plus_minus_C, rho_other_plus_minus_one, rho_other_plus_minus_t, rho_other_plus_minus_w, rho_other_plus_minus_z, rho_other_plus_plus_B, rho_other_plus_plus_C, rho_other_plus_plus_one, rho_other_plus_plus_t, rho_other_plus_plus_w, rho_other_plus_plus_z, t
+  train_rows = 8199
+  heldout_rows = 8061
+  exact_combo_weight_le_3 = none
+  best_low_weight_train_heldout max_weight=3:
+    train=4287/8199 0.522868643 heldout=3990/8061 0.494975809 weight=3 combo=eps_v * rho_actual_plus_plus_one * rho_other_plus_plus_t
+    train=4284/8199 0.522502744 heldout=4010/8061 0.497456891 weight=3 combo=U_other * rho_other_minus_minus_z * rho_other_plus_plus_z
+    train=4276/8199 0.521527015 heldout=4015/8061 0.498077162 weight=3 combo=-U_other * eps_v * rho_other_minus_minus_C
+    train=4275/8199 0.521405049 heldout=4070/8061 0.504900136 weight=3 combo=rho_actual_minus_plus_one * rho_actual_minus_plus_w * rho_other_plus_plus_t
+    train=4275/8199 0.521405049 heldout=3982/8061 0.493983377 weight=3 combo=U_other * rho_actual_minus_plus_z * rho_other_plus_plus_w
+    train=4271/8199 0.520917185 heldout=3973/8061 0.492866890 weight=3 combo=-rho_actual_plus_plus_B * rho_other_minus_plus_t * rho_other_plus_minus_B
+    train=4269/8199 0.520673253 heldout=4074/8061 0.505396353 weight=3 combo=rho_actual_minus_plus_B * rho_actual_plus_minus_one * rho_actual_plus_plus_t
+    train=4269/8199 0.520673253 heldout=4054/8061 0.502915271 weight=2 combo=-rho_actual_minus_minus_t * rho_actual_plus_plus_w
+    train=4266/8199 0.520307355 heldout=3974/8061 0.492990944 weight=2 combo=-rho_actual_plus_minus_C * rho_actual_plus_plus_t
+    train=4262/8199 0.519819490 heldout=4032/8061 0.500186081 weight=3 combo=eta * rho_actual_plus_minus_C * rho_other_plus_plus_C
+    train=4260/8199 0.519575558 heldout=3926/8061 0.487036348 weight=3 combo=rho_actual_plus_plus_t * rho_other_minus_minus_z * rho_other_plus_minus_C
+    train=4259/8199 0.519453592 heldout=4059/8061 0.503535541 weight=3 combo=rho_actual_minus_minus_t * rho_actual_minus_minus_w * rho_other_plus_minus_B
+    train=4258/8199 0.519331626 heldout=4015/8061 0.498077162 weight=3 combo=U_actual * W_actual * rho_other_plus_plus_t
+    train=4257/8199 0.519209660 heldout=4069/8061 0.504776082 weight=3 combo=-W_other * rho_other_plus_minus_t * rho_other_plus_plus_B
+    train=4256/8199 0.519087694 heldout=3968/8061 0.492246620 weight=3 combo=rho_actual_minus_plus_one * rho_other_minus_minus_t * rho_other_plus_plus_t
+    train=4255/8199 0.518965728 heldout=4084/8061 0.506636894 weight=3 combo=-rho_actual_plus_minus_C * rho_actual_plus_plus_B * rho_actual_plus_plus_C
+verdict:
+  promote only if an exact or strong heldout H90/rho coboundary appears
+  otherwise keep Dplus/H90 as CAS class comparison, not GPU bucket work
+p27_trace_norm_dplus_h90_x6_coboundary_probe_rows=1/1

@@ -239,6 +239,12 @@ makes that boundary explicit: q607/q1607/q1847 exact enumerations have mixed
 that samples only `F_A(X,U5),F_A(U5,U6)`.  A useful GPU mode must either stay
 same-stream from legal `Dplus` rows or enforce the selected legal/core source
 cut and report the raw denominator.
+Follow-up [P27 Trace/Norm Dplus H90-X6 Coboundary Probe](p27_trace_norm_dplus_h90_x6_coboundary_20260622.md)
+kills the cheap H90/root bridge: simple H90 atoms and first-order
+`rho +/- atom` branch divisors have no exact weight-`<=3` product for
+post-Dplus `chi(x6)`, and train skews do not hold out.  Do not add GPU
+production modes for H90/rho/x6 sign buckets unless CAS supplies a named
+quotient or source map.
 
 Promotion:
 
@@ -252,6 +258,7 @@ Kill:
 ```text
 post-Dplus signs remain independent half-gates, matching the CPU orientation
 and product screens
+H90/rho/x6 branch-root products behave like heldout noise
 ```
 
 ## Required Output
