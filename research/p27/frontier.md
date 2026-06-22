@@ -2103,6 +2103,12 @@ The first executable q7 chart for that brief is
 `archive/fixtures/p27_abk_f3_f4_localized_noR_q7_magma.m`; the online Magma
 calculator was temporarily disabled when submitted, so no genus/dimension
 answer exists yet.
+Finite-field chart counts are now available:
+[P27 A/B/K F3/F4 Chart Count](evidence/p27_abk_f3_f4_chart_count_20260622.md).
+They show that the f3-plus-only B fibers reproduce the prior gamma handoff,
+while all-chart mixed fibers are staging artifacts.  This keeps the live task
+as selected-component Kummer extraction and kills all-chart gamma buckets as a
+GPU source.
 
 ### Card 4c: K-Line Fit Significance
 

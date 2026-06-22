@@ -193,6 +193,15 @@ The current saved online output is:
 So this fixture is staged for offline Magma/Sage, but no q7 dimension/genus
 result has been obtained for it yet.
 
+Finite-field count follow-up:
+[P27 A/B/K F3/F4 Chart Count](p27_abk_f3_f4_chart_count_20260622.md).
+The all-chart f3/f4 count separates f3-plus-only, f3-mixed, f3-minus-only,
+and empty B fibers.  The f3-plus-only fibers reproduce the prior gamma handoff
+exactly in q1607/q1847/q2087, while all-chart gamma remains mixed and
+field-dependent.  CAS should therefore normalize the selected f3-plus-only
+component and treat the other fibers as staging/component bookkeeping, not GPU
+buckets.
+
 2. Extract the f4/f3 Kummer class.
 
 Required output:
