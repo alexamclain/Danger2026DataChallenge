@@ -2156,6 +2156,12 @@ The cheap visible-source explanation is negative:
 No named B atom and no split linear support of degree `<=2` explains the mixed
 `f5(B)` signs, so the live route remains Kummer/Prym extraction rather than a
 base-line character bucket.
+The cheap recurrence explanation is negative too:
+[P27 B-Line Mixed-F5 Recurrence Screen](evidence/p27_b_line_mixedf5_recurrence_20260622.md).
+Across q4999/q5783/q6007/q6247 there is no exact visible PGL2 recurrence
+`f5(B)=+/-f4(phi(B))`, and the tested Belyi-conjugated hidden-X power maps
+cover only small row fractions.  This keeps repeated gamma as a CAS/Prym
+class-comparison target rather than a visible recurrence or GPU bucket.
 P27 telemetry now sets the practical boundary:
 [P27 Gamma-Chain 20k Telemetry](evidence/p27_gamma_chain_p27_20k_telemetry_20260622.md).
 On `20k + 20k` train/heldout samples, gamma products and V4 phase links stay

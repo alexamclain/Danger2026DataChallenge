@@ -30,6 +30,13 @@ finds no exact named B atom and no exact split linear support of degree `<=2`
 for these mixed `f5(B)` signs.  This keeps the result in the Kummer/class
 extraction lane rather than promoting a cheap base-line character source.
 
+Recurrence follow-up:
+[P27 B-Line Mixed-F5 Recurrence Screen](p27_b_line_mixedf5_recurrence_20260622.md)
+finds no exact visible PGL2 recurrence and no exact Belyi-conjugated hidden-X
+power-map recurrence from `f4` to `f5` in the same mixed guard fields.  The
+repeated transition remains a CAS/Prym class-extraction target, not a visible
+recurrence bucket.
+
 ## Artifacts
 
 Fixtures:
@@ -158,6 +165,7 @@ continue = search for a theorem-shaped quotient/coboundary explaining the exact 
 
 kill = dismissing f4/f5 recurrence as merely one-sided q1607/q1847/q2087 tails
 kill = visible B atoms or split degree-2 branch support as f5 selectors
+kill = visible PGL2 or hidden-X power-map recurrence as f5 selectors
 kill = GPU gamma bucket production without source-normalized lift
 kill = materialization/orientation halves as production filters
 ```

@@ -1,0 +1,234 @@
+p27 B-line mixed-f5 recurrence probe
+screen = f5(B) = +/- f4(phi(B)) on mixed-f5 guard fields
+families = full-coverage PGL2; Belyi-conjugated hidden-X power maps
+kummer_fixture = research/p27/archive/fixtures/p27_b_line_kummer_fixture_packet_mixedf5_20260622.json
+powers = 2,3,4,5,6
+q4999_setup:
+  f4_minus = 52
+  f4_plus = 39
+  f4_rows = 91
+  f5_minus = 12
+  f5_plus = 27
+  f5_rows = 39
+q4999_f4_to_f5_pgl2_stats:
+  best_coverage_x1000000 = 1000000
+  best_covered = 39
+  best_match_x1000000 = 692307
+  best_matches = 27
+  candidate_poles = 10418
+  distinct_pgl2_maps = 728910
+  exact_pgl2_recurrences = 0
+  pgl2_maps_tested = 728910
+  source_rows = 91
+  target_rows = 39
+q4999_f4_to_f5_exact_pgl2:
+  none
+q4999_f4_to_f5_best_pgl2:
+  phi=(1*B+0)/(0*B+1) polarity=1 covered=39 matches=27
+  phi=(1*B+0)/(0*B+1) polarity=-1 covered=39 matches=12
+  phi=(1*B+4847)/(1491*B+4998) polarity=1 covered=10 matches=9
+  phi=(1*B+1031)/(3975*B+328) polarity=-1 covered=10 matches=7
+  phi=(1*B+1311)/(4213*B+3506) polarity=1 covered=10 matches=6
+  phi=(1*B+1311)/(4213*B+3506) polarity=-1 covered=10 matches=4
+  phi=(1*B+1031)/(3975*B+328) polarity=1 covered=10 matches=3
+  phi=(1*B+4847)/(1491*B+4998) polarity=-1 covered=10 matches=1
+q4999_f4_f5_power_stats:
+  forward_best_coverage_x1000000 = 153846
+  forward_best_covered = 6
+  forward_best_match_x1000000 = 102564
+  forward_best_matches = 4
+  maps_tested = 180
+  reverse_best_coverage_x1000000 = 65934
+  reverse_best_covered = 6
+  reverse_best_match_x1000000 = 43956
+  reverse_best_matches = 4
+q4999_forward_f5_eq_f4_power_best:
+  B o X^2 o 4/B polarity=-1 covered=6/39 matches=4 core_images=6 legal_images=6 undefined=0
+  B o X^2 o -4/(B+2) polarity=-1 covered=6/39 matches=4 core_images=6 legal_images=6 undefined=0
+  B o X^2 o 4/B polarity=1 covered=6/39 matches=2 core_images=6 legal_images=6 undefined=0
+  B o X^2 o -4/(B+2) polarity=1 covered=6/39 matches=2 core_images=6 legal_images=6 undefined=0
+  4/B o X^5 o 4/B polarity=-1 covered=5/39 matches=4 core_images=5 legal_images=5 undefined=0
+  -4/(B+2) o X^2 o -B-2 polarity=1 covered=5/39 matches=4 core_images=5 legal_images=5 undefined=0
+  -4/(B+2) o X^2 o -2(B+2)/B polarity=1 covered=5/39 matches=4 core_images=5 legal_images=5 undefined=0
+  -2(B+2)/B o X^5 o -4/(B+2) polarity=-1 covered=5/39 matches=4 core_images=5 legal_images=5 undefined=0
+q4999_reverse_f4_eq_f5_power_best:
+  4/B o X^6 o 4/B polarity=-1 covered=6/91 matches=4 core_images=11 legal_images=6 undefined=0
+  4/B o X^6 o -4/(B+2) polarity=-1 covered=6/91 matches=4 core_images=11 legal_images=6 undefined=0
+  -4/(B+2) o X^2 o -B-2 polarity=-1 covered=6/91 matches=4 core_images=8 legal_images=6 undefined=0
+  -4/(B+2) o X^2 o -2(B+2)/B polarity=-1 covered=6/91 matches=4 core_images=8 legal_images=6 undefined=0
+  4/B o X^6 o 4/B polarity=1 covered=6/91 matches=2 core_images=11 legal_images=6 undefined=0
+  4/B o X^6 o -4/(B+2) polarity=1 covered=6/91 matches=2 core_images=11 legal_images=6 undefined=0
+  -4/(B+2) o X^2 o -B-2 polarity=1 covered=6/91 matches=2 core_images=8 legal_images=6 undefined=0
+  -4/(B+2) o X^2 o -2(B+2)/B polarity=1 covered=6/91 matches=2 core_images=8 legal_images=6 undefined=0
+q5783_setup:
+  f4_minus = 86
+  f4_plus = 42
+  f4_rows = 128
+  f5_minus = 41
+  f5_plus = 1
+  f5_rows = 42
+q5783_f4_to_f5_pgl2_stats:
+  best_coverage_x1000000 = 1000000
+  best_covered = 42
+  best_match_x1000000 = 976190
+  best_matches = 41
+  candidate_poles = 27526
+  distinct_pgl2_maps = 2048256
+  exact_pgl2_recurrences = 0
+  pgl2_maps_tested = 2048256
+  source_rows = 128
+  target_rows = 42
+q5783_f4_to_f5_exact_pgl2:
+  none
+q5783_f4_to_f5_best_pgl2:
+  phi=(1*B+0)/(0*B+1) polarity=-1 covered=42 matches=41
+  phi=(1*B+0)/(0*B+1) polarity=1 covered=42 matches=1
+  phi=(1*B+1194)/(1777*B+4574) polarity=1 covered=10 matches=10
+  phi=(1*B+133)/(2067*B+549) polarity=1 covered=10 matches=10
+  phi=(1*B+3960)/(3129*B+2950) polarity=1 covered=10 matches=9
+  phi=(1*B+3909)/(4005*B+3754) polarity=1 covered=10 matches=9
+  phi=(1*B+3298)/(2188*B+5668) polarity=1 covered=10 matches=8
+  phi=(1*B+3342)/(1226*B+4430) polarity=1 covered=10 matches=8
+q5783_f4_f5_power_stats:
+  forward_best_coverage_x1000000 = 214285
+  forward_best_covered = 9
+  forward_best_match_x1000000 = 142857
+  forward_best_matches = 6
+  maps_tested = 180
+  reverse_best_coverage_x1000000 = 78125
+  reverse_best_covered = 10
+  reverse_best_match_x1000000 = 39062
+  reverse_best_matches = 5
+q5783_forward_f5_eq_f4_power_best:
+  4/B o X^6 o B polarity=1 covered=9/42 matches=6 core_images=9 legal_images=9 undefined=0
+  4/B o X^6 o -2B/(B+2) polarity=1 covered=9/42 matches=6 core_images=9 legal_images=9 undefined=0
+  4/B o X^6 o B polarity=-1 covered=9/42 matches=3 core_images=9 legal_images=9 undefined=0
+  4/B o X^6 o -2B/(B+2) polarity=-1 covered=9/42 matches=3 core_images=9 legal_images=9 undefined=0
+  B o X^5 o B polarity=1 covered=8/42 matches=6 core_images=8 legal_images=8 undefined=0
+  -2B/(B+2) o X^5 o -2B/(B+2) polarity=1 covered=8/42 matches=6 core_images=8 legal_images=8 undefined=0
+  B o X^5 o B polarity=-1 covered=8/42 matches=2 core_images=8 legal_images=8 undefined=0
+  -2B/(B+2) o X^5 o -2B/(B+2) polarity=-1 covered=8/42 matches=2 core_images=8 legal_images=8 undefined=0
+q5783_reverse_f4_eq_f5_power_best:
+  -B-2 o X^3 o -B-2 polarity=1 covered=10/128 matches=5 core_images=13 legal_images=10 undefined=0
+  -B-2 o X^3 o -B-2 polarity=-1 covered=10/128 matches=5 core_images=13 legal_images=10 undefined=0
+  -4/(B+2) o X^3 o -2(B+2)/B polarity=1 covered=10/128 matches=5 core_images=13 legal_images=10 undefined=0
+  -4/(B+2) o X^3 o -2(B+2)/B polarity=-1 covered=10/128 matches=5 core_images=13 legal_images=10 undefined=0
+  -B-2 o X^3 o -2(B+2)/B polarity=-1 covered=7/128 matches=6 core_images=16 legal_images=7 undefined=0
+  -4/(B+2) o X^3 o -B-2 polarity=-1 covered=7/128 matches=6 core_images=16 legal_images=7 undefined=0
+  4/B o X^6 o B polarity=1 covered=7/128 matches=4 core_images=19 legal_images=7 undefined=0
+  4/B o X^6 o -2B/(B+2) polarity=1 covered=7/128 matches=4 core_images=19 legal_images=7 undefined=0
+q6007_setup:
+  f4_minus = 70
+  f4_plus = 38
+  f4_rows = 108
+  f5_minus = 20
+  f5_plus = 18
+  f5_rows = 38
+q6007_f4_to_f5_pgl2_stats:
+  best_coverage_x1000000 = 1000000
+  best_covered = 38
+  best_match_x1000000 = 526315
+  best_matches = 20
+  candidate_poles = 14584
+  distinct_pgl2_maps = 1224936
+  exact_pgl2_recurrences = 0
+  pgl2_maps_tested = 1224936
+  source_rows = 108
+  target_rows = 38
+q6007_f4_to_f5_exact_pgl2:
+  none
+q6007_f4_to_f5_best_pgl2:
+  phi=(1*B+0)/(0*B+1) polarity=-1 covered=38 matches=20
+  phi=(1*B+0)/(0*B+1) polarity=1 covered=38 matches=18
+  phi=(1*B+3097)/(2150*B+5381) polarity=1 covered=11 matches=6
+  phi=(1*B+3097)/(2150*B+5381) polarity=-1 covered=11 matches=5
+  phi=(1*B+1116)/(3318*B+4809) polarity=-1 covered=10 matches=6
+  phi=(1*B+1116)/(3318*B+4809) polarity=1 covered=10 matches=4
+  phi=(1*B+4988)/(443*B+816) polarity=-1 covered=9 matches=8
+  phi=(1*B+3669)/(2943*B+1490) polarity=-1 covered=9 matches=6
+q6007_f4_f5_power_stats:
+  forward_best_coverage_x1000000 = 184210
+  forward_best_covered = 7
+  forward_best_match_x1000000 = 131578
+  forward_best_matches = 5
+  maps_tested = 180
+  reverse_best_coverage_x1000000 = 74074
+  reverse_best_covered = 8
+  reverse_best_match_x1000000 = 46296
+  reverse_best_matches = 5
+q6007_forward_f5_eq_f4_power_best:
+  -B-2 o X^3 o -B-2 polarity=1 covered=7/38 matches=5 core_images=7 legal_images=7 undefined=0
+  -4/(B+2) o X^3 o -2(B+2)/B polarity=1 covered=7/38 matches=5 core_images=7 legal_images=7 undefined=0
+  -B-2 o X^3 o -B-2 polarity=-1 covered=7/38 matches=2 core_images=7 legal_images=7 undefined=0
+  -4/(B+2) o X^3 o -2(B+2)/B polarity=-1 covered=7/38 matches=2 core_images=7 legal_images=7 undefined=0
+  4/B o X^6 o B polarity=1 covered=6/38 matches=4 core_images=6 legal_images=6 undefined=0
+  4/B o X^6 o -2B/(B+2) polarity=1 covered=6/38 matches=4 core_images=6 legal_images=6 undefined=0
+  4/B o X^6 o B polarity=-1 covered=6/38 matches=2 core_images=6 legal_images=6 undefined=0
+  4/B o X^6 o -2B/(B+2) polarity=-1 covered=6/38 matches=2 core_images=6 legal_images=6 undefined=0
+q6007_reverse_f4_eq_f5_power_best:
+  B o X^5 o 4/B polarity=1 covered=8/108 matches=5 core_images=13 legal_images=8 undefined=0
+  -2B/(B+2) o X^5 o -4/(B+2) polarity=1 covered=8/108 matches=5 core_images=13 legal_images=8 undefined=0
+  B o X^5 o 4/B polarity=-1 covered=8/108 matches=3 core_images=13 legal_images=8 undefined=0
+  -2B/(B+2) o X^5 o -4/(B+2) polarity=-1 covered=8/108 matches=3 core_images=13 legal_images=8 undefined=0
+  4/B o X^3 o 4/B polarity=-1 covered=6/108 matches=5 core_images=8 legal_images=6 undefined=0
+  -2(B+2)/B o X^3 o -4/(B+2) polarity=-1 covered=6/108 matches=5 core_images=8 legal_images=6 undefined=0
+  B o X^6 o 4/B polarity=1 covered=6/108 matches=4 core_images=8 legal_images=6 undefined=0
+  B o X^6 o -4/(B+2) polarity=1 covered=6/108 matches=4 core_images=8 legal_images=6 undefined=0
+q6247_setup:
+  f4_minus = 28
+  f4_plus = 34
+  f4_rows = 62
+  f5_minus = 16
+  f5_plus = 18
+  f5_rows = 34
+q6247_f4_to_f5_pgl2_stats:
+  best_coverage_x1000000 = 1000000
+  best_covered = 34
+  best_match_x1000000 = 529411
+  best_matches = 18
+  candidate_poles = 2144
+  distinct_pgl2_maps = 226920
+  exact_pgl2_recurrences = 0
+  pgl2_maps_tested = 226920
+  source_rows = 62
+  target_rows = 34
+q6247_f4_to_f5_exact_pgl2:
+  none
+q6247_f4_to_f5_best_pgl2:
+  phi=(1*B+0)/(0*B+1) polarity=1 covered=34 matches=18
+  phi=(1*B+0)/(0*B+1) polarity=-1 covered=34 matches=16
+  phi=(1*B+358)/(5037*B+6246) polarity=-1 covered=9 matches=5
+  phi=(1*B+358)/(5037*B+6246) polarity=1 covered=9 matches=4
+  phi=(1*B+5740)/(2129*B+4858) polarity=-1 covered=8 matches=7
+  phi=(1*B+4620)/(3184*B+6246) polarity=1 covered=8 matches=5
+  phi=(1*B+3275)/(3044*B+1960) polarity=-1 covered=8 matches=5
+  phi=(1*B+78)/(5684*B+396) polarity=1 covered=8 matches=5
+q6247_f4_f5_power_stats:
+  forward_best_coverage_x1000000 = 117647
+  forward_best_covered = 4
+  forward_best_match_x1000000 = 58823
+  forward_best_matches = 2
+  maps_tested = 180
+  reverse_best_coverage_x1000000 = 80645
+  reverse_best_covered = 5
+  reverse_best_match_x1000000 = 48387
+  reverse_best_matches = 3
+q6247_forward_f5_eq_f4_power_best:
+  B o X^5 o 4/B polarity=1 covered=4/34 matches=2 core_images=4 legal_images=4 undefined=0
+  B o X^5 o 4/B polarity=-1 covered=4/34 matches=2 core_images=4 legal_images=4 undefined=0
+  -2B/(B+2) o X^5 o -4/(B+2) polarity=1 covered=4/34 matches=2 core_images=4 legal_images=4 undefined=0
+  -2B/(B+2) o X^5 o -4/(B+2) polarity=-1 covered=4/34 matches=2 core_images=4 legal_images=4 undefined=0
+  B o X^2 o 4/B polarity=1 covered=3/34 matches=3 core_images=3 legal_images=3 undefined=0
+  B o X^2 o -4/(B+2) polarity=1 covered=3/34 matches=3 core_images=3 legal_images=3 undefined=0
+  -4/(B+2) o X^2 o -B-2 polarity=1 covered=3/34 matches=2 core_images=3 legal_images=3 undefined=0
+  -4/(B+2) o X^2 o -2(B+2)/B polarity=1 covered=3/34 matches=2 core_images=3 legal_images=3 undefined=0
+q6247_reverse_f4_eq_f5_power_best:
+  B o X^2 o 4/B polarity=1 covered=5/62 matches=3 core_images=8 legal_images=5 undefined=0
+  B o X^2 o -4/(B+2) polarity=1 covered=5/62 matches=3 core_images=8 legal_images=5 undefined=0
+  B o X^2 o 4/B polarity=-1 covered=5/62 matches=2 core_images=8 legal_images=5 undefined=0
+  B o X^2 o -4/(B+2) polarity=-1 covered=5/62 matches=2 core_images=8 legal_images=5 undefined=0
+  B o X^5 o 4/B polarity=1 covered=2/62 matches=2 core_images=5 legal_images=2 undefined=0
+  4/B o X^6 o B polarity=-1 covered=2/62 matches=2 core_images=3 legal_images=2 undefined=0
+  4/B o X^6 o -2B/(B+2) polarity=-1 covered=2/62 matches=2 core_images=3 legal_images=2 undefined=0
+  -4/(B+2) o X^4 o -B-2 polarity=-1 covered=2/62 matches=2 core_images=4 legal_images=2 undefined=0
+p27_b_line_mixedf5_recurrence_probe_rows=1/1

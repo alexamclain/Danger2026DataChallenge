@@ -89,6 +89,12 @@ The near misses in `q5783` are not meaningful by themselves because that field
 has only one plus row.  The balanced fields `q6007` and `q6247` are the better
 guards, and they also have no exact visible rule.
 
+Recurrence follow-up:
+[P27 B-Line Mixed-F5 Recurrence Screen](p27_b_line_mixedf5_recurrence_20260622.md)
+tests whether `f5(B)` is instead `+/- f4(phi(B))`.  It finds no exact visible
+PGL2 recurrence and no exact Belyi-conjugated hidden-X power-map recurrence
+over the same mixed guard fields.
+
 ## Interpretation
 
 Positive:
@@ -115,6 +121,7 @@ continue = ask only theorem-shaped quotient/coboundary questions from here
 
 kill = named B atoms as f5 source selectors
 kill = split linear branch support of degree <=2 as an f5 source selector
+kill = visible PGL2 or hidden-X power-map recurrences as f5 source selectors
 kill = GPU production from visible f5(B) buckets
 ```
 

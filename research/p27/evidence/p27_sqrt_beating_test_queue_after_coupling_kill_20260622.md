@@ -92,6 +92,10 @@ GPU recurrence-coupling still kills current sign-word production.
 Follow-up [P27 B-Line F5 Visible Character Screen](p27_b_line_f5_visible_character_20260622.md)
 finds no exact named B atom or split degree-2 linear support for those mixed
 `f5(B)` signs, so do not turn this into a visible B-bucket search.
+Follow-up [P27 B-Line Mixed-F5 Recurrence Screen](p27_b_line_mixedf5_recurrence_20260622.md)
+also kills visible PGL2 and Belyi-conjugated hidden-X power-map recurrences
+from `f4` to `f5` on the same guard fields.  So this remains a
+Kummer/Prym/class-comparison task, not a visible recurrence task.
 
 Inputs:
 
