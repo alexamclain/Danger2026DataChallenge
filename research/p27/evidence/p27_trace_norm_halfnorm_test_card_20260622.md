@@ -33,6 +33,7 @@ research/p27/evidence/p27_trace_norm_dplus_prefix_identity_20260621.md
 research/p27/evidence/p27_trace_norm_post_dplus_screen_20260621.md
 research/p27/evidence/p27_trace_norm_orientation_phase_screen_20260622.md
 research/p27/evidence/p27_trace_norm_automorphism_quotient_obstruction_20260622.md
+research/p27/evidence/p27_trace_norm_elliptic_line_divisor_screen_20260622.md
 ```
 
 Evaluator:
@@ -67,6 +68,7 @@ large-factor quotient collisions for m=345451 and small multiples
 simple Tr/anti-Tr/Norm of H, V, HV, pref_HV, BC_HV
 low-weight post-Dplus products from H/VQ/X/T_line/root atoms
 post-Dplus eps_h/eps_v, H/VQ, eps_h/eps_v/T_line orientation buckets
+visible elliptic line divisors u-c and v+m*u+c with |m|,|c| <= 4
 ```
 
 ## Machine Check
@@ -153,6 +155,7 @@ Kill a proposal if:
 it only rederives Dplus as the first-two-gate prefix
 it needs a killed visible branch/torsion/norm feature family
 it requires descent under t -> 1/t or t -> -t
+it is only a visible L(3O) line divisor u-c or v+m*u+c
 heldout lift is noise-scale or not stable across seeds 121..124
 it reports conditional lift without raw-source accounting
 it cannot be reduced to a finite-field squareclass, divisor, or source map

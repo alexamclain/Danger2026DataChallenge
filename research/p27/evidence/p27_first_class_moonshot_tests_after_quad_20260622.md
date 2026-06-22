@@ -434,6 +434,7 @@ research/p27/evidence/p27_hv_trace_coupling_audit_20260621.md
 research/p27/evidence/p27_trace_norm_elliptic_line_coset_20260621.md
 research/p27/evidence/p27_trace_norm_halfnorm_test_card_20260622.md
 research/p27/evidence/p27_trace_norm_automorphism_quotient_obstruction_20260622.md
+research/p27/evidence/p27_trace_norm_elliptic_line_divisor_screen_20260622.md
 ```
 
 Ask narrowly for:
@@ -448,6 +449,10 @@ The visible automorphism quotient is now bounded: `T_line` is invariant under
 `t -> -1/t` on heldout seeds `121..124`, but is mixed under `t -> 1/t` and
 `t -> -t`.  So do not ask for a smaller t-line automorphism quotient.
 
+The first visible elliptic line-divisor family is also bounded negative:
+`u-c` and `v+m*u+c` for `|m|,|c| <= 4` have no exact selector and only
+`1.011x` best heldout target/source lift.
+
 Promote if:
 
 ```text
@@ -460,6 +465,7 @@ Kill if:
 
 ```text
 it reduces to already-killed visible branch/norm squareclasses
+or it is only a visible L(3O) line divisor on E
 or only rederives the first fixed half-gate
 ```
 

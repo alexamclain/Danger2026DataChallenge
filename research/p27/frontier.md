@@ -1729,6 +1729,12 @@ behavior on p27 samples.  Small torsion/coset projections and visible
 branch-coordinate rational functions are negative as explanations for
 `domain_line` or `T_line`.
 
+The first visible elliptic divisor follow-up is also negative:
+[P27 Trace/Norm Elliptic Line-Divisor Screen](evidence/p27_trace_norm_elliptic_line_divisor_screen_20260622.md).
+Vertical divisors `u-c` and affine divisors `v+m*u+c` with `|m|,|c| <= 4`
+produce no exact selector; the best heldout target lift is only `1.011x`.
+So there is no small `L(3O)` line-divisor bucket worth sending to GPU.
+
 The large-factor elliptic quotient route is also negative:
 [P27 Elliptic Large-Factor Collision Audit](evidence/p27_elliptic_large_factor_collision_20260621.md).
 For the p27-specific factor `345451` and small multiples through
@@ -1784,6 +1790,11 @@ boundary.  But under `t -> 1/t` and `t -> -t`, `T_line` is mixed
 `32568/32552` with no exact reference sign.  Thus the remaining identity must
 live on the `C/E` quotient; it does not descend to a smaller visible
 automorphism quotient.
+
+The first visible divisor family on that quotient is now bounded negative:
+[P27 Trace/Norm Elliptic Line-Divisor Screen](evidence/p27_trace_norm_elliptic_line_divisor_screen_20260622.md).
+It checked `u-c` and `v+m*u+c` for `|m|,|c| <= 4`; exact counts were zero
+for train and heldout, with heldout target lift at only `1.011x`.
 
 A direct trace/anti-trace follow-up is negative:
 [P27 H/V Trace Coupling Audit](evidence/p27_hv_trace_coupling_audit_20260621.md).

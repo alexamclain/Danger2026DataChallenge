@@ -43,6 +43,7 @@ research/p27/evidence/p27_trace_norm_dplus_h90_quotient_20260622.md
 research/p27/evidence/p27_trace_norm_dplus_h90_quartic_model_20260622.md
 research/p27/evidence/p27_trace_norm_dplus_h90_branch_class_20260622.md
 research/p27/evidence/p27_trace_norm_dplus_h90_payload_screen_20260622.md
+research/p27/evidence/p27_trace_norm_elliptic_line_divisor_screen_20260622.md
 ```
 
 Do not retest these killed routes:
@@ -55,6 +56,7 @@ low-weight tested a/g/m quotient-character products
 bare conic quotient a^2+g^2=4 as a standalone Dplus sampler
 H90 elliptic quotient alone as a Dplus sampler
 H90 eta/U/W/rho payload sign buckets as production filters
+small elliptic line-divisor buckets u-c or v+m*u+c with |m|,|c| <= 4
 full genus-69 orientation-cover sampling as the first production plan
 seed-order or compact-bucket fishing without a named invariant
 ```
