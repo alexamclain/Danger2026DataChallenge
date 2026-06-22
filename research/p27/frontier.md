@@ -1017,6 +1017,16 @@ On the legal `f3=+1` B-domain, each active row has `64` x7 occurrences,
 `f4=chi(v+2)` throughout q1607/q1847/q2087.  Stable plane relations in
 `(B,v)` and `(B,v+2)` are absent through degree `20`, so the B-line ask is now
 a true f3-vs-f4 Kummer/divisor class comparison, not another GPU bucket.
+The transition/orientation layer is now explicit too:
+[P27 B-Line Transition Closure And Orientation](evidence/p27_b_line_transition_closure_orientation_20260622.md).
+The generic quotient transition
+`(v^2-4)^2 - 4*u*(v^2-4)*(v+A) + 16*(v+A)^2 = 0` has `4` v-roots per u-root,
+while the actual selected source keeps exactly the `2` roots with
+`chi(v^2-4)=chi(v+A)=+1`.  That half is just the visible lift from quotient
+`v` to actual `x7`; `chi(v+2)=f4(B)` is already constant on the larger generic
+transition.  The live CAS object is therefore the staged cover
+`F_A(u,v)=0`, `rho^2=v^2-4`, `gamma^2=v+2`, and the live question is whether
+`gamma` is a sourceable Kummer class rather than a fresh half-cover.
 The B-line visible two-gate quartic shortcut is closed as well:
 [P27 B-Line Gate4-Prefix Quartic q1847 Screen](evidence/p27_b_line_gate4_prefix_quartic_q1847_screen_20260622.md).
 It scans `6,300,872,423` q1847 coefficient triples for

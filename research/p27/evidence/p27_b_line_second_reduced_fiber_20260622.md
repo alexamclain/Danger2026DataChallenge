@@ -116,6 +116,28 @@ q1607 f4-minus: extra_nullity = 3 at degree 10, killed at higher forced range
 q2087 f4-minus: extra_nullity = 3 at degree 8, killed by q1847
 ```
 
+## Transition Follow-Up
+
+[P27 B-Line Transition Closure And Orientation](p27_b_line_transition_closure_orientation_20260622.md)
+shows that the second reduced fiber is best viewed as:
+
+```text
+F_A(u,v)=0:
+  (v^2 - 4)^2 - 4*u*(v^2 - 4)*(v + A) + 16*(v + A)^2 = 0
+
+materialization:
+  rho^2 = v^2 - 4
+
+f4 selector:
+  gamma^2 = v + 2
+```
+
+For each legal `f3=+1` B row, the generic transition has `4` v-roots per
+u-root, while the actual selected source keeps exactly the `2` roots with
+`chi(v^2-4)=chi(v+A)=+1`.  The f4 sign `chi(v+2)` is already constant on the
+larger generic transition, so the materialization half is not the moonshot;
+the live question is the Kummer class of `gamma^2=v+2` on the staged cover.
+
 ## Interpretation
 
 Positive:
@@ -138,11 +160,13 @@ The fixture does not justify GPU production or another B-bucket search.
 
 ```text
 continue = offline normalize the f4-over-f3-plus 8-v cover
+continue = use the transition/materialization/gamma staging in CAS
 continue = compare its branch/divisor/Kummer class with the f3 reduced cover
 continue = use the JSON fixture as the CAS regression packet
 
 kill = visible low-degree plane relations for the second reduced fiber through degree 20
 kill = power-sum or reciprocal power-sum selectors through exponent 64
+kill = treating the chi(v^2-4) materialization half as a production win
 kill = GPU production from second-fiber B buckets before a class/source is named
 ```
 

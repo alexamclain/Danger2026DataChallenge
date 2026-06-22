@@ -167,6 +167,16 @@ with `f4=chi(v+2)` in every q1607/q1847/q2087 row.  Stable low-degree
 relations in `(B,v)` and `(B,v+2)` are absent through degree `20`, so this is
 a concrete f4/f3 CAS class-comparison artifact, not a GPU bucket.
 
+Transition/orientation follow-up:
+[P27 B-Line Transition Closure And Orientation](p27_b_line_transition_closure_orientation_20260622.md).
+The generic quotient transition from `u` to `v` has `4` v-roots per u-root,
+while the actual selected source keeps exactly the `2` with
+`chi(v^2-4)=chi(v+A)=+1`.  This visible half is only the lift/materialization
+of quotient `v` to actual `x7`; `chi(v+2)=f4(B)` is already constant on the
+larger generic transition.  The CAS target should therefore be the staged
+cover `F_A(u,v)=0`, `rho^2=v^2-4`, `gamma^2=v+2`, with the question whether
+`gamma` is a pullback/coboundary/iterate/low-genus quotient.
+
 Required computation:
 
 ```text
@@ -174,7 +184,7 @@ normalize the reduced 4-u / 8-x legal+d3 cover over P1_B/P1_A/P1_Sroot
 include x6^2-U*x6+1 and gamma^2=U+2 in the offline branch/class extraction
 impose the selected-source legal/core cut before using all-chart lift buckets
 extract branch divisor degree, support field degrees, components, genus
-if d3 is tractable, use the second reduced-fiber fixture to compare f4/f3 in the Kummer group
+if d3 is tractable, normalize F_A(u,v)=0 plus rho^2=v^2-4 and compare gamma^2=v+2 in the Kummer group
 use f5/f6 only as regression checks until larger data supports them
 ```
 
@@ -371,6 +381,7 @@ kill = more one-bit filters as moonshots
 kill = norm/trace/power-sum selectors for the B-line d3 fiber
 kill = low-degree plane relations for the reduced B-line d3 fiber through degree 20
 kill = low-degree plane relations for the second reduced B-line f4/f3 fiber through degree 20
+kill = treating chi(v^2-4) or chi(v+A) materialization as a GPU/source win
 kill = online Magma as the reduced-cover extraction engine
 kill = more visible quartic/branch-map bucket searches without a theorem
 kill = treating source-conditional 2x lift as sqrt-beating

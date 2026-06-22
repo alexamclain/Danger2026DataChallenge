@@ -129,6 +129,15 @@ reciprocal-quotient values `v=x7+1/x7`, with `f4=chi(v+2)` throughout.  No
 stable power-sum or low-degree plane relation appears through the tested
 bounds, so this is a CAS class-comparison packet rather than a GPU bucket.
 
+Transition/orientation follow-up:
+[P27 B-Line Transition Closure And Orientation](p27_b_line_transition_closure_orientation_20260622.md)
+shows that the quotient transition from `u` to `v` has `4` generic v-roots per
+u-root, while the actual source keeps the `2` roots with
+`chi(v^2-4)=chi(v+A)=+1`.  This is the visible materialization layer, not the
+moonshot class: `chi(v+2)=f4(B)` is constant even on the discarded generic
+roots.  The next CAS object is therefore `F_A(u,v)=0`, `rho^2=v^2-4`,
+`gamma^2=v+2`.
+
 Negative:
 
 ```text
@@ -155,6 +164,7 @@ continue = recover f3 branch degree, support field degrees, genus, components
 continue = cross-check any class through the A/B/K/Sroot fixture bridges
 continue = normalize the reduced 4-u / 8-x d3 fiber cover
 continue = normalize the second reduced f4/f3 8-v cover
+continue = use the staged transition/materialization/gamma model for f4/f3
 continue = compare f4/f3 as a class relation after f3 is named
 continue = use f5/f6 rows only as tail/regression checks for an extracted class
 
@@ -162,6 +172,7 @@ kill = treating one-sided guard-field f5/f6 tails as promotion evidence
 kill = counting A-level, B-line, and K/Sroot fixtures as independent positives
 kill = B-line norm/trace/power-sum selectors as a production sampler
 kill = second-fiber low-degree B-plane relations as a production sampler
+kill = chi(v^2-4) materialization as a production sampler
 kill = more B-bucket GPU production before a source/recurrent class exists
 kill = widening visible low-degree B scans already killed by q1847
 ```
