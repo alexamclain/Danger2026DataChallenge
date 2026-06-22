@@ -336,10 +336,14 @@ quadratic divisor in the tested fields.  It writes a frozen target packet:
 research/p27/archive/fixtures/p27_dplus_rowbit_u_divisor_targets_20260622.json
 ```
 
-The next exact-support test is now concrete: monic cubic on
-`q1607,q1847,q2087`, then monic quartic on `q1847,q2087`.  An exact hit in
-`q1847` or `q2087` would be highly non-random; no hit kills visible low-degree
-`P^1_u` support.
+Sixteenth update:
+[P27 Trace/Norm Dplus U6 Row-Bit H90 U Cubic/Quartic Screen](p27_trace_norm_dplus_u6_rowbit_h90_u_cubic_quartic_20260622.md)
+closes the visible q1847 low-degree `u` route.  Monic cubic exact support is
+absent in q607/q1607/q1847/q2087, and a full q1847 monic quartic scan over
+`6300872423` coefficient triples finds zero exact supports.  Therefore the
+row-bit test queue should not send q1847 cubic/quartic `u` scans to GPU.
+Optional q2087 quartic closure is allowed only if cheap; the mainline is
+non-visible divisor/theta/Prym extraction of the descended `u` class.
 
 This is the most concrete bridge test after the coupling kill.  We know:
 
@@ -360,6 +364,8 @@ small elliptic group quotient projections do not explain the soluble-side
 plus/minus sign.
 the soluble-side sign descends to u=4/(t-1/t)^2, but not to monic degree <=2
 u-divisors.
+monic cubic support is absent in q607/q1607/q1847/q2087, and q1847 monic
+quartic support is absent.
 ```
 
 The missing object is the map or obstruction between the H90 model and the
@@ -395,6 +401,7 @@ through degree 20
 do not retry low-weight H90/rho sign products for chi(x6)
 do not treat the Ktrace-solubility boundary as a sampler until the soluble-side
 plus/minus class is named
+do not retry q1847 monic cubic/quartic u exact support
 ```
 
 Promote:
@@ -433,7 +440,7 @@ continue = CAS/Prym extraction of the descended U6 row bit
 continue = explain H90 rational-point uniformity of the row bit
 continue = prove/extract the Ktrace local-solubility boundary
 continue = divisor/theta/Prym extraction after the small-coset kill
-continue = exact monic cubic/quartic support on the frozen u target packet
+continue = optional q2087 quartic u closure only if cheap
 
 kill = more sign-word/gamma bucket GPU scans
 kill = visible f5(B) B-atom/split-linear bucket searches
@@ -449,6 +456,8 @@ kill = simple H90/rho coboundary bucket screens for chi(x6)
 kill = treating Ktrace solubility alone as a production source
 kill = small H90 elliptic group-coset projections m <= 24 as a row-bit source
 kill = monic degree <= 2 u-divisors as the row-bit source
+kill = q1847 monic cubic/quartic u exact support
+kill = visible monic P^1_u support through degree 4 as a GPU target
 kill = searching for another low-degree Dplus-to-A coordinate map
 kill = visible low-degree A/B/K formula fishing without a divisor reason
 kill = large p27 production run based only on the current Dplus classifier

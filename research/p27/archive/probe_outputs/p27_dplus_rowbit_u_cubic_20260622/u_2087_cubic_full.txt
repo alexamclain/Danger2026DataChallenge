@@ -1,0 +1,13 @@
+p27 cubic fast chunk probe
+rows_file = research/p27/archive/probe_outputs/p27_dplus_rowbit_u_cubic_20260622/u_2087_rows.txt
+field = 2087
+rows = 57
+start = 0
+end = 4355569
+pairs_scanned = 4355569
+polarity_-1_hits = 0
+polarity_1_hits = 0
+exact_cubics = 0
+elapsed_seconds = 2.126630
+throughput_pairs_per_second = 2048108.510
+p27_cubic_chunk_fast_rows=1/1

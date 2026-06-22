@@ -152,24 +152,31 @@ expected to produce many local exact fits.
 The next concrete test is:
 
 ```text
-run monic cubic exact support on q1607, q1847, q2087;
-if no cubic, run monic quartic exact support on q1847 and q2087;
+done: run monic cubic exact support on q607, q1607, q1847, q2087;
+done: run monic quartic exact support on q1847;
+optional: run monic quartic exact support on q2087 only as closure;
 verify any hit on another guard field before promoting.
 ```
 
-Promote only if the exact divisor survives a promotion field and gives a named
-source/class to compare with later gates.  If cubic/quartic exact support is
-empty in q1847/q2087, kill visible low-degree `P^1_u` support and keep the
-row-bit lane in divisor/theta/Prym extraction.
+Follow-up:
+[P27 Trace/Norm Dplus U6 Row-Bit H90 U Cubic/Quartic Screen](p27_trace_norm_dplus_u6_rowbit_h90_u_cubic_quartic_20260622.md)
+finds zero exact cubics in q607/q1607/q1847/q2087 and zero exact quartics in
+q1847 after all `6300872423` coefficient triples.  Therefore the q1847
+visible monic `P^1_u` route is closed through degree `4`.  Promote no GPU
+work on this target unless q2087 closure or a CAS extraction supplies a named
+field-independent divisor/class.
 
 ## Continue / Kill
 
 ```text
-continue = exact monic cubic/quartic support on the frozen u target packet
-continue = if hit, verify on independent guard field and compare to d4/d5
-continue = if no hit, extract non-visible theta/Prym class on the u-line cover
+continue = optional q2087 quartic closure only if cheap
+continue = extract non-visible theta/Prym class on the u-line cover
+continue = compare the u row-bit class with pulled-back A-level d3/x6
 
 kill = monic degree <= 2 u-divisors as the source
+kill = monic cubic u-divisors in q607/q1607/q1847/q2087
+kill = monic quartic u-divisors in q1847
+kill = visible monic P^1_u support through degree 4 as a GPU target
 kill = treating q607 quartic fits, if any, as promotion evidence by themselves
 kill = GPU production from u buckets before exact support or theorem evidence
 ```

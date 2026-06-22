@@ -2298,6 +2298,14 @@ finds a sharper positive/negative split: the soluble-side sign descends to
 have no exact hits.  It creates
 `archive/fixtures/p27_dplus_rowbit_u_divisor_targets_20260622.json` for exact
 monic cubic/quartic support tests in the promotion fields.
+That exact-support follow-up now kills the visible q1847 low-degree route:
+[P27 Trace/Norm Dplus U6 Row-Bit H90 U Cubic/Quartic Screen](evidence/p27_trace_norm_dplus_u6_rowbit_h90_u_cubic_quartic_20260622.md).
+Full monic cubic scans in q607/q1607/q1847/q2087 and a full q1847 monic
+quartic scan all find zero exact supports.  Since q1847 quartic random exact
+fits are expected only about `6.31e-7` times, visible monic `P^1_u` support
+through degree `4` is closed in the decisive field.  The row-bit lane now
+needs non-visible divisor/theta/Prym extraction, not a GPU cubic/quartic
+bucket run.
 The small-field descent audit then sets the boundary:
 [P27 Trace/Norm Dplus Reciprocal Tower Small-Field Descent](evidence/p27_trace_norm_dplus_reciprocal_tower_smallfield_descent_20260622.md).
 Over q607/q1607/q1847, the naked reciprocal tower has mixed `A`/`B` fibers for

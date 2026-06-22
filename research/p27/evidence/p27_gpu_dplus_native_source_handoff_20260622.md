@@ -46,6 +46,7 @@ research/p27/evidence/p27_trace_norm_dplus_h90_payload_screen_20260622.md
 research/p27/evidence/p27_trace_norm_dplus_u6_rowbit_h90_solubility_boundary_20260622.md
 research/p27/evidence/p27_trace_norm_dplus_u6_rowbit_h90_group_coset_20260622.md
 research/p27/evidence/p27_trace_norm_dplus_u6_rowbit_h90_u_divisor_20260622.md
+research/p27/evidence/p27_trace_norm_dplus_u6_rowbit_h90_u_cubic_quartic_20260622.md
 research/p27/evidence/p27_trace_norm_elliptic_line_divisor_screen_20260622.md
 ```
 
@@ -62,6 +63,7 @@ H90 eta/U/W/rho payload sign buckets as production filters
 visible E_h90/Z/Aeta row-bit product characters
 small H90 elliptic group-coset buckets for the row bit
 small elliptic line-divisor buckets u-c or v+m*u+c with |m|,|c| <= 4
+q1847 monic cubic/quartic u exact-support scans
 full genus-69 orientation-cover sampling as the first production plan
 seed-order or compact-bucket fishing without a named invariant
 ```
@@ -298,6 +300,14 @@ Promote an exact cubic/quartic hit only if it appears in a promotion field and
 verifies on another guard field or yields a named divisor/class.  Do not treat
 q607 quartic fits as promotion evidence; random fits are expected there.
 
+Latest exact-support follow-up:
+[P27 Trace/Norm Dplus U6 Row-Bit H90 U Cubic/Quartic Screen](p27_trace_norm_dplus_u6_rowbit_h90_u_cubic_quartic_20260622.md)
+finds zero exact cubics in q607/q1607/q1847/q2087 and zero exact quartics in
+q1847 after a full `6300872423`-triple scan.  Do not spend GPU time on q1847
+`u` cubic/quartic exact support.  q2087 quartic is optional closure only if a
+GPU is already warm; the main row-bit ask is now non-visible
+divisor/theta/Prym extraction or telemetry for a named class supplied by CAS.
+
 If cheap, fused telemetry should therefore emit:
 
 ```text
@@ -353,6 +363,8 @@ kill = orientation bucket telemetry as a standalone GPU task
 kill = fixed-prefix filtering without source-normalized improvement
 kill = visible H90 row-bit products or small H90 elliptic coset buckets
 kill = monic degree <= 2 u-divisor support for the row bit
+kill = q1847 monic cubic/quartic u exact-support GPU scans
+kill = visible monic P^1_u support through degree 4 as a production target
 ```
 
 ```text
