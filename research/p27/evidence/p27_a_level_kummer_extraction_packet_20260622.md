@@ -1,0 +1,133 @@
+# P27 A-Level Kummer Extraction Packet
+
+Date: 2026-06-22
+
+## Claim
+
+The A-line route now has a concrete CAS handoff: extract the normalized
+A-level Kummer/divisor classes behind selected gates, starting with d3 and
+then comparing d4/d5/d6.
+
+This packet is the replacement for blind A-polynomial scans.  It preserves the
+positive result that selected gates descend to whole A-fibers, plus the
+negative result that visible degree `<= 4` branch support on `P1_A` is killed.
+
+## Artifacts
+
+Packet generator:
+
+```text
+research/p27/archive/gates/p27_a_level_kummer_extraction_packet.py
+```
+
+Readable packet:
+
+```text
+research/p27/archive/probe_outputs/p27_a_level_kummer_extraction_packet_20260622.txt
+```
+
+JSON fixture:
+
+```text
+research/p27/archive/fixtures/p27_a_level_kummer_extraction_packet_20260622.json
+```
+
+Commands:
+
+```bash
+PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=research/p27/archive/gates \
+python3 -u research/p27/archive/gates/p27_a_level_kummer_extraction_packet.py \
+  --small-primes 1607,1847,2087 \
+  --depth 8 \
+  --min-rows 40 \
+  | tee research/p27/archive/probe_outputs/p27_a_level_kummer_extraction_packet_20260622.txt
+
+PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=research/p27/archive/gates \
+python3 -u research/p27/archive/gates/p27_a_level_kummer_extraction_packet.py \
+  --small-primes 1607,1847,2087 \
+  --depth 8 \
+  --min-rows 40 \
+  --json \
+  | tee research/p27/archive/fixtures/p27_a_level_kummer_extraction_packet_20260622.json
+```
+
+## Fixture Contents
+
+The JSON fixture records A-labeled rows for the p27-signature fields:
+
+```text
+q1607:
+  unique_A = 49
+  d3 rows = 49, plus/minus = 28/21, mixed = 0
+  d4 rows = 28, plus/minus = 19/9, mixed = 0
+
+q1847:
+  unique_A = 63
+  d3 rows = 63, plus/minus = 45/18, mixed = 0
+  d4 rows = 45, plus/minus = 19/26, mixed = 0
+
+q2087:
+  unique_A = 57
+  d3 rows = 57, plus/minus = 25/32, mixed = 0
+  d4 rows = 25, plus/minus = 18/7, mixed = 0
+```
+
+The full JSON includes the actual A values and signs, not only counts.
+
+## CAS Task
+
+1. Recover the normalized A-cover carrying d3.
+
+Required outputs:
+
+```text
+A-line function field or correspondence carrying the d3 character
+branch divisor degree and support field degrees
+normalization genus and component count
+whether d3 is sourceable despite no visible degree <=4 support
+```
+
+2. Compare successive A-line classes.
+
+Required outputs:
+
+```text
+d4 class on the d3-plus prefix
+d5/d6 classes when enough rows or equations are available
+pullback / translate / coboundary / iterate relation among classes
+first p27-relevant recurrence candidate for d3..d10
+```
+
+## Promote / Kill
+
+Promote:
+
+```text
+stable low-genus/sourceable A-line class
+named correspondence controlling multiple selected gates
+recurrence or coboundary that beats independent half-loss source-normalized
+```
+
+Kill:
+
+```text
+d3 has high/generic branch degree with no quotient
+d4/d5/d6 are unrelated fresh half-covers
+no low-genus/sourceable normalized A-level object exists
+```
+
+## Continue / Kill
+
+```text
+continue = run Magma/Sage normalization/class extraction using the JSON rows
+continue = compare d3/d4/d5/d6 classes once a normalized model exists
+continue = use p27 d3..d10 prefix data as routing evidence, not as equations
+
+kill = blind A polynomial scans without a divisor reason
+kill = GPU A-bucket production before a source law exists
+kill = treating finite-field rows alone as a proof of recurrence
+```
+
+```text
+p27_a_level_kummer_extraction_packet_rows=1/1
+```

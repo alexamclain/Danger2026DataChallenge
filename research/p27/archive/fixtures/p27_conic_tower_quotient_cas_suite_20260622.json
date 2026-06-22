@@ -39,7 +39,8 @@
       "research/p27/evidence/p27_conic_tower_sign_quotient_20260622.md",
       "research/p27/evidence/p27_conic_tower_d6_a_descent_20260622.md",
       "research/p27/evidence/p27_a_level_prefix_descent_20260622.md",
-      "research/p27/evidence/p27_a_line_character_support_20260622.md"
+      "research/p27/evidence/p27_a_line_character_support_20260622.md",
+      "research/p27/evidence/p27_a_level_kummer_extraction_packet_20260622.md"
     ],
     "killed_shortcuts": [
       "research/p27/evidence/p27_conic_pair_lowdegree_relation_20260621.md",
@@ -50,6 +51,13 @@
       "research/p27/evidence/p27_conic_signword_coupling_20260622.md",
       "research/p27/evidence/p27_a_line_character_support_20260622.md"
     ]
+  },
+  "machine_fixtures": {
+    "a_level_kummer_packet": {
+      "generator": "research/p27/archive/gates/p27_a_level_kummer_extraction_packet.py",
+      "json": "research/p27/archive/fixtures/p27_a_level_kummer_extraction_packet_20260622.json",
+      "text": "research/p27/archive/probe_outputs/p27_a_level_kummer_extraction_packet_20260622.txt"
+    }
   },
   "tasks": [
     {

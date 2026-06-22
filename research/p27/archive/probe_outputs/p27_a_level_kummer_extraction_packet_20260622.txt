@@ -1,0 +1,35 @@
+p27 A-level Kummer extraction packet
+
+Purpose:
+  Extract the actual A-line Kummer/divisor classes for selected gates.
+  The A-prefix descent is real, but visible degree <=4 branch support
+  is killed; this packet is for normalized-cover/class extraction.
+
+Guard fields:
+  q=1607: unique_A=49 unique_ax=196
+    d3: rows=49 plus=28 minus=21 mixed=0
+    d4: rows=28 plus=19 minus=9 mixed=0
+  q=1847: unique_A=63 unique_ax=252
+    d3: rows=63 plus=45 minus=18 mixed=0
+    d4: rows=45 plus=19 minus=26 mixed=0
+  q=2087: unique_A=57 unique_ax=228
+    d3: rows=57 plus=25 minus=32 mixed=0
+    d4: rows=25 plus=18 minus=7 mixed=0
+
+Known kills:
+  - d3 has no visible degree <=4 A-line branch support in q1607/q1847/q2087
+  - q1847 d4 also has no visible degree <=4 A-line branch support
+  - nearby 7 mod 8 fields reject split degree <=4 support for d3
+  - A-prefix counts remain geometric in p27 train/heldout
+
+CAS task:
+  1. Recover the normalized A-cover carrying d3.
+  2. Compute branch divisor degree, support field degrees, genus, and components.
+  3. Compare d4/d5/d6 classes as pullbacks/translates/coboundaries/iterates.
+  4. Promote only a low-genus/sourceable class or recurrence controlling multiple gates.
+  5. Kill if d3..d10 are independent fresh half-covers.
+
+Fixture JSON:
+  research/p27/archive/fixtures/p27_a_level_kummer_extraction_packet_20260622.json
+
+p27_a_level_kummer_extraction_packet_rows=1/1

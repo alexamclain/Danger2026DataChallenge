@@ -851,6 +851,13 @@ Complete degree `<= 4` branch-support families on `P1_A` are killed for d3 in
 q1607/q1847/q2087, q1847 also kills d4, and nearby `7 mod 8` fields reject
 split degree `<= 4` d3 support.  Do not widen blind A-polynomial scans; the
 next real test is divisor/Kummer class extraction on the normalized A-cover.
+That extraction now has a concrete packet:
+[P27 A-Level Kummer Extraction Packet](evidence/p27_a_level_kummer_extraction_packet_20260622.md).
+It emits a JSON fixture of A-labeled d3/d4 rows over q1607/q1847/q2087 and
+asks CAS to recover the normalized A-cover, branch divisor data, genus, and
+successive Kummer-class relations.  This is the next first-class conic/A-line
+test that could still beat sqrt if it finds recurrence rather than fresh
+half-covers.
 The direct sign-word coupling telemetry now agrees:
 [P27 Conic Sign-Word Coupling Probe](evidence/p27_conic_signword_coupling_20260622.md).
 On `4000 + 4000` p27 train/heldout unique `(A,x5)` rows, the all-plus conic

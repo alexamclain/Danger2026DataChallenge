@@ -161,6 +161,11 @@ kill = visible genus <=1 A-line support as the immediate sqrt-beating source
 kill = GPU production from A-prefix descent without a class/source law
 ```
 
+Next packet:
+[P27 A-Level Kummer Extraction Packet](p27_a_level_kummer_extraction_packet_20260622.md)
+emits the q1607/q1847/q2087 A-labeled d3/d4 fixture and the normalized-cover
+CAS acceptance criteria.
+
 ```text
 p27_a_line_character_support_rows=1/1
 ```

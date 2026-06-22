@@ -510,6 +510,10 @@ kills visible degree `<= 4` branch support for d3 in q1607/q1847/q2087 and
 for d4 in q1847, with nearby-field split-support negatives.  The live conic
 task is now normalized A-cover divisor/Kummer class extraction, not wider
 low-degree A polynomial scans.
+[P27 A-Level Kummer Extraction Packet](p27_a_level_kummer_extraction_packet_20260622.md)
+is the concrete CAS handoff for that task: it emits q1607/q1847/q2087
+A-labeled d3/d4 fixtures and the promote/kill criteria for normalized A-cover
+class extraction.
 
 The compact actionable version is the "Current Priority After Two-Step Kummer
 Screen" section of

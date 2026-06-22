@@ -131,6 +131,9 @@ sample counts are still healthy; use d11..d14 as routing evidence only.
 kills the nearest visible degree `<= 4` branch-support shortcut, so the CAS
 pass should extract divisor/Kummer classes directly instead of widening blind
 A-polynomial scans.
+[P27 A-Level Kummer Extraction Packet](p27_a_level_kummer_extraction_packet_20260622.md)
+is the concrete input packet for this pass.  Its JSON fixture records
+q1607/q1847/q2087 A-labeled d3/d4 rows and the exact promote/kill criteria.
 
 If a quotient/source map appears, measure:
 
@@ -169,6 +172,7 @@ sampler pays the same constant/q legal-incidence denominator as free (R,L)
 - [P27 Conic Tower D6 A-Descent](p27_conic_tower_d6_a_descent_20260622.md)
 - [P27 A-Level Prefix Descent](p27_a_level_prefix_descent_20260622.md)
 - [P27 A-Line Character Support Screen](p27_a_line_character_support_20260622.md)
+- [P27 A-Level Kummer Extraction Packet](p27_a_level_kummer_extraction_packet_20260622.md)
 - [P27 Conic-Pair Two-Step Kummer Screen](p27_conic_pair_two_step_kummer_20260621.md)
 - [P27 Conic-Pair Two-Step Kummer Trivariate Screen](p27_conic_pair_two_step_kummer_trivar_20260621.md)
 

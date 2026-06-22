@@ -168,6 +168,11 @@ q1607/q1847/q2087, with a split-support stability sweep across nearby fields.
 q1847 also kills the visible degree `<= 4` d4 support.  Continue with
 divisor/Kummer class extraction rather than broader coefficient scans.
 
+Packetized as:
+[P27 A-Level Kummer Extraction Packet](p27_a_level_kummer_extraction_packet_20260622.md),
+which emits A-labeled d3/d4 finite-field fixtures and the normalized-cover
+CAS tasks.
+
 3. GPU boundary.
 
 ```text

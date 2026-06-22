@@ -391,6 +391,16 @@ with normalized-cover divisor/Kummer class extraction or a named divisor
 reason from CAS.
 ```
 
+A-cover packet:
+[P27 A-Level Kummer Extraction Packet](p27_a_level_kummer_extraction_packet_20260622.md).
+
+```text
+Use the JSON fixture
+research/p27/archive/fixtures/p27_a_level_kummer_extraction_packet_20260622.json
+as the first CAS input for A-cover class extraction.  It records q1607/q1847/q2087
+A-labeled d3/d4 rows plus the exact promote/kill criteria.
+```
+
 Updated kill rule:
 
 ```text
