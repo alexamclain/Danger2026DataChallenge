@@ -25,6 +25,14 @@ link product clears the source-normalized promotion bar.  GPU is useful only
 to close the scale loophole or reveal a heldout recurrence that the CPU sample
 was too small to see.
 
+The natural phase-word source screen is also negative:
+[P27 B-Line Phase-Word Source Screen](p27_b_line_phase_word_source_screen_20260622.md).
+On `6000+6000` p27 train/heldout starts, pre-registered short words built from
+`alpha_j`, `beta_j`, adjacent products, and cumulative products all stay below
+the `1.25x` conditional promotion bar, and every selected bucket has lower
+absolute target/source than baseline.  Treat GPU phase telemetry as diagnostic
+or class-discovery work, not as a likely production filter.
+
 ## Manifest
 
 Machine-readable GPU contract:
@@ -58,6 +66,7 @@ Also do not promote:
 ```text
 alpha alone
 beta alone
+natural short phase words from the CPU pre-screen
 Bplus buckets alone
 short phase words without raw source accounting
 conditional lift without target/source_draw lift
@@ -185,6 +194,7 @@ continue = bounded GPU x16blinephaseprobe if instrumentation is cheap
 continue = use phase columns as support for B-line Kummer extraction
 continue = promote only source-normalized heldout recurrence or class evidence
 
+kill = natural short phase words as production filters after the CPU pre-screen
 kill = compactD_R standalone GPU filter after reduced_U
 kill = alpha-only or beta-only bucket production
 kill = Bplus-only production from no-mixed-B evidence

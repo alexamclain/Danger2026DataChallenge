@@ -8,17 +8,19 @@
   "purpose": "bounded GPU telemetry for the B-line alpha/beta phase sequence; not a production search",
   "candidate_mode": "x16blinephaseprobe",
   "baseline_evidence": [
-    "research/p27/evidence/p27_b_line_gamma_v4_factorization_20260622.md",
-    "research/p27/evidence/p27_b_line_alpha_beta_phase_sequence_20260622.md",
-    "research/p27/evidence/p27_b_line_localized_cover_layer_count_20260622.md",
-    "research/p27/evidence/p27_b_line_reduced_cover_symbolic_packet_20260622.md"
+        "research/p27/evidence/p27_b_line_gamma_v4_factorization_20260622.md",
+        "research/p27/evidence/p27_b_line_alpha_beta_phase_sequence_20260622.md",
+        "research/p27/evidence/p27_b_line_phase_word_source_screen_20260622.md",
+        "research/p27/evidence/p27_b_line_localized_cover_layer_count_20260622.md",
+        "research/p27/evidence/p27_b_line_reduced_cover_symbolic_packet_20260622.md"
   ],
   "do_not_test_as_production_filters": [
-    "compactD_R alone",
-    "alpha alone",
-    "beta alone",
-    "Bplus buckets alone",
-    "short phase words without raw source accounting"
+        "compactD_R alone",
+        "alpha alone",
+        "beta alone",
+        "natural short alpha/beta phase words from the CPU source screen",
+        "Bplus buckets alone",
+        "short phase words without raw source accounting"
   ],
   "phase_definitions": {
     "A": "B^2 - 2",

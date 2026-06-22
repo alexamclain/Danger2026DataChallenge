@@ -234,6 +234,13 @@ win.  Link products stay near `1/2`, the only stable-looking phase-state skew
 is about `1.1x` conditional after paying a half split, and guard-field
 plateaus disagree across q1607/q1847/q2087.
 
+Phase-word source follow-up:
+[P27 B-Line Phase-Word Source Screen](p27_b_line_phase_word_source_screen_20260622.md).
+On `6000+6000` p27 train/heldout starts, pre-registered natural V4 phase words
+do not reach `1.25x` conditional lift and all lose absolute target/source after
+the phase split.  GPU phase telemetry should therefore be treated as bounded
+diagnostic/class-discovery work, not as a production bucket search.
+
 Extension-field denominator follow-up:
 [P27 B-Line Gamma Extension Count](p27_b_line_gamma_extension_count_20260622.md).
 The `GF(607)` replay matches the prior prime-field point-count probe, and the
@@ -497,6 +504,7 @@ kill = visible f3/H90-layer pair-coordinate source laws for gamma
 kill = treating rho/materialization as the gamma source law
 kill = alpha or beta alone as a canonical B-line bucket
 kill = current alpha/beta phase-state split as a production sampler
+kill = natural short alpha/beta phase words as production filters
 kill = gamma^2=U+2 as a direct source sampler after the extension-count audit
 kill = online Magma as the reduced-cover extraction engine
 kill = more visible quartic/branch-map bucket searches without a theorem
