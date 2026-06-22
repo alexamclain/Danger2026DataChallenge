@@ -924,6 +924,17 @@ The next sqrt-beating test is therefore a direct legal-pullback/quotient
 sampler for this recurrence domain, or a coupling law across many
 `chi(r_j^2+c*r_j+1)` signs.
 
+The direct base-curve sampler test is negative:
+[P27 K/A Base-Curve Sampler Probe](evidence/p27_kline_base_curve_sampler_20260622.md).
+Over q1607/q1847/q2087, the explicit base curve has exactly `q` affine
+`(K,A)` points and contains every realized legal d2 point, but the realized
+legal subset is only `49/1607`, `63/1847`, and `57/2087` respectively.
+Low-weight squareclass products of the natural K/A atoms do not identify this
+subset; their best nontrivial scores are only about `0.53`.  Thus the base
+curve is a good normalization coordinate, not a direct GPU source.  The live
+object is still the additional legal cover over the base, especially the d3
+reverse-root cover over `P1_Sroot`.
+
 The first Belyi-normalized source family is now killed:
 [P27 Lambda Branch-Divisor Screen](evidence/p27_lambda_branch_divisor_screen_20260621.md).
 It tested `z^2=f(lambda)` with `deg_lambda(f)<=4`, where

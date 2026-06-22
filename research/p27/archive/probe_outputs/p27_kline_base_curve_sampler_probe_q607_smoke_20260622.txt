@@ -1,0 +1,42 @@
+p27 K/A base-curve sampler viability probe
+base curve: 64(A-2)^2(A+2)L^2 + 64(A+2)(A+14)(3A+10)L - (A-2)^4 = 0, L=K^2
+atoms = ['K', 'K+1', 'K-1', 'K^2+4', 'A+2', 'A-2', 'A+6', 'A+14', '3A+10', 'A^2+60A+132']
+q607_base_sampler_stats:
+  base_KA = 607
+  base_realized_d2_fraction_ppm = 52718
+  base_realized_d3plus_fraction_ppm = 26359
+  enum_compact_not_target = 293
+  enum_no_label2_candidate = 184
+  realized_d2_KA = 32
+  realized_d2_in_base = 32
+  realized_d2_missing_from_base = 0
+  realized_d3plus_KA = 16
+  realized_d3plus_in_base = 16
+  realized_d3plus_missing_from_base = 0
+q607_d2_atom_score_stats:
+  scored_rows = 600
+  target_rows = 32
+  zero_atom_skip = 7
+q607_d2_best_atom_combos:
+  good=568/600 rate=0.946666667 polarity=1 weight=0 combo=1
+  good=568/600 rate=0.946666667 polarity=1 weight=1 combo=K^2+4
+  good=568/600 rate=0.946666667 polarity=1 weight=1 combo=A+2
+  good=568/600 rate=0.946666667 polarity=1 weight=2 combo=K^2+4 * A+2
+  good=352/600 rate=0.586666667 polarity=-1 weight=4 combo=K-1 * A+14 * 3A+10 * A^2+60A+132
+  good=336/600 rate=0.560000000 polarity=1 weight=4 combo=K+1 * A+14 * 3A+10 * A^2+60A+132
+  good=336/600 rate=0.560000000 polarity=1 weight=4 combo=A-2 * A+6 * 3A+10 * A^2+60A+132
+  good=334/600 rate=0.556666667 polarity=-1 weight=4 combo=A-2 * A+6 * A+14 * A^2+60A+132
+q607_d3plus_atom_score_stats:
+  scored_rows = 600
+  target_rows = 16
+  zero_atom_skip = 7
+q607_d3plus_best_atom_combos:
+  good=584/600 rate=0.973333333 polarity=1 weight=0 combo=1
+  good=584/600 rate=0.973333333 polarity=1 weight=1 combo=K^2+4
+  good=584/600 rate=0.973333333 polarity=1 weight=1 combo=A+2
+  good=584/600 rate=0.973333333 polarity=1 weight=2 combo=K^2+4 * A+2
+  good=350/600 rate=0.583333333 polarity=-1 weight=4 combo=K-1 * A+14 * 3A+10 * A^2+60A+132
+  good=338/600 rate=0.563333333 polarity=1 weight=4 combo=K+1 * A+14 * 3A+10 * A^2+60A+132
+  good=338/600 rate=0.563333333 polarity=-1 weight=4 combo=A-2 * A+6 * A+14 * A^2+60A+132
+  good=336/600 rate=0.560000000 polarity=1 weight=4 combo=A-2 * A+6 * 3A+10 * A^2+60A+132
+p27_kline_base_curve_sampler_probe_rows=1/1

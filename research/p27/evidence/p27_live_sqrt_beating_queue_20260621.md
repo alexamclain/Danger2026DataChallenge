@@ -155,6 +155,12 @@ The GPU quadratic-gate pass then validated the recurrence formula
 mismatches across gates 3-8.  It still did not improve source-normalized
 target rate, because the recurrence-coordinate domain costs about the same
 factor that it recovers conditionally.
+The base-curve sampler test is negative.  In q1607/q1847/q2087 the base curve
+has exactly `q` affine `(K,A)` points and contains every realized legal d2
+point, but only `49/1607`, `63/1847`, and `57/2087` base points are realized
+by the legal source.  Natural K/A squareclass atoms up to weight 4 do not pick
+out the legal subset.  So the base curve is a CAS coordinate, not a direct GPU
+sampler.
 The two-step Kummer quotient screen is now negative too.  After adjoining the
 first root `Z0`, the next selector `S1`, and when available the second root
 `Z1`, all obvious selector/root pair systems are full-rank through degree 12 on
@@ -196,6 +202,7 @@ K-line affine or reciprocal-affine recurrence scans
 K/Sroot reverse-root plane relation scans in `z`, `x6`, `r`, or `z +/- 1/z`
 K/Sroot bucket searches based only on the constant-fiber extension counts
 rational K/Sroot fiber-anomaly searches
+direct GPU sampling of the K/A base curve
 an A-projection or A-bucket search based only on selected-prefix filters
 raw selected-prefix source enumeration based on extension-field tail artifacts
 ```

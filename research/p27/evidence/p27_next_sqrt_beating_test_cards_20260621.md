@@ -941,6 +941,25 @@ Next GPU use requires either a direct legal-pullback sampler into the
 recurrence-coordinate domain or a measured multi-gate coupling law.
 ```
 
+Base-curve sampler update:
+[P27 K/A Base-Curve Sampler Probe](p27_kline_base_curve_sampler_20260622.md).
+
+```text
+q1607/q1847/q2087:
+  base_KA = q
+  realized legal d2 K/A = 49, 63, 57
+  all realized legal K/A points lie on the base curve
+  natural K/A squareclass atoms up to weight 4 do not select the legal subset
+```
+
+Updated action:
+
+```text
+Use the K/A equation as a normalization coordinate.
+Do not ask GPU to sample the base curve directly; it mostly produces non-legal
+points and does not avoid the legal-cover toll.
+```
+
 K/S first-half cover update:
 [P27 K/S First-Half Cover Magma Smoke](p27_ks_first_half_cover_magma_20260621.md).
 [P27 K/S First-Half Alpha-Lift Obstruction](p27_ks_first_half_alpha_lift_obstruction_20260621.md).
