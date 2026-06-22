@@ -671,6 +671,18 @@ not a d3 source; it quotients away the squareclass.  The sharper live CAS target
 is the divisor/Kummer class of `r+2` on the normalized r-quotient, or a
 recurrence/source for many `chi(r_j+2)` bits at once.
 
+The first recurrence model for that class is now explicit:
+[P27 S-Map Quartic Recurrence Probe](evidence/p27_smap_quartic_recurrence_20260621.md).
+With `r=S^2-2`, the all-plus reverse-doubling map is
+`x_prev=S^2*(S^2-4)/(4*(S^2+A-2))`.  One more all-plus step gives a quartic
+`F(Y)` in `Y=S_next^2` whose discriminant is a square times known degenerate
+divisors.  Over q1607/q1847/q2087, every d3-plus row has four `Y` roots, and
+either all four are squares or none are; this common root squareclass equals
+`d4` with zero mismatches.  But the nearest split class `chi(S^2+A-6)` is flat
+on p27 heldout, and the named quartic-factor GF(2) span has no exact train
+combo.  The next live test is therefore a resolvent/theta/Kummer formula for
+the common root squareclass of `F(Y)`, not another coefficient/factor screen.
+
 The K-line now has a cleaner coordinate for that extraction:
 [P27 Kummer Belyi Structure Probe](evidence/p27_kummer_belyi_structure_probe_20260621.md).
 Symbolically,

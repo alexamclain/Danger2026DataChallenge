@@ -292,6 +292,36 @@ squareclass.  Continue only if r+2 has a sourceable divisor class, low-genus
 quotient, or multi-gate recurrence.
 ```
 
+S-map quartic recurrence update:
+[P27 S-Map Quartic Recurrence Probe](p27_smap_quartic_recurrence_20260621.md).
+
+```text
+With r=S^2-2, the all-plus reverse-doubling map is:
+  x_prev = S^2*(S^2-4)/(4*(S^2+A-2)).
+
+One more all-plus step gives a quartic F(Y) in Y=S_next^2.  Its discriminant is
+a square times known degenerate divisors, and its nearest quadratic split has
+discriminant 16*S^2*(S^2+A-6).
+
+Guard fields q1607/q1847/q2087:
+  every d3-plus row has four Y roots
+  either all four Y roots are squares or none are
+  this common root squareclass matches d4 with zero mismatches
+
+p27 train/heldout:
+  chi(S^2+A-6) is flat
+  named quartic-factor GF(2) span has no exact train combo
+  best train 0.5198 collapses to heldout 0.4898
+```
+
+Updated test card:
+
+```text
+The next serious beat-sqrt test is a resolvent/theta/Kummer formula for the
+common squareclass of the four roots of F(Y), plus a recurrence comparison at
+the next gate.  Do not continue named-factor products from the quartic.
+```
+
 U+2 norm/coboundary screen:
 
 ```text

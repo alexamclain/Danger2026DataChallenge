@@ -30,6 +30,7 @@ Latest evidence:
 [P27 E-Prime L(4O) Exact Section Screen](p27_eprime_l4_section_exact_screen_20260621.md).
 [P27 E-Prime U-Cubic Exact Screen](p27_eprime_ucubic_exact_screen_20260621.md).
 [P27 E-Prime Reciprocal R-Quotient Branch Screen](p27_eprime_rquotient_branch_screen_20260621.md).
+[P27 S-Map Quartic Recurrence Probe](p27_smap_quartic_recurrence_20260621.md).
 
 Key result over tiny p27-signature field `q=7`:
 
@@ -66,6 +67,11 @@ artifacts, so widening univariate U-polynomials is no longer a live source path.
 The reciprocal quotient `r=z^2+z^-2` is real, but it is not the selector:
 on p27 train/heldout and q1607/q1847/q2087, the r-quadratic discriminant is
 always square and the remaining bit is exactly `d3=chi(r+2)=chi(r-2)`.
+The first recurrence model for `r+2` is explicit: with `r=S^2-2`, one more
+all-plus step gives a quartic `F(Y)` in `Y=S_next^2`.  Guard fields show four
+`Y` roots on every d3-plus row, and either all four are squares or none are;
+this common root squareclass is exactly d4.  The nearby split class
+`chi(S^2+A-6)` and named quartic-factor span are flat on p27 heldout.
 ```
 
 Concrete next K/S test:
@@ -74,7 +80,8 @@ Concrete next K/S test:
 offline Magma/Sage should now target E': V^2=U^3+4U:
   normalize the staged reciprocal r quotient of J
   compute the divisor / Kummer class of r+2 on that quotient
-  compare this to the already-known u+2 tower class
+  derive the resolvent/theta/Kummer class giving the common squareclass of
+    roots of the S-map quartic F(Y)
   d4 fresh-cover falsifier vs recurrence/sourceable transform
 ```
 
@@ -90,7 +97,7 @@ Kill condition:
 ```text
 no low-genus quotient of the genus-37 layer, or d4 is a fresh unrelated cover
 no F_p descent of the sqrt(-1)-twisted alpha quotient
-no useful low-genus/function-field structure for the r+2 Kummer class
+no useful low-genus/function-field structure for the r+2 / S-map root class
 ```
 
 ## Current Alpha Status

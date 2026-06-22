@@ -1,0 +1,9 @@
+AFTER_FIRSTHALF_SAT 2 61 0
+D3_SCOVER_AFTER_FIRSTHALF_SCHEME 1 62 0
+
+Current total memory usage: 375.5MB, failed memory request: 32.0MB
+System Error: User memory limit has been reached
+
+Current total memory usage: 375.5MB, failed memory request: 8.2MB
+System Error: User memory limit has been reached
+RESULT p27_eprime_d3_scover_after_firsthalf_saturation_q7 done

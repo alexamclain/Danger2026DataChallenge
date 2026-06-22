@@ -1,0 +1,96 @@
+p27 S-map quartic recurrence probe
+x_prev = S^2*(S^2-4)/(4*(S^2+A-2))
+F(Y)=Y^4-4*S2*Y^3+(-4*A*S2+8*A+24*S2-16)*Y^2+(16*A*S2-32*S2)*Y+16*(A-2)^2
+disc_Y(F)=65536*S^4*(A-2)^2*(A+2)^2*(S-2)^2*(S+2)^2*(A+S^2-2)^2
+quadratic_split_discriminant = 16*S^2*(S^2+A-6)
+p27_train:
+  d3_not_plus = 5952
+  d4_-1 = 3016
+  d4_1 = 3032
+  rows = 6048
+  sample_candidate_invalid_not_nonsplit = 23520
+  sample_compact_not_target = 23392
+  sample_no_t = 23514
+  sample_no_w = 46641
+  sample_pair_incomplete = 11760
+  sample_x_draws = 93731
+  split_-1 = 3002
+  split_1 = 3046
+  split_matches_d4 = 3082
+  split_neg_matches_d4 = 2966
+p27_heldout:
+  d3_not_plus = 5912
+  d4_-1 = 3102
+  d4_1 = 2986
+  rows = 6088
+  sample_candidate_invalid_not_nonsplit = 23586
+  sample_compact_not_target = 24085
+  sample_no_t = 24002
+  sample_no_w = 47898
+  sample_pair_incomplete = 11793
+  sample_x_draws = 95839
+  split_-1 = 3154
+  split_1 = 2934
+  split_matches_d4 = 2988
+  split_neg_matches_d4 = 3100
+p27_named_quartic_factor_span:
+  features = S2, S2-4, S2+4, A-2, A+2, A+S2-2, A+S2-6, A*S2-2A-2S2, quartic_c2, quartic_c1
+  train_rows = 6048
+  heldout_rows = 6088
+  exact_train_combos = 0
+  best_combos:
+    train=3144/6048 rate=0.519841270 heldout=2982/6088 rate=0.489816032 weight=2 combo=A-2 * quartic_c2
+    train=3144/6048 rate=0.519841270 heldout=2982/6088 rate=0.489816032 weight=2 combo=quartic_c2 * quartic_c1
+    train=3144/6048 rate=0.519841270 heldout=2982/6088 rate=0.489816032 weight=3 combo=S2 * A-2 * quartic_c2
+    train=3144/6048 rate=0.519841270 heldout=2982/6088 rate=0.489816032 weight=3 combo=S2-4 * A-2 * quartic_c2
+    train=3144/6048 rate=0.519841270 heldout=2982/6088 rate=0.489816032 weight=3 combo=A-2 * A+2 * quartic_c2
+    train=3144/6048 rate=0.519841270 heldout=2982/6088 rate=0.489816032 weight=3 combo=A-2 * A+S2-2 * quartic_c2
+    train=3144/6048 rate=0.519841270 heldout=2982/6088 rate=0.489816032 weight=3 combo=S2 * quartic_c2 * quartic_c1
+    train=3144/6048 rate=0.519841270 heldout=2982/6088 rate=0.489816032 weight=3 combo=S2-4 * quartic_c2 * quartic_c1
+small_field_smap_quartic_screens:
+q1607:
+  d4_-1 = 144
+  d4_1 = 304
+  enum_compact_not_target = 805
+  enum_no_label2_candidate = 408
+  root_squareclass_matches_d4 = 448
+  roots_4 = 448
+  rows = 448
+  split_-1 = 248
+  split_0 = 8
+  split_1 = 192
+  split_matches_d4 = 216
+  split_neg_matches_d4 = 224
+  square_y_roots_0 = 144
+  square_y_roots_4 = 304
+q1847:
+  d4_-1 = 416
+  d4_1 = 304
+  enum_compact_not_target = 873
+  enum_no_label2_candidate = 468
+  root_squareclass_matches_d4 = 720
+  roots_4 = 720
+  rows = 720
+  split_-1 = 316
+  split_0 = 8
+  split_1 = 396
+  split_matches_d4 = 356
+  split_neg_matches_d4 = 356
+  square_y_roots_0 = 416
+  square_y_roots_4 = 304
+q2087:
+  d4_-1 = 112
+  d4_1 = 288
+  enum_compact_not_target = 1109
+  enum_no_label2_candidate = 520
+  root_squareclass_matches_d4 = 400
+  roots_4 = 400
+  rows = 400
+  split_-1 = 196
+  split_0 = 4
+  split_1 = 200
+  split_matches_d4 = 200
+  split_neg_matches_d4 = 196
+  square_y_roots_0 = 112
+  square_y_roots_4 = 288
+p27_smap_quartic_recurrence_probe_rows=1/1
