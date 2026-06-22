@@ -23,6 +23,18 @@ Machine-readable manifest:
 research/p27/archive/fixtures/p27_abk_symbolic_kummer_cas_brief_20260622.json
 ```
 
+First executable Magma chart:
+
+```text
+research/p27/archive/fixtures/p27_abk_f3_f4_localized_noR_q7_magma.m
+```
+
+Online calculator output:
+
+```text
+research/p27/archive/probe_outputs/p27_abk_f3_f4_localized_noR_q7_magma_20260622.xml
+```
+
 ## Coordinates
 
 Use the following equivalent coordinate views as checks on the same selected
@@ -138,6 +150,48 @@ comparison against q1607/q1847/q2087 fixture rows
 Start from the localized complete-intersection or no-R reduced chart, not from
 product saturation.  Impose the selected-source legal/core cut before
 interpreting all-chart point-count fibers.
+
+The initial q7 fixture does exactly this for the staged f3/f4 question:
+
+```text
+X*iX = 1
+(X-1)*iXm = 1
+(X+1)*iXp = 1
+(T-2X^2)*iTm = 1
+(X^2+1)*iX2p = 1
+U_den*iU = 1
+E_W = 0
+T_cover = 0
+Bline_relation = 0
+first_half_beta = 0
+reduced_Unext = 0
+H^2 = Unext + 2
+F_A(Unext,V) = 0
+gamma^2 = V + 2
+```
+
+It omits `compactD_R` on purpose; that layer should be reattached only after
+the no-R reduced base is normalized.
+
+Submission command:
+
+```bash
+curl -L -s -A 'Mozilla/5.0 Codex p27 research' \
+  -H 'Content-Type: application/x-www-form-urlencoded' \
+  --data-urlencode input@research/p27/archive/fixtures/p27_abk_f3_f4_localized_noR_q7_magma.m \
+  --max-time 75 \
+  https://magma.maths.usyd.edu.au/xml/calculator.xml \
+  | tee research/p27/archive/probe_outputs/p27_abk_f3_f4_localized_noR_q7_magma_20260622.xml
+```
+
+The current saved online output is:
+
+```text
+<calculator><offline>The Magma calculator is temporarily disabled.</offline></calculator>
+```
+
+So this fixture is staged for offline Magma/Sage, but no q7 dimension/genus
+result has been obtained for it yet.
 
 2. Extract the f4/f3 Kummer class.
 

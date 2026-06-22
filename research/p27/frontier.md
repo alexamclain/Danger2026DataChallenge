@@ -2099,6 +2099,10 @@ It puts the conic transition, reduced B-line first transition, f4/f3
 Kummer-class extraction brief.  This is the current offline CAS/expert object
 that could still yield a below-sqrt source law; without such a named relation,
 GPU remains limited to `Dplus` fused pricing and bounded telemetry.
+The first executable q7 chart for that brief is
+`archive/fixtures/p27_abk_f3_f4_localized_noR_q7_magma.m`; the online Magma
+calculator was temporarily disabled when submitted, so no genus/dimension
+answer exists yet.
 
 ### Card 4c: K-Line Fit Significance
 

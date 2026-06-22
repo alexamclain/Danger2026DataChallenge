@@ -38,6 +38,22 @@
       "S^2 = B^2 + H^2 - 4",
       "Y = (H +/- R)*(H +/- S)",
       "f4 = chi(H + R)*chi(H + S)"
+    ],
+    "first_magma_chart": [
+      "X*iX = 1",
+      "(X-1)*iXm = 1",
+      "(X+1)*iXp = 1",
+      "(T-2*X^2)*iTm = 1",
+      "(X^2+1)*iX2p = 1",
+      "U_den*iU = 1",
+      "E_W = 0",
+      "T_cover = 0",
+      "Bline_relation = 0",
+      "first_half_beta = 0",
+      "reduced_Unext = 0",
+      "H^2 = Unext + 2",
+      "F_A(Unext,V) = 0",
+      "gamma^2 = V + 2"
     ]
   },
   "positive_evidence": [
@@ -118,5 +134,14 @@
     "research/p27/evidence/p27_conic_tower_quotient_cas_handoff_20260622.md",
     "research/p27/evidence/p27_trace_norm_dplus_a_descent_20260622.md",
     "research/p27/evidence/p27_noR_quotient_prym_test_packet_20260622.md"
+  ],
+  "magma_fixtures": [
+    "research/p27/archive/fixtures/p27_abk_f3_f4_localized_noR_q7_magma.m"
+  ],
+  "online_outputs": [
+    {
+      "path": "research/p27/archive/probe_outputs/p27_abk_f3_f4_localized_noR_q7_magma_20260622.xml",
+      "status": "calculator temporarily disabled; no dimension/genus result yet"
+    }
   ]
 }
