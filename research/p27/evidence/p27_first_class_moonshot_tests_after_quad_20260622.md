@@ -365,6 +365,14 @@ or the only proposed sampler is the killed visible two-character lift profile
 This is the top CAS/expert ask because the same active selected bits are now
 proven in A, B, K, and Sroot coordinates, not merely fitted buckets.
 
+Compact symbolic brief:
+[P27 A/B/K Symbolic Kummer CAS Brief](p27_abk_symbolic_kummer_cas_brief_20260622.md).
+This consolidates the conic transition, reduced B-line first transition,
+`F_A(U,V)` f4/f3 transition, and V4 gamma factorization into one offline CAS
+request.  Treat it as the handoff for normalization, divisor/Kummer-class
+extraction, and source-denominator testing before any large GPU production run
+from the A/B/K lane.
+
 ## Test 2: BSM Staged Legal Pullback
 
 Use:

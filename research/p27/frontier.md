@@ -2092,6 +2092,14 @@ reserved for bounded telemetry or a named
 direct sampler; fixed one-bit filters and visible quartic buckets are not
 production moonshots.
 
+The coordinated CAS request is now compact:
+[P27 A/B/K Symbolic Kummer CAS Brief](evidence/p27_abk_symbolic_kummer_cas_brief_20260622.md).
+It puts the conic transition, reduced B-line first transition, f4/f3
+`F_A(U,V)` transition, and V4 gamma factorization into one normalization and
+Kummer-class extraction brief.  This is the current offline CAS/expert object
+that could still yield a below-sqrt source law; without such a named relation,
+GPU remains limited to `Dplus` fused pricing and bounded telemetry.
+
 ### Card 4c: K-Line Fit Significance
 
 K-line exact fits now have a quantitative promotion rule:
