@@ -108,14 +108,20 @@ check   = translate through K^2=(B-2)^4/(8B(B+2)^2) and Sroot^2=K
 then    = compare f4/f3 after f3 is named
 ```
 
+Follow-up:
+[P27 B/A Fixture Bridge](p27_b_a_fixture_bridge_20260622.md)
+adds the A quotient view.  For the frozen d3/d4 rows, `A=B^2-2` is also an
+exact signed bijection.  The queue is now one coordinated A/B/K/Sroot
+normalized-class extraction.
+
 ## Continue / Kill
 
 ```text
-continue = one coordinated B/K/Sroot normalized-class extraction
+continue = one coordinated A/B/K/Sroot normalized-class extraction
 continue = use B as the simpler genus-0 quotient and Sroot as parity/descent check
 continue = compare f4/f3 only after f3 is explicit
 
-kill = treating B-line and K/Sroot as independent evidence
+kill = treating A-level, B-line, and K/Sroot as independent evidence
 kill = separate GPU bucket production for K/Sroot after B-line negatives
 kill = Sroot-only source claims that do not survive K-square preservation
 ```

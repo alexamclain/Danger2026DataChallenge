@@ -169,6 +169,13 @@ full-domain recurrence appears in q1607/q1847/q2087.  This closes the nearest
 postcritically finite A-line dynamics route and keeps the packet focused on
 actual normalized-cover Kummer extraction.
 
+Update: [P27 B/A Fixture Bridge](p27_b_a_fixture_bridge_20260622.md)
+checks the frozen A-level rows against the B-line fixture through
+`A=B^2-2`.  For q1607/q1847/q2087 and gates `d3,d4`, all `267` rows form an
+exact signed bijection.  Thus the A packet is a quotient view of the same
+conditional classes as the B-line packet, not an independent moonshot lane.
+Use A as a CAS/check coordinate inside the coordinated A/B/K/Sroot extraction.
+
 ```text
 p27_a_level_kummer_extraction_packet_rows=1/1
 ```

@@ -867,6 +867,12 @@ asks CAS to recover the normalized A-cover, branch divisor data, genus, and
 successive Kummer-class relations.  This is the next first-class conic/A-line
 test that could still beat sqrt if it finds recurrence rather than fresh
 half-covers.
+The A/B row-level bridge is exact:
+[P27 B/A Fixture Bridge](evidence/p27_b_a_fixture_bridge_20260622.md).
+Across q1607/q1847/q2087 and gates d3/d4, `A=B^2-2` gives `267/267`
+row-level sign matches with no missing rows, uncovered A rows, or collisions.
+This folds A into the coordinated A/B/K/Sroot class-extraction problem; it is
+not a separate GPU A-bucket lane.
 The cheap visible-transform recurrence is now closed:
 [P27 A-Line Named-Transform Recurrence Screen](evidence/p27_a_line_named_transform_recurrence_20260622.md).
 The S3 group preserving the visible A-branch set `{-2,2,infinity}` almost
@@ -928,10 +934,10 @@ preserved.
 The compact synthesis after these closures is:
 [P27 Post-Branch-Dynamics Test Frontier](evidence/p27_post_branch_dynamics_test_frontier_20260622.md).
 It lists the closed branch-map families and the remaining first-class tests:
-normalized A-level Kummer extraction, coordinated B/K/Sroot Kummer sequence
-extraction with the rational K-square stratum preserved, and the trace/norm
-half-norm phase identity.  GPU is demoted to bounded telemetry or direct-sampler
-testing until one of those produces a named class or source.
+coordinated A/B/K/Sroot Kummer extraction with the rational K-square stratum
+preserved, BSM staged legal-pullback normalization, and the trace/norm
+half-norm phase identity.  GPU is demoted to bounded telemetry or
+direct-sampler testing until one of those produces a named class or source.
 The K/Sroot density shortcut is now priced too:
 [P27 K/Sroot Prefix Profile](evidence/p27_sroot_prefix_profile_20260622.md).
 It shows that selected prefix bits descend cleanly to both K and Sroot, but
@@ -949,6 +955,12 @@ The row-level coordinate bridge is exact:
 Through every nonempty recorded gate, B rows map to exactly one signed K row
 and two Sroot rows with matching signs.  This collapses B-line and K/Sroot to
 one coordinated class-extraction lane rather than independent evidence.
+The A quotient view has now been bridged too:
+[P27 B/A Fixture Bridge](evidence/p27_b_a_fixture_bridge_20260622.md).
+For the frozen d3/d4 fixtures, A is exactly the quotient coordinate
+`A=B^2-2` with signs preserved.  The live CAS ask is therefore one
+A/B/K/Sroot normalized-class extraction, choosing whichever coordinate makes
+the branch divisor easiest.
 The B-line visible two-gate quartic shortcut is closed as well:
 [P27 B-Line Gate4-Prefix Quartic q1847 Screen](evidence/p27_b_line_gate4_prefix_quartic_q1847_screen_20260622.md).
 It scans `6,300,872,423` q1847 coefficient triples for
@@ -1682,11 +1694,11 @@ normalization/genus extraction, not a GPU sampler from obvious B projections.
 The post-quad moonshot queue is now consolidated:
 [P27 First-Class Moonshot Tests After Quadratic Probe](evidence/p27_first_class_moonshot_tests_after_quad_20260622.md).
 After the GPU quadratic-gate validation and the q1847 B/K/lambda quartic
-closures, the first-class tests are B-line Kummer-sequence extraction, BSM
-staged legal-pullback normalization, K/Sroot branch-class extraction, and the
-trace/norm half-norm phase identity.  GPU is reserved for bounded telemetry or
-a named direct sampler; fixed one-bit filters and visible quartic buckets are
-not production moonshots.
+closures, the first-class tests are coordinated A/B/K/Sroot Kummer-sequence
+extraction, BSM staged legal-pullback normalization, and the trace/norm
+half-norm phase identity.  GPU is reserved for bounded telemetry or a named
+direct sampler; fixed one-bit filters and visible quartic buckets are not
+production moonshots.
 
 ### Card 4c: K-Line Fit Significance
 

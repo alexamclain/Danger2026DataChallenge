@@ -49,21 +49,34 @@ no GPU production reason
 
 ## Remaining First-Class Tests
 
-### Test 1: A-Level Kummer Class Extraction
+### Test 1: Coordinated A/B/K/Sroot Kummer Class Extraction
 
 Use:
 
 ```text
 research/p27/archive/fixtures/p27_a_level_kummer_extraction_packet_20260622.json
+research/p27/archive/fixtures/p27_b_line_kummer_fixture_packet_20260622.json
+research/p27/archive/fixtures/p27_ksroot_kummer_fixture_packet_20260622.json
 ```
+
+The coordinate bridges are now exact on the frozen fixtures:
+
+```text
+A = B^2 - 2
+K^2 = (B - 2)^4 / (8*B*(B + 2)^2)
+Sroot^2 = K
+```
+
+So A-level, B-line, K-line, and Sroot are coordinate views of the same
+selected-gate class problem, not independent lanes.
 
 Compute:
 
 ```text
-normalized A-cover carrying d3
+normalized cover carrying d3 over P1_A/P1_B/P1_Sroot
 branch divisor degree and support field degrees
 genus/component count
-d4/d5/d6 classes on selected prefixes
+f4/f3 and later classes on selected prefixes
 ```
 
 Promote only if:
@@ -79,7 +92,7 @@ Kill if:
 d3 is high/generic and d4,d5,d6 are fresh independent half-covers
 ```
 
-### Test 2: B-Line Kummer Sequence Extraction
+#### B-Line Coordinate
 
 Use:
 
@@ -115,7 +128,7 @@ Kill if:
 the normalized B-line cover is high genus and successive classes are unrelated
 ```
 
-### Test 3: K/Lambda Branch Class With K-Square Stratum
+#### K/Lambda Coordinate With K-Square Stratum
 
 Use lambda only as a normalization coordinate:
 
@@ -167,7 +180,13 @@ Kill if:
 lambda gives only an algebraic-closure quotient with no rational K-square lift
 ```
 
-### Test 4: Trace/Norm Half-Norm Phase Identity
+### Test 2: BSM Staged Legal Pullback
+
+The staged BSM surface remains a CAS coordinate only.  It should be compared
+against the same A/B/K/Sroot class sequence after the legal B-cover is imposed,
+not treated as a raw GPU sampling surface.
+
+### Test 3: Trace/Norm Half-Norm Phase Identity
 
 The exact `Dplus` predicate is still useful as a two-gate model, but not as a
 late recurrence.  The remaining trace/norm test is theoretical:
@@ -195,9 +214,9 @@ Do not run a large p27 GPU production search from any branch-map family above.
 
 The post-quad first-class queue is consolidated in
 [P27 First-Class Moonshot Tests After Quadratic Probe](p27_first_class_moonshot_tests_after_quad_20260622.md).
-It keeps the surviving tests scoped to B-line Kummer sequence extraction, BSM
-staged legal-pullback normalization, K/Sroot branch-class extraction, and the
-trace/norm half-norm phase identity.
+It keeps the surviving tests scoped to coordinated A/B/K/Sroot Kummer sequence
+extraction, BSM staged legal-pullback normalization, and the trace/norm
+half-norm phase identity.
 
 GPU becomes first-class again only for:
 
@@ -217,7 +236,7 @@ or an exact direct sampler into a named source stratum
 ## Continue / Kill
 
 ```text
-continue = A/B/K normalized Kummer/divisor class extraction
+continue = A/B/K/Sroot normalized Kummer/divisor class extraction
 continue = trace/norm half-norm phase theorem ask
 continue = GPU only after a class/sampler is named
 

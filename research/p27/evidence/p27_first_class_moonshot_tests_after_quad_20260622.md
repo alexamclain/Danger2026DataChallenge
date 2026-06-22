@@ -9,11 +9,10 @@ p27 moonshot should not spend a large GPU run on another fixed one-bit filter.
 The remaining tests that could beat `sqrt(p)` are source or class tests:
 
 ```text
-1. B-line Kummer sequence extraction on P1_B.
+1. Coordinated A/B/K/Sroot Kummer sequence extraction.
 2. BSM staged legal-pullback normalization.
-3. K/Sroot normalized branch-class extraction.
-4. trace/norm half-norm phase identity.
-5. bounded GPU telemetry only when it feeds one of the above.
+3. trace/norm half-norm phase identity.
+4. bounded GPU telemetry only when it feeds one of the above.
 ```
 
 The shared promotion bar is strict:
@@ -43,10 +42,11 @@ visible branch dynamics:
   do not give stable d3/d4 recurrence
 ```
 
-These results do not kill the B/K/A/Kummer routes.  They kill the nearby
-coefficient buckets and map-family shortcuts.
+These results do not kill the A/B/K/Sroot Kummer route.  They kill the nearby
+coefficient buckets and map-family shortcuts, and the fixture bridges collapse
+the surviving coordinates to one class-extraction problem.
 
-## Test 1: B-Line Kummer Sequence
+## Test 1: Coordinated A/B/K/Sroot Kummer Sequence
 
 Use:
 
@@ -95,10 +95,17 @@ It proves the frozen B-line and K/Sroot fixtures are exact coordinate views of
 the same conditional classes.  Treat B-line and K/Sroot as one coordinated
 class-extraction problem, not independent moonshot lanes.
 
+Second coordinate bridge:
+[P27 B/A Fixture Bridge](p27_b_a_fixture_bridge_20260622.md).
+It proves the frozen A-level `d3,d4` rows are also exact B-line coordinate
+views under `A=B^2-2`: `267/267` row-level sign matches and no collisions
+across q1607/q1847/q2087.  Treat A as a quotient/check coordinate for the same
+problem, not a separate GPU bucket or CAS lane.
+
 Required computation:
 
 ```text
-normalize the legal+d3 cover over P1_B in q1607/q1847/q2087
+normalize the legal+d3 cover over P1_B/P1_A/P1_Sroot in q1607/q1847/q2087
 extract branch divisor degree, support field degrees, components, genus
 if d3 is tractable, compare f4/f3 in the Kummer group
 use f5/f6 only as regression checks until larger data supports them
@@ -119,8 +126,8 @@ d3 is high-genus/generic after normalization
 and f4/f5 are fresh unrelated half-covers
 ```
 
-This is the top CAS/expert ask because B is already proven to carry the active
-selected bits, not merely a fitted bucket.
+This is the top CAS/expert ask because the same active selected bits are now
+proven in A, B, K, and Sroot coordinates, not merely fitted buckets.
 
 ## Test 2: BSM Staged Legal Pullback
 
@@ -173,7 +180,7 @@ or BSM only contributes the inherited surface equation
 
 This is the best conic-chain CAS coordinate, but not a GPU source by itself.
 
-## Test 3: K/Sroot Branch Class
+## Coordinate View: K/Sroot Branch Class
 
 Use:
 
@@ -191,7 +198,7 @@ Sroot is the cleaner normalization coordinate
 selected bits descend to K and Sroot with no mixed groups
 Sroot is density-equivalent to K, not a stronger bucket
 K/Sroot fixture rows preserve Sroot^2=K explicitly
-B/K/Sroot fixtures are exact coordinate views of the same classes
+A/B/K/Sroot fixtures are exact coordinate views of the same classes
 ```
 
 Required computation:
@@ -218,7 +225,7 @@ lambda/Sroot structure exists only after forgetting the rational K-square
 stratum, or successive classes are unrelated
 ```
 
-## Test 4: Trace/Norm Half-Norm Phase
+## Test 3: Trace/Norm Half-Norm Phase
 
 Use:
 
@@ -261,13 +268,13 @@ Run GPU now only for bounded telemetry or for a named sampler:
 
 ```text
 allowed:
-  B-line deep-prefix telemetry with Bplus and d3..dN emitted same-stream
+  A/B/K/Sroot deep-prefix telemetry with d3..dN emitted same-stream
   recurrence sign-word telemetry with raw source denominator reported
   direct sampler A/B test after CAS names a sampler/source map
 
 not allowed:
   large p27 production run from fixed quadratic precheck
-  B/K/lambda quartic bucket production
+  A/B/K/lambda quartic bucket production
   raw BSM surface sampling
   Bplus/core-B bucket search without a class recurrence
 ```
@@ -283,9 +290,8 @@ or exact direct sampling into a named source stratum
 ## Continue / Kill
 
 ```text
-continue = B-line normalized Kummer sequence extraction
+continue = coordinated A/B/K/Sroot normalized Kummer sequence extraction
 continue = BSM staged legal-pullback normalization
-continue = K/Sroot branch-class extraction preserving K-square rationality
 continue = trace/norm half-norm phase expert ask
 continue = GPU only as bounded telemetry or for a named sampler
 

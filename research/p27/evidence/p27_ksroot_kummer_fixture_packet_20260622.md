@@ -110,6 +110,12 @@ shows that the K/Sroot rows are exactly the B-line rows pulled through
 normalization/parity coordinate, but collapses it with the B-line as one
 coordinated branch-class extraction problem.
 
+A-coordinate update:
+[P27 B/A Fixture Bridge](p27_b_a_fixture_bridge_20260622.md)
+also identifies the frozen A-level `d3,d4` rows with the B-line rows through
+`A=B^2-2`.  The live task is one A/B/K/Sroot extraction with K/Sroot as a
+normalization/parity view, not an independent density source.
+
 Negative:
 
 ```text
@@ -129,7 +135,7 @@ then compare f4/f3 only after f3 is named.
 ## Continue / Kill
 
 ```text
-continue = use JSON rows for normalized K/Sroot branch-class extraction
+continue = use JSON rows for coordinated A/B/K/Sroot branch-class extraction
 continue = compute f3 branch degree, support field degrees, genus, components
 continue = test whether f3 descends to K or needs signed Sroot
 continue = cross-check any class against the B-line fixture bridge
@@ -137,7 +143,7 @@ continue = compare f4/f3 only after f3 is explicit
 
 kill = Sroot prefix density as a source
 kill = accepting a Sroot source that only works after forgetting K
-kill = treating K/Sroot as independent evidence from B-line
+kill = treating K/Sroot as independent evidence from A/B-line
 kill = more visible degree <=4 branch scans without a new divisor reason
 kill = GPU K/Sroot bucket production before a named source/recurrent class
 ```

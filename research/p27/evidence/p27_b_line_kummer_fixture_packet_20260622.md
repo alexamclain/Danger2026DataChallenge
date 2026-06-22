@@ -106,6 +106,13 @@ views of the same conditional classes through all recorded gates.  Use B as
 the simpler genus-0 quotient and K/Sroot as signed-sheet/parity checks, not as
 independent moonshot evidence.
 
+Second bridge:
+[P27 B/A Fixture Bridge](p27_b_a_fixture_bridge_20260622.md)
+shows that the frozen A-level `d3,d4` rows are exactly the B-line rows under
+`A=B^2-2`, with `267/267` sign matches and no collisions across the three
+p27-signature fields.  Treat A as another coordinate for the same class
+extraction problem.
+
 Negative:
 
 ```text
@@ -129,12 +136,12 @@ denominator and a named class.
 ```text
 continue = use JSON rows for B-line normalized Kummer/divisor extraction
 continue = recover f3 branch degree, support field degrees, genus, components
-continue = cross-check any class through the B/K/Sroot fixture bridge
+continue = cross-check any class through the A/B/K/Sroot fixture bridges
 continue = compare f4/f3 as a class relation after f3 is named
 continue = use f5/f6 rows only as tail/regression checks for an extracted class
 
 kill = treating one-sided guard-field f5/f6 tails as promotion evidence
-kill = counting B-line and K/Sroot fixtures as independent positives
+kill = counting A-level, B-line, and K/Sroot fixtures as independent positives
 kill = more B-bucket GPU production before a source/recurrent class exists
 kill = widening visible low-degree B scans already killed by q1847
 ```
