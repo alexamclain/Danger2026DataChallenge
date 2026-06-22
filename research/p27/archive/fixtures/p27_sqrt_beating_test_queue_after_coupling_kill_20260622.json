@@ -1,0 +1,117 @@
+{
+  "title": "P27 Sqrt-Beating Test Queue After Coupling Kill",
+  "date": "2026-06-22",
+  "target": {
+    "p": "1000000000000000000000000103",
+    "sqrt_floor": "31622776601683"
+  },
+  "current_boundary": {
+    "killed": [
+      "fixed sign-word buckets",
+      "gamma/sign-word GPU production",
+      "visible low-degree A/B/K formula fits",
+      "standalone H90 payload signs",
+      "Dplus as an expensive independent classifier"
+    ],
+    "live": [
+      "normalized A-level Kummer class sequence",
+      "gamma4/gamma5 repeated-Kummer CAS comparison",
+      "fused/native Dplus exchange-rate test",
+      "Dplus-to-A bridge reconstruction"
+    ]
+  },
+  "tests": [
+    {
+      "name": "a_level_kummer_sequence_extraction",
+      "kind": "offline_cas_math_mainline",
+      "question": "Are d3,d4,d5,... pullbacks, translates, coboundaries, iterates, or fresh independent half-covers on the normalized A-level surface?",
+      "inputs": [
+        "research/p27/evidence/p27_a_level_kummer_extraction_packet_20260622.md",
+        "research/p27/archive/fixtures/p27_a_level_kummer_extraction_packet_20260622.json",
+        "research/p27/evidence/p27_b_a_fixture_bridge_20260622.md",
+        "research/p27/evidence/p27_trace_norm_dplus_a_descent_20260622.md"
+      ],
+      "required_outputs": [
+        "normalized A-level cover carrying d3",
+        "branch divisor degree and support field degrees",
+        "genus/component count after obvious quotients",
+        "d4 class on the d3-plus prefix",
+        "first explicit relation or obstruction among d3,d4,d5,d6"
+      ],
+      "promote_if": "low-genus/sourceable class or named correspondence controls multiple selected gates source-normalized",
+      "kill_if": "d3 is high/generic after quotienting and d4/d5/d6 are fresh independent Kummer layers"
+    },
+    {
+      "name": "gamma4_gamma5_repeated_kummer_comparison",
+      "kind": "offline_cas_supporting_mainline",
+      "question": "Does the repeated transition F_A(U,V), gamma^2=V+2 reuse a Kummer class or add a fresh half-cover each layer?",
+      "inputs": [
+        "research/p27/evidence/p27_abk_symbolic_kummer_cas_brief_20260622.md",
+        "research/p27/evidence/p27_abk_gamma4_gamma5_cas_fixture_20260622.md",
+        "research/p27/archive/fixtures/p27_abk_gamma4_gamma5_localized_noR_q7_magma.m"
+      ],
+      "required_outputs": [
+        "normalize selected components of the localized no-R chart",
+        "compare div(V+2) and div(Wnext+2) modulo squares",
+        "decide square/pullback/translate/coboundary/norm relation for gamma5/gamma4"
+      ],
+      "promote_if": "gamma4 and gamma5 become related on a low-genus/sourceable quotient or produce a selected-chain sampler",
+      "kill_if": "gamma4 and gamma5 are unrelated fresh Kummer layers or only yield a sign-word bucket already killed at GPU scale"
+    },
+    {
+      "name": "dplus_fused_native_exchange_rate",
+      "kind": "gpu_engineering_pricing",
+      "question": "Can Dplus be imposed cheaper than ordinary first-two-gate halving failure?",
+      "inputs": [
+        "research/p27/evidence/p27_gpu_dplus_native_source_handoff_20260622.md",
+        "research/p27/evidence/p27_trace_norm_dplus_prefix_identity_20260621.md",
+        "research/p27/evidence/p27_trace_norm_post_dplus_screen_20260621.md"
+      ],
+      "required_outputs": [
+        "baseline ordinary raw_y_draws/sec and accepted roots/sec",
+        "fused/native Dplus raw_y_draws/sec and accepted roots/sec",
+        "depth-20/24/26/28/30 survivors",
+        "target/source_draw",
+        "target/sec",
+        "validation replay mismatch count"
+      ],
+      "promote_if": "effective survivor/sec at depth >= 26 improves by >=2x versus baseline and target/source_draw is not worse than the known two-gate denominator",
+      "math_promote_if": "the fused stream also exposes a later-gate source/recurrent class",
+      "kill_if": "fused path is slower than ordinary halving or only converts conditional enrichment into classifier cost"
+    },
+    {
+      "name": "dplus_to_a_bridge_reconstruction",
+      "kind": "gpu_cas_bridge",
+      "question": "Can Dplus H90/quotient coordinates map cheaply to the A-line coordinate that carries post-Dplus d3/d4?",
+      "inputs": [
+        "research/p27/evidence/p27_trace_norm_dplus_h90_quartic_model_20260622.md",
+        "research/p27/evidence/p27_trace_norm_dplus_h90_branch_class_20260622.md",
+        "research/p27/evidence/p27_trace_norm_dplus_h90_payload_screen_20260622.md",
+        "research/p27/evidence/p27_trace_norm_dplus_a_descent_20260622.md"
+      ],
+      "same_stream_columns": [
+        "y",
+        "Dplus bit",
+        "t,w,z or enough trace/norm/H90 coordinates to recover them",
+        "eta",
+        "A",
+        "x5 or xp",
+        "d3,d4,d5",
+        "root/sheet ids needed for replay"
+      ],
+      "required_analysis": [
+        "try bounded rational reconstruction A = R(t,w,z,eta) or A = R(a,g,z,eta)",
+        "compare the induced d3 class with A_eta = U_eta + z*W_eta",
+        "record whether the map is low-degree, high-degree/generic, or sheet-dependent"
+      ],
+      "promote_if": "low-degree/sourceable map from Dplus H90 coordinates to A-level d3 class or quotient/Prym relation between A_eta and d3",
+      "kill_if": "no stable bounded-degree map across heldout streams and A-level class remains independent of H90 payload except through ordinary candidate materialization"
+    }
+  ],
+  "priority_order": [
+    "a_level_kummer_sequence_extraction",
+    "dplus_fused_native_exchange_rate",
+    "dplus_to_a_bridge_reconstruction",
+    "gamma4_gamma5_repeated_kummer_comparison"
+  ]
+}

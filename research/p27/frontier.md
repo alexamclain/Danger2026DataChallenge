@@ -2133,6 +2133,13 @@ The repeated-gamma CAS object is now executable:
 It stages `gamma4^2=V+2` and `gamma5^2=Wnext+2` on the localized no-R A/B/K
 chart.  Online Magma returned a gateway timeout, so this is an offline
 Magma/Sage normalization and Kummer-class comparison task.
+The current sqrt-beating queue is consolidated here:
+[P27 Sqrt-Beating Test Queue After Coupling Kill](evidence/p27_sqrt_beating_test_queue_after_coupling_kill_20260622.md).
+It makes the priority explicit: A-level Kummer extraction is the mathematical
+mainline, fused/native `Dplus` is the only immediate GPU engineering ask, and
+the new bridge test is reconstructing whether `Dplus` H90 coordinates map
+cheaply to the A-level `d3` surface.  More gamma/sign-word GPU buckets stay
+killed unless CAS names a quotient or source.
 
 ### Card 4c: K-Line Fit Significance
 
