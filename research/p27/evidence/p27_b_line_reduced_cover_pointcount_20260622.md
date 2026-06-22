@@ -125,6 +125,12 @@ sampler visible from point counts alone.
 This does not promote GPU production.
 ```
 
+Follow-up:
+[P27 B-Line Reduced-Lift Classifier Screen](p27_b_line_reduced_lift_classifier_20260622.md)
+tests whether the `0/mixed/full` B-fiber profile is the sum of two visible
+B-line characters.  Named atoms, all rational-linear pairs, and all pairs of
+monic irreducible quadratics are negative across q1607/q1847/q2087.
+
 ## Continue / Kill
 
 ```text
@@ -133,6 +139,7 @@ continue = extract branch divisor/classes for the B-fibers with 0/32/64 lifts
 continue = compare the resulting f3 class against f4/f3 after normalization
 
 kill = treating the bare U double cover as the whole d3 source
+kill = two-visible-character classifier for the B-fiber lift profile
 kill = GPU production before a named source map or recurrence is extracted
 kill = online Magma for this extraction path
 ```

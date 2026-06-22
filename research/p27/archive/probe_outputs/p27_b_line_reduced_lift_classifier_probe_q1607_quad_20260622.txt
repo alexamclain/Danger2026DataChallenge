@@ -1,0 +1,47 @@
+p27 B-line reduced-lift classifier probe
+question = is the 0/mixed/full reduced-cover lift profile two visible B-line characters?
+small_primes = 1607
+unit = 16
+quadratic_pair = True
+q1607_reduced_lift_profile_stats:
+  classifier_rows = 100
+  lift_units_0 = 22
+  lift_units_1 = 50
+  lift_units_2 = 28
+  pointcount_U_materialization_roots_0 = 1504
+  pointcount_U_materialization_roots_0_selector_chi_-1 = 704
+  pointcount_U_materialization_roots_0_selector_chi_1 = 800
+  pointcount_U_materialization_roots_2 = 1696
+  pointcount_U_materialization_roots_2_selector_chi_-1 = 800
+  pointcount_U_materialization_roots_2_selector_chi_1 = 896
+  pointcount_bad_X_denominator = 3
+  pointcount_compactD_not_square = 800
+  pointcount_first_half_beta_not_square = 400
+  pointcount_legal_R_points = 800
+  pointcount_legal_chart_points = 1600
+  pointcount_materialized_x6_from_selector_minus_U = 1600
+  pointcount_materialized_x6_from_selector_plus_U = 1792
+  pointcount_materialized_x6_points = 3392
+  pointcount_reduced_U_points = 3200
+  pointcount_selector_chi_-1 = 1504
+  pointcount_selector_chi_1 = 1696
+  pointcount_selector_gamma_points = 3392
+  pointcount_x6_chi_-1 = 1600
+  pointcount_x6_chi_1 = 1792
+q1607_target_masks:
+  target0_none = 22
+  target1_mixed = 50
+  target2_full = 28
+q1607_atom_pair_classifier_stats:
+  atom_masks = 10
+  atom_zero_or_pole = 1
+q1607_atom_pair_classifier_result: none
+q1607_linear_pair_classifier_stats:
+  linear_masks = 1507
+  linear_zero_skip = 100
+q1607_linear_pair_classifier_result: none
+q1607_quadratic_pair_classifier_stats:
+  irreducible_quadratic_masks = 1290421
+  unique_quadratic_masks = 2580842
+q1607_quadratic_pair_classifier_result: none
+p27_b_line_reduced_lift_classifier_probe_rows=1/1

@@ -144,6 +144,13 @@ split into B-fibers with `0`, middle, or full lift.  The next offline object is
 therefore the reduced cover with those layers attached, not the bare U-cover
 and not a GPU bucket.
 
+Visible lift-classifier follow-up:
+[P27 B-Line Reduced-Lift Classifier Screen](p27_b_line_reduced_lift_classifier_20260622.md).
+The `0/mixed/full` profile is not the sum of two named atoms, two rational
+linears, or two monic irreducible quadratic characters on `P1_B` in the
+promotion fields.  This kills the nearest low-degree sampler interpretation
+of the point-count profile.
+
 Required computation:
 
 ```text
@@ -168,6 +175,7 @@ Kill if:
 d3 is high-genus/generic after normalization
 and f4/f5 are fresh unrelated half-covers
 or online Magma is the only available extraction engine
+or the only proposed sampler is the killed visible two-character lift profile
 ```
 
 This is the top CAS/expert ask because the same active selected bits are now
