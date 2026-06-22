@@ -377,6 +377,15 @@ With `rho=s/((t+1)(t^2+2t-1))`, the cover satisfies
 components collapse to two cases `eta=eh*ev`.  Magma confirms both `eta`
 models are still genus `17`, degree `4` over `E_h90`.  The next test is branch
 divisor/Kummer extraction for these two eta classes.
+That branch extraction is now explicit:
+[P27 Trace/Norm Dplus H90 Branch Class](evidence/p27_trace_norm_dplus_h90_branch_class_20260622.md).
+The resolvent satisfies `U_eta^2 - F*Sprime^2 = F*W_eta^2`, so the first
+quadratic layer is exactly the already-known domain-spin cover `z^2=F`.
+The hard class is the second layer `rho^2=U_eta+z*W_eta` over the genus-5
+cover `E_h90(z)`.  Magma reports odd branch divisor degree `16` for this
+second layer, giving genus `17`.  This kills a hidden low-genus first-resolvent
+shortcut; the next real test is whether this named second-layer class equals,
+recurs with, or predicts `d3`.
 
 The naive orientation-source cover is now priced:
 [P27 Trace/Norm Source-Orientation Cover](evidence/p27_trace_norm_source_orientation_cover_20260621.md).

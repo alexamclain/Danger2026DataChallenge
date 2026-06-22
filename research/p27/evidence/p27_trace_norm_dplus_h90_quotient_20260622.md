@@ -139,6 +139,12 @@ After scaling `rho=s/((t+1)(t^2+2t-1))`, the quartic depends on the orientation
 signs only through `eta=eh*ev`.  The four sign components therefore reduce to
 two genus-17 quartic classes over `E_h90`.
 
+Follow-up branch class:
+[P27 Trace/Norm Dplus H90 Branch Class](p27_trace_norm_dplus_h90_branch_class_20260622.md).
+The first quadratic resolvent is just the domain-spin cover.  The new Kummer
+payload is the second-layer class `rho^2=U_eta+z*W_eta`, with odd branch
+divisor degree `16` over the genus-5 cover.
+
 ## Interpretation
 
 Positive:
@@ -148,6 +154,7 @@ The relative Dplus cover has an explicit order-4 H90 automorphism.
 The quotient is the named elliptic curve E_h90, not an unknown genus-17 object.
 The next CAS target is a cyclic-quartic/Kummer class over E_h90.
 The four orientation components collapse to two eta classes.
+The first resolvent is domain-spin; the second-layer Kummer class is A_eta.
 ```
 
 Negative:
@@ -187,11 +194,13 @@ class.
 ```text
 continue = cyclic-quartic/Kummer extraction over E_h90
 continue = use the normalized eta quartics for branch extraction
+continue = compare A_eta with the d3 Kummer class
 continue = compare the E_h90 class with d3/d4 classes
 continue = use alpha orbit telemetry only as validation
 
 kill = generic CurveQuotient calls as the main online-Magma path
 kill = treating four orientation components as separate classes after eta collapse
+kill = searching for an additional first-resolvent shortcut
 kill = treating E_h90 alone as a Dplus source
 kill = GPU production from this lane without a source map or d3 coupling
 ```
@@ -200,6 +209,7 @@ kill = GPU production from this lane without a source map or d3 coupling
 
 - Relative descent: [P27 Trace/Norm Dplus Relative Descent](p27_trace_norm_dplus_relative_descent_20260622.md)
 - Normalized quartic: [P27 Trace/Norm Dplus H90 Quartic Model](p27_trace_norm_dplus_h90_quartic_model_20260622.md)
+- Branch class: [P27 Trace/Norm Dplus H90 Branch Class](p27_trace_norm_dplus_h90_branch_class_20260622.md)
 - Quotient symmetry: [P27 Trace/Norm Dplus Quotient Symmetry](p27_trace_norm_dplus_quotient_symmetry_20260622.md)
 - Dplus cover: [P27 Trace/Norm D_plus Cover](p27_trace_norm_dplus_cover_20260621.md)
 - GPU handoff: [P27 GPU Dplus-Native Source Handoff](p27_gpu_dplus_native_source_handoff_20260622.md)

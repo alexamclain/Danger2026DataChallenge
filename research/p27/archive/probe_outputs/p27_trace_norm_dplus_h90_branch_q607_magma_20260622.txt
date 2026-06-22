@@ -1,0 +1,13 @@
+RESULT h90_branch_base 1 2 608
+RESULT h90_branch_F 4 8
+RESULT h90_branch_delta 1 4 8
+RESULT h90_branch_Leta 1 0 0
+RESULT h90_branch_delta_over_F_Wsquare 1 0 0
+RESULT h90_branch_resolvent 1 5 2 4
+RESULT h90_branch_second_layer 1 12 16 5 17 2 4
+RESULT h90_branch_delta -1 4 8
+RESULT h90_branch_Leta -1 0 0
+RESULT h90_branch_delta_over_F_Wsquare -1 0 0
+RESULT h90_branch_resolvent -1 5 2 4
+RESULT h90_branch_second_layer -1 12 16 5 17 2 4
+

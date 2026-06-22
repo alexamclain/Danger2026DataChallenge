@@ -94,6 +94,12 @@ eta=+1 quartic has genus 17 and degree 4 over E_h90
 eta=-1 quartic has genus 17 and degree 4 over E_h90
 ```
 
+Follow-up branch extraction:
+[P27 Trace/Norm Dplus H90 Branch Class](p27_trace_norm_dplus_h90_branch_class_20260622.md).
+The resolvent is not new: `U_eta^2 - F*Sprime^2 = F*W_eta^2`, so the first
+quadratic layer is just the domain-spin cover `z^2=F`.  The hard class is
+`rho^2=U_eta+z*W_eta` over that genus-5 cover, with Magma branch degree `16`.
+
 ## Interpretation
 
 Positive:
@@ -102,12 +108,14 @@ Positive:
 The four orientation components reduce to two eta classes.
 The cyclic quartic equation is explicit and small enough for targeted CAS.
 This is a cleaner branch/Kummer extraction target than the raw genus-17 cover.
+The first quadratic resolvent is exactly identified as the domain-spin cover.
 ```
 
 Negative:
 
 ```text
 Both eta classes still have genus 17.
+The second-layer branch divisor has degree 16.
 No source map, recurrence, or d3 coupling is proved yet.
 GPU should not promote this without additional structure.
 ```
@@ -135,10 +143,12 @@ or a sharply stated generic-branch obstruction.
 
 ```text
 continue = branch/Kummer extraction for eta=+1 and eta=-1
+continue = compare A_eta=U_eta+z*W_eta with post-Dplus d3
 continue = compare the two eta classes with post-Dplus d3
 continue = use this normalized model for GPU/CAS handoffs
 
 kill = treating four independent orientation components as separate frontiers
+kill = looking for a new first quadratic resolvent
 kill = treating the normalized quartic as a production source by itself
 kill = low-weight eta-blind quotient-character scans
 ```
@@ -146,6 +156,7 @@ kill = low-weight eta-blind quotient-character scans
 ## Linked Artifacts
 
 - H90 quotient: [P27 Trace/Norm Dplus H90 Quotient](p27_trace_norm_dplus_h90_quotient_20260622.md)
+- Branch class: [P27 Trace/Norm Dplus H90 Branch Class](p27_trace_norm_dplus_h90_branch_class_20260622.md)
 - Relative descent: [P27 Trace/Norm Dplus Relative Descent](p27_trace_norm_dplus_relative_descent_20260622.md)
 - GPU handoff: [P27 GPU Dplus-Native Source Handoff](p27_gpu_dplus_native_source_handoff_20260622.md)
 
