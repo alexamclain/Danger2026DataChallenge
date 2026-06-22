@@ -1,0 +1,107 @@
+p27 trace/norm Dplus quotient character probe
+quotient = a=t-1/t, g=w/t, a^2+g^2=4
+max_weight = 3
+min_coverage = 0.98
+q607_sample:
+  atom_count = 33
+  dplus_+1 = 109
+  dplus_-1 = 71
+  fiber_size_2 = 2
+  fiber_size_4 = 180
+  quotient_points = 182
+  source_rows = 724
+  usable_quotient_rows = 182
+q607_top:
+  rank=1 score=0.629834254 covered=181 weight=3 polarity=-1 delta=-48 combo=a2+1,a2-1,m+1
+  rank=2 score=0.611111111 covered=180 weight=3 polarity=+1 delta=40 combo=a+g+1,g-1,m2-1
+  rank=3 score=0.609890110 covered=182 weight=3 polarity=+1 delta=42 combo=ag+1,ag-1,m-2
+  rank=4 score=0.607734807 covered=181 weight=3 polarity=+1 delta=40 combo=a-g+1,g+1,g-2
+  rank=5 score=0.607734807 covered=181 weight=3 polarity=-1 delta=-40 combo=a-g+1,g+1,g+2
+  rank=6 score=0.605555556 covered=180 weight=1 polarity=+1 delta=38 combo=a
+  rank=7 score=0.605555556 covered=180 weight=2 polarity=+1 delta=38 combo=m2+1,m2-1
+  rank=8 score=0.605555556 covered=180 weight=2 polarity=-1 delta=-38 combo=g-2,m2-1
+  rank=9 score=0.605555556 covered=180 weight=2 polarity=+1 delta=38 combo=g+2,m2-1
+  rank=10 score=0.605555556 covered=180 weight=2 polarity=-1 delta=-38 combo=g+2,g-2
+  rank=11 score=0.605555556 covered=180 weight=2 polarity=-1 delta=-38 combo=a-2,m2-1
+  rank=12 score=0.605555556 covered=180 weight=2 polarity=+1 delta=38 combo=a+2,m2-1
+q1607_sample:
+  atom_count = 33
+  dplus_+1 = 200
+  dplus_-1 = 200
+  fiber_size_2 = 2
+  fiber_size_4 = 400
+  quotient_points = 402
+  source_rows = 1604
+  usable_quotient_rows = 402
+q1607_top:
+  rank=1 score=0.595000000 covered=400 weight=3 polarity=+1 delta=76 combo=a+g-1,ag-1,m2-1
+  rank=2 score=0.593516209 covered=401 weight=3 polarity=+1 delta=76 combo=a-g-1,ag+1,g-2
+  rank=3 score=0.593516209 covered=401 weight=3 polarity=-1 delta=-76 combo=a-g-1,ag+1,g+2
+  rank=4 score=0.592039801 covered=402 weight=3 polarity=-1 delta=-76 combo=a-g-1,ag+1,m2+1
+  rank=5 score=0.592039801 covered=402 weight=3 polarity=+1 delta=76 combo=a-2,a-g-1,ag+1
+  rank=6 score=0.592039801 covered=402 weight=3 polarity=-1 delta=-76 combo=a+2,a-g-1,ag+1
+  rank=7 score=0.578553616 covered=401 weight=3 polarity=+1 delta=64 combo=g2-1,m+1,m2+2
+  rank=8 score=0.576441103 covered=399 weight=3 polarity=+1 delta=62 combo=a+g,g2-1,m+1
+  rank=9 score=0.575000000 covered=400 weight=3 polarity=-1 delta=-60 combo=a+g+1,g,m2-1
+  rank=10 score=0.575000000 covered=400 weight=3 polarity=+1 delta=60 combo=a,a+g+1,m
+  rank=11 score=0.573566085 covered=401 weight=3 polarity=-1 delta=-60 combo=a-g+1,g,g-2
+  rank=12 score=0.573566085 covered=401 weight=3 polarity=+1 delta=60 combo=a-g+1,g,g+2
+q1847_sample:
+  atom_count = 33
+  dplus_+1 = 243
+  dplus_-1 = 217
+  fiber_size_2 = 2
+  fiber_size_4 = 460
+  quotient_points = 462
+  source_rows = 1844
+  usable_quotient_rows = 462
+q1847_top:
+  rank=1 score=0.599128540 covered=459 weight=3 polarity=+1 delta=93 combo=a+g,a-g-1,m2-m+1
+  rank=2 score=0.585152838 covered=458 weight=3 polarity=-1 delta=-80 combo=a+1,a-g,ag+1
+  rank=3 score=0.583514100 covered=461 weight=3 polarity=-1 delta=-79 combo=a-g+1,a2-1,m+2
+  rank=4 score=0.581344902 covered=461 weight=3 polarity=-1 delta=-76 combo=m+1,m2+m+1,m2-m+1
+  rank=5 score=0.581140351 covered=456 weight=3 polarity=-1 delta=-76 combo=ag+1,g+1,g2-1
+  rank=6 score=0.581140351 covered=456 weight=3 polarity=-1 delta=-74 combo=a,ag-1,g+1
+  rank=7 score=0.578602620 covered=458 weight=2 polarity=-1 delta=-74 combo=ag+1,g-1
+  rank=8 score=0.577680525 covered=457 weight=3 polarity=+1 delta=73 combo=a-g+1,ag+1,g-1
+  rank=9 score=0.576086957 covered=460 weight=3 polarity=+1 delta=72 combo=a2-1,ag-1,m2+m+1
+  rank=10 score=0.574561404 covered=456 weight=3 polarity=+1 delta=68 combo=a,a2-1,g2-1
+  rank=11 score=0.572052402 covered=458 weight=2 polarity=+1 delta=68 combo=a2-1,g2-1
+  rank=12 score=0.572052402 covered=458 weight=3 polarity=+1 delta=68 combo=a2-1,g+1,g-1
+q2087_sample:
+  atom_count = 33
+  dplus_+1 = 244
+  dplus_-1 = 276
+  fiber_size_2 = 2
+  fiber_size_4 = 520
+  quotient_points = 522
+  source_rows = 2084
+  usable_quotient_rows = 522
+q2087_top:
+  rank=1 score=0.574712644 covered=522 weight=3 polarity=+1 delta=80 combo=a+g-1,g,g2+1
+  rank=2 score=0.569230769 covered=520 weight=3 polarity=+1 delta=72 combo=g,g-1,m2-1
+  rank=3 score=0.569230769 covered=520 weight=3 polarity=-1 delta=-72 combo=a,g-1,m
+  rank=4 score=0.568138196 covered=521 weight=3 polarity=-1 delta=-72 combo=g,g+1,g-2
+  rank=5 score=0.568138196 covered=521 weight=3 polarity=+1 delta=72 combo=g,g+1,g+2
+  rank=6 score=0.567049808 covered=522 weight=2 polarity=-1 delta=-72 combo=g+1,m
+  rank=7 score=0.567049808 covered=522 weight=3 polarity=-1 delta=-72 combo=g-1,g2-1,m
+  rank=8 score=0.567049808 covered=522 weight=3 polarity=-1 delta=-72 combo=g+1,g2+1,m2-m+1
+  rank=9 score=0.567049808 covered=522 weight=3 polarity=+1 delta=72 combo=g,g+1,m2+1
+  rank=10 score=0.567049808 covered=522 weight=3 polarity=-1 delta=-72 combo=a-2,g,g+1
+  rank=11 score=0.567049808 covered=522 weight=3 polarity=+1 delta=72 combo=a+g+1,a-1,g+1
+  rank=12 score=0.567049808 covered=522 weight=3 polarity=+1 delta=72 combo=a+g,a+g+1,m2+m+1
+train_q = 607
+heldout_scores:
+  rank=1 train_score=0.629834254 weight=3 polarity=-1 combo=a2+1,a2-1,m+1 q1607:fixed=0.508728180:best=0.508728180:covered=401:delta=-8 q1847:fixed=0.529284165:best=0.529284165:covered=461:delta=-28 q2087:fixed=0.476007678:best=0.522072937:covered=521:delta=24
+  rank=2 train_score=0.611111111 weight=3 polarity=+1 combo=a+g+1,g-1,m2-1 q1607:fixed=0.510000000:best=0.510000000:covered=400:delta=8 q1847:fixed=0.520787746:best=0.520787746:covered=457:delta=19 q2087:fixed=0.526923077:best=0.526923077:covered=520:delta=28
+  rank=3 train_score=0.609890110 weight=3 polarity=+1 combo=ag+1,ag-1,m-2 q1607:fixed=0.509950249:best=0.509950249:covered=402:delta=10 q1847:fixed=0.484716157:best=0.510917031:covered=458:delta=-12 q2087:fixed=0.506717850:best=0.506717850:covered=521:delta=9
+  rank=4 train_score=0.607734807 weight=3 polarity=+1 combo=a-g+1,g+1,g-2 q1607:fixed=0.508728180:best=0.508728180:covered=401:delta=8 q1847:fixed=0.519650655:best=0.519650655:covered=458:delta=19 q2087:fixed=0.525911708:best=0.525911708:covered=521:delta=28
+  rank=5 train_score=0.607734807 weight=3 polarity=-1 combo=a-g+1,g+1,g+2 q1607:fixed=0.508728180:best=0.508728180:covered=401:delta=-8 q1847:fixed=0.519650655:best=0.519650655:covered=458:delta=-19 q2087:fixed=0.525911708:best=0.525911708:covered=521:delta=-28
+  rank=6 train_score=0.605555556 weight=1 polarity=+1 combo=a q1607:fixed=0.500000000:best=0.500000000:covered=400:delta=0 q1847:fixed=0.528260870:best=0.528260870:covered=460:delta=26 q2087:fixed=0.469230769:best=0.530769231:covered=520:delta=-32
+  rank=7 train_score=0.605555556 weight=2 polarity=+1 combo=m2+1,m2-1 q1607:fixed=0.500000000:best=0.500000000:covered=400:delta=0 q1847:fixed=0.528260870:best=0.528260870:covered=460:delta=26 q2087:fixed=0.469230769:best=0.530769231:covered=520:delta=-32
+  rank=8 train_score=0.605555556 weight=2 polarity=-1 combo=g-2,m2-1 q1607:fixed=0.500000000:best=0.500000000:covered=400:delta=0 q1847:fixed=0.528260870:best=0.528260870:covered=460:delta=-26 q2087:fixed=0.469230769:best=0.530769231:covered=520:delta=32
+  rank=9 train_score=0.605555556 weight=2 polarity=+1 combo=g+2,m2-1 q1607:fixed=0.500000000:best=0.500000000:covered=400:delta=0 q1847:fixed=0.528260870:best=0.528260870:covered=460:delta=26 q2087:fixed=0.469230769:best=0.530769231:covered=520:delta=-32
+  rank=10 train_score=0.605555556 weight=2 polarity=-1 combo=g+2,g-2 q1607:fixed=0.500000000:best=0.500000000:covered=400:delta=0 q1847:fixed=0.528260870:best=0.528260870:covered=460:delta=-26 q2087:fixed=0.469230769:best=0.530769231:covered=520:delta=32
+  rank=11 train_score=0.605555556 weight=2 polarity=-1 combo=a-2,m2-1 q1607:fixed=0.500000000:best=0.500000000:covered=400:delta=0 q1847:fixed=0.528260870:best=0.528260870:covered=460:delta=-26 q2087:fixed=0.469230769:best=0.530769231:covered=520:delta=32
+  rank=12 train_score=0.605555556 weight=2 polarity=+1 combo=a+2,m2-1 q1607:fixed=0.500000000:best=0.500000000:covered=400:delta=0 q1847:fixed=0.528260870:best=0.528260870:covered=460:delta=26 q2087:fixed=0.469230769:best=0.530769231:covered=520:delta=-32
+p27_trace_norm_dplus_quotient_character_probe_rows=1/1

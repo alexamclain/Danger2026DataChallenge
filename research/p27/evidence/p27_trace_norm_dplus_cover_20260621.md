@@ -164,6 +164,13 @@ The exact `eps_h/eps_v` phases and nearby `H/VQ/T_line` buckets do not
 stably predict `d3` or `d4`; they should remain diagnostic data, not GPU
 production filters.
 
+Follow-up quotient symmetry:
+[P27 Trace/Norm Dplus Quotient Symmetry](p27_trace_norm_dplus_quotient_symmetry_20260622.md).
+`Dplus` descends under `z -> -z` and under `t -> -1/t` with `w -> -w/t^2`,
+giving quotient coordinates `a=t-1/t`, `g=w/t`, `a^2+g^2=4`.  The descended
+class is not a low-weight product of the tested `a/g/m` atoms, so the next
+positive artifact is an exact Kummer/divisor class on this conic.
+
 Negative:
 
 ```text
@@ -210,11 +217,13 @@ selected x-square gate, rather than just acting as a one-time 4x stratum.
 
 ```text
 continue = Magma/Sage quotient decomposition of the named D_plus cover
+continue = exact descended Kummer/divisor extraction on a^2+g^2=4
 continue = GPU direct-source experiment if a quotient map is found
 continue = use this exact core formula for any further D_plus telemetry
 
 kill = treating fixed d2/d3/d4 prefixes as source shrink
 kill = searching for D_plus as a tiny R(a) character
+kill = low-weight tested a/g/m quotient-character products
 kill = using eps_h/eps_v or H/VQ/T_line buckets as post-Dplus filters
 kill = promoting current trace/norm classifier as production without a direct
        sampler or cheaper orientation source
@@ -230,6 +239,7 @@ kill = promoting current trace/norm classifier as production without a direct
 - Magma D_plus input: `research/p27/archive/fixtures/p27_trace_norm_dplus_cover_q607_magma.m`
 - Magma D_plus output: `research/p27/archive/probe_outputs/p27_trace_norm_dplus_cover_q607_magma_20260621.txt`
 - Magma D_plus XML: `research/p27/archive/probe_outputs/p27_trace_norm_dplus_cover_q607_magma_20260621.xml`
+- Quotient symmetry: [P27 Trace/Norm Dplus Quotient Symmetry](p27_trace_norm_dplus_quotient_symmetry_20260622.md)
 - Related GPU note: [P27 GPU Search-Space Narrowing Probe](p27_gpu_search_space_narrowing_20260621.md)
 - Prior spin note: [P27 Trace/Norm Spin Obstruction](p27_trace_norm_spin_obstruction_20260621.md)
 

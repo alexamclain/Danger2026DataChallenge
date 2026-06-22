@@ -341,6 +341,14 @@ selectors `eps_h=chi(t)` and `eps_v=chi((t+1)C)`, which explains why the
 current classifier pays fresh Legendre costs.  The next sqrt-beating test is a
 Magma/Sage quotient/Prym decomposition of the four orientation components, or
 a direct GPU source sampler if such a quotient is found.
+There is now a positive quotient handle:
+[P27 Trace/Norm Dplus Quotient Symmetry](evidence/p27_trace_norm_dplus_quotient_symmetry_20260622.md).
+Across `q=607,1607,1847,2087`, `Dplus` is invariant under `z -> -z` and under
+`t -> -1/t` paired with `w -> -w/t^2`.  Thus it descends to the conic quotient
+`a=t-1/t`, `g=w/t`, `a^2+g^2=4`.  Generic fibers have size four and no
+conflicts.  However, low-weight products of the tested `a/g/m` atoms do not
+hold out, so the next artifact must be the exact descended Kummer/divisor
+class on the conic, not another visible character bucket.
 
 The naive orientation-source cover is now priced:
 [P27 Trace/Norm Source-Orientation Cover](evidence/p27_trace_norm_source_orientation_cover_20260621.md).
