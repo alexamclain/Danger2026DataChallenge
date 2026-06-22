@@ -170,6 +170,13 @@ with zero mismatches in all tested fields.  Thus, after adjoining
 the already-adjoined beta branch.  The full cover is a clean double of the
 no-R reduced cover up to zero-root degeneracies.
 
+[P27 B-Line CompactD/Beta/Dnext Squareclass](p27_b_line_compact_beta_dnext_squareclass_20260622.md)
+then checks the corresponding function-field statement in Magma over `GF(7)`
+and `GF(23)`: with `Z=x5`, `beta=Z-1/Z`, and `d_next=Z*(U+A)`,
+`compactD_R_rhs/(beta^2*d_next)` is a square in both small function fields.
+This is still not genus extraction, but it is stronger than point-count
+evidence for demoting `compactD_R`.
+
 ## Interpretation
 
 Positive:
@@ -205,7 +212,8 @@ Use this order:
 3. Normalize the no-R reduced cover directly, without Saturation(I,bad).
 4. Compute degree/reducedness/irreducibility offline; the online endpoint
    cannot supply even these invariants.
-5. Prove symbolically that compactD_R_rhs / beta_rhs differs from d_next by a square.
+5. Lift the q7/q23 Magma square witness for compactD_R_rhs/(beta^2*d_next)
+   to characteristic 0 or p27 if CAS resources permit.
 6. Add compactD_R as a redundant/twinned quadratic cover only after the no-R
    base is understood.
 7. Only after the reduced f3 cover is understood, attach
@@ -234,7 +242,8 @@ or the only available evidence remains point counts and finite-field buckets.
 ```text
 continue = offline normalize the localized reduced cover
 continue = use X-inverted no-R base as a fallback decomposition
-continue = prove compactD_R/beta/d_next square relation symbolically
+continue = use the q7/q23 squareclass smoke as the compactD_R staging baseline
+continue = lift the compactD_R/beta/d_next relation to characteristic 0 or p27
 continue = compute branch divisor degrees for compactD_R and gamma only after normalization
 
 kill = online Magma as the extraction engine

@@ -146,6 +146,14 @@ compactD_R_rhs / beta_rhs = d_next * square
 
 on the denominator-localized B-line source chart.
 
+Update:
+[P27 B-Line CompactD/Beta/Dnext Squareclass](p27_b_line_compact_beta_dnext_squareclass_20260622.md)
+performs this as a Magma function-field `IsSquare` smoke over `GF(7)` and
+`GF(23)`.  In the `Z=x5` coordinate, with `beta=Z-1/Z` and
+`d_next=Z*(U+A)`, Magma verifies
+`compactD_R_rhs / (beta^2*d_next)` is a square and checks the returned root
+in both fields.
+
 If proved, the normalization order becomes:
 
 ```text
@@ -163,6 +171,7 @@ and later classes are fresh half-covers.
 
 ```text
 continue = symbolic proof of compactD_R/beta/d_next square relation
+continue = lift the q7/q23 function-field square witness to characteristic 0 or p27
 continue = offline normalize no-R reduced cover before full compactD_R cover
 continue = compare f4/f3 after no-R normalization
 

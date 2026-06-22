@@ -1,0 +1,2 @@
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>2396895087</seed><version>2.29-8</version><time>31.239</time><memory>32.09MB</memory></headers><results><line>P27_COMPACT_BETA_DNEXT_Q 7 true</line><line>P27_COMPACT_BETA_DNEXT_ROOT_CHECK_Q 7 true</line><line>P27_COMPACT_BETA_DNEXT_Q 23 true</line><line>P27_COMPACT_BETA_DNEXT_ROOT_CHECK_Q 23 true</line><line>RESULT p27_b_line_compact_beta_dnext_square_q7_q23 done</line><line></line></results></calculator>

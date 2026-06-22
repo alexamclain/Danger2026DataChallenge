@@ -278,6 +278,13 @@ The finite-field layer count shows
 makes `d_next` square, compactD_R is not an independent first normalization
 layer.  Normalize the no-R reduced cover first.
 
+Function-field squareclass follow-up:
+[P27 B-Line CompactD/Beta/Dnext Squareclass](p27_b_line_compact_beta_dnext_squareclass_20260622.md).
+Online Magma verifies over `GF(7)` and `GF(23)` that
+`compactD_R_rhs/(beta^2*d_next)` is a square in the staged function field
+with `Z=x5`, `beta=Z-1/Z`, and `d_next=Z*(U+A)`.  This strengthens the
+compactD_R demotion but still leaves normalization/genus/sourceability open.
+
 GPU phase-sequence handoff:
 [P27 B-Line Phase GPU Telemetry Handoff](p27_b_line_phase_gpu_telemetry_handoff_20260622.md).
 The V4 factorization gives `f_{j+1}=alpha_j*beta_j`, but the small p27 phase
@@ -292,7 +299,7 @@ Required computation:
 ```text
 normalize the reduced 4-u / 8-x legal+d3 cover over P1_B/P1_A/P1_Sroot
 start from the no-R localized complete-intersection chart rather than product saturation
-prove compactD_R_rhs / beta_rhs = d_next * square before adding compactD_R
+lift the q7/q23 compactD_R/beta/d_next square witness beyond small fields if possible
 include x6^2-U*x6+1 and gamma^2=U+2 in the offline branch/class extraction
 impose the selected-source legal/core cut before using all-chart lift buckets
 extract branch divisor degree, support field degrees, components, genus

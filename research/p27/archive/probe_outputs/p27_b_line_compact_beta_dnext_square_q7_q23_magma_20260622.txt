@@ -1,0 +1,8 @@
+magma_memory = 32.09MB
+magma_time = 31.239
+magma_version = 2.29-8
+P27_COMPACT_BETA_DNEXT_Q 7 true
+P27_COMPACT_BETA_DNEXT_ROOT_CHECK_Q 7 true
+P27_COMPACT_BETA_DNEXT_Q 23 true
+P27_COMPACT_BETA_DNEXT_ROOT_CHECK_Q 23 true
+RESULT p27_b_line_compact_beta_dnext_square_q7_q23 done

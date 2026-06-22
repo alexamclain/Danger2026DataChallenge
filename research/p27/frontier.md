@@ -1202,9 +1202,13 @@ The layer-count follow-up gives a sharper simplification:
 Across `607`, `7^3`, `7^4`, `7^5`, `7^6`, `23^2`, and `23^3`, the probe finds
 zero mismatches for `chi(compactD_R_rhs / beta_rhs)=chi(d_next)`.  Since the
 reduced `U_next` equation makes `d_next` square, compactD_R is a twinned beta
-layer on the reduced cover, not a fresh first CAS layer.  The B-line
-normalization target is now the no-R reduced cover plus a symbolic proof of
-that square relation.
+layer on the reduced cover, not a fresh first CAS layer.
+[P27 B-Line CompactD/Beta/Dnext Squareclass](evidence/p27_b_line_compact_beta_dnext_squareclass_20260622.md)
+then verifies the corresponding Magma function-field `IsSquare` check over
+`GF(7)` and `GF(23)`: `compactD_R_rhs/(beta^2*d_next)` is square with
+`root^2` checked in both fields.  The B-line normalization target is now the
+no-R reduced cover; the remaining squareclass task is lifting this witness
+beyond the q7/q23 smoke if CAS resources permit.
 The B-line visible two-gate quartic shortcut is closed as well:
 [P27 B-Line Gate4-Prefix Quartic q1847 Screen](evidence/p27_b_line_gate4_prefix_quartic_q1847_screen_20260622.md).
 It scans `6,300,872,423` q1847 coefficient triples for

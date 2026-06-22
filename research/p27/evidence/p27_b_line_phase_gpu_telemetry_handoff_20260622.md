@@ -60,6 +60,8 @@ chi(compactD_R_rhs / beta_rhs) = chi(d_next)
 with zero mismatches in the tested fields.  Since the reduced `U_next` layer
 already imposes `d_next` square, `compactD_R` is a twinned beta layer after
 reduced_U, not a fresh production filter.
+[P27 B-Line CompactD/Beta/Dnext Squareclass](p27_b_line_compact_beta_dnext_squareclass_20260622.md)
+confirms the corresponding function-field square over `GF(7)` and `GF(23)`.
 
 Also do not promote:
 

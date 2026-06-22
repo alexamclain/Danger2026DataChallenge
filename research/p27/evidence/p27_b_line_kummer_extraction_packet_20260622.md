@@ -273,6 +273,12 @@ fresh Kummer layer once the reduced `U_next` cover makes `d_next` square.  The
 first normalization target should be the no-R reduced cover; then prove this
 square relation and add compactD_R as a redundant/twinned layer.
 
+Update: the compactD_R demotion now has a function-field smoke:
+[P27 B-Line CompactD/Beta/Dnext Squareclass](p27_b_line_compact_beta_dnext_squareclass_20260622.md).
+Magma verifies over `GF(7)` and `GF(23)` that
+`compactD_R_rhs/(beta^2*d_next)` is a square in the staged function field
+with `Z=x5`, `beta=Z-1/Z`, and `d_next=Z*(U+A)`.
+
 ## Continue / Kill
 
 ```text
@@ -281,7 +287,7 @@ continue = normalize the reduced 4-u / 8-x d3 fiber cover if easier than the ful
 continue = use the reduced_Unext symbolic packet as the first CAS model
 continue = use the localized reduced-cover chart to avoid product saturation
 continue = normalize no-R reduced cover before compactD_R
-continue = prove compactD_R/beta/d_next square relation
+continue = lift compactD_R/beta/d_next square relation beyond q7/q23
 continue = optional q2087 quartic closure only if useful
 continue = use the B-line Kummer fixture rows as the compact CAS/expert input
 continue = bounded GPU deep-prefix telemetry if it feeds f3/f4/f5 extraction
