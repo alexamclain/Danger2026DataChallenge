@@ -49,6 +49,7 @@ research/p27/evidence/p27_trace_norm_dplus_u6_rowbit_h90_u_divisor_20260622.md
 research/p27/evidence/p27_trace_norm_dplus_u6_rowbit_h90_u_cubic_quartic_20260622.md
 research/p27/evidence/p27_trace_norm_dplus_u6_rowbit_local_magma_factor_split_20260622.md
 research/p27/evidence/p27_trace_norm_dplus_u6_rowbit_factor_label_20260622.md
+research/p27/evidence/p27_trace_norm_dplus_u6_rowbit_quartic_invariant_20260622.md
 research/p27/evidence/p27_trace_norm_elliptic_line_divisor_screen_20260622.md
 ```
 
@@ -338,6 +339,18 @@ domain factor label
 Aeta quartic label / resolvent class
 d3,d4,d5
 source denominator and replay data
+```
+
+Quartic-invariant follow-up:
+[P27 Trace/Norm Dplus U6 Row-Bit Quartic Invariant](p27_trace_norm_dplus_u6_rowbit_quartic_invariant_20260622.md)
+shows the first cheap resolvent class explicitly: the cubic resolvent has
+linear root `16 - 8*A`, while the remaining quadratic resolvent discriminant is
+nonsquare.  Do not ask GPU to factor quartics.  The GPU-relevant object, once
+CAS exports a formula, is:
+
+```text
+Delta_res = residual quadratic resolvent discriminant over Aeta
+compare chi(Delta_res) with d3,d4,d5 on same-stream Dplus rows
 ```
 
 If cheap, fused telemetry should therefore emit:

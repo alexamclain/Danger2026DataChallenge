@@ -1,0 +1,35 @@
+Magma V2.29-1     Mon Jun 22 2026 13:33:00 on agent-mini [Seed = 1765448063]
+
++-------------------------------------------------------------------+
+|       This copy of Magma has been made available through a        |
+|                   generous initiative of the                      |
+|                                                                   |
+|                         Simons Foundation                         |
+|                                                                   |
+| covering U.S. Colleges, Universities, Nonprofit Research entities,|
+|               and their students, faculty, and staff              |
++-------------------------------------------------------------------+
+
+Type ? for help.  Type <Ctrl>-D to quit.
+
+Loading file "/tmp/p27_trace_norm_dplus_u6_rowbit_quartic_invariant_q1607_magma\
+.m"
+RESULT invariant_setup 1607 true 4
+RESULT quartic_factorization 4 1
+RESULT quartic_factor 4 1
+RESULT quartic_discriminant_square false
+RESULT quartic_discriminant_metric nonzero_basis 8 max_num_degree 68 max_den_degree 33
+RESULT quartic_discriminant_rho_norm_square true
+RESULT quartic_discriminant_rho_norm_metric nonzero_basis 4 max_num_degree 136 max_den_degree 66
+RESULT cubic_resolvent_factorization 3 2
+RESULT cubic_resolvent_factor 1 1
+RESULT cubic_resolvent_linear_root_matches_16_minus_8A true
+RESULT cubic_resolvent_linear_root_metric nonzero_basis 1 max_num_degree 8 max_den_degree 4
+RESULT cubic_resolvent_factor 2 1
+RESULT cubic_resolvent_quadratic_discriminant_square false
+RESULT cubic_resolvent_quadratic_discriminant_metric nonzero_basis 8 max_num_degree 24 max_den_degree 12
+RESULT cubic_resolvent_discriminant_square false
+RESULT cubic_resolvent_discriminant_metric nonzero_basis 8 max_num_degree 68 max_den_degree 33
+RESULT p27_trace_norm_dplus_u6_rowbit_quartic_invariant_q1607 done
+
+Total time: 30.899 seconds, Total memory usage: 90.72MB

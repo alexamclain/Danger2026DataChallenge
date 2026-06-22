@@ -443,6 +443,13 @@ rho-paired products are exactly the two domain-spin factors; and the quartic
 coefficient profile is stable with moderate numerator/denominator degrees.
 The immediate moonshot test is now an exact quartic-label Kummer extraction,
 then a same-stream comparison of that label with A-level `d3/d4/d5`.
+The first invariant pass gives the A-line bridge:
+[P27 Trace/Norm Dplus U6 Row-Bit Quartic Invariant](evidence/p27_trace_norm_dplus_u6_rowbit_quartic_invariant_20260622.md).
+In q607/q1607/q1847, the quartic label is irreducible, its discriminant is
+nonsquare, and its cubic resolvent factors `1+2` with linear root exactly
+`16 - 8*A`.  The residual named obstruction is the nonsquare quadratic
+resolvent discriminant over Aeta; compare that class to pulled-back A-level
+`d3=chi(x6)` and later gates before asking GPU for row-bit telemetry.
 The point-fiber probe adds a positive compatibility signal:
 [P27 Trace/Norm Dplus U6 Row-Bit H90 Point-Fiber Probe](evidence/p27_trace_norm_dplus_u6_rowbit_h90_pointfiber_20260622.md).
 In small fields, the row bit can be mixed over `t` alone, but all mixed `t`
@@ -2295,6 +2302,11 @@ The factor-label probe
 then descends those degree-8 factors to quartics in `Y=S^2`, with rho-pairs
 multiplying back to the domain factors.  That is the concrete CAS object to
 extract before asking GPU for any row-bit label telemetry.
+The quartic invariant pass
+[P27 Trace/Norm Dplus U6 Row-Bit Quartic Invariant](evidence/p27_trace_norm_dplus_u6_rowbit_quartic_invariant_20260622.md)
+finds the resolvent root `16-8*A`, so the row-bit quartic already knows the
+A-coordinate.  The live object is now the residual quadratic resolvent
+discriminant, not the full quartic.
 The point-fiber companion
 [P27 Trace/Norm Dplus U6 Row-Bit H90 Point-Fiber Probe](evidence/p27_trace_norm_dplus_u6_rowbit_h90_pointfiber_20260622.md)
 keeps this alive by showing uniform rational H90/domain-spin/Aeta fibers in

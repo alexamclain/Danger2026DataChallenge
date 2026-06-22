@@ -121,6 +121,14 @@ compute discriminant/resolvent/norm classes of the quartic label;
 compare the resulting Kummer class with pulled-back A-level d3=chi(x6).
 ```
 
+Follow-up:
+[P27 Trace/Norm Dplus U6 Row-Bit Quartic Invariant](p27_trace_norm_dplus_u6_rowbit_quartic_invariant_20260622.md)
+computes the first invariant layer.  The quartic is irreducible, but its cubic
+resolvent factors as `1+2`, and the linear resolvent root is exactly
+`16 - 8*A`.  The remaining obstruction is the nonsquare quadratic resolvent
+discriminant over Aeta, now the named class to compare with A-level selected
+gates.
+
 GPU/telemetry test, only after a cheap label formula exists:
 
 ```text
@@ -136,6 +144,7 @@ kill if the factor labels split d3/d4/d5 flat after heldout normalization.
 ```text
 continue = exact quartic-label formula over the Aeta cover
 continue = resolvent/discriminant/norm class of the quartic label
+continue = residual quadratic-resolvent class comparison with d3/d4/d5
 continue = compare factor labels to A-level d3/x6 and later gates
 continue = bounded GPU telemetry only after CAS supplies a cheap label
 

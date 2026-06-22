@@ -298,6 +298,13 @@ coefficient profile is stable in q607/q1607.  The next accepted row-bit
 artifact should extract this quartic-label Kummer class and compare it to
 A-level `d3=chi(x6)`, not run another bucket scan.
 
+Tenth follow-up C:
+[P27 Trace/Norm Dplus U6 Row-Bit Quartic Invariant](p27_trace_norm_dplus_u6_rowbit_quartic_invariant_20260622.md)
+finds that the row-bit quartic label is irreducible but has cubic resolvent
+`1+2`, with linear root exactly `16-8*A` in q607/q1607/q1847.  This is the
+first exact A-line bridge inside the row-bit factor label.  The remaining
+class to test is the nonsquare quadratic resolvent discriminant over Aeta.
+
 Eleventh update:
 [P27 Trace/Norm Dplus U6 Row-Bit H90 Point-Fiber Probe](p27_trace_norm_dplus_u6_rowbit_h90_pointfiber_20260622.md)
 finds a positive pointwise compatibility signal.  Over `q=263` and `q=607`,
@@ -388,6 +395,8 @@ local Magma shows domain-spin/Aeta factor-degree drops: 32 -> 16+16 -> 8x4,
 with stable z/rho/S factor-action permutations.
 the Aeta degree-8 factors are quartics in Y=S^2, paired by rho back to the
 domain-spin factors.
+the quartic label has cubic resolvent root 16-8*A; the remaining class is the
+quadratic resolvent discriminant over Aeta.
 ```
 
 The missing object is the map or obstruction between the H90 model and the
@@ -460,6 +469,7 @@ continue = fused/native Dplus pricing with A/d3 telemetry columns
 continue = Dplus/H90 A_eta versus pulled-back A-level d3 class comparison
 continue = factor-action/Kummer extraction from the U6 row-bit 16+16 and 8x4 splits
 continue = exact quartic-label extraction in Y=S^2 over the Aeta cover
+continue = residual quadratic resolvent discriminant comparison with A-level gates
 continue = explain H90 rational-point uniformity of the row bit
 continue = prove/extract the Ktrace local-solubility boundary
 continue = divisor/theta/Prym extraction after the small-coset kill
