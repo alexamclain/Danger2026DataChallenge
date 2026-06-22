@@ -1,0 +1,110 @@
+p27 trace/norm Dplus U6 row-bit branch-atom probe
+question = is the descended U6 row bit a visible t-branch character product?
+p = 1000000000000000000000000103
+seed_groups = 121,122;123,124
+chunks = 0,1
+tids = 0:64
+draws_per_thread = 512
+max_y = 0
+max_weight = 5
+train_seeds_121,122:
+  D_+1 = 16485
+  D_-1 = 16316
+  D_0 = 32965
+  Dplus_candidates = 16398
+  Dplus_no_valid_candidate = 8286
+  Dplus_y = 16485
+  analyzed_y = 8199
+  chi_UplusA_+1 = 65592
+  chi_x6_+1 = 33192
+  chi_x6_-1 = 32400
+  d1_+1 = 16398
+  d2_+1 = 32796
+  nonsplit_y = 65766
+  raw_y_draws = 131072
+  target_+1 = 4149
+  target_-1 = 4050
+heldout_seeds_123,124:
+  D_+1 = 16454
+  D_-1 = 16293
+  D_0 = 32723
+  Dplus_candidates = 16122
+  Dplus_no_valid_candidate = 8393
+  Dplus_y = 16454
+  analyzed_y = 8061
+  chi_UplusA_+1 = 64488
+  chi_x6_+1 = 31888
+  chi_x6_-1 = 32600
+  d1_+1 = 16122
+  d2_+1 = 32244
+  nonsplit_y = 65470
+  raw_y_draws = 131072
+  target_+1 = 3986
+  target_-1 = 4075
+feature_profile:
+  A_+1 = 8191
+  A_-1 = 8069
+  A_minus_2_-1 = 16260
+  A_plus_2_+1 = 16260
+  B*C*R_+1 = 8143
+  B*C*R_-1 = 8117
+  B*C_+1 = 8046
+  B*C_-1 = 8214
+  B*R_+1 = 8214
+  B*R_-1 = 8046
+  B=t2_plus_1_+1 = 8117
+  B=t2_plus_1_-1 = 8143
+  C*R_-1 = 16260
+  C=t2_plus_2t_minus_1_+1 = 8165
+  C=t2_plus_2t_minus_1_-1 = 8095
+  R=t2_minus_2t_minus_1_+1 = 8095
+  R=t2_minus_2t_minus_1_-1 = 8165
+  X_+1 = 8147
+  X_-1 = 8113
+  X_minus_2_+1 = 16260
+  X_plus_2_+1 = 16260
+  active_features = 13
+  constant_features = 5
+  t2_minus_1_+1 = 8046
+  t2_minus_1_-1 = 8214
+  t_+1 = 8046
+  t_-1 = 8214
+  t_minus_1_+1 = 8253
+  t_minus_1_-1 = 8007
+  t_plus_1_+1 = 8185
+  t_plus_1_-1 = 8075
+  y=t_plus_1_+1 = 8185
+  y=t_plus_1_-1 = 8075
+active_features:
+  A
+  B*C
+  B*C*R
+  B*R
+  B=t2_plus_1
+  C=t2_plus_2t_minus_1
+  R=t2_minus_2t_minus_1
+  X
+  t
+  t2_minus_1
+  t_minus_1
+  t_plus_1
+  y=t_plus_1
+exact_branch_atom_combos:
+  none
+best_branch_atom_combos:
+  combo=-A train=4062/8199 heldout=4152/8061 combined=8214/16260
+  combo=A*B*C*B*R train=4062/8199 heldout=4152/8061 combined=8214/16260
+  combo=-A*B*C*t train=4062/8199 heldout=4152/8061 combined=8214/16260
+  combo=-A*B*C*t2_minus_1 train=4062/8199 heldout=4152/8061 combined=8214/16260
+  combo=A*B*C*R*B=t2_plus_1 train=4062/8199 heldout=4152/8061 combined=8214/16260
+  combo=A*B*R*t train=4062/8199 heldout=4152/8061 combined=8214/16260
+  combo=A*B*R*t2_minus_1 train=4062/8199 heldout=4152/8061 combined=8214/16260
+  combo=A*C=t2_plus_2t_minus_1*R=t2_minus_2t_minus_1 train=4062/8199 heldout=4152/8061 combined=8214/16260
+  combo=-A*t*t2_minus_1 train=4062/8199 heldout=4152/8061 combined=8214/16260
+  combo=-A*t_plus_1*y=t_plus_1 train=4062/8199 heldout=4152/8061 combined=8214/16260
+  combo=A*B*C*B*C*R*C=t2_plus_2t_minus_1 train=4062/8199 heldout=4152/8061 combined=8214/16260
+  combo=-A*B*C*B*C*R*R=t2_minus_2t_minus_1 train=4062/8199 heldout=4152/8061 combined=8214/16260
+verdict:
+  promote only an exact or strong heldout branch-atom product
+  otherwise the descended row bit remains a CAS/Prym class
+p27_trace_norm_dplus_u6_rowbit_branch_atom_probe_rows=1/1

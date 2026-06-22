@@ -259,6 +259,13 @@ specializations at `U6=+/-2`, but `R(t,S^2-2)` does not factor over `Q`.
 Thus the target is one descended balanced row bit, not a U6 branch-choice
 bucket.
 
+Eighth update:
+[P27 Trace/Norm Dplus U6 Row-Bit Branch-Atom Screen](p27_trace_norm_dplus_u6_rowbit_branch_atom_20260622.md)
+kills the immediate visible branch-character explanation.  Products through
+weight `5` in `t`, `t+/-1`, `t^2+1`, `t^2+/-2t-1`, `A`, and `X` have no exact
+match; the best heldout-ranked effect is equivalent to weak `-A` bias and
+does not hold train/heldout.
+
 This is the most concrete bridge test after the coupling kill.  We know:
 
 ```text
@@ -267,6 +274,7 @@ post-Dplus d3/d4 descend to whole A fibers;
 H90 payload signs alone do not predict d3/d4.
 simple H90/rho coboundaries do not predict chi(x6).
 the U6/x6 class is a descended row bit, not a branch-choice bit.
+visible t/A/X branch atoms do not source the row bit through weight 5.
 ```
 
 The missing object is the map or obstruction between the H90 model and the
@@ -340,6 +348,7 @@ kill = more sign-word/gamma bucket GPU scans
 kill = visible f5(B) B-atom/split-linear bucket searches
 kill = naked reciprocal-tower source sampling
 kill = U6 branch-choice buckets after Dplus
+kill = visible t/A/X branch-atom products as Dplus row-bit sources
 kill = standalone H90 payload sign screens
 kill = simple H90/rho coboundary bucket screens for chi(x6)
 kill = searching for another low-degree Dplus-to-A coordinate map

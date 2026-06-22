@@ -176,6 +176,8 @@ Negative:
 The descended row bit is balanced on p27 samples.
 The S^2=U6+2 lift does not visibly split over Q.
 Simple H90/rho coboundaries were already killed on the same target.
+Visible t/A/X branch atoms are killed through weight 5 by the branch-atom
+follow-up.
 This is not yet a source-space shrink or GPU production mode.
 ```
 
@@ -193,6 +195,14 @@ For GPU, fused/native `Dplus` telemetry should emit one post-Dplus row bit per
 `y` with raw source denominators.  It should not fan out into four branch
 buckets or treat branch choice as the missing win.
 
+Branch-atom follow-up:
+[P27 Trace/Norm Dplus U6 Row-Bit Branch-Atom Screen](p27_trace_norm_dplus_u6_rowbit_branch_atom_20260622.md)
+tests the visible `t`, `t+/-1`, `t^2+1`, `t^2+/-2t-1`, `A`, and `X` branch
+characters through product weight `5`.  It finds no exact product; the best
+heldout-ranked product is equivalent to `-A`, with
+`4062/8199` train and `4152/8061` heldout, so it is not stable enough to
+promote.
+
 ## Continue / Kill
 
 ```text
@@ -202,6 +212,7 @@ continue = fused/native Dplus pricing with one d3 row-bit column
 
 kill = U6 branch-choice buckets after Dplus
 kill = visible rational factorization of R(t,S^2-2) over Q as the easy source
+kill = visible t/A/X branch-atom products through weight 5
 kill = GPU production from chi(U6+2) before the row bit is sourced
 ```
 

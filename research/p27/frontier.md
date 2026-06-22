@@ -409,6 +409,13 @@ are uniform, with balanced `++++`/`----` counts.  The exact eliminated
 resultant has square specializations at `U6=+/-2`, but the Kummer lift
 `U6=S^2-2` does not split over `Q`.  The moonshot target is therefore one
 descended row bit on the selected Dplus/H90 base, not a branch-choice bucket.
+The visible branch-atom follow-up is negative:
+[P27 Trace/Norm Dplus U6 Row-Bit Branch-Atom Screen](evidence/p27_trace_norm_dplus_u6_rowbit_branch_atom_20260622.md).
+Products through weight `5` in the exact resultant branch factors
+`t`, `t+/-1`, `t^2+1`, `t^2+/-2t-1` plus nearby `A` and `X` atoms have no
+exact match.  The best heldout-ranked product is only weak `-A` bias and does
+not hold train/heldout.  This keeps the Dplus row bit as a non-visible
+CAS/Prym/theta target.
 The class comparison now has a routing result:
 [P27 Trace/Norm Dplus A-Descent Bridge](evidence/p27_trace_norm_dplus_a_descent_20260622.md).
 Across three p27 seed groups, post-Dplus `d3` and `d4` after `d3=+1` have zero
@@ -2230,6 +2237,9 @@ shows that the four `U6` branches over each Dplus row are all `++++` or all
 `R(t,U6)` as degree `16` in `U6`, with square specializations at `U6=+/-2`
 and no visible rational factor of `R(t,S^2-2)`.  Source the row bit; do not
 build a branch-choice GPU bucket.
+The visible branch-atom source is killed by
+[P27 Trace/Norm Dplus U6 Row-Bit Branch-Atom Screen](evidence/p27_trace_norm_dplus_u6_rowbit_branch_atom_20260622.md);
+continue only with a non-visible quotient/Prym/source relation.
 The small-field descent audit then sets the boundary:
 [P27 Trace/Norm Dplus Reciprocal Tower Small-Field Descent](evidence/p27_trace_norm_dplus_reciprocal_tower_smallfield_descent_20260622.md).
 Over q607/q1607/q1847, the naked reciprocal tower has mixed `A`/`B` fibers for
