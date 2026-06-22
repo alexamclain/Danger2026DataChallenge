@@ -913,6 +913,12 @@ It tests S3-conjugated `lambda -> lambda^m` maps for `m=2..12` on
 q1471/q1607/q1847, with best forward coverages only `4/28`, `5/28`, and
 `9/45`.  Thus lambda remains useful for branch-class normalization, not as a
 standalone recurrence/source.
+The lambda low-genus subcase is sharpened:
+[P27 Lambda Low-Genus Screen](evidence/p27_lambda_lowgenus_screen_20260622.md).
+It freezes lambda targets and exhausts all monic cubic support for
+`d3_on_lambda` in q1471/q1607/q1847, finding zero exact cubics.  The remaining
+bounded lambda test is exact monic quartic support, which is GPU-sized at
+q1847 and diagnostic only until a K-square lift is verified.
 The compact synthesis after these closures is:
 [P27 Post-Branch-Dynamics Test Frontier](evidence/p27_post_branch_dynamics_test_frontier_20260622.md).
 It lists the closed branch-map families and the remaining first-class tests:

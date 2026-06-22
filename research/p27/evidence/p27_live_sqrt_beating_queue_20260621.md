@@ -226,6 +226,12 @@ It tests S3-conjugated `lambda -> lambda^m` maps for `m=2..12` on
 `lambda=-K^2/4`.  No exact `d3/d4` recurrence appears in q1471/q1607/q1847,
 and coverage is low.  Lambda is still a normalization coordinate for
 branch-class extraction, not a source or recurrence by itself.
+The lambda low-genus support screen has now made one concrete step:
+[P27 Lambda Low-Genus Screen](p27_lambda_lowgenus_screen_20260622.md).
+All monic cubic `d3_on_lambda` candidates are exhausted in q1471/q1607/q1847
+with zero exact hits.  A monic quartic lambda screen remains as a GPU-sized
+bounded class-extraction diagnostic; any hit must lift back to the rational
+K-square stratum before it can be source-promoted.
 The post-map-family synthesis is now explicit:
 [P27 Post-Branch-Dynamics Test Frontier](p27_post_branch_dynamics_test_frontier_20260622.md).
 The remaining sqrt-beating tests are A/B/K normalized Kummer/divisor class

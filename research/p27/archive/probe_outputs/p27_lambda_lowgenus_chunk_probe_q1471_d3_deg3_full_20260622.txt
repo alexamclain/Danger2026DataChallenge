@@ -1,0 +1,18 @@
+p27 lambda low-genus chunk probe
+packet = research/p27/archive/fixtures/p27_lambda_lowgenus_targets_20260622.json
+field = 1471
+family = d3_on_lambda
+degree = 3
+chunk_stats:
+  degree = 3
+  end = 2163841
+  exact_polynomials = 0
+  field = 1471
+  polarity_-1_hits = 0
+  polarity_1_hits = 0
+  requested_count = 2163841
+  rows = 50
+  start = 0
+  tuples_scanned = 2163841
+hit_samples:
+p27_lambda_lowgenus_chunk_probe_rows=1/1
