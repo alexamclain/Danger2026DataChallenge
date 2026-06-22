@@ -1245,6 +1245,12 @@ The fiber-level localization is now recorded too:
 Degree-3 activity sits over degree-3 `B` orbits in both base families, while
 quadratic activity can occur by fiber splitting over base-field `B` values.
 So the CAS pass must separate B-orbit degree from fiber-extension degree.
+The coordinate-degree microscope sharpens this split:
+[P27 B-Line No-R Coordinate Degree Profile](evidence/p27_b_line_noR_coordinate_degree_20260622.md).
+Cubic activity is a `B`-orbit phenomenon; quadratic activity includes fixed-`B`
+fiber extensions, with a clean `GF(7^2)` case where only `W` or `T` leaves the
+base field.  The next no-R CAS run should split into cubic B-orbit and
+quadratic fixed-B fiber subtests.
 The B-line visible two-gate quartic shortcut is closed as well:
 [P27 B-Line Gate4-Prefix Quartic q1847 Screen](evidence/p27_b_line_gate4_prefix_quartic_q1847_screen_20260622.md).
 It scans `6,300,872,423` q1847 coefficient triples for

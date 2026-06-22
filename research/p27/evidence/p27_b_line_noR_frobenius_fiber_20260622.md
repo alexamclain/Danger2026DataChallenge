@@ -20,6 +20,14 @@ The gamma profile is stable on Frobenius orbits in this finite-field test, so
 gamma descent/permutation is a well-posed normalized-cover question rather
 than visible orbit noise.
 
+Coordinate-degree follow-up:
+[P27 B-Line No-R Coordinate Degree Profile](p27_b_line_noR_coordinate_degree_20260622.md).
+The cubic activity is genuinely degree-3 `B`-orbit activity, while quadratic
+activity can be hidden fiber activity over base-field `B`: over `GF(7^2)` all
+eight no-R points have base-field `B`, `X`, `beta`, `x5`, `U`, and selector,
+with extension only in `W` or `T`; over `GF(23^2)` the quadratic behavior is a
+mix of degree-2 `B` orbits and fixed-`B` fiber extensions.
+
 ## Artifacts
 
 Probe:
@@ -138,10 +146,12 @@ extension-field diagnostic, not a p27 source.
 continue = run normalized no-R component/Frobenius test over q^2 and q^3
 continue = distinguish B-orbit degree from fiber-extension degree above fixed B
 continue = track gamma descent separately on degree-3 B orbits and quadratic base-B fibers
+continue = split quadratic fixed-B fiber tests into W/T-only and beta/x5/U subcovers
 
 kill = single B-degree source law
 kill = GPU production from Frobenius B-orbit buckets alone
 kill = interpreting Frobenius-stable counts as a descent proof without divisors
+kill = treating degree-2 and degree-3 activity as the same mechanism
 ```
 
 ```text

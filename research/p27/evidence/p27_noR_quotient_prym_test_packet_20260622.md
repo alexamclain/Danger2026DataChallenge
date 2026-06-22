@@ -41,6 +41,7 @@ compactD_R/beta/d_next squareclass smoke = pass over q7/q23
 no-R genus pressure = genus <= 1 violated in 5/7 fields if one component
 no-R closed-point pressure = degree 2 and 3 closed points both nonzero
 no-R Frobenius fiber profile = degree-3 B orbits plus quadratic fiber splitting
+no-R coordinate degree profile = cubic B-orbit, quadratic fixed-B/fiber split
 reduced lift visible classifier = killed
 gamma visible square triviality = killed
 oriented alpha/beta word = tautological, not a source
@@ -115,7 +116,18 @@ This comparison is required because the closed-point transform has no degree-1
 points but has nonzero coprime degree-2 and degree-3 closed points in both
 base-field families.  The finite-field Frobenius-fiber screen further shows
 that degree-3 activity sits over degree-3 `B` orbits, while quadratic activity
-can also occur above base-field `B` values.
+can also occur above base-field `B` values.  The coordinate-degree screen
+splits the next CAS work into a cubic `B`-orbit subtest and a quadratic
+fixed-`B` fiber subtest, with the latter separated into `W/T` and
+`beta/x5/U` extension layers.
+
+Required subtests:
+
+```text
+cubic B-orbit quotient/component test
+quadratic fixed-B W/T-only subcover test
+quadratic fixed-B beta/x5/U subcover test
+```
 
 4. Compute quotient/Prym structure under the available symmetries:
 
