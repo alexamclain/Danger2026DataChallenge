@@ -129,6 +129,14 @@ For GPU, this still does not promote a production bucket.  It does justify
 including the row bit and H90 rational-point coordinates in fused/native
 `Dplus` telemetry.
 
+Follow-up
+[P27 Trace/Norm Dplus U6 Row-Bit H90 Visible Character](p27_trace_norm_dplus_u6_rowbit_h90_visible_character_20260622.md)
+screens the cheap explanation: visible product characters through weight `4`
+on `E_h90`, domain-spin, and `A_eta` coordinates.  It finds no exact products.
+The best filtered products are equivalent to weak `A` bias, and the best bare
+products are weak `-A*B` bias.  Thus the point-fiber uniformity remains real
+but non-visible in the tested coordinate family.
+
 ## Continue / Kill
 
 ```text
@@ -138,6 +146,7 @@ continue = fused/native Dplus telemetry with E_h90/Z/Aeta coordinates and row bi
 
 kill = pointwise descent to t alone
 kill = treating irreducibility over bare E_h90 as a complete independence proof
+kill = visible E_h90/Z/Aeta product characters through weight 4 as the source
 kill = GPU production before a source or quotient relation is named
 ```
 

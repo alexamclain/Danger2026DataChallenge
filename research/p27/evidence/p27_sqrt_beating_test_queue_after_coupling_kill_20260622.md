@@ -287,6 +287,15 @@ the row bit is mixed over `t` alone, but all mixed `t` fibers have no rational
 `E_h90` point; every tested rational `E_h90`, domain-spin, and `A_eta` fiber is
 uniform, with or without materialization filters.
 
+Twelfth update:
+[P27 Trace/Norm Dplus U6 Row-Bit H90 Visible Character](p27_trace_norm_dplus_u6_rowbit_h90_visible_character_20260622.md)
+kills the cheap visible-coordinate explanation.  Product characters through
+weight `4` on `E_h90`, domain-spin, and `A_eta` coordinates have no exact
+match.  With materialization filters the best effect is weak `A` bias
+(`544/848` on `A_eta`); without filters the best effect is weak `-A*B` bias
+(`581/901`).  Keep the row-bit lane alive as non-visible H90/Prym/theta or
+local-solubility structure, not as a GPU sign-bucket scan.
+
 This is the most concrete bridge test after the coupling kill.  We know:
 
 ```text
@@ -298,6 +307,8 @@ the U6/x6 class is a descended row bit, not a branch-choice bit.
 visible t/A/X branch atoms do not source the row bit through weight 5.
 the H90 elliptic quotient does not factor the row-bit cover over q607.
 H90 rational point fibers are nevertheless uniform in the tested small fields.
+visible H90/domain-spin/Aeta coordinate products through weight 4 do not
+explain that uniformity.
 ```
 
 The missing object is the map or obstruction between the H90 model and the
@@ -375,6 +386,7 @@ kill = U6 branch-choice buckets after Dplus
 kill = pointwise descent to t alone
 kill = visible t/A/X branch-atom products as Dplus row-bit sources
 kill = H90 elliptic-base factorization as the easy Dplus row-bit source
+kill = visible H90/domain-spin/Aeta product characters through weight 4
 kill = online Magma for domain-spin/Aeta row-bit factorization
 kill = standalone H90 payload sign screens
 kill = simple H90/rho coboundary bucket screens for chi(x6)

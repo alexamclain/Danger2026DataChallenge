@@ -2272,6 +2272,12 @@ The point-fiber companion
 [P27 Trace/Norm Dplus U6 Row-Bit H90 Point-Fiber Probe](evidence/p27_trace_norm_dplus_u6_rowbit_h90_pointfiber_20260622.md)
 keeps this alive by showing uniform rational H90/domain-spin/Aeta fibers in
 the tested small fields, even when `t` alone is mixed.
+The visible-character follow-up
+[P27 Trace/Norm Dplus U6 Row-Bit H90 Visible Character](evidence/p27_trace_norm_dplus_u6_rowbit_h90_visible_character_20260622.md)
+then kills the cheap explanation: no product character through weight `4` on
+`E_h90`, domain-spin, or `A_eta` coordinates exactly matches the row bit.  So
+the row-bit signal is real but currently non-visible; do not hand GPU another
+sign-bucket scan from these atoms.
 The small-field descent audit then sets the boundary:
 [P27 Trace/Norm Dplus Reciprocal Tower Small-Field Descent](evidence/p27_trace_norm_dplus_reciprocal_tower_smallfield_descent_20260622.md).
 Over q607/q1607/q1847, the naked reciprocal tower has mixed `A`/`B` fibers for
