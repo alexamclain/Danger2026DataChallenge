@@ -1,0 +1,86 @@
+p27 B-line no-R beta_U same-sign f4 selector probe
+question = can natural x6-level characters choose same-plus vs same-minus?
+fields = 71^2,167^2,199^2,263^2,311^2
+max_weight = 3
+
+GF(71^2) q=5041
+  common_atoms = 20
+  mixed_pairs = 138
+  same_sign_pairs = 118
+  same_target_-1 = 48
+  same_target_1 = 70
+  screen_rows = 118
+  weight_1_tested = 20
+  weight_2_tested = 190
+  weight_3_tested = 1140
+  best_products:
+    columns = weight label matches total misses
+    (1, '-x6+2', 80, 118, 38)
+    (2, '-A*x6+2', 80, 118, 38)
+    (3, '-(x6+1)*(A*x6+1)*x6+1*x6+2', 80, 118, 38)
+
+GF(167^2) q=27889
+  common_atoms = 20
+  mixed_pairs = 100
+  same_sign_pairs = 92
+  same_target_-1 = 44
+  same_target_1 = 48
+  screen_rows = 92
+  weight_1_tested = 20
+  weight_2_tested = 190
+  weight_3_tested = 1140
+  best_products:
+    columns = weight label matches total misses
+    (1, 'A*x6-1', 56, 92, 36)
+    (2, '(x6+1)*(A*x6+1)*u', 68, 92, 24)
+    (3, '(x6+1)*(A*x6+1)*A*u', 68, 92, 24)
+
+GF(199^2) q=39601
+  common_atoms = 20
+  mixed_pairs = 262
+  same_sign_pairs = 250
+  same_target_-1 = 136
+  same_target_1 = 114
+  screen_rows = 250
+  weight_1_tested = 20
+  weight_2_tested = 190
+  weight_3_tested = 1140
+  best_products:
+    columns = weight label matches total misses
+    (1, '-x6+A', 142, 250, 108)
+    (2, '(x6+1)*(A*x6+1)*A*x6-1', 146, 250, 104)
+    (3, '(x6+1)*(A*x6+1)*A*A*x6-1', 146, 250, 104)
+
+GF(263^2) q=69169
+  common_atoms = 20
+  mixed_pairs = 176
+  same_sign_pairs = 208
+  same_target_-1 = 104
+  same_target_1 = 104
+  screen_rows = 208
+  weight_1_tested = 20
+  weight_2_tested = 190
+  weight_3_tested = 1140
+  best_products:
+    columns = weight label matches total misses
+    (1, 'A*x6-1', 122, 208, 86)
+    (2, '(x6+1)*(A*x6+1)*x6+A', 126, 208, 82)
+    (3, '-(x6+1)*(A*x6+1)*x6+2*x6+A', 130, 208, 78)
+
+GF(311^2) q=96721
+  common_atoms = 20
+  mixed_pairs = 240
+  same_sign_pairs = 272
+  same_target_-1 = 124
+  same_target_1 = 148
+  screen_rows = 272
+  weight_1_tested = 20
+  weight_2_tested = 190
+  weight_3_tested = 1140
+  best_products:
+    columns = weight label matches total misses
+    (1, '-x6-1/x6', 154, 272, 118)
+    (2, '(x6+1)*(A*x6+1)*x6+2', 156, 272, 116)
+    (3, '(x6+1)*(A*x6+1)*u*x6-2', 164, 272, 108)
+
+p27_b_line_noR_betaU_same_sign_selector_probe_rows=1/1

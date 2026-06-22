@@ -1294,6 +1294,12 @@ For each x6, the ordinary halving norm
 mixed x7 pairs.  But same-plus versus same-minus is still not selected, and
 reciprocal x6 pair products are not stable.  Carry `A*x6+1` into CAS as
 orientation data; do not promote x6-pair buckets.
+The visible same-sign selector screen is also negative:
+[P27 B-Line No-R Beta_U Same-Sign Selector Screen](evidence/p27_b_line_noR_betaU_same_sign_selector_20260622.md).
+After restricting to same-sign x7 pairs, natural x6-level atoms and products
+through weight `3` do not select same-plus versus same-minus.  Best labels are
+weak and field-dependent; `359^2` only reaches `276/456`.  This closes the
+visible beta_U f4-product route absent a named new coordinate.
 The fixed-`B` comparison now explains why beta_U remains first in that queue:
 [P27 B-Line No-R Fixed-B Norm Comparison](evidence/p27_b_line_noR_fixedB_norm_comparison_20260622.md).
 Across `q = 23, 71, 103, 167, 199, 263, 311`, both beta_U and hidden_mixed

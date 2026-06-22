@@ -107,6 +107,13 @@ field    product pattern summary
 311^2    (1,1)=70, (-1,-1)=54, mixed orientations 132 total
 ```
 
+Same-sign selector follow-up:
+[P27 B-Line No-R Beta_U Same-Sign Selector Screen](p27_b_line_noR_betaU_same_sign_selector_20260622.md).
+After restricting to same-sign x7 pairs, natural x6-level squareclass products
+through weight `3` do not select same-plus versus same-minus.  The best labels
+are field-dependent, and the larger `359^2` heldout only reaches `276/456`.
+So the remaining f4 choice is not a visible low-weight x6 atom product.
+
 ## Interpretation
 
 Positive:
@@ -146,9 +153,11 @@ but not a sqrt-beating multi-gate source.
 continue = include x7-pair norm -4*(A*x6+1) in beta_U CAS handoff
 continue = compare remaining same-sign choice after beta_U normalization
 continue = treat beta_U as f3/materialization unless CAS couples f4
+continue = use same-sign selector screen as regression against visible x6 atom claims
 
 kill = x6-pair product as a production sampler
 kill = reciprocal x6-pair product pattern as a stable source law
+kill = natural x6-level products through weight 3 as same-sign f4 selectors
 kill = GPU beta_U f4 pair buckets
 ```
 

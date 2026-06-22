@@ -49,6 +49,7 @@ no-R beta_U norm descent = gamma is Norm(Unext+2), half-size/full-size fiber spl
 no-R beta_U norm relation = no stable low-bidegree (B,Norm) plane curve
 no-R beta_U next-gate = gamma+ materializes cleanly but f4 is mixed inside every active B
 no-R beta_U f4 pair = x7-pair norm -4*(A*x6+1) exact, but no pair-level sampler
+no-R beta_U same-sign selector = x6 atom products through weight 3 fail on same-plus/same-minus
 no-R fixed-B norm comparison = hidden_mixed descends too, but its visible 32/64 split is chi(B), not gamma
 no-R hidden_mixed next-gate = nonsquare-B gamma+ does not materialize; square-B materializes but f4 is mixed
 reduced lift visible classifier = killed
@@ -209,6 +210,11 @@ only distinguishes mixed-sign x7 pairs from same-sign pairs; it does not
 decide same-plus versus same-minus, and reciprocal x6 pair products are not
 stable.  Do not promote x6-pair buckets without a new normalized quotient or
 class relation.
+
+The remaining same-sign choice has also been screened against the natural
+x6-level atoms and products through weight `3`.  No exact or stable selector
+appears; the `359^2` heldout best reaches only `276/456`.  Treat further
+visible x6 product scans as killed unless a theorem names a new coordinate.
 
 For `hidden_mixed_fixedB`, the same norm-descent comparison has zero
 finite-field mismatches and zero per-`B` sign conflicts, but it does not

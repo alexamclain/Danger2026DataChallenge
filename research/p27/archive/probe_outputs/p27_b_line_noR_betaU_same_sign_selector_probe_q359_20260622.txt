@@ -1,0 +1,22 @@
+p27 B-line no-R beta_U same-sign f4 selector probe
+question = can natural x6-level characters choose same-plus vs same-minus?
+fields = 359^2
+max_weight = 3
+
+GF(359^2) q=128881
+  common_atoms = 20
+  mixed_pairs = 440
+  same_sign_pairs = 456
+  same_target_-1 = 236
+  same_target_1 = 220
+  screen_rows = 456
+  weight_1_tested = 20
+  weight_2_tested = 190
+  weight_3_tested = 1140
+  best_products:
+    columns = weight label matches total misses
+    (1, 'x6+A', 244, 456, 212)
+    (2, '(x6+1)*(A*x6+1)*x6-A', 270, 456, 186)
+    (3, 'A*x6-1*x6+2*x6-1/x6', 276, 456, 180)
+
+p27_b_line_noR_betaU_same_sign_selector_probe_rows=1/1
