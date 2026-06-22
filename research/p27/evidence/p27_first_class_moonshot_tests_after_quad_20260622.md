@@ -136,10 +136,19 @@ The q7 saturation-only fixture hits the online calculator memory limit during
 CAS object, but it means web Magma cannot answer genus/component/sourceability
 for this lane.
 
+Finite-field point-count smoke:
+[P27 B-Line Reduced-Cover Point Count](p27_b_line_reduced_cover_pointcount_20260622.md).
+The `U_next` layer is exactly two-valued over each legal chart point in the
+promotion fields, but the materialized `x6` and selector `gamma^2=U+2` layers
+split into B-fibers with `0`, middle, or full lift.  The next offline object is
+therefore the reduced cover with those layers attached, not the bare U-cover
+and not a GPU bucket.
+
 Required computation:
 
 ```text
 normalize the reduced 4-u / 8-x legal+d3 cover over P1_B/P1_A/P1_Sroot
+include x6^2-U*x6+1 and gamma^2=U+2 in the offline branch/class extraction
 extract branch divisor degree, support field degrees, components, genus
 if d3 is tractable, compare f4/f3 in the Kummer group
 use f5/f6 only as regression checks until larger data supports them

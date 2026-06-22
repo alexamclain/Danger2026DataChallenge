@@ -128,6 +128,13 @@ terminates at the memory limit during `Saturation(I, bad)`.  This moves the
 next step to offline Magma/Sage or specialized elimination; it does not promote
 GPU production.
 
+Direct finite-field point-count follow-up:
+[P27 B-Line Reduced-Cover Point Count](p27_b_line_reduced_cover_pointcount_20260622.md).
+The `U_next` layer is a clean two-valued cover over the legal chart in the
+promotion fields, but materialization through `x6^2-U*x6+1` and the selector
+cover `gamma^2=U+2` split by B-fiber.  Offline CAS should keep these layers
+attached; the bare `U` cover is not itself a source.
+
 Negative:
 
 ```text
@@ -144,6 +151,7 @@ The online calculator cannot provide that output for the reduced q7 fixture.
 ```text
 continue = run CAS normalization of the reduced_Unext cover over P1_Bline
 continue = use offline Magma/Sage or elimination; online Magma is too small
+continue = attach x6-materialization and gamma^2=Unext+2 to the offline model
 continue = compute genus/components/quotients and compare against the fixture
 continue = only then pull back f4/f3
 

@@ -990,6 +990,13 @@ The first online Magma smoke for this reduced cover is cautionary:
 Even over q7, the saturation-only fixture exceeds the online calculator memory
 limit during `Saturation(I,bad)`.  The reduced cover remains the right first
 offline CAS/expert object, but this is not a GPU-production green light.
+A direct finite-field point-count probe then clarifies the offline object:
+[P27 B-Line Reduced-Cover Point Count](evidence/p27_b_line_reduced_cover_pointcount_20260622.md).
+In q1607/q1847/q2087, every legal chart point has two `U_next` roots, but the
+materialized `x6` layer and selector cover `gamma^2=U+2` split by B-fiber into
+0/middle/full lift profiles.  So the next CAS pass should attach those layers
+and extract their branch/Kummer classes; the bare U double cover is not a
+source and does not justify GPU production.
 The B-line visible two-gate quartic shortcut is closed as well:
 [P27 B-Line Gate4-Prefix Quartic q1847 Screen](evidence/p27_b_line_gate4_prefix_quartic_q1847_screen_20260622.md).
 It scans `6,300,872,423` q1847 coefficient triples for
