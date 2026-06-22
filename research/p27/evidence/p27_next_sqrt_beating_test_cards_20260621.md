@@ -1038,6 +1038,30 @@ Do not continue visible B-factor bucket scans unless they are part of a
 structured divisor extraction.
 ```
 
+B-line deep descent update:
+[P27 B-Line Extension Counts And Deep Descent](p27_b_line_extension_and_deep_descent_20260622.md).
+
+```text
+extension counts:
+  legal_B_missing_core = 0 in all nonempty GF(7^n), GF(23^n) tests
+  B_d3_mixed = 0
+  B_d4_mixed = 0
+  legal_B is still field-sized, roughly 0.03N in informative odd extensions
+
+p27 deep descent:
+  original Bplus determines active selected gate bits through d12
+  no mixed B groups in p27 train/heldout
+```
+
+Updated action:
+
+```text
+Promote B-line Kummer sequence extraction:
+  f3(B), f4(B), f5(B), ...
+Compare these classes for recurrence/coupling.
+Only use GPU for bounded Bplus + deep-bit telemetry until exact classes exist.
+```
+
 K/S first-half cover update:
 [P27 K/S First-Half Cover Magma Smoke](p27_ks_first_half_cover_magma_20260621.md).
 [P27 K/S First-Half Alpha-Lift Obstruction](p27_ks_first_half_alpha_lift_obstruction_20260621.md).

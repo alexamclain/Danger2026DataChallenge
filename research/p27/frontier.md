@@ -971,6 +971,18 @@ field.  The next serious test is Magma/Sage divisor extraction for the
 descended `d3(B)` class, not another B-bucket or low-degree visible-factor
 scan.
 
+The B-line target is now stronger than a one-bit descent:
+[P27 B-Line Extension Counts And Deep Descent](evidence/p27_b_line_extension_and_deep_descent_20260622.md).
+Extension counts over `GF(7^n)` and `GF(23^n)` show that legal B values stay
+inside the core B bucket with no misses, and that `d3`/`d4` remain unmixed on
+B.  The legal B-domain is still field-sized, about `0.03N` in the informative
+odd extensions, so counts alone do not give a below-sqrt sampler.  But deep
+p27 train/heldout tests show no mixed B groups through `d12`: the original
+`Bplus` value determines every active selected gate bit tested.  This changes
+the live B moonshot from "find d3(B)" to "extract the B-line Kummer sequence
+`f3(B), f4(B), ...` and test whether those classes recur or couple."  That is
+the first B-lane mechanism that could genuinely amortize multiple half-losses.
+
 The first Belyi-normalized source family is now killed:
 [P27 Lambda Branch-Divisor Screen](evidence/p27_lambda_branch_divisor_screen_20260621.md).
 It tested `z^2=f(lambda)` with `deg_lambda(f)<=4`, where

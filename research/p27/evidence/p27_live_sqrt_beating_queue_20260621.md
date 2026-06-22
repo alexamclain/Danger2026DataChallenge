@@ -182,6 +182,13 @@ The nearest branch-support screens are negative: no degree-<=4 rational-linear
 support for d2 or d3 on the B-line, and no d3 support of the form one
 irreducible quadratic times <=2 rational linears in the promotion fields.  So
 the live B test is now exact Kummer-class/divisor extraction on `P1_B`.
+The B-line result is now multi-gate: extension counts over `GF(7^n)` and
+`GF(23^n)` keep legal B inside the core bucket with no d3/d4 mixed groups,
+while p27 train/heldout deep-descent probes show no mixed B groups through
+`d12`.  Counts remain field-sized, so this is not a sampler by itself.  The
+moonshot target is the sequence of B-line Kummer classes
+`f3(B), f4(B), f5(B), ...`; a recurrence or coupling among those classes is
+the first credible way for this lane to beat independent sqrt-scale half-loss.
 The two-step Kummer quotient screen is now negative too.  After adjoining the
 first root `Z0`, the next selector `S1`, and when available the second root
 `Z1`, all obvious selector/root pair systems are full-rank through degree 12 on
