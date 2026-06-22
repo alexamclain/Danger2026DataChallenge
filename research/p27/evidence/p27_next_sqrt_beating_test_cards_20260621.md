@@ -401,6 +401,17 @@ as the first CAS input for A-cover class extraction.  It records q1607/q1847/q20
 A-labeled d3/d4 rows plus the exact promote/kill criteria.
 ```
 
+A named-transform falsifier:
+[P27 A-Line Named-Transform Recurrence Screen](p27_a_line_named_transform_recurrence_20260622.md).
+
+```text
+The six visible A-branch S3 transforms preserving {-2,2,infinity} do not
+preserve or relate the selected A classes.  q1847 has zero non-identity d3
+coverage, and p27 train/heldout have zero non-identity d3..d8 coverage.  The
+A-cover route must be actual normalized-cover/Kummer-class extraction, not an
+orbit sampler or d_{j+1}(A)=d_j(T(A)) shortcut.
+```
+
 Updated kill rule:
 
 ```text

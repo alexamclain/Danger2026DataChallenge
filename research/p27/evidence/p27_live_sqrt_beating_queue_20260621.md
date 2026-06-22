@@ -185,6 +185,13 @@ heldout depth-14 survivor tail has only two rows.  q1607/q1847/q2087 show
 local plateaus, but their kill gates disagree.  This kills GPU sign-word
 bucket hunting from short conic words alone; use GPU only for much larger
 bounded confirmation or for a direct legal-pullback sampler.
+The A-line named-transform follow-up is also negative:
+[P27 A-Line Named-Transform Recurrence Screen](p27_a_line_named_transform_recurrence_20260622.md).
+The visible S3 transforms preserving `A in {-2,2,infinity}` do not preserve
+the selected A-domain or relate successive selected gates.  q1847 has zero
+non-identity d3 coverage, while p27 train/heldout have zero non-identity
+d3..d8 coverage.  This kills visible A-orbit and branch-S3 recurrence
+shortcuts; continue only with normalized-cover/Kummer-class extraction.
 The B/K-enhanced legal-pullback screen gives one positive staging coordinate:
 [P27 Conic-Pair B/K-Enhanced Pullback Screen](p27_conic_pair_b_enhanced_pullback_20260622.md).
 It finds the expected `B^2+c^2=4` and the stable surface

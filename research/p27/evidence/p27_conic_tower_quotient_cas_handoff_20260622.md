@@ -134,6 +134,11 @@ A-polynomial scans.
 [P27 A-Level Kummer Extraction Packet](p27_a_level_kummer_extraction_packet_20260622.md)
 is the concrete input packet for this pass.  Its JSON fixture records
 q1607/q1847/q2087 A-labeled d3/d4 rows and the exact promote/kill criteria.
+[P27 A-Line Named-Transform Recurrence Screen](p27_a_line_named_transform_recurrence_20260622.md)
+then closes the cheap visible branch-orbit shortcut: the S3 transforms
+preserving `A in {-2,2,infinity}` do not preserve or relate the selected
+A-classes in guard fields or p27 samples.  The CAS pass should compute the
+actual normalized-cover/Kummer classes, not an A-branch orbit quotient.
 
 If a quotient/source map appears, measure:
 
@@ -173,6 +178,7 @@ sampler pays the same constant/q legal-incidence denominator as free (R,L)
 - [P27 A-Level Prefix Descent](p27_a_level_prefix_descent_20260622.md)
 - [P27 A-Line Character Support Screen](p27_a_line_character_support_20260622.md)
 - [P27 A-Level Kummer Extraction Packet](p27_a_level_kummer_extraction_packet_20260622.md)
+- [P27 A-Line Named-Transform Recurrence Screen](p27_a_line_named_transform_recurrence_20260622.md)
 - [P27 Conic-Pair Two-Step Kummer Screen](p27_conic_pair_two_step_kummer_20260621.md)
 - [P27 Conic-Pair Two-Step Kummer Trivariate Screen](p27_conic_pair_two_step_kummer_trivar_20260621.md)
 

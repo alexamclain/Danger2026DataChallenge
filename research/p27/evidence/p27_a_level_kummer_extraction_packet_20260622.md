@@ -124,9 +124,16 @@ continue = compare d3/d4/d5/d6 classes once a normalized model exists
 continue = use p27 d3..d10 prefix data as routing evidence, not as equations
 
 kill = blind A polynomial scans without a divisor reason
+kill = visible A-branch S3 orbit/recurrence shortcut
 kill = GPU A-bucket production before a source law exists
 kill = treating finite-field rows alone as a proof of recurrence
 ```
+
+Update: [P27 A-Line Named-Transform Recurrence Screen](p27_a_line_named_transform_recurrence_20260622.md)
+tests the fixed S3 action preserving `A in {-2,2,infinity}`.  Non-identity
+transforms have zero d3 coverage in q1847 and zero d3..d8 coverage in p27
+train/heldout samples, so the CAS pass should not spend time on visible
+branch-orbit recurrences.
 
 ```text
 p27_a_level_kummer_extraction_packet_rows=1/1

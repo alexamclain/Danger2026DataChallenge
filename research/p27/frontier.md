@@ -858,6 +858,14 @@ asks CAS to recover the normalized A-cover, branch divisor data, genus, and
 successive Kummer-class relations.  This is the next first-class conic/A-line
 test that could still beat sqrt if it finds recurrence rather than fresh
 half-covers.
+The cheap visible-transform recurrence is now closed:
+[P27 A-Line Named-Transform Recurrence Screen](evidence/p27_a_line_named_transform_recurrence_20260622.md).
+The S3 group preserving the visible A-branch set `{-2,2,infinity}` almost
+never maps the legal A-domain back to itself.  In q1847 it has zero
+non-identity d3 coverage, and in p27 `4000 + 4000` train/heldout samples every
+non-identity transform has zero d3..d8 coverage.  So the A-line route cannot
+be promoted through a visible orbit or `d_{j+1}(A)=d_j(T(A))` shortcut; it
+still needs actual normalized-cover/Kummer-class extraction.
 The direct sign-word coupling telemetry now agrees:
 [P27 Conic Sign-Word Coupling Probe](evidence/p27_conic_signword_coupling_20260622.md).
 On `4000 + 4000` p27 train/heldout unique `(A,x5)` rows, the all-plus conic

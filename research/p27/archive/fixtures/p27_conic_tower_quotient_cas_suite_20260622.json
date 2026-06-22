@@ -38,26 +38,33 @@
       "research/p27/evidence/p27_conic_pair_d5_tower_20260621.md",
       "research/p27/evidence/p27_conic_tower_sign_quotient_20260622.md",
       "research/p27/evidence/p27_conic_tower_d6_a_descent_20260622.md",
-      "research/p27/evidence/p27_a_level_prefix_descent_20260622.md",
-      "research/p27/evidence/p27_a_line_character_support_20260622.md",
-      "research/p27/evidence/p27_a_level_kummer_extraction_packet_20260622.md"
+            "research/p27/evidence/p27_a_level_prefix_descent_20260622.md",
+            "research/p27/evidence/p27_a_line_character_support_20260622.md",
+            "research/p27/evidence/p27_a_level_kummer_extraction_packet_20260622.md",
+            "research/p27/evidence/p27_a_line_named_transform_recurrence_20260622.md"
     ],
     "killed_shortcuts": [
       "research/p27/evidence/p27_conic_pair_lowdegree_relation_20260621.md",
       "research/p27/evidence/p27_conic_pair_invariant_relation_20260621.md",
       "research/p27/evidence/p27_conic_pair_kummer_z_relation_20260621.md",
       "research/p27/evidence/p27_conic_pair_two_step_kummer_20260621.md",
-      "research/p27/evidence/p27_conic_pair_two_step_kummer_trivar_20260621.md",
-      "research/p27/evidence/p27_conic_signword_coupling_20260622.md",
-      "research/p27/evidence/p27_a_line_character_support_20260622.md"
+            "research/p27/evidence/p27_conic_pair_two_step_kummer_trivar_20260621.md",
+            "research/p27/evidence/p27_conic_signword_coupling_20260622.md",
+            "research/p27/evidence/p27_a_line_character_support_20260622.md",
+            "research/p27/evidence/p27_a_line_named_transform_recurrence_20260622.md"
     ]
   },
   "machine_fixtures": {
-    "a_level_kummer_packet": {
-      "generator": "research/p27/archive/gates/p27_a_level_kummer_extraction_packet.py",
-      "json": "research/p27/archive/fixtures/p27_a_level_kummer_extraction_packet_20260622.json",
-      "text": "research/p27/archive/probe_outputs/p27_a_level_kummer_extraction_packet_20260622.txt"
-    }
+        "a_level_kummer_packet": {
+            "generator": "research/p27/archive/gates/p27_a_level_kummer_extraction_packet.py",
+            "json": "research/p27/archive/fixtures/p27_a_level_kummer_extraction_packet_20260622.json",
+            "text": "research/p27/archive/probe_outputs/p27_a_level_kummer_extraction_packet_20260622.txt"
+        },
+        "a_line_named_transform_screen": {
+            "generator": "research/p27/archive/gates/p27_a_line_named_transform_probe.py",
+            "small_field_text": "research/p27/archive/probe_outputs/p27_a_line_named_transform_probe_q1607_q1847_q2087_20260622.txt",
+            "p27_text": "research/p27/archive/probe_outputs/p27_a_line_named_transform_probe_p27_train_heldout_20260622.txt"
+        }
   },
   "tasks": [
     {
@@ -94,9 +101,10 @@
         "branch divisors/classes for the A-level d3 through d10 quadratic characters",
         "whether later d_j classes are pullbacks, translates, coboundaries, or iterates of earlier classes",
         "genus/component count of the common A-level cover carrying these characters",
-        "whether the class sequence gives a recurrence or sourceable walk controlling multiple selected gates",
-        "treat d11 through d14 as low-count routing evidence, not the first CAS target",
-        "do not retry visible degree <=4 A-line branch support without a new divisor reason"
+                "whether the class sequence gives a recurrence or sourceable walk controlling multiple selected gates",
+                "treat d11 through d14 as low-count routing evidence, not the first CAS target",
+                "do not retry visible degree <=4 A-line branch support without a new divisor reason",
+                "do not retry visible A-branch S3 orbit/recurrence shortcuts"
       ],
       "promote_if": "one low-genus/sourceable class or recurrence controls multiple selected gates beyond independent half-loss",
       "kill_if": "d3 through d10 are independent fresh half-covers on the normalized A-level object"
@@ -117,9 +125,10 @@
   ],
   "do_not_run": [
     "free random (R,L) production search",
-    "short conic sign-word bucket hunt",
-    "low-degree pair/triple coordinate scans already killed",
-    "GPU production from fixed conic prefixes without source-normalized lift"
+        "short conic sign-word bucket hunt",
+        "low-degree pair/triple coordinate scans already killed",
+        "visible A-branch S3 orbit or recurrence search",
+        "GPU production from fixed conic prefixes without source-normalized lift"
   ],
   "acceptance": {
     "promote": "A low-genus/sourceable quotient, reusable Kummer class, or direct legal tower sampler that compounds beyond constant-factor filtering.",
