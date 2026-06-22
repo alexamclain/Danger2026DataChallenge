@@ -30,13 +30,13 @@ function LiftPolynomial(Base)
     return P1!Evaluate(R, [ 0, S^2 - 2 ]);
 end function;
 
-function PrintFactorSummary(label, poly)
+procedure PrintFactorSummary(label, poly)
     Fac := Factorization(poly);
     print "RESULT", label, Degree(poly), #Fac;
     for item in Fac do
         print "RESULT", label cat "_factor", Degree(item[1]), item[2];
     end for;
-end function;
+end procedure;
 
 PW<W> := PolynomialRing(K);
 B := t^2 + 1;

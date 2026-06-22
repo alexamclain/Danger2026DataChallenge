@@ -1,0 +1,25 @@
+Magma V2.29-1     Mon Jun 22 2026 13:19:11 on agent-mini [Seed = 2116914636]
+
++-------------------------------------------------------------------+
+|       This copy of Magma has been made available through a        |
+|                   generous initiative of the                      |
+|                                                                   |
+|                         Simons Foundation                         |
+|                                                                   |
+| covering U.S. Colleges, Universities, Nonprofit Research entities,|
+|               and their students, faculty, and staff              |
++-------------------------------------------------------------------+
+
+Type ? for help.  Type <Ctrl>-D to quit.
+
+Loading file "research/p27/archive/fixtures/p27_trace_norm_dplus_u6_rowbit_fact\
+or_action_q607_magma.m"
+RESULT factor_action_domain_count 607 2 [ 16, 16 ]
+RESULT factor_action_domain_z_perm [ 2, 1 ]
+RESULT factor_action_domain_Sneg_perm [ 1, 2 ]
+RESULT factor_action_Aeta_count 607 1 4 [ 8, 8, 8, 8 ]
+RESULT factor_action_Aeta_rho_perm [ 2, 1, 4, 3 ]
+RESULT factor_action_Aeta_Sneg_perm [ 1, 2, 3, 4 ]
+RESULT p27_trace_norm_dplus_u6_rowbit_factor_action_q607 done
+
+Total time: 6.810 seconds, Total memory usage: 96.16MB

@@ -1,0 +1,23 @@
+Magma V2.29-1     Mon Jun 22 2026 13:10:02 on agent-mini [Seed = 1075035646]
+
++-------------------------------------------------------------------+
+|       This copy of Magma has been made available through a        |
+|                   generous initiative of the                      |
+|                                                                   |
+|                         Simons Foundation                         |
+|                                                                   |
+| covering U.S. Colleges, Universities, Nonprofit Research entities,|
+|               and their students, faculty, and staff              |
++-------------------------------------------------------------------+
+
+Type ? for help.  Type <Ctrl>-D to quit.
+
+Loading file "research/p27/archive/fixtures/p27_trace_norm_dplus_u6_rowbit_doma\
+inspin_factor_q31_magma.m"
+RESULT u6_rowbit_domainspin_q31_setup 31 1 2 5 2
+RESULT u6_rowbit_domainspin_q31 32 2
+RESULT u6_rowbit_domainspin_q31_factor 16 1
+RESULT u6_rowbit_domainspin_q31_factor 16 1
+RESULT p27_trace_norm_dplus_u6_rowbit_domainspin_factor_q31 done
+
+Total time: 0.710 seconds, Total memory usage: 32.09MB

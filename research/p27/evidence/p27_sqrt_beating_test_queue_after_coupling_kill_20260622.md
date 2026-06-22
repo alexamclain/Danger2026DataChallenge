@@ -280,6 +280,16 @@ stages the exact next factor tests over the H90 domain-spin cover and the
 factorization tiers, so the remaining factor/split question is an offline CAS
 task.
 
+Tenth follow-up:
+[P27 Trace/Norm Dplus U6 Row-Bit Local Magma Factor Split](p27_trace_norm_dplus_u6_rowbit_local_magma_factor_split_20260622.md)
+resolves that offline factor-degree question.  In q607/q1607/q1847/q2087,
+domain-spin splits the row-bit lift as `16+16`, and either Aeta sign splits it
+as `8+8+8+8`.  The q607/q1607 factor-action probe also shows `z -> -z`
+swapping the two domain factors, `rho -> -rho` swapping Aeta factors in pairs,
+and `S -> -S` fixing each tested factor.  This is the strongest positive
+row-bit structure so far.  The next queue item is Kummer/Prym identification
+of the factor labels, not another visible coordinate bucket.
+
 Eleventh update:
 [P27 Trace/Norm Dplus U6 Row-Bit H90 Point-Fiber Probe](p27_trace_norm_dplus_u6_rowbit_h90_pointfiber_20260622.md)
 finds a positive pointwise compatibility signal.  Over `q=263` and `q=607`,
@@ -366,6 +376,8 @@ the soluble-side sign descends to u=4/(t-1/t)^2, but not to monic degree <=2
 u-divisors.
 monic cubic support is absent in q607/q1607/q1847/q2087, and q1847 monic
 quartic support is absent.
+local Magma shows domain-spin/Aeta factor-degree drops: 32 -> 16+16 -> 8x4,
+with stable z/rho/S factor-action permutations.
 ```
 
 The missing object is the map or obstruction between the H90 model and the
@@ -436,7 +448,7 @@ continue = offline CAS comparison of gamma4/gamma5
 continue = use mixed-f5 guard fields as repeated-gamma regression data
 continue = fused/native Dplus pricing with A/d3 telemetry columns
 continue = Dplus/H90 A_eta versus pulled-back A-level d3 class comparison
-continue = CAS/Prym extraction of the descended U6 row bit
+continue = factor-action/Kummer extraction from the U6 row-bit 16+16 and 8x4 splits
 continue = explain H90 rational-point uniformity of the row bit
 continue = prove/extract the Ktrace local-solubility boundary
 continue = divisor/theta/Prym extraction after the small-coset kill
@@ -451,6 +463,7 @@ kill = visible t/A/X branch-atom products as Dplus row-bit sources
 kill = H90 elliptic-base factorization as the easy Dplus row-bit source
 kill = visible H90/domain-spin/Aeta product characters through weight 4
 kill = online Magma for domain-spin/Aeta row-bit factorization
+kill = treating the domain-spin/Aeta split alone as a source sampler
 kill = standalone H90 payload sign screens
 kill = simple H90/rho coboundary bucket screens for chi(x6)
 kill = treating Ktrace solubility alone as a production source

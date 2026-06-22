@@ -4,8 +4,16 @@ Date: 2026-06-22
 
 ## Claim
 
-The next decisive Dplus row-bit test is now staged, but online Magma cannot
-run it at the `q=607` size.
+This boundary has now been resolved by local Magma.  The earlier online Magma
+attempts timed out, but the local runs show a stable factor drop:
+
+```text
+over domain-spin z:      32 -> 16 + 16
+over A_eta, eta = +/-1:  32 -> 8 + 8 + 8 + 8
+```
+
+See the follow-up:
+[P27 Trace/Norm Dplus U6 Row-Bit Local Magma Factor Split](p27_trace_norm_dplus_u6_rowbit_local_magma_factor_split_20260622.md).
 
 After the row-bit lift stayed irreducible over `F_607(t)` and over the H90
 elliptic base `E_h90`, the next bridge test is:
@@ -85,6 +93,21 @@ Kill:
 irreducible degree 32 over L and over both eta A_eta covers.
 ```
 
+## Local Magma Follow-Up
+
+Local Magma resolves the pending offline ask.  In q607/q1607/q1847/q2087,
+the domain-spin cover splits the row-bit lift into two degree-16 factors, and
+either Aeta sign splits it into four degree-8 factors.
+
+This promotes a new exact CAS task:
+
+```text
+compute the deck action on the factor set;
+identify whether the degree-8 factor labels carry the pulled-back A-level
+d3/x6 Kummer class or a separate Prym class;
+only then ask GPU for factor-label telemetry.
+```
+
 ## Interpretation
 
 This is not a mathematical negative yet.  It is a boundary:
@@ -94,9 +117,11 @@ online Magma can factor the row-bit lift over E_h90;
 online Magma cannot factor it after adjoining the H90 spin/payload layers.
 ```
 
-The next concrete CAS ask is therefore narrow enough for an offline Magma/Sage
-agent: run these fixtures, first `q=31`, then `q=607`, and report factor
-degrees over the domain-spin and `A_eta` covers.
+The next concrete CAS ask is no longer "get factor degrees."  It is now:
+
+```text
+extract the factor-action/Kummer class from the 16+16 and 8+8+8+8 splits.
+```
 
 Point-fiber follow-up:
 [P27 Trace/Norm Dplus U6 Row-Bit H90 Point-Fiber Probe](p27_trace_norm_dplus_u6_rowbit_h90_pointfiber_20260622.md)
@@ -109,12 +134,13 @@ local solubility, or selected-source side conditions.
 ## Continue / Kill
 
 ```text
-continue = offline factorization over domain-spin and A_eta covers
-continue = if any factor drops, extract the quotient/Prym/source relation
-continue = if irreducible, record a sharp independence obstruction
+continue = factor-action extraction over domain-spin and Aeta covers
+continue = compare the degree-8 factor labels with A-level d3/x6
+continue = if sourceable, turn the factor label into bounded GPU telemetry
 
 kill = using online Magma for this factorization tier
 kill = assuming E_h90 irreducibility already proves A_eta-cover irreducibility
+kill = treating the factor split alone as a sampler
 ```
 
 ```text

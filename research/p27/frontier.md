@@ -427,6 +427,15 @@ The next factorization tier is staged but above the online-calculator limit:
 The exact domain-spin and `eta=+1` `A_eta` factor fixtures return `504` over
 `q=607`; this is now an offline Magma/Sage ask to decide whether the row-bit
 lift drops degree after adjoining `z` or `rho`.
+Local Magma now resolves that ask:
+[P27 Trace/Norm Dplus U6 Row-Bit Local Magma Factor Split](evidence/p27_trace_norm_dplus_u6_rowbit_local_magma_factor_split_20260622.md).
+Across q607/q1607/q1847/q2087, the row-bit lift factors as `16+16` over the
+domain-spin cover and as `8+8+8+8` after adjoining either `A_eta` sign.  This
+is positive structure, not yet a sampler.  A q607/q1607 action probe shows
+`z -> -z` swaps the two degree-16 factors, `rho -> -rho` swaps the degree-8
+factors in pairs, and `S -> -S` fixes each tested factor.  The next test is
+Kummer/Prym identification of these factor labels, then comparison to
+pulled-back A-level `d3=chi(x6)`.
 The point-fiber probe adds a positive compatibility signal:
 [P27 Trace/Norm Dplus U6 Row-Bit H90 Point-Fiber Probe](evidence/p27_trace_norm_dplus_u6_rowbit_h90_pointfiber_20260622.md).
 In small fields, the row bit can be mixed over `t` alone, but all mixed `t`
@@ -2267,7 +2276,13 @@ then shows the named elliptic quotient still leaves the lift irreducible of
 degree `32` over `q=607`.
 The staged domain-spin/Aeta factor tests
 [P27 Trace/Norm Dplus U6 Row-Bit Aeta Factor Boundary](evidence/p27_trace_norm_dplus_u6_rowbit_aeta_factor_boundary_20260622.md)
-are the next offline CAS checkpoint; online Magma times out at that tier.
+are now resolved by local Magma:
+[P27 Trace/Norm Dplus U6 Row-Bit Local Magma Factor Split](evidence/p27_trace_norm_dplus_u6_rowbit_local_magma_factor_split_20260622.md).
+In q607/q1607/q1847/q2087, domain-spin gives `16+16`, and either `A_eta`
+sign gives `8+8+8+8`.  The tested deck actions are stable:
+`z` swaps degree-16 factors, `rho` swaps degree-8 factors in pairs, and
+`S -> -S` fixes each tested factor.  Keep this as a factor-action/Kummer-class
+extraction lane; do not treat the split alone as a GPU sampler.
 The point-fiber companion
 [P27 Trace/Norm Dplus U6 Row-Bit H90 Point-Fiber Probe](evidence/p27_trace_norm_dplus_u6_rowbit_h90_pointfiber_20260622.md)
 keeps this alive by showing uniform rational H90/domain-spin/Aeta fibers in

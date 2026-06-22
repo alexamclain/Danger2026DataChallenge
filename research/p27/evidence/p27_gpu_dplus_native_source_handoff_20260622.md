@@ -47,6 +47,7 @@ research/p27/evidence/p27_trace_norm_dplus_u6_rowbit_h90_solubility_boundary_202
 research/p27/evidence/p27_trace_norm_dplus_u6_rowbit_h90_group_coset_20260622.md
 research/p27/evidence/p27_trace_norm_dplus_u6_rowbit_h90_u_divisor_20260622.md
 research/p27/evidence/p27_trace_norm_dplus_u6_rowbit_h90_u_cubic_quartic_20260622.md
+research/p27/evidence/p27_trace_norm_dplus_u6_rowbit_local_magma_factor_split_20260622.md
 research/p27/evidence/p27_trace_norm_elliptic_line_divisor_screen_20260622.md
 ```
 
@@ -307,6 +308,22 @@ q1847 after a full `6300872423`-triple scan.  Do not spend GPU time on q1847
 `u` cubic/quartic exact support.  q2087 quartic is optional closure only if a
 GPU is already warm; the main row-bit ask is now non-visible
 divisor/theta/Prym extraction or telemetry for a named class supplied by CAS.
+
+Local Magma factor-split update:
+[P27 Trace/Norm Dplus U6 Row-Bit Local Magma Factor Split](p27_trace_norm_dplus_u6_rowbit_local_magma_factor_split_20260622.md)
+finds stable factor drops in q607/q1607/q1847/q2087:
+
+```text
+domain-spin: 32 -> 16 + 16
+Aeta eta=+1: 32 -> 8 + 8 + 8 + 8
+Aeta eta=-1: 32 -> 8 + 8 + 8 + 8
+```
+
+The q607/q1607 action probe shows `z -> -z` swaps the two domain-spin factors,
+`rho -> -rho` swaps Aeta degree-8 factors in pairs, and `S -> -S` fixes each
+tested factor.  This is not itself a GPU sampler.  It is a CAS-to-GPU bridge:
+if CAS extracts a cheap factor label or Kummer class from the degree-8 factors,
+GPU should emit that label against d3/d4/d5 in same-stream Dplus telemetry.
 
 If cheap, fused telemetry should therefore emit:
 
