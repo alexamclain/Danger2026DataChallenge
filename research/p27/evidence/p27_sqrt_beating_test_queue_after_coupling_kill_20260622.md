@@ -185,6 +185,19 @@ the same A.  Therefore the remaining bridge test is not to find `A`; it is to
 compare the pulled-back A-level `d3` Kummer class with the H90 second-layer
 payload `A_eta = U_eta + z*W_eta`.
 
+Second update:
+[P27 Trace/Norm Dplus X6/U-Class](p27_trace_norm_dplus_x6_uclass_20260622.md)
+sharpens the pulled-back `d3` class.  After `Dplus`, each y has four
+reciprocal-reduced `U=x6+1/x6` values and eight `x6` values; `chi(U+A)=+1`
+on every tested branch, so:
+
+```text
+d3 = chi(x6)
+```
+
+on the whole second-halving sheet.  The live comparison is therefore between
+the `x6` squareclass and the H90 payload `A_eta`, not a generic d3 sign.
+
 This is the most concrete bridge test after the coupling kill.  We know:
 
 ```text
@@ -213,7 +226,8 @@ Required analysis:
 
 ```text
 use the exact map A = (t - 1/t)^4/4 - 2
-compare the induced d3 class with A_eta = U_eta + z*W_eta
+use d3 = chi(x6) after U=x6+1/x6 and chi(U+A)=+1
+compare the x6 squareclass with A_eta = U_eta + z*W_eta
 record whether the pulled-back A-level d3 class equals, differs by coboundary,
 or shares a quotient/Prym factor with the H90 class
 ```

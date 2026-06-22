@@ -211,6 +211,21 @@ So a fused-Dplus GPU telemetry mode can emit A-level columns from `y/t`
 without first materializing root-dependent candidate A.  This is only a
 telemetry/source-accounting convenience; it does not by itself predict `d3/d4`.
 
+Second-layer update:
+[P27 Trace/Norm Dplus X6/U-Class](p27_trace_norm_dplus_x6_uclass_20260622.md)
+shows that on same-stream `Dplus` rows:
+
+```text
+U = x6 + 1/x6
+chi(U + A) = +1
+d3 = chi(x6)
+```
+
+Each analyzed y has four `U` values and eight `x6` values, with all eight
+`x6` branches sharing one squareclass.  A GPU telemetry mode should emit
+`x6`/`U` only if it is supporting the class comparison with H90 `A_eta`;
+this is not yet a production bucket.
+
 Promotion:
 
 ```text

@@ -2147,6 +2147,12 @@ candidate A, so the next cross-lane question is not finding `A`; it is comparing
 the pulled-back A-level `d3` class with the H90 payload
 `A_eta = U_eta + z*W_eta`.  The bridge is not a source shrink by itself:
 `d3/d4` remain balanced half-gates in the probe.
+The pulled-back `d3` class is now sharper:
+[P27 Trace/Norm Dplus X6/U-Class](evidence/p27_trace_norm_dplus_x6_uclass_20260622.md).
+After `Dplus`, every tested y has four `U=x6+1/x6` values and eight `x6`
+values; `chi(U+A)=+1`, so `d3=chi(x6)` across the whole second-halving sheet.
+This makes the next CAS comparison `x6` squareclass versus H90 `A_eta`, not an
+undifferentiated A-level sign.
 
 ### Card 4c: K-Line Fit Significance
 

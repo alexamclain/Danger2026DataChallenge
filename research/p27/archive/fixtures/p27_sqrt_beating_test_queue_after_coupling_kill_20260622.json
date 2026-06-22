@@ -92,12 +92,24 @@
         "A + 2 = ((t^2 - 1)^2/(2*t^2))^2",
         "A - 2 = -(((t^2 + 1)*w)/(2*t^2))^2"
       ],
+      "post_dplus_d3_reduction": {
+        "status": "x6/U class isolated by research/p27/evidence/p27_trace_norm_dplus_x6_uclass_20260622.md",
+        "facts": [
+          "each analyzed Dplus y has 4 U=x6+1/x6 values",
+          "each U fiber has the reciprocal pair x6,1/x6",
+          "each analyzed Dplus y has 8 x6 values",
+          "chi(U+A)=+1 on every tested branch",
+          "d3=chi(x6) on the second-halving sheet",
+          "all 8 x6 branches over one y have the same squareclass"
+        ]
+      },
       "inputs": [
         "research/p27/evidence/p27_trace_norm_dplus_h90_quartic_model_20260622.md",
         "research/p27/evidence/p27_trace_norm_dplus_h90_branch_class_20260622.md",
         "research/p27/evidence/p27_trace_norm_dplus_h90_payload_screen_20260622.md",
         "research/p27/evidence/p27_trace_norm_dplus_a_descent_20260622.md",
-        "research/p27/evidence/p27_trace_norm_dplus_a_coordinate_bridge_20260622.md"
+        "research/p27/evidence/p27_trace_norm_dplus_a_coordinate_bridge_20260622.md",
+        "research/p27/evidence/p27_trace_norm_dplus_x6_uclass_20260622.md"
       ],
       "same_stream_columns": [
         "y",
@@ -111,11 +123,12 @@
       ],
       "required_analysis": [
         "use exact A = (t - 1/t)^4/4 - 2",
-        "compare the induced d3 class with A_eta = U_eta + z*W_eta",
-        "record whether pulled-back A-level d3 equals, differs by coboundary from, or shares a quotient/Prym factor with A_eta"
+        "use U=x6+1/x6 and the observed/target identity chi(U+A)=+1",
+        "compare the x6 squareclass d3=chi(x6) with A_eta = U_eta + z*W_eta",
+        "record whether the x6 squareclass equals, differs by coboundary from, or shares a quotient/Prym factor with A_eta"
       ],
-      "promote_if": "quotient/Prym/coboundary relation between A_eta and pulled-back A-level d3, or sourceable recurrence controlling later gates",
-      "kill_if": "pulled-back A-level d3 class is independent of the H90 payload except through ordinary candidate materialization"
+      "promote_if": "quotient/Prym/coboundary relation between A_eta and the x6 squareclass, or sourceable recurrence controlling later gates",
+      "kill_if": "x6 squareclass is independent of the H90 payload and successive A-level classes"
     }
   ],
   "priority_order": [
