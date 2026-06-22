@@ -416,6 +416,12 @@ Products through weight `5` in the exact resultant branch factors
 exact match.  The best heldout-ranked product is only weak `-A` bias and does
 not hold train/heldout.  This keeps the Dplus row bit as a non-visible
 CAS/Prym/theta target.
+The nearest H90 quotient shortcut is negative:
+[P27 Trace/Norm Dplus U6 Row-Bit H90 Factor Test](evidence/p27_trace_norm_dplus_u6_rowbit_h90_factor_20260622.md).
+Online Magma over `q=607` factors the row-bit lift as one degree-32 factor
+over `F_607(t)` and still one degree-32 factor over
+`E_h90: w^2=-(t^2+2t-1)(t^2-2t-1)`.  So the named elliptic quotient does not
+split or source the row bit; only a non-obvious Prym/theta relation remains.
 The class comparison now has a routing result:
 [P27 Trace/Norm Dplus A-Descent Bridge](evidence/p27_trace_norm_dplus_a_descent_20260622.md).
 Across three p27 seed groups, post-Dplus `d3` and `d4` after `d3=+1` have zero
@@ -2240,6 +2246,10 @@ build a branch-choice GPU bucket.
 The visible branch-atom source is killed by
 [P27 Trace/Norm Dplus U6 Row-Bit Branch-Atom Screen](evidence/p27_trace_norm_dplus_u6_rowbit_branch_atom_20260622.md);
 continue only with a non-visible quotient/Prym/source relation.
+The H90 factor test
+[P27 Trace/Norm Dplus U6 Row-Bit H90 Factor Test](evidence/p27_trace_norm_dplus_u6_rowbit_h90_factor_20260622.md)
+then shows the named elliptic quotient still leaves the lift irreducible of
+degree `32` over `q=607`.
 The small-field descent audit then sets the boundary:
 [P27 Trace/Norm Dplus Reciprocal Tower Small-Field Descent](evidence/p27_trace_norm_dplus_reciprocal_tower_smallfield_descent_20260622.md).
 Over q607/q1607/q1847, the naked reciprocal tower has mixed `A`/`B` fibers for

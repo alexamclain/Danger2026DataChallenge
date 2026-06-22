@@ -145,6 +145,12 @@ The first quadratic resolvent is just the domain-spin cover.  The new Kummer
 payload is the second-layer class `rho^2=U_eta+z*W_eta`, with odd branch
 divisor degree `16` over the genus-5 cover.
 
+Follow-up row-bit factor test:
+[P27 Trace/Norm Dplus U6 Row-Bit H90 Factor Test](p27_trace_norm_dplus_u6_rowbit_h90_factor_20260622.md).
+The post-Dplus `U6` row-bit lift remains irreducible of degree `32` after
+base change from `F_607(t)` to `E_h90/F_607(t)`.  Thus the elliptic quotient
+does not by itself split or source the row bit.
+
 ## Interpretation
 
 Positive:
@@ -201,6 +207,7 @@ continue = use alpha orbit telemetry only as validation
 kill = generic CurveQuotient calls as the main online-Magma path
 kill = treating four orientation components as separate classes after eta collapse
 kill = searching for an additional first-resolvent shortcut
+kill = H90 elliptic-base factorization as the easy row-bit source
 kill = treating E_h90 alone as a Dplus source
 kill = GPU production from this lane without a source map or d3 coupling
 ```

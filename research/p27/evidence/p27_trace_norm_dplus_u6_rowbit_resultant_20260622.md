@@ -203,6 +203,12 @@ heldout-ranked product is equivalent to `-A`, with
 `4062/8199` train and `4152/8061` heldout, so it is not stable enough to
 promote.
 
+H90 factor follow-up:
+[P27 Trace/Norm Dplus U6 Row-Bit H90 Factor Test](p27_trace_norm_dplus_u6_rowbit_h90_factor_20260622.md)
+tests whether the same degree-32 row-bit lift factors after adjoining the H90
+elliptic coordinate `w`.  Over `F_607(t,w)`, Magma reports one degree-32
+factor, so the named H90 quotient does not split the row-bit cover.
+
 ## Continue / Kill
 
 ```text
@@ -213,6 +219,7 @@ continue = fused/native Dplus pricing with one d3 row-bit column
 kill = U6 branch-choice buckets after Dplus
 kill = visible rational factorization of R(t,S^2-2) over Q as the easy source
 kill = visible t/A/X branch-atom products through weight 5
+kill = H90 elliptic-base factorization as the easy row-bit source
 kill = GPU production from chi(U6+2) before the row bit is sourced
 ```
 
