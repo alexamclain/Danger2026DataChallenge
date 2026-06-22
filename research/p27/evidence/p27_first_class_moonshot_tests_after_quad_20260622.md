@@ -232,10 +232,19 @@ selector rates (`GF(7^5)` at `0.5169`, `GF(23^3)` at `0.5207`), while smaller
 skews are field-local artifacts.  This demotes `gamma^2=U+2` as a direct
 source/GPU bucket; it remains only as a Kummer/divisor class to normalize.
 
+Charted reduced-cover Magma follow-up:
+[P27 B-Line Reduced-Cover Charted Magma Staging](p27_b_line_reduced_cover_charted_magma_20260622.md).
+The web-calculator wall is now localized.  Product saturation fails first at
+the `X=0` artifact; using `X*iX=1` makes the no-R reduced cover saturate as a
+dimension-1 scheme, while the fully localized compactD_R model is already
+dimension 1 with 12 equations.  This is the current concrete offline CAS
+object for the first-class B-line lane.
+
 Required computation:
 
 ```text
 normalize the reduced 4-u / 8-x legal+d3 cover over P1_B/P1_A/P1_Sroot
+start from the localized complete-intersection chart rather than product saturation
 include x6^2-U*x6+1 and gamma^2=U+2 in the offline branch/class extraction
 impose the selected-source legal/core cut before using all-chart lift buckets
 extract branch divisor degree, support field degrees, components, genus

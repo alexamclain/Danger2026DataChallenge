@@ -1150,6 +1150,15 @@ extensions have near-half selector rates (`0.5169` for `GF(7^5)`, `0.5207`
 for `GF(23^3)`).  This says `gamma^2=U+2` is coupled to the ordinary
 materialized `x6` denominator, not a cheaper source stratum.  Continue with
 offline Kummer/divisor extraction only; do not run gamma bucket production.
+The reduced-cover CAS staging now has a better attack order:
+[P27 B-Line Reduced-Cover Charted Magma Staging](evidence/p27_b_line_reduced_cover_charted_magma_20260622.md).
+Online q7 product saturation fails first at `Saturation(J,X)`.  Adding an
+explicit chart variable `X*iX=1` makes the no-R reduced cover saturate as a
+dimension-1 scheme with 6 basis equations; the full compactD_R model is
+dimension 1 before remaining saturation; and the fully localized full model is
+dimension 1 with 12 equations and no saturation stage.  This is now the
+concrete offline Magma/Sage object for the B-line moonshot: normalize the
+localized complete intersection, then compute compactD/gamma branch classes.
 The B-line visible two-gate quartic shortcut is closed as well:
 [P27 B-Line Gate4-Prefix Quartic q1847 Screen](evidence/p27_b_line_gate4_prefix_quartic_q1847_screen_20260622.md).
 It scans `6,300,872,423` q1847 coefficient triples for

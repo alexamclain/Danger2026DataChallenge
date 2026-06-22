@@ -128,6 +128,16 @@ terminates at the memory limit during `Saturation(I, bad)`.  This moves the
 next step to offline Magma/Sage or specialized elimination; it does not promote
 GPU production.
 
+Charted Magma follow-up:
+[P27 B-Line Reduced-Cover Charted Magma Staging](p27_b_line_reduced_cover_charted_magma_20260622.md).
+The first saturation wall is specifically the `X=0` artifact.  Replacing it
+with `X*iX=1` lets the no-R reduced cover saturate online as a dimension-1
+scheme with 6 basis equations.  The full compactD_R cover is dimension 1
+before saturation, and the fully localized full model, with inverse variables
+for all denominator factors, is immediately dimension 1 with 12 equations.
+Thus the next offline attack should normalize the localized model or the
+X-inverted no-R base, not restart product saturation.
+
 Direct finite-field point-count follow-up:
 [P27 B-Line Reduced-Cover Point Count](p27_b_line_reduced_cover_pointcount_20260622.md).
 The `U_next` layer is a clean two-valued cover over the legal chart in the
@@ -151,11 +161,13 @@ The online calculator cannot provide that output for the reduced q7 fixture.
 ```text
 continue = run CAS normalization of the reduced_Unext cover over P1_Bline
 continue = use offline Magma/Sage or elimination; online Magma is too small
+continue = prefer the localized complete-intersection chart over product saturation
 continue = attach x6-materialization and gamma^2=Unext+2 to the offline model
 continue = compute genus/components/quotients and compare against the fixture
 continue = only then pull back f4/f3
 
 kill = full reverse z/Y normalization as the first CAS attempt if reduced_Unext is feasible
+kill = saturation-first online workflow after the charted Magma smoke
 kill = GPU production before reduced-cover genus/sourceability is known
 ```
 

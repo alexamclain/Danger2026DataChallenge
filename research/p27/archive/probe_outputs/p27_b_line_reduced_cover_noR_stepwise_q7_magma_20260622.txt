@@ -1,0 +1,10 @@
+BREDUCED_NOR_STEP_START 7 2 5
+BREDUCED_NOR_STEP_BEFORE 1 X
+
+Current total memory usage: 364.2MB, failed memory request: 32.0MB
+System Error: User memory limit has been reached
+
+Current total memory usage: 364.2MB, failed memory request: 32.0MB
+System Error: User memory limit has been reached
+RESULT p27_b_line_reduced_cover_noR_stepwise_q7 done
+

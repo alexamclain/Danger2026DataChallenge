@@ -1,0 +1,19 @@
+BREDUCED_NOR_START 7
+
+Current total memory usage: 365.5MB, failed memory request: 32.0MB
+System Error: User memory limit has been reached
+
+>> S := Scheme(A6, Basis(Isat));
+                         ^
+Runtime error: Variable 'Isat' has not been initialized
+
+
+>> print "BREDUCED_NOR_SATURATION", Dimension(S), #Basis(Isat);
+                                              ^
+User error: Identifier 'S' has not been declared or assigned
+
+>>     C := Curve(S);
+                  ^
+User error: Identifier 'S' has not been declared or assigned
+RESULT p27_b_line_reduced_cover_noR_q7 done
+
