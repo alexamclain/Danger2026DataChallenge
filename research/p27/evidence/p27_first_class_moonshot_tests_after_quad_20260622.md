@@ -200,6 +200,14 @@ not expose the `f4` split in `(B,H)`, `(B,tau)`, `(B,H^2)`, or `(B,tau_sym)`.
 The triple relations are the tautologies `H^2=u+2` and the Cayley relation
 between `H` and `tau`, not gamma source laws.
 
+Gamma class handoff:
+[P27 B-Line Gamma Class Handoff](p27_b_line_gamma_class_handoff_20260622.md).
+The q1607/q1847/q2087 fixture now records the staged object
+`A=B^2-2`, `H^2=u+2`, `F_A(u,v)=0`, and `gamma^2=v+2`.  In every active row
+the four generic transition roots split into two materialized and two
+discarded roots, while `chi(v+2)` is constant on the generic roots.  This is
+the current input for CAS/expert work; do not restart visible coordinate scans.
+
 Required computation:
 
 ```text
@@ -207,10 +215,9 @@ normalize the reduced 4-u / 8-x legal+d3 cover over P1_B/P1_A/P1_Sroot
 include x6^2-U*x6+1 and gamma^2=U+2 in the offline branch/class extraction
 impose the selected-source legal/core cut before using all-chart lift buckets
 extract branch divisor degree, support field degrees, components, genus
-if d3 is tractable, normalize F_A(u,v)=0 plus rho^2=v^2-4 and compare gamma^2=v+2 in the Kummer group
-compute the H90 quotient/coboundary for gamma and ask whether it telescopes or recurs
-after the quotient collapses to f3, compute gamma over the f3/H90 layer
-extract the gamma divisor/Kummer class over the normalized f3/H90 layer
+normalize F_A(u,v)=0 over the f3-plus B-u-H layer and extract div(v+2) modulo squares
+classify gamma as pullback, coboundary, translate, quotient class, or fresh half-cover
+repeat the staged construction after f4-plus and compare the f5/f4 class with gamma
 use f5/f6 only as regression checks until larger data supports them
 ```
 
@@ -374,6 +381,7 @@ Run GPU now only for bounded telemetry or for a named sampler:
 ```text
 allowed:
   A/B/K/Sroot deep-prefix telemetry with d3..dN emitted same-stream
+  B-line gamma-class telemetry emitting B,u,H,v,gamma and the next staged class
   recurrence sign-word telemetry with raw source denominator reported
   direct sampler A/B test after CAS names a sampler/source map
 
@@ -402,6 +410,7 @@ continue = trace/norm half-norm phase expert ask
 continue = GPU only as bounded telemetry or for a named sampler
 continue = offline Magma/Sage for the reduced B-line cover
 continue = offline Magma/Sage comparison of the second reduced f4/f3 cover
+continue = extract the gamma class from the staged handoff before any more B buckets
 
 kill = more one-bit filters as moonshots
 kill = norm/trace/power-sum selectors for the B-line d3 fiber
@@ -411,6 +420,7 @@ kill = treating chi(v^2-4) or chi(v+A) materialization as a GPU/source win
 kill = naive gamma norm or visible pair-invariant predictors as source laws
 kill = explicit H90 quotient as a standalone f4 source law
 kill = visible f3/H90-layer pair-coordinate source laws for gamma
+kill = treating rho/materialization as the gamma source law
 kill = online Magma as the reduced-cover extraction engine
 kill = more visible quartic/branch-map bucket searches without a theorem
 kill = treating source-conditional 2x lift as sqrt-beating

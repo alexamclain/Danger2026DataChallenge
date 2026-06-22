@@ -1046,6 +1046,14 @@ After adjoining both sheets `H=+/-(h+1/h)`, stable pair-coordinate screens in
 `(B,H)`, `(B,tau)`, `(B,H^2)`, and `(B,tau_sym)` do not expose `f4`.  The live
 B-line task is now actual divisor/Kummer-class extraction for `gamma` over the
 normalized f3/H90 layer, not another visible coordinate bucket.
+That extraction now has a compact handoff:
+[P27 B-Line Gamma Class Handoff](evidence/p27_b_line_gamma_class_handoff_20260622.md).
+It freezes q1607/q1847/q2087 rows for the staged object
+`A=B^2-2`, `H^2=u+2`, `F_A(u,v)=0`, and `gamma^2=v+2`.  Every active parent
+has four generic transition roots, two materialized roots, two discarded roots,
+constant `chi(v+2)` on the generic roots, and zero failures in the norm/H90
+identities.  The next accepted B-line result must classify this `gamma` class
+as pullback/coboundary/quotient/recurrent, or kill it as a fresh half-cover.
 The B-line visible two-gate quartic shortcut is closed as well:
 [P27 B-Line Gate4-Prefix Quartic q1847 Screen](evidence/p27_b_line_gate4_prefix_quartic_q1847_screen_20260622.md).
 It scans `6,300,872,423` q1847 coefficient triples for

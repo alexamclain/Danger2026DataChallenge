@@ -158,6 +158,15 @@ screens in `(B,H)`, `(B,tau)`, `(B,H^2)`, and `(B,tau_sym)` do not expose the
 `f4` split.  The remaining B-line work is true divisor/Kummer-class extraction
 for `gamma`, not visible coordinate fitting.
 
+Gamma class handoff:
+[P27 B-Line Gamma Class Handoff](p27_b_line_gamma_class_handoff_20260622.md)
+freezes the staged q1607/q1847/q2087 rows for
+`A=B^2-2`, `H^2=u+2`, `F_A(u,v)=0`, and `gamma^2=v+2`.  Every active `(B,u)`
+parent has four generic transition roots, two materialized roots, and two
+discarded roots; `chi(v+2)` is constant on the generic roots.  The next B-line
+pass should classify the resulting gamma class, then compare it with the next
+f5/f4 class.
+
 Negative:
 
 ```text
@@ -188,6 +197,7 @@ continue = use the staged transition/materialization/gamma model for f4/f3
 continue = compute an explicit H90 quotient for gamma^2=v+2
 continue = compute gamma over the f3/H90 layer as the remaining class
 continue = extract the gamma divisor/Kummer class over that layer
+continue = use the gamma class handoff as the current CAS/GPU packet
 continue = compare f4/f3 as a class relation after f3 is named
 continue = use f5/f6 rows only as tail/regression checks for an extracted class
 
