@@ -1,0 +1,105 @@
+p27 K-line selected A-map relation probe
+source rows: d2 square and d3 all-plus with x6=z^2
+question: is selected A a low-degree relation over K or Sroot?
+pair_degrees = [2, 4, 6, 8, 10, 12, 14, 16]
+triple_degrees = [2, 4, 6, 8]
+p27_sample_stats:
+  oriented_candidates_raw = 4000
+  sample_candidate_invalid_not_nonsplit = 2070
+  sample_compact_not_target = 1977
+  sample_no_t = 2010
+  sample_no_w = 4083
+  sample_pair_incomplete = 1035
+  sample_rows = 1000
+  sample_x_draws = 8099
+p27_selected_stats:
+  candidates = 4000
+  d2_plus_candidates = 4000
+  unique_A = 242
+  unique_K = 242
+  unique_K_A = 242
+  unique_K_A_x5 = 484
+  unique_K_x5 = 484
+  unique_S = 484
+  unique_S_A = 484
+  unique_S_A_x5 = 968
+  unique_S_x5 = 968
+  x6_branches = 8000
+  x6_nonsquare = 4128
+  z_rows = 7744
+p27:
+  rows = 7744
+p27_K_A:
+  transform_rows = 7744
+  transform_unique = 242
+  transform_degenerate = 0
+  deg2: monomials=6 rank=6 nullity=0 forced=0 extra=0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg6: monomials=28 rank=28 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=42 nullity=3 forced=0 extra=3
+  deg8_relation_terms=13 self_mismatches=0
+  deg10: monomials=66 rank=56 nullity=10 forced=0 extra=10
+  deg10_relation_terms=13 self_mismatches=0
+  deg12: monomials=91 rank=70 nullity=21 forced=0 extra=21
+  deg12_relation_terms=13 self_mismatches=0
+  deg14: monomials=120 rank=84 nullity=36 forced=0 extra=36
+  deg14_relation_terms=13 self_mismatches=0
+  deg16: monomials=153 rank=98 nullity=55 forced=0 extra=55
+  deg16_relation_terms=13 self_mismatches=0
+p27_S_A:
+  transform_rows = 7744
+  transform_unique = 484
+  transform_degenerate = 0
+  deg2: monomials=6 rank=6 nullity=0 forced=0 extra=0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg6: monomials=28 rank=28 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+  deg10: monomials=66 rank=66 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=88 nullity=3 forced=0 extra=3
+  deg12_relation_terms=13 self_mismatches=0
+  deg14: monomials=120 rank=110 nullity=10 forced=0 extra=10
+  deg14_relation_terms=13 self_mismatches=0
+  deg16: monomials=153 rank=132 nullity=21 forced=0 extra=21
+  deg16_relation_terms=13 self_mismatches=0
+p27_K_x5:
+  transform_rows = 7744
+  transform_unique = 484
+  transform_degenerate = 0
+  deg2: monomials=6 rank=6 nullity=0 forced=0 extra=0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg6: monomials=28 rank=28 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+  deg10: monomials=66 rank=66 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+  deg14: monomials=120 rank=120 nullity=0 forced=0 extra=0
+  deg16: monomials=153 rank=153 nullity=0 forced=0 extra=0
+p27_S_x5:
+  transform_rows = 7744
+  transform_unique = 968
+  transform_degenerate = 0
+  deg2: monomials=6 rank=6 nullity=0 forced=0 extra=0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg6: monomials=28 rank=28 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+  deg10: monomials=66 rank=66 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+  deg14: monomials=120 rank=120 nullity=0 forced=0 extra=0
+  deg16: monomials=153 rank=153 nullity=0 forced=0 extra=0
+p27_K_A_x5:
+  transform_rows = 7744
+  transform_unique = 484
+  transform_degenerate = 0
+  deg2: monomials=10 rank=10 nullity=0 forced=0 extra=0
+  deg4: monomials=35 rank=35 nullity=0 forced=0 extra=0
+  deg6: monomials=84 rank=84 nullity=0 forced=0 extra=0
+  deg8: monomials=165 rank=161 nullity=4 forced=0 extra=4
+  deg8_relation_terms=13 self_mismatches=0
+p27_S_A_x5:
+  transform_rows = 7744
+  transform_unique = 968
+  transform_degenerate = 0
+  deg2: monomials=10 rank=10 nullity=0 forced=0 extra=0
+  deg4: monomials=35 rank=35 nullity=0 forced=0 extra=0
+  deg6: monomials=84 rank=84 nullity=0 forced=0 extra=0
+  deg8: monomials=165 rank=165 nullity=0 forced=0 extra=0
+p27_kline_a_map_relation_probe_rows=1/1

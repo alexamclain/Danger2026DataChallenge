@@ -145,6 +145,16 @@ fiber has 64 rows and one selected A, while every Sroot fiber has 32 rows and
 one selected A; all tracked fiber histograms have zero anomalous fibers.  This
 promotes Sroot as the cleaner CAS coordinate and kills rational-fiber anomaly
 search as a source of sqrt beating.
+The K/A graph is now explicit.  With `L=K^2`, all d2-plus rows satisfy
+`64(A-2)^2(A+2)L^2 + 64(A+2)(A+14)(3A+10)L - (A-2)^4 = 0`, with
+discriminant `256(A+2)(A+6)^2(A^2+60A+132)^2`.  This is the first-half source
+identity, not the d3 selector: p27 train/heldout and q607/q1607/q1847/q2087
+show formula-zero on both d3-plus and d3-minus rows.
+The GPU quadratic-gate pass then validated the recurrence formula
+`chi(r_j^2+c*r_j+1)` at scale, with `7,874,715` checked gates and zero
+mismatches across gates 3-8.  It still did not improve source-normalized
+target rate, because the recurrence-coordinate domain costs about the same
+factor that it recovers conditionally.
 The two-step Kummer quotient screen is now negative too.  After adjoining the
 first root `Z0`, the next selector `S1`, and when available the second root
 `Z1`, all obvious selector/root pair systems are full-rank through degree 12 on
@@ -159,12 +169,10 @@ coordinate.
 Concrete next K/S test:
 
 ```text
-offline Magma/Sage should now target E': V^2=U^3+4U:
-  do staged elimination for the legal pullback:
-    first A=2-c^2 and x5=r0^2,
-    then both conjugate conics and the r_next transition
-  compute whether the resulting legal source has low genus/sourceable
-    components, or remains a high-complexity cover
+offline Magma/Sage should now target the explicit base curve:
+  64(A-2)^2(A+2)L^2 + 64(A+2)(A+14)(3A+10)L - (A-2)^4 = 0
+  with L=K^2 and K=Sroot^2
+then add the d3 reverse-root cover and compute branch/genus data over P1_Sroot
 ```
 
 Promotion bar:

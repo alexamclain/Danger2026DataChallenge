@@ -1,0 +1,229 @@
+p27 K-line selected A-map relation extractor
+relations are trained over p27 and checked on independent heldout rows
+systems = [('K_A', 8), ('S_A', 12), ('K_A_x5', 8)]
+train_sample_stats:
+  oriented_candidates_raw = 4000
+  sample_candidate_invalid_not_nonsplit = 2070
+  sample_compact_not_target = 1977
+  sample_no_t = 2010
+  sample_no_w = 4083
+  sample_pair_incomplete = 1035
+  sample_rows = 1000
+  sample_x_draws = 8099
+train_selected_stats:
+  candidates = 4000
+  d2_plus_candidates = 4000
+  unique_A = 242
+  unique_K = 242
+  unique_K_A = 242
+  unique_K_A_x5 = 484
+  unique_K_x5 = 484
+  unique_S = 484
+  unique_S_A = 484
+  unique_S_A_x5 = 968
+  unique_S_x5 = 968
+  x6_branches = 8000
+  x6_nonsquare = 4128
+  z_rows = 7744
+heldout_sample_stats:
+  oriented_candidates_raw = 4000
+  sample_candidate_invalid_not_nonsplit = 1934
+  sample_compact_not_target = 2117
+  sample_no_t = 2024
+  sample_no_w = 4060
+  sample_pair_incomplete = 967
+  sample_rows = 1000
+  sample_x_draws = 8126
+heldout_selected_stats:
+  candidates = 4000
+  d2_plus_candidates = 4000
+  unique_A = 263
+  unique_K = 263
+  unique_K_A = 263
+  unique_K_A_x5 = 526
+  unique_K_x5 = 526
+  unique_S = 526
+  unique_S_A = 526
+  unique_S_A_x5 = 1052
+  unique_S_x5 = 1052
+  x6_branches = 8000
+  x6_nonsquare = 3792
+  z_rows = 8416
+K_A_deg8_train_nullspace:
+  extra_nullity = 3
+  forced_nullity = 0
+  monomials = 45
+  nullity = 3
+  points = 242
+  rank = 42
+K_A_deg8_heldout_points = 263
+K_A_deg8_basis0: train_bad=0/242 heldout_bad=0/263 terms=13
+relation K_A degree=8 basis_index=0 terms=13
+  coeff=-250000000000000000000000026 monomial=(0, 0)
+  coeff=-500000000000000000000000051 monomial=(0, 1)
+  coeff=-375000000000000000000000039 monomial=(0, 2)
+  coeff=280 monomial=(2, 0)
+  coeff=125000000000000000000000013 monomial=(0, 3)
+  coeff=244 monomial=(2, 1)
+  coeff=359375000000000000000000037 monomial=(0, 4)
+  coeff=58 monomial=(2, 2)
+  coeff=8 monomial=(4, 0)
+  coeff=3 monomial=(2, 3)
+  coeff=-4 monomial=(4, 1)
+  coeff=-2 monomial=(4, 2)
+  coeff=1 monomial=(4, 3)
+K_A_deg8_basis1: train_bad=0/242 heldout_bad=0/263 terms=14
+relation K_A degree=8 basis_index=1 terms=14
+  coeff=500000000000000000000000051 monomial=(0, 0)
+  coeff=-250000000000000000000000025 monomial=(0, 1)
+  coeff=-250000000000000000000000026 monomial=(0, 2)
+  coeff=560 monomial=(2, 0)
+  coeff=-125000000000000000000000013 monomial=(0, 3)
+  coeff=768 monomial=(2, 1)
+  coeff=-156250000000000000000000016 monomial=(0, 4)
+  coeff=360 monomial=(2, 2)
+  coeff=16 monomial=(4, 0)
+  coeff=359375000000000000000000037 monomial=(0, 5)
+  coeff=64 monomial=(2, 3)
+  coeff=3 monomial=(2, 4)
+  coeff=-8 monomial=(4, 2)
+  coeff=1 monomial=(4, 4)
+K_A_deg8_basis2: train_bad=0/242 heldout_bad=0/263 terms=13
+relation K_A degree=8 basis_index=2 terms=13
+  coeff=-250000000000000000000000026 monomial=(1, 0)
+  coeff=-500000000000000000000000051 monomial=(1, 1)
+  coeff=-375000000000000000000000039 monomial=(1, 2)
+  coeff=280 monomial=(3, 0)
+  coeff=125000000000000000000000013 monomial=(1, 3)
+  coeff=244 monomial=(3, 1)
+  coeff=359375000000000000000000037 monomial=(1, 4)
+  coeff=58 monomial=(3, 2)
+  coeff=8 monomial=(5, 0)
+  coeff=3 monomial=(3, 3)
+  coeff=-4 monomial=(5, 1)
+  coeff=-2 monomial=(5, 2)
+  coeff=1 monomial=(5, 3)
+S_A_deg12_train_nullspace:
+  extra_nullity = 3
+  forced_nullity = 0
+  monomials = 91
+  nullity = 3
+  points = 484
+  rank = 88
+S_A_deg12_heldout_points = 526
+S_A_deg12_basis0: train_bad=0/484 heldout_bad=0/526 terms=13
+relation S_A degree=12 basis_index=0 terms=13
+  coeff=-250000000000000000000000026 monomial=(0, 0)
+  coeff=-500000000000000000000000051 monomial=(0, 1)
+  coeff=-375000000000000000000000039 monomial=(0, 2)
+  coeff=125000000000000000000000013 monomial=(0, 3)
+  coeff=359375000000000000000000037 monomial=(0, 4)
+  coeff=280 monomial=(4, 0)
+  coeff=244 monomial=(4, 1)
+  coeff=58 monomial=(4, 2)
+  coeff=3 monomial=(4, 3)
+  coeff=8 monomial=(8, 0)
+  coeff=-4 monomial=(8, 1)
+  coeff=-2 monomial=(8, 2)
+  coeff=1 monomial=(8, 3)
+S_A_deg12_basis1: train_bad=0/484 heldout_bad=0/526 terms=14
+relation S_A degree=12 basis_index=1 terms=14
+  coeff=500000000000000000000000051 monomial=(0, 0)
+  coeff=-250000000000000000000000025 monomial=(0, 1)
+  coeff=-250000000000000000000000026 monomial=(0, 2)
+  coeff=-125000000000000000000000013 monomial=(0, 3)
+  coeff=-156250000000000000000000016 monomial=(0, 4)
+  coeff=560 monomial=(4, 0)
+  coeff=359375000000000000000000037 monomial=(0, 5)
+  coeff=768 monomial=(4, 1)
+  coeff=360 monomial=(4, 2)
+  coeff=64 monomial=(4, 3)
+  coeff=3 monomial=(4, 4)
+  coeff=16 monomial=(8, 0)
+  coeff=-8 monomial=(8, 2)
+  coeff=1 monomial=(8, 4)
+S_A_deg12_basis2: train_bad=0/484 heldout_bad=0/526 terms=13
+relation S_A degree=12 basis_index=2 terms=13
+  coeff=-250000000000000000000000026 monomial=(1, 0)
+  coeff=-500000000000000000000000051 monomial=(1, 1)
+  coeff=-375000000000000000000000039 monomial=(1, 2)
+  coeff=125000000000000000000000013 monomial=(1, 3)
+  coeff=359375000000000000000000037 monomial=(1, 4)
+  coeff=280 monomial=(5, 0)
+  coeff=244 monomial=(5, 1)
+  coeff=58 monomial=(5, 2)
+  coeff=3 monomial=(5, 3)
+  coeff=8 monomial=(9, 0)
+  coeff=-4 monomial=(9, 1)
+  coeff=-2 monomial=(9, 2)
+  coeff=1 monomial=(9, 3)
+K_A_x5_deg8_train_nullspace:
+  extra_nullity = 4
+  forced_nullity = 0
+  monomials = 165
+  nullity = 4
+  points = 484
+  rank = 161
+K_A_x5_deg8_heldout_points = 526
+K_A_x5_deg8_basis0: train_bad=0/484 heldout_bad=0/526 terms=13
+relation K_A_x5 degree=8 basis_index=0 terms=13
+  coeff=-250000000000000000000000026 monomial=(0, 0, 0)
+  coeff=-500000000000000000000000051 monomial=(0, 1, 0)
+  coeff=-375000000000000000000000039 monomial=(0, 2, 0)
+  coeff=280 monomial=(2, 0, 0)
+  coeff=125000000000000000000000013 monomial=(0, 3, 0)
+  coeff=244 monomial=(2, 1, 0)
+  coeff=359375000000000000000000037 monomial=(0, 4, 0)
+  coeff=58 monomial=(2, 2, 0)
+  coeff=8 monomial=(4, 0, 0)
+  coeff=3 monomial=(2, 3, 0)
+  coeff=-4 monomial=(4, 1, 0)
+  coeff=-2 monomial=(4, 2, 0)
+  coeff=1 monomial=(4, 3, 0)
+K_A_x5_deg8_basis1: train_bad=0/484 heldout_bad=0/526 terms=13
+relation K_A_x5 degree=8 basis_index=1 terms=13
+  coeff=-250000000000000000000000026 monomial=(0, 0, 1)
+  coeff=-500000000000000000000000051 monomial=(0, 1, 1)
+  coeff=-375000000000000000000000039 monomial=(0, 2, 1)
+  coeff=280 monomial=(2, 0, 1)
+  coeff=125000000000000000000000013 monomial=(0, 3, 1)
+  coeff=244 monomial=(2, 1, 1)
+  coeff=359375000000000000000000037 monomial=(0, 4, 1)
+  coeff=58 monomial=(2, 2, 1)
+  coeff=8 monomial=(4, 0, 1)
+  coeff=3 monomial=(2, 3, 1)
+  coeff=-4 monomial=(4, 1, 1)
+  coeff=-2 monomial=(4, 2, 1)
+  coeff=1 monomial=(4, 3, 1)
+K_A_x5_deg8_basis2: train_bad=0/484 heldout_bad=0/526 terms=14
+relation K_A_x5 degree=8 basis_index=2 terms=14
+  coeff=500000000000000000000000051 monomial=(0, 0, 0)
+  coeff=-250000000000000000000000025 monomial=(0, 1, 0)
+  coeff=-250000000000000000000000026 monomial=(0, 2, 0)
+  coeff=560 monomial=(2, 0, 0)
+  coeff=-125000000000000000000000013 monomial=(0, 3, 0)
+  coeff=768 monomial=(2, 1, 0)
+  coeff=-156250000000000000000000016 monomial=(0, 4, 0)
+  coeff=360 monomial=(2, 2, 0)
+  coeff=16 monomial=(4, 0, 0)
+  coeff=359375000000000000000000037 monomial=(0, 5, 0)
+  coeff=64 monomial=(2, 3, 0)
+  coeff=3 monomial=(2, 4, 0)
+  coeff=-8 monomial=(4, 2, 0)
+  coeff=1 monomial=(4, 4, 0)
+K_A_x5_deg8_basis3: train_bad=0/484 heldout_bad=0/526 terms=13
+relation K_A_x5 degree=8 basis_index=3 terms=13
+  coeff=-250000000000000000000000026 monomial=(1, 0, 0)
+  coeff=-500000000000000000000000051 monomial=(1, 1, 0)
+  coeff=-375000000000000000000000039 monomial=(1, 2, 0)
+  coeff=280 monomial=(3, 0, 0)
+  coeff=125000000000000000000000013 monomial=(1, 3, 0)
+  coeff=244 monomial=(3, 1, 0)
+  coeff=359375000000000000000000037 monomial=(1, 4, 0)
+  coeff=58 monomial=(3, 2, 0)
+  coeff=8 monomial=(5, 0, 0)
+  coeff=3 monomial=(3, 3, 0)
+  coeff=-4 monomial=(5, 1, 0)
+  coeff=-2 monomial=(5, 2, 0)
+  coeff=1 monomial=(5, 3, 0)
+p27_kline_a_map_relation_extract_rows=1/1

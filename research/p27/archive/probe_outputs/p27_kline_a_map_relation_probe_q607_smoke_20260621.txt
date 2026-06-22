@@ -1,0 +1,71 @@
+p27 K-line selected A-map relation probe
+source rows: d2 square and d3 all-plus with x6=z^2
+question: is selected A a low-degree relation over K or Sroot?
+pair_degrees = [2, 4, 6, 8]
+triple_degrees = [2, 4]
+q=607:
+q607_enum_stats:
+  compact_not_target = 293
+  no_label2_candidate = 184
+q607_selected_stats:
+  candidates = 512
+  d2_plus_candidates = 512
+  unique_A = 16
+  unique_K = 16
+  unique_K_A = 16
+  unique_K_A_x5 = 64
+  unique_K_x5 = 64
+  unique_S = 32
+  unique_S_A = 32
+  unique_S_A_x5 = 128
+  unique_S_x5 = 128
+  x6_branches = 1024
+  x6_nonsquare = 512
+  z_rows = 1024
+q607:
+  rows = 1024
+q607_K_A:
+  transform_rows = 1024
+  transform_unique = 16
+  transform_degenerate = 0
+  deg2: monomials=6 rank=6 nullity=0 forced=0 extra=0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg6: monomials=28 rank=16 nullity=12 forced=12 extra=0
+  deg8: monomials=45 rank=16 nullity=29 forced=29 extra=0
+q607_S_A:
+  transform_rows = 1024
+  transform_unique = 32
+  transform_degenerate = 0
+  deg2: monomials=6 rank=6 nullity=0 forced=0 extra=0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg6: monomials=28 rank=28 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=32 nullity=13 forced=13 extra=0
+q607_K_x5:
+  transform_rows = 1024
+  transform_unique = 64
+  transform_degenerate = 0
+  deg2: monomials=6 rank=6 nullity=0 forced=0 extra=0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg6: monomials=28 rank=28 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+q607_S_x5:
+  transform_rows = 1024
+  transform_unique = 128
+  transform_degenerate = 0
+  deg2: monomials=6 rank=6 nullity=0 forced=0 extra=0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg6: monomials=28 rank=28 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+q607_K_A_x5:
+  transform_rows = 1024
+  transform_unique = 64
+  transform_degenerate = 0
+  deg2: monomials=10 rank=10 nullity=0 forced=0 extra=0
+  deg4: monomials=35 rank=35 nullity=0 forced=0 extra=0
+q607_S_A_x5:
+  transform_rows = 1024
+  transform_unique = 128
+  transform_degenerate = 0
+  deg2: monomials=10 rank=10 nullity=0 forced=0 extra=0
+  deg4: monomials=35 rank=35 nullity=0 forced=0 extra=0
+p27_kline_a_map_relation_probe_rows=1/1

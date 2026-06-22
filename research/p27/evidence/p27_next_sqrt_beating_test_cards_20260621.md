@@ -907,6 +907,40 @@ Prioritize offline normalization over P1_Sroot with K as a quotient check.
 Do not run rational K/Sroot fiber-anomaly searches or GPU K/S buckets.
 ```
 
+K/A base-curve and GPU quadratic-gate update:
+[P27 K/A Map And GPU Quadratic-Gate Update](p27_kline_a_map_and_gpu_quad_20260622.md).
+
+```text
+With L=K^2, the d2/base source satisfies:
+  64(A-2)^2(A+2)L^2 + 64(A+2)(A+14)(3A+10)L - (A-2)^4 = 0
+
+discriminant_L:
+  256(A+2)(A+6)^2(A^2+60A+132)^2
+
+This explains the flat K/Sroot fibers but is not the d3 selector.  The formula
+vanishes on both d3-plus and d3-minus rows in p27 train/heldout and
+q607/q1607/q1847/q2087.
+```
+
+GPU result:
+
+```text
+branch: codex/add-cuda-p26-search
+commit: e153fd1 Add p27 quadratic gate GPU probe
+checked gates: 7,874,715
+gates: 3..8
+mismatches: 0
+source-normalized target rate: flat/slightly lower
+```
+
+Updated action:
+
+```text
+Do not run a larger production GPU search from this formula alone.
+Next GPU use requires either a direct legal-pullback sampler into the
+recurrence-coordinate domain or a measured multi-gate coupling law.
+```
+
 K/S first-half cover update:
 [P27 K/S First-Half Cover Magma Smoke](p27_ks_first_half_cover_magma_20260621.md).
 [P27 K/S First-Half Alpha-Lift Obstruction](p27_ks_first_half_alpha_lift_obstruction_20260621.md).

@@ -908,6 +908,22 @@ the promotion fields.  This makes Sroot the cleaner branch-extraction
 coordinate, but it also kills the hope that rational K/Sroot fiber anomalies
 are the sqrt-beating source.
 
+The K/A graph now has an exact equation and a matching GPU interpretation:
+[P27 K/A Map And GPU Quadratic-Gate Update](evidence/p27_kline_a_map_and_gpu_quad_20260622.md).
+With `L=K^2`, the first-half source satisfies
+`64(A-2)^2(A+2)L^2 + 64(A+2)(A+14)(3A+10)L - (A-2)^4 = 0`,
+whose discriminant in `L` is
+`256(A+2)(A+6)^2(A^2+60A+132)^2`.  This explains the clean K/S fibers and
+shows that Sroot is the natural first-half coordinate.  But the formula
+vanishes on both d3-plus and d3-minus d2-plus candidates in p27 train/heldout
+and q607/q1607/q1847/q2087, so it is not the missing d3 selector.  The new GPU
+quadratic-gate run then checked `7,874,715` gates across gates `3..8` with
+zero mismatches, but its recurrence-coordinate domain is only a conditional
+half-scope: source-normalized target rate remains flat or slightly lower.
+The next sqrt-beating test is therefore a direct legal-pullback/quotient
+sampler for this recurrence domain, or a coupling law across many
+`chi(r_j^2+c*r_j+1)` signs.
+
 The first Belyi-normalized source family is now killed:
 [P27 Lambda Branch-Divisor Screen](evidence/p27_lambda_branch_divisor_screen_20260621.md).
 It tested `z^2=f(lambda)` with `deg_lambda(f)<=4`, where
