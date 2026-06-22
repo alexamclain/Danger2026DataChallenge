@@ -274,6 +274,14 @@ Every full-coverage PGL2 map `B -> (aB+b)/(cB+d)` was tested for
 the best full-coverage maps are identity/raw d4-bias baselines.  This keeps
 the live B-line target on extracted Kummer classes `f3,f4,f5,...`, not
 degree-one B-map fitting.
+The natural hidden-`X` power-map loophole is now closed too:
+[P27 B-Line Power-Map Recurrence Screen](p27_b_line_power_recurrence_screen_20260622.md).
+It tests `B=8X^2/(X^2-1)^2` maps induced by `X -> X^m` for `m=2..6`, with
+all six Belyi symmetries on both sides.  There are no exact forward or reverse
+`d3/d4` recurrences in q1607/q1847/q2087, and the best forward coverage is
+only `7/28`, `12/45`, and `6/25`.  So even the principled B-line
+doubling/tripling correspondences do not supply the missing multi-gate
+coupling.
 The B-line result is now multi-gate: extension counts over `GF(7^n)` and
 `GF(23^n)` keep legal B inside the core bucket with no d3/d4 mixed groups,
 while p27 train/heldout deep-descent probes show no mixed B groups through

@@ -1196,6 +1196,14 @@ exact recurrences; the best full-coverage maps are identity maps scoring raw
 d4 majority bias (`19/28`, `26/45`, `18/25`).  So the B-line coupling target
 is extracted Kummer classes or a theorem-shaped higher correspondence, not
 degree-one rational B maps.
+The nearest theorem-shaped higher correspondence is now negative as well:
+[P27 B-Line Power-Map Recurrence Screen](evidence/p27_b_line_power_recurrence_screen_20260622.md).
+It tests the hidden-`X` maps induced by `X -> X^m` for `m=2..6`, with all
+Belyi branch symmetries on both sides.  No exact `d3 -> d4` or reverse
+recurrence appears in q1607/q1847/q2087, and the best maps cover only
+`7/28`, `12/45`, and `6/25` of the forward domains.  This closes the natural
+hidden-`X` doubling/tripling shortcut and leaves actual B-line
+Kummer/divisor-class extraction as the live route.
 
 The B-line target is now stronger than a one-bit descent:
 [P27 B-Line Extension Counts And Deep Descent](evidence/p27_b_line_extension_and_deep_descent_20260622.md).
