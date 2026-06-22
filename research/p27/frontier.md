@@ -1275,6 +1275,13 @@ Across `q = 23, 71, 103, 167, 199, 263`, gamma descends as
 `chi_base(Norm(Unext+2))`, is uniform per active base `B`, and matches the
 `16` versus `32` beta_U fiber-size split.  The next beta_U CAS test is divisor
 extraction for this norm class on the `chi(B)=+1` support.
+The norm map profile is sharper:
+[P27 B-Line No-R Beta_U Norm-Fiber Profile](evidence/p27_b_line_noR_betaU_norm_fiber_profile_20260622.md).
+In `23^2,71^2,103^2,167^2,199^2,263^2,311^2`, `gamma=+1` is exactly the
+low-support side of the norm map: each active `B` has `1` or `8` distinct
+`Norm(Unext+2)` values.  `gamma=-1` has `9`, `12`, `14`, or `16`.  This is a
+real branch/ramification target for CAS, but not a production sampler because
+the support count is obtained only after enumerating the beta_U fiber.
 The obvious plane-curve shortcut is now screened:
 [P27 B-Line No-R Beta_U Norm Relation Screen](evidence/p27_b_line_noR_betaU_norm_relation_20260622.md).
 `(B, Norm(Unext+2))` has no stable extra bidegree relation through `B12_N16`;

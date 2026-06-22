@@ -46,6 +46,8 @@ no-R B-orbit invariant screen = square Norm(B) support, no visible trace/norm ga
 no-R quadratic subcover classifier = W/T-only killed; beta_U and hidden_mixed remain
 no-R fixed-B character screen = beta_U support chi(B)=+1; no stable gamma law
 no-R beta_U norm descent = gamma is Norm(Unext+2), half-size/full-size fiber split
+no-R beta_U norm-fiber profile = gamma+ is exactly low norm-support degree
+    1 or 8, while gamma- has support degree 9,12,14,16 in tested q^2 fields
 no-R beta_U norm relation = no stable low-bidegree (B,Norm) plane curve
 no-R beta_U next-gate = gamma+ materializes cleanly but f4 is mixed inside every active B
 no-R beta_U f4 pair = x7-pair norm -4*(A*x6+1) exact, but no pair-level sampler
@@ -177,7 +179,22 @@ The finite-field signature to explain is:
 gamma = chi_base(N_B)
 gamma+ rows have 16 beta_U points over B
 gamma- rows have 32 beta_U points over B
+gamma+ rows have distinct N_B support size 1 or 8
+gamma- rows have distinct N_B support size 9, 12, 14, or 16
 ```
+
+The norm-support refinement is now a required beta_U regression check:
+
+```text
+research/p27/evidence/p27_b_line_noR_betaU_norm_fiber_profile_20260622.md
+```
+
+It has zero cutoff mismatches in
+`23^2,71^2,103^2,167^2,199^2,263^2,311^2`.  CAS should explain this as a
+branch/ramification profile of the norm map, or show that it is still a
+high-genus fresh Kummer layer after normalization.  Do not treat the support
+count itself as a GPU source; it is computed after enumerating the beta_U
+fiber.
 
 Do not ask for a small visible `(B, N_B)` plane equation as the main route:
 the relation screen is negative through bidegree `B12_N16` in the stable guard

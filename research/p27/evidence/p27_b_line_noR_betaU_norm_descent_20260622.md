@@ -91,6 +91,14 @@ gamma- rows: norm-value counts per B are 9, 12, 14, or 16
 This suggests the selected sign is tied to a splitting/branch profile inside
 the beta_U subcover, not to an arbitrary pointwise filter.
 
+Follow-up profile:
+[P27 B-Line No-R Beta_U Norm-Fiber Profile](p27_b_line_noR_betaU_norm_fiber_profile_20260622.md)
+confirms this in `23^2,71^2,103^2,167^2,199^2,263^2,311^2`.  The cutoff
+`distinct Norm(Unext+2) values per B <= 8` selects exactly the `gamma=+1`
+rows, while `> 8` selects exactly `gamma=-1`, with zero mismatches.  This
+promotes the beta_U subtest from a sign bucket to a norm-map
+branch/ramification target for CAS.
+
 Relation-screen follow-up:
 [P27 B-Line No-R Beta_U Norm Relation Screen](p27_b_line_noR_betaU_norm_relation_20260622.md).
 The named norm class does not collapse to a small visible plane curve in
@@ -146,11 +154,13 @@ low-genus quotient carrying gamma or coupling f3/f4.
 ```text
 continue = beta_U divisor/Kummer extraction for Norm(Unext+2)
 continue = explain gamma+ half-size vs gamma- full-size fiber split
+continue = explain the norm-support split 1/8 versus 9/12/14/16
 continue = compare the beta_U norm class with f4/f3 after normalization
 
 kill = treating chi(B)=+1 support alone as a sampler
 kill = treating norm descent alone as sqrt-beating
 kill = treating beta_U gamma=+1 as an f4/multi-gate sampler
+kill = treating distinct norm-value count as a production sampler
 kill = small visible (B, Norm(Unext+2)) plane curve through B12_N16
 kill = GPU production before the norm class becomes a named source map
 ```
