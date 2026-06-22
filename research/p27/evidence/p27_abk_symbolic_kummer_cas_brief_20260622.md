@@ -225,8 +225,11 @@ Next-layer finite-field follow-up:
 [P27 A/B/K F4/F5 Transition Count](p27_abk_f4_f5_transition_count_20260622.md).
 The same gamma-transition form repeats on the selected `f4=+1` component:
 `chi(W+2)` is constant across the generic four-root transition and matches the
-frozen `f5(B)` class in q1607/q1847/q2087.  Because those `f5` rows are
-one-sided field tails, this is a CAS class-comparison/regression result, not a
+frozen `f5(B)` class in q1607/q1847/q2087.
+Mixed-guard follow-up:
+[P27 A/B/K F4/F5 Mixed-Guard Transition](p27_abk_f4_f5_mixed_guard_20260622.md)
+extends this to q4999/q5783/q6007/q6247, where `f5(B)` has both signs, and
+still gets exact agreement.  This is a stronger CAS regression result, not a
 source law yet.
 
 P27 sample telemetry:

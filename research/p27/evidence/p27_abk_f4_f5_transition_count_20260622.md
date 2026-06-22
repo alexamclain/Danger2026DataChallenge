@@ -14,8 +14,7 @@ F_A(V,W) = 0
 have the same `chi(W+2)`, and that sign matches the frozen `f5(B)` class.
 
 This is a positive CAS-routing result.  It does **not** by itself promote a
-GPU production source, because the available guard-field `f5` rows are
-one-sided field tails:
+GPU production source.  The first guard fields had one-sided `f5` rows:
 
 ```text
 q1607: f5 is all plus on 19 B rows
@@ -27,9 +26,17 @@ So the right interpretation is:
 
 ```text
 the gamma-transition form recurs on the selected component;
-the field-tail signs are not yet a p27 source law;
 CAS should compare f4/f3 and f5/f4 as repeated Kummer classes.
 ```
+
+Mixed-guard update:
+[P27 A/B/K F4/F5 Mixed-Guard Transition](p27_abk_f4_f5_mixed_guard_20260622.md)
+extends the same check to `q4999,q5783,q6007,q6247`, where `f5` has both
+signs.  The exact transition survives: every selected `f4=+1` B row has
+`chi(W+2)=f5(B)` on all generic roots, with `gamma_matches_f5_rate=1.0`.
+So this result is no longer merely a one-sided small-field tail.  It is a
+stronger CAS regression for the repeated Kummer class, while still lacking a
+source denominator.
 
 ## Probe
 
@@ -121,7 +128,6 @@ This is exactly the kind of recurrence-shaped structure CAS should compare.
 Negative:
 
 ```text
-The observed f5 signs are one-sided and field-dependent in the small guard fields.
 This does not give a source denominator, direct sampler, or p27 heldout lift.
 It does not justify GPU production from B buckets or gamma signs.
 ```
@@ -149,7 +155,7 @@ This creates a better bounded telemetry request but not a production run:
 emit B, U, V, W, gamma_4, gamma_5, rho/orient splits, and raw source denominators
 on p27 samples;
 promote only if gamma_4/gamma_5 coupling improves target/source_draw;
-do not run large production from the guard-field one-sided f5 signs.
+do not run large production from guard-field gamma signs alone.
 ```
 
 P27 telemetry follow-up:
@@ -172,9 +178,10 @@ This is a clean kill for GPU production from the current sign-word coupling.
 ```text
 continue = CAS compare f4/f3 gamma with f5/f4 gamma
 continue = use this as a regression fixture for normalized selected components
+continue = include mixed-f5 q4999/q5783/q6007/q6247 as regression fields
 continue = bounded GPU telemetry can emit gamma_4/gamma_5 with denominators
 
-kill = reading q1607/q1847/q2087 one-sided f5 tails as a source law
+kill = reading exact mixed-guard transitions as a source law without a quotient/source
 kill = gamma bucket production without raw-source lift
 kill = materialization/orientation halves as production filters
 ```
@@ -182,6 +189,7 @@ kill = materialization/orientation halves as production filters
 ## Linked Artifacts
 
 - [P27 A/B/K F3/F4 Chart Count](p27_abk_f3_f4_chart_count_20260622.md)
+- [P27 A/B/K F4/F5 Mixed-Guard Transition](p27_abk_f4_f5_mixed_guard_20260622.md)
 - [P27 B-Line Second Reduced-Fiber Fixture](p27_b_line_second_reduced_fiber_20260622.md)
 - [P27 B-Line Kummer Fixture Packet](p27_b_line_kummer_fixture_packet_20260622.md)
 - [P27 B-Line Gamma Class Handoff](p27_b_line_gamma_class_handoff_20260622.md)

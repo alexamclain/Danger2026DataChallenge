@@ -2146,6 +2146,11 @@ On the selected `f4=+1` component, `chi(W+2)` is constant across
 `F_A(V,W)=0` and matches frozen `f5(B)` in q1607/q1847/q2087.  Because the
 guard-field `f5` rows are one-sided tails, this promotes CAS comparison of
 repeated gamma classes, not GPU production.
+The mixed-guard update removes that specific weakness:
+[P27 A/B/K F4/F5 Mixed-Guard Transition](evidence/p27_abk_f4_f5_mixed_guard_20260622.md).
+In q4999/q5783/q6007/q6247, `f5(B)` has both signs and the exact transition
+still holds on every selected B row.  This strengthens the repeated-Kummer
+CAS target, while p27/GPU telemetry still kills gamma bucket production.
 P27 telemetry now sets the practical boundary:
 [P27 Gamma-Chain 20k Telemetry](evidence/p27_gamma_chain_p27_20k_telemetry_20260622.md).
 On `20k + 20k` train/heldout samples, gamma products and V4 phase links stay

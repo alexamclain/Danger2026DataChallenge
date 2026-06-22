@@ -83,6 +83,13 @@ Does the repeated transition F_A(U,V), gamma^2=V+2 produce a reusable Kummer
 class, or does it add a fresh half-cover at each layer?
 ```
 
+Status update:
+[P27 A/B/K F4/F5 Mixed-Guard Transition](p27_abk_f4_f5_mixed_guard_20260622.md)
+shows the repeated transition is exact in mixed-`f5` guard fields
+`q4999,q5783,q6007,q6247`, not only in one-sided q1607/q1847/q2087 tails.
+This raises the priority of the offline class-comparison question, while
+GPU recurrence-coupling still kills current sign-word production.
+
 Inputs:
 
 ```text
@@ -306,6 +313,7 @@ through ordinary candidate materialization
 ```text
 continue = normalized A-level Kummer extraction
 continue = offline CAS comparison of gamma4/gamma5
+continue = use mixed-f5 guard fields as repeated-gamma regression data
 continue = fused/native Dplus pricing with A/d3 telemetry columns
 continue = Dplus/H90 A_eta versus pulled-back A-level d3 class comparison
 
