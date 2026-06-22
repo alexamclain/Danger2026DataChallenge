@@ -46,6 +46,7 @@ no-R quadratic subcover classifier = W/T-only killed; beta_U and hidden_mixed re
 no-R fixed-B character screen = beta_U support chi(B)=+1; no stable gamma law
 no-R beta_U norm descent = gamma is Norm(Unext+2), half-size/full-size fiber split
 no-R beta_U norm relation = no stable low-bidegree (B,Norm) plane curve
+no-R fixed-B norm comparison = hidden_mixed descends too, but its visible 32/64 split is chi(B), not gamma
 reduced lift visible classifier = killed
 gamma visible square triviality = killed
 oriented alpha/beta word = tautological, not a source
@@ -161,6 +162,20 @@ Do not ask for a small visible `(B, N_B)` plane equation as the main route:
 the relation screen is negative through bidegree `B12_N16` in the stable guard
 fields.  The task is divisor/Kummer extraction of `N_B`, not another blind
 low-degree scan.
+
+For `hidden_mixed_fixedB`, the same norm-descent comparison has zero
+finite-field mismatches and zero per-`B` sign conflicts, but it does not
+reproduce beta_U's selected `gamma`/fiber-size handle.  Its visible split is:
+
+```text
+chi(B)=+1 => 32 hidden_mixed points over B
+chi(B)=-1 => 64 hidden_mixed points over B
+```
+
+So run hidden_mixed only after beta_U unless the CAS engine can extract both
+classes at essentially the same cost.  The hidden_mixed promotion criterion is
+stricter: it must find a quotient/Prym/divisor class carrying `gamma`, not
+merely the `chi(B)` fiber-size split.
 
 4. Compute quotient/Prym structure under the available symmetries:
 

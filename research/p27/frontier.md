@@ -1272,6 +1272,15 @@ The obvious plane-curve shortcut is now screened:
 `(B, Norm(Unext+2))` has no stable extra bidegree relation through `B12_N16`;
 the lone `q=199` signal dies at `q=263` and `q=311`.  Keep beta_U as a
 divisor/Kummer extraction target, not a low-degree plane-curve sampler.
+The fixed-`B` comparison now explains why beta_U remains first in that queue:
+[P27 B-Line No-R Fixed-B Norm Comparison](evidence/p27_b_line_noR_fixedB_norm_comparison_20260622.md).
+Across `q = 23, 71, 103, 167, 199, 263, 311`, both beta_U and hidden_mixed
+have zero norm-descent mismatches and zero per-`B` sign conflicts.  But
+hidden_mixed's visible fiber split is `chi(B)` (`32` points for square `B`,
+`64` for nonsquare `B`), while beta_U's `16/32` split is controlled by
+`gamma` itself.  So hidden_mixed stays as a second-pass Kummer comparison; the
+first CAS extraction target is still beta_U `Norm(Unext+2)` on
+`chi(B)=+1` support.
 The B-line visible two-gate quartic shortcut is closed as well:
 [P27 B-Line Gate4-Prefix Quartic q1847 Screen](evidence/p27_b_line_gate4_prefix_quartic_q1847_screen_20260622.md).
 It scans `6,300,872,423` q1847 coefficient triples for
