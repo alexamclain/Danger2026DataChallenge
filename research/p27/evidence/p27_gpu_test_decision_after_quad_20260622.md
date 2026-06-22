@@ -295,19 +295,24 @@ do not run B-line deep-prefix telemetry as a large production hunt; it is a
 bounded structural feeder for recurrence or Kummer extraction
 ```
 
+The consolidated post-quad queue is:
+[P27 First-Class Moonshot Tests After Quadratic Probe](p27_first_class_moonshot_tests_after_quad_20260622.md).
+It supersedes quartic bucket production as a live GPU lane and keeps GPU work
+tied to bounded telemetry or a named sampler/source.
+
 ## Continue / Kill
 
 ```text
 continue = bounded GPU recurrence-coupling telemetry
 continue = direct legal-pullback sampler only after a quotient/sampler exists
 continue = CAS/math normalization of the d3 legal cover over P1_Sroot or P1_B
-continue = full B-line/K-line quartic exact-support GPU screen
 continue = bounded B-line deep-prefix telemetry if it can emit Bplus plus d3..dN
 
 kill = production GPU run from the quadratic formula alone
 kill = interpreting conditional 2x lift as source shrink
 kill = fixed-prefix GPU filters without target/source_draw improvement
 kill = short conic sign-word bucket searches without a new invariant
+kill = further B/K/lambda quartic bucket production without a new theorem
 kill = K-line even-quartic-only GPU screen
 kill = K-line Belyi-reciprocal-only GPU screen
 kill = B-line Belyi-involution-only GPU screen

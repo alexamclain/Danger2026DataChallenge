@@ -1631,6 +1631,15 @@ models in `(B,z)` and nearby branch-normalized coordinates through degree `20`
 in q1607/q1847/q2087.  This reinforces that the B-line path needs real
 normalization/genus extraction, not a GPU sampler from obvious B projections.
 
+The post-quad moonshot queue is now consolidated:
+[P27 First-Class Moonshot Tests After Quadratic Probe](evidence/p27_first_class_moonshot_tests_after_quad_20260622.md).
+After the GPU quadratic-gate validation and the q1847 B/K/lambda quartic
+closures, the first-class tests are B-line Kummer-sequence extraction, BSM
+staged legal-pullback normalization, K/Sroot branch-class extraction, and the
+trace/norm half-norm phase identity.  GPU is reserved for bounded telemetry or
+a named direct sampler; fixed one-bit filters and visible quartic buckets are
+not production moonshots.
+
 ### Card 4c: K-Line Fit Significance
 
 K-line exact fits now have a quantitative promotion rule:
