@@ -31,6 +31,7 @@ Latest evidence:
 [P27 E-Prime U-Cubic Exact Screen](p27_eprime_ucubic_exact_screen_20260621.md).
 [P27 E-Prime Reciprocal R-Quotient Branch Screen](p27_eprime_rquotient_branch_screen_20260621.md).
 [P27 S-Map Quartic Recurrence Probe](p27_smap_quartic_recurrence_20260621.md).
+[P27 Quadratic Gate Recurrence](p27_quadratic_gate_recurrence_20260621.md).
 
 Key result over tiny p27-signature field `q=7`:
 
@@ -72,17 +73,20 @@ all-plus step gives a quartic `F(Y)` in `Y=S_next^2`.  Guard fields show four
 `Y` roots on every d3-plus row, and either all four are squares or none are;
 this common root squareclass is exactly d4.  The nearby split class
 `chi(S^2+A-6)` and named quartic-factor span are flat on p27 heldout.
+The pair resolvent then collapses the tower to a repeated conic gate.  In
+coordinates `A=2-c^2`, `x=r^2`, the next gate is exactly
+`chi(r^2+c*r+1)`.  This matched p27 train/heldout through gates 3-8 and
+q1607/q1847/q2087 through gates 3-4, all with zero mismatches.
 ```
 
 Concrete next K/S test:
 
 ```text
 offline Magma/Sage should now target E': V^2=U^3+4U:
-  normalize the staged reciprocal r quotient of J
-  compute the divisor / Kummer class of r+2 on that quotient
-  derive the resolvent/theta/Kummer class giving the common squareclass of
-    roots of the S-map quartic F(Y)
-  d4 fresh-cover falsifier vs recurrence/sourceable transform
+  build the conic-chain source/pullback with A=2-c^2 and x=r^2
+  impose one or two gates h_j^2=r_j^2+c*r_j+1
+  compute whether the pullback to the legal X1(16)/compactD surface is low
+    genus/sourceable, or whether each gate remains a fresh independent cover
 ```
 
 Promotion bar:
@@ -97,7 +101,7 @@ Kill condition:
 ```text
 no low-genus quotient of the genus-37 layer, or d4 is a fresh unrelated cover
 no F_p descent of the sqrt(-1)-twisted alpha quotient
-no useful low-genus/function-field structure for the r+2 / S-map root class
+no useful low-genus/function-field structure for the conic-chain pullback
 ```
 
 ## Current Alpha Status

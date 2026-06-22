@@ -1,0 +1,76 @@
+p27 S-map pair-resolvent probe
+quadratic_pair = Y^2 + a1*Y + B
+a1 = -2*S^2 + 2*S*E, E^2=S^2-4
+root_squareclass = chi(-a1 + 2*sqrt(B))
+p27_train:
+  B_square = 24192
+  d3_not_plus = 5952
+  d4_-1 = 3016
+  d4_1 = 3032
+  resolvent_-1 = 3016
+  resolvent_1 = 3032
+  resolvent_matches_d4 = 6048
+  rows = 6048
+  sample_candidate_invalid_not_nonsplit = 23520
+  sample_compact_not_target = 23392
+  sample_no_t = 23514
+  sample_no_w = 46641
+  sample_pair_incomplete = 11760
+  sample_x_draws = 93731
+  sign_independent_resolvent = 6048
+  match_rate = 1.000000000
+p27_heldout:
+  B_square = 24352
+  d3_not_plus = 5912
+  d4_-1 = 3102
+  d4_1 = 2986
+  resolvent_-1 = 3102
+  resolvent_1 = 2986
+  resolvent_matches_d4 = 6088
+  rows = 6088
+  sample_candidate_invalid_not_nonsplit = 23586
+  sample_compact_not_target = 24085
+  sample_no_t = 24002
+  sample_no_w = 47898
+  sample_pair_incomplete = 11793
+  sample_x_draws = 95839
+  sign_independent_resolvent = 6088
+  match_rate = 1.000000000
+small_field_pair_resolvent_screens:
+q1607:
+  B_square = 1792
+  d4_-1 = 144
+  d4_1 = 304
+  enum_compact_not_target = 805
+  enum_no_label2_candidate = 408
+  resolvent_-1 = 144
+  resolvent_1 = 304
+  resolvent_matches_d4 = 448
+  rows = 448
+  sign_independent_resolvent = 448
+  match_rate = 1.000000000
+q1847:
+  B_square = 2880
+  d4_-1 = 416
+  d4_1 = 304
+  enum_compact_not_target = 873
+  enum_no_label2_candidate = 468
+  resolvent_-1 = 416
+  resolvent_1 = 304
+  resolvent_matches_d4 = 720
+  rows = 720
+  sign_independent_resolvent = 720
+  match_rate = 1.000000000
+q2087:
+  B_square = 1600
+  d4_-1 = 112
+  d4_1 = 288
+  enum_compact_not_target = 1109
+  enum_no_label2_candidate = 520
+  resolvent_-1 = 112
+  resolvent_1 = 288
+  resolvent_matches_d4 = 400
+  rows = 400
+  sign_independent_resolvent = 400
+  match_rate = 1.000000000
+p27_smap_pair_resolvent_probe_rows=1/1

@@ -322,6 +322,51 @@ common squareclass of the four roots of F(Y), plus a recurrence comparison at
 the next gate.  Do not continue named-factor products from the quartic.
 ```
 
+Quadratic gate recurrence update:
+[P27 Quadratic Gate Recurrence](p27_quadratic_gate_recurrence_20260621.md).
+
+```text
+The pair resolvent simplifies in the natural square-root coordinate:
+  A = 2 - c^2
+  x = r^2
+  next_gate = chi(r^2 + c*r + 1)
+
+Equivalently, each next all-plus gate is the conic condition:
+  h^2 = r^2 + c*r + 1.
+```
+
+Validation:
+
+```text
+p27 train:
+  gates 3-8 all matched, zero mismatches
+p27 heldout:
+  gates 3-8 all matched, zero mismatches
+q1607/q1847/q2087:
+  gates 3-4 all matched, zero mismatches
+```
+
+Updated test card:
+
+```text
+Build the conic-chain source/pullback:
+  A = 2 - c^2
+  x_j = r_j^2
+  h_j^2 = r_j^2 + c*r_j + 1
+
+Then decide whether this can be pulled back to the legal X1(16)/compactD
+starting surface with low genus or a sourceable walk.  This is the current
+best candidate for a real sqrt-beating structure.
+```
+
+Updated kill rule:
+
+```text
+The recurrence is not by itself a win.  Kill only if the conic-chain pullback
+is high/genus-generic or if deriving r_next still requires a fresh independent
+cover at every step.
+```
+
 U+2 norm/coboundary screen:
 
 ```text

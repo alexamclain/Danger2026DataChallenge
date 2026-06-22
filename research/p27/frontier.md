@@ -683,6 +683,17 @@ on p27 heldout, and the named quartic-factor GF(2) span has no exact train
 combo.  The next live test is therefore a resolvent/theta/Kummer formula for
 the common root squareclass of `F(Y)`, not another coefficient/factor screen.
 
+That resolvent now simplifies to a repeated conic gate:
+[P27 Quadratic Gate Recurrence](evidence/p27_quadratic_gate_recurrence_20260621.md).
+In the square-root coordinate, write `A=2-c^2` and `x=r^2`.  Then the next
+selected x-square gate is exactly `chi(r^2+c*r+1)`, independent of the signs
+of `c` and `r` in the tested tower.  This matched p27 train and heldout through
+gates 3-8 with zero mismatches, and q1607/q1847/q2087 at gates 3-4 with zero
+mismatches.  This is the first genuinely source-shaped p27 recurrence: the
+next beat-sqrt test is to parametrize or pull back chains of conics
+`h_j^2=r_j^2+c*r_j+1` to the legal X1(16)/compactD starting surface, or prove
+that each step still introduces a fresh independent cover.
+
 The K-line now has a cleaner coordinate for that extraction:
 [P27 Kummer Belyi Structure Probe](evidence/p27_kummer_belyi_structure_probe_20260621.md).
 Symbolically,
