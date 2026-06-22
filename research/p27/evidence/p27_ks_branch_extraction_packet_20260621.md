@@ -107,6 +107,12 @@ m0^2 - mt^2*T2 = 4*T2*Salpha^2
 chi(-1) = -1
 ```
 
+Update:
+[P27 K/S Guard-Field Sanity](p27_ks_guard_field_sanity_20260622.md)
+replays the K/S and H90 checks in the actual p27-signature fields
+q1607/q1847/q2087 with zero mismatches.  The broader fallback queue is now
+packaged in [P27 Post-Quartic CAS Suite Handoff](p27_post_quartic_cas_suite_handoff_20260622.md).
+
 ## Why This Is The Right Next Test
 
 Already killed:

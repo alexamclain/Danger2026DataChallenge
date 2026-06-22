@@ -163,6 +163,10 @@ That would close the visible low-genus monic-quartic route.  The next route
 would be offline branch/genus/Kummer extraction over `P1_B`, `P1_K`, or the
 legal pullback cover, not more small proxy scans.
 
+Fallback handoff:
+[P27 Post-Quartic CAS Suite Handoff](p27_post_quartic_cas_suite_handoff_20260622.md)
+packages that next route as an ordered CAS queue.
+
 ## Linked Artifacts
 
 - [P27 B-Line Quartic GPU Test Card](p27_b_line_quartic_gpu_test_card_20260622.md)
@@ -172,6 +176,7 @@ legal pullback cover, not more small proxy scans.
 - [P27 K-Line Belyi-Reciprocal Quartic Screen](p27_kline_reciprocal_quartic_screen_20260622.md)
 - [P27 B-Line Belyi-Involution Quartic Screen](p27_b_line_involution_quartic_screen_20260622.md)
 - [P27 Quartic Hit Geometry Promotion Tool](p27_quartic_hit_geometry_promotion_tool_20260622.md)
+- [P27 Post-Quartic CAS Suite Handoff](p27_post_quartic_cas_suite_handoff_20260622.md)
 
 ```text
 p27_full_quartic_gpu_suite_handoff_rows=1/1

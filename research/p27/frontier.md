@@ -629,6 +629,14 @@ genus.
 The fallback branch-extraction ask remains packaged as a separate concrete
 handoff:
 [P27 Kummer Branch-Extraction Handoff](evidence/p27_kummer_branch_extraction_handoff_20260621.md).
+That fallback is now organized as an ordered CAS suite:
+[P27 Post-Quartic CAS Suite Handoff](evidence/p27_post_quartic_cas_suite_handoff_20260622.md)
+with manifest
+`research/p27/archive/fixtures/p27_post_quartic_cas_suite_20260622.json`.
+The cheap K/S guard-field sanity layer is complete:
+[P27 K/S Guard-Field Sanity](evidence/p27_ks_guard_field_sanity_20260622.md)
+checks q1607/q1847/q2087 with zero mismatches for the K/S map and H90
+identities.
 It records the map from the residual `E: W^2=X^3-X` through
 `E': V^2=U^3+4U` to
 `K=x([2]P)=((X^2-2X-1)^2*(X^2+2X-1)^2)/(4X(X-1)(X+1)(X^2+1)^2)`,
