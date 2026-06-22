@@ -233,6 +233,12 @@ Follow-up [P27 Trace/Norm Dplus Reciprocal Tower](p27_trace_norm_dplus_reciproca
 names the CAS object: `X=t^3+2*t^2-1/t`, `F_A(X,U5)=0`, `F_A(U5,U6)=0`,
 and `x6^2-U6*x6+1=0`.  GPU telemetry should support this tower/class
 comparison; it is still not a standalone production mode.
+Follow-up [P27 Trace/Norm Dplus Reciprocal Tower Small-Field Descent](p27_trace_norm_dplus_reciprocal_tower_smallfield_descent_20260622.md)
+makes that boundary explicit: q607/q1607/q1847 exact enumerations have mixed
+`A`/`B` fibers for `chi(x6)` on the naked tower.  Do not build a GPU source
+that samples only `F_A(X,U5),F_A(U5,U6)`.  A useful GPU mode must either stay
+same-stream from legal `Dplus` rows or enforce the selected legal/core source
+cut and report the raw denominator.
 
 Promotion:
 

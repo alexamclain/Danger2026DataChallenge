@@ -2163,6 +2163,13 @@ The positive replacement is the reciprocal tower:
 The candidate `xp` roots are reciprocal with `X=t^3+2*t^2-1/t`, and the tower
 is `F_A(X,U5)=0`, `F_A(U5,U6)=0`, then `x6^2-U6*x6+1=0`.  This is now the
 CAS object for comparing `chi(x6)` with H90 `A_eta`.
+The small-field descent audit then sets the boundary:
+[P27 Trace/Norm Dplus Reciprocal Tower Small-Field Descent](evidence/p27_trace_norm_dplus_reciprocal_tower_smallfield_descent_20260622.md).
+Over q607/q1607/q1847, the naked reciprocal tower has mixed `A`/`B` fibers for
+`d3=chi(x6)=chi(U6+2)`, even after materialization filters.  Thus the selected
+legal/core source cut is essential: do not hand GPU a naked `F_A` tower
+sampler, and do not compare the tower to H90 `A_eta` as if it were already the
+source-level A/B Kummer class.
 
 ### Card 4c: K-Line Fit Significance
 

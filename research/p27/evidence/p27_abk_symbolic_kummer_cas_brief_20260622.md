@@ -126,6 +126,8 @@ Positive facts to preserve:
 selected gates descend to whole A fibers in p27 samples through d14
 A, B, K, and Sroot fixtures are exact coordinate views of the same classes
 Dplus post-gate d3/d4 also descends to A, routing Dplus class work here
+the naked Dplus reciprocal tower has mixed A/B fibers in q607/q1607/q1847,
+so the selected legal/core cut is essential before attaching tower classes
 the reduced B-line equation gives an explicit f3 cover before reverse z/Y
 the gamma transition gives an exact staged f4/f3 class over the f3 layer
 the V4 factorization names phase classes for bounded telemetry
@@ -329,6 +331,7 @@ separate fused/native `Dplus` pricing test:
 - [P27 B-Line Gamma V4 Factorization](p27_b_line_gamma_v4_factorization_20260622.md)
 - [P27 Conic Tower Quotient CAS Handoff](p27_conic_tower_quotient_cas_handoff_20260622.md)
 - [P27 Trace/Norm Dplus A-Descent Bridge](p27_trace_norm_dplus_a_descent_20260622.md)
+- [P27 Trace/Norm Dplus Reciprocal Tower Small-Field Descent](p27_trace_norm_dplus_reciprocal_tower_smallfield_descent_20260622.md)
 - [P27 No-R Quotient/Prym Test Packet](p27_noR_quotient_prym_test_packet_20260622.md)
 
 ```text

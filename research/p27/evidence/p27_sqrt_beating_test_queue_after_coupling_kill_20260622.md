@@ -219,6 +219,15 @@ x6^2 - U6*x6 + 1 = 0.
 
 This is now the concrete CAS object for the x6 class.
 
+Fifth update:
+[P27 Trace/Norm Dplus Reciprocal Tower Small-Field Descent](p27_trace_norm_dplus_reciprocal_tower_smallfield_descent_20260622.md)
+adds the important denominator warning.  Exact small-field enumerations over
+q607/q1607/q1847 show substantial mixed `A`/`B` fibers for
+`d3=chi(x6)=chi(U6+2)` on the naked reciprocal tower, even with the
+materialization filters.  Therefore the tower is a local class-comparison
+object, not a source sampler.  Any CAS/GPU test must keep the selected
+legal/core source cut before interpreting A/B descent.
+
 This is the most concrete bridge test after the coupling kill.  We know:
 
 ```text
@@ -250,6 +259,8 @@ use the exact map A = (t - 1/t)^4/4 - 2
 use d3 = chi(x6) after U=x6+1/x6 and chi(U+A)=+1
 use the reciprocal tower F_A(X,U5)=0 and F_A(U5,U6)=0
 compare the x6 squareclass with A_eta = U_eta + z*W_eta
+keep the selected legal/core source cut; the naked reciprocal tower has mixed
+A/B fibers in q607/q1607/q1847
 record whether the pulled-back A-level d3 class equals, differs by coboundary,
 or shares a quotient/Prym factor with the H90 class
 do not retry low-degree rational coefficient fits for prod(Z-U_i) in t,a,A
@@ -289,6 +300,7 @@ continue = fused/native Dplus pricing with A/d3 telemetry columns
 continue = Dplus/H90 A_eta versus pulled-back A-level d3 class comparison
 
 kill = more sign-word/gamma bucket GPU scans
+kill = naked reciprocal-tower source sampling
 kill = standalone H90 payload sign screens
 kill = searching for another low-degree Dplus-to-A coordinate map
 kill = visible low-degree A/B/K formula fishing without a divisor reason

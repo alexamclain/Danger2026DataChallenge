@@ -160,6 +160,15 @@ d1_failure
 d2_failure
 ```
 
+Small-field descent follow-up:
+[P27 Trace/Norm Dplus Reciprocal Tower Small-Field Descent](p27_trace_norm_dplus_reciprocal_tower_smallfield_descent_20260622.md)
+shows that this tower should not be promoted as a standalone source sampler.
+In exact enumerations over q607/q1607/q1847, the next class
+`d3=chi(x6)=chi(U6+2)` has mixed `A`/`B` fibers on the naked tower, even after
+the materialization filters.  Therefore the selected legal/core source cut is
+essential before comparing this class with H90 `A_eta` or the A/B/K Kummer
+sequence.
+
 ## Interpretation
 
 Positive:
@@ -228,12 +237,14 @@ continue = compare that class with H90 A_eta
 kill = generic A-level d3 language without the reciprocal tower
 kill = visible t/a/A coefficient fitting for the four-U cover
 kill = GPU x6 bucket production before a source/coboundary exists
+kill = naked reciprocal-tower source sampling without the selected legal/core cut
 ```
 
 ## Linked Artifacts
 
 - [P27 Trace/Norm Dplus X6/U-Class](p27_trace_norm_dplus_x6_uclass_20260622.md)
 - [P27 Trace/Norm Dplus Four-U Rational Screen](p27_trace_norm_dplus_ucover_rational_screen_20260622.md)
+- [P27 Trace/Norm Dplus Reciprocal Tower Small-Field Descent](p27_trace_norm_dplus_reciprocal_tower_smallfield_descent_20260622.md)
 - [P27 Trace/Norm Dplus A-Coordinate Bridge](p27_trace_norm_dplus_a_coordinate_bridge_20260622.md)
 - [P27 Trace/Norm Dplus H90 Branch Class](p27_trace_norm_dplus_h90_branch_class_20260622.md)
 - [P27 Sqrt-Beating Test Queue After Coupling Kill](p27_sqrt_beating_test_queue_after_coupling_kill_20260622.md)
