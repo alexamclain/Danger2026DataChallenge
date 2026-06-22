@@ -50,6 +50,7 @@ no-R beta_U norm relation = no stable low-bidegree (B,Norm) plane curve
 no-R beta_U next-gate = gamma+ materializes cleanly but f4 is mixed inside every active B
 no-R beta_U f4 pair = x7-pair norm -4*(A*x6+1) exact, but no pair-level sampler
 no-R fixed-B norm comparison = hidden_mixed descends too, but its visible 32/64 split is chi(B), not gamma
+no-R hidden_mixed next-gate = nonsquare-B gamma+ does not materialize; square-B materializes but f4 is mixed
 reduced lift visible classifier = killed
 gamma visible square triviality = killed
 oriented alpha/beta word = tautological, not a source
@@ -222,6 +223,18 @@ So run hidden_mixed only after beta_U unless the CAS engine can extract both
 classes at essentially the same cost.  The hidden_mixed promotion criterion is
 stricter: it must find a quotient/Prym/divisor class carrying `gamma`, not
 merely the `chi(B)` fiber-size split.
+
+The hidden_mixed next-gate test adds a materialization boundary:
+
+```text
+chi(B)=-1 and gamma=+1 => no x6 materialization
+chi(B)=+1 and gamma=+1 => x6 materializes, but every active B has mixed f4
+```
+
+Thus hidden_mixed is not a continuation sampler.  If normalized CAS keeps it
+alive, separate the nonsquare-B non-materialized boundary from the square-B
+materialized class and carry the ordinary x7-pair norm
+`x7_plus*x7_minus=-4*(A*x6+1)` only as orientation data.
 
 4. Compute quotient/Prym structure under the available symmetries:
 

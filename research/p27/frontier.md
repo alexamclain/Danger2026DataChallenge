@@ -1303,6 +1303,12 @@ hidden_mixed's visible fiber split is `chi(B)` (`32` points for square `B`,
 `gamma` itself.  So hidden_mixed stays as a second-pass Kummer comparison; the
 first CAS extraction target is still beta_U `Norm(Unext+2)` on
 `chi(B)=+1` support.
+The hidden_mixed next-gate check is also negative:
+[P27 B-Line No-R Hidden_Mixed Next-Gate Probe](evidence/p27_b_line_noR_hidden_mixed_next_gate_20260622.md).
+Gamma-positive nonsquare-`B` hidden_mixed rows do not materialize to x6.
+Gamma-positive square-`B` rows materialize, but every active `B` row has mixed
+f4.  This kills hidden_mixed gamma=+1 as a continuation sampler; keep it only
+as second-pass normalized Kummer/Prym comparison data.
 The B-line visible two-gate quartic shortcut is closed as well:
 [P27 B-Line Gate4-Prefix Quartic q1847 Screen](evidence/p27_b_line_gate4_prefix_quartic_q1847_screen_20260622.md).
 It scans `6,300,872,423` q1847 coefficient triples for

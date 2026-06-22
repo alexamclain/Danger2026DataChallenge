@@ -1,0 +1,304 @@
+p27 B-line no-R hidden_mixed next-gate probe
+question = after hidden_mixed gamma=+1, is f4 coupled or fresh?
+fields = 23^2,71^2,103^2,167^2,199^2,263^2,311^2
+
+GF(23^2) q=529
+  B_f4_conflicts = 0
+  B_gamma_conflicts = 0
+  bad_curve_a = 0
+  gamma_plus_B_chiB_-1 = 1
+  gamma_plus_B_f4_keycount_0 = 1
+  gamma_plus_B_x7_roots_0 = 1
+  hidden_chiB_-1 = 128
+  hidden_chiB_1 = 64
+  hidden_gamma_-1 = 128
+  hidden_gamma_1 = 64
+  hidden_points = 192
+  vplus2_x7_chi_mismatch = 0
+  x6_roots_0 = 64
+  x7_pair_product_formula_mismatch = 0
+  point_f4_summary:
+    p0_m0_z0 = 64
+  x6_pair_summary:
+  B_summary_top:
+    columns = chiB hidden gamma x6 x7 f4+ f4-
+    (1, 32, -1, 0, 0, 0, 0) = 2
+    (-1, 64, -1, 0, 0, 0, 0) = 1
+    (-1, 64, 1, 0, 0, 0, 0) = 1
+
+GF(71^2) q=5041
+  B_f4_conflicts = 8
+  B_gamma_conflicts = 0
+  bad_curve_a = 0
+  f4_-1 = 534
+  f4_1 = 490
+  gamma_plus_B_chiB_-1 = 4
+  gamma_plus_B_chiB_1 = 8
+  gamma_plus_B_f4_keycount_0 = 4
+  gamma_plus_B_f4_keycount_2 = 8
+  gamma_plus_B_x7_roots_0 = 4
+  gamma_plus_B_x7_roots_128 = 8
+  hidden_chiB_-1 = 512
+  hidden_chiB_1 = 256
+  hidden_gamma_-1 = 256
+  hidden_gamma_1 = 512
+  hidden_points = 768
+  vplus2_x7_chi_mismatch = 0
+  x6_materialized_roots = 512
+  x6_roots_0 = 256
+  x6_roots_2 = 256
+  x7_pair_product_formula_mismatch = 0
+  x7_roots = 1024
+  x7_roots_2 = 512
+  point_f4_summary:
+    p0_m0_z0 = 256
+    p2_m2_z0 = 104
+    p1_m3_z0 = 72
+    p3_m1_z0 = 54
+    p0_m4_z0 = 14
+    p4_m0_z0 = 12
+  x6_pair_summary:
+    p1_m1_z0 = 266
+    product_chi_-1 = 266
+    product_chi_1 = 246
+    p0_m2_z0 = 134
+    p2_m0_z0 = 112
+  B_summary_top:
+    columns = chiB hidden gamma x6 x7 f4+ f4-
+    (-1, 64, -1, 0, 0, 0, 0) = 4
+    (-1, 64, 1, 0, 0, 0, 0) = 4
+    (1, 32, 1, 64, 128, 64, 64) = 3
+    (1, 32, 1, 64, 128, 60, 68) = 2
+    (1, 32, 1, 64, 128, 62, 66) = 1
+    (1, 32, 1, 64, 128, 68, 60) = 1
+    (1, 32, 1, 64, 128, 48, 80) = 1
+
+GF(103^2) q=10609
+  B_f4_conflicts = 0
+  B_gamma_conflicts = 0
+  bad_curve_a = 0
+  gamma_plus_B_chiB_-1 = 6
+  gamma_plus_B_f4_keycount_0 = 6
+  gamma_plus_B_x7_roots_0 = 6
+  hidden_chiB_-1 = 768
+  hidden_chiB_1 = 384
+  hidden_gamma_-1 = 768
+  hidden_gamma_1 = 384
+  hidden_points = 1152
+  vplus2_x7_chi_mismatch = 0
+  x6_roots_0 = 384
+  x7_pair_product_formula_mismatch = 0
+  point_f4_summary:
+    p0_m0_z0 = 384
+  x6_pair_summary:
+  B_summary_top:
+    columns = chiB hidden gamma x6 x7 f4+ f4-
+    (1, 32, -1, 0, 0, 0, 0) = 12
+    (-1, 64, -1, 0, 0, 0, 0) = 6
+    (-1, 64, 1, 0, 0, 0, 0) = 6
+
+GF(167^2) q=27889
+  B_f4_conflicts = 6
+  B_gamma_conflicts = 0
+  bad_curve_a = 0
+  f4_-1 = 398
+  f4_1 = 370
+  gamma_plus_B_chiB_-1 = 10
+  gamma_plus_B_chiB_1 = 6
+  gamma_plus_B_f4_keycount_0 = 10
+  gamma_plus_B_f4_keycount_2 = 6
+  gamma_plus_B_x7_roots_0 = 10
+  gamma_plus_B_x7_roots_128 = 6
+  hidden_chiB_-1 = 1280
+  hidden_chiB_1 = 640
+  hidden_gamma_-1 = 1088
+  hidden_gamma_1 = 832
+  hidden_points = 1920
+  vplus2_x7_chi_mismatch = 0
+  x6_materialized_roots = 384
+  x6_roots_0 = 640
+  x6_roots_2 = 192
+  x7_pair_product_formula_mismatch = 0
+  x7_roots = 768
+  x7_roots_2 = 384
+  point_f4_summary:
+    p0_m0_z0 = 640
+    p2_m2_z0 = 94
+    p1_m3_z0 = 44
+    p3_m1_z0 = 30
+    p4_m0_z0 = 12
+    p0_m4_z0 = 12
+  x6_pair_summary:
+    p1_m1_z0 = 198
+    product_chi_-1 = 198
+    product_chi_1 = 186
+    p0_m2_z0 = 100
+    p2_m0_z0 = 86
+  B_summary_top:
+    columns = chiB hidden gamma x6 x7 f4+ f4-
+    (1, 32, -1, 0, 0, 0, 0) = 14
+    (-1, 64, 1, 0, 0, 0, 0) = 10
+    (-1, 64, -1, 0, 0, 0, 0) = 10
+    (1, 32, 1, 64, 128, 56, 72) = 2
+    (1, 32, 1, 64, 128, 64, 64) = 2
+    (1, 32, 1, 64, 128, 62, 66) = 1
+    (1, 32, 1, 64, 128, 68, 60) = 1
+
+GF(199^2) q=39601
+  B_f4_conflicts = 16
+  B_gamma_conflicts = 0
+  bad_curve_a = 0
+  f4_-1 = 1024
+  f4_1 = 1024
+  gamma_plus_B_chiB_-1 = 12
+  gamma_plus_B_chiB_1 = 16
+  gamma_plus_B_f4_keycount_0 = 12
+  gamma_plus_B_f4_keycount_2 = 16
+  gamma_plus_B_x7_roots_0 = 12
+  gamma_plus_B_x7_roots_128 = 16
+  hidden_chiB_-1 = 1536
+  hidden_chiB_1 = 768
+  hidden_gamma_-1 = 1024
+  hidden_gamma_1 = 1280
+  hidden_points = 2304
+  vplus2_x7_chi_mismatch = 0
+  x6_materialized_roots = 1024
+  x6_roots_0 = 768
+  x6_roots_2 = 512
+  x7_pair_product_formula_mismatch = 0
+  x7_roots = 2048
+  x7_roots_2 = 1024
+  point_f4_summary:
+    p0_m0_z0 = 768
+    p2_m2_z0 = 170
+    p1_m3_z0 = 146
+    p3_m1_z0 = 134
+    p4_m0_z0 = 34
+    p0_m4_z0 = 28
+  x6_pair_summary:
+    product_chi_1 = 528
+    p1_m1_z0 = 496
+    product_chi_-1 = 496
+    p2_m0_z0 = 264
+    p0_m2_z0 = 264
+  B_summary_top:
+    columns = chiB hidden gamma x6 x7 f4+ f4-
+    (-1, 64, -1, 0, 0, 0, 0) = 12
+    (-1, 64, 1, 0, 0, 0, 0) = 12
+    (1, 32, -1, 0, 0, 0, 0) = 8
+    (1, 32, 1, 64, 128, 66, 62) = 4
+    (1, 32, 1, 64, 128, 58, 70) = 3
+    (1, 32, 1, 64, 128, 72, 56) = 2
+    (1, 32, 1, 64, 128, 56, 72) = 2
+    (1, 32, 1, 64, 128, 74, 54) = 2
+    (1, 32, 1, 64, 128, 60, 68) = 2
+    (1, 32, 1, 64, 128, 62, 66) = 1
+
+GF(263^2) q=69169
+  B_f4_conflicts = 12
+  B_gamma_conflicts = 0
+  bad_curve_a = 0
+  f4_-1 = 790
+  f4_1 = 746
+  gamma_plus_B_chiB_-1 = 16
+  gamma_plus_B_chiB_1 = 12
+  gamma_plus_B_f4_keycount_0 = 16
+  gamma_plus_B_f4_keycount_2 = 12
+  gamma_plus_B_x7_roots_0 = 16
+  gamma_plus_B_x7_roots_128 = 12
+  hidden_chiB_-1 = 2048
+  hidden_chiB_1 = 1024
+  hidden_gamma_-1 = 1664
+  hidden_gamma_1 = 1408
+  hidden_points = 3072
+  vplus2_x7_chi_mismatch = 0
+  x6_materialized_roots = 768
+  x6_roots_0 = 1024
+  x6_roots_2 = 384
+  x7_pair_product_formula_mismatch = 0
+  x7_roots = 1536
+  x7_roots_2 = 768
+  point_f4_summary:
+    p0_m0_z0 = 1024
+    p2_m2_z0 = 134
+    p1_m3_z0 = 100
+    p3_m1_z0 = 86
+    p0_m4_z0 = 34
+    p4_m0_z0 = 30
+  x6_pair_summary:
+    product_chi_1 = 394
+    p1_m1_z0 = 374
+    product_chi_-1 = 374
+    p0_m2_z0 = 208
+    p2_m0_z0 = 186
+  B_summary_top:
+    columns = chiB hidden gamma x6 x7 f4+ f4-
+    (1, 32, -1, 0, 0, 0, 0) = 20
+    (-1, 64, 1, 0, 0, 0, 0) = 16
+    (-1, 64, -1, 0, 0, 0, 0) = 16
+    (1, 32, 1, 64, 128, 72, 56) = 2
+    (1, 32, 1, 64, 128, 56, 72) = 2
+    (1, 32, 1, 64, 128, 70, 58) = 2
+    (1, 32, 1, 64, 128, 60, 68) = 1
+    (1, 32, 1, 64, 128, 58, 70) = 1
+    (1, 32, 1, 64, 128, 66, 62) = 1
+    (1, 32, 1, 64, 128, 50, 78) = 1
+    (1, 32, 1, 64, 128, 52, 76) = 1
+    (1, 32, 1, 64, 128, 64, 64) = 1
+
+GF(311^2) q=96721
+  B_f4_conflicts = 16
+  B_gamma_conflicts = 0
+  bad_curve_a = 0
+  f4_-1 = 1014
+  f4_1 = 1034
+  gamma_plus_B_chiB_-1 = 19
+  gamma_plus_B_chiB_1 = 16
+  gamma_plus_B_f4_keycount_0 = 19
+  gamma_plus_B_f4_keycount_2 = 16
+  gamma_plus_B_x7_roots_0 = 19
+  gamma_plus_B_x7_roots_128 = 16
+  hidden_chiB_-1 = 2432
+  hidden_chiB_1 = 1216
+  hidden_gamma_-1 = 1920
+  hidden_gamma_1 = 1728
+  hidden_points = 3648
+  vplus2_x7_chi_mismatch = 0
+  x6_materialized_roots = 1024
+  x6_roots_0 = 1216
+  x6_roots_2 = 512
+  x7_pair_product_formula_mismatch = 0
+  x7_roots = 2048
+  x7_roots_2 = 1024
+  point_f4_summary:
+    p0_m0_z0 = 1216
+    p2_m2_z0 = 190
+    p3_m1_z0 = 134
+    p1_m3_z0 = 124
+    p4_m0_z0 = 32
+    p0_m4_z0 = 32
+  x6_pair_summary:
+    p1_m1_z0 = 518
+    product_chi_-1 = 518
+    product_chi_1 = 506
+    p2_m0_z0 = 258
+    p0_m2_z0 = 248
+  B_summary_top:
+    columns = chiB hidden gamma x6 x7 f4+ f4-
+    (1, 32, -1, 0, 0, 0, 0) = 22
+    (-1, 64, 1, 0, 0, 0, 0) = 19
+    (-1, 64, -1, 0, 0, 0, 0) = 19
+    (1, 32, 1, 64, 128, 58, 70) = 4
+    (1, 32, 1, 64, 128, 64, 64) = 2
+    (1, 32, 1, 64, 128, 68, 60) = 1
+    (1, 32, 1, 64, 128, 54, 74) = 1
+    (1, 32, 1, 64, 128, 76, 52) = 1
+    (1, 32, 1, 64, 128, 78, 50) = 1
+    (1, 32, 1, 64, 128, 74, 54) = 1
+    (1, 32, 1, 64, 128, 66, 62) = 1
+    (1, 32, 1, 64, 128, 60, 68) = 1
+    (1, 32, 1, 64, 128, 56, 72) = 1
+    (1, 32, 1, 64, 128, 70, 58) = 1
+    (1, 32, 1, 64, 128, 72, 56) = 1
+
+p27_b_line_noR_hidden_mixed_next_gate_probe_rows=1/1

@@ -130,6 +130,12 @@ The obvious hidden-mixed fiber-size split is chi(B), not gamma.
 No GPU sampler follows from hidden_mixed norm descent.
 ```
 
+Next-gate follow-up:
+[P27 B-Line No-R Hidden_Mixed Next-Gate Probe](p27_b_line_noR_hidden_mixed_next_gate_20260622.md).
+Gamma-positive hidden_mixed rows over nonsquare `B` do not materialize to x6.
+Gamma-positive square-`B` rows materialize, but every active base `B` row has
+mixed f4 signs.  Thus hidden_mixed is not a direct multi-gate sampler either.
+
 ## CAS Consequence
 
 Keep the fixed-`B` CAS order:
@@ -159,6 +165,7 @@ continue = compare hidden_mixed norm class after beta_U, not before
 continue = ask CAS whether beta_U and hidden_mixed norm classes share a Prym factor
 
 kill = treating hidden_mixed norm descent as a production filter
+kill = treating hidden_mixed gamma=+1 as an x6/f4 continuation sampler
 kill = using chi(B) 32/64 hidden-mixed split as the selected gamma sampler
 kill = broad hidden_mixed base-B atom hunting without a named divisor class
 ```
