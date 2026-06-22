@@ -1,0 +1,1 @@
+RESULT p27_ka_base_q607 ok 607 604 3 0 1208 0 0 0

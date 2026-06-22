@@ -1026,12 +1026,26 @@ q1607/q1847/q2087:
   natural K/A squareclass atoms up to weight 4 do not select the legal subset
 ```
 
+Online Magma validation:
+[P27 K/A Base-Curve Magma Validation](p27_ka_base_curve_magma_validation_20260622.md).
+
+```text
+q607:
+  base_KA = 607
+  nondegenerate B-chart KA = 604
+  expected B-degenerate missing points = 3
+  B-chart extras = 0
+  equation/discriminant mismatches = 0
+```
+
 Updated action:
 
 ```text
 Use the K/A equation as a normalization coordinate.
 Do not ask GPU to sample the base curve directly; it mostly produces non-legal
 points and does not avoid the legal-cover toll.
+The remaining source question is the legal/d3 cover over this validated base,
+not the base equation or the three B-chart degeneracies.
 ```
 
 B-parameter follow-up:

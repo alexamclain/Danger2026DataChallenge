@@ -31,6 +31,7 @@ Outputs:
 ```text
 research/p27/archive/probe_outputs/p27_kline_base_curve_sampler_probe_q607_smoke_20260622.txt
 research/p27/archive/probe_outputs/p27_kline_base_curve_sampler_probe_q1607_q1847_q2087_20260622.txt
+research/p27/archive/probe_outputs/p27_ka_base_curve_q607_magma_20260622.txt
 ```
 
 Commands:
@@ -62,6 +63,22 @@ L = K^2.
 
 The probe solves the quadratic in `L`, takes square roots `K^2=L`, and compares
 the resulting `(K,A)` points with the actual legal label-2/compactD candidates.
+
+Online Magma follow-up:
+[P27 K/A Base-Curve Magma Validation](p27_ka_base_curve_magma_validation_20260622.md).
+Over q607, Magma independently confirms:
+
+```text
+base_KA = 607
+B-chart KA = 604
+base points outside nondegenerate B chart = 3
+B-chart points outside base = 0
+B-chart rooted rows = 1208
+equation/discriminant mismatches = 0
+```
+
+This confirms that the K/A base model and B rationalization are clean; the
+remaining obstruction is the additional legal/d3 cover over the base.
 
 ## Counts
 
@@ -194,6 +211,7 @@ continue = search for a theorem-specified legal cover or gate-coupling law
 kill = direct GPU sampling of the K/A base curve
 kill = simple squareclass atom products as the legal-subset selector
 kill = treating base_KA=q as a source-normalized win
+kill = treating B-chart degeneracies as a hidden source shrink
 ```
 
 ```text

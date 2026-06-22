@@ -1108,6 +1108,12 @@ subset; their best nontrivial scores are only about `0.53`.  Thus the base
 curve is a good normalization coordinate, not a direct GPU source.  The live
 object is still the additional legal cover over the base, especially the d3
 reverse-root cover over `P1_Sroot`.
+Online Magma now independently validates the base equation and B chart:
+[P27 K/A Base-Curve Magma Validation](evidence/p27_ka_base_curve_magma_validation_20260622.md).
+In q607, `base_KA=607`, the nondegenerate B chart covers `604` of them, the
+only missing points are the expected three B-degeneracies, and equation plus
+discriminant checks have zero mismatches.  So the remaining obstruction is the
+legal/d3 cover, not the K/A base model.
 
 The B-rationalized follow-up is positive as bounded telemetry, but not as a
 production source:

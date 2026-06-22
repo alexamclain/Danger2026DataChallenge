@@ -232,6 +232,12 @@ point, but only `49/1607`, `63/1847`, and `57/2087` base points are realized
 by the legal source.  Natural K/A squareclass atoms up to weight 4 do not pick
 out the legal subset.  So the base curve is a CAS coordinate, not a direct GPU
 sampler.
+The online Magma q607 validation now confirms the base model itself:
+[P27 K/A Base-Curve Magma Validation](p27_ka_base_curve_magma_validation_20260622.md).
+It checks `base_KA=607`, nondegenerate B-chart coverage `604`, exactly three
+expected B-degenerate missing points, no spurious B-chart points, and zero
+equation/discriminant mismatches.  This pushes the live question entirely onto
+the additional legal/d3 cover over the base.
 The B-parameter follow-up is a real but only constant-factor improvement.
 After adjoining `B` with `A=B^2-2`, all realized d2 and d3plus rows in
 q1607/q1847/q2087 lie in a stable bucket for `K`, `B+2`, `B-2`, and `L=K^2`;
