@@ -106,6 +106,15 @@ killed.
 The packet does not promote B-line buckets or one-sided small-field tails.
 ```
 
+Extension-count update:
+[P27 B-Line Gamma Extension Count](p27_b_line_gamma_extension_count_20260622.md)
+checks the same reduced source chart over `GF(607)`, `GF(7^3)`, `GF(7^4)`,
+`GF(7^5)`, `GF(23^2)`, and `GF(23^3)`.  It finds
+`selector_gamma_points = materialized_x6_points` in every tested field, with
+larger odd extension selector rates near `1/2`.  Thus `gamma^2=v+2` is not a
+direct source sampler or GPU bucket; the remaining value of this handoff is
+offline Kummer/divisor-class extraction.
+
 ## Concrete Tests
 
 First CAS test:

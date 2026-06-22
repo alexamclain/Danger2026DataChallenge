@@ -1140,6 +1140,16 @@ conditional and costs a half split, below the source-normalized promotion bar.
 Guard-field all-plus/all-minus plateaus stop at different gates, so they are
 field-tail artifacts.  Keep alpha/beta as optional telemetry columns, not a
 production mode.
+The extension-field denominator audit is also negative:
+[P27 B-Line Gamma Extension Count](evidence/p27_b_line_gamma_extension_count_20260622.md).
+The new finite-field engine replays `q=607` exactly against the earlier
+prime-field point-count probe, then counts `GF(7^3)`, `GF(7^4)`, `GF(7^5)`,
+`GF(23^2)`, and `GF(23^3)`.  In every tested field,
+`selector_gamma_points = materialized_x6_points`, and the larger odd
+extensions have near-half selector rates (`0.5169` for `GF(7^5)`, `0.5207`
+for `GF(23^3)`).  This says `gamma^2=U+2` is coupled to the ordinary
+materialized `x6` denominator, not a cheaper source stratum.  Continue with
+offline Kummer/divisor extraction only; do not run gamma bucket production.
 The B-line visible two-gate quartic shortcut is closed as well:
 [P27 B-Line Gate4-Prefix Quartic q1847 Screen](evidence/p27_b_line_gate4_prefix_quartic_q1847_screen_20260622.md).
 It scans `6,300,872,423` q1847 coefficient triples for

@@ -223,6 +223,15 @@ win.  Link products stay near `1/2`, the only stable-looking phase-state skew
 is about `1.1x` conditional after paying a half split, and guard-field
 plateaus disagree across q1607/q1847/q2087.
 
+Extension-field denominator follow-up:
+[P27 B-Line Gamma Extension Count](p27_b_line_gamma_extension_count_20260622.md).
+The `GF(607)` replay matches the prior prime-field point-count probe, and the
+extension counts show `selector_gamma_points = materialized_x6_points` in
+every tested field.  The larger odd extension fields have ordinary near-half
+selector rates (`GF(7^5)` at `0.5169`, `GF(23^3)` at `0.5207`), while smaller
+skews are field-local artifacts.  This demotes `gamma^2=U+2` as a direct
+source/GPU bucket; it remains only as a Kummer/divisor class to normalize.
+
 Required computation:
 
 ```text
@@ -444,6 +453,7 @@ kill = visible f3/H90-layer pair-coordinate source laws for gamma
 kill = treating rho/materialization as the gamma source law
 kill = alpha or beta alone as a canonical B-line bucket
 kill = current alpha/beta phase-state split as a production sampler
+kill = gamma^2=U+2 as a direct source sampler after the extension-count audit
 kill = online Magma as the reduced-cover extraction engine
 kill = more visible quartic/branch-map bucket searches without a theorem
 kill = treating source-conditional 2x lift as sqrt-beating
