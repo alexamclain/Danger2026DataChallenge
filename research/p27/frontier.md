@@ -1054,6 +1054,16 @@ has four generic transition roots, two materialized roots, two discarded roots,
 constant `chi(v+2)` on the generic roots, and zero failures in the norm/H90
 identities.  The next accepted B-line result must classify this `gamma` class
 as pullback/coboundary/quotient/recurrent, or kill it as a fresh half-cover.
+The class now has an explicit V4 factorization:
+[P27 B-Line Gamma V4 Factorization](evidence/p27_b_line_gamma_v4_factorization_20260622.md).
+Writing `Y=v+2`, the quartic `P(Y)` has square discriminant and split cubic
+resolvent; after adjoining `R^2=H^2-4` and `S^2=B^2+H^2-4`, its roots are
+`(H +/- R)*(H +/- S)`.  Thus `f4=chi(v+2)=alpha*beta`, where
+`alpha=chi(H+R)` and `beta=chi(H+S)`.  Both factors flip under `H -> -H`,
+while the product is invariant and constant on active B.  This gives the next
+bounded GPU/CAS target: test the successive `alpha_j,beta_j` phase sequence
+for recurrence or telescoping; do not promote either factor as a standalone
+bucket.
 The B-line visible two-gate quartic shortcut is closed as well:
 [P27 B-Line Gate4-Prefix Quartic q1847 Screen](evidence/p27_b_line_gate4_prefix_quartic_q1847_screen_20260622.md).
 It scans `6,300,872,423` q1847 coefficient triples for

@@ -208,6 +208,14 @@ the four generic transition roots split into two materialized and two
 discarded roots, while `chi(v+2)` is constant on the generic roots.  This is
 the current input for CAS/expert work; do not restart visible coordinate scans.
 
+Gamma V4 factorization:
+[P27 B-Line Gamma V4 Factorization](p27_b_line_gamma_v4_factorization_20260622.md).
+The quartic in `Y=v+2` has square discriminant and split resolvent.  With
+`R^2=H^2-4` and `S^2=B^2+H^2-4`, the roots are
+`Y=(H +/- R)*(H +/- S)`, so `f4=alpha*beta` with
+`alpha=chi(H+R)` and `beta=chi(H+S)`.  Both factors flip under `H -> -H`; the
+product is the canonical selected bit.
+
 Required computation:
 
 ```text
@@ -217,6 +225,7 @@ impose the selected-source legal/core cut before using all-chart lift buckets
 extract branch divisor degree, support field degrees, components, genus
 normalize F_A(u,v)=0 over the f3-plus B-u-H layer and extract div(v+2) modulo squares
 classify gamma as pullback, coboundary, translate, quotient class, or fresh half-cover
+extract alpha/beta phase classes and test whether they telescope across successive gates
 repeat the staged construction after f4-plus and compare the f5/f4 class with gamma
 use f5/f6 only as regression checks until larger data supports them
 ```
@@ -382,6 +391,7 @@ Run GPU now only for bounded telemetry or for a named sampler:
 allowed:
   A/B/K/Sroot deep-prefix telemetry with d3..dN emitted same-stream
   B-line gamma-class telemetry emitting B,u,H,v,gamma and the next staged class
+  B-line alpha/beta phase-sequence telemetry with raw source denominator
   recurrence sign-word telemetry with raw source denominator reported
   direct sampler A/B test after CAS names a sampler/source map
 
@@ -411,6 +421,7 @@ continue = GPU only as bounded telemetry or for a named sampler
 continue = offline Magma/Sage for the reduced B-line cover
 continue = offline Magma/Sage comparison of the second reduced f4/f3 cover
 continue = extract the gamma class from the staged handoff before any more B buckets
+continue = test alpha/beta phase recurrence or telescoping across gates
 
 kill = more one-bit filters as moonshots
 kill = norm/trace/power-sum selectors for the B-line d3 fiber
@@ -421,6 +432,7 @@ kill = naive gamma norm or visible pair-invariant predictors as source laws
 kill = explicit H90 quotient as a standalone f4 source law
 kill = visible f3/H90-layer pair-coordinate source laws for gamma
 kill = treating rho/materialization as the gamma source law
+kill = alpha or beta alone as a canonical B-line bucket
 kill = online Magma as the reduced-cover extraction engine
 kill = more visible quartic/branch-map bucket searches without a theorem
 kill = treating source-conditional 2x lift as sqrt-beating

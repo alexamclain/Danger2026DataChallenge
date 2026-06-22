@@ -167,6 +167,15 @@ discarded roots; `chi(v+2)` is constant on the generic roots.  The next B-line
 pass should classify the resulting gamma class, then compare it with the next
 f5/f4 class.
 
+V4 factorization follow-up:
+[P27 B-Line Gamma V4 Factorization](p27_b_line_gamma_v4_factorization_20260622.md)
+shows that the quartic in `Y=v+2` has square discriminant and split resolvent.
+After adjoining `R^2=H^2-4` and `S^2=B^2+H^2-4`, the roots are
+`(H +/- R)*(H +/- S)`.  The component characters
+`alpha=chi(H+R)` and `beta=chi(H+S)` both flip under `H -> -H`, but their
+product is `f4`.  This turns the next test into phase-sequence recurrence or
+telescoping, not a standalone B bucket.
+
 Negative:
 
 ```text
@@ -198,6 +207,7 @@ continue = compute an explicit H90 quotient for gamma^2=v+2
 continue = compute gamma over the f3/H90 layer as the remaining class
 continue = extract the gamma divisor/Kummer class over that layer
 continue = use the gamma class handoff as the current CAS/GPU packet
+continue = test the V4 alpha/beta phase sequence across f4/f5
 continue = compare f4/f3 as a class relation after f3 is named
 continue = use f5/f6 rows only as tail/regression checks for an extracted class
 
