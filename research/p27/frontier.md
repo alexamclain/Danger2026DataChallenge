@@ -923,6 +923,11 @@ half-scope: source-normalized target rate remains flat or slightly lower.
 The next sqrt-beating test is therefore a direct legal-pullback/quotient
 sampler for this recurrence domain, or a coupling law across many
 `chi(r_j^2+c*r_j+1)` signs.
+The GPU decision memo records the operational boundary:
+[P27 GPU Test Decision After Quadratic Probe](evidence/p27_gpu_test_decision_after_quad_20260622.md).
+Use GPU next for bounded recurrence-coupling telemetry or for a direct
+legal-pullback sampler once one exists; do not launch a large production run
+from the fixed quadratic precheck alone.
 
 The direct base-curve sampler test is negative:
 [P27 K/A Base-Curve Sampler Probe](evidence/p27_kline_base_curve_sampler_20260622.md).
