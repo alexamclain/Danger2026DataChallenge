@@ -43,6 +43,8 @@ research/p27/evidence/p27_trace_norm_dplus_h90_quotient_20260622.md
 research/p27/evidence/p27_trace_norm_dplus_h90_quartic_model_20260622.md
 research/p27/evidence/p27_trace_norm_dplus_h90_branch_class_20260622.md
 research/p27/evidence/p27_trace_norm_dplus_h90_payload_screen_20260622.md
+research/p27/evidence/p27_trace_norm_dplus_u6_rowbit_h90_solubility_boundary_20260622.md
+research/p27/evidence/p27_trace_norm_dplus_u6_rowbit_h90_group_coset_20260622.md
 research/p27/evidence/p27_trace_norm_elliptic_line_divisor_screen_20260622.md
 ```
 
@@ -56,6 +58,8 @@ low-weight tested a/g/m quotient-character products
 bare conic quotient a^2+g^2=4 as a standalone Dplus sampler
 H90 elliptic quotient alone as a Dplus sampler
 H90 eta/U/W/rho payload sign buckets as production filters
+visible E_h90/Z/Aeta row-bit product characters
+small H90 elliptic group-coset buckets for the row bit
 small elliptic line-divisor buckets u-c or v+m*u+c with |m|,|c| <= 4
 full genus-69 orientation-cover sampling as the first production plan
 seed-order or compact-bucket fishing without a named invariant
@@ -245,6 +249,40 @@ kills the cheap H90/root bridge: simple H90 atoms and first-order
 post-Dplus `chi(x6)`, and train skews do not hold out.  Do not add GPU
 production modes for H90/rho/x6 sign buckets unless CAS supplies a named
 quotient or source map.
+Latest row-bit boundary:
+[P27 Trace/Norm Dplus U6 Row-Bit H90 Solubility Boundary](p27_trace_norm_dplus_u6_rowbit_h90_solubility_boundary_20260622.md)
+finds zero failures of:
+
+```text
+Ktrace square or zero  => row-bit t-fiber uniform;
+Ktrace nonsquare       => row-bit t-fiber mixed, always 4 plus / 4 minus.
+```
+
+This is worth validating at GPU scale as telemetry, because it is a precise
+class boundary.  It is not a production source until the plus/minus class on
+the H90-soluble side is named.
+
+Small-coset follow-up:
+[P27 Trace/Norm Dplus U6 Row-Bit H90 Group-Coset Screen](p27_trace_norm_dplus_u6_rowbit_h90_group_coset_20260622.md)
+kills the nearest quick source for that plus/minus class.  After mapping to
+`E: v^2=u^3-u`, quotient projections with `m <= 24` have:
+
+```text
+exact_nontrivial_projection_total = 0
+```
+
+So do not add GPU modes for small H90 elliptic coset buckets unless a new
+theorem names a projection outside the tested family.
+
+If cheap, fused telemetry should therefore emit:
+
+```text
+Ktrace squareclass
+row bit chi(U6+2)=chi(x6)
+H90 elliptic coordinates or compact hashes
+A coordinate
+d3,d4,d5,...
+```
 
 Promotion:
 
@@ -284,10 +322,12 @@ continue = Dplus-native/fused implementation if it improves effective deep
            survivor throughput or exposes later-gate coupling
 continue = direct source only if it names the source map and denominator
 continue = emit A with Dplus later-gate telemetry and compare to A-level classes
+continue = emit Ktrace and row-bit telemetry to validate the H90 boundary at scale
 
 kill = large p27 production run based only on the existing Dplus classifier
 kill = orientation bucket telemetry as a standalone GPU task
 kill = fixed-prefix filtering without source-normalized improvement
+kill = visible H90 row-bit products or small H90 elliptic coset buckets
 ```
 
 ```text
