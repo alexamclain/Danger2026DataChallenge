@@ -1,0 +1,22 @@
+p27 trace/norm Dplus U6 symbolic resultant probe
+tower = F_A(X(t),U5)=0 and F_A(U5,U6)=0
+A = (t - 1/t)^4/4 - 2
+X = t^3 + 2*t^2 - 1/t
+resultant_degree_t = 72
+resultant_degree_U6 = 16
+resultant_terms = 617
+resultant_factorization_Q:
+  exp=8 deg_t=1 deg_U6=0 terms=1 factor=t
+  exp=1 deg_t=64 deg_U6=16 terms=617 factor=t**64 - t**63*z**4 + 4*t**63*z**2 - 2*t**62*z**4 + 8*t**62*z**2 - 32*t**62 + 28*t**61*z**4 - 112*t**61*z**2 + 56*t**60*z**4 - 224*t**60*z...
+R_U6_minus_2_factorization = (1, [(t, 8), (t - 1, 32), (t + 1, 32)])
+R_U6_plus_2_factorization = (1, [(t, 8), (t**2 - 2*t - 1, 8), (t**2 + 2*t - 1, 8), (t**2 + 1, 16)])
+kummer_lift_degree_t = 72
+kummer_lift_degree_s = 32
+kummer_lift_terms = 623
+kummer_lift_factorization_Q:
+  exp=8 deg_t=1 deg_s=0 terms=1 factor=t
+  exp=1 deg_t=64 deg_s=32 terms=623 factor=s**32*t**32 - 16*s**30*t**35 - 32*s**30*t**34 - 32*s**30*t**32 + 16*s**30*t**31 - 20*s**28*t**39 - 40*s**28*t**38 + 80*s**28*t**37 + 160*...
+verdict:
+  exact square norm at U6+2, but no rational factor of the S^2=U6+2 lift over Q
+  promote only if CAS finds a lower quotient/Prym/source for the descended row bit
+p27_trace_norm_dplus_u6_symbolic_resultant_probe_rows=1/1

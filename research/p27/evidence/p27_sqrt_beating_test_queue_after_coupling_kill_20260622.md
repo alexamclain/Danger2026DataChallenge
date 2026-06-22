@@ -250,6 +250,15 @@ for post-Dplus `chi(x6)`, and the best train skew collapses on heldout.  So
 the live Dplus/H90 bridge is exact CAS/Prym comparison, not another finite
 field sign-bucket screen.
 
+Seventh update:
+[P27 Trace/Norm Dplus U6 Row-Bit Resultant](p27_trace_norm_dplus_u6_rowbit_resultant_20260622.md)
+shows that the four `U6` branches over each actual Dplus row have one common
+`chi(U6+2)=chi(x6)` sign: `8199/8199` train rows and `8061/8061` heldout rows
+are uniform, with no mixed branch rows.  The exact resultant has square
+specializations at `U6=+/-2`, but `R(t,S^2-2)` does not factor over `Q`.
+Thus the target is one descended balanced row bit, not a U6 branch-choice
+bucket.
+
 This is the most concrete bridge test after the coupling kill.  We know:
 
 ```text
@@ -257,6 +266,7 @@ Dplus has a real H90/quotient model;
 post-Dplus d3/d4 descend to whole A fibers;
 H90 payload signs alone do not predict d3/d4.
 simple H90/rho coboundaries do not predict chi(x6).
+the U6/x6 class is a descended row bit, not a branch-choice bit.
 ```
 
 The missing object is the map or obstruction between the H90 model and the
@@ -282,6 +292,7 @@ use the exact map A = (t - 1/t)^4/4 - 2
 use d3 = chi(x6) after U=x6+1/x6 and chi(U+A)=+1
 use the reciprocal tower F_A(X,U5)=0 and F_A(U5,U6)=0
 compare the x6 squareclass with A_eta = U_eta + z*W_eta
+source the descended U6 row bit, not a U6 branch bucket
 keep the selected legal/core source cut; the naked reciprocal tower has mixed
 A/B fibers in q607/q1607/q1847
 record whether the pulled-back A-level d3 class equals, differs by coboundary,
@@ -323,10 +334,12 @@ continue = offline CAS comparison of gamma4/gamma5
 continue = use mixed-f5 guard fields as repeated-gamma regression data
 continue = fused/native Dplus pricing with A/d3 telemetry columns
 continue = Dplus/H90 A_eta versus pulled-back A-level d3 class comparison
+continue = CAS/Prym extraction of the descended U6 row bit
 
 kill = more sign-word/gamma bucket GPU scans
 kill = visible f5(B) B-atom/split-linear bucket searches
 kill = naked reciprocal-tower source sampling
+kill = U6 branch-choice buckets after Dplus
 kill = standalone H90 payload sign screens
 kill = simple H90/rho coboundary bucket screens for chi(x6)
 kill = searching for another low-degree Dplus-to-A coordinate map

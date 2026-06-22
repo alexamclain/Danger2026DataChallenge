@@ -169,6 +169,14 @@ the materialization filters.  Therefore the selected legal/core source cut is
 essential before comparing this class with H90 `A_eta` or the A/B/K Kummer
 sequence.
 
+Row-bit/resultant follow-up:
+[P27 Trace/Norm Dplus U6 Row-Bit Resultant](p27_trace_norm_dplus_u6_rowbit_resultant_20260622.md)
+adds the sharper p27 fact: inside the actual Dplus stream, the four `U6`
+branches over one row all have the same `chi(U6+2)`.  The class is a balanced
+descended row bit.  Symbolically, the eliminated `R(t,U6)` has square
+specializations at `U6=+/-2`, while `R(t,S^2-2)` does not factor over `Q`.
+Thus the next task is sourcing the row bit, not choosing among branches.
+
 ## Interpretation
 
 Positive:
@@ -178,7 +186,7 @@ The root-dependent candidate stage collapses to one rational X(t).
 The post-Dplus branch structure is an iterated F_A reciprocal tower.
 U5 has two reciprocal fibers; U6 has four reciprocal fibers.
 U5^2-4, U5+A, U6^2-4, and U6+A are all square in the tested rows.
-The only remaining next-gate squareclass is x6.
+The only remaining next-gate squareclass is the descended U6/x6 row bit.
 ```
 
 Negative:
@@ -232,10 +240,12 @@ the normalized tower is generic/high-genus and chi(x6) is independent of A_eta.
 ```text
 continue = run offline Magma/Sage normalization on the q7 fixture
 continue = extract the x6 Kummer class over the reciprocal tower
+continue = compare the descended U6 row bit with H90 A_eta
 continue = compare that class with H90 A_eta
 
 kill = generic A-level d3 language without the reciprocal tower
 kill = visible t/a/A coefficient fitting for the four-U cover
+kill = U6 branch-choice buckets after Dplus
 kill = GPU x6 bucket production before a source/coboundary exists
 kill = naked reciprocal-tower source sampling without the selected legal/core cut
 ```
@@ -243,6 +253,7 @@ kill = naked reciprocal-tower source sampling without the selected legal/core cu
 ## Linked Artifacts
 
 - [P27 Trace/Norm Dplus X6/U-Class](p27_trace_norm_dplus_x6_uclass_20260622.md)
+- [P27 Trace/Norm Dplus U6 Row-Bit Resultant](p27_trace_norm_dplus_u6_rowbit_resultant_20260622.md)
 - [P27 Trace/Norm Dplus Four-U Rational Screen](p27_trace_norm_dplus_ucover_rational_screen_20260622.md)
 - [P27 Trace/Norm Dplus Reciprocal Tower Small-Field Descent](p27_trace_norm_dplus_reciprocal_tower_smallfield_descent_20260622.md)
 - [P27 Trace/Norm Dplus A-Coordinate Bridge](p27_trace_norm_dplus_a_coordinate_bridge_20260622.md)

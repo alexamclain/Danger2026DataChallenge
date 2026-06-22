@@ -401,6 +401,14 @@ first-order `rho +/- atom` divisors have no exact weight-`<=3` product for
 `chi(x6)`.  The best train skew falls from `0.5229` to `0.4950` on heldout.
 This kills the cheap H90-root coboundary bucket; only exact CAS/Prym
 comparison remains.
+The branch-vs-row question is now resolved:
+[P27 Trace/Norm Dplus U6 Row-Bit Resultant](evidence/p27_trace_norm_dplus_u6_rowbit_resultant_20260622.md).
+On the same Dplus streams, all four `U6` branches over one row share the same
+`chi(U6+2)=chi(x6)` sign: `8199/8199` train rows and `8061/8061` heldout rows
+are uniform, with balanced `++++`/`----` counts.  The exact eliminated
+resultant has square specializations at `U6=+/-2`, but the Kummer lift
+`U6=S^2-2` does not split over `Q`.  The moonshot target is therefore one
+descended row bit on the selected Dplus/H90 base, not a branch-choice bucket.
 The class comparison now has a routing result:
 [P27 Trace/Norm Dplus A-Descent Bridge](evidence/p27_trace_norm_dplus_a_descent_20260622.md).
 Across three p27 seed groups, post-Dplus `d3` and `d4` after `d3=+1` have zero
@@ -2213,7 +2221,15 @@ The positive replacement is the reciprocal tower:
 [P27 Trace/Norm Dplus Reciprocal Tower](evidence/p27_trace_norm_dplus_reciprocal_tower_20260622.md).
 The candidate `xp` roots are reciprocal with `X=t^3+2*t^2-1/t`, and the tower
 is `F_A(X,U5)=0`, `F_A(U5,U6)=0`, then `x6^2-U6*x6+1=0`.  This is now the
-CAS object for comparing `chi(x6)` with H90 `A_eta`.
+CAS object for comparing the descended `chi(x6)=chi(U6+2)` row bit with H90
+`A_eta`.
+The row-bit/resultant follow-up
+[P27 Trace/Norm Dplus U6 Row-Bit Resultant](evidence/p27_trace_norm_dplus_u6_rowbit_resultant_20260622.md)
+shows that the four `U6` branches over each Dplus row are all `++++` or all
+`----`, never mixed, on `8199 + 8061` analyzed rows.  It also records
+`R(t,U6)` as degree `16` in `U6`, with square specializations at `U6=+/-2`
+and no visible rational factor of `R(t,S^2-2)`.  Source the row bit; do not
+build a branch-choice GPU bucket.
 The small-field descent audit then sets the boundary:
 [P27 Trace/Norm Dplus Reciprocal Tower Small-Field Descent](evidence/p27_trace_norm_dplus_reciprocal_tower_smallfield_descent_20260622.md).
 Over q607/q1607/q1847, the naked reciprocal tower has mixed `A`/`B` fibers for

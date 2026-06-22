@@ -110,6 +110,13 @@ The heldout majority baseline is already:
 d3 = -1 majority = 4075/8061 = 0.505520407
 ```
 
+Row-bit follow-up:
+[P27 Trace/Norm Dplus U6 Row-Bit Resultant](p27_trace_norm_dplus_u6_rowbit_resultant_20260622.md)
+shows that the same target is a descended Dplus row bit: all four `U6`
+branches over each analyzed row have one common `chi(U6+2)=chi(x6)` sign.
+Therefore this negative H90/rho result is not a branch-choice failure; it says
+the obvious H90 atoms do not source the descended row bit.
+
 ## Interpretation
 
 Positive:
@@ -148,9 +155,11 @@ pricing plus telemetry.  It should not promote a production search from
 ```text
 continue = Dplus fused/native exchange-rate test with raw source denominators
 continue = exact CAS comparison of the x6 Kummer class with A_eta
+continue = source the descended U6 row bit on the selected Dplus/H90 base
 continue = A-level Kummer extraction as the main post-Dplus class surface
 
 kill = simple H90/rho coboundary product as a d3 predictor
+kill = U6 branch-choice buckets after Dplus
 kill = GPU production from H90/x6 sign buckets
 kill = more low-weight rho +/- atom finite-field scans absent a named divisor
 ```
