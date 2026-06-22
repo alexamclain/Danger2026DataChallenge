@@ -108,6 +108,10 @@ The legal depth screen confirms the other half: conic-chain lift existence
 matches selected-prefix bits through depth 4, but p27 train/heldout prefix
 rates still thin roughly like successive half-gates.  So the tower is exact,
 not yet sqrt-beating without a quotient/source for the tower itself.
+The raw `(R,L)` quotient screen is negative through total degree 20 on
+q1607/q1847/q2087.  The legal d3-plus preimages are not a small plane curve in
+the free sampler parameters, so the live quotient search must use tower/Kummer
+variables rather than raw `(R,L)` alone.
 ```
 
 Concrete next K/S test:

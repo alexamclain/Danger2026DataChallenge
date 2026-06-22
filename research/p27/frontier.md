@@ -757,6 +757,13 @@ prefix rates through depths 1-4 are about `0.48/0.24/0.10/0.058` and
 `0.53/0.23/0.11/0.058`.  Thus the tower is exact, but not density-beating on
 the original legal source without a quotient or direct tower sampler.
 
+The first raw quotient screen is negative:
+[P27 Conic-Pair Low-Degree Relation Screen](evidence/p27_conic_pair_lowdegree_relation_20260621.md).
+For q1607/q1847/q2087, the legal d3-plus sampler preimages in `(R,L)` have no
+nonzero total-degree relation through degree `20`.  This kills the easiest
+"low-degree plane curve in raw `(R,L)`" source, and pushes the quotient search
+to the repeated Kummer tower variables instead.
+
 The K-line now has a cleaner coordinate for that extraction:
 [P27 Kummer Belyi Structure Probe](evidence/p27_kummer_belyi_structure_probe_20260621.md).
 Symbolically,

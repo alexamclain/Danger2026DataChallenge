@@ -157,3 +157,7 @@ kill = raw GPU production from the original legal source without a quotient
 ```text
 p27_legal_conic_tower_depth_rows=1/1
 ```
+
+Update: the raw `(R,L)` plane-curve shortcut is now screened and negative.
+See [P27 Conic-Pair Low-Degree Relation Screen](p27_conic_pair_lowdegree_relation_20260621.md):
+no total-degree relation `<=20` on q1607/q1847/q2087 legal d3-plus preimages.

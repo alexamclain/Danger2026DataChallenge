@@ -257,6 +257,12 @@ confirms the original legal source still thins like selected half-gates on
 p27 samples.  Do not spend GPU time merely evaluating deeper legal conic-chain
 prefixes unless a quotient or tower sampler is supplied.
 
+The raw `(R,L)` low-degree quotient screen is negative:
+[P27 Conic-Pair Low-Degree Relation Screen](p27_conic_pair_lowdegree_relation_20260621.md).
+Do not spend GPU time on random `(R,L)` buckets or raw low-degree plane-curve
+filters.  Any GPU follow-up needs a quotient/source in the repeated Kummer
+tower variables.
+
 Packet source warning:
 [P27 Label-2 E[2] Packet Source Probe](p27_label2_e2_packet_source_probe_20260621.md).
 The easy rational `E[2]` packet source has already been tested on p27 and gives

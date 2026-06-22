@@ -157,6 +157,12 @@ successive selected half-gates through depth 4.  GPU should therefore look for
 a quotient/legal tower sampler, not just evaluate the original legal source
 with more depth gates.
 
+The raw `(R,L)` low-degree quotient screen is negative:
+[P27 Conic-Pair Low-Degree Relation Screen](p27_conic_pair_lowdegree_relation_20260621.md).
+Do not ask GPU to search random `(R,L)` or low-degree raw plane-curve buckets.
+The remaining GPU-relevant target is a quotient/source in the repeated Kummer
+tower variables.
+
 Report:
 
 ```text
