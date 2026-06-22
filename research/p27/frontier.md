@@ -602,6 +602,12 @@ The signed-root selector over that bridge is not a shortcut:
 [P27 B/K Signed-Root Relation Screen](evidence/p27_b_kline_signed_root_relation_20260622.md).
 The selected K sheet has no positive extra low-degree plane relation beyond
 the inherited bridge cover in q1471/q1607/q1847/q2087.
+The descended even-quartic subcase is also dead:
+[P27 K-Line Even-Quartic Screen](evidence/p27_kline_even_quartic_screen_20260622.md).
+Over q1471/q1607/q1847, `chi(K^4+a*K^2+b)` has zero exact hits for both
+`d3_on_K` and `d4_on_K_after_d3`.  So a useful K-line quartic hit must use odd
+K terms and the signed K sheet; the GPU ask is the full quartic, not a
+`K^2`-only proxy.
 
 That ask is now packaged as a concrete handoff:
 [P27 Kummer Branch-Extraction Handoff](evidence/p27_kummer_branch_extraction_handoff_20260621.md).

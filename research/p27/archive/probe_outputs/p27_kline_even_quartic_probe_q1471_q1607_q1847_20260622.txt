@@ -1,0 +1,58 @@
+p27 K-line even-quartic probe
+packet = research/p27/archive/fixtures/p27_kline_quartic_targets_20260622.json
+family = chi(K^4 + a*K^2 + b), global polarity allowed
+target: field=1471 family=d3_on_K
+even_quartic_stats:
+  exact_even_quartics = 0
+  field = 1471
+  pairs_tested = 2163841
+  polarity_-1_hits = 0
+  polarity_1_hits = 0
+  rows = 50
+hit_samples:
+target: field=1471 family=d4_on_K_after_d3
+even_quartic_stats:
+  exact_even_quartics = 0
+  field = 1471
+  pairs_tested = 2163841
+  polarity_-1_hits = 0
+  polarity_1_hits = 0
+  rows = 28
+hit_samples:
+target: field=1607 family=d3_on_K
+even_quartic_stats:
+  exact_even_quartics = 0
+  field = 1607
+  pairs_tested = 2582449
+  polarity_-1_hits = 0
+  polarity_1_hits = 0
+  rows = 49
+hit_samples:
+target: field=1607 family=d4_on_K_after_d3
+even_quartic_stats:
+  exact_even_quartics = 0
+  field = 1607
+  pairs_tested = 2582449
+  polarity_-1_hits = 0
+  polarity_1_hits = 0
+  rows = 28
+hit_samples:
+target: field=1847 family=d3_on_K
+even_quartic_stats:
+  exact_even_quartics = 0
+  field = 1847
+  pairs_tested = 3411409
+  polarity_-1_hits = 0
+  polarity_1_hits = 0
+  rows = 63
+hit_samples:
+target: field=1847 family=d4_on_K_after_d3
+even_quartic_stats:
+  exact_even_quartics = 0
+  field = 1847
+  pairs_tested = 3411409
+  polarity_-1_hits = 0
+  polarity_1_hits = 0
+  rows = 45
+hit_samples:
+p27_kline_even_quartic_probe_rows=1/1

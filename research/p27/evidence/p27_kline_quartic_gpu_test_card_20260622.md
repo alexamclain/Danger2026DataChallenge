@@ -186,6 +186,14 @@ exact_quartics = 0
 This is only an implementation sanity check, not evidence against the full
 quartic family.
 
+Follow-up:
+[P27 K-Line Even-Quartic Screen](p27_kline_even_quartic_screen_20260622.md)
+exhausts the descended subfamily
+`chi(K^4+a*K^2+b)` locally over q1471/q1607/q1847.  It finds zero exact hits
+for both `d3_on_K` and `d4_on_K_after_d3`.  Therefore the GPU should not spend
+time on the cheap `K^2`-only subfamily; a useful K-line quartic hit must use
+odd powers of `K` and the signed K sheet.
+
 ## Run Order
 
 ```text

@@ -206,6 +206,10 @@ confirmation streams.
 [P27 B/K Signed-Root Relation Screen](p27_b_kline_signed_root_relation_20260622.md)
 then rules out the nearest shortcut: selecting the signed K root over B is not
 an extra low-degree plane relation beyond the bridge cover.
+[P27 K-Line Even-Quartic Screen](p27_kline_even_quartic_screen_20260622.md)
+also rules out the descended `K^2`-only subfamily
+`chi(K^4+a*K^2+b)` over q1471/q1607/q1847.  So the next GPU quartic screen
+should test the full signed K-line quartic, not a cheaper even-only proxy.
 
 ## Do Not Run Yet
 
@@ -218,6 +222,8 @@ direct sampler
 
 do not score broader random buckets unless they are pre-registered from a
 named algebraic object
+
+do not spend GPU time on the K-line even-quartic subfamily alone
 ```
 
 ## Continue / Kill
@@ -226,11 +232,13 @@ named algebraic object
 continue = bounded GPU recurrence-coupling telemetry
 continue = direct legal-pullback sampler only after a quotient/sampler exists
 continue = CAS/math normalization of the d3 legal cover over P1_Sroot or P1_B
+continue = full B-line/K-line quartic exact-support GPU screen
 
 kill = production GPU run from the quadratic formula alone
 kill = interpreting conditional 2x lift as source shrink
 kill = fixed-prefix GPU filters without target/source_draw improvement
 kill = short conic sign-word bucket searches without a new invariant
+kill = K-line even-quartic-only GPU screen
 ```
 
 ```text
