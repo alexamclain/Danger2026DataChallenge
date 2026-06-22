@@ -165,6 +165,12 @@ low-weight visible pair invariants do not predict `f4`.  This sharpens the
 next CAS ask to an explicit Hilbert-90 quotient/coboundary computation, not a
 visible norm sampler.
 
+Explicit H90 follow-up:
+[P27 B-Line Gamma H90 Quotient](p27_b_line_gamma_h90_quotient_20260622.md)
+shows that the quotient is `r=(v1+2)/(v2+2)` with `r+1/r=u`; equivalently,
+if `h^2=r`, then `(h+1/h)^2=u+2`.  This is the already-known `f3` square-root
+layer.  It does not predict `f4`.
+
 Negative:
 
 ```text
@@ -181,11 +187,13 @@ follows from the materialization selector alone.
 ```text
 continue = normalize the staged cover F_A(u,v)=0 plus rho^2=v^2-4
 continue = compute the H90 quotient for gamma^2=v+2 on that staged cover
+continue = compute gamma as a class over the f3/H90 layer, not just the quotient
 continue = compare gamma^2=v+2 against the f3 class on that normalized cover
 continue = ask CAS/expert whether gamma is a pullback, coboundary, iterate, or low-genus quotient
 
 kill = treating generic 4-to-actual 2 v-root shrink as a new search-space win
 kill = naive Norm_2(v+2)=4*x6*(2-A) as the missing formula
+kill = explicit H90 quotient as a standalone f4 source law
 kill = GPU production from chi(v^2-4) or chi(v+A) alone
 kill = searching more visible orientation atoms for this materialization half
 ```

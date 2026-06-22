@@ -39,6 +39,14 @@ is false in every row.  The quotient is square, but it is not the parent
 So the norm data supports a Hilbert-90/coboundary framing, but not a visible
 source formula.
 
+Follow-up:
+[P27 B-Line Gamma H90 Quotient](p27_b_line_gamma_h90_quotient_20260622.md)
+computes the explicit quotient.  If
+`r=(v1+2)/(v2+2)` and `h^2=r`, then `r+1/r=u` and
+`(h+1/h)^2=u+2` with zero failures in q1607/q1847/q2087.  So the H90 quotient
+collapses to the already-imposed first reduced `f3` layer; it does not expose
+`f4`.
+
 ## Artifacts
 
 Probe:
@@ -159,10 +167,12 @@ This does not produce a GPU bucket or direct sampler.
 
 ```text
 continue = compute an explicit H90 quotient for gamma on the staged cover
+continue = compute the gamma class over the resulting f3/H90 layer
 continue = ask whether that quotient telescopes or recurs in the next gate
 continue = offline CAS on F_A(u,v), rho^2=v^2-4, gamma^2=v+2
 
 kill = naive Norm_2(v+2)=4*x6*(2-A) as the missing formula
+kill = explicit H90 quotient as a standalone f4 source law
 kill = visible pair-invariant products through weight 4 as f4 predictors
 kill = GPU production from gamma norm-triviality alone
 ```

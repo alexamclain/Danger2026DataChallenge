@@ -1034,6 +1034,12 @@ always square in q1607/q1847/q2087.  But the naive parent-`x6` norm formula is
 false, and no visible pair-invariant product through weight `4` predicts
 `f4`.  This keeps a real H90/coboundary CAS question alive while killing
 gamma norm-triviality as a direct GPU/source rule.
+The explicit H90 quotient is now computed:
+[P27 B-Line Gamma H90 Quotient](evidence/p27_b_line_gamma_h90_quotient_20260622.md).
+For `r=(v1+2)/(v2+2)` and `h^2=r`, the identities `r+1/r=u` and
+`(h+1/h)^2=u+2` hold with zero failures.  Thus the quotient collapses to the
+already-imposed first reduced `f3` layer and does not predict `f4`; the live
+object is now `gamma` as a class over that f3/H90 layer.
 The B-line visible two-gate quartic shortcut is closed as well:
 [P27 B-Line Gate4-Prefix Quartic q1847 Screen](evidence/p27_b_line_gate4_prefix_quartic_q1847_screen_20260622.md).
 It scans `6,300,872,423` q1847 coefficient triples for

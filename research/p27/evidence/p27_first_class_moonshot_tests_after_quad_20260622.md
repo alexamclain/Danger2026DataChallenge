@@ -186,6 +186,13 @@ invariants have no exact `f4` predictor through weight `4`.  The remaining
 test is therefore an explicit H90 quotient/coboundary computation for
 `gamma`, not another norm or pair-invariant scan.
 
+Explicit H90 follow-up:
+[P27 B-Line Gamma H90 Quotient](p27_b_line_gamma_h90_quotient_20260622.md).
+The quotient is real but collapses: for `r=(v1+2)/(v2+2)`,
+`r+1/r=u`, and if `h^2=r`, then `(h+1/h)^2=u+2`.  No visible H90 quotient
+product through weight `4` predicts `f4`.  So the next CAS object is `gamma`
+as a class over the known f3/H90 layer, not the H90 quotient itself.
+
 Required computation:
 
 ```text
@@ -195,6 +202,7 @@ impose the selected-source legal/core cut before using all-chart lift buckets
 extract branch divisor degree, support field degrees, components, genus
 if d3 is tractable, normalize F_A(u,v)=0 plus rho^2=v^2-4 and compare gamma^2=v+2 in the Kummer group
 compute the H90 quotient/coboundary for gamma and ask whether it telescopes or recurs
+after the quotient collapses to f3, compute gamma over the f3/H90 layer
 use f5/f6 only as regression checks until larger data supports them
 ```
 
@@ -393,6 +401,7 @@ kill = low-degree plane relations for the reduced B-line d3 fiber through degree
 kill = low-degree plane relations for the second reduced B-line f4/f3 fiber through degree 20
 kill = treating chi(v^2-4) or chi(v+A) materialization as a GPU/source win
 kill = naive gamma norm or visible pair-invariant predictors as source laws
+kill = explicit H90 quotient as a standalone f4 source law
 kill = online Magma as the reduced-cover extraction engine
 kill = more visible quartic/branch-map bucket searches without a theorem
 kill = treating source-conditional 2x lift as sqrt-beating

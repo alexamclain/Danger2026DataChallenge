@@ -145,6 +145,12 @@ are square, but the naive parent-`x6` formula is false and visible pair
 invariants do not predict `f4`.  Keep the H90/coboundary route alive as a CAS
 class computation, not as a norm bucket.
 
+Explicit H90 follow-up:
+[P27 B-Line Gamma H90 Quotient](p27_b_line_gamma_h90_quotient_20260622.md)
+shows that the quotient collapses to the first reduced cover:
+`(v1+2)/(v2+2) + (v2+2)/(v1+2) = u`, and if `h^2=(v1+2)/(v2+2)` then
+`(h+1/h)^2=u+2`.  No visible H90 quotient product predicts `f4`.
+
 Negative:
 
 ```text
@@ -173,6 +179,7 @@ continue = normalize the reduced 4-u / 8-x d3 fiber cover
 continue = normalize the second reduced f4/f3 8-v cover
 continue = use the staged transition/materialization/gamma model for f4/f3
 continue = compute an explicit H90 quotient for gamma^2=v+2
+continue = compute gamma over the f3/H90 layer as the remaining class
 continue = compare f4/f3 as a class relation after f3 is named
 continue = use f5/f6 rows only as tail/regression checks for an extracted class
 
@@ -182,6 +189,7 @@ kill = B-line norm/trace/power-sum selectors as a production sampler
 kill = second-fiber low-degree B-plane relations as a production sampler
 kill = chi(v^2-4) materialization as a production sampler
 kill = naive gamma norm or visible pair-invariant predictors as source laws
+kill = explicit H90 quotient as a standalone f4 source law
 kill = more B-bucket GPU production before a source/recurrent class exists
 kill = widening visible low-degree B scans already killed by q1847
 ```
