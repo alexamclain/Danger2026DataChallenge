@@ -937,6 +937,12 @@ It shows that selected prefix bits descend cleanly to both K and Sroot, but
 Sroot is only a doubled K grouping with identical all-plus prefix ratios.  This
 strengthens Sroot as the normalization coordinate for CAS and kills Sroot
 prefix buckets as a GPU/source shortcut.
+The compact K/Sroot class fixture is now frozen:
+[P27 K/Sroot Kummer Fixture Packet](evidence/p27_ksroot_kummer_fixture_packet_20260622.md).
+It records conditional `f3/f4/f5/f6` rows over q1607/q1847/q2087 for both K
+and signed Sroot, with `Sroot^2=K` included row-by-row.  Every K row has two
+Sroot rows and the signs double, so the live test is normalized `f3` branch
+class extraction preserving K-square rationality, then `f4/f3` comparison.
 The B-line visible two-gate quartic shortcut is closed as well:
 [P27 B-Line Gate4-Prefix Quartic q1847 Screen](evidence/p27_b_line_gate4_prefix_quartic_q1847_screen_20260622.md).
 It scans `6,300,872,423` q1847 coefficient triples for

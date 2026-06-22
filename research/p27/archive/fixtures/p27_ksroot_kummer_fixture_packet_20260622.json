@@ -1,0 +1,7460 @@
+{
+  "acceptance": {
+    "kill": "generic high-genus f3 plus fresh f4 half-cover or class that only works after forgetting K",
+    "promote": "low-genus/sourceable/recurrent K/Sroot class preserving K-square rationality"
+  },
+  "cas_tasks": [
+    {
+      "compute": [
+        "branch divisor degree and support field degrees over P1_Sroot",
+        "normalization genus and component count",
+        "Sroot -> -Sroot decomposition and descent to K",
+        "whether the class preserves the rational K-square stratum"
+      ],
+      "kill_if": "class only appears after forgetting K-square rationality or is high/generic",
+      "name": "Recover normalized Sroot branch class for f3",
+      "priority": 10,
+      "promote_if": "stable low-genus/sourceable Sroot class that survives K quotient checks"
+    },
+    {
+      "compute": [
+        "pullback/translate/coboundary/iterate relation between conditional classes",
+        "whether signed Sroot is essential or the relation descends to K",
+        "first falsifier showing f4 is a fresh independent half-cover"
+      ],
+      "kill_if": "successive classes are unrelated fresh Kummer covers",
+      "name": "Compare f4/f3 after f3 is named",
+      "priority": 20,
+      "promote_if": "one K/Sroot class or correspondence controls multiple selected gates"
+    }
+  ],
+  "coordinates": {
+    "K": "x([2]P) on E': V^2 = U^3 + 4U",
+    "Sroot": "(U^2 - 4)/(2V)",
+    "relation": "Sroot^2 = K"
+  },
+  "date": "2026-06-22",
+  "do_not_run": [
+    "K/Sroot bucket production without a named class",
+    "Sroot prefix-density GPU tests",
+    "visible degree <=4 branch divisor restarts",
+    "K-line even or reciprocal quartic subfamilies already killed"
+  ],
+  "field_signature": {
+    "chi_minus_one": -1,
+    "chi_two": 1,
+    "q_mod_16": 7
+  },
+  "fields": [
+    1607,
+    1847,
+    2087
+  ],
+  "fixtures": [
+    {
+      "base": {
+        "K_group_size_histogram": {
+          "16": 49
+        },
+        "Sroot_group_size_histogram": {
+          "8": 98
+        },
+        "legal_K": 49,
+        "legal_Sroot": 98,
+        "sheet_stats": {
+          "K_from_Sroot": 49,
+          "Sroot": 98,
+          "Sroot_per_K_histogram": {
+            "2": 49
+          }
+        }
+      },
+      "families": [
+        {
+          "coordinate": "K",
+          "meaning": "legal selected-source K values",
+          "name": "legal_K",
+          "row_count": 49,
+          "rows": [
+            {
+              "K": 12
+            },
+            {
+              "K": 27
+            },
+            {
+              "K": 34
+            },
+            {
+              "K": 49
+            },
+            {
+              "K": 93
+            },
+            {
+              "K": 108
+            },
+            {
+              "K": 137
+            },
+            {
+              "K": 206
+            },
+            {
+              "K": 229
+            },
+            {
+              "K": 256
+            },
+            {
+              "K": 263
+            },
+            {
+              "K": 268
+            },
+            {
+              "K": 283
+            },
+            {
+              "K": 300
+            },
+            {
+              "K": 377
+            },
+            {
+              "K": 419
+            },
+            {
+              "K": 486
+            },
+            {
+              "K": 517
+            },
+            {
+              "K": 529
+            },
+            {
+              "K": 532
+            },
+            {
+              "K": 693
+            },
+            {
+              "K": 728
+            },
+            {
+              "K": 734
+            },
+            {
+              "K": 755
+            },
+            {
+              "K": 805
+            },
+            {
+              "K": 817
+            },
+            {
+              "K": 838
+            },
+            {
+              "K": 843
+            },
+            {
+              "K": 867
+            },
+            {
+              "K": 876
+            },
+            {
+              "K": 888
+            },
+            {
+              "K": 917
+            },
+            {
+              "K": 918
+            },
+            {
+              "K": 937
+            },
+            {
+              "K": 961
+            },
+            {
+              "K": 992
+            },
+            {
+              "K": 1083
+            },
+            {
+              "K": 1085
+            },
+            {
+              "K": 1107
+            },
+            {
+              "K": 1144
+            },
+            {
+              "K": 1168
+            },
+            {
+              "K": 1212
+            },
+            {
+              "K": 1281
+            },
+            {
+              "K": 1362
+            },
+            {
+              "K": 1432
+            },
+            {
+              "K": 1456
+            },
+            {
+              "K": 1475
+            },
+            {
+              "K": 1490
+            },
+            {
+              "K": 1529
+            }
+          ]
+        },
+        {
+          "coordinate": "K",
+          "domain": "legal K",
+          "gate": "d3",
+          "meaning": "selected gate d3 character on the active K domain",
+          "minus_count": 21,
+          "missing_count": 0,
+          "mixed_count": 0,
+          "name": "f3_conditional_on_K",
+          "plus_count": 28,
+          "row_count": 49,
+          "rows": [
+            {
+              "K": 12,
+              "sign": "minus"
+            },
+            {
+              "K": 27,
+              "sign": "minus"
+            },
+            {
+              "K": 34,
+              "sign": "plus"
+            },
+            {
+              "K": 49,
+              "sign": "minus"
+            },
+            {
+              "K": 93,
+              "sign": "minus"
+            },
+            {
+              "K": 108,
+              "sign": "plus"
+            },
+            {
+              "K": 137,
+              "sign": "plus"
+            },
+            {
+              "K": 206,
+              "sign": "plus"
+            },
+            {
+              "K": 229,
+              "sign": "minus"
+            },
+            {
+              "K": 256,
+              "sign": "plus"
+            },
+            {
+              "K": 263,
+              "sign": "minus"
+            },
+            {
+              "K": 268,
+              "sign": "plus"
+            },
+            {
+              "K": 283,
+              "sign": "plus"
+            },
+            {
+              "K": 300,
+              "sign": "plus"
+            },
+            {
+              "K": 377,
+              "sign": "minus"
+            },
+            {
+              "K": 419,
+              "sign": "minus"
+            },
+            {
+              "K": 486,
+              "sign": "plus"
+            },
+            {
+              "K": 517,
+              "sign": "minus"
+            },
+            {
+              "K": 529,
+              "sign": "plus"
+            },
+            {
+              "K": 532,
+              "sign": "minus"
+            },
+            {
+              "K": 693,
+              "sign": "plus"
+            },
+            {
+              "K": 728,
+              "sign": "minus"
+            },
+            {
+              "K": 734,
+              "sign": "plus"
+            },
+            {
+              "K": 755,
+              "sign": "minus"
+            },
+            {
+              "K": 805,
+              "sign": "minus"
+            },
+            {
+              "K": 817,
+              "sign": "plus"
+            },
+            {
+              "K": 838,
+              "sign": "plus"
+            },
+            {
+              "K": 843,
+              "sign": "plus"
+            },
+            {
+              "K": 867,
+              "sign": "plus"
+            },
+            {
+              "K": 876,
+              "sign": "plus"
+            },
+            {
+              "K": 888,
+              "sign": "plus"
+            },
+            {
+              "K": 917,
+              "sign": "plus"
+            },
+            {
+              "K": 918,
+              "sign": "plus"
+            },
+            {
+              "K": 937,
+              "sign": "minus"
+            },
+            {
+              "K": 961,
+              "sign": "plus"
+            },
+            {
+              "K": 992,
+              "sign": "minus"
+            },
+            {
+              "K": 1083,
+              "sign": "plus"
+            },
+            {
+              "K": 1085,
+              "sign": "minus"
+            },
+            {
+              "K": 1107,
+              "sign": "plus"
+            },
+            {
+              "K": 1144,
+              "sign": "minus"
+            },
+            {
+              "K": 1168,
+              "sign": "minus"
+            },
+            {
+              "K": 1212,
+              "sign": "minus"
+            },
+            {
+              "K": 1281,
+              "sign": "plus"
+            },
+            {
+              "K": 1362,
+              "sign": "minus"
+            },
+            {
+              "K": 1432,
+              "sign": "plus"
+            },
+            {
+              "K": 1456,
+              "sign": "plus"
+            },
+            {
+              "K": 1475,
+              "sign": "minus"
+            },
+            {
+              "K": 1490,
+              "sign": "plus"
+            },
+            {
+              "K": 1529,
+              "sign": "plus"
+            }
+          ]
+        },
+        {
+          "coordinate": "K",
+          "domain": "K all-plus prefix through d3",
+          "gate": "d4",
+          "meaning": "selected gate d4 character on the active K domain",
+          "minus_count": 9,
+          "missing_count": 0,
+          "mixed_count": 0,
+          "name": "f4_conditional_on_K",
+          "plus_count": 19,
+          "row_count": 28,
+          "rows": [
+            {
+              "K": 34,
+              "sign": "plus"
+            },
+            {
+              "K": 108,
+              "sign": "plus"
+            },
+            {
+              "K": 137,
+              "sign": "plus"
+            },
+            {
+              "K": 206,
+              "sign": "plus"
+            },
+            {
+              "K": 256,
+              "sign": "plus"
+            },
+            {
+              "K": 268,
+              "sign": "plus"
+            },
+            {
+              "K": 283,
+              "sign": "minus"
+            },
+            {
+              "K": 300,
+              "sign": "minus"
+            },
+            {
+              "K": 486,
+              "sign": "minus"
+            },
+            {
+              "K": 529,
+              "sign": "plus"
+            },
+            {
+              "K": 693,
+              "sign": "plus"
+            },
+            {
+              "K": 734,
+              "sign": "plus"
+            },
+            {
+              "K": 817,
+              "sign": "plus"
+            },
+            {
+              "K": 838,
+              "sign": "plus"
+            },
+            {
+              "K": 843,
+              "sign": "plus"
+            },
+            {
+              "K": 867,
+              "sign": "minus"
+            },
+            {
+              "K": 876,
+              "sign": "minus"
+            },
+            {
+              "K": 888,
+              "sign": "plus"
+            },
+            {
+              "K": 917,
+              "sign": "plus"
+            },
+            {
+              "K": 918,
+              "sign": "plus"
+            },
+            {
+              "K": 961,
+              "sign": "minus"
+            },
+            {
+              "K": 1083,
+              "sign": "plus"
+            },
+            {
+              "K": 1107,
+              "sign": "plus"
+            },
+            {
+              "K": 1281,
+              "sign": "minus"
+            },
+            {
+              "K": 1432,
+              "sign": "plus"
+            },
+            {
+              "K": 1456,
+              "sign": "minus"
+            },
+            {
+              "K": 1490,
+              "sign": "plus"
+            },
+            {
+              "K": 1529,
+              "sign": "minus"
+            }
+          ]
+        },
+        {
+          "coordinate": "K",
+          "domain": "K all-plus prefix through d4",
+          "gate": "d5",
+          "meaning": "selected gate d5 character on the active K domain",
+          "minus_count": 0,
+          "missing_count": 0,
+          "mixed_count": 0,
+          "name": "f5_conditional_on_K",
+          "plus_count": 19,
+          "row_count": 19,
+          "rows": [
+            {
+              "K": 34,
+              "sign": "plus"
+            },
+            {
+              "K": 108,
+              "sign": "plus"
+            },
+            {
+              "K": 137,
+              "sign": "plus"
+            },
+            {
+              "K": 206,
+              "sign": "plus"
+            },
+            {
+              "K": 256,
+              "sign": "plus"
+            },
+            {
+              "K": 268,
+              "sign": "plus"
+            },
+            {
+              "K": 529,
+              "sign": "plus"
+            },
+            {
+              "K": 693,
+              "sign": "plus"
+            },
+            {
+              "K": 734,
+              "sign": "plus"
+            },
+            {
+              "K": 817,
+              "sign": "plus"
+            },
+            {
+              "K": 838,
+              "sign": "plus"
+            },
+            {
+              "K": 843,
+              "sign": "plus"
+            },
+            {
+              "K": 888,
+              "sign": "plus"
+            },
+            {
+              "K": 917,
+              "sign": "plus"
+            },
+            {
+              "K": 918,
+              "sign": "plus"
+            },
+            {
+              "K": 1083,
+              "sign": "plus"
+            },
+            {
+              "K": 1107,
+              "sign": "plus"
+            },
+            {
+              "K": 1432,
+              "sign": "plus"
+            },
+            {
+              "K": 1490,
+              "sign": "plus"
+            }
+          ]
+        },
+        {
+          "coordinate": "K",
+          "domain": "K all-plus prefix through d5",
+          "gate": "d6",
+          "meaning": "selected gate d6 character on the active K domain",
+          "minus_count": 19,
+          "missing_count": 0,
+          "mixed_count": 0,
+          "name": "f6_conditional_on_K",
+          "plus_count": 0,
+          "row_count": 19,
+          "rows": [
+            {
+              "K": 34,
+              "sign": "minus"
+            },
+            {
+              "K": 108,
+              "sign": "minus"
+            },
+            {
+              "K": 137,
+              "sign": "minus"
+            },
+            {
+              "K": 206,
+              "sign": "minus"
+            },
+            {
+              "K": 256,
+              "sign": "minus"
+            },
+            {
+              "K": 268,
+              "sign": "minus"
+            },
+            {
+              "K": 529,
+              "sign": "minus"
+            },
+            {
+              "K": 693,
+              "sign": "minus"
+            },
+            {
+              "K": 734,
+              "sign": "minus"
+            },
+            {
+              "K": 817,
+              "sign": "minus"
+            },
+            {
+              "K": 838,
+              "sign": "minus"
+            },
+            {
+              "K": 843,
+              "sign": "minus"
+            },
+            {
+              "K": 888,
+              "sign": "minus"
+            },
+            {
+              "K": 917,
+              "sign": "minus"
+            },
+            {
+              "K": 918,
+              "sign": "minus"
+            },
+            {
+              "K": 1083,
+              "sign": "minus"
+            },
+            {
+              "K": 1107,
+              "sign": "minus"
+            },
+            {
+              "K": 1432,
+              "sign": "minus"
+            },
+            {
+              "K": 1490,
+              "sign": "minus"
+            }
+          ]
+        },
+        {
+          "coordinate": "Sroot",
+          "meaning": "legal selected-source Sroot values",
+          "name": "legal_Sroot",
+          "row_count": 98,
+          "rows": [
+            {
+              "K": 49,
+              "Sroot": 7
+            },
+            {
+              "K": 256,
+              "Sroot": 16
+            },
+            {
+              "K": 529,
+              "Sroot": 23
+            },
+            {
+              "K": 961,
+              "Sroot": 31
+            },
+            {
+              "K": 1529,
+              "Sroot": 56
+            },
+            {
+              "K": 755,
+              "Sroot": 63
+            },
+            {
+              "K": 12,
+              "Sroot": 133
+            },
+            {
+              "K": 532,
+              "Sroot": 162
+            },
+            {
+              "K": 1432,
+              "Sroot": 200
+            },
+            {
+              "K": 486,
+              "Sroot": 217
+            },
+            {
+              "K": 876,
+              "Sroot": 239
+            },
+            {
+              "K": 229,
+              "Sroot": 241
+            },
+            {
+              "K": 93,
+              "Sroot": 292
+            },
+            {
+              "K": 838,
+              "Sroot": 296
+            },
+            {
+              "K": 419,
+              "Sroot": 298
+            },
+            {
+              "K": 1212,
+              "Sroot": 302
+            },
+            {
+              "K": 817,
+              "Sroot": 304
+            },
+            {
+              "K": 1490,
+              "Sroot": 318
+            },
+            {
+              "K": 867,
+              "Sroot": 327
+            },
+            {
+              "K": 263,
+              "Sroot": 389
+            },
+            {
+              "K": 937,
+              "Sroot": 396
+            },
+            {
+              "K": 918,
+              "Sroot": 398
+            },
+            {
+              "K": 108,
+              "Sroot": 399
+            },
+            {
+              "K": 1107,
+              "Sroot": 416
+            },
+            {
+              "K": 1168,
+              "Sroot": 418
+            },
+            {
+              "K": 843,
+              "Sroot": 429
+            },
+            {
+              "K": 34,
+              "Sroot": 441
+            },
+            {
+              "K": 917,
+              "Sroot": 442
+            },
+            {
+              "K": 1083,
+              "Sroot": 460
+            },
+            {
+              "K": 1144,
+              "Sroot": 467
+            },
+            {
+              "K": 992,
+              "Sroot": 519
+            },
+            {
+              "K": 734,
+              "Sroot": 576
+            },
+            {
+              "K": 27,
+              "Sroot": 604
+            },
+            {
+              "K": 888,
+              "Sroot": 632
+            },
+            {
+              "K": 206,
+              "Sroot": 634
+            },
+            {
+              "K": 1475,
+              "Sroot": 635
+            },
+            {
+              "K": 805,
+              "Sroot": 637
+            },
+            {
+              "K": 300,
+              "Sroot": 665
+            },
+            {
+              "K": 1085,
+              "Sroot": 668
+            },
+            {
+              "K": 1362,
+              "Sroot": 673
+            },
+            {
+              "K": 283,
+              "Sroot": 698
+            },
+            {
+              "K": 377,
+              "Sroot": 714
+            },
+            {
+              "K": 1456,
+              "Sroot": 717
+            },
+            {
+              "K": 1281,
+              "Sroot": 728
+            },
+            {
+              "K": 693,
+              "Sroot": 732
+            },
+            {
+              "K": 137,
+              "Sroot": 736
+            },
+            {
+              "K": 728,
+              "Sroot": 744
+            },
+            {
+              "K": 268,
+              "Sroot": 748
+            },
+            {
+              "K": 517,
+              "Sroot": 762
+            },
+            {
+              "K": 517,
+              "Sroot": 845
+            },
+            {
+              "K": 268,
+              "Sroot": 859
+            },
+            {
+              "K": 728,
+              "Sroot": 863
+            },
+            {
+              "K": 137,
+              "Sroot": 871
+            },
+            {
+              "K": 693,
+              "Sroot": 875
+            },
+            {
+              "K": 1281,
+              "Sroot": 879
+            },
+            {
+              "K": 1456,
+              "Sroot": 890
+            },
+            {
+              "K": 377,
+              "Sroot": 893
+            },
+            {
+              "K": 283,
+              "Sroot": 909
+            },
+            {
+              "K": 1362,
+              "Sroot": 934
+            },
+            {
+              "K": 1085,
+              "Sroot": 939
+            },
+            {
+              "K": 300,
+              "Sroot": 942
+            },
+            {
+              "K": 805,
+              "Sroot": 970
+            },
+            {
+              "K": 1475,
+              "Sroot": 972
+            },
+            {
+              "K": 206,
+              "Sroot": 973
+            },
+            {
+              "K": 888,
+              "Sroot": 975
+            },
+            {
+              "K": 27,
+              "Sroot": 1003
+            },
+            {
+              "K": 734,
+              "Sroot": 1031
+            },
+            {
+              "K": 992,
+              "Sroot": 1088
+            },
+            {
+              "K": 1144,
+              "Sroot": 1140
+            },
+            {
+              "K": 1083,
+              "Sroot": 1147
+            },
+            {
+              "K": 917,
+              "Sroot": 1165
+            },
+            {
+              "K": 34,
+              "Sroot": 1166
+            },
+            {
+              "K": 843,
+              "Sroot": 1178
+            },
+            {
+              "K": 1168,
+              "Sroot": 1189
+            },
+            {
+              "K": 1107,
+              "Sroot": 1191
+            },
+            {
+              "K": 108,
+              "Sroot": 1208
+            },
+            {
+              "K": 918,
+              "Sroot": 1209
+            },
+            {
+              "K": 937,
+              "Sroot": 1211
+            },
+            {
+              "K": 263,
+              "Sroot": 1218
+            },
+            {
+              "K": 867,
+              "Sroot": 1280
+            },
+            {
+              "K": 1490,
+              "Sroot": 1289
+            },
+            {
+              "K": 817,
+              "Sroot": 1303
+            },
+            {
+              "K": 1212,
+              "Sroot": 1305
+            },
+            {
+              "K": 419,
+              "Sroot": 1309
+            },
+            {
+              "K": 838,
+              "Sroot": 1311
+            },
+            {
+              "K": 93,
+              "Sroot": 1315
+            },
+            {
+              "K": 229,
+              "Sroot": 1366
+            },
+            {
+              "K": 876,
+              "Sroot": 1368
+            },
+            {
+              "K": 486,
+              "Sroot": 1390
+            },
+            {
+              "K": 1432,
+              "Sroot": 1407
+            },
+            {
+              "K": 532,
+              "Sroot": 1445
+            },
+            {
+              "K": 12,
+              "Sroot": 1474
+            },
+            {
+              "K": 755,
+              "Sroot": 1544
+            },
+            {
+              "K": 1529,
+              "Sroot": 1551
+            },
+            {
+              "K": 961,
+              "Sroot": 1576
+            },
+            {
+              "K": 529,
+              "Sroot": 1584
+            },
+            {
+              "K": 256,
+              "Sroot": 1591
+            },
+            {
+              "K": 49,
+              "Sroot": 1600
+            }
+          ]
+        },
+        {
+          "coordinate": "Sroot",
+          "domain": "legal Sroot",
+          "gate": "d3",
+          "meaning": "selected gate d3 character on the active Sroot domain",
+          "minus_count": 42,
+          "missing_count": 0,
+          "mixed_count": 0,
+          "name": "f3_conditional_on_Sroot",
+          "plus_count": 56,
+          "row_count": 98,
+          "rows": [
+            {
+              "K": 49,
+              "Sroot": 7,
+              "sign": "minus"
+            },
+            {
+              "K": 256,
+              "Sroot": 16,
+              "sign": "plus"
+            },
+            {
+              "K": 529,
+              "Sroot": 23,
+              "sign": "plus"
+            },
+            {
+              "K": 961,
+              "Sroot": 31,
+              "sign": "plus"
+            },
+            {
+              "K": 1529,
+              "Sroot": 56,
+              "sign": "plus"
+            },
+            {
+              "K": 755,
+              "Sroot": 63,
+              "sign": "minus"
+            },
+            {
+              "K": 12,
+              "Sroot": 133,
+              "sign": "minus"
+            },
+            {
+              "K": 532,
+              "Sroot": 162,
+              "sign": "minus"
+            },
+            {
+              "K": 1432,
+              "Sroot": 200,
+              "sign": "plus"
+            },
+            {
+              "K": 486,
+              "Sroot": 217,
+              "sign": "plus"
+            },
+            {
+              "K": 876,
+              "Sroot": 239,
+              "sign": "plus"
+            },
+            {
+              "K": 229,
+              "Sroot": 241,
+              "sign": "minus"
+            },
+            {
+              "K": 93,
+              "Sroot": 292,
+              "sign": "minus"
+            },
+            {
+              "K": 838,
+              "Sroot": 296,
+              "sign": "plus"
+            },
+            {
+              "K": 419,
+              "Sroot": 298,
+              "sign": "minus"
+            },
+            {
+              "K": 1212,
+              "Sroot": 302,
+              "sign": "minus"
+            },
+            {
+              "K": 817,
+              "Sroot": 304,
+              "sign": "plus"
+            },
+            {
+              "K": 1490,
+              "Sroot": 318,
+              "sign": "plus"
+            },
+            {
+              "K": 867,
+              "Sroot": 327,
+              "sign": "plus"
+            },
+            {
+              "K": 263,
+              "Sroot": 389,
+              "sign": "minus"
+            },
+            {
+              "K": 937,
+              "Sroot": 396,
+              "sign": "minus"
+            },
+            {
+              "K": 918,
+              "Sroot": 398,
+              "sign": "plus"
+            },
+            {
+              "K": 108,
+              "Sroot": 399,
+              "sign": "plus"
+            },
+            {
+              "K": 1107,
+              "Sroot": 416,
+              "sign": "plus"
+            },
+            {
+              "K": 1168,
+              "Sroot": 418,
+              "sign": "minus"
+            },
+            {
+              "K": 843,
+              "Sroot": 429,
+              "sign": "plus"
+            },
+            {
+              "K": 34,
+              "Sroot": 441,
+              "sign": "plus"
+            },
+            {
+              "K": 917,
+              "Sroot": 442,
+              "sign": "plus"
+            },
+            {
+              "K": 1083,
+              "Sroot": 460,
+              "sign": "plus"
+            },
+            {
+              "K": 1144,
+              "Sroot": 467,
+              "sign": "minus"
+            },
+            {
+              "K": 992,
+              "Sroot": 519,
+              "sign": "minus"
+            },
+            {
+              "K": 734,
+              "Sroot": 576,
+              "sign": "plus"
+            },
+            {
+              "K": 27,
+              "Sroot": 604,
+              "sign": "minus"
+            },
+            {
+              "K": 888,
+              "Sroot": 632,
+              "sign": "plus"
+            },
+            {
+              "K": 206,
+              "Sroot": 634,
+              "sign": "plus"
+            },
+            {
+              "K": 1475,
+              "Sroot": 635,
+              "sign": "minus"
+            },
+            {
+              "K": 805,
+              "Sroot": 637,
+              "sign": "minus"
+            },
+            {
+              "K": 300,
+              "Sroot": 665,
+              "sign": "plus"
+            },
+            {
+              "K": 1085,
+              "Sroot": 668,
+              "sign": "minus"
+            },
+            {
+              "K": 1362,
+              "Sroot": 673,
+              "sign": "minus"
+            },
+            {
+              "K": 283,
+              "Sroot": 698,
+              "sign": "plus"
+            },
+            {
+              "K": 377,
+              "Sroot": 714,
+              "sign": "minus"
+            },
+            {
+              "K": 1456,
+              "Sroot": 717,
+              "sign": "plus"
+            },
+            {
+              "K": 1281,
+              "Sroot": 728,
+              "sign": "plus"
+            },
+            {
+              "K": 693,
+              "Sroot": 732,
+              "sign": "plus"
+            },
+            {
+              "K": 137,
+              "Sroot": 736,
+              "sign": "plus"
+            },
+            {
+              "K": 728,
+              "Sroot": 744,
+              "sign": "minus"
+            },
+            {
+              "K": 268,
+              "Sroot": 748,
+              "sign": "plus"
+            },
+            {
+              "K": 517,
+              "Sroot": 762,
+              "sign": "minus"
+            },
+            {
+              "K": 517,
+              "Sroot": 845,
+              "sign": "minus"
+            },
+            {
+              "K": 268,
+              "Sroot": 859,
+              "sign": "plus"
+            },
+            {
+              "K": 728,
+              "Sroot": 863,
+              "sign": "minus"
+            },
+            {
+              "K": 137,
+              "Sroot": 871,
+              "sign": "plus"
+            },
+            {
+              "K": 693,
+              "Sroot": 875,
+              "sign": "plus"
+            },
+            {
+              "K": 1281,
+              "Sroot": 879,
+              "sign": "plus"
+            },
+            {
+              "K": 1456,
+              "Sroot": 890,
+              "sign": "plus"
+            },
+            {
+              "K": 377,
+              "Sroot": 893,
+              "sign": "minus"
+            },
+            {
+              "K": 283,
+              "Sroot": 909,
+              "sign": "plus"
+            },
+            {
+              "K": 1362,
+              "Sroot": 934,
+              "sign": "minus"
+            },
+            {
+              "K": 1085,
+              "Sroot": 939,
+              "sign": "minus"
+            },
+            {
+              "K": 300,
+              "Sroot": 942,
+              "sign": "plus"
+            },
+            {
+              "K": 805,
+              "Sroot": 970,
+              "sign": "minus"
+            },
+            {
+              "K": 1475,
+              "Sroot": 972,
+              "sign": "minus"
+            },
+            {
+              "K": 206,
+              "Sroot": 973,
+              "sign": "plus"
+            },
+            {
+              "K": 888,
+              "Sroot": 975,
+              "sign": "plus"
+            },
+            {
+              "K": 27,
+              "Sroot": 1003,
+              "sign": "minus"
+            },
+            {
+              "K": 734,
+              "Sroot": 1031,
+              "sign": "plus"
+            },
+            {
+              "K": 992,
+              "Sroot": 1088,
+              "sign": "minus"
+            },
+            {
+              "K": 1144,
+              "Sroot": 1140,
+              "sign": "minus"
+            },
+            {
+              "K": 1083,
+              "Sroot": 1147,
+              "sign": "plus"
+            },
+            {
+              "K": 917,
+              "Sroot": 1165,
+              "sign": "plus"
+            },
+            {
+              "K": 34,
+              "Sroot": 1166,
+              "sign": "plus"
+            },
+            {
+              "K": 843,
+              "Sroot": 1178,
+              "sign": "plus"
+            },
+            {
+              "K": 1168,
+              "Sroot": 1189,
+              "sign": "minus"
+            },
+            {
+              "K": 1107,
+              "Sroot": 1191,
+              "sign": "plus"
+            },
+            {
+              "K": 108,
+              "Sroot": 1208,
+              "sign": "plus"
+            },
+            {
+              "K": 918,
+              "Sroot": 1209,
+              "sign": "plus"
+            },
+            {
+              "K": 937,
+              "Sroot": 1211,
+              "sign": "minus"
+            },
+            {
+              "K": 263,
+              "Sroot": 1218,
+              "sign": "minus"
+            },
+            {
+              "K": 867,
+              "Sroot": 1280,
+              "sign": "plus"
+            },
+            {
+              "K": 1490,
+              "Sroot": 1289,
+              "sign": "plus"
+            },
+            {
+              "K": 817,
+              "Sroot": 1303,
+              "sign": "plus"
+            },
+            {
+              "K": 1212,
+              "Sroot": 1305,
+              "sign": "minus"
+            },
+            {
+              "K": 419,
+              "Sroot": 1309,
+              "sign": "minus"
+            },
+            {
+              "K": 838,
+              "Sroot": 1311,
+              "sign": "plus"
+            },
+            {
+              "K": 93,
+              "Sroot": 1315,
+              "sign": "minus"
+            },
+            {
+              "K": 229,
+              "Sroot": 1366,
+              "sign": "minus"
+            },
+            {
+              "K": 876,
+              "Sroot": 1368,
+              "sign": "plus"
+            },
+            {
+              "K": 486,
+              "Sroot": 1390,
+              "sign": "plus"
+            },
+            {
+              "K": 1432,
+              "Sroot": 1407,
+              "sign": "plus"
+            },
+            {
+              "K": 532,
+              "Sroot": 1445,
+              "sign": "minus"
+            },
+            {
+              "K": 12,
+              "Sroot": 1474,
+              "sign": "minus"
+            },
+            {
+              "K": 755,
+              "Sroot": 1544,
+              "sign": "minus"
+            },
+            {
+              "K": 1529,
+              "Sroot": 1551,
+              "sign": "plus"
+            },
+            {
+              "K": 961,
+              "Sroot": 1576,
+              "sign": "plus"
+            },
+            {
+              "K": 529,
+              "Sroot": 1584,
+              "sign": "plus"
+            },
+            {
+              "K": 256,
+              "Sroot": 1591,
+              "sign": "plus"
+            },
+            {
+              "K": 49,
+              "Sroot": 1600,
+              "sign": "minus"
+            }
+          ]
+        },
+        {
+          "coordinate": "Sroot",
+          "domain": "Sroot all-plus prefix through d3",
+          "gate": "d4",
+          "meaning": "selected gate d4 character on the active Sroot domain",
+          "minus_count": 18,
+          "missing_count": 0,
+          "mixed_count": 0,
+          "name": "f4_conditional_on_Sroot",
+          "plus_count": 38,
+          "row_count": 56,
+          "rows": [
+            {
+              "K": 256,
+              "Sroot": 16,
+              "sign": "plus"
+            },
+            {
+              "K": 529,
+              "Sroot": 23,
+              "sign": "plus"
+            },
+            {
+              "K": 961,
+              "Sroot": 31,
+              "sign": "minus"
+            },
+            {
+              "K": 1529,
+              "Sroot": 56,
+              "sign": "minus"
+            },
+            {
+              "K": 1432,
+              "Sroot": 200,
+              "sign": "plus"
+            },
+            {
+              "K": 486,
+              "Sroot": 217,
+              "sign": "minus"
+            },
+            {
+              "K": 876,
+              "Sroot": 239,
+              "sign": "minus"
+            },
+            {
+              "K": 838,
+              "Sroot": 296,
+              "sign": "plus"
+            },
+            {
+              "K": 817,
+              "Sroot": 304,
+              "sign": "plus"
+            },
+            {
+              "K": 1490,
+              "Sroot": 318,
+              "sign": "plus"
+            },
+            {
+              "K": 867,
+              "Sroot": 327,
+              "sign": "minus"
+            },
+            {
+              "K": 918,
+              "Sroot": 398,
+              "sign": "plus"
+            },
+            {
+              "K": 108,
+              "Sroot": 399,
+              "sign": "plus"
+            },
+            {
+              "K": 1107,
+              "Sroot": 416,
+              "sign": "plus"
+            },
+            {
+              "K": 843,
+              "Sroot": 429,
+              "sign": "plus"
+            },
+            {
+              "K": 34,
+              "Sroot": 441,
+              "sign": "plus"
+            },
+            {
+              "K": 917,
+              "Sroot": 442,
+              "sign": "plus"
+            },
+            {
+              "K": 1083,
+              "Sroot": 460,
+              "sign": "plus"
+            },
+            {
+              "K": 734,
+              "Sroot": 576,
+              "sign": "plus"
+            },
+            {
+              "K": 888,
+              "Sroot": 632,
+              "sign": "plus"
+            },
+            {
+              "K": 206,
+              "Sroot": 634,
+              "sign": "plus"
+            },
+            {
+              "K": 300,
+              "Sroot": 665,
+              "sign": "minus"
+            },
+            {
+              "K": 283,
+              "Sroot": 698,
+              "sign": "minus"
+            },
+            {
+              "K": 1456,
+              "Sroot": 717,
+              "sign": "minus"
+            },
+            {
+              "K": 1281,
+              "Sroot": 728,
+              "sign": "minus"
+            },
+            {
+              "K": 693,
+              "Sroot": 732,
+              "sign": "plus"
+            },
+            {
+              "K": 137,
+              "Sroot": 736,
+              "sign": "plus"
+            },
+            {
+              "K": 268,
+              "Sroot": 748,
+              "sign": "plus"
+            },
+            {
+              "K": 268,
+              "Sroot": 859,
+              "sign": "plus"
+            },
+            {
+              "K": 137,
+              "Sroot": 871,
+              "sign": "plus"
+            },
+            {
+              "K": 693,
+              "Sroot": 875,
+              "sign": "plus"
+            },
+            {
+              "K": 1281,
+              "Sroot": 879,
+              "sign": "minus"
+            },
+            {
+              "K": 1456,
+              "Sroot": 890,
+              "sign": "minus"
+            },
+            {
+              "K": 283,
+              "Sroot": 909,
+              "sign": "minus"
+            },
+            {
+              "K": 300,
+              "Sroot": 942,
+              "sign": "minus"
+            },
+            {
+              "K": 206,
+              "Sroot": 973,
+              "sign": "plus"
+            },
+            {
+              "K": 888,
+              "Sroot": 975,
+              "sign": "plus"
+            },
+            {
+              "K": 734,
+              "Sroot": 1031,
+              "sign": "plus"
+            },
+            {
+              "K": 1083,
+              "Sroot": 1147,
+              "sign": "plus"
+            },
+            {
+              "K": 917,
+              "Sroot": 1165,
+              "sign": "plus"
+            },
+            {
+              "K": 34,
+              "Sroot": 1166,
+              "sign": "plus"
+            },
+            {
+              "K": 843,
+              "Sroot": 1178,
+              "sign": "plus"
+            },
+            {
+              "K": 1107,
+              "Sroot": 1191,
+              "sign": "plus"
+            },
+            {
+              "K": 108,
+              "Sroot": 1208,
+              "sign": "plus"
+            },
+            {
+              "K": 918,
+              "Sroot": 1209,
+              "sign": "plus"
+            },
+            {
+              "K": 867,
+              "Sroot": 1280,
+              "sign": "minus"
+            },
+            {
+              "K": 1490,
+              "Sroot": 1289,
+              "sign": "plus"
+            },
+            {
+              "K": 817,
+              "Sroot": 1303,
+              "sign": "plus"
+            },
+            {
+              "K": 838,
+              "Sroot": 1311,
+              "sign": "plus"
+            },
+            {
+              "K": 876,
+              "Sroot": 1368,
+              "sign": "minus"
+            },
+            {
+              "K": 486,
+              "Sroot": 1390,
+              "sign": "minus"
+            },
+            {
+              "K": 1432,
+              "Sroot": 1407,
+              "sign": "plus"
+            },
+            {
+              "K": 1529,
+              "Sroot": 1551,
+              "sign": "minus"
+            },
+            {
+              "K": 961,
+              "Sroot": 1576,
+              "sign": "minus"
+            },
+            {
+              "K": 529,
+              "Sroot": 1584,
+              "sign": "plus"
+            },
+            {
+              "K": 256,
+              "Sroot": 1591,
+              "sign": "plus"
+            }
+          ]
+        },
+        {
+          "coordinate": "Sroot",
+          "domain": "Sroot all-plus prefix through d4",
+          "gate": "d5",
+          "meaning": "selected gate d5 character on the active Sroot domain",
+          "minus_count": 0,
+          "missing_count": 0,
+          "mixed_count": 0,
+          "name": "f5_conditional_on_Sroot",
+          "plus_count": 38,
+          "row_count": 38,
+          "rows": [
+            {
+              "K": 256,
+              "Sroot": 16,
+              "sign": "plus"
+            },
+            {
+              "K": 529,
+              "Sroot": 23,
+              "sign": "plus"
+            },
+            {
+              "K": 1432,
+              "Sroot": 200,
+              "sign": "plus"
+            },
+            {
+              "K": 838,
+              "Sroot": 296,
+              "sign": "plus"
+            },
+            {
+              "K": 817,
+              "Sroot": 304,
+              "sign": "plus"
+            },
+            {
+              "K": 1490,
+              "Sroot": 318,
+              "sign": "plus"
+            },
+            {
+              "K": 918,
+              "Sroot": 398,
+              "sign": "plus"
+            },
+            {
+              "K": 108,
+              "Sroot": 399,
+              "sign": "plus"
+            },
+            {
+              "K": 1107,
+              "Sroot": 416,
+              "sign": "plus"
+            },
+            {
+              "K": 843,
+              "Sroot": 429,
+              "sign": "plus"
+            },
+            {
+              "K": 34,
+              "Sroot": 441,
+              "sign": "plus"
+            },
+            {
+              "K": 917,
+              "Sroot": 442,
+              "sign": "plus"
+            },
+            {
+              "K": 1083,
+              "Sroot": 460,
+              "sign": "plus"
+            },
+            {
+              "K": 734,
+              "Sroot": 576,
+              "sign": "plus"
+            },
+            {
+              "K": 888,
+              "Sroot": 632,
+              "sign": "plus"
+            },
+            {
+              "K": 206,
+              "Sroot": 634,
+              "sign": "plus"
+            },
+            {
+              "K": 693,
+              "Sroot": 732,
+              "sign": "plus"
+            },
+            {
+              "K": 137,
+              "Sroot": 736,
+              "sign": "plus"
+            },
+            {
+              "K": 268,
+              "Sroot": 748,
+              "sign": "plus"
+            },
+            {
+              "K": 268,
+              "Sroot": 859,
+              "sign": "plus"
+            },
+            {
+              "K": 137,
+              "Sroot": 871,
+              "sign": "plus"
+            },
+            {
+              "K": 693,
+              "Sroot": 875,
+              "sign": "plus"
+            },
+            {
+              "K": 206,
+              "Sroot": 973,
+              "sign": "plus"
+            },
+            {
+              "K": 888,
+              "Sroot": 975,
+              "sign": "plus"
+            },
+            {
+              "K": 734,
+              "Sroot": 1031,
+              "sign": "plus"
+            },
+            {
+              "K": 1083,
+              "Sroot": 1147,
+              "sign": "plus"
+            },
+            {
+              "K": 917,
+              "Sroot": 1165,
+              "sign": "plus"
+            },
+            {
+              "K": 34,
+              "Sroot": 1166,
+              "sign": "plus"
+            },
+            {
+              "K": 843,
+              "Sroot": 1178,
+              "sign": "plus"
+            },
+            {
+              "K": 1107,
+              "Sroot": 1191,
+              "sign": "plus"
+            },
+            {
+              "K": 108,
+              "Sroot": 1208,
+              "sign": "plus"
+            },
+            {
+              "K": 918,
+              "Sroot": 1209,
+              "sign": "plus"
+            },
+            {
+              "K": 1490,
+              "Sroot": 1289,
+              "sign": "plus"
+            },
+            {
+              "K": 817,
+              "Sroot": 1303,
+              "sign": "plus"
+            },
+            {
+              "K": 838,
+              "Sroot": 1311,
+              "sign": "plus"
+            },
+            {
+              "K": 1432,
+              "Sroot": 1407,
+              "sign": "plus"
+            },
+            {
+              "K": 529,
+              "Sroot": 1584,
+              "sign": "plus"
+            },
+            {
+              "K": 256,
+              "Sroot": 1591,
+              "sign": "plus"
+            }
+          ]
+        },
+        {
+          "coordinate": "Sroot",
+          "domain": "Sroot all-plus prefix through d5",
+          "gate": "d6",
+          "meaning": "selected gate d6 character on the active Sroot domain",
+          "minus_count": 38,
+          "missing_count": 0,
+          "mixed_count": 0,
+          "name": "f6_conditional_on_Sroot",
+          "plus_count": 0,
+          "row_count": 38,
+          "rows": [
+            {
+              "K": 256,
+              "Sroot": 16,
+              "sign": "minus"
+            },
+            {
+              "K": 529,
+              "Sroot": 23,
+              "sign": "minus"
+            },
+            {
+              "K": 1432,
+              "Sroot": 200,
+              "sign": "minus"
+            },
+            {
+              "K": 838,
+              "Sroot": 296,
+              "sign": "minus"
+            },
+            {
+              "K": 817,
+              "Sroot": 304,
+              "sign": "minus"
+            },
+            {
+              "K": 1490,
+              "Sroot": 318,
+              "sign": "minus"
+            },
+            {
+              "K": 918,
+              "Sroot": 398,
+              "sign": "minus"
+            },
+            {
+              "K": 108,
+              "Sroot": 399,
+              "sign": "minus"
+            },
+            {
+              "K": 1107,
+              "Sroot": 416,
+              "sign": "minus"
+            },
+            {
+              "K": 843,
+              "Sroot": 429,
+              "sign": "minus"
+            },
+            {
+              "K": 34,
+              "Sroot": 441,
+              "sign": "minus"
+            },
+            {
+              "K": 917,
+              "Sroot": 442,
+              "sign": "minus"
+            },
+            {
+              "K": 1083,
+              "Sroot": 460,
+              "sign": "minus"
+            },
+            {
+              "K": 734,
+              "Sroot": 576,
+              "sign": "minus"
+            },
+            {
+              "K": 888,
+              "Sroot": 632,
+              "sign": "minus"
+            },
+            {
+              "K": 206,
+              "Sroot": 634,
+              "sign": "minus"
+            },
+            {
+              "K": 693,
+              "Sroot": 732,
+              "sign": "minus"
+            },
+            {
+              "K": 137,
+              "Sroot": 736,
+              "sign": "minus"
+            },
+            {
+              "K": 268,
+              "Sroot": 748,
+              "sign": "minus"
+            },
+            {
+              "K": 268,
+              "Sroot": 859,
+              "sign": "minus"
+            },
+            {
+              "K": 137,
+              "Sroot": 871,
+              "sign": "minus"
+            },
+            {
+              "K": 693,
+              "Sroot": 875,
+              "sign": "minus"
+            },
+            {
+              "K": 206,
+              "Sroot": 973,
+              "sign": "minus"
+            },
+            {
+              "K": 888,
+              "Sroot": 975,
+              "sign": "minus"
+            },
+            {
+              "K": 734,
+              "Sroot": 1031,
+              "sign": "minus"
+            },
+            {
+              "K": 1083,
+              "Sroot": 1147,
+              "sign": "minus"
+            },
+            {
+              "K": 917,
+              "Sroot": 1165,
+              "sign": "minus"
+            },
+            {
+              "K": 34,
+              "Sroot": 1166,
+              "sign": "minus"
+            },
+            {
+              "K": 843,
+              "Sroot": 1178,
+              "sign": "minus"
+            },
+            {
+              "K": 1107,
+              "Sroot": 1191,
+              "sign": "minus"
+            },
+            {
+              "K": 108,
+              "Sroot": 1208,
+              "sign": "minus"
+            },
+            {
+              "K": 918,
+              "Sroot": 1209,
+              "sign": "minus"
+            },
+            {
+              "K": 1490,
+              "Sroot": 1289,
+              "sign": "minus"
+            },
+            {
+              "K": 817,
+              "Sroot": 1303,
+              "sign": "minus"
+            },
+            {
+              "K": 838,
+              "Sroot": 1311,
+              "sign": "minus"
+            },
+            {
+              "K": 1432,
+              "Sroot": 1407,
+              "sign": "minus"
+            },
+            {
+              "K": 529,
+              "Sroot": 1584,
+              "sign": "minus"
+            },
+            {
+              "K": 256,
+              "Sroot": 1591,
+              "sign": "minus"
+            }
+          ]
+        }
+      ],
+      "field": 1607,
+      "source_stats": {
+        "K_group_size_16": 49,
+        "K_to_Sroot_size_hist_keys": 2,
+        "Sroot_group_size_8": 98,
+        "candidate_invalid_degenerate_A": 16,
+        "candidate_invalid_not_nonsplit": 800,
+        "candidates": 784,
+        "compact_not_target": 800,
+        "d2_plus_candidates": 784,
+        "ks_degenerate": 1,
+        "legal_K": 49,
+        "legal_Sroot": 98,
+        "skip_X_degenerate": 2,
+        "source_rows": 800,
+        "unique_A_x5": 196,
+        "unique_K_seen": 201,
+        "unique_Sroot_seen": 401
+      }
+    },
+    {
+      "base": {
+        "K_group_size_histogram": {
+          "16": 63
+        },
+        "Sroot_group_size_histogram": {
+          "8": 126
+        },
+        "legal_K": 63,
+        "legal_Sroot": 126,
+        "sheet_stats": {
+          "K_from_Sroot": 63,
+          "Sroot": 126,
+          "Sroot_per_K_histogram": {
+            "2": 63
+          }
+        }
+      },
+      "families": [
+        {
+          "coordinate": "K",
+          "meaning": "legal selected-source K values",
+          "name": "legal_K",
+          "row_count": 63,
+          "rows": [
+            {
+              "K": 36
+            },
+            {
+              "K": 54
+            },
+            {
+              "K": 66
+            },
+            {
+              "K": 75
+            },
+            {
+              "K": 79
+            },
+            {
+              "K": 82
+            },
+            {
+              "K": 96
+            },
+            {
+              "K": 126
+            },
+            {
+              "K": 138
+            },
+            {
+              "K": 155
+            },
+            {
+              "K": 161
+            },
+            {
+              "K": 189
+            },
+            {
+              "K": 194
+            },
+            {
+              "K": 215
+            },
+            {
+              "K": 241
+            },
+            {
+              "K": 252
+            },
+            {
+              "K": 271
+            },
+            {
+              "K": 297
+            },
+            {
+              "K": 323
+            },
+            {
+              "K": 338
+            },
+            {
+              "K": 369
+            },
+            {
+              "K": 377
+            },
+            {
+              "K": 386
+            },
+            {
+              "K": 444
+            },
+            {
+              "K": 453
+            },
+            {
+              "K": 454
+            },
+            {
+              "K": 472
+            },
+            {
+              "K": 534
+            },
+            {
+              "K": 550
+            },
+            {
+              "K": 579
+            },
+            {
+              "K": 618
+            },
+            {
+              "K": 731
+            },
+            {
+              "K": 826
+            },
+            {
+              "K": 832
+            },
+            {
+              "K": 869
+            },
+            {
+              "K": 906
+            },
+            {
+              "K": 916
+            },
+            {
+              "K": 925
+            },
+            {
+              "K": 928
+            },
+            {
+              "K": 940
+            },
+            {
+              "K": 948
+            },
+            {
+              "K": 964
+            },
+            {
+              "K": 993
+            },
+            {
+              "K": 1024
+            },
+            {
+              "K": 1061
+            },
+            {
+              "K": 1083
+            },
+            {
+              "K": 1099
+            },
+            {
+              "K": 1133
+            },
+            {
+              "K": 1152
+            },
+            {
+              "K": 1196
+            },
+            {
+              "K": 1206
+            },
+            {
+              "K": 1266
+            },
+            {
+              "K": 1306
+            },
+            {
+              "K": 1448
+            },
+            {
+              "K": 1466
+            },
+            {
+              "K": 1503
+            },
+            {
+              "K": 1642
+            },
+            {
+              "K": 1705
+            },
+            {
+              "K": 1720
+            },
+            {
+              "K": 1742
+            },
+            {
+              "K": 1764
+            },
+            {
+              "K": 1776
+            },
+            {
+              "K": 1832
+            }
+          ]
+        },
+        {
+          "coordinate": "K",
+          "domain": "legal K",
+          "gate": "d3",
+          "meaning": "selected gate d3 character on the active K domain",
+          "minus_count": 18,
+          "missing_count": 0,
+          "mixed_count": 0,
+          "name": "f3_conditional_on_K",
+          "plus_count": 45,
+          "row_count": 63,
+          "rows": [
+            {
+              "K": 36,
+              "sign": "plus"
+            },
+            {
+              "K": 54,
+              "sign": "plus"
+            },
+            {
+              "K": 66,
+              "sign": "plus"
+            },
+            {
+              "K": 75,
+              "sign": "minus"
+            },
+            {
+              "K": 79,
+              "sign": "plus"
+            },
+            {
+              "K": 82,
+              "sign": "plus"
+            },
+            {
+              "K": 96,
+              "sign": "plus"
+            },
+            {
+              "K": 126,
+              "sign": "plus"
+            },
+            {
+              "K": 138,
+              "sign": "minus"
+            },
+            {
+              "K": 155,
+              "sign": "minus"
+            },
+            {
+              "K": 161,
+              "sign": "plus"
+            },
+            {
+              "K": 189,
+              "sign": "plus"
+            },
+            {
+              "K": 194,
+              "sign": "plus"
+            },
+            {
+              "K": 215,
+              "sign": "plus"
+            },
+            {
+              "K": 241,
+              "sign": "plus"
+            },
+            {
+              "K": 252,
+              "sign": "minus"
+            },
+            {
+              "K": 271,
+              "sign": "plus"
+            },
+            {
+              "K": 297,
+              "sign": "plus"
+            },
+            {
+              "K": 323,
+              "sign": "plus"
+            },
+            {
+              "K": 338,
+              "sign": "plus"
+            },
+            {
+              "K": 369,
+              "sign": "minus"
+            },
+            {
+              "K": 377,
+              "sign": "minus"
+            },
+            {
+              "K": 386,
+              "sign": "plus"
+            },
+            {
+              "K": 444,
+              "sign": "plus"
+            },
+            {
+              "K": 453,
+              "sign": "minus"
+            },
+            {
+              "K": 454,
+              "sign": "minus"
+            },
+            {
+              "K": 472,
+              "sign": "plus"
+            },
+            {
+              "K": 534,
+              "sign": "plus"
+            },
+            {
+              "K": 550,
+              "sign": "plus"
+            },
+            {
+              "K": 579,
+              "sign": "plus"
+            },
+            {
+              "K": 618,
+              "sign": "minus"
+            },
+            {
+              "K": 731,
+              "sign": "plus"
+            },
+            {
+              "K": 826,
+              "sign": "minus"
+            },
+            {
+              "K": 832,
+              "sign": "minus"
+            },
+            {
+              "K": 869,
+              "sign": "plus"
+            },
+            {
+              "K": 906,
+              "sign": "minus"
+            },
+            {
+              "K": 916,
+              "sign": "plus"
+            },
+            {
+              "K": 925,
+              "sign": "minus"
+            },
+            {
+              "K": 928,
+              "sign": "plus"
+            },
+            {
+              "K": 940,
+              "sign": "plus"
+            },
+            {
+              "K": 948,
+              "sign": "plus"
+            },
+            {
+              "K": 964,
+              "sign": "plus"
+            },
+            {
+              "K": 993,
+              "sign": "plus"
+            },
+            {
+              "K": 1024,
+              "sign": "plus"
+            },
+            {
+              "K": 1061,
+              "sign": "minus"
+            },
+            {
+              "K": 1083,
+              "sign": "plus"
+            },
+            {
+              "K": 1099,
+              "sign": "plus"
+            },
+            {
+              "K": 1133,
+              "sign": "plus"
+            },
+            {
+              "K": 1152,
+              "sign": "plus"
+            },
+            {
+              "K": 1196,
+              "sign": "plus"
+            },
+            {
+              "K": 1206,
+              "sign": "plus"
+            },
+            {
+              "K": 1266,
+              "sign": "minus"
+            },
+            {
+              "K": 1306,
+              "sign": "plus"
+            },
+            {
+              "K": 1448,
+              "sign": "plus"
+            },
+            {
+              "K": 1466,
+              "sign": "plus"
+            },
+            {
+              "K": 1503,
+              "sign": "plus"
+            },
+            {
+              "K": 1642,
+              "sign": "plus"
+            },
+            {
+              "K": 1705,
+              "sign": "minus"
+            },
+            {
+              "K": 1720,
+              "sign": "minus"
+            },
+            {
+              "K": 1742,
+              "sign": "plus"
+            },
+            {
+              "K": 1764,
+              "sign": "plus"
+            },
+            {
+              "K": 1776,
+              "sign": "minus"
+            },
+            {
+              "K": 1832,
+              "sign": "plus"
+            }
+          ]
+        },
+        {
+          "coordinate": "K",
+          "domain": "K all-plus prefix through d3",
+          "gate": "d4",
+          "meaning": "selected gate d4 character on the active K domain",
+          "minus_count": 26,
+          "missing_count": 0,
+          "mixed_count": 0,
+          "name": "f4_conditional_on_K",
+          "plus_count": 19,
+          "row_count": 45,
+          "rows": [
+            {
+              "K": 36,
+              "sign": "minus"
+            },
+            {
+              "K": 54,
+              "sign": "plus"
+            },
+            {
+              "K": 66,
+              "sign": "plus"
+            },
+            {
+              "K": 79,
+              "sign": "minus"
+            },
+            {
+              "K": 82,
+              "sign": "plus"
+            },
+            {
+              "K": 96,
+              "sign": "minus"
+            },
+            {
+              "K": 126,
+              "sign": "plus"
+            },
+            {
+              "K": 161,
+              "sign": "minus"
+            },
+            {
+              "K": 189,
+              "sign": "minus"
+            },
+            {
+              "K": 194,
+              "sign": "plus"
+            },
+            {
+              "K": 215,
+              "sign": "minus"
+            },
+            {
+              "K": 241,
+              "sign": "plus"
+            },
+            {
+              "K": 271,
+              "sign": "minus"
+            },
+            {
+              "K": 297,
+              "sign": "minus"
+            },
+            {
+              "K": 323,
+              "sign": "minus"
+            },
+            {
+              "K": 338,
+              "sign": "minus"
+            },
+            {
+              "K": 386,
+              "sign": "plus"
+            },
+            {
+              "K": 444,
+              "sign": "plus"
+            },
+            {
+              "K": 472,
+              "sign": "minus"
+            },
+            {
+              "K": 534,
+              "sign": "minus"
+            },
+            {
+              "K": 550,
+              "sign": "minus"
+            },
+            {
+              "K": 579,
+              "sign": "minus"
+            },
+            {
+              "K": 731,
+              "sign": "minus"
+            },
+            {
+              "K": 869,
+              "sign": "plus"
+            },
+            {
+              "K": 916,
+              "sign": "minus"
+            },
+            {
+              "K": 928,
+              "sign": "minus"
+            },
+            {
+              "K": 940,
+              "sign": "plus"
+            },
+            {
+              "K": 948,
+              "sign": "plus"
+            },
+            {
+              "K": 964,
+              "sign": "minus"
+            },
+            {
+              "K": 993,
+              "sign": "plus"
+            },
+            {
+              "K": 1024,
+              "sign": "plus"
+            },
+            {
+              "K": 1083,
+              "sign": "plus"
+            },
+            {
+              "K": 1099,
+              "sign": "plus"
+            },
+            {
+              "K": 1133,
+              "sign": "plus"
+            },
+            {
+              "K": 1152,
+              "sign": "minus"
+            },
+            {
+              "K": 1196,
+              "sign": "minus"
+            },
+            {
+              "K": 1206,
+              "sign": "minus"
+            },
+            {
+              "K": 1306,
+              "sign": "minus"
+            },
+            {
+              "K": 1448,
+              "sign": "minus"
+            },
+            {
+              "K": 1466,
+              "sign": "minus"
+            },
+            {
+              "K": 1503,
+              "sign": "plus"
+            },
+            {
+              "K": 1642,
+              "sign": "plus"
+            },
+            {
+              "K": 1742,
+              "sign": "plus"
+            },
+            {
+              "K": 1764,
+              "sign": "minus"
+            },
+            {
+              "K": 1832,
+              "sign": "minus"
+            }
+          ]
+        },
+        {
+          "coordinate": "K",
+          "domain": "K all-plus prefix through d4",
+          "gate": "d5",
+          "meaning": "selected gate d5 character on the active K domain",
+          "minus_count": 19,
+          "missing_count": 0,
+          "mixed_count": 0,
+          "name": "f5_conditional_on_K",
+          "plus_count": 0,
+          "row_count": 19,
+          "rows": [
+            {
+              "K": 54,
+              "sign": "minus"
+            },
+            {
+              "K": 66,
+              "sign": "minus"
+            },
+            {
+              "K": 82,
+              "sign": "minus"
+            },
+            {
+              "K": 126,
+              "sign": "minus"
+            },
+            {
+              "K": 194,
+              "sign": "minus"
+            },
+            {
+              "K": 241,
+              "sign": "minus"
+            },
+            {
+              "K": 386,
+              "sign": "minus"
+            },
+            {
+              "K": 444,
+              "sign": "minus"
+            },
+            {
+              "K": 869,
+              "sign": "minus"
+            },
+            {
+              "K": 940,
+              "sign": "minus"
+            },
+            {
+              "K": 948,
+              "sign": "minus"
+            },
+            {
+              "K": 993,
+              "sign": "minus"
+            },
+            {
+              "K": 1024,
+              "sign": "minus"
+            },
+            {
+              "K": 1083,
+              "sign": "minus"
+            },
+            {
+              "K": 1099,
+              "sign": "minus"
+            },
+            {
+              "K": 1133,
+              "sign": "minus"
+            },
+            {
+              "K": 1503,
+              "sign": "minus"
+            },
+            {
+              "K": 1642,
+              "sign": "minus"
+            },
+            {
+              "K": 1742,
+              "sign": "minus"
+            }
+          ]
+        },
+        {
+          "coordinate": "K",
+          "domain": "K all-plus prefix through d5",
+          "gate": "d6",
+          "meaning": "selected gate d6 character on the active K domain",
+          "minus_count": 0,
+          "missing_count": 0,
+          "mixed_count": 0,
+          "name": "f6_conditional_on_K",
+          "plus_count": 0,
+          "row_count": 0,
+          "rows": []
+        },
+        {
+          "coordinate": "Sroot",
+          "meaning": "legal selected-source Sroot values",
+          "name": "legal_Sroot",
+          "row_count": 126,
+          "rows": [
+            {
+              "K": 36,
+              "Sroot": 6
+            },
+            {
+              "K": 1024,
+              "Sroot": 32
+            },
+            {
+              "K": 1764,
+              "Sroot": 42
+            },
+            {
+              "K": 1206,
+              "Sroot": 70
+            },
+            {
+              "K": 1448,
+              "Sroot": 94
+            },
+            {
+              "K": 369,
+              "Sroot": 98
+            },
+            {
+              "K": 940,
+              "Sroot": 152
+            },
+            {
+              "K": 386,
+              "Sroot": 162
+            },
+            {
+              "K": 377,
+              "Sroot": 173
+            },
+            {
+              "K": 1196,
+              "Sroot": 274
+            },
+            {
+              "K": 826,
+              "Sroot": 280
+            },
+            {
+              "K": 1306,
+              "Sroot": 303
+            },
+            {
+              "K": 66,
+              "Sroot": 304
+            },
+            {
+              "K": 252,
+              "Sroot": 322
+            },
+            {
+              "K": 155,
+              "Sroot": 352
+            },
+            {
+              "K": 241,
+              "Sroot": 365
+            },
+            {
+              "K": 1705,
+              "Sroot": 367
+            },
+            {
+              "K": 1720,
+              "Sroot": 403
+            },
+            {
+              "K": 453,
+              "Sroot": 406
+            },
+            {
+              "K": 1266,
+              "Sroot": 407
+            },
+            {
+              "K": 454,
+              "Sroot": 415
+            },
+            {
+              "K": 271,
+              "Sroot": 417
+            },
+            {
+              "K": 96,
+              "Sroot": 419
+            },
+            {
+              "K": 1776,
+              "Sroot": 421
+            },
+            {
+              "K": 1466,
+              "Sroot": 425
+            },
+            {
+              "K": 1061,
+              "Sroot": 431
+            },
+            {
+              "K": 1099,
+              "Sroot": 454
+            },
+            {
+              "K": 161,
+              "Sroot": 455
+            },
+            {
+              "K": 138,
+              "Sroot": 457
+            },
+            {
+              "K": 126,
+              "Sroot": 465
+            },
+            {
+              "K": 1503,
+              "Sroot": 499
+            },
+            {
+              "K": 75,
+              "Sroot": 514
+            },
+            {
+              "K": 338,
+              "Sroot": 559
+            },
+            {
+              "K": 731,
+              "Sroot": 561
+            },
+            {
+              "K": 1133,
+              "Sroot": 598
+            },
+            {
+              "K": 832,
+              "Sroot": 619
+            },
+            {
+              "K": 1642,
+              "Sroot": 630
+            },
+            {
+              "K": 472,
+              "Sroot": 632
+            },
+            {
+              "K": 579,
+              "Sroot": 635
+            },
+            {
+              "K": 1832,
+              "Sroot": 656
+            },
+            {
+              "K": 79,
+              "Sroot": 670
+            },
+            {
+              "K": 916,
+              "Sroot": 672
+            },
+            {
+              "K": 993,
+              "Sroot": 699
+            },
+            {
+              "K": 297,
+              "Sroot": 709
+            },
+            {
+              "K": 444,
+              "Sroot": 713
+            },
+            {
+              "K": 1742,
+              "Sroot": 728
+            },
+            {
+              "K": 964,
+              "Sroot": 730
+            },
+            {
+              "K": 194,
+              "Sroot": 732
+            },
+            {
+              "K": 925,
+              "Sroot": 745
+            },
+            {
+              "K": 215,
+              "Sroot": 747
+            },
+            {
+              "K": 948,
+              "Sroot": 773
+            },
+            {
+              "K": 54,
+              "Sroot": 776
+            },
+            {
+              "K": 82,
+              "Sroot": 789
+            },
+            {
+              "K": 869,
+              "Sroot": 793
+            },
+            {
+              "K": 189,
+              "Sroot": 811
+            },
+            {
+              "K": 1152,
+              "Sroot": 815
+            },
+            {
+              "K": 906,
+              "Sroot": 835
+            },
+            {
+              "K": 1083,
+              "Sroot": 845
+            },
+            {
+              "K": 323,
+              "Sroot": 850
+            },
+            {
+              "K": 928,
+              "Sroot": 859
+            },
+            {
+              "K": 550,
+              "Sroot": 862
+            },
+            {
+              "K": 618,
+              "Sroot": 911
+            },
+            {
+              "K": 534,
+              "Sroot": 915
+            },
+            {
+              "K": 534,
+              "Sroot": 932
+            },
+            {
+              "K": 618,
+              "Sroot": 936
+            },
+            {
+              "K": 550,
+              "Sroot": 985
+            },
+            {
+              "K": 928,
+              "Sroot": 988
+            },
+            {
+              "K": 323,
+              "Sroot": 997
+            },
+            {
+              "K": 1083,
+              "Sroot": 1002
+            },
+            {
+              "K": 906,
+              "Sroot": 1012
+            },
+            {
+              "K": 1152,
+              "Sroot": 1032
+            },
+            {
+              "K": 189,
+              "Sroot": 1036
+            },
+            {
+              "K": 869,
+              "Sroot": 1054
+            },
+            {
+              "K": 82,
+              "Sroot": 1058
+            },
+            {
+              "K": 54,
+              "Sroot": 1071
+            },
+            {
+              "K": 948,
+              "Sroot": 1074
+            },
+            {
+              "K": 215,
+              "Sroot": 1100
+            },
+            {
+              "K": 925,
+              "Sroot": 1102
+            },
+            {
+              "K": 194,
+              "Sroot": 1115
+            },
+            {
+              "K": 964,
+              "Sroot": 1117
+            },
+            {
+              "K": 1742,
+              "Sroot": 1119
+            },
+            {
+              "K": 444,
+              "Sroot": 1134
+            },
+            {
+              "K": 297,
+              "Sroot": 1138
+            },
+            {
+              "K": 993,
+              "Sroot": 1148
+            },
+            {
+              "K": 916,
+              "Sroot": 1175
+            },
+            {
+              "K": 79,
+              "Sroot": 1177
+            },
+            {
+              "K": 1832,
+              "Sroot": 1191
+            },
+            {
+              "K": 579,
+              "Sroot": 1212
+            },
+            {
+              "K": 472,
+              "Sroot": 1215
+            },
+            {
+              "K": 1642,
+              "Sroot": 1217
+            },
+            {
+              "K": 832,
+              "Sroot": 1228
+            },
+            {
+              "K": 1133,
+              "Sroot": 1249
+            },
+            {
+              "K": 731,
+              "Sroot": 1286
+            },
+            {
+              "K": 338,
+              "Sroot": 1288
+            },
+            {
+              "K": 75,
+              "Sroot": 1333
+            },
+            {
+              "K": 1503,
+              "Sroot": 1348
+            },
+            {
+              "K": 126,
+              "Sroot": 1382
+            },
+            {
+              "K": 138,
+              "Sroot": 1390
+            },
+            {
+              "K": 161,
+              "Sroot": 1392
+            },
+            {
+              "K": 1099,
+              "Sroot": 1393
+            },
+            {
+              "K": 1061,
+              "Sroot": 1416
+            },
+            {
+              "K": 1466,
+              "Sroot": 1422
+            },
+            {
+              "K": 1776,
+              "Sroot": 1426
+            },
+            {
+              "K": 96,
+              "Sroot": 1428
+            },
+            {
+              "K": 271,
+              "Sroot": 1430
+            },
+            {
+              "K": 454,
+              "Sroot": 1432
+            },
+            {
+              "K": 1266,
+              "Sroot": 1440
+            },
+            {
+              "K": 453,
+              "Sroot": 1441
+            },
+            {
+              "K": 1720,
+              "Sroot": 1444
+            },
+            {
+              "K": 1705,
+              "Sroot": 1480
+            },
+            {
+              "K": 241,
+              "Sroot": 1482
+            },
+            {
+              "K": 155,
+              "Sroot": 1495
+            },
+            {
+              "K": 252,
+              "Sroot": 1525
+            },
+            {
+              "K": 66,
+              "Sroot": 1543
+            },
+            {
+              "K": 1306,
+              "Sroot": 1544
+            },
+            {
+              "K": 826,
+              "Sroot": 1567
+            },
+            {
+              "K": 1196,
+              "Sroot": 1573
+            },
+            {
+              "K": 377,
+              "Sroot": 1674
+            },
+            {
+              "K": 386,
+              "Sroot": 1685
+            },
+            {
+              "K": 940,
+              "Sroot": 1695
+            },
+            {
+              "K": 369,
+              "Sroot": 1749
+            },
+            {
+              "K": 1448,
+              "Sroot": 1753
+            },
+            {
+              "K": 1206,
+              "Sroot": 1777
+            },
+            {
+              "K": 1764,
+              "Sroot": 1805
+            },
+            {
+              "K": 1024,
+              "Sroot": 1815
+            },
+            {
+              "K": 36,
+              "Sroot": 1841
+            }
+          ]
+        },
+        {
+          "coordinate": "Sroot",
+          "domain": "legal Sroot",
+          "gate": "d3",
+          "meaning": "selected gate d3 character on the active Sroot domain",
+          "minus_count": 36,
+          "missing_count": 0,
+          "mixed_count": 0,
+          "name": "f3_conditional_on_Sroot",
+          "plus_count": 90,
+          "row_count": 126,
+          "rows": [
+            {
+              "K": 36,
+              "Sroot": 6,
+              "sign": "plus"
+            },
+            {
+              "K": 1024,
+              "Sroot": 32,
+              "sign": "plus"
+            },
+            {
+              "K": 1764,
+              "Sroot": 42,
+              "sign": "plus"
+            },
+            {
+              "K": 1206,
+              "Sroot": 70,
+              "sign": "plus"
+            },
+            {
+              "K": 1448,
+              "Sroot": 94,
+              "sign": "plus"
+            },
+            {
+              "K": 369,
+              "Sroot": 98,
+              "sign": "minus"
+            },
+            {
+              "K": 940,
+              "Sroot": 152,
+              "sign": "plus"
+            },
+            {
+              "K": 386,
+              "Sroot": 162,
+              "sign": "plus"
+            },
+            {
+              "K": 377,
+              "Sroot": 173,
+              "sign": "minus"
+            },
+            {
+              "K": 1196,
+              "Sroot": 274,
+              "sign": "plus"
+            },
+            {
+              "K": 826,
+              "Sroot": 280,
+              "sign": "minus"
+            },
+            {
+              "K": 1306,
+              "Sroot": 303,
+              "sign": "plus"
+            },
+            {
+              "K": 66,
+              "Sroot": 304,
+              "sign": "plus"
+            },
+            {
+              "K": 252,
+              "Sroot": 322,
+              "sign": "minus"
+            },
+            {
+              "K": 155,
+              "Sroot": 352,
+              "sign": "minus"
+            },
+            {
+              "K": 241,
+              "Sroot": 365,
+              "sign": "plus"
+            },
+            {
+              "K": 1705,
+              "Sroot": 367,
+              "sign": "minus"
+            },
+            {
+              "K": 1720,
+              "Sroot": 403,
+              "sign": "minus"
+            },
+            {
+              "K": 453,
+              "Sroot": 406,
+              "sign": "minus"
+            },
+            {
+              "K": 1266,
+              "Sroot": 407,
+              "sign": "minus"
+            },
+            {
+              "K": 454,
+              "Sroot": 415,
+              "sign": "minus"
+            },
+            {
+              "K": 271,
+              "Sroot": 417,
+              "sign": "plus"
+            },
+            {
+              "K": 96,
+              "Sroot": 419,
+              "sign": "plus"
+            },
+            {
+              "K": 1776,
+              "Sroot": 421,
+              "sign": "minus"
+            },
+            {
+              "K": 1466,
+              "Sroot": 425,
+              "sign": "plus"
+            },
+            {
+              "K": 1061,
+              "Sroot": 431,
+              "sign": "minus"
+            },
+            {
+              "K": 1099,
+              "Sroot": 454,
+              "sign": "plus"
+            },
+            {
+              "K": 161,
+              "Sroot": 455,
+              "sign": "plus"
+            },
+            {
+              "K": 138,
+              "Sroot": 457,
+              "sign": "minus"
+            },
+            {
+              "K": 126,
+              "Sroot": 465,
+              "sign": "plus"
+            },
+            {
+              "K": 1503,
+              "Sroot": 499,
+              "sign": "plus"
+            },
+            {
+              "K": 75,
+              "Sroot": 514,
+              "sign": "minus"
+            },
+            {
+              "K": 338,
+              "Sroot": 559,
+              "sign": "plus"
+            },
+            {
+              "K": 731,
+              "Sroot": 561,
+              "sign": "plus"
+            },
+            {
+              "K": 1133,
+              "Sroot": 598,
+              "sign": "plus"
+            },
+            {
+              "K": 832,
+              "Sroot": 619,
+              "sign": "minus"
+            },
+            {
+              "K": 1642,
+              "Sroot": 630,
+              "sign": "plus"
+            },
+            {
+              "K": 472,
+              "Sroot": 632,
+              "sign": "plus"
+            },
+            {
+              "K": 579,
+              "Sroot": 635,
+              "sign": "plus"
+            },
+            {
+              "K": 1832,
+              "Sroot": 656,
+              "sign": "plus"
+            },
+            {
+              "K": 79,
+              "Sroot": 670,
+              "sign": "plus"
+            },
+            {
+              "K": 916,
+              "Sroot": 672,
+              "sign": "plus"
+            },
+            {
+              "K": 993,
+              "Sroot": 699,
+              "sign": "plus"
+            },
+            {
+              "K": 297,
+              "Sroot": 709,
+              "sign": "plus"
+            },
+            {
+              "K": 444,
+              "Sroot": 713,
+              "sign": "plus"
+            },
+            {
+              "K": 1742,
+              "Sroot": 728,
+              "sign": "plus"
+            },
+            {
+              "K": 964,
+              "Sroot": 730,
+              "sign": "plus"
+            },
+            {
+              "K": 194,
+              "Sroot": 732,
+              "sign": "plus"
+            },
+            {
+              "K": 925,
+              "Sroot": 745,
+              "sign": "minus"
+            },
+            {
+              "K": 215,
+              "Sroot": 747,
+              "sign": "plus"
+            },
+            {
+              "K": 948,
+              "Sroot": 773,
+              "sign": "plus"
+            },
+            {
+              "K": 54,
+              "Sroot": 776,
+              "sign": "plus"
+            },
+            {
+              "K": 82,
+              "Sroot": 789,
+              "sign": "plus"
+            },
+            {
+              "K": 869,
+              "Sroot": 793,
+              "sign": "plus"
+            },
+            {
+              "K": 189,
+              "Sroot": 811,
+              "sign": "plus"
+            },
+            {
+              "K": 1152,
+              "Sroot": 815,
+              "sign": "plus"
+            },
+            {
+              "K": 906,
+              "Sroot": 835,
+              "sign": "minus"
+            },
+            {
+              "K": 1083,
+              "Sroot": 845,
+              "sign": "plus"
+            },
+            {
+              "K": 323,
+              "Sroot": 850,
+              "sign": "plus"
+            },
+            {
+              "K": 928,
+              "Sroot": 859,
+              "sign": "plus"
+            },
+            {
+              "K": 550,
+              "Sroot": 862,
+              "sign": "plus"
+            },
+            {
+              "K": 618,
+              "Sroot": 911,
+              "sign": "minus"
+            },
+            {
+              "K": 534,
+              "Sroot": 915,
+              "sign": "plus"
+            },
+            {
+              "K": 534,
+              "Sroot": 932,
+              "sign": "plus"
+            },
+            {
+              "K": 618,
+              "Sroot": 936,
+              "sign": "minus"
+            },
+            {
+              "K": 550,
+              "Sroot": 985,
+              "sign": "plus"
+            },
+            {
+              "K": 928,
+              "Sroot": 988,
+              "sign": "plus"
+            },
+            {
+              "K": 323,
+              "Sroot": 997,
+              "sign": "plus"
+            },
+            {
+              "K": 1083,
+              "Sroot": 1002,
+              "sign": "plus"
+            },
+            {
+              "K": 906,
+              "Sroot": 1012,
+              "sign": "minus"
+            },
+            {
+              "K": 1152,
+              "Sroot": 1032,
+              "sign": "plus"
+            },
+            {
+              "K": 189,
+              "Sroot": 1036,
+              "sign": "plus"
+            },
+            {
+              "K": 869,
+              "Sroot": 1054,
+              "sign": "plus"
+            },
+            {
+              "K": 82,
+              "Sroot": 1058,
+              "sign": "plus"
+            },
+            {
+              "K": 54,
+              "Sroot": 1071,
+              "sign": "plus"
+            },
+            {
+              "K": 948,
+              "Sroot": 1074,
+              "sign": "plus"
+            },
+            {
+              "K": 215,
+              "Sroot": 1100,
+              "sign": "plus"
+            },
+            {
+              "K": 925,
+              "Sroot": 1102,
+              "sign": "minus"
+            },
+            {
+              "K": 194,
+              "Sroot": 1115,
+              "sign": "plus"
+            },
+            {
+              "K": 964,
+              "Sroot": 1117,
+              "sign": "plus"
+            },
+            {
+              "K": 1742,
+              "Sroot": 1119,
+              "sign": "plus"
+            },
+            {
+              "K": 444,
+              "Sroot": 1134,
+              "sign": "plus"
+            },
+            {
+              "K": 297,
+              "Sroot": 1138,
+              "sign": "plus"
+            },
+            {
+              "K": 993,
+              "Sroot": 1148,
+              "sign": "plus"
+            },
+            {
+              "K": 916,
+              "Sroot": 1175,
+              "sign": "plus"
+            },
+            {
+              "K": 79,
+              "Sroot": 1177,
+              "sign": "plus"
+            },
+            {
+              "K": 1832,
+              "Sroot": 1191,
+              "sign": "plus"
+            },
+            {
+              "K": 579,
+              "Sroot": 1212,
+              "sign": "plus"
+            },
+            {
+              "K": 472,
+              "Sroot": 1215,
+              "sign": "plus"
+            },
+            {
+              "K": 1642,
+              "Sroot": 1217,
+              "sign": "plus"
+            },
+            {
+              "K": 832,
+              "Sroot": 1228,
+              "sign": "minus"
+            },
+            {
+              "K": 1133,
+              "Sroot": 1249,
+              "sign": "plus"
+            },
+            {
+              "K": 731,
+              "Sroot": 1286,
+              "sign": "plus"
+            },
+            {
+              "K": 338,
+              "Sroot": 1288,
+              "sign": "plus"
+            },
+            {
+              "K": 75,
+              "Sroot": 1333,
+              "sign": "minus"
+            },
+            {
+              "K": 1503,
+              "Sroot": 1348,
+              "sign": "plus"
+            },
+            {
+              "K": 126,
+              "Sroot": 1382,
+              "sign": "plus"
+            },
+            {
+              "K": 138,
+              "Sroot": 1390,
+              "sign": "minus"
+            },
+            {
+              "K": 161,
+              "Sroot": 1392,
+              "sign": "plus"
+            },
+            {
+              "K": 1099,
+              "Sroot": 1393,
+              "sign": "plus"
+            },
+            {
+              "K": 1061,
+              "Sroot": 1416,
+              "sign": "minus"
+            },
+            {
+              "K": 1466,
+              "Sroot": 1422,
+              "sign": "plus"
+            },
+            {
+              "K": 1776,
+              "Sroot": 1426,
+              "sign": "minus"
+            },
+            {
+              "K": 96,
+              "Sroot": 1428,
+              "sign": "plus"
+            },
+            {
+              "K": 271,
+              "Sroot": 1430,
+              "sign": "plus"
+            },
+            {
+              "K": 454,
+              "Sroot": 1432,
+              "sign": "minus"
+            },
+            {
+              "K": 1266,
+              "Sroot": 1440,
+              "sign": "minus"
+            },
+            {
+              "K": 453,
+              "Sroot": 1441,
+              "sign": "minus"
+            },
+            {
+              "K": 1720,
+              "Sroot": 1444,
+              "sign": "minus"
+            },
+            {
+              "K": 1705,
+              "Sroot": 1480,
+              "sign": "minus"
+            },
+            {
+              "K": 241,
+              "Sroot": 1482,
+              "sign": "plus"
+            },
+            {
+              "K": 155,
+              "Sroot": 1495,
+              "sign": "minus"
+            },
+            {
+              "K": 252,
+              "Sroot": 1525,
+              "sign": "minus"
+            },
+            {
+              "K": 66,
+              "Sroot": 1543,
+              "sign": "plus"
+            },
+            {
+              "K": 1306,
+              "Sroot": 1544,
+              "sign": "plus"
+            },
+            {
+              "K": 826,
+              "Sroot": 1567,
+              "sign": "minus"
+            },
+            {
+              "K": 1196,
+              "Sroot": 1573,
+              "sign": "plus"
+            },
+            {
+              "K": 377,
+              "Sroot": 1674,
+              "sign": "minus"
+            },
+            {
+              "K": 386,
+              "Sroot": 1685,
+              "sign": "plus"
+            },
+            {
+              "K": 940,
+              "Sroot": 1695,
+              "sign": "plus"
+            },
+            {
+              "K": 369,
+              "Sroot": 1749,
+              "sign": "minus"
+            },
+            {
+              "K": 1448,
+              "Sroot": 1753,
+              "sign": "plus"
+            },
+            {
+              "K": 1206,
+              "Sroot": 1777,
+              "sign": "plus"
+            },
+            {
+              "K": 1764,
+              "Sroot": 1805,
+              "sign": "plus"
+            },
+            {
+              "K": 1024,
+              "Sroot": 1815,
+              "sign": "plus"
+            },
+            {
+              "K": 36,
+              "Sroot": 1841,
+              "sign": "plus"
+            }
+          ]
+        },
+        {
+          "coordinate": "Sroot",
+          "domain": "Sroot all-plus prefix through d3",
+          "gate": "d4",
+          "meaning": "selected gate d4 character on the active Sroot domain",
+          "minus_count": 52,
+          "missing_count": 0,
+          "mixed_count": 0,
+          "name": "f4_conditional_on_Sroot",
+          "plus_count": 38,
+          "row_count": 90,
+          "rows": [
+            {
+              "K": 36,
+              "Sroot": 6,
+              "sign": "minus"
+            },
+            {
+              "K": 1024,
+              "Sroot": 32,
+              "sign": "plus"
+            },
+            {
+              "K": 1764,
+              "Sroot": 42,
+              "sign": "minus"
+            },
+            {
+              "K": 1206,
+              "Sroot": 70,
+              "sign": "minus"
+            },
+            {
+              "K": 1448,
+              "Sroot": 94,
+              "sign": "minus"
+            },
+            {
+              "K": 940,
+              "Sroot": 152,
+              "sign": "plus"
+            },
+            {
+              "K": 386,
+              "Sroot": 162,
+              "sign": "plus"
+            },
+            {
+              "K": 1196,
+              "Sroot": 274,
+              "sign": "minus"
+            },
+            {
+              "K": 1306,
+              "Sroot": 303,
+              "sign": "minus"
+            },
+            {
+              "K": 66,
+              "Sroot": 304,
+              "sign": "plus"
+            },
+            {
+              "K": 241,
+              "Sroot": 365,
+              "sign": "plus"
+            },
+            {
+              "K": 271,
+              "Sroot": 417,
+              "sign": "minus"
+            },
+            {
+              "K": 96,
+              "Sroot": 419,
+              "sign": "minus"
+            },
+            {
+              "K": 1466,
+              "Sroot": 425,
+              "sign": "minus"
+            },
+            {
+              "K": 1099,
+              "Sroot": 454,
+              "sign": "plus"
+            },
+            {
+              "K": 161,
+              "Sroot": 455,
+              "sign": "minus"
+            },
+            {
+              "K": 126,
+              "Sroot": 465,
+              "sign": "plus"
+            },
+            {
+              "K": 1503,
+              "Sroot": 499,
+              "sign": "plus"
+            },
+            {
+              "K": 338,
+              "Sroot": 559,
+              "sign": "minus"
+            },
+            {
+              "K": 731,
+              "Sroot": 561,
+              "sign": "minus"
+            },
+            {
+              "K": 1133,
+              "Sroot": 598,
+              "sign": "plus"
+            },
+            {
+              "K": 1642,
+              "Sroot": 630,
+              "sign": "plus"
+            },
+            {
+              "K": 472,
+              "Sroot": 632,
+              "sign": "minus"
+            },
+            {
+              "K": 579,
+              "Sroot": 635,
+              "sign": "minus"
+            },
+            {
+              "K": 1832,
+              "Sroot": 656,
+              "sign": "minus"
+            },
+            {
+              "K": 79,
+              "Sroot": 670,
+              "sign": "minus"
+            },
+            {
+              "K": 916,
+              "Sroot": 672,
+              "sign": "minus"
+            },
+            {
+              "K": 993,
+              "Sroot": 699,
+              "sign": "plus"
+            },
+            {
+              "K": 297,
+              "Sroot": 709,
+              "sign": "minus"
+            },
+            {
+              "K": 444,
+              "Sroot": 713,
+              "sign": "plus"
+            },
+            {
+              "K": 1742,
+              "Sroot": 728,
+              "sign": "plus"
+            },
+            {
+              "K": 964,
+              "Sroot": 730,
+              "sign": "minus"
+            },
+            {
+              "K": 194,
+              "Sroot": 732,
+              "sign": "plus"
+            },
+            {
+              "K": 215,
+              "Sroot": 747,
+              "sign": "minus"
+            },
+            {
+              "K": 948,
+              "Sroot": 773,
+              "sign": "plus"
+            },
+            {
+              "K": 54,
+              "Sroot": 776,
+              "sign": "plus"
+            },
+            {
+              "K": 82,
+              "Sroot": 789,
+              "sign": "plus"
+            },
+            {
+              "K": 869,
+              "Sroot": 793,
+              "sign": "plus"
+            },
+            {
+              "K": 189,
+              "Sroot": 811,
+              "sign": "minus"
+            },
+            {
+              "K": 1152,
+              "Sroot": 815,
+              "sign": "minus"
+            },
+            {
+              "K": 1083,
+              "Sroot": 845,
+              "sign": "plus"
+            },
+            {
+              "K": 323,
+              "Sroot": 850,
+              "sign": "minus"
+            },
+            {
+              "K": 928,
+              "Sroot": 859,
+              "sign": "minus"
+            },
+            {
+              "K": 550,
+              "Sroot": 862,
+              "sign": "minus"
+            },
+            {
+              "K": 534,
+              "Sroot": 915,
+              "sign": "minus"
+            },
+            {
+              "K": 534,
+              "Sroot": 932,
+              "sign": "minus"
+            },
+            {
+              "K": 550,
+              "Sroot": 985,
+              "sign": "minus"
+            },
+            {
+              "K": 928,
+              "Sroot": 988,
+              "sign": "minus"
+            },
+            {
+              "K": 323,
+              "Sroot": 997,
+              "sign": "minus"
+            },
+            {
+              "K": 1083,
+              "Sroot": 1002,
+              "sign": "plus"
+            },
+            {
+              "K": 1152,
+              "Sroot": 1032,
+              "sign": "minus"
+            },
+            {
+              "K": 189,
+              "Sroot": 1036,
+              "sign": "minus"
+            },
+            {
+              "K": 869,
+              "Sroot": 1054,
+              "sign": "plus"
+            },
+            {
+              "K": 82,
+              "Sroot": 1058,
+              "sign": "plus"
+            },
+            {
+              "K": 54,
+              "Sroot": 1071,
+              "sign": "plus"
+            },
+            {
+              "K": 948,
+              "Sroot": 1074,
+              "sign": "plus"
+            },
+            {
+              "K": 215,
+              "Sroot": 1100,
+              "sign": "minus"
+            },
+            {
+              "K": 194,
+              "Sroot": 1115,
+              "sign": "plus"
+            },
+            {
+              "K": 964,
+              "Sroot": 1117,
+              "sign": "minus"
+            },
+            {
+              "K": 1742,
+              "Sroot": 1119,
+              "sign": "plus"
+            },
+            {
+              "K": 444,
+              "Sroot": 1134,
+              "sign": "plus"
+            },
+            {
+              "K": 297,
+              "Sroot": 1138,
+              "sign": "minus"
+            },
+            {
+              "K": 993,
+              "Sroot": 1148,
+              "sign": "plus"
+            },
+            {
+              "K": 916,
+              "Sroot": 1175,
+              "sign": "minus"
+            },
+            {
+              "K": 79,
+              "Sroot": 1177,
+              "sign": "minus"
+            },
+            {
+              "K": 1832,
+              "Sroot": 1191,
+              "sign": "minus"
+            },
+            {
+              "K": 579,
+              "Sroot": 1212,
+              "sign": "minus"
+            },
+            {
+              "K": 472,
+              "Sroot": 1215,
+              "sign": "minus"
+            },
+            {
+              "K": 1642,
+              "Sroot": 1217,
+              "sign": "plus"
+            },
+            {
+              "K": 1133,
+              "Sroot": 1249,
+              "sign": "plus"
+            },
+            {
+              "K": 731,
+              "Sroot": 1286,
+              "sign": "minus"
+            },
+            {
+              "K": 338,
+              "Sroot": 1288,
+              "sign": "minus"
+            },
+            {
+              "K": 1503,
+              "Sroot": 1348,
+              "sign": "plus"
+            },
+            {
+              "K": 126,
+              "Sroot": 1382,
+              "sign": "plus"
+            },
+            {
+              "K": 161,
+              "Sroot": 1392,
+              "sign": "minus"
+            },
+            {
+              "K": 1099,
+              "Sroot": 1393,
+              "sign": "plus"
+            },
+            {
+              "K": 1466,
+              "Sroot": 1422,
+              "sign": "minus"
+            },
+            {
+              "K": 96,
+              "Sroot": 1428,
+              "sign": "minus"
+            },
+            {
+              "K": 271,
+              "Sroot": 1430,
+              "sign": "minus"
+            },
+            {
+              "K": 241,
+              "Sroot": 1482,
+              "sign": "plus"
+            },
+            {
+              "K": 66,
+              "Sroot": 1543,
+              "sign": "plus"
+            },
+            {
+              "K": 1306,
+              "Sroot": 1544,
+              "sign": "minus"
+            },
+            {
+              "K": 1196,
+              "Sroot": 1573,
+              "sign": "minus"
+            },
+            {
+              "K": 386,
+              "Sroot": 1685,
+              "sign": "plus"
+            },
+            {
+              "K": 940,
+              "Sroot": 1695,
+              "sign": "plus"
+            },
+            {
+              "K": 1448,
+              "Sroot": 1753,
+              "sign": "minus"
+            },
+            {
+              "K": 1206,
+              "Sroot": 1777,
+              "sign": "minus"
+            },
+            {
+              "K": 1764,
+              "Sroot": 1805,
+              "sign": "minus"
+            },
+            {
+              "K": 1024,
+              "Sroot": 1815,
+              "sign": "plus"
+            },
+            {
+              "K": 36,
+              "Sroot": 1841,
+              "sign": "minus"
+            }
+          ]
+        },
+        {
+          "coordinate": "Sroot",
+          "domain": "Sroot all-plus prefix through d4",
+          "gate": "d5",
+          "meaning": "selected gate d5 character on the active Sroot domain",
+          "minus_count": 38,
+          "missing_count": 0,
+          "mixed_count": 0,
+          "name": "f5_conditional_on_Sroot",
+          "plus_count": 0,
+          "row_count": 38,
+          "rows": [
+            {
+              "K": 1024,
+              "Sroot": 32,
+              "sign": "minus"
+            },
+            {
+              "K": 940,
+              "Sroot": 152,
+              "sign": "minus"
+            },
+            {
+              "K": 386,
+              "Sroot": 162,
+              "sign": "minus"
+            },
+            {
+              "K": 66,
+              "Sroot": 304,
+              "sign": "minus"
+            },
+            {
+              "K": 241,
+              "Sroot": 365,
+              "sign": "minus"
+            },
+            {
+              "K": 1099,
+              "Sroot": 454,
+              "sign": "minus"
+            },
+            {
+              "K": 126,
+              "Sroot": 465,
+              "sign": "minus"
+            },
+            {
+              "K": 1503,
+              "Sroot": 499,
+              "sign": "minus"
+            },
+            {
+              "K": 1133,
+              "Sroot": 598,
+              "sign": "minus"
+            },
+            {
+              "K": 1642,
+              "Sroot": 630,
+              "sign": "minus"
+            },
+            {
+              "K": 993,
+              "Sroot": 699,
+              "sign": "minus"
+            },
+            {
+              "K": 444,
+              "Sroot": 713,
+              "sign": "minus"
+            },
+            {
+              "K": 1742,
+              "Sroot": 728,
+              "sign": "minus"
+            },
+            {
+              "K": 194,
+              "Sroot": 732,
+              "sign": "minus"
+            },
+            {
+              "K": 948,
+              "Sroot": 773,
+              "sign": "minus"
+            },
+            {
+              "K": 54,
+              "Sroot": 776,
+              "sign": "minus"
+            },
+            {
+              "K": 82,
+              "Sroot": 789,
+              "sign": "minus"
+            },
+            {
+              "K": 869,
+              "Sroot": 793,
+              "sign": "minus"
+            },
+            {
+              "K": 1083,
+              "Sroot": 845,
+              "sign": "minus"
+            },
+            {
+              "K": 1083,
+              "Sroot": 1002,
+              "sign": "minus"
+            },
+            {
+              "K": 869,
+              "Sroot": 1054,
+              "sign": "minus"
+            },
+            {
+              "K": 82,
+              "Sroot": 1058,
+              "sign": "minus"
+            },
+            {
+              "K": 54,
+              "Sroot": 1071,
+              "sign": "minus"
+            },
+            {
+              "K": 948,
+              "Sroot": 1074,
+              "sign": "minus"
+            },
+            {
+              "K": 194,
+              "Sroot": 1115,
+              "sign": "minus"
+            },
+            {
+              "K": 1742,
+              "Sroot": 1119,
+              "sign": "minus"
+            },
+            {
+              "K": 444,
+              "Sroot": 1134,
+              "sign": "minus"
+            },
+            {
+              "K": 993,
+              "Sroot": 1148,
+              "sign": "minus"
+            },
+            {
+              "K": 1642,
+              "Sroot": 1217,
+              "sign": "minus"
+            },
+            {
+              "K": 1133,
+              "Sroot": 1249,
+              "sign": "minus"
+            },
+            {
+              "K": 1503,
+              "Sroot": 1348,
+              "sign": "minus"
+            },
+            {
+              "K": 126,
+              "Sroot": 1382,
+              "sign": "minus"
+            },
+            {
+              "K": 1099,
+              "Sroot": 1393,
+              "sign": "minus"
+            },
+            {
+              "K": 241,
+              "Sroot": 1482,
+              "sign": "minus"
+            },
+            {
+              "K": 66,
+              "Sroot": 1543,
+              "sign": "minus"
+            },
+            {
+              "K": 386,
+              "Sroot": 1685,
+              "sign": "minus"
+            },
+            {
+              "K": 940,
+              "Sroot": 1695,
+              "sign": "minus"
+            },
+            {
+              "K": 1024,
+              "Sroot": 1815,
+              "sign": "minus"
+            }
+          ]
+        },
+        {
+          "coordinate": "Sroot",
+          "domain": "Sroot all-plus prefix through d5",
+          "gate": "d6",
+          "meaning": "selected gate d6 character on the active Sroot domain",
+          "minus_count": 0,
+          "missing_count": 0,
+          "mixed_count": 0,
+          "name": "f6_conditional_on_Sroot",
+          "plus_count": 0,
+          "row_count": 0,
+          "rows": []
+        }
+      ],
+      "field": 1847,
+      "source_stats": {
+        "K_group_size_16": 63,
+        "K_to_Sroot_size_hist_keys": 2,
+        "Sroot_group_size_8": 126,
+        "candidate_invalid_degenerate_A": 16,
+        "candidate_invalid_not_nonsplit": 920,
+        "candidates": 1008,
+        "compact_not_target": 868,
+        "d2_plus_candidates": 1008,
+        "ks_degenerate": 1,
+        "legal_K": 63,
+        "legal_Sroot": 126,
+        "skip_X_degenerate": 2,
+        "source_rows": 972,
+        "unique_A_x5": 252,
+        "unique_K_seen": 231,
+        "unique_Sroot_seen": 461
+      }
+    },
+    {
+      "base": {
+        "K_group_size_histogram": {
+          "16": 57
+        },
+        "Sroot_group_size_histogram": {
+          "8": 114
+        },
+        "legal_K": 57,
+        "legal_Sroot": 114,
+        "sheet_stats": {
+          "K_from_Sroot": 57,
+          "Sroot": 114,
+          "Sroot_per_K_histogram": {
+            "2": 57
+          }
+        }
+      },
+      "families": [
+        {
+          "coordinate": "K",
+          "meaning": "legal selected-source K values",
+          "name": "legal_K",
+          "row_count": 57,
+          "rows": [
+            {
+              "K": 41
+            },
+            {
+              "K": 123
+            },
+            {
+              "K": 133
+            },
+            {
+              "K": 198
+            },
+            {
+              "K": 239
+            },
+            {
+              "K": 253
+            },
+            {
+              "K": 272
+            },
+            {
+              "K": 297
+            },
+            {
+              "K": 307
+            },
+            {
+              "K": 331
+            },
+            {
+              "K": 366
+            },
+            {
+              "K": 370
+            },
+            {
+              "K": 464
+            },
+            {
+              "K": 493
+            },
+            {
+              "K": 507
+            },
+            {
+              "K": 512
+            },
+            {
+              "K": 594
+            },
+            {
+              "K": 596
+            },
+            {
+              "K": 614
+            },
+            {
+              "K": 647
+            },
+            {
+              "K": 717
+            },
+            {
+              "K": 778
+            },
+            {
+              "K": 798
+            },
+            {
+              "K": 807
+            },
+            {
+              "K": 828
+            },
+            {
+              "K": 933
+            },
+            {
+              "K": 956
+            },
+            {
+              "K": 1010
+            },
+            {
+              "K": 1041
+            },
+            {
+              "K": 1058
+            },
+            {
+              "K": 1069
+            },
+            {
+              "K": 1087
+            },
+            {
+              "K": 1107
+            },
+            {
+              "K": 1121
+            },
+            {
+              "K": 1175
+            },
+            {
+              "K": 1204
+            },
+            {
+              "K": 1229
+            },
+            {
+              "K": 1236
+            },
+            {
+              "K": 1308
+            },
+            {
+              "K": 1312
+            },
+            {
+              "K": 1323
+            },
+            {
+              "K": 1352
+            },
+            {
+              "K": 1366
+            },
+            {
+              "K": 1443
+            },
+            {
+              "K": 1447
+            },
+            {
+              "K": 1503
+            },
+            {
+              "K": 1533
+            },
+            {
+              "K": 1610
+            },
+            {
+              "K": 1645
+            },
+            {
+              "K": 1652
+            },
+            {
+              "K": 1663
+            },
+            {
+              "K": 1767
+            },
+            {
+              "K": 1886
+            },
+            {
+              "K": 1898
+            },
+            {
+              "K": 1916
+            },
+            {
+              "K": 1941
+            },
+            {
+              "K": 2047
+            }
+          ]
+        },
+        {
+          "coordinate": "K",
+          "domain": "legal K",
+          "gate": "d3",
+          "meaning": "selected gate d3 character on the active K domain",
+          "minus_count": 32,
+          "missing_count": 0,
+          "mixed_count": 0,
+          "name": "f3_conditional_on_K",
+          "plus_count": 25,
+          "row_count": 57,
+          "rows": [
+            {
+              "K": 41,
+              "sign": "minus"
+            },
+            {
+              "K": 123,
+              "sign": "minus"
+            },
+            {
+              "K": 133,
+              "sign": "minus"
+            },
+            {
+              "K": 198,
+              "sign": "plus"
+            },
+            {
+              "K": 239,
+              "sign": "minus"
+            },
+            {
+              "K": 253,
+              "sign": "plus"
+            },
+            {
+              "K": 272,
+              "sign": "minus"
+            },
+            {
+              "K": 297,
+              "sign": "plus"
+            },
+            {
+              "K": 307,
+              "sign": "plus"
+            },
+            {
+              "K": 331,
+              "sign": "minus"
+            },
+            {
+              "K": 366,
+              "sign": "minus"
+            },
+            {
+              "K": 370,
+              "sign": "minus"
+            },
+            {
+              "K": 464,
+              "sign": "minus"
+            },
+            {
+              "K": 493,
+              "sign": "plus"
+            },
+            {
+              "K": 507,
+              "sign": "minus"
+            },
+            {
+              "K": 512,
+              "sign": "minus"
+            },
+            {
+              "K": 594,
+              "sign": "minus"
+            },
+            {
+              "K": 596,
+              "sign": "minus"
+            },
+            {
+              "K": 614,
+              "sign": "minus"
+            },
+            {
+              "K": 647,
+              "sign": "plus"
+            },
+            {
+              "K": 717,
+              "sign": "minus"
+            },
+            {
+              "K": 778,
+              "sign": "minus"
+            },
+            {
+              "K": 798,
+              "sign": "plus"
+            },
+            {
+              "K": 807,
+              "sign": "minus"
+            },
+            {
+              "K": 828,
+              "sign": "plus"
+            },
+            {
+              "K": 933,
+              "sign": "plus"
+            },
+            {
+              "K": 956,
+              "sign": "minus"
+            },
+            {
+              "K": 1010,
+              "sign": "plus"
+            },
+            {
+              "K": 1041,
+              "sign": "plus"
+            },
+            {
+              "K": 1058,
+              "sign": "minus"
+            },
+            {
+              "K": 1069,
+              "sign": "minus"
+            },
+            {
+              "K": 1087,
+              "sign": "minus"
+            },
+            {
+              "K": 1107,
+              "sign": "plus"
+            },
+            {
+              "K": 1121,
+              "sign": "minus"
+            },
+            {
+              "K": 1175,
+              "sign": "plus"
+            },
+            {
+              "K": 1204,
+              "sign": "minus"
+            },
+            {
+              "K": 1229,
+              "sign": "plus"
+            },
+            {
+              "K": 1236,
+              "sign": "minus"
+            },
+            {
+              "K": 1308,
+              "sign": "plus"
+            },
+            {
+              "K": 1312,
+              "sign": "plus"
+            },
+            {
+              "K": 1323,
+              "sign": "minus"
+            },
+            {
+              "K": 1352,
+              "sign": "plus"
+            },
+            {
+              "K": 1366,
+              "sign": "plus"
+            },
+            {
+              "K": 1443,
+              "sign": "plus"
+            },
+            {
+              "K": 1447,
+              "sign": "plus"
+            },
+            {
+              "K": 1503,
+              "sign": "minus"
+            },
+            {
+              "K": 1533,
+              "sign": "minus"
+            },
+            {
+              "K": 1610,
+              "sign": "minus"
+            },
+            {
+              "K": 1645,
+              "sign": "minus"
+            },
+            {
+              "K": 1652,
+              "sign": "minus"
+            },
+            {
+              "K": 1663,
+              "sign": "plus"
+            },
+            {
+              "K": 1767,
+              "sign": "plus"
+            },
+            {
+              "K": 1886,
+              "sign": "minus"
+            },
+            {
+              "K": 1898,
+              "sign": "plus"
+            },
+            {
+              "K": 1916,
+              "sign": "plus"
+            },
+            {
+              "K": 1941,
+              "sign": "minus"
+            },
+            {
+              "K": 2047,
+              "sign": "plus"
+            }
+          ]
+        },
+        {
+          "coordinate": "K",
+          "domain": "K all-plus prefix through d3",
+          "gate": "d4",
+          "meaning": "selected gate d4 character on the active K domain",
+          "minus_count": 7,
+          "missing_count": 0,
+          "mixed_count": 0,
+          "name": "f4_conditional_on_K",
+          "plus_count": 18,
+          "row_count": 25,
+          "rows": [
+            {
+              "K": 198,
+              "sign": "plus"
+            },
+            {
+              "K": 253,
+              "sign": "plus"
+            },
+            {
+              "K": 297,
+              "sign": "plus"
+            },
+            {
+              "K": 307,
+              "sign": "plus"
+            },
+            {
+              "K": 493,
+              "sign": "minus"
+            },
+            {
+              "K": 647,
+              "sign": "minus"
+            },
+            {
+              "K": 798,
+              "sign": "plus"
+            },
+            {
+              "K": 828,
+              "sign": "minus"
+            },
+            {
+              "K": 933,
+              "sign": "plus"
+            },
+            {
+              "K": 1010,
+              "sign": "minus"
+            },
+            {
+              "K": 1041,
+              "sign": "plus"
+            },
+            {
+              "K": 1107,
+              "sign": "plus"
+            },
+            {
+              "K": 1175,
+              "sign": "plus"
+            },
+            {
+              "K": 1229,
+              "sign": "minus"
+            },
+            {
+              "K": 1308,
+              "sign": "plus"
+            },
+            {
+              "K": 1312,
+              "sign": "plus"
+            },
+            {
+              "K": 1352,
+              "sign": "plus"
+            },
+            {
+              "K": 1366,
+              "sign": "plus"
+            },
+            {
+              "K": 1443,
+              "sign": "plus"
+            },
+            {
+              "K": 1447,
+              "sign": "plus"
+            },
+            {
+              "K": 1663,
+              "sign": "plus"
+            },
+            {
+              "K": 1767,
+              "sign": "plus"
+            },
+            {
+              "K": 1898,
+              "sign": "minus"
+            },
+            {
+              "K": 1916,
+              "sign": "plus"
+            },
+            {
+              "K": 2047,
+              "sign": "minus"
+            }
+          ]
+        },
+        {
+          "coordinate": "K",
+          "domain": "K all-plus prefix through d4",
+          "gate": "d5",
+          "meaning": "selected gate d5 character on the active K domain",
+          "minus_count": 0,
+          "missing_count": 0,
+          "mixed_count": 0,
+          "name": "f5_conditional_on_K",
+          "plus_count": 18,
+          "row_count": 18,
+          "rows": [
+            {
+              "K": 198,
+              "sign": "plus"
+            },
+            {
+              "K": 253,
+              "sign": "plus"
+            },
+            {
+              "K": 297,
+              "sign": "plus"
+            },
+            {
+              "K": 307,
+              "sign": "plus"
+            },
+            {
+              "K": 798,
+              "sign": "plus"
+            },
+            {
+              "K": 933,
+              "sign": "plus"
+            },
+            {
+              "K": 1041,
+              "sign": "plus"
+            },
+            {
+              "K": 1107,
+              "sign": "plus"
+            },
+            {
+              "K": 1175,
+              "sign": "plus"
+            },
+            {
+              "K": 1308,
+              "sign": "plus"
+            },
+            {
+              "K": 1312,
+              "sign": "plus"
+            },
+            {
+              "K": 1352,
+              "sign": "plus"
+            },
+            {
+              "K": 1366,
+              "sign": "plus"
+            },
+            {
+              "K": 1443,
+              "sign": "plus"
+            },
+            {
+              "K": 1447,
+              "sign": "plus"
+            },
+            {
+              "K": 1663,
+              "sign": "plus"
+            },
+            {
+              "K": 1767,
+              "sign": "plus"
+            },
+            {
+              "K": 1916,
+              "sign": "plus"
+            }
+          ]
+        },
+        {
+          "coordinate": "K",
+          "domain": "K all-plus prefix through d5",
+          "gate": "d6",
+          "meaning": "selected gate d6 character on the active K domain",
+          "minus_count": 0,
+          "missing_count": 0,
+          "mixed_count": 0,
+          "name": "f6_conditional_on_K",
+          "plus_count": 18,
+          "row_count": 18,
+          "rows": [
+            {
+              "K": 198,
+              "sign": "plus"
+            },
+            {
+              "K": 253,
+              "sign": "plus"
+            },
+            {
+              "K": 297,
+              "sign": "plus"
+            },
+            {
+              "K": 307,
+              "sign": "plus"
+            },
+            {
+              "K": 798,
+              "sign": "plus"
+            },
+            {
+              "K": 933,
+              "sign": "plus"
+            },
+            {
+              "K": 1041,
+              "sign": "plus"
+            },
+            {
+              "K": 1107,
+              "sign": "plus"
+            },
+            {
+              "K": 1175,
+              "sign": "plus"
+            },
+            {
+              "K": 1308,
+              "sign": "plus"
+            },
+            {
+              "K": 1312,
+              "sign": "plus"
+            },
+            {
+              "K": 1352,
+              "sign": "plus"
+            },
+            {
+              "K": 1366,
+              "sign": "plus"
+            },
+            {
+              "K": 1443,
+              "sign": "plus"
+            },
+            {
+              "K": 1447,
+              "sign": "plus"
+            },
+            {
+              "K": 1663,
+              "sign": "plus"
+            },
+            {
+              "K": 1767,
+              "sign": "plus"
+            },
+            {
+              "K": 1916,
+              "sign": "plus"
+            }
+          ]
+        },
+        {
+          "coordinate": "Sroot",
+          "meaning": "legal selected-source Sroot values",
+          "name": "legal_Sroot",
+          "row_count": 114,
+          "rows": [
+            {
+              "K": 1010,
+              "Sroot": 72
+            },
+            {
+              "K": 1308,
+              "Sroot": 87
+            },
+            {
+              "K": 1652,
+              "Sroot": 100
+            },
+            {
+              "K": 1229,
+              "Sroot": 108
+            },
+            {
+              "K": 1886,
+              "Sroot": 111
+            },
+            {
+              "K": 366,
+              "Sroot": 172
+            },
+            {
+              "K": 1058,
+              "Sroot": 174
+            },
+            {
+              "K": 464,
+              "Sroot": 184
+            },
+            {
+              "K": 1204,
+              "Sroot": 186
+            },
+            {
+              "K": 1941,
+              "Sroot": 209
+            },
+            {
+              "K": 1175,
+              "Sroot": 217
+            },
+            {
+              "K": 1610,
+              "Sroot": 218
+            },
+            {
+              "K": 2047,
+              "Sroot": 219
+            },
+            {
+              "K": 1352,
+              "Sroot": 257
+            },
+            {
+              "K": 297,
+              "Sroot": 259
+            },
+            {
+              "K": 331,
+              "Sroot": 267
+            },
+            {
+              "K": 493,
+              "Sroot": 275
+            },
+            {
+              "K": 41,
+              "Sroot": 289
+            },
+            {
+              "K": 507,
+              "Sroot": 314
+            },
+            {
+              "K": 1767,
+              "Sroot": 316
+            },
+            {
+              "K": 778,
+              "Sroot": 321
+            },
+            {
+              "K": 198,
+              "Sroot": 336
+            },
+            {
+              "K": 1121,
+              "Sroot": 367
+            },
+            {
+              "K": 1366,
+              "Sroot": 384
+            },
+            {
+              "K": 798,
+              "Sroot": 394
+            },
+            {
+              "K": 1503,
+              "Sroot": 418
+            },
+            {
+              "K": 253,
+              "Sroot": 419
+            },
+            {
+              "K": 717,
+              "Sroot": 439
+            },
+            {
+              "K": 1323,
+              "Sroot": 456
+            },
+            {
+              "K": 1041,
+              "Sroot": 467
+            },
+            {
+              "K": 512,
+              "Sroot": 484
+            },
+            {
+              "K": 1312,
+              "Sroot": 510
+            },
+            {
+              "K": 1107,
+              "Sroot": 553
+            },
+            {
+              "K": 1236,
+              "Sroot": 555
+            },
+            {
+              "K": 133,
+              "Sroot": 594
+            },
+            {
+              "K": 614,
+              "Sroot": 610
+            },
+            {
+              "K": 370,
+              "Sroot": 630
+            },
+            {
+              "K": 807,
+              "Sroot": 632
+            },
+            {
+              "K": 1443,
+              "Sroot": 652
+            },
+            {
+              "K": 307,
+              "Sroot": 687
+            },
+            {
+              "K": 1645,
+              "Sroot": 691
+            },
+            {
+              "K": 239,
+              "Sroot": 693
+            },
+            {
+              "K": 933,
+              "Sroot": 698
+            },
+            {
+              "K": 956,
+              "Sroot": 701
+            },
+            {
+              "K": 272,
+              "Sroot": 702
+            },
+            {
+              "K": 647,
+              "Sroot": 773
+            },
+            {
+              "K": 1533,
+              "Sroot": 804
+            },
+            {
+              "K": 1069,
+              "Sroot": 843
+            },
+            {
+              "K": 1447,
+              "Sroot": 876
+            },
+            {
+              "K": 123,
+              "Sroot": 880
+            },
+            {
+              "K": 1916,
+              "Sroot": 909
+            },
+            {
+              "K": 596,
+              "Sroot": 914
+            },
+            {
+              "K": 1663,
+              "Sroot": 918
+            },
+            {
+              "K": 1898,
+              "Sroot": 969
+            },
+            {
+              "K": 1087,
+              "Sroot": 992
+            },
+            {
+              "K": 828,
+              "Sroot": 1026
+            },
+            {
+              "K": 594,
+              "Sroot": 1035
+            },
+            {
+              "K": 594,
+              "Sroot": 1052
+            },
+            {
+              "K": 828,
+              "Sroot": 1061
+            },
+            {
+              "K": 1087,
+              "Sroot": 1095
+            },
+            {
+              "K": 1898,
+              "Sroot": 1118
+            },
+            {
+              "K": 1663,
+              "Sroot": 1169
+            },
+            {
+              "K": 596,
+              "Sroot": 1173
+            },
+            {
+              "K": 1916,
+              "Sroot": 1178
+            },
+            {
+              "K": 123,
+              "Sroot": 1207
+            },
+            {
+              "K": 1447,
+              "Sroot": 1211
+            },
+            {
+              "K": 1069,
+              "Sroot": 1244
+            },
+            {
+              "K": 1533,
+              "Sroot": 1283
+            },
+            {
+              "K": 647,
+              "Sroot": 1314
+            },
+            {
+              "K": 272,
+              "Sroot": 1385
+            },
+            {
+              "K": 956,
+              "Sroot": 1386
+            },
+            {
+              "K": 933,
+              "Sroot": 1389
+            },
+            {
+              "K": 239,
+              "Sroot": 1394
+            },
+            {
+              "K": 1645,
+              "Sroot": 1396
+            },
+            {
+              "K": 307,
+              "Sroot": 1400
+            },
+            {
+              "K": 1443,
+              "Sroot": 1435
+            },
+            {
+              "K": 807,
+              "Sroot": 1455
+            },
+            {
+              "K": 370,
+              "Sroot": 1457
+            },
+            {
+              "K": 614,
+              "Sroot": 1477
+            },
+            {
+              "K": 133,
+              "Sroot": 1493
+            },
+            {
+              "K": 1236,
+              "Sroot": 1532
+            },
+            {
+              "K": 1107,
+              "Sroot": 1534
+            },
+            {
+              "K": 1312,
+              "Sroot": 1577
+            },
+            {
+              "K": 512,
+              "Sroot": 1603
+            },
+            {
+              "K": 1041,
+              "Sroot": 1620
+            },
+            {
+              "K": 1323,
+              "Sroot": 1631
+            },
+            {
+              "K": 717,
+              "Sroot": 1648
+            },
+            {
+              "K": 253,
+              "Sroot": 1668
+            },
+            {
+              "K": 1503,
+              "Sroot": 1669
+            },
+            {
+              "K": 798,
+              "Sroot": 1693
+            },
+            {
+              "K": 1366,
+              "Sroot": 1703
+            },
+            {
+              "K": 1121,
+              "Sroot": 1720
+            },
+            {
+              "K": 198,
+              "Sroot": 1751
+            },
+            {
+              "K": 778,
+              "Sroot": 1766
+            },
+            {
+              "K": 1767,
+              "Sroot": 1771
+            },
+            {
+              "K": 507,
+              "Sroot": 1773
+            },
+            {
+              "K": 41,
+              "Sroot": 1798
+            },
+            {
+              "K": 493,
+              "Sroot": 1812
+            },
+            {
+              "K": 331,
+              "Sroot": 1820
+            },
+            {
+              "K": 297,
+              "Sroot": 1828
+            },
+            {
+              "K": 1352,
+              "Sroot": 1830
+            },
+            {
+              "K": 2047,
+              "Sroot": 1868
+            },
+            {
+              "K": 1610,
+              "Sroot": 1869
+            },
+            {
+              "K": 1175,
+              "Sroot": 1870
+            },
+            {
+              "K": 1941,
+              "Sroot": 1878
+            },
+            {
+              "K": 1204,
+              "Sroot": 1901
+            },
+            {
+              "K": 464,
+              "Sroot": 1903
+            },
+            {
+              "K": 1058,
+              "Sroot": 1913
+            },
+            {
+              "K": 366,
+              "Sroot": 1915
+            },
+            {
+              "K": 1886,
+              "Sroot": 1976
+            },
+            {
+              "K": 1229,
+              "Sroot": 1979
+            },
+            {
+              "K": 1652,
+              "Sroot": 1987
+            },
+            {
+              "K": 1308,
+              "Sroot": 2000
+            },
+            {
+              "K": 1010,
+              "Sroot": 2015
+            }
+          ]
+        },
+        {
+          "coordinate": "Sroot",
+          "domain": "legal Sroot",
+          "gate": "d3",
+          "meaning": "selected gate d3 character on the active Sroot domain",
+          "minus_count": 64,
+          "missing_count": 0,
+          "mixed_count": 0,
+          "name": "f3_conditional_on_Sroot",
+          "plus_count": 50,
+          "row_count": 114,
+          "rows": [
+            {
+              "K": 1010,
+              "Sroot": 72,
+              "sign": "plus"
+            },
+            {
+              "K": 1308,
+              "Sroot": 87,
+              "sign": "plus"
+            },
+            {
+              "K": 1652,
+              "Sroot": 100,
+              "sign": "minus"
+            },
+            {
+              "K": 1229,
+              "Sroot": 108,
+              "sign": "plus"
+            },
+            {
+              "K": 1886,
+              "Sroot": 111,
+              "sign": "minus"
+            },
+            {
+              "K": 366,
+              "Sroot": 172,
+              "sign": "minus"
+            },
+            {
+              "K": 1058,
+              "Sroot": 174,
+              "sign": "minus"
+            },
+            {
+              "K": 464,
+              "Sroot": 184,
+              "sign": "minus"
+            },
+            {
+              "K": 1204,
+              "Sroot": 186,
+              "sign": "minus"
+            },
+            {
+              "K": 1941,
+              "Sroot": 209,
+              "sign": "minus"
+            },
+            {
+              "K": 1175,
+              "Sroot": 217,
+              "sign": "plus"
+            },
+            {
+              "K": 1610,
+              "Sroot": 218,
+              "sign": "minus"
+            },
+            {
+              "K": 2047,
+              "Sroot": 219,
+              "sign": "plus"
+            },
+            {
+              "K": 1352,
+              "Sroot": 257,
+              "sign": "plus"
+            },
+            {
+              "K": 297,
+              "Sroot": 259,
+              "sign": "plus"
+            },
+            {
+              "K": 331,
+              "Sroot": 267,
+              "sign": "minus"
+            },
+            {
+              "K": 493,
+              "Sroot": 275,
+              "sign": "plus"
+            },
+            {
+              "K": 41,
+              "Sroot": 289,
+              "sign": "minus"
+            },
+            {
+              "K": 507,
+              "Sroot": 314,
+              "sign": "minus"
+            },
+            {
+              "K": 1767,
+              "Sroot": 316,
+              "sign": "plus"
+            },
+            {
+              "K": 778,
+              "Sroot": 321,
+              "sign": "minus"
+            },
+            {
+              "K": 198,
+              "Sroot": 336,
+              "sign": "plus"
+            },
+            {
+              "K": 1121,
+              "Sroot": 367,
+              "sign": "minus"
+            },
+            {
+              "K": 1366,
+              "Sroot": 384,
+              "sign": "plus"
+            },
+            {
+              "K": 798,
+              "Sroot": 394,
+              "sign": "plus"
+            },
+            {
+              "K": 1503,
+              "Sroot": 418,
+              "sign": "minus"
+            },
+            {
+              "K": 253,
+              "Sroot": 419,
+              "sign": "plus"
+            },
+            {
+              "K": 717,
+              "Sroot": 439,
+              "sign": "minus"
+            },
+            {
+              "K": 1323,
+              "Sroot": 456,
+              "sign": "minus"
+            },
+            {
+              "K": 1041,
+              "Sroot": 467,
+              "sign": "plus"
+            },
+            {
+              "K": 512,
+              "Sroot": 484,
+              "sign": "minus"
+            },
+            {
+              "K": 1312,
+              "Sroot": 510,
+              "sign": "plus"
+            },
+            {
+              "K": 1107,
+              "Sroot": 553,
+              "sign": "plus"
+            },
+            {
+              "K": 1236,
+              "Sroot": 555,
+              "sign": "minus"
+            },
+            {
+              "K": 133,
+              "Sroot": 594,
+              "sign": "minus"
+            },
+            {
+              "K": 614,
+              "Sroot": 610,
+              "sign": "minus"
+            },
+            {
+              "K": 370,
+              "Sroot": 630,
+              "sign": "minus"
+            },
+            {
+              "K": 807,
+              "Sroot": 632,
+              "sign": "minus"
+            },
+            {
+              "K": 1443,
+              "Sroot": 652,
+              "sign": "plus"
+            },
+            {
+              "K": 307,
+              "Sroot": 687,
+              "sign": "plus"
+            },
+            {
+              "K": 1645,
+              "Sroot": 691,
+              "sign": "minus"
+            },
+            {
+              "K": 239,
+              "Sroot": 693,
+              "sign": "minus"
+            },
+            {
+              "K": 933,
+              "Sroot": 698,
+              "sign": "plus"
+            },
+            {
+              "K": 956,
+              "Sroot": 701,
+              "sign": "minus"
+            },
+            {
+              "K": 272,
+              "Sroot": 702,
+              "sign": "minus"
+            },
+            {
+              "K": 647,
+              "Sroot": 773,
+              "sign": "plus"
+            },
+            {
+              "K": 1533,
+              "Sroot": 804,
+              "sign": "minus"
+            },
+            {
+              "K": 1069,
+              "Sroot": 843,
+              "sign": "minus"
+            },
+            {
+              "K": 1447,
+              "Sroot": 876,
+              "sign": "plus"
+            },
+            {
+              "K": 123,
+              "Sroot": 880,
+              "sign": "minus"
+            },
+            {
+              "K": 1916,
+              "Sroot": 909,
+              "sign": "plus"
+            },
+            {
+              "K": 596,
+              "Sroot": 914,
+              "sign": "minus"
+            },
+            {
+              "K": 1663,
+              "Sroot": 918,
+              "sign": "plus"
+            },
+            {
+              "K": 1898,
+              "Sroot": 969,
+              "sign": "plus"
+            },
+            {
+              "K": 1087,
+              "Sroot": 992,
+              "sign": "minus"
+            },
+            {
+              "K": 828,
+              "Sroot": 1026,
+              "sign": "plus"
+            },
+            {
+              "K": 594,
+              "Sroot": 1035,
+              "sign": "minus"
+            },
+            {
+              "K": 594,
+              "Sroot": 1052,
+              "sign": "minus"
+            },
+            {
+              "K": 828,
+              "Sroot": 1061,
+              "sign": "plus"
+            },
+            {
+              "K": 1087,
+              "Sroot": 1095,
+              "sign": "minus"
+            },
+            {
+              "K": 1898,
+              "Sroot": 1118,
+              "sign": "plus"
+            },
+            {
+              "K": 1663,
+              "Sroot": 1169,
+              "sign": "plus"
+            },
+            {
+              "K": 596,
+              "Sroot": 1173,
+              "sign": "minus"
+            },
+            {
+              "K": 1916,
+              "Sroot": 1178,
+              "sign": "plus"
+            },
+            {
+              "K": 123,
+              "Sroot": 1207,
+              "sign": "minus"
+            },
+            {
+              "K": 1447,
+              "Sroot": 1211,
+              "sign": "plus"
+            },
+            {
+              "K": 1069,
+              "Sroot": 1244,
+              "sign": "minus"
+            },
+            {
+              "K": 1533,
+              "Sroot": 1283,
+              "sign": "minus"
+            },
+            {
+              "K": 647,
+              "Sroot": 1314,
+              "sign": "plus"
+            },
+            {
+              "K": 272,
+              "Sroot": 1385,
+              "sign": "minus"
+            },
+            {
+              "K": 956,
+              "Sroot": 1386,
+              "sign": "minus"
+            },
+            {
+              "K": 933,
+              "Sroot": 1389,
+              "sign": "plus"
+            },
+            {
+              "K": 239,
+              "Sroot": 1394,
+              "sign": "minus"
+            },
+            {
+              "K": 1645,
+              "Sroot": 1396,
+              "sign": "minus"
+            },
+            {
+              "K": 307,
+              "Sroot": 1400,
+              "sign": "plus"
+            },
+            {
+              "K": 1443,
+              "Sroot": 1435,
+              "sign": "plus"
+            },
+            {
+              "K": 807,
+              "Sroot": 1455,
+              "sign": "minus"
+            },
+            {
+              "K": 370,
+              "Sroot": 1457,
+              "sign": "minus"
+            },
+            {
+              "K": 614,
+              "Sroot": 1477,
+              "sign": "minus"
+            },
+            {
+              "K": 133,
+              "Sroot": 1493,
+              "sign": "minus"
+            },
+            {
+              "K": 1236,
+              "Sroot": 1532,
+              "sign": "minus"
+            },
+            {
+              "K": 1107,
+              "Sroot": 1534,
+              "sign": "plus"
+            },
+            {
+              "K": 1312,
+              "Sroot": 1577,
+              "sign": "plus"
+            },
+            {
+              "K": 512,
+              "Sroot": 1603,
+              "sign": "minus"
+            },
+            {
+              "K": 1041,
+              "Sroot": 1620,
+              "sign": "plus"
+            },
+            {
+              "K": 1323,
+              "Sroot": 1631,
+              "sign": "minus"
+            },
+            {
+              "K": 717,
+              "Sroot": 1648,
+              "sign": "minus"
+            },
+            {
+              "K": 253,
+              "Sroot": 1668,
+              "sign": "plus"
+            },
+            {
+              "K": 1503,
+              "Sroot": 1669,
+              "sign": "minus"
+            },
+            {
+              "K": 798,
+              "Sroot": 1693,
+              "sign": "plus"
+            },
+            {
+              "K": 1366,
+              "Sroot": 1703,
+              "sign": "plus"
+            },
+            {
+              "K": 1121,
+              "Sroot": 1720,
+              "sign": "minus"
+            },
+            {
+              "K": 198,
+              "Sroot": 1751,
+              "sign": "plus"
+            },
+            {
+              "K": 778,
+              "Sroot": 1766,
+              "sign": "minus"
+            },
+            {
+              "K": 1767,
+              "Sroot": 1771,
+              "sign": "plus"
+            },
+            {
+              "K": 507,
+              "Sroot": 1773,
+              "sign": "minus"
+            },
+            {
+              "K": 41,
+              "Sroot": 1798,
+              "sign": "minus"
+            },
+            {
+              "K": 493,
+              "Sroot": 1812,
+              "sign": "plus"
+            },
+            {
+              "K": 331,
+              "Sroot": 1820,
+              "sign": "minus"
+            },
+            {
+              "K": 297,
+              "Sroot": 1828,
+              "sign": "plus"
+            },
+            {
+              "K": 1352,
+              "Sroot": 1830,
+              "sign": "plus"
+            },
+            {
+              "K": 2047,
+              "Sroot": 1868,
+              "sign": "plus"
+            },
+            {
+              "K": 1610,
+              "Sroot": 1869,
+              "sign": "minus"
+            },
+            {
+              "K": 1175,
+              "Sroot": 1870,
+              "sign": "plus"
+            },
+            {
+              "K": 1941,
+              "Sroot": 1878,
+              "sign": "minus"
+            },
+            {
+              "K": 1204,
+              "Sroot": 1901,
+              "sign": "minus"
+            },
+            {
+              "K": 464,
+              "Sroot": 1903,
+              "sign": "minus"
+            },
+            {
+              "K": 1058,
+              "Sroot": 1913,
+              "sign": "minus"
+            },
+            {
+              "K": 366,
+              "Sroot": 1915,
+              "sign": "minus"
+            },
+            {
+              "K": 1886,
+              "Sroot": 1976,
+              "sign": "minus"
+            },
+            {
+              "K": 1229,
+              "Sroot": 1979,
+              "sign": "plus"
+            },
+            {
+              "K": 1652,
+              "Sroot": 1987,
+              "sign": "minus"
+            },
+            {
+              "K": 1308,
+              "Sroot": 2000,
+              "sign": "plus"
+            },
+            {
+              "K": 1010,
+              "Sroot": 2015,
+              "sign": "plus"
+            }
+          ]
+        },
+        {
+          "coordinate": "Sroot",
+          "domain": "Sroot all-plus prefix through d3",
+          "gate": "d4",
+          "meaning": "selected gate d4 character on the active Sroot domain",
+          "minus_count": 14,
+          "missing_count": 0,
+          "mixed_count": 0,
+          "name": "f4_conditional_on_Sroot",
+          "plus_count": 36,
+          "row_count": 50,
+          "rows": [
+            {
+              "K": 1010,
+              "Sroot": 72,
+              "sign": "minus"
+            },
+            {
+              "K": 1308,
+              "Sroot": 87,
+              "sign": "plus"
+            },
+            {
+              "K": 1229,
+              "Sroot": 108,
+              "sign": "minus"
+            },
+            {
+              "K": 1175,
+              "Sroot": 217,
+              "sign": "plus"
+            },
+            {
+              "K": 2047,
+              "Sroot": 219,
+              "sign": "minus"
+            },
+            {
+              "K": 1352,
+              "Sroot": 257,
+              "sign": "plus"
+            },
+            {
+              "K": 297,
+              "Sroot": 259,
+              "sign": "plus"
+            },
+            {
+              "K": 493,
+              "Sroot": 275,
+              "sign": "minus"
+            },
+            {
+              "K": 1767,
+              "Sroot": 316,
+              "sign": "plus"
+            },
+            {
+              "K": 198,
+              "Sroot": 336,
+              "sign": "plus"
+            },
+            {
+              "K": 1366,
+              "Sroot": 384,
+              "sign": "plus"
+            },
+            {
+              "K": 798,
+              "Sroot": 394,
+              "sign": "plus"
+            },
+            {
+              "K": 253,
+              "Sroot": 419,
+              "sign": "plus"
+            },
+            {
+              "K": 1041,
+              "Sroot": 467,
+              "sign": "plus"
+            },
+            {
+              "K": 1312,
+              "Sroot": 510,
+              "sign": "plus"
+            },
+            {
+              "K": 1107,
+              "Sroot": 553,
+              "sign": "plus"
+            },
+            {
+              "K": 1443,
+              "Sroot": 652,
+              "sign": "plus"
+            },
+            {
+              "K": 307,
+              "Sroot": 687,
+              "sign": "plus"
+            },
+            {
+              "K": 933,
+              "Sroot": 698,
+              "sign": "plus"
+            },
+            {
+              "K": 647,
+              "Sroot": 773,
+              "sign": "minus"
+            },
+            {
+              "K": 1447,
+              "Sroot": 876,
+              "sign": "plus"
+            },
+            {
+              "K": 1916,
+              "Sroot": 909,
+              "sign": "plus"
+            },
+            {
+              "K": 1663,
+              "Sroot": 918,
+              "sign": "plus"
+            },
+            {
+              "K": 1898,
+              "Sroot": 969,
+              "sign": "minus"
+            },
+            {
+              "K": 828,
+              "Sroot": 1026,
+              "sign": "minus"
+            },
+            {
+              "K": 828,
+              "Sroot": 1061,
+              "sign": "minus"
+            },
+            {
+              "K": 1898,
+              "Sroot": 1118,
+              "sign": "minus"
+            },
+            {
+              "K": 1663,
+              "Sroot": 1169,
+              "sign": "plus"
+            },
+            {
+              "K": 1916,
+              "Sroot": 1178,
+              "sign": "plus"
+            },
+            {
+              "K": 1447,
+              "Sroot": 1211,
+              "sign": "plus"
+            },
+            {
+              "K": 647,
+              "Sroot": 1314,
+              "sign": "minus"
+            },
+            {
+              "K": 933,
+              "Sroot": 1389,
+              "sign": "plus"
+            },
+            {
+              "K": 307,
+              "Sroot": 1400,
+              "sign": "plus"
+            },
+            {
+              "K": 1443,
+              "Sroot": 1435,
+              "sign": "plus"
+            },
+            {
+              "K": 1107,
+              "Sroot": 1534,
+              "sign": "plus"
+            },
+            {
+              "K": 1312,
+              "Sroot": 1577,
+              "sign": "plus"
+            },
+            {
+              "K": 1041,
+              "Sroot": 1620,
+              "sign": "plus"
+            },
+            {
+              "K": 253,
+              "Sroot": 1668,
+              "sign": "plus"
+            },
+            {
+              "K": 798,
+              "Sroot": 1693,
+              "sign": "plus"
+            },
+            {
+              "K": 1366,
+              "Sroot": 1703,
+              "sign": "plus"
+            },
+            {
+              "K": 198,
+              "Sroot": 1751,
+              "sign": "plus"
+            },
+            {
+              "K": 1767,
+              "Sroot": 1771,
+              "sign": "plus"
+            },
+            {
+              "K": 493,
+              "Sroot": 1812,
+              "sign": "minus"
+            },
+            {
+              "K": 297,
+              "Sroot": 1828,
+              "sign": "plus"
+            },
+            {
+              "K": 1352,
+              "Sroot": 1830,
+              "sign": "plus"
+            },
+            {
+              "K": 2047,
+              "Sroot": 1868,
+              "sign": "minus"
+            },
+            {
+              "K": 1175,
+              "Sroot": 1870,
+              "sign": "plus"
+            },
+            {
+              "K": 1229,
+              "Sroot": 1979,
+              "sign": "minus"
+            },
+            {
+              "K": 1308,
+              "Sroot": 2000,
+              "sign": "plus"
+            },
+            {
+              "K": 1010,
+              "Sroot": 2015,
+              "sign": "minus"
+            }
+          ]
+        },
+        {
+          "coordinate": "Sroot",
+          "domain": "Sroot all-plus prefix through d4",
+          "gate": "d5",
+          "meaning": "selected gate d5 character on the active Sroot domain",
+          "minus_count": 0,
+          "missing_count": 0,
+          "mixed_count": 0,
+          "name": "f5_conditional_on_Sroot",
+          "plus_count": 36,
+          "row_count": 36,
+          "rows": [
+            {
+              "K": 1308,
+              "Sroot": 87,
+              "sign": "plus"
+            },
+            {
+              "K": 1175,
+              "Sroot": 217,
+              "sign": "plus"
+            },
+            {
+              "K": 1352,
+              "Sroot": 257,
+              "sign": "plus"
+            },
+            {
+              "K": 297,
+              "Sroot": 259,
+              "sign": "plus"
+            },
+            {
+              "K": 1767,
+              "Sroot": 316,
+              "sign": "plus"
+            },
+            {
+              "K": 198,
+              "Sroot": 336,
+              "sign": "plus"
+            },
+            {
+              "K": 1366,
+              "Sroot": 384,
+              "sign": "plus"
+            },
+            {
+              "K": 798,
+              "Sroot": 394,
+              "sign": "plus"
+            },
+            {
+              "K": 253,
+              "Sroot": 419,
+              "sign": "plus"
+            },
+            {
+              "K": 1041,
+              "Sroot": 467,
+              "sign": "plus"
+            },
+            {
+              "K": 1312,
+              "Sroot": 510,
+              "sign": "plus"
+            },
+            {
+              "K": 1107,
+              "Sroot": 553,
+              "sign": "plus"
+            },
+            {
+              "K": 1443,
+              "Sroot": 652,
+              "sign": "plus"
+            },
+            {
+              "K": 307,
+              "Sroot": 687,
+              "sign": "plus"
+            },
+            {
+              "K": 933,
+              "Sroot": 698,
+              "sign": "plus"
+            },
+            {
+              "K": 1447,
+              "Sroot": 876,
+              "sign": "plus"
+            },
+            {
+              "K": 1916,
+              "Sroot": 909,
+              "sign": "plus"
+            },
+            {
+              "K": 1663,
+              "Sroot": 918,
+              "sign": "plus"
+            },
+            {
+              "K": 1663,
+              "Sroot": 1169,
+              "sign": "plus"
+            },
+            {
+              "K": 1916,
+              "Sroot": 1178,
+              "sign": "plus"
+            },
+            {
+              "K": 1447,
+              "Sroot": 1211,
+              "sign": "plus"
+            },
+            {
+              "K": 933,
+              "Sroot": 1389,
+              "sign": "plus"
+            },
+            {
+              "K": 307,
+              "Sroot": 1400,
+              "sign": "plus"
+            },
+            {
+              "K": 1443,
+              "Sroot": 1435,
+              "sign": "plus"
+            },
+            {
+              "K": 1107,
+              "Sroot": 1534,
+              "sign": "plus"
+            },
+            {
+              "K": 1312,
+              "Sroot": 1577,
+              "sign": "plus"
+            },
+            {
+              "K": 1041,
+              "Sroot": 1620,
+              "sign": "plus"
+            },
+            {
+              "K": 253,
+              "Sroot": 1668,
+              "sign": "plus"
+            },
+            {
+              "K": 798,
+              "Sroot": 1693,
+              "sign": "plus"
+            },
+            {
+              "K": 1366,
+              "Sroot": 1703,
+              "sign": "plus"
+            },
+            {
+              "K": 198,
+              "Sroot": 1751,
+              "sign": "plus"
+            },
+            {
+              "K": 1767,
+              "Sroot": 1771,
+              "sign": "plus"
+            },
+            {
+              "K": 297,
+              "Sroot": 1828,
+              "sign": "plus"
+            },
+            {
+              "K": 1352,
+              "Sroot": 1830,
+              "sign": "plus"
+            },
+            {
+              "K": 1175,
+              "Sroot": 1870,
+              "sign": "plus"
+            },
+            {
+              "K": 1308,
+              "Sroot": 2000,
+              "sign": "plus"
+            }
+          ]
+        },
+        {
+          "coordinate": "Sroot",
+          "domain": "Sroot all-plus prefix through d5",
+          "gate": "d6",
+          "meaning": "selected gate d6 character on the active Sroot domain",
+          "minus_count": 0,
+          "missing_count": 0,
+          "mixed_count": 0,
+          "name": "f6_conditional_on_Sroot",
+          "plus_count": 36,
+          "row_count": 36,
+          "rows": [
+            {
+              "K": 1308,
+              "Sroot": 87,
+              "sign": "plus"
+            },
+            {
+              "K": 1175,
+              "Sroot": 217,
+              "sign": "plus"
+            },
+            {
+              "K": 1352,
+              "Sroot": 257,
+              "sign": "plus"
+            },
+            {
+              "K": 297,
+              "Sroot": 259,
+              "sign": "plus"
+            },
+            {
+              "K": 1767,
+              "Sroot": 316,
+              "sign": "plus"
+            },
+            {
+              "K": 198,
+              "Sroot": 336,
+              "sign": "plus"
+            },
+            {
+              "K": 1366,
+              "Sroot": 384,
+              "sign": "plus"
+            },
+            {
+              "K": 798,
+              "Sroot": 394,
+              "sign": "plus"
+            },
+            {
+              "K": 253,
+              "Sroot": 419,
+              "sign": "plus"
+            },
+            {
+              "K": 1041,
+              "Sroot": 467,
+              "sign": "plus"
+            },
+            {
+              "K": 1312,
+              "Sroot": 510,
+              "sign": "plus"
+            },
+            {
+              "K": 1107,
+              "Sroot": 553,
+              "sign": "plus"
+            },
+            {
+              "K": 1443,
+              "Sroot": 652,
+              "sign": "plus"
+            },
+            {
+              "K": 307,
+              "Sroot": 687,
+              "sign": "plus"
+            },
+            {
+              "K": 933,
+              "Sroot": 698,
+              "sign": "plus"
+            },
+            {
+              "K": 1447,
+              "Sroot": 876,
+              "sign": "plus"
+            },
+            {
+              "K": 1916,
+              "Sroot": 909,
+              "sign": "plus"
+            },
+            {
+              "K": 1663,
+              "Sroot": 918,
+              "sign": "plus"
+            },
+            {
+              "K": 1663,
+              "Sroot": 1169,
+              "sign": "plus"
+            },
+            {
+              "K": 1916,
+              "Sroot": 1178,
+              "sign": "plus"
+            },
+            {
+              "K": 1447,
+              "Sroot": 1211,
+              "sign": "plus"
+            },
+            {
+              "K": 933,
+              "Sroot": 1389,
+              "sign": "plus"
+            },
+            {
+              "K": 307,
+              "Sroot": 1400,
+              "sign": "plus"
+            },
+            {
+              "K": 1443,
+              "Sroot": 1435,
+              "sign": "plus"
+            },
+            {
+              "K": 1107,
+              "Sroot": 1534,
+              "sign": "plus"
+            },
+            {
+              "K": 1312,
+              "Sroot": 1577,
+              "sign": "plus"
+            },
+            {
+              "K": 1041,
+              "Sroot": 1620,
+              "sign": "plus"
+            },
+            {
+              "K": 253,
+              "Sroot": 1668,
+              "sign": "plus"
+            },
+            {
+              "K": 798,
+              "Sroot": 1693,
+              "sign": "plus"
+            },
+            {
+              "K": 1366,
+              "Sroot": 1703,
+              "sign": "plus"
+            },
+            {
+              "K": 198,
+              "Sroot": 1751,
+              "sign": "plus"
+            },
+            {
+              "K": 1767,
+              "Sroot": 1771,
+              "sign": "plus"
+            },
+            {
+              "K": 297,
+              "Sroot": 1828,
+              "sign": "plus"
+            },
+            {
+              "K": 1352,
+              "Sroot": 1830,
+              "sign": "plus"
+            },
+            {
+              "K": 1175,
+              "Sroot": 1870,
+              "sign": "plus"
+            },
+            {
+              "K": 1308,
+              "Sroot": 2000,
+              "sign": "plus"
+            }
+          ]
+        }
+      ],
+      "field": 2087,
+      "source_stats": {
+        "K_group_size_16": 57,
+        "K_to_Sroot_size_hist_keys": 2,
+        "Sroot_group_size_8": 114,
+        "candidate_invalid_not_nonsplit": 1040,
+        "candidates": 912,
+        "compact_not_target": 1104,
+        "d2_plus_candidates": 912,
+        "ks_degenerate": 1,
+        "legal_K": 57,
+        "legal_Sroot": 114,
+        "skip_X_degenerate": 2,
+        "source_rows": 976,
+        "unique_A_x5": 228,
+        "unique_K_seen": 261,
+        "unique_Sroot_seen": 521
+      }
+    }
+  ],
+  "max_gate": 6,
+  "name": "p27_ksroot_kummer_fixture_packet",
+  "purpose": "Compact guard-field fixtures for extracting and comparing the K/Sroot branch classes after K/Sroot bucket, prefix-density, quartic, and visible branch-divisor shortcuts were killed.",
+  "sentinel": "p27_ksroot_kummer_fixture_packet_rows=1/1",
+  "target_prime": "1000000000000000000000000103"
+}

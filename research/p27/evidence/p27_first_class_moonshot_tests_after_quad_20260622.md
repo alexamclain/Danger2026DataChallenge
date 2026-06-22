@@ -175,6 +175,7 @@ Use:
 research/p27/evidence/p27_sroot_prefix_profile_20260622.md
 research/p27/evidence/p27_kline_a_map_and_gpu_quad_20260622.md
 research/p27/evidence/p27_post_branch_dynamics_test_frontier_20260622.md
+research/p27/evidence/p27_ksroot_kummer_fixture_packet_20260622.md
 ```
 
 Known structure:
@@ -183,6 +184,7 @@ Known structure:
 Sroot is the cleaner normalization coordinate
 selected bits descend to K and Sroot with no mixed groups
 Sroot is density-equivalent to K, not a stronger bucket
+K/Sroot fixture rows preserve Sroot^2=K explicitly
 ```
 
 Required computation:
@@ -191,6 +193,7 @@ Required computation:
 extract the normalized d3 branch class over P1_Sroot or P1_K
 preserve the rational K-square stratum
 compare d4/d5 only after d3 is explicit
+use f5/f6 only as tail/regression checks unless larger heldout data names a class
 ```
 
 Promote if:

@@ -1,0 +1,46 @@
+p27 K/Sroot Kummer fixture packet
+
+Purpose:
+  Freeze guard-field rows for conditional K and signed-Sroot classes
+  so branch-class extraction can preserve the K-square stratum.
+
+Guard fields:
+  q=1607: legal_K=49 legal_Sroot=98 Sroot_per_K={'2': 49}
+    f3_conditional_on_K: rows=49 plus=28 minus=21 mixed=0 missing=0
+    f4_conditional_on_K: rows=28 plus=19 minus=9 mixed=0 missing=0
+    f5_conditional_on_K: rows=19 plus=19 minus=0 mixed=0 missing=0
+    f6_conditional_on_K: rows=19 plus=0 minus=19 mixed=0 missing=0
+    f3_conditional_on_Sroot: rows=98 plus=56 minus=42 mixed=0 missing=0
+    f4_conditional_on_Sroot: rows=56 plus=38 minus=18 mixed=0 missing=0
+    f5_conditional_on_Sroot: rows=38 plus=38 minus=0 mixed=0 missing=0
+    f6_conditional_on_Sroot: rows=38 plus=0 minus=38 mixed=0 missing=0
+  q=1847: legal_K=63 legal_Sroot=126 Sroot_per_K={'2': 63}
+    f3_conditional_on_K: rows=63 plus=45 minus=18 mixed=0 missing=0
+    f4_conditional_on_K: rows=45 plus=19 minus=26 mixed=0 missing=0
+    f5_conditional_on_K: rows=19 plus=0 minus=19 mixed=0 missing=0
+    f6_conditional_on_K: rows=0 plus=0 minus=0 mixed=0 missing=0
+    f3_conditional_on_Sroot: rows=126 plus=90 minus=36 mixed=0 missing=0
+    f4_conditional_on_Sroot: rows=90 plus=38 minus=52 mixed=0 missing=0
+    f5_conditional_on_Sroot: rows=38 plus=0 minus=38 mixed=0 missing=0
+    f6_conditional_on_Sroot: rows=0 plus=0 minus=0 mixed=0 missing=0
+  q=2087: legal_K=57 legal_Sroot=114 Sroot_per_K={'2': 57}
+    f3_conditional_on_K: rows=57 plus=25 minus=32 mixed=0 missing=0
+    f4_conditional_on_K: rows=25 plus=18 minus=7 mixed=0 missing=0
+    f5_conditional_on_K: rows=18 plus=18 minus=0 mixed=0 missing=0
+    f6_conditional_on_K: rows=18 plus=18 minus=0 mixed=0 missing=0
+    f3_conditional_on_Sroot: rows=114 plus=50 minus=64 mixed=0 missing=0
+    f4_conditional_on_Sroot: rows=50 plus=36 minus=14 mixed=0 missing=0
+    f5_conditional_on_Sroot: rows=36 plus=36 minus=0 mixed=0 missing=0
+    f6_conditional_on_Sroot: rows=36 plus=36 minus=0 mixed=0 missing=0
+
+CAS task:
+  1. Recover f3 over P1_Sroot and check descent/parity under Sroot -> -Sroot.
+  2. Preserve the rational K-square stratum; do not accept a source that only
+     appears after forgetting K.
+  3. Compare f4/f3 only after f3 is named.
+  4. Promote only a low-genus/sourceable/recurrent class controlling multiple gates.
+
+Fixture JSON:
+  research/p27/archive/fixtures/p27_ksroot_kummer_fixture_packet_20260622.json
+
+p27_ksroot_kummer_fixture_packet_rows=1/1

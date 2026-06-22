@@ -175,16 +175,26 @@ Field-local all-plus plateaus do not transfer across q1607/q1847/q2087.
 No GPU K/Sroot bucket or prefix production mode is justified.
 ```
 
+Update: the row-level K/Sroot fixture is now frozen:
+[P27 K/Sroot Kummer Fixture Packet](p27_ksroot_kummer_fixture_packet_20260622.md).
+It records conditional `f3/f4/f5/f6` rows for both K and Sroot over
+q1607/q1847/q2087.  Every K row has exactly two Sroot rows, and the
+conditional signs simply double.  This makes Sroot a normalization/parity
+coordinate, not a source shrink, and gives CAS exact rows for preserving the
+rational K-square stratum.
+
 ## Continue / Kill
 
 ```text
 continue = normalize the d3 cover over P1_Sroot with K as quotient check
+continue = use the K/Sroot fixture rows as compact CAS/expert input
 continue = compute branch divisor/support degrees/genus
 continue = compare d4 only after the d3 Kummer class is explicit
 
 kill = Sroot prefix density as a below-sqrt source
 kill = GPU K/Sroot bucket production without a named class or recurrence
 kill = treating q2087's local plateau as transferable p27 structure
+kill = accepting a Sroot class that wins only after forgetting K
 ```
 
 ```text
