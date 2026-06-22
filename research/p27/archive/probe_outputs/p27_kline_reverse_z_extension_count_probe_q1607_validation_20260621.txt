@@ -1,0 +1,54 @@
+p27 K-line reverse-z extension-count probe
+source = residual E/T + compactD=-1 + label-2 candidate map
+reverse source = d2 square and d3 all-plus with x6=z^2
+coordinates = K=x([2]P) on E', Sroot^2=K
+GF(1607^1) N=1607:
+  source_rows = 800
+  candidates = 784
+  d2_plus_candidates = 784
+  x6_branches = 1568
+  x6_square_branches = 896
+  x6_nonsquare = 672
+  z_rows = 1792
+  unique_Ax = 196
+  unique_A = 49
+  unique_K = 28
+  unique_S = 56
+  unique_x6 = 192
+  unique_z = 384
+  unique_r = 96
+  unique_zsum = 192
+  unique_zdiff = 192
+  unique_K_x6 = 224
+  unique_S_x6 = 448
+  unique_K_z = 448
+  unique_S_z = 896
+  unique_K_r = 112
+  unique_S_r = 224
+  unique_K_zsum = 224
+  unique_S_zsum = 448
+  unique_K_zdiff = 224
+  unique_S_zdiff = 448
+  candidate_invalid_degenerate_A = 16
+  candidate_invalid_not_nonsplit = 800
+  ks_degenerate = 1
+  compact_not_target = 800
+  source_rows/N = 0.497822029
+  candidates/N = 0.487865588
+  z_rows/N = 1.115121344
+  unique_Ax/N = 0.121966397
+  unique_A/N = 0.030491599
+  unique_K/N = 0.017423771
+  unique_S/N = 0.034847542
+  unique_K_z/N = 0.278780336
+  unique_S_z/N = 0.557560672
+  unique_K_r/N = 0.069695084
+  unique_S_r/N = 0.139390168
+  z_rows/unique_K = 64.000000000
+  z_rows/unique_S = 32.000000000
+  unique_K_z/unique_K = 16.000000000
+  unique_S_z/unique_S = 16.000000000
+  unique_K_r/unique_K = 4.000000000
+  unique_S_r/unique_S = 4.000000000
+  unique_Ax/unique_A = 4.000000000
+p27_kline_reverse_z_extension_count_probe_rows=1/1

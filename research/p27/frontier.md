@@ -887,6 +887,17 @@ kills the obvious plane-model shortcut for the branch cover.  The surviving
 K-line work is now literal normalization / branch divisor / genus extraction
 over `P1_K` or `P1_Sroot`.
 
+The reverse-root extension count is now in:
+[P27 K-Line Reverse-Z Extension Counts](evidence/p27_kline_reverse_z_extension_count_20260621.md).
+It validates against q607 and repeats on q1607/q1847/q2087 plus
+`GF(7^n)`/`GF(23^n)`: the actual reverse-root cover has exact constant fibers
+`z_rows/unique_K = 64`, `z_rows/unique_S = 32`, and `unique_Ax/unique_A = 4`
+on every nonempty guard field.  That is strong evidence that K/S is a real
+structured projection, but `unique_K` and `unique_S` still grow at field-size
+scale.  So K/Sroot enumeration is not a below-sqrt sampler by itself; the
+next useful work is the actual branch/genus/CAS extraction of this
+constant-degree cover, not a GPU bucket search on K or Sroot.
+
 The first Belyi-normalized source family is now killed:
 [P27 Lambda Branch-Divisor Screen](evidence/p27_lambda_branch_divisor_screen_20260621.md).
 It tested `z^2=f(lambda)` with `deg_lambda(f)<=4`, where

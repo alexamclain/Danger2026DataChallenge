@@ -862,6 +862,29 @@ Kill obvious plane-model shortcuts for the K/Sroot branch cover.  The next
 K-line work must be normalization / branch divisor / genus extraction.
 ```
 
+Reverse-root extension-count update:
+[P27 K-Line Reverse-Z Extension Counts](p27_kline_reverse_z_extension_count_20260621.md).
+
+```text
+Validated against q607 and repeated on q1607/q1847/q2087 plus GF(7^n),
+GF(23^n).  Every nonempty guard field has:
+  z_rows/unique_K = 64
+  z_rows/unique_S = 32
+  unique_Ax/unique_A = 4
+
+This confirms that K/S is a structured constant-degree projection of the
+actual reverse-root cover, but unique_K and unique_S still grow at field-size
+scale.  K/Sroot enumeration is therefore not a below-sqrt sampler.
+```
+
+Updated action:
+
+```text
+Do actual branch/genus/CAS extraction for the constant-degree K/S cover.
+Do not spend GPU time on K/S bucket searches unless a new quotient or
+recurrence is named first.
+```
+
 K/S first-half cover update:
 [P27 K/S First-Half Cover Magma Smoke](p27_ks_first_half_cover_magma_20260621.md).
 [P27 K/S First-Half Alpha-Lift Obstruction](p27_ks_first_half_alpha_lift_obstruction_20260621.md).

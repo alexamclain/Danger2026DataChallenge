@@ -133,6 +133,13 @@ memory-heavy online Magma pullback.  Over `GF(7^n)` and `GF(23^n)`, the legal
 label-2/compactD source is curve-sized, but selected prefixes still reduce
 unique `A` and `(A,x)` together.  Local Frobenius tails occur, but they do not
 look like p27 source laws.
+The reverse-root extension count now sharpens the K/S projection itself.
+Across q607, q1607, q1847, q2087, and nonempty `GF(7^n)`/`GF(23^n)` guard
+fields, the actual d3 all-plus cover has constant fibers
+`z_rows/unique_K=64`, `z_rows/unique_S=32`, and `unique_Ax/unique_A=4`.
+This makes K/S a real branch-extraction target, but `unique_K` and `unique_S`
+still grow at field-size scale, so K/Sroot enumeration is not a below-sqrt
+source and should not become a GPU bucket search.
 The two-step Kummer quotient screen is now negative too.  After adjoining the
 first root `Z0`, the next selector `S1`, and when available the second root
 `Z1`, all obvious selector/root pair systems are full-rank through degree 12 on
@@ -174,6 +181,7 @@ another simple two-step Kummer pair scan in `Z0,S1,Z1` coordinates
 another ad hoc two-step Kummer trivariate bucket scan without a new coordinate
 K-line affine or reciprocal-affine recurrence scans
 K/Sroot reverse-root plane relation scans in `z`, `x6`, `r`, or `z +/- 1/z`
+K/Sroot bucket searches based only on the constant-fiber extension counts
 an A-projection or A-bucket search based only on selected-prefix filters
 raw selected-prefix source enumeration based on extension-field tail artifacts
 ```
