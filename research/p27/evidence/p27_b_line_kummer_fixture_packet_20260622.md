@@ -121,6 +121,14 @@ However, products/norms are square, power sums through exponent `64` do not
 select f3, and the four-u polynomial coefficients are not low-degree on the
 legal-B set.  The reduced 4-u/8-x cover is the next normalization target.
 
+Second reduced-fiber follow-up:
+[P27 B-Line Second Reduced-Fiber Fixture](p27_b_line_second_reduced_fiber_20260622.md)
+freezes the analogous `f4` object over the `f3=+1` legal B-domain.  Each
+active B row has `64` x7 occurrences, `16` distinct x7 roots, and `8`
+reciprocal-quotient values `v=x7+1/x7`, with `f4=chi(v+2)` throughout.  No
+stable power-sum or low-degree plane relation appears through the tested
+bounds, so this is a CAS class-comparison packet rather than a GPU bucket.
+
 Negative:
 
 ```text
@@ -146,12 +154,14 @@ continue = use JSON rows for B-line normalized Kummer/divisor extraction
 continue = recover f3 branch degree, support field degrees, genus, components
 continue = cross-check any class through the A/B/K/Sroot fixture bridges
 continue = normalize the reduced 4-u / 8-x d3 fiber cover
+continue = normalize the second reduced f4/f3 8-v cover
 continue = compare f4/f3 as a class relation after f3 is named
 continue = use f5/f6 rows only as tail/regression checks for an extracted class
 
 kill = treating one-sided guard-field f5/f6 tails as promotion evidence
 kill = counting A-level, B-line, and K/Sroot fixtures as independent positives
 kill = B-line norm/trace/power-sum selectors as a production sampler
+kill = second-fiber low-degree B-plane relations as a production sampler
 kill = more B-bucket GPU production before a source/recurrent class exists
 kill = widening visible low-degree B scans already killed by q1847
 ```

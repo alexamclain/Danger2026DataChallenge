@@ -1,0 +1,15 @@
+p27 B-line second reduced fiber fixture packet
+
+Purpose:
+  Freeze the f4-over-f3-plus reduced fiber for CAS class comparison.
+  Each row records 16 distinct x7 roots, 8 v=x7+1/x7 roots,
+  polynomial coefficients, and the descended f4 sign.
+
+q=1607: rows=28 plus=19 minus=9 occ64=28 x16=28 v8=28
+q=1847: rows=45 plus=19 minus=26 occ64=45 x16=45 v8=45
+q=2087: rows=25 plus=18 minus=7 occ64=25 x16=25 v8=25
+
+JSON fixture:
+  research/p27/archive/fixtures/p27_b_line_second_reduced_fiber_fixture_20260622.json
+
+p27_b_line_second_reduced_fiber_fixture_rows=1/1

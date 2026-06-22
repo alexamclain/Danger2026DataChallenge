@@ -159,6 +159,14 @@ and matches `d3(B)` with zero mismatches; the mixed point-count fibers are
 outside the selected-source legal domain.  CAS must impose that legal/core cut
 before interpreting the reduced-cover branch classes.
 
+Second reduced-fiber handoff:
+[P27 B-Line Second Reduced-Fiber Fixture](p27_b_line_second_reduced_fiber_20260622.md).
+Restricting to legal `f3=+1` B rows, the next selected fiber has `64` x7
+occurrences, `16` distinct x7 roots, and `8` values of `v=x7+1/x7` per B,
+with `f4=chi(v+2)` in every q1607/q1847/q2087 row.  Stable low-degree
+relations in `(B,v)` and `(B,v+2)` are absent through degree `20`, so this is
+a concrete f4/f3 CAS class-comparison artifact, not a GPU bucket.
+
 Required computation:
 
 ```text
@@ -166,7 +174,7 @@ normalize the reduced 4-u / 8-x legal+d3 cover over P1_B/P1_A/P1_Sroot
 include x6^2-U*x6+1 and gamma^2=U+2 in the offline branch/class extraction
 impose the selected-source legal/core cut before using all-chart lift buckets
 extract branch divisor degree, support field degrees, components, genus
-if d3 is tractable, compare f4/f3 in the Kummer group
+if d3 is tractable, use the second reduced-fiber fixture to compare f4/f3 in the Kummer group
 use f5/f6 only as regression checks until larger data supports them
 ```
 
@@ -357,10 +365,12 @@ continue = BSM staged legal-pullback normalization
 continue = trace/norm half-norm phase expert ask
 continue = GPU only as bounded telemetry or for a named sampler
 continue = offline Magma/Sage for the reduced B-line cover
+continue = offline Magma/Sage comparison of the second reduced f4/f3 cover
 
 kill = more one-bit filters as moonshots
 kill = norm/trace/power-sum selectors for the B-line d3 fiber
 kill = low-degree plane relations for the reduced B-line d3 fiber through degree 20
+kill = low-degree plane relations for the second reduced B-line f4/f3 fiber through degree 20
 kill = online Magma as the reduced-cover extraction engine
 kill = more visible quartic/branch-map bucket searches without a theorem
 kill = treating source-conditional 2x lift as sqrt-beating
