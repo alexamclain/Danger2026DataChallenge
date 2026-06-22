@@ -24,6 +24,14 @@ hidden_mixed_fixedB
 
 The degree-2 `B_orbit` class remains separate from fixed-`B` fiber splitting.
 
+Fixed-B character follow-up:
+[P27 B-Line No-R Fixed-B Character Screen](p27_b_line_noR_fixedB_character_screen_20260622.md).
+The `beta_U_fixedB` support is exactly `chi(B)=+1` on the tested fixed-`B`
+domain over `q = 23, 71, 103, 167`, but gamma polarity on that support is not
+stable.  The `hidden_mixed_fixedB` gamma atom patterns seen in smaller fields
+fail at `q=167`.  Thus `chi(B)=+1` is a real support gate for beta_U, not a
+selected-gamma source.
+
 ## Artifacts
 
 Probe:
@@ -125,9 +133,11 @@ factor.
 continue = beta_U_fixedB divisor/class extraction
 continue = hidden_mixed_fixedB divisor/class extraction
 continue = B_orbit quotient/component comparison
+continue = impose chi(B)=+1 only as beta_U support, not as gamma selector
 
 kill = WT-only fixed-B subcover as a gamma source
 kill = base_point rows as a stable sqrt-beating source
+kill = hidden_mixed B+/-2 atom shortcut after q167 failure
 kill = GPU production from any quadratic bucket without a named map
 ```
 

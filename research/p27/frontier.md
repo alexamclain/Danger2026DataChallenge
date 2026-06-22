@@ -1256,6 +1256,11 @@ The quadratic split has already killed one tempting branch:
 Across `q = 7, 23, 71, 103, 167`, the `W/T`-only fixed-`B` class is always an
 8-point `gamma=0` branch.  Keep only `beta_U_fixedB`, `hidden_mixed_fixedB`,
 and B-orbit quotient/component tests as active no-R CAS targets.
+The fixed-`B` character screen gives one support law:
+[P27 B-Line No-R Fixed-B Character Screen](evidence/p27_b_line_noR_fixedB_character_screen_20260622.md).
+`beta_U_fixedB` support is exactly `chi(B)=+1` on the tested fixed-`B` domain,
+but its gamma polarity is not stable; `hidden_mixed` small-field `B +/- 2`
+patterns fail at `q=167`.  This is a CAS support gate, not a GPU sampler.
 The B-line visible two-gate quartic shortcut is closed as well:
 [P27 B-Line Gate4-Prefix Quartic q1847 Screen](evidence/p27_b_line_gate4_prefix_quartic_q1847_screen_20260622.md).
 It scans `6,300,872,423` q1847 coefficient triples for

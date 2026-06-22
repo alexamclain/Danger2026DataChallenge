@@ -43,6 +43,7 @@ no-R closed-point pressure = degree 2 and 3 closed points both nonzero
 no-R Frobenius fiber profile = degree-3 B orbits plus quadratic fiber splitting
 no-R coordinate degree profile = cubic B-orbit, quadratic fixed-B/fiber split
 no-R quadratic subcover classifier = W/T-only killed; beta_U and hidden_mixed remain
+no-R fixed-B character screen = beta_U support chi(B)=+1; no stable gamma law
 reduced lift visible classifier = killed
 gamma visible square triviality = killed
 oriented alpha/beta word = tautological, not a source
@@ -134,6 +135,11 @@ quadratic fixed-B hidden_mixed_fixedB subcover test
 Do not spend CAS/GPU effort on the `W/T`-only fixed-`B` subcover as a selected
 gamma source: the quadratic classifier finds it is always an 8-point
 zero-selector branch in the tested guard fields.
+
+For the `beta_U_fixedB` test, impose `chi(B)=+1` as a support gate.  Do not
+promote that support gate as a sampler unless the gamma/f4 class descends on
+the resulting quotient.  For `hidden_mixed_fixedB`, ignore the small-field
+`B +/- 2` atom shortcut unless a divisor proof resurrects it.
 
 4. Compute quotient/Prym structure under the available symmetries:
 
