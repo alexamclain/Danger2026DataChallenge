@@ -30,6 +30,16 @@
     ],
     "same_stream_requirement": "All counts must use the same source stream and the same denominator as baseline so target/source_draw is meaningful."
   },
+  "latest_cpu_baseline": {
+    "evidence": "research/p27/evidence/p27_b_line_prefix_scaling_60k_20260622.md",
+    "output": "research/p27/archive/probe_outputs/p27_b_line_deep_descent_probe_p27_60k_heldout_60k_gate18_20260622.txt",
+    "train_source_rows": 60000,
+    "heldout_source_rows": 60000,
+    "train_B_groups": 30000,
+    "heldout_B_groups": 30000,
+    "mixed_B_groups_through_d18": 0,
+    "interpretation": "Bplus controls the selected bits, but source-normalized all-plus prefixes stay near independent half-loss through meaningful counts d3..d12. A GPU run must beat this baseline or feed Kummer-class extraction."
+  },
   "bounded_run_tiers": [
     {
       "tier": "implementation_smoke",
@@ -39,7 +49,7 @@
     {
       "tier": "large_telemetry",
       "target_rows": "at least 10000000 accepted/legal rows if runtime is reasonable",
-      "purpose": "Stress-test the no-mixed-B claim and collect prefix histograms with useful tails."
+      "purpose": "Stress-test the no-mixed-B claim and collect prefix histograms with useful tails; promotion requires source-normalized lift beyond the 60k CPU baseline or data that names Kummer classes."
     },
     {
       "tier": "optional_deep_tail",
@@ -65,12 +75,12 @@
   ],
   "promotion_rules": [
     "Zero or explainable mixed B groups at large scale through a meaningful depth.",
-    "A held-out all-plus prefix density, sign-word state, or recurrence that improves target/source_draw by at least 1.25x over independent half-loss with margin.",
+    "A held-out all-plus prefix density, sign-word state, or recurrence that improves target/source_draw by at least 1.25x over independent half-loss with margin and beats the 60k CPU baseline.",
     "Or a named Kummer/divisor/recurrence hypothesis that feeds exact CAS extraction of f3(B), f4(B), f5(B), ..."
   ],
   "kill_rules": [
     "Material mixed B groups appear, so Bplus alone does not determine the selected bits.",
-    "Prefix counts remain geometric half-loss after source normalization and no recurrence/coupling appears.",
+    "Prefix counts remain geometric half-loss after source normalization, matching the 60k CPU baseline, and no recurrence/coupling appears.",
     "Telemetry overhead is high and the emitted data cannot feed Kummer/divisor extraction.",
     "The run reports only bucket lifts without raw source denominators."
   ],

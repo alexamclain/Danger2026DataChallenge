@@ -243,6 +243,19 @@ still meaningful, both train and heldout are close to independent half-loss.
 The small-field plateaus are field-dependent and do not transfer to p27 at the
 current sample scale.
 
+Current update:
+[P27 B-Line 60K Prefix Scaling](p27_b_line_prefix_scaling_60k_20260622.md)
+supersedes the sample-size boundary.  On `30000 + 30000` B groups, there are
+still zero mixed B groups through `d18`, but source-normalized scaled half-loss
+stays close to `1` through the meaningful `d3..d12` range.  Train's late
+`d13/d14` bump has only `18/9` surviving B groups and does not transfer to
+heldout.  The current conclusion is therefore stronger:
+
+```text
+Bplus is an exact Kummer-sequence coordinate.
+Bplus prefix counts alone are not a below-sqrt sampler.
+```
+
 ## Interpretation
 
 Positive:

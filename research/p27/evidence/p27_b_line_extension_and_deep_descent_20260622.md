@@ -9,9 +9,10 @@ counts show that the legal B-domain stays inside the core B bucket as a
 positive-density subset, and deep selected-gate tests show that the original
 `Bplus` value determines the active selected gate bits far beyond `d3`.
 
-In p27 train/heldout samples, there are no mixed B groups through `d12`.
-Across q1607/q1847/q2087, there are no mixed B groups before the finite-field
-all-plus population dies.
+In the largest p27 train/heldout samples, there are no mixed B groups through
+`d18`; through the meaningful-count range `d3..d12`, source-normalized prefix
+scaling remains close to independent half-loss.  Across q1607/q1847/q2087,
+there are no mixed B groups before the finite-field all-plus population dies.
 
 This is the first B-lane result that can plausibly beat sqrt if converted into
 an explicit Kummer/divisor sequence or direct B-line all-plus sampler.
@@ -32,6 +33,7 @@ research/p27/archive/probe_outputs/p27_b_line_extension_count_probe_q7_degrees1_
 research/p27/archive/probe_outputs/p27_b_line_extension_count_probe_q23_degrees1_3_20260622.txt
 research/p27/archive/probe_outputs/p27_b_line_deep_descent_probe_p27_q1607_q1847_q2087_20260622.txt
 research/p27/archive/probe_outputs/p27_b_line_deep_descent_probe_p27_q1607_q1847_q2087_gate12_20260622.txt
+research/p27/archive/probe_outputs/p27_b_line_deep_descent_probe_p27_60k_heldout_60k_gate18_20260622.txt
 ```
 
 Commands:
@@ -66,6 +68,15 @@ python3 -u research/p27/archive/gates/p27_b_line_deep_descent_probe.py \
   --max-draws 800000 \
   --max-gate 12 \
   | tee research/p27/archive/probe_outputs/p27_b_line_deep_descent_probe_p27_q1607_q1847_q2087_gate12_20260622.txt
+
+PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=research/p27/archive/gates \
+python3 -u research/p27/archive/gates/p27_b_line_deep_descent_probe.py \
+  --small-primes '' \
+  --p27-target 60000 \
+  --p27-heldout-target 60000 \
+  --max-draws 1500000 \
+  --max-gate 18 \
+  | tee research/p27/archive/probe_outputs/p27_b_line_deep_descent_probe_p27_60k_heldout_60k_gate18_20260622.txt
 ```
 
 ## Extension Counts
@@ -126,6 +137,28 @@ selected gate bits `d3, d4, ...` along the all-plus tower.  A mixed group would
 mean that B is not enough information for that gate.
 
 No mixed groups occurred in the p27 train/heldout runs through `d12`.
+
+Update: [P27 B-Line 60K Prefix Scaling](p27_b_line_prefix_scaling_60k_20260622.md)
+extends the p27 test to `60000 + 60000` source rows and `d18`.  It again finds
+zero mixed B groups through the tested depth, but the source-normalized prefix
+scaling stays near independent half-loss through meaningful counts:
+
+```text
+train, 30000 B groups:
+  d3..d12 scaled_half_loss =
+  0.9978, 0.9980, 1.0027, 0.9899, 1.0176,
+  1.0453, 0.9472, 0.9984, 1.0581, 0.9557
+
+heldout, 30000 B groups:
+  d3..d12 scaled_half_loss =
+  1.0043, 1.0065, 1.0187, 1.0171, 1.0176,
+  1.0453, 0.9856, 1.0240, 0.9387, 1.0581
+```
+
+The train tail reaches `1.2288x` at `d13/d14`, but only on `18/9` surviving
+B groups and does not transfer to heldout.  Heldout's larger `d15+` values are
+single-digit tails.  This kills B prefix counts alone as a source-normalized
+sampler while strengthening B as a Kummer-sequence extraction surface.
 
 p27 train, 1000 B groups:
 

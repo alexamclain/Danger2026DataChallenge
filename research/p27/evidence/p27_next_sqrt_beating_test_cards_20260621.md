@@ -1102,8 +1102,10 @@ extension counts:
   legal_B is still field-sized, roughly 0.03N in informative odd extensions
 
 p27 deep descent:
-  original Bplus determines active selected gate bits through d12
-  no mixed B groups in p27 train/heldout
+  original Bplus determines active selected gate bits with zero mixed B groups
+  through d18 in the 60000 + 60000 p27 train/heldout sample
+  source-normalized prefix scaling stays near independent half-loss through
+  meaningful counts d3..d12
 ```
 
 Updated action:

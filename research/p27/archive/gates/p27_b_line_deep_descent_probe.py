@@ -103,11 +103,49 @@ def print_counter(prefix: str, stats: Counter) -> None:
         print(f"  {key} = {stats[key]}")
 
 
-def run_candidates(label: str, candidates: list[dict[str, int]], p: int, max_gate: int) -> None:
+def print_prefix_table(
+    label: str,
+    group_stats: Counter,
+    descent_stats: Counter,
+    max_gate: int,
+    source_draws: int | None,
+) -> None:
+    groups = group_stats["B_groups"]
+    print(f"{label}_prefix_table:")
+    print("  gate active plus minus mixed missing transition_rate prefix_rate scaled_half_loss source_draws_per_plus")
+    for gate in range(3, max_gate + 1):
+        active = descent_stats[f"gate{gate}_active_B"]
+        plus = descent_stats[f"gate{gate}_plus_B"]
+        minus = descent_stats[f"gate{gate}_minus_B"]
+        mixed = descent_stats[f"gate{gate}_mixed_B"]
+        missing = descent_stats[f"gate{gate}_missing_B"]
+        transition = plus / active if active else 0.0
+        prefix_rate = plus / groups if groups else 0.0
+        depth = gate - 2
+        scaled = plus * (2**depth) / groups if groups else 0.0
+        if source_draws and plus:
+            source_per_plus = source_draws / plus
+            source_label = f"{source_per_plus:.6f}"
+        else:
+            source_label = "inf"
+        print(
+            f"  {gate} {active} {plus} {minus} {mixed} {missing} "
+            f"{transition:.9f} {prefix_rate:.9f} {scaled:.9f} {source_label}"
+        )
+
+
+def run_candidates(
+    label: str,
+    candidates: list[dict[str, int]],
+    p: int,
+    max_gate: int,
+    source_draws: int | None = None,
+) -> None:
     groups, group_stats = collect_b_groups(candidates, p, max_gate)
     print_counter(f"{label}_b_group_stats", group_stats)
     descent_stats = summarize_deep_descent(groups, max_gate)
     print_counter(f"{label}_deep_descent_stats", descent_stats)
+    print_prefix_table(label, group_stats, descent_stats, max_gate, source_draws)
 
 
 def main() -> int:
@@ -128,12 +166,12 @@ def main() -> int:
     if args.p27_target:
         candidates, sample_stats = p27_candidates(args.p27_target, args.seed, args.max_draws)
         print_counter("p27_train_sample_stats", sample_stats)
-        run_candidates("p27_train", candidates, P, args.max_gate)
+        run_candidates("p27_train", candidates, P, args.max_gate, sample_stats["sample_x_draws"])
 
     if args.p27_heldout_target:
         candidates, sample_stats = p27_candidates(args.p27_heldout_target, args.heldout_seed, args.max_draws)
         print_counter("p27_heldout_sample_stats", sample_stats)
-        run_candidates("p27_heldout", candidates, P, args.max_gate)
+        run_candidates("p27_heldout", candidates, P, args.max_gate, sample_stats["sample_x_draws"])
 
     for q in parse_ints(args.small_primes):
         candidates, enum_stats = enumerate_small_prime_candidates(q)

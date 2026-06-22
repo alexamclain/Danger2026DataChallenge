@@ -15,9 +15,12 @@ A + 2 = B^2
 ```
 
 CPU and small-field tests show that the original `Bplus` value determines the
-active selected gate bits through `d12` in the tested p27 samples, with no
-mixed B groups.  That could become sqrt-beating only if it yields a Kummer
-sequence, recurrence, or source for many all-plus gates at once.
+active selected gate bits through `d18` in the largest tested p27 samples, with
+no mixed B groups.  The larger source-normalized prefix check is negative as a
+count-only sampler, however: all-plus prefixes thin like independent
+half-gates through meaningful counts.  That could become sqrt-beating only if
+it yields a Kummer sequence, recurrence, or source for many all-plus gates at
+once.
 
 ## Manifest
 
@@ -41,9 +44,18 @@ raw source draw denominator
 accepted/legal row denominator
 ```
 
-Minimum useful depth is `d3..d12`, matching the current CPU deep-descent
-frontier.  If the native code can expose deeper bits cheaply, extend to
-`d3..d16`.
+Minimum useful depth is still `d3..d12`, where the CPU baseline has meaningful
+counts.  If the native code can expose deeper bits cheaply, extend to `d3..d18`
+or beyond, but treat late tails as evidence only when the surviving row counts
+are large enough for heldout comparison.
+
+Latest CPU baseline:
+[P27 B-Line 60K Prefix Scaling](p27_b_line_prefix_scaling_60k_20260622.md)
+has `60000 + 60000` p27 source rows, `30000 + 30000` B groups, zero mixed B
+groups through `d18`, and scaled half-loss near `1` through `d12`.  A GPU run
+must beat this source-normalized baseline or provide data for exact
+Kummer-class extraction; repeating the same geometric prefix curve at larger
+scale is a kill, not a promotion.
 
 Use three bounded tiers:
 

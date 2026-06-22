@@ -1170,6 +1170,13 @@ p27 train/heldout tests show no mixed B groups through `d12`: the original
 the live B moonshot from "find d3(B)" to "extract the B-line Kummer sequence
 `f3(B), f4(B), ...` and test whether those classes recur or couple."  That is
 the first B-lane mechanism that could genuinely amortize multiple half-losses.
+The larger p27 source-normalized check is now in:
+[P27 B-Line 60K Prefix Scaling](evidence/p27_b_line_prefix_scaling_60k_20260622.md).
+On `60000 + 60000` p27 train/heldout rows, there are again zero mixed B groups
+through `d18`, but scaled half-loss remains near `1` through meaningful counts
+(`d3..d12`).  Train's `d13/d14` bump is only `18/9` rows and does not transfer
+to heldout; heldout's larger `d15+` values are single-digit tails.  So B is a
+real Kummer-sequence surface, not a count-only sampler or B-bucket GPU reason.
 That GPU follow-up is now bounded and pre-registered:
 [P27 B-Line Deep-Prefix GPU Telemetry Handoff](evidence/p27_b_line_deep_prefix_gpu_telemetry_handoff_20260622.md)
 with manifest
@@ -1483,19 +1490,23 @@ gate sequence and is the cleaner 2-descent language.
 ### Card 4b: B-Line Prefix Profile
 
 The B-line quotient is exact structure but not a direct source win:
-[P27 B-Line Prefix Profile](evidence/p27_b_line_prefix_profile_20260622.md).
+[P27 B-Line Prefix Profile](evidence/p27_b_line_prefix_profile_20260622.md),
+updated by
+[P27 B-Line 60K Prefix Scaling](evidence/p27_b_line_prefix_scaling_60k_20260622.md).
 
 The original `Bplus` value still determines the selected gate sequence in
-p27 samples, with no mixed B groups through `d16` in the latest
-`4000 + 4000` train/heldout check.  But the all-plus population thins close
+p27 samples, with no mixed B groups through `d18` in the latest
+`60000 + 60000` train/heldout check.  But the all-plus population thins close
 to one independent half-loss per gate through the meaningful range:
 
 ```text
-p27 train gate3..gate10 plus counts:
-  2018, 1024, 505, 241, 126, 66, 28, 12 out of 4000
+p27 train gate3..gate12 scaled_half_loss:
+  0.9978, 0.9980, 1.0027, 0.9899, 1.0176,
+  1.0453, 0.9472, 0.9984, 1.0581, 0.9557
 
-p27 heldout gate3..gate10 plus counts:
-  2048, 1008, 500, 240, 110, 63, 31, 18 out of 4000
+p27 heldout gate3..gate12 scaled_half_loss:
+  1.0043, 1.0065, 1.0187, 1.0171, 1.0176,
+  1.0453, 0.9856, 1.0240, 0.9387, 1.0581
 ```
 
 Small exact guard fields sometimes show late all-plus plateaus, but the
