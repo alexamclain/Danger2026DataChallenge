@@ -232,6 +232,13 @@ sums through exponent `64` do not select f3, and the four-u polynomial
 coefficients are maximal-degree on legal B.  So this is not a GPU sampler; it
 is a sharper CAS model.
 
+Update: the reduced-fiber low-degree plane relation screen is negative:
+[P27 B-Line Reduced-Fiber Relation Screen](p27_b_line_reduced_fiber_relation_20260622.md).
+The all-cover and f3 plus/minus subcovers have `extra_nullity=0` through total
+degree `20` in the screened B/A/lambda/mu coordinates.  The reduced cover
+still matters, but it needs normalization/genus extraction rather than more
+visible plane-relation scans.
+
 ## Continue / Kill
 
 ```text
@@ -246,6 +253,7 @@ continue = use GPU only after a source/sampler or recurrence is named
 kill = more unguided B-bucket scoring
 kill = large GPU production from Bplus alone
 kill = norm/trace/power-sum selectors for the B-line d3 fiber
+kill = low-degree plane relations for the reduced B-line d3 fiber through degree 20
 kill = treating one-bit conditional lift as sqrt-beating
 kill = visible monic quartic d3 promotion after the q1847 B/K negatives
 kill = degree-one rational B-line recurrence

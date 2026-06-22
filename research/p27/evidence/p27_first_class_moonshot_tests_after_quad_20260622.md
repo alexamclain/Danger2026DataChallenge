@@ -114,6 +114,14 @@ GPU symmetric-invariant sampler.
 The corresponding row-level CAS fixture is
 `research/p27/archive/fixtures/p27_b_line_reduced_fiber_fixture_20260622.json`.
 
+Plane-relation follow-up:
+[P27 B-Line Reduced-Fiber Relation Screen](p27_b_line_reduced_fiber_relation_20260622.md).
+The all-cover and f3 plus/minus subcovers have zero extra low-degree relation
+through total degree `20` in `(B,u)`, `(B,u^2)`, `(B,u+2)`, `(A,u)`,
+`(lambda,u)`, and `(mu,u)`.  Do not widen this as another search lane; the
+remaining test is actual normalization/genus/quotient extraction of the
+reduced cover.
+
 Required computation:
 
 ```text
@@ -309,6 +317,7 @@ continue = GPU only as bounded telemetry or for a named sampler
 
 kill = more one-bit filters as moonshots
 kill = norm/trace/power-sum selectors for the B-line d3 fiber
+kill = low-degree plane relations for the reduced B-line d3 fiber through degree 20
 kill = more visible quartic/branch-map bucket searches without a theorem
 kill = treating source-conditional 2x lift as sqrt-beating
 ```

@@ -971,6 +971,13 @@ selector, and the four-u coefficients are maximal-degree on the legal-B set.
 So the next CAS object is the reduced 4-u/8-x cover, not a GPU symmetric
 invariant sampler.  The exact row-level fixture is
 `research/p27/archive/fixtures/p27_b_line_reduced_fiber_fixture_20260622.json`.
+The reduced-cover plane relation screen is now negative too:
+[P27 B-Line Reduced-Fiber Relation Screen](evidence/p27_b_line_reduced_fiber_relation_20260622.md).
+Across q1607/q1847/q2087, `(B,u)`, `(B,u^2)`, `(B,u+2)`, `(A,u)`,
+`(lambda,u)`, `(mu,u)`, and the f3 plus/minus subcovers all have
+`extra_nullity=0` through total degree `20`.  This kills the cheap plane-model
+route; the remaining test is actual normalization/genus/quotient extraction
+of the reduced cover.
 The B-line visible two-gate quartic shortcut is closed as well:
 [P27 B-Line Gate4-Prefix Quartic q1847 Screen](evidence/p27_b_line_gate4_prefix_quartic_q1847_screen_20260622.md).
 It scans `6,300,872,423` q1847 coefficient triples for

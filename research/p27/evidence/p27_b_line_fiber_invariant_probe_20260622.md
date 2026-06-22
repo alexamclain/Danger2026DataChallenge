@@ -49,6 +49,14 @@ JSON fixture:
 research/p27/archive/fixtures/p27_b_line_reduced_fiber_fixture_20260622.json
 ```
 
+Reduced-fiber relation follow-up:
+
+```text
+research/p27/evidence/p27_b_line_reduced_fiber_relation_20260622.md
+research/p27/archive/gates/p27_b_line_reduced_fiber_relation_probe.py
+research/p27/archive/probe_outputs/p27_b_line_reduced_fiber_relation_probe_20260622.txt
+```
+
 ## Command
 
 ```bash
@@ -134,6 +142,8 @@ Power sums through exponent 64 do not recover f3, even up to global polarity.
 The four-u cover coefficients look maximally varying on the legal-B set.
 There is no new GPU sampler or one-line recurrence from these symmetric
 invariants.
+The reduced 4-u cover and its plus/minus subcovers have no extra low-degree
+plane relation through total degree 20 in the screened coordinates.
 ```
 
 ## Continue / Kill
@@ -144,6 +154,7 @@ continue = compute genus, components, and quotient maps for this reduced cover
 continue = compare f4/f3 only after the reduced f3 cover is understood
 
 kill = norm/trace/power-sum selector for the B-line d3 fiber
+kill = low-degree plane relation route for the reduced B-line d3 fiber
 kill = GPU B-fiber production from symmetric invariants alone
 kill = low-degree coefficient interpolation on legal B as the next shortcut
 ```
