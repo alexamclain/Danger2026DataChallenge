@@ -27,6 +27,7 @@ Known finite-field facts to preserve:
   - no one irreducible quadratic times <=2 linears for d3(B)
   - no product of two irreducible quadratics for d3(B)
   - no product of two irreducible quadratics for the legal B-domain
+  - no visible Belyi S3 orbit sampler on B
 
 Source equations for the d3 all-plus cover over P1_B:
   variables: X, W, T, beta, R, z, Y, eta, Bline

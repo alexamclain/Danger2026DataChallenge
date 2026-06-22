@@ -108,6 +108,7 @@ rational-linear branch support of weight <=4 for d3(B)
 one irreducible quadratic times <=2 rational linears for d3(B)
 two irreducible quadratic branch factors for d3(B)
 two irreducible quadratic branch factors for the legal B-domain
+visible Belyi S3 orbit sampler on B
 B-line prefix counts alone as a below-sqrt sampler
 large GPU search from B buckets without an extracted class
 ```
@@ -158,6 +159,11 @@ Update: the legal-domain split degree-4 screen is also negative:
 [P27 B-Line Legal-Domain Two-Quadratic Support Screen](p27_b_line_legal_two_quadratic_support_20260622.md).
 The core-to-legal B cut is not a product of two irreducible quadratic branch
 factors in q1607/q1847/q2087.
+
+Update: the visible Belyi orbit shortcut is negative:
+[P27 B-Line Belyi-Orbit Screen](p27_b_line_belyi_orbit_20260622.md).
+Every non-identity automorphism of the branch set `{0,-2,infinity}` sends core
+B values outside the core bucket in q1607/q1847/q2087.
 
 ## Continue / Kill
 

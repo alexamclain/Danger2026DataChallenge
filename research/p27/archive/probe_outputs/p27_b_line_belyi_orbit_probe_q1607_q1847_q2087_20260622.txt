@@ -1,0 +1,256 @@
+p27 B-line Belyi-orbit probe
+branch set = {0, -2, infinity}
+transforms = B, -B-2, 4/B, -4/(B+2), -2B/(B+2), -2(B+2)/B
+q1607:
+  setup_stats:
+  core_B = 200
+  d3_labeled_B = 49
+  d4_labeled_B = 28
+  enum_compact_not_target = 805
+  enum_no_label2_candidate = 408
+  legal_B = 49
+  core_legal_transform_stats:
+  -2(B+2)/B_image_not_core = 200
+  -2(B+2)/B_image_not_legal = 200
+  -2(B+2)/B_image_out_domain = 200
+  -2B/(B+2)_image_not_core = 200
+  -2B/(B+2)_image_not_legal = 200
+  -2B/(B+2)_image_out_domain = 200
+  -4/(B+2)_image_not_core = 200
+  -4/(B+2)_image_not_legal = 200
+  -4/(B+2)_image_out_domain = 200
+  -B-2_image_not_core = 200
+  -B-2_image_not_legal = 200
+  -B-2_image_out_domain = 200
+  4/B_image_not_core = 200
+  4/B_image_not_legal = 200
+  4/B_image_out_domain = 200
+  B_image_core = 200
+  B_image_in_domain = 200
+  B_image_legal = 49
+  B_image_not_legal = 151
+  B_same_target = 200
+  core_legal_orbit_stats:
+  constant_minus_orbits = 151
+  constant_plus_orbits = 49
+  orbit_size_1 = 200
+  orbits = 200
+  legal_d3_transform_stats:
+  -2(B+2)/B_image_not_core = 49
+  -2(B+2)/B_image_not_legal = 49
+  -2(B+2)/B_image_out_domain = 49
+  -2B/(B+2)_image_not_core = 49
+  -2B/(B+2)_image_not_legal = 49
+  -2B/(B+2)_image_out_domain = 49
+  -4/(B+2)_image_not_core = 49
+  -4/(B+2)_image_not_legal = 49
+  -4/(B+2)_image_out_domain = 49
+  -B-2_image_not_core = 49
+  -B-2_image_not_legal = 49
+  -B-2_image_out_domain = 49
+  4/B_image_not_core = 49
+  4/B_image_not_legal = 49
+  4/B_image_out_domain = 49
+  B_image_core = 49
+  B_image_in_domain = 49
+  B_image_legal = 49
+  B_same_target = 49
+  legal_d3_orbit_stats:
+  constant_minus_orbits = 21
+  constant_plus_orbits = 28
+  orbit_size_1 = 49
+  orbits = 49
+  d4_domain_transform_stats:
+  -2(B+2)/B_image_not_core = 28
+  -2(B+2)/B_image_not_legal = 28
+  -2(B+2)/B_image_out_domain = 28
+  -2B/(B+2)_image_not_core = 28
+  -2B/(B+2)_image_not_legal = 28
+  -2B/(B+2)_image_out_domain = 28
+  -4/(B+2)_image_not_core = 28
+  -4/(B+2)_image_not_legal = 28
+  -4/(B+2)_image_out_domain = 28
+  -B-2_image_not_core = 28
+  -B-2_image_not_legal = 28
+  -B-2_image_out_domain = 28
+  4/B_image_not_core = 28
+  4/B_image_not_legal = 28
+  4/B_image_out_domain = 28
+  B_image_core = 28
+  B_image_in_domain = 28
+  B_image_legal = 28
+  B_same_target = 28
+  d4_domain_orbit_stats:
+  constant_minus_orbits = 9
+  constant_plus_orbits = 19
+  orbit_size_1 = 28
+  orbits = 28
+q1847:
+  setup_stats:
+  core_B = 230
+  d3_labeled_B = 63
+  d4_labeled_B = 45
+  enum_compact_not_target = 873
+  enum_no_label2_candidate = 468
+  legal_B = 63
+  core_legal_transform_stats:
+  -2(B+2)/B_image_not_core = 230
+  -2(B+2)/B_image_not_legal = 230
+  -2(B+2)/B_image_out_domain = 230
+  -2B/(B+2)_image_not_core = 230
+  -2B/(B+2)_image_not_legal = 230
+  -2B/(B+2)_image_out_domain = 230
+  -4/(B+2)_image_not_core = 230
+  -4/(B+2)_image_not_legal = 230
+  -4/(B+2)_image_out_domain = 230
+  -B-2_image_not_core = 230
+  -B-2_image_not_legal = 230
+  -B-2_image_out_domain = 230
+  4/B_image_not_core = 230
+  4/B_image_not_legal = 230
+  4/B_image_out_domain = 230
+  B_image_core = 230
+  B_image_in_domain = 230
+  B_image_legal = 63
+  B_image_not_legal = 167
+  B_same_target = 230
+  core_legal_orbit_stats:
+  constant_minus_orbits = 167
+  constant_plus_orbits = 63
+  orbit_size_1 = 230
+  orbits = 230
+  legal_d3_transform_stats:
+  -2(B+2)/B_image_not_core = 63
+  -2(B+2)/B_image_not_legal = 63
+  -2(B+2)/B_image_out_domain = 63
+  -2B/(B+2)_image_not_core = 63
+  -2B/(B+2)_image_not_legal = 63
+  -2B/(B+2)_image_out_domain = 63
+  -4/(B+2)_image_not_core = 63
+  -4/(B+2)_image_not_legal = 63
+  -4/(B+2)_image_out_domain = 63
+  -B-2_image_not_core = 63
+  -B-2_image_not_legal = 63
+  -B-2_image_out_domain = 63
+  4/B_image_not_core = 63
+  4/B_image_not_legal = 63
+  4/B_image_out_domain = 63
+  B_image_core = 63
+  B_image_in_domain = 63
+  B_image_legal = 63
+  B_same_target = 63
+  legal_d3_orbit_stats:
+  constant_minus_orbits = 18
+  constant_plus_orbits = 45
+  orbit_size_1 = 63
+  orbits = 63
+  d4_domain_transform_stats:
+  -2(B+2)/B_image_not_core = 45
+  -2(B+2)/B_image_not_legal = 45
+  -2(B+2)/B_image_out_domain = 45
+  -2B/(B+2)_image_not_core = 45
+  -2B/(B+2)_image_not_legal = 45
+  -2B/(B+2)_image_out_domain = 45
+  -4/(B+2)_image_not_core = 45
+  -4/(B+2)_image_not_legal = 45
+  -4/(B+2)_image_out_domain = 45
+  -B-2_image_not_core = 45
+  -B-2_image_not_legal = 45
+  -B-2_image_out_domain = 45
+  4/B_image_not_core = 45
+  4/B_image_not_legal = 45
+  4/B_image_out_domain = 45
+  B_image_core = 45
+  B_image_in_domain = 45
+  B_image_legal = 45
+  B_same_target = 45
+  d4_domain_orbit_stats:
+  constant_minus_orbits = 26
+  constant_plus_orbits = 19
+  orbit_size_1 = 45
+  orbits = 45
+q2087:
+  setup_stats:
+  core_B = 260
+  d3_labeled_B = 57
+  d4_labeled_B = 25
+  enum_compact_not_target = 1109
+  enum_no_label2_candidate = 520
+  legal_B = 57
+  core_legal_transform_stats:
+  -2(B+2)/B_image_not_core = 260
+  -2(B+2)/B_image_not_legal = 260
+  -2(B+2)/B_image_out_domain = 260
+  -2B/(B+2)_image_not_core = 260
+  -2B/(B+2)_image_not_legal = 260
+  -2B/(B+2)_image_out_domain = 260
+  -4/(B+2)_image_not_core = 260
+  -4/(B+2)_image_not_legal = 260
+  -4/(B+2)_image_out_domain = 260
+  -B-2_image_not_core = 260
+  -B-2_image_not_legal = 260
+  -B-2_image_out_domain = 260
+  4/B_image_not_core = 260
+  4/B_image_not_legal = 260
+  4/B_image_out_domain = 260
+  B_image_core = 260
+  B_image_in_domain = 260
+  B_image_legal = 57
+  B_image_not_legal = 203
+  B_same_target = 260
+  core_legal_orbit_stats:
+  constant_minus_orbits = 203
+  constant_plus_orbits = 57
+  orbit_size_1 = 260
+  orbits = 260
+  legal_d3_transform_stats:
+  -2(B+2)/B_image_not_core = 57
+  -2(B+2)/B_image_not_legal = 57
+  -2(B+2)/B_image_out_domain = 57
+  -2B/(B+2)_image_not_core = 57
+  -2B/(B+2)_image_not_legal = 57
+  -2B/(B+2)_image_out_domain = 57
+  -4/(B+2)_image_not_core = 57
+  -4/(B+2)_image_not_legal = 57
+  -4/(B+2)_image_out_domain = 57
+  -B-2_image_not_core = 57
+  -B-2_image_not_legal = 57
+  -B-2_image_out_domain = 57
+  4/B_image_not_core = 57
+  4/B_image_not_legal = 57
+  4/B_image_out_domain = 57
+  B_image_core = 57
+  B_image_in_domain = 57
+  B_image_legal = 57
+  B_same_target = 57
+  legal_d3_orbit_stats:
+  constant_minus_orbits = 32
+  constant_plus_orbits = 25
+  orbit_size_1 = 57
+  orbits = 57
+  d4_domain_transform_stats:
+  -2(B+2)/B_image_not_core = 25
+  -2(B+2)/B_image_not_legal = 25
+  -2(B+2)/B_image_out_domain = 25
+  -2B/(B+2)_image_not_core = 25
+  -2B/(B+2)_image_not_legal = 25
+  -2B/(B+2)_image_out_domain = 25
+  -4/(B+2)_image_not_core = 25
+  -4/(B+2)_image_not_legal = 25
+  -4/(B+2)_image_out_domain = 25
+  -B-2_image_not_core = 25
+  -B-2_image_not_legal = 25
+  -B-2_image_out_domain = 25
+  4/B_image_not_core = 25
+  4/B_image_not_legal = 25
+  4/B_image_out_domain = 25
+  B_image_core = 25
+  B_image_in_domain = 25
+  B_image_legal = 25
+  B_same_target = 25
+  d4_domain_orbit_stats:
+  constant_minus_orbits = 7
+  constant_plus_orbits = 18
+  orbit_size_1 = 25
+  orbits = 25
+p27_b_line_belyi_orbit_probe_rows=1/1

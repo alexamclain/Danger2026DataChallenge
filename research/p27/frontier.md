@@ -991,6 +991,11 @@ The legal-domain split degree-4 screen is now negative too:
 Inside the core B bucket, the legal B subset is not a product of two
 irreducible quadratic branch factors in q1607/q1847/q2087.  This kills the
 nearest low-degree split-divisor sampler for the `core B -> legal B` step.
+The visible Belyi orbit shortcut is also negative:
+[P27 B-Line Belyi-Orbit Screen](evidence/p27_b_line_belyi_orbit_20260622.md).
+The six Möbius transforms preserving `{0,-2,infinity}` send every non-identity
+image of a core B value outside the core bucket in q1607/q1847/q2087.  Thus the
+B-line branch-set symmetry gives no orbit sampler or GPU reason.
 
 The B-line target is now stronger than a one-bit descent:
 [P27 B-Line Extension Counts And Deep Descent](evidence/p27_b_line_extension_and_deep_descent_20260622.md).
