@@ -296,6 +296,22 @@ match.  With materialization filters the best effect is weak `A` bias
 (`581/901`).  Keep the row-bit lane alive as non-visible H90/Prym/theta or
 local-solubility structure, not as a GPU sign-bucket scan.
 
+Thirteenth update:
+[P27 Trace/Norm Dplus U6 Row-Bit H90 Solubility Boundary](p27_trace_norm_dplus_u6_rowbit_h90_solubility_boundary_20260622.md)
+turns the point-fiber signal into a crisp tested boundary.  Across
+`71,167,199,263,607,1607,1847,2087`, with and without materialization filters,
+there are zero failures of:
+
+```text
+Ktrace square or zero  => row-bit t-fiber uniform;
+Ktrace nonsquare       => row-bit t-fiber mixed, always 4 plus / 4 minus.
+```
+
+This is now a theorem/CAS target: prove the H90 local-solubility boundary,
+then extract the non-visible plus/minus class on the soluble side.  It is not
+yet a GPU production source, because the soluble-side sign remains invisible
+to tested coordinate products.
+
 This is the most concrete bridge test after the coupling kill.  We know:
 
 ```text
@@ -309,6 +325,8 @@ the H90 elliptic quotient does not factor the row-bit cover over q607.
 H90 rational point fibers are nevertheless uniform in the tested small fields.
 visible H90/domain-spin/Aeta coordinate products through weight 4 do not
 explain that uniformity.
+Ktrace local solubility exactly predicts uniform versus mixed t-fibers in the
+tested fields.
 ```
 
 The missing object is the map or obstruction between the H90 model and the
@@ -342,6 +360,8 @@ or shares a quotient/Prym factor with the H90 class
 do not retry low-degree rational coefficient fits for prod(Z-U_i) in t,a,A
 through degree 20
 do not retry low-weight H90/rho sign products for chi(x6)
+do not treat the Ktrace-solubility boundary as a sampler until the soluble-side
+plus/minus class is named
 ```
 
 Promote:
@@ -378,6 +398,7 @@ continue = fused/native Dplus pricing with A/d3 telemetry columns
 continue = Dplus/H90 A_eta versus pulled-back A-level d3 class comparison
 continue = CAS/Prym extraction of the descended U6 row bit
 continue = explain H90 rational-point uniformity of the row bit
+continue = prove/extract the Ktrace local-solubility boundary
 
 kill = more sign-word/gamma bucket GPU scans
 kill = visible f5(B) B-atom/split-linear bucket searches
@@ -390,6 +411,7 @@ kill = visible H90/domain-spin/Aeta product characters through weight 4
 kill = online Magma for domain-spin/Aeta row-bit factorization
 kill = standalone H90 payload sign screens
 kill = simple H90/rho coboundary bucket screens for chi(x6)
+kill = treating Ktrace solubility alone as a production source
 kill = searching for another low-degree Dplus-to-A coordinate map
 kill = visible low-degree A/B/K formula fishing without a divisor reason
 kill = large p27 production run based only on the current Dplus classifier

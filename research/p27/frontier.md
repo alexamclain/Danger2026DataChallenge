@@ -2278,6 +2278,13 @@ then kills the cheap explanation: no product character through weight `4` on
 `E_h90`, domain-spin, or `A_eta` coordinates exactly matches the row bit.  So
 the row-bit signal is real but currently non-visible; do not hand GPU another
 sign-bucket scan from these atoms.
+The local-solubility follow-up
+[P27 Trace/Norm Dplus U6 Row-Bit H90 Solubility Boundary](evidence/p27_trace_norm_dplus_u6_rowbit_h90_solubility_boundary_20260622.md)
+is cleaner and positive: in fields `71,167,199,263,607,1607,1847,2087`, both
+with and without materialization filters, `Ktrace` square/zero exactly matches
+uniform row-bit `t`-fibers, while `Ktrace` nonsquare gives mixed fibers with
+`4` plus and `4` minus branches.  The next theorem target is the H90
+local-solubility boundary plus the non-visible soluble-side sign class.
 The small-field descent audit then sets the boundary:
 [P27 Trace/Norm Dplus Reciprocal Tower Small-Field Descent](evidence/p27_trace_norm_dplus_reciprocal_tower_smallfield_descent_20260622.md).
 Over q607/q1607/q1847, the naked reciprocal tower has mixed `A`/`B` fibers for

@@ -137,11 +137,23 @@ The best filtered products are equivalent to weak `A` bias, and the best bare
 products are weak `-A*B` bias.  Thus the point-fiber uniformity remains real
 but non-visible in the tested coordinate family.
 
+Follow-up
+[P27 Trace/Norm Dplus U6 Row-Bit H90 Solubility Boundary](p27_trace_norm_dplus_u6_rowbit_h90_solubility_boundary_20260622.md)
+sharpens the point-fiber statement.  Across fields
+`71,167,199,263,607,1607,1847,2087`, with and without materialization filters,
+there are zero failures of:
+
+```text
+Ktrace square or zero  => row-bit t-fiber uniform;
+Ktrace nonsquare       => row-bit t-fiber mixed, always 4 plus / 4 minus.
+```
+
 ## Continue / Kill
 
 ```text
 continue = offline factorization with side conditions over domain-spin/Aeta covers
 continue = explain H90 rational-point uniformity of the row bit
+continue = prove/extract the Ktrace local-solubility boundary
 continue = fused/native Dplus telemetry with E_h90/Z/Aeta coordinates and row bit
 
 kill = pointwise descent to t alone
