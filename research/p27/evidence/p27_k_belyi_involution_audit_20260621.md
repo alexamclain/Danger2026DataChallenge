@@ -137,6 +137,15 @@ q=607:  rows=32,  4/K present=32, same=0, opposite=32, missing=0
 q=1607: rows=49,  4/K present=0,  same=0, opposite=0,  missing=49
 ```
 
+Follow-up:
+[P27 K-Line Belyi-Reciprocal Quartic Screen](p27_kline_reciprocal_quartic_screen_20260622.md)
+tests the nearest quartic family whose branch divisor is preserved by
+`K -> 4/K`.  Both reciprocal signs,
+`K^4+aK^3+bK^2+4aK+16` and `K^4+aK^3+bK^2-4aK-16`, have zero exact hits over
+q1471/q1607/q1847 for `d3_on_K` and `d4_on_K_after_d3`.  So the involution is
+not merely missing as an orbit quotient; it also does not supply the natural
+Belyi-reciprocal quartic source.
+
 ## Interpretation
 
 Positive:

@@ -608,6 +608,12 @@ Over q1471/q1607/q1847, `chi(K^4+a*K^2+b)` has zero exact hits for both
 `d3_on_K` and `d4_on_K_after_d3`.  So a useful K-line quartic hit must use odd
 K terms and the signed K sheet; the GPU ask is the full quartic, not a
 `K^2`-only proxy.
+The visible Belyi reciprocal subcase is dead too:
+[P27 K-Line Belyi-Reciprocal Quartic Screen](evidence/p27_kline_reciprocal_quartic_screen_20260622.md).
+The two shapes preserved by `K -> 4/K`,
+`K^4+aK^3+bK^2+4aK+16` and `K^4+aK^3+bK^2-4aK-16`, have zero exact hits over
+q1471/q1607/q1847.  Thus the remaining GPU quartic job is genuinely the full
+q^3 coefficient-triple screen.
 
 That ask is now packaged as a concrete handoff:
 [P27 Kummer Branch-Extraction Handoff](evidence/p27_kummer_branch_extraction_handoff_20260621.md).
