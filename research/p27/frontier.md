@@ -614,8 +614,15 @@ The two shapes preserved by `K -> 4/K`,
 `K^4+aK^3+bK^2+4aK+16` and `K^4+aK^3-4aK-16`, have zero exact hits over
 q1471/q1607/q1847.  Thus the remaining GPU quartic job is genuinely the full
 q^3 coefficient-triple screen.
+The full B/K quartic GPU handoff is now unified:
+[P27 Full Quartic GPU Suite Handoff](evidence/p27_full_quartic_gpu_suite_handoff_20260622.md)
+and
+`research/p27/archive/fixtures/p27_full_quartic_gpu_suite_20260622.json`
+give the run order, verifier commands, exact packets, and promotion/kill
+rules for the remaining B-line/K-line monic-quartic test.
 
-That ask is now packaged as a concrete handoff:
+The fallback branch-extraction ask remains packaged as a separate concrete
+handoff:
 [P27 Kummer Branch-Extraction Handoff](evidence/p27_kummer_branch_extraction_handoff_20260621.md).
 It records the map from the residual `E: W^2=X^3-X` through
 `E': V^2=U^3+4U` to

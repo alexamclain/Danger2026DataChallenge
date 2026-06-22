@@ -88,6 +88,11 @@ come from either:
 
 ## Next GPU Tests
 
+Unified quartic handoff:
+[P27 Full Quartic GPU Suite Handoff](p27_full_quartic_gpu_suite_handoff_20260622.md)
+is now the entry point for Tests 3 and 4.  It includes the run order, frozen
+packets, verifiers, manifest, killed proxy families, and promotion/kill rules.
+
 ### Test 1: Recurrence-Coupling Telemetry
 
 Run same-stream p27 telemetry that emits the sign vector
