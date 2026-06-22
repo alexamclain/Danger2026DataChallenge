@@ -234,6 +234,18 @@ d3-minus classes, but random free `(R,L)` hits legal rows at only about
 `constant/q`.  So instrument the formula and test any implemented legal
 pullback source; do not promote raw random `(R,L)` as a production sampler.
 
+The next selector is also explicit now:
+[P27 Conic-Pair D4 Recurrence](p27_conic_pair_d4_recurrence_20260621.md).
+With `a=R-1/R` and `L=h-g-2r`, the d4 gate is:
+
+```text
+d4 = chi(-(L+a)(L-a)cR)
+```
+
+because the quotient with `R^2+cR+1` is `2` times a square and p27 has
+`chi(2)=+1`.  GPU should log this only when legal conic-pair variables are
+already available.  This is not a license to run raw random `(R,L)`.
+
 Packet source warning:
 [P27 Label-2 E[2] Packet Source Probe](p27_label2_e2_packet_source_probe_20260621.md).
 The easy rational `E[2]` packet source has already been tested on p27 and gives

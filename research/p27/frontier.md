@@ -730,6 +730,16 @@ two-dimensional sampler is killed as a production GPU source.  The live target
 is sharper: find the legal pullback/quotient or a d4 recurrence on the
 intersection.
 
+The d4 recurrence now has an exact selector:
+[P27 Conic-Pair D4 Recurrence](evidence/p27_conic_pair_d4_recurrence_20260621.md).
+With `a=R-1/R` and `L=h-g-2r`, the next gate satisfies
+`chi(R^2+cR+1)=chi(-(L+a)(L-a)cR)` because the quotient is `2` times a square
+and p27 has `chi(2)=+1`.  This held on q1607/q1847/q2087 and on 1,000-row p27
+train/heldout samples.  The selected next coordinate still does not re-enter
+the original legal label-2/compactD source in the guard fields, so the live
+test is now the legal pullback with `Z^2=-(L+a)(L-a)cR`, not blind iteration of
+the same sampler.
+
 The K-line now has a cleaner coordinate for that extraction:
 [P27 Kummer Belyi Structure Probe](evidence/p27_kummer_belyi_structure_probe_20260621.md).
 Symbolically,

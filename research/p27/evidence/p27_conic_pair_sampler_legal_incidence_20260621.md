@@ -173,6 +173,10 @@ continue = CAS/Sage/Magma legal pullback of the conic-pair surface
    fresh independent cover.
 ```
 
+Update: this test now has a positive answer in
+[P27 Conic-Pair D4 Recurrence](p27_conic_pair_d4_recurrence_20260621.md):
+`d4 = chi(-(L+a)(L-a)cR)` on the legal conic-pair lift.
+
 ## Continue / Kill
 
 ```text

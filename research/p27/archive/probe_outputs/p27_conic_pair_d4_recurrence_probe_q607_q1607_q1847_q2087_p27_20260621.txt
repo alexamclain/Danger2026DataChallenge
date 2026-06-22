@@ -1,0 +1,226 @@
+p27 conic-pair d4 recurrence probe
+target = d4 after legal d3-plus conic-pair lift
+feature span excludes the tautological next conic R^2+c*R+1
+q607:
+  conic_lifts = 2048
+  d3_plus_unique_ax = 64
+  d4_-1_unique_ax = 64
+  enum2_compact_not_target = 293
+  enum2_no_label2_candidate = 184
+  feature_rows = 2032
+  feature_zero_L+1 = 8
+  feature_zero_L-1 = 8
+  feature_zero_rows = 16
+  legal_enum_compact_not_target = 293
+  legal_enum_no_label2_candidate = 184
+  legal_oriented_legal_candidates = 512
+  legal_unique_d3_minus_A_x = 64
+  legal_unique_d3_plus_A_x = 64
+  legal_unique_legal_A_x = 128
+  x6_d4_-1 = 128
+  x6_in_legal = 0
+  x6_in_legal_d3_minus = 0
+  x6_in_legal_d3_plus = 0
+  x6_in_raw_cr = 128
+  x6_in_sampler_image = 0
+  x6_square_branch_count_2 = 64
+  x6_square_branches = 128
+  x6_sampler_image_rate = 0.000000000
+  x6_legal_reentry_rate = 0.000000000
+  x6_raw_cr_rate = 1.000000000
+  feature_row_rate = 0.992187500
+  exact_feature_combo = -1
+  best_single_features:
+    -1 polarity=1 good=2032/2032 rate=1.000000000
+    h*g polarity=-1 good=1088/2032 rate=0.535433071
+    c-1 polarity=-1 good=1080/2032 rate=0.531496063
+    c+1 polarity=1 good=1080/2032 rate=0.531496063
+    h+1 polarity=-1 good=1052/2032 rate=0.517716535
+    g+1 polarity=-1 good=1052/2032 rate=0.517716535
+    R-1 polarity=1 good=1052/2032 rate=0.517716535
+    R+1 polarity=-1 good=1052/2032 rate=0.517716535
+q1607:
+  conic_lifts = 3584
+  d3_plus_unique_ax = 112
+  d4_-1_unique_ax = 36
+  d4_1_unique_ax = 76
+  enum2_compact_not_target = 805
+  enum2_no_label2_candidate = 408
+  feature_rows = 3568
+  feature_zero_L+r = 16
+  feature_zero_rows = 16
+  legal_enum_compact_not_target = 805
+  legal_enum_no_label2_candidate = 408
+  legal_oriented_legal_candidates = 784
+  legal_unique_d3_minus_A_x = 84
+  legal_unique_d3_plus_A_x = 112
+  legal_unique_legal_A_x = 196
+  x6_d4_-1 = 72
+  x6_d4_1 = 152
+  x6_in_legal = 0
+  x6_in_legal_d3_minus = 0
+  x6_in_legal_d3_plus = 0
+  x6_in_raw_cr = 0
+  x6_in_sampler_image = 152
+  x6_square_branch_count_2 = 112
+  x6_square_branches = 224
+  x6_sampler_image_rate = 0.678571429
+  x6_legal_reentry_rate = 0.000000000
+  feature_row_rate = 0.995535714
+  exact_feature_combo = -1 * L+a * L-a * c*R
+  best_single_features:
+    -1 polarity=-1 good=2432/3568 rate=0.681614350
+    r-1 polarity=-1 good=1984/3568 rate=0.556053812
+    r+1 polarity=1 good=1984/3568 rate=0.556053812
+    h*g polarity=1 good=1968/3568 rate=0.551569507
+    c-1 polarity=1 good=1848/3568 rate=0.517937220
+    c+1 polarity=-1 good=1848/3568 rate=0.517937220
+    R-1 polarity=-1 good=1844/3568 rate=0.516816143
+    R+1 polarity=1 good=1844/3568 rate=0.516816143
+q1847:
+  conic_lifts = 5760
+  d3_plus_unique_ax = 180
+  d4_-1_unique_ax = 104
+  d4_1_unique_ax = 76
+  enum2_compact_not_target = 873
+  enum2_no_label2_candidate = 468
+  feature_rows = 5728
+  feature_zero_L+1 = 8
+  feature_zero_L-1 = 8
+  feature_zero_L-r = 16
+  feature_zero_rows = 32
+  legal_enum_compact_not_target = 873
+  legal_enum_no_label2_candidate = 468
+  legal_oriented_legal_candidates = 1008
+  legal_unique_d3_minus_A_x = 72
+  legal_unique_d3_plus_A_x = 180
+  legal_unique_legal_A_x = 252
+  x6_d4_-1 = 208
+  x6_d4_1 = 152
+  x6_in_legal = 0
+  x6_in_legal_d3_minus = 0
+  x6_in_legal_d3_plus = 0
+  x6_in_raw_cr = 0
+  x6_in_sampler_image = 152
+  x6_square_branch_count_2 = 180
+  x6_square_branches = 360
+  x6_sampler_image_rate = 0.422222222
+  x6_legal_reentry_rate = 0.000000000
+  feature_row_rate = 0.994444444
+  exact_feature_combo = -1 * L+a * L-a * c*R
+  best_single_features:
+    c-1 polarity=1 good=3312/5728 rate=0.578212291
+    c+1 polarity=-1 good=3312/5728 rate=0.578212291
+    -1 polarity=1 good=3312/5728 rate=0.578212291
+    h*g polarity=-1 good=3232/5728 rate=0.564245810
+    L-1 polarity=-1 good=2992/5728 rate=0.522346369
+    L+1 polarity=1 good=2992/5728 rate=0.522346369
+    r-1 polarity=-1 good=2968/5728 rate=0.518156425
+    r+1 polarity=1 good=2968/5728 rate=0.518156425
+q2087:
+  conic_lifts = 3200
+  d3_plus_unique_ax = 100
+  d4_-1_unique_ax = 28
+  d4_1_unique_ax = 72
+  enum2_compact_not_target = 1109
+  enum2_no_label2_candidate = 520
+  feature_rows = 3200
+  legal_enum_compact_not_target = 1109
+  legal_enum_no_label2_candidate = 520
+  legal_oriented_legal_candidates = 912
+  legal_unique_d3_minus_A_x = 128
+  legal_unique_d3_plus_A_x = 100
+  legal_unique_legal_A_x = 228
+  x6_d4_-1 = 56
+  x6_d4_1 = 144
+  x6_in_legal = 0
+  x6_in_legal_d3_minus = 0
+  x6_in_legal_d3_plus = 0
+  x6_in_raw_cr = 0
+  x6_in_sampler_image = 144
+  x6_square_branch_count_2 = 100
+  x6_square_branches = 200
+  x6_sampler_image_rate = 0.720000000
+  x6_legal_reentry_rate = 0.000000000
+  feature_row_rate = 1.000000000
+  exact_feature_combo = -1 * L+a * L-a * c*R
+  best_single_features:
+    -1 polarity=-1 good=2304/3200 rate=0.720000000
+    c-1 polarity=-1 good=1792/3200 rate=0.560000000
+    c+1 polarity=1 good=1792/3200 rate=0.560000000
+    h*g polarity=-1 good=1760/3200 rate=0.550000000
+    R-1 polarity=1 good=1696/3200 rate=0.530000000
+    R+1 polarity=-1 good=1696/3200 rate=0.530000000
+    h+1 polarity=-1 good=1664/3200 rate=0.520000000
+    g+1 polarity=-1 good=1664/3200 rate=0.520000000
+p27_train:
+  conic_lifts = 15488
+  d3_plus_unique_ax = 484
+  d4_-1_unique_ax = 240
+  d4_1_unique_ax = 244
+  feature_rows = 15488
+  oriented_candidates = 4000
+  sample_candidate_invalid_not_nonsplit = 2070
+  sample_compact_not_target = 1977
+  sample_no_t = 2010
+  sample_no_w = 4083
+  sample_pair_incomplete = 1035
+  sample_x_draws = 8099
+  sampled_pairs = 1000
+  unique_ax = 1000
+  x6_d4_-1 = 480
+  x6_d4_1 = 488
+  x6_square_branch_count_2 = 484
+  x6_square_branches = 968
+  feature_row_rate = 1.000000000
+  exact_feature_combo = -1 * L+a * L-a * c*R
+  best_single_features:
+    r-1 polarity=1 good=8304/15488 rate=0.536157025
+    r+1 polarity=-1 good=8304/15488 rate=0.536157025
+    c-1 polarity=-1 good=8288/15488 rate=0.535123967
+    c+1 polarity=1 good=8288/15488 rate=0.535123967
+    h*g polarity=1 good=8096/15488 rate=0.522727273
+    h+1 polarity=1 good=8000/15488 rate=0.516528926
+    g+1 polarity=1 good=8000/15488 rate=0.516528926
+    R-1 polarity=-1 good=7872/15488 rate=0.508264463
+p27_heldout:
+  conic_lifts = 16832
+  d3_plus_unique_ax = 526
+  d4_-1_unique_ax = 294
+  d4_1_unique_ax = 232
+  feature_rows = 16832
+  oriented_candidates = 4000
+  sample_candidate_invalid_not_nonsplit = 1934
+  sample_compact_not_target = 2117
+  sample_no_t = 2024
+  sample_no_w = 4060
+  sample_pair_incomplete = 967
+  sample_x_draws = 8126
+  sampled_pairs = 1000
+  unique_ax = 1000
+  x6_d4_-1 = 588
+  x6_d4_1 = 464
+  x6_square_branch_count_2 = 526
+  x6_square_branches = 1052
+  feature_row_rate = 1.000000000
+  exact_feature_combo = -1 * L+a * L-a * c*R
+  best_single_features:
+    -1 polarity=1 good=9408/16832 rate=0.558935361
+    h*g polarity=1 good=8896/16832 rate=0.528517110
+    r-1 polarity=1 good=8608/16832 rate=0.511406844
+    r+1 polarity=-1 good=8608/16832 rate=0.511406844
+    h+1 polarity=1 good=8592/16832 rate=0.510456274
+    g+1 polarity=1 good=8592/16832 rate=0.510456274
+    c-1 polarity=-1 good=8512/16832 rate=0.505703422
+    c+1 polarity=1 good=8512/16832 rate=0.505703422
+combined_feature_span:
+  exact_feature_combo = -1 * L+a * L-a * c*R
+  best_single -1 polarity=1 good=24464/46848 rate=0.522199454
+  best_single h*g polarity=1 good=23840/46848 rate=0.508879781
+  best_single r-1 polarity=1 good=23824/46848 rate=0.508538251
+  best_single r+1 polarity=-1 good=23824/46848 rate=0.508538251
+  best_single c-1 polarity=-1 good=23808/46848 rate=0.508196721
+  best_single c+1 polarity=1 good=23808/46848 rate=0.508196721
+  best_single h+1 polarity=1 good=23744/46848 rate=0.506830601
+  best_single g+1 polarity=1 good=23744/46848 rate=0.506830601
+p27_conic_pair_d4_recurrence_probe_rows=1/1

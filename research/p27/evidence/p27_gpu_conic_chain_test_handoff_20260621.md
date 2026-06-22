@@ -134,6 +134,17 @@ The useful GPU/CPU experiment is narrower: test a legal pullback source, if
 one is implemented, that samples the conic-pair intersection with the
 label-2/compactD locus rather than sampling free two-dimensional `(R,L)`.
 
+The d4 selector on that legal pullback is now explicit:
+[P27 Conic-Pair D4 Recurrence](p27_conic_pair_d4_recurrence_20260621.md).
+With `a=R-1/R` and `L=h-g-2r`,
+
+```text
+d4 = chi(-(L+a)(L-a)cR).
+```
+
+GPU should report this selector only if the legal conic-pair variables are
+already available.  It is not a reason to run free random `(R,L)`.
+
 Report:
 
 ```text

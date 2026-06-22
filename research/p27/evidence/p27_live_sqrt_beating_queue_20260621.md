@@ -92,6 +92,13 @@ it covers every legal d3-plus `(A,x5)` class tested and no d3-minus classes,
 but random `(R,L)` hits legal rows at only about `constant/q` per draw.  This
 kills the naive free two-dimensional GPU sampler while strengthening the legal
 pullback/quotient target.
+The d4 selector is now exact in conic-pair coordinates:
+with `a=R-1/R` and `L=h-g-2r`,
+`d4 = chi(-(L+a)(L-a)cR)`.  The quotient from the tautological conic
+`R^2+cR+1` is `2` times a square, so this is valid in the p27 `chi(2)=+1`
+regime.  The selected next coordinate does not re-enter the original legal
+source in q1607/q1847/q2087, so the live route is the legal pullback plus this
+new Kummer divisor, not direct iteration.
 ```
 
 Concrete next K/S test:
@@ -256,7 +263,7 @@ Ranked next moves:
 
 ```text
 1. Theory/CAS: staged legal pullback / quotient decomposition of the
-   conic-chain/K/S layer.
+   conic-chain/K/S layer, now including Z^2=-(L+a)(L-a)cR.
 2. GPU/structure: recurrence telemetry and legal-pullback sampler only, not
    raw random `(R,L)`.
 3. Theory/lit/expert: trace/norm half-norm phase identity for pref vs h*vq.
