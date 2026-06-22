@@ -121,18 +121,24 @@ formula mismatch count = 0
 This experiment is mostly a GPU implementation check.  It should be small:
 use same-stream telemetry, not a production cap.
 
-## GPU Experiment B: Direct Pair-Source Probe
+## GPU Experiment B: Legal Pullback Source Probe
 
-Implement the `(R,L) -> (c,r,h,g,A,x)` sampler above and test whether its
-outputs can be fed into, or pulled back to, the legal p27 label-2/compactD
-path.
+The direct free `(R,L) -> (c,r,h,g,A,x)` sampler is now screened:
+[P27 Conic-Pair Sampler Legal Incidence](p27_conic_pair_sampler_legal_incidence_20260621.md).
+It covers every legal d3-plus `(A,x5)` class tested and no d3-minus classes,
+but legal hits occur at about `constant/q` per random `(R,L)` draw.  Therefore
+do not benchmark a raw random `(R,L)` production sampler as if it were already
+a win.
+
+The useful GPU/CPU experiment is narrower: test a legal pullback source, if
+one is implemented, that samples the conic-pair intersection with the
+label-2/compactD locus rather than sampling free two-dimensional `(R,L)`.
 
 Report:
 
 ```text
-raw (R,L) draws/sec
-nondegenerate sampler outputs/sec
-valid A/x rows/sec
+source draws/sec
+nondegenerate legal-pullback outputs/sec
 rows accepted by the existing legal verifier/path
 d3/d4/d5 survivor rates from sampler outputs
 same metrics for the ordinary raw X1(16) baseline
@@ -149,7 +155,8 @@ or a direct source into a named legal stratum that avoids a fresh 1/2 loss.
 Kill condition:
 
 ```text
-sampler outputs do not map back to legal label-2/compactD rows at useful rate,
+legal pullback is not implemented,
+raw free (R,L) is the only source,
 or the legal pullback costs erase the sourced conic gate.
 ```
 
@@ -183,6 +190,7 @@ than merely improving a constant factor.
 
 ```text
 do not run a large blind p27 production search from this handoff
+do not run raw random `(R,L)` as a production sampler
 do not retest fixed d2/d3/d4 prefixes as if they already shrink raw source scope
 do not promote independent u+2 Legendre prechecks; that GPU result is negative
 do not treat trace/norm D_plus as production until there is a direct sampler

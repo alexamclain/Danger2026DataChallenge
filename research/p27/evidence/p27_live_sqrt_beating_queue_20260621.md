@@ -10,8 +10,8 @@ three live test surfaces.  They should be treated differently:
 ```text
 1. K/S saturated first-half cover: live only as quotient/decomposition work.
 2. Trace/norm half-norm phase coupling: live theorem/expert front.
-3. GPU conic-chain A/B: useful now as a bounded source test, not as a giant
-   production search.
+3. GPU conic-chain telemetry: useful for exact recurrence checks and legal
+   pullback sources, but raw random `(R,L)` is killed as production.
 ```
 
 Do not restart broad visible-character scans.  Do not promote a fixed prefix
@@ -87,6 +87,11 @@ with zero xDBL mismatches.
 On legal label-2 / compactD rows over q1607/q1847/q2087, depth-1 conic lifts
 match exactly the d3-plus rows, and depth-2 lifts match exactly d4-plus after
 d3.  The full q7 E-prime pullback still exceeds web Magma memory.
+The direct rational conic-pair sampler now has a legal-incidence screen:
+it covers every legal d3-plus `(A,x5)` class tested and no d3-minus classes,
+but random `(R,L)` hits legal rows at only about `constant/q` per draw.  This
+kills the naive free two-dimensional GPU sampler while strengthening the legal
+pullback/quotient target.
 ```
 
 Concrete next K/S test:
@@ -213,7 +218,8 @@ Concrete GPU tests if used:
   h = (s + d)/2
   g = (s - d)/2
   c = s*d/(2*r)
-  test whether outputs feed legal label-2/compactD rows cheaply
+  killed as free random (R,L) production by legal-incidence rate ~constant/q
+  continue only as a legal-pullback sampler
 
 3. same-stream practical controls:
   baseline raw X1(16)
@@ -241,6 +247,7 @@ Kill condition:
 ```text
 fixed-prefix filters give only constant factors and no recurrence/source
 conic-pair sampler does not pull back to legal rows at useful rate
+raw free (R,L) remains the only conic-pair source
 ```
 
 ## Current Recommendation
@@ -248,9 +255,10 @@ conic-pair sampler does not pull back to legal rows at useful rate
 Ranked next moves:
 
 ```text
-1. GPU/structure: bounded conic-chain recurrence and direct-pair sampler test.
-2. Theory/CAS: staged legal pullback / quotient decomposition of the same
+1. Theory/CAS: staged legal pullback / quotient decomposition of the
    conic-chain/K/S layer.
+2. GPU/structure: recurrence telemetry and legal-pullback sampler only, not
+   raw random `(R,L)`.
 3. Theory/lit/expert: trace/norm half-norm phase identity for pref vs h*vq.
 4. Production GPU: no moonshot-scale run without a quotient/source or measured
    heldout efficiency gain.

@@ -721,6 +721,15 @@ telemetry test.  A large production hunt should wait until the direct sampler
 either pulls back to legal rows at useful rate or controls more than one
 selected gate without paying a fresh half-loss.
 
+The direct sampler incidence is now measured:
+[P27 Conic-Pair Sampler Legal Incidence](evidence/p27_conic_pair_sampler_legal_incidence_20260621.md).
+Across q263/q607/q1607/q1847/q2087 it covers every legal d3-plus `(A,x5)`
+class tested and zero d3-minus classes, so the structure is real.  But random
+free `(R,L)` hits legal rows at only about `constant/q` per draw, so the raw
+two-dimensional sampler is killed as a production GPU source.  The live target
+is sharper: find the legal pullback/quotient or a d4 recurrence on the
+intersection.
+
 The K-line now has a cleaner coordinate for that extraction:
 [P27 Kummer Belyi Structure Probe](evidence/p27_kummer_belyi_structure_probe_20260621.md).
 Symbolically,

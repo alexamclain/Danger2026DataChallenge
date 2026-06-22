@@ -227,10 +227,12 @@ c = s*d/(2*r)
 ```
 
 Then `h^2=r^2+c*r+1`, `g^2=r^2-c*r+1`, and
-`R^2-(h+g)R+1=0`.  This is the current best bounded GPU structure test:
-instrument the formula, try the direct pair sampler, and report whether it
-feeds legal label-2/compactD rows or just reparametrizes the ordinary half
-loss.
+`R^2-(h+g)R+1=0`.  The legal incidence screen now shows the important split:
+[P27 Conic-Pair Sampler Legal Incidence](p27_conic_pair_sampler_legal_incidence_20260621.md).
+The sampler image covers every legal d3-plus `(A,x5)` class tested and no
+d3-minus classes, but random free `(R,L)` hits legal rows at only about
+`constant/q`.  So instrument the formula and test any implemented legal
+pullback source; do not promote raw random `(R,L)` as a production sampler.
 
 Packet source warning:
 [P27 Label-2 E[2] Packet Source Probe](p27_label2_e2_packet_source_probe_20260621.md).
@@ -314,14 +316,15 @@ any branch/sign mismatch count
 baseline = raw p27 X1(16) nonsplit halving path
 candidate A = recurrence telemetry:
               next_gate = chi(r_j^2 + c*r_j + 1)
-candidate B = direct one-step pair sampler from (R,L)
+candidate B = legal pullback of the one-step pair sampler, if implemented
 candidate C = two-step chain pressure if B maps to legal rows
 ```
 
 Report mismatch counts, legal pullback rate, d3/d4/d5 rates, and effective
-deep survivors/sec.  Promote only if the sampler/source gives a real heldout
-rate lift or controls more than one selected gate without paying a new
-independent Legendre/sqrt toll.  Use
+deep survivors/sec.  Do not run free random `(R,L)` as a production source:
+CPU guard fields show legal hits are only `~constant/q` per draw.  Promote only
+if the legal pullback source gives a real heldout rate lift or controls more
+than one selected gate without paying a new independent Legendre/sqrt toll. Use
 [P27 GPU Conic-Chain Test Handoff](p27_gpu_conic_chain_test_handoff_20260621.md)
 as the exact brief.
 
