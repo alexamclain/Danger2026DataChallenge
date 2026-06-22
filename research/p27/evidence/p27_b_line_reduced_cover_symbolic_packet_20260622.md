@@ -154,6 +154,15 @@ Magma verifies over `GF(7)` and `GF(23)` that
 This strengthens the compactD_R demotion, but still does not compute genus or
 sourceability.
 
+Genus/component pressure follow-up:
+[P27 B-Line No-R Genus Pressure](p27_b_line_noR_genus_pressure_20260622.md).
+Treating the existing no-R layer counts as affine counts, the one-component
+Hasse-Weil pressure test violates genus `<= 1` in `5/7` fields and reaches
+`g_min = 11` in the strongest field.  If the counted object splits, the same
+numbers are evidence for component or field-of-definition structure.  The
+offline CAS target should compute components, quotients, and Prym factors, not
+assume the no-R base is an obvious genus-0/1 source.
+
 Direct finite-field point-count follow-up:
 [P27 B-Line Reduced-Cover Point Count](p27_b_line_reduced_cover_pointcount_20260622.md).
 The `U_next` layer is a clean two-valued cover over the legal chart in the
@@ -182,11 +191,13 @@ continue = normalize the no-R reduced cover before compactD_R
 continue = lift compactD_R_rhs/(beta^2*d_next) squareclass beyond q7/q23 if possible
 continue = attach x6-materialization and gamma^2=Unext+2 to the offline model
 continue = compute genus/components/quotients and compare against the fixture
+continue = compute no-R quotient/Prym structure after genus pressure
 continue = only then pull back f4/f3
 
 kill = full reverse z/Y normalization as the first CAS attempt if reduced_Unext is feasible
 kill = saturation-first online workflow after the charted Magma smoke
 kill = GPU production before reduced-cover genus/sourceability is known
+kill = expecting the no-R reduced cover to be an obvious genus-0/1 source
 ```
 
 ```text

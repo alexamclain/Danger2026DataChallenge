@@ -1222,6 +1222,13 @@ then verifies the corresponding Magma function-field `IsSquare` check over
 `root^2` checked in both fields.  The B-line normalization target is now the
 no-R reduced cover; the remaining squareclass task is lifting this witness
 beyond the q7/q23 smoke if CAS resources permit.
+The no-R reduced cover is also no longer a naive low-genus hope:
+[P27 B-Line No-R Genus Pressure](evidence/p27_b_line_noR_genus_pressure_20260622.md).
+A one-component Hasse-Weil pressure read of the same layer counts violates
+genus `<= 1` in `5/7` tested fields and reaches `g >= 11` under that reading.
+If the cover is reducible or field-of-definition sensitive, that is the next
+structure to compute.  The live CAS ask is components, quotients, and Prym
+decomposition of the no-R chart before compactD_R/gamma are added.
 The B-line visible two-gate quartic shortcut is closed as well:
 [P27 B-Line Gate4-Prefix Quartic q1847 Screen](evidence/p27_b_line_gate4_prefix_quartic_q1847_screen_20260622.md).
 It scans `6,300,872,423` q1847 coefficient triples for

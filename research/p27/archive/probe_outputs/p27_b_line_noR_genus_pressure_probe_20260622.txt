@@ -1,0 +1,17 @@
+p27 B-line no-R reduced-cover genus/component pressure
+source = localized layer-count output
+interpretation = one-component Hasse-Weil lower bound; otherwise component pressure
+
+field q noR_reduced_U noR_per_q excess_over_qplus1 g_min_if_one_component genus1_margin noR_gamma gamma_per_q full_per_noR
+607^1 607 1044 1.719934102 436 9 386.725 1036 1.706754530 1.996168582
+7^3 343 288 0.839650146 -56 0 -93.041 144 0.419825073 2.000000000
+7^4 2401 1688 0.703040400 -714 0 -812.000 1680 0.699708455 1.995260664
+7^5 16807 18880 1.123341465 2072 8 1812.716 19520 1.161420837 2.000000000
+7^6 117649 124808 1.060850496 7158 11 6472.000 126728 1.077170227 1.999935902
+23^2 529 648 1.224952741 118 3 72.000 520 0.982986767 1.987654321
+23^3 12167 12768 1.049395907 600 3 379.392 13296 1.092791978 2.000000000
+
+positive_excess_fields = 5/7
+genus_one_violations_if_one_component = 5/7
+max_g_min_if_one_component = 11
+p27_b_line_noR_genus_pressure_probe_rows=1/1

@@ -167,15 +167,26 @@ Promote only if the no-R cover has a low-genus/sourceable quotient or if
 `f4/f5` recur on the normalized base.  Kill if the no-R cover is high genus
 and later classes are fresh half-covers.
 
+Genus-pressure follow-up:
+[P27 B-Line No-R Genus Pressure](p27_b_line_noR_genus_pressure_20260622.md)
+applies a one-component Hasse-Weil pressure test to these same counts.  Five
+of seven tested fields violate the genus-one bound under a one-component
+interpretation, with strongest pressure `g >= 11`.  If the cover is not one
+component, the counts instead indicate nontrivial component/field-of-definition
+behavior.  Either way, the no-R cover no longer looks like an obvious
+genus-0/1 source.
+
 ## Continue / Kill
 
 ```text
 continue = symbolic proof of compactD_R/beta/d_next square relation
 continue = lift the q7/q23 function-field square witness to characteristic 0 or p27
 continue = offline normalize no-R reduced cover before full compactD_R cover
+continue = compute no-R components/quotients/Prym structure, not only genus
 continue = compare f4/f3 after no-R normalization
 
 kill = treating compactD_R as an independent first CAS layer after reduced_U
+kill = expecting the no-R reduced cover to be an obvious genus-0/1 source
 kill = GPU production from the layer-count simplification alone
 kill = gamma bucket/source search without a normalized quotient
 ```

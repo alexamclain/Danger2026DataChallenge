@@ -279,6 +279,15 @@ Magma verifies over `GF(7)` and `GF(23)` that
 `compactD_R_rhs/(beta^2*d_next)` is a square in the staged function field
 with `Z=x5`, `beta=Z-1/Z`, and `d_next=Z*(U+A)`.
 
+Update: the no-R reduced cover has a first genus/component pressure test:
+[P27 B-Line No-R Genus Pressure](p27_b_line_noR_genus_pressure_20260622.md).
+Applying a one-component Hasse-Weil pressure bound to the existing layer
+counts gives genus-one violations in `5/7` tested fields and maximum
+`g_min = 11` under that reading.  If the cover is not one component, the same
+data is component or field-of-definition pressure.  The CAS target is therefore
+normalization with components, quotients, and Prym structure, not an obvious
+genus-0/1 source.
+
 ## Continue / Kill
 
 ```text
@@ -287,6 +296,7 @@ continue = normalize the reduced 4-u / 8-x d3 fiber cover if easier than the ful
 continue = use the reduced_Unext symbolic packet as the first CAS model
 continue = use the localized reduced-cover chart to avoid product saturation
 continue = normalize no-R reduced cover before compactD_R
+continue = compute no-R components/quotients/Prym after genus pressure
 continue = lift compactD_R/beta/d_next square relation beyond q7/q23
 continue = optional q2087 quartic closure only if useful
 continue = use the B-line Kummer fixture rows as the compact CAS/expert input
@@ -307,6 +317,7 @@ kill = q1847 visible B-line monic quartic for d3+d4 all-plus
 kill = treating one-sided q1607/q1847/q2087 f5/f6 tails as recurrence evidence
 kill = saturation-first online Magma extraction of the reduced cover
 kill = compactD_R as an independent first-layer normalization target after reduced_U
+kill = expecting the no-R reduced cover to be an obvious genus-0/1 source
 ```
 
 ```text

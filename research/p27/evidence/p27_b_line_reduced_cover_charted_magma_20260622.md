@@ -177,6 +177,14 @@ and `GF(23)`: with `Z=x5`, `beta=Z-1/Z`, and `d_next=Z*(U+A)`,
 This is still not genus extraction, but it is stronger than point-count
 evidence for demoting `compactD_R`.
 
+[P27 B-Line No-R Genus Pressure](p27_b_line_noR_genus_pressure_20260622.md)
+then applies a one-component Hasse-Weil pressure test to the no-R reduced
+counts.  Five of seven fields violate the genus-one bound under that reading,
+with strongest pressure `g >= 11`.  If the one-component assumption fails,
+the cover has nontrivial component/field-of-definition behavior.  Offline CAS
+should therefore compute components and quotient/Prym structure, not only ask
+whether a genus-0/1 source appears.
+
 ## Interpretation
 
 Positive:
@@ -210,7 +218,8 @@ Use this order:
    fully localized no-R chart.
 2. Port the same no-R localized chart to q1607/q1847/q2087 or characteristic 0.
 3. Normalize the no-R reduced cover directly, without Saturation(I,bad).
-4. Compute degree/reducedness/irreducibility offline; the online endpoint
+4. Compute components, degree, reducedness, irreducibility, genus, and
+   quotient/Prym structure offline; the online endpoint
    cannot supply even these invariants.
 5. Lift the q7/q23 Magma square witness for compactD_R_rhs/(beta^2*d_next)
    to characteristic 0 or p27 if CAS resources permit.
@@ -242,6 +251,7 @@ or the only available evidence remains point counts and finite-field buckets.
 ```text
 continue = offline normalize the localized reduced cover
 continue = use X-inverted no-R base as a fallback decomposition
+continue = compute no-R component/quotient/Prym structure after genus pressure
 continue = use the q7/q23 squareclass smoke as the compactD_R staging baseline
 continue = lift the compactD_R/beta/d_next relation to characteristic 0 or p27
 continue = compute branch divisor degrees for compactD_R and gamma only after normalization

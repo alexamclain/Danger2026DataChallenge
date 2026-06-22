@@ -285,6 +285,16 @@ Online Magma verifies over `GF(7)` and `GF(23)` that
 with `Z=x5`, `beta=Z-1/Z`, and `d_next=Z*(U+A)`.  This strengthens the
 compactD_R demotion but still leaves normalization/genus/sourceability open.
 
+No-R genus/component pressure:
+[P27 B-Line No-R Genus Pressure](p27_b_line_noR_genus_pressure_20260622.md).
+Using the existing layer counts as affine counts, a one-component
+Hasse-Weil pressure check violates genus `<= 1` in `5/7` tested fields, with
+maximum one-component lower pressure `g >= 11`.  If the cover is reducible or
+not absolutely irreducible in the counted fields, that is itself component or
+field-of-definition structure to extract.  Do not treat the no-R chart as a
+likely obvious rational/elliptic source; compute components, quotients, and
+Prym factors.
+
 Gamma squareclass follow-up:
 [P27 B-Line Gamma Specialized Square Smoke](p27_b_line_gamma_specialized_square_smoke_20260622.md).
 Two irreducible one-parameter specializations of the visible `B/H/Y`
@@ -315,6 +325,7 @@ lift the q7/q23 compactD_R/beta/d_next square witness beyond small fields if pos
 include x6^2-U*x6+1 and gamma^2=U+2 in the offline branch/class extraction
 impose the selected-source legal/core cut before using all-chart lift buckets
 extract branch divisor degree, support field degrees, components, genus
+compute no-R components, quotients, and Prym structure; do not assume genus 0/1
 compute degree/reducedness/irreducibility offline; do not rely on online Magma
 normalize F_A(u,v)=0 over the f3-plus B-u-H layer and extract div(v+2) modulo squares
 do not retry visible B/H square triviality; the specialization smoke kills it
@@ -338,6 +349,7 @@ Kill if:
 ```text
 d3 is high-genus/generic after normalization
 and f4/f5 are fresh unrelated half-covers
+or the no-R reduced cover only offers the now-pressured obvious genus-0/1 hope
 or online Magma is the only available extraction engine
 or the only proposed sampler is the killed visible two-character lift profile
 ```
