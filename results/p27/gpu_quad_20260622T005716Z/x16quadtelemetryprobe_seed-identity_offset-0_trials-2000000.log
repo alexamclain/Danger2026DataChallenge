@@ -1,0 +1,37 @@
+Pomerance CUDA x16halvenonsplit prototype
+
+p = 1000000000000000000000000103
+mode = x16quadtelemetryprobe
+seed_offset = 0
+seed_mode = identity
+max_trials = 2000000
+chunk_trials = 2000000
+quad_target_depth = 13
+quad_telemetry_only = true
+k = 45
+backend = u96
+GPU = NVIDIA RTX 6000 Ada Generation  SMs=142  blocks=142  threads=128  claim_batch=1
+
+  quad_trials=2000000 elapsed=1.292 rate_Mps=1.547634 target_survivors=31571 quad_checks=3940467 quad_reject=1968429 mismatches=0 short_circuit=0 w_sqrt_calls=5958420
+
+Quadratic-gate telemetry summary:
+  mode=x16quadtelemetryprobe backend=u96 GPU="NVIDIA RTX 6000 Ada Generation" seed_mode=identity seed_offset=0
+  accepted_roots=2000000 y_draws=31950790 nonsplit_y=15976054 sqrtD_y=7992817 roots_valid=15985223 prefix_attempts=15985223 prefix_success=3999589
+  prefix_depth=6 target_depth=13 survivors=31571 rate=0.015785500 elapsed=1.292322 accepted_rate_Mps=1.547601 source_draws_per_accepted=15.975395 target_per_source_draw=0.000988113283 target_survivor_per_sec=24429.661196
+  quad counters: checks=3940467 pass=1972038 reject=1968429 unavailable=0 sign_dependent=0 short_circuit=0 mismatches=0 formula_plus=1972038 formula_minus=1968429 actual_plus=1972038 actual_minus=1968429 actual_zero=0
+  sqrt counters: d_sqrt=3972038/3972038 w_sqrt=3972038/5958420
+  gate telemetry:
+    gate rows formula_plus formula_minus actual_plus actual_minus mismatches
+    3 2000000 1000333 999667 1000333 999667 0
+    4 1000333 501231 499102 501231 499102 0
+    5 501231 250382 250849 250382 250849 0
+    6 250382 125342 125040 125342 125040 0
+    7 125342 63179 62163 63179 62163 0
+    8 63179 31571 31608 31571 31608 0
+  depth survival checkpoints:
+    depth>=6 count=2000000 rate=1.000000000
+    depth>=8 count=1000333 rate=0.500166500
+    depth>=10 count=250382 rate=0.125191000
+    depth>=12 count=63179 rate=0.031589500
+    depth>=13 count=31571 rate=0.015785500
+quadprecheck_jsonl={"mode":"x16quadtelemetryprobe","p":"1000000000000000000000000103","backend":"u96","gpu":"NVIDIA RTX 6000 Ada Generation","seed_mode":"identity","seed_offset":0,"telemetry_only":true,"prefix_depth":6,"target_depth":13,"elapsed":1.292322,"accepted_rate_Mps":1.547601,"accepted_roots":2000000,"source_draws":31950790,"nonsplit_y":15976054,"sqrtD_y":7992817,"roots_valid":15985223,"prefix_attempts":15985223,"prefix_success":3999589,"target_survivors":31571,"target_rate":0.015785500000,"source_draws_per_accepted":15.975395000000,"target_per_source_draw":0.000988113283,"target_survivor_per_sec":24429.661196,"quad_checks":3940467,"quad_pass":1972038,"quad_reject":1968429,"quad_unavailable":0,"quad_sign_dependent":0,"quad_formula_plus":1972038,"quad_formula_minus":1968429,"actual_plus":1972038,"actual_minus":1968429,"actual_zero":0,"mismatches":0,"short_circuit":0,"d_sqrt_calls":3972038,"d_sqrt_success":3972038,"w_sqrt_calls":5958420,"w_sqrt_success":3972038,"gate3_rows":2000000,"gate3_formula_plus":1000333,"gate3_formula_minus":999667,"gate3_actual_plus":1000333,"gate3_actual_minus":999667,"gate3_mismatch":0,"gate4_rows":1000333,"gate4_formula_plus":501231,"gate4_formula_minus":499102,"gate4_actual_plus":501231,"gate4_actual_minus":499102,"gate4_mismatch":0,"gate5_rows":501231,"gate5_formula_plus":250382,"gate5_formula_minus":250849,"gate5_actual_plus":250382,"gate5_actual_minus":250849,"gate5_mismatch":0,"gate6_rows":250382,"gate6_formula_plus":125342,"gate6_formula_minus":125040,"gate6_actual_plus":125342,"gate6_actual_minus":125040,"gate6_mismatch":0,"gate7_rows":125342,"gate7_formula_plus":63179,"gate7_formula_minus":62163,"gate7_actual_plus":63179,"gate7_actual_minus":62163,"gate7_mismatch":0,"gate8_rows":63179,"gate8_formula_plus":31571,"gate8_formula_minus":31608,"gate8_actual_plus":31571,"gate8_actual_minus":31608,"gate8_mismatch":0,"survive_6":2000000,"survive_8":1000333,"survive_10":250382,"survive_12":63179,"survive_13":31571}

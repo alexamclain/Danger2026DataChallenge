@@ -13,7 +13,7 @@
  *
  * Usage:
  *   ./pomerance_cuda <p> [seed_offset] [max_trials]
- *     [x16halvenonsplit|x16stratumprobe|x16domainprobe|x16d2probe|x16d3probe|x16d4probe|x16tracenormab|x16tracenormfilter|x16uprecheckprobe|x16ecoverprobe|x16ecoverd2probe|x16ecoverd3probe|x16ecoverd4probe] [chunk_trials] [blocks]
+ *     [x16halvenonsplit|x16stratumprobe|x16domainprobe|x16d2probe|x16d3probe|x16d4probe|x16tracenormab|x16tracenormfilter|x16uprecheckprobe|x16quadprecheckprobe|x16quadtelemetryprobe|x16ecoverprobe|x16ecoverd2probe|x16ecoverd3probe|x16ecoverd4probe] [chunk_trials] [blocks]
  *     [threads] [claim_batch] [auto|generic|u96]
  *     [seed=mixed|identity|splitmix] [start_chunk=N] [start_trial=N]
  *     [target_depth=N] [bucket_bits=N] [focus_bucket=N]
@@ -201,6 +201,44 @@ struct UPrecheckStats {
     u64 roots_valid;
     u64 depth_exact[PROBE_MAX_DEPTH + 1];
     UPrecheckCounters counters;
+};
+
+struct QuadPrecheckCounters {
+    u64 d_sqrt_calls;
+    u64 d_sqrt_success;
+    u64 quad_checks;
+    u64 quad_pass;
+    u64 quad_reject;
+    u64 quad_unavailable;
+    u64 quad_sign_dependent;
+    u64 quad_formula_plus;
+    u64 quad_formula_minus;
+    u64 actual_plus;
+    u64 actual_minus;
+    u64 actual_zero;
+    u64 mismatches;
+    u64 short_circuit;
+    u64 w_sqrt_calls;
+    u64 w_sqrt_success;
+    u64 gate_rows[9];
+    u64 gate_formula_plus[9];
+    u64 gate_formula_minus[9];
+    u64 gate_actual_plus[9];
+    u64 gate_actual_minus[9];
+    u64 gate_mismatch[9];
+};
+
+struct QuadPrecheckStats {
+    u64 claimed;
+    u64 accepted_roots;
+    u64 y_draws;
+    u64 y_nonsplit;
+    u64 y_with_sqrt_D;
+    u64 roots_valid;
+    u64 prefix_attempts;
+    u64 prefix_success;
+    u64 depth_exact[PROBE_MAX_DEPTH + 1];
+    QuadPrecheckCounters counters;
 };
 
 HD static inline U128Parts pack128(u128 x) {
@@ -857,6 +895,11 @@ DEV static inline int uprecheck_done_now(const UPrecheckStats *stats,
     return *((volatile const u64 *)&stats->claimed) >= max_curves;
 }
 
+DEV static inline int quadprecheck_done_now(const QuadPrecheckStats *stats,
+                                            u64 max_curves) {
+    return *((volatile const u64 *)&stats->claimed) >= max_curves;
+}
+
 DEV static inline void probe_record_candidate(ProbeStats *probe, u64 claim,
                                               u64 split_trial, int reached_depth,
                                               int target_depth, int root_index,
@@ -885,6 +928,13 @@ DEV static inline void probe_record_candidate(ProbeStats *probe, u64 claim,
 
 DEV static inline void uprecheck_record_candidate(UPrecheckStats *stats,
                                                   int reached_depth) {
+    if (reached_depth < 0) reached_depth = 0;
+    if (reached_depth > PROBE_MAX_DEPTH) reached_depth = PROBE_MAX_DEPTH;
+    atomicAdd(&stats->depth_exact[reached_depth], 1ULL);
+}
+
+DEV static inline void quadprecheck_record_candidate(QuadPrecheckStats *stats,
+                                                     int reached_depth) {
     if (reached_depth < 0) reached_depth = 0;
     if (reached_depth > PROBE_MAX_DEPTH) reached_depth = PROBE_MAX_DEPTH;
     atomicAdd(&stats->depth_exact[reached_depth], 1ULL);
@@ -1932,6 +1982,83 @@ HD static int halve_once_first96_mont_uprecheck(U96 *xo_m, U96 A_m, U96 x_m,
     return 0;
 }
 
+HD static int quad_gate_formula_chi96(U96 A_m, U96 x_m,
+                                      const SearchParams96 *params,
+                                      QuadPrecheckCounters *counters,
+                                      int gate_index,
+                                      int record_counts) {
+    U96 c2_m = submod96(params->two_m, A_m, params->f.p);
+    U96 c_m;
+    U96 r_m;
+    if (!sqrtmod_p5_96_mont(&c_m, c2_m, params) ||
+        !sqrtmod_p5_96_mont(&r_m, x_m, params)) {
+        if (record_counts && counters) counters->quad_unavailable++;
+        return 0;
+    }
+
+    U96 cr_m = mont_mul96(c_m, r_m, &params->f);
+    U96 qp_m = addmod96(addmod96(x_m, cr_m, params->f.p),
+                        params->f.one, params->f.p);
+    U96 qm_m = addmod96(submod96(x_m, cr_m, params->f.p),
+                        params->f.one, params->f.p);
+    int chip = chi96_mont(qp_m, params);
+    int chim = chi96_mont(qm_m, params);
+    if (chip == 0 || chim == 0) {
+        if (record_counts && counters) counters->quad_unavailable++;
+        return 0;
+    }
+    if (record_counts && counters && chip != chim) {
+        counters->quad_sign_dependent++;
+    }
+
+    int formula = chip;
+    if (record_counts && counters && formula == 1) {
+        counters->quad_formula_plus++;
+        if (gate_index >= 0 && gate_index <= 8) counters->gate_formula_plus[gate_index]++;
+    } else if (record_counts && counters && formula == -1) {
+        counters->quad_formula_minus++;
+        if (gate_index >= 0 && gate_index <= 8) counters->gate_formula_minus[gate_index]++;
+    }
+    return formula;
+}
+
+HD static int halve_once_first96_mont_counted(U96 *xo_m, U96 A_m, U96 x_m,
+                                              const SearchParams96 *params,
+                                              QuadPrecheckCounters *counters) {
+    U96 x2_m = mont_mul96(x_m, x_m, &params->f);
+    U96 d_m = addmod96(addmod96(x2_m, mont_mul96(A_m, x_m, &params->f),
+                                params->f.p),
+                       params->f.one, params->f.p);
+    U96 sd_m;
+    counters->d_sqrt_calls++;
+    if (!sqrtmod_p5_96_mont(&sd_m, d_m, params)) return 0;
+    counters->d_sqrt_success++;
+
+    U96 roots_d[2] = {sd_m, submod96(u96_from_u64(0), sd_m, params->f.p)};
+    for (int i = 0; i < 2; i++) {
+        U96 u_m = addmod96(addmod96(x_m, x_m, params->f.p),
+                           addmod96(roots_d[i], roots_d[i], params->f.p),
+                           params->f.p);
+        U96 w_m = submod96(mont_mul96(u_m, u_m, &params->f), params->four_m,
+                           params->f.p);
+        U96 sw_m;
+        counters->w_sqrt_calls++;
+        if (!sqrtmod_p5_96_mont(&sw_m, w_m, params)) continue;
+        counters->w_sqrt_success++;
+        U96 candidates[2] = {
+            mont_mul96(addmod96(u_m, sw_m, params->f.p), params->inv2_m, &params->f),
+            mont_mul96(submod96(u_m, sw_m, params->f.p), params->inv2_m, &params->f),
+        };
+        for (int j = 0; j < 2; j++) {
+            if (!is_zero96(candidates[j])) {
+                *xo_m = candidates[j];
+                return 1;
+            }
+        }
+    }
+    return 0;
+}
+
 HD static int halve_chain_from_depth96_mont(U96 *xout_m, U96 A_m, U96 x_m,
                                             int depth, const SearchParams96 *params) {
     for (; depth < params->k; depth++) {
@@ -2021,6 +2148,75 @@ HD static int halve_prefix_depth96_mont_uprecheck(U96 *xout_m, U96 A_m,
             return depth + 1;
         }
         break;
+    }
+    *xout_m = x_m;
+    return depth;
+}
+
+HD static int halve_prefix_depth96_mont_quadprecheck(
+    U96 *xout_m, U96 A_m, U96 x_m, int depth, int target_depth,
+    int telemetry_only, const SearchParams96 *params,
+    QuadPrecheckCounters *counters) {
+    if (target_depth > params->k) target_depth = params->k;
+    if (target_depth > PROBE_MAX_DEPTH) target_depth = PROBE_MAX_DEPTH;
+    while (depth < target_depth) {
+        int need_next_gate = (depth + 1) < target_depth;
+        int gate_index = depth - 3;
+        int formula = 0;
+        int checked = 0;
+        if (need_next_gate && gate_index >= 3 && gate_index <= 8) {
+            counters->quad_checks++;
+            counters->gate_rows[gate_index]++;
+            formula = quad_gate_formula_chi96(A_m, x_m, params, counters,
+                                              gate_index, 1);
+            checked = formula != 0;
+            if (formula == 0) {
+                *xout_m = x_m;
+                return depth;
+            }
+            if (formula == 1) {
+                counters->quad_pass++;
+            } else if (formula == -1) {
+                counters->quad_reject++;
+                if (!telemetry_only) {
+                    counters->short_circuit++;
+                    *xout_m = x_m;
+                    return depth + 1;
+                }
+            }
+        }
+
+        U96 x_next_m;
+        if (!halve_once_first96_mont_counted(&x_next_m, A_m, x_m, params,
+                                             counters)) {
+            break;
+        }
+
+        if (checked) {
+            int actual = chi96_mont(x_next_m, params);
+            if (actual == 1) {
+                counters->actual_plus++;
+                counters->gate_actual_plus[gate_index]++;
+            } else if (actual == -1) {
+                counters->actual_minus++;
+                counters->gate_actual_minus[gate_index]++;
+            } else {
+                counters->actual_zero++;
+            }
+            if (actual != formula) {
+                counters->mismatches++;
+                counters->gate_mismatch[gate_index]++;
+            }
+            if (actual != 1) {
+                x_m = x_next_m;
+                depth++;
+                *xout_m = x_m;
+                return depth;
+            }
+        }
+
+        x_m = x_next_m;
+        depth++;
     }
     *xout_m = x_m;
     return depth;
@@ -2625,6 +2821,159 @@ __global__ static void x16uprecheckprobe_kernel96(SearchParams96 params,
               local_counters.precheck_short_circuit);
 }
 
+__global__ static void x16quadprecheckprobe_kernel96(
+    SearchParams96 params,
+    u64 seed_offset,
+    u64 chunk_nonce,
+    u64 max_curves,
+    u64 claim_batch,
+    int seed_mode,
+    int target_depth,
+    int telemetry_only,
+    QuadPrecheckStats *__restrict__ stats) {
+    u64 tid = (u64)blockIdx.x * (u64)blockDim.x + (u64)threadIdx.x;
+    u64 total_threads = (u64)gridDim.x * (u64)blockDim.x;
+    Rng rng;
+    init_rng(&rng, seed_offset, chunk_nonce, tid, total_threads, seed_mode);
+
+    u64 local_accepted = 0;
+    u64 local_y_draws = 0;
+    u64 local_y_nonsplit = 0;
+    u64 local_y_with_sqrt_D = 0;
+    u64 local_roots_valid = 0;
+    u64 local_prefix_attempts = 0;
+    u64 local_prefix_success = 0;
+    QuadPrecheckCounters local_counters{};
+    u64 next_claim = 0;
+    u64 claim_limit = 0;
+
+    while (!quadprecheck_done_now(stats, max_curves)) {
+        U96 y = rand_below96(&rng, &params);
+        local_y_draws++;
+        if (is_zero96(y)) continue;
+
+        U96 y_m = to_mont96(y, &params.f);
+        U96 y2_m = mont_mul96(y_m, y_m, &params.f);
+        if (!x16_y_predicts_nonsplit96_mont(y_m, y2_m, &params)) continue;
+        local_y_nonsplit++;
+
+        U96 y3_m = mont_mul96(y2_m, y_m, &params.f);
+        U96 two_y_m = addmod96(y_m, y_m, params.f.p);
+        U96 qa_m = submod96(y2_m, two_y_m, params.f.p);
+        if (is_zero96(qa_m)) continue;
+        U96 qb_m = submod96(addmod96(y2_m, y2_m, params.f.p), y3_m, params.f.p);
+        U96 qc_m = submod96(params.f.one, y_m, params.f.p);
+        U96 D_m = submod96(
+            mont_mul96(qb_m, qb_m, &params.f),
+            mont_mul96(addmod96(qa_m, qa_m, params.f.p),
+                       addmod96(qc_m, qc_m, params.f.p), &params.f),
+            params.f.p);
+        U96 sd_m;
+        if (!sqrtmod_p5_96_mont(&sd_m, D_m, &params)) continue;
+        local_y_with_sqrt_D++;
+
+        U96 inv_2qa_m = invert96_mont(addmod96(qa_m, qa_m, params.f.p), &params);
+        U96 roots_m[2] = {
+            mont_mul96(submod96(sd_m, qb_m, params.f.p), inv_2qa_m, &params.f),
+            mont_mul96(submod96(submod96(u96_from_u64(0), sd_m, params.f.p), qb_m,
+                                params.f.p),
+                       inv_2qa_m, &params.f),
+        };
+
+        U96 A;
+        U96 A_m;
+        U96 xP16_m[2];
+        int root_valid[2] = {0, 0};
+        root_valid[0] = x16_root_to_montgomery_A96_mont(&A, &A_m, &xP16_m[0],
+                                                        roots_m[0], y_m, &params);
+        if (root_valid[0]) {
+            root_valid[1] = x16_root_to_montgomery_xP96_mont(&xP16_m[1],
+                                                             roots_m[1], y_m,
+                                                             &params);
+        } else {
+            root_valid[1] = x16_root_to_montgomery_A96_mont(&A, &A_m, &xP16_m[1],
+                                                            roots_m[1], y_m,
+                                                            &params);
+        }
+
+        int stop = 0;
+        for (int ri = 0; ri < 2; ri++) {
+            if (!root_valid[ri]) continue;
+            local_roots_valid++;
+            local_prefix_attempts++;
+
+            U96 x_start_m = xP16_m[ri];
+            int prefix_depth = target_depth < 6 ? target_depth : 6;
+            int prefix_reached = halve_prefix_depth96_mont(
+                &x_start_m, A_m, x_start_m, 4, prefix_depth, &params);
+            if (prefix_reached < prefix_depth) continue;
+            local_prefix_success++;
+
+            int domain_formula = quad_gate_formula_chi96(A_m, x_start_m, &params,
+                                                         nullptr, 3, 0);
+            if (domain_formula == 0) continue;
+
+            if (next_claim >= claim_limit) {
+                next_claim = atomicAdd(&stats->claimed, claim_batch);
+                claim_limit = next_claim + claim_batch;
+            }
+            u64 claim = next_claim++;
+            if (claim >= max_curves) {
+                stop = 1;
+                break;
+            }
+
+            local_accepted++;
+            U96 x_probe_m;
+            int reached_depth = halve_prefix_depth96_mont_quadprecheck(
+                &x_probe_m, A_m, x_start_m, prefix_depth, target_depth,
+                telemetry_only, &params, &local_counters);
+            quadprecheck_record_candidate(stats, reached_depth);
+        }
+        if (stop) break;
+    }
+
+    atomicAdd(&stats->accepted_roots, local_accepted);
+    atomicAdd(&stats->y_draws, local_y_draws);
+    atomicAdd(&stats->y_nonsplit, local_y_nonsplit);
+    atomicAdd(&stats->y_with_sqrt_D, local_y_with_sqrt_D);
+    atomicAdd(&stats->roots_valid, local_roots_valid);
+    atomicAdd(&stats->prefix_attempts, local_prefix_attempts);
+    atomicAdd(&stats->prefix_success, local_prefix_success);
+    atomicAdd(&stats->counters.d_sqrt_calls, local_counters.d_sqrt_calls);
+    atomicAdd(&stats->counters.d_sqrt_success, local_counters.d_sqrt_success);
+    atomicAdd(&stats->counters.quad_checks, local_counters.quad_checks);
+    atomicAdd(&stats->counters.quad_pass, local_counters.quad_pass);
+    atomicAdd(&stats->counters.quad_reject, local_counters.quad_reject);
+    atomicAdd(&stats->counters.quad_unavailable, local_counters.quad_unavailable);
+    atomicAdd(&stats->counters.quad_sign_dependent,
+              local_counters.quad_sign_dependent);
+    atomicAdd(&stats->counters.quad_formula_plus,
+              local_counters.quad_formula_plus);
+    atomicAdd(&stats->counters.quad_formula_minus,
+              local_counters.quad_formula_minus);
+    atomicAdd(&stats->counters.actual_plus, local_counters.actual_plus);
+    atomicAdd(&stats->counters.actual_minus, local_counters.actual_minus);
+    atomicAdd(&stats->counters.actual_zero, local_counters.actual_zero);
+    atomicAdd(&stats->counters.mismatches, local_counters.mismatches);
+    atomicAdd(&stats->counters.short_circuit, local_counters.short_circuit);
+    atomicAdd(&stats->counters.w_sqrt_calls, local_counters.w_sqrt_calls);
+    atomicAdd(&stats->counters.w_sqrt_success, local_counters.w_sqrt_success);
+    for (int i = 0; i <= 8; i++) {
+        atomicAdd(&stats->counters.gate_rows[i], local_counters.gate_rows[i]);
+        atomicAdd(&stats->counters.gate_formula_plus[i],
+                  local_counters.gate_formula_plus[i]);
+        atomicAdd(&stats->counters.gate_formula_minus[i],
+                  local_counters.gate_formula_minus[i]);
+        atomicAdd(&stats->counters.gate_actual_plus[i],
+                  local_counters.gate_actual_plus[i]);
+        atomicAdd(&stats->counters.gate_actual_minus[i],
+                  local_counters.gate_actual_minus[i]);
+        atomicAdd(&stats->counters.gate_mismatch[i],
+                  local_counters.gate_mismatch[i]);
+    }
+}
+
 __global__ static void x16tracenormab_kernel96(SearchParams96 params,
                                                u64 seed_offset,
                                                u64 chunk_nonce,
@@ -2927,8 +3276,10 @@ static void usage(const char *argv0) {
                  "Usage: %s <p> [seed_offset] [max_trials] "
                  "[x16halvenonsplit|x16stratumprobe|x16domainprobe|"
                  "x16d2probe|x16d3probe|x16d4probe|x16tracenormab|"
-                 "x16tracenormfilter|x16uprecheckprobe|x16ecoverprobe|"
-                 "x16ecoverd2probe|x16ecoverd3probe|x16ecoverd4probe] "
+                 "x16tracenormfilter|x16uprecheckprobe|"
+                 "x16quadprecheckprobe|x16quadtelemetryprobe|"
+                 "x16ecoverprobe|x16ecoverd2probe|x16ecoverd3probe|"
+                 "x16ecoverd4probe] "
                  "[chunk_trials] [blocks] "
                  "[threads] [claim_batch] [auto|generic|u96] "
                  "[seed=mixed|identity|splitmix] [start_chunk=N] "
@@ -3000,7 +3351,58 @@ static void add_uprecheck_stats(UPrecheckStats *dst, const UPrecheckStats *src) 
         src->counters.precheck_short_circuit;
 }
 
+static void add_quadprecheck_stats(QuadPrecheckStats *dst,
+                                   const QuadPrecheckStats *src) {
+    dst->claimed += src->claimed;
+    dst->accepted_roots += src->accepted_roots;
+    dst->y_draws += src->y_draws;
+    dst->y_nonsplit += src->y_nonsplit;
+    dst->y_with_sqrt_D += src->y_with_sqrt_D;
+    dst->roots_valid += src->roots_valid;
+    dst->prefix_attempts += src->prefix_attempts;
+    dst->prefix_success += src->prefix_success;
+    for (int i = 0; i <= PROBE_MAX_DEPTH; i++) {
+        dst->depth_exact[i] += src->depth_exact[i];
+    }
+
+    QuadPrecheckCounters *d = &dst->counters;
+    const QuadPrecheckCounters *s = &src->counters;
+    d->d_sqrt_calls += s->d_sqrt_calls;
+    d->d_sqrt_success += s->d_sqrt_success;
+    d->quad_checks += s->quad_checks;
+    d->quad_pass += s->quad_pass;
+    d->quad_reject += s->quad_reject;
+    d->quad_unavailable += s->quad_unavailable;
+    d->quad_sign_dependent += s->quad_sign_dependent;
+    d->quad_formula_plus += s->quad_formula_plus;
+    d->quad_formula_minus += s->quad_formula_minus;
+    d->actual_plus += s->actual_plus;
+    d->actual_minus += s->actual_minus;
+    d->actual_zero += s->actual_zero;
+    d->mismatches += s->mismatches;
+    d->short_circuit += s->short_circuit;
+    d->w_sqrt_calls += s->w_sqrt_calls;
+    d->w_sqrt_success += s->w_sqrt_success;
+    for (int i = 0; i <= 8; i++) {
+        d->gate_rows[i] += s->gate_rows[i];
+        d->gate_formula_plus[i] += s->gate_formula_plus[i];
+        d->gate_formula_minus[i] += s->gate_formula_minus[i];
+        d->gate_actual_plus[i] += s->gate_actual_plus[i];
+        d->gate_actual_minus[i] += s->gate_actual_minus[i];
+        d->gate_mismatch[i] += s->gate_mismatch[i];
+    }
+}
+
 static u64 uprecheck_depth_survive_ge(const UPrecheckStats *stats, int depth) {
+    if (depth < 0) depth = 0;
+    if (depth > PROBE_MAX_DEPTH) depth = PROBE_MAX_DEPTH;
+    u64 total = 0;
+    for (int d = depth; d <= PROBE_MAX_DEPTH; d++) total += stats->depth_exact[d];
+    return total;
+}
+
+static u64 quadprecheck_depth_survive_ge(const QuadPrecheckStats *stats,
+                                         int depth) {
     if (depth < 0) depth = 0;
     if (depth > PROBE_MAX_DEPTH) depth = PROBE_MAX_DEPTH;
     u64 total = 0;
@@ -3065,6 +3467,131 @@ static void print_uprecheck_summary(const UPrecheckStats *stats, u128 p,
                 c->uplus_checks, c->uplus_pass, c->uplus_reject,
                 c->precheck_short_circuit, c->w_sqrt_calls,
                 c->w_sqrt_success);
+}
+
+static void print_quadprecheck_summary(const QuadPrecheckStats *stats,
+                                       const char *mode_name, u128 p,
+                                       const char *backend_name,
+                                       const char *gpu_name, int seed_mode,
+                                       u64 seed_offset, int target_depth,
+                                       int telemetry_only, double elapsed) {
+    double accepted_rate = elapsed > 0.0
+        ? (double)stats->accepted_roots / elapsed / 1e6
+        : 0.0;
+    u64 target_survive = quadprecheck_depth_survive_ge(stats, target_depth);
+    double target_rate = stats->accepted_roots
+        ? (double)target_survive / (double)stats->accepted_roots
+        : 0.0;
+    double target_survivor_per_sec = elapsed > 0.0
+        ? (double)target_survive / elapsed
+        : 0.0;
+    double source_per_accepted = stats->accepted_roots
+        ? (double)stats->y_draws / (double)stats->accepted_roots
+        : 0.0;
+    double target_per_source_draw = stats->y_draws
+        ? (double)target_survive / (double)stats->y_draws
+        : 0.0;
+    const QuadPrecheckCounters *c = &stats->counters;
+
+    std::printf("\nQuadratic-gate %s summary:\n",
+                telemetry_only ? "telemetry" : "precheck");
+    std::printf("  mode=%s backend=%s GPU=\"%s\" seed_mode=%s seed_offset=%llu\n",
+                mode_name, backend_name, gpu_name, seed_mode_name(seed_mode),
+                seed_offset);
+    std::printf("  accepted_roots=%llu y_draws=%llu nonsplit_y=%llu "
+                "sqrtD_y=%llu roots_valid=%llu prefix_attempts=%llu "
+                "prefix_success=%llu\n",
+                stats->accepted_roots, stats->y_draws, stats->y_nonsplit,
+                stats->y_with_sqrt_D, stats->roots_valid,
+                stats->prefix_attempts, stats->prefix_success);
+    std::printf("  prefix_depth=6 target_depth=%d survivors=%llu rate=%.9f "
+                "elapsed=%.6f accepted_rate_Mps=%.6f "
+                "source_draws_per_accepted=%.6f target_per_source_draw=%.12f "
+                "target_survivor_per_sec=%.6f\n",
+                target_depth, target_survive, target_rate, elapsed,
+                accepted_rate, source_per_accepted, target_per_source_draw,
+                target_survivor_per_sec);
+    std::printf("  quad counters: checks=%llu pass=%llu reject=%llu "
+                "unavailable=%llu sign_dependent=%llu short_circuit=%llu "
+                "mismatches=%llu formula_plus=%llu formula_minus=%llu "
+                "actual_plus=%llu actual_minus=%llu actual_zero=%llu\n",
+                c->quad_checks, c->quad_pass, c->quad_reject,
+                c->quad_unavailable, c->quad_sign_dependent,
+                c->short_circuit, c->mismatches, c->quad_formula_plus,
+                c->quad_formula_minus, c->actual_plus, c->actual_minus,
+                c->actual_zero);
+    std::printf("  sqrt counters: d_sqrt=%llu/%llu w_sqrt=%llu/%llu\n",
+                c->d_sqrt_success, c->d_sqrt_calls,
+                c->w_sqrt_success, c->w_sqrt_calls);
+    std::printf("  gate telemetry:\n");
+    std::printf("    gate rows formula_plus formula_minus actual_plus "
+                "actual_minus mismatches\n");
+    for (int g = 3; g <= 8; g++) {
+        std::printf("    %d %llu %llu %llu %llu %llu %llu\n",
+                    g, c->gate_rows[g], c->gate_formula_plus[g],
+                    c->gate_formula_minus[g], c->gate_actual_plus[g],
+                    c->gate_actual_minus[g], c->gate_mismatch[g]);
+    }
+    std::printf("  depth survival checkpoints:\n");
+    for (int d = 6; d <= target_depth; d++) {
+        if (d == 6 || d == target_depth || (d % 2) == 0) {
+            u64 ge = quadprecheck_depth_survive_ge(stats, d);
+            double rate = stats->accepted_roots
+                ? (double)ge / (double)stats->accepted_roots
+                : 0.0;
+            std::printf("    depth>=%d count=%llu rate=%.9f\n", d, ge, rate);
+        }
+    }
+
+    std::printf("quadprecheck_jsonl={\"mode\":\"%s\","
+                "\"p\":\"%s\",\"backend\":\"%s\",\"gpu\":\"%s\","
+                "\"seed_mode\":\"%s\",\"seed_offset\":%llu,"
+                "\"telemetry_only\":%s,\"prefix_depth\":6,"
+                "\"target_depth\":%d,\"elapsed\":%.6f,"
+                "\"accepted_rate_Mps\":%.6f,"
+                "\"accepted_roots\":%llu,\"source_draws\":%llu,"
+                "\"nonsplit_y\":%llu,\"sqrtD_y\":%llu,"
+                "\"roots_valid\":%llu,\"prefix_attempts\":%llu,"
+                "\"prefix_success\":%llu,\"target_survivors\":%llu,"
+                "\"target_rate\":%.12f,\"source_draws_per_accepted\":%.12f,"
+                "\"target_per_source_draw\":%.12f,"
+                "\"target_survivor_per_sec\":%.6f,"
+                "\"quad_checks\":%llu,\"quad_pass\":%llu,"
+                "\"quad_reject\":%llu,\"quad_unavailable\":%llu,"
+                "\"quad_sign_dependent\":%llu,\"quad_formula_plus\":%llu,"
+                "\"quad_formula_minus\":%llu,\"actual_plus\":%llu,"
+                "\"actual_minus\":%llu,\"actual_zero\":%llu,"
+                "\"mismatches\":%llu,\"short_circuit\":%llu,"
+                "\"d_sqrt_calls\":%llu,\"d_sqrt_success\":%llu,"
+                "\"w_sqrt_calls\":%llu,\"w_sqrt_success\":%llu",
+                mode_name, sprint128(p).c_str(), backend_name, gpu_name,
+                seed_mode_name(seed_mode), seed_offset,
+                telemetry_only ? "true" : "false", target_depth, elapsed,
+                accepted_rate, stats->accepted_roots, stats->y_draws,
+                stats->y_nonsplit, stats->y_with_sqrt_D, stats->roots_valid,
+                stats->prefix_attempts, stats->prefix_success, target_survive,
+                target_rate, source_per_accepted, target_per_source_draw,
+                target_survivor_per_sec, c->quad_checks, c->quad_pass,
+                c->quad_reject, c->quad_unavailable, c->quad_sign_dependent,
+                c->quad_formula_plus, c->quad_formula_minus, c->actual_plus,
+                c->actual_minus, c->actual_zero, c->mismatches,
+                c->short_circuit, c->d_sqrt_calls, c->d_sqrt_success,
+                c->w_sqrt_calls, c->w_sqrt_success);
+    for (int g = 3; g <= 8; g++) {
+        std::printf(",\"gate%d_rows\":%llu,\"gate%d_formula_plus\":%llu,"
+                    "\"gate%d_formula_minus\":%llu,\"gate%d_actual_plus\":%llu,"
+                    "\"gate%d_actual_minus\":%llu,\"gate%d_mismatch\":%llu",
+                    g, c->gate_rows[g], g, c->gate_formula_plus[g],
+                    g, c->gate_formula_minus[g], g, c->gate_actual_plus[g],
+                    g, c->gate_actual_minus[g], g, c->gate_mismatch[g]);
+    }
+    for (int d = 6; d <= target_depth; d++) {
+        if (d == 6 || d == target_depth || (d % 2) == 0) {
+            std::printf(",\"survive_%d\":%llu", d,
+                        quadprecheck_depth_survive_ge(stats, d));
+        }
+    }
+    std::printf("}\n");
 }
 
 static void print_trace_norm_ab_summary(const TraceNormABStats *stats,
@@ -3371,21 +3898,25 @@ int main(int argc, char **argv) {
     bool trace_ab_mode = std::strcmp(mode, "x16tracenormab") == 0;
     bool trace_filter_mode = std::strcmp(mode, "x16tracenormfilter") == 0;
     bool uprecheck_mode = std::strcmp(mode, "x16uprecheckprobe") == 0;
+    bool quadprecheck_mode = std::strcmp(mode, "x16quadprecheckprobe") == 0;
+    bool quadtelemetry_mode = std::strcmp(mode, "x16quadtelemetryprobe") == 0;
     bool ecover_probe_mode = std::strcmp(mode, "x16ecoverprobe") == 0;
     bool ecover_prefix_probe_mode =
         std::strcmp(mode, "x16ecoverprefixprobe") == 0 ||
         std::strcmp(mode, "x16ecoverd2probe") == 0 ||
         std::strcmp(mode, "x16ecoverd3probe") == 0 ||
         std::strcmp(mode, "x16ecoverd4probe") == 0;
+    bool quad_mode = quadprecheck_mode || quadtelemetry_mode;
     bool scope_probe_mode = probe_mode || domain_probe_mode || prefix_probe_mode ||
                             ecover_probe_mode || ecover_prefix_probe_mode;
     if (std::strcmp(mode, "x16halvenonsplit") != 0 && !probe_mode &&
         !domain_probe_mode && !prefix_probe_mode && !trace_ab_mode &&
-        !trace_filter_mode && !uprecheck_mode && !ecover_probe_mode &&
+        !trace_filter_mode && !uprecheck_mode && !quad_mode && !ecover_probe_mode &&
         !ecover_prefix_probe_mode) {
         std::fprintf(stderr,
                      "Only x16halvenonsplit, x16stratumprobe/x16domainprobe, and "
                      "x16tracenormab/x16tracenormfilter/x16uprecheckprobe/"
+                     "x16quadprecheckprobe/x16quadtelemetryprobe/"
                      "x16ecoverprobe plus d-prefix probe aliases "
                      "are implemented in this CUDA prototype.\n");
         return 1;
@@ -3552,6 +4083,11 @@ int main(int argc, char **argv) {
     if (uprecheck_mode) {
         std::printf("uprecheck_target_depth = %d\n", probe_target_depth);
     }
+    if (quad_mode) {
+        std::printf("quad_target_depth = %d\n", probe_target_depth);
+        std::printf("quad_telemetry_only = %s\n",
+                    quadtelemetry_mode ? "true" : "false");
+    }
     std::printf("k = %d\n", params.k);
     std::printf("backend = %s\n", use_u96 ? "u96" : "generic-u128");
     std::printf("GPU = %s  SMs=%d  blocks=%d  threads=%d  claim_batch=%llu\n\n",
@@ -3691,6 +4227,85 @@ int main(int argc, char **argv) {
                                 prop.name, seed_mode, seed_offset,
                                 probe_target_depth, elapsed);
         cudaFree(d_uprecheck);
+        return 0;
+    }
+
+    if (quad_mode) {
+        if (!use_u96) {
+            std::fprintf(stderr,
+                         "x16quadprecheckprobe/x16quadtelemetryprobe currently "
+                         "require the u96 backend.\n");
+            return 1;
+        }
+
+        QuadPrecheckStats *d_quad = nullptr;
+        die_cuda(cudaMalloc(&d_quad, sizeof(QuadPrecheckStats)),
+                 "cudaMalloc quadratic precheck stats");
+
+        QuadPrecheckStats cumulative{};
+        u64 total = start_trial_base;
+        u64 chunk_nonce = start_chunk_nonce;
+        auto t0 = std::chrono::steady_clock::now();
+
+        while (total < max_trials) {
+            u64 remaining = max_trials - total;
+            u64 this_chunk = remaining < chunk_trials ? remaining : chunk_trials;
+            die_cuda(cudaMemset(d_quad, 0, sizeof(QuadPrecheckStats)),
+                     "cudaMemset quadratic precheck stats");
+
+            x16quadprecheckprobe_kernel96<<<blocks, threads>>>(
+                params96, seed_offset, chunk_nonce, this_chunk, claim_batch,
+                seed_mode, probe_target_depth, quadtelemetry_mode ? 1 : 0,
+                d_quad);
+            die_cuda(cudaGetLastError(), "quadratic precheck kernel launch");
+            die_cuda(cudaDeviceSynchronize(),
+                     "quadratic precheck kernel synchronize");
+
+            QuadPrecheckStats stats{};
+            die_cuda(cudaMemcpy(&stats, d_quad, sizeof(stats),
+                                cudaMemcpyDeviceToHost),
+                     "copy quadratic precheck stats");
+            add_quadprecheck_stats(&cumulative, &stats);
+
+            u64 done = stats.accepted_roots;
+            if (done > this_chunk) done = this_chunk;
+            total += done;
+            auto now = std::chrono::steady_clock::now();
+            double elapsed = std::chrono::duration<double>(now - t0).count();
+            double rate = elapsed > 0.0
+                ? (double)(total - start_trial_base) / elapsed / 1e6
+                : 0.0;
+            u64 target_survive =
+                quadprecheck_depth_survive_ge(&cumulative, probe_target_depth);
+            std::printf("  quad_trials=%llu elapsed=%.3f rate_Mps=%.6f "
+                        "target_survivors=%llu quad_checks=%llu "
+                        "quad_reject=%llu mismatches=%llu short_circuit=%llu "
+                        "w_sqrt_calls=%llu\n",
+                        total, elapsed, rate, target_survive,
+                        cumulative.counters.quad_checks,
+                        cumulative.counters.quad_reject,
+                        cumulative.counters.mismatches,
+                        cumulative.counters.short_circuit,
+                        cumulative.counters.w_sqrt_calls);
+            std::fflush(stdout);
+
+            if (done == 0) {
+                std::fprintf(stderr,
+                             "Quadratic precheck kernel made no candidate "
+                             "progress; stopping.\n");
+                break;
+            }
+            chunk_nonce++;
+        }
+
+        auto t1 = std::chrono::steady_clock::now();
+        double elapsed = std::chrono::duration<double>(t1 - t0).count();
+        print_quadprecheck_summary(&cumulative, mode,
+                                   p, use_u96 ? "u96" : "generic-u128",
+                                   prop.name, seed_mode, seed_offset,
+                                   probe_target_depth,
+                                   quadtelemetry_mode ? 1 : 0, elapsed);
+        cudaFree(d_quad);
         return 0;
     }
 

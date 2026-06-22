@@ -1,0 +1,48 @@
+Pomerance CUDA x16halvenonsplit prototype
+
+p = 1000000000000000000000000103
+mode = x16d2probe
+seed_offset = 0
+seed_mode = splitmix
+max_trials = 2000000
+chunk_trials = 2000000
+probe_target_depth = 13
+probe_prefix_filter_depth = 6
+probe_bucket_bits = 6
+k = 45
+backend = u96
+GPU = NVIDIA RTX 6000 Ada Generation  SMs=142  blocks=142  threads=128  claim_batch=1
+
+  probe_trials=2000000 elapsed=0.521 rate_Mps=3.840903 target_survivors=15914 y_draws=16032054
+
+Stratum probe summary:
+  mode=x16d2probe source_kind=raw_x16_domain_plus_prefix_d backend=u96 GPU="NVIDIA RTX 6000 Ada Generation" seed_mode=splitmix seed_offset=0
+  prefix_filter_depth=6
+  accepted_roots=2000000 y_draws=16032054 nonsplit_y=8017168 sqrtD_y=2004728 roots_valid=4008050
+  target_depth=13 survivors=15914 rate=0.007957000 elapsed=0.520733 accepted_rate_Mps=3.840739 source_draws_per_accepted=8.016027 target_per_source_draw=0.000992636377 target_survivor_per_sec=30560.756897
+  prefix total=1000000 survivors=7932 rate=0.007932000
+  heldout total=1000000 survivors=7982 rate=0.007982000
+  depth survival checkpoints:
+    depth>=4 count=2000000 rate=1.000000000
+    depth>=6 count=2000000 rate=1.000000000
+    depth>=8 count=498387 rate=0.249193500
+    depth>=10 count=124758 rate=0.062379000
+    depth>=12 count=31236 rate=0.015618000
+    depth>=13 count=15914 rate=0.007957000
+  top buckets selected by prefix lift (min prefix total 100):
+    bucket q_sheet key prefix_total prefix_surv prefix_lift held_total held_surv held_lift promotion
+    53 0 53 7853 87 1.397 7805 70 1.124 no
+    1 0 1 7612 79 1.308 7994 58 0.909 no
+    62 0 62 7739 80 1.303 7776 55 0.886 no
+    86 1 22 7746 79 1.286 7799 56 0.900 no
+    98 1 34 7864 78 1.250 7826 61 0.977 no
+    106 1 42 7697 75 1.228 7736 56 0.907 no
+    119 1 55 7723 75 1.224 7881 54 0.858 no
+    55 0 55 7823 75 1.209 7738 48 0.777 no
+    44 0 44 7838 75 1.206 7696 67 1.091 no
+    78 1 14 7872 74 1.185 7804 65 1.043 no
+    121 1 57 7768 72 1.169 7691 62 1.010 no
+    59 0 59 7885 73 1.167 7831 59 0.944 no
+scope_probe_jsonl={"mode":"x16d2probe","source_kind":"raw_x16_domain_plus_prefix_d","narrowing_source":false,"scope_narrowing":true,"p":"1000000000000000000000000103","backend":"u96","gpu":"NVIDIA RTX 6000 Ada Generation","seed_mode":"splitmix","seed_offset":0,"target_depth":13,"prefix_filter_depth":6,"bucket_bits":6,"elapsed":0.520733,"accepted_rate_Mps":3.840739,"accepted_roots":2000000,"source_draws":16032054,"nonsplit_y":8017168,"sqrtD_y":2004728,"roots_valid":4008050,"target_survivors":15914,"target_rate":0.007957000000,"source_draws_per_accepted":8.016027000000,"target_per_source_draw":0.000992636377,"target_survivor_per_sec":30560.756897,"prefix_total":1000000,"prefix_survive":7932,"held_total":1000000,"held_survive":7982,"survive_4":2000000,"survive_6":2000000,"survive_8":498387,"survive_10":124758,"survive_12":31236,"survive_13":15914}
+
+Probe completed in 0.52s. trials=2000000 interval_trials=2000000 rate_Mps=3.840739
