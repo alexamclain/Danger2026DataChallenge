@@ -157,9 +157,13 @@ source until a legal tower sampler exists.
 The legal source depth screen is also explicit now:
 [P27 Legal Conic Tower Depth](p27_legal_conic_tower_depth_20260621.md).
 On p27 train/heldout samples, the legal tower still thins roughly like
-successive selected half-gates through depth 4.  GPU should therefore look for
+successive selected half-gates through depth 5.  GPU should therefore look for
 a quotient/legal tower sampler, not just evaluate the original legal source
 with more depth gates.
+
+The CAS form of that quotient/sampler ask is now packaged:
+[P27 Conic Tower Quotient CAS Handoff](p27_conic_tower_quotient_cas_handoff_20260622.md).
+Use this as the source of truth before starting new GPU conic work.
 
 The raw `(R,L)` low-degree quotient screen is negative:
 [P27 Conic-Pair Low-Degree Relation Screen](p27_conic_pair_lowdegree_relation_20260621.md).

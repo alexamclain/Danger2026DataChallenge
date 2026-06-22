@@ -43,6 +43,7 @@ Output:
 
 ```text
 research/p27/archive/probe_outputs/p27_conic_pair_d5_tower_probe_q1607_q1847_q2087_p27_20260621.txt
+research/p27/archive/probe_outputs/p27_conic_pair_d5_tower_probe_q1607_q1847_q2087_p27_1500_20260622.txt
 ```
 
 Command:
@@ -55,6 +56,14 @@ python3 -u research/p27/archive/gates/p27_conic_pair_d5_tower_probe.py \
   --p27-heldout-target 500 \
   --p27-max-draws 1000000 \
   | tee research/p27/archive/probe_outputs/p27_conic_pair_d5_tower_probe_q1607_q1847_q2087_p27_20260621.txt
+
+PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=research/p27/archive/gates \
+python3 -u research/p27/archive/gates/p27_conic_pair_d5_tower_probe.py \
+  --small-primes 1607,1847,2087 \
+  --p27-target 1500 \
+  --p27-heldout-target 1500 \
+  --p27-max-draws 1500000 \
+  | tee research/p27/archive/probe_outputs/p27_conic_pair_d5_tower_probe_q1607_q1847_q2087_p27_1500_20260622.txt
 ```
 
 ## Guard-Field Results
@@ -109,6 +118,26 @@ p27 heldout:
   universal product mismatches = 0
 ```
 
+The larger 2026-06-22 p27 run confirms the same result:
+
+```text
+p27 train:
+  sampled pairs = 1500
+  d4-plus unique (A,x) = 368
+  d5 split = 156 plus / 212 minus
+  second lifts = 94,208
+  d5 product mismatches = 0
+  universal product mismatches = 0
+
+p27 heldout:
+  sampled pairs = 1500
+  d4-plus unique (A,x) = 360
+  d5 split = 166 plus / 194 minus
+  second lifts = 92,160
+  d5 product mismatches = 0
+  universal product mismatches = 0
+```
+
 ## Interpretation
 
 Positive:
@@ -146,6 +175,9 @@ source; it must be a legal pullback/quotient/source for the tower itself.
 3. Ask an expert/CAS agent whether the repeated divisor
    `-(L+a)(L-a)cR` is a known Kummer/Hilbert-90 boundary on an iterated
    conic bundle.
+
+These tasks are now packaged as:
+[P27 Conic Tower Quotient CAS Handoff](p27_conic_tower_quotient_cas_handoff_20260622.md).
 ```
 
 ## Continue / Kill
@@ -164,5 +196,5 @@ p27_conic_pair_d5_tower_rows=1/1
 
 Update: the legal-source depth screen is recorded in
 [P27 Legal Conic Tower Depth](p27_legal_conic_tower_depth_20260621.md).  Lift
-existence matches selected-prefix bits through depth 4, but p27 sample prefix
+existence matches selected-prefix bits through depth 5, but p27 sample prefix
 rates still thin roughly like ordinary selected gates.

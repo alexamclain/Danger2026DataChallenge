@@ -16,10 +16,11 @@ depth 1 -> d3 plus
 depth 2 -> d4 plus after d3
 depth 3 -> d5 plus after d3,d4
 depth 4 -> d6 plus after d3,d4,d5
+depth 5 -> d7 plus after d3,d4,d5,d6
 ```
 
 In q1607/q1847/q2087, lift existence matched the selected-prefix indicator
-for every legal candidate through depth 4.
+for every legal candidate through depth 5.
 
 ## Artifacts
 
@@ -33,6 +34,7 @@ Output:
 
 ```text
 research/p27/archive/probe_outputs/p27_legal_conic_tower_depth_probe_q1607_q1847_q2087_p27_depth4_20260621.txt
+research/p27/archive/probe_outputs/p27_legal_conic_tower_depth_probe_q1607_q1847_q2087_p27_depth5_20260622.txt
 ```
 
 Command:
@@ -46,6 +48,15 @@ python3 -u research/p27/archive/gates/p27_legal_conic_tower_depth_probe.py \
   --p27-heldout-target 1000 \
   --p27-max-draws 1000000 \
   | tee research/p27/archive/probe_outputs/p27_legal_conic_tower_depth_probe_q1607_q1847_q2087_p27_depth4_20260621.txt
+
+PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=research/p27/archive/gates \
+python3 -u research/p27/archive/gates/p27_legal_conic_tower_depth_probe.py \
+  --small-primes 1607,1847,2087 \
+  --depth 5 \
+  --p27-target 1500 \
+  --p27-heldout-target 1500 \
+  --p27-max-draws 1500000 \
+  | tee research/p27/archive/probe_outputs/p27_legal_conic_tower_depth_probe_q1607_q1847_q2087_p27_depth5_20260622.txt
 ```
 
 ## Guard-Field Results
@@ -70,7 +81,17 @@ q2087:
   depth2 lift candidates = 288/912
   depth3 lift candidates = 288/912
   depth4 lift candidates = 288/912
+  depth5 lift candidates = 288/912
   depth1/2/3/4 prefix mismatches = 0
+```
+
+The 2026-06-22 depth-5 run also has zero prefix-indicator mismatches in all
+three fields:
+
+```text
+q1607: depth1/2/3/4/5 matches = 784/784 at every depth
+q1847: depth1/2/3/4/5 matches = 1008/1008 at every depth
+q2087: depth1/2/3/4/5 matches = 912/912 at every depth
 ```
 
 Lift multiplicity grows by a factor of `8` per added conic step on candidates
@@ -104,6 +125,24 @@ p27 heldout, 1000 unique (A,x):
   depth4/d6 rate = 0.058
 ```
 
+On the larger depth-5 run:
+
+```text
+p27 train, 1500 unique (A,x):
+  depth1/d3 rate = 0.481333333
+  depth2/d4 rate = 0.245333333
+  depth3/d5 rate = 0.104000000
+  depth4/d6 rate = 0.057333333
+  depth5/d7 rate = 0.028000000
+
+p27 heldout, 1500 unique (A,x):
+  depth1/d3 rate = 0.518666667
+  depth2/d4 rate = 0.240000000
+  depth3/d5 rate = 0.110666667
+  depth4/d6 rate = 0.061333333
+  depth5/d7 rate = 0.028000000
+```
+
 So p27 itself does not show the constant-tail behavior seen in some small
 fields.  It still thins roughly like a sequence of selected half-gates.
 
@@ -112,7 +151,7 @@ fields.  It still thins roughly like a sequence of selected half-gates.
 Positive:
 
 ```text
-The legal conic-chain pullback is exact through depth 4 in guard fields.
+The legal conic-chain pullback is exact through depth 5 in guard fields.
 The repeated selector tower is the correct mathematical object to hand to CAS
 or an expert.
 The finite-field lift multiplicity is regular enough to model.
@@ -161,3 +200,6 @@ p27_legal_conic_tower_depth_rows=1/1
 Update: the raw `(R,L)` plane-curve shortcut is now screened and negative.
 See [P27 Conic-Pair Low-Degree Relation Screen](p27_conic_pair_lowdegree_relation_20260621.md):
 no total-degree relation `<=20` on q1607/q1847/q2087 legal d3-plus preimages.
+
+Update: the quotient/CAS form of the remaining conic task is now packaged in
+[P27 Conic Tower Quotient CAS Handoff](p27_conic_tower_quotient_cas_handoff_20260622.md).

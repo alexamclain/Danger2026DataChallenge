@@ -486,6 +486,9 @@ Ranked next moves:
    production run.
 ```
 
+The conic-chain CAS ask is now packaged as
+[P27 Conic Tower Quotient CAS Handoff](p27_conic_tower_quotient_cas_handoff_20260622.md).
+
 The compact actionable version is the "Current Priority After Two-Step Kummer
 Screen" section of
 [P27 Next Sqrt-Beating Test Cards](p27_next_sqrt_beating_test_cards_20260621.md):

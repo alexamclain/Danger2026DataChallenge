@@ -806,19 +806,28 @@ the same sampler.
 The repeated-tower check is positive:
 [P27 Conic-Pair D5 Tower](evidence/p27_conic_pair_d5_tower_20260621.md).
 After adjoining the d4 selector root, the same product law gives d5 with zero
-mismatches on q1607/q1847/q2087 and p27 train/heldout samples.  This promotes
-the conic-chain lead from a one-off d4 identity to a recursive Kummer selector
-tower.  The obstruction remains source-side: the selected one-step and
-two-step coordinates do not re-enter the original legal label-2/compactD
-source in the guard fields.
+mismatches on q1607/q1847/q2087 and p27 train/heldout samples, including a
+larger `1500 + 1500` p27 confirmation.  This promotes the conic-chain lead
+from a one-off d4 identity to a recursive Kummer selector tower.  The
+obstruction remains source-side: the selected one-step and two-step
+coordinates do not re-enter the original legal label-2/compactD source in the
+guard fields.
 
 The legal source-side depth screen is now explicit:
 [P27 Legal Conic Tower Depth](evidence/p27_legal_conic_tower_depth_20260621.md).
 In q1607/q1847/q2087, legal conic-chain lift existence matches selected-prefix
-bits through depth 4 with zero mismatches.  On p27 train/heldout samples,
-prefix rates through depths 1-4 are about `0.48/0.24/0.10/0.058` and
-`0.53/0.23/0.11/0.058`.  Thus the tower is exact, but not density-beating on
-the original legal source without a quotient or direct tower sampler.
+bits through depth 5 with zero mismatches.  On the larger p27 train/heldout
+samples, prefix rates through depths 1-5 are about
+`0.481/0.245/0.104/0.057/0.028` and
+`0.519/0.240/0.111/0.061/0.028`.  Thus the tower is exact, but not
+density-beating on the original legal source without a quotient or direct
+tower sampler.
+The remaining conic moonshot is now packaged as:
+[P27 Conic Tower Quotient CAS Handoff](evidence/p27_conic_tower_quotient_cas_handoff_20260622.md)
+with manifest
+`research/p27/archive/fixtures/p27_conic_tower_quotient_cas_suite_20260622.json`.
+It asks for depth-1/depth-2 legal-pullback quotients, genus/components, and a
+direct legal tower sampler if a quotient appears.
 The direct sign-word coupling telemetry now agrees:
 [P27 Conic Sign-Word Coupling Probe](evidence/p27_conic_signword_coupling_20260622.md).
 On `4000 + 4000` p27 train/heldout unique `(A,x5)` rows, the all-plus conic
