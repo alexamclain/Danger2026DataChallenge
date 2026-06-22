@@ -201,6 +201,12 @@ searches in simple `Z0/S1/Z1`, normalized-root, ratio, or product coordinates.
 The remaining GPU-relevant conic work is legal-pullback telemetry or a
 new theorem-specified tower coordinate.
 
+The trivariate version is negative as well:
+[P27 Conic-Pair Two-Step Kummer Trivariate Screen](p27_conic_pair_two_step_kummer_trivar_20260621.md).
+Simple `A/R/L/S1/Z0/Z1` triples are full-rank through degree 6 on the same
+guard fields.  This further argues against GPU bucket searches in obvious
+two-step Kummer coordinates.
+
 Report:
 
 ```text

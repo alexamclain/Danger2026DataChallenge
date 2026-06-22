@@ -1381,9 +1381,10 @@ controls many selected `chi(d_j)` / `chi(u_j+2)` gates at once.
 
 ## Current Priority After Two-Step Kummer Screen
 
-The latest conic-pair two-step Kummer screen kills the simple
-`Z0/S1/Z1` quotient family.  The current test queue should now be this compact
-list:
+The latest conic-pair two-step Kummer screens kill the simple `Z0/S1/Z1`
+quotient family: pair systems are flat through degree 12, and the obvious
+trivariate systems are flat through degree 6.  The current test queue should
+now be this compact list:
 
 ### Test A: Staged Legal Pullback Normalization
 

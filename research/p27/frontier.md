@@ -811,6 +811,14 @@ therefore staged normalization/components or a theorem-level repeated
 Kummer/Hilbert-90 identity, not a GPU bucket search in simple two-root
 coordinates.
 
+The next cheap bucket generalization is also negative:
+[P27 Conic-Pair Two-Step Kummer Trivariate Screen](evidence/p27_conic_pair_two_step_kummer_trivar_20260621.md).
+Selector/root triples such as `(A,Z0,S1)`, `(A,Z0,Z1)`,
+`(A,Z1/Z0,Z0*Z1)`, normalized-root triples, and `(R_j,Z0,Z1)` are full-rank
+through degree `6` on q1607/q1847/q2087.  This spends the obvious
+three-coordinate surface search; continuing now needs a staged component
+calculation or a theorem-specified coordinate, not larger ad hoc bucket scans.
+
 The K-line now has a cleaner coordinate for that extraction:
 [P27 Kummer Belyi Structure Probe](evidence/p27_kummer_belyi_structure_probe_20260621.md).
 Symbolically,
