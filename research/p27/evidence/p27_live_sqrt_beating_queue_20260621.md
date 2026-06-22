@@ -261,6 +261,12 @@ candidate for either `d3_on_legalB` or the combined gate4 prefix.  The random
 expected exact counts in q1847/q2087 are tiny on the primary rows, so a stable
 positive is real structure and a stable negative closes the visible quartic
 B-line route.
+The parallel K-line quotient test is now packetized too:
+[P27 K-Line Quartic GPU Test Card](p27_kline_quartic_gpu_test_card_20260622.md).
+This tests exact monic quartic support on
+`K=x([2]P)` for `d3_on_K` over q1471/q1607/q1847.  It is the remaining
+low-genus polynomial source shape after degree `<=2` and q1471 cubics are
+killed; q1847 has expected random exact count about `2.52e-6`.
 The first targeted B-line elimination proxy is negative:
 [P27 B-Line Reverse-Z Relation Screen](p27_b_line_reverse_z_relation_20260622.md).
 It keeps the actual d3 all-plus reverse-source root `z` with `x6=z^2` and

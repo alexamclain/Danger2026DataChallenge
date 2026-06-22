@@ -176,6 +176,27 @@ Use the frozen target packet:
 research/p27/archive/fixtures/p27_b_line_quartic_targets_20260622.json
 ```
 
+### Test 4: K-Line Exact Quartic Support
+
+Run this as the signed-doubling `E'` quotient counterpart to Test 3:
+[P27 K-Line Quartic GPU Test Card](p27_kline_quartic_gpu_test_card_20260622.md).
+
+Test exact monic quartic support
+
+```text
+chi(K^4 + aK^3 + bK^2 + cK + d)
+```
+
+for `d3_on_K` over q1471/q1607/q1847.  A stable q1847 positive is a genus-1
+K-line source candidate; a stable negative closes the visible degree-4
+K-polynomial source shape.
+
+Use the frozen target packet:
+
+```text
+research/p27/archive/fixtures/p27_kline_quartic_targets_20260622.json
+```
+
 ## Do Not Run Yet
 
 ```text

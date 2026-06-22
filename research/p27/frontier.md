@@ -584,6 +584,14 @@ no exact irreducible cubic.  The best miss was `31/32`.  This is only a local
 falsifier, not a p27 proof, but it reinforces the current rule: do actual
 K/S branch-class and genus extraction rather than widening blind cubic scans.
 
+The remaining visible K-polynomial source shape is now GPU-packetized:
+[P27 K-Line Quartic GPU Test Card](evidence/p27_kline_quartic_gpu_test_card_20260622.md).
+It freezes the `d3_on_K` and optional `d4_on_K_after_d3` rows for
+q1471/q1607/q1847 and tests exact monic quartic support
+`chi(K^4+aK^3+bK^2+cK+d)`.  A q1847 d3 hit would be highly non-random
+(`expected_exact ~= 2.52e-6`); no stable q1847/q1471/q1607 hit would close the
+visible degree-4 K-line source shape.
+
 That ask is now packaged as a concrete handoff:
 [P27 Kummer Branch-Extraction Handoff](evidence/p27_kummer_branch_extraction_handoff_20260621.md).
 It records the map from the residual `E: W^2=X^3-X` through
