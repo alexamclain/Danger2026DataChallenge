@@ -1,0 +1,52 @@
+p27 trace/norm Dplus U6 parity probe
+question = is chi(U6+2)=chi(x6) a branch-choice bit or a Dplus-row bit?
+p = 1000000000000000000000000103
+seed_groups = 121,122;123,124
+chunks = 0,1
+tids = 0:64
+draws_per_thread = 512
+max_y = 0
+group1_seeds_121,122:
+  D_+1 = 16485
+  D_-1 = 16316
+  D_0 = 32965
+  Dplus_no_valid_candidate = 8286
+  Dplus_y = 16485
+  U6_count_4 = 8199
+  U6_minus_count_0 = 4149
+  U6_minus_count_4 = 4050
+  U6_pattern_++++ = 4149
+  U6_pattern_---- = 4050
+  U6_plus_count_0 = 4050
+  U6_plus_count_4 = 4149
+  U6_sign_product_+1 = 8199
+  U6_uniform_sign = 8199
+  analyzed_y = 8199
+  d1_+1 = 16398
+  d2_+1 = 32796
+  nonsplit_y = 65766
+  raw_y_draws = 131072
+group2_seeds_123,124:
+  D_+1 = 16454
+  D_-1 = 16293
+  D_0 = 32723
+  Dplus_no_valid_candidate = 8393
+  Dplus_y = 16454
+  U6_count_4 = 8061
+  U6_minus_count_0 = 3986
+  U6_minus_count_4 = 4075
+  U6_pattern_++++ = 3986
+  U6_pattern_---- = 4075
+  U6_plus_count_0 = 4075
+  U6_plus_count_4 = 3986
+  U6_sign_product_+1 = 8061
+  U6_uniform_sign = 8061
+  analyzed_y = 8061
+  d1_+1 = 16122
+  d2_+1 = 32244
+  nonsplit_y = 65470
+  raw_y_draws = 131072
+verdict:
+  U6 branch class descends to Dplus row iff U6_mixed_sign=0
+  sourceable only if the descended row bit is named by CAS/H90/theta data
+p27_trace_norm_dplus_u6_parity_probe_rows=1/1

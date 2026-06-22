@@ -1,0 +1,35 @@
+Magma V2.29-1     Mon Jun 22 2026 13:11:27 on agent-mini [Seed = 2032829615]
+
++-------------------------------------------------------------------+
+|       This copy of Magma has been made available through a        |
+|                   generous initiative of the                      |
+|                                                                   |
+|                         Simons Foundation                         |
+|                                                                   |
+| covering U.S. Colleges, Universities, Nonprofit Research entities,|
+|               and their students, faculty, and staff              |
++-------------------------------------------------------------------+
+
+Type ? for help.  Type <Ctrl>-D to quit.
+
+Loading file "/tmp/p27_trace_norm_dplus_u6_rowbit_aeta_factor_botheta_q1607_mag\
+ma.m"
+RESULT u6_rowbit_botheta_setup 1607 1 2 5 2
+RESULT u6_rowbit_factor_domainspin_botheta 32 2
+RESULT u6_rowbit_factor_domainspin_botheta_factor 16 1
+RESULT u6_rowbit_factor_domainspin_botheta_factor 16 1
+RESULT u6_rowbit_aeta_sign_setup 1607 1 2
+RESULT u6_rowbit_factor_Aeta_eta1 32 4
+RESULT u6_rowbit_factor_Aeta_eta1_factor 8 1
+RESULT u6_rowbit_factor_Aeta_eta1_factor 8 1
+RESULT u6_rowbit_factor_Aeta_eta1_factor 8 1
+RESULT u6_rowbit_factor_Aeta_eta1_factor 8 1
+RESULT u6_rowbit_aeta_sign_setup 1607 -1 2
+RESULT u6_rowbit_factor_Aeta_eta-1 32 4
+RESULT u6_rowbit_factor_Aeta_eta-1_factor 8 1
+RESULT u6_rowbit_factor_Aeta_eta-1_factor 8 1
+RESULT u6_rowbit_factor_Aeta_eta-1_factor 8 1
+RESULT u6_rowbit_factor_Aeta_eta-1_factor 8 1
+RESULT p27_trace_norm_dplus_u6_rowbit_aeta_factor_botheta_q1607 done
+
+Total time: 47.009 seconds, Total memory usage: 90.72MB

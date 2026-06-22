@@ -1,0 +1,73 @@
+p27 B-line f5 visible character probe
+target = f5(B) on mixed-f5 selected f4-plus guard fields
+families = named atoms; split linear support degree <= 2
+kummer_fixture = research/p27/archive/fixtures/p27_b_line_kummer_fixture_packet_mixedf5_20260622.json
+q=4999:
+  minus_rows = 12
+  plus_rows = 27
+  rows = 39
+  target_weight = 12
+  atom_screen:
+    tested = 11
+    zero_or_pole_skip = 0
+    exact = none
+    best_distance = 12
+    best_polarity = 1
+  split_linear_degree_le_2:
+    linear_factors = 4960
+    degree2_exact = 0
+    exact = none
+    best_single_linear_distance = 7
+    best_single_linear_polarity = -1
+q=5783:
+  minus_rows = 41
+  plus_rows = 1
+  rows = 42
+  target_weight = 41
+  atom_screen:
+    tested = 11
+    zero_or_pole_skip = 0
+    exact = none
+    best_distance = 1
+    best_polarity = -1
+  split_linear_degree_le_2:
+    linear_factors = 5741
+    degree2_exact = 0
+    exact = none
+    best_single_linear_distance = 1
+    best_single_linear_polarity = -1
+q=6007:
+  minus_rows = 20
+  plus_rows = 18
+  rows = 38
+  target_weight = 20
+  atom_screen:
+    tested = 11
+    zero_or_pole_skip = 0
+    exact = none
+    best_distance = 17
+    best_polarity = 1
+  split_linear_degree_le_2:
+    linear_factors = 5969
+    degree2_exact = 0
+    exact = none
+    best_single_linear_distance = 8
+    best_single_linear_polarity = 1
+q=6247:
+  minus_rows = 16
+  plus_rows = 18
+  rows = 34
+  target_weight = 16
+  atom_screen:
+    tested = 11
+    zero_or_pole_skip = 0
+    exact = none
+    best_distance = 16
+    best_polarity = 1
+  split_linear_degree_le_2:
+    linear_factors = 6213
+    degree2_exact = 0
+    exact = none
+    best_single_linear_distance = 6
+    best_single_linear_polarity = -1
+p27_b_line_f5_visible_character_probe_rows=1/1

@@ -58,3 +58,11 @@ dkms.conf
 /pomerance_*
 !/pomerance_cuda.cu
 __pycache__/
+.DS_Store
+
+# Local Magma credentials/licenses
+magma.pass
+magma.passfile
+.magma-passfile
+.magma_passfile
+.magma_license

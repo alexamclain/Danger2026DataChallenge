@@ -1,0 +1,250 @@
+p27 trace/norm Dplus U6 row-bit H90 u-divisor probe
+question = does the H90-soluble row bit descend to a low-degree u divisor?
+fields = 263,607,1607,1847,2087
+degree = 2
+materialization_filters = 1
+q263:
+  both_signs_present = 0
+  empty_t = 238
+  mixed_t_skipped = 12
+  soluble_uniform_t = 12
+  soluble_uniform_t_plus = 12
+  u_group_size_2 = 6
+  u_groups = 6
+  u_rows = 6
+  u_rows_minus = 0
+  u_rows_plus = 6
+  u_uniform_plus = 6
+q263_screen:
+  skipped = one_sign_only
+q607:
+  both_signs_present = 1
+  empty_t = 510
+  mixed_t_skipped = 32
+  soluble_uniform_t = 64
+  soluble_uniform_t_minus = 32
+  soluble_uniform_t_plus = 32
+  u_group_size_2 = 32
+  u_groups = 32
+  u_rows = 32
+  u_rows_minus = 16
+  u_rows_plus = 16
+  u_uniform_minus = 16
+  u_uniform_plus = 16
+q607_linear_best:
+  best_c = 177
+  best_matches = 26
+  best_polarity = 1
+  best_total = 32
+  best_x1000000 = 812500
+  best_zeros = 0
+q607_degree1_hits:
+  none
+q607_degree2_hits:
+  none
+q1607:
+  both_signs_present = 1
+  empty_t = 1450
+  mixed_t_skipped = 56
+  soluble_uniform_t = 100
+  soluble_uniform_t_minus = 44
+  soluble_uniform_t_plus = 56
+  u_group_size_2 = 50
+  u_groups = 50
+  u_rows = 50
+  u_rows_minus = 22
+  u_rows_plus = 28
+  u_uniform_minus = 22
+  u_uniform_plus = 28
+q1607_linear_best:
+  best_c = 228
+  best_matches = 38
+  best_polarity = -1
+  best_total = 50
+  best_x1000000 = 760000
+  best_zeros = 0
+q1607_degree1_hits:
+  none
+q1607_degree2_hits:
+  none
+q1847:
+  both_signs_present = 1
+  empty_t = 1628
+  mixed_t_skipped = 90
+  soluble_uniform_t = 128
+  soluble_uniform_t_minus = 38
+  soluble_uniform_t_plus = 90
+  u_group_size_2 = 64
+  u_groups = 64
+  u_rows = 64
+  u_rows_minus = 19
+  u_rows_plus = 45
+  u_uniform_minus = 19
+  u_uniform_plus = 45
+q1847_linear_best:
+  best_c = 0
+  best_matches = 45
+  best_polarity = 1
+  best_total = 64
+  best_x1000000 = 703125
+  best_zeros = 0
+q1847_degree1_hits:
+  none
+q1847_degree2_hits:
+  none
+q2087:
+  both_signs_present = 1
+  empty_t = 1922
+  mixed_t_skipped = 50
+  soluble_uniform_t = 114
+  soluble_uniform_t_minus = 64
+  soluble_uniform_t_plus = 50
+  u_group_size_2 = 57
+  u_groups = 57
+  u_rows = 57
+  u_rows_minus = 32
+  u_rows_plus = 25
+  u_uniform_minus = 32
+  u_uniform_plus = 25
+q2087_linear_best:
+  best_c = 1333
+  best_matches = 43
+  best_polarity = -1
+  best_total = 57
+  best_x1000000 = 754385
+  best_zeros = 0
+q2087_degree1_hits:
+  none
+q2087_degree2_hits:
+  none
+materialization_filters = 0
+q263:
+  both_signs_present = 0
+  empty_t = 236
+  mixed_t_skipped = 12
+  soluble_uniform_t = 12
+  soluble_uniform_t_plus = 12
+  u_group_size_2 = 6
+  u_groups = 6
+  u_rows = 6
+  u_rows_minus = 0
+  u_rows_plus = 6
+  u_undefined = 2
+  u_uniform_plus = 6
+q263_screen:
+  skipped = one_sign_only
+q607:
+  both_signs_present = 1
+  empty_t = 474
+  mixed_t_skipped = 64
+  soluble_uniform_t = 66
+  soluble_uniform_t_minus = 34
+  soluble_uniform_t_plus = 32
+  u_group_size_2 = 33
+  u_groups = 33
+  u_rows = 33
+  u_rows_minus = 17
+  u_rows_plus = 16
+  u_undefined = 2
+  u_uniform_minus = 17
+  u_uniform_plus = 16
+q607_linear_best:
+  best_c = 265
+  best_matches = 27
+  best_polarity = -1
+  best_total = 33
+  best_x1000000 = 818181
+  best_zeros = 0
+q607_degree1_hits:
+  none
+q607_degree2_hits:
+  none
+q1607:
+  both_signs_present = 1
+  empty_t = 1404
+  mixed_t_skipped = 100
+  soluble_uniform_t = 100
+  soluble_uniform_t_minus = 44
+  soluble_uniform_t_plus = 56
+  u_group_size_2 = 50
+  u_groups = 50
+  u_rows = 50
+  u_rows_minus = 22
+  u_rows_plus = 28
+  u_undefined = 2
+  u_uniform_minus = 22
+  u_uniform_plus = 28
+q1607_linear_best:
+  best_c = 228
+  best_matches = 38
+  best_polarity = -1
+  best_total = 50
+  best_x1000000 = 760000
+  best_zeros = 0
+q1607_degree1_hits:
+  none
+q1607_degree2_hits:
+  none
+q1847:
+  both_signs_present = 1
+  empty_t = 1588
+  mixed_t_skipped = 128
+  soluble_uniform_t = 128
+  soluble_uniform_t_minus = 38
+  soluble_uniform_t_plus = 90
+  u_group_size_2 = 64
+  u_groups = 64
+  u_rows = 64
+  u_rows_minus = 19
+  u_rows_plus = 45
+  u_undefined = 2
+  u_uniform_minus = 19
+  u_uniform_plus = 45
+q1847_linear_best:
+  best_c = 0
+  best_matches = 45
+  best_polarity = 1
+  best_total = 64
+  best_x1000000 = 703125
+  best_zeros = 0
+q1847_degree1_hits:
+  none
+q1847_degree2_hits:
+  none
+q2087:
+  both_signs_present = 1
+  empty_t = 1856
+  mixed_t_skipped = 114
+  soluble_uniform_t = 114
+  soluble_uniform_t_minus = 64
+  soluble_uniform_t_plus = 50
+  u_group_size_2 = 57
+  u_groups = 57
+  u_rows = 57
+  u_rows_minus = 32
+  u_rows_plus = 25
+  u_undefined = 2
+  u_uniform_minus = 32
+  u_uniform_plus = 25
+q2087_linear_best:
+  best_c = 1333
+  best_matches = 43
+  best_polarity = -1
+  best_total = 57
+  best_x1000000 = 754385
+  best_zeros = 0
+q2087_degree1_hits:
+  none
+q2087_degree2_hits:
+  none
+aggregate:
+  both_signs_present = 8
+  degree1_exact = 0
+  degree2_exact = 0
+  u_mixed = 0
+json_out = research/p27/archive/fixtures/p27_dplus_rowbit_u_divisor_targets_20260622.json
+verdict:
+  u_mixed kills descent to the even elliptic coordinate
+  exact low-degree hits promote a divisor/source candidate
+  no exact hits keeps the row bit in non-visible Prym/theta territory
+p27_trace_norm_dplus_u6_rowbit_h90_u_divisor_probe_rows=1/1

@@ -43,6 +43,8 @@ Online calculator output:
 
 ```text
 research/p27/archive/probe_outputs/p27_abk_f3_f4_localized_noR_q7_magma_20260622.xml
+research/p27/archive/probe_outputs/p27_abk_f3_f4_localized_noR_q7_magma_retry_20260622.xml
+research/p27/archive/probe_outputs/p27_abk_f3_f4_localized_noR_q7_magma_retry2_20260622.xml
 ```
 
 ## Coordinates
@@ -202,8 +204,21 @@ The current saved online output is:
 <calculator><offline>The Magma calculator is temporarily disabled.</offline></calculator>
 ```
 
-So this fixture is staged for offline Magma/Sage, but no q7 dimension/genus
-result has been obtained for it yet.
+A later retry reached the service but returned:
+
+```text
+504 Gateway Timeout
+```
+
+A 2026-06-22 retry after successful smaller H90 function-field Magma tests
+again returned:
+
+```text
+504 Gateway Timeout
+```
+
+So this fixture remains staged for offline Magma/Sage, and no q7
+dimension/genus result has been obtained for it yet.
 
 Finite-field count follow-up:
 [P27 A/B/K F3/F4 Chart Count](p27_abk_f3_f4_chart_count_20260622.md).
@@ -218,8 +233,11 @@ Next-layer finite-field follow-up:
 [P27 A/B/K F4/F5 Transition Count](p27_abk_f4_f5_transition_count_20260622.md).
 The same gamma-transition form repeats on the selected `f4=+1` component:
 `chi(W+2)` is constant across the generic four-root transition and matches the
-frozen `f5(B)` class in q1607/q1847/q2087.  Because those `f5` rows are
-one-sided field tails, this is a CAS class-comparison/regression result, not a
+frozen `f5(B)` class in q1607/q1847/q2087.
+Mixed-guard follow-up:
+[P27 A/B/K F4/F5 Mixed-Guard Transition](p27_abk_f4_f5_mixed_guard_20260622.md)
+extends this to q4999/q5783/q6007/q6247, where `f5(B)` has both signs, and
+still gets exact agreement.  This is a stronger CAS regression result, not a
 source law yet.
 
 P27 sample telemetry:

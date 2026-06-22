@@ -394,6 +394,69 @@ squareclasses are already `+1`, including opposite-eta variants.  Products of
 weight-`<=3` predictor; train skews such as `U_actual` for `d3` and
 `-eta*U_other` for `d4` collapse on heldout.  The remaining Dplus-H90 test is
 actual d3 Kummer/divisor extraction on `E_h90(z)`, not more sign buckets.
+The sharper H90/x6 coboundary screen is negative too:
+[P27 Trace/Norm Dplus H90-X6 Coboundary Probe](evidence/p27_trace_norm_dplus_h90_x6_coboundary_20260622.md).
+On `8199` train and `8061` heldout Dplus `y` rows, simple H90 atoms and
+first-order `rho +/- atom` divisors have no exact weight-`<=3` product for
+`chi(x6)`.  The best train skew falls from `0.5229` to `0.4950` on heldout.
+This kills the cheap H90-root coboundary bucket; only exact CAS/Prym
+comparison remains.
+The branch-vs-row question is now resolved:
+[P27 Trace/Norm Dplus U6 Row-Bit Resultant](evidence/p27_trace_norm_dplus_u6_rowbit_resultant_20260622.md).
+On the same Dplus streams, all four `U6` branches over one row share the same
+`chi(U6+2)=chi(x6)` sign: `8199/8199` train rows and `8061/8061` heldout rows
+are uniform, with balanced `++++`/`----` counts.  The exact eliminated
+resultant has square specializations at `U6=+/-2`, but the Kummer lift
+`U6=S^2-2` does not split over `Q`.  The moonshot target is therefore one
+descended row bit on the selected Dplus/H90 base, not a branch-choice bucket.
+The visible branch-atom follow-up is negative:
+[P27 Trace/Norm Dplus U6 Row-Bit Branch-Atom Screen](evidence/p27_trace_norm_dplus_u6_rowbit_branch_atom_20260622.md).
+Products through weight `5` in the exact resultant branch factors
+`t`, `t+/-1`, `t^2+1`, `t^2+/-2t-1` plus nearby `A` and `X` atoms have no
+exact match.  The best heldout-ranked product is only weak `-A` bias and does
+not hold train/heldout.  This keeps the Dplus row bit as a non-visible
+CAS/Prym/theta target.
+The nearest H90 quotient shortcut is negative:
+[P27 Trace/Norm Dplus U6 Row-Bit H90 Factor Test](evidence/p27_trace_norm_dplus_u6_rowbit_h90_factor_20260622.md).
+Online Magma over `q=607` factors the row-bit lift as one degree-32 factor
+over `F_607(t)` and still one degree-32 factor over
+`E_h90: w^2=-(t^2+2t-1)(t^2-2t-1)`.  So the named elliptic quotient does not
+split or source the row bit; only a non-obvious Prym/theta relation remains.
+The next factorization tier is staged but above the online-calculator limit:
+[P27 Trace/Norm Dplus U6 Row-Bit Aeta Factor Boundary](evidence/p27_trace_norm_dplus_u6_rowbit_aeta_factor_boundary_20260622.md).
+The exact domain-spin and `eta=+1` `A_eta` factor fixtures return `504` over
+`q=607`; this is now an offline Magma/Sage ask to decide whether the row-bit
+lift drops degree after adjoining `z` or `rho`.
+Local Magma now resolves that ask:
+[P27 Trace/Norm Dplus U6 Row-Bit Local Magma Factor Split](evidence/p27_trace_norm_dplus_u6_rowbit_local_magma_factor_split_20260622.md).
+Across q607/q1607/q1847/q2087, the row-bit lift factors as `16+16` over the
+domain-spin cover and as `8+8+8+8` after adjoining either `A_eta` sign.  This
+is positive structure, not yet a sampler.  A q607/q1607 action probe shows
+`z -> -z` swaps the two degree-16 factors, `rho -> -rho` swaps the degree-8
+factors in pairs, and `S -> -S` fixes each tested factor.  The next test is
+Kummer/Prym identification of these factor labels, then comparison to
+pulled-back A-level `d3=chi(x6)`.
+The factor-label follow-up makes that next test sharper:
+[P27 Trace/Norm Dplus U6 Row-Bit Factor Label Probe](evidence/p27_trace_norm_dplus_u6_rowbit_factor_label_20260622.md).
+In q607/q1607, all Aeta degree-8 factors are quartics in `Y=S^2=U6+2`; the
+rho-paired products are exactly the two domain-spin factors; and the quartic
+coefficient profile is stable with moderate numerator/denominator degrees.
+The immediate moonshot test is now an exact quartic-label Kummer extraction,
+then a same-stream comparison of that label with A-level `d3/d4/d5`.
+The first invariant pass gives the A-line bridge:
+[P27 Trace/Norm Dplus U6 Row-Bit Quartic Invariant](evidence/p27_trace_norm_dplus_u6_rowbit_quartic_invariant_20260622.md).
+In q607/q1607/q1847, the quartic label is irreducible, its discriminant is
+nonsquare, and its cubic resolvent factors `1+2` with linear root exactly
+`16 - 8*A`.  The residual named obstruction is the nonsquare quadratic
+resolvent discriminant over Aeta; compare that class to pulled-back A-level
+`d3=chi(x6)` and later gates before asking GPU for row-bit telemetry.
+The point-fiber probe adds a positive compatibility signal:
+[P27 Trace/Norm Dplus U6 Row-Bit H90 Point-Fiber Probe](evidence/p27_trace_norm_dplus_u6_rowbit_h90_pointfiber_20260622.md).
+In small fields, the row bit can be mixed over `t` alone, but all mixed `t`
+fibers have no rational `E_h90` point; every tested rational `E_h90`,
+domain-spin, and `A_eta` fiber is uniform, both with and without the
+materialization filters.  So H90 still matters, but not as a simple bare
+function-field factor over `E_h90`.
 The class comparison now has a routing result:
 [P27 Trace/Norm Dplus A-Descent Bridge](evidence/p27_trace_norm_dplus_a_descent_20260622.md).
 Across three p27 seed groups, post-Dplus `d3` and `d4` after `d3=+1` have zero
@@ -2126,7 +2189,10 @@ GPU remains limited to `Dplus` fused pricing and bounded telemetry.
 The first executable q7 chart for that brief is
 `archive/fixtures/p27_abk_f3_f4_localized_noR_q7_magma.m`; the online Magma
 calculator was temporarily disabled when submitted, so no genus/dimension
-answer exists yet.
+answer exists yet.  A later retry, and a second retry on 2026-06-22 after
+successful smaller H90 function-field Magma tests, both returned `504 Gateway
+Timeout`; this remains an offline Magma/Sage normalization task rather than an
+online-calculator task.
 Finite-field chart counts are now available:
 [P27 A/B/K F3/F4 Chart Count](evidence/p27_abk_f3_f4_chart_count_20260622.md).
 They show that the f3-plus-only B fibers reproduce the prior gamma handoff,
@@ -2139,6 +2205,22 @@ On the selected `f4=+1` component, `chi(W+2)` is constant across
 `F_A(V,W)=0` and matches frozen `f5(B)` in q1607/q1847/q2087.  Because the
 guard-field `f5` rows are one-sided tails, this promotes CAS comparison of
 repeated gamma classes, not GPU production.
+The mixed-guard update removes that specific weakness:
+[P27 A/B/K F4/F5 Mixed-Guard Transition](evidence/p27_abk_f4_f5_mixed_guard_20260622.md).
+In q4999/q5783/q6007/q6247, `f5(B)` has both signs and the exact transition
+still holds on every selected B row.  This strengthens the repeated-Kummer
+CAS target, while p27/GPU telemetry still kills gamma bucket production.
+The cheap visible-source explanation is negative:
+[P27 B-Line F5 Visible Character Screen](evidence/p27_b_line_f5_visible_character_20260622.md).
+No named B atom and no split linear support of degree `<=2` explains the mixed
+`f5(B)` signs, so the live route remains Kummer/Prym extraction rather than a
+base-line character bucket.
+The cheap recurrence explanation is negative too:
+[P27 B-Line Mixed-F5 Recurrence Screen](evidence/p27_b_line_mixedf5_recurrence_20260622.md).
+Across q4999/q5783/q6007/q6247 there is no exact visible PGL2 recurrence
+`f5(B)=+/-f4(phi(B))`, and the tested Belyi-conjugated hidden-X power maps
+cover only small row fractions.  This keeps repeated gamma as a CAS/Prym
+class-comparison target rather than a visible recurrence or GPU bucket.
 P27 telemetry now sets the practical boundary:
 [P27 Gamma-Chain 20k Telemetry](evidence/p27_gamma_chain_p27_20k_telemetry_20260622.md).
 On `20k + 20k` train/heldout samples, gamma products and V4 phase links stay
@@ -2177,6 +2259,10 @@ After `Dplus`, every tested y has four `U=x6+1/x6` values and eight `x6`
 values; `chi(U+A)=+1`, so `d3=chi(x6)` across the whole second-halving sheet.
 This makes the next CAS comparison `x6` squareclass versus H90 `A_eta`, not an
 undifferentiated A-level sign.
+The cheap version of that comparison is now killed:
+[P27 Trace/Norm Dplus H90-X6 Coboundary Probe](evidence/p27_trace_norm_dplus_h90_x6_coboundary_20260622.md)
+finds no stable low-weight H90/rho product for `chi(x6)`.  Keep this as an
+exact Kummer/Prym comparison, not a GPU sign-bucket request.
 The cheap visible formula for the four-`U` cover is negative:
 [P27 Trace/Norm Dplus Four-U Rational Screen](evidence/p27_trace_norm_dplus_ucover_rational_screen_20260622.md).
 No elementary coefficient of `prod(Z-U_i)` is a rational function of degree
@@ -2186,7 +2272,79 @@ The positive replacement is the reciprocal tower:
 [P27 Trace/Norm Dplus Reciprocal Tower](evidence/p27_trace_norm_dplus_reciprocal_tower_20260622.md).
 The candidate `xp` roots are reciprocal with `X=t^3+2*t^2-1/t`, and the tower
 is `F_A(X,U5)=0`, `F_A(U5,U6)=0`, then `x6^2-U6*x6+1=0`.  This is now the
-CAS object for comparing `chi(x6)` with H90 `A_eta`.
+CAS object for comparing the descended `chi(x6)=chi(U6+2)` row bit with H90
+`A_eta`.
+The row-bit/resultant follow-up
+[P27 Trace/Norm Dplus U6 Row-Bit Resultant](evidence/p27_trace_norm_dplus_u6_rowbit_resultant_20260622.md)
+shows that the four `U6` branches over each Dplus row are all `++++` or all
+`----`, never mixed, on `8199 + 8061` analyzed rows.  It also records
+`R(t,U6)` as degree `16` in `U6`, with square specializations at `U6=+/-2`
+and no visible rational factor of `R(t,S^2-2)`.  Source the row bit; do not
+build a branch-choice GPU bucket.
+The visible branch-atom source is killed by
+[P27 Trace/Norm Dplus U6 Row-Bit Branch-Atom Screen](evidence/p27_trace_norm_dplus_u6_rowbit_branch_atom_20260622.md);
+continue only with a non-visible quotient/Prym/source relation.
+The H90 factor test
+[P27 Trace/Norm Dplus U6 Row-Bit H90 Factor Test](evidence/p27_trace_norm_dplus_u6_rowbit_h90_factor_20260622.md)
+then shows the named elliptic quotient still leaves the lift irreducible of
+degree `32` over `q=607`.
+The staged domain-spin/Aeta factor tests
+[P27 Trace/Norm Dplus U6 Row-Bit Aeta Factor Boundary](evidence/p27_trace_norm_dplus_u6_rowbit_aeta_factor_boundary_20260622.md)
+are now resolved by local Magma:
+[P27 Trace/Norm Dplus U6 Row-Bit Local Magma Factor Split](evidence/p27_trace_norm_dplus_u6_rowbit_local_magma_factor_split_20260622.md).
+In q607/q1607/q1847/q2087, domain-spin gives `16+16`, and either `A_eta`
+sign gives `8+8+8+8`.  The tested deck actions are stable:
+`z` swaps degree-16 factors, `rho` swaps degree-8 factors in pairs, and
+`S -> -S` fixes each tested factor.  Keep this as a factor-action/Kummer-class
+extraction lane; do not treat the split alone as a GPU sampler.
+The factor-label probe
+[P27 Trace/Norm Dplus U6 Row-Bit Factor Label Probe](evidence/p27_trace_norm_dplus_u6_rowbit_factor_label_20260622.md)
+then descends those degree-8 factors to quartics in `Y=S^2`, with rho-pairs
+multiplying back to the domain factors.  That is the concrete CAS object to
+extract before asking GPU for any row-bit label telemetry.
+The quartic invariant pass
+[P27 Trace/Norm Dplus U6 Row-Bit Quartic Invariant](evidence/p27_trace_norm_dplus_u6_rowbit_quartic_invariant_20260622.md)
+finds the resolvent root `16-8*A`, so the row-bit quartic already knows the
+A-coordinate.  The live object is now the residual quadratic resolvent
+discriminant, not the full quartic.
+The point-fiber companion
+[P27 Trace/Norm Dplus U6 Row-Bit H90 Point-Fiber Probe](evidence/p27_trace_norm_dplus_u6_rowbit_h90_pointfiber_20260622.md)
+keeps this alive by showing uniform rational H90/domain-spin/Aeta fibers in
+the tested small fields, even when `t` alone is mixed.
+The visible-character follow-up
+[P27 Trace/Norm Dplus U6 Row-Bit H90 Visible Character](evidence/p27_trace_norm_dplus_u6_rowbit_h90_visible_character_20260622.md)
+then kills the cheap explanation: no product character through weight `4` on
+`E_h90`, domain-spin, or `A_eta` coordinates exactly matches the row bit.  So
+the row-bit signal is real but currently non-visible; do not hand GPU another
+sign-bucket scan from these atoms.
+The local-solubility follow-up
+[P27 Trace/Norm Dplus U6 Row-Bit H90 Solubility Boundary](evidence/p27_trace_norm_dplus_u6_rowbit_h90_solubility_boundary_20260622.md)
+is cleaner and positive: in fields `71,167,199,263,607,1607,1847,2087`, both
+with and without materialization filters, `Ktrace` square/zero exactly matches
+uniform row-bit `t`-fibers, while `Ktrace` nonsquare gives mixed fibers with
+`4` plus and `4` minus branches.  The next theorem target is the H90
+local-solubility boundary plus the non-visible soluble-side sign class.
+The small group-coset follow-up
+[P27 Trace/Norm Dplus U6 Row-Bit H90 Group-Coset Screen](evidence/p27_trace_norm_dplus_u6_rowbit_h90_group_coset_20260622.md)
+kills the nearest sourceable shortcut for that sign: after mapping to
+`E: v^2=u^3-u`, small quotient projections through `m=24` have no nontrivial
+exact separation in the fields with both signs.  Keep the row-bit lane in
+divisor/theta/Prym extraction, not GPU coset buckets.
+The `u`-divisor follow-up
+[P27 Trace/Norm Dplus U6 Row-Bit H90 U-Divisor Screen](evidence/p27_trace_norm_dplus_u6_rowbit_h90_u_divisor_20260622.md)
+finds a sharper positive/negative split: the soluble-side sign descends to
+`u=4/(t-1/t)^2` with zero mixed `u` groups, but monic degree `<=2` divisors
+have no exact hits.  It creates
+`archive/fixtures/p27_dplus_rowbit_u_divisor_targets_20260622.json` for exact
+monic cubic/quartic support tests in the promotion fields.
+That exact-support follow-up now kills the visible q1847 low-degree route:
+[P27 Trace/Norm Dplus U6 Row-Bit H90 U Cubic/Quartic Screen](evidence/p27_trace_norm_dplus_u6_rowbit_h90_u_cubic_quartic_20260622.md).
+Full monic cubic scans in q607/q1607/q1847/q2087 and a full q1847 monic
+quartic scan all find zero exact supports.  Since q1847 quartic random exact
+fits are expected only about `6.31e-7` times, visible monic `P^1_u` support
+through degree `4` is closed in the decisive field.  The row-bit lane now
+needs non-visible divisor/theta/Prym extraction, not a GPU cubic/quartic
+bucket run.
 The small-field descent audit then sets the boundary:
 [P27 Trace/Norm Dplus Reciprocal Tower Small-Field Descent](evidence/p27_trace_norm_dplus_reciprocal_tower_smallfield_descent_20260622.md).
 Over q607/q1607/q1847, the naked reciprocal tower has mixed `A`/`B` fibers for

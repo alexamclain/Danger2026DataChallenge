@@ -1,0 +1,2 @@
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>2428728244</seed><version>2.29-8</version><time>0.510</time><memory>32.09MB</memory></headers><results><line>RESULT u6_rowbit_factor_base 607 32 1</line><line>RESULT u6_rowbit_factor_K 32 1</line><line>RESULT u6_rowbit_factor_h90 607 1 2 32 1</line><line>RESULT u6_rowbit_factor_E 32 1</line><line>RESULT p27_trace_norm_dplus_u6_rowbit_h90_factor_q607 done</line><line></line></results></calculator>

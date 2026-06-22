@@ -1,0 +1,918 @@
+{
+  "date": "2026-06-22",
+  "known_results": {
+    "degree_1_exact": 0,
+    "degree_2_exact": 0,
+    "next_gpu_tests": [
+      "monic cubic exact support in q1847 and q2087",
+      "monic quartic exact support in q1847 and q2087"
+    ],
+    "u_descent": "zero mixed u groups in tested fields"
+  },
+  "name": "p27_dplus_rowbit_u_divisor_targets",
+  "polynomial_family": {
+    "accept": "chi(P(u)) = polarity * sign for every listed row, with no zero evaluations",
+    "degree_3": "u^3 + a*u^2 + b*u + c",
+    "degree_4": "u^4 + a*u^3 + b*u^2 + c*u + d"
+  },
+  "purpose": "Exact finite-field target rows for testing whether the H90-soluble Dplus U6 row bit is chi(P(u)) for a monic cubic, quartic, or other named low-degree divisor on E: v^2=u^3-u.",
+  "target_prime": "1000000000000000000000000103",
+  "targets": [
+    {
+      "coordinate": "u",
+      "family": "dplus_h90_soluble_rowbit_u",
+      "field": 263,
+      "materialization_filters": true,
+      "minus_count": 0,
+      "plus_count": 6,
+      "row_count": 6,
+      "rows": [
+        {
+          "sign": 1,
+          "u": 3
+        },
+        {
+          "sign": 1,
+          "u": 12
+        },
+        {
+          "sign": 1,
+          "u": 17
+        },
+        {
+          "sign": 1,
+          "u": 103
+        },
+        {
+          "sign": 1,
+          "u": 144
+        },
+        {
+          "sign": 1,
+          "u": 204
+        }
+      ],
+      "u_mixed_groups": 0
+    },
+    {
+      "coordinate": "u",
+      "family": "dplus_h90_soluble_rowbit_u",
+      "field": 607,
+      "materialization_filters": true,
+      "minus_count": 16,
+      "plus_count": 16,
+      "row_count": 32,
+      "rows": [
+        {
+          "sign": 1,
+          "u": 14
+        },
+        {
+          "sign": 1,
+          "u": 50
+        },
+        {
+          "sign": 1,
+          "u": 86
+        },
+        {
+          "sign": -1,
+          "u": 87
+        },
+        {
+          "sign": 1,
+          "u": 98
+        },
+        {
+          "sign": 1,
+          "u": 100
+        },
+        {
+          "sign": -1,
+          "u": 101
+        },
+        {
+          "sign": -1,
+          "u": 105
+        },
+        {
+          "sign": -1,
+          "u": 121
+        },
+        {
+          "sign": -1,
+          "u": 143
+        },
+        {
+          "sign": 1,
+          "u": 170
+        },
+        {
+          "sign": 1,
+          "u": 172
+        },
+        {
+          "sign": 1,
+          "u": 173
+        },
+        {
+          "sign": 1,
+          "u": 175
+        },
+        {
+          "sign": 1,
+          "u": 209
+        },
+        {
+          "sign": 1,
+          "u": 241
+        },
+        {
+          "sign": -1,
+          "u": 275
+        },
+        {
+          "sign": -1,
+          "u": 287
+        },
+        {
+          "sign": 1,
+          "u": 289
+        },
+        {
+          "sign": -1,
+          "u": 308
+        },
+        {
+          "sign": -1,
+          "u": 310
+        },
+        {
+          "sign": -1,
+          "u": 328
+        },
+        {
+          "sign": -1,
+          "u": 353
+        },
+        {
+          "sign": -1,
+          "u": 388
+        },
+        {
+          "sign": -1,
+          "u": 389
+        },
+        {
+          "sign": -1,
+          "u": 447
+        },
+        {
+          "sign": 1,
+          "u": 459
+        },
+        {
+          "sign": -1,
+          "u": 467
+        },
+        {
+          "sign": 1,
+          "u": 483
+        },
+        {
+          "sign": 1,
+          "u": 498
+        },
+        {
+          "sign": -1,
+          "u": 540
+        },
+        {
+          "sign": 1,
+          "u": 573
+        }
+      ],
+      "u_mixed_groups": 0
+    },
+    {
+      "coordinate": "u",
+      "family": "dplus_h90_soluble_rowbit_u",
+      "field": 1607,
+      "materialization_filters": true,
+      "minus_count": 22,
+      "plus_count": 28,
+      "row_count": 50,
+      "rows": [
+        {
+          "sign": -1,
+          "u": 2
+        },
+        {
+          "sign": 1,
+          "u": 17
+        },
+        {
+          "sign": 1,
+          "u": 50
+        },
+        {
+          "sign": 1,
+          "u": 54
+        },
+        {
+          "sign": -1,
+          "u": 68
+        },
+        {
+          "sign": -1,
+          "u": 101
+        },
+        {
+          "sign": -1,
+          "u": 102
+        },
+        {
+          "sign": 1,
+          "u": 107
+        },
+        {
+          "sign": -1,
+          "u": 145
+        },
+        {
+          "sign": -1,
+          "u": 178
+        },
+        {
+          "sign": 1,
+          "u": 203
+        },
+        {
+          "sign": -1,
+          "u": 236
+        },
+        {
+          "sign": -1,
+          "u": 273
+        },
+        {
+          "sign": 1,
+          "u": 289
+        },
+        {
+          "sign": 1,
+          "u": 307
+        },
+        {
+          "sign": 1,
+          "u": 328
+        },
+        {
+          "sign": 1,
+          "u": 421
+        },
+        {
+          "sign": -1,
+          "u": 428
+        },
+        {
+          "sign": 1,
+          "u": 471
+        },
+        {
+          "sign": -1,
+          "u": 485
+        },
+        {
+          "sign": 1,
+          "u": 495
+        },
+        {
+          "sign": -1,
+          "u": 547
+        },
+        {
+          "sign": 1,
+          "u": 558
+        },
+        {
+          "sign": -1,
+          "u": 577
+        },
+        {
+          "sign": -1,
+          "u": 611
+        },
+        {
+          "sign": -1,
+          "u": 628
+        },
+        {
+          "sign": -1,
+          "u": 655
+        },
+        {
+          "sign": 1,
+          "u": 657
+        },
+        {
+          "sign": 1,
+          "u": 711
+        },
+        {
+          "sign": 1,
+          "u": 781
+        },
+        {
+          "sign": -1,
+          "u": 797
+        },
+        {
+          "sign": 1,
+          "u": 858
+        },
+        {
+          "sign": 1,
+          "u": 887
+        },
+        {
+          "sign": 1,
+          "u": 904
+        },
+        {
+          "sign": -1,
+          "u": 916
+        },
+        {
+          "sign": -1,
+          "u": 923
+        },
+        {
+          "sign": -1,
+          "u": 1092
+        },
+        {
+          "sign": 1,
+          "u": 1219
+        },
+        {
+          "sign": 1,
+          "u": 1256
+        },
+        {
+          "sign": 1,
+          "u": 1258
+        },
+        {
+          "sign": -1,
+          "u": 1259
+        },
+        {
+          "sign": -1,
+          "u": 1262
+        },
+        {
+          "sign": 1,
+          "u": 1337
+        },
+        {
+          "sign": 1,
+          "u": 1355
+        },
+        {
+          "sign": 1,
+          "u": 1492
+        },
+        {
+          "sign": 1,
+          "u": 1521
+        },
+        {
+          "sign": 1,
+          "u": 1523
+        },
+        {
+          "sign": 1,
+          "u": 1550
+        },
+        {
+          "sign": 1,
+          "u": 1564
+        },
+        {
+          "sign": -1,
+          "u": 1568
+        }
+      ],
+      "u_mixed_groups": 0
+    },
+    {
+      "coordinate": "u",
+      "family": "dplus_h90_soluble_rowbit_u",
+      "field": 1847,
+      "materialization_filters": true,
+      "minus_count": 19,
+      "plus_count": 45,
+      "row_count": 64,
+      "rows": [
+        {
+          "sign": -1,
+          "u": 2
+        },
+        {
+          "sign": -1,
+          "u": 12
+        },
+        {
+          "sign": -1,
+          "u": 13
+        },
+        {
+          "sign": -1,
+          "u": 23
+        },
+        {
+          "sign": -1,
+          "u": 27
+        },
+        {
+          "sign": 1,
+          "u": 117
+        },
+        {
+          "sign": 1,
+          "u": 174
+        },
+        {
+          "sign": 1,
+          "u": 193
+        },
+        {
+          "sign": -1,
+          "u": 242
+        },
+        {
+          "sign": 1,
+          "u": 276
+        },
+        {
+          "sign": 1,
+          "u": 277
+        },
+        {
+          "sign": 1,
+          "u": 323
+        },
+        {
+          "sign": 1,
+          "u": 355
+        },
+        {
+          "sign": -1,
+          "u": 362
+        },
+        {
+          "sign": -1,
+          "u": 413
+        },
+        {
+          "sign": 1,
+          "u": 429
+        },
+        {
+          "sign": 1,
+          "u": 506
+        },
+        {
+          "sign": 1,
+          "u": 528
+        },
+        {
+          "sign": 1,
+          "u": 529
+        },
+        {
+          "sign": 1,
+          "u": 553
+        },
+        {
+          "sign": 1,
+          "u": 624
+        },
+        {
+          "sign": 1,
+          "u": 643
+        },
+        {
+          "sign": 1,
+          "u": 644
+        },
+        {
+          "sign": 1,
+          "u": 680
+        },
+        {
+          "sign": 1,
+          "u": 693
+        },
+        {
+          "sign": -1,
+          "u": 701
+        },
+        {
+          "sign": -1,
+          "u": 722
+        },
+        {
+          "sign": -1,
+          "u": 725
+        },
+        {
+          "sign": -1,
+          "u": 728
+        },
+        {
+          "sign": 1,
+          "u": 729
+        },
+        {
+          "sign": 1,
+          "u": 730
+        },
+        {
+          "sign": 1,
+          "u": 766
+        },
+        {
+          "sign": 1,
+          "u": 813
+        },
+        {
+          "sign": 1,
+          "u": 897
+        },
+        {
+          "sign": 1,
+          "u": 928
+        },
+        {
+          "sign": 1,
+          "u": 936
+        },
+        {
+          "sign": 1,
+          "u": 963
+        },
+        {
+          "sign": 1,
+          "u": 1011
+        },
+        {
+          "sign": 1,
+          "u": 1038
+        },
+        {
+          "sign": 1,
+          "u": 1050
+        },
+        {
+          "sign": 1,
+          "u": 1060
+        },
+        {
+          "sign": 1,
+          "u": 1061
+        },
+        {
+          "sign": 1,
+          "u": 1084
+        },
+        {
+          "sign": -1,
+          "u": 1157
+        },
+        {
+          "sign": -1,
+          "u": 1158
+        },
+        {
+          "sign": 1,
+          "u": 1235
+        },
+        {
+          "sign": -1,
+          "u": 1284
+        },
+        {
+          "sign": 1,
+          "u": 1288
+        },
+        {
+          "sign": 1,
+          "u": 1331
+        },
+        {
+          "sign": 1,
+          "u": 1332
+        },
+        {
+          "sign": 1,
+          "u": 1349
+        },
+        {
+          "sign": 1,
+          "u": 1351
+        },
+        {
+          "sign": -1,
+          "u": 1353
+        },
+        {
+          "sign": -1,
+          "u": 1358
+        },
+        {
+          "sign": 1,
+          "u": 1438
+        },
+        {
+          "sign": -1,
+          "u": 1449
+        },
+        {
+          "sign": 1,
+          "u": 1457
+        },
+        {
+          "sign": 1,
+          "u": 1473
+        },
+        {
+          "sign": 1,
+          "u": 1567
+        },
+        {
+          "sign": 1,
+          "u": 1599
+        },
+        {
+          "sign": -1,
+          "u": 1627
+        },
+        {
+          "sign": 1,
+          "u": 1628
+        },
+        {
+          "sign": 1,
+          "u": 1661
+        },
+        {
+          "sign": 1,
+          "u": 1717
+        }
+      ],
+      "u_mixed_groups": 0
+    },
+    {
+      "coordinate": "u",
+      "family": "dplus_h90_soluble_rowbit_u",
+      "field": 2087,
+      "materialization_filters": true,
+      "minus_count": 32,
+      "plus_count": 25,
+      "row_count": 57,
+      "rows": [
+        {
+          "sign": -1,
+          "u": 34
+        },
+        {
+          "sign": -1,
+          "u": 35
+        },
+        {
+          "sign": 1,
+          "u": 50
+        },
+        {
+          "sign": 1,
+          "u": 70
+        },
+        {
+          "sign": 1,
+          "u": 71
+        },
+        {
+          "sign": -1,
+          "u": 96
+        },
+        {
+          "sign": -1,
+          "u": 97
+        },
+        {
+          "sign": -1,
+          "u": 98
+        },
+        {
+          "sign": -1,
+          "u": 137
+        },
+        {
+          "sign": -1,
+          "u": 138
+        },
+        {
+          "sign": 1,
+          "u": 184
+        },
+        {
+          "sign": -1,
+          "u": 195
+        },
+        {
+          "sign": 1,
+          "u": 199
+        },
+        {
+          "sign": -1,
+          "u": 215
+        },
+        {
+          "sign": 1,
+          "u": 261
+        },
+        {
+          "sign": 1,
+          "u": 262
+        },
+        {
+          "sign": 1,
+          "u": 294
+        },
+        {
+          "sign": 1,
+          "u": 391
+        },
+        {
+          "sign": -1,
+          "u": 399
+        },
+        {
+          "sign": -1,
+          "u": 464
+        },
+        {
+          "sign": -1,
+          "u": 493
+        },
+        {
+          "sign": -1,
+          "u": 506
+        },
+        {
+          "sign": 1,
+          "u": 538
+        },
+        {
+          "sign": 1,
+          "u": 556
+        },
+        {
+          "sign": -1,
+          "u": 594
+        },
+        {
+          "sign": -1,
+          "u": 620
+        },
+        {
+          "sign": 1,
+          "u": 621
+        },
+        {
+          "sign": -1,
+          "u": 669
+        },
+        {
+          "sign": -1,
+          "u": 677
+        },
+        {
+          "sign": 1,
+          "u": 716
+        },
+        {
+          "sign": -1,
+          "u": 758
+        },
+        {
+          "sign": 1,
+          "u": 760
+        },
+        {
+          "sign": -1,
+          "u": 771
+        },
+        {
+          "sign": -1,
+          "u": 867
+        },
+        {
+          "sign": 1,
+          "u": 868
+        },
+        {
+          "sign": -1,
+          "u": 904
+        },
+        {
+          "sign": 1,
+          "u": 963
+        },
+        {
+          "sign": 1,
+          "u": 1097
+        },
+        {
+          "sign": 1,
+          "u": 1239
+        },
+        {
+          "sign": 1,
+          "u": 1243
+        },
+        {
+          "sign": -1,
+          "u": 1453
+        },
+        {
+          "sign": -1,
+          "u": 1483
+        },
+        {
+          "sign": -1,
+          "u": 1514
+        },
+        {
+          "sign": -1,
+          "u": 1521
+        },
+        {
+          "sign": -1,
+          "u": 1626
+        },
+        {
+          "sign": 1,
+          "u": 1631
+        },
+        {
+          "sign": -1,
+          "u": 1733
+        },
+        {
+          "sign": 1,
+          "u": 1737
+        },
+        {
+          "sign": -1,
+          "u": 1743
+        },
+        {
+          "sign": 1,
+          "u": 1744
+        },
+        {
+          "sign": 1,
+          "u": 1783
+        },
+        {
+          "sign": 1,
+          "u": 1836
+        },
+        {
+          "sign": -1,
+          "u": 1837
+        },
+        {
+          "sign": 1,
+          "u": 1885
+        },
+        {
+          "sign": -1,
+          "u": 2002
+        },
+        {
+          "sign": -1,
+          "u": 2003
+        },
+        {
+          "sign": -1,
+          "u": 2048
+        }
+      ],
+      "u_mixed_groups": 0
+    }
+  ]
+}

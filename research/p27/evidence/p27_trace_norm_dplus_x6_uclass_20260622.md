@@ -52,6 +52,15 @@ F_A(U5,U6) = 0
 x6^2 - U6*x6 + 1 = 0.
 ```
 
+Row-bit/resultant follow-up:
+[P27 Trace/Norm Dplus U6 Row-Bit Resultant](p27_trace_norm_dplus_u6_rowbit_resultant_20260622.md)
+confirms on the same two Dplus seed groups that the four `U6` values over each
+row are uniformly signed: `8199/8199` train rows and `8061/8061` heldout rows
+are either `++++` or `----`, with no mixed rows.  The exact eliminated
+resultant has square specializations at `U6=+/-2`, but the lift
+`U6=S^2-2` does not factor over `Q` in the symbolic screen.  So the missing
+object is one descended row bit, not a branch-choice rule.
+
 ## Probe
 
 Gate:
@@ -205,6 +214,13 @@ Compare this class with the Dplus H90 second-layer payload:
 A_eta = U_eta + z*W_eta.
 ```
 
+First comparison screen:
+[P27 Trace/Norm Dplus H90-X6 Coboundary Probe](p27_trace_norm_dplus_h90_x6_coboundary_20260622.md).
+On the same production-style Dplus stream, simple H90 atoms and first-order
+`rho +/- atom` branch divisors have no exact weight-`<=3` product for
+`chi(x6)`, and train skews do not hold out.  The comparison therefore remains
+an exact cover/Prym task, not a GPU sign-bucket task.
+
 Promote if:
 
 ```text
@@ -227,6 +243,7 @@ A-level classes.
 continue = derive/eliminate the four-U cover over t or the H90 base
 continue = normalize the reciprocal tower F_A(X,U5), F_A(U5,U6)
 continue = compare the x6 squareclass with A_eta
+continue = source the descended U6 row bit, not a branch-choice bit
 continue = route A-level d3 extraction through this Dplus pullback model
 continue = GPU fused-Dplus telemetry may emit U/x6 only as support for this
            class comparison
@@ -235,6 +252,8 @@ kill = searching U+A; it is already square in the tested Dplus domain
 kill = low-degree rational formulas for the four-U quartic coefficients in
        t,a,A through degree 20
 kill = treating d3 as an arbitrary eight-branch sign
+kill = U6 branch-choice buckets after Dplus
+kill = simple H90/rho coboundary products as chi(x6) predictors
 kill = GPU production from x6 buckets before a source/coboundary exists
 ```
 
@@ -243,9 +262,11 @@ kill = GPU production from x6 buckets before a source/coboundary exists
 - [P27 Trace/Norm Dplus A-Coordinate Bridge](p27_trace_norm_dplus_a_coordinate_bridge_20260622.md)
 - [P27 Trace/Norm Dplus Four-U Rational Screen](p27_trace_norm_dplus_ucover_rational_screen_20260622.md)
 - [P27 Trace/Norm Dplus Reciprocal Tower](p27_trace_norm_dplus_reciprocal_tower_20260622.md)
+- [P27 Trace/Norm Dplus U6 Row-Bit Resultant](p27_trace_norm_dplus_u6_rowbit_resultant_20260622.md)
 - [P27 Sqrt-Beating Test Queue After Coupling Kill](p27_sqrt_beating_test_queue_after_coupling_kill_20260622.md)
 - [P27 Trace/Norm Dplus H90 Branch Class](p27_trace_norm_dplus_h90_branch_class_20260622.md)
 - [P27 Trace/Norm Dplus H90 Payload Screen](p27_trace_norm_dplus_h90_payload_screen_20260622.md)
+- [P27 Trace/Norm Dplus H90-X6 Coboundary Probe](p27_trace_norm_dplus_h90_x6_coboundary_20260622.md)
 - [P27 A-Level Kummer Extraction Packet](p27_a_level_kummer_extraction_packet_20260622.md)
 
 ```text

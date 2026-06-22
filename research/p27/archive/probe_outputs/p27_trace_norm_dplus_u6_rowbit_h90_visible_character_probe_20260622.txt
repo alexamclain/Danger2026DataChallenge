@@ -1,0 +1,1001 @@
+p27 trace/norm Dplus U6 row-bit H90 visible-character probe
+question = is the H90 point-fiber row bit a visible character on E/Z/Aeta coordinates?
+fields = 71,167,199,263,607
+max_weight = 4
+materialization_filters = 1
+collection:
+  Aeta_minus_rows = 848
+  Aeta_plus_rows = 848
+  E_rows = 212
+  Z_rows = 424
+  q167_mixed_or_empty_t = 160
+  q199_mixed_or_empty_t = 182
+  q263_mixed_or_empty_t = 250
+  q607_mixed_or_empty_t = 542
+  q71_mixed_or_empty_t = 62
+E_profile:
+  A_minus = 112
+  A_minus_2_minus = 212
+  A_plus = 100
+  A_plus_2_plus = 212
+  B*C_minus = 106
+  B*C_plus = 106
+  B*R_minus = 106
+  B*R_plus = 106
+  B_minus = 128
+  B_plus = 84
+  C*R_minus = 212
+  C_minus = 106
+  C_plus = 106
+  Fspin_plus = 212
+  Ktrace_plus = 212
+  R_minus = 106
+  R_plus = 106
+  X_minus = 118
+  X_minus_2_plus = 212
+  X_plus = 94
+  X_plus_2_plus = 212
+  active_features = 20
+  best_match_x1000000 = 641509
+  best_matches = 136
+  best_total = 212
+  combos_screened = 12390
+  constant_features = 7
+  exact_combos = 0
+  features_screened = 20
+  t2_minus_1_minus = 106
+  t2_minus_1_plus = 106
+  t_minus = 106
+  t_minus_1_minus = 106
+  t_minus_1_plus = 106
+  t_plus = 106
+  t_plus_1_minus = 128
+  t_plus_1_plus = 84
+  w_minus = 106
+  w_minus_B_minus = 84
+  w_minus_B_plus = 128
+  w_minus_C_minus = 106
+  w_minus_C_plus = 106
+  w_minus_R_minus = 106
+  w_minus_R_plus = 106
+  w_minus_t_minus = 106
+  w_minus_t_plus = 106
+  w_plus = 106
+  w_plus_B_minus = 128
+  w_plus_B_plus = 84
+  w_plus_C_minus = 106
+  w_plus_C_plus = 106
+  w_plus_R_minus = 106
+  w_plus_R_plus = 106
+  w_plus_t_minus = 106
+  w_plus_t_plus = 106
+E_exact_combos:
+  none
+E_best_combos:
+  combo=A matches=136/212 fields=[q71:12/16, q167:8/12, q199:24/32, q263:20/24, q607:72/128]
+  combo=-A*B*C*B*R matches=136/212 fields=[q71:12/16, q167:8/12, q199:24/32, q263:20/24, q607:72/128]
+  combo=A*B*C*t matches=136/212 fields=[q71:12/16, q167:8/12, q199:24/32, q263:20/24, q607:72/128]
+  combo=A*B*C*t2_minus_1 matches=136/212 fields=[q71:12/16, q167:8/12, q199:24/32, q263:20/24, q607:72/128]
+  combo=-A*B*R*t matches=136/212 fields=[q71:12/16, q167:8/12, q199:24/32, q263:20/24, q607:72/128]
+  combo=-A*B*R*t2_minus_1 matches=136/212 fields=[q71:12/16, q167:8/12, q199:24/32, q263:20/24, q607:72/128]
+  combo=-A*C*R matches=136/212 fields=[q71:12/16, q167:8/12, q199:24/32, q263:20/24, q607:72/128]
+  combo=A*t*t2_minus_1 matches=136/212 fields=[q71:12/16, q167:8/12, q199:24/32, q263:20/24, q607:72/128]
+  combo=-A*w_minus_B*w_plus_B matches=136/212 fields=[q71:12/16, q167:8/12, q199:24/32, q263:20/24, q607:72/128]
+  combo=A*B*B*C*C matches=136/212 fields=[q71:12/16, q167:8/12, q199:24/32, q263:20/24, q607:72/128]
+  combo=-A*B*B*C*R matches=136/212 fields=[q71:12/16, q167:8/12, q199:24/32, q263:20/24, q607:72/128]
+  combo=-A*B*B*R*C matches=136/212 fields=[q71:12/16, q167:8/12, q199:24/32, q263:20/24, q607:72/128]
+Z_profile:
+  A_minus = 224
+  A_minus_2_minus = 424
+  A_plus = 200
+  A_plus_2_plus = 424
+  B*C_minus = 212
+  B*C_plus = 212
+  B*R_minus = 212
+  B*R_plus = 212
+  B_minus = 256
+  B_plus = 168
+  C*R_minus = 424
+  C_minus = 212
+  C_plus = 212
+  Fspin_plus = 424
+  Ktrace_plus = 424
+  R_minus = 212
+  R_plus = 212
+  X_minus = 236
+  X_minus_2_plus = 424
+  X_plus = 188
+  X_plus_2_plus = 424
+  active_features = 27
+  best_match_x1000000 = 641509
+  best_matches = 272
+  best_total = 424
+  combos_screened = 41706
+  constant_features = 7
+  exact_combos = 0
+  features_screened = 27
+  features_with_zero = 4
+  t2_minus_1_minus = 212
+  t2_minus_1_plus = 212
+  t_minus = 212
+  t_minus_1_minus = 212
+  t_minus_1_plus = 212
+  t_plus = 212
+  t_plus_1_minus = 256
+  t_plus_1_plus = 168
+  w_minus = 212
+  w_minus_B_minus = 168
+  w_minus_B_plus = 256
+  w_minus_C_minus = 212
+  w_minus_C_plus = 212
+  w_minus_R_minus = 212
+  w_minus_R_plus = 212
+  w_minus_t_minus = 212
+  w_minus_t_plus = 212
+  w_plus = 212
+  w_plus_B_minus = 256
+  w_plus_B_plus = 168
+  w_plus_C_minus = 212
+  w_plus_C_plus = 212
+  w_plus_R_minus = 212
+  w_plus_R_plus = 212
+  w_plus_t_minus = 212
+  w_plus_t_plus = 212
+  z_minus = 212
+  z_minus_B_minus = 194
+  z_minus_B_plus = 230
+  z_minus_C_minus = 218
+  z_minus_C_plus = 206
+  z_minus_R_minus = 230
+  z_minus_R_plus = 192
+  z_minus_R_zero = 2
+  z_minus_t_minus = 202
+  z_minus_t_plus = 220
+  z_minus_t_zero = 2
+  z_minus_w_minus = 212
+  z_minus_w_plus = 212
+  z_plus = 212
+  z_plus_B_minus = 230
+  z_plus_B_plus = 194
+  z_plus_C_minus = 206
+  z_plus_C_plus = 218
+  z_plus_R_minus = 192
+  z_plus_R_plus = 230
+  z_plus_R_zero = 2
+  z_plus_t_minus = 220
+  z_plus_t_plus = 202
+  z_plus_t_zero = 2
+  z_plus_w_minus = 212
+  z_plus_w_plus = 212
+Z_exact_combos:
+  none
+Z_best_combos:
+  combo=A matches=272/424 fields=[q71:24/32, q167:16/24, q199:48/64, q263:40/48, q607:144/256]
+  combo=-A*B*C*B*R matches=272/424 fields=[q71:24/32, q167:16/24, q199:48/64, q263:40/48, q607:144/256]
+  combo=A*B*C*t matches=272/424 fields=[q71:24/32, q167:16/24, q199:48/64, q263:40/48, q607:144/256]
+  combo=A*B*C*t2_minus_1 matches=272/424 fields=[q71:24/32, q167:16/24, q199:48/64, q263:40/48, q607:144/256]
+  combo=-A*B*R*t matches=272/424 fields=[q71:24/32, q167:16/24, q199:48/64, q263:40/48, q607:144/256]
+  combo=-A*B*R*t2_minus_1 matches=272/424 fields=[q71:24/32, q167:16/24, q199:48/64, q263:40/48, q607:144/256]
+  combo=-A*C*R matches=272/424 fields=[q71:24/32, q167:16/24, q199:48/64, q263:40/48, q607:144/256]
+  combo=A*t*t2_minus_1 matches=272/424 fields=[q71:24/32, q167:16/24, q199:48/64, q263:40/48, q607:144/256]
+  combo=-A*w_minus_B*w_plus_B matches=272/424 fields=[q71:24/32, q167:16/24, q199:48/64, q263:40/48, q607:144/256]
+  combo=A*B*B*C*C matches=272/424 fields=[q71:24/32, q167:16/24, q199:48/64, q263:40/48, q607:144/256]
+  combo=-A*B*B*C*R matches=272/424 fields=[q71:24/32, q167:16/24, q199:48/64, q263:40/48, q607:144/256]
+  combo=-A*B*B*R*C matches=272/424 fields=[q71:24/32, q167:16/24, q199:48/64, q263:40/48, q607:144/256]
+Aeta_plus_profile:
+  A_minus = 448
+  A_minus_2_minus = 848
+  A_plus = 400
+  A_plus_2_plus = 848
+  B*C_minus = 424
+  B*C_plus = 424
+  B*R_minus = 424
+  B*R_plus = 424
+  B_minus = 512
+  B_plus = 336
+  C*R_minus = 848
+  C_minus = 424
+  C_plus = 424
+  Fspin_plus = 848
+  Ktrace_plus = 848
+  R_minus = 424
+  R_plus = 424
+  X_minus = 472
+  X_minus_2_plus = 848
+  X_plus = 376
+  X_plus_2_plus = 848
+  active_features = 28
+  best_match_x1000000 = 641509
+  best_matches = 544
+  best_total = 848
+  combos_screened = 48314
+  constant_features = 7
+  exact_combos = 0
+  features_screened = 28
+  features_with_zero = 16
+  rho_minus = 424
+  rho_minus_B_minus = 416
+  rho_minus_B_plus = 430
+  rho_minus_B_zero = 2
+  rho_minus_C_minus = 426
+  rho_minus_C_plus = 414
+  rho_minus_C_zero = 8
+  rho_minus_R_minus = 414
+  rho_minus_R_plus = 430
+  rho_minus_R_zero = 4
+  rho_minus_t_minus = 436
+  rho_minus_t_plus = 408
+  rho_minus_t_zero = 4
+  rho_minus_w_minus = 408
+  rho_minus_w_plus = 435
+  rho_minus_w_zero = 5
+  rho_minus_z_minus = 411
+  rho_minus_z_plus = 435
+  rho_minus_z_zero = 2
+  rho_plus = 424
+  rho_plus_B_minus = 430
+  rho_plus_B_plus = 416
+  rho_plus_B_zero = 2
+  rho_plus_C_minus = 414
+  rho_plus_C_plus = 426
+  rho_plus_C_zero = 8
+  rho_plus_R_minus = 430
+  rho_plus_R_plus = 414
+  rho_plus_R_zero = 4
+  rho_plus_t_minus = 408
+  rho_plus_t_plus = 436
+  rho_plus_t_zero = 4
+  rho_plus_w_minus = 435
+  rho_plus_w_plus = 408
+  rho_plus_w_zero = 5
+  rho_plus_z_minus = 435
+  rho_plus_z_plus = 411
+  rho_plus_z_zero = 2
+  t2_minus_1_minus = 424
+  t2_minus_1_plus = 424
+  t_minus = 424
+  t_minus_1_minus = 424
+  t_minus_1_plus = 424
+  t_plus = 424
+  t_plus_1_minus = 512
+  t_plus_1_plus = 336
+  w_minus = 424
+  w_minus_B_minus = 336
+  w_minus_B_plus = 512
+  w_minus_C_minus = 424
+  w_minus_C_plus = 424
+  w_minus_R_minus = 424
+  w_minus_R_plus = 424
+  w_minus_t_minus = 424
+  w_minus_t_plus = 424
+  w_plus = 424
+  w_plus_B_minus = 512
+  w_plus_B_plus = 336
+  w_plus_C_minus = 424
+  w_plus_C_plus = 424
+  w_plus_R_minus = 424
+  w_plus_R_plus = 424
+  w_plus_t_minus = 424
+  w_plus_t_plus = 424
+  z_minus = 424
+  z_minus_B_minus = 388
+  z_minus_B_plus = 460
+  z_minus_C_minus = 436
+  z_minus_C_plus = 412
+  z_minus_R_minus = 460
+  z_minus_R_plus = 384
+  z_minus_R_zero = 4
+  z_minus_t_minus = 404
+  z_minus_t_plus = 440
+  z_minus_t_zero = 4
+  z_minus_w_minus = 424
+  z_minus_w_plus = 424
+  z_plus = 424
+  z_plus_B_minus = 460
+  z_plus_B_plus = 388
+  z_plus_C_minus = 412
+  z_plus_C_plus = 436
+  z_plus_R_minus = 384
+  z_plus_R_plus = 460
+  z_plus_R_zero = 4
+  z_plus_t_minus = 440
+  z_plus_t_plus = 404
+  z_plus_t_zero = 4
+  z_plus_w_minus = 424
+  z_plus_w_plus = 424
+Aeta_plus_exact_combos:
+  none
+Aeta_plus_best_combos:
+  combo=A matches=544/848 fields=[q71:48/64, q167:32/48, q199:96/128, q263:80/96, q607:288/512]
+  combo=-A*B*C*B*R matches=544/848 fields=[q71:48/64, q167:32/48, q199:96/128, q263:80/96, q607:288/512]
+  combo=A*B*C*t matches=544/848 fields=[q71:48/64, q167:32/48, q199:96/128, q263:80/96, q607:288/512]
+  combo=A*B*C*t2_minus_1 matches=544/848 fields=[q71:48/64, q167:32/48, q199:96/128, q263:80/96, q607:288/512]
+  combo=-A*B*R*t matches=544/848 fields=[q71:48/64, q167:32/48, q199:96/128, q263:80/96, q607:288/512]
+  combo=-A*B*R*t2_minus_1 matches=544/848 fields=[q71:48/64, q167:32/48, q199:96/128, q263:80/96, q607:288/512]
+  combo=-A*C*R matches=544/848 fields=[q71:48/64, q167:32/48, q199:96/128, q263:80/96, q607:288/512]
+  combo=A*t*t2_minus_1 matches=544/848 fields=[q71:48/64, q167:32/48, q199:96/128, q263:80/96, q607:288/512]
+  combo=-A*w_minus_B*w_plus_B matches=544/848 fields=[q71:48/64, q167:32/48, q199:96/128, q263:80/96, q607:288/512]
+  combo=A*B*B*C*C matches=544/848 fields=[q71:48/64, q167:32/48, q199:96/128, q263:80/96, q607:288/512]
+  combo=-A*B*B*C*R matches=544/848 fields=[q71:48/64, q167:32/48, q199:96/128, q263:80/96, q607:288/512]
+  combo=-A*B*B*R*C matches=544/848 fields=[q71:48/64, q167:32/48, q199:96/128, q263:80/96, q607:288/512]
+Aeta_minus_profile:
+  A_minus = 448
+  A_minus_2_minus = 848
+  A_plus = 400
+  A_plus_2_plus = 848
+  B*C_minus = 424
+  B*C_plus = 424
+  B*R_minus = 424
+  B*R_plus = 424
+  B_minus = 512
+  B_plus = 336
+  C*R_minus = 848
+  C_minus = 424
+  C_plus = 424
+  Fspin_plus = 848
+  Ktrace_plus = 848
+  R_minus = 424
+  R_plus = 424
+  X_minus = 472
+  X_minus_2_plus = 848
+  X_plus = 376
+  X_plus_2_plus = 848
+  active_features = 28
+  best_match_x1000000 = 641509
+  best_matches = 544
+  best_total = 848
+  combos_screened = 48314
+  constant_features = 7
+  exact_combos = 0
+  features_screened = 28
+  features_with_zero = 16
+  rho_minus = 424
+  rho_minus_B_minus = 416
+  rho_minus_B_plus = 430
+  rho_minus_B_zero = 2
+  rho_minus_C_minus = 426
+  rho_minus_C_plus = 414
+  rho_minus_C_zero = 8
+  rho_minus_R_minus = 414
+  rho_minus_R_plus = 430
+  rho_minus_R_zero = 4
+  rho_minus_t_minus = 436
+  rho_minus_t_plus = 408
+  rho_minus_t_zero = 4
+  rho_minus_w_minus = 435
+  rho_minus_w_plus = 408
+  rho_minus_w_zero = 5
+  rho_minus_z_minus = 411
+  rho_minus_z_plus = 435
+  rho_minus_z_zero = 2
+  rho_plus = 424
+  rho_plus_B_minus = 430
+  rho_plus_B_plus = 416
+  rho_plus_B_zero = 2
+  rho_plus_C_minus = 414
+  rho_plus_C_plus = 426
+  rho_plus_C_zero = 8
+  rho_plus_R_minus = 430
+  rho_plus_R_plus = 414
+  rho_plus_R_zero = 4
+  rho_plus_t_minus = 408
+  rho_plus_t_plus = 436
+  rho_plus_t_zero = 4
+  rho_plus_w_minus = 408
+  rho_plus_w_plus = 435
+  rho_plus_w_zero = 5
+  rho_plus_z_minus = 435
+  rho_plus_z_plus = 411
+  rho_plus_z_zero = 2
+  t2_minus_1_minus = 424
+  t2_minus_1_plus = 424
+  t_minus = 424
+  t_minus_1_minus = 424
+  t_minus_1_plus = 424
+  t_plus = 424
+  t_plus_1_minus = 512
+  t_plus_1_plus = 336
+  w_minus = 424
+  w_minus_B_minus = 336
+  w_minus_B_plus = 512
+  w_minus_C_minus = 424
+  w_minus_C_plus = 424
+  w_minus_R_minus = 424
+  w_minus_R_plus = 424
+  w_minus_t_minus = 424
+  w_minus_t_plus = 424
+  w_plus = 424
+  w_plus_B_minus = 512
+  w_plus_B_plus = 336
+  w_plus_C_minus = 424
+  w_plus_C_plus = 424
+  w_plus_R_minus = 424
+  w_plus_R_plus = 424
+  w_plus_t_minus = 424
+  w_plus_t_plus = 424
+  z_minus = 424
+  z_minus_B_minus = 388
+  z_minus_B_plus = 460
+  z_minus_C_minus = 436
+  z_minus_C_plus = 412
+  z_minus_R_minus = 460
+  z_minus_R_plus = 384
+  z_minus_R_zero = 4
+  z_minus_t_minus = 404
+  z_minus_t_plus = 440
+  z_minus_t_zero = 4
+  z_minus_w_minus = 424
+  z_minus_w_plus = 424
+  z_plus = 424
+  z_plus_B_minus = 460
+  z_plus_B_plus = 388
+  z_plus_C_minus = 412
+  z_plus_C_plus = 436
+  z_plus_R_minus = 384
+  z_plus_R_plus = 460
+  z_plus_R_zero = 4
+  z_plus_t_minus = 440
+  z_plus_t_plus = 404
+  z_plus_t_zero = 4
+  z_plus_w_minus = 424
+  z_plus_w_plus = 424
+Aeta_minus_exact_combos:
+  none
+Aeta_minus_best_combos:
+  combo=A matches=544/848 fields=[q71:48/64, q167:32/48, q199:96/128, q263:80/96, q607:288/512]
+  combo=-A*B*C*B*R matches=544/848 fields=[q71:48/64, q167:32/48, q199:96/128, q263:80/96, q607:288/512]
+  combo=A*B*C*t matches=544/848 fields=[q71:48/64, q167:32/48, q199:96/128, q263:80/96, q607:288/512]
+  combo=A*B*C*t2_minus_1 matches=544/848 fields=[q71:48/64, q167:32/48, q199:96/128, q263:80/96, q607:288/512]
+  combo=-A*B*R*t matches=544/848 fields=[q71:48/64, q167:32/48, q199:96/128, q263:80/96, q607:288/512]
+  combo=-A*B*R*t2_minus_1 matches=544/848 fields=[q71:48/64, q167:32/48, q199:96/128, q263:80/96, q607:288/512]
+  combo=-A*C*R matches=544/848 fields=[q71:48/64, q167:32/48, q199:96/128, q263:80/96, q607:288/512]
+  combo=A*t*t2_minus_1 matches=544/848 fields=[q71:48/64, q167:32/48, q199:96/128, q263:80/96, q607:288/512]
+  combo=-A*w_minus_B*w_plus_B matches=544/848 fields=[q71:48/64, q167:32/48, q199:96/128, q263:80/96, q607:288/512]
+  combo=A*B*B*C*C matches=544/848 fields=[q71:48/64, q167:32/48, q199:96/128, q263:80/96, q607:288/512]
+  combo=-A*B*B*C*R matches=544/848 fields=[q71:48/64, q167:32/48, q199:96/128, q263:80/96, q607:288/512]
+  combo=-A*B*B*R*C matches=544/848 fields=[q71:48/64, q167:32/48, q199:96/128, q263:80/96, q607:288/512]
+materialization_filters = 0
+collection:
+  Aeta_minus_rows = 901
+  Aeta_plus_rows = 901
+  E_rows = 234
+  Z_rows = 468
+  q167_mixed_or_empty_t = 158
+  q199_mixed_or_empty_t = 180
+  q263_mixed_or_empty_t = 248
+  q607_mixed_or_empty_t = 538
+  q71_mixed_or_empty_t = 60
+E_profile:
+  A_minus = 132
+  A_minus_2_minus = 232
+  A_minus_2_zero = 2
+  A_plus = 102
+  A_plus_2_plus = 214
+  A_plus_2_zero = 20
+  B*C_minus = 117
+  B*C_plus = 117
+  B*R_minus = 116
+  B*R_plus = 116
+  B*R_zero = 2
+  B_minus = 128
+  B_plus = 106
+  C*R_minus = 232
+  C*R_zero = 2
+  C_minus = 117
+  C_plus = 117
+  Fspin_plus = 234
+  Ktrace_plus = 232
+  Ktrace_zero = 2
+  R_minus = 116
+  R_plus = 116
+  R_zero = 2
+  X_minus = 119
+  X_minus_2_plus = 214
+  X_minus_2_zero = 20
+  X_plus = 115
+  X_plus_2_plus = 234
+  active_features = 8
+  best_match_x1000000 = 658119
+  best_matches = 154
+  best_total = 234
+  combos_screened = 324
+  constant_features = 2
+  exact_combos = 0
+  features_screened = 8
+  features_with_zero = 17
+  t2_minus_1_minus = 107
+  t2_minus_1_plus = 107
+  t2_minus_1_zero = 20
+  t_minus = 117
+  t_minus_1_minus = 117
+  t_minus_1_plus = 107
+  t_minus_1_zero = 10
+  t_plus = 117
+  t_plus_1_minus = 128
+  t_plus_1_plus = 96
+  t_plus_1_zero = 10
+  w_minus = 116
+  w_minus_B_minus = 96
+  w_minus_B_plus = 128
+  w_minus_B_zero = 10
+  w_minus_C_minus = 112
+  w_minus_C_plus = 112
+  w_minus_C_zero = 10
+  w_minus_R_minus = 111
+  w_minus_R_plus = 111
+  w_minus_R_zero = 12
+  w_minus_t_minus = 117
+  w_minus_t_plus = 117
+  w_plus = 116
+  w_plus_B_minus = 128
+  w_plus_B_plus = 96
+  w_plus_B_zero = 10
+  w_plus_C_minus = 112
+  w_plus_C_plus = 112
+  w_plus_C_zero = 10
+  w_plus_R_minus = 111
+  w_plus_R_plus = 111
+  w_plus_R_zero = 12
+  w_plus_t_minus = 117
+  w_plus_t_plus = 117
+  w_zero = 2
+E_exact_combos:
+  none
+E_best_combos:
+  combo=-A*B matches=154/234 fields=[q71:12/20, q167:12/16, q199:32/36, q263:12/28, q607:86/134]
+  combo=-A*B*C*C matches=154/234 fields=[q71:12/20, q167:12/16, q199:32/36, q263:12/28, q607:86/134]
+  combo=-A*C*t matches=154/234 fields=[q71:12/20, q167:12/16, q199:32/36, q263:12/28, q607:86/134]
+  combo=-A*B*B*C*t matches=154/234 fields=[q71:12/20, q167:12/16, q199:32/36, q263:12/28, q607:86/134]
+  combo=X matches=143/234 fields=[q71:12/20, q167:12/16, q199:28/36, q263:18/28, q607:73/134]
+  combo=B*C*X*t matches=143/234 fields=[q71:12/20, q167:12/16, q199:28/36, q263:18/28, q607:73/134]
+  combo=B*B*C*C*X matches=143/234 fields=[q71:12/20, q167:12/16, q199:28/36, q263:18/28, q607:73/134]
+  combo=B*C*X*t matches=143/234 fields=[q71:12/20, q167:12/16, q199:28/36, q263:18/28, q607:73/134]
+  combo=B*w_minus_t*w_plus_t matches=142/234 fields=[q71:20/20, q167:12/16, q199:24/36, q263:12/28, q607:74/134]
+  combo=B*C*C*w_minus_t*w_plus_t matches=142/234 fields=[q71:20/20, q167:12/16, q199:24/36, q263:12/28, q607:74/134]
+  combo=C*t*w_minus_t*w_plus_t matches=142/234 fields=[q71:20/20, q167:12/16, q199:24/36, q263:12/28, q607:74/134]
+  combo=-A*C*w_minus_t matches=140/234 fields=[q71:8/20, q167:10/16, q199:22/36, q263:24/28, q607:76/134]
+Z_profile:
+  A_minus = 264
+  A_minus_2_minus = 464
+  A_minus_2_zero = 4
+  A_plus = 204
+  A_plus_2_plus = 428
+  A_plus_2_zero = 40
+  B*C_minus = 234
+  B*C_plus = 234
+  B*R_minus = 232
+  B*R_plus = 232
+  B*R_zero = 4
+  B_minus = 256
+  B_plus = 212
+  C*R_minus = 464
+  C*R_zero = 4
+  C_minus = 234
+  C_plus = 234
+  Fspin_plus = 468
+  Ktrace_plus = 464
+  Ktrace_zero = 4
+  R_minus = 232
+  R_plus = 232
+  R_zero = 4
+  X_minus = 238
+  X_minus_2_plus = 428
+  X_minus_2_zero = 40
+  X_plus = 230
+  X_plus_2_plus = 468
+  active_features = 9
+  best_match_x1000000 = 658119
+  best_matches = 308
+  best_total = 468
+  combos_screened = 510
+  constant_features = 2
+  exact_combos = 0
+  features_screened = 9
+  features_with_zero = 27
+  t2_minus_1_minus = 214
+  t2_minus_1_plus = 214
+  t2_minus_1_zero = 40
+  t_minus = 234
+  t_minus_1_minus = 234
+  t_minus_1_plus = 214
+  t_minus_1_zero = 20
+  t_plus = 234
+  t_plus_1_minus = 256
+  t_plus_1_plus = 192
+  t_plus_1_zero = 20
+  w_minus = 232
+  w_minus_B_minus = 192
+  w_minus_B_plus = 256
+  w_minus_B_zero = 20
+  w_minus_C_minus = 224
+  w_minus_C_plus = 224
+  w_minus_C_zero = 20
+  w_minus_R_minus = 222
+  w_minus_R_plus = 222
+  w_minus_R_zero = 24
+  w_minus_t_minus = 234
+  w_minus_t_plus = 234
+  w_plus = 232
+  w_plus_B_minus = 256
+  w_plus_B_plus = 192
+  w_plus_B_zero = 20
+  w_plus_C_minus = 224
+  w_plus_C_plus = 224
+  w_plus_C_zero = 20
+  w_plus_R_minus = 222
+  w_plus_R_plus = 222
+  w_plus_R_zero = 24
+  w_plus_t_minus = 234
+  w_plus_t_plus = 234
+  w_zero = 4
+  z_minus = 234
+  z_minus_B_minus = 217
+  z_minus_B_plus = 231
+  z_minus_B_zero = 20
+  z_minus_C_minus = 229
+  z_minus_C_plus = 219
+  z_minus_C_zero = 20
+  z_minus_R_minus = 242
+  z_minus_R_plus = 204
+  z_minus_R_zero = 22
+  z_minus_t_minus = 224
+  z_minus_t_plus = 242
+  z_minus_t_zero = 2
+  z_minus_w_minus = 224
+  z_minus_w_plus = 224
+  z_minus_w_zero = 20
+  z_plus = 234
+  z_plus_B_minus = 231
+  z_plus_B_plus = 217
+  z_plus_B_zero = 20
+  z_plus_C_minus = 219
+  z_plus_C_plus = 229
+  z_plus_C_zero = 20
+  z_plus_R_minus = 204
+  z_plus_R_plus = 242
+  z_plus_R_zero = 22
+  z_plus_t_minus = 242
+  z_plus_t_plus = 224
+  z_plus_t_zero = 2
+  z_plus_w_minus = 224
+  z_plus_w_plus = 224
+  z_plus_w_zero = 20
+Z_exact_combos:
+  none
+Z_best_combos:
+  combo=-A*B matches=308/468 fields=[q71:24/40, q167:24/32, q199:64/72, q263:24/56, q607:172/268]
+  combo=-A*B*C*C matches=308/468 fields=[q71:24/40, q167:24/32, q199:64/72, q263:24/56, q607:172/268]
+  combo=-A*C*t matches=308/468 fields=[q71:24/40, q167:24/32, q199:64/72, q263:24/56, q607:172/268]
+  combo=-A*B*B*C*t matches=308/468 fields=[q71:24/40, q167:24/32, q199:64/72, q263:24/56, q607:172/268]
+  combo=X matches=286/468 fields=[q71:24/40, q167:24/32, q199:56/72, q263:36/56, q607:146/268]
+  combo=B*C*X*t matches=286/468 fields=[q71:24/40, q167:24/32, q199:56/72, q263:36/56, q607:146/268]
+  combo=B*B*C*C*X matches=286/468 fields=[q71:24/40, q167:24/32, q199:56/72, q263:36/56, q607:146/268]
+  combo=B*C*X*t matches=286/468 fields=[q71:24/40, q167:24/32, q199:56/72, q263:36/56, q607:146/268]
+  combo=B*w_minus_t*w_plus_t matches=284/468 fields=[q71:40/40, q167:24/32, q199:48/72, q263:24/56, q607:148/268]
+  combo=B*C*C*w_minus_t*w_plus_t matches=284/468 fields=[q71:40/40, q167:24/32, q199:48/72, q263:24/56, q607:148/268]
+  combo=C*t*w_minus_t*w_plus_t matches=284/468 fields=[q71:40/40, q167:24/32, q199:48/72, q263:24/56, q607:148/268]
+  combo=-A*C*w_minus_t matches=280/468 fields=[q71:16/40, q167:20/32, q199:44/72, q263:48/56, q607:152/268]
+Aeta_plus_profile:
+  A_minus = 493
+  A_minus_2_minus = 893
+  A_minus_2_zero = 8
+  A_plus = 408
+  A_plus_2_plus = 856
+  A_plus_2_zero = 45
+  B*C_minus = 453
+  B*C_plus = 448
+  B*R_minus = 444
+  B*R_plus = 449
+  B*R_zero = 8
+  B_minus = 512
+  B_plus = 389
+  C*R_minus = 893
+  C*R_zero = 8
+  C_minus = 453
+  C_plus = 448
+  Fspin_plus = 901
+  Ktrace_plus = 893
+  Ktrace_zero = 8
+  R_minus = 444
+  R_plus = 449
+  R_zero = 8
+  X_minus = 476
+  X_minus_2_plus = 856
+  X_minus_2_zero = 45
+  X_plus = 425
+  X_plus_2_plus = 901
+  active_features = 9
+  best_match_x1000000 = 644839
+  best_matches = 581
+  best_total = 901
+  combos_screened = 510
+  constant_features = 2
+  exact_combos = 0
+  features_screened = 9
+  features_with_zero = 40
+  rho_minus = 433
+  rho_minus_B_minus = 462
+  rho_minus_B_plus = 437
+  rho_minus_B_zero = 2
+  rho_minus_C_minus = 454
+  rho_minus_C_plus = 439
+  rho_minus_C_zero = 8
+  rho_minus_R_minus = 440
+  rho_minus_R_plus = 457
+  rho_minus_R_zero = 4
+  rho_minus_t_minus = 463
+  rho_minus_t_plus = 434
+  rho_minus_t_zero = 4
+  rho_minus_w_minus = 435
+  rho_minus_w_plus = 461
+  rho_minus_w_zero = 5
+  rho_minus_z_minus = 437
+  rho_minus_z_plus = 462
+  rho_minus_z_zero = 2
+  rho_plus = 433
+  rho_plus_B_minus = 437
+  rho_plus_B_plus = 462
+  rho_plus_B_zero = 2
+  rho_plus_C_minus = 439
+  rho_plus_C_plus = 454
+  rho_plus_C_zero = 8
+  rho_plus_R_minus = 457
+  rho_plus_R_plus = 440
+  rho_plus_R_zero = 4
+  rho_plus_t_minus = 434
+  rho_plus_t_plus = 463
+  rho_plus_t_zero = 4
+  rho_plus_w_minus = 461
+  rho_plus_w_plus = 435
+  rho_plus_w_zero = 5
+  rho_plus_z_minus = 462
+  rho_plus_z_plus = 437
+  rho_plus_z_zero = 2
+  rho_zero = 35
+  t2_minus_1_minus = 428
+  t2_minus_1_plus = 428
+  t2_minus_1_zero = 45
+  t_minus = 453
+  t_minus_1_minus = 453
+  t_minus_1_plus = 428
+  t_minus_1_zero = 20
+  t_plus = 448
+  t_plus_1_minus = 512
+  t_plus_1_plus = 364
+  t_plus_1_zero = 25
+  w_minus = 449
+  w_minus_B_minus = 369
+  w_minus_B_plus = 512
+  w_minus_B_zero = 20
+  w_minus_C_minus = 438
+  w_minus_C_plus = 438
+  w_minus_C_zero = 25
+  w_minus_R_minus = 439
+  w_minus_R_plus = 434
+  w_minus_R_zero = 28
+  w_minus_t_minus = 453
+  w_minus_t_plus = 448
+  w_plus = 444
+  w_plus_B_minus = 512
+  w_plus_B_plus = 364
+  w_plus_B_zero = 25
+  w_plus_C_minus = 443
+  w_plus_C_plus = 438
+  w_plus_C_zero = 20
+  w_plus_R_minus = 434
+  w_plus_R_plus = 434
+  w_plus_R_zero = 33
+  w_plus_t_minus = 451
+  w_plus_t_plus = 450
+  w_zero = 8
+  z_minus = 448
+  z_minus_B_minus = 414
+  z_minus_B_plus = 462
+  z_minus_B_zero = 25
+  z_minus_C_minus = 448
+  z_minus_C_plus = 433
+  z_minus_C_zero = 20
+  z_minus_R_minus = 474
+  z_minus_R_plus = 398
+  z_minus_R_zero = 29
+  z_minus_t_minus = 430
+  z_minus_t_plus = 467
+  z_minus_t_zero = 4
+  z_minus_w_minus = 438
+  z_minus_w_plus = 443
+  z_minus_w_zero = 20
+  z_plus = 453
+  z_plus_B_minus = 462
+  z_plus_B_plus = 419
+  z_plus_B_zero = 20
+  z_plus_C_minus = 428
+  z_plus_C_plus = 448
+  z_plus_C_zero = 25
+  z_plus_R_minus = 398
+  z_plus_R_plus = 479
+  z_plus_R_zero = 24
+  z_plus_t_minus = 464
+  z_plus_t_plus = 433
+  z_plus_t_zero = 4
+  z_plus_w_minus = 438
+  z_plus_w_plus = 438
+  z_plus_w_zero = 25
+Aeta_plus_exact_combos:
+  none
+Aeta_plus_best_combos:
+  combo=-A*B matches=581/901 fields=[q71:41/73, q167:41/57, q199:121/137, q263:41/105, q607:337/529]
+  combo=-A*B*C*C matches=581/901 fields=[q71:41/73, q167:41/57, q199:121/137, q263:41/105, q607:337/529]
+  combo=-A*C*t matches=581/901 fields=[q71:41/73, q167:41/57, q199:121/137, q263:41/105, q607:337/529]
+  combo=-A*B*B*C*t matches=581/901 fields=[q71:41/73, q167:41/57, q199:121/137, q263:41/105, q607:337/529]
+  combo=B*w_minus_t*w_plus_t matches=547/901 fields=[q71:73/73, q167:41/57, q199:96/137, q263:41/105, q607:296/529]
+  combo=B*C*C*w_minus_t*w_plus_t matches=547/901 fields=[q71:73/73, q167:41/57, q199:96/137, q263:41/105, q607:296/529]
+  combo=C*t*w_minus_t*w_plus_t matches=547/901 fields=[q71:73/73, q167:41/57, q199:96/137, q263:41/105, q607:296/529]
+  combo=A matches=544/901 fields=[q71:48/73, q167:32/57, q199:96/137, q263:80/105, q607:288/529]
+  combo=A*B*C*t matches=544/901 fields=[q71:48/73, q167:32/57, q199:96/137, q263:80/105, q607:288/529]
+  combo=A*B*B*C*C matches=544/901 fields=[q71:48/73, q167:32/57, q199:96/137, q263:80/105, q607:288/529]
+  combo=A*B*C*t matches=544/901 fields=[q71:48/73, q167:32/57, q199:96/137, q263:80/105, q607:288/529]
+  combo=X matches=537/901 fields=[q71:41/73, q167:41/57, q199:105/137, q263:65/105, q607:285/529]
+Aeta_minus_profile:
+  A_minus = 493
+  A_minus_2_minus = 893
+  A_minus_2_zero = 8
+  A_plus = 408
+  A_plus_2_plus = 856
+  A_plus_2_zero = 45
+  B*C_minus = 453
+  B*C_plus = 448
+  B*R_minus = 444
+  B*R_plus = 449
+  B*R_zero = 8
+  B_minus = 512
+  B_plus = 389
+  C*R_minus = 893
+  C*R_zero = 8
+  C_minus = 453
+  C_plus = 448
+  Fspin_plus = 901
+  Ktrace_plus = 893
+  Ktrace_zero = 8
+  R_minus = 444
+  R_plus = 449
+  R_zero = 8
+  X_minus = 476
+  X_minus_2_plus = 856
+  X_minus_2_zero = 45
+  X_plus = 425
+  X_plus_2_plus = 901
+  active_features = 9
+  best_match_x1000000 = 644839
+  best_matches = 581
+  best_total = 901
+  combos_screened = 510
+  constant_features = 2
+  exact_combos = 0
+  features_screened = 9
+  features_with_zero = 40
+  rho_minus = 433
+  rho_minus_B_minus = 462
+  rho_minus_B_plus = 437
+  rho_minus_B_zero = 2
+  rho_minus_C_minus = 454
+  rho_minus_C_plus = 439
+  rho_minus_C_zero = 8
+  rho_minus_R_minus = 440
+  rho_minus_R_plus = 457
+  rho_minus_R_zero = 4
+  rho_minus_t_minus = 463
+  rho_minus_t_plus = 434
+  rho_minus_t_zero = 4
+  rho_minus_w_minus = 461
+  rho_minus_w_plus = 435
+  rho_minus_w_zero = 5
+  rho_minus_z_minus = 437
+  rho_minus_z_plus = 462
+  rho_minus_z_zero = 2
+  rho_plus = 433
+  rho_plus_B_minus = 437
+  rho_plus_B_plus = 462
+  rho_plus_B_zero = 2
+  rho_plus_C_minus = 439
+  rho_plus_C_plus = 454
+  rho_plus_C_zero = 8
+  rho_plus_R_minus = 457
+  rho_plus_R_plus = 440
+  rho_plus_R_zero = 4
+  rho_plus_t_minus = 434
+  rho_plus_t_plus = 463
+  rho_plus_t_zero = 4
+  rho_plus_w_minus = 435
+  rho_plus_w_plus = 461
+  rho_plus_w_zero = 5
+  rho_plus_z_minus = 462
+  rho_plus_z_plus = 437
+  rho_plus_z_zero = 2
+  rho_zero = 35
+  t2_minus_1_minus = 428
+  t2_minus_1_plus = 428
+  t2_minus_1_zero = 45
+  t_minus = 453
+  t_minus_1_minus = 453
+  t_minus_1_plus = 428
+  t_minus_1_zero = 20
+  t_plus = 448
+  t_plus_1_minus = 512
+  t_plus_1_plus = 364
+  t_plus_1_zero = 25
+  w_minus = 444
+  w_minus_B_minus = 364
+  w_minus_B_plus = 512
+  w_minus_B_zero = 25
+  w_minus_C_minus = 438
+  w_minus_C_plus = 443
+  w_minus_C_zero = 20
+  w_minus_R_minus = 434
+  w_minus_R_plus = 434
+  w_minus_R_zero = 33
+  w_minus_t_minus = 450
+  w_minus_t_plus = 451
+  w_plus = 449
+  w_plus_B_minus = 512
+  w_plus_B_plus = 369
+  w_plus_B_zero = 20
+  w_plus_C_minus = 438
+  w_plus_C_plus = 438
+  w_plus_C_zero = 25
+  w_plus_R_minus = 434
+  w_plus_R_plus = 439
+  w_plus_R_zero = 28
+  w_plus_t_minus = 448
+  w_plus_t_plus = 453
+  w_zero = 8
+  z_minus = 448
+  z_minus_B_minus = 414
+  z_minus_B_plus = 462
+  z_minus_B_zero = 25
+  z_minus_C_minus = 448
+  z_minus_C_plus = 433
+  z_minus_C_zero = 20
+  z_minus_R_minus = 474
+  z_minus_R_plus = 398
+  z_minus_R_zero = 29
+  z_minus_t_minus = 430
+  z_minus_t_plus = 467
+  z_minus_t_zero = 4
+  z_minus_w_minus = 438
+  z_minus_w_plus = 438
+  z_minus_w_zero = 25
+  z_plus = 453
+  z_plus_B_minus = 462
+  z_plus_B_plus = 419
+  z_plus_B_zero = 20
+  z_plus_C_minus = 428
+  z_plus_C_plus = 448
+  z_plus_C_zero = 25
+  z_plus_R_minus = 398
+  z_plus_R_plus = 479
+  z_plus_R_zero = 24
+  z_plus_t_minus = 464
+  z_plus_t_plus = 433
+  z_plus_t_zero = 4
+  z_plus_w_minus = 438
+  z_plus_w_plus = 443
+  z_plus_w_zero = 20
+Aeta_minus_exact_combos:
+  none
+Aeta_minus_best_combos:
+  combo=-A*B matches=581/901 fields=[q71:41/73, q167:41/57, q199:121/137, q263:41/105, q607:337/529]
+  combo=-A*B*C*C matches=581/901 fields=[q71:41/73, q167:41/57, q199:121/137, q263:41/105, q607:337/529]
+  combo=-A*C*t matches=581/901 fields=[q71:41/73, q167:41/57, q199:121/137, q263:41/105, q607:337/529]
+  combo=-A*B*B*C*t matches=581/901 fields=[q71:41/73, q167:41/57, q199:121/137, q263:41/105, q607:337/529]
+  combo=B*w_minus_t*w_plus_t matches=547/901 fields=[q71:73/73, q167:41/57, q199:96/137, q263:41/105, q607:296/529]
+  combo=B*C*C*w_minus_t*w_plus_t matches=547/901 fields=[q71:73/73, q167:41/57, q199:96/137, q263:41/105, q607:296/529]
+  combo=C*t*w_minus_t*w_plus_t matches=547/901 fields=[q71:73/73, q167:41/57, q199:96/137, q263:41/105, q607:296/529]
+  combo=A matches=544/901 fields=[q71:48/73, q167:32/57, q199:96/137, q263:80/105, q607:288/529]
+  combo=A*B*C*t matches=544/901 fields=[q71:48/73, q167:32/57, q199:96/137, q263:80/105, q607:288/529]
+  combo=A*B*B*C*C matches=544/901 fields=[q71:48/73, q167:32/57, q199:96/137, q263:80/105, q607:288/529]
+  combo=A*B*C*t matches=544/901 fields=[q71:48/73, q167:32/57, q199:96/137, q263:80/105, q607:288/529]
+  combo=X matches=537/901 fields=[q71:41/73, q167:41/57, q199:105/137, q263:65/105, q607:285/529]
+verdict:
+  exact visible character promotes a source candidate
+  no exact character keeps the row bit in Prym/theta/CAS territory
+p27_trace_norm_dplus_u6_rowbit_h90_visible_character_probe_rows=1/1

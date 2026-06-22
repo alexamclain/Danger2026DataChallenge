@@ -83,6 +83,20 @@ Does the repeated transition F_A(U,V), gamma^2=V+2 produce a reusable Kummer
 class, or does it add a fresh half-cover at each layer?
 ```
 
+Status update:
+[P27 A/B/K F4/F5 Mixed-Guard Transition](p27_abk_f4_f5_mixed_guard_20260622.md)
+shows the repeated transition is exact in mixed-`f5` guard fields
+`q4999,q5783,q6007,q6247`, not only in one-sided q1607/q1847/q2087 tails.
+This raises the priority of the offline class-comparison question, while
+GPU recurrence-coupling still kills current sign-word production.
+Follow-up [P27 B-Line F5 Visible Character Screen](p27_b_line_f5_visible_character_20260622.md)
+finds no exact named B atom or split degree-2 linear support for those mixed
+`f5(B)` signs, so do not turn this into a visible B-bucket search.
+Follow-up [P27 B-Line Mixed-F5 Recurrence Screen](p27_b_line_mixedf5_recurrence_20260622.md)
+also kills visible PGL2 and Belyi-conjugated hidden-X power-map recurrences
+from `f4` to `f5` on the same guard fields.  So this remains a
+Kummer/Prym/class-comparison task, not a visible recurrence task.
+
 Inputs:
 
 ```text
@@ -228,12 +242,161 @@ materialization filters.  Therefore the tower is a local class-comparison
 object, not a source sampler.  Any CAS/GPU test must keep the selected
 legal/core source cut before interpreting A/B descent.
 
+Sixth update:
+[P27 Trace/Norm Dplus H90-X6 Coboundary Probe](p27_trace_norm_dplus_h90_x6_coboundary_20260622.md)
+tests the cheap class-comparison version directly.  Simple H90 atoms and
+first-order `rho +/- atom` branch divisors have no exact weight-`<=3` product
+for post-Dplus `chi(x6)`, and the best train skew collapses on heldout.  So
+the live Dplus/H90 bridge is exact CAS/Prym comparison, not another finite
+field sign-bucket screen.
+
+Seventh update:
+[P27 Trace/Norm Dplus U6 Row-Bit Resultant](p27_trace_norm_dplus_u6_rowbit_resultant_20260622.md)
+shows that the four `U6` branches over each actual Dplus row have one common
+`chi(U6+2)=chi(x6)` sign: `8199/8199` train rows and `8061/8061` heldout rows
+are uniform, with no mixed branch rows.  The exact resultant has square
+specializations at `U6=+/-2`, but `R(t,S^2-2)` does not factor over `Q`.
+Thus the target is one descended balanced row bit, not a U6 branch-choice
+bucket.
+
+Eighth update:
+[P27 Trace/Norm Dplus U6 Row-Bit Branch-Atom Screen](p27_trace_norm_dplus_u6_rowbit_branch_atom_20260622.md)
+kills the immediate visible branch-character explanation.  Products through
+weight `5` in `t`, `t+/-1`, `t^2+1`, `t^2+/-2t-1`, `A`, and `X` have no exact
+match; the best heldout-ranked effect is equivalent to weak `-A` bias and
+does not hold train/heldout.
+
+Ninth update:
+[P27 Trace/Norm Dplus U6 Row-Bit H90 Factor Test](p27_trace_norm_dplus_u6_rowbit_h90_factor_20260622.md)
+tests the nearest quotient shortcut.  Over `F_607(t)`, the row-bit lift has
+one degree-32 factor; after adjoining the H90 elliptic coordinate
+`w^2=-(t^2+2t-1)(t^2-2t-1)`, it still has one degree-32 factor.  So the H90
+elliptic base does not split the row-bit cover.
+
+Tenth update:
+[P27 Trace/Norm Dplus U6 Row-Bit Aeta Factor Boundary](p27_trace_norm_dplus_u6_rowbit_aeta_factor_boundary_20260622.md)
+stages the exact next factor tests over the H90 domain-spin cover and the
+`eta=+1` `A_eta` cover.  Online Magma returns `504` at `q=607` for those
+factorization tiers, so the remaining factor/split question is an offline CAS
+task.
+
+Tenth follow-up:
+[P27 Trace/Norm Dplus U6 Row-Bit Local Magma Factor Split](p27_trace_norm_dplus_u6_rowbit_local_magma_factor_split_20260622.md)
+resolves that offline factor-degree question.  In q607/q1607/q1847/q2087,
+domain-spin splits the row-bit lift as `16+16`, and either Aeta sign splits it
+as `8+8+8+8`.  The q607/q1607 factor-action probe also shows `z -> -z`
+swapping the two domain factors, `rho -> -rho` swapping Aeta factors in pairs,
+and `S -> -S` fixing each tested factor.  This is the strongest positive
+row-bit structure so far.  The next queue item is Kummer/Prym identification
+of the factor labels, not another visible coordinate bucket.
+
+Tenth follow-up B:
+[P27 Trace/Norm Dplus U6 Row-Bit Factor Label Probe](p27_trace_norm_dplus_u6_rowbit_factor_label_20260622.md)
+descends the Aeta degree-8 factors to quartics in `Y=S^2=U6+2`.  The
+rho-paired quartics multiply exactly to the two domain-spin factors, and the
+coefficient profile is stable in q607/q1607.  The next accepted row-bit
+artifact should extract this quartic-label Kummer class and compare it to
+A-level `d3=chi(x6)`, not run another bucket scan.
+
+Tenth follow-up C:
+[P27 Trace/Norm Dplus U6 Row-Bit Quartic Invariant](p27_trace_norm_dplus_u6_rowbit_quartic_invariant_20260622.md)
+finds that the row-bit quartic label is irreducible but has cubic resolvent
+`1+2`, with linear root exactly `16-8*A` in q607/q1607/q1847.  This is the
+first exact A-line bridge inside the row-bit factor label.  The remaining
+class to test is the nonsquare quadratic resolvent discriminant over Aeta.
+
+Eleventh update:
+[P27 Trace/Norm Dplus U6 Row-Bit H90 Point-Fiber Probe](p27_trace_norm_dplus_u6_rowbit_h90_pointfiber_20260622.md)
+finds a positive pointwise compatibility signal.  Over `q=263` and `q=607`,
+the row bit is mixed over `t` alone, but all mixed `t` fibers have no rational
+`E_h90` point; every tested rational `E_h90`, domain-spin, and `A_eta` fiber is
+uniform, with or without materialization filters.
+
+Twelfth update:
+[P27 Trace/Norm Dplus U6 Row-Bit H90 Visible Character](p27_trace_norm_dplus_u6_rowbit_h90_visible_character_20260622.md)
+kills the cheap visible-coordinate explanation.  Product characters through
+weight `4` on `E_h90`, domain-spin, and `A_eta` coordinates have no exact
+match.  With materialization filters the best effect is weak `A` bias
+(`544/848` on `A_eta`); without filters the best effect is weak `-A*B` bias
+(`581/901`).  Keep the row-bit lane alive as non-visible H90/Prym/theta or
+local-solubility structure, not as a GPU sign-bucket scan.
+
+Thirteenth update:
+[P27 Trace/Norm Dplus U6 Row-Bit H90 Solubility Boundary](p27_trace_norm_dplus_u6_rowbit_h90_solubility_boundary_20260622.md)
+turns the point-fiber signal into a crisp tested boundary.  Across
+`71,167,199,263,607,1607,1847,2087`, with and without materialization filters,
+there are zero failures of:
+
+```text
+Ktrace square or zero  => row-bit t-fiber uniform;
+Ktrace nonsquare       => row-bit t-fiber mixed, always 4 plus / 4 minus.
+```
+
+This is now a theorem/CAS target: prove the H90 local-solubility boundary,
+then extract the non-visible plus/minus class on the soluble side.  It is not
+yet a GPU production source, because the soluble-side sign remains invisible
+to tested coordinate products.
+
+Fourteenth update:
+[P27 Trace/Norm Dplus U6 Row-Bit H90 Group-Coset Screen](p27_trace_norm_dplus_u6_rowbit_h90_group_coset_20260622.md)
+kills the nearest small elliptic-coset explanation for that soluble-side sign.
+After mapping `E_h90` to `E: v^2=u^3-u`, quotient projections with
+`m=2,3,4,6,8,12,16,24` have no nontrivial exact separation in the fields with
+both signs present.  The final marker is:
+
+```text
+exact_nontrivial_projection_total = 0
+```
+
+So the row-bit lane remains a divisor/theta/Prym or higher-Kummer extraction
+problem, not a small group-coset GPU sampler.
+
+Fifteenth update:
+[P27 Trace/Norm Dplus U6 Row-Bit H90 U-Divisor Screen](p27_trace_norm_dplus_u6_rowbit_h90_u_divisor_20260622.md)
+finds that the soluble-side sign descends to the even elliptic coordinate
+`u=4/(t-1/t)^2` with zero mixed `u` groups, but has no monic linear or
+quadratic divisor in the tested fields.  It writes a frozen target packet:
+
+```text
+research/p27/archive/fixtures/p27_dplus_rowbit_u_divisor_targets_20260622.json
+```
+
+Sixteenth update:
+[P27 Trace/Norm Dplus U6 Row-Bit H90 U Cubic/Quartic Screen](p27_trace_norm_dplus_u6_rowbit_h90_u_cubic_quartic_20260622.md)
+closes the visible q1847 low-degree `u` route.  Monic cubic exact support is
+absent in q607/q1607/q1847/q2087, and a full q1847 monic quartic scan over
+`6300872423` coefficient triples finds zero exact supports.  Therefore the
+row-bit test queue should not send q1847 cubic/quartic `u` scans to GPU.
+Optional q2087 quartic closure is allowed only if cheap; the mainline is
+non-visible divisor/theta/Prym extraction of the descended `u` class.
+
 This is the most concrete bridge test after the coupling kill.  We know:
 
 ```text
 Dplus has a real H90/quotient model;
 post-Dplus d3/d4 descend to whole A fibers;
 H90 payload signs alone do not predict d3/d4.
+simple H90/rho coboundaries do not predict chi(x6).
+the U6/x6 class is a descended row bit, not a branch-choice bit.
+visible t/A/X branch atoms do not source the row bit through weight 5.
+the H90 elliptic quotient does not factor the row-bit cover over q607.
+H90 rational point fibers are nevertheless uniform in the tested small fields.
+visible H90/domain-spin/Aeta coordinate products through weight 4 do not
+explain that uniformity.
+Ktrace local solubility exactly predicts uniform versus mixed t-fibers in the
+tested fields.
+small elliptic group quotient projections do not explain the soluble-side
+plus/minus sign.
+the soluble-side sign descends to u=4/(t-1/t)^2, but not to monic degree <=2
+u-divisors.
+monic cubic support is absent in q607/q1607/q1847/q2087, and q1847 monic
+quartic support is absent.
+local Magma shows domain-spin/Aeta factor-degree drops: 32 -> 16+16 -> 8x4,
+with stable z/rho/S factor-action permutations.
+the Aeta degree-8 factors are quartics in Y=S^2, paired by rho back to the
+domain-spin factors.
+the quartic label has cubic resolvent root 16-8*A; the remaining class is the
+quadratic resolvent discriminant over Aeta.
 ```
 
 The missing object is the map or obstruction between the H90 model and the
@@ -259,12 +422,17 @@ use the exact map A = (t - 1/t)^4/4 - 2
 use d3 = chi(x6) after U=x6+1/x6 and chi(U+A)=+1
 use the reciprocal tower F_A(X,U5)=0 and F_A(U5,U6)=0
 compare the x6 squareclass with A_eta = U_eta + z*W_eta
+source the descended U6 row bit, not a U6 branch bucket
 keep the selected legal/core source cut; the naked reciprocal tower has mixed
 A/B fibers in q607/q1607/q1847
 record whether the pulled-back A-level d3 class equals, differs by coboundary,
 or shares a quotient/Prym factor with the H90 class
 do not retry low-degree rational coefficient fits for prod(Z-U_i) in t,a,A
 through degree 20
+do not retry low-weight H90/rho sign products for chi(x6)
+do not treat the Ktrace-solubility boundary as a sampler until the soluble-side
+plus/minus class is named
+do not retry q1847 monic cubic/quartic u exact support
 ```
 
 Promote:
@@ -287,7 +455,7 @@ through ordinary candidate materialization
 1. A-level Kummer extraction is the mathematical mainline.
 2. Dplus fused/native pricing is the only immediate GPU implementation ask.
 3. Dplus-to-A coordinate reconstruction is solved; the next cross-lane task is
-   class comparison between pulled-back A-level d3 and H90 A_eta.
+   exact CAS/Prym comparison between pulled-back A-level d3 and H90 A_eta.
 4. Gamma4/Gamma5 is offline CAS only until it names a quotient/source.
 ```
 
@@ -296,12 +464,34 @@ through ordinary candidate materialization
 ```text
 continue = normalized A-level Kummer extraction
 continue = offline CAS comparison of gamma4/gamma5
+continue = use mixed-f5 guard fields as repeated-gamma regression data
 continue = fused/native Dplus pricing with A/d3 telemetry columns
 continue = Dplus/H90 A_eta versus pulled-back A-level d3 class comparison
+continue = factor-action/Kummer extraction from the U6 row-bit 16+16 and 8x4 splits
+continue = exact quartic-label extraction in Y=S^2 over the Aeta cover
+continue = residual quadratic resolvent discriminant comparison with A-level gates
+continue = explain H90 rational-point uniformity of the row bit
+continue = prove/extract the Ktrace local-solubility boundary
+continue = divisor/theta/Prym extraction after the small-coset kill
+continue = optional q2087 quartic u closure only if cheap
 
 kill = more sign-word/gamma bucket GPU scans
+kill = visible f5(B) B-atom/split-linear bucket searches
 kill = naked reciprocal-tower source sampling
+kill = U6 branch-choice buckets after Dplus
+kill = pointwise descent to t alone
+kill = visible t/A/X branch-atom products as Dplus row-bit sources
+kill = H90 elliptic-base factorization as the easy Dplus row-bit source
+kill = visible H90/domain-spin/Aeta product characters through weight 4
+kill = online Magma for domain-spin/Aeta row-bit factorization
+kill = treating the domain-spin/Aeta split alone as a source sampler
 kill = standalone H90 payload sign screens
+kill = simple H90/rho coboundary bucket screens for chi(x6)
+kill = treating Ktrace solubility alone as a production source
+kill = small H90 elliptic group-coset projections m <= 24 as a row-bit source
+kill = monic degree <= 2 u-divisors as the row-bit source
+kill = q1847 monic cubic/quartic u exact support
+kill = visible monic P^1_u support through degree 4 as a GPU target
 kill = searching for another low-degree Dplus-to-A coordinate map
 kill = visible low-degree A/B/K formula fishing without a divisor reason
 kill = large p27 production run based only on the current Dplus classifier

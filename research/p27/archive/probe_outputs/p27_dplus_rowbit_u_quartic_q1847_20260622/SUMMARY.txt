@@ -1,0 +1,10 @@
+p27 Dplus row-bit u quartic q1847 full screen
+field = 1847
+rows = 64
+triples_scanned = 6300872423
+polarity_-1_hits = 0
+polarity_1_hits = 0
+exact_quartics = 0
+max_elapsed_seconds = 602.496965
+sum_throughput_triples_per_second = 10567112.940
+p27_dplus_rowbit_u_quartic_q1847_rows=1/1

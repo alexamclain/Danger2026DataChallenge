@@ -17,6 +17,13 @@ f5/f4 Kummer classes are related or fresh independent half-covers.
 It is not a GPU production object.  The GPU recurrence-coupling run already
 killed current sign-word/gamma buckets without a named quotient or source map.
 
+Mixed-guard update:
+[P27 A/B/K F4/F5 Mixed-Guard Transition](p27_abk_f4_f5_mixed_guard_20260622.md)
+shows that the f4/f5 transition is exact even in larger guard fields where
+`f5` has both signs.  This strengthens the offline CAS ask: compare the
+repeated Kummer classes as actual divisor/quotient objects, not as one-sided
+field-tail bucket data.
+
 ## Fixture
 
 Magma fixture:
@@ -142,6 +149,7 @@ kill = GPU production from gamma buckets before CAS names a quotient/source
 
 - [P27 A/B/K Symbolic Kummer CAS Brief](p27_abk_symbolic_kummer_cas_brief_20260622.md)
 - [P27 A/B/K F4/F5 Transition Count](p27_abk_f4_f5_transition_count_20260622.md)
+- [P27 A/B/K F4/F5 Mixed-Guard Transition](p27_abk_f4_f5_mixed_guard_20260622.md)
 - [P27 GPU Recurrence-Coupling Telemetry](p27_gpu_recurrence_coupling_20260622.md)
 - [P27 Gamma-Chain 20k Telemetry](p27_gamma_chain_p27_20k_telemetry_20260622.md)
 

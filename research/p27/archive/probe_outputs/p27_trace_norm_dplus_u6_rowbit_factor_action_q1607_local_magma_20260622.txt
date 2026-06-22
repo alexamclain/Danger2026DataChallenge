@@ -1,0 +1,24 @@
+Magma V2.29-1     Mon Jun 22 2026 13:17:39 on agent-mini [Seed = 1047383379]
+
++-------------------------------------------------------------------+
+|       This copy of Magma has been made available through a        |
+|                   generous initiative of the                      |
+|                                                                   |
+|                         Simons Foundation                         |
+|                                                                   |
+| covering U.S. Colleges, Universities, Nonprofit Research entities,|
+|               and their students, faculty, and staff              |
++-------------------------------------------------------------------+
+
+Type ? for help.  Type <Ctrl>-D to quit.
+
+Loading file "/tmp/p27_factor_action_probe_q1607.m"
+domain factors 2 [ 16, 16 ]
+domain z_perm [ 2, 1 ]
+domain Sneg_perm [ 1, 2 ]
+aeta factors 4 [ 8, 8, 8, 8 ]
+aeta rho_perm [ 2, 1, 4, 3 ]
+aeta Sneg_perm [ 1, 2, 3, 4 ]
+done
+
+Total time: 25.170 seconds, Total memory usage: 90.72MB
