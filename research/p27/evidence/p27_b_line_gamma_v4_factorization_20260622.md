@@ -147,6 +147,13 @@ This explains why the earlier H90 quotient collapsed to the f3 layer: the
 missing information is not the quotient `H^2=u+2` itself, but the coupled
 sheet-dependent phase product.
 
+Follow-up:
+[P27 B-Line Gamma Specialized Square Smoke](p27_b_line_gamma_specialized_square_smoke_20260622.md)
+checks irreducible one-parameter specializations over `GF(7)` and `GF(23)`.
+In both, `Y=v+2` is nonsquare even though `Norm(Y)` has the expected square
+form `16*(B^2-4)^2`.  This confirms that the V4 norm-square pattern is not,
+by itself, a visible square/sampler law.
+
 ## Concrete Next Test
 
 The next meaningful GPU/CAS telemetry is not another B bucket.  It should emit
@@ -169,6 +176,7 @@ half-loss.
 ```text
 continue = CAS compare alpha/beta phase classes across f4/f5
 continue = bounded GPU telemetry emitting alpha_j,beta_j,f_j with raw source denominator
+continue = use nonsquare specialized B/H smokes as regression checks
 continue = look for telescoping or sheet-choice recurrence, not a one-factor bucket
 
 kill = using alpha alone as a canonical selector

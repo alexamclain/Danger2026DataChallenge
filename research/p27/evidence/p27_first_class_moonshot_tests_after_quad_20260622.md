@@ -285,6 +285,12 @@ Online Magma verifies over `GF(7)` and `GF(23)` that
 with `Z=x5`, `beta=Z-1/Z`, and `d_next=Z*(U+A)`.  This strengthens the
 compactD_R demotion but still leaves normalization/genus/sourceability open.
 
+Gamma squareclass follow-up:
+[P27 B-Line Gamma Specialized Square Smoke](p27_b_line_gamma_specialized_square_smoke_20260622.md).
+Two irreducible one-parameter specializations of the visible `B/H/Y`
+transition have `Y=v+2` nonsquare while `Norm(Y)` remains the expected square.
+So the gamma class is not killed by a universal visible B/H square identity.
+
 GPU phase-sequence handoff:
 [P27 B-Line Phase GPU Telemetry Handoff](p27_b_line_phase_gpu_telemetry_handoff_20260622.md).
 The V4 factorization gives `f_{j+1}=alpha_j*beta_j`, but the small p27 phase
@@ -305,6 +311,7 @@ impose the selected-source legal/core cut before using all-chart lift buckets
 extract branch divisor degree, support field degrees, components, genus
 compute degree/reducedness/irreducibility offline; do not rely on online Magma
 normalize F_A(u,v)=0 over the f3-plus B-u-H layer and extract div(v+2) modulo squares
+do not retry visible B/H square triviality; the specialization smoke kills it
 classify gamma as pullback, coboundary, translate, quotient class, or fresh half-cover
 extract alpha/beta phase classes and test whether they telescope across successive gates
 use GPU phase telemetry only as bounded support for that class test

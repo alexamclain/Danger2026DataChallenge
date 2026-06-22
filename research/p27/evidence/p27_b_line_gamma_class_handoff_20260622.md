@@ -115,6 +115,14 @@ larger odd extension selector rates near `1/2`.  Thus `gamma^2=v+2` is not a
 direct source sampler or GPU bucket; the remaining value of this handoff is
 offline Kummer/divisor-class extraction.
 
+Specialized squareclass update:
+[P27 B-Line Gamma Specialized Square Smoke](p27_b_line_gamma_specialized_square_smoke_20260622.md)
+checks two one-parameter function-field specializations of the visible
+`B/H/Y` transition.  In both, the transition quartic is irreducible and
+`Y=v+2` is not square, while `Norm(Y)` has the expected square form.  This
+kills the visible universal claim that gamma is already square over the `B/H`
+layer, but does not replace normalization of the actual no-R reduced base.
+
 ## Concrete Tests
 
 First CAS test:
@@ -148,6 +156,7 @@ source denominator.
 ```text
 continue = normalize the f3-plus B-u-H base
 continue = extract div(v+2) / Kummer class for gamma over that base
+continue = use the specialized square smoke as a regression for visible B/H claims
 continue = compare gamma with the next f5/f4 class
 continue = use GPU only for named-class telemetry or a direct sampler test
 

@@ -1149,6 +1149,13 @@ while the product is invariant and constant on active B.  This gives the next
 bounded GPU/CAS target: test the successive `alpha_j,beta_j` phase sequence
 for recurrence or telescoping; do not promote either factor as a standalone
 bucket.
+The visible gamma-square shortcut is now killed:
+[P27 B-Line Gamma Specialized Square Smoke](evidence/p27_b_line_gamma_specialized_square_smoke_20260622.md).
+In irreducible `GF(7)` and `GF(23)` one-parameter specializations of the
+`B/H/Y` transition, `Y=v+2` is not square while `Norm(Y)` remains the expected
+square.  So the V4 norm-square pattern does not trivialize gamma on the
+visible B/H layer; the remaining task is still normalized divisor/Kummer
+class extraction or a recurrence/telescoping relation.
 The first phase-sequence screen is negative:
 [P27 B-Line Alpha/Beta Phase Sequence Screen](evidence/p27_b_line_alpha_beta_phase_sequence_20260622.md).
 On `3000+3000` p27 train/heldout starts, the main next-product rates stay near
