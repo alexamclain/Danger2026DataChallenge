@@ -806,6 +806,36 @@ route is irreducible cubic/quartic extraction or Magma/Sage recovery of the
 actual branch divisor/genus, not more visible split-factor screens.
 ```
 
+K-line degree-one recurrence update:
+[P27 K-Line Affine Recurrence Screen](p27_kline_affine_recurrence_20260621.md).
+
+```text
+Tested all K -> a*K+b and K -> a/K+b maps.
+
+q1607:
+  affine full coverage = identity only, 19/28 raw d4 majority
+  reciprocal full coverage = 0, best coverage = 6/28
+
+q1847:
+  affine full coverage = identity only, 26/45 raw d4 majority
+  reciprocal full coverage = 0, best coverage = 7/45
+
+q2087:
+  affine full coverage = identity only, 18/25 raw d4 majority
+  reciprocal full coverage = 0, best coverage = 6/25
+
+q2039:
+  identity exact only because d4 is constant
+```
+
+Updated kill rule:
+
+```text
+Kill degree-one rational K-line recurrences as a d4-from-d3 source.  The next
+K-line work must be actual branch-class/genus extraction, not affine or
+reciprocal-affine bucket searches.
+```
+
 K/S first-half cover update:
 [P27 K/S First-Half Cover Magma Smoke](p27_ks_first_half_cover_magma_20260621.md).
 [P27 K/S First-Half Alpha-Lift Obstruction](p27_ks_first_half_alpha_lift_obstruction_20260621.md).

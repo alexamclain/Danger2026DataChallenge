@@ -1,0 +1,96 @@
+p27 K-line affine recurrence probe
+test = d4(K) ?= +/- d3(a*K+b) or +/- d3(a/K+b)
+small_primes = 1471
+q=1471:
+  q_mod_16 = 15
+  setup_stats:
+  d3_eprime_input_rows = 200
+  d3_eprime_minus = 44
+  d3_eprime_plus = 56
+  d3_eprime_quotient_rows = 100
+  d3_k_input_rows = 100
+  d3_k_k_rows = 50
+  d3_k_minus = 22
+  d3_k_plus = 28
+  d3_s_input_rows = 100
+  d3_s_minus = 44
+  d3_s_paired_s_neg_s = 100
+  d3_s_plus = 56
+  d3_s_s_rows = 100
+  d4_eprime_input_rows = 112
+  d4_eprime_minus = 28
+  d4_eprime_plus = 28
+  d4_eprime_quotient_rows = 56
+  d4_k_input_rows = 56
+  d4_k_k_rows = 28
+  d4_k_minus = 14
+  d4_k_plus = 14
+  d4_s_input_rows = 56
+  d4_s_minus = 28
+  d4_s_paired_s_neg_s = 56
+  d4_s_plus = 28
+  d4_s_s_rows = 56
+  enum_compact_not_target = 837
+  enum_no_label2_candidate = 424
+  quotient_d3_minus_E_points = 88
+  quotient_d3_missing_on_E_orbit = 0
+  quotient_d3_not_descended_to_E = 0
+  quotient_d3_plus_E_points = 112
+  quotient_d3_quotient_rows = 200
+  quotient_d4_minus_E_points_after_d3 = 56
+  quotient_d4_missing_on_E_orbit = 0
+  quotient_d4_not_descended_to_E = 0
+  quotient_d4_plus_E_points_after_d3 = 56
+  quotient_d4_quotient_rows_after_d3 = 112
+  quotient_orbit_size_4 = 200
+  quotient_oriented_candidates = 800
+  quotient_quotient_E_points = 200
+  d3_k_rows = 50
+  d4_k_rows = 28
+  d3_plus = 28
+  d3_minus = 22
+  d4_plus = 14
+  d4_minus = 14
+  q1471_affine_stats:
+  best_covered = 28
+  best_good = 14
+  d3_rows = 50
+  d4_rows = 28
+  domain_rows = 28
+  exact_on_covered_maps = 1042513
+  exact_reported = 0
+  full_coverage_maps = 1
+  maps_with_nonzero_coverage = 1348464
+  q1471_affine_best:
+  family=affine map=1,0 expr=a*K+b polarity=1 good=14/28 rate=0.500000000 coverage=1.000000000
+  family=affine map=250,848 expr=a*K+b polarity=-1 good=7/7 rate=1.000000000 coverage=0.250000000
+  family=affine map=9,393 expr=a*K+b polarity=1 good=6/6 rate=1.000000000 coverage=0.214285714
+  family=affine map=47,50 expr=a*K+b polarity=-1 good=6/6 rate=1.000000000 coverage=0.214285714
+  family=affine map=359,374 expr=a*K+b polarity=1 good=6/6 rate=1.000000000 coverage=0.214285714
+  family=affine map=395,51 expr=a*K+b polarity=-1 good=6/6 rate=1.000000000 coverage=0.214285714
+  family=affine map=470,525 expr=a*K+b polarity=-1 good=6/6 rate=1.000000000 coverage=0.214285714
+  family=affine map=536,127 expr=a*K+b polarity=1 good=6/6 rate=1.000000000 coverage=0.214285714
+  q1471_affine_full_exact:
+  none
+  q1471_reciprocal_stats:
+  best_covered = 28
+  best_good = 14
+  d3_rows = 50
+  d4_rows = 28
+  domain_rows = 28
+  exact_on_covered_maps = 1042513
+  exact_reported = 0
+  full_coverage_maps = 1
+  maps_with_nonzero_coverage = 1348464
+  q1471_reciprocal_best:
+  family=reciprocal map=4,0 expr=a/K+b polarity=1 good=14/28 rate=0.500000000 coverage=1.000000000
+  family=reciprocal map=1000,848 expr=a/K+b polarity=1 good=7/7 rate=1.000000000 coverage=0.250000000
+  family=reciprocal map=3,1272 expr=a/K+b polarity=-1 good=6/6 rate=1.000000000 coverage=0.214285714
+  family=reciprocal map=36,393 expr=a/K+b polarity=-1 good=6/6 rate=1.000000000 coverage=0.214285714
+  family=reciprocal map=62,533 expr=a/K+b polarity=-1 good=6/6 rate=1.000000000 coverage=0.214285714
+  family=reciprocal map=109,51 expr=a/K+b polarity=1 good=6/6 rate=1.000000000 coverage=0.214285714
+  family=reciprocal map=188,50 expr=a/K+b polarity=1 good=6/6 rate=1.000000000 coverage=0.214285714
+  family=reciprocal map=409,525 expr=a/K+b polarity=1 good=6/6 rate=1.000000000 coverage=0.214285714
+  q1471_reciprocal_full_exact:
+  none
+p27_kline_affine_recurrence_probe_rows=1/1

@@ -172,6 +172,7 @@ another low-degree plane-curve screen in raw or obvious invariant coordinates
 another simple first-Z-layer pair scan without a new theorem-specified coordinate
 another simple two-step Kummer pair scan in `Z0,S1,Z1` coordinates
 another ad hoc two-step Kummer trivariate bucket scan without a new coordinate
+K-line affine or reciprocal-affine recurrence scans
 an A-projection or A-bucket search based only on selected-prefix filters
 raw selected-prefix source enumeration based on extension-field tail artifacts
 ```

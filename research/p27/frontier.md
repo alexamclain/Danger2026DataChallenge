@@ -864,6 +864,17 @@ and `19/45` in q1847.  So a d4-from-d3 Lattes recurrence is not the
 sqrt-beating mechanism; compare d4 only after the actual d3 branch class is
 named.
 
+The broader degree-one K-line recurrence screen is negative too:
+[P27 K-Line Affine Recurrence Screen](evidence/p27_kline_affine_recurrence_20260621.md).
+It tested all maps `K -> a*K+b` and `K -> a/K+b` over p27-signature fields
+q1607/q1847/q2039/q2087.  In the non-degenerate promotion fields, the only
+full-coverage affine map is identity, scoring as raw d4 bias
+(`19/28`, `26/45`, `18/25`), and reciprocal-affine maps cover at most
+`6/28`, `7/45`, and `6/25`.  q2039 has full exact identity only because d4 is
+constant there.  This kills the sourceable degree-one rational recurrence
+loophole; the K-line route now really needs branch-divisor/Kummer-class/genus
+extraction.
+
 The first Belyi-normalized source family is now killed:
 [P27 Lambda Branch-Divisor Screen](evidence/p27_lambda_branch_divisor_screen_20260621.md).
 It tested `z^2=f(lambda)` with `deg_lambda(f)<=4`, where

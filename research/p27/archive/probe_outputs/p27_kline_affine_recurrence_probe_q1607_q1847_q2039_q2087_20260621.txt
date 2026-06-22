@@ -1,0 +1,369 @@
+p27 K-line affine recurrence probe
+test = d4(K) ?= +/- d3(a*K+b) or +/- d3(a/K+b)
+small_primes = 1607,1847,2039,2087
+q=1607:
+  q_mod_16 = 7
+  setup_stats:
+  d3_eprime_input_rows = 196
+  d3_eprime_minus = 42
+  d3_eprime_plus = 56
+  d3_eprime_quotient_rows = 98
+  d3_k_input_rows = 98
+  d3_k_k_rows = 49
+  d3_k_minus = 21
+  d3_k_plus = 28
+  d3_s_input_rows = 98
+  d3_s_minus = 42
+  d3_s_paired_s_neg_s = 98
+  d3_s_plus = 56
+  d3_s_s_rows = 98
+  d4_eprime_input_rows = 112
+  d4_eprime_minus = 18
+  d4_eprime_plus = 38
+  d4_eprime_quotient_rows = 56
+  d4_k_input_rows = 56
+  d4_k_k_rows = 28
+  d4_k_minus = 9
+  d4_k_plus = 19
+  d4_s_input_rows = 56
+  d4_s_minus = 18
+  d4_s_paired_s_neg_s = 56
+  d4_s_plus = 38
+  d4_s_s_rows = 56
+  enum_compact_not_target = 805
+  enum_no_label2_candidate = 408
+  quotient_d3_minus_E_points = 84
+  quotient_d3_missing_on_E_orbit = 0
+  quotient_d3_not_descended_to_E = 0
+  quotient_d3_plus_E_points = 112
+  quotient_d3_quotient_rows = 196
+  quotient_d4_minus_E_points_after_d3 = 36
+  quotient_d4_missing_on_E_orbit = 0
+  quotient_d4_not_descended_to_E = 0
+  quotient_d4_plus_E_points_after_d3 = 76
+  quotient_d4_quotient_rows_after_d3 = 112
+  quotient_orbit_size_4 = 196
+  quotient_oriented_candidates = 784
+  quotient_quotient_E_points = 196
+  d3_k_rows = 49
+  d4_k_rows = 28
+  d3_plus = 28
+  d3_minus = 21
+  d4_plus = 19
+  d4_minus = 9
+  q1607_affine_stats:
+  best_covered = 28
+  best_good = 19
+  d3_rows = 49
+  d4_rows = 28
+  domain_rows = 28
+  exact_on_covered_maps = 1198509
+  exact_reported = 0
+  full_coverage_maps = 1
+  maps_with_nonzero_coverage = 1504561
+  q1607_affine_best:
+  family=affine map=1,0 expr=a*K+b polarity=1 good=19/28 rate=0.678571429 coverage=1.000000000
+  family=affine map=150,500 expr=a*K+b polarity=1 good=6/6 rate=1.000000000 coverage=0.214285714
+  family=affine map=712,1238 expr=a*K+b polarity=-1 good=6/6 rate=1.000000000 coverage=0.214285714
+  family=affine map=771,30 expr=a*K+b polarity=-1 good=6/6 rate=1.000000000 coverage=0.214285714
+  family=affine map=780,938 expr=a*K+b polarity=1 good=6/6 rate=1.000000000 coverage=0.214285714
+  family=affine map=1054,989 expr=a*K+b polarity=-1 good=6/6 rate=1.000000000 coverage=0.214285714
+  family=affine map=1159,152 expr=a*K+b polarity=-1 good=6/6 rate=1.000000000 coverage=0.214285714
+  family=affine map=1244,848 expr=a*K+b polarity=-1 good=6/6 rate=1.000000000 coverage=0.214285714
+  q1607_affine_full_exact:
+  none
+  q1607_reciprocal_stats:
+  best_covered = 6
+  best_good = 6
+  d3_rows = 49
+  d4_rows = 28
+  domain_rows = 28
+  exact_on_covered_maps = 1198041
+  exact_reported = 0
+  maps_with_nonzero_coverage = 1504126
+  q1607_reciprocal_best:
+  family=reciprocal map=26,943 expr=a/K+b polarity=-1 good=6/6 rate=1.000000000 coverage=0.214285714
+  family=reciprocal map=29,32 expr=a/K+b polarity=1 good=6/6 rate=1.000000000 coverage=0.214285714
+  family=reciprocal map=309,305 expr=a/K+b polarity=-1 good=6/6 rate=1.000000000 coverage=0.214285714
+  family=reciprocal map=454,1461 expr=a/K+b polarity=1 good=6/6 rate=1.000000000 coverage=0.214285714
+  family=reciprocal map=638,0 expr=a/K+b polarity=1 good=6/6 rate=1.000000000 coverage=0.214285714
+  family=reciprocal map=725,435 expr=a/K+b polarity=-1 good=6/6 rate=1.000000000 coverage=0.214285714
+  family=reciprocal map=777,565 expr=a/K+b polarity=1 good=6/6 rate=1.000000000 coverage=0.214285714
+  family=reciprocal map=905,1484 expr=a/K+b polarity=1 good=6/6 rate=1.000000000 coverage=0.214285714
+  q1607_reciprocal_full_exact:
+  none
+q=1847:
+  q_mod_16 = 7
+  setup_stats:
+  d3_eprime_input_rows = 252
+  d3_eprime_minus = 36
+  d3_eprime_plus = 90
+  d3_eprime_quotient_rows = 126
+  d3_k_input_rows = 126
+  d3_k_k_rows = 63
+  d3_k_minus = 18
+  d3_k_plus = 45
+  d3_s_input_rows = 126
+  d3_s_minus = 36
+  d3_s_paired_s_neg_s = 126
+  d3_s_plus = 90
+  d3_s_s_rows = 126
+  d4_eprime_input_rows = 180
+  d4_eprime_minus = 52
+  d4_eprime_plus = 38
+  d4_eprime_quotient_rows = 90
+  d4_k_input_rows = 90
+  d4_k_k_rows = 45
+  d4_k_minus = 26
+  d4_k_plus = 19
+  d4_s_input_rows = 90
+  d4_s_minus = 52
+  d4_s_paired_s_neg_s = 90
+  d4_s_plus = 38
+  d4_s_s_rows = 90
+  enum_compact_not_target = 873
+  enum_no_label2_candidate = 468
+  quotient_d3_minus_E_points = 72
+  quotient_d3_missing_on_E_orbit = 0
+  quotient_d3_not_descended_to_E = 0
+  quotient_d3_plus_E_points = 180
+  quotient_d3_quotient_rows = 252
+  quotient_d4_minus_E_points_after_d3 = 104
+  quotient_d4_missing_on_E_orbit = 0
+  quotient_d4_not_descended_to_E = 0
+  quotient_d4_plus_E_points_after_d3 = 76
+  quotient_d4_quotient_rows_after_d3 = 180
+  quotient_orbit_size_4 = 252
+  quotient_oriented_candidates = 1008
+  quotient_quotient_E_points = 252
+  d3_k_rows = 63
+  d4_k_rows = 45
+  d3_plus = 45
+  d3_minus = 18
+  d4_plus = 19
+  d4_minus = 26
+  q1847_affine_stats:
+  best_covered = 45
+  best_good = 26
+  d3_rows = 63
+  d4_rows = 45
+  domain_rows = 45
+  exact_on_covered_maps = 1728260
+  exact_reported = 0
+  full_coverage_maps = 1
+  maps_with_nonzero_coverage = 2708723
+  q1847_affine_best:
+  family=affine map=1,0 expr=a*K+b polarity=-1 good=26/45 rate=0.577777778 coverage=1.000000000
+  family=affine map=1563,350 expr=a*K+b polarity=-1 good=9/9 rate=1.000000000 coverage=0.200000000
+  family=affine map=1108,1193 expr=a*K+b polarity=-1 good=8/8 rate=1.000000000 coverage=0.177777778
+  family=affine map=16,1394 expr=a*K+b polarity=-1 good=7/7 rate=1.000000000 coverage=0.155555556
+  family=affine map=88,584 expr=a*K+b polarity=1 good=7/7 rate=1.000000000 coverage=0.155555556
+  family=affine map=143,589 expr=a*K+b polarity=-1 good=7/7 rate=1.000000000 coverage=0.155555556
+  family=affine map=172,953 expr=a*K+b polarity=-1 good=7/7 rate=1.000000000 coverage=0.155555556
+  family=affine map=222,263 expr=a*K+b polarity=1 good=7/7 rate=1.000000000 coverage=0.155555556
+  q1847_affine_full_exact:
+  none
+  q1847_reciprocal_stats:
+  best_covered = 7
+  best_good = 7
+  d3_rows = 63
+  d4_rows = 45
+  domain_rows = 45
+  exact_on_covered_maps = 1727175
+  exact_reported = 0
+  maps_with_nonzero_coverage = 2708209
+  q1847_reciprocal_best:
+  family=reciprocal map=47,1424 expr=a/K+b polarity=-1 good=7/7 rate=1.000000000 coverage=0.155555556
+  family=reciprocal map=64,424 expr=a/K+b polarity=-1 good=7/7 rate=1.000000000 coverage=0.155555556
+  family=reciprocal map=278,640 expr=a/K+b polarity=-1 good=7/7 rate=1.000000000 coverage=0.155555556
+  family=reciprocal map=287,1739 expr=a/K+b polarity=-1 good=7/7 rate=1.000000000 coverage=0.155555556
+  family=reciprocal map=327,1014 expr=a/K+b polarity=-1 good=7/7 rate=1.000000000 coverage=0.155555556
+  family=reciprocal map=431,1735 expr=a/K+b polarity=-1 good=7/7 rate=1.000000000 coverage=0.155555556
+  family=reciprocal map=448,882 expr=a/K+b polarity=-1 good=7/7 rate=1.000000000 coverage=0.155555556
+  family=reciprocal map=624,1340 expr=a/K+b polarity=-1 good=7/7 rate=1.000000000 coverage=0.155555556
+  q1847_reciprocal_full_exact:
+  none
+q=2039:
+  q_mod_16 = 7
+  setup_stats:
+  d3_eprime_input_rows = 204
+  d3_eprime_minus = 64
+  d3_eprime_plus = 38
+  d3_eprime_quotient_rows = 102
+  d3_k_input_rows = 102
+  d3_k_k_rows = 51
+  d3_k_minus = 32
+  d3_k_plus = 19
+  d3_s_input_rows = 102
+  d3_s_minus = 64
+  d3_s_paired_s_neg_s = 102
+  d3_s_plus = 38
+  d3_s_s_rows = 102
+  d4_eprime_input_rows = 76
+  d4_eprime_minus = 0
+  d4_eprime_plus = 38
+  d4_eprime_quotient_rows = 38
+  d4_k_input_rows = 38
+  d4_k_k_rows = 19
+  d4_k_minus = 0
+  d4_k_plus = 19
+  d4_s_input_rows = 38
+  d4_s_minus = 0
+  d4_s_paired_s_neg_s = 38
+  d4_s_plus = 38
+  d4_s_s_rows = 38
+  enum_compact_not_target = 1113
+  enum_no_label2_candidate = 516
+  quotient_d3_minus_E_points = 128
+  quotient_d3_missing_on_E_orbit = 0
+  quotient_d3_not_descended_to_E = 0
+  quotient_d3_plus_E_points = 76
+  quotient_d3_quotient_rows = 204
+  quotient_d4_minus_E_points_after_d3 = 0
+  quotient_d4_missing_on_E_orbit = 0
+  quotient_d4_not_descended_to_E = 0
+  quotient_d4_plus_E_points_after_d3 = 76
+  quotient_d4_quotient_rows_after_d3 = 76
+  quotient_orbit_size_4 = 204
+  quotient_oriented_candidates = 816
+  quotient_quotient_E_points = 204
+  d3_k_rows = 51
+  d4_k_rows = 19
+  d3_plus = 19
+  d3_minus = 32
+  d4_plus = 19
+  d4_minus = 0
+  q2039_affine_stats:
+  best_covered = 19
+  best_good = 19
+  d3_rows = 51
+  d4_rows = 19
+  domain_rows = 19
+  exact_on_covered_maps = 1423230
+  exact_reported = 1
+  full_coverage_maps = 1
+  full_exact_maps = 1
+  maps_with_nonzero_coverage = 1593033
+  q2039_affine_best:
+  family=affine map=1,0 expr=a*K+b polarity=1 good=19/19 rate=1.000000000 coverage=1.000000000
+  family=affine map=834,1040 expr=a*K+b polarity=-1 good=6/6 rate=1.000000000 coverage=0.315789474
+  family=affine map=1029,15 expr=a*K+b polarity=-1 good=6/6 rate=1.000000000 coverage=0.315789474
+  family=affine map=1683,1850 expr=a*K+b polarity=-1 good=6/6 rate=1.000000000 coverage=0.315789474
+  family=affine map=86,2014 expr=a*K+b polarity=-1 good=5/5 rate=1.000000000 coverage=0.263157895
+  family=affine map=101,1459 expr=a*K+b polarity=-1 good=5/5 rate=1.000000000 coverage=0.263157895
+  family=affine map=290,246 expr=a*K+b polarity=-1 good=5/5 rate=1.000000000 coverage=0.263157895
+  family=affine map=299,1754 expr=a*K+b polarity=-1 good=5/5 rate=1.000000000 coverage=0.263157895
+  q2039_affine_full_exact:
+  family=affine map=1,0 expr=a*K+b polarity=1 good=19/19 rate=1.000000000 coverage=1.000000000
+  q2039_reciprocal_stats:
+  best_covered = 5
+  best_good = 5
+  d3_rows = 51
+  d4_rows = 19
+  domain_rows = 19
+  exact_on_covered_maps = 1422509
+  exact_reported = 0
+  maps_with_nonzero_coverage = 1592612
+  q2039_reciprocal_best:
+  family=reciprocal map=9,601 expr=a/K+b polarity=-1 good=5/5 rate=1.000000000 coverage=0.263157895
+  family=reciprocal map=195,1127 expr=a/K+b polarity=-1 good=5/5 rate=1.000000000 coverage=0.263157895
+  family=reciprocal map=197,1980 expr=a/K+b polarity=-1 good=5/5 rate=1.000000000 coverage=0.263157895
+  family=reciprocal map=335,1433 expr=a/K+b polarity=-1 good=5/5 rate=1.000000000 coverage=0.263157895
+  family=reciprocal map=431,404 expr=a/K+b polarity=-1 good=5/5 rate=1.000000000 coverage=0.263157895
+  family=reciprocal map=474,575 expr=a/K+b polarity=-1 good=5/5 rate=1.000000000 coverage=0.263157895
+  family=reciprocal map=483,1601 expr=a/K+b polarity=-1 good=5/5 rate=1.000000000 coverage=0.263157895
+  family=reciprocal map=593,328 expr=a/K+b polarity=-1 good=5/5 rate=1.000000000 coverage=0.263157895
+  q2039_reciprocal_full_exact:
+  none
+q=2087:
+  q_mod_16 = 7
+  setup_stats:
+  d3_eprime_input_rows = 228
+  d3_eprime_minus = 64
+  d3_eprime_plus = 50
+  d3_eprime_quotient_rows = 114
+  d3_k_input_rows = 114
+  d3_k_k_rows = 57
+  d3_k_minus = 32
+  d3_k_plus = 25
+  d3_s_input_rows = 114
+  d3_s_minus = 64
+  d3_s_paired_s_neg_s = 114
+  d3_s_plus = 50
+  d3_s_s_rows = 114
+  d4_eprime_input_rows = 100
+  d4_eprime_minus = 14
+  d4_eprime_plus = 36
+  d4_eprime_quotient_rows = 50
+  d4_k_input_rows = 50
+  d4_k_k_rows = 25
+  d4_k_minus = 7
+  d4_k_plus = 18
+  d4_s_input_rows = 50
+  d4_s_minus = 14
+  d4_s_paired_s_neg_s = 50
+  d4_s_plus = 36
+  d4_s_s_rows = 50
+  enum_compact_not_target = 1109
+  enum_no_label2_candidate = 520
+  quotient_d3_minus_E_points = 128
+  quotient_d3_missing_on_E_orbit = 0
+  quotient_d3_not_descended_to_E = 0
+  quotient_d3_plus_E_points = 100
+  quotient_d3_quotient_rows = 228
+  quotient_d4_minus_E_points_after_d3 = 28
+  quotient_d4_missing_on_E_orbit = 0
+  quotient_d4_not_descended_to_E = 0
+  quotient_d4_plus_E_points_after_d3 = 72
+  quotient_d4_quotient_rows_after_d3 = 100
+  quotient_orbit_size_4 = 228
+  quotient_oriented_candidates = 912
+  quotient_quotient_E_points = 228
+  d3_k_rows = 57
+  d4_k_rows = 25
+  d3_plus = 25
+  d3_minus = 32
+  d4_plus = 18
+  d4_minus = 7
+  q2087_affine_stats:
+  best_covered = 25
+  best_good = 18
+  d3_rows = 57
+  d4_rows = 25
+  domain_rows = 25
+  exact_on_covered_maps = 1828577
+  exact_reported = 0
+  full_coverage_maps = 1
+  maps_with_nonzero_coverage = 2183910
+  q2087_affine_best:
+  family=affine map=1,0 expr=a*K+b polarity=1 good=18/25 rate=0.720000000 coverage=1.000000000
+  family=affine map=231,1245 expr=a*K+b polarity=-1 good=6/6 rate=1.000000000 coverage=0.240000000
+  family=affine map=1239,1868 expr=a*K+b polarity=1 good=6/6 rate=1.000000000 coverage=0.240000000
+  family=affine map=1379,547 expr=a*K+b polarity=-1 good=6/6 rate=1.000000000 coverage=0.240000000
+  family=affine map=1400,1679 expr=a*K+b polarity=1 good=6/6 rate=1.000000000 coverage=0.240000000
+  family=affine map=1567,1161 expr=a*K+b polarity=-1 good=6/6 rate=1.000000000 coverage=0.240000000
+  family=affine map=1660,1623 expr=a*K+b polarity=-1 good=6/6 rate=1.000000000 coverage=0.240000000
+  family=affine map=74,1957 expr=a*K+b polarity=-1 good=5/5 rate=1.000000000 coverage=0.200000000
+  q2087_affine_full_exact:
+  none
+  q2087_reciprocal_stats:
+  best_covered = 6
+  best_good = 6
+  d3_rows = 57
+  d4_rows = 25
+  domain_rows = 25
+  exact_on_covered_maps = 1828760
+  exact_reported = 0
+  maps_with_nonzero_coverage = 2183913
+  q2087_reciprocal_best:
+  family=reciprocal map=236,693 expr=a/K+b polarity=-1 good=6/6 rate=1.000000000 coverage=0.240000000
+  family=reciprocal map=367,822 expr=a/K+b polarity=-1 good=6/6 rate=1.000000000 coverage=0.240000000
+  family=reciprocal map=1194,248 expr=a/K+b polarity=-1 good=6/6 rate=1.000000000 coverage=0.240000000
+  family=reciprocal map=1262,982 expr=a/K+b polarity=1 good=6/6 rate=1.000000000 coverage=0.240000000
+  family=reciprocal map=2038,71 expr=a/K+b polarity=-1 good=6/6 rate=1.000000000 coverage=0.240000000
+  family=reciprocal map=2062,1443 expr=a/K+b polarity=-1 good=6/6 rate=1.000000000 coverage=0.240000000
+  family=reciprocal map=12,169 expr=a/K+b polarity=-1 good=5/5 rate=1.000000000 coverage=0.200000000
+  family=reciprocal map=26,1919 expr=a/K+b polarity=-1 good=5/5 rate=1.000000000 coverage=0.200000000
+  q2087_reciprocal_full_exact:
+  none
+p27_kline_affine_recurrence_probe_rows=1/1
