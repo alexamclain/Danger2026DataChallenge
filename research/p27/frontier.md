@@ -1267,6 +1267,30 @@ named divisor/Kummer relation explains them and survives p27 rows.
 Status: B-line remains a clean Kummer-class extraction surface; do not run a
 large GPU production search based only on Bplus buckets.
 
+### Card 4c: K-Line Fit Significance
+
+K-line exact fits now have a quantitative promotion rule:
+[P27 K-Line Fit Significance](evidence/p27_kline_fit_significance_20260622.md).
+
+The q863 exact cubic burst is expected interpolation, not structure:
+
+```text
+q863 d3 monic cubic expected exact fits ~= 76.6
+observed exact cubics = 58
+```
+
+By contrast, exact d3 cubics in the promotion fields would be highly
+non-random:
+
+```text
+q1471 expected ~= 5.65e-6
+q1607 expected ~= 1.47e-5
+q1847 expected ~= 1.37e-9
+```
+
+Status: promote only stable promotion-field d3 low-degree formulas or
+branch-cover/genus extraction.  Demote q863 cubics and low-row d4 local fits.
+
 ### Card 5: Elliptic Line Identity
 
 Use the model:

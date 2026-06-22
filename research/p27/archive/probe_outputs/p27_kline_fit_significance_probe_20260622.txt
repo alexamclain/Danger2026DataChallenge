@@ -1,0 +1,105 @@
+p27 K-line fit-significance probe
+model = random signs, exact up to global polarity
+q=607:
+  d3_minus = 16
+  d3_plus = 16
+  d3_rows = 32
+  d4_minus = 16
+  d4_plus = 0
+  d4_rows = 16
+  d3_fit_significance:
+    monic_cubic: family_size=223648543 expected_exact=0.104144468 p_at_least_one=0.0989048918 verdict=exact_fit_interesting_needs_guard
+    monic_quartic: family_size=135754665601 expected_exact=63.2156923 p_at_least_one=1 verdict=interpolation_likely
+    projective_cubic: family_size=224017600 expected_exact=0.104316324 p_at_least_one=0.0990597367 verdict=exact_fit_interesting_needs_guard
+    projective_quartic: family_size=135978683201 expected_exact=63.3200087 p_at_least_one=1 verdict=interpolation_likely
+  d4_fit_significance:
+    monic_cubic: family_size=223648543 expected_exact=6825.21188 p_at_least_one=1 verdict=interpolation_likely
+    monic_quartic: family_size=135754665601 expected_exact=4142903.61 p_at_least_one=1 verdict=interpolation_likely
+    projective_cubic: family_size=224017600 expected_exact=6836.47461 p_at_least_one=1 verdict=interpolation_likely
+    projective_quartic: family_size=135978683201 expected_exact=4149740.09 p_at_least_one=1 verdict=interpolation_likely
+q=863:
+  d3_minus = 12
+  d3_plus = 12
+  d3_rows = 24
+  d4_minus = 12
+  d4_plus = 0
+  d4_rows = 12
+  d3_fit_significance:
+    monic_cubic: family_size=642735647 expected_exact=76.6200598 p_at_least_one=1 verdict=interpolation_likely
+    monic_quartic: family_size=554680863361 expected_exact=66123.1116 p_at_least_one=1 verdict=interpolation_likely
+    projective_cubic: family_size=643481280 expected_exact=76.7089462 p_at_least_one=1 verdict=interpolation_likely
+    projective_quartic: family_size=555324344641 expected_exact=66199.8206 p_at_least_one=1 verdict=interpolation_likely
+  d4_fit_significance:
+    monic_cubic: family_size=642735647 expected_exact=313835.765 p_at_least_one=1 verdict=interpolation_likely
+    monic_quartic: family_size=554680863361 expected_exact=270840265 p_at_least_one=1 verdict=interpolation_likely
+    projective_cubic: family_size=643481280 expected_exact=314199.844 p_at_least_one=1 verdict=interpolation_likely
+    projective_quartic: family_size=555324344641 expected_exact=271154465 p_at_least_one=1 verdict=interpolation_likely
+q=991:
+  d3_minus = 18
+  d3_plus = 18
+  d3_rows = 36
+  d4_minus = 0
+  d4_plus = 18
+  d4_rows = 18
+  d3_fit_significance:
+    monic_cubic: family_size=973242271 expected_exact=0.028325078 p_at_least_one=0.0279276839 verdict=exact_fit_interesting_needs_guard
+    monic_quartic: family_size=964483090561 expected_exact=28.0701523 p_at_least_one=1 verdict=interpolation_likely
+    projective_cubic: family_size=974225344 expected_exact=0.0283536892 p_at_least_one=0.0279554957 verdict=exact_fit_interesting_needs_guard
+    projective_quartic: family_size=965457315905 expected_exact=28.098506 p_at_least_one=1 verdict=interpolation_likely
+  d4_fit_significance:
+    monic_cubic: family_size=973242271 expected_exact=7425.24926 p_at_least_one=1 verdict=interpolation_likely
+    monic_quartic: family_size=964483090561 expected_exact=7358422.02 p_at_least_one=1 verdict=interpolation_likely
+    projective_cubic: family_size=974225344 expected_exact=7432.74951 p_at_least_one=1 verdict=interpolation_likely
+    projective_quartic: family_size=965457315905 expected_exact=7365854.77 p_at_least_one=1 verdict=interpolation_likely
+q=1471:
+  d3_minus = 22
+  d3_plus = 28
+  d3_rows = 50
+  d4_minus = 14
+  d4_plus = 14
+  d4_rows = 28
+  d3_fit_significance:
+    monic_cubic: family_size=3183010111 expected_exact=5.65416178e-06 p_at_least_one=5.6541458e-06 verdict=exact_fit_decisive_if_stable
+    monic_quartic: family_size=4682207873281 expected_exact=0.00831727198 p_at_least_one=0.00828277917 verdict=exact_fit_decisive_if_stable
+    projective_cubic: family_size=3185175424 expected_exact=5.65800815e-06 p_at_least_one=5.65799214e-06 verdict=exact_fit_decisive_if_stable
+    projective_quartic: family_size=4685393048705 expected_exact=0.00832292999 p_at_least_one=0.0082883903 verdict=exact_fit_decisive_if_stable
+  d4_fit_significance:
+    monic_cubic: family_size=3183010111 expected_exact=23.7152734 p_at_least_one=1 verdict=interpolation_likely
+    monic_quartic: family_size=4682207873281 expected_exact=34885.1671 p_at_least_one=1 verdict=interpolation_likely
+    projective_cubic: family_size=3185175424 expected_exact=23.7314062 p_at_least_one=1 verdict=interpolation_likely
+    projective_quartic: family_size=4685393048705 expected_exact=34908.8985 p_at_least_one=1 verdict=interpolation_likely
+q=1607:
+  d3_minus = 21
+  d3_plus = 28
+  d3_rows = 49
+  d4_minus = 9
+  d4_plus = 19
+  d4_rows = 28
+  d3_fit_significance:
+    monic_cubic: family_size=4149995543 expected_exact=1.47437459e-05 p_at_least_one=1.47436372e-05 verdict=exact_fit_decisive_if_stable
+    monic_quartic: family_size=6669042837601 expected_exact=0.0236931997 p_at_least_one=0.0234147196 verdict=exact_fit_interesting_needs_guard
+    projective_cubic: family_size=4152579600 expected_exact=1.47529263e-05 p_at_least_one=1.47528175e-05 verdict=exact_fit_decisive_if_stable
+    projective_quartic: family_size=6673195417201 expected_exact=0.0237079526 p_at_least_one=0.0234291269 verdict=exact_fit_interesting_needs_guard
+  d4_fit_significance:
+    monic_cubic: family_size=4149995543 expected_exact=30.9198763 p_at_least_one=1 verdict=interpolation_likely
+    monic_quartic: family_size=6669042837601 expected_exact=49688.2412 p_at_least_one=1 verdict=interpolation_likely
+    projective_cubic: family_size=4152579600 expected_exact=30.939129 p_at_least_one=1 verdict=interpolation_likely
+    projective_quartic: family_size=6673195417201 expected_exact=49719.1803 p_at_least_one=1 verdict=interpolation_likely
+q=1847:
+  d3_minus = 18
+  d3_plus = 45
+  d3_rows = 63
+  d4_minus = 26
+  d4_plus = 19
+  d4_rows = 45
+  d3_fit_significance:
+    monic_cubic: family_size=6300872423 expected_exact=1.36628391e-09 p_at_least_one=1.36628386e-09 verdict=exact_fit_decisive_if_stable
+    monic_quartic: family_size=11637711365281 expected_exact=2.52352639e-06 p_at_least_one=2.5235232e-06 verdict=exact_fit_decisive_if_stable
+    projective_cubic: family_size=6304285680 expected_exact=1.36702405e-09 p_at_least_one=1.36702405e-09 verdict=exact_fit_decisive_if_stable
+    projective_quartic: family_size=11644015650961 expected_exact=2.52489341e-06 p_at_least_one=2.52489023e-06 verdict=exact_fit_decisive_if_stable
+  d4_fit_significance:
+    monic_cubic: family_size=6300872423 expected_exact=0.00035816313 p_at_least_one=0.000358098998 verdict=exact_fit_decisive_if_stable
+    monic_quartic: family_size=11637711365281 expected_exact=0.661527302 p_at_least_one=0.483937451 verdict=local_fit_not_decisive
+    projective_cubic: family_size=6304285680 expected_exact=0.000358357152 p_at_least_one=0.000358292949 verdict=exact_fit_decisive_if_stable
+    projective_quartic: family_size=11644015650961 expected_exact=0.661885659 p_at_least_one=0.484122353 verdict=local_fit_not_decisive
+p27_kline_fit_significance_probe_rows=1/1

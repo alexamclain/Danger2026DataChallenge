@@ -135,6 +135,12 @@ and then finds no q991 cubic.  This field-to-field instability kills q863
 exact cubics as source candidates and reinforces the rule that K-line
 promotion needs branch-cover/genus extraction in q1471/q1607/q1847, not
 small-field interpolation fits.
+The fit-significance calibration makes this quantitative:
+[P27 K-Line Fit Significance](p27_kline_fit_significance_20260622.md).
+q863 d3 monic cubics have `expected_exact ~= 76.6`, while q1471/q1607/q1847
+d3 monic cubics have expected exact counts `5.65e-6`, `1.47e-5`, and
+`1.37e-9`.  Thus a stable d3 low-degree fit in the promotion fields would be
+meaningful; q863 fits and q1471/q1607 d4 fits are not enough.
 The extension-field source count now gives a staged-geometry substitute for the
 memory-heavy online Magma pullback.  Over `GF(7^n)` and `GF(23^n)`, the legal
 label-2/compactD source is curve-sized, but selected prefixes still reduce

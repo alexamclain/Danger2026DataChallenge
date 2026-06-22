@@ -1757,6 +1757,10 @@ local interpolation artifacts
 ```
 
 See [P27 K-Line Cubic Stdin Probe](p27_kline_cubic_stdin_probe_20260622.md).
+Use [P27 K-Line Fit Significance](p27_kline_fit_significance_20260622.md)
+to decide whether an exact finite-field fit is meaningful.  In particular,
+q863 exact cubics are expected interpolation, while q1471/q1607/q1847 d3
+cubic or quartic fits would be strong evidence if stable.
 
 Promotion bar:
 

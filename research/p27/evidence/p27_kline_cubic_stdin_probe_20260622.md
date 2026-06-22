@@ -22,6 +22,14 @@ artifacts, not a stable p27 source.
 The remaining serious K-line task is still branch-cover/genus extraction in
 the promotion fields, not wider small-field cubic fitting.
 
+Follow-up calibration:
+[P27 K-Line Fit Significance](p27_kline_fit_significance_20260622.md)
+quantifies this.  Under a random-sign model, q863 d3 monic cubics have
+`expected_exact ~= 76.6`, so the observed `58` exact cubics are interpolation.
+By contrast, q1471/q1607/q1847 d3 cubic exact fits have expected counts
+`5.65e-6`, `1.47e-5`, and `1.37e-9`; a stable promotion-field d3 fit would be
+real evidence.
+
 ## Artifacts
 
 Probe:
