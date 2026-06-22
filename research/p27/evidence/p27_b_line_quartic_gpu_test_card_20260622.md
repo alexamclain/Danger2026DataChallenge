@@ -107,6 +107,28 @@ Reuse the bitset convention from:
 research/p27/archive/gates/p27_b_line_cubic_support_probe.py
 ```
 
+The target rows are frozen in a machine-readable packet:
+
+```text
+research/p27/archive/fixtures/p27_b_line_quartic_targets_20260622.json
+```
+
+Packet generator:
+
+```text
+research/p27/archive/gates/p27_b_line_quartic_target_packet.py
+```
+
+Generation command:
+
+```bash
+PYTHONDONTWRITEBYTECODE=1 \
+python3 -u research/p27/archive/gates/p27_b_line_quartic_target_packet.py \
+  --small-primes 1607,1847,2087 \
+  --families d3_on_legalB,gate4_prefix_on_legalB,legal_on_coreB \
+  > research/p27/archive/fixtures/p27_b_line_quartic_targets_20260622.json
+```
+
 For each field and target rows `(B_i, bit_i)`:
 
 ```text
@@ -128,6 +150,22 @@ for a in F_q:
 Report both polarities.  Exclude zeros in the Legendre table as the existing
 cubic solver does; an exact source selector should not vanish on the sampled B
 domain.
+
+Packet sanity counts:
+
+```text
+q1607 d3_on_legalB:          rows=49  plus=28  minus=21
+q1607 gate4_prefix_on_legalB rows=49  plus=19  minus=30
+q1607 legal_on_coreB         rows=200 plus=49  minus=151
+
+q1847 d3_on_legalB:          rows=63  plus=45  minus=18
+q1847 gate4_prefix_on_legalB rows=63  plus=19  minus=44
+q1847 legal_on_coreB         rows=230 plus=63  minus=167
+
+q2087 d3_on_legalB:          rows=57  plus=25  minus=32
+q2087 gate4_prefix_on_legalB rows=57  plus=18  minus=39
+q2087 legal_on_coreB         rows=260 plus=57  minus=203
+```
 
 ## Run Order
 

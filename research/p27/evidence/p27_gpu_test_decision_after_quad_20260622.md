@@ -170,6 +170,11 @@ chi(B^4 + aB^3 + bB^2 + cB + d)
 for `d3_on_legalB` and `gate4_prefix_on_legalB` over q1847/q2087, with q1607
 as implementation smoke.  A stable positive gives a genus-1 B-line source
 candidate; a stable negative closes the visible quartic branch-support route.
+Use the frozen target packet:
+
+```text
+research/p27/archive/fixtures/p27_b_line_quartic_targets_20260622.json
+```
 
 ## Do Not Run Yet
 
