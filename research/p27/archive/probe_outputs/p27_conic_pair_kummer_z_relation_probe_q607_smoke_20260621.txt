@@ -1,0 +1,185 @@
+p27 conic-pair Kummer-Z relation probe
+points = d4-plus roots Z over legal d3-plus conic-pair preimages
+Z^2 = -(L+a)(L-a)cR
+nullity_extra = nullity beyond finite interpolation forced by unique count
+q607 A_z:
+  z_rows = 0
+  d4_plus_preimages = 0
+  d4_minus_preimages = 1024
+  transform_rows = 0
+  transform_unique = 0
+  transform_degenerate = 0
+  deg2: monomials=0 rank=0 nullity=0 forced=0 extra=0
+  deg4: monomials=0 rank=0 nullity=0 forced=0 extra=0
+  deg6: monomials=0 rank=0 nullity=0 forced=0 extra=0
+q607 x_z:
+  z_rows = 0
+  d4_plus_preimages = 0
+  d4_minus_preimages = 1024
+  transform_rows = 0
+  transform_unique = 0
+  transform_degenerate = 0
+  deg2: monomials=0 rank=0 nullity=0 forced=0 extra=0
+  deg4: monomials=0 rank=0 nullity=0 forced=0 extra=0
+  deg6: monomials=0 rank=0 nullity=0 forced=0 extra=0
+q607 c_z:
+  z_rows = 0
+  d4_plus_preimages = 0
+  d4_minus_preimages = 1024
+  transform_rows = 0
+  transform_unique = 0
+  transform_degenerate = 0
+  deg2: monomials=0 rank=0 nullity=0 forced=0 extra=0
+  deg4: monomials=0 rank=0 nullity=0 forced=0 extra=0
+  deg6: monomials=0 rank=0 nullity=0 forced=0 extra=0
+q607 r_z:
+  z_rows = 0
+  d4_plus_preimages = 0
+  d4_minus_preimages = 1024
+  transform_rows = 0
+  transform_unique = 0
+  transform_degenerate = 0
+  deg2: monomials=0 rank=0 nullity=0 forced=0 extra=0
+  deg4: monomials=0 rank=0 nullity=0 forced=0 extra=0
+  deg6: monomials=0 rank=0 nullity=0 forced=0 extra=0
+q607 R_z:
+  z_rows = 0
+  d4_plus_preimages = 0
+  d4_minus_preimages = 1024
+  transform_rows = 0
+  transform_unique = 0
+  transform_degenerate = 0
+  deg2: monomials=0 rank=0 nullity=0 forced=0 extra=0
+  deg4: monomials=0 rank=0 nullity=0 forced=0 extra=0
+  deg6: monomials=0 rank=0 nullity=0 forced=0 extra=0
+q607 L_z:
+  z_rows = 0
+  d4_plus_preimages = 0
+  d4_minus_preimages = 1024
+  transform_rows = 0
+  transform_unique = 0
+  transform_degenerate = 0
+  deg2: monomials=0 rank=0 nullity=0 forced=0 extra=0
+  deg4: monomials=0 rank=0 nullity=0 forced=0 extra=0
+  deg6: monomials=0 rank=0 nullity=0 forced=0 extra=0
+q607 s_z:
+  z_rows = 0
+  d4_plus_preimages = 0
+  d4_minus_preimages = 1024
+  transform_rows = 0
+  transform_unique = 0
+  transform_degenerate = 0
+  deg2: monomials=0 rank=0 nullity=0 forced=0 extra=0
+  deg4: monomials=0 rank=0 nullity=0 forced=0 extra=0
+  deg6: monomials=0 rank=0 nullity=0 forced=0 extra=0
+q607 a2_z:
+  z_rows = 0
+  d4_plus_preimages = 0
+  d4_minus_preimages = 1024
+  transform_rows = 0
+  transform_unique = 0
+  transform_degenerate = 0
+  deg2: monomials=0 rank=0 nullity=0 forced=0 extra=0
+  deg4: monomials=0 rank=0 nullity=0 forced=0 extra=0
+  deg6: monomials=0 rank=0 nullity=0 forced=0 extra=0
+q607 m_z:
+  z_rows = 0
+  d4_plus_preimages = 0
+  d4_minus_preimages = 1024
+  transform_rows = 0
+  transform_unique = 0
+  transform_degenerate = 0
+  deg2: monomials=0 rank=0 nullity=0 forced=0 extra=0
+  deg4: monomials=0 rank=0 nullity=0 forced=0 extra=0
+  deg6: monomials=0 rank=0 nullity=0 forced=0 extra=0
+q607 n_z:
+  z_rows = 0
+  d4_plus_preimages = 0
+  d4_minus_preimages = 1024
+  transform_rows = 0
+  transform_unique = 0
+  transform_degenerate = 0
+  deg2: monomials=0 rank=0 nullity=0 forced=0 extra=0
+  deg4: monomials=0 rank=0 nullity=0 forced=0 extra=0
+  deg6: monomials=0 rank=0 nullity=0 forced=0 extra=0
+q607 w_z:
+  z_rows = 0
+  d4_plus_preimages = 0
+  d4_minus_preimages = 1024
+  transform_rows = 0
+  transform_unique = 0
+  transform_degenerate = 0
+  deg2: monomials=0 rank=0 nullity=0 forced=0 extra=0
+  deg4: monomials=0 rank=0 nullity=0 forced=0 extra=0
+  deg6: monomials=0 rank=0 nullity=0 forced=0 extra=0
+q607 s_z_lpa:
+  z_rows = 0
+  d4_plus_preimages = 0
+  d4_minus_preimages = 1024
+  transform_rows = 0
+  transform_unique = 0
+  transform_degenerate = 0
+  deg2: monomials=0 rank=0 nullity=0 forced=0 extra=0
+  deg4: monomials=0 rank=0 nullity=0 forced=0 extra=0
+  deg6: monomials=0 rank=0 nullity=0 forced=0 extra=0
+q607 s_z_lma:
+  z_rows = 0
+  d4_plus_preimages = 0
+  d4_minus_preimages = 1024
+  transform_rows = 0
+  transform_unique = 0
+  transform_degenerate = 0
+  deg2: monomials=0 rank=0 nullity=0 forced=0 extra=0
+  deg4: monomials=0 rank=0 nullity=0 forced=0 extra=0
+  deg6: monomials=0 rank=0 nullity=0 forced=0 extra=0
+q607 s_z_cR:
+  z_rows = 0
+  d4_plus_preimages = 0
+  d4_minus_preimages = 1024
+  transform_rows = 0
+  transform_unique = 0
+  transform_degenerate = 0
+  deg2: monomials=0 rank=0 nullity=0 forced=0 extra=0
+  deg4: monomials=0 rank=0 nullity=0 forced=0 extra=0
+  deg6: monomials=0 rank=0 nullity=0 forced=0 extra=0
+q607 a2_z_lpa:
+  z_rows = 0
+  d4_plus_preimages = 0
+  d4_minus_preimages = 1024
+  transform_rows = 0
+  transform_unique = 0
+  transform_degenerate = 0
+  deg2: monomials=0 rank=0 nullity=0 forced=0 extra=0
+  deg4: monomials=0 rank=0 nullity=0 forced=0 extra=0
+  deg6: monomials=0 rank=0 nullity=0 forced=0 extra=0
+q607 a2_z_lma:
+  z_rows = 0
+  d4_plus_preimages = 0
+  d4_minus_preimages = 1024
+  transform_rows = 0
+  transform_unique = 0
+  transform_degenerate = 0
+  deg2: monomials=0 rank=0 nullity=0 forced=0 extra=0
+  deg4: monomials=0 rank=0 nullity=0 forced=0 extra=0
+  deg6: monomials=0 rank=0 nullity=0 forced=0 extra=0
+q607 m_z_lpa:
+  z_rows = 0
+  d4_plus_preimages = 0
+  d4_minus_preimages = 1024
+  transform_rows = 0
+  transform_unique = 0
+  transform_degenerate = 0
+  deg2: monomials=0 rank=0 nullity=0 forced=0 extra=0
+  deg4: monomials=0 rank=0 nullity=0 forced=0 extra=0
+  deg6: monomials=0 rank=0 nullity=0 forced=0 extra=0
+q607 n_z_lma:
+  z_rows = 0
+  d4_plus_preimages = 0
+  d4_minus_preimages = 1024
+  transform_rows = 0
+  transform_unique = 0
+  transform_degenerate = 0
+  deg2: monomials=0 rank=0 nullity=0 forced=0 extra=0
+  deg4: monomials=0 rank=0 nullity=0 forced=0 extra=0
+  deg6: monomials=0 rank=0 nullity=0 forced=0 extra=0
+p27_conic_pair_kummer_z_relation_probe_rows=1/1

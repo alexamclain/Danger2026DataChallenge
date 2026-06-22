@@ -32,6 +32,7 @@ research/p27/evidence/p27_conic_chain_source_screen_20260621.md
 research/p27/evidence/p27_gpu_search_space_narrowing_20260621.md
 research/p27/evidence/p27_gpu_uprecheck_probe_20260621.md
 research/p27/evidence/p27_conic_pair_invariant_relation_20260621.md
+research/p27/evidence/p27_conic_pair_kummer_z_relation_20260621.md
 ```
 
 The recurrence is exact in the tested p27 tower:
@@ -170,6 +171,13 @@ Do not spend GPU time on bucket searches in simple symmetric pairs like
 `(R+1/R,L+a^2/L)`, `((R-1/R)^2,L+a^2/L)`, `(R+1/R,(L+a)(L-a))`,
 or `(c,r)`.  q1847/q2087 show no extra low-degree relation through degree 20,
 and the only q1607 degree-20 artifact failed to repeat.
+
+The first Kummer-root layer was also screened:
+[P27 Conic-Pair Kummer-Z Relation Screen](p27_conic_pair_kummer_z_relation_20260621.md).
+After adjoining `Z^2=-(L+a)(L-a)cR`, simple pairs involving `Z` remain
+full-rank through degree 20 except `(A,Z)`, and the `(A,Z)` exception is only a
+univariate A-projection polynomial.  Do not launch GPU bucket searches for
+first-Z-layer pair relations without a new theorem-specified coordinate.
 
 Report:
 

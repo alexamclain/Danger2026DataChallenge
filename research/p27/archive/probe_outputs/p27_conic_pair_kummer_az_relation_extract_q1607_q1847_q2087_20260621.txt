@@ -1,0 +1,284 @@
+p27 conic-pair Kummer A,Z relation extractor
+q1607 degree18:
+  points = 604
+  z_rows = 2432
+  monomials = 190
+  rank = 190
+  nullity = 0
+q1607 degree20:
+  points = 604
+  z_rows = 2432
+  monomials = 231
+  rank = 228
+  nullity = 3
+  relation_0:
+    terms = 20
+    odd_z_terms = 0
+    max_A_exp = 19
+    max_Z_exp = 0
+      653*1
+      55*A
+      -487*A^2
+      593*A^3
+      -573*A^4
+      219*A^5
+      -452*A^6
+      412*A^7
+      93*A^8
+      -42*A^9
+      154*A^10
+      305*A^11
+      673*A^12
+      717*A^13
+      512*A^14
+      111*A^15
+      -776*A^16
+      802*A^17
+      425*A^18
+      1*A^19
+  relation_1:
+    terms = 20
+    odd_z_terms = 20
+    max_A_exp = 19
+    max_Z_exp = 1
+      653*Z
+      55*A*Z
+      -487*A^2*Z
+      593*A^3*Z
+      -573*A^4*Z
+      219*A^5*Z
+      -452*A^6*Z
+      412*A^7*Z
+      93*A^8*Z
+      -42*A^9*Z
+      154*A^10*Z
+      305*A^11*Z
+      673*A^12*Z
+      717*A^13*Z
+      512*A^14*Z
+      111*A^15*Z
+      -776*A^16*Z
+      802*A^17*Z
+      425*A^18*Z
+      1*A^19*Z
+  relation_2:
+    terms = 20
+    odd_z_terms = 0
+    max_A_exp = 20
+    max_Z_exp = 0
+      486*1
+      -224*A
+      -273*A^2
+      -213*A^3
+      -146*A^4
+      -442*A^5
+      -521*A^6
+      -389*A^7
+      -545*A^8
+      266*A^9
+      395*A^10
+      696*A^11
+      326*A^12
+      -329*A^13
+      62*A^14
+      -60*A^15
+      476*A^16
+      665*A^17
+      161*A^18
+      1*A^20
+q1847 degree18:
+  points = 598
+  z_rows = 2432
+  monomials = 190
+  rank = 190
+  nullity = 0
+q1847 degree20:
+  points = 598
+  z_rows = 2432
+  monomials = 231
+  rank = 228
+  nullity = 3
+  relation_0:
+    terms = 20
+    odd_z_terms = 0
+    max_A_exp = 19
+    max_Z_exp = 0
+      168*1
+      400*A
+      656*A^2
+      45*A^3
+      707*A^4
+      275*A^5
+      354*A^6
+      865*A^7
+      -420*A^8
+      398*A^9
+      610*A^10
+      539*A^11
+      602*A^12
+      296*A^13
+      -891*A^14
+      -21*A^15
+      380*A^16
+      -524*A^17
+      760*A^18
+      1*A^19
+  relation_1:
+    terms = 20
+    odd_z_terms = 20
+    max_A_exp = 19
+    max_Z_exp = 1
+      168*Z
+      400*A*Z
+      656*A^2*Z
+      45*A^3*Z
+      707*A^4*Z
+      275*A^5*Z
+      354*A^6*Z
+      865*A^7*Z
+      -420*A^8*Z
+      398*A^9*Z
+      610*A^10*Z
+      539*A^11*Z
+      602*A^12*Z
+      296*A^13*Z
+      -891*A^14*Z
+      -21*A^15*Z
+      380*A^16*Z
+      -524*A^17*Z
+      760*A^18*Z
+      1*A^19*Z
+  relation_2:
+    terms = 20
+    odd_z_terms = 0
+    max_A_exp = 20
+    max_Z_exp = 0
+      -237*1
+      923*A
+      530*A^2
+      -298*A^3
+      202*A^4
+      418*A^5
+      897*A^6
+      486*A^7
+      534*A^8
+      8*A^9
+      395*A^10
+      -843*A^11
+      -772*A^12
+      -871*A^13
+      -393*A^14
+      293*A^15
+      -689*A^16
+      -332*A^17
+      -13*A^18
+      1*A^20
+q2087 degree18:
+  points = 570
+  z_rows = 2304
+  monomials = 190
+  rank = 189
+  nullity = 1
+  relation_0:
+    terms = 19
+    odd_z_terms = 0
+    max_A_exp = 18
+    max_Z_exp = 0
+      566*1
+      -198*A
+      862*A^2
+      -247*A^3
+      -800*A^4
+      -681*A^5
+      -340*A^6
+      575*A^7
+      611*A^8
+      -258*A^9
+      -926*A^10
+      171*A^11
+      -653*A^12
+      -432*A^13
+      739*A^14
+      887*A^15
+      -151*A^16
+      -207*A^17
+      1*A^18
+q2087 degree20:
+  points = 570
+  z_rows = 2304
+  monomials = 231
+  rank = 225
+  nullity = 6
+  relation_0:
+    terms = 19
+    odd_z_terms = 0
+    max_A_exp = 18
+    max_Z_exp = 0
+      566*1
+      -198*A
+      862*A^2
+      -247*A^3
+      -800*A^4
+      -681*A^5
+      -340*A^6
+      575*A^7
+      611*A^8
+      -258*A^9
+      -926*A^10
+      171*A^11
+      -653*A^12
+      -432*A^13
+      739*A^14
+      887*A^15
+      -151*A^16
+      -207*A^17
+      1*A^18
+  relation_1:
+    terms = 19
+    odd_z_terms = 19
+    max_A_exp = 18
+    max_Z_exp = 1
+      566*Z
+      -198*A*Z
+      862*A^2*Z
+      -247*A^3*Z
+      -800*A^4*Z
+      -681*A^5*Z
+      -340*A^6*Z
+      575*A^7*Z
+      611*A^8*Z
+      -258*A^9*Z
+      -926*A^10*Z
+      171*A^11*Z
+      -653*A^12*Z
+      -432*A^13*Z
+      739*A^14*Z
+      887*A^15*Z
+      -151*A^16*Z
+      -207*A^17*Z
+      1*A^18*Z
+  relation_2:
+    terms = 19
+    odd_z_terms = 0
+    max_A_exp = 19
+    max_Z_exp = 0
+      290*1
+      -767*A
+      841*A^2
+      -179*A^3
+      -974*A^4
+      149*A^5
+      -103*A^6
+      -274*A^7
+      -255*A^8
+      -620*A^9
+      64*A^10
+      -1008*A^11
+      655*A^12
+      -336*A^13
+      190*A^14
+      692*A^15
+      935*A^16
+      827*A^17
+      1*A^19
+p27_conic_pair_kummer_az_relation_extract_rows=1/1

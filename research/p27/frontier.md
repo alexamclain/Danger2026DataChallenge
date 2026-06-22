@@ -774,6 +774,16 @@ in any tested pair system, and the only q1607 degree-20 artifact does not
 repeat.  This spends the cheap invariant plane-curve idea; the remaining live
 route must retain selector roots `Z_j` or use staged pullback/normalization.
 
+The first selector-root layer has now been screened too:
+[P27 Conic-Pair Kummer-Z Relation Screen](evidence/p27_conic_pair_kummer_z_relation_20260621.md).
+After adjoining `Z^2=-(L+a)(L-a)cR`, all tested simple pairs involving `Z` are
+full-rank through degree `20` except `(A,Z)`.  Extracting `(A,Z)` shows the
+exception is only a univariate `A`-projection polynomial, with the next
+relation equal to that polynomial times `Z`; the A-projection grows at
+constant-density small-field scale.  This kills the first-Z-layer simple
+pair-quotient hope and pushes the live route to staged normalization/components
+or a named Kummer/Hilbert-90 theorem.
+
 The K-line now has a cleaner coordinate for that extraction:
 [P27 Kummer Belyi Structure Probe](evidence/p27_kummer_belyi_structure_probe_20260621.md).
 Symbolically,

@@ -118,6 +118,12 @@ in the obvious pair systems: `(A,x)`, `(c,r)`, `(r,d)`,
 `(R+1/R,(L+a)(L-a))`, and related pairs.  q1847/q2087 have no extra nullity;
 the only q1607 degree-20 artifact does not repeat.  This kills the cheap
 "maybe the quotient is a plane curve after symmetrizing" path.
+The first Kummer-root layer is now screened as well.  After adjoining
+`Z^2=-(L+a)(L-a)cR`, all obvious pairs involving `Z` are full-rank through
+degree 20 except `(A,Z)`.  The `(A,Z)` relation extracts to a univariate
+polynomial in `A`, plus its product with `Z`; it is the finite A-projection of
+the selected small-field rows, not a Kummer-root quotient.  The A-projection
+count grows at constant-density small-field scale, so this is not a p27 source.
 ```
 
 Concrete next K/S test:
@@ -145,6 +151,7 @@ no low-genus quotient of the genus-37 layer, or d4 is a fresh unrelated cover
 no F_p descent of the sqrt(-1)-twisted alpha quotient
 no useful low-genus/function-field structure for the conic-chain pullback
 another low-degree plane-curve screen in raw or obvious invariant coordinates
+another simple first-Z-layer pair scan without a new theorem-specified coordinate
 ```
 
 ## Current Alpha Status

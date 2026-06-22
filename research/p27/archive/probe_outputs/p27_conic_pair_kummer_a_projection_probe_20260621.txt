@@ -1,0 +1,13 @@
+p27 conic-pair Kummer A-projection probe
+q1607: legal_Ax=196 d3_Ax=112 d3_A=28 d4_Ax=76 d4_A=19 d4_minus_Ax=36 bad=0 sqrt=40.1 d4_A_over_q=0.011823 time=0.04s
+q1847: legal_Ax=252 d3_Ax=180 d3_A=45 d4_Ax=76 d4_A=19 d4_minus_Ax=104 bad=0 sqrt=43.0 d4_A_over_q=0.010287 time=0.05s
+q2087: legal_Ax=228 d3_Ax=100 d3_A=25 d4_Ax=72 d4_A=18 d4_minus_Ax=28 bad=0 sqrt=45.7 d4_A_over_q=0.008625 time=0.04s
+q2207: legal_Ax=256 d3_Ax=128 d3_A=32 d4_Ax=0 d4_A=0 d4_minus_Ax=128 bad=0 sqrt=47.0 d4_A_over_q=0.000000 time=0.05s
+q2239: legal_Ax=344 d3_Ax=208 d3_A=52 d4_Ax=104 d4_A=26 d4_minus_Ax=104 bad=0 sqrt=47.3 d4_A_over_q=0.011612 time=0.06s
+q2287: legal_Ax=280 d3_Ax=120 d3_A=30 d4_Ax=120 d4_A=30 d4_minus_Ax=0 bad=0 sqrt=47.8 d4_A_over_q=0.013118 time=0.05s
+q2311: legal_Ax=312 d3_Ax=192 d3_A=48 d4_Ax=192 d4_A=48 d4_minus_Ax=0 bad=0 sqrt=48.1 d4_A_over_q=0.020770 time=0.06s
+q2351: legal_Ax=316 d3_Ax=200 d3_A=50 d4_Ax=140 d4_A=35 d4_minus_Ax=60 bad=0 sqrt=48.5 d4_A_over_q=0.014887 time=0.06s
+q2383: legal_Ax=264 d3_Ax=144 d3_A=36 d4_Ax=96 d4_A=24 d4_minus_Ax=48 bad=0 sqrt=48.8 d4_A_over_q=0.010071 time=0.05s
+q2399: legal_Ax=168 d3_Ax=84 d3_A=21 d4_Ax=32 d4_A=8 d4_minus_Ax=52 bad=0 sqrt=49.0 d4_A_over_q=0.003335 time=0.04s
+q2423: legal_Ax=276 d3_Ax=80 d3_A=20 d4_Ax=0 d4_A=0 d4_minus_Ax=80 bad=0 sqrt=49.2 d4_A_over_q=0.000000 time=0.04s
+p27_conic_pair_kummer_a_projection_probe_rows=1/1

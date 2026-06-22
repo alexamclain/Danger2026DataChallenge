@@ -1,0 +1,761 @@
+p27 conic-pair Kummer-Z relation probe
+points = d4-plus roots Z over legal d3-plus conic-pair preimages
+Z^2 = -(L+a)(L-a)cR
+nullity_extra = nullity beyond finite interpolation forced by unique count
+q1607 A_z:
+  z_rows = 2432
+  d4_plus_preimages = 1216
+  d4_minus_preimages = 576
+  transform_rows = 2432
+  transform_unique = 604
+  transform_degenerate = 0
+  deg2: monomials=6 rank=6 nullity=0 forced=0 extra=0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg6: monomials=28 rank=28 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+  deg10: monomials=66 rank=66 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+  deg14: monomials=120 rank=120 nullity=0 forced=0 extra=0
+q1607 x_z:
+  z_rows = 2432
+  d4_plus_preimages = 1216
+  d4_minus_preimages = 576
+  transform_rows = 2432
+  transform_unique = 604
+  transform_degenerate = 0
+  deg2: monomials=6 rank=6 nullity=0 forced=0 extra=0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg6: monomials=28 rank=28 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+  deg10: monomials=66 rank=66 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+  deg14: monomials=120 rank=120 nullity=0 forced=0 extra=0
+q1607 c_z:
+  z_rows = 2432
+  d4_plus_preimages = 1216
+  d4_minus_preimages = 576
+  transform_rows = 2432
+  transform_unique = 1208
+  transform_degenerate = 0
+  deg2: monomials=6 rank=6 nullity=0 forced=0 extra=0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg6: monomials=28 rank=28 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+  deg10: monomials=66 rank=66 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+  deg14: monomials=120 rank=120 nullity=0 forced=0 extra=0
+q1607 r_z:
+  z_rows = 2432
+  d4_plus_preimages = 1216
+  d4_minus_preimages = 576
+  transform_rows = 2432
+  transform_unique = 1208
+  transform_degenerate = 0
+  deg2: monomials=6 rank=6 nullity=0 forced=0 extra=0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg6: monomials=28 rank=28 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+  deg10: monomials=66 rank=66 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+  deg14: monomials=120 rank=120 nullity=0 forced=0 extra=0
+q1607 R_z:
+  z_rows = 2432
+  d4_plus_preimages = 1216
+  d4_minus_preimages = 576
+  transform_rows = 2432
+  transform_unique = 1216
+  transform_degenerate = 0
+  deg2: monomials=6 rank=6 nullity=0 forced=0 extra=0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg6: monomials=28 rank=28 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+  deg10: monomials=66 rank=66 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+  deg14: monomials=120 rank=120 nullity=0 forced=0 extra=0
+q1607 L_z:
+  z_rows = 2432
+  d4_plus_preimages = 1216
+  d4_minus_preimages = 576
+  transform_rows = 2432
+  transform_unique = 1216
+  transform_degenerate = 0
+  deg2: monomials=6 rank=6 nullity=0 forced=0 extra=0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg6: monomials=28 rank=28 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+  deg10: monomials=66 rank=66 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+  deg14: monomials=120 rank=120 nullity=0 forced=0 extra=0
+q1607 s_z:
+  z_rows = 2432
+  d4_plus_preimages = 1216
+  d4_minus_preimages = 576
+  transform_rows = 2432
+  transform_unique = 1208
+  transform_degenerate = 0
+  deg2: monomials=6 rank=6 nullity=0 forced=0 extra=0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg6: monomials=28 rank=28 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+  deg10: monomials=66 rank=66 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+  deg14: monomials=120 rank=120 nullity=0 forced=0 extra=0
+q1607 a2_z:
+  z_rows = 2432
+  d4_plus_preimages = 1216
+  d4_minus_preimages = 576
+  transform_rows = 2432
+  transform_unique = 604
+  transform_degenerate = 0
+  deg2: monomials=6 rank=6 nullity=0 forced=0 extra=0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg6: monomials=28 rank=28 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+  deg10: monomials=66 rank=66 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+  deg14: monomials=120 rank=120 nullity=0 forced=0 extra=0
+q1607 m_z:
+  z_rows = 2432
+  d4_plus_preimages = 1216
+  d4_minus_preimages = 576
+  transform_rows = 2432
+  transform_unique = 1208
+  transform_degenerate = 0
+  deg2: monomials=6 rank=6 nullity=0 forced=0 extra=0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg6: monomials=28 rank=28 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+  deg10: monomials=66 rank=66 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+  deg14: monomials=120 rank=120 nullity=0 forced=0 extra=0
+q1607 n_z:
+  z_rows = 2432
+  d4_plus_preimages = 1216
+  d4_minus_preimages = 576
+  transform_rows = 2432
+  transform_unique = 1208
+  transform_degenerate = 0
+  deg2: monomials=6 rank=6 nullity=0 forced=0 extra=0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg6: monomials=28 rank=28 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+  deg10: monomials=66 rank=66 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+  deg14: monomials=120 rank=120 nullity=0 forced=0 extra=0
+q1607 w_z:
+  z_rows = 2432
+  d4_plus_preimages = 1216
+  d4_minus_preimages = 576
+  transform_rows = 2432
+  transform_unique = 608
+  transform_degenerate = 0
+  deg2: monomials=6 rank=6 nullity=0 forced=0 extra=0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg6: monomials=28 rank=28 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+  deg10: monomials=66 rank=66 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+  deg14: monomials=120 rank=120 nullity=0 forced=0 extra=0
+q1607 s_z_lpa:
+  z_rows = 2432
+  d4_plus_preimages = 1216
+  d4_minus_preimages = 576
+  transform_rows = 2432
+  transform_unique = 1216
+  transform_degenerate = 0
+  deg2: monomials=6 rank=6 nullity=0 forced=0 extra=0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg6: monomials=28 rank=28 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+  deg10: monomials=66 rank=66 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+  deg14: monomials=120 rank=120 nullity=0 forced=0 extra=0
+q1607 s_z_lma:
+  z_rows = 2432
+  d4_plus_preimages = 1216
+  d4_minus_preimages = 576
+  transform_rows = 2432
+  transform_unique = 1216
+  transform_degenerate = 0
+  deg2: monomials=6 rank=6 nullity=0 forced=0 extra=0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg6: monomials=28 rank=28 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+  deg10: monomials=66 rank=66 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+  deg14: monomials=120 rank=120 nullity=0 forced=0 extra=0
+q1607 s_z_cR:
+  z_rows = 2432
+  d4_plus_preimages = 1216
+  d4_minus_preimages = 576
+  transform_rows = 2432
+  transform_unique = 1208
+  transform_degenerate = 0
+  deg2: monomials=6 rank=6 nullity=0 forced=0 extra=0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg6: monomials=28 rank=28 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+  deg10: monomials=66 rank=66 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+  deg14: monomials=120 rank=120 nullity=0 forced=0 extra=0
+q1607 a2_z_lpa:
+  z_rows = 2432
+  d4_plus_preimages = 1216
+  d4_minus_preimages = 576
+  transform_rows = 2432
+  transform_unique = 608
+  transform_degenerate = 0
+  deg2: monomials=6 rank=6 nullity=0 forced=0 extra=0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg6: monomials=28 rank=28 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+  deg10: monomials=66 rank=66 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+  deg14: monomials=120 rank=120 nullity=0 forced=0 extra=0
+q1607 a2_z_lma:
+  z_rows = 2432
+  d4_plus_preimages = 1216
+  d4_minus_preimages = 576
+  transform_rows = 2432
+  transform_unique = 608
+  transform_degenerate = 0
+  deg2: monomials=6 rank=6 nullity=0 forced=0 extra=0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg6: monomials=28 rank=28 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+  deg10: monomials=66 rank=66 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+  deg14: monomials=120 rank=120 nullity=0 forced=0 extra=0
+q1607 m_z_lpa:
+  z_rows = 2432
+  d4_plus_preimages = 1216
+  d4_minus_preimages = 576
+  transform_rows = 2432
+  transform_unique = 1216
+  transform_degenerate = 0
+  deg2: monomials=6 rank=6 nullity=0 forced=0 extra=0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg6: monomials=28 rank=28 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+  deg10: monomials=66 rank=66 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+  deg14: monomials=120 rank=120 nullity=0 forced=0 extra=0
+q1607 n_z_lma:
+  z_rows = 2432
+  d4_plus_preimages = 1216
+  d4_minus_preimages = 576
+  transform_rows = 2432
+  transform_unique = 1216
+  transform_degenerate = 0
+  deg2: monomials=6 rank=6 nullity=0 forced=0 extra=0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg6: monomials=28 rank=28 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+  deg10: monomials=66 rank=66 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+  deg14: monomials=120 rank=120 nullity=0 forced=0 extra=0
+q1847 A_z:
+  z_rows = 2432
+  d4_plus_preimages = 1216
+  d4_minus_preimages = 1664
+  transform_rows = 2432
+  transform_unique = 598
+  transform_degenerate = 0
+  deg2: monomials=6 rank=6 nullity=0 forced=0 extra=0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg6: monomials=28 rank=28 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+  deg10: monomials=66 rank=66 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+  deg14: monomials=120 rank=120 nullity=0 forced=0 extra=0
+q1847 x_z:
+  z_rows = 2432
+  d4_plus_preimages = 1216
+  d4_minus_preimages = 1664
+  transform_rows = 2432
+  transform_unique = 604
+  transform_degenerate = 0
+  deg2: monomials=6 rank=6 nullity=0 forced=0 extra=0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg6: monomials=28 rank=28 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+  deg10: monomials=66 rank=66 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+  deg14: monomials=120 rank=120 nullity=0 forced=0 extra=0
+q1847 c_z:
+  z_rows = 2432
+  d4_plus_preimages = 1216
+  d4_minus_preimages = 1664
+  transform_rows = 2432
+  transform_unique = 1196
+  transform_degenerate = 0
+  deg2: monomials=6 rank=6 nullity=0 forced=0 extra=0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg6: monomials=28 rank=28 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+  deg10: monomials=66 rank=66 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+  deg14: monomials=120 rank=120 nullity=0 forced=0 extra=0
+q1847 r_z:
+  z_rows = 2432
+  d4_plus_preimages = 1216
+  d4_minus_preimages = 1664
+  transform_rows = 2432
+  transform_unique = 1208
+  transform_degenerate = 0
+  deg2: monomials=6 rank=6 nullity=0 forced=0 extra=0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg6: monomials=28 rank=28 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+  deg10: monomials=66 rank=66 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+  deg14: monomials=120 rank=120 nullity=0 forced=0 extra=0
+q1847 R_z:
+  z_rows = 2432
+  d4_plus_preimages = 1216
+  d4_minus_preimages = 1664
+  transform_rows = 2432
+  transform_unique = 1216
+  transform_degenerate = 0
+  deg2: monomials=6 rank=6 nullity=0 forced=0 extra=0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg6: monomials=28 rank=28 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+  deg10: monomials=66 rank=66 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+  deg14: monomials=120 rank=120 nullity=0 forced=0 extra=0
+q1847 L_z:
+  z_rows = 2432
+  d4_plus_preimages = 1216
+  d4_minus_preimages = 1664
+  transform_rows = 2432
+  transform_unique = 1216
+  transform_degenerate = 0
+  deg2: monomials=6 rank=6 nullity=0 forced=0 extra=0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg6: monomials=28 rank=28 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+  deg10: monomials=66 rank=66 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+  deg14: monomials=120 rank=120 nullity=0 forced=0 extra=0
+q1847 s_z:
+  z_rows = 2432
+  d4_plus_preimages = 1216
+  d4_minus_preimages = 1664
+  transform_rows = 2432
+  transform_unique = 1208
+  transform_degenerate = 0
+  deg2: monomials=6 rank=6 nullity=0 forced=0 extra=0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg6: monomials=28 rank=28 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+  deg10: monomials=66 rank=66 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+  deg14: monomials=120 rank=120 nullity=0 forced=0 extra=0
+q1847 a2_z:
+  z_rows = 2432
+  d4_plus_preimages = 1216
+  d4_minus_preimages = 1664
+  transform_rows = 2432
+  transform_unique = 604
+  transform_degenerate = 0
+  deg2: monomials=6 rank=6 nullity=0 forced=0 extra=0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg6: monomials=28 rank=28 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+  deg10: monomials=66 rank=66 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+  deg14: monomials=120 rank=120 nullity=0 forced=0 extra=0
+q1847 m_z:
+  z_rows = 2432
+  d4_plus_preimages = 1216
+  d4_minus_preimages = 1664
+  transform_rows = 2432
+  transform_unique = 1208
+  transform_degenerate = 0
+  deg2: monomials=6 rank=6 nullity=0 forced=0 extra=0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg6: monomials=28 rank=28 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+  deg10: monomials=66 rank=66 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+  deg14: monomials=120 rank=120 nullity=0 forced=0 extra=0
+q1847 n_z:
+  z_rows = 2432
+  d4_plus_preimages = 1216
+  d4_minus_preimages = 1664
+  transform_rows = 2432
+  transform_unique = 1208
+  transform_degenerate = 0
+  deg2: monomials=6 rank=6 nullity=0 forced=0 extra=0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg6: monomials=28 rank=28 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+  deg10: monomials=66 rank=66 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+  deg14: monomials=120 rank=120 nullity=0 forced=0 extra=0
+q1847 w_z:
+  z_rows = 2432
+  d4_plus_preimages = 1216
+  d4_minus_preimages = 1664
+  transform_rows = 2432
+  transform_unique = 608
+  transform_degenerate = 0
+  deg2: monomials=6 rank=6 nullity=0 forced=0 extra=0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg6: monomials=28 rank=28 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+  deg10: monomials=66 rank=66 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+  deg14: monomials=120 rank=120 nullity=0 forced=0 extra=0
+q1847 s_z_lpa:
+  z_rows = 2432
+  d4_plus_preimages = 1216
+  d4_minus_preimages = 1664
+  transform_rows = 2432
+  transform_unique = 1216
+  transform_degenerate = 0
+  deg2: monomials=6 rank=6 nullity=0 forced=0 extra=0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg6: monomials=28 rank=28 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+  deg10: monomials=66 rank=66 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+  deg14: monomials=120 rank=120 nullity=0 forced=0 extra=0
+q1847 s_z_lma:
+  z_rows = 2432
+  d4_plus_preimages = 1216
+  d4_minus_preimages = 1664
+  transform_rows = 2432
+  transform_unique = 1216
+  transform_degenerate = 0
+  deg2: monomials=6 rank=6 nullity=0 forced=0 extra=0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg6: monomials=28 rank=28 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+  deg10: monomials=66 rank=66 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+  deg14: monomials=120 rank=120 nullity=0 forced=0 extra=0
+q1847 s_z_cR:
+  z_rows = 2432
+  d4_plus_preimages = 1216
+  d4_minus_preimages = 1664
+  transform_rows = 2432
+  transform_unique = 1208
+  transform_degenerate = 0
+  deg2: monomials=6 rank=6 nullity=0 forced=0 extra=0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg6: monomials=28 rank=28 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+  deg10: monomials=66 rank=66 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+  deg14: monomials=120 rank=120 nullity=0 forced=0 extra=0
+q1847 a2_z_lpa:
+  z_rows = 2432
+  d4_plus_preimages = 1216
+  d4_minus_preimages = 1664
+  transform_rows = 2432
+  transform_unique = 608
+  transform_degenerate = 0
+  deg2: monomials=6 rank=6 nullity=0 forced=0 extra=0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg6: monomials=28 rank=28 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+  deg10: monomials=66 rank=66 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+  deg14: monomials=120 rank=120 nullity=0 forced=0 extra=0
+q1847 a2_z_lma:
+  z_rows = 2432
+  d4_plus_preimages = 1216
+  d4_minus_preimages = 1664
+  transform_rows = 2432
+  transform_unique = 608
+  transform_degenerate = 0
+  deg2: monomials=6 rank=6 nullity=0 forced=0 extra=0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg6: monomials=28 rank=28 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+  deg10: monomials=66 rank=66 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+  deg14: monomials=120 rank=120 nullity=0 forced=0 extra=0
+q1847 m_z_lpa:
+  z_rows = 2432
+  d4_plus_preimages = 1216
+  d4_minus_preimages = 1664
+  transform_rows = 2432
+  transform_unique = 1216
+  transform_degenerate = 0
+  deg2: monomials=6 rank=6 nullity=0 forced=0 extra=0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg6: monomials=28 rank=28 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+  deg10: monomials=66 rank=66 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+  deg14: monomials=120 rank=120 nullity=0 forced=0 extra=0
+q1847 n_z_lma:
+  z_rows = 2432
+  d4_plus_preimages = 1216
+  d4_minus_preimages = 1664
+  transform_rows = 2432
+  transform_unique = 1216
+  transform_degenerate = 0
+  deg2: monomials=6 rank=6 nullity=0 forced=0 extra=0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg6: monomials=28 rank=28 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+  deg10: monomials=66 rank=66 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+  deg14: monomials=120 rank=120 nullity=0 forced=0 extra=0
+q2087 A_z:
+  z_rows = 2304
+  d4_plus_preimages = 1152
+  d4_minus_preimages = 448
+  transform_rows = 2304
+  transform_unique = 570
+  transform_degenerate = 0
+  deg2: monomials=6 rank=6 nullity=0 forced=0 extra=0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg6: monomials=28 rank=28 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+  deg10: monomials=66 rank=66 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+  deg14: monomials=120 rank=120 nullity=0 forced=0 extra=0
+q2087 x_z:
+  z_rows = 2304
+  d4_plus_preimages = 1152
+  d4_minus_preimages = 448
+  transform_rows = 2304
+  transform_unique = 574
+  transform_degenerate = 0
+  deg2: monomials=6 rank=6 nullity=0 forced=0 extra=0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg6: monomials=28 rank=28 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+  deg10: monomials=66 rank=66 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+  deg14: monomials=120 rank=120 nullity=0 forced=0 extra=0
+q2087 c_z:
+  z_rows = 2304
+  d4_plus_preimages = 1152
+  d4_minus_preimages = 448
+  transform_rows = 2304
+  transform_unique = 1140
+  transform_degenerate = 0
+  deg2: monomials=6 rank=6 nullity=0 forced=0 extra=0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg6: monomials=28 rank=28 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+  deg10: monomials=66 rank=66 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+  deg14: monomials=120 rank=120 nullity=0 forced=0 extra=0
+q2087 r_z:
+  z_rows = 2304
+  d4_plus_preimages = 1152
+  d4_minus_preimages = 448
+  transform_rows = 2304
+  transform_unique = 1148
+  transform_degenerate = 0
+  deg2: monomials=6 rank=6 nullity=0 forced=0 extra=0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg6: monomials=28 rank=28 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+  deg10: monomials=66 rank=66 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+  deg14: monomials=120 rank=120 nullity=0 forced=0 extra=0
+q2087 R_z:
+  z_rows = 2304
+  d4_plus_preimages = 1152
+  d4_minus_preimages = 448
+  transform_rows = 2304
+  transform_unique = 1152
+  transform_degenerate = 0
+  deg2: monomials=6 rank=6 nullity=0 forced=0 extra=0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg6: monomials=28 rank=28 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+  deg10: monomials=66 rank=66 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+  deg14: monomials=120 rank=120 nullity=0 forced=0 extra=0
+q2087 L_z:
+  z_rows = 2304
+  d4_plus_preimages = 1152
+  d4_minus_preimages = 448
+  transform_rows = 2304
+  transform_unique = 1152
+  transform_degenerate = 0
+  deg2: monomials=6 rank=6 nullity=0 forced=0 extra=0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg6: monomials=28 rank=28 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+  deg10: monomials=66 rank=66 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+  deg14: monomials=120 rank=120 nullity=0 forced=0 extra=0
+q2087 s_z:
+  z_rows = 2304
+  d4_plus_preimages = 1152
+  d4_minus_preimages = 448
+  transform_rows = 2304
+  transform_unique = 1148
+  transform_degenerate = 0
+  deg2: monomials=6 rank=6 nullity=0 forced=0 extra=0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg6: monomials=28 rank=28 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+  deg10: monomials=66 rank=66 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+  deg14: monomials=120 rank=120 nullity=0 forced=0 extra=0
+q2087 a2_z:
+  z_rows = 2304
+  d4_plus_preimages = 1152
+  d4_minus_preimages = 448
+  transform_rows = 2304
+  transform_unique = 574
+  transform_degenerate = 0
+  deg2: monomials=6 rank=6 nullity=0 forced=0 extra=0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg6: monomials=28 rank=28 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+  deg10: monomials=66 rank=66 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+  deg14: monomials=120 rank=120 nullity=0 forced=0 extra=0
+q2087 m_z:
+  z_rows = 2304
+  d4_plus_preimages = 1152
+  d4_minus_preimages = 448
+  transform_rows = 2304
+  transform_unique = 1148
+  transform_degenerate = 0
+  deg2: monomials=6 rank=6 nullity=0 forced=0 extra=0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg6: monomials=28 rank=28 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+  deg10: monomials=66 rank=66 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+  deg14: monomials=120 rank=120 nullity=0 forced=0 extra=0
+q2087 n_z:
+  z_rows = 2304
+  d4_plus_preimages = 1152
+  d4_minus_preimages = 448
+  transform_rows = 2304
+  transform_unique = 1148
+  transform_degenerate = 0
+  deg2: monomials=6 rank=6 nullity=0 forced=0 extra=0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg6: monomials=28 rank=28 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+  deg10: monomials=66 rank=66 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+  deg14: monomials=120 rank=120 nullity=0 forced=0 extra=0
+q2087 w_z:
+  z_rows = 2304
+  d4_plus_preimages = 1152
+  d4_minus_preimages = 448
+  transform_rows = 2304
+  transform_unique = 576
+  transform_degenerate = 0
+  deg2: monomials=6 rank=6 nullity=0 forced=0 extra=0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg6: monomials=28 rank=28 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+  deg10: monomials=66 rank=66 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+  deg14: monomials=120 rank=120 nullity=0 forced=0 extra=0
+q2087 s_z_lpa:
+  z_rows = 2304
+  d4_plus_preimages = 1152
+  d4_minus_preimages = 448
+  transform_rows = 2304
+  transform_unique = 1152
+  transform_degenerate = 0
+  deg2: monomials=6 rank=6 nullity=0 forced=0 extra=0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg6: monomials=28 rank=28 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+  deg10: monomials=66 rank=66 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+  deg14: monomials=120 rank=120 nullity=0 forced=0 extra=0
+q2087 s_z_lma:
+  z_rows = 2304
+  d4_plus_preimages = 1152
+  d4_minus_preimages = 448
+  transform_rows = 2304
+  transform_unique = 1152
+  transform_degenerate = 0
+  deg2: monomials=6 rank=6 nullity=0 forced=0 extra=0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg6: monomials=28 rank=28 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+  deg10: monomials=66 rank=66 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+  deg14: monomials=120 rank=120 nullity=0 forced=0 extra=0
+q2087 s_z_cR:
+  z_rows = 2304
+  d4_plus_preimages = 1152
+  d4_minus_preimages = 448
+  transform_rows = 2304
+  transform_unique = 1148
+  transform_degenerate = 0
+  deg2: monomials=6 rank=6 nullity=0 forced=0 extra=0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg6: monomials=28 rank=28 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+  deg10: monomials=66 rank=66 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+  deg14: monomials=120 rank=120 nullity=0 forced=0 extra=0
+q2087 a2_z_lpa:
+  z_rows = 2304
+  d4_plus_preimages = 1152
+  d4_minus_preimages = 448
+  transform_rows = 2304
+  transform_unique = 576
+  transform_degenerate = 0
+  deg2: monomials=6 rank=6 nullity=0 forced=0 extra=0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg6: monomials=28 rank=28 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+  deg10: monomials=66 rank=66 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+  deg14: monomials=120 rank=120 nullity=0 forced=0 extra=0
+q2087 a2_z_lma:
+  z_rows = 2304
+  d4_plus_preimages = 1152
+  d4_minus_preimages = 448
+  transform_rows = 2304
+  transform_unique = 576
+  transform_degenerate = 0
+  deg2: monomials=6 rank=6 nullity=0 forced=0 extra=0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg6: monomials=28 rank=28 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+  deg10: monomials=66 rank=66 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+  deg14: monomials=120 rank=120 nullity=0 forced=0 extra=0
+q2087 m_z_lpa:
+  z_rows = 2304
+  d4_plus_preimages = 1152
+  d4_minus_preimages = 448
+  transform_rows = 2304
+  transform_unique = 1152
+  transform_degenerate = 0
+  deg2: monomials=6 rank=6 nullity=0 forced=0 extra=0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg6: monomials=28 rank=28 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+  deg10: monomials=66 rank=66 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+  deg14: monomials=120 rank=120 nullity=0 forced=0 extra=0
+q2087 n_z_lma:
+  z_rows = 2304
+  d4_plus_preimages = 1152
+  d4_minus_preimages = 448
+  transform_rows = 2304
+  transform_unique = 1152
+  transform_degenerate = 0
+  deg2: monomials=6 rank=6 nullity=0 forced=0 extra=0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg6: monomials=28 rank=28 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+  deg10: monomials=66 rank=66 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+  deg14: monomials=120 rank=120 nullity=0 forced=0 extra=0
+p27_conic_pair_kummer_z_relation_probe_rows=1/1
