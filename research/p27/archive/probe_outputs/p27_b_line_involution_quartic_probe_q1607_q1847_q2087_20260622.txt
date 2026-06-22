@@ -1,0 +1,124 @@
+p27 B-line Belyi-involution quartic probe
+packet = research/p27/archive/fixtures/p27_b_line_quartic_targets_20260622.json
+families:
+  B_to_-B-2: B^4 + 4B^3 + bB^2 + (2b-8)B + d
+  B_to_4_over_B_plus: B^4 + aB^3 + bB^2 + 4aB + 16
+  B_to_4_over_B_minus: B^4 + aB^3 - 4aB - 16
+  Bplus2_to_4_over_Bplus2_plus: shifted plus reciprocal
+  Bplus2_to_4_over_Bplus2_minus: shifted minus reciprocal
+global polarity allowed
+target: field=1607 family=d3_on_legalB
+involution_quartic_stats:
+  B_to_-B-2_hits = 0
+  B_to_-B-2_tested = 2582449
+  B_to_4_over_B_minus_hits = 0
+  B_to_4_over_B_minus_tested = 1607
+  B_to_4_over_B_plus_hits = 0
+  B_to_4_over_B_plus_tested = 2582449
+  Bplus2_to_4_over_Bplus2_minus_hits = 0
+  Bplus2_to_4_over_Bplus2_minus_tested = 1607
+  Bplus2_to_4_over_Bplus2_plus_hits = 0
+  Bplus2_to_4_over_Bplus2_plus_tested = 2582449
+  exact_involution_quartics = 0
+  field = 1607
+  polarity_-1_hits = 0
+  polarity_1_hits = 0
+  rows = 49
+  total_polynomial_shapes = 7750561
+hit_samples:
+target: field=1607 family=gate4_prefix_on_legalB
+involution_quartic_stats:
+  B_to_-B-2_hits = 0
+  B_to_-B-2_tested = 2582449
+  B_to_4_over_B_minus_hits = 0
+  B_to_4_over_B_minus_tested = 1607
+  B_to_4_over_B_plus_hits = 0
+  B_to_4_over_B_plus_tested = 2582449
+  Bplus2_to_4_over_Bplus2_minus_hits = 0
+  Bplus2_to_4_over_Bplus2_minus_tested = 1607
+  Bplus2_to_4_over_Bplus2_plus_hits = 0
+  Bplus2_to_4_over_Bplus2_plus_tested = 2582449
+  exact_involution_quartics = 0
+  field = 1607
+  polarity_-1_hits = 0
+  polarity_1_hits = 0
+  rows = 49
+  total_polynomial_shapes = 7750561
+hit_samples:
+target: field=1847 family=d3_on_legalB
+involution_quartic_stats:
+  B_to_-B-2_hits = 0
+  B_to_-B-2_tested = 3411409
+  B_to_4_over_B_minus_hits = 0
+  B_to_4_over_B_minus_tested = 1847
+  B_to_4_over_B_plus_hits = 0
+  B_to_4_over_B_plus_tested = 3411409
+  Bplus2_to_4_over_Bplus2_minus_hits = 0
+  Bplus2_to_4_over_Bplus2_minus_tested = 1847
+  Bplus2_to_4_over_Bplus2_plus_hits = 0
+  Bplus2_to_4_over_Bplus2_plus_tested = 3411409
+  exact_involution_quartics = 0
+  field = 1847
+  polarity_-1_hits = 0
+  polarity_1_hits = 0
+  rows = 63
+  total_polynomial_shapes = 10237921
+hit_samples:
+target: field=1847 family=gate4_prefix_on_legalB
+involution_quartic_stats:
+  B_to_-B-2_hits = 0
+  B_to_-B-2_tested = 3411409
+  B_to_4_over_B_minus_hits = 0
+  B_to_4_over_B_minus_tested = 1847
+  B_to_4_over_B_plus_hits = 0
+  B_to_4_over_B_plus_tested = 3411409
+  Bplus2_to_4_over_Bplus2_minus_hits = 0
+  Bplus2_to_4_over_Bplus2_minus_tested = 1847
+  Bplus2_to_4_over_Bplus2_plus_hits = 0
+  Bplus2_to_4_over_Bplus2_plus_tested = 3411409
+  exact_involution_quartics = 0
+  field = 1847
+  polarity_-1_hits = 0
+  polarity_1_hits = 0
+  rows = 63
+  total_polynomial_shapes = 10237921
+hit_samples:
+target: field=2087 family=d3_on_legalB
+involution_quartic_stats:
+  B_to_-B-2_hits = 0
+  B_to_-B-2_tested = 4355569
+  B_to_4_over_B_minus_hits = 0
+  B_to_4_over_B_minus_tested = 2087
+  B_to_4_over_B_plus_hits = 0
+  B_to_4_over_B_plus_tested = 4355569
+  Bplus2_to_4_over_Bplus2_minus_hits = 0
+  Bplus2_to_4_over_Bplus2_minus_tested = 2087
+  Bplus2_to_4_over_Bplus2_plus_hits = 0
+  Bplus2_to_4_over_Bplus2_plus_tested = 4355569
+  exact_involution_quartics = 0
+  field = 2087
+  polarity_-1_hits = 0
+  polarity_1_hits = 0
+  rows = 57
+  total_polynomial_shapes = 13070881
+hit_samples:
+target: field=2087 family=gate4_prefix_on_legalB
+involution_quartic_stats:
+  B_to_-B-2_hits = 0
+  B_to_-B-2_tested = 4355569
+  B_to_4_over_B_minus_hits = 0
+  B_to_4_over_B_minus_tested = 2087
+  B_to_4_over_B_plus_hits = 0
+  B_to_4_over_B_plus_tested = 4355569
+  Bplus2_to_4_over_Bplus2_minus_hits = 0
+  Bplus2_to_4_over_Bplus2_minus_tested = 2087
+  Bplus2_to_4_over_Bplus2_plus_hits = 0
+  Bplus2_to_4_over_Bplus2_plus_tested = 4355569
+  exact_involution_quartics = 0
+  field = 2087
+  polarity_-1_hits = 0
+  polarity_1_hits = 0
+  rows = 57
+  total_polynomial_shapes = 13070881
+hit_samples:
+p27_b_line_involution_quartic_probe_rows=1/1

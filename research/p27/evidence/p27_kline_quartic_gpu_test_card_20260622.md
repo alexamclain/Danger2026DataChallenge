@@ -195,9 +195,9 @@ time on the cheap `K^2`-only subfamily; a useful K-line quartic hit must use
 odd powers of `K` and the signed K sheet.
 
 [P27 K-Line Belyi-Reciprocal Quartic Screen](p27_kline_reciprocal_quartic_screen_20260622.md)
-also exhausts the two q^2 subfamilies preserved by the visible Belyi
+also exhausts the small subfamilies preserved by the visible Belyi
 involution `K -> 4/K`:
-`K^4+aK^3+bK^2+4aK+16` and `K^4+aK^3+bK^2-4aK-16`.
+`K^4+aK^3+bK^2+4aK+16` and `K^4+aK^3-4aK-16`.
 It likewise finds zero exact hits over q1471/q1607/q1847.  The full GPU
 quartic screen should not be replaced by a Belyi-reciprocal-only proxy.
 

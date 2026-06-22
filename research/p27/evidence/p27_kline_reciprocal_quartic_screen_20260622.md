@@ -18,7 +18,7 @@ Thus the two reciprocal quartic shapes are:
 
 ```text
 K^4 + a*K^3 + b*K^2 + 4*a*K + 16
-K^4 + a*K^3 + b*K^2 - 4*a*K - 16
+K^4 + a*K^3 - 4*a*K - 16
 ```
 
 Exhausting both shapes gives zero exact hits for both `d3_on_K` and
@@ -60,21 +60,21 @@ python3 -u research/p27/archive/gates/p27_kline_reciprocal_quartic_probe.py \
 All tested fields and families had zero exact Belyi-reciprocal quartics:
 
 ```text
-q1471 d3_on_K:          rows=50, shapes=4,327,682, exact=0
-q1607 d3_on_K:          rows=49, shapes=5,164,898, exact=0
-q1847 d3_on_K:          rows=63, shapes=6,822,818, exact=0
+q1471 d3_on_K:          rows=50, shapes=2,165,312, exact=0
+q1607 d3_on_K:          rows=49, shapes=2,584,056, exact=0
+q1847 d3_on_K:          rows=63, shapes=3,413,256, exact=0
 
-q1471 d4_on_K_after_d3: rows=28, shapes=4,327,682, exact=0
-q1607 d4_on_K_after_d3: rows=28, shapes=5,164,898, exact=0
-q1847 d4_on_K_after_d3: rows=45, shapes=6,822,818, exact=0
+q1471 d4_on_K_after_d3: rows=28, shapes=2,165,312, exact=0
+q1607 d4_on_K_after_d3: rows=28, shapes=2,584,056, exact=0
+q1847 d4_on_K_after_d3: rows=45, shapes=3,413,256, exact=0
 ```
 
 Crude random expected exact counts for the decisive d3 rows are tiny:
 
 ```text
-q1471 d3: 7.69e-9
-q1607 d3: 1.83e-8
-q1847 d3: 1.48e-12
+q1471 d3: 3.85e-9
+q1607 d3: 9.18e-9
+q1847 d3: 7.40e-13
 ```
 
 As with the even-quartic screen, the negative result is not statistically
@@ -87,7 +87,8 @@ Positive:
 
 ```text
 The K-line quartic handoff is now narrower and cleaner.
-The two obvious q^2 subfamilies inside the full quartic search are exhausted.
+The obvious low-dimensional reciprocal subfamilies inside the full quartic
+search are exhausted.
 ```
 
 Negative:

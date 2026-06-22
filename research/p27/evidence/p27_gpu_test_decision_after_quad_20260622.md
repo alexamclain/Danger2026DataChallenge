@@ -176,6 +176,11 @@ Use the frozen target packet:
 research/p27/archive/fixtures/p27_b_line_quartic_targets_20260622.json
 ```
 
+[P27 B-Line Belyi-Involution Quartic Screen](p27_b_line_involution_quartic_screen_20260622.md)
+rules out the visible branch-involution subfamilies over q1607/q1847/q2087.
+Do not replace this full B-line quartic screen with a smaller Belyi-involution
+proxy.
+
 ### Test 4: K-Line Exact Quartic Support
 
 Run this as the signed-doubling `E'` quotient counterpart to Test 3:
@@ -211,7 +216,7 @@ also rules out the descended `K^2`-only subfamily
 `chi(K^4+a*K^2+b)` over q1471/q1607/q1847.  So the next GPU quartic screen
 should test the full signed K-line quartic, not a cheaper even-only proxy.
 [P27 K-Line Belyi-Reciprocal Quartic Screen](p27_kline_reciprocal_quartic_screen_20260622.md)
-rules out the other natural q^2 shortcut, the Belyi-reciprocal quartics
+rules out the other natural low-dimensional shortcut, the Belyi-reciprocal quartics
 preserved by `K -> 4/K`.  The remaining K-line GPU test is the full q^3
 coefficient-triple search.
 
@@ -230,6 +235,8 @@ named algebraic object
 do not spend GPU time on the K-line even-quartic subfamily alone
 
 do not spend GPU time on the K-line Belyi-reciprocal subfamily alone
+
+do not spend GPU time on the B-line Belyi-involution subfamilies alone
 ```
 
 ## Continue / Kill
@@ -246,6 +253,7 @@ kill = fixed-prefix GPU filters without target/source_draw improvement
 kill = short conic sign-word bucket searches without a new invariant
 kill = K-line even-quartic-only GPU screen
 kill = K-line Belyi-reciprocal-only GPU screen
+kill = B-line Belyi-involution-only GPU screen
 ```
 
 ```text

@@ -110,6 +110,14 @@ compute branch support/genus/quotients
 look for non-visible recurrence or coupling
 ```
 
+Follow-up:
+[P27 B-Line Belyi-Involution Quartic Screen](p27_b_line_involution_quartic_screen_20260622.md)
+tests the nearest quartic branch-support families preserved by the three
+order-2 Belyi symmetries.  Those q^2/q families have zero exact hits over
+q1607/q1847/q2087 for both `d3_on_legalB` and `gate4_prefix_on_legalB`, so
+the visible branch-set symmetry is also negative inside the remaining quartic
+GPU family.
+
 ## Continue / Kill
 
 ```text

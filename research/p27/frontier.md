@@ -611,7 +611,7 @@ K terms and the signed K sheet; the GPU ask is the full quartic, not a
 The visible Belyi reciprocal subcase is dead too:
 [P27 K-Line Belyi-Reciprocal Quartic Screen](evidence/p27_kline_reciprocal_quartic_screen_20260622.md).
 The two shapes preserved by `K -> 4/K`,
-`K^4+aK^3+bK^2+4aK+16` and `K^4+aK^3+bK^2-4aK-16`, have zero exact hits over
+`K^4+aK^3+bK^2+4aK+16` and `K^4+aK^3-4aK-16`, have zero exact hits over
 q1471/q1607/q1847.  Thus the remaining GPU quartic job is genuinely the full
 q^3 coefficient-triple screen.
 
@@ -1143,6 +1143,12 @@ over q1847/q2087.  Random expected exact counts are about `2.52e-6` for q1847
 and `2.63e-4` for q2087 on the primary rows, so a stable positive would be a
 real genus-1 source candidate.  A stable negative would close the visible
 quartic B-line branch-support route.
+The visible Belyi-involution subfamilies are now dead:
+[P27 B-Line Belyi-Involution Quartic Screen](evidence/p27_b_line_involution_quartic_screen_20260622.md).
+The five small families attached to the three order-2 symmetries of
+`{0,-2,infinity}` have zero exact hits over q1607/q1847/q2087 for both
+`d3_on_legalB` and `gate4_prefix_on_legalB`.  The GPU ask is therefore the
+full B-line quartic, not a branch-symmetry proxy.
 
 There is also a rational-source obstruction to treating `lambda` as the next
 quotient:

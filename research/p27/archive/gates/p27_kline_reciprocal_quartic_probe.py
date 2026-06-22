@@ -9,7 +9,7 @@ branch divisor is preserved by this involution must satisfy
 so it has one of the two forms
 
     K^4 + a*K^3 + b*K^2 + 4*a*K + 16
-    K^4 + a*K^3 + b*K^2 - 4*a*K - 16.
+    K^4 + a*K^3 - 4*a*K - 16.
 
 This is a small q^2 screen for the nearest Belyi-symmetric subfamily inside
 the GPU-sized full K-line quartic family.
@@ -45,8 +45,9 @@ def scan_reciprocal_quartics(target: dict, sample_limit: int) -> tuple[dict[str,
     stats = {
         "field": q,
         "rows": len(rows),
-        "pairs_tested_per_reciprocal_sign": q * q,
-        "total_polynomial_shapes": 2 * q * q,
+        "sign_1_pairs_tested": q * q,
+        "sign_-1_coefficients_tested": q,
+        "total_polynomial_shapes": q * q + q,
         "reciprocal_sign_1_hits": 0,
         "reciprocal_sign_-1_hits": 0,
         "polarity_1_hits": 0,
@@ -54,16 +55,13 @@ def scan_reciprocal_quartics(target: dict, sample_limit: int) -> tuple[dict[str,
         "exact_reciprocal_quartics": 0,
     }
     hits: list[Hit] = []
-    for reciprocal_sign in (1, -1):
-        c_factor = 4 * reciprocal_sign
-        d = 16 * reciprocal_sign
+    for reciprocal_sign, b_values in ((1, range(q)), (-1, (0,))):
+        c_factor = 4 if reciprocal_sign == 1 else -4
+        d = 16 if reciprocal_sign == 1 else -16
         for a in range(q):
             c = c_factor * a
-            a_terms = [
-                (K4 + a * K3 + c * K + d) % q
-                for K, _K2, K3, K4 in powers
-            ]
-            for b in range(q):
+            a_terms = [(K4 + a * K3 + c * K + d) % q for K, _K2, K3, K4 in powers]
+            for b in b_values:
                 for polarity in (1, -1):
                     ok = True
                     for (base, (_K, K2, _K3, _K4), (_row_k, target_sign)) in zip(
@@ -110,7 +108,7 @@ def main() -> int:
     print(f"packet = {args.packet}")
     print("families:")
     print("  sign=+1: K^4 + a*K^3 + b*K^2 + 4*a*K + 16")
-    print("  sign=-1: K^4 + a*K^3 + b*K^2 - 4*a*K - 16")
+    print("  sign=-1: K^4 + a*K^3 - 4*a*K - 16")
     print("global polarity allowed")
     for q in fields:
         for family in families:

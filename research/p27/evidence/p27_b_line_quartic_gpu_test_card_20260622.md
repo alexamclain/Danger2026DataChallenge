@@ -25,6 +25,14 @@ descended d3/d4 classes under
 `K^2=(B-2)^4/(8B(B+2)^2)`.  Treat this as a coordinate alternative to the
 K-line quartic screen, not independent confirmation.
 
+Follow-up:
+[P27 B-Line Belyi-Involution Quartic Screen](p27_b_line_involution_quartic_screen_20260622.md)
+exhausts the small quartic families preserved by the three visible order-2
+Belyi symmetries of `{0,-2,infinity}`.  It finds zero exact hits over
+q1607/q1847/q2087 for both `d3_on_legalB` and `gate4_prefix_on_legalB`.
+Therefore the GPU should test the full B-line quartic family, not a
+branch-involution-only proxy.
+
 ## Why This Is GPU-Worthy
 
 The exact cubic solver already uses the right method: hold all coefficients
