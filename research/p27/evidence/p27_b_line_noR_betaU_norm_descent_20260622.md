@@ -99,6 +99,13 @@ nullity through bidegree `B12_N16` across `q=103,167,263,311`.  A lone
 `q=199` gamma- `B8_N12` signal disappears at `q=263` and `q=311`, so it is
 not promoted.
 
+Next-gate follow-up:
+[P27 B-Line No-R Beta_U Next-Gate Probe](p27_b_line_noR_betaU_next_gate_20260622.md).
+The gamma-positive beta_U rows materialize cleanly to `x6`, and
+`chi(v+2)=chi(x7)` for the next roots with zero mismatches, but f4 is mixed
+inside every active gamma-positive base `B` row.  Thus beta_U remains a clean
+f3/materialization class, not a direct two-gate sampler.
+
 ## Interpretation
 
 Positive:
@@ -143,6 +150,7 @@ continue = compare the beta_U norm class with f4/f3 after normalization
 
 kill = treating chi(B)=+1 support alone as a sampler
 kill = treating norm descent alone as sqrt-beating
+kill = treating beta_U gamma=+1 as an f4/multi-gate sampler
 kill = small visible (B, Norm(Unext+2)) plane curve through B12_N16
 kill = GPU production before the norm class becomes a named source map
 ```

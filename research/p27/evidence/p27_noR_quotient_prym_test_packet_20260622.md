@@ -47,6 +47,7 @@ no-R quadratic subcover classifier = W/T-only killed; beta_U and hidden_mixed re
 no-R fixed-B character screen = beta_U support chi(B)=+1; no stable gamma law
 no-R beta_U norm descent = gamma is Norm(Unext+2), half-size/full-size fiber split
 no-R beta_U norm relation = no stable low-bidegree (B,Norm) plane curve
+no-R beta_U next-gate = gamma+ materializes cleanly but f4 is mixed inside every active B
 no-R fixed-B norm comparison = hidden_mixed descends too, but its visible 32/64 split is chi(B), not gamma
 reduced lift visible classifier = killed
 gamma visible square triviality = killed
@@ -179,6 +180,20 @@ Do not ask for a small visible `(B, N_B)` plane equation as the main route:
 the relation screen is negative through bidegree `B12_N16` in the stable guard
 fields.  The task is divisor/Kummer extraction of `N_B`, not another blind
 low-degree scan.
+
+Also do not treat beta_U gamma-positive rows as a two-gate source.  The
+next-gate probe finds:
+
+```text
+gamma=+1 beta_U row => 2 x6 roots
+each x6 => 2 x7 roots
+chi(v+2)=chi(x7) with zero mismatches
+every active gamma-positive B row has both f4 signs
+```
+
+So beta_U is a clean f3/materialization class, but f4 must be compared after
+normalization as a possible quotient/Prym relation or fresh half-cover.  It is
+not a direct GPU sampler.
 
 For `hidden_mixed_fixedB`, the same norm-descent comparison has zero
 finite-field mismatches and zero per-`B` sign conflicts, but it does not

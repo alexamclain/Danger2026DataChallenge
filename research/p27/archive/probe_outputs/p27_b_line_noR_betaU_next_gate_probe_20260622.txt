@@ -1,0 +1,73 @@
+p27 B-line no-R beta_U next-gate probe
+question = after beta_U gamma=+1, is f4 coupled or fresh?
+fields = 23^2,71^2,103^2,167^2
+
+GF(23^2) q=529
+  B_f4_conflicts = 0
+  B_gamma_conflicts = 0
+  bad_curve_a = 0
+  betaU_gamma_-1 = 64
+  betaU_points = 64
+  vplus2_x7_chi_mismatch = 0
+  B_summary_top:
+    columns = chiB betaU gamma x6 x7 f4+ f4-
+    (1, 32, -1, 0, 0, 0, 0) = 2
+
+GF(71^2) q=5041
+  B_f4_conflicts = 8
+  B_gamma_conflicts = 0
+  bad_curve_a = 0
+  betaU_gamma_1 = 128
+  betaU_points = 128
+  f4_-1 = 234
+  f4_1 = 278
+  gamma_plus_B_f4_keycount_2 = 8
+  gamma_plus_B_x7_roots_64 = 8
+  vplus2_x7_chi_mismatch = 0
+  x6_materialized_roots = 256
+  x6_roots_2 = 128
+  x7_roots = 512
+  x7_roots_2 = 256
+  B_summary_top:
+    columns = chiB betaU gamma x6 x7 f4+ f4-
+    (1, 16, 1, 32, 64, 36, 28) = 4
+    (1, 16, 1, 32, 64, 28, 36) = 2
+    (1, 16, 1, 32, 64, 38, 26) = 1
+    (1, 16, 1, 32, 64, 40, 24) = 1
+
+GF(103^2) q=10609
+  B_f4_conflicts = 0
+  B_gamma_conflicts = 0
+  bad_curve_a = 0
+  betaU_gamma_-1 = 384
+  betaU_points = 384
+  vplus2_x7_chi_mismatch = 0
+  B_summary_top:
+    columns = chiB betaU gamma x6 x7 f4+ f4-
+    (1, 32, -1, 0, 0, 0, 0) = 12
+
+GF(167^2) q=27889
+  B_f4_conflicts = 6
+  B_gamma_conflicts = 0
+  bad_curve_a = 0
+  betaU_gamma_-1 = 448
+  betaU_gamma_1 = 96
+  betaU_points = 544
+  f4_-1 = 188
+  f4_1 = 196
+  gamma_plus_B_f4_keycount_2 = 6
+  gamma_plus_B_x7_roots_64 = 6
+  vplus2_x7_chi_mismatch = 0
+  x6_materialized_roots = 192
+  x6_roots_2 = 96
+  x7_roots = 384
+  x7_roots_2 = 192
+  B_summary_top:
+    columns = chiB betaU gamma x6 x7 f4+ f4-
+    (1, 32, -1, 0, 0, 0, 0) = 14
+    (1, 16, 1, 32, 64, 34, 30) = 2
+    (1, 16, 1, 32, 64, 32, 32) = 2
+    (1, 16, 1, 32, 64, 28, 36) = 1
+    (1, 16, 1, 32, 64, 36, 28) = 1
+
+p27_b_line_noR_betaU_next_gate_probe_rows=1/1

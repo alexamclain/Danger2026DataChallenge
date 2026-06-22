@@ -1280,6 +1280,13 @@ The obvious plane-curve shortcut is now screened:
 `(B, Norm(Unext+2))` has no stable extra bidegree relation through `B12_N16`;
 the lone `q=199` signal dies at `q=263` and `q=311`.  Keep beta_U as a
 divisor/Kummer extraction target, not a low-degree plane-curve sampler.
+The beta_U next-gate check draws the first hard boundary:
+[P27 B-Line No-R Beta_U Next-Gate Probe](evidence/p27_b_line_noR_betaU_next_gate_20260622.md).
+On gamma-positive beta_U rows, `Unext=x6+1/x6` materializes cleanly and
+`chi(v+2)=chi(x7)` for the next roots, but every active gamma-positive `B`
+row has both f4 signs.  Thus beta_U is a clean f3/materialization Kummer
+class, not a direct two-gate sampler.  Compare f4 only after normalization;
+do not send beta_U gamma-positive rows to GPU production.
 The fixed-`B` comparison now explains why beta_U remains first in that queue:
 [P27 B-Line No-R Fixed-B Norm Comparison](evidence/p27_b_line_noR_fixedB_norm_comparison_20260622.md).
 Across `q = 23, 71, 103, 167, 199, 263, 311`, both beta_U and hidden_mixed

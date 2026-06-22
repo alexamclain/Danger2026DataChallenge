@@ -1,0 +1,89 @@
+p27 B-line no-R beta_U next-gate probe
+question = after beta_U gamma=+1, is f4 coupled or fresh?
+fields = 199^2,263^2,311^2
+
+GF(199^2) q=39601
+  B_f4_conflicts = 16
+  B_gamma_conflicts = 0
+  bad_curve_a = 0
+  betaU_gamma_-1 = 256
+  betaU_gamma_1 = 256
+  betaU_points = 512
+  f4_-1 = 534
+  f4_1 = 490
+  gamma_plus_B_f4_keycount_2 = 16
+  gamma_plus_B_x7_roots_64 = 16
+  vplus2_x7_chi_mismatch = 0
+  x6_materialized_roots = 512
+  x6_roots_2 = 256
+  x7_roots = 1024
+  x7_roots_2 = 512
+  B_summary_top:
+    columns = chiB betaU gamma x6 x7 f4+ f4-
+    (1, 32, -1, 0, 0, 0, 0) = 8
+    (1, 16, 1, 32, 64, 30, 34) = 5
+    (1, 16, 1, 32, 64, 34, 30) = 3
+    (1, 16, 1, 32, 64, 28, 36) = 3
+    (1, 16, 1, 32, 64, 38, 26) = 2
+    (1, 16, 1, 32, 64, 32, 32) = 1
+    (1, 16, 1, 32, 64, 22, 42) = 1
+    (1, 16, 1, 32, 64, 24, 40) = 1
+
+GF(263^2) q=69169
+  B_f4_conflicts = 12
+  B_gamma_conflicts = 0
+  bad_curve_a = 0
+  betaU_gamma_-1 = 640
+  betaU_gamma_1 = 192
+  betaU_points = 832
+  f4_-1 = 384
+  f4_1 = 384
+  gamma_plus_B_f4_keycount_2 = 12
+  gamma_plus_B_x7_roots_64 = 12
+  vplus2_x7_chi_mismatch = 0
+  x6_materialized_roots = 384
+  x6_roots_2 = 192
+  x7_roots = 768
+  x7_roots_2 = 384
+  B_summary_top:
+    columns = chiB betaU gamma x6 x7 f4+ f4-
+    (1, 32, -1, 0, 0, 0, 0) = 20
+    (1, 16, 1, 32, 64, 32, 32) = 3
+    (1, 16, 1, 32, 64, 38, 26) = 2
+    (1, 16, 1, 32, 64, 30, 34) = 2
+    (1, 16, 1, 32, 64, 34, 30) = 2
+    (1, 16, 1, 32, 64, 20, 44) = 1
+    (1, 16, 1, 32, 64, 36, 28) = 1
+    (1, 16, 1, 32, 64, 28, 36) = 1
+
+GF(311^2) q=96721
+  B_f4_conflicts = 16
+  B_gamma_conflicts = 0
+  bad_curve_a = 0
+  betaU_gamma_-1 = 704
+  betaU_gamma_1 = 256
+  betaU_points = 960
+  f4_-1 = 488
+  f4_1 = 536
+  gamma_plus_B_f4_keycount_2 = 16
+  gamma_plus_B_x7_roots_64 = 16
+  vplus2_x7_chi_mismatch = 0
+  x6_materialized_roots = 512
+  x6_roots_2 = 256
+  x7_roots = 1024
+  x7_roots_2 = 512
+  B_summary_top:
+    columns = chiB betaU gamma x6 x7 f4+ f4-
+    (1, 32, -1, 0, 0, 0, 0) = 22
+    (1, 16, 1, 32, 64, 32, 32) = 3
+    (1, 16, 1, 32, 64, 38, 26) = 3
+    (1, 16, 1, 32, 64, 30, 34) = 2
+    (1, 16, 1, 32, 64, 36, 28) = 2
+    (1, 16, 1, 32, 64, 34, 30) = 1
+    (1, 16, 1, 32, 64, 26, 38) = 1
+    (1, 16, 1, 32, 64, 40, 24) = 1
+    (1, 16, 1, 32, 64, 24, 40) = 1
+    (1, 16, 1, 32, 64, 28, 36) = 1
+    (1, 16, 1, 32, 64, 42, 22) = 1
+
+p27_b_line_noR_betaU_next_gate_probe_rows=1/1
