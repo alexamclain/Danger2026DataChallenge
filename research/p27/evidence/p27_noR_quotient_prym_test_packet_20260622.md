@@ -48,6 +48,7 @@ no-R fixed-B character screen = beta_U support chi(B)=+1; no stable gamma law
 no-R beta_U norm descent = gamma is Norm(Unext+2), half-size/full-size fiber split
 no-R beta_U norm relation = no stable low-bidegree (B,Norm) plane curve
 no-R beta_U next-gate = gamma+ materializes cleanly but f4 is mixed inside every active B
+no-R beta_U f4 pair = x7-pair norm -4*(A*x6+1) exact, but no pair-level sampler
 no-R fixed-B norm comparison = hidden_mixed descends too, but its visible 32/64 split is chi(B), not gamma
 reduced lift visible classifier = killed
 gamma visible square triviality = killed
@@ -194,6 +195,19 @@ every active gamma-positive B row has both f4 signs
 So beta_U is a clean f3/materialization class, but f4 must be compared after
 normalization as a possible quotient/Prym relation or fresh half-cover.  It is
 not a direct GPU sampler.
+
+At the x6-pair level, carry the exact ordinary halving norm as orientation
+data:
+
+```text
+x7_plus * x7_minus = -4*(A*x6 + 1)
+```
+
+The pair probe verifies this with zero formula/squareclass mismatches.  It
+only distinguishes mixed-sign x7 pairs from same-sign pairs; it does not
+decide same-plus versus same-minus, and reciprocal x6 pair products are not
+stable.  Do not promote x6-pair buckets without a new normalized quotient or
+class relation.
 
 For `hidden_mixed_fixedB`, the same norm-descent comparison has zero
 finite-field mismatches and zero per-`B` sign conflicts, but it does not

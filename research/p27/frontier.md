@@ -1287,6 +1287,13 @@ On gamma-positive beta_U rows, `Unext=x6+1/x6` materializes cleanly and
 row has both f4 signs.  Thus beta_U is a clean f3/materialization Kummer
 class, not a direct two-gate sampler.  Compare f4 only after normalization;
 do not send beta_U gamma-positive rows to GPU production.
+The pair-level f4 check sharpens that boundary:
+[P27 B-Line No-R Beta_U F4 Pair Probe](evidence/p27_b_line_noR_betaU_f4_pair_20260622.md).
+For each x6, the ordinary halving norm
+`x7_plus*x7_minus=-4*(A*x6+1)` holds exactly, explaining same-sign versus
+mixed x7 pairs.  But same-plus versus same-minus is still not selected, and
+reciprocal x6 pair products are not stable.  Carry `A*x6+1` into CAS as
+orientation data; do not promote x6-pair buckets.
 The fixed-`B` comparison now explains why beta_U remains first in that queue:
 [P27 B-Line No-R Fixed-B Norm Comparison](evidence/p27_b_line_noR_fixedB_norm_comparison_20260622.md).
 Across `q = 23, 71, 103, 167, 199, 263, 311`, both beta_U and hidden_mixed

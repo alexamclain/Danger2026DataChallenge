@@ -1,0 +1,160 @@
+p27 B-line no-R beta_U f4 pair probe
+question = is mixed f4 organized at x6-pair level?
+fields = 71^2,167^2,199^2,263^2,311^2
+
+GF(71^2) q=5041
+  bad_curve_a = 0
+  gamma_plus_betaU_points = 128
+  x6_roots_2 = 128
+  x7_pair_product_chi_mismatch = 0
+  x7_pair_product_formula_mismatch = 0
+  x7_roots_2 = 256
+  beta_point_summary:
+    p2_m2_z0 = 60
+    x6_pair_product_pattern_(-1, -1) = 42
+    p3_m1_z0 = 36
+    x6_pair_product_pattern_(1, 1) = 32
+    x6_pair_product_pattern_(1, -1) = 27
+    x6_pair_product_pattern_(-1, 1) = 27
+    p1_m3_z0 = 18
+    p4_m0_z0 = 8
+    p0_m4_z0 = 6
+  x6_pair_summary:
+    p1_m1_z0 = 138
+    product_chi_-1 = 138
+    product_chi_1 = 118
+    p2_m0_z0 = 70
+    p0_m2_z0 = 48
+  reciprocal_pair_product_summary:
+    product_of_pair_products_1 = 74
+    product_of_pair_products_-1 = 54
+    (-1, -1) = 42
+    (1, 1) = 32
+    (1, -1) = 27
+    (-1, 1) = 27
+
+GF(167^2) q=27889
+  bad_curve_a = 0
+  gamma_plus_betaU_points = 96
+  x6_roots_2 = 96
+  x7_pair_product_chi_mismatch = 0
+  x7_pair_product_formula_mismatch = 0
+  x7_roots_2 = 192
+  beta_point_summary:
+    p2_m2_z0 = 48
+    x6_pair_product_pattern_(-1, -1) = 34
+    x6_pair_product_pattern_(1, 1) = 30
+    p1_m3_z0 = 18
+    x6_pair_product_pattern_(1, -1) = 16
+    x6_pair_product_pattern_(-1, 1) = 16
+    p3_m1_z0 = 14
+    p4_m0_z0 = 10
+    p0_m4_z0 = 6
+  x6_pair_summary:
+    p1_m1_z0 = 100
+    product_chi_-1 = 100
+    product_chi_1 = 92
+    p2_m0_z0 = 48
+    p0_m2_z0 = 44
+  reciprocal_pair_product_summary:
+    product_of_pair_products_1 = 64
+    (-1, -1) = 34
+    product_of_pair_products_-1 = 32
+    (1, 1) = 30
+    (1, -1) = 16
+    (-1, 1) = 16
+
+GF(199^2) q=39601
+  bad_curve_a = 0
+  gamma_plus_betaU_points = 256
+  x6_roots_2 = 256
+  x7_pair_product_chi_mismatch = 0
+  x7_pair_product_formula_mismatch = 0
+  x7_roots_2 = 512
+  beta_point_summary:
+    p2_m2_z0 = 100
+    p3_m1_z0 = 70
+    x6_pair_product_pattern_(1, -1) = 67
+    x6_pair_product_pattern_(-1, 1) = 67
+    x6_pair_product_pattern_(-1, -1) = 64
+    p1_m3_z0 = 64
+    x6_pair_product_pattern_(1, 1) = 58
+    p0_m4_z0 = 18
+    p4_m0_z0 = 4
+  x6_pair_summary:
+    p1_m1_z0 = 262
+    product_chi_-1 = 262
+    product_chi_1 = 250
+    p0_m2_z0 = 136
+    p2_m0_z0 = 114
+  reciprocal_pair_product_summary:
+    product_of_pair_products_-1 = 134
+    product_of_pair_products_1 = 122
+    (1, -1) = 67
+    (-1, 1) = 67
+    (-1, -1) = 64
+    (1, 1) = 58
+
+GF(263^2) q=69169
+  bad_curve_a = 0
+  gamma_plus_betaU_points = 192
+  x6_roots_2 = 192
+  x7_pair_product_chi_mismatch = 0
+  x7_pair_product_formula_mismatch = 0
+  x7_roots_2 = 384
+  beta_point_summary:
+    p2_m2_z0 = 66
+    x6_pair_product_pattern_(1, 1) = 58
+    p3_m1_z0 = 52
+    x6_pair_product_pattern_(-1, 1) = 46
+    x6_pair_product_pattern_(1, -1) = 46
+    x6_pair_product_pattern_(-1, -1) = 42
+    p1_m3_z0 = 40
+    p0_m4_z0 = 20
+    p4_m0_z0 = 14
+  x6_pair_summary:
+    product_chi_1 = 208
+    p1_m1_z0 = 176
+    product_chi_-1 = 176
+    p0_m2_z0 = 104
+    p2_m0_z0 = 104
+  reciprocal_pair_product_summary:
+    product_of_pair_products_1 = 100
+    product_of_pair_products_-1 = 92
+    (1, 1) = 58
+    (-1, 1) = 46
+    (1, -1) = 46
+    (-1, -1) = 42
+
+GF(311^2) q=96721
+  bad_curve_a = 0
+  gamma_plus_betaU_points = 256
+  x6_roots_2 = 256
+  x7_pair_product_chi_mismatch = 0
+  x7_pair_product_formula_mismatch = 0
+  x7_roots_2 = 512
+  beta_point_summary:
+    p2_m2_z0 = 86
+    p3_m1_z0 = 76
+    x6_pair_product_pattern_(1, 1) = 70
+    x6_pair_product_pattern_(-1, 1) = 66
+    x6_pair_product_pattern_(1, -1) = 66
+    p1_m3_z0 = 56
+    x6_pair_product_pattern_(-1, -1) = 54
+    p4_m0_z0 = 20
+    p0_m4_z0 = 18
+  x6_pair_summary:
+    product_chi_1 = 272
+    p1_m1_z0 = 240
+    product_chi_-1 = 240
+    p2_m0_z0 = 148
+    p0_m2_z0 = 124
+  reciprocal_pair_product_summary:
+    product_of_pair_products_-1 = 132
+    product_of_pair_products_1 = 124
+    (1, 1) = 70
+    (-1, 1) = 66
+    (1, -1) = 66
+    (-1, -1) = 54
+
+p27_b_line_noR_betaU_f4_pair_probe_rows=1/1

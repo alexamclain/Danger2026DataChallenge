@@ -98,6 +98,19 @@ Fields with only gamma-negative beta_U rows:
 103^2    betaU gamma- = 384, no x6 materialization
 ```
 
+Pair-level follow-up:
+[P27 B-Line No-R Beta_U F4 Pair Probe](p27_b_line_noR_betaU_f4_pair_20260622.md).
+The ordinary halving norm
+
+```text
+x7_plus * x7_minus = -4 * (A*x6 + 1)
+```
+
+holds with zero formula or squareclass mismatches.  This explains whether the
+two x7 roots above a fixed x6 are same-sign or mixed, but it does not select
+same-plus versus same-minus, and the reciprocal x6-pair product pattern is not
+fixed.  So the finer pair structure also does not yield a sampler.
+
 ## Interpretation
 
 Positive:
@@ -140,10 +153,12 @@ class.
 continue = beta_U divisor/Kummer extraction for f3/materialization
 continue = compare f4 after beta_U normalization, not before
 continue = use this probe as a regression for chi(v+2)=chi(x7)
+continue = include x7-pair norm -4*(A*x6+1) as known CAS orientation data
 
 kill = beta_U gamma=+1 as a multi-gate sampler
 kill = GPU production from beta_U materialized rows
 kill = treating the 16/32 beta_U split as evidence for f4 coupling
+kill = x6-pair product buckets as an f4 production filter
 ```
 
 ```text
