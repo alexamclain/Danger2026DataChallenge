@@ -68,6 +68,7 @@ Positive structure:
 d4 selector product is exact
 d5 selector product repeats with zero mismatches
 legal conic-chain lift existence matches selected-prefix bits through depth 5
+obvious sign quotients preserve d5 on p27 train/heldout samples
 ```
 
 Negative boundary:
@@ -77,6 +78,7 @@ free random (R,L) hits legal rows only at constant/q density
 simple pair/triple Kummer coordinate screens are full-rank
 p27 conic prefixes still thin like independent half-gates through useful counts
 selected one-step and two-step coordinates do not re-enter the original legal source
+sign quotients collapse only finite multiplicity and do not shrink A-space
 ```
 
 ## CAS Tasks
@@ -92,6 +94,10 @@ legal label-2/compactD source + one conic transition
 
 Promotion requires a low-genus quotient or explicit sampler of legal d3-plus
 rows.
+
+Start by quotienting the finite sign cover documented in
+[P27 Conic Tower Sign-Quotient Probe](p27_conic_tower_sign_quotient_20260622.md).
+That quotient is selector-preserving but not source-shrinking by itself.
 
 2. Depth-2 repeated selector quotient.
 
@@ -139,6 +145,7 @@ sampler pays the same constant/q legal-incidence denominator as free (R,L)
 - [P27 Conic-Pair D5 Tower](p27_conic_pair_d5_tower_20260621.md)
 - [P27 Legal Conic Tower Depth](p27_legal_conic_tower_depth_20260621.md)
 - [P27 Conic Sign-Word Coupling Probe](p27_conic_signword_coupling_20260622.md)
+- [P27 Conic Tower Sign-Quotient Probe](p27_conic_tower_sign_quotient_20260622.md)
 - [P27 Conic-Pair Two-Step Kummer Screen](p27_conic_pair_two_step_kummer_20260621.md)
 - [P27 Conic-Pair Two-Step Kummer Trivariate Screen](p27_conic_pair_two_step_kummer_trivar_20260621.md)
 

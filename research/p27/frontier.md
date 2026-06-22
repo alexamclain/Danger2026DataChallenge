@@ -828,6 +828,11 @@ with manifest
 `research/p27/archive/fixtures/p27_conic_tower_quotient_cas_suite_20260622.json`.
 It asks for depth-1/depth-2 legal-pullback quotients, genus/components, and a
 direct legal tower sampler if a quotient appears.
+The first quotient sanity screen is now in:
+[P27 Conic Tower Sign-Quotient Probe](evidence/p27_conic_tower_sign_quotient_20260622.md).
+The obvious sign quotients preserve d5 and even descend to `A`/`(A,x)` on p27
+samples, but they collapse only finite multiplicities.  A-space still thins
+like random half-loss, so this is CAS staging, not a GPU sign-bucket source.
 The direct sign-word coupling telemetry now agrees:
 [P27 Conic Sign-Word Coupling Probe](evidence/p27_conic_signword_coupling_20260622.md).
 On `4000 + 4000` p27 train/heldout unique `(A,x5)` rows, the all-plus conic

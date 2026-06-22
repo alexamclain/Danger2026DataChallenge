@@ -35,7 +35,8 @@
     ],
     "selector_identity": [
       "research/p27/evidence/p27_conic_pair_d4_recurrence_20260621.md",
-      "research/p27/evidence/p27_conic_pair_d5_tower_20260621.md"
+      "research/p27/evidence/p27_conic_pair_d5_tower_20260621.md",
+      "research/p27/evidence/p27_conic_tower_sign_quotient_20260622.md"
     ],
     "killed_shortcuts": [
       "research/p27/evidence/p27_conic_pair_lowdegree_relation_20260621.md",
@@ -54,7 +55,7 @@
       "compute": [
         "dimension",
         "component count after saturation by nonzero denominators",
-        "obvious sign involutions",
+        "obvious sign involutions, starting from the selector-preserving sign quotient already screened",
         "quotient maps under h0/g0/r1 sign symmetries",
         "genus of any curve quotient"
       ],

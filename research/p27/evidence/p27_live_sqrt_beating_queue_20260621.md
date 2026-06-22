@@ -488,6 +488,10 @@ Ranked next moves:
 
 The conic-chain CAS ask is now packaged as
 [P27 Conic Tower Quotient CAS Handoff](p27_conic_tower_quotient_cas_handoff_20260622.md).
+Its first sign-quotient sanity screen is
+[P27 Conic Tower Sign-Quotient Probe](p27_conic_tower_sign_quotient_20260622.md):
+the obvious sign quotient is selector-preserving but only a finite cover, not
+a source shrink.
 
 The compact actionable version is the "Current Priority After Two-Step Kummer
 Screen" section of
