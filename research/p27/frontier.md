@@ -932,6 +932,12 @@ Complete degree `<= 4` branch-support families on `P1_A` are killed for d3 in
 q1607/q1847/q2087, q1847 also kills d4, and nearby `7 mod 8` fields reject
 split degree `<= 4` d3 support.  Do not widen blind A-polynomial scans; the
 next real test is divisor/Kummer class extraction on the normalized A-cover.
+The combined-prefix version is negative too:
+[P27 A-Line Combined Prefix Support Screen](evidence/p27_a_line_prefix_support_20260622.md).
+The all-plus `d3&d4` prefix has no visible degree `<= 4` A-line character in
+q1607/q1847/q2087.  Three- and four-gate prefixes are either one-sided
+finite-field tails or repeat the same negative pattern.  This kills GPU
+A-prefix bucket production unless a named Kummer/source law is found.
 That extraction now has a concrete packet:
 [P27 A-Level Kummer Extraction Packet](evidence/p27_a_level_kummer_extraction_packet_20260622.md).
 It emits a JSON fixture of A-labeled d3/d4 rows over q1607/q1847/q2087 and

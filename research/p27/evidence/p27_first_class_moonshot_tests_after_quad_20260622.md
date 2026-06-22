@@ -40,6 +40,10 @@ B/K/lambda visible quartics:
 visible branch dynamics:
   A/B/K/lambda S3, PGL2, Chebyshev, monomial, and hidden-X power maps
   do not give stable d3/d4 recurrence
+
+A-line combined prefixes:
+  q1607/q1847/q2087 have no visible degree <=4 character selecting d3&d4
+  deeper prefixes are one-sided field tails or repeat the same negative pattern
 ```
 
 These results do not kill the A/B/K/Sroot Kummer route.  They kill the nearby
@@ -456,6 +460,7 @@ allowed:
 not allowed:
   large p27 production run from fixed quadratic precheck
   A/B/K/lambda quartic bucket production
+  A-prefix bucket production from finite-field descent alone
   raw BSM surface sampling
   Bplus/core-B bucket search without a class recurrence
   GPU production before reduced-cover genus/sourceability is known
@@ -495,6 +500,7 @@ kill = current alpha/beta phase-state split as a production sampler
 kill = gamma^2=U+2 as a direct source sampler after the extension-count audit
 kill = online Magma as the reduced-cover extraction engine
 kill = more visible quartic/branch-map bucket searches without a theorem
+kill = low-degree visible A-character as a multi-gate source selector
 kill = treating source-conditional 2x lift as sqrt-beating
 ```
 
