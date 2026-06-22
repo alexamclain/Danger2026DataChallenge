@@ -177,6 +177,15 @@ larger generic transition.  The CAS target should therefore be the staged
 cover `F_A(u,v)=0`, `rho^2=v^2-4`, `gamma^2=v+2`, with the question whether
 `gamma` is a pullback/coboundary/iterate/low-genus quotient.
 
+Gamma norm/coboundary follow-up:
+[P27 B-Line Gamma Norm/Coboundary Boundary](p27_b_line_gamma_norm_coboundary_20260622.md).
+The full norm `Norm_4(v+2)=16*(A-2)^2` is square, and the actual/missing
+two-root gamma norms are square across q1607/q1847/q2087.  However, the naive
+`Norm_2(v+2)=4*x6*(2-A)` formula is false, and screened visible pair
+invariants have no exact `f4` predictor through weight `4`.  The remaining
+test is therefore an explicit H90 quotient/coboundary computation for
+`gamma`, not another norm or pair-invariant scan.
+
 Required computation:
 
 ```text
@@ -185,6 +194,7 @@ include x6^2-U*x6+1 and gamma^2=U+2 in the offline branch/class extraction
 impose the selected-source legal/core cut before using all-chart lift buckets
 extract branch divisor degree, support field degrees, components, genus
 if d3 is tractable, normalize F_A(u,v)=0 plus rho^2=v^2-4 and compare gamma^2=v+2 in the Kummer group
+compute the H90 quotient/coboundary for gamma and ask whether it telescopes or recurs
 use f5/f6 only as regression checks until larger data supports them
 ```
 
@@ -382,6 +392,7 @@ kill = norm/trace/power-sum selectors for the B-line d3 fiber
 kill = low-degree plane relations for the reduced B-line d3 fiber through degree 20
 kill = low-degree plane relations for the second reduced B-line f4/f3 fiber through degree 20
 kill = treating chi(v^2-4) or chi(v+A) materialization as a GPU/source win
+kill = naive gamma norm or visible pair-invariant predictors as source laws
 kill = online Magma as the reduced-cover extraction engine
 kill = more visible quartic/branch-map bucket searches without a theorem
 kill = treating source-conditional 2x lift as sqrt-beating

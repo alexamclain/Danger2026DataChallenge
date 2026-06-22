@@ -138,6 +138,13 @@ moonshot class: `chi(v+2)=f4(B)` is constant even on the discarded generic
 roots.  The next CAS object is therefore `F_A(u,v)=0`, `rho^2=v^2-4`,
 `gamma^2=v+2`.
 
+Gamma norm follow-up:
+[P27 B-Line Gamma Norm/Coboundary Boundary](p27_b_line_gamma_norm_coboundary_20260622.md)
+shows that `Norm_4(v+2)=16*(A-2)^2` and the actual/missing two-root gamma norms
+are square, but the naive parent-`x6` formula is false and visible pair
+invariants do not predict `f4`.  Keep the H90/coboundary route alive as a CAS
+class computation, not as a norm bucket.
+
 Negative:
 
 ```text
@@ -165,6 +172,7 @@ continue = cross-check any class through the A/B/K/Sroot fixture bridges
 continue = normalize the reduced 4-u / 8-x d3 fiber cover
 continue = normalize the second reduced f4/f3 8-v cover
 continue = use the staged transition/materialization/gamma model for f4/f3
+continue = compute an explicit H90 quotient for gamma^2=v+2
 continue = compare f4/f3 as a class relation after f3 is named
 continue = use f5/f6 rows only as tail/regression checks for an extracted class
 
@@ -173,6 +181,7 @@ kill = counting A-level, B-line, and K/Sroot fixtures as independent positives
 kill = B-line norm/trace/power-sum selectors as a production sampler
 kill = second-fiber low-degree B-plane relations as a production sampler
 kill = chi(v^2-4) materialization as a production sampler
+kill = naive gamma norm or visible pair-invariant predictors as source laws
 kill = more B-bucket GPU production before a source/recurrent class exists
 kill = widening visible low-degree B scans already killed by q1847
 ```

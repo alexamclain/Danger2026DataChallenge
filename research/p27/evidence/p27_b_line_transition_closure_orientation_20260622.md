@@ -156,6 +156,15 @@ The materialization half is explicit, so future CAS does not need the full
 second x7 root forest to know which quotient roots lift to actual x7.
 ```
 
+Norm/coboundary follow-up:
+[P27 B-Line Gamma Norm/Coboundary Boundary](p27_b_line_gamma_norm_coboundary_20260622.md)
+checks the remaining `gamma^2=v+2` class.  The generic four-root norm is
+`16*(A-2)^2`, and the actual/missing two-root gamma norms are always squares
+in q1607/q1847/q2087.  But the naive parent-`x6` norm formula is false, and
+low-weight visible pair invariants do not predict `f4`.  This sharpens the
+next CAS ask to an explicit Hilbert-90 quotient/coboundary computation, not a
+visible norm sampler.
+
 Negative:
 
 ```text
@@ -171,10 +180,12 @@ follows from the materialization selector alone.
 
 ```text
 continue = normalize the staged cover F_A(u,v)=0 plus rho^2=v^2-4
+continue = compute the H90 quotient for gamma^2=v+2 on that staged cover
 continue = compare gamma^2=v+2 against the f3 class on that normalized cover
 continue = ask CAS/expert whether gamma is a pullback, coboundary, iterate, or low-genus quotient
 
 kill = treating generic 4-to-actual 2 v-root shrink as a new search-space win
+kill = naive Norm_2(v+2)=4*x6*(2-A) as the missing formula
 kill = GPU production from chi(v^2-4) or chi(v+A) alone
 kill = searching more visible orientation atoms for this materialization half
 ```

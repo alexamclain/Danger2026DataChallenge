@@ -1027,6 +1027,13 @@ while the actual selected source keeps exactly the `2` roots with
 transition.  The live CAS object is therefore the staged cover
 `F_A(u,v)=0`, `rho^2=v^2-4`, `gamma^2=v+2`, and the live question is whether
 `gamma` is a sourceable Kummer class rather than a fresh half-cover.
+The first gamma norm/coboundary screen is now bounded:
+[P27 B-Line Gamma Norm/Coboundary Boundary](evidence/p27_b_line_gamma_norm_coboundary_20260622.md).
+`Norm_4(v+2)=16*(A-2)^2`, and the actual/missing two-root gamma norms are
+always square in q1607/q1847/q2087.  But the naive parent-`x6` norm formula is
+false, and no visible pair-invariant product through weight `4` predicts
+`f4`.  This keeps a real H90/coboundary CAS question alive while killing
+gamma norm-triviality as a direct GPU/source rule.
 The B-line visible two-gate quartic shortcut is closed as well:
 [P27 B-Line Gate4-Prefix Quartic q1847 Screen](evidence/p27_b_line_gate4_prefix_quartic_q1847_screen_20260622.md).
 It scans `6,300,872,423` q1847 coefficient triples for
