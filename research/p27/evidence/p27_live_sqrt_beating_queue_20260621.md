@@ -168,6 +168,12 @@ the bucket has about `8.04x` all-recall lift in each promotion field.  This is
 worth bounded GPU telemetry if the four bits are cheap to emit, but it is not
 a production source because the surviving bucket is still field-sized and the
 sharper partial buckets vary by field.
+The direct next-gate B-atom follow-up is negative.  On actual legal d2 rows,
+the core B bucket remains exact, but B/K/A atom products do not stably predict
+`d3` or `d4`: p27 train fits weaken or reverse on heldout, and guard-field
+winners disagree.  This kills B-bucket GPU scoring as a moonshot route and
+reframes the live B test as function-field/CAS extraction of the legal cover
+over the rationalized base.
 The two-step Kummer quotient screen is now negative too.  After adjoining the
 first root `Z0`, the next selector `S1`, and when available the second root
 `Z1`, all obvious selector/root pair systems are full-rank through degree 12 on

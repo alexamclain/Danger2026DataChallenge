@@ -947,6 +947,16 @@ bounded GPU telemetry target.  It is not sqrt-beating by itself: the bucket is
 still field-sized, and the higher-lift partial buckets are not stable enough
 to promote without a theorem.
 
+The direct next-gate version of that idea is now negative:
+[P27 B-Parameter Next-Gate Probe](evidence/p27_kline_base_param_nextgate_20260622.md).
+After conditioning on actual legal `d2` rows, the core B bucket still contains
+all rows in p27 train/heldout and q1607/q1847/q2087.  But B/K/A atom products
+do not stably predict `d3` or `d4`: the p27 train-best `d3` parity combo drops
+below majority on heldout, and the train-best `d4` combo falls from `1.087x`
+majority-lift to only `1.015x` on heldout.  So the B route is no longer a GPU
+bucket-search route; it is a function-field/CAS cover-extraction route over
+the B-rationalized base curve.
+
 The first Belyi-normalized source family is now killed:
 [P27 Lambda Branch-Divisor Screen](evidence/p27_lambda_branch_divisor_screen_20260621.md).
 It tested `z^2=f(lambda)` with `deg_lambda(f)<=4`, where

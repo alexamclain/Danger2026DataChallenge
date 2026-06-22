@@ -986,6 +986,28 @@ No to a larger production GPU run from this alone: the win is constant-factor,
 not below-sqrt, and the sharper partial buckets are field-sensitive.
 ```
 
+B-next-gate update:
+[P27 B-Parameter Next-Gate Probe](p27_kline_base_param_nextgate_20260622.md).
+
+```text
+p27 train/heldout:
+  legal rows all stay in the core B bucket
+  d3 train-best combo does not hold out
+  d4 train-best combo weakens to about 1.015x majority-lift on heldout
+
+q1607/q1847/q2087:
+  small-field winners disagree
+```
+
+Updated action:
+
+```text
+Do not ask GPU to score B-atom next-gate buckets.
+The next beat-sqrt test is CAS/function-field extraction of the legal cover
+over the B-rationalized base curve, looking for genus <= 1 quotient,
+sourceable walk, or repeated multi-gate coupling.
+```
+
 K/S first-half cover update:
 [P27 K/S First-Half Cover Magma Smoke](p27_ks_first_half_cover_magma_20260621.md).
 [P27 K/S First-Half Alpha-Lift Obstruction](p27_ks_first_half_alpha_lift_obstruction_20260621.md).
