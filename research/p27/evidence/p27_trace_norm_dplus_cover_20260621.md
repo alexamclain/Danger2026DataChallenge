@@ -171,6 +171,12 @@ giving quotient coordinates `a=t-1/t`, `g=w/t`, `a^2+g^2=4`.  The descended
 class is not a low-weight product of the tested `a/g/m` atoms, so the next
 positive artifact is an exact Kummer/divisor class on this conic.
 
+Follow-up relative descent:
+[P27 Trace/Norm Dplus Relative Descent](p27_trace_norm_dplus_relative_descent_20260622.md).
+The symbolic norm identity is `Norm_z(-core)=F*S^2`, with
+`F=t(t^2+2t-1)(t^2+1)=z^2`.  Therefore the quotient handle is conditional on
+the domain-spin cover; the bare conic is not a standalone `Dplus` source.
+
 Negative:
 
 ```text
@@ -218,12 +224,14 @@ selected x-square gate, rather than just acting as a one-time 4x stratum.
 ```text
 continue = Magma/Sage quotient decomposition of the named D_plus cover
 continue = exact descended Kummer/divisor extraction on a^2+g^2=4
+continue = relative Hilbert-90/Kummer extraction over z^2=F
 continue = GPU direct-source experiment if a quotient map is found
 continue = use this exact core formula for any further D_plus telemetry
 
 kill = treating fixed d2/d3/d4 prefixes as source shrink
 kill = searching for D_plus as a tiny R(a) character
 kill = low-weight tested a/g/m quotient-character products
+kill = standalone R(m) search on the bare conic quotient
 kill = using eps_h/eps_v or H/VQ/T_line buckets as post-Dplus filters
 kill = promoting current trace/norm classifier as production without a direct
        sampler or cheaper orientation source
@@ -240,6 +248,7 @@ kill = promoting current trace/norm classifier as production without a direct
 - Magma D_plus output: `research/p27/archive/probe_outputs/p27_trace_norm_dplus_cover_q607_magma_20260621.txt`
 - Magma D_plus XML: `research/p27/archive/probe_outputs/p27_trace_norm_dplus_cover_q607_magma_20260621.xml`
 - Quotient symmetry: [P27 Trace/Norm Dplus Quotient Symmetry](p27_trace_norm_dplus_quotient_symmetry_20260622.md)
+- Relative descent: [P27 Trace/Norm Dplus Relative Descent](p27_trace_norm_dplus_relative_descent_20260622.md)
 - Related GPU note: [P27 GPU Search-Space Narrowing Probe](p27_gpu_search_space_narrowing_20260621.md)
 - Prior spin note: [P27 Trace/Norm Spin Obstruction](p27_trace_norm_spin_obstruction_20260621.md)
 

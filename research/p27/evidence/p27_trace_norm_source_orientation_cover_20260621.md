@@ -42,6 +42,12 @@ The first visible quotient has now been identified: `Dplus` descends to
 full orientation-source cover, although the tested low-weight quotient
 characters do not explain the class.
 
+Follow-up relative-descent correction:
+[P27 Trace/Norm Dplus Relative Descent](p27_trace_norm_dplus_relative_descent_20260622.md).
+The quotient is conditional on the domain-spin cover because
+`Norm_z(-core)=F*S^2`.  So a bare conic sampler is killed; the CAS target is a
+relative Hilbert-90/Kummer class over `z^2=F`.
+
 ## Cover
 
 Use:
@@ -155,10 +161,12 @@ trace/norm quotient, rather than adjoining both orientation roots separately.
 ```text
 continue = trace/norm D_plus as a structural narrowing lead
 continue = exact Kummer/divisor extraction on the Dplus conic quotient
+continue = relative Hilbert-90/Kummer extraction over the domain-spin cover
 continue = quotient/Prym decomposition of the genus-69 source components
 continue = GPU recurrence/coupling telemetry for D_plus versus later gates
 
 kill = direct full-orientation-cover sampler as the first production plan
+kill = bare conic quotient as a standalone Dplus sampler
 kill = low-weight tested a/g/m quotient-character products
 kill = eps_h/eps_v or H/VQ/T_line buckets as post-Dplus GPU filters
 kill = treating eps_h and eps_v as free once Dplus is named
@@ -173,6 +181,7 @@ kill = another tiny R(a) character scan for Dplus
 - Prior D_plus cover: [P27 Trace/Norm D_plus Cover](p27_trace_norm_dplus_cover_20260621.md)
 - Orientation phase screen: [P27 Trace/Norm Orientation Phase Screen](p27_trace_norm_orientation_phase_screen_20260622.md)
 - Quotient symmetry: [P27 Trace/Norm Dplus Quotient Symmetry](p27_trace_norm_dplus_quotient_symmetry_20260622.md)
+- Relative descent: [P27 Trace/Norm Dplus Relative Descent](p27_trace_norm_dplus_relative_descent_20260622.md)
 - GPU narrowing: [P27 GPU Search-Space Narrowing Probe](p27_gpu_search_space_narrowing_20260621.md)
 
 ```text

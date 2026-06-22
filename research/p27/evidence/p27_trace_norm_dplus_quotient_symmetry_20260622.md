@@ -26,6 +26,14 @@ This is the first genuinely quotient-shaped positive result in the `Dplus`
 lane.  It says the next math target is not the full genus-69 orientation cover
 as written; it is the descended Kummer/divisor class on this conic quotient.
 
+Follow-up correction:
+[P27 Trace/Norm Dplus Relative Descent](p27_trace_norm_dplus_relative_descent_20260622.md).
+The conic quotient is not a free sampler by itself.  Symbolically,
+`u=-core=u0+u1*z` satisfies `Norm_z(u)=F*S^2`, where
+`F=t(t^2+2t-1)(t^2+1)=z^2`.  Thus the quotient fiber constancy is conditional
+on the domain-spin cover.  The live object is a relative Hilbert-90/Kummer
+class over `z^2=F`, not a standalone `R(m)`.
+
 Negative shortcut result:
 
 ```text
@@ -163,7 +171,7 @@ q1847 fixed = 0.529284165
 q2087 fixed = 0.476007678
 ```
 
-This is the expected signature of a real descended class whose branch divisor
+This is the expected signature of a real relative class whose branch divisor
 is not one of the tiny visible products tested here.
 
 ## Interpretation
@@ -186,19 +194,19 @@ This is not yet a GPU sampler or a production filter.
 
 ## Next Test
 
-Compute the exact descended Kummer/divisor class on:
+Compute the exact relative Kummer/divisor class over the domain-spin cover:
 
 ```text
+z^2 = t*(t^2+2t-1)*(t^2+1)
+a = t - 1/t
+g = w/t
 a^2 + g^2 = 4
 ```
-
-or on its parameter line `m=g/(a-2)`.
 
 The decisive artifact would be one of:
 
 ```text
-1. A rational function R(m) whose squareclass is the descended Dplus class,
-   with its branch divisor and genus.
+1. A relative Hilbert-90 coboundary/Kummer representative for u=-core.
 2. A proof that the descended branch divisor is too large/generic to source
    cheaply.
 3. A low-genus further quotient or recurrence that couples this class to d3.
@@ -212,10 +220,12 @@ only after the descended source map or branch divisor is named.
 ```text
 continue = exact Kummer/divisor extraction on the conic quotient
 continue = use a=t-1/t, g=w/t as the Dplus quotient coordinates
+continue = include the domain-spin cover z^2=F in that extraction
 continue = GPU direct-source work only after a source map or branch divisor is
            supplied
 
 kill = searching Dplus as a function of a alone
+kill = standalone R(m) search on the bare conic parameter line
 kill = low-weight products of the tested a/g/m atoms
 kill = wflip or zwflip as Dplus-preserving quotient maps
 ```
@@ -223,6 +233,7 @@ kill = wflip or zwflip as Dplus-preserving quotient maps
 ## Linked Artifacts
 
 - Dplus cover: [P27 Trace/Norm D_plus Cover](p27_trace_norm_dplus_cover_20260621.md)
+- Relative descent: [P27 Trace/Norm Dplus Relative Descent](p27_trace_norm_dplus_relative_descent_20260622.md)
 - Source-orientation pricing: [P27 Trace/Norm Source-Orientation Cover](p27_trace_norm_source_orientation_cover_20260621.md)
 - Orientation phase screen: [P27 Trace/Norm Orientation Phase Screen](p27_trace_norm_orientation_phase_screen_20260622.md)
 - GPU handoff: [P27 GPU Dplus-Native Source Handoff](p27_gpu_dplus_native_source_handoff_20260622.md)

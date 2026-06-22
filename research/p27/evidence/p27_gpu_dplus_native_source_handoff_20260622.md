@@ -38,6 +38,7 @@ research/p27/evidence/p27_trace_norm_orientation_phase_screen_20260622.md
 research/p27/evidence/p27_trace_norm_dplus_cover_20260621.md
 research/p27/evidence/p27_trace_norm_source_orientation_cover_20260621.md
 research/p27/evidence/p27_trace_norm_dplus_quotient_symmetry_20260622.md
+research/p27/evidence/p27_trace_norm_dplus_relative_descent_20260622.md
 ```
 
 Do not retest these killed routes:
@@ -47,6 +48,7 @@ fixed d2/d3/d4 prefix buckets as raw source shrink
 low-weight H/VQ/X/T_line/root character products
 eps_h/eps_v, H/VQ, eps_h/eps_v/T_line orientation buckets
 low-weight tested a/g/m quotient-character products
+bare conic quotient a^2+g^2=4 as a standalone Dplus sampler
 full genus-69 orientation-cover sampling as the first production plan
 seed-order or compact-bucket fishing without a named invariant
 ```
@@ -120,7 +122,7 @@ Acceptable prototypes:
 ```text
 sample a named low-genus quotient that maps to Dplus candidates
 sample the conic quotient a=t-1/t, g=w/t only after the descended Kummer class
-  or branch divisor is named
+  or branch divisor is named, and only together with the domain-spin cover
 sample a partial source that provably covers a fixed Dplus component
 sample a fused recurrence source that emits Dplus plus a later selected gate
 ```

@@ -349,6 +349,15 @@ Across `q=607,1607,1847,2087`, `Dplus` is invariant under `z -> -z` and under
 conflicts.  However, low-weight products of the tested `a/g/m` atoms do not
 hold out, so the next artifact must be the exact descended Kummer/divisor
 class on the conic, not another visible character bucket.
+That target has now been corrected symbolically:
+[P27 Trace/Norm Dplus Relative Descent](evidence/p27_trace_norm_dplus_relative_descent_20260622.md).
+Writing `u=-core=u0+u1*z` with
+`F=t(t^2+2t-1)(t^2+1)=z^2`, the verifier proves
+`Norm_z(u)=F*S^2`.  Thus the conic quotient constancy is conditional on the
+domain-spin root already existing; `Dplus` is not a standalone rational
+character on `a^2+g^2=4`.  The next serious CAS object is the relative
+Hilbert-90/Kummer class over the domain-spin cover, and the bare conic sampler
+is killed.
 
 The naive orientation-source cover is now priced:
 [P27 Trace/Norm Source-Orientation Cover](evidence/p27_trace_norm_source_orientation_cover_20260621.md).
