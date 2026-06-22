@@ -136,6 +136,13 @@ Gamma-positive hidden_mixed rows over nonsquare `B` do not materialize to x6.
 Gamma-positive square-`B` rows materialize, but every active base `B` row has
 mixed f4 signs.  Thus hidden_mixed is not a direct multi-gate sampler either.
 
+Norm-relation follow-up:
+[P27 B-Line No-R Fixed-B Norm Relation](p27_b_line_noR_fixedB_norm_relation_20260622.md).
+On the common square-`B` support, hidden_mixed has the same `gamma` sign as
+beta_U in all tested fields.  This makes hidden_mixed a related secondary
+model of the beta_U first sign on the materialized side, not an independent
+source of a second first-sign cut.
+
 ## CAS Consequence
 
 Keep the fixed-`B` CAS order:
@@ -163,10 +170,12 @@ the only visible result remains the `chi(B)` fiber-size split.
 continue = beta_U divisor/Kummer extraction for Norm(Unext+2)
 continue = compare hidden_mixed norm class after beta_U, not before
 continue = ask CAS whether beta_U and hidden_mixed norm classes share a Prym factor
+continue = enforce gamma_hidden = gamma_beta on square-B rows as a regression
 
 kill = treating hidden_mixed norm descent as a production filter
 kill = treating hidden_mixed gamma=+1 as an x6/f4 continuation sampler
 kill = using chi(B) 32/64 hidden-mixed split as the selected gamma sampler
+kill = treating hidden_mixed as an independent first-sign source on square-B rows
 kill = broad hidden_mixed base-B atom hunting without a named divisor class
 ```
 

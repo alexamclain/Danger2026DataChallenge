@@ -1328,6 +1328,11 @@ hidden_mixed's visible fiber split is `chi(B)` (`32` points for square `B`,
 `gamma` itself.  So hidden_mixed stays as a second-pass Kummer comparison; the
 first CAS extraction target is still beta_U `Norm(Unext+2)` on
 `chi(B)=+1` support.
+The square-`B` relation is now explicit:
+[P27 B-Line No-R Fixed-B Norm Relation](evidence/p27_b_line_noR_fixedB_norm_relation_20260622.md).
+On the common square-`B` support, `gamma_hidden = gamma_beta` in every tested
+quadratic field.  This demotes hidden_mixed as an independent first-sign
+source; keep it as related component/Prym data for the beta_U class.
 The hidden_mixed next-gate check is also negative:
 [P27 B-Line No-R Hidden_Mixed Next-Gate Probe](evidence/p27_b_line_noR_hidden_mixed_next_gate_20260622.md).
 Gamma-positive nonsquare-`B` hidden_mixed rows do not materialize to x6.

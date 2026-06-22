@@ -57,6 +57,7 @@ no-R beta_U next-gate = gamma+ materializes cleanly but f4 is mixed inside every
 no-R beta_U f4 pair = x7-pair norm -4*(A*x6+1) exact, but no pair-level sampler
 no-R beta_U same-sign selector = x6 atom products through weight 3 fail on same-plus/same-minus
 no-R fixed-B norm comparison = hidden_mixed descends too, but its visible 32/64 split is chi(B), not gamma
+no-R fixed-B norm relation = on square-B rows gamma_hidden = gamma_beta in every tested q^2 field
 no-R hidden_mixed next-gate = nonsquare-B gamma+ does not materialize; square-B materializes but f4 is mixed
 reduced lift visible classifier = killed
 gamma visible square triviality = killed
@@ -273,6 +274,12 @@ classes at essentially the same cost.  The hidden_mixed promotion criterion is
 stricter: it must find a quotient/Prym/divisor class carrying `gamma`, not
 merely the `chi(B)` fiber-size split.
 
+The direct beta_U/hidden_mixed comparison sharpens this demotion:
+on the common square-`B` support, `gamma_hidden = gamma_beta` in every tested
+quadratic field.  Hidden_mixed is therefore a related secondary model of the
+same first selected sign on the materialized side, not an independent source
+of a second first-sign cut.  Preserve this equality as a CAS regression.
+
 The hidden_mixed next-gate test adds a materialization boundary:
 
 ```text
@@ -331,7 +338,8 @@ Kill this first-pass B-line route if:
 ```text
 all components and quotients carrying gamma are high-genus/generic
 gamma and f4/f3 are fresh unrelated Kummer classes
-the surviving beta_U/hidden_mixed fixed-B subcovers are fresh unrelated half-covers
+the surviving beta_U/hidden_mixed fixed-B subcovers share only the observed
+    square-B gamma sign and no source-producing quotient
 the only benefit is a constant-factor continuation filter
 the proposed GPU mode pays a new Legendre/classification toll
 ```

@@ -18,6 +18,13 @@ chi(B) = +1, gamma = +1:
 
 So hidden_mixed gives useful CAS routing data, but no GPU-production sampler.
 
+Relation to beta_U:
+[P27 B-Line No-R Fixed-B Norm Relation](p27_b_line_noR_fixedB_norm_relation_20260622.md)
+shows that on the common square-`B` support, `gamma_hidden = gamma_beta` in
+all tested fields.  The square-`B` materialized hidden_mixed rows are therefore
+a related model of beta_U's first selected class, not an independent first-sign
+source.
+
 ## Artifacts
 
 Probe:
@@ -141,10 +148,12 @@ sqrt-beating route.
 continue = hidden_mixed divisor/Kummer extraction only as second-pass CAS
 continue = compare hidden_mixed square-B materialized class with beta_U after normalization
 continue = record nonsquare-B gamma+ rows as non-materialized boundary data
+continue = enforce gamma_hidden = gamma_beta on square-B rows as a regression
 
 kill = hidden_mixed gamma=+1 as a continuation sampler
 kill = hidden_mixed chi(B) split as an f4 selector
 kill = hidden_mixed x7-pair buckets as production filters
+kill = hidden_mixed as an independent square-B first-sign source
 ```
 
 ```text
