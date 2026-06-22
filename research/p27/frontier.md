@@ -304,6 +304,12 @@ It attached the actual `D_plus` cover signs `eps_h=chi(t)` and
 `d4` by `eps_h/eps_v`, `H/VQ`, `eps_h/eps_v/T_line`, and
 `hcore_chi/vcore_chi` stayed near half; the apparent high `d4` bucket moved
 between groups.  This kills orientation buckets as a GPU/source shortcut.
+The GPU ask is now sharply bounded:
+[P27 GPU Dplus-Native Source Handoff](evidence/p27_gpu_dplus_native_source_handoff_20260622.md).
+Ask for fused/native `D_plus` pricing and same-stream coupling telemetry, with
+raw-source denominators.  Promote only if `D_plus` is cheaper than letting the
+first two selected gates fail naturally or if a direct source reaches beyond
+those first two gates.
 The surviving trace/norm/quotient task is now formalized as a narrow test card:
 [P27 Trace/Norm Half-Norm Test Card](evidence/p27_trace_norm_halfnorm_test_card_20260622.md).
 It accepts only a finite-field squareclass, divisor/theta identity, or direct
