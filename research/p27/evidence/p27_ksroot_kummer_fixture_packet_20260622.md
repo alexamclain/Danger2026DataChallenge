@@ -103,6 +103,13 @@ Sroot separates sheets with no mixed groups.
 The Sroot -> K map is explicit row-by-row in the fixture.
 ```
 
+Bridge update:
+[P27 B/K/Sroot Fixture Bridge](p27_b_ksroot_fixture_bridge_20260622.md)
+shows that the K/Sroot rows are exactly the B-line rows pulled through
+`K^2=(B-2)^4/(8B(B+2)^2)` and `Sroot^2=K`.  This keeps K/Sroot useful as a
+normalization/parity coordinate, but collapses it with the B-line as one
+coordinated branch-class extraction problem.
+
 Negative:
 
 ```text
@@ -125,10 +132,12 @@ then compare f4/f3 only after f3 is named.
 continue = use JSON rows for normalized K/Sroot branch-class extraction
 continue = compute f3 branch degree, support field degrees, genus, components
 continue = test whether f3 descends to K or needs signed Sroot
+continue = cross-check any class against the B-line fixture bridge
 continue = compare f4/f3 only after f3 is explicit
 
 kill = Sroot prefix density as a source
 kill = accepting a Sroot source that only works after forgetting K
+kill = treating K/Sroot as independent evidence from B-line
 kill = more visible degree <=4 branch scans without a new divisor reason
 kill = GPU K/Sroot bucket production before a named source/recurrent class
 ```

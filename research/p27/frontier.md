@@ -928,11 +928,10 @@ preserved.
 The compact synthesis after these closures is:
 [P27 Post-Branch-Dynamics Test Frontier](evidence/p27_post_branch_dynamics_test_frontier_20260622.md).
 It lists the closed branch-map families and the remaining first-class tests:
-normalized A-level Kummer extraction, B-line Kummer sequence extraction,
-K/lambda branch class extraction with the rational K-square stratum preserved,
-and the trace/norm half-norm phase identity.  GPU is demoted to bounded
-telemetry or direct-sampler testing until one of those produces a named class
-or source.
+normalized A-level Kummer extraction, coordinated B/K/Sroot Kummer sequence
+extraction with the rational K-square stratum preserved, and the trace/norm
+half-norm phase identity.  GPU is demoted to bounded telemetry or direct-sampler
+testing until one of those produces a named class or source.
 The K/Sroot density shortcut is now priced too:
 [P27 K/Sroot Prefix Profile](evidence/p27_sroot_prefix_profile_20260622.md).
 It shows that selected prefix bits descend cleanly to both K and Sroot, but
@@ -945,6 +944,11 @@ It records conditional `f3/f4/f5/f6` rows over q1607/q1847/q2087 for both K
 and signed Sroot, with `Sroot^2=K` included row-by-row.  Every K row has two
 Sroot rows and the signs double, so the live test is normalized `f3` branch
 class extraction preserving K-square rationality, then `f4/f3` comparison.
+The row-level coordinate bridge is exact:
+[P27 B/K/Sroot Fixture Bridge](evidence/p27_b_ksroot_fixture_bridge_20260622.md).
+Through every nonempty recorded gate, B rows map to exactly one signed K row
+and two Sroot rows with matching signs.  This collapses B-line and K/Sroot to
+one coordinated class-extraction lane rather than independent evidence.
 The B-line visible two-gate quartic shortcut is closed as well:
 [P27 B-Line Gate4-Prefix Quartic q1847 Screen](evidence/p27_b_line_gate4_prefix_quartic_q1847_screen_20260622.md).
 It scans `6,300,872,423` q1847 coefficient triples for

@@ -89,6 +89,12 @@ q1607/q1847/q2087.  The actionable comparison is now `f3` and `f4/f3`; the
 later `f5/f6` guard-field rows are one-sided field tails unless a larger
 heldout run supplies a named class and raw-source denominator.
 
+Coordinate bridge:
+[P27 B/K/Sroot Fixture Bridge](p27_b_ksroot_fixture_bridge_20260622.md).
+It proves the frozen B-line and K/Sroot fixtures are exact coordinate views of
+the same conditional classes.  Treat B-line and K/Sroot as one coordinated
+class-extraction problem, not independent moonshot lanes.
+
 Required computation:
 
 ```text
@@ -185,6 +191,7 @@ Sroot is the cleaner normalization coordinate
 selected bits descend to K and Sroot with no mixed groups
 Sroot is density-equivalent to K, not a stronger bucket
 K/Sroot fixture rows preserve Sroot^2=K explicitly
+B/K/Sroot fixtures are exact coordinate views of the same classes
 ```
 
 Required computation:
@@ -194,6 +201,7 @@ extract the normalized d3 branch class over P1_Sroot or P1_K
 preserve the rational K-square stratum
 compare d4/d5 only after d3 is explicit
 use f5/f6 only as tail/regression checks unless larger heldout data names a class
+cross-check against the B-line class through the fixture bridge
 ```
 
 Promote if:

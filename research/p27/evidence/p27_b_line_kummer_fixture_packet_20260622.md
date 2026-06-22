@@ -99,6 +99,13 @@ The class-comparison task is concrete: f3 first, then f4/f3.
 No-mixed-B descent remains clean in q1607/q1847/q2087.
 ```
 
+Bridge update:
+[P27 B/K/Sroot Fixture Bridge](p27_b_ksroot_fixture_bridge_20260622.md)
+shows that this B-line fixture and the K/Sroot fixture are exact coordinate
+views of the same conditional classes through all recorded gates.  Use B as
+the simpler genus-0 quotient and K/Sroot as signed-sheet/parity checks, not as
+independent moonshot evidence.
+
 Negative:
 
 ```text
@@ -122,10 +129,12 @@ denominator and a named class.
 ```text
 continue = use JSON rows for B-line normalized Kummer/divisor extraction
 continue = recover f3 branch degree, support field degrees, genus, components
+continue = cross-check any class through the B/K/Sroot fixture bridge
 continue = compare f4/f3 as a class relation after f3 is named
 continue = use f5/f6 rows only as tail/regression checks for an extracted class
 
 kill = treating one-sided guard-field f5/f6 tails as promotion evidence
+kill = counting B-line and K/Sroot fixtures as independent positives
 kill = more B-bucket GPU production before a source/recurrent class exists
 kill = widening visible low-degree B scans already killed by q1847
 ```

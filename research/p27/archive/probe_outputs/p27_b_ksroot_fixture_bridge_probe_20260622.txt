@@ -1,0 +1,145 @@
+p27 B/K/Sroot fixture bridge probe
+relation = K^2 - (B-2)^4/(8*B*(B+2)^2), Sroot^2=K
+fields = [1607, 1847, 2087]
+max_gate = 6
+q=1607:
+  gate3_bridge:
+  B_checked = 49
+  B_rows = 49
+  B_to_K_sign_match = 49
+  B_to_Sroot_sheet_signs_match = 49
+  K_present_1 = 49
+  K_roots_2 = 49
+  K_rows = 49
+  Sroot_present_2 = 49
+  Sroot_rows = 98
+  Sroot_square_match = 98
+  gate3_rows = 49
+  gate4_bridge:
+  B_checked = 28
+  B_rows = 28
+  B_to_K_sign_match = 28
+  B_to_Sroot_sheet_signs_match = 28
+  K_present_1 = 28
+  K_roots_2 = 28
+  K_rows = 28
+  Sroot_present_2 = 28
+  Sroot_rows = 56
+  Sroot_square_match = 56
+  gate4_rows = 28
+  gate5_bridge:
+  B_checked = 19
+  B_rows = 19
+  B_to_K_sign_match = 19
+  B_to_Sroot_sheet_signs_match = 19
+  K_present_1 = 19
+  K_roots_2 = 19
+  K_rows = 19
+  Sroot_present_2 = 19
+  Sroot_rows = 38
+  Sroot_square_match = 38
+  gate5_rows = 19
+  gate6_bridge:
+  B_checked = 19
+  B_rows = 19
+  B_to_K_sign_match = 19
+  B_to_Sroot_sheet_signs_match = 19
+  K_present_1 = 19
+  K_roots_2 = 19
+  K_rows = 19
+  Sroot_present_2 = 19
+  Sroot_rows = 38
+  Sroot_square_match = 38
+  gate6_rows = 19
+q=1847:
+  gate3_bridge:
+  B_checked = 63
+  B_rows = 63
+  B_to_K_sign_match = 63
+  B_to_Sroot_sheet_signs_match = 63
+  K_present_1 = 63
+  K_roots_2 = 63
+  K_rows = 63
+  Sroot_present_2 = 63
+  Sroot_rows = 126
+  Sroot_square_match = 126
+  gate3_rows = 63
+  gate4_bridge:
+  B_checked = 45
+  B_rows = 45
+  B_to_K_sign_match = 45
+  B_to_Sroot_sheet_signs_match = 45
+  K_present_1 = 45
+  K_roots_2 = 45
+  K_rows = 45
+  Sroot_present_2 = 45
+  Sroot_rows = 90
+  Sroot_square_match = 90
+  gate4_rows = 45
+  gate5_bridge:
+  B_checked = 19
+  B_rows = 19
+  B_to_K_sign_match = 19
+  B_to_Sroot_sheet_signs_match = 19
+  K_present_1 = 19
+  K_roots_2 = 19
+  K_rows = 19
+  Sroot_present_2 = 19
+  Sroot_rows = 38
+  Sroot_square_match = 38
+  gate5_rows = 19
+  gate6_bridge:
+  B_rows = 0
+  K_rows = 0
+  Sroot_rows = 0
+  gate6_rows = 0
+q=2087:
+  gate3_bridge:
+  B_checked = 57
+  B_rows = 57
+  B_to_K_sign_match = 57
+  B_to_Sroot_sheet_signs_match = 57
+  K_present_1 = 57
+  K_roots_2 = 57
+  K_rows = 57
+  Sroot_present_2 = 57
+  Sroot_rows = 114
+  Sroot_square_match = 114
+  gate3_rows = 57
+  gate4_bridge:
+  B_checked = 25
+  B_rows = 25
+  B_to_K_sign_match = 25
+  B_to_Sroot_sheet_signs_match = 25
+  K_present_1 = 25
+  K_roots_2 = 25
+  K_rows = 25
+  Sroot_present_2 = 25
+  Sroot_rows = 50
+  Sroot_square_match = 50
+  gate4_rows = 25
+  gate5_bridge:
+  B_checked = 18
+  B_rows = 18
+  B_to_K_sign_match = 18
+  B_to_Sroot_sheet_signs_match = 18
+  K_present_1 = 18
+  K_roots_2 = 18
+  K_rows = 18
+  Sroot_present_2 = 18
+  Sroot_rows = 36
+  Sroot_square_match = 36
+  gate5_rows = 18
+  gate6_bridge:
+  B_checked = 18
+  B_rows = 18
+  B_to_K_sign_match = 18
+  B_to_Sroot_sheet_signs_match = 18
+  K_present_1 = 18
+  K_roots_2 = 18
+  K_rows = 18
+  Sroot_present_2 = 18
+  Sroot_rows = 36
+  Sroot_square_match = 36
+  gate6_rows = 18
+p27_b_ksroot_fixture_bridge_probe_rows=1/1
