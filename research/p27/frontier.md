@@ -890,6 +890,14 @@ It enumerates every full-coverage PGL2 map
 q2087 all have zero exact PGL2 recurrences; again the best maps are identity
 with raw d4-bias scores.  Do not spend more agent or GPU time on degree-one
 A-line recurrence scans unless a theorem supplies a different object.
+The first theorem-shaped higher A-correspondence is negative too:
+[P27 A-Level Power-Correspondence Screen](evidence/p27_a_level_power_correspondence_screen_20260622.md).
+It projects the hidden-`X` power maps from the B-line through `A=B^2-2`,
+allowing both B roots and all Belyi conjugations for `X -> X^m`, `m=2..6`.
+There are no exact forward or reverse `d3/d4` recurrences in
+q1607/q1847/q2087.  The best forward coverage is only `9/28`, `17/45`, and
+`11/25`, so forgetting B sign does not recover a sourceable hidden-`X`
+recurrence.
 The direct sign-word coupling telemetry now agrees:
 [P27 Conic Sign-Word Coupling Probe](evidence/p27_conic_signword_coupling_20260622.md).
 On `4000 + 4000` p27 train/heldout unique `(A,x5)` rows, the all-plus conic

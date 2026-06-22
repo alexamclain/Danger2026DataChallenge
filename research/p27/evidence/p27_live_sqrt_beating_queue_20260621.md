@@ -206,6 +206,13 @@ Every full-coverage degree-one rational map
 `A -> (aA+b)/(cA+d)` is tested for `d3 -> d4`; q1607/q1847/q2087 all have zero
 exact recurrences.  The next A-line correspondence test should be higher
 degree or theorem-specified, not another rational line map.
+The hidden-`X` power correspondence projected to A is now negative as well:
+[P27 A-Level Power-Correspondence Screen](p27_a_level_power_correspondence_screen_20260622.md).
+It tests `A=B^2-2` images of Belyi-conjugated `X -> X^m` maps for `m=2..6`.
+No exact forward or reverse `d3/d4` recurrence appears in q1607/q1847/q2087;
+the best forward coverage is only `9/28`, `17/45`, and `11/25`.  So the next
+A-line correspondence must come from actual normalized-cover classes, not the
+hidden-X doubling/tripling family.
 The B/K-enhanced legal-pullback screen gives one positive staging coordinate:
 [P27 Conic-Pair B/K-Enhanced Pullback Screen](p27_conic_pair_b_enhanced_pullback_20260622.md).
 It finds the expected `B^2+c^2=4` and the stable surface

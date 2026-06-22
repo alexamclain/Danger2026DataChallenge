@@ -129,6 +129,7 @@ kill = blind A polynomial scans without a divisor reason
 kill = visible A-branch S3 orbit/recurrence shortcut
 kill = affine A-line recurrence d_{j+1}(A)=+/-d_j(m*A+b)
 kill = degree-one rational A-line recurrence
+kill = hidden-X power-map A-level recurrence for m=2..6
 kill = GPU A-bucket production before a source law exists
 kill = treating finite-field rows alone as a proof of recurrence
 ```
@@ -151,6 +152,14 @@ extends the recurrence falsifier to every full-coverage degree-one rational
 map `A -> (aA+b)/(cA+d)`.  It also finds zero exact `d3 -> d4` recurrences in
 q1607/q1847/q2087.  Future correspondence tests should therefore be higher
 degree or theorem-specified, not PGL2 restarts.
+
+Update: [P27 A-Level Power-Correspondence Screen](p27_a_level_power_correspondence_screen_20260622.md)
+tests the first theorem-shaped higher correspondence after the PGL2 kill.  It
+uses the hidden B-line coordinate `B=8X^2/(X^2-1)^2`, projects through
+`A=B^2-2`, and checks all Belyi-conjugated `X -> X^m` maps for `m=2..6`.
+There are no exact forward or reverse `d3/d4` recurrences in
+q1607/q1847/q2087, so hidden-X power maps should not distract the CAS pass from
+actual normalized-cover Kummer classes.
 
 ```text
 p27_a_level_kummer_extraction_packet_rows=1/1
