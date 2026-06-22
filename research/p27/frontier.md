@@ -786,6 +786,13 @@ full-rank, but `(B,s,m)` has the stable equation
 Together with the tautology `B^2+c^2=4`, this is a cleaner CAS staging
 coordinate for the legal pullback.  It still does not select the sparse legal
 B-domain, so it is not a GPU sampler by itself.
+The incidence follow-up prices that surface:
+[P27 BSM Surface Incidence Probe](evidence/p27_bsm_surface_incidence_20260622.md).
+Over q1607/q1847/q2087 the BSM surface has about `q^2` points and hits
+canonical d3-plus `(B,A,x)` rows at `constant/q` density
+(`rate*q` about `0.38..0.78`).  It captures all canonical d3-plus target rows
+and no canonical d3-minus rows, so it is a good staged model, but it does not
+solve the legal B-domain denominator.
 
 The first raw quotient screen is negative:
 [P27 Conic-Pair Low-Degree Relation Screen](evidence/p27_conic_pair_lowdegree_relation_20260621.md).

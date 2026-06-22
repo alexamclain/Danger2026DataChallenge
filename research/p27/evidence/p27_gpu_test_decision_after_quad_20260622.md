@@ -59,6 +59,9 @@ Update: [P27 Conic-Pair B/K-Enhanced Pullback Screen](p27_conic_pair_b_enhanced_
 found a useful staging equation,
 `m^2*(B^2+s^2-4)=4*s^2*(s^2-4)`, but it does not impose the sparse legal
 B-domain.  Treat it as CAS input, not as a direct GPU sampler.
+[P27 BSM Surface Incidence Probe](p27_bsm_surface_incidence_20260622.md)
+confirms this pricing: the surface is about `q^2`-sized and d3-plus incidence
+is still `constant/q`.
 
 ## Interpretation
 
