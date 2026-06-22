@@ -1,0 +1,169 @@
+p27 guard-field signature probe
+p27_mod16 = 7
+p27_v2_p_plus_1 = 3
+fields = 144
+field q=607 q_mod16=15 v2_q_plus_1=5 d3=16/32 d4=0/16 d3_4K=present:32 same:0 opp:32 miss:0 d4_4K=present:0 same:0 opp:0 miss:16 flags=d4_constant,d3_4K_full_opposite,d4_4K_absent
+field q=631 q_mod16=7 v2_q_plus_1=3 d3=20/20 d4=0/20 d3_4K=present:0 same:0 opp:0 miss:20 d4_4K=present:0 same:0 opp:0 miss:20 flags=d4_constant,d3_4K_absent,d4_4K_absent
+field q=647 q_mod16=7 v2_q_plus_1=3 d3=12/12 d4=0/12 d3_4K=present:0 same:0 opp:0 miss:12 d4_4K=present:0 same:0 opp:0 miss:12 flags=d4_constant,d3_4K_absent,d4_4K_absent
+field q=719 q_mod16=15 v2_q_plus_1=4 d3=10/22 d4=10/10 d3_4K=present:0 same:0 opp:0 miss:22 d4_4K=present:0 same:0 opp:0 miss:10 flags=d4_constant,d3_4K_absent,d4_4K_absent
+field q=727 q_mod16=7 v2_q_plus_1=3 d3=12/20 d4=12/12 d3_4K=present:0 same:0 opp:0 miss:20 d4_4K=present:0 same:0 opp:0 miss:12 flags=d4_constant,d3_4K_absent,d4_4K_absent
+field q=743 q_mod16=7 v2_q_plus_1=3 d3=25/33 d4=25/25 d3_4K=present:0 same:0 opp:0 miss:33 d4_4K=present:0 same:0 opp:0 miss:25 flags=d4_constant,d3_4K_absent,d4_4K_absent
+field q=751 q_mod16=15 v2_q_plus_1=4 d3=12/19 d4=12/12 d3_4K=present:0 same:0 opp:0 miss:19 d4_4K=present:0 same:0 opp:0 miss:12 flags=d4_constant,d3_4K_absent,d4_4K_absent
+field q=823 q_mod16=7 v2_q_plus_1=3 d3=4/18 d4=4/4 d3_4K=present:0 same:0 opp:0 miss:18 d4_4K=present:0 same:0 opp:0 miss:4 flags=d4_constant,d3_4K_absent,d4_4K_absent
+field q=839 q_mod16=7 v2_q_plus_1=3 d3=4/13 d4=0/4 d3_4K=present:0 same:0 opp:0 miss:13 d4_4K=present:0 same:0 opp:0 miss:4 flags=d4_constant,d3_4K_absent,d4_4K_absent
+field q=863 q_mod16=15 v2_q_plus_1=5 d3=12/24 d4=0/12 d3_4K=present:22 same:0 opp:22 miss:2 d4_4K=present:0 same:0 opp:0 miss:12 flags=d4_constant,d3_4K_partial,d4_4K_absent
+field q=887 q_mod16=7 v2_q_plus_1=3 d3=21/26 d4=0/21 d3_4K=present:0 same:0 opp:0 miss:26 d4_4K=present:0 same:0 opp:0 miss:21 flags=d4_constant,d3_4K_absent,d4_4K_absent
+field q=911 q_mod16=15 v2_q_plus_1=4 d3=10/28 d4=0/10 d3_4K=present:0 same:0 opp:0 miss:28 d4_4K=present:0 same:0 opp:0 miss:10 flags=d4_constant,d3_4K_absent,d4_4K_absent
+field q=919 q_mod16=7 v2_q_plus_1=3 d3=15/33 d4=0/15 d3_4K=present:0 same:0 opp:0 miss:33 d4_4K=present:0 same:0 opp:0 miss:15 flags=d4_constant,d3_4K_absent,d4_4K_absent
+field q=967 q_mod16=7 v2_q_plus_1=3 d3=8/34 d4=8/8 d3_4K=present:0 same:0 opp:0 miss:34 d4_4K=present:0 same:0 opp:0 miss:8 flags=d4_constant,d3_4K_absent,d4_4K_absent
+field q=983 q_mod16=7 v2_q_plus_1=3 d3=8/40 d4=8/8 d3_4K=present:0 same:0 opp:0 miss:40 d4_4K=present:0 same:0 opp:0 miss:8 flags=d4_constant,d3_4K_absent,d4_4K_absent
+field q=991 q_mod16=15 v2_q_plus_1=5 d3=18/36 d4=18/18 d3_4K=present:36 same:0 opp:36 miss:0 d4_4K=present:0 same:0 opp:0 miss:18 flags=d4_constant,d3_4K_full_opposite,d4_4K_absent
+field q=1031 q_mod16=7 v2_q_plus_1=3 d3=16/22 d4=16/16 d3_4K=present:0 same:0 opp:0 miss:22 d4_4K=present:0 same:0 opp:0 miss:16 flags=d4_constant,d3_4K_absent,d4_4K_absent
+field q=1039 q_mod16=15 v2_q_plus_1=4 d3=20/27 d4=20/20 d3_4K=present:0 same:0 opp:0 miss:27 d4_4K=present:0 same:0 opp:0 miss:20 flags=d4_constant,d3_4K_absent,d4_4K_absent
+field q=1063 q_mod16=7 v2_q_plus_1=3 d3=16/35 d4=16/16 d3_4K=present:0 same:0 opp:0 miss:35 d4_4K=present:0 same:0 opp:0 miss:16 flags=d4_constant,d3_4K_absent,d4_4K_absent
+field q=1087 q_mod16=15 v2_q_plus_1=6 d3=10/18 d4=5/10 d3_4K=present:17 same:17 opp:0 miss:1 d4_4K=present:10 same:0 opp:10 miss:0 flags=d3_4K_partial,d4_4K_full_opposite
+field q=1103 q_mod16=15 v2_q_plus_1=4 d3=17/40 d4=0/17 d3_4K=present:0 same:0 opp:0 miss:40 d4_4K=present:0 same:0 opp:0 miss:17 flags=d4_constant,d3_4K_absent,d4_4K_absent
+field q=1151 q_mod16=15 v2_q_plus_1=7 d3=38/48 d4=0/38 d3_4K=present:47 same:47 opp:0 miss:1 d4_4K=present:37 same:37 opp:0 miss:1 flags=d4_constant,d3_4K_partial,d4_4K_partial
+field q=1223 q_mod16=7 v2_q_plus_1=3 d3=15/33 d4=15/15 d3_4K=present:0 same:0 opp:0 miss:33 d4_4K=present:0 same:0 opp:0 miss:15 flags=d4_constant,d3_4K_absent,d4_4K_absent
+field q=1231 q_mod16=15 v2_q_plus_1=4 d3=12/34 d4=12/12 d3_4K=present:0 same:0 opp:0 miss:34 d4_4K=present:0 same:0 opp:0 miss:12 flags=d4_constant,d3_4K_absent,d4_4K_absent
+field q=1279 q_mod16=15 v2_q_plus_1=8 d3=22/46 d4=22/22 d3_4K=present:45 same:45 opp:0 miss:1 d4_4K=present:21 same:21 opp:0 miss:1 flags=d4_constant,d3_4K_partial,d4_4K_partial
+field q=1303 q_mod16=7 v2_q_plus_1=3 d3=16/32 d4=16/16 d3_4K=present:0 same:0 opp:0 miss:32 d4_4K=present:0 same:0 opp:0 miss:16 flags=d4_constant,d3_4K_absent,d4_4K_absent
+field q=1319 q_mod16=7 v2_q_plus_1=3 d3=19/54 d4=19/19 d3_4K=present:0 same:0 opp:0 miss:54 d4_4K=present:0 same:0 opp:0 miss:19 flags=d4_constant,d3_4K_absent,d4_4K_absent
+field q=1327 q_mod16=15 v2_q_plus_1=4 d3=15/35 d4=15/15 d3_4K=present:0 same:0 opp:0 miss:35 d4_4K=present:0 same:0 opp:0 miss:15 flags=d4_constant,d3_4K_absent,d4_4K_absent
+field q=1367 q_mod16=7 v2_q_plus_1=3 d3=11/45 d4=0/11 d3_4K=present:0 same:0 opp:0 miss:45 d4_4K=present:0 same:0 opp:0 miss:11 flags=d4_constant,d3_4K_absent,d4_4K_absent
+field q=1399 q_mod16=7 v2_q_plus_1=3 d3=18/43 d4=0/18 d3_4K=present:0 same:0 opp:0 miss:43 d4_4K=present:0 same:0 opp:0 miss:18 flags=d4_constant,d3_4K_absent,d4_4K_absent
+field q=1423 q_mod16=15 v2_q_plus_1=4 d3=35/46 d4=0/35 d3_4K=present:0 same:0 opp:0 miss:46 d4_4K=present:0 same:0 opp:0 miss:35 flags=d4_constant,d3_4K_absent,d4_4K_absent
+field q=1439 q_mod16=15 v2_q_plus_1=5 d3=15/30 d4=0/15 d3_4K=present:30 same:0 opp:30 miss:0 d4_4K=present:0 same:0 opp:0 miss:15 flags=d4_constant,d3_4K_full_opposite,d4_4K_absent
+field q=1447 q_mod16=7 v2_q_plus_1=3 d3=16/27 d4=0/16 d3_4K=present:0 same:0 opp:0 miss:27 d4_4K=present:0 same:0 opp:0 miss:16 flags=d4_constant,d3_4K_absent,d4_4K_absent
+field q=1471 q_mod16=15 v2_q_plus_1=6 d3=28/50 d4=14/28 d3_4K=present:49 same:49 opp:0 miss:1 d4_4K=present:28 same:0 opp:28 miss:0 flags=d3_4K_partial,d4_4K_full_opposite
+field q=1487 q_mod16=15 v2_q_plus_1=4 d3=31/40 d4=31/31 d3_4K=present:0 same:0 opp:0 miss:40 d4_4K=present:0 same:0 opp:0 miss:31 flags=d4_constant,d3_4K_absent,d4_4K_absent
+field q=1511 q_mod16=7 v2_q_plus_1=3 d3=25/46 d4=25/25 d3_4K=present:0 same:0 opp:0 miss:46 d4_4K=present:0 same:0 opp:0 miss:25 flags=d4_constant,d3_4K_absent,d4_4K_absent
+field q=1543 q_mod16=7 v2_q_plus_1=3 d3=14/44 d4=14/14 d3_4K=present:0 same:0 opp:0 miss:44 d4_4K=present:0 same:0 opp:0 miss:14 flags=d4_constant,d3_4K_absent,d4_4K_absent
+field q=1559 q_mod16=7 v2_q_plus_1=3 d3=34/49 d4=34/34 d3_4K=present:0 same:0 opp:0 miss:49 d4_4K=present:0 same:0 opp:0 miss:34 flags=d4_constant,d3_4K_absent,d4_4K_absent
+field q=1567 q_mod16=15 v2_q_plus_1=5 d3=28/56 d4=28/28 d3_4K=present:56 same:0 opp:56 miss:0 d4_4K=present:0 same:0 opp:0 miss:28 flags=d4_constant,d3_4K_full_opposite,d4_4K_absent
+field q=1583 q_mod16=15 v2_q_plus_1=4 d3=30/50 d4=30/30 d3_4K=present:0 same:0 opp:0 miss:50 d4_4K=present:0 same:0 opp:0 miss:30 flags=d4_constant,d3_4K_absent,d4_4K_absent
+field q=1607 q_mod16=7 v2_q_plus_1=3 d3=28/49 d4=19/28 d3_4K=present:0 same:0 opp:0 miss:49 d4_4K=present:0 same:0 opp:0 miss:28 flags=d3_4K_absent,d4_4K_absent
+field q=1663 q_mod16=15 v2_q_plus_1=7 d3=16/58 d4=0/16 d3_4K=present:57 same:57 opp:0 miss:1 d4_4K=present:15 same:15 opp:0 miss:1 flags=d4_constant,d3_4K_partial,d4_4K_partial
+field q=1759 q_mod16=15 v2_q_plus_1=5 d3=33/66 d4=33/33 d3_4K=present:66 same:0 opp:66 miss:0 d4_4K=present:0 same:0 opp:0 miss:33 flags=d4_constant,d3_4K_full_opposite,d4_4K_absent
+field q=1783 q_mod16=7 v2_q_plus_1=3 d3=32/71 d4=32/32 d3_4K=present:0 same:0 opp:0 miss:71 d4_4K=present:0 same:0 opp:0 miss:32 flags=d4_constant,d3_4K_absent,d4_4K_absent
+field q=1823 q_mod16=15 v2_q_plus_1=5 d3=15/30 d4=15/15 d3_4K=present:30 same:0 opp:30 miss:0 d4_4K=present:0 same:0 opp:0 miss:15 flags=d4_constant,d3_4K_full_opposite,d4_4K_absent
+field q=1831 q_mod16=7 v2_q_plus_1=3 d3=40/58 d4=40/40 d3_4K=present:0 same:0 opp:0 miss:58 d4_4K=present:0 same:0 opp:0 miss:40 flags=d4_constant,d3_4K_absent,d4_4K_absent
+field q=1847 q_mod16=7 v2_q_plus_1=3 d3=45/63 d4=19/45 d3_4K=present:0 same:0 opp:0 miss:63 d4_4K=present:0 same:0 opp:0 miss:45 flags=d3_4K_absent,d4_4K_absent
+field q=1871 q_mod16=15 v2_q_plus_1=4 d3=47/58 d4=11/47 d3_4K=present:0 same:0 opp:0 miss:58 d4_4K=present:0 same:0 opp:0 miss:47 flags=d3_4K_absent,d4_4K_absent
+field q=1879 q_mod16=7 v2_q_plus_1=3 d3=28/54 d4=0/28 d3_4K=present:0 same:0 opp:0 miss:54 d4_4K=present:0 same:0 opp:0 miss:28 flags=d4_constant,d3_4K_absent,d4_4K_absent
+field q=1951 q_mod16=15 v2_q_plus_1=5 d3=20/40 d4=0/20 d3_4K=present:40 same:0 opp:40 miss:0 d4_4K=present:0 same:0 opp:0 miss:20 flags=d4_constant,d3_4K_full_opposite,d4_4K_absent
+field q=1999 q_mod16=15 v2_q_plus_1=4 d3=25/67 d4=9/25 d3_4K=present:0 same:0 opp:0 miss:67 d4_4K=present:0 same:0 opp:0 miss:25 flags=d3_4K_absent,d4_4K_absent
+field q=2039 q_mod16=7 v2_q_plus_1=3 d3=19/51 d4=19/19 d3_4K=present:0 same:0 opp:0 miss:51 d4_4K=present:0 same:0 opp:0 miss:19 flags=d4_constant,d3_4K_absent,d4_4K_absent
+field q=2063 q_mod16=15 v2_q_plus_1=4 d3=27/70 d4=27/27 d3_4K=present:0 same:0 opp:0 miss:70 d4_4K=present:0 same:0 opp:0 miss:27 flags=d4_constant,d3_4K_absent,d4_4K_absent
+field q=2087 q_mod16=7 v2_q_plus_1=3 d3=25/57 d4=18/25 d3_4K=present:0 same:0 opp:0 miss:57 d4_4K=present:0 same:0 opp:0 miss:25 flags=d3_4K_absent,d4_4K_absent
+field q=2111 q_mod16=15 v2_q_plus_1=6 d3=18/66 d4=9/18 d3_4K=present:65 same:65 opp:0 miss:1 d4_4K=present:18 same:0 opp:18 miss:0 flags=d3_4K_partial,d4_4K_full_opposite
+field q=2143 q_mod16=15 v2_q_plus_1=5 d3=20/40 d4=0/20 d3_4K=present:40 same:0 opp:40 miss:0 d4_4K=present:0 same:0 opp:0 miss:20 flags=d4_constant,d3_4K_full_opposite,d4_4K_absent
+field q=2207 q_mod16=15 v2_q_plus_1=5 d3=32/64 d4=0/32 d3_4K=present:62 same:0 opp:62 miss:2 d4_4K=present:0 same:0 opp:0 miss:32 flags=d4_constant,d3_4K_partial,d4_4K_absent
+field q=2239 q_mod16=15 v2_q_plus_1=6 d3=52/86 d4=26/52 d3_4K=present:85 same:85 opp:0 miss:1 d4_4K=present:52 same:0 opp:52 miss:0 flags=d3_4K_partial,d4_4K_full_opposite
+field q=2287 q_mod16=15 v2_q_plus_1=4 d3=30/70 d4=30/30 d3_4K=present:0 same:0 opp:0 miss:70 d4_4K=present:0 same:0 opp:0 miss:30 flags=d4_constant,d3_4K_absent,d4_4K_absent
+field q=2311 q_mod16=7 v2_q_plus_1=3 d3=48/78 d4=48/48 d3_4K=present:0 same:0 opp:0 miss:78 d4_4K=present:0 same:0 opp:0 miss:48 flags=d4_constant,d3_4K_absent,d4_4K_absent
+field q=2351 q_mod16=15 v2_q_plus_1=4 d3=50/79 d4=35/50 d3_4K=present:0 same:0 opp:0 miss:79 d4_4K=present:0 same:0 opp:0 miss:50 flags=d3_4K_absent,d4_4K_absent
+field q=2383 q_mod16=15 v2_q_plus_1=4 d3=36/66 d4=24/36 d3_4K=present:0 same:0 opp:0 miss:66 d4_4K=present:0 same:0 opp:0 miss:36 flags=d3_4K_absent,d4_4K_absent
+field q=2399 q_mod16=15 v2_q_plus_1=5 d3=21/42 d4=8/21 d3_4K=present:42 same:0 opp:42 miss:0 d4_4K=present:0 same:0 opp:0 miss:21 flags=d3_4K_full_opposite,d4_4K_absent
+field q=2423 q_mod16=7 v2_q_plus_1=3 d3=20/69 d4=0/20 d3_4K=present:0 same:0 opp:0 miss:69 d4_4K=present:0 same:0 opp:0 miss:20 flags=d4_constant,d3_4K_absent,d4_4K_absent
+field q=2447 q_mod16=15 v2_q_plus_1=4 d3=29/84 d4=0/29 d3_4K=present:0 same:0 opp:0 miss:84 d4_4K=present:0 same:0 opp:0 miss:29 flags=d4_constant,d3_4K_absent,d4_4K_absent
+field q=2503 q_mod16=7 v2_q_plus_1=3 d3=57/77 d4=39/57 d3_4K=present:0 same:0 opp:0 miss:77 d4_4K=present:0 same:0 opp:0 miss:57 flags=d3_4K_absent,d4_4K_absent
+field q=2543 q_mod16=15 v2_q_plus_1=4 d3=24/75 d4=24/24 d3_4K=present:0 same:0 opp:0 miss:75 d4_4K=present:0 same:0 opp:0 miss:24 flags=d4_constant,d3_4K_absent,d4_4K_absent
+field q=2551 q_mod16=7 v2_q_plus_1=3 d3=30/74 d4=30/30 d3_4K=present:0 same:0 opp:0 miss:74 d4_4K=present:0 same:0 opp:0 miss:30 flags=d4_constant,d3_4K_absent,d4_4K_absent
+field q=2591 q_mod16=15 v2_q_plus_1=5 d3=27/54 d4=14/27 d3_4K=present:52 same:0 opp:52 miss:2 d4_4K=present:0 same:0 opp:0 miss:27 flags=d3_4K_partial,d4_4K_absent
+field q=2647 q_mod16=7 v2_q_plus_1=3 d3=45/66 d4=25/45 d3_4K=present:0 same:0 opp:0 miss:66 d4_4K=present:0 same:0 opp:0 miss:45 flags=d3_4K_absent,d4_4K_absent
+field q=2663 q_mod16=7 v2_q_plus_1=3 d3=63/98 d4=0/63 d3_4K=present:0 same:0 opp:0 miss:98 d4_4K=present:0 same:0 opp:0 miss:63 flags=d4_constant,d3_4K_absent,d4_4K_absent
+field q=2671 q_mod16=15 v2_q_plus_1=4 d3=28/74 d4=0/28 d3_4K=present:0 same:0 opp:0 miss:74 d4_4K=present:0 same:0 opp:0 miss:28 flags=d4_constant,d3_4K_absent,d4_4K_absent
+field q=2687 q_mod16=15 v2_q_plus_1=7 d3=50/84 d4=0/50 d3_4K=present:83 same:83 opp:0 miss:1 d4_4K=present:49 same:49 opp:0 miss:1 flags=d4_constant,d3_4K_partial,d4_4K_partial
+field q=2711 q_mod16=7 v2_q_plus_1=3 d3=45/89 d4=1/45 d3_4K=present:0 same:0 opp:0 miss:89 d4_4K=present:0 same:0 opp:0 miss:45 flags=d3_4K_absent,d4_4K_absent
+field q=2719 q_mod16=15 v2_q_plus_1=5 d3=44/88 d4=10/44 d3_4K=present:88 same:0 opp:88 miss:0 d4_4K=present:0 same:0 opp:0 miss:44 flags=d3_4K_full_opposite,d4_4K_absent
+field q=2767 q_mod16=15 v2_q_plus_1=4 d3=52/80 d4=30/52 d3_4K=present:0 same:0 opp:0 miss:80 d4_4K=present:0 same:0 opp:0 miss:52 flags=d3_4K_absent,d4_4K_absent
+field q=2791 q_mod16=7 v2_q_plus_1=3 d3=21/79 d4=15/21 d3_4K=present:0 same:0 opp:0 miss:79 d4_4K=present:0 same:0 opp:0 miss:21 flags=d3_4K_absent,d4_4K_absent
+field q=2879 q_mod16=15 v2_q_plus_1=6 d3=56/110 d4=28/56 d3_4K=present:107 same:107 opp:0 miss:3 d4_4K=present:56 same:0 opp:56 miss:0 flags=d3_4K_partial,d4_4K_full_opposite
+field q=2887 q_mod16=7 v2_q_plus_1=3 d3=56/106 d4=22/56 d3_4K=present:0 same:0 opp:0 miss:106 d4_4K=present:0 same:0 opp:0 miss:56 flags=d3_4K_absent,d4_4K_absent
+field q=2903 q_mod16=7 v2_q_plus_1=3 d3=31/94 d4=11/31 d3_4K=present:0 same:0 opp:0 miss:94 d4_4K=present:0 same:0 opp:0 miss:31 flags=d3_4K_absent,d4_4K_absent
+field q=2927 q_mod16=15 v2_q_plus_1=4 d3=21/99 d4=0/21 d3_4K=present:0 same:0 opp:0 miss:99 d4_4K=present:0 same:0 opp:0 miss:21 flags=d4_constant,d3_4K_absent,d4_4K_absent
+field q=2999 q_mod16=7 v2_q_plus_1=3 d3=50/70 d4=28/50 d3_4K=present:0 same:0 opp:0 miss:70 d4_4K=present:0 same:0 opp:0 miss:50 flags=d3_4K_absent,d4_4K_absent
+field q=3023 q_mod16=15 v2_q_plus_1=4 d3=46/86 d4=37/46 d3_4K=present:0 same:0 opp:0 miss:86 d4_4K=present:0 same:0 opp:0 miss:46 flags=d3_4K_absent,d4_4K_absent
+field q=3079 q_mod16=7 v2_q_plus_1=3 d3=16/81 d4=16/16 d3_4K=present:0 same:0 opp:0 miss:81 d4_4K=present:0 same:0 opp:0 miss:16 flags=d4_constant,d3_4K_absent,d4_4K_absent
+field q=3119 q_mod16=15 v2_q_plus_1=4 d3=56/92 d4=35/56 d3_4K=present:0 same:0 opp:0 miss:92 d4_4K=present:0 same:0 opp:0 miss:56 flags=d3_4K_absent,d4_4K_absent
+field q=3167 q_mod16=15 v2_q_plus_1=5 d3=63/126 d4=21/63 d3_4K=present:126 same:0 opp:126 miss:0 d4_4K=present:0 same:0 opp:0 miss:63 flags=d3_4K_full_opposite,d4_4K_absent
+field q=3191 q_mod16=7 v2_q_plus_1=3 d3=35/102 d4=0/35 d3_4K=present:0 same:0 opp:0 miss:102 d4_4K=present:0 same:0 opp:0 miss:35 flags=d4_constant,d3_4K_absent,d4_4K_absent
+field q=3271 q_mod16=7 v2_q_plus_1=3 d3=45/85 d4=20/45 d3_4K=present:0 same:0 opp:0 miss:85 d4_4K=present:0 same:0 opp:0 miss:45 flags=d3_4K_absent,d4_4K_absent
+field q=3319 q_mod16=7 v2_q_plus_1=3 d3=45/94 d4=45/45 d3_4K=present:0 same:0 opp:0 miss:94 d4_4K=present:0 same:0 opp:0 miss:45 flags=d4_constant,d3_4K_absent,d4_4K_absent
+field q=3343 q_mod16=15 v2_q_plus_1=4 d3=61/106 d4=52/61 d3_4K=present:0 same:0 opp:0 miss:106 d4_4K=present:0 same:0 opp:0 miss:61 flags=d3_4K_absent,d4_4K_absent
+field q=3359 q_mod16=15 v2_q_plus_1=5 d3=56/112 d4=20/56 d3_4K=present:112 same:0 opp:112 miss:0 d4_4K=present:0 same:0 opp:0 miss:56 flags=d3_4K_full_opposite,d4_4K_absent
+field q=3391 q_mod16=15 v2_q_plus_1=6 d3=78/114 d4=39/78 d3_4K=present:113 same:113 opp:0 miss:1 d4_4K=present:78 same:0 opp:78 miss:0 flags=d3_4K_partial,d4_4K_full_opposite
+field q=3407 q_mod16=15 v2_q_plus_1=4 d3=80/110 d4=12/80 d3_4K=present:0 same:0 opp:0 miss:110 d4_4K=present:0 same:0 opp:0 miss:80 flags=d3_4K_absent,d4_4K_absent
+field q=3463 q_mod16=7 v2_q_plus_1=3 d3=51/121 d4=0/51 d3_4K=present:0 same:0 opp:0 miss:121 d4_4K=present:0 same:0 opp:0 miss:51 flags=d4_constant,d3_4K_absent,d4_4K_absent
+field q=3511 q_mod16=7 v2_q_plus_1=3 d3=62/98 d4=22/62 d3_4K=present:0 same:0 opp:0 miss:98 d4_4K=present:0 same:0 opp:0 miss:62 flags=d3_4K_absent,d4_4K_absent
+field q=3527 q_mod16=7 v2_q_plus_1=3 d3=78/119 d4=20/78 d3_4K=present:0 same:0 opp:0 miss:119 d4_4K=present:0 same:0 opp:0 miss:78 flags=d3_4K_absent,d4_4K_absent
+field q=3559 q_mod16=7 v2_q_plus_1=3 d3=62/142 d4=38/62 d3_4K=present:0 same:0 opp:0 miss:142 d4_4K=present:0 same:0 opp:0 miss:62 flags=d3_4K_absent,d4_4K_absent
+field q=3583 q_mod16=15 v2_q_plus_1=9 d3=28/108 d4=28/28 d3_4K=present:107 same:107 opp:0 miss:1 d4_4K=present:27 same:27 opp:0 miss:1 flags=d4_constant,d3_4K_partial,d4_4K_partial
+field q=3607 q_mod16=7 v2_q_plus_1=3 d3=35/105 d4=19/35 d3_4K=present:0 same:0 opp:0 miss:105 d4_4K=present:0 same:0 opp:0 miss:35 flags=d3_4K_absent,d4_4K_absent
+field q=3623 q_mod16=7 v2_q_plus_1=3 d3=48/129 d4=30/48 d3_4K=present:0 same:0 opp:0 miss:129 d4_4K=present:0 same:0 opp:0 miss:48 flags=d3_4K_absent,d4_4K_absent
+field q=3631 q_mod16=15 v2_q_plus_1=4 d3=74/114 d4=36/74 d3_4K=present:0 same:0 opp:0 miss:114 d4_4K=present:0 same:0 opp:0 miss:74 flags=d3_4K_absent,d4_4K_absent
+field q=3671 q_mod16=7 v2_q_plus_1=3 d3=53/129 d4=26/53 d3_4K=present:0 same:0 opp:0 miss:129 d4_4K=present:0 same:0 opp:0 miss:53 flags=d3_4K_absent,d4_4K_absent
+field q=3719 q_mod16=7 v2_q_plus_1=3 d3=33/87 d4=10/33 d3_4K=present:0 same:0 opp:0 miss:87 d4_4K=present:0 same:0 opp:0 miss:33 flags=d3_4K_absent,d4_4K_absent
+field q=3727 q_mod16=15 v2_q_plus_1=4 d3=70/120 d4=22/70 d3_4K=present:0 same:0 opp:0 miss:120 d4_4K=present:0 same:0 opp:0 miss:70 flags=d3_4K_absent,d4_4K_absent
+field q=3767 q_mod16=7 v2_q_plus_1=3 d3=81/131 d4=62/81 d3_4K=present:0 same:0 opp:0 miss:131 d4_4K=present:0 same:0 opp:0 miss:81 flags=d3_4K_absent,d4_4K_absent
+field q=3823 q_mod16=15 v2_q_plus_1=4 d3=64/126 d4=52/64 d3_4K=present:0 same:0 opp:0 miss:126 d4_4K=present:0 same:0 opp:0 miss:64 flags=d3_4K_absent,d4_4K_absent
+field q=3847 q_mod16=7 v2_q_plus_1=3 d3=48/105 d4=42/48 d3_4K=present:0 same:0 opp:0 miss:105 d4_4K=present:0 same:0 opp:0 miss:48 flags=d3_4K_absent,d4_4K_absent
+field q=3863 q_mod16=7 v2_q_plus_1=3 d3=82/119 d4=66/82 d3_4K=present:0 same:0 opp:0 miss:119 d4_4K=present:0 same:0 opp:0 miss:82 flags=d3_4K_absent,d4_4K_absent
+field q=3911 q_mod16=7 v2_q_plus_1=3 d3=70/120 d4=46/70 d3_4K=present:0 same:0 opp:0 miss:120 d4_4K=present:0 same:0 opp:0 miss:70 flags=d3_4K_absent,d4_4K_absent
+field q=3919 q_mod16=15 v2_q_plus_1=4 d3=49/117 d4=30/49 d3_4K=present:0 same:0 opp:0 miss:117 d4_4K=present:0 same:0 opp:0 miss:49 flags=d3_4K_absent,d4_4K_absent
+field q=3943 q_mod16=7 v2_q_plus_1=3 d3=78/131 d4=32/78 d3_4K=present:0 same:0 opp:0 miss:131 d4_4K=present:0 same:0 opp:0 miss:78 flags=d3_4K_absent,d4_4K_absent
+field q=3967 q_mod16=15 v2_q_plus_1=7 d3=32/128 d4=0/32 d3_4K=present:127 same:127 opp:0 miss:1 d4_4K=present:31 same:31 opp:0 miss:1 flags=d4_constant,d3_4K_partial,d4_4K_partial
+field q=4007 q_mod16=7 v2_q_plus_1=3 d3=48/120 d4=30/48 d3_4K=present:0 same:0 opp:0 miss:120 d4_4K=present:0 same:0 opp:0 miss:48 flags=d3_4K_absent,d4_4K_absent
+field q=4079 q_mod16=15 v2_q_plus_1=4 d3=36/111 d4=20/36 d3_4K=present:0 same:0 opp:0 miss:111 d4_4K=present:0 same:0 opp:0 miss:36 flags=d3_4K_absent,d4_4K_absent
+field q=4111 q_mod16=15 v2_q_plus_1=4 d3=60/139 d4=40/60 d3_4K=present:0 same:0 opp:0 miss:139 d4_4K=present:0 same:0 opp:0 miss:60 flags=d3_4K_absent,d4_4K_absent
+field q=4127 q_mod16=15 v2_q_plus_1=5 d3=90/180 d4=45/90 d3_4K=present:180 same:0 opp:180 miss:0 d4_4K=present:0 same:0 opp:0 miss:90 flags=d3_4K_full_opposite,d4_4K_absent
+field q=4159 q_mod16=15 v2_q_plus_1=6 d3=80/120 d4=40/80 d3_4K=present:119 same:119 opp:0 miss:1 d4_4K=present:80 same:0 opp:80 miss:0 flags=d3_4K_partial,d4_4K_full_opposite
+field q=4231 q_mod16=7 v2_q_plus_1=3 d3=57/130 d4=13/57 d3_4K=present:0 same:0 opp:0 miss:130 d4_4K=present:0 same:0 opp:0 miss:57 flags=d3_4K_absent,d4_4K_absent
+field q=4271 q_mod16=15 v2_q_plus_1=4 d3=94/138 d4=23/94 d3_4K=present:0 same:0 opp:0 miss:138 d4_4K=present:0 same:0 opp:0 miss:94 flags=d3_4K_absent,d4_4K_absent
+field q=4327 q_mod16=7 v2_q_plus_1=3 d3=56/130 d4=28/56 d3_4K=present:0 same:0 opp:0 miss:130 d4_4K=present:0 same:0 opp:0 miss:56 flags=d3_4K_absent,d4_4K_absent
+field q=4391 q_mod16=7 v2_q_plus_1=3 d3=58/137 d4=30/58 d3_4K=present:0 same:0 opp:0 miss:137 d4_4K=present:0 same:0 opp:0 miss:58 flags=d3_4K_absent,d4_4K_absent
+field q=4423 q_mod16=7 v2_q_plus_1=3 d3=84/133 d4=24/84 d3_4K=present:0 same:0 opp:0 miss:133 d4_4K=present:0 same:0 opp:0 miss:84 flags=d3_4K_absent,d4_4K_absent
+field q=4447 q_mod16=15 v2_q_plus_1=5 d3=73/146 d4=13/73 d3_4K=present:146 same:0 opp:146 miss:0 d4_4K=present:0 same:0 opp:0 miss:73 flags=d3_4K_full_opposite,d4_4K_absent
+field q=4463 q_mod16=15 v2_q_plus_1=4 d3=65/126 d4=15/65 d3_4K=present:0 same:0 opp:0 miss:126 d4_4K=present:0 same:0 opp:0 miss:65 flags=d3_4K_absent,d4_4K_absent
+field q=4519 q_mod16=7 v2_q_plus_1=3 d3=96/159 d4=42/96 d3_4K=present:0 same:0 opp:0 miss:159 d4_4K=present:0 same:0 opp:0 miss:96 flags=d3_4K_absent,d4_4K_absent
+field q=4567 q_mod16=7 v2_q_plus_1=3 d3=83/143 d4=35/83 d3_4K=present:0 same:0 opp:0 miss:143 d4_4K=present:0 same:0 opp:0 miss:83 flags=d3_4K_absent,d4_4K_absent
+field q=4583 q_mod16=7 v2_q_plus_1=3 d3=103/145 d4=76/103 d3_4K=present:0 same:0 opp:0 miss:145 d4_4K=present:0 same:0 opp:0 miss:103 flags=d3_4K_absent,d4_4K_absent
+field q=4591 q_mod16=15 v2_q_plus_1=4 d3=91/159 d4=63/91 d3_4K=present:0 same:0 opp:0 miss:159 d4_4K=present:0 same:0 opp:0 miss:91 flags=d3_4K_absent,d4_4K_absent
+field q=4639 q_mod16=15 v2_q_plus_1=5 d3=49/98 d4=35/49 d3_4K=present:98 same:0 opp:98 miss:0 d4_4K=present:0 same:0 opp:0 miss:49 flags=d3_4K_full_opposite,d4_4K_absent
+field q=4663 q_mod16=7 v2_q_plus_1=3 d3=83/138 d4=63/83 d3_4K=present:0 same:0 opp:0 miss:138 d4_4K=present:0 same:0 opp:0 miss:83 flags=d3_4K_absent,d4_4K_absent
+field q=4679 q_mod16=7 v2_q_plus_1=3 d3=78/149 d4=46/78 d3_4K=present:0 same:0 opp:0 miss:149 d4_4K=present:0 same:0 opp:0 miss:78 flags=d3_4K_absent,d4_4K_absent
+field q=4703 q_mod16=15 v2_q_plus_1=5 d3=76/152 d4=59/76 d3_4K=present:152 same:0 opp:152 miss:0 d4_4K=present:0 same:0 opp:0 miss:76 flags=d3_4K_full_opposite,d4_4K_absent
+field q=4751 q_mod16=15 v2_q_plus_1=4 d3=40/139 d4=24/40 d3_4K=present:0 same:0 opp:0 miss:139 d4_4K=present:0 same:0 opp:0 miss:40 flags=d3_4K_absent,d4_4K_absent
+field q=4759 q_mod16=7 v2_q_plus_1=3 d3=64/150 d4=28/64 d3_4K=present:0 same:0 opp:0 miss:150 d4_4K=present:0 same:0 opp:0 miss:64 flags=d3_4K_absent,d4_4K_absent
+field q=4783 q_mod16=15 v2_q_plus_1=4 d3=60/136 d4=34/60 d3_4K=present:0 same:0 opp:0 miss:136 d4_4K=present:0 same:0 opp:0 miss:60 flags=d3_4K_absent,d4_4K_absent
+field q=4799 q_mod16=15 v2_q_plus_1=6 d3=70/160 d4=35/70 d3_4K=present:159 same:159 opp:0 miss:1 d4_4K=present:70 same:0 opp:70 miss:0 flags=d3_4K_partial,d4_4K_full_opposite
+field q=4831 q_mod16=15 v2_q_plus_1=5 d3=77/154 d4=56/77 d3_4K=present:154 same:0 opp:154 miss:0 d4_4K=present:0 same:0 opp:0 miss:77 flags=d3_4K_full_opposite,d4_4K_absent
+field q=4871 q_mod16=7 v2_q_plus_1=3 d3=66/166 d4=20/66 d3_4K=present:0 same:0 opp:0 miss:166 d4_4K=present:0 same:0 opp:0 miss:66 flags=d3_4K_absent,d4_4K_absent
+field q=4903 q_mod16=7 v2_q_plus_1=3 d3=68/159 d4=24/68 d3_4K=present:0 same:0 opp:0 miss:159 d4_4K=present:0 same:0 opp:0 miss:68 flags=d3_4K_absent,d4_4K_absent
+field q=4919 q_mod16=7 v2_q_plus_1=3 d3=90/170 d4=45/90 d3_4K=present:0 same:0 opp:0 miss:170 d4_4K=present:0 same:0 opp:0 miss:90 flags=d3_4K_absent,d4_4K_absent
+field q=4943 q_mod16=15 v2_q_plus_1=4 d3=87/151 d4=19/87 d3_4K=present:0 same:0 opp:0 miss:151 d4_4K=present:0 same:0 opp:0 miss:87 flags=d3_4K_absent,d4_4K_absent
+field q=4951 q_mod16=7 v2_q_plus_1=3 d3=110/170 d4=54/110 d3_4K=present:0 same:0 opp:0 miss:170 d4_4K=present:0 same:0 opp:0 miss:110 flags=d3_4K_absent,d4_4K_absent
+field q=4967 q_mod16=7 v2_q_plus_1=3 d3=70/137 d4=22/70 d3_4K=present:0 same:0 opp:0 miss:137 d4_4K=present:0 same:0 opp:0 miss:70 flags=d3_4K_absent,d4_4K_absent
+field q=4999 q_mod16=7 v2_q_plus_1=3 d3=91/158 d4=39/91 d3_4K=present:0 same:0 opp:0 miss:158 d4_4K=present:0 same:0 opp:0 miss:91 flags=d3_4K_absent,d4_4K_absent
+summary q_mod16=7:
+  d3_4K_absent = 73
+  d4_4K_absent = 73
+  d4_constant = 33
+  d4_nonconstant = 40
+  fields = 73
+  total_d3_rows = 6374
+  total_d4_rows = 3239
+summary q_mod16=15:
+  d3_4K_absent = 37
+  d3_4K_full_opposite = 17
+  d3_4K_partial = 17
+  d4_4K_absent = 57
+  d4_4K_full_opposite = 8
+  d4_4K_partial = 6
+  d4_constant = 32
+  d4_nonconstant = 39
+  fields = 71
+  total_d3_rows = 5899
+  total_d4_rows = 2957
+p27_guard_field_signature_probe_rows=1/1

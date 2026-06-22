@@ -1,0 +1,4 @@
+FACTOR_DIFF_ZERO true
+RATIO_IDEAL_MEMBER true
+COUNTS 800 800 0 800 0 400 400 0
+RESULT p27_ks_first_half_alpha_ratio_q1607 done

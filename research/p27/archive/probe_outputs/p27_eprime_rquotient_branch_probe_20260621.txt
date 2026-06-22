@@ -1,0 +1,103 @@
+p27 E-prime reciprocal r-quotient branch probe
+r = z^2 + z^-2
+p = 1000000000000000000000000103
+p27_train_sample_stats:
+  candidate_invalid_not_nonsplit = 9808
+  compact_not_target = 9728
+  no_t = 9900
+  no_w = 19583
+  pair_incomplete = 4904
+  x_draws = 39299
+p27_train:
+  candidates = 20000
+  d3_minus = 10136
+  d3_plus = 9864
+  disc_core_diff_squareclass = 10000
+  disc_core_same_squareclass = 10000
+  r_discriminant_matches_d3 = 9864
+  r_discriminant_mismatch_d3 = 10136
+  r_discriminant_square = 20000
+  r_minus_2_matches_d3 = 20000
+  r_plus_2_matches_d3 = 20000
+  single_r_value = 20000
+  d3_plus_rate = 0.493200000
+  r_discriminant_square_rate = 1.000000000
+  r_plus_2_match_rate = 1.000000000
+p27_heldout_sample_stats:
+  candidate_invalid_not_nonsplit = 9798
+  compact_not_target = 10137
+  no_t = 10143
+  no_w = 20412
+  pair_incomplete = 4899
+  x_draws = 40573
+p27_heldout:
+  candidates = 20000
+  d3_minus = 9912
+  d3_plus = 10088
+  disc_core_diff_squareclass = 10000
+  disc_core_same_squareclass = 10000
+  r_discriminant_matches_d3 = 10088
+  r_discriminant_mismatch_d3 = 9912
+  r_discriminant_square = 20000
+  r_minus_2_matches_d3 = 20000
+  r_plus_2_matches_d3 = 20000
+  single_r_value = 20000
+  d3_plus_rate = 0.504400000
+  r_discriminant_square_rate = 1.000000000
+  r_plus_2_match_rate = 1.000000000
+small_prime_rquotient_branch_screens:
+q=1607:
+  enum_compact_not_target = 805
+  enum_no_label2_candidate = 408
+q1607:
+  candidates = 784
+  d3_minus = 336
+  d3_plus = 448
+  disc_core_diff_squareclass = 392
+  disc_core_same_squareclass = 392
+  r_discriminant_matches_d3 = 448
+  r_discriminant_mismatch_d3 = 336
+  r_discriminant_square = 784
+  r_minus_2_matches_d3 = 784
+  r_plus_2_matches_d3 = 784
+  single_r_value = 784
+  d3_plus_rate = 0.571428571
+  r_discriminant_square_rate = 1.000000000
+  r_plus_2_match_rate = 1.000000000
+q=1847:
+  enum_compact_not_target = 873
+  enum_no_label2_candidate = 468
+q1847:
+  candidates = 1008
+  d3_minus = 288
+  d3_plus = 720
+  disc_core_diff_squareclass = 504
+  disc_core_same_squareclass = 504
+  r_discriminant_matches_d3 = 720
+  r_discriminant_mismatch_d3 = 288
+  r_discriminant_square = 1008
+  r_minus_2_matches_d3 = 1008
+  r_plus_2_matches_d3 = 1008
+  single_r_value = 1008
+  d3_plus_rate = 0.714285714
+  r_discriminant_square_rate = 1.000000000
+  r_plus_2_match_rate = 1.000000000
+q=2087:
+  enum_compact_not_target = 1109
+  enum_no_label2_candidate = 520
+q2087:
+  candidates = 912
+  d3_minus = 512
+  d3_plus = 400
+  disc_core_diff_squareclass = 456
+  disc_core_same_squareclass = 456
+  r_discriminant_matches_d3 = 400
+  r_discriminant_mismatch_d3 = 512
+  r_discriminant_square = 912
+  r_minus_2_matches_d3 = 912
+  r_plus_2_matches_d3 = 912
+  single_r_value = 912
+  d3_plus_rate = 0.438596491
+  r_discriminant_square_rate = 1.000000000
+  r_plus_2_match_rate = 1.000000000
+p27_eprime_rquotient_branch_probe_rows=1/1

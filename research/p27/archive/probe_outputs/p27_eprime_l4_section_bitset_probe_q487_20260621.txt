@@ -1,0 +1,58 @@
+p27 E-prime bitset exact L(4O) section probe
+Eprime = V^2 = U^3 + 4U
+basis = 1,U,U^2,V
+small_primes = 487
+q=487:
+  enum_stats:
+  enum_compact_not_target = 253
+  enum_no_label2_candidate = 120
+  original_quotient_stats:
+  d3_minus_E_points = 24
+  d3_missing_on_E_orbit = 0
+  d3_not_descended_to_E = 0
+  d3_plus_E_points = 32
+  d3_quotient_rows = 56
+  d4_minus_E_points_after_d3 = 0
+  d4_missing_on_E_orbit = 0
+  d4_not_descended_to_E = 0
+  d4_plus_E_points_after_d3 = 32
+  d4_quotient_rows_after_d3 = 32
+  orbit_size_4 = 56
+  oriented_candidates = 224
+  quotient_E_points = 56
+  eprime_d3_stats:
+  input_rows = 56
+  minus = 12
+  plus = 16
+  quotient_rows = 28
+  eprime_d4_stats:
+  input_rows = 32
+  minus = 0
+  plus = 16
+  quotient_rows = 16
+q487_d3_l4_bitset_stats:
+  b1_bc_pairs = 1
+  c1_bc_pairs = 487
+  c1_exact_polarity_-1 = 15
+  c1_exact_polarity_1 = 18
+  constant_tested = 1
+  d1_bc_pairs = 237169
+  exact_sections = 33
+  minus = 12
+  plus = 16
+  rows = 28
+q487_d3_l4_bitset_exact_samples:
+  polarity=1 section=191+2*U+1*U2+0*V
+  polarity=-1 section=67+16*U+1*U2+0*V
+  polarity=-1 section=187+44*U+1*U2+0*V
+  polarity=-1 section=26+61*U+1*U2+0*V
+  polarity=-1 section=18+78*U+1*U2+0*V
+  polarity=1 section=377+79*U+1*U2+0*V
+  polarity=-1 section=85+93*U+1*U2+0*V
+  polarity=1 section=254+97*U+1*U2+0*V
+q487_d4_l4_bitset_stats:
+  minus = 0
+  plus = 16
+  rows = 16
+  skipped_one_sided = 1
+p27_eprime_l4_section_bitset_probe_rows=1/1

@@ -1,0 +1,1 @@
+RESULT p27_k_belyi_involution ok 607 32 32 0 32 0 1607 49 0 0 0 49

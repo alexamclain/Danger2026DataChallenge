@@ -1,0 +1,207 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<!-- Computational Algebra Group -->
+<!-- Original web engine by Alexander M Kasprzyk -->
+<head>
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1" />
+  <meta name="Author" content="Computational Algebra Group" />
+  <meta name="copyright" content="Copyright (c) 2010-2026 Computational Algebra Group" />
+  <meta name="description" content="A software package designed to solve computationally hard problems in algebra, number theory, geometry and combinatorics." />
+  <meta name="keywords" content="Magma computational algebra software" />
+  <link rel="alternate" type="application/rss+xml" title="A software package designed to solve computationally hard problems in algebra, number theory, geometry and combinatorics." href="/rss/magma.xml" />
+  <link rel="stylesheet" type="text/css" href="/style.css" />
+  <link rel="stylesheet" type="text/css" href="/style_special.css" />
+  <link rel="stylesheet" type="text/css" href="/magma/tools/calculator/calculator.css" />
+  <script src="/javascript/common.js" type="text/javascript"></script>
+  <script src="/javascript/xml.js" type="text/javascript"></script>
+  <script src="/javascript/calculator.js" type="text/javascript"></script>
+  <script src="/javascript/magma.js" type="text/javascript"></script>
+  <title>Magma Calculator</title>
+</head>
+
+<!-- Begin Body -->
+<body>
+
+<!-- Begin Header -->
+<div id="pageheader">
+  <div class="navBar"><ul>
+    <li><a href="/magma/">About</a></li>
+    <li class="selected"><a href="/calc/">Calculator</a></li>
+    <li><a href="/magma/ordering/">Ordering</a></li>
+    <li><a href="/magma/faq/">FAQ</a></li>
+    <li id="navbarexp"><a href="/magma/download/all/">Download</a></li>
+    <li id="navbardoc"><a href="/magma/documentation/">Documentation</a></li>
+    <li><a href="/magma/citations/">Citations</a></li>
+    <li><a href="/magma/conferences/">Conferences</a></li>
+    <li><a href="/magma/links/">Links</a></li>
+    <li><a href="/magma/contact/">Contact</a></li>
+    <li class="split"><a href="/group/">CAG</a></li>
+    <li class="split" id="navbaraccount"><a href="/account/login" title="Log in to your account">Login</a></li>
+  </ul></div>
+  <div class="logo magma"><table>
+    <tr><td class="title"><a href="/magma/">Magma</a></td></tr>
+    <tr><td class="desc"><a href="/magma/">Computer &bull; algebra</a></td></tr>
+  </table></div>
+  <div class="pagetitle">
+    Magma Calculator
+  </div>
+</div>
+<!-- End Header -->
+
+<!-- Begin Content -->
+<div id="pagecontent">
+<div>
+  <p class="description">
+    Enter your code in the box below. Click on &quot;Submit&quot; to have it evaluated by Magma.
+  </p>
+  <form method="post" onsubmit="return checkSubmit();">
+    <table class="calculator">
+      <tr>
+        <td>
+          <textarea name="input" rows="15" cols="80" id="input" maxlength="50000">// P27 E-prime d3 all-plus S-cover after first-half saturation, q7 smoke.
+//
+// The reciprocal quotient r=s+1/s is not selective: the actual d3 bit is
+// chi(r+2).  This fixture tests the selective quotient directly by writing
+//
+//   r = S^2 - 2
+//
+// in the r-quotient equation.  It is the quotient of the full z-source by the
+// remaining z &lt;-&gt; 1/z symmetry, retaining exactly the all-plus Kummer cover.
+
+SetColumns(0);
+q := 7;
+F := GF(q);
+A7&lt;U,V,X,T,R,B,S&gt; := AffineSpace(F, 7);
+P := CoordinateRing(A7);
+
+X2 := X^2;
+X3 := X2*X;
+X4 := X2^2;
+X5 := X4*X;
+X6 := X5*X;
+X8 := X4^2;
+D := X2 + 1;
+Wnum := V*X2;
+
+T2 := X*(X2 + 1)*(X2 + 2*X - 1);
+eq_Ep := V^2 - (U^3 + 4*U);
+eq_X := X^2 - U*X - 1;
+eq_T := T^2 - T2;
+
+mt_num := (X + 1)*(2*Wnum*X + D*(X3 + X2 - X - 1));
+m0_poly := (X2 + 2*X - 1)*(Wnum*(X + 1) + 2*X2*D);
+eq_compact := D*X*R^2 - Wnum*(D*m0_poly + mt_num*T);
+
+U_core_num := 4*T*Wnum*X
+    + D*(T*X3 + T*X2 - T*X - T
+        + 2*X5 + 2*X4 - 2*X3 - 2*X2);
+U_num_scaled := 2*U_core_num;
+U_den := (T - 2*X2)*(X - 1)*(X + 1)^2;
+eq_first_half := B^2*U_den^2*D^2 - U_num_scaled^2 + 4*U_den^2*D^2;
+
+A_den := (X - 1)^4*(X + 1)^4;
+A_num := -2*(X8 - 4*X6 - 26*X4 - 4*X2 + 1);
+Cterm := U_num_scaled + B*U_den*D;
+r_expr := S^2 - 2;
+eq_reverse_s := 2*Cterm*(A_den*r_expr + A_num) - U_den*D*A_den*(r_expr^2 - 4);
+
+I0 := ideal&lt;P | eq_Ep, eq_X, eq_T, eq_compact, eq_first_half&gt;;
+bad0 := X*(X - 1)*(X + 1)*D*(T - 2*X^2);
+Iclean := Saturation(I0, bad0);
+S0 := Scheme(A7, Basis(Iclean));
+print &quot;AFTER_FIRSTHALF_SAT&quot;, Dimension(S0), #Basis(Iclean), #Points(S0);
+
+Js := ideal&lt;P | Basis(Iclean) cat [eq_reverse_s]&gt;;
+Ss := Scheme(A7, Basis(Js));
+print &quot;D3_SCOVER_AFTER_FIRSTHALF_SCHEME&quot;, Dimension(Ss), #Basis(Js), #Points(Ss);
+
+try
+    Cs := Curve(Ss);
+    print &quot;D3_SCOVER_AFTER_FIRSTHALF_CURVE&quot;, Genus(Cs), #Points(Cs);
+catch e
+    print &quot;D3_SCOVER_AFTER_FIRSTHALF_CURVE_ERROR&quot;;
+    print e`Object;
+end try;
+
+try
+    Js_sat := Saturation(Js, bad0*S);
+    Ss_sat := Scheme(A7, Basis(Js_sat));
+    print &quot;D3_SCOVER_AFTER_FIRSTHALF_RESAT_SCHEME&quot;, Dimension(Ss_sat), #Basis(Js_sat), #Points(Ss_sat);
+    try
+        Cs_sat := Curve(Ss_sat);
+        print &quot;D3_SCOVER_AFTER_FIRSTHALF_RESAT_CURVE&quot;, Genus(Cs_sat), #Points(Cs_sat);
+    catch e
+        print &quot;D3_SCOVER_AFTER_FIRSTHALF_RESAT_CURVE_ERROR&quot;;
+        print e`Object;
+    end try;
+catch e
+    print &quot;D3_SCOVER_AFTER_FIRSTHALF_RESAT_ERROR&quot;;
+    print e`Object;
+end try;
+
+print &quot;RESULT p27_eprime_d3_scover_after_firsthalf_saturation_q7 done&quot;;
+</textarea>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="dbuttons">
+            <input type="button" value="Cancel" onclick="cancelCalculation();" id="reset" disabled="disabled" />
+            <input type="submit" value="Submit" onclick="submitData();" id="submit" />
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div id="output">
+            <div id="warnings">
+              <ul>
+                <li class="warning">The computation exceeded the memory limit and so was terminated prematurely.</li>
+                <li class="warning">The computation exceeded the memory limit and so was terminated prematurely.</li>
+              </ul>
+            </div>
+            <textarea name="output" rows="10" cols="80" readonly="1" id="result">AFTER_FIRSTHALF_SAT 2 61 0
+D3_SCOVER_AFTER_FIRSTHALF_SCHEME 1 62 0
+
+Current total memory usage: 375.5MB, failed memory request: 32.0MB
+System Error: User memory limit has been reached
+
+Current total memory usage: 375.5MB, failed memory request: 8.2MB
+System Error: User memory limit has been reached
+RESULT p27_eprime_d3_scover_after_firsthalf_saturation_q7 done</textarea>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div id="summary">
+            <ul>
+              <li>Calculations are restricted to 60 seconds.</li>
+              <li>Input is limited to 50000 bytes.</li>
+              <li>Running Magma V2.29-8.</li>
+              <li>Seed: 1243110269; Total time: 27.190 seconds; Total memory usage: 375.47MB.</li>
+            </ul>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </form>
+</div>
+</div>
+<!-- End Content -->
+
+<!-- Begin Footer -->
+<div id="pagefooter">
+  <div class="producedby">
+    Magma is maintained and distributed by the <a href="/group/">Computational Algebra Group</a>, <a href="http://www.maths.usyd.edu.au/">School of Mathematics and Statistics</a>, <a href="http://sydney.edu.au/">University of Sydney</a>.
+  </div>
+  <div class="copyright">Copyright &copy; 2010-2026 Computational Algebra Group.</div>
+</div>
+<!-- End Footer -->
+
+</body>
+<!-- End Body -->
+
+</html>

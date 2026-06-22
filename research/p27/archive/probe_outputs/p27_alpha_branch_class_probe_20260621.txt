@@ -1,0 +1,658 @@
+p27 alpha branch-class probe
+quartic = R^4 - 2*a*R^2 + b
+a = prefactor*m0
+b = 4*prefactor^2*T2*S^2
+disc_R squareclass = T2
+unique_quadratic_subcover = T^2=T2
+branch_atoms = T2, S, S_conj, mt_linear, mt_coeff, m0, prefactor, L, X, W, X-1, X+1, X2+1, X2+2X-1, X2-2X-1
+p27_train_quotient_stats:
+  d3_minus_E_points = 2534
+  d3_missing_on_E_orbit = 0
+  d3_not_descended_to_E = 0
+  d3_plus_E_points = 2466
+  d3_quotient_rows = 5000
+  d4_minus_E_points_after_d3 = 1190
+  d4_missing_on_E_orbit = 0
+  d4_not_descended_to_E = 0
+  d4_plus_E_points_after_d3 = 1276
+  d4_quotient_rows_after_d3 = 2466
+  orbit_size_4 = 5000
+  oriented_candidates = 20000
+  quotient_E_points = 5000
+  sample_candidate_invalid_not_nonsplit = 9808
+  sample_compact_not_target = 9728
+  sample_no_t = 9900
+  sample_no_w = 19583
+  sample_pair_incomplete = 4904
+  sample_x_draws = 39299
+  sampled_pairs = 5000
+p27_train:
+  p = 1000000000000000000000000103
+  d3_rows = 5000
+  d4_rows_after_d3 = 2466
+p27_train_d3_branch_atom_stats:
+  L_chi_-1 = 2470
+  L_chi_1 = 2530
+  S_chi_-1 = 2500
+  S_chi_1 = 2500
+  S_conj_chi_-1 = 2500
+  S_conj_chi_1 = 2500
+  T2_chi_1 = 5000
+  W_chi_-1 = 2500
+  W_chi_1 = 2500
+  X+1_chi_-1 = 2540
+  X+1_chi_1 = 2460
+  X-1_chi_-1 = 2478
+  X-1_chi_1 = 2522
+  X2+1_chi_-1 = 2552
+  X2+1_chi_1 = 2448
+  X2+2X-1_chi_-1 = 2542
+  X2+2X-1_chi_1 = 2458
+  X2-2X-1_chi_-1 = 2542
+  X2-2X-1_chi_1 = 2458
+  X_chi_-1 = 2470
+  X_chi_1 = 2530
+  input_rows = 5000
+  m0_chi_-1 = 2500
+  m0_chi_1 = 2500
+  mt_coeff_chi_-1 = 2478
+  mt_coeff_chi_1 = 2522
+  mt_linear_chi_-1 = 2498
+  mt_linear_chi_1 = 2502
+  prefactor_chi_-1 = 2500
+  prefactor_chi_1 = 2500
+  usable_rows = 5000
+p27_train_d4_branch_atom_stats:
+  L_chi_-1 = 1194
+  L_chi_1 = 1272
+  S_chi_-1 = 1233
+  S_chi_1 = 1233
+  S_conj_chi_-1 = 1233
+  S_conj_chi_1 = 1233
+  T2_chi_1 = 2466
+  W_chi_-1 = 1233
+  W_chi_1 = 1233
+  X+1_chi_-1 = 1252
+  X+1_chi_1 = 1214
+  X-1_chi_-1 = 1254
+  X-1_chi_1 = 1212
+  X2+1_chi_-1 = 1262
+  X2+1_chi_1 = 1204
+  X2+2X-1_chi_-1 = 1264
+  X2+2X-1_chi_1 = 1202
+  X2-2X-1_chi_-1 = 1264
+  X2-2X-1_chi_1 = 1202
+  X_chi_-1 = 1194
+  X_chi_1 = 1272
+  input_rows = 2466
+  m0_chi_-1 = 1233
+  m0_chi_1 = 1233
+  mt_coeff_chi_-1 = 1258
+  mt_coeff_chi_1 = 1208
+  mt_linear_chi_-1 = 1230
+  mt_linear_chi_1 = 1236
+  prefactor_chi_-1 = 1233
+  prefactor_chi_1 = 1233
+  usable_rows = 2466
+p27_train_d3_branch_screen:
+  best_good = 2572
+  best_polarity = -1
+  best_weight = 1
+  branch_atoms = 15
+  combos_tested = 32768
+  exact_combos = 0
+  rows = 5000
+p27_train_d3_branch_best:
+  good=2572/5000 rate=0.514400000 weight=1 polarity=-1 combo=mt_coeff
+  good=2572/5000 rate=0.514400000 weight=2 polarity=-1 combo=mt_linear * X+1
+  good=2572/5000 rate=0.514400000 weight=2 polarity=-1 combo=T2 * mt_coeff
+  good=2572/5000 rate=0.514400000 weight=3 polarity=-1 combo=mt_coeff * X2+2X-1 * X2-2X-1
+  good=2572/5000 rate=0.514400000 weight=3 polarity=-1 combo=m0 * W * X+1
+  good=2572/5000 rate=0.514400000 weight=3 polarity=-1 combo=T2 * mt_linear * X+1
+  good=2572/5000 rate=0.514400000 weight=3 polarity=-1 combo=S_conj * W * X-1
+  good=2572/5000 rate=0.514400000 weight=3 polarity=-1 combo=S * W * X-1
+  good=2572/5000 rate=0.514400000 weight=3 polarity=-1 combo=mt_linear * X * X-1
+  good=2572/5000 rate=0.514400000 weight=3 polarity=-1 combo=mt_linear * L * X-1
+p27_train_d4_branch_screen:
+  best_good = 1312
+  best_polarity = 1
+  best_weight = 1
+  branch_atoms = 15
+  combos_tested = 32768
+  exact_combos = 0
+  rows = 2466
+p27_train_d4_branch_best:
+  good=1312/2466 rate=0.532035685 weight=1 polarity=1 combo=X2-2X-1
+  good=1312/2466 rate=0.532035685 weight=1 polarity=1 combo=X2+2X-1
+  good=1312/2466 rate=0.532035685 weight=2 polarity=1 combo=T2 * X2-2X-1
+  good=1312/2466 rate=0.532035685 weight=2 polarity=1 combo=T2 * X2+2X-1
+  good=1312/2466 rate=0.532035685 weight=2 polarity=1 combo=X * X2+1
+  good=1312/2466 rate=0.532035685 weight=2 polarity=1 combo=L * X2+1
+  good=1312/2466 rate=0.532035685 weight=2 polarity=1 combo=mt_coeff * X2+1
+  good=1312/2466 rate=0.532035685 weight=2 polarity=1 combo=prefactor * W
+  good=1312/2466 rate=0.532035685 weight=3 polarity=1 combo=mt_linear * X-1 * X2-2X-1
+  good=1312/2466 rate=0.532035685 weight=3 polarity=1 combo=L * X * X2-2X-1
+p27_heldout_quotient_stats:
+  d3_minus_E_points = 2478
+  d3_missing_on_E_orbit = 0
+  d3_not_descended_to_E = 0
+  d3_plus_E_points = 2522
+  d3_quotient_rows = 5000
+  d4_minus_E_points_after_d3 = 1288
+  d4_missing_on_E_orbit = 0
+  d4_not_descended_to_E = 0
+  d4_plus_E_points_after_d3 = 1234
+  d4_quotient_rows_after_d3 = 2522
+  orbit_size_4 = 5000
+  oriented_candidates = 20000
+  quotient_E_points = 5000
+  sample_candidate_invalid_not_nonsplit = 9798
+  sample_compact_not_target = 10137
+  sample_no_t = 10143
+  sample_no_w = 20412
+  sample_pair_incomplete = 4899
+  sample_x_draws = 40573
+  sampled_pairs = 5000
+p27_heldout:
+  p = 1000000000000000000000000103
+  d3_rows = 5000
+  d4_rows_after_d3 = 2522
+p27_heldout_d3_branch_atom_stats:
+  L_chi_-1 = 2530
+  L_chi_1 = 2470
+  S_chi_-1 = 2500
+  S_chi_1 = 2500
+  S_conj_chi_-1 = 2500
+  S_conj_chi_1 = 2500
+  T2_chi_1 = 5000
+  W_chi_-1 = 2500
+  W_chi_1 = 2500
+  X+1_chi_-1 = 2560
+  X+1_chi_1 = 2440
+  X-1_chi_-1 = 2454
+  X-1_chi_1 = 2546
+  X2+1_chi_-1 = 2512
+  X2+1_chi_1 = 2488
+  X2+2X-1_chi_-1 = 2502
+  X2+2X-1_chi_1 = 2498
+  X2-2X-1_chi_-1 = 2502
+  X2-2X-1_chi_1 = 2498
+  X_chi_-1 = 2530
+  X_chi_1 = 2470
+  input_rows = 5000
+  m0_chi_-1 = 2500
+  m0_chi_1 = 2500
+  mt_coeff_chi_-1 = 2500
+  mt_coeff_chi_1 = 2500
+  mt_linear_chi_-1 = 2580
+  mt_linear_chi_1 = 2420
+  prefactor_chi_-1 = 2500
+  prefactor_chi_1 = 2500
+  usable_rows = 5000
+p27_heldout_d4_branch_atom_stats:
+  L_chi_-1 = 1280
+  L_chi_1 = 1242
+  S_chi_-1 = 1261
+  S_chi_1 = 1261
+  S_conj_chi_-1 = 1261
+  S_conj_chi_1 = 1261
+  T2_chi_1 = 2522
+  W_chi_-1 = 1261
+  W_chi_1 = 1261
+  X+1_chi_-1 = 1278
+  X+1_chi_1 = 1244
+  X-1_chi_-1 = 1242
+  X-1_chi_1 = 1280
+  X2+1_chi_-1 = 1242
+  X2+1_chi_1 = 1280
+  X2+2X-1_chi_-1 = 1326
+  X2+2X-1_chi_1 = 1196
+  X2-2X-1_chi_-1 = 1326
+  X2-2X-1_chi_1 = 1196
+  X_chi_-1 = 1280
+  X_chi_1 = 1242
+  input_rows = 2522
+  m0_chi_-1 = 1261
+  m0_chi_1 = 1261
+  mt_coeff_chi_-1 = 1272
+  mt_coeff_chi_1 = 1250
+  mt_linear_chi_-1 = 1302
+  mt_linear_chi_1 = 1220
+  prefactor_chi_-1 = 1261
+  prefactor_chi_1 = 1261
+  usable_rows = 2522
+p27_heldout_d3_branch_screen:
+  best_good = 2640
+  best_polarity = 1
+  best_weight = 2
+  branch_atoms = 15
+  combos_tested = 32768
+  exact_combos = 0
+  rows = 5000
+p27_heldout_d3_branch_best:
+  good=2640/5000 rate=0.528000000 weight=2 polarity=1 combo=mt_linear * X2-2X-1
+  good=2640/5000 rate=0.528000000 weight=2 polarity=1 combo=mt_linear * X2+2X-1
+  good=2640/5000 rate=0.528000000 weight=2 polarity=1 combo=m0 * prefactor
+  good=2640/5000 rate=0.528000000 weight=3 polarity=1 combo=mt_coeff * X+1 * X2-2X-1
+  good=2640/5000 rate=0.528000000 weight=3 polarity=1 combo=m0 * W * X2-2X-1
+  good=2640/5000 rate=0.528000000 weight=3 polarity=1 combo=T2 * mt_linear * X2-2X-1
+  good=2640/5000 rate=0.528000000 weight=3 polarity=1 combo=mt_coeff * X+1 * X2+2X-1
+  good=2640/5000 rate=0.528000000 weight=3 polarity=1 combo=m0 * W * X2+2X-1
+  good=2640/5000 rate=0.528000000 weight=3 polarity=1 combo=T2 * mt_linear * X2+2X-1
+  good=2640/5000 rate=0.528000000 weight=3 polarity=1 combo=mt_coeff * X-1 * X2+1
+p27_heldout_d4_branch_screen:
+  best_good = 1332
+  best_polarity = -1
+  best_weight = 1
+  branch_atoms = 15
+  combos_tested = 32768
+  exact_combos = 0
+  rows = 2522
+p27_heldout_d4_branch_best:
+  good=1332/2522 rate=0.528152260 weight=1 polarity=-1 combo=X
+  good=1332/2522 rate=0.528152260 weight=1 polarity=-1 combo=L
+  good=1332/2522 rate=0.528152260 weight=2 polarity=-1 combo=X2+1 * X2-2X-1
+  good=1332/2522 rate=0.528152260 weight=2 polarity=-1 combo=X2+1 * X2+2X-1
+  good=1332/2522 rate=0.528152260 weight=2 polarity=-1 combo=X-1 * X+1
+  good=1332/2522 rate=0.528152260 weight=2 polarity=-1 combo=T2 * X
+  good=1332/2522 rate=0.528152260 weight=2 polarity=-1 combo=T2 * L
+  good=1332/2522 rate=0.528152260 weight=2 polarity=-1 combo=S_conj * m0
+  good=1332/2522 rate=0.528152260 weight=2 polarity=-1 combo=S * m0
+  good=1332/2522 rate=0.528152260 weight=3 polarity=-1 combo=X * X2+2X-1 * X2-2X-1
+p27_train_best_on_heldout:
+  d3_branch_train_best_eval:
+  good=2522/5000 rate=0.504400000 weight=1 polarity=-1 combo=mt_coeff
+  good=2522/5000 rate=0.504400000 weight=2 polarity=-1 combo=mt_linear * X+1
+  good=2522/5000 rate=0.504400000 weight=2 polarity=-1 combo=T2 * mt_coeff
+  good=2522/5000 rate=0.504400000 weight=3 polarity=-1 combo=mt_coeff * X2+2X-1 * X2-2X-1
+  good=2522/5000 rate=0.504400000 weight=3 polarity=-1 combo=m0 * W * X+1
+  good=2522/5000 rate=0.504400000 weight=3 polarity=-1 combo=T2 * mt_linear * X+1
+  good=2522/5000 rate=0.504400000 weight=3 polarity=-1 combo=S_conj * W * X-1
+  good=2522/5000 rate=0.504400000 weight=3 polarity=-1 combo=S * W * X-1
+  good=2522/5000 rate=0.504400000 weight=3 polarity=-1 combo=mt_linear * X * X-1
+  good=2522/5000 rate=0.504400000 weight=3 polarity=-1 combo=mt_linear * L * X-1
+  d4_branch_train_best_eval:
+  good=1280/2522 rate=0.507533703 weight=2 polarity=1 combo=mt_coeff * X2+1
+  good=1280/2522 rate=0.507533703 weight=3 polarity=1 combo=mt_linear * X-1 * X2-2X-1
+  good=1256/2522 rate=0.498017446 weight=1 polarity=1 combo=X2-2X-1
+  good=1256/2522 rate=0.498017446 weight=1 polarity=1 combo=X2+2X-1
+  good=1256/2522 rate=0.498017446 weight=2 polarity=1 combo=T2 * X2-2X-1
+  good=1256/2522 rate=0.498017446 weight=2 polarity=1 combo=T2 * X2+2X-1
+  good=1256/2522 rate=0.498017446 weight=2 polarity=1 combo=X * X2+1
+  good=1256/2522 rate=0.498017446 weight=2 polarity=1 combo=L * X2+1
+  good=1256/2522 rate=0.498017446 weight=2 polarity=1 combo=prefactor * W
+  good=1256/2522 rate=0.498017446 weight=3 polarity=1 combo=L * X * X2-2X-1
+small_prime_branch_screens:
+q=1607:
+  enum_stats:
+  enum_compact_not_target = 805
+  enum_no_label2_candidate = 408
+  quotient_stats:
+  d3_minus_E_points = 84
+  d3_missing_on_E_orbit = 0
+  d3_not_descended_to_E = 0
+  d3_plus_E_points = 112
+  d3_quotient_rows = 196
+  d4_minus_E_points_after_d3 = 36
+  d4_missing_on_E_orbit = 0
+  d4_not_descended_to_E = 0
+  d4_plus_E_points_after_d3 = 76
+  d4_quotient_rows_after_d3 = 112
+  orbit_size_4 = 196
+  oriented_candidates = 784
+  quotient_E_points = 196
+q1607:
+  p = 1607
+  d3_rows = 196
+  d4_rows_after_d3 = 112
+q1607_d3_branch_atom_stats:
+  L_chi_-1 = 98
+  L_chi_1 = 98
+  S_chi_-1 = 98
+  S_chi_1 = 98
+  S_conj_chi_-1 = 98
+  S_conj_chi_1 = 98
+  T2_chi_1 = 196
+  W_chi_-1 = 98
+  W_chi_1 = 98
+  X+1_chi_-1 = 88
+  X+1_chi_1 = 108
+  X-1_chi_-1 = 98
+  X-1_chi_1 = 98
+  X2+1_chi_-1 = 96
+  X2+1_chi_1 = 100
+  X2+2X-1_chi_-1 = 98
+  X2+2X-1_chi_1 = 98
+  X2-2X-1_chi_-1 = 98
+  X2-2X-1_chi_1 = 98
+  X_chi_-1 = 98
+  X_chi_1 = 98
+  input_rows = 196
+  m0_chi_-1 = 98
+  m0_chi_1 = 98
+  mt_coeff_chi_-1 = 102
+  mt_coeff_chi_1 = 94
+  mt_linear_chi_-1 = 82
+  mt_linear_chi_1 = 114
+  prefactor_chi_-1 = 98
+  prefactor_chi_1 = 98
+  usable_rows = 196
+q1607_d4_branch_atom_stats:
+  L_chi_-1 = 56
+  L_chi_1 = 56
+  S_chi_-1 = 56
+  S_chi_1 = 56
+  S_conj_chi_-1 = 56
+  S_conj_chi_1 = 56
+  T2_chi_1 = 112
+  W_chi_-1 = 56
+  W_chi_1 = 56
+  X+1_chi_-1 = 56
+  X+1_chi_1 = 56
+  X-1_chi_-1 = 56
+  X-1_chi_1 = 56
+  X2+1_chi_-1 = 48
+  X2+1_chi_1 = 64
+  X2+2X-1_chi_-1 = 56
+  X2+2X-1_chi_1 = 56
+  X2-2X-1_chi_-1 = 56
+  X2-2X-1_chi_1 = 56
+  X_chi_-1 = 56
+  X_chi_1 = 56
+  input_rows = 112
+  m0_chi_-1 = 56
+  m0_chi_1 = 56
+  mt_coeff_chi_-1 = 60
+  mt_coeff_chi_1 = 52
+  mt_linear_chi_-1 = 48
+  mt_linear_chi_1 = 64
+  prefactor_chi_-1 = 56
+  prefactor_chi_1 = 56
+  usable_rows = 112
+q1607_d3_branch_screen:
+  best_good = 120
+  best_polarity = 1
+  best_weight = 2
+  branch_atoms = 15
+  combos_tested = 32768
+  exact_combos = 0
+  rows = 196
+q1607_d3_branch_best:
+  good=120/196 rate=0.612244898 weight=2 polarity=1 combo=mt_coeff * X2-2X-1
+  good=120/196 rate=0.612244898 weight=2 polarity=1 combo=mt_coeff * X2+2X-1
+  good=120/196 rate=0.612244898 weight=2 polarity=1 combo=mt_coeff * X-1
+  good=120/196 rate=0.612244898 weight=2 polarity=1 combo=S_conj * W
+  good=120/196 rate=0.612244898 weight=2 polarity=1 combo=S * W
+  good=120/196 rate=0.612244898 weight=2 polarity=1 combo=mt_linear * X
+  good=120/196 rate=0.612244898 weight=2 polarity=1 combo=mt_linear * L
+  good=120/196 rate=0.612244898 weight=3 polarity=1 combo=mt_linear * X2+1 * X2-2X-1
+  good=120/196 rate=0.612244898 weight=3 polarity=1 combo=mt_linear * X+1 * X2-2X-1
+  good=120/196 rate=0.612244898 weight=3 polarity=1 combo=S_conj * prefactor * X2-2X-1
+q1607_d4_branch_screen:
+  best_good = 76
+  best_polarity = 1
+  best_weight = 0
+  branch_atoms = 15
+  combos_tested = 32768
+  exact_combos = 0
+  rows = 112
+q1607_d4_branch_best:
+  good=76/112 rate=0.678571429 weight=0 polarity=1 combo=1
+  good=76/112 rate=0.678571429 weight=1 polarity=1 combo=T2
+  good=76/112 rate=0.678571429 weight=2 polarity=1 combo=X2+2X-1 * X2-2X-1
+  good=76/112 rate=0.678571429 weight=2 polarity=1 combo=L * X
+  good=76/112 rate=0.678571429 weight=2 polarity=1 combo=S * S_conj
+  good=76/112 rate=0.678571429 weight=3 polarity=1 combo=T2 * X2+2X-1 * X2-2X-1
+  good=76/112 rate=0.678571429 weight=3 polarity=1 combo=X * X2+1 * X2-2X-1
+  good=76/112 rate=0.678571429 weight=3 polarity=1 combo=L * X2+1 * X2-2X-1
+  good=76/112 rate=0.678571429 weight=3 polarity=1 combo=prefactor * W * X2-2X-1
+  good=76/112 rate=0.678571429 weight=3 polarity=1 combo=X * X2+1 * X2+2X-1
+q=1847:
+  enum_stats:
+  enum_compact_not_target = 873
+  enum_no_label2_candidate = 468
+  quotient_stats:
+  d3_minus_E_points = 72
+  d3_missing_on_E_orbit = 0
+  d3_not_descended_to_E = 0
+  d3_plus_E_points = 180
+  d3_quotient_rows = 252
+  d4_minus_E_points_after_d3 = 104
+  d4_missing_on_E_orbit = 0
+  d4_not_descended_to_E = 0
+  d4_plus_E_points_after_d3 = 76
+  d4_quotient_rows_after_d3 = 180
+  orbit_size_4 = 252
+  oriented_candidates = 1008
+  quotient_E_points = 252
+q1847:
+  p = 1847
+  d3_rows = 252
+  d4_rows_after_d3 = 180
+q1847_d3_branch_atom_stats:
+  L_chi_-1 = 126
+  L_chi_1 = 126
+  S_chi_-1 = 126
+  S_chi_1 = 126
+  S_conj_chi_-1 = 126
+  S_conj_chi_1 = 126
+  T2_chi_1 = 252
+  W_chi_-1 = 126
+  W_chi_1 = 126
+  X+1_chi_-1 = 120
+  X+1_chi_1 = 132
+  X-1_chi_-1 = 126
+  X-1_chi_1 = 126
+  X2+1_chi_-1 = 120
+  X2+1_chi_1 = 132
+  X2+2X-1_chi_-1 = 126
+  X2+2X-1_chi_1 = 126
+  X2-2X-1_chi_-1 = 126
+  X2-2X-1_chi_1 = 126
+  X_chi_-1 = 126
+  X_chi_1 = 126
+  input_rows = 252
+  m0_chi_-1 = 126
+  m0_chi_1 = 126
+  mt_coeff_chi_-1 = 142
+  mt_coeff_chi_1 = 110
+  mt_linear_chi_-1 = 130
+  mt_linear_chi_1 = 122
+  prefactor_chi_-1 = 126
+  prefactor_chi_1 = 126
+  usable_rows = 252
+q1847_d4_branch_atom_stats:
+  L_chi_-1 = 90
+  L_chi_1 = 90
+  S_chi_-1 = 90
+  S_chi_1 = 90
+  S_conj_chi_-1 = 90
+  S_conj_chi_1 = 90
+  T2_chi_1 = 180
+  W_chi_-1 = 90
+  W_chi_1 = 90
+  X+1_chi_-1 = 88
+  X+1_chi_1 = 92
+  X-1_chi_-1 = 90
+  X-1_chi_1 = 90
+  X2+1_chi_-1 = 80
+  X2+1_chi_1 = 100
+  X2+2X-1_chi_-1 = 90
+  X2+2X-1_chi_1 = 90
+  X2-2X-1_chi_-1 = 90
+  X2-2X-1_chi_1 = 90
+  X_chi_-1 = 90
+  X_chi_1 = 90
+  input_rows = 180
+  m0_chi_-1 = 90
+  m0_chi_1 = 90
+  mt_coeff_chi_-1 = 102
+  mt_coeff_chi_1 = 78
+  mt_linear_chi_-1 = 98
+  mt_linear_chi_1 = 82
+  prefactor_chi_-1 = 90
+  prefactor_chi_1 = 90
+  usable_rows = 180
+q1847_d3_branch_screen:
+  best_good = 180
+  best_polarity = 1
+  best_weight = 0
+  branch_atoms = 15
+  combos_tested = 32768
+  exact_combos = 0
+  rows = 252
+q1847_d3_branch_best:
+  good=180/252 rate=0.714285714 weight=0 polarity=1 combo=1
+  good=180/252 rate=0.714285714 weight=1 polarity=1 combo=T2
+  good=180/252 rate=0.714285714 weight=2 polarity=1 combo=X2+2X-1 * X2-2X-1
+  good=180/252 rate=0.714285714 weight=2 polarity=1 combo=L * X
+  good=180/252 rate=0.714285714 weight=2 polarity=1 combo=S * S_conj
+  good=180/252 rate=0.714285714 weight=3 polarity=1 combo=T2 * X2+2X-1 * X2-2X-1
+  good=180/252 rate=0.714285714 weight=3 polarity=1 combo=X * X2+1 * X2-2X-1
+  good=180/252 rate=0.714285714 weight=3 polarity=1 combo=L * X2+1 * X2-2X-1
+  good=180/252 rate=0.714285714 weight=3 polarity=1 combo=prefactor * W * X2-2X-1
+  good=180/252 rate=0.714285714 weight=3 polarity=1 combo=X * X2+1 * X2+2X-1
+q1847_d4_branch_screen:
+  best_good = 110
+  best_polarity = 1
+  best_weight = 1
+  branch_atoms = 15
+  combos_tested = 32768
+  exact_combos = 0
+  rows = 180
+q1847_d4_branch_best:
+  good=110/180 rate=0.611111111 weight=1 polarity=1 combo=mt_linear
+  good=110/180 rate=0.611111111 weight=2 polarity=1 combo=mt_coeff * X+1
+  good=110/180 rate=0.611111111 weight=2 polarity=1 combo=m0 * W
+  good=110/180 rate=0.611111111 weight=2 polarity=1 combo=T2 * mt_linear
+  good=110/180 rate=0.611111111 weight=2 polarity=-1 combo=mt_coeff * X2+1
+  good=110/180 rate=0.611111111 weight=3 polarity=1 combo=mt_linear * X2+2X-1 * X2-2X-1
+  good=110/180 rate=0.611111111 weight=3 polarity=1 combo=m0 * prefactor * X2-2X-1
+  good=110/180 rate=0.611111111 weight=3 polarity=1 combo=m0 * prefactor * X2+2X-1
+  good=110/180 rate=0.611111111 weight=3 polarity=1 combo=S_conj * prefactor * X2+1
+  good=110/180 rate=0.611111111 weight=3 polarity=1 combo=S * prefactor * X2+1
+q=2087:
+  enum_stats:
+  enum_compact_not_target = 1109
+  enum_no_label2_candidate = 520
+  quotient_stats:
+  d3_minus_E_points = 128
+  d3_missing_on_E_orbit = 0
+  d3_not_descended_to_E = 0
+  d3_plus_E_points = 100
+  d3_quotient_rows = 228
+  d4_minus_E_points_after_d3 = 28
+  d4_missing_on_E_orbit = 0
+  d4_not_descended_to_E = 0
+  d4_plus_E_points_after_d3 = 72
+  d4_quotient_rows_after_d3 = 100
+  orbit_size_4 = 228
+  oriented_candidates = 912
+  quotient_E_points = 228
+q2087:
+  p = 2087
+  d3_rows = 228
+  d4_rows_after_d3 = 100
+q2087_d3_branch_atom_stats:
+  L_chi_-1 = 114
+  L_chi_1 = 114
+  S_chi_-1 = 114
+  S_chi_1 = 114
+  S_conj_chi_-1 = 114
+  S_conj_chi_1 = 114
+  T2_chi_1 = 228
+  W_chi_-1 = 114
+  W_chi_1 = 114
+  X+1_chi_-1 = 120
+  X+1_chi_1 = 108
+  X-1_chi_-1 = 114
+  X-1_chi_1 = 114
+  X2+1_chi_-1 = 88
+  X2+1_chi_1 = 140
+  X2+2X-1_chi_-1 = 114
+  X2+2X-1_chi_1 = 114
+  X2-2X-1_chi_-1 = 114
+  X2-2X-1_chi_1 = 114
+  X_chi_-1 = 114
+  X_chi_1 = 114
+  input_rows = 228
+  m0_chi_-1 = 114
+  m0_chi_1 = 114
+  mt_coeff_chi_-1 = 122
+  mt_coeff_chi_1 = 106
+  mt_linear_chi_-1 = 102
+  mt_linear_chi_1 = 126
+  prefactor_chi_-1 = 114
+  prefactor_chi_1 = 114
+  usable_rows = 228
+q2087_d4_branch_atom_stats:
+  L_chi_-1 = 50
+  L_chi_1 = 50
+  S_chi_-1 = 50
+  S_chi_1 = 50
+  S_conj_chi_-1 = 50
+  S_conj_chi_1 = 50
+  T2_chi_1 = 100
+  W_chi_-1 = 50
+  W_chi_1 = 50
+  X+1_chi_-1 = 48
+  X+1_chi_1 = 52
+  X-1_chi_-1 = 50
+  X-1_chi_1 = 50
+  X2+1_chi_-1 = 28
+  X2+1_chi_1 = 72
+  X2+2X-1_chi_-1 = 50
+  X2+2X-1_chi_1 = 50
+  X2-2X-1_chi_-1 = 50
+  X2-2X-1_chi_1 = 50
+  X_chi_-1 = 50
+  X_chi_1 = 50
+  input_rows = 100
+  m0_chi_-1 = 50
+  m0_chi_1 = 50
+  mt_coeff_chi_-1 = 52
+  mt_coeff_chi_1 = 48
+  mt_linear_chi_-1 = 52
+  mt_linear_chi_1 = 48
+  prefactor_chi_-1 = 50
+  prefactor_chi_1 = 50
+  usable_rows = 100
+q2087_d3_branch_screen:
+  best_good = 136
+  best_polarity = -1
+  best_weight = 2
+  branch_atoms = 15
+  combos_tested = 32768
+  exact_combos = 0
+  rows = 228
+q2087_d3_branch_best:
+  good=136/228 rate=0.596491228 weight=2 polarity=-1 combo=mt_coeff * X2-2X-1
+  good=136/228 rate=0.596491228 weight=2 polarity=-1 combo=mt_coeff * X2+2X-1
+  good=136/228 rate=0.596491228 weight=2 polarity=-1 combo=mt_coeff * X-1
+  good=136/228 rate=0.596491228 weight=2 polarity=-1 combo=S_conj * W
+  good=136/228 rate=0.596491228 weight=2 polarity=-1 combo=S * W
+  good=136/228 rate=0.596491228 weight=2 polarity=-1 combo=mt_linear * X
+  good=136/228 rate=0.596491228 weight=2 polarity=-1 combo=mt_linear * L
+  good=136/228 rate=0.596491228 weight=3 polarity=-1 combo=mt_linear * X2+1 * X2-2X-1
+  good=136/228 rate=0.596491228 weight=3 polarity=-1 combo=mt_linear * X+1 * X2-2X-1
+  good=136/228 rate=0.596491228 weight=3 polarity=-1 combo=S_conj * prefactor * X2-2X-1
+q2087_d4_branch_screen:
+  best_good = 72
+  best_polarity = 1
+  best_weight = 0
+  branch_atoms = 15
+  combos_tested = 32768
+  exact_combos = 0
+  rows = 100
+q2087_d4_branch_best:
+  good=72/100 rate=0.720000000 weight=0 polarity=1 combo=1
+  good=72/100 rate=0.720000000 weight=1 polarity=1 combo=T2
+  good=72/100 rate=0.720000000 weight=2 polarity=1 combo=X2+2X-1 * X2-2X-1
+  good=72/100 rate=0.720000000 weight=2 polarity=1 combo=L * X
+  good=72/100 rate=0.720000000 weight=2 polarity=1 combo=S * S_conj
+  good=72/100 rate=0.720000000 weight=3 polarity=1 combo=T2 * X2+2X-1 * X2-2X-1
+  good=72/100 rate=0.720000000 weight=3 polarity=1 combo=X * X2+1 * X2-2X-1
+  good=72/100 rate=0.720000000 weight=3 polarity=1 combo=L * X2+1 * X2-2X-1
+  good=72/100 rate=0.720000000 weight=3 polarity=1 combo=prefactor * W * X2-2X-1
+  good=72/100 rate=0.720000000 weight=3 polarity=1 combo=X * X2+1 * X2+2X-1
+p27_alpha_branch_class_probe_rows=1/1

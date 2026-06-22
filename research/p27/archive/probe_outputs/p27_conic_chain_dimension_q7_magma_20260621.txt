@@ -1,0 +1,6 @@
+CONIC_CHAIN_DEPTH1 2 3 62
+CONIC_CHAIN_DEPTH2 2 6 128
+
+Current total memory usage: 312.8MB, failed memory request: 109.6MB
+System Error: User memory limit has been reached
+RESULT p27_conic_chain_dimension_q7 done

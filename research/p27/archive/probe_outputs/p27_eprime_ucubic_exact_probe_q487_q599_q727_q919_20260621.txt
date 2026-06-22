@@ -1,0 +1,201 @@
+p27 E-prime exact U-cubic probe
+Eprime = V^2 = U^3 + 4U
+family = a+bU+cU2+dU3
+small_primes = 487,599,727,919
+q=487:
+  enum_stats:
+  enum_compact_not_target = 253
+  enum_no_label2_candidate = 120
+  original_quotient_stats:
+  d3_minus_E_points = 24
+  d3_missing_on_E_orbit = 0
+  d3_not_descended_to_E = 0
+  d3_plus_E_points = 32
+  d3_quotient_rows = 56
+  d4_minus_E_points_after_d3 = 0
+  d4_missing_on_E_orbit = 0
+  d4_not_descended_to_E = 0
+  d4_plus_E_points_after_d3 = 32
+  d4_quotient_rows_after_d3 = 32
+  orbit_size_4 = 56
+  oriented_candidates = 224
+  quotient_E_points = 56
+  eprime_d3_stats:
+  input_rows = 56
+  minus = 12
+  plus = 16
+  quotient_rows = 28
+  eprime_d4_stats:
+  input_rows = 32
+  minus = 0
+  plus = 16
+  quotient_rows = 16
+q487_d3_ucubic_stats:
+  b1_bc_pairs = 1
+  c1_bc_pairs = 487
+  c1_exact_polarity_-1 = 15
+  c1_exact_polarity_1 = 18
+  constant_tested = 1
+  d1_bc_pairs = 237169
+  d1_exact_polarity_-1 = 6868
+  d1_exact_polarity_1 = 6844
+  exact_polynomials = 13745
+  minus = 12
+  plus = 16
+  rows = 28
+q487_d3_ucubic_exact_samples:
+  polarity=1 poly=220+11*U+0*U2+1*U3
+  polarity=-1 poly=216+34*U+0*U2+1*U3
+  polarity=1 poly=388+48*U+0*U2+1*U3
+  polarity=-1 poly=1+75*U+0*U2+1*U3
+  polarity=-1 poly=248+157*U+0*U2+1*U3
+  polarity=1 poly=381+165*U+0*U2+1*U3
+  polarity=1 poly=78+170*U+0*U2+1*U3
+  polarity=-1 poly=205+200*U+0*U2+1*U3
+q487_d4_ucubic_stats:
+  minus = 0
+  plus = 16
+  rows = 16
+  skipped_one_sided = 1
+q=599:
+  enum_stats:
+  enum_compact_not_target = 217
+  enum_no_label2_candidate = 156
+  original_quotient_stats:
+  d3_minus_E_points = 76
+  d3_missing_on_E_orbit = 0
+  d3_not_descended_to_E = 0
+  d3_plus_E_points = 36
+  d3_quotient_rows = 112
+  d4_minus_E_points_after_d3 = 36
+  d4_missing_on_E_orbit = 0
+  d4_not_descended_to_E = 0
+  d4_plus_E_points_after_d3 = 0
+  d4_quotient_rows_after_d3 = 36
+  orbit_size_4 = 112
+  oriented_candidates = 448
+  quotient_E_points = 112
+  eprime_d3_stats:
+  input_rows = 112
+  minus = 38
+  plus = 18
+  quotient_rows = 56
+  eprime_d4_stats:
+  input_rows = 36
+  minus = 18
+  plus = 0
+  quotient_rows = 18
+q599_d3_ucubic_stats:
+  b1_bc_pairs = 1
+  c1_bc_pairs = 599
+  constant_tested = 1
+  d1_bc_pairs = 358801
+  d1_exact_polarity_-1 = 1
+  exact_polynomials = 1
+  minus = 38
+  plus = 18
+  rows = 56
+q599_d3_ucubic_exact_samples:
+  polarity=-1 poly=431+583*U+83*U2+1*U3
+q599_d4_ucubic_stats:
+  minus = 18
+  plus = 0
+  rows = 18
+  skipped_one_sided = 1
+q=727:
+  enum_stats:
+  enum_compact_not_target = 385
+  enum_no_label2_candidate = 180
+  original_quotient_stats:
+  d3_minus_E_points = 32
+  d3_missing_on_E_orbit = 0
+  d3_not_descended_to_E = 0
+  d3_plus_E_points = 48
+  d3_quotient_rows = 80
+  d4_minus_E_points_after_d3 = 0
+  d4_missing_on_E_orbit = 0
+  d4_not_descended_to_E = 0
+  d4_plus_E_points_after_d3 = 48
+  d4_quotient_rows_after_d3 = 48
+  orbit_size_4 = 80
+  oriented_candidates = 320
+  quotient_E_points = 80
+  eprime_d3_stats:
+  input_rows = 80
+  minus = 16
+  plus = 24
+  quotient_rows = 40
+  eprime_d4_stats:
+  input_rows = 48
+  minus = 0
+  plus = 24
+  quotient_rows = 24
+q727_d3_ucubic_stats:
+  b1_bc_pairs = 1
+  c1_bc_pairs = 727
+  constant_tested = 1
+  d1_bc_pairs = 528529
+  d1_exact_polarity_-1 = 379
+  d1_exact_polarity_1 = 366
+  exact_polynomials = 745
+  minus = 16
+  plus = 24
+  rows = 40
+q727_d3_ucubic_exact_samples:
+  polarity=1 poly=65+132*U+0*U2+1*U3
+  polarity=1 poly=585+197*U+0*U2+1*U3
+  polarity=-1 poly=149+441*U+5*U2+1*U3
+  polarity=1 poly=192+708*U+5*U2+1*U3
+  polarity=1 poly=628+114*U+8*U2+1*U3
+  polarity=-1 poly=179+278*U+8*U2+1*U3
+  polarity=1 poly=665+103*U+9*U2+1*U3
+  polarity=1 poly=5+306*U+10*U2+1*U3
+q727_d4_ucubic_stats:
+  minus = 0
+  plus = 24
+  rows = 24
+  skipped_one_sided = 1
+q=919:
+  enum_stats:
+  enum_compact_not_target = 425
+  enum_no_label2_candidate = 228
+  original_quotient_stats:
+  d3_minus_E_points = 72
+  d3_missing_on_E_orbit = 0
+  d3_not_descended_to_E = 0
+  d3_plus_E_points = 60
+  d3_quotient_rows = 132
+  d4_minus_E_points_after_d3 = 60
+  d4_missing_on_E_orbit = 0
+  d4_not_descended_to_E = 0
+  d4_plus_E_points_after_d3 = 0
+  d4_quotient_rows_after_d3 = 60
+  orbit_size_4 = 132
+  oriented_candidates = 528
+  quotient_E_points = 132
+  eprime_d3_stats:
+  input_rows = 132
+  minus = 36
+  plus = 30
+  quotient_rows = 66
+  eprime_d4_stats:
+  input_rows = 60
+  minus = 30
+  plus = 0
+  quotient_rows = 30
+q919_d3_ucubic_stats:
+  b1_bc_pairs = 1
+  c1_bc_pairs = 919
+  constant_tested = 1
+  d1_bc_pairs = 844561
+  exact_polynomials = 0
+  minus = 36
+  plus = 30
+  rows = 66
+q919_d3_ucubic_exact_samples:
+q919_d4_ucubic_stats:
+  minus = 30
+  plus = 0
+  rows = 30
+  skipped_one_sided = 1
+p27_eprime_ucubic_exact_probe_rows=1/1

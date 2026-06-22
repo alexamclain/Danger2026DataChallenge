@@ -1,0 +1,181 @@
+p27 S-root parity reduction probe
+coordinate = S=(U^2-4)/(2V), K=S^2
+target condition = d3/d4 are even on S/-S pairs
+odd semivariant obstruction = chi(-1)=-1
+even semivariant reduction = function of K, already covered by K-line screens
+q=1471:
+  q_mod_8 = 7
+  chi_minus_one = -1
+  setup_stats:
+  d3_eprime_input_rows = 200
+  d3_eprime_minus = 44
+  d3_eprime_plus = 56
+  d3_eprime_quotient_rows = 100
+  d3_s_input_rows = 100
+  d3_s_minus = 44
+  d3_s_paired_s_neg_s = 100
+  d3_s_plus = 56
+  d3_s_s_rows = 100
+  d4_eprime_input_rows = 112
+  d4_eprime_minus = 28
+  d4_eprime_plus = 28
+  d4_eprime_quotient_rows = 56
+  d4_s_input_rows = 56
+  d4_s_minus = 28
+  d4_s_paired_s_neg_s = 56
+  d4_s_plus = 28
+  d4_s_s_rows = 56
+  enum_compact_not_target = 837
+  enum_no_label2_candidate = 424
+  quotient_d3_minus_E_points = 88
+  quotient_d3_missing_on_E_orbit = 0
+  quotient_d3_not_descended_to_E = 0
+  quotient_d3_plus_E_points = 112
+  quotient_d3_quotient_rows = 200
+  quotient_d4_minus_E_points_after_d3 = 56
+  quotient_d4_missing_on_E_orbit = 0
+  quotient_d4_not_descended_to_E = 0
+  quotient_d4_plus_E_points_after_d3 = 56
+  quotient_d4_quotient_rows_after_d3 = 112
+  quotient_orbit_size_4 = 200
+  quotient_oriented_candidates = 800
+  quotient_quotient_E_points = 200
+  d3_pair_stats:
+  mixed_target_pairs = 0
+  opposite_chi_s_pairs = 50
+  pairs = 50
+  same_target_pairs = 50
+  d3_odd_semivariant_obstruction:
+  forced_pair_mismatches = 50
+  max_odd_semivariant_good = 50
+  pair_count = 50
+  rows = 100
+  d4_pair_stats:
+  mixed_target_pairs = 0
+  opposite_chi_s_pairs = 28
+  pairs = 28
+  same_target_pairs = 28
+  d4_odd_semivariant_obstruction:
+  forced_pair_mismatches = 28
+  max_odd_semivariant_good = 28
+  pair_count = 28
+  rows = 56
+q=1607:
+  q_mod_8 = 7
+  chi_minus_one = -1
+  setup_stats:
+  d3_eprime_input_rows = 196
+  d3_eprime_minus = 42
+  d3_eprime_plus = 56
+  d3_eprime_quotient_rows = 98
+  d3_s_input_rows = 98
+  d3_s_minus = 42
+  d3_s_paired_s_neg_s = 98
+  d3_s_plus = 56
+  d3_s_s_rows = 98
+  d4_eprime_input_rows = 112
+  d4_eprime_minus = 18
+  d4_eprime_plus = 38
+  d4_eprime_quotient_rows = 56
+  d4_s_input_rows = 56
+  d4_s_minus = 18
+  d4_s_paired_s_neg_s = 56
+  d4_s_plus = 38
+  d4_s_s_rows = 56
+  enum_compact_not_target = 805
+  enum_no_label2_candidate = 408
+  quotient_d3_minus_E_points = 84
+  quotient_d3_missing_on_E_orbit = 0
+  quotient_d3_not_descended_to_E = 0
+  quotient_d3_plus_E_points = 112
+  quotient_d3_quotient_rows = 196
+  quotient_d4_minus_E_points_after_d3 = 36
+  quotient_d4_missing_on_E_orbit = 0
+  quotient_d4_not_descended_to_E = 0
+  quotient_d4_plus_E_points_after_d3 = 76
+  quotient_d4_quotient_rows_after_d3 = 112
+  quotient_orbit_size_4 = 196
+  quotient_oriented_candidates = 784
+  quotient_quotient_E_points = 196
+  d3_pair_stats:
+  mixed_target_pairs = 0
+  opposite_chi_s_pairs = 49
+  pairs = 49
+  same_target_pairs = 49
+  d3_odd_semivariant_obstruction:
+  forced_pair_mismatches = 49
+  max_odd_semivariant_good = 49
+  pair_count = 49
+  rows = 98
+  d4_pair_stats:
+  mixed_target_pairs = 0
+  opposite_chi_s_pairs = 28
+  pairs = 28
+  same_target_pairs = 28
+  d4_odd_semivariant_obstruction:
+  forced_pair_mismatches = 28
+  max_odd_semivariant_good = 28
+  pair_count = 28
+  rows = 56
+q=1847:
+  q_mod_8 = 7
+  chi_minus_one = -1
+  setup_stats:
+  d3_eprime_input_rows = 252
+  d3_eprime_minus = 36
+  d3_eprime_plus = 90
+  d3_eprime_quotient_rows = 126
+  d3_s_input_rows = 126
+  d3_s_minus = 36
+  d3_s_paired_s_neg_s = 126
+  d3_s_plus = 90
+  d3_s_s_rows = 126
+  d4_eprime_input_rows = 180
+  d4_eprime_minus = 52
+  d4_eprime_plus = 38
+  d4_eprime_quotient_rows = 90
+  d4_s_input_rows = 90
+  d4_s_minus = 52
+  d4_s_paired_s_neg_s = 90
+  d4_s_plus = 38
+  d4_s_s_rows = 90
+  enum_compact_not_target = 873
+  enum_no_label2_candidate = 468
+  quotient_d3_minus_E_points = 72
+  quotient_d3_missing_on_E_orbit = 0
+  quotient_d3_not_descended_to_E = 0
+  quotient_d3_plus_E_points = 180
+  quotient_d3_quotient_rows = 252
+  quotient_d4_minus_E_points_after_d3 = 104
+  quotient_d4_missing_on_E_orbit = 0
+  quotient_d4_not_descended_to_E = 0
+  quotient_d4_plus_E_points_after_d3 = 76
+  quotient_d4_quotient_rows_after_d3 = 180
+  quotient_orbit_size_4 = 252
+  quotient_oriented_candidates = 1008
+  quotient_quotient_E_points = 252
+  d3_pair_stats:
+  mixed_target_pairs = 0
+  opposite_chi_s_pairs = 63
+  pairs = 63
+  same_target_pairs = 63
+  d3_odd_semivariant_obstruction:
+  forced_pair_mismatches = 63
+  max_odd_semivariant_good = 63
+  pair_count = 63
+  rows = 126
+  d4_pair_stats:
+  mixed_target_pairs = 0
+  opposite_chi_s_pairs = 45
+  pairs = 45
+  same_target_pairs = 45
+  d4_odd_semivariant_obstruction:
+  forced_pair_mismatches = 45
+  max_odd_semivariant_good = 45
+  pair_count = 45
+  rows = 90
+reduction_summary:
+  even_global_s_semivariant_degree_le_4 = K-polynomial degree <= 2
+  odd_global_s_semivariant_degree_le_4 = impossible for pair-even target
+  remaining = non-visible branch class or non-semi-invariant accidental fit
+p27_sroot_parity_reduction_probe_rows=1/1

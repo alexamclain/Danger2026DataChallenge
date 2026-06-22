@@ -144,6 +144,51 @@ second-gate cover as a cyclic quartic cover over the residual elliptic curve
 test from "is genus 17 generic?" to "can the cyclic quartic character over E
 be sourced cheaply or shown to recur for d3/d4?"
 
+The online Magma component check now confirms the genus warning:
+[P27 Label-2 Cyclic-Quartic Component Check](evidence/p27_label2_cyclic_components_magma_20260621.md).
+After eliminating `T`, the raw projective cyclic-quartic model must be
+reduced and decomposed.  Online Magma now gives the same answer over `q=607`,
+`q=1471`, and the p27-signature field `q=1607`: two components, a degree-30
+genus-17 main component and a degree-1 genus-0 projection artifact.  This
+kills the hope that the eliminated model is itself secretly low genus.  It
+keeps exactly one serious H90 route alive:
+compute the `alpha` quotient/Prym decomposition of the genus-17 component and
+derive a cyclic-quartic character over `E` that recurs or couples to `d3/d4`.
+
+The alpha quotient ask is now executable rather than vague:
+[P27 Label-2 Alpha Eliminated-Map Probe](evidence/p27_label2_alpha_eliminated_map_20260621.md).
+On the eliminated quartic
+`R^4 - 2*pref*m0*R^2 + 4*pref^2*T2*S^2 = 0`, the order-4 lift descends to
+`R -> R*mt*(2*pref*m0 - R^2)/(2*S*(R^2 - pref*m0))`.  This rational map was
+validated over q1607, q1847, and q2087: it maps the curve to itself, squares
+to `R -> -R`, and fourth-powers to identity, with only four expected affine
+exceptional points per field.  The next concrete theorem/CAS test is therefore
+quotient/Prym decomposition using this explicit alpha map.
+
+That quotient test now has a small Magma smoke:
+[P27 Label-2 Alpha Projective Quotient Smoke](evidence/p27_label2_alpha_projective_quotient_magma_20260621.md).
+After homogenizing the alpha map, online Magma over tiny `q=7` finds the
+degree-30 genus-17 main component, certifies the projection to
+`E: W^2Z=X^3-XZ^2` as degree `4`, computes ramification degree `32`,
+constructs the projective alpha isomorphism, and builds an automorphism group
+of order `4`.  The generic
+`CurveQuotient(G)` call times out, but the quotient coordinates are no longer
+the unknown: `D/<alpha>` is the residual elliptic curve `E`.  The live task is
+now the cyclic-quartic/Kummer class over `E` and its relation to the descended
+`d3`/`d4` classes, not a blind quotient computation.
+
+The branch-class follow-up kills the nearest alpha shortcut:
+[P27 Alpha Branch-Class Screen](evidence/p27_alpha_branch_class_screen_20260621.md).
+For the quartic `R^4-2*a*R^2+b`, with
+`a=prefactor*m0` and `b=4*prefactor^2*T2*S^2`, the `R`-discriminant
+squareclass is just `T2`.  The probe verifies `T2_chi_1` on all active rows:
+p27 train `5000/5000` d3 and `2466/2466` d4, p27 heldout `5000/5000` d3 and
+`2522/2522` d4, and q1607/q1847/q2087 also all square.  Branch-atom product
+fits have zero exact combos and p27 train-best products collapse to
+`0.5044` for d3 and at most `0.5075` for d4 on heldout.  So the alpha branch
+divisor is not the missing post-compactD selector; the next serious test is
+actual `d3`/`d4` cover extraction on `E'` or `P^1_K`.
+
 The first source attempt from that viewpoint is negative:
 [P27 Label-2 E[2] Packet Source Probe](evidence/p27_label2_e2_packet_source_probe_20260621.md).
 The rational `E[2]` packet selector is exact and gives the expected `~2x`
@@ -151,6 +196,18 @@ per-candidate lift after halving the candidate set, but source survival is
 unchanged through depth `24` on a 200k-source p27 run.  So the easy packet
 source is killed; the surviving tests are the alpha/cyclic-quartic
 decomposition and `d3/d4` recurrence telemetry.
+
+The natural H90 norm-one recurrence screen is also negative:
+[P27 Label-2 H90 Norm-One Recurrence Screen](evidence/p27_label2_h90_normone_recurrence_20260621.md).
+It tested squareclasses built from
+`u=(m0+mt*T)/(2*T*Salpha)` and its closest H90 companions on independent
+8,000-row train/heldout p27 samples.  The genuinely `T -> -T` invariant
+features are only `u^2+1`, `u-u^-1`, `mplus`, `m0`, `Salpha`, `prefactor`,
+and `L`.  Best apparent train lifts collapse on heldout: d3 best
+`0.5125 -> 0.4910`, d4 best `0.5268 -> 0.4939`, and invariant-only d4 is
+just raw bias.  This kills H90 norm-one squareclass products as `d3/d4`
+selectors.  The remaining H90 route is non-visible alpha/Prym decomposition,
+not canonical-`T` feature fitting.
 
 A residual `[3]` coset source screen is also negative:
 [P27 Label-2 Residual E[3] Coset Screen](evidence/p27_label2_residual_e3_coset_screen_20260621.md).
@@ -496,6 +553,287 @@ small-row local interpolation artifacts.  This kills the first elliptic-source
 subcase `z^2=f(K)` with split branch divisor of degree `<=4`; the live K-line
 task is now irreducible cubic/quartic branch extraction or a Magma/Sage
 divisor/genus computation.
+
+The branch-divisor conclusion survives the corrected guard-field rule:
+[P27 Signature-Field Branch-Divisor Replay](evidence/p27_signature_field_branch_divisor_replay_20260621.md).
+Using only p27-signature fields `q = 7 mod 16`, `d3` has no exact K-line split
+branch divisor of degree `<=4` in q1607, q1847, q2039, or q2087, and no exact
+S-root split branch divisor of degree `<=4` in the same fields.  K-line `d4`
+has degree-3 local fits in q1607 and q2087, but not q1847; q2039 has constant
+`d4` and is not promotion evidence.  Thus the corrected replay keeps `d3`
+negative and demotes `d4` fits to local interpolation artifacts.
+
+The nearest monic cubic K-line subcase is negative on a small guard field:
+[P27 K-Line Cubic Exhaustive Pilot](evidence/p27_kline_cubic_exhaustive_20260621.md).
+Over the p27-compatible field `q=607`, the selected `d3` K rows are balanced
+`16/16`.  An exhaustive check of all `223,648,543` monic cubics
+`K^3+aK^2+bK+c`, allowing global polarity, found no exact character match and
+no exact irreducible cubic.  The best miss was `31/32`.  This is only a local
+falsifier, not a p27 proof, but it reinforces the current rule: do actual
+K/S branch-class and genus extraction rather than widening blind cubic scans.
+
+That ask is now packaged as a concrete handoff:
+[P27 Kummer Branch-Extraction Handoff](evidence/p27_kummer_branch_extraction_handoff_20260621.md).
+It records the map from the residual `E: W^2=X^3-X` through
+`E': V^2=U^3+4U` to
+`K=x([2]P)=((X^2-2X-1)^2*(X^2+2X-1)^2)/(4X(X-1)(X+1)(X^2+1)^2)`,
+together with the reverse-source equations for the `d3` all-plus extraction.
+The next serious test is to normalize this cover over `P^1_K` in Magma/Sage
+and compute the actual branch divisor degree, support field degrees, and genus
+over p27-signature guard fields such as `q=1607,1847,2087`.  This is the
+current best "could beat sqrt" theorem checkpoint: genus `<=1` or a named
+recurrence/sourceable walk promotes; high/generic branch degree with unrelated
+`d4` kills the K-line source route.
+
+The first actual Magma normalization smoke is strongly cautionary:
+[P27 K/S First-Half Cover Magma Smoke](evidence/p27_ks_first_half_cover_magma_20260621.md).
+The full q7 reverse-source fixture and eta-component fixture both hit the
+online calculator memory limit.  Staging the equations shows why saturation is
+necessary: the raw first-half layer is dimension `2` with `77` affine points,
+so cleared-denominator artifacts remain.  After saturating by
+`X*(X-1)*(X+1)*(T-2X^2)`, the eta=`+1` first-half layer becomes a curve:
+`SAT_SCHEME_OK 1 42 3` and `SAT_CURVE_OK 37 3`.  This is not a promotion-field
+theorem, but it is a real obstruction to a direct low-genus K/S source: genus
+`37` appears before adding the final reverse-square variables.  The K/S route
+now needs an offline promotion-field normalization plus a non-obvious quotient
+or recurrence; online full-source normalization and coefficient widening are
+not the right next moves.
+
+The most obvious quotient shortcut is now obstructed over the p27 base field:
+[P27 K/S First-Half Alpha-Lift Obstruction](evidence/p27_ks_first_half_alpha_lift_obstruction_20260621.md).
+The first-half `B` branch class factors as
+`32*T*X*(eta*T*W + X*(X-1)*(X+1)^2)*(2*eta*W*X + X^3 + X^2 - X - 1)`.
+For `eta=+1`, the same-eta alpha lift ratio is exactly `-1` times a square on
+the intermediate curve; since p27 is `3 mod 4`, the lift is not `F_p`-rational.
+The eta-swapped ratio is mixed on q1607/q1847/q2087.  Thus the generic
+"quotient the genus-37 layer by alpha" test is demoted: it is useful only if an
+`F_{p^2}` geometric quotient comes with an explicit `F_p` descent, or if the
+actual d3/d4 double covers produce a separate low-genus source.
+
+The right quotient for that separate source is now reinforced:
+[P27 K/S First-Half E-Prime Descent](evidence/p27_ks_first_half_eprime_descent_20260621.md).
+Translation by `(0,0)` sends `X -> -1/X`, `W -> W/X^2`, and
+`T -> +/-T/X^3`; symbolically `T2(-1/X)=T2(X)/X^6`, and over
+q1607/q1847/q2087 both T-lifts preserve compactD and the first-half
+`B`-branch squareclass on every compactD point tested.  This turns the next
+K/S extraction into a concrete E-prime task:
+extract the actual d3/d4 double covers on `E': V^2=U^3+4U`, compute their
+branch divisors/Kummer classes/genera, and decide whether d4 is a fresh cover
+or a recurrence/sourceable transform of d3.
+
+The first E-prime pullback smoke keeps the genus warning in force:
+[P27 E-Prime First-Half Pullback Magma Smoke](evidence/p27_eprime_first_half_pullback_magma_20260621.md).
+After substituting `W=V*X^2/(X^2+1)` and saturating by the known denominator
+divisors, online Magma over q7 reports `EPRIME_PULLBACK_SAT_SCHEME 1 61 0`
+and `EPRIME_PULLBACK_SAT_CURVE 37 0`.  Thus E-prime is the right extraction
+coordinate, but not a direct low-genus source; the win must be a lower-genus
+factor, Kummer-class relation, or recurrence inside/under the genus-37 staged
+cover.
+
+The actual d3 z-source is now staged but still needs offline CAS:
+[P27 E-Prime D3 Z-Source Magma Smoke](evidence/p27_eprime_d3_zsource_magma_20260621.md).
+All-at-once saturation of the z-source ideal hits the online memory limit after
+showing raw dimension `3`.  Sequential saturation also exceeds the limit.  The
+successful staging is to first compute the saturated first-half ideal
+`Iclean`, then add the reverse-source equation `reverse_z`, producing
+`D3_Z_AFTER_FIRSTHALF_SCHEME 1 62 0` over q7.  Online Magma cannot compute
+genus/normalization for this curve, so the concrete next test is offline
+normalization of `J = Iclean + <reverse_z>` over q7 and p27-signature guard
+fields, then branch/Kummer-class comparison against d4.
+
+The nearest exact low-pole section family on E' is now killed:
+[P27 E-Prime L(4O) Exact Section Screen](evidence/p27_eprime_l4_section_exact_screen_20260621.md).
+The probe exhaustively tested projective sections
+`a+bU+cU^2+dV` on p27-signature fields.  q487 has local exact quadratic-U
+artifacts, but q599, q727, and q919 all have non-degenerate d3 splits and zero
+exact L(4O) sections.  So the E' source, if it exists, is not a single
+irreducible-conic-sized section; it must come from the actual normalized
+z-source curve, a higher divisor/Kummer class, or a recurrence visible only
+after the d3 class is named.
+
+The next rational U-line loophole is also closed:
+[P27 E-Prime U-Cubic Exact Screen](evidence/p27_eprime_ucubic_exact_screen_20260621.md).
+Exact U-cubic polynomials `a+bU+cU^2+dU^3` occur locally in q487, q599, and
+q727, but disappear on q919, q967, and q1063.  This demotes univariate U-line
+coefficient widening as another interpolation trap.  The surviving E' task is
+not "try degree 4"; it is normalize `J = Iclean + <reverse_z>` and recover the
+actual branch/Kummer class.
+
+That branch class is now partially named:
+[P27 E-Prime Reciprocal R-Quotient Branch Screen](evidence/p27_eprime_rquotient_branch_screen_20260621.md).
+The reverse-source equation is reciprocal in `s=z^2`; setting
+`r=s+1/s` gives a real quotient curve, and online Magma reaches
+`D3_RQUOT_AFTER_FIRSTHALF_SCHEME 1 62 0` before the same memory limit.  On two
+20,000-candidate p27 samples and guard fields q1607/q1847/q2087, every usable
+row has a single `r`, the r-quadratic discriminant is always square, and
+`d3 = chi(r+2) = chi(r-2)` with zero mismatches.  Thus the r quotient itself is
+not a d3 source; it quotients away the squareclass.  The sharper live CAS target
+is the divisor/Kummer class of `r+2` on the normalized r-quotient, or a
+recurrence/source for many `chi(r_j+2)` bits at once.
+
+The first recurrence model for that class is now explicit:
+[P27 S-Map Quartic Recurrence Probe](evidence/p27_smap_quartic_recurrence_20260621.md).
+With `r=S^2-2`, the all-plus reverse-doubling map is
+`x_prev=S^2*(S^2-4)/(4*(S^2+A-2))`.  One more all-plus step gives a quartic
+`F(Y)` in `Y=S_next^2` whose discriminant is a square times known degenerate
+divisors.  Over q1607/q1847/q2087, every d3-plus row has four `Y` roots, and
+either all four are squares or none are; this common root squareclass equals
+`d4` with zero mismatches.  But the nearest split class `chi(S^2+A-6)` is flat
+on p27 heldout, and the named quartic-factor GF(2) span has no exact train
+combo.  The next live test is therefore a resolvent/theta/Kummer formula for
+the common root squareclass of `F(Y)`, not another coefficient/factor screen.
+
+That resolvent now simplifies to a repeated conic gate:
+[P27 Quadratic Gate Recurrence](evidence/p27_quadratic_gate_recurrence_20260621.md).
+In the square-root coordinate, write `A=2-c^2` and `x=r^2`.  Then the next
+selected x-square gate is exactly `chi(r^2+c*r+1)`, independent of the signs
+of `c` and `r` in the tested tower.  This matched p27 train and heldout through
+gates 3-8 with zero mismatches, and q1607/q1847/q2087 at gates 3-4 with zero
+mismatches.  This is the first genuinely source-shaped p27 recurrence: the
+next beat-sqrt test is to parametrize or pull back chains of conics
+`h_j^2=r_j^2+c*r_j+1` to the legal X1(16)/compactD starting surface, or prove
+that each step still introduces a fresh independent cover.
+
+The first source-screen for that chain is positive but incomplete:
+[P27 Conic-Chain Source Screen](evidence/p27_conic_chain_source_screen_20260621.md).
+Legal halving requires both conjugate conics
+`h_j^2=r_j^2+c*r_j+1` and `g_j^2=r_j^2-c*r_j+1`, with
+`r_{j+1}^2-(h_j+g_j)r_{j+1}+1=0`.  Online Magma over q7 reports dimension `2`
+for depth 1 and depth 2 chain ideals, while finite-field counts through depth
+4 over q103/q263/q607 and depth 2 over q1607 show zero xDBL mismatches and
+output projections staying near `0.5*q^2`.  This supports a genuine lifted
+two-dimensional chain object.  On actual label-2 / compactD rows in
+q1607/q1847/q2087, depth-1 conic-chain lifts are exactly the d3-plus rows and
+depth-2 lifts are exactly the d4-plus-after-d3 rows.  The full q7 E-prime
+legal pullback fixture still hits the web Magma memory limit, so the remaining
+decisive test is a staged elimination/normalization of the legal pullback,
+not another count check.
+
+That source test now has a GPU-ready handoff:
+[P27 GPU Conic-Chain Test Handoff](evidence/p27_gpu_conic_chain_test_handoff_20260621.md).
+The one-step legal pair can be sampled directly from two nonzero parameters
+`R,L` by setting `a=R-1/R`, `s=R+1/R`, `d=(L-a^2/L)/2`,
+`r=-(L+a^2/L)/4`, `h=(s+d)/2`, `g=(s-d)/2`, and `c=s*d/(2*r)`.  This
+identically satisfies the two conjugate conics and the transition to `R`; it
+validated on q1607/q1847/q2087 and p27 random trials.  So the answer to
+"should GPU test this?" is yes, but only as a bounded conic-chain source and
+telemetry test.  A large production hunt should wait until the direct sampler
+either pulls back to legal rows at useful rate or controls more than one
+selected gate without paying a fresh half-loss.
+
+The K-line now has a cleaner coordinate for that extraction:
+[P27 Kummer Belyi Structure Probe](evidence/p27_kummer_belyi_structure_probe_20260621.md).
+Symbolically,
+`K_num=(X^2-2X-1)^2*(X^2+2X-1)^2` and
+`K_den=4X(X-1)(X+1)(X^2+1)^2`, with branch resultant
+`K^4*(K^2+4)^4`.  Thus `lambda=-K^2/4` has branch values
+`0,1,infinity`.  The cheap visible branch atoms `K`, `K^2+4`, and `K^2` are
+all already square on the selected guard-field rows, so they do not explain
+`d3/d4` and do not give a sampler.  The useful consequence is only the
+normalization: the next Magma/Sage pass should mark these Belyi branch values
+when recovering the actual `d3` branch class.
+
+The visible Belyi involutions do not give a further quotient:
+[P27 K/S Belyi Involution Audit](evidence/p27_k_belyi_involution_audit_20260621.md).
+The tempting shortcut was `K -> 4/K`, equivalently
+`Sroot -> +/-2/Sroot`.  It is closed in some small fields but not stable:
+for `d3`, q607 has `32/32` present with opposite targets and q1471 has
+`49/50` present with same targets, while the promotion fields q1607 and q1847
+have `0/49` and `0/63` present.  An online Magma q607/q1607 fixture confirms
+the contrast.  So Belyi automorphisms remain normalization data, not a
+sqrt-beating sampler or quotient shortcut.
+
+The guard-field rule is now sharper:
+[P27 Guard-Field Signature Audit](evidence/p27_guard_field_signature_audit_20260621.md).
+Because p27 is `7 mod 16` and `v2(p+1)=3`, K/S orbit and recurrence positives
+must promote through fields with `q = 7 mod 16`, not merely `q = 7 mod 8`.
+In an audit of 144 primes `q = 7 mod 8` from 607 to 5000, every tested
+`q = 7 mod 16` field had `K -> 4/K` absent on selected `d3` and `d4` K rows.
+All full or partial `K -> 4/K` closures came from `q = 15 mod 16` fields with
+an extra 2-adic layer.  Thus q1471 is useful as a stress checksum, but q1471
+positives are no longer promotion evidence for 2-adic-sensitive K/S claims;
+future promotion fields should look like q1607, q1847, q2039, and other
+`7 mod 16` fields.
+
+The K-line recurrence loophole is now closed for small Lattes maps:
+[P27 K-Line Lattes Recurrence Screen](evidence/p27_k_lattes_recurrence_20260621.md).
+It tested `d4(K) = +/- d3(x([m]Q))` and
+`d4(K) = +/- d3(x([m]Q+(0,0)))` for `m=1..16` on the reduced Kummer line.
+In the promotion fields, only identity has full coverage, except for the
+already-local q1471 `K -> 4/K` artifact; the scores are raw d4 bias
+(`14/28`, `19/28`, `26/45`).  Nontrivial maps cover at most `13/28` in q1607
+and `19/45` in q1847.  So a d4-from-d3 Lattes recurrence is not the
+sqrt-beating mechanism; compare d4 only after the actual d3 branch class is
+named.
+
+The first Belyi-normalized source family is now killed:
+[P27 Lambda Branch-Divisor Screen](evidence/p27_lambda_branch_divisor_screen_20260621.md).
+It tested `z^2=f(lambda)` with `deg_lambda(f)<=4`, where
+`lambda=-K^2/4` and the branch divisor splits over each guard field into
+rational linear and irreducible quadratic factors.  For `d3` there are no
+exact divisors over `q=1471,1607,1847`; for `d4`, degree-3 fits appear in
+q1471/q1607 but disappear at q1847.  This rules out the nearest genus `<=1`
+lambda-line sampler for the decisive next bit.  The surviving K/lambda route
+is not coefficient-bound widening; it is actual branch-class/genus extraction,
+including possible irreducible cubic/quartic support or a higher-degree class.
+
+There is also a rational-source obstruction to treating `lambda` as the next
+quotient:
+[P27 Lambda Rational-Quotient Obstruction](evidence/p27_lambda_rational_quotient_obstruction_20260621.md).
+On `E': V^2=U^3+4U`,
+`K=x([2]P)=((U^2-4)/(2V))^2`, so every nondegenerate rational doubled `K` is a
+square.  In the p27 sign regime `chi(-1)=-1`, hence `-K` is outside the same
+rational doubled stratum.  Across fifteen `q=7 mod 8` guard fields, the full
+doubled image has no nonzero `K/-K` paired values, and selected `d3/d4` rows
+all have `chi(K)=+1` with no `-K` partner.  Therefore `lambda=-K^2/4` is a
+Belyi bookkeeping coordinate, not a standalone rational sampler.  Any
+sqrt-beating source must lift back to the K-level square stratum.
+
+That rational lift has now been tested:
+[P27 S-Root Branch-Divisor Screen](evidence/p27_sroot_branch_divisor_screen_20260621.md).
+On `E'`, write `S=(U^2-4)/(2V)`, so `K=S^2`.  This keeps the rational
+K-square stratum and restores the `S/-S` orientation that lambda quotients
+away.  The guard-field data has paired `S/-S` rows throughout, but there are no
+exact split branch divisors `z^2=f(S)` with `deg_S(f)<=4` for `d3` over
+`q=1471,1607,1847`; unlike K/lambda, `d4` also has no small-field local fits
+in this S family.  This kills the nearest rational square-root line sampler.
+The remaining K-square route is branch-class/genus extraction over K or S, not
+another low-degree split-divisor scan.
+
+The visible S-ramification is now priced too:
+[P27 S-Root Belyi Structure Probe](evidence/p27_sroot_belyi_structure_probe_20260621.md).
+The S-map branch resultant is
+`S^8*(S^2-2S+2)^4*(S^2+2S+2)^4`.  On selected rows, the quadratic branch atoms
+`S^2-2S+2`, `S^2+2S+2`, and `S^2` are already square, while `chi(S)` flips on
+every `S/-S` pair and the `d3/d4` target is constant on each pair.  So visible
+S branch values and `chi(S)` are killed as selectors.  A future extraction
+should use these branch values as marked points, but the source class, if it
+exists, is non-visible.
+
+The S parity reduction is now explicit:
+[P27 S-Root Parity Reduction](evidence/p27_sroot_parity_reduction_20260621.md).
+The `d3/d4` targets are constant on every `S/-S` pair, while `chi(S)` flips
+because `chi(-1)=-1`.  Thus global even low-degree S classes are just
+K-classes already covered by the K-line screens, and global odd S classes
+cannot match the pair-even target.  This kills broad visible S coefficient
+scans as a useful next step.  The remaining test is function-field extraction
+of the actual non-visible branch class and its decomposition under `S -> -S`.
+
+That extraction is now packaged as a K/S CAS packet:
+[P27 K/S Branch-Extraction Packet](evidence/p27_ks_branch_extraction_packet_20260621.md).
+It combines the `K=x([2]P)` map, the rational square root
+`Sroot=(U^2-4)/(2V)`, the reverse-source equations, and the label-2
+order-4/H90 identities in one Magma/Sage-ready handoff.  Its symbolic checks
+recover `Sroot^2=K`, the branch resultants
+`Sroot^8*(Sroot^2-2Sroot+2)^4*(Sroot^2+2Sroot+2)^4` and
+`K^4*(K^2+4)^4`, and the H90 identities with zero remainders.  The attached
+online-Magma sanity fixture has now passed over `q=1471`; after the
+guard-field signature audit this is only an algebraic checksum, not promotion
+evidence.  The real next test is
+normalization of the `d3` source over `P^1_K` and
+`P^1_Sroot`.  Promote for genus `<=1`, a sourceable recurrence, or a cheap
+character/source sampler; kill for high/generic branch degree or an unrelated
+fresh `d4` half-cover.
 
 The newest p26 GPU trace/norm result is positive structure but negative as a
 production prefilter:

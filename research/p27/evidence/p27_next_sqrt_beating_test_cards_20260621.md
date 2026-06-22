@@ -261,6 +261,152 @@ sqrt-beating test must be multi-gate and non-local: a Kummer/theta/H90
 relation or a source for the all-plus iterated 2-cover.
 ```
 
+E-prime reciprocal quotient update:
+[P27 E-Prime Reciprocal R-Quotient Branch Screen](p27_eprime_rquotient_branch_screen_20260621.md).
+
+```text
+The staged z-source equation is reciprocal in s=z^2.  With r=s+1/s, online
+Magma reaches a dimension-1 r-quotient curve:
+  D3_RQUOT_AFTER_FIRSTHALF_SCHEME 1 62 0
+
+But the quotient itself is not the d3 selector.  On p27 train/heldout and
+q1607/q1847/q2087:
+  single_r_value = all usable rows
+  r_discriminant_square = all usable rows
+  d3 = chi(r+2) = chi(r-2), zero mismatches
+```
+
+Updated test card:
+
+```text
+Do not spend the next pass trying to make r itself selective.  The concrete
+CAS target is the divisor/Kummer class of r+2 on the normalized r quotient,
+or a recurrence/source for the sequence of r_j+2 classes.
+```
+
+Updated kill rule:
+
+```text
+Kill reciprocal-r quotient as a standalone d3 source; it quotients away the
+squareclass.  Continue only if r+2 has a sourceable divisor class, low-genus
+quotient, or multi-gate recurrence.
+```
+
+S-map quartic recurrence update:
+[P27 S-Map Quartic Recurrence Probe](p27_smap_quartic_recurrence_20260621.md).
+
+```text
+With r=S^2-2, the all-plus reverse-doubling map is:
+  x_prev = S^2*(S^2-4)/(4*(S^2+A-2)).
+
+One more all-plus step gives a quartic F(Y) in Y=S_next^2.  Its discriminant is
+a square times known degenerate divisors, and its nearest quadratic split has
+discriminant 16*S^2*(S^2+A-6).
+
+Guard fields q1607/q1847/q2087:
+  every d3-plus row has four Y roots
+  either all four Y roots are squares or none are
+  this common root squareclass matches d4 with zero mismatches
+
+p27 train/heldout:
+  chi(S^2+A-6) is flat
+  named quartic-factor GF(2) span has no exact train combo
+  best train 0.5198 collapses to heldout 0.4898
+```
+
+Updated test card:
+
+```text
+The next serious beat-sqrt test is a resolvent/theta/Kummer formula for the
+common squareclass of the four roots of F(Y), plus a recurrence comparison at
+the next gate.  Do not continue named-factor products from the quartic.
+```
+
+Quadratic gate recurrence update:
+[P27 Quadratic Gate Recurrence](p27_quadratic_gate_recurrence_20260621.md).
+
+```text
+The pair resolvent simplifies in the natural square-root coordinate:
+  A = 2 - c^2
+  x = r^2
+  next_gate = chi(r^2 + c*r + 1)
+
+Equivalently, each next all-plus gate is the conic condition:
+  h^2 = r^2 + c*r + 1.
+```
+
+Validation:
+
+```text
+p27 train:
+  gates 3-8 all matched, zero mismatches
+p27 heldout:
+  gates 3-8 all matched, zero mismatches
+q1607/q1847/q2087:
+  gates 3-4 all matched, zero mismatches
+```
+
+Updated test card:
+
+```text
+Build the conic-chain source/pullback:
+  A = 2 - c^2
+  x_j = r_j^2
+  h_j^2 = r_j^2 + c*r_j + 1
+
+Then decide whether this can be pulled back to the legal X1(16)/compactD
+starting surface with low genus or a sourceable walk.  This is the current
+best candidate for a real sqrt-beating structure.
+```
+
+Updated kill rule:
+
+```text
+The recurrence is not by itself a win.  Kill only if the conic-chain pullback
+is high/genus-generic or if deriving r_next still requires a fresh independent
+cover at every step.
+```
+
+Conic-chain source update:
+[P27 Conic-Chain Source Screen](p27_conic_chain_source_screen_20260621.md).
+
+```text
+Legal halving needs both conjugate conics:
+  h_j^2 = r_j^2 + c*r_j + 1
+  g_j^2 = r_j^2 - c*r_j + 1
+  r_{j+1}^2 - (h_j+g_j)*r_{j+1} + 1 = 0
+
+q7 Magma:
+  depth 1 dimension = 2
+  depth 2 dimension = 2
+  depth 3 hits web memory
+
+finite-field counts:
+  q103/q263/q607 through depth 4: zero xDBL mismatches
+  q1607 through depth 2: zero xDBL mismatches
+  output projection stays near 0.5*q^2 rather than halving each depth
+
+legal-source counts:
+  q1607/q1847/q2087 depth 1 conic lift iff d3=+1
+  q1607/q1847/q2087 depth 2 conic lift iff d4=+1 after d3
+  full q7 E-prime pullback fixture hits web Magma memory before dimension
+```
+
+Updated test card:
+
+```text
+Do staged elimination for the label-2/compactD legal source equations:
+  A = 2 - c^2
+  x5 = r0^2
+  h0^2 = r0^2 + c*r0 + 1
+  g0^2 = r0^2 - c*r0 + 1
+  r1^2 - (h0+g0)*r1 + 1 = 0
+
+Avoid the all-at-once web-Magma pullback; it is too heavy.  The next decisive
+test is whether staged elimination/normalization yields low-genus or
+sourceable legal components.
+```
+
 U+2 norm/coboundary screen:
 
 ```text
@@ -658,6 +804,90 @@ Updated kill rule:
 Kill the split degree <=4 K-line branch-divisor source.  The remaining K-line
 route is irreducible cubic/quartic extraction or Magma/Sage recovery of the
 actual branch divisor/genus, not more visible split-factor screens.
+```
+
+K/S first-half cover update:
+[P27 K/S First-Half Cover Magma Smoke](p27_ks_first_half_cover_magma_20260621.md).
+[P27 K/S First-Half Alpha-Lift Obstruction](p27_ks_first_half_alpha_lift_obstruction_20260621.md).
+[P27 K/S First-Half E-Prime Descent](p27_ks_first_half_eprime_descent_20260621.md).
+[P27 E-Prime First-Half Pullback Magma Smoke](p27_eprime_first_half_pullback_magma_20260621.md).
+[P27 E-Prime D3 Z-Source Magma Smoke](p27_eprime_d3_zsource_magma_20260621.md).
+[P27 E-Prime L(4O) Exact Section Screen](p27_eprime_l4_section_exact_screen_20260621.md).
+[P27 E-Prime U-Cubic Exact Screen](p27_eprime_ucubic_exact_screen_20260621.md).
+
+```text
+Full q7 reverse-source fixture: online Magma memory limit.
+Eta=+1 component fixture: online Magma memory limit.
+Raw first-half layer: SCHEME_OK 2 4, AFFINE_POINTS 77.
+Saturated first-half layer:
+  SAT_SCHEME_OK 1 42 3
+  SAT_CURVE_OK 37 3
+```
+
+Updated K/S interpretation:
+
+```text
+The unsaturated handoff equations contain denominator/projection artifacts.
+After saturating by X*(X-1)*(X+1)*(T-2X^2), the first post-alpha layer is a
+genus-37 curve over tiny p27-signature q=7, before adding final reverse-square
+variables z,Y.  This is not a promotion-field theorem, but it is strong
+negative pressure on a direct low-genus K/S source.
+
+The first-half B-cover branch class also factors exactly:
+  32*T*X*(eta*T*W + X*(X-1)*(X+1)^2)
+          *(2*eta*W*X + X^3 + X^2 - X - 1).
+For eta=+1, the same-eta alpha lift ratio is -1 times a square on the
+intermediate curve.  Since p27 is 3 mod 4, this lift is not F_p-rational.
+The eta-swapped ratio is mixed on q=1607, q=1847, and q=2087.
+
+Positive quotient update: translation by `(0,0)` sends
+`X -> -1/X`, `W -> W/X^2`, and `T -> +/-T/X^3`.  It preserves compactD and
+the first-half B-branch squareclass on every compactD point over
+q=1607/q1847/q2087 tested.  Online Magma q1607 reports:
+`BRANCH_FACTOR_DIFF_ZERO true`, `T2_TRANSFORM_ZERO true`, and
+`COUNTS 800 800 1600 0 0 0`.
+
+However, the explicit E' pullback of the eta=+1 first-half layer still reports
+`EPRIME_PULLBACK_SAT_SCHEME 1 61 0` and `EPRIME_PULLBACK_SAT_CURVE 37 0`
+over q7 after saturation.
+
+The actual d3 z-source is now staged:
+  all-at-once saturation: memory limit after raw dimension 3
+  sequential saturation: memory limit
+  first-half-saturation then reverse_z: `D3_Z_AFTER_FIRSTHALF_SCHEME 1 62 0`
+Genus/normalization of this curve is the concrete offline CAS ask.
+
+The nearest exact low-pole source family on E' is killed: sections
+`a+bU+cU^2+dV` in `L(4O)` have zero exact d3 formulas on q599/q727/q919.
+The q487 exact quadratic-U sections do not survive and are local artifacts.
+
+The next rational U-line loophole is also killed.  Exact U-cubics appear in
+some small fields, including one q599 formula and many q487/q727 formulas, but
+there are zero exact U-cubics on q919, q967, and q1063.
+```
+
+Updated K/S next test:
+
+```text
+Do not continue visible K/S coefficient or branch-product scans.
+Do offline Magma/Sage quotient/decomposition only with a sharper target:
+  normalize the staged d3 z-source J = Iclean + <reverse_z> on E',
+  compute branch divisor / Kummer class / genus beyond L(4O),
+  and d4 fresh-cover vs recurrence testing.
+Do not treat E' descent alone as a low-genus source; the staged first-half
+pullback remains genus 37.
+Do not widen univariate U coefficient searches without a divisor-class reason.
+Promote only if a low-genus quotient, named recurrence, or sourceable walk
+survives over F_p on p27-signature fields.
+```
+
+Updated K/S kill condition:
+
+```text
+No useful quotient of the genus-37 first-half layer, or d4 is a fresh
+unrelated cover after the d3 class is named.  A quotient that exists only
+after adjoining sqrt(-1) is diagnostic but not a direct p27 sampler unless it
+comes with an explicit F_p descent.
 ```
 
 Promotion bar:
@@ -1131,7 +1361,20 @@ squareclasses killed by the H/V trace audit.
 
 ## Current Recommendation
 
-The first large GPU use should be Card 1, not a blind production cap.  If Card
-1 shows flat strata, the math effort should move to Card 3/9.  If Card 1 shows
-a real same-stream survivor lift, then the GPU agent should run a paired A/B
-cost model before any certificate hunt.
+The current compact queue is:
+[P27 Live Sqrt-Beating Queue](p27_live_sqrt_beating_queue_20260621.md).
+
+Ranked next moves:
+
+```text
+1. Theory/CAS: quotient decomposition of the saturated genus-37 K/S layer.
+2. Theory/lit/expert: trace/norm half-norm phase identity for pref vs h*vq.
+3. GPU: bounded same-stream telemetry only; no moonshot-scale run without
+   a quotient/source or heldout efficiency gain.
+```
+
+The first large GPU use should still be Card 1 rather than a blind production
+cap, but the moonshot bottleneck has moved: fixed-prefix and visible-character
+screens are no longer the scarce work.  The scarce work is a low-genus
+quotient/source or a non-visible theta/Kummer/Hilbert-90 identity that
+controls many selected `chi(d_j)` / `chi(u_j+2)` gates at once.

@@ -1,0 +1,91 @@
+p27 E-prime exact U-cubic probe
+Eprime = V^2 = U^3 + 4U
+family = a+bU+cU2+dU3
+small_primes = 967,1063
+q=967:
+  enum_stats:
+  enum_compact_not_target = 453
+  enum_no_label2_candidate = 240
+  original_quotient_stats:
+  d3_minus_E_points = 104
+  d3_missing_on_E_orbit = 0
+  d3_not_descended_to_E = 0
+  d3_plus_E_points = 32
+  d3_quotient_rows = 136
+  d4_minus_E_points_after_d3 = 0
+  d4_missing_on_E_orbit = 0
+  d4_not_descended_to_E = 0
+  d4_plus_E_points_after_d3 = 32
+  d4_quotient_rows_after_d3 = 32
+  orbit_size_4 = 136
+  oriented_candidates = 544
+  quotient_E_points = 136
+  eprime_d3_stats:
+  input_rows = 136
+  minus = 52
+  plus = 16
+  quotient_rows = 68
+  eprime_d4_stats:
+  input_rows = 32
+  minus = 0
+  plus = 16
+  quotient_rows = 16
+q967_d3_ucubic_stats:
+  b1_bc_pairs = 1
+  c1_bc_pairs = 967
+  constant_tested = 1
+  d1_bc_pairs = 935089
+  exact_polynomials = 0
+  minus = 52
+  plus = 16
+  rows = 68
+q967_d3_ucubic_exact_samples:
+q967_d4_ucubic_stats:
+  minus = 0
+  plus = 16
+  rows = 16
+  skipped_one_sided = 1
+q=1063:
+  enum_stats:
+  enum_compact_not_target = 517
+  enum_no_label2_candidate = 264
+  original_quotient_stats:
+  d3_minus_E_points = 76
+  d3_missing_on_E_orbit = 0
+  d3_not_descended_to_E = 0
+  d3_plus_E_points = 64
+  d3_quotient_rows = 140
+  d4_minus_E_points_after_d3 = 0
+  d4_missing_on_E_orbit = 0
+  d4_not_descended_to_E = 0
+  d4_plus_E_points_after_d3 = 64
+  d4_quotient_rows_after_d3 = 64
+  orbit_size_4 = 140
+  oriented_candidates = 560
+  quotient_E_points = 140
+  eprime_d3_stats:
+  input_rows = 140
+  minus = 38
+  plus = 32
+  quotient_rows = 70
+  eprime_d4_stats:
+  input_rows = 64
+  minus = 0
+  plus = 32
+  quotient_rows = 32
+q1063_d3_ucubic_stats:
+  b1_bc_pairs = 1
+  c1_bc_pairs = 1063
+  constant_tested = 1
+  d1_bc_pairs = 1129969
+  exact_polynomials = 0
+  minus = 38
+  plus = 32
+  rows = 70
+q1063_d3_ucubic_exact_samples:
+q1063_d4_ucubic_stats:
+  minus = 0
+  plus = 32
+  rows = 32
+  skipped_one_sided = 1
+p27_eprime_ucubic_exact_probe_rows=1/1

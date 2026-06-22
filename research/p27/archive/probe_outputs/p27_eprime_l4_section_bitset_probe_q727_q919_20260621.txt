@@ -1,0 +1,91 @@
+p27 E-prime bitset exact L(4O) section probe
+Eprime = V^2 = U^3 + 4U
+basis = 1,U,U^2,V
+small_primes = 727,919
+q=727:
+  enum_stats:
+  enum_compact_not_target = 385
+  enum_no_label2_candidate = 180
+  original_quotient_stats:
+  d3_minus_E_points = 32
+  d3_missing_on_E_orbit = 0
+  d3_not_descended_to_E = 0
+  d3_plus_E_points = 48
+  d3_quotient_rows = 80
+  d4_minus_E_points_after_d3 = 0
+  d4_missing_on_E_orbit = 0
+  d4_not_descended_to_E = 0
+  d4_plus_E_points_after_d3 = 48
+  d4_quotient_rows_after_d3 = 48
+  orbit_size_4 = 80
+  oriented_candidates = 320
+  quotient_E_points = 80
+  eprime_d3_stats:
+  input_rows = 80
+  minus = 16
+  plus = 24
+  quotient_rows = 40
+  eprime_d4_stats:
+  input_rows = 48
+  minus = 0
+  plus = 24
+  quotient_rows = 24
+q727_d3_l4_bitset_stats:
+  b1_bc_pairs = 1
+  c1_bc_pairs = 727
+  constant_tested = 1
+  d1_bc_pairs = 528529
+  exact_sections = 0
+  minus = 16
+  plus = 24
+  rows = 40
+q727_d3_l4_bitset_exact_samples:
+q727_d4_l4_bitset_stats:
+  minus = 0
+  plus = 24
+  rows = 24
+  skipped_one_sided = 1
+q=919:
+  enum_stats:
+  enum_compact_not_target = 425
+  enum_no_label2_candidate = 228
+  original_quotient_stats:
+  d3_minus_E_points = 72
+  d3_missing_on_E_orbit = 0
+  d3_not_descended_to_E = 0
+  d3_plus_E_points = 60
+  d3_quotient_rows = 132
+  d4_minus_E_points_after_d3 = 60
+  d4_missing_on_E_orbit = 0
+  d4_not_descended_to_E = 0
+  d4_plus_E_points_after_d3 = 0
+  d4_quotient_rows_after_d3 = 60
+  orbit_size_4 = 132
+  oriented_candidates = 528
+  quotient_E_points = 132
+  eprime_d3_stats:
+  input_rows = 132
+  minus = 36
+  plus = 30
+  quotient_rows = 66
+  eprime_d4_stats:
+  input_rows = 60
+  minus = 30
+  plus = 0
+  quotient_rows = 30
+q919_d3_l4_bitset_stats:
+  b1_bc_pairs = 1
+  c1_bc_pairs = 919
+  constant_tested = 1
+  d1_bc_pairs = 844561
+  exact_sections = 0
+  minus = 36
+  plus = 30
+  rows = 66
+q919_d3_l4_bitset_exact_samples:
+q919_d4_l4_bitset_stats:
+  minus = 30
+  plus = 0
+  rows = 30
+  skipped_one_sided = 1
+p27_eprime_l4_section_bitset_probe_rows=1/1

@@ -1,0 +1,253 @@
+p27 Kummer-line Belyi structure probe
+K_num = (X**2 - 2*X - 1)**2*(X**2 + 2*X - 1)**2
+K_den = 4*X*(X - 1)*(X + 1)*(X**2 + 1)**2
+branch_resultant = -4503599627370496*K**4*(K**2 + 4)**4
+derivative_num = (X**2 - 2*X - 1)*(X**2 + 2*X - 1)*(X**8 + 20*X**6 - 26*X**4 + 20*X**2 + 1)
+finite branch values = K=0 and K^2+4=0
+pole branch value = K=infinity, with double poles above X^2+1=0
+Belyi coordinate lambda = -K^2/4 has branch values 0, 1, infinity
+
+q=1471:
+  setup_stats:
+  d3_eprime_input_rows = 200
+  d3_eprime_minus = 44
+  d3_eprime_plus = 56
+  d3_eprime_quotient_rows = 100
+  d3_k_input_rows = 100
+  d3_k_k_rows = 50
+  d3_k_minus = 22
+  d3_k_plus = 28
+  d4_eprime_input_rows = 112
+  d4_eprime_minus = 28
+  d4_eprime_plus = 28
+  d4_eprime_quotient_rows = 56
+  d4_k_input_rows = 56
+  d4_k_k_rows = 28
+  d4_k_minus = 14
+  d4_k_plus = 14
+  enum_compact_not_target = 837
+  enum_no_label2_candidate = 424
+  quotient_d3_minus_E_points = 88
+  quotient_d3_missing_on_E_orbit = 0
+  quotient_d3_not_descended_to_E = 0
+  quotient_d3_plus_E_points = 112
+  quotient_d3_quotient_rows = 200
+  quotient_d4_minus_E_points_after_d3 = 56
+  quotient_d4_missing_on_E_orbit = 0
+  quotient_d4_not_descended_to_E = 0
+  quotient_d4_plus_E_points_after_d3 = 56
+  quotient_d4_quotient_rows_after_d3 = 112
+  quotient_orbit_size_4 = 200
+  quotient_oriented_candidates = 800
+  quotient_quotient_E_points = 200
+  d3_lambda_descent_stats:
+  collision_classes = 0
+  lambda_classes = 50
+  mixed_collision_classes = 0
+  rows = 50
+  d3_branch_atom_distribution:
+  K2_minus = 0
+  K2_plus = 50
+  K2_zero = 0
+  K2p4_minus = 0
+  K2p4_plus = 50
+  K2p4_zero = 0
+  K_minus = 0
+  K_plus = 50
+  K_zero = 0
+  d3_branch_atom_scores:
+  1: good=28/50 rate=0.560000000 zeros=0 polarity=1
+  K: good=28/50 rate=0.560000000 zeros=0 polarity=1
+  K2p4: good=28/50 rate=0.560000000 zeros=0 polarity=1
+  K*K2p4: good=28/50 rate=0.560000000 zeros=0 polarity=1
+  K2: good=28/50 rate=0.560000000 zeros=0 polarity=1
+  K*K2: good=28/50 rate=0.560000000 zeros=0 polarity=1
+  K2p4*K2: good=28/50 rate=0.560000000 zeros=0 polarity=1
+  K*K2p4*K2: good=28/50 rate=0.560000000 zeros=0 polarity=1
+  d4_lambda_descent_stats:
+  collision_classes = 0
+  lambda_classes = 28
+  mixed_collision_classes = 0
+  rows = 28
+  d4_branch_atom_distribution:
+  K2_minus = 0
+  K2_plus = 28
+  K2_zero = 0
+  K2p4_minus = 0
+  K2p4_plus = 28
+  K2p4_zero = 0
+  K_minus = 0
+  K_plus = 28
+  K_zero = 0
+  d4_branch_atom_scores:
+  1: good=14/28 rate=0.500000000 zeros=0 polarity=1
+  K: good=14/28 rate=0.500000000 zeros=0 polarity=1
+  K2p4: good=14/28 rate=0.500000000 zeros=0 polarity=1
+  K*K2p4: good=14/28 rate=0.500000000 zeros=0 polarity=1
+  K2: good=14/28 rate=0.500000000 zeros=0 polarity=1
+  K*K2: good=14/28 rate=0.500000000 zeros=0 polarity=1
+  K2p4*K2: good=14/28 rate=0.500000000 zeros=0 polarity=1
+  K*K2p4*K2: good=14/28 rate=0.500000000 zeros=0 polarity=1
+q=1607:
+  setup_stats:
+  d3_eprime_input_rows = 196
+  d3_eprime_minus = 42
+  d3_eprime_plus = 56
+  d3_eprime_quotient_rows = 98
+  d3_k_input_rows = 98
+  d3_k_k_rows = 49
+  d3_k_minus = 21
+  d3_k_plus = 28
+  d4_eprime_input_rows = 112
+  d4_eprime_minus = 18
+  d4_eprime_plus = 38
+  d4_eprime_quotient_rows = 56
+  d4_k_input_rows = 56
+  d4_k_k_rows = 28
+  d4_k_minus = 9
+  d4_k_plus = 19
+  enum_compact_not_target = 805
+  enum_no_label2_candidate = 408
+  quotient_d3_minus_E_points = 84
+  quotient_d3_missing_on_E_orbit = 0
+  quotient_d3_not_descended_to_E = 0
+  quotient_d3_plus_E_points = 112
+  quotient_d3_quotient_rows = 196
+  quotient_d4_minus_E_points_after_d3 = 36
+  quotient_d4_missing_on_E_orbit = 0
+  quotient_d4_not_descended_to_E = 0
+  quotient_d4_plus_E_points_after_d3 = 76
+  quotient_d4_quotient_rows_after_d3 = 112
+  quotient_orbit_size_4 = 196
+  quotient_oriented_candidates = 784
+  quotient_quotient_E_points = 196
+  d3_lambda_descent_stats:
+  collision_classes = 0
+  lambda_classes = 49
+  mixed_collision_classes = 0
+  rows = 49
+  d3_branch_atom_distribution:
+  K2_minus = 0
+  K2_plus = 49
+  K2_zero = 0
+  K2p4_minus = 0
+  K2p4_plus = 49
+  K2p4_zero = 0
+  K_minus = 0
+  K_plus = 49
+  K_zero = 0
+  d3_branch_atom_scores:
+  1: good=28/49 rate=0.571428571 zeros=0 polarity=1
+  K: good=28/49 rate=0.571428571 zeros=0 polarity=1
+  K2p4: good=28/49 rate=0.571428571 zeros=0 polarity=1
+  K*K2p4: good=28/49 rate=0.571428571 zeros=0 polarity=1
+  K2: good=28/49 rate=0.571428571 zeros=0 polarity=1
+  K*K2: good=28/49 rate=0.571428571 zeros=0 polarity=1
+  K2p4*K2: good=28/49 rate=0.571428571 zeros=0 polarity=1
+  K*K2p4*K2: good=28/49 rate=0.571428571 zeros=0 polarity=1
+  d4_lambda_descent_stats:
+  collision_classes = 0
+  lambda_classes = 28
+  mixed_collision_classes = 0
+  rows = 28
+  d4_branch_atom_distribution:
+  K2_minus = 0
+  K2_plus = 28
+  K2_zero = 0
+  K2p4_minus = 0
+  K2p4_plus = 28
+  K2p4_zero = 0
+  K_minus = 0
+  K_plus = 28
+  K_zero = 0
+  d4_branch_atom_scores:
+  1: good=19/28 rate=0.678571429 zeros=0 polarity=1
+  K: good=19/28 rate=0.678571429 zeros=0 polarity=1
+  K2p4: good=19/28 rate=0.678571429 zeros=0 polarity=1
+  K*K2p4: good=19/28 rate=0.678571429 zeros=0 polarity=1
+  K2: good=19/28 rate=0.678571429 zeros=0 polarity=1
+  K*K2: good=19/28 rate=0.678571429 zeros=0 polarity=1
+  K2p4*K2: good=19/28 rate=0.678571429 zeros=0 polarity=1
+  K*K2p4*K2: good=19/28 rate=0.678571429 zeros=0 polarity=1
+q=1847:
+  setup_stats:
+  d3_eprime_input_rows = 252
+  d3_eprime_minus = 36
+  d3_eprime_plus = 90
+  d3_eprime_quotient_rows = 126
+  d3_k_input_rows = 126
+  d3_k_k_rows = 63
+  d3_k_minus = 18
+  d3_k_plus = 45
+  d4_eprime_input_rows = 180
+  d4_eprime_minus = 52
+  d4_eprime_plus = 38
+  d4_eprime_quotient_rows = 90
+  d4_k_input_rows = 90
+  d4_k_k_rows = 45
+  d4_k_minus = 26
+  d4_k_plus = 19
+  enum_compact_not_target = 873
+  enum_no_label2_candidate = 468
+  quotient_d3_minus_E_points = 72
+  quotient_d3_missing_on_E_orbit = 0
+  quotient_d3_not_descended_to_E = 0
+  quotient_d3_plus_E_points = 180
+  quotient_d3_quotient_rows = 252
+  quotient_d4_minus_E_points_after_d3 = 104
+  quotient_d4_missing_on_E_orbit = 0
+  quotient_d4_not_descended_to_E = 0
+  quotient_d4_plus_E_points_after_d3 = 76
+  quotient_d4_quotient_rows_after_d3 = 180
+  quotient_orbit_size_4 = 252
+  quotient_oriented_candidates = 1008
+  quotient_quotient_E_points = 252
+  d3_lambda_descent_stats:
+  collision_classes = 0
+  lambda_classes = 63
+  mixed_collision_classes = 0
+  rows = 63
+  d3_branch_atom_distribution:
+  K2_minus = 0
+  K2_plus = 63
+  K2_zero = 0
+  K2p4_minus = 0
+  K2p4_plus = 63
+  K2p4_zero = 0
+  K_minus = 0
+  K_plus = 63
+  K_zero = 0
+  d3_branch_atom_scores:
+  1: good=45/63 rate=0.714285714 zeros=0 polarity=1
+  K: good=45/63 rate=0.714285714 zeros=0 polarity=1
+  K2p4: good=45/63 rate=0.714285714 zeros=0 polarity=1
+  K*K2p4: good=45/63 rate=0.714285714 zeros=0 polarity=1
+  K2: good=45/63 rate=0.714285714 zeros=0 polarity=1
+  K*K2: good=45/63 rate=0.714285714 zeros=0 polarity=1
+  K2p4*K2: good=45/63 rate=0.714285714 zeros=0 polarity=1
+  K*K2p4*K2: good=45/63 rate=0.714285714 zeros=0 polarity=1
+  d4_lambda_descent_stats:
+  collision_classes = 0
+  lambda_classes = 45
+  mixed_collision_classes = 0
+  rows = 45
+  d4_branch_atom_distribution:
+  K2_minus = 0
+  K2_plus = 45
+  K2_zero = 0
+  K2p4_minus = 0
+  K2p4_plus = 45
+  K2p4_zero = 0
+  K_minus = 0
+  K_plus = 45
+  K_zero = 0
+  d4_branch_atom_scores:
+  1: good=26/45 rate=0.577777778 zeros=0 polarity=-1
+  K: good=26/45 rate=0.577777778 zeros=0 polarity=-1
+  K2p4: good=26/45 rate=0.577777778 zeros=0 polarity=-1
+  K*K2p4: good=26/45 rate=0.577777778 zeros=0 polarity=-1
+  K2: good=26/45 rate=0.577777778 zeros=0 polarity=-1
+  K*K2: good=26/45 rate=0.577777778 zeros=0 polarity=-1
+  K2p4*K2: good=26/45 rate=0.577777778 zeros=0 polarity=-1
+  K*K2p4*K2: good=26/45 rate=0.577777778 zeros=0 polarity=-1
+p27_kummer_belyi_structure_probe_rows=1/1

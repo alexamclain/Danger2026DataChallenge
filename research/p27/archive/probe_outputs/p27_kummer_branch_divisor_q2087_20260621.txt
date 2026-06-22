@@ -1,0 +1,76 @@
+p27 Kummer-line branch-divisor probe
+factors = rational linear and irreducible quadratic over F_q
+small_primes = 2087
+max_degree = 4
+q=2087:
+  setup_stats:
+  d3_eprime_input_rows = 228
+  d3_eprime_minus = 64
+  d3_eprime_plus = 50
+  d3_eprime_quotient_rows = 114
+  d3_k_input_rows = 114
+  d3_k_k_rows = 57
+  d3_k_minus = 32
+  d3_k_plus = 25
+  d4_eprime_input_rows = 100
+  d4_eprime_minus = 14
+  d4_eprime_plus = 36
+  d4_eprime_quotient_rows = 50
+  d4_k_input_rows = 50
+  d4_k_k_rows = 25
+  d4_k_minus = 7
+  d4_k_plus = 18
+  enum_compact_not_target = 1109
+  enum_no_label2_candidate = 520
+  quotient_d3_minus_E_points = 128
+  quotient_d3_missing_on_E_orbit = 0
+  quotient_d3_not_descended_to_E = 0
+  quotient_d3_plus_E_points = 100
+  quotient_d3_quotient_rows = 228
+  quotient_d4_minus_E_points_after_d3 = 28
+  quotient_d4_missing_on_E_orbit = 0
+  quotient_d4_not_descended_to_E = 0
+  quotient_d4_plus_E_points_after_d3 = 72
+  quotient_d4_quotient_rows_after_d3 = 100
+  quotient_orbit_size_4 = 228
+  quotient_oriented_candidates = 912
+  quotient_quotient_E_points = 228
+q2087_d3:
+  rows = 57
+  plus = 25
+  minus = 32
+q2087_d3_side_stats:
+  distinct_degree0_side_masks = 1
+  distinct_degree1_side_masks = 2030
+  distinct_degree2_side_masks = 4236176
+  linear_atoms = 2030
+  linear_pair_sides = 2059435
+  quadratic_atoms = 2176741
+q2087_d3_exact_stats:
+  left_sides_scanned = 4238207
+q2087_d3_exact_divisors:
+  none
+q2087_d4:
+  rows = 25
+  plus = 18
+  minus = 7
+q2087_d4_side_stats:
+  distinct_degree0_side_masks = 1
+  distinct_degree1_side_masks = 2062
+  distinct_degree2_side_masks = 4037623
+  linear_atoms = 2062
+  linear_pair_sides = 2124891
+  quadratic_atoms = 2176741
+q2087_d4_exact_stats:
+  exact_degree_3 = 8
+  left_sides_scanned = 43
+q2087_d4_exact_divisors:
+  degree=3 polarity=-1 factors=K-10 * K-1455 * K-968
+  degree=3 polarity=1 factors=K-18 * K^2+891K+562
+  degree=3 polarity=-1 factors=K-131 * K-1657 * K-19
+  degree=3 polarity=1 factors=K-23 * K^2+63K+1608
+  degree=3 polarity=-1 factors=K-1626 * K-26 * K-872
+  degree=3 polarity=1 factors=K-32 * K^2+307K+1957
+  degree=3 polarity=1 factors=K-39 * K^2+875K+795
+  degree=3 polarity=-1 factors=K-41 * K^2+1579K+488
+p27_kummer_branch_divisor_probe_rows=1/1
