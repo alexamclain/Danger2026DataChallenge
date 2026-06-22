@@ -427,6 +427,13 @@ The next factorization tier is staged but above the online-calculator limit:
 The exact domain-spin and `eta=+1` `A_eta` factor fixtures return `504` over
 `q=607`; this is now an offline Magma/Sage ask to decide whether the row-bit
 lift drops degree after adjoining `z` or `rho`.
+The point-fiber probe adds a positive compatibility signal:
+[P27 Trace/Norm Dplus U6 Row-Bit H90 Point-Fiber Probe](evidence/p27_trace_norm_dplus_u6_rowbit_h90_pointfiber_20260622.md).
+In small fields, the row bit can be mixed over `t` alone, but all mixed `t`
+fibers have no rational `E_h90` point; every tested rational `E_h90`,
+domain-spin, and `A_eta` fiber is uniform, both with and without the
+materialization filters.  So H90 still matters, but not as a simple bare
+function-field factor over `E_h90`.
 The class comparison now has a routing result:
 [P27 Trace/Norm Dplus A-Descent Bridge](evidence/p27_trace_norm_dplus_a_descent_20260622.md).
 Across three p27 seed groups, post-Dplus `d3` and `d4` after `d3=+1` have zero
@@ -2261,6 +2268,10 @@ degree `32` over `q=607`.
 The staged domain-spin/Aeta factor tests
 [P27 Trace/Norm Dplus U6 Row-Bit Aeta Factor Boundary](evidence/p27_trace_norm_dplus_u6_rowbit_aeta_factor_boundary_20260622.md)
 are the next offline CAS checkpoint; online Magma times out at that tier.
+The point-fiber companion
+[P27 Trace/Norm Dplus U6 Row-Bit H90 Point-Fiber Probe](evidence/p27_trace_norm_dplus_u6_rowbit_h90_pointfiber_20260622.md)
+keeps this alive by showing uniform rational H90/domain-spin/Aeta fibers in
+the tested small fields, even when `t` alone is mixed.
 The small-field descent audit then sets the boundary:
 [P27 Trace/Norm Dplus Reciprocal Tower Small-Field Descent](evidence/p27_trace_norm_dplus_reciprocal_tower_smallfield_descent_20260622.md).
 Over q607/q1607/q1847, the naked reciprocal tower has mixed `A`/`B` fibers for

@@ -280,6 +280,13 @@ stages the exact next factor tests over the H90 domain-spin cover and the
 factorization tiers, so the remaining factor/split question is an offline CAS
 task.
 
+Eleventh update:
+[P27 Trace/Norm Dplus U6 Row-Bit H90 Point-Fiber Probe](p27_trace_norm_dplus_u6_rowbit_h90_pointfiber_20260622.md)
+finds a positive pointwise compatibility signal.  Over `q=263` and `q=607`,
+the row bit is mixed over `t` alone, but all mixed `t` fibers have no rational
+`E_h90` point; every tested rational `E_h90`, domain-spin, and `A_eta` fiber is
+uniform, with or without materialization filters.
+
 This is the most concrete bridge test after the coupling kill.  We know:
 
 ```text
@@ -290,6 +297,7 @@ simple H90/rho coboundaries do not predict chi(x6).
 the U6/x6 class is a descended row bit, not a branch-choice bit.
 visible t/A/X branch atoms do not source the row bit through weight 5.
 the H90 elliptic quotient does not factor the row-bit cover over q607.
+H90 rational point fibers are nevertheless uniform in the tested small fields.
 ```
 
 The missing object is the map or obstruction between the H90 model and the
@@ -358,11 +366,13 @@ continue = use mixed-f5 guard fields as repeated-gamma regression data
 continue = fused/native Dplus pricing with A/d3 telemetry columns
 continue = Dplus/H90 A_eta versus pulled-back A-level d3 class comparison
 continue = CAS/Prym extraction of the descended U6 row bit
+continue = explain H90 rational-point uniformity of the row bit
 
 kill = more sign-word/gamma bucket GPU scans
 kill = visible f5(B) B-atom/split-linear bucket searches
 kill = naked reciprocal-tower source sampling
 kill = U6 branch-choice buckets after Dplus
+kill = pointwise descent to t alone
 kill = visible t/A/X branch-atom products as Dplus row-bit sources
 kill = H90 elliptic-base factorization as the easy Dplus row-bit source
 kill = online Magma for domain-spin/Aeta row-bit factorization

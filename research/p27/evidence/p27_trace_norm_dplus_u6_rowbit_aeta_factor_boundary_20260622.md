@@ -98,6 +98,14 @@ The next concrete CAS ask is therefore narrow enough for an offline Magma/Sage
 agent: run these fixtures, first `q=31`, then `q=607`, and report factor
 degrees over the domain-spin and `A_eta` covers.
 
+Point-fiber follow-up:
+[P27 Trace/Norm Dplus U6 Row-Bit H90 Point-Fiber Probe](p27_trace_norm_dplus_u6_rowbit_h90_pointfiber_20260622.md)
+shows that rational point fibers are already uniform over `E_h90`, domain-spin,
+and `A_eta` in the tested small fields, while `t` alone can be mixed.  This
+keeps the offline factor test relevant: the question is not whether H90 matters,
+but whether the pointwise uniformity comes from a true quotient/Prym relation,
+local solubility, or selected-source side conditions.
+
 ## Continue / Kill
 
 ```text
