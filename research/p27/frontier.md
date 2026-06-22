@@ -1029,6 +1029,15 @@ p27 train/heldout tests show no mixed B groups through `d12`: the original
 the live B moonshot from "find d3(B)" to "extract the B-line Kummer sequence
 `f3(B), f4(B), ...` and test whether those classes recur or couple."  That is
 the first B-lane mechanism that could genuinely amortize multiple half-losses.
+The first Magma staging smoke sets the extraction boundary:
+[P27 B-Line Magma Staging Smoke](evidence/p27_b_line_magma_staging_20260622.md).
+Over q7, the eta=`+1` legal B-cover saturation succeeds as a dimension-1
+scheme with `93` basis polynomials.  But adding point/curve/component calls to
+that legal cover returns a web-calculator `504`, and the full legal+d3
+reverse-source fixture also returns `504`.  So the B-line CAS target is
+concrete, but online Magma is only a syntax/saturation sanity tool here.  The
+next real extraction needs offline Magma/Sage or a specialized elimination over
+`Bline`.
 
 The first Belyi-normalized source family is now killed:
 [P27 Lambda Branch-Divisor Screen](evidence/p27_lambda_branch_divisor_screen_20260621.md).

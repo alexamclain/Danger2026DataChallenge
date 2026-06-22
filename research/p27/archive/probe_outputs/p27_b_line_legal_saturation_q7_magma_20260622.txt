@@ -1,0 +1,2 @@
+BLEGAL_SATURATION_ONLY 1 93
+RESULT p27_b_line_legal_saturation_q7 done

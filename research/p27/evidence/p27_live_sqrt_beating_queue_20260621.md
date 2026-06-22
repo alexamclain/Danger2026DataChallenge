@@ -215,6 +215,12 @@ while p27 train/heldout deep-descent probes show no mixed B groups through
 moonshot target is the sequence of B-line Kummer classes
 `f3(B), f4(B), f5(B), ...`; a recurrence or coupling among those classes is
 the first credible way for this lane to beat independent sqrt-scale half-loss.
+The first B-line Magma staging smoke says how to pursue that extraction:
+q7 legal-cover saturation over `P1_B` succeeds as a dimension-1 scheme with
+93 basis polynomials, but online point/curve/component extraction and the full
+legal+d3 fixture both return `504 Gateway Timeout`.  So use offline
+Magma/Sage or targeted elimination for B-line class extraction; online Magma is
+only a syntax/saturation sanity check here.
 The B-line prefix profile now gives the next verdict:
 [P27 B-Line Prefix Profile](p27_b_line_prefix_profile_20260622.md).  Exact
 small fields show late all-plus plateaus, but the plateau/kill gate changes
