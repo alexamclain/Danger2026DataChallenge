@@ -504,6 +504,12 @@ extends the positive side: d3..d14 all have zero mixed A groups on `12000 +
 12000` p27 train/heldout samples.  The negative side remains decisive for
 operations: counts stay near geometric half-loss, so this is class-extraction
 evidence, not a source-space shrink.
+The first A-character falsifier
+[P27 A-Line Character Support Screen](p27_a_line_character_support_20260622.md)
+kills visible degree `<= 4` branch support for d3 in q1607/q1847/q2087 and
+for d4 in q1847, with nearby-field split-support negatives.  The live conic
+task is now normalized A-cover divisor/Kummer class extraction, not wider
+low-degree A polynomial scans.
 
 The compact actionable version is the "Current Priority After Two-Step Kummer
 Screen" section of

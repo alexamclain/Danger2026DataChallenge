@@ -380,6 +380,17 @@ next test is A-line Kummer class extraction or a low-degree A-character
 falsifier, not GPU A-bucket production.
 ```
 
+A-character support update:
+[P27 A-Line Character Support Screen](p27_a_line_character_support_20260622.md).
+
+```text
+Visible degree <=4 branch support on P1_A is killed for d3 in
+q1607/q1847/q2087, q1847 also kills d4, and nearby fields reject split
+degree <=4 d3 support.  Do not widen blind A-polynomial scans; continue only
+with normalized-cover divisor/Kummer class extraction or a named divisor
+reason from CAS.
+```
+
 Updated kill rule:
 
 ```text
@@ -1699,7 +1710,9 @@ Promotion bar:
 
 ```text
 genus <= 1 quotient, sourceable low-genus component, or a recurrence that
-forces d_{j+1} from the previous Kummer class without a fresh half-loss
+forces d_{j+1} from the previous Kummer class without a fresh half-loss.  A
+visible degree <=4 A-character no longer counts unless it comes from a new
+class-extraction reason.
 ```
 
 Kill condition:

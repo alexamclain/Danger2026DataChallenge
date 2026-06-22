@@ -161,6 +161,13 @@ Treat tiny-field exact fits as interpolation unless they survive multiple
 larger guard fields and match the class-extraction story.
 ```
 
+Completed first pass:
+[P27 A-Line Character Support Screen](p27_a_line_character_support_20260622.md)
+kills the visible degree `<= 4` branch-support shortcut for d3 in
+q1607/q1847/q2087, with a split-support stability sweep across nearby fields.
+q1847 also kills the visible degree `<= 4` d4 support.  Continue with
+divisor/Kummer class extraction rather than broader coefficient scans.
+
 3. GPU boundary.
 
 ```text

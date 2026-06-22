@@ -845,6 +845,12 @@ On `12000 + 12000` p27 train/heldout samples, selected gates d3..d14 all have
 zero mixed A groups.  Robust counts through about d10 stay near the geometric
 half-loss baseline, so the moonshot target is a normalized A-line Kummer
 sequence/class extraction, not a prefix-count source.
+The first visible A-character falsifier is now negative:
+[P27 A-Line Character Support Screen](evidence/p27_a_line_character_support_20260622.md).
+Complete degree `<= 4` branch-support families on `P1_A` are killed for d3 in
+q1607/q1847/q2087, q1847 also kills d4, and nearby `7 mod 8` fields reject
+split degree `<= 4` d3 support.  Do not widen blind A-polynomial scans; the
+next real test is divisor/Kummer class extraction on the normalized A-cover.
 The direct sign-word coupling telemetry now agrees:
 [P27 Conic Sign-Word Coupling Probe](evidence/p27_conic_signword_coupling_20260622.md).
 On `4000 + 4000` p27 train/heldout unique `(A,x5)` rows, the all-plus conic

@@ -38,7 +38,8 @@
       "research/p27/evidence/p27_conic_pair_d5_tower_20260621.md",
       "research/p27/evidence/p27_conic_tower_sign_quotient_20260622.md",
       "research/p27/evidence/p27_conic_tower_d6_a_descent_20260622.md",
-      "research/p27/evidence/p27_a_level_prefix_descent_20260622.md"
+      "research/p27/evidence/p27_a_level_prefix_descent_20260622.md",
+      "research/p27/evidence/p27_a_line_character_support_20260622.md"
     ],
     "killed_shortcuts": [
       "research/p27/evidence/p27_conic_pair_lowdegree_relation_20260621.md",
@@ -46,7 +47,8 @@
       "research/p27/evidence/p27_conic_pair_kummer_z_relation_20260621.md",
       "research/p27/evidence/p27_conic_pair_two_step_kummer_20260621.md",
       "research/p27/evidence/p27_conic_pair_two_step_kummer_trivar_20260621.md",
-      "research/p27/evidence/p27_conic_signword_coupling_20260622.md"
+      "research/p27/evidence/p27_conic_signword_coupling_20260622.md",
+      "research/p27/evidence/p27_a_line_character_support_20260622.md"
     ]
   },
   "tasks": [
@@ -85,7 +87,8 @@
         "whether later d_j classes are pullbacks, translates, coboundaries, or iterates of earlier classes",
         "genus/component count of the common A-level cover carrying these characters",
         "whether the class sequence gives a recurrence or sourceable walk controlling multiple selected gates",
-        "treat d11 through d14 as low-count routing evidence, not the first CAS target"
+        "treat d11 through d14 as low-count routing evidence, not the first CAS target",
+        "do not retry visible degree <=4 A-line branch support without a new divisor reason"
       ],
       "promote_if": "one low-genus/sourceable class or recurrence controls multiple selected gates beyond independent half-loss",
       "kill_if": "d3 through d10 are independent fresh half-covers on the normalized A-level object"
