@@ -270,6 +270,22 @@ Do not run a large GPU hunt merely from this result.  The useful GPU role is
 bounded telemetry for B-line exactness, all-plus density, and Kummer-sequence
 extraction.
 
+Update: [P27 B-Line Prefix Extension Ladder](p27_b_line_prefix_extension_ladder_20260622.md)
+extends this count-only falsifier over `GF(7^n)`, `GF(23^n)`, and `GF(103^n)`.
+Legal B still has no core-bucket misses, but the all-plus plateau and hard
+stop move with the field:
+
+```text
+GF(7^5):  d3,d4,d5 survive, d6 dies
+GF(7^6):  d3,d4,d5,d6 survive, d7 dies
+GF(23^3): d3..d8 survive, d9 dies
+GF(103^2): d3,d4,d5 survive, d6 dies
+```
+
+That kills B-prefix counts alone as a transferable below-sqrt sampler while
+strengthening the real next ask: extract the Kummer sequence
+`f3(B), f4(B), ...` and explain these local plateaus by class/Frobenius data.
+
 ## Continue / Kill
 
 ```text

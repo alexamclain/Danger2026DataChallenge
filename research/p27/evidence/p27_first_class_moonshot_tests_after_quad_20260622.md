@@ -63,7 +63,13 @@ B = 8X^2/(X^2 - 1)^2
 A + 2 = B^2
 d3, d4, ... descend to original Bplus in all tested active rows
 deep p27 B-prefix counts still thin like independent half-losses
+extension-field all-plus plateaus are field-local and stop at moving gates
 ```
+
+Latest count-only falsifier:
+[P27 B-Line Prefix Extension Ladder](p27_b_line_prefix_extension_ladder_20260622.md).
+It keeps B-line extraction live, but kills B-prefix counts alone as a direct
+below-sqrt sampler.
 
 Required computation:
 

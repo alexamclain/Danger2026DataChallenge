@@ -1625,6 +1625,15 @@ named divisor/Kummer relation explains them and survives p27 rows.
 Status: B-line remains a clean Kummer-class extraction surface; do not run a
 large GPU production search based only on Bplus buckets.
 
+Extension-field update:
+[P27 B-Line Prefix Extension Ladder](evidence/p27_b_line_prefix_extension_ladder_20260622.md)
+pushes that verdict through `GF(7^n)`, `GF(23^n)`, and `GF(103^n)`.  Legal B
+continues to have zero core-bucket misses, but all-plus plateaus stop at
+field-dependent gates: `GF(7^6)` dies at `d7`, `GF(23^3)` at `d9`, and
+`GF(103^2)` at `d6`.  This kills B-prefix counts alone as a transferable
+below-sqrt sampler; the live B-line work is still Kummer-sequence extraction
+for `f3(B), f4(B), ...`.
+
 Follow-up: [P27 B-Line Reverse-Z Relation Screen](evidence/p27_b_line_reverse_z_relation_20260622.md)
 keeps the actual d3 reverse-source root and kills low-degree B-line plane
 models in `(B,z)` and nearby branch-normalized coordinates through degree `20`

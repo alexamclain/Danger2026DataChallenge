@@ -1,0 +1,283 @@
+p27 B-line prefix extension-count probe
+B = 8 X^2/(X^2 - 1)^2, A+2=B^2
+counts = legal B and all-plus prefixes for d3..dN
+max_gate = 10
+GF(7^1) N=7:
+  B_degenerate = 1
+  core_B = 0
+  core_B_without_legal = 0
+  deduped_ax = 0
+  field_size = 7
+  gate10_active_B = 0
+  gate3_active_B = 0
+  gate4_active_B = 0
+  gate5_active_B = 0
+  gate6_active_B = 0
+  gate7_active_B = 0
+  gate8_active_B = 0
+  gate9_active_B = 0
+  legal_B = 0
+  legal_B_in_core = 0
+  legal_B_missing_core = 0
+  modulus_degree = 1
+  prefix_d2_legal_B = 0
+  prefix_gate10_all_plus_B = 0
+  prefix_gate3_all_plus_B = 0
+  prefix_gate4_all_plus_B = 0
+  prefix_gate5_all_plus_B = 0
+  prefix_gate6_all_plus_B = 0
+  prefix_gate7_all_plus_B = 0
+  prefix_gate8_all_plus_B = 0
+  prefix_gate9_all_plus_B = 0
+  skip_X_degenerate = 2
+  core_B/N = 0.000000000
+  legal_B/N = 0.000000000
+  prefix_gate3/legal_B = 0.000000000 step_rate=0.000000000 scaled_by_half=0.000000
+  prefix_gate4/legal_B = 0.000000000 step_rate=0.000000000 scaled_by_half=0.000000
+  prefix_gate5/legal_B = 0.000000000 step_rate=0.000000000 scaled_by_half=0.000000
+  prefix_gate6/legal_B = 0.000000000 step_rate=0.000000000 scaled_by_half=0.000000
+  prefix_gate7/legal_B = 0.000000000 step_rate=0.000000000 scaled_by_half=0.000000
+  prefix_gate8/legal_B = 0.000000000 step_rate=0.000000000 scaled_by_half=0.000000
+  prefix_gate9/legal_B = 0.000000000 step_rate=0.000000000 scaled_by_half=0.000000
+  prefix_gate10/legal_B = 0.000000000 step_rate=0.000000000 scaled_by_half=0.000000
+GF(7^2) N=49:
+  B_degenerate = 1
+  compact_not_target = 16
+  core_B = 0
+  core_B_without_legal = 0
+  deduped_ax = 0
+  field_size = 49
+  gate10_active_B = 0
+  gate3_active_B = 0
+  gate4_active_B = 0
+  gate5_active_B = 0
+  gate6_active_B = 0
+  gate7_active_B = 0
+  gate8_active_B = 0
+  gate9_active_B = 0
+  legal_B = 0
+  legal_B_in_core = 0
+  legal_B_missing_core = 0
+  modulus_degree = 2
+  prefix_d2_legal_B = 0
+  prefix_gate10_all_plus_B = 0
+  prefix_gate3_all_plus_B = 0
+  prefix_gate4_all_plus_B = 0
+  prefix_gate5_all_plus_B = 0
+  prefix_gate6_all_plus_B = 0
+  prefix_gate7_all_plus_B = 0
+  prefix_gate8_all_plus_B = 0
+  prefix_gate9_all_plus_B = 0
+  skip_X_degenerate = 2
+  core_B/N = 0.000000000
+  legal_B/N = 0.000000000
+  prefix_gate3/legal_B = 0.000000000 step_rate=0.000000000 scaled_by_half=0.000000
+  prefix_gate4/legal_B = 0.000000000 step_rate=0.000000000 scaled_by_half=0.000000
+  prefix_gate5/legal_B = 0.000000000 step_rate=0.000000000 scaled_by_half=0.000000
+  prefix_gate6/legal_B = 0.000000000 step_rate=0.000000000 scaled_by_half=0.000000
+  prefix_gate7/legal_B = 0.000000000 step_rate=0.000000000 scaled_by_half=0.000000
+  prefix_gate8/legal_B = 0.000000000 step_rate=0.000000000 scaled_by_half=0.000000
+  prefix_gate9/legal_B = 0.000000000 step_rate=0.000000000 scaled_by_half=0.000000
+  prefix_gate10/legal_B = 0.000000000 step_rate=0.000000000 scaled_by_half=0.000000
+GF(7^3) N=343:
+  B_degenerate = 1
+  B_group_size_16 = 9
+  candidate_invalid_not_nonsplit = 168
+  candidates = 144
+  compact_not_target = 180
+  core_B = 42
+  core_B_without_legal = 33
+  d2_plus_candidates = 144
+  deduped_ax = 36
+  field_size = 343
+  gate10_active_B = 0
+  gate3_active_B = 9
+  gate3_minus_B = 9
+  gate4_active_B = 0
+  gate5_active_B = 0
+  gate6_active_B = 0
+  gate7_active_B = 0
+  gate8_active_B = 0
+  gate9_active_B = 0
+  legal_B = 9
+  legal_B_in_core = 9
+  legal_B_missing_core = 0
+  modulus_degree = 3
+  prefix_d2_legal_B = 9
+  prefix_gate10_all_plus_B = 0
+  prefix_gate3_all_plus_B = 0
+  prefix_gate4_all_plus_B = 0
+  prefix_gate5_all_plus_B = 0
+  prefix_gate6_all_plus_B = 0
+  prefix_gate7_all_plus_B = 0
+  prefix_gate8_all_plus_B = 0
+  prefix_gate9_all_plus_B = 0
+  skip_X_degenerate = 2
+  source_rows = 156
+  core_B/N = 0.122448980
+  legal_B/N = 0.026239067
+  legal_B/core_B = 0.214285714
+  prefix_gate3/legal_B = 0.000000000 step_rate=0.000000000 scaled_by_half=0.000000
+  prefix_gate4/legal_B = 0.000000000 step_rate=0.000000000 scaled_by_half=0.000000
+  prefix_gate5/legal_B = 0.000000000 step_rate=0.000000000 scaled_by_half=0.000000
+  prefix_gate6/legal_B = 0.000000000 step_rate=0.000000000 scaled_by_half=0.000000
+  prefix_gate7/legal_B = 0.000000000 step_rate=0.000000000 scaled_by_half=0.000000
+  prefix_gate8/legal_B = 0.000000000 step_rate=0.000000000 scaled_by_half=0.000000
+  prefix_gate9/legal_B = 0.000000000 step_rate=0.000000000 scaled_by_half=0.000000
+  prefix_gate10/legal_B = 0.000000000 step_rate=0.000000000 scaled_by_half=0.000000
+GF(7^4) N=2401:
+  B_degenerate = 1
+  B_group_size_8 = 72
+  candidate_invalid_not_nonsplit = 840
+  candidates = 1344
+  compact_not_target = 1196
+  core_B = 168
+  core_B_without_legal = 96
+  d2_minus = 768
+  d2_plus_candidates = 576
+  deduped_ax = 288
+  field_size = 2401
+  gate10_active_B = 0
+  gate3_active_B = 72
+  gate3_minus_B = 40
+  gate3_plus_B = 32
+  gate4_active_B = 32
+  gate4_minus_B = 32
+  gate5_active_B = 0
+  gate6_active_B = 0
+  gate7_active_B = 0
+  gate8_active_B = 0
+  gate9_active_B = 0
+  legal_B = 72
+  legal_B_in_core = 72
+  legal_B_missing_core = 0
+  modulus_degree = 4
+  prefix_d2_legal_B = 72
+  prefix_gate10_all_plus_B = 0
+  prefix_gate3_all_plus_B = 32
+  prefix_gate4_all_plus_B = 0
+  prefix_gate5_all_plus_B = 0
+  prefix_gate6_all_plus_B = 0
+  prefix_gate7_all_plus_B = 0
+  prefix_gate8_all_plus_B = 0
+  prefix_gate9_all_plus_B = 0
+  skip_X_degenerate = 2
+  source_rows = 1092
+  core_B/N = 0.069970845
+  legal_B/N = 0.029987505
+  legal_B/core_B = 0.428571429
+  prefix_gate3/legal_B = 0.444444444 step_rate=0.444444444 scaled_by_half=0.888889
+  prefix_gate4/legal_B = 0.000000000 step_rate=0.000000000 scaled_by_half=0.000000
+  prefix_gate5/legal_B = 0.000000000 step_rate=0.000000000 scaled_by_half=0.000000
+  prefix_gate6/legal_B = 0.000000000 step_rate=0.000000000 scaled_by_half=0.000000
+  prefix_gate7/legal_B = 0.000000000 step_rate=0.000000000 scaled_by_half=0.000000
+  prefix_gate8/legal_B = 0.000000000 step_rate=0.000000000 scaled_by_half=0.000000
+  prefix_gate9/legal_B = 0.000000000 step_rate=0.000000000 scaled_by_half=0.000000
+  prefix_gate10/legal_B = 0.000000000 step_rate=0.000000000 scaled_by_half=0.000000
+GF(7^5) N=16807:
+  B_degenerate = 1
+  B_group_size_16 = 590
+  candidate_invalid_not_nonsplit = 8400
+  candidates = 9440
+  compact_not_target = 7880
+  core_B = 2100
+  core_B_without_legal = 1510
+  d2_plus_candidates = 9440
+  deduped_ax = 2360
+  field_size = 16807
+  gate10_active_B = 0
+  gate3_active_B = 590
+  gate3_minus_B = 275
+  gate3_plus_B = 315
+  gate4_active_B = 315
+  gate4_minus_B = 175
+  gate4_plus_B = 140
+  gate5_active_B = 140
+  gate5_plus_B = 140
+  gate6_active_B = 140
+  gate6_minus_B = 140
+  gate7_active_B = 0
+  gate8_active_B = 0
+  gate9_active_B = 0
+  legal_B = 590
+  legal_B_in_core = 590
+  legal_B_missing_core = 0
+  modulus_degree = 5
+  prefix_d2_legal_B = 590
+  prefix_gate10_all_plus_B = 0
+  prefix_gate3_all_plus_B = 315
+  prefix_gate4_all_plus_B = 140
+  prefix_gate5_all_plus_B = 140
+  prefix_gate6_all_plus_B = 0
+  prefix_gate7_all_plus_B = 0
+  prefix_gate8_all_plus_B = 0
+  prefix_gate9_all_plus_B = 0
+  skip_X_degenerate = 2
+  source_rows = 8920
+  core_B/N = 0.124947938
+  legal_B/N = 0.035104421
+  legal_B/core_B = 0.280952381
+  prefix_gate3/legal_B = 0.533898305 step_rate=0.533898305 scaled_by_half=1.067797
+  prefix_gate4/legal_B = 0.237288136 step_rate=0.444444444 scaled_by_half=0.949153
+  prefix_gate5/legal_B = 0.237288136 step_rate=1.000000000 scaled_by_half=1.898305
+  prefix_gate6/legal_B = 0.000000000 step_rate=0.000000000 scaled_by_half=0.000000
+  prefix_gate7/legal_B = 0.000000000 step_rate=0.000000000 scaled_by_half=0.000000
+  prefix_gate8/legal_B = 0.000000000 step_rate=0.000000000 scaled_by_half=0.000000
+  prefix_gate9/legal_B = 0.000000000 step_rate=0.000000000 scaled_by_half=0.000000
+  prefix_gate10/legal_B = 0.000000000 step_rate=0.000000000 scaled_by_half=0.000000
+GF(7^6) N=117649:
+  B_degenerate = 1
+  B_group_size_8 = 3576
+  candidate_invalid_not_nonsplit = 62400
+  candidates = 57792
+  compact_not_target = 60112
+  core_B = 7224
+  core_B_without_legal = 3648
+  d2_minus = 29184
+  d2_plus_candidates = 28608
+  deduped_ax = 14304
+  field_size = 117649
+  gate10_active_B = 0
+  gate3_active_B = 3576
+  gate3_minus_B = 1680
+  gate3_plus_B = 1896
+  gate4_active_B = 1896
+  gate4_minus_B = 768
+  gate4_plus_B = 1128
+  gate5_active_B = 1128
+  gate5_minus_B = 528
+  gate5_plus_B = 600
+  gate6_active_B = 600
+  gate6_minus_B = 240
+  gate6_plus_B = 360
+  gate7_active_B = 360
+  gate7_minus_B = 360
+  gate8_active_B = 0
+  gate9_active_B = 0
+  legal_B = 3576
+  legal_B_in_core = 3576
+  legal_B_missing_core = 0
+  modulus_degree = 6
+  prefix_d2_legal_B = 3576
+  prefix_gate10_all_plus_B = 0
+  prefix_gate3_all_plus_B = 1896
+  prefix_gate4_all_plus_B = 1128
+  prefix_gate5_all_plus_B = 600
+  prefix_gate6_all_plus_B = 360
+  prefix_gate7_all_plus_B = 0
+  prefix_gate8_all_plus_B = 0
+  prefix_gate9_all_plus_B = 0
+  skip_X_degenerate = 2
+  source_rows = 60096
+  core_B/N = 0.061402987
+  legal_B/N = 0.030395498
+  legal_B/core_B = 0.495016611
+  prefix_gate3/legal_B = 0.530201342 step_rate=0.530201342 scaled_by_half=1.060403
+  prefix_gate4/legal_B = 0.315436242 step_rate=0.594936709 scaled_by_half=1.261745
+  prefix_gate5/legal_B = 0.167785235 step_rate=0.531914894 scaled_by_half=1.342282
+  prefix_gate6/legal_B = 0.100671141 step_rate=0.600000000 scaled_by_half=1.610738
+  prefix_gate7/legal_B = 0.000000000 step_rate=0.000000000 scaled_by_half=0.000000
+  prefix_gate8/legal_B = 0.000000000 step_rate=0.000000000 scaled_by_half=0.000000
+  prefix_gate9/legal_B = 0.000000000 step_rate=0.000000000 scaled_by_half=0.000000
+  prefix_gate10/legal_B = 0.000000000 step_rate=0.000000000 scaled_by_half=0.000000
+p27_b_line_prefix_extension_count_probe_rows=1/1
