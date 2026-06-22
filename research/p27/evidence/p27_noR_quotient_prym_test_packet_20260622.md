@@ -44,6 +44,7 @@ no-R Frobenius fiber profile = degree-3 B orbits plus quadratic fiber splitting
 no-R coordinate degree profile = cubic B-orbit, quadratic fixed-B/fiber split
 no-R quadratic subcover classifier = W/T-only killed; beta_U and hidden_mixed remain
 no-R fixed-B character screen = beta_U support chi(B)=+1; no stable gamma law
+no-R beta_U norm descent = gamma is Norm(Unext+2), half-size/full-size fiber split
 reduced lift visible classifier = killed
 gamma visible square triviality = killed
 oriented alpha/beta word = tautological, not a source
@@ -140,6 +141,20 @@ For the `beta_U_fixedB` test, impose `chi(B)=+1` as a support gate.  Do not
 promote that support gate as a sampler unless the gamma/f4 class descends on
 the resulting quotient.  For `hidden_mixed_fixedB`, ignore the small-field
 `B +/- 2` atom shortcut unless a divisor proof resurrects it.
+
+For beta_U specifically, the class to extract is now named:
+
+```text
+N_B = Norm_GF(q^2)/GF(q)(Unext + 2)
+```
+
+The finite-field signature to explain is:
+
+```text
+gamma = chi_base(N_B)
+gamma+ rows have 16 beta_U points over B
+gamma- rows have 32 beta_U points over B
+```
 
 4. Compute quotient/Prym structure under the available symmetries:
 

@@ -26,6 +26,15 @@ hidden_mixed_fixedB gamma has no stable visible base-B character law
 So `beta_U_fixedB` has a real base-`B` support gate, but it is not yet a
 sqrt-beating source.  The selected class still needs divisor/Kummer extraction.
 
+Norm-descent follow-up:
+[P27 B-Line No-R Beta_U Norm Descent](p27_b_line_noR_betaU_norm_descent_20260622.md).
+On the `chi(B)=+1` support, `gamma = chi(Unext+2)` descends exactly as
+`chi_base(Norm(Unext+2))` across `q = 23, 71, 103, 167, 199, 263`.  The sign
+is uniform on each active base `B`, and `gamma=+1` is exactly the half-size
+`16`-point beta_U fiber case while `gamma=-1` is the full-size `32`-point
+case.  This promotes beta_U from a bucket to a named norm/Kummer extraction
+target, but still not to GPU production.
+
 ## Artifacts
 
 Probe:
@@ -154,11 +163,13 @@ diagnostic subcover, not a verified continuation source.
 
 ```text
 continue = beta_U_fixedB Kummer/divisor extraction on chi(B)=+1 support
+continue = extract the beta_U norm class Norm(Unext+2)
 continue = hidden_mixed_fixedB Kummer/divisor extraction without visible atom shortcut
 continue = compare beta_U gamma class against f4/f3 after quotient extraction
 
 kill = hidden_mixed B+/-2 atom shortcut after q167 failure
 kill = beta_U gamma polarity as a visible base-B law
+kill = treating beta_U norm descent alone as sqrt-beating
 kill = GPU production from chi(B)=+1 support alone
 ```
 

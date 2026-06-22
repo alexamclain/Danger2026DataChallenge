@@ -1261,6 +1261,12 @@ The fixed-`B` character screen gives one support law:
 `beta_U_fixedB` support is exactly `chi(B)=+1` on the tested fixed-`B` domain,
 but its gamma polarity is not stable; `hidden_mixed` small-field `B +/- 2`
 patterns fail at `q=167`.  This is a CAS support gate, not a GPU sampler.
+The beta_U class now has a named norm target:
+[P27 B-Line No-R Beta_U Norm Descent](evidence/p27_b_line_noR_betaU_norm_descent_20260622.md).
+Across `q = 23, 71, 103, 167, 199, 263`, gamma descends as
+`chi_base(Norm(Unext+2))`, is uniform per active base `B`, and matches the
+`16` versus `32` beta_U fiber-size split.  The next beta_U CAS test is divisor
+extraction for this norm class on the `chi(B)=+1` support.
 The B-line visible two-gate quartic shortcut is closed as well:
 [P27 B-Line Gate4-Prefix Quartic q1847 Screen](evidence/p27_b_line_gate4_prefix_quartic_q1847_screen_20260622.md).
 It scans `6,300,872,423` q1847 coefficient triples for

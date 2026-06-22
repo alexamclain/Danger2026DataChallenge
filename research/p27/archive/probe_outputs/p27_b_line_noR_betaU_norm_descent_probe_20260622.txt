@@ -1,0 +1,82 @@
+p27 B-line no-R beta_U norm-descent probe
+question = does gamma descend as chi_base Norm(Unext+2), uniformly per B?
+fields = 23^2,71^2,103^2,167^2
+
+GF(23^2) q=529
+  active_beta_U_B = 2
+  base_B_chi_1 = 64
+  beta_U_points = 64
+  gamma_-1 = 64
+  norm_selector_chi_-1 = 64
+  norm_values_per_B_10 = 1
+  norm_values_per_B_9 = 1
+  trace_values_per_B_13 = 2
+  B_summary_top:
+    columns = chiB points gamma norm_values trace_values
+    (1, 32, -1, 10, 13) = 1
+    (1, 32, -1, 9, 13) = 1
+
+GF(71^2) q=5041
+  active_beta_U_B = 8
+  base_B_chi_1 = 128
+  beta_U_points = 128
+  gamma_1 = 128
+  norm_selector_chi_1 = 128
+  norm_values_per_B_1 = 4
+  norm_values_per_B_8 = 4
+  trace_values_per_B_8 = 8
+  B_summary_top:
+    columns = chiB points gamma norm_values trace_values
+    (1, 16, 1, 1, 8) = 4
+    (1, 16, 1, 8, 8) = 4
+
+GF(103^2) q=10609
+  active_beta_U_B = 12
+  base_B_chi_1 = 384
+  beta_U_points = 384
+  gamma_-1 = 384
+  norm_selector_chi_-1 = 384
+  norm_values_per_B_12 = 1
+  norm_values_per_B_14 = 1
+  norm_values_per_B_16 = 4
+  norm_values_per_B_9 = 6
+  trace_values_per_B_15 = 4
+  trace_values_per_B_16 = 8
+  B_summary_top:
+    columns = chiB points gamma norm_values trace_values
+    (1, 32, -1, 9, 16) = 4
+    (1, 32, -1, 16, 16) = 3
+    (1, 32, -1, 9, 15) = 2
+    (1, 32, -1, 12, 16) = 1
+    (1, 32, -1, 16, 15) = 1
+    (1, 32, -1, 14, 15) = 1
+
+GF(167^2) q=27889
+  active_beta_U_B = 20
+  base_B_chi_1 = 544
+  beta_U_points = 544
+  gamma_-1 = 448
+  gamma_1 = 96
+  norm_selector_chi_-1 = 448
+  norm_selector_chi_1 = 96
+  norm_values_per_B_1 = 3
+  norm_values_per_B_12 = 2
+  norm_values_per_B_14 = 1
+  norm_values_per_B_16 = 4
+  norm_values_per_B_8 = 3
+  norm_values_per_B_9 = 7
+  trace_values_per_B_15 = 4
+  trace_values_per_B_16 = 10
+  trace_values_per_B_8 = 6
+  B_summary_top:
+    columns = chiB points gamma norm_values trace_values
+    (1, 32, -1, 9, 16) = 5
+    (1, 32, -1, 16, 16) = 4
+    (1, 16, 1, 8, 8) = 3
+    (1, 16, 1, 1, 8) = 3
+    (1, 32, -1, 9, 15) = 2
+    (1, 32, -1, 14, 15) = 1
+    (1, 32, -1, 12, 16) = 1
+    (1, 32, -1, 12, 15) = 1
+
+p27_b_line_noR_betaU_norm_descent_probe_rows=1/1
