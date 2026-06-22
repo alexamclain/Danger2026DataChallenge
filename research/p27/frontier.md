@@ -1282,6 +1282,12 @@ low-support side of the norm map: each active `B` has `1` or `8` distinct
 `Norm(Unext+2)` values.  `gamma=-1` has `9`, `12`, `14`, or `16`.  This is a
 real branch/ramification target for CAS, but not a production sampler because
 the support count is obtained only after enumerating the beta_U fiber.
+The cheap visible precursor is now replayed and killed:
+[P27 B-Line No-R Beta_U B-Character Replay](evidence/p27_b_line_noR_betaU_b_character_replay_20260622.md).
+In q199/q263/q311, beta_U support is still exactly `chi(B)=+1`, but the
+`gamma=+1` / low-norm-support side is not any named atom, linear factor, or
+irreducible quadratic `B` character.  So the norm profile is CAS
+branch/ramification data, not a GPU B-bucket.
 The obvious plane-curve shortcut is now screened:
 [P27 B-Line No-R Beta_U Norm Relation Screen](evidence/p27_b_line_noR_betaU_norm_relation_20260622.md).
 `(B, Norm(Unext+2))` has no stable extra bidegree relation through `B12_N16`;

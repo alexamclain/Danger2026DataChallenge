@@ -48,6 +48,8 @@ no-R fixed-B character screen = beta_U support chi(B)=+1; no stable gamma law
 no-R beta_U norm descent = gamma is Norm(Unext+2), half-size/full-size fiber split
 no-R beta_U norm-fiber profile = gamma+ is exactly low norm-support degree
     1 or 8, while gamma- has support degree 9,12,14,16 in tested q^2 fields
+no-R beta_U B-character replay = q199/q263/q311 kill atom/linear/irreducible
+    quadratic B-character explanations for gamma/low-support side
 no-R beta_U norm relation = no stable low-bidegree (B,Norm) plane curve
 no-R beta_U next-gate = gamma+ materializes cleanly but f4 is mixed inside every active B
 no-R beta_U f4 pair = x7-pair norm -4*(A*x6+1) exact, but no pair-level sampler
@@ -195,6 +197,16 @@ branch/ramification profile of the norm map, or show that it is still a
 high-genus fresh Kummer layer after normalization.  Do not treat the support
 count itself as a GPU source; it is computed after enumerating the beta_U
 fiber.
+
+The heldout B-character replay:
+
+```text
+research/p27/evidence/p27_b_line_noR_betaU_b_character_replay_20260622.md
+```
+
+adds that the low-support side is not an atom, linear, or irreducible
+quadratic base-`B` character in q199/q263/q311.  This keeps the beta_U target
+at divisor/Kummer/ramification extraction rather than bucket screening.
 
 Do not ask for a small visible `(B, N_B)` plane equation as the main route:
 the relation screen is negative through bidegree `B12_N16` in the stable guard

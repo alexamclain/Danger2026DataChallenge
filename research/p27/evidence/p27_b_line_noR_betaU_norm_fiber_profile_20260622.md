@@ -94,6 +94,14 @@ and the cutoff test has no exceptions:
 norm_value_cutoff_8_mismatch = 0
 ```
 
+Visible precursor replay:
+[P27 B-Line No-R Beta_U B-Character Replay](p27_b_line_noR_betaU_b_character_replay_20260622.md)
+checks the closest cheap explanation in the heldout fields `q=199,263,311`.
+The beta_U support remains exactly `chi(B)=+1`, but the `gamma=+1`
+low-support side has no exact named atom, linear, or irreducible-quadratic
+`B` character.  Thus the norm-support profile is a branch/ramification target,
+not a B-bucket source.
+
 ## Interpretation
 
 Positive:
@@ -139,12 +147,14 @@ continue = include norm-value support counts in offline CAS regression
 
 kill = treating distinct norm-value count as a production sampler
 kill = GPU beta_U buckets without a source map
+kill = atom/linear/quadratic B-character explanations for the low-support side
 kill = broad visible (B,Norm) plane-curve scans already killed through B12_N16
 ```
 
 ## Linked Artifacts
 
 - [P27 B-Line No-R Beta_U Norm Descent](p27_b_line_noR_betaU_norm_descent_20260622.md)
+- [P27 B-Line No-R Beta_U B-Character Replay](p27_b_line_noR_betaU_b_character_replay_20260622.md)
 - [P27 B-Line No-R Beta_U Norm Relation Screen](p27_b_line_noR_betaU_norm_relation_20260622.md)
 - [P27 B-Line No-R Beta_U Next-Gate Probe](p27_b_line_noR_betaU_next_gate_20260622.md)
 - [P27 No-R Quotient/Prym Test Packet](p27_noR_quotient_prym_test_packet_20260622.md)

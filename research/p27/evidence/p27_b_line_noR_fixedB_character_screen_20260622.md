@@ -97,6 +97,12 @@ q=167: exact B
 Equivalently, the fixed-`B` beta/U subcover appears exactly on the
 `chi(B)=+1` half of the tested fixed-`B` domain.
 
+Heldout replay:
+[P27 B-Line No-R Beta_U B-Character Replay](p27_b_line_noR_betaU_b_character_replay_20260622.md)
+extends the same screen to `q=199,263,311`.  The support law remains exact
+`B`, while `beta_U_fixedB gamma_plus` has no exact atom, linear, or
+irreducible-quadratic `B` character in any of the three fields.
+
 `beta_U_fixedB` gamma polarity:
 
 ```text
@@ -169,6 +175,7 @@ continue = compare beta_U gamma class against f4/f3 after quotient extraction
 
 kill = hidden_mixed B+/-2 atom shortcut after q167 failure
 kill = beta_U gamma polarity as a visible base-B law
+kill = beta_U gamma polarity as an atom/linear/quadratic B law after q199/q263/q311 replay
 kill = treating beta_U norm descent alone as sqrt-beating
 kill = GPU production from chi(B)=+1 support alone
 ```

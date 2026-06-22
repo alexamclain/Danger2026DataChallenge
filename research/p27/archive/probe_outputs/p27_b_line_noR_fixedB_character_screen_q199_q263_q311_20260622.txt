@@ -1,0 +1,122 @@
+p27 B-line no-R fixed-B character screen
+families = named atoms, linear B-a, irreducible quadratic B^2+uB+v
+fields = 199^2,263^2,311^2
+
+GF(199^2) q=39601
+  fixedB_rows = 48
+  beta_U_fixedB_points = 512
+  beta_U_fixedB_gamma_plus = 256
+  beta_U_fixedB_gamma_minus = 256
+  target beta_U_fixedB presence: active_B = 24/48
+    atoms: tested=11 exact=B best=B best_distance=0
+    linear: tested=151 exact=B-0 best=B-0 best_distance=0
+    irreducible_quadratic: tested=19701 exact=none best=B^2+55B+4 best_distance=12
+  target beta_U_fixedB gamma_plus: active_B = 16/48
+    atoms: tested=11 exact=none best=B best_distance=8
+    linear: tested=151 exact=none best=B-0 best_distance=8
+    irreducible_quadratic: tested=19701 exact=none best=-B^2+59B+156 best_distance=10
+  target beta_U_fixedB gamma_minus: active_B = 8/48
+    atoms: tested=11 exact=none best=B-2 best_distance=12
+    linear: tested=151 exact=none best=B-2 best_distance=12
+    irreducible_quadratic: tested=19701 exact=none best=-B^2+2B+19 best_distance=10
+  target beta_U_fixedB plus_majority: active_B = 16/48
+    atoms: tested=11 exact=none best=B best_distance=8
+    linear: tested=151 exact=none best=B-0 best_distance=8
+    irreducible_quadratic: tested=19701 exact=none best=-B^2+59B+156 best_distance=10
+  hidden_mixed_fixedB_points = 2304
+  hidden_mixed_fixedB_gamma_plus = 1280
+  hidden_mixed_fixedB_gamma_minus = 1024
+  target hidden_mixed_fixedB presence: active_B = 48/48
+    trivial_target = true
+  target hidden_mixed_fixedB gamma_plus: active_B = 28/48
+    atoms: tested=11 exact=none best=B+2 best_distance=16
+    linear: tested=151 exact=none best=B-9 best_distance=15
+    irreducible_quadratic: tested=19701 exact=none best=B^2+16B+143 best_distance=10
+  target hidden_mixed_fixedB gamma_minus: active_B = 20/48
+    atoms: tested=11 exact=none best=-B+2 best_distance=16
+    linear: tested=151 exact=none best=-B-9 best_distance=15
+    irreducible_quadratic: tested=19701 exact=none best=-B^2+16B+143 best_distance=10
+  target hidden_mixed_fixedB plus_majority: active_B = 28/48
+    atoms: tested=11 exact=none best=B+2 best_distance=16
+    linear: tested=151 exact=none best=B-9 best_distance=15
+    irreducible_quadratic: tested=19701 exact=none best=B^2+16B+143 best_distance=10
+
+GF(263^2) q=69169
+  fixedB_rows = 64
+  beta_U_fixedB_points = 832
+  beta_U_fixedB_gamma_plus = 192
+  beta_U_fixedB_gamma_minus = 640
+  target beta_U_fixedB presence: active_B = 32/64
+    atoms: tested=11 exact=B best=B best_distance=0
+    linear: tested=199 exact=B-0 best=B-0 best_distance=0
+    irreducible_quadratic: tested=34453 exact=none best=-B^2+45B+4 best_distance=16
+  target beta_U_fixedB gamma_plus: active_B = 12/64
+    atoms: tested=11 exact=none best=B-2 best_distance=16
+    linear: tested=199 exact=none best=B-2 best_distance=16
+    irreducible_quadratic: tested=34453 exact=none best=B^2+152B+92 best_distance=16
+  target beta_U_fixedB gamma_minus: active_B = 20/64
+    atoms: tested=11 exact=none best=B best_distance=12
+    linear: tested=199 exact=none best=B-0 best_distance=12
+    irreducible_quadratic: tested=34453 exact=none best=B^2+58B+74 best_distance=17
+  target beta_U_fixedB plus_majority: active_B = 12/64
+    atoms: tested=11 exact=none best=B-2 best_distance=16
+    linear: tested=199 exact=none best=B-2 best_distance=16
+    irreducible_quadratic: tested=34453 exact=none best=B^2+152B+92 best_distance=16
+  hidden_mixed_fixedB_points = 3072
+  hidden_mixed_fixedB_gamma_plus = 1408
+  hidden_mixed_fixedB_gamma_minus = 1664
+  target hidden_mixed_fixedB presence: active_B = 64/64
+    trivial_target = true
+  target hidden_mixed_fixedB gamma_plus: active_B = 28/64
+    atoms: tested=11 exact=none best=-B+2 best_distance=24
+    linear: tested=199 exact=none best=B-64 best_distance=23
+    irreducible_quadratic: tested=34453 exact=none best=B^2+136B+73 best_distance=16
+  target hidden_mixed_fixedB gamma_minus: active_B = 36/64
+    atoms: tested=11 exact=none best=B+2 best_distance=24
+    linear: tested=199 exact=none best=-B-64 best_distance=23
+    irreducible_quadratic: tested=34453 exact=none best=-B^2+136B+73 best_distance=16
+  target hidden_mixed_fixedB plus_majority: active_B = 28/64
+    atoms: tested=11 exact=none best=-B+2 best_distance=24
+    linear: tested=199 exact=none best=B-64 best_distance=23
+    irreducible_quadratic: tested=34453 exact=none best=B^2+136B+73 best_distance=16
+
+GF(311^2) q=96721
+  fixedB_rows = 76
+  beta_U_fixedB_points = 960
+  beta_U_fixedB_gamma_plus = 256
+  beta_U_fixedB_gamma_minus = 704
+  target beta_U_fixedB presence: active_B = 38/76
+    atoms: tested=11 exact=B best=B best_distance=0
+    linear: tested=235 exact=B-0 best=B-0 best_distance=0
+    irreducible_quadratic: tested=48205 exact=none best=-B^2+58B+76 best_distance=20
+  target beta_U_fixedB gamma_plus: active_B = 16/76
+    atoms: tested=11 exact=none best=B-2 best_distance=19
+    linear: tested=235 exact=none best=B-2 best_distance=19
+    irreducible_quadratic: tested=48205 exact=none best=B^2+70B+304 best_distance=20
+  target beta_U_fixedB gamma_minus: active_B = 22/76
+    atoms: tested=11 exact=none best=B best_distance=16
+    linear: tested=235 exact=none best=B-0 best_distance=16
+    irreducible_quadratic: tested=48205 exact=none best=B^2+286B+4 best_distance=18
+  target beta_U_fixedB plus_majority: active_B = 16/76
+    atoms: tested=11 exact=none best=B-2 best_distance=19
+    linear: tested=235 exact=none best=B-2 best_distance=19
+    irreducible_quadratic: tested=48205 exact=none best=B^2+70B+304 best_distance=20
+  hidden_mixed_fixedB_points = 3648
+  hidden_mixed_fixedB_gamma_plus = 1728
+  hidden_mixed_fixedB_gamma_minus = 1920
+  target hidden_mixed_fixedB presence: active_B = 76/76
+    trivial_target = true
+  target hidden_mixed_fixedB gamma_plus: active_B = 35/76
+    atoms: tested=11 exact=none best=-B+2 best_distance=32
+    linear: tested=235 exact=none best=-B-58 best_distance=26
+    irreducible_quadratic: tested=48205 exact=none best=B^2+90B+21 best_distance=20
+  target hidden_mixed_fixedB gamma_minus: active_B = 41/76
+    atoms: tested=11 exact=none best=B+2 best_distance=32
+    linear: tested=235 exact=none best=B-58 best_distance=26
+    irreducible_quadratic: tested=48205 exact=none best=-B^2+90B+21 best_distance=20
+  target hidden_mixed_fixedB plus_majority: active_B = 35/76
+    atoms: tested=11 exact=none best=-B+2 best_distance=32
+    linear: tested=235 exact=none best=-B-58 best_distance=26
+    irreducible_quadratic: tested=48205 exact=none best=B^2+90B+21 best_distance=20
+
+p27_b_line_noR_fixedB_character_screen_rows=1/1
