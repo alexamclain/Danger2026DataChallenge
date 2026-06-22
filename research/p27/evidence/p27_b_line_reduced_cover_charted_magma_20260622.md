@@ -34,6 +34,8 @@ research/p27/archive/fixtures/p27_b_line_reduced_cover_noR_invX_q7_magma.m
 research/p27/archive/fixtures/p27_b_line_reduced_cover_invX_q7_magma.m
 research/p27/archive/fixtures/p27_b_line_reduced_cover_invX_stepwise_q7_magma.m
 research/p27/archive/fixtures/p27_b_line_reduced_cover_localized_q7_magma.m
+research/p27/archive/fixtures/p27_b_line_reduced_cover_localized_invariants_q7_magma.m
+research/p27/archive/fixtures/p27_b_line_reduced_cover_localized_reduced_q7_magma.m
 ```
 
 Outputs:
@@ -51,6 +53,10 @@ research/p27/archive/probe_outputs/p27_b_line_reduced_cover_invX_stepwise_q7_mag
 research/p27/archive/probe_outputs/p27_b_line_reduced_cover_invX_stepwise_q7_magma_20260622.txt
 research/p27/archive/probe_outputs/p27_b_line_reduced_cover_localized_q7_magma_20260622.xml
 research/p27/archive/probe_outputs/p27_b_line_reduced_cover_localized_q7_magma_20260622.txt
+research/p27/archive/probe_outputs/p27_b_line_reduced_cover_localized_invariants_q7_magma_20260622.xml
+research/p27/archive/probe_outputs/p27_b_line_reduced_cover_localized_invariants_q7_magma_20260622.txt
+research/p27/archive/probe_outputs/p27_b_line_reduced_cover_localized_reduced_q7_magma_20260622.xml
+research/p27/archive/probe_outputs/p27_b_line_reduced_cover_localized_reduced_q7_magma_20260622.txt
 ```
 
 Submission shape:
@@ -129,6 +135,23 @@ BREDUCED_LOCALIZED_START 7 1 12
 The online calculator still cannot compute `#Points(S)` or `Curve(S)`, but the
 localized model avoids the failing saturation stage entirely.
 
+### Localized Invariant Boundary
+
+The lighter invariant fixtures show the same boundary more sharply:
+
+```text
+BREDUCED_LOCALIZED_INV_START 7 1 12
+BREDUCED_LOCALIZED_INV_DEG_ERROR
+time limit
+
+BREDUCED_LOCALIZED_REDUCED_START 7 1 12
+time limit
+```
+
+So the web calculator can certify dimension for the localized complete
+intersection, but not degree, reducedness, irreducibility, point count, curve
+conversion, or genus.
+
 ## Interpretation
 
 Positive:
@@ -145,6 +168,8 @@ Negative:
 ```text
 Online Magma still cannot extract genus, components, branch divisors, or a
 source map.
+Online Magma also cannot extract lightweight degree/reduced/irreducible
+invariants from the localized full model.
 No low-genus quotient has been found.
 No GPU production mode follows from this result.
 ```
@@ -158,10 +183,12 @@ Use this order:
 2. Port the same localized chart to q1607/q1847/q2087 or characteristic 0.
 3. Normalize the 13-variable complete intersection directly, without
    Saturation(I,bad).
-4. If that is too heavy, normalize the no-R X-inverted base first:
+4. Compute degree/reducedness/irreducibility offline; the online endpoint
+   cannot supply even these invariants.
+5. If that is too heavy, normalize the no-R X-inverted base first:
    p27_b_line_reduced_cover_noR_invX_q7_magma.m.
-5. Add compactD_R as a quadratic cover and compute its branch divisor.
-6. Only after the reduced f3 cover is understood, attach
+6. Add compactD_R as a quadratic cover and compute its branch divisor.
+7. Only after the reduced f3 cover is understood, attach
    x6^2 - U*x6 + 1 and gamma^2 = U + 2.
 ```
 

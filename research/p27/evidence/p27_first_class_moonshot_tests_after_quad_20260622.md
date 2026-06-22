@@ -238,7 +238,10 @@ The web-calculator wall is now localized.  Product saturation fails first at
 the `X=0` artifact; using `X*iX=1` makes the no-R reduced cover saturate as a
 dimension-1 scheme, while the fully localized compactD_R model is already
 dimension 1 with 12 equations.  This is the current concrete offline CAS
-object for the first-class B-line lane.
+object for the first-class B-line lane.  Follow-up invariant probes show the
+online endpoint cannot compute degree, reducedness, or irreducibility for this
+localized model either, so all normalization/component/branch invariants now
+belong to offline Magma/Sage.
 
 Required computation:
 
@@ -248,6 +251,7 @@ start from the localized complete-intersection chart rather than product saturat
 include x6^2-U*x6+1 and gamma^2=U+2 in the offline branch/class extraction
 impose the selected-source legal/core cut before using all-chart lift buckets
 extract branch divisor degree, support field degrees, components, genus
+compute degree/reducedness/irreducibility offline; do not rely on online Magma
 normalize F_A(u,v)=0 over the f3-plus B-u-H layer and extract div(v+2) modulo squares
 classify gamma as pullback, coboundary, translate, quotient class, or fresh half-cover
 extract alpha/beta phase classes and test whether they telescope across successive gates

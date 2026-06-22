@@ -1,0 +1,2 @@
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>3051790315</seed><version>2.29-8</version><warning>The computation exceeded the time limit and so was terminated prematurely.</warning></headers><results><line>BREDUCED_LOCALIZED_INV_START 7 1 12</line><line>BREDUCED_LOCALIZED_INV_DEG_ERROR</line></results></calculator>

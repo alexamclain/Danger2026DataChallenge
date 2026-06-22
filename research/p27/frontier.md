@@ -1159,6 +1159,9 @@ dimension 1 before remaining saturation; and the fully localized full model is
 dimension 1 with 12 equations and no saturation stage.  This is now the
 concrete offline Magma/Sage object for the B-line moonshot: normalize the
 localized complete intersection, then compute compactD/gamma branch classes.
+Follow-up invariant probes show the web endpoint cannot compute even
+degree/reducedness/irreducibility on that localized chart, so these invariants
+must also be part of the offline CAS ask.
 The B-line visible two-gate quartic shortcut is closed as well:
 [P27 B-Line Gate4-Prefix Quartic q1847 Screen](evidence/p27_b_line_gate4_prefix_quartic_q1847_screen_20260622.md).
 It scans `6,300,872,423` q1847 coefficient triples for
