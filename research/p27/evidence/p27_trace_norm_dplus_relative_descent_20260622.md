@@ -97,6 +97,59 @@ exact = 1
 p27_trace_norm_dplus_relative_descent_probe_rows=1/1
 ```
 
+## Magma Pricing
+
+Fixture:
+
+```text
+research/p27/archive/fixtures/p27_trace_norm_dplus_relative_cover_q607_magma.m
+```
+
+XML:
+
+```text
+research/p27/archive/probe_outputs/p27_trace_norm_dplus_relative_cover_q607_magma_20260622.xml
+```
+
+Output:
+
+```text
+research/p27/archive/probe_outputs/p27_trace_norm_dplus_relative_cover_q607_magma_20260622.txt
+```
+
+Command:
+
+```bash
+curl -sS \
+  --data-urlencode input@research/p27/archive/fixtures/p27_trace_norm_dplus_relative_cover_q607_magma.m \
+  https://magma.maths.usyd.edu.au/xml/calculator.xml \
+  | tee research/p27/archive/probe_outputs/p27_trace_norm_dplus_relative_cover_q607_magma_20260622.xml
+```
+
+Result:
+
+```text
+RESULT relative_base 2 2 5 4
+RESULT relative_dplus_cover 1 1 17 8 2
+RESULT relative_dplus_cover 1 -1 17 8 2
+RESULT relative_dplus_cover -1 1 17 8 2
+RESULT relative_dplus_cover -1 -1 17 8 2
+```
+
+Meaning:
+
+```text
+domain-spin base z^2=F has genus 2 and degree 2 over F_q(t)
+adding w^2=-C*R gives genus 5 and degree 4 over F_q(t)
+adding the relative Dplus cover gives genus 17 and degree 8 over F_q(t)
+the genus-17 price is uniform for all fixed orientation sign pairs eh,ev
+```
+
+This is a real reduction from the naive genus-69 full orientation-source cover,
+but it is still not a genus-0/genus-1 direct sampler.  The useful next object
+is a special quotient/Prym/decomposition of the genus-17 relative cover, or a
+relation from this cover to `d3`.
+
 ## Interpretation
 
 Positive:
@@ -105,6 +158,7 @@ Positive:
 The quotient-symmetry fiber constancy is explained exactly.
 The hard class is now a named relative Kummer/Hilbert-90 problem.
 The known domain-spin gate is the boundary term, not disposable bookkeeping.
+The reduced relative Dplus cover prices at genus 17, not genus 69.
 ```
 
 Negative:
@@ -113,6 +167,7 @@ Negative:
 Dplus is not a free rational character on a^2+g^2=4.
 The failed low-weight a/g/m character screen was testing the wrong level.
 Sampling the conic quotient alone cannot impose Dplus.
+Genus 17 is still too large to promote as a direct production sampler.
 ```
 
 ## Next Test
@@ -141,12 +196,14 @@ Norm_z(u) = z^2*S^2
 
 ```text
 continue = relative Hilbert-90/Kummer extraction using u0,u1,S
+continue = quotient/Prym/decomposition of the genus-17 relative cover
 continue = quotient coordinates a=t-1/t, g=w/t only together with the
            domain-spin cover
 continue = GPU only after the relative source map or d3 coupling is named
 
 kill = standalone R(m) search on the conic parameter line
 kill = treating the conic quotient as a direct Dplus sampler
+kill = treating the genus-17 relative cover as an immediate production source
 kill = low-weight a/g/m character buckets as the Dplus class
 ```
 

@@ -176,6 +176,8 @@ Follow-up relative descent:
 The symbolic norm identity is `Norm_z(-core)=F*S^2`, with
 `F=t(t^2+2t-1)(t^2+1)=z^2`.  Therefore the quotient handle is conditional on
 the domain-spin cover; the bare conic is not a standalone `Dplus` source.
+Online Magma over `q=607` prices the reduced relative Dplus cover at genus
+`17` for every fixed orientation sign pair.
 
 Negative:
 
@@ -225,6 +227,7 @@ selected x-square gate, rather than just acting as a one-time 4x stratum.
 continue = Magma/Sage quotient decomposition of the named D_plus cover
 continue = exact descended Kummer/divisor extraction on a^2+g^2=4
 continue = relative Hilbert-90/Kummer extraction over z^2=F
+continue = quotient/Prym/decomposition of the genus-17 relative cover
 continue = GPU direct-source experiment if a quotient map is found
 continue = use this exact core formula for any further D_plus telemetry
 
@@ -232,6 +235,7 @@ kill = treating fixed d2/d3/d4 prefixes as source shrink
 kill = searching for D_plus as a tiny R(a) character
 kill = low-weight tested a/g/m quotient-character products
 kill = standalone R(m) search on the bare conic quotient
+kill = treating genus 17 as a direct source without further structure
 kill = using eps_h/eps_v or H/VQ/T_line buckets as post-Dplus filters
 kill = promoting current trace/norm classifier as production without a direct
        sampler or cheaper orientation source

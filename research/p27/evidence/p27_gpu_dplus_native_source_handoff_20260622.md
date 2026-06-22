@@ -123,6 +123,8 @@ Acceptable prototypes:
 sample a named low-genus quotient that maps to Dplus candidates
 sample the conic quotient a=t-1/t, g=w/t only after the descended Kummer class
   or branch divisor is named, and only together with the domain-spin cover
+do not treat the genus-17 relative cover as a production source unless a
+  further quotient/Prym/source map is supplied
 sample a partial source that provably covers a fixed Dplus component
 sample a fused recurrence source that emits Dplus plus a later selected gate
 ```

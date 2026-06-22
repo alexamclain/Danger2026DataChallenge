@@ -357,7 +357,11 @@ Writing `u=-core=u0+u1*z` with
 domain-spin root already existing; `Dplus` is not a standalone rational
 character on `a^2+g^2=4`.  The next serious CAS object is the relative
 Hilbert-90/Kummer class over the domain-spin cover, and the bare conic sampler
-is killed.
+is killed.  Online Magma over `q=607` prices this reduced relative cover at
+genus `17`, uniformly for the four fixed orientation sign pairs.  That is a
+real reduction from the naive genus-69 full orientation-source cover, but still
+not a direct production source without a special quotient/Prym or `d3`
+coupling.
 
 The naive orientation-source cover is now priced:
 [P27 Trace/Norm Source-Orientation Cover](evidence/p27_trace_norm_source_orientation_cover_20260621.md).
