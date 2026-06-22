@@ -1,0 +1,85 @@
+p27 K-line reverse-z relation probe
+source rows: d2 square and d3 all-plus with x6=z^2
+coordinates: K=x([2]P), Sroot^2=K
+degrees = [10, 12]
+p27_sample_stats:
+  oriented_candidates_raw = 4000
+  sample_candidate_invalid_not_nonsplit = 2070
+  sample_compact_not_target = 1977
+  sample_no_t = 2010
+  sample_no_w = 4083
+  sample_pair_incomplete = 1035
+  sample_rows = 1000
+  sample_x_draws = 8099
+p27_zrow_stats:
+  candidates = 4000
+  unique_K = 242
+  unique_K_z = 1936
+  unique_S = 484
+  unique_S_z = 3872
+  x6_branches = 8000
+  x6_nonsquare = 4128
+  z_rows = 7744
+p27:
+  rows = 7744
+p27_K_z:
+  transform_rows = 7744
+  transform_unique = 1936
+  transform_degenerate = 0
+  deg10: monomials=66 rank=66 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+p27_S_z:
+  transform_rows = 7744
+  transform_unique = 3872
+  transform_degenerate = 0
+  deg10: monomials=66 rank=66 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+p27_K_x6:
+  transform_rows = 7744
+  transform_unique = 968
+  transform_degenerate = 0
+  deg10: monomials=66 rank=66 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+p27_S_x6:
+  transform_rows = 7744
+  transform_unique = 1936
+  transform_degenerate = 0
+  deg10: monomials=66 rank=66 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+p27_K_r:
+  transform_rows = 7744
+  transform_unique = 484
+  transform_degenerate = 0
+  deg10: monomials=66 rank=66 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+p27_S_r:
+  transform_rows = 7744
+  transform_unique = 968
+  transform_degenerate = 0
+  deg10: monomials=66 rank=66 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+p27_K_zsum:
+  transform_rows = 7744
+  transform_unique = 968
+  transform_degenerate = 0
+  deg10: monomials=66 rank=66 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+p27_S_zsum:
+  transform_rows = 7744
+  transform_unique = 1936
+  transform_degenerate = 0
+  deg10: monomials=66 rank=66 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+p27_K_zdiff:
+  transform_rows = 7744
+  transform_unique = 968
+  transform_degenerate = 0
+  deg10: monomials=66 rank=66 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+p27_S_zdiff:
+  transform_rows = 7744
+  transform_unique = 1936
+  transform_degenerate = 0
+  deg10: monomials=66 rank=66 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+p27_kline_reverse_z_relation_probe_rows=1/1

@@ -847,11 +847,12 @@ Kept the actual d3 source root x6=z^2 and tested:
   (K,z-1/z), (Sroot,z-1/z).
 
 q1607/q1847/q2087:
-  all systems full-rank through degree 12
+  main systems full-rank through degree 20
+  q1607 has non-repeating degree-20 artifacts in lower projections only
 
 p27 1000-row sample:
   7744 z rows
-  all systems full-rank through degree 8
+  all systems full-rank through degree 12
 ```
 
 Updated kill rule:

@@ -25,8 +25,10 @@ and tests low-degree relations in:
 (K,z-1/z), (Sroot,z-1/z).
 ```
 
-On q1607/q1847/q2087 all systems are full-rank through degree `12`.  On a
-1,000-row p27 sample, all systems are full-rank through degree `8`.
+On q1607/q1847/q2087 all main systems are full-rank through degree `20`.
+The only extra-nullity rows are q1607-only degree-20 artifacts in lower
+multiplicity projections; they do not repeat in q1847 or q2087.  On a
+1,000-row p27 sample, all systems are full-rank through degree `12`.
 
 ## Artifacts
 
@@ -41,7 +43,9 @@ Outputs:
 ```text
 research/p27/archive/probe_outputs/p27_kline_reverse_z_relation_probe_q607_smoke_20260621.txt
 research/p27/archive/probe_outputs/p27_kline_reverse_z_relation_probe_q1607_q1847_q2087_deg12_20260621.txt
+research/p27/archive/probe_outputs/p27_kline_reverse_z_relation_probe_q1607_q1847_q2087_deg14_20_20260621.txt
 research/p27/archive/probe_outputs/p27_kline_reverse_z_relation_probe_p27_sample_deg8_20260621.txt
+research/p27/archive/probe_outputs/p27_kline_reverse_z_relation_probe_p27_sample_deg10_12_20260621.txt
 ```
 
 Commands:
@@ -61,11 +65,25 @@ python3 -u research/p27/archive/gates/p27_kline_reverse_z_relation_probe.py \
 
 PYTHONDONTWRITEBYTECODE=1 \
 python3 -u research/p27/archive/gates/p27_kline_reverse_z_relation_probe.py \
+  --small-primes 1607,1847,2087 \
+  --degrees 14,16,18,20 \
+  | tee research/p27/archive/probe_outputs/p27_kline_reverse_z_relation_probe_q1607_q1847_q2087_deg14_20_20260621.txt
+
+PYTHONDONTWRITEBYTECODE=1 \
+python3 -u research/p27/archive/gates/p27_kline_reverse_z_relation_probe.py \
   --small-primes '' \
   --p27-target 1000 \
   --max-draws 500000 \
   --degrees 2,4,6,8 \
   | tee research/p27/archive/probe_outputs/p27_kline_reverse_z_relation_probe_p27_sample_deg8_20260621.txt
+
+PYTHONDONTWRITEBYTECODE=1 \
+python3 -u research/p27/archive/gates/p27_kline_reverse_z_relation_probe.py \
+  --small-primes '' \
+  --p27-target 1000 \
+  --max-draws 500000 \
+  --degrees 10,12 \
+  | tee research/p27/archive/probe_outputs/p27_kline_reverse_z_relation_probe_p27_sample_deg10_12_20260621.txt
 ```
 
 ## Results
@@ -79,7 +97,10 @@ q1607:
   unique_K_z = 448
   unique_S = 56
   unique_S_z = 896
-  every system degree 2,4,6,8,10,12: extra_nullity = 0
+  (K,z), (Sroot,z), (Sroot,x6), (Sroot,z+/-1/z):
+    degree 2..20 even: extra_nullity = 0
+  q1607-only degree-20 artifacts:
+    (Sroot,r), (K,z+1/z), (K,z-1/z) have extra_nullity = 2
 
 q1847:
   z_rows = 2880
@@ -87,7 +108,7 @@ q1847:
   unique_K_z = 720
   unique_S = 90
   unique_S_z = 1440
-  every system degree 2,4,6,8,10,12: extra_nullity = 0
+  every system degree 2,4,6,8,10,12,14,16,18,20: extra_nullity = 0
 
 q2087:
   z_rows = 1600
@@ -95,7 +116,7 @@ q2087:
   unique_K_z = 400
   unique_S = 50
   unique_S_z = 800
-  every system degree 2,4,6,8,10,12: extra_nullity = 0
+  every system degree 2,4,6,8,10,12,14,16,18,20: extra_nullity = 0
 ```
 
 p27 sample:
@@ -108,7 +129,7 @@ unique_K = 242
 unique_K_z = 1936
 unique_S = 484
 unique_S_z = 3872
-every system degree 2,4,6,8: extra_nullity = 0
+every system degree 2,4,6,8,10,12: extra_nullity = 0
 ```
 
 q607 smoke:
@@ -132,7 +153,9 @@ Negative:
 
 ```text
 No hyperelliptic-looking relation z^2=f(K), z^2=f(Sroot), or low-degree
-normalization through r, z+1/z, or z-1/z appears in these coordinates.
+normalization through r, z+1/z, or z-1/z appears in these coordinates across
+the promotion fields.  The only higher-degree anomaly is q1607-local and does
+not survive q1847/q2087.
 No GPU sampler follows from the obvious K/Sroot reverse-root projections.
 ```
 

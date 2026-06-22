@@ -879,11 +879,13 @@ The first actual reverse-root branch proxy is negative:
 [P27 K-Line Reverse-Z Relation Screen](evidence/p27_kline_reverse_z_relation_20260621.md).
 Instead of using only the sign bit, it keeps the d3 all-plus source root
 `x6=z^2` and screens `(K,z)`, `(Sroot,z)`, `(K,x6)`, `(K,r)`, and normalized
-`z +/- 1/z` coordinates.  On q1607/q1847/q2087 all systems are full-rank
-through degree `12`; on a 1,000-row p27 sample, all are full-rank through
-degree `8`.  This kills the obvious plane-model shortcut for the branch cover.
-The surviving K-line work is now literal normalization / branch divisor /
-genus extraction over `P1_K` or `P1_Sroot`.
+`z +/- 1/z` coordinates.  On q1847/q2087 all systems are full-rank through
+degree `20`; q1607 has only non-repeating degree-20 artifacts in lower
+multiplicity projections, while `(K,z)` and `(Sroot,z)` stay full-rank.  On a
+1,000-row p27 sample, all systems are full-rank through degree `12`.  This
+kills the obvious plane-model shortcut for the branch cover.  The surviving
+K-line work is now literal normalization / branch divisor / genus extraction
+over `P1_K` or `P1_Sroot`.
 
 The first Belyi-normalized source family is now killed:
 [P27 Lambda Branch-Divisor Screen](evidence/p27_lambda_branch_divisor_screen_20260621.md).
