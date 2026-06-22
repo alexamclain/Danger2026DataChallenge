@@ -151,6 +151,13 @@ shows that the quotient collapses to the first reduced cover:
 `(v1+2)/(v2+2) + (v2+2)/(v1+2) = u`, and if `h^2=(v1+2)/(v2+2)` then
 `(h+1/h)^2=u+2`.  No visible H90 quotient product predicts `f4`.
 
+F3/H90 layer follow-up:
+[P27 B-Line Gamma Over F3/H90 Layer Relation Screen](p27_b_line_gamma_f3_layer_relation_20260622.md)
+adjoins both sheets `H=+/-(h+1/h)` with `H^2=u+2`.  The stable pair-coordinate
+screens in `(B,H)`, `(B,tau)`, `(B,H^2)`, and `(B,tau_sym)` do not expose the
+`f4` split.  The remaining B-line work is true divisor/Kummer-class extraction
+for `gamma`, not visible coordinate fitting.
+
 Negative:
 
 ```text
@@ -180,6 +187,7 @@ continue = normalize the second reduced f4/f3 8-v cover
 continue = use the staged transition/materialization/gamma model for f4/f3
 continue = compute an explicit H90 quotient for gamma^2=v+2
 continue = compute gamma over the f3/H90 layer as the remaining class
+continue = extract the gamma divisor/Kummer class over that layer
 continue = compare f4/f3 as a class relation after f3 is named
 continue = use f5/f6 rows only as tail/regression checks for an extracted class
 
@@ -190,6 +198,7 @@ kill = second-fiber low-degree B-plane relations as a production sampler
 kill = chi(v^2-4) materialization as a production sampler
 kill = naive gamma norm or visible pair-invariant predictors as source laws
 kill = explicit H90 quotient as a standalone f4 source law
+kill = visible f3/H90-layer pair-coordinate source laws for gamma
 kill = more B-bucket GPU production before a source/recurrent class exists
 kill = widening visible low-degree B scans already killed by q1847
 ```

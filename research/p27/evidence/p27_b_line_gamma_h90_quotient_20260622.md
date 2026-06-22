@@ -154,6 +154,13 @@ A sqrt-beating result now needs `gamma` to be a pullback, coboundary, iterate,
 recurrence, or low-genus/sourceable quotient over that layer.  The basic H90
 quotient is not enough.
 
+Follow-up:
+[P27 B-Line Gamma Over F3/H90 Layer Relation Screen](p27_b_line_gamma_f3_layer_relation_20260622.md)
+doubles the rows by `H -> +/-H` and tests whether `gamma` becomes visible on
+the explicit `H^2=u+2` layer.  Stable pair-coordinate screens in `(B,H)`,
+`(B,tau)`, `(B,H^2)`, and `(B,tau^2+tau^-2)` remain negative; the triple
+relations are the known layer equations.
+
 ## Continue / Kill
 
 ```text
@@ -164,6 +171,7 @@ continue = offline CAS on gamma over the normalized f3/H90 layer
 kill = treating the explicit H90 quotient as a new source law
 kill = visible H90 quotient-coordinate products through weight 4
 kill = low-degree B-plane relations for r+1/r, (h+1/h)^2, or tau^2+tau^-2 through degree 10
+kill = visible f3/H90-layer pair-coordinate relations as gamma source laws
 ```
 
 ```text

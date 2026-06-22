@@ -1040,6 +1040,12 @@ For `r=(v1+2)/(v2+2)` and `h^2=r`, the identities `r+1/r=u` and
 `(h+1/h)^2=u+2` hold with zero failures.  Thus the quotient collapses to the
 already-imposed first reduced `f3` layer and does not predict `f4`; the live
 object is now `gamma` as a class over that f3/H90 layer.
+The visible f3/H90-layer screen is also negative:
+[P27 B-Line Gamma Over F3/H90 Layer Relation Screen](evidence/p27_b_line_gamma_f3_layer_relation_20260622.md).
+After adjoining both sheets `H=+/-(h+1/h)`, stable pair-coordinate screens in
+`(B,H)`, `(B,tau)`, `(B,H^2)`, and `(B,tau_sym)` do not expose `f4`.  The live
+B-line task is now actual divisor/Kummer-class extraction for `gamma` over the
+normalized f3/H90 layer, not another visible coordinate bucket.
 The B-line visible two-gate quartic shortcut is closed as well:
 [P27 B-Line Gate4-Prefix Quartic q1847 Screen](evidence/p27_b_line_gate4_prefix_quartic_q1847_screen_20260622.md).
 It scans `6,300,872,423` q1847 coefficient triples for

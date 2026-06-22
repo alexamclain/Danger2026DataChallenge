@@ -193,6 +193,13 @@ The quotient is real but collapses: for `r=(v1+2)/(v2+2)`,
 product through weight `4` predicts `f4`.  So the next CAS object is `gamma`
 as a class over the known f3/H90 layer, not the H90 quotient itself.
 
+F3/H90 layer relation follow-up:
+[P27 B-Line Gamma Over F3/H90 Layer Relation Screen](p27_b_line_gamma_f3_layer_relation_20260622.md).
+After adjoining both sheets `H=+/-(h+1/h)`, stable pair-coordinate screens do
+not expose the `f4` split in `(B,H)`, `(B,tau)`, `(B,H^2)`, or `(B,tau_sym)`.
+The triple relations are the tautologies `H^2=u+2` and the Cayley relation
+between `H` and `tau`, not gamma source laws.
+
 Required computation:
 
 ```text
@@ -203,6 +210,7 @@ extract branch divisor degree, support field degrees, components, genus
 if d3 is tractable, normalize F_A(u,v)=0 plus rho^2=v^2-4 and compare gamma^2=v+2 in the Kummer group
 compute the H90 quotient/coboundary for gamma and ask whether it telescopes or recurs
 after the quotient collapses to f3, compute gamma over the f3/H90 layer
+extract the gamma divisor/Kummer class over the normalized f3/H90 layer
 use f5/f6 only as regression checks until larger data supports them
 ```
 
@@ -402,6 +410,7 @@ kill = low-degree plane relations for the second reduced B-line f4/f3 fiber thro
 kill = treating chi(v^2-4) or chi(v+A) materialization as a GPU/source win
 kill = naive gamma norm or visible pair-invariant predictors as source laws
 kill = explicit H90 quotient as a standalone f4 source law
+kill = visible f3/H90-layer pair-coordinate source laws for gamma
 kill = online Magma as the reduced-cover extraction engine
 kill = more visible quartic/branch-map bucket searches without a theorem
 kill = treating source-conditional 2x lift as sqrt-beating
