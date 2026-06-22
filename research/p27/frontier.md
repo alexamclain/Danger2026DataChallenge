@@ -422,6 +422,11 @@ Online Magma over `q=607` factors the row-bit lift as one degree-32 factor
 over `F_607(t)` and still one degree-32 factor over
 `E_h90: w^2=-(t^2+2t-1)(t^2-2t-1)`.  So the named elliptic quotient does not
 split or source the row bit; only a non-obvious Prym/theta relation remains.
+The next factorization tier is staged but above the online-calculator limit:
+[P27 Trace/Norm Dplus U6 Row-Bit Aeta Factor Boundary](evidence/p27_trace_norm_dplus_u6_rowbit_aeta_factor_boundary_20260622.md).
+The exact domain-spin and `eta=+1` `A_eta` factor fixtures return `504` over
+`q=607`; this is now an offline Magma/Sage ask to decide whether the row-bit
+lift drops degree after adjoining `z` or `rho`.
 The class comparison now has a routing result:
 [P27 Trace/Norm Dplus A-Descent Bridge](evidence/p27_trace_norm_dplus_a_descent_20260622.md).
 Across three p27 seed groups, post-Dplus `d3` and `d4` after `d3=+1` have zero
@@ -2253,6 +2258,9 @@ The H90 factor test
 [P27 Trace/Norm Dplus U6 Row-Bit H90 Factor Test](evidence/p27_trace_norm_dplus_u6_rowbit_h90_factor_20260622.md)
 then shows the named elliptic quotient still leaves the lift irreducible of
 degree `32` over `q=607`.
+The staged domain-spin/Aeta factor tests
+[P27 Trace/Norm Dplus U6 Row-Bit Aeta Factor Boundary](evidence/p27_trace_norm_dplus_u6_rowbit_aeta_factor_boundary_20260622.md)
+are the next offline CAS checkpoint; online Magma times out at that tier.
 The small-field descent audit then sets the boundary:
 [P27 Trace/Norm Dplus Reciprocal Tower Small-Field Descent](evidence/p27_trace_norm_dplus_reciprocal_tower_smallfield_descent_20260622.md).
 Over q607/q1607/q1847, the naked reciprocal tower has mixed `A`/`B` fibers for

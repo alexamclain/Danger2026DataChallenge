@@ -273,6 +273,13 @@ one degree-32 factor; after adjoining the H90 elliptic coordinate
 `w^2=-(t^2+2t-1)(t^2-2t-1)`, it still has one degree-32 factor.  So the H90
 elliptic base does not split the row-bit cover.
 
+Tenth update:
+[P27 Trace/Norm Dplus U6 Row-Bit Aeta Factor Boundary](p27_trace_norm_dplus_u6_rowbit_aeta_factor_boundary_20260622.md)
+stages the exact next factor tests over the H90 domain-spin cover and the
+`eta=+1` `A_eta` cover.  Online Magma returns `504` at `q=607` for those
+factorization tiers, so the remaining factor/split question is an offline CAS
+task.
+
 This is the most concrete bridge test after the coupling kill.  We know:
 
 ```text
@@ -358,6 +365,7 @@ kill = naked reciprocal-tower source sampling
 kill = U6 branch-choice buckets after Dplus
 kill = visible t/A/X branch-atom products as Dplus row-bit sources
 kill = H90 elliptic-base factorization as the easy Dplus row-bit source
+kill = online Magma for domain-spin/Aeta row-bit factorization
 kill = standalone H90 payload sign screens
 kill = simple H90/rho coboundary bucket screens for chi(x6)
 kill = searching for another low-degree Dplus-to-A coordinate map

@@ -81,6 +81,12 @@ not only irreducible over Q(t),
 but still irreducible after adjoining the named H90 elliptic quotient.
 ```
 
+Follow-up staged factor tests:
+[P27 Trace/Norm Dplus U6 Row-Bit Aeta Factor Boundary](p27_trace_norm_dplus_u6_rowbit_aeta_factor_boundary_20260622.md)
+sets up the next exact tests over the domain-spin cover and the `eta=+1`
+`A_eta` cover.  Online Magma times out at `q=607` for both the domain-spin and
+payload-cover factorization tiers, so this is now an offline CAS ask.
+
 The remaining Dplus route is therefore not "factor the row bit over E_h90";
 it is one of:
 
@@ -94,12 +100,14 @@ it is one of:
 
 ```text
 continue = Prym/theta comparison of row bit with A_eta
+continue = offline factorization over domain-spin and A_eta covers
 continue = second-layer branch-class obstruction or decomposition
 continue = fused/native Dplus pricing with one row-bit column
 
 kill = H90 elliptic-base factorization as the easy row-bit source
 kill = branch-choice buckets after Dplus
 kill = visible t/A/X branch atoms as row-bit sources
+kill = online Magma as the engine for domain-spin/Aeta row-bit factorization
 ```
 
 ```text
