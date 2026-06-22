@@ -138,15 +138,24 @@ sample a short Frobenius orbit bucket
 launch a large B-prefix GPU production run
 ```
 
+Follow-up:
+[P27 B-Line Trace/Norm Plateau Audit](p27_b_line_trace_norm_plateau_audit_20260622.md)
+tests the next named Frobenius invariants.  Trace+norm is exact only in
+relative quadratic extensions, where it records a conjugate pair.  Prime-degree
+fields remain mixed.  This is useful quotient bookkeeping, not a transferable
+sampler.
+
 ## Continue / Kill
 
 ```text
 continue = B-line Kummer sequence extraction
 continue = compare extracted classes with local Frobenius stop gates
 continue = use these extension sets as regression fixtures for CAS
+continue = use trace+norm-to-half only as even-extension regression data
 
 kill = proper-subfield explanation for the tested B-line plateaus
 kill = short-Frobenius-orbit sampler for the tested B-line plateaus
+kill = trace/norm bucket sampler as a p27 production lane
 kill = GPU production from plateau counts without extracted classes
 ```
 

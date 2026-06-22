@@ -1641,6 +1641,13 @@ then checks the obvious explanation for those plateaus.  In `GF(7^5)`,
 first-stop B set has full extension degree and full Frobenius orbit size.
 So the local plateaus are not proper-subfield or short-orbit samplers.
 
+Trace/norm audit:
+[P27 B-Line Trace/Norm Plateau Audit](evidence/p27_b_line_trace_norm_plateau_audit_20260622.md)
+then tests the next named Frobenius-invariant buckets.  Trace+norm is exact in
+relative quadratic extensions only, where it records conjugate pairs; prime
+degree fields remain mixed.  This is regression data for Kummer/Frobenius
+class extraction, not a p27 sampler.
+
 Follow-up: [P27 B-Line Reverse-Z Relation Screen](evidence/p27_b_line_reverse_z_relation_20260622.md)
 keeps the actual d3 reverse-source root and kills low-degree B-line plane
 models in `(B,z)` and nearby branch-normalized coordinates through degree `20`

@@ -143,6 +143,12 @@ orbit samplers.  They are not: in `GF(7^5)`, `GF(7^6)`, `GF(23^3)`, and
 entirely of full-degree Frobenius orbits.  This kills the obvious subfield
 sampler explanation while preserving the class-extraction question.
 
+Second follow-up:
+[P27 B-Line Trace/Norm Plateau Audit](p27_b_line_trace_norm_plateau_audit_20260622.md)
+shows that trace+norm exactness appears only as relative quadratic
+conjugate-pair bookkeeping.  Prime-degree fields are mixed, so trace/norm
+buckets are not a transferable p27 sampler.
+
 ## Continue / Kill
 
 ```text

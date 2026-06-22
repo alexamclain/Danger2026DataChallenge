@@ -77,6 +77,11 @@ The local plateaus are not proper-subfield or short-Frobenius-orbit samplers;
 all tested plateau sets have full extension degree.  Use them as Kummer-class
 regression fixtures, not as production buckets.
 
+Second follow-up:
+[P27 B-Line Trace/Norm Plateau Audit](p27_b_line_trace_norm_plateau_audit_20260622.md).
+Relative trace+norm is exact only for quadratic extension quotients; prime
+degree fields are mixed.  This kills trace/norm bucket sampling as a p27 lane.
+
 Required computation:
 
 ```text
