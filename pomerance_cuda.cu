@@ -13,10 +13,11 @@
  *
  * Usage:
  *   ./pomerance_cuda <p> [seed_offset] [max_trials]
- *     [x16halvenonsplit|x16stratumprobe|x16domainprobe|x16d2probe|x16d3probe|x16d4probe|x16tracenormab|x16tracenormfilter|x16uprecheckprobe|x16quadprecheckprobe|x16quadtelemetryprobe|x16ecoverprobe|x16ecoverd2probe|x16ecoverd3probe|x16ecoverd4probe] [chunk_trials] [blocks]
+ *     [x16halvenonsplit|x16stratumprobe|x16domainprobe|x16d2probe|x16d3probe|x16d4probe|x16tracenormab|x16tracenormfilter|x16uprecheckprobe|x16quadprecheckprobe|x16quadtelemetryprobe|x16quadcouplingprobe|x16ecoverprobe|x16ecoverd2probe|x16ecoverd3probe|x16ecoverd4probe] [chunk_trials] [blocks]
  *     [threads] [claim_batch] [auto|generic|u96]
  *     [seed=mixed|identity|splitmix] [start_chunk=N] [start_trial=N]
  *     [target_depth=N] [bucket_bits=N] [focus_bucket=N]
+ *     [gate_max=N] [word_bits=N]
  * The auto backend uses the specialized u96 path for p < 2^96 and the
  * generic u128 path otherwise.
  *
@@ -63,6 +64,12 @@ static constexpr int PROBE_MAX_BUCKET_BITS = 8;
 static constexpr int PROBE_MAX_BUCKETS = 1 << (PROBE_MAX_BUCKET_BITS + 1);
 static constexpr int PROBE_MAX_DEPTH = 64;
 static constexpr int TRACE_AB_DEPTH_COUNT = 6;
+static constexpr int COUPLING_MIN_GATE = 3;
+static constexpr int COUPLING_MAX_GATE = 16;
+static constexpr int COUPLING_GATE_SLOTS = COUPLING_MAX_GATE + 1;
+static constexpr int COUPLING_MAX_WORD_BITS = 8;
+static constexpr int COUPLING_WORD_BUCKETS = 1 << COUPLING_MAX_WORD_BITS;
+static constexpr int COUPLING_MAX_SAMPLES = 16;
 
 struct u256 {
     u128 lo;
@@ -239,6 +246,54 @@ struct QuadPrecheckStats {
     u64 prefix_success;
     u64 depth_exact[PROBE_MAX_DEPTH + 1];
     QuadPrecheckCounters counters;
+};
+
+struct CouplingSample {
+    u64 raw_draw_index;
+    u64 source_hash;
+    int root_index;
+    int gate_count;
+    int survived_target;
+    int b_sqrt_ok;
+    u32 sign_bits;
+    U128Parts A;
+    U128Parts c;
+    U128Parts B;
+    U128Parts x[COUPLING_GATE_SLOTS];
+    U128Parts r[COUPLING_GATE_SLOTS];
+};
+
+struct CouplingStats {
+    u64 raw_y_draws;
+    u64 y_zero;
+    u64 nonsplit_y;
+    u64 sqrtD_y;
+    u64 roots_valid;
+    u64 prefix_attempts;
+    u64 prefix_success;
+    u64 recurrence_rows;
+    u64 b_sqrt_success;
+    u64 b_sqrt_fail;
+    u64 formula_unavailable;
+    u64 materialize_fail;
+    u64 actual_mismatch;
+    u64 target_survivors;
+    u64 gate_rows[COUPLING_GATE_SLOTS];
+    u64 gate_plus[COUPLING_GATE_SLOTS];
+    u64 gate_minus[COUPLING_GATE_SLOTS];
+    u64 gate_unavailable[COUPLING_GATE_SLOTS];
+    u64 pair_count[COUPLING_GATE_SLOTS][COUPLING_GATE_SLOTS];
+    u64 pair_plus_i[COUPLING_GATE_SLOTS][COUPLING_GATE_SLOTS];
+    u64 pair_plus_j[COUPLING_GATE_SLOTS][COUPLING_GATE_SLOTS];
+    u64 pair_same[COUPLING_GATE_SLOTS][COUPLING_GATE_SLOTS];
+    u64 word_total[COUPLING_MAX_WORD_BITS + 1][COUPLING_WORD_BUCKETS];
+    u64 word_survive[COUPLING_MAX_WORD_BITS + 1][COUPLING_WORD_BUCKETS];
+    u64 word_prefix_total[COUPLING_MAX_WORD_BITS + 1][COUPLING_WORD_BUCKETS];
+    u64 word_prefix_survive[COUPLING_MAX_WORD_BITS + 1][COUPLING_WORD_BUCKETS];
+    u64 word_held_total[COUPLING_MAX_WORD_BITS + 1][COUPLING_WORD_BUCKETS];
+    u64 word_held_survive[COUPLING_MAX_WORD_BITS + 1][COUPLING_WORD_BUCKETS];
+    u64 sample_count;
+    CouplingSample samples[COUPLING_MAX_SAMPLES];
 };
 
 HD static inline U128Parts pack128(u128 x) {
@@ -2022,6 +2077,30 @@ HD static int quad_gate_formula_chi96(U96 A_m, U96 x_m,
     return formula;
 }
 
+HD static int quad_gate_formula_trace96(U96 A_m, U96 x_m,
+                                        const SearchParams96 *params,
+                                        U96 *c_m_out, U96 *r_m_out) {
+    U96 c2_m = submod96(params->two_m, A_m, params->f.p);
+    U96 c_m;
+    U96 r_m;
+    if (!sqrtmod_p5_96_mont(&c_m, c2_m, params) ||
+        !sqrtmod_p5_96_mont(&r_m, x_m, params)) {
+        return 0;
+    }
+
+    U96 cr_m = mont_mul96(c_m, r_m, &params->f);
+    U96 qp_m = addmod96(addmod96(x_m, cr_m, params->f.p),
+                        params->f.one, params->f.p);
+    U96 qm_m = addmod96(submod96(x_m, cr_m, params->f.p),
+                        params->f.one, params->f.p);
+    int chip = chi96_mont(qp_m, params);
+    int chim = chi96_mont(qm_m, params);
+    if (chip == 0 || chim == 0) return 0;
+    if (c_m_out) *c_m_out = c_m;
+    if (r_m_out) *r_m_out = r_m;
+    return chip;
+}
+
 HD static int halve_once_first96_mont_counted(U96 *xo_m, U96 A_m, U96 x_m,
                                               const SearchParams96 *params,
                                               QuadPrecheckCounters *counters) {
@@ -2974,6 +3053,262 @@ __global__ static void x16quadprecheckprobe_kernel96(
     }
 }
 
+__global__ static void x16quadcouplingprobe_kernel96(
+    SearchParams96 params,
+    u64 seed_offset,
+    u64 chunk_nonce,
+    u64 raw_y_draws,
+    u64 global_base,
+    u64 split_raw_draw,
+    int seed_mode,
+    int gate_max,
+    int word_bits,
+    CouplingStats *__restrict__ stats) {
+    u64 tid = (u64)blockIdx.x * (u64)blockDim.x + (u64)threadIdx.x;
+    u64 total_threads = (u64)gridDim.x * (u64)blockDim.x;
+    Rng rng;
+    init_rng(&rng, seed_offset, chunk_nonce, tid, total_threads, seed_mode);
+
+    u64 local_raw_y_draws = 0;
+    u64 local_y_zero = 0;
+    u64 local_nonsplit_y = 0;
+    u64 local_sqrtD_y = 0;
+    u64 local_roots_valid = 0;
+    u64 local_prefix_attempts = 0;
+    u64 local_prefix_success = 0;
+    u64 local_recurrence_rows = 0;
+    u64 local_b_sqrt_success = 0;
+    u64 local_b_sqrt_fail = 0;
+    u64 local_formula_unavailable = 0;
+    u64 local_materialize_fail = 0;
+    u64 local_actual_mismatch = 0;
+    u64 local_target_survivors = 0;
+
+    if (gate_max < COUPLING_MIN_GATE) gate_max = COUPLING_MIN_GATE;
+    if (gate_max > COUPLING_MAX_GATE) gate_max = COUPLING_MAX_GATE;
+    if (word_bits < 1) word_bits = 1;
+    if (word_bits > COUPLING_MAX_WORD_BITS) word_bits = COUPLING_MAX_WORD_BITS;
+
+    u64 draws_per_thread = (raw_y_draws + total_threads - 1) / total_threads;
+    for (u64 i = 0; i < draws_per_thread; i++) {
+        u64 draw_index = i * total_threads + tid;
+        if (draw_index >= raw_y_draws) break;
+        u64 global_draw_index = global_base + draw_index;
+
+        U96 y = rand_below96(&rng, &params);
+        local_raw_y_draws++;
+        if (is_zero96(y)) {
+            local_y_zero++;
+            continue;
+        }
+
+        U96 y_m = to_mont96(y, &params.f);
+        U96 y2_m = mont_mul96(y_m, y_m, &params.f);
+        if (!x16_y_predicts_nonsplit96_mont(y_m, y2_m, &params)) continue;
+        local_nonsplit_y++;
+
+        U96 y3_m = mont_mul96(y2_m, y_m, &params.f);
+        U96 two_y_m = addmod96(y_m, y_m, params.f.p);
+        U96 qa_m = submod96(y2_m, two_y_m, params.f.p);
+        if (is_zero96(qa_m)) continue;
+        U96 qb_m = submod96(addmod96(y2_m, y2_m, params.f.p), y3_m, params.f.p);
+        U96 qc_m = submod96(params.f.one, y_m, params.f.p);
+        U96 D_m = submod96(
+            mont_mul96(qb_m, qb_m, &params.f),
+            mont_mul96(addmod96(qa_m, qa_m, params.f.p),
+                       addmod96(qc_m, qc_m, params.f.p), &params.f),
+            params.f.p);
+        U96 sd_m;
+        if (!sqrtmod_p5_96_mont(&sd_m, D_m, &params)) continue;
+        local_sqrtD_y++;
+
+        U96 inv_2qa_m = invert96_mont(addmod96(qa_m, qa_m, params.f.p), &params);
+        U96 roots_m[2] = {
+            mont_mul96(submod96(sd_m, qb_m, params.f.p), inv_2qa_m, &params.f),
+            mont_mul96(submod96(submod96(u96_from_u64(0), sd_m, params.f.p), qb_m,
+                                params.f.p),
+                       inv_2qa_m, &params.f),
+        };
+
+        U96 A;
+        U96 A_m;
+        U96 xP16_m[2];
+        int root_valid[2] = {0, 0};
+        root_valid[0] = x16_root_to_montgomery_A96_mont(&A, &A_m, &xP16_m[0],
+                                                        roots_m[0], y_m, &params);
+        if (root_valid[0]) {
+            root_valid[1] = x16_root_to_montgomery_xP96_mont(&xP16_m[1],
+                                                             roots_m[1], y_m,
+                                                             &params);
+        } else {
+            root_valid[1] = x16_root_to_montgomery_A96_mont(&A, &A_m, &xP16_m[1],
+                                                            roots_m[1], y_m,
+                                                            &params);
+        }
+
+        for (int ri = 0; ri < 2; ri++) {
+            if (!root_valid[ri]) continue;
+            local_roots_valid++;
+            local_prefix_attempts++;
+
+            U96 x_m = xP16_m[ri];
+            int prefix_reached = halve_prefix_depth96_mont(
+                &x_m, A_m, x_m, 4, 6, &params);
+            if (prefix_reached < 6) continue;
+            local_prefix_success++;
+
+            U96 c_m = u96_from_u64(0);
+            U96 r_m = u96_from_u64(0);
+            int first_formula = quad_gate_formula_trace96(A_m, x_m, &params,
+                                                          &c_m, &r_m);
+            if (first_formula == 0) continue;
+            local_recurrence_rows++;
+
+            U96 B_m = u96_from_u64(0);
+            int b_sqrt_ok = sqrtmod_p5_96_mont(
+                &B_m, addmod96(A_m, params.two_m, params.f.p), &params);
+            if (b_sqrt_ok) local_b_sqrt_success++;
+            else local_b_sqrt_fail++;
+
+            u64 sample_slot = atomicAdd(&stats->sample_count, 1ULL);
+            int sample_enabled = sample_slot < COUPLING_MAX_SAMPLES;
+            if (sample_enabled) {
+                CouplingSample *sample = &stats->samples[sample_slot];
+                sample->raw_draw_index = global_draw_index;
+                sample->source_hash = compact128(u96_to_u128(y));
+                sample->root_index = ri;
+                sample->gate_count = 0;
+                sample->survived_target = 0;
+                sample->b_sqrt_ok = b_sqrt_ok;
+                sample->sign_bits = 0;
+                sample->A = pack96(from_mont96(A_m, &params.f));
+                sample->c = pack96(from_mont96(c_m, &params.f));
+                sample->B = b_sqrt_ok ? pack96(from_mont96(B_m, &params.f))
+                                      : pack96(u96_from_u64(0));
+            }
+
+            int signs[COUPLING_GATE_SLOTS];
+            int gate_count = 0;
+            u32 sign_bits = 0;
+            int survived_target = 0;
+            int stop = 0;
+
+            for (int gate = COUPLING_MIN_GATE; gate <= gate_max && !stop; gate++) {
+                U96 gate_c_m;
+                U96 gate_r_m;
+                int formula;
+                if (gate == COUPLING_MIN_GATE) {
+                    gate_c_m = c_m;
+                    gate_r_m = r_m;
+                    formula = first_formula;
+                } else {
+                    formula = quad_gate_formula_trace96(A_m, x_m, &params,
+                                                        &gate_c_m, &gate_r_m);
+                }
+
+                atomicAdd(&stats->gate_rows[gate], 1ULL);
+                if (formula == 0) {
+                    atomicAdd(&stats->gate_unavailable[gate], 1ULL);
+                    local_formula_unavailable++;
+                    break;
+                }
+
+                int sign = formula > 0 ? 1 : -1;
+                signs[gate_count] = sign;
+                if (sign > 0) {
+                    atomicAdd(&stats->gate_plus[gate], 1ULL);
+                    sign_bits |= (1u << gate_count);
+                } else {
+                    atomicAdd(&stats->gate_minus[gate], 1ULL);
+                }
+
+                if (sample_enabled) {
+                    CouplingSample *sample = &stats->samples[sample_slot];
+                    sample->x[gate] = pack96(from_mont96(x_m, &params.f));
+                    sample->r[gate] = pack96(from_mont96(gate_r_m, &params.f));
+                    sample->gate_count = gate_count + 1;
+                    sample->sign_bits = sign_bits;
+                }
+
+                gate_count++;
+
+                if (sign < 0) break;
+                if (gate == gate_max) {
+                    survived_target = 1;
+                    break;
+                }
+
+                U96 x_next_m;
+                if (!halve_once_first96_mont(&x_next_m, A_m, x_m, &params)) {
+                    local_materialize_fail++;
+                    break;
+                }
+                int actual = chi96_mont(x_next_m, &params);
+                if (actual != 1) {
+                    local_actual_mismatch++;
+                    break;
+                }
+                x_m = x_next_m;
+            }
+
+            if (survived_target) local_target_survivors++;
+            if (sample_enabled) {
+                CouplingSample *sample = &stats->samples[sample_slot];
+                sample->survived_target = survived_target;
+            }
+
+            int word_limit = gate_count < word_bits ? gate_count : word_bits;
+            u32 prefix_bits = 0;
+            for (int len = 1; len <= word_limit; len++) {
+                if (signs[len - 1] > 0) prefix_bits |= (1u << (len - 1));
+                atomicAdd(&stats->word_total[len][prefix_bits], 1ULL);
+                if (survived_target) {
+                    atomicAdd(&stats->word_survive[len][prefix_bits], 1ULL);
+                }
+                if (global_draw_index < split_raw_draw) {
+                    atomicAdd(&stats->word_prefix_total[len][prefix_bits], 1ULL);
+                    if (survived_target) {
+                        atomicAdd(&stats->word_prefix_survive[len][prefix_bits],
+                                  1ULL);
+                    }
+                } else {
+                    atomicAdd(&stats->word_held_total[len][prefix_bits], 1ULL);
+                    if (survived_target) {
+                        atomicAdd(&stats->word_held_survive[len][prefix_bits],
+                                  1ULL);
+                    }
+                }
+            }
+
+            for (int a = 0; a < gate_count; a++) {
+                int ga = COUPLING_MIN_GATE + a;
+                for (int b = a + 1; b < gate_count; b++) {
+                    int gb = COUPLING_MIN_GATE + b;
+                    atomicAdd(&stats->pair_count[ga][gb], 1ULL);
+                    if (signs[a] > 0) atomicAdd(&stats->pair_plus_i[ga][gb], 1ULL);
+                    if (signs[b] > 0) atomicAdd(&stats->pair_plus_j[ga][gb], 1ULL);
+                    if (signs[a] == signs[b]) atomicAdd(&stats->pair_same[ga][gb], 1ULL);
+                }
+            }
+        }
+    }
+
+    atomicAdd(&stats->raw_y_draws, local_raw_y_draws);
+    atomicAdd(&stats->y_zero, local_y_zero);
+    atomicAdd(&stats->nonsplit_y, local_nonsplit_y);
+    atomicAdd(&stats->sqrtD_y, local_sqrtD_y);
+    atomicAdd(&stats->roots_valid, local_roots_valid);
+    atomicAdd(&stats->prefix_attempts, local_prefix_attempts);
+    atomicAdd(&stats->prefix_success, local_prefix_success);
+    atomicAdd(&stats->recurrence_rows, local_recurrence_rows);
+    atomicAdd(&stats->b_sqrt_success, local_b_sqrt_success);
+    atomicAdd(&stats->b_sqrt_fail, local_b_sqrt_fail);
+    atomicAdd(&stats->formula_unavailable, local_formula_unavailable);
+    atomicAdd(&stats->materialize_fail, local_materialize_fail);
+    atomicAdd(&stats->actual_mismatch, local_actual_mismatch);
+    atomicAdd(&stats->target_survivors, local_target_survivors);
+}
+
 __global__ static void x16tracenormab_kernel96(SearchParams96 params,
                                                u64 seed_offset,
                                                u64 chunk_nonce,
@@ -3278,13 +3613,14 @@ static void usage(const char *argv0) {
                  "x16d2probe|x16d3probe|x16d4probe|x16tracenormab|"
                  "x16tracenormfilter|x16uprecheckprobe|"
                  "x16quadprecheckprobe|x16quadtelemetryprobe|"
+                 "x16quadcouplingprobe|"
                  "x16ecoverprobe|x16ecoverd2probe|x16ecoverd3probe|"
                  "x16ecoverd4probe] "
                  "[chunk_trials] [blocks] "
                  "[threads] [claim_batch] [auto|generic|u96] "
                  "[seed=mixed|identity|splitmix] [start_chunk=N] "
                  "[start_trial=N] [target_depth=N] [bucket_bits=N] "
-                 "[focus_bucket=N]\n",
+                 "[focus_bucket=N] [gate_max=N] [word_bits=N]\n",
                  argv0);
 }
 
@@ -3391,6 +3727,57 @@ static void add_quadprecheck_stats(QuadPrecheckStats *dst,
         d->gate_actual_minus[i] += s->gate_actual_minus[i];
         d->gate_mismatch[i] += s->gate_mismatch[i];
     }
+}
+
+static void add_coupling_stats(CouplingStats *dst, const CouplingStats *src) {
+    u64 dst_sample_used = dst->sample_count < COUPLING_MAX_SAMPLES
+        ? dst->sample_count
+        : COUPLING_MAX_SAMPLES;
+    u64 src_sample_used = src->sample_count < COUPLING_MAX_SAMPLES
+        ? src->sample_count
+        : COUPLING_MAX_SAMPLES;
+    for (u64 i = 0; i < src_sample_used &&
+                    dst_sample_used + i < COUPLING_MAX_SAMPLES; i++) {
+        dst->samples[dst_sample_used + i] = src->samples[i];
+    }
+
+    dst->raw_y_draws += src->raw_y_draws;
+    dst->y_zero += src->y_zero;
+    dst->nonsplit_y += src->nonsplit_y;
+    dst->sqrtD_y += src->sqrtD_y;
+    dst->roots_valid += src->roots_valid;
+    dst->prefix_attempts += src->prefix_attempts;
+    dst->prefix_success += src->prefix_success;
+    dst->recurrence_rows += src->recurrence_rows;
+    dst->b_sqrt_success += src->b_sqrt_success;
+    dst->b_sqrt_fail += src->b_sqrt_fail;
+    dst->formula_unavailable += src->formula_unavailable;
+    dst->materialize_fail += src->materialize_fail;
+    dst->actual_mismatch += src->actual_mismatch;
+    dst->target_survivors += src->target_survivors;
+    for (int g = 0; g < COUPLING_GATE_SLOTS; g++) {
+        dst->gate_rows[g] += src->gate_rows[g];
+        dst->gate_plus[g] += src->gate_plus[g];
+        dst->gate_minus[g] += src->gate_minus[g];
+        dst->gate_unavailable[g] += src->gate_unavailable[g];
+        for (int h = 0; h < COUPLING_GATE_SLOTS; h++) {
+            dst->pair_count[g][h] += src->pair_count[g][h];
+            dst->pair_plus_i[g][h] += src->pair_plus_i[g][h];
+            dst->pair_plus_j[g][h] += src->pair_plus_j[g][h];
+            dst->pair_same[g][h] += src->pair_same[g][h];
+        }
+    }
+    for (int len = 0; len <= COUPLING_MAX_WORD_BITS; len++) {
+        for (int b = 0; b < COUPLING_WORD_BUCKETS; b++) {
+            dst->word_total[len][b] += src->word_total[len][b];
+            dst->word_survive[len][b] += src->word_survive[len][b];
+            dst->word_prefix_total[len][b] += src->word_prefix_total[len][b];
+            dst->word_prefix_survive[len][b] += src->word_prefix_survive[len][b];
+            dst->word_held_total[len][b] += src->word_held_total[len][b];
+            dst->word_held_survive[len][b] += src->word_held_survive[len][b];
+        }
+    }
+    dst->sample_count += src->sample_count;
 }
 
 static u64 uprecheck_depth_survive_ge(const UPrecheckStats *stats, int depth) {
@@ -3592,6 +3979,317 @@ static void print_quadprecheck_summary(const QuadPrecheckStats *stats,
         }
     }
     std::printf("}\n");
+}
+
+static std::string coupling_sign_word(u32 bits, int len) {
+    std::string out;
+    out.reserve(len);
+    for (int i = 0; i < len; i++) {
+        out.push_back((bits & (1u << i)) ? '+' : '-');
+    }
+    return out;
+}
+
+static double coupling_corr(u64 n, u64 plus_i, u64 plus_j, u64 same) {
+    if (n == 0) return 0.0;
+    double dn = (double)n;
+    double ei = (2.0 * (double)plus_i - dn) / dn;
+    double ej = (2.0 * (double)plus_j - dn) / dn;
+    double eij = (2.0 * (double)same - dn) / dn;
+    double vi = 1.0 - ei * ei;
+    double vj = 1.0 - ej * ej;
+    if (vi <= 0.0 || vj <= 0.0) return 0.0;
+    return (eij - ei * ej) / std::sqrt(vi * vj);
+}
+
+struct CouplingBucketRank {
+    int len;
+    int bucket;
+    double expected_prob;
+    double prefix_count_lift;
+    double held_count_lift;
+    double prefix_target_lift;
+    double held_target_lift;
+    double prefix_residual_lift;
+    double held_residual_lift;
+    u64 prefix_total;
+    u64 prefix_survive;
+    u64 held_total;
+    u64 held_survive;
+};
+
+static void print_coupling_summary(const CouplingStats *stats, u128 p,
+                                   const char *backend_name,
+                                   const char *gpu_name, int seed_mode,
+                                   u64 seed_offset, int gate_max,
+                                   int word_bits, double elapsed) {
+    double raw_rate = elapsed > 0.0
+        ? (double)stats->raw_y_draws / elapsed / 1e6
+        : 0.0;
+    double recurrence_per_raw = stats->raw_y_draws
+        ? (double)stats->recurrence_rows / (double)stats->raw_y_draws
+        : 0.0;
+    double target_per_raw = stats->raw_y_draws
+        ? (double)stats->target_survivors / (double)stats->raw_y_draws
+        : 0.0;
+    double target_per_recurrence = stats->recurrence_rows
+        ? (double)stats->target_survivors / (double)stats->recurrence_rows
+        : 0.0;
+    double target_per_sec = elapsed > 0.0
+        ? (double)stats->target_survivors / elapsed
+        : 0.0;
+
+    std::printf("\nQuadratic-gate recurrence-coupling summary:\n");
+    std::printf("  mode=x16quadcouplingprobe backend=%s GPU=\"%s\" "
+                "seed_mode=%s seed_offset=%llu\n",
+                backend_name, gpu_name, seed_mode_name(seed_mode), seed_offset);
+    std::printf("  gate_range=%d..%d word_bits=%d elapsed=%.6f raw_y_Mps=%.6f\n",
+                COUPLING_MIN_GATE, gate_max, word_bits, elapsed, raw_rate);
+    std::printf("  raw_source_draws=%llu y_zero=%llu nonsplit_y=%llu "
+                "sqrtD_y=%llu roots_valid=%llu prefix_attempts=%llu "
+                "prefix_success=%llu recurrence_rows=%llu "
+                "recurrence_per_raw=%.12f\n",
+                stats->raw_y_draws, stats->y_zero, stats->nonsplit_y,
+                stats->sqrtD_y, stats->roots_valid, stats->prefix_attempts,
+                stats->prefix_success, stats->recurrence_rows,
+                recurrence_per_raw);
+    std::printf("  B_sqrt_sampled_globally success=%llu fail=%llu "
+                "formula_unavailable=%llu materialize_fail=%llu "
+                "actual_mismatch=%llu\n",
+                stats->b_sqrt_success, stats->b_sqrt_fail,
+                stats->formula_unavailable, stats->materialize_fail,
+                stats->actual_mismatch);
+    std::printf("  target_gate=%d target_survivors=%llu "
+                "target_per_raw_source_draw=%.12f "
+                "target_per_recurrence_row=%.12f "
+                "target_survivor_per_sec=%.6f\n",
+                gate_max, stats->target_survivors, target_per_raw,
+                target_per_recurrence, target_per_sec);
+
+    std::printf("  per-gate signs:\n");
+    std::printf("    gate rows plus minus unavailable plus_rate\n");
+    for (int g = COUPLING_MIN_GATE; g <= gate_max; g++) {
+        double plus_rate = stats->gate_rows[g]
+            ? (double)stats->gate_plus[g] / (double)stats->gate_rows[g]
+            : 0.0;
+        std::printf("    %d %llu %llu %llu %llu %.9f\n",
+                    g, stats->gate_rows[g], stats->gate_plus[g],
+                    stats->gate_minus[g], stats->gate_unavailable[g],
+                    plus_rate);
+    }
+
+    std::printf("coupling_jsonl={\"mode\":\"x16quadcouplingprobe\","
+                "\"p\":\"%s\",\"backend\":\"%s\",\"gpu\":\"%s\","
+                "\"seed_mode\":\"%s\",\"seed_offset\":%llu,"
+                "\"gate_min\":%d,\"gate_max\":%d,\"word_bits\":%d,"
+                "\"elapsed\":%.6f,\"raw_y_Mps\":%.6f,"
+                "\"raw_source_draws\":%llu,\"y_zero\":%llu,"
+                "\"nonsplit_y\":%llu,\"sqrtD_y\":%llu,"
+                "\"roots_valid\":%llu,\"prefix_attempts\":%llu,"
+                "\"prefix_success\":%llu,\"recurrence_rows\":%llu,"
+                "\"recurrence_per_raw\":%.12f,"
+                "\"target_survivors\":%llu,"
+                "\"target_per_raw_source_draw\":%.12f,"
+                "\"target_per_recurrence_row\":%.12f,"
+                "\"target_survivor_per_sec\":%.6f,"
+                "\"B_sqrt_success\":%llu,\"B_sqrt_fail\":%llu,"
+                "\"formula_unavailable\":%llu,"
+                "\"materialize_fail\":%llu,\"actual_mismatch\":%llu",
+                sprint128(p).c_str(), backend_name, gpu_name,
+                seed_mode_name(seed_mode), seed_offset, COUPLING_MIN_GATE,
+                gate_max, word_bits, elapsed, raw_rate, stats->raw_y_draws,
+                stats->y_zero, stats->nonsplit_y, stats->sqrtD_y,
+                stats->roots_valid, stats->prefix_attempts,
+                stats->prefix_success, stats->recurrence_rows,
+                recurrence_per_raw, stats->target_survivors, target_per_raw,
+                target_per_recurrence, target_per_sec,
+                stats->b_sqrt_success, stats->b_sqrt_fail,
+                stats->formula_unavailable, stats->materialize_fail,
+                stats->actual_mismatch);
+    for (int g = COUPLING_MIN_GATE; g <= gate_max; g++) {
+        std::printf(",\"gate%d_rows\":%llu,\"gate%d_plus\":%llu,"
+                    "\"gate%d_minus\":%llu,\"gate%d_unavailable\":%llu",
+                    g, stats->gate_rows[g], g, stats->gate_plus[g],
+                    g, stats->gate_minus[g], g, stats->gate_unavailable[g]);
+    }
+    std::printf("}\n");
+
+    std::printf("  pairwise sign correlations among co-observed signs:\n");
+    std::printf("    gate_i gate_j n plus_i plus_j same corr note\n");
+    for (int i = COUPLING_MIN_GATE; i <= gate_max; i++) {
+        for (int j = i + 1; j <= gate_max; j++) {
+            u64 n = stats->pair_count[i][j];
+            if (n == 0) continue;
+            u64 pi = stats->pair_plus_i[i][j];
+            u64 pj = stats->pair_plus_j[i][j];
+            u64 same = stats->pair_same[i][j];
+            double corr = coupling_corr(n, pi, pj, same);
+            const char *note = (pi == 0 || pi == n || pj == 0 || pj == n)
+                ? "censored_or_degenerate"
+                : "ok";
+            std::printf("    %d %d %llu %llu %llu %llu %.6f %s\n",
+                        i, j, n, pi, pj, same, corr, note);
+            std::printf("coupling_pair_jsonl={\"gate_i\":%d,\"gate_j\":%d,"
+                        "\"lag\":%d,\"n\":%llu,\"plus_i\":%llu,"
+                        "\"plus_j\":%llu,\"same\":%llu,\"corr\":%.9f,"
+                        "\"note\":\"%s\"}\n",
+                        i, j, j - i, n, pi, pj, same, corr, note);
+        }
+    }
+
+    for (int lag = 1; lag <= gate_max - COUPLING_MIN_GATE; lag++) {
+        u64 n = 0;
+        u64 pi = 0;
+        u64 pj = 0;
+        u64 same = 0;
+        for (int i = COUPLING_MIN_GATE; i + lag <= gate_max; i++) {
+            int j = i + lag;
+            n += stats->pair_count[i][j];
+            pi += stats->pair_plus_i[i][j];
+            pj += stats->pair_plus_j[i][j];
+            same += stats->pair_same[i][j];
+        }
+        if (n == 0) continue;
+        double corr = coupling_corr(n, pi, pj, same);
+        std::printf("coupling_lag_jsonl={\"lag\":%d,\"n\":%llu,"
+                    "\"plus_i\":%llu,\"plus_j\":%llu,\"same\":%llu,"
+                    "\"corr\":%.9f}\n",
+                    lag, n, pi, pj, same, corr);
+    }
+
+    u64 prefix_recurrence_rows = stats->word_prefix_total[1][0] +
+                                 stats->word_prefix_total[1][1];
+    u64 held_recurrence_rows = stats->word_held_total[1][0] +
+                               stats->word_held_total[1][1];
+
+    std::vector<CouplingBucketRank> buckets;
+    for (int len = 1; len <= word_bits; len++) {
+        int max_bucket = 1 << len;
+        for (int b = 0; b < max_bucket; b++) {
+            u64 pt = stats->word_prefix_total[len][b];
+            if (pt < 100) continue;
+            u64 ht = stats->word_held_total[len][b];
+            u64 ps = stats->word_prefix_survive[len][b];
+            u64 hs = stats->word_held_survive[len][b];
+            int all_plus_bucket = (1 << len) - 1;
+            int terminal_minus_bucket = (1 << (len - 1)) - 1;
+            double expected_prob = (b == all_plus_bucket ||
+                                    b == terminal_minus_bucket)
+                ? 1.0 / (double)(1 << len)
+                : 0.0;
+            double prefix_freq = prefix_recurrence_rows
+                ? (double)pt / (double)prefix_recurrence_rows
+                : 0.0;
+            double held_freq = held_recurrence_rows
+                ? (double)ht / (double)held_recurrence_rows
+                : 0.0;
+            double prefix_count_lift = expected_prob > 0.0
+                ? prefix_freq / expected_prob
+                : 0.0;
+            double held_count_lift = expected_prob > 0.0
+                ? held_freq / expected_prob
+                : 0.0;
+            double pr = pt ? (double)ps / (double)pt : 0.0;
+            double hr = ht ? (double)hs / (double)ht : 0.0;
+            double prefix_target_lift = target_per_recurrence > 0.0
+                ? pr / target_per_recurrence
+                : 0.0;
+            double held_target_lift = target_per_recurrence > 0.0
+                ? hr / target_per_recurrence
+                : 0.0;
+            double independent_target_lift = (b == all_plus_bucket)
+                ? (double)(1 << len)
+                : 0.0;
+            double prefix_residual_lift = independent_target_lift > 0.0
+                ? prefix_target_lift / independent_target_lift
+                : 0.0;
+            double held_residual_lift = independent_target_lift > 0.0
+                ? held_target_lift / independent_target_lift
+                : 0.0;
+            buckets.push_back(CouplingBucketRank{
+                len, b, expected_prob, prefix_count_lift, held_count_lift,
+                prefix_target_lift, held_target_lift, prefix_residual_lift,
+                held_residual_lift, pt, ps, ht, hs});
+        }
+    }
+    std::sort(buckets.begin(), buckets.end(),
+              [](const CouplingBucketRank &a, const CouplingBucketRank &b) {
+                  double da = std::fabs(a.prefix_count_lift - 1.0);
+                  double db = std::fabs(b.prefix_count_lift - 1.0);
+                  if (da != db) {
+                      return da > db;
+                  }
+                  return a.prefix_survive > b.prefix_survive;
+              });
+
+    std::printf("  top sign-word buckets selected by prefix count-lift deviation "
+                "(min prefix total 100):\n");
+    std::printf("    len word prefix_total held_total expected_prob "
+                "prefix_count_lift held_count_lift prefix_target_lift "
+                "held_target_lift held_residual_lift promotion\n");
+    int printed = 0;
+    for (const CouplingBucketRank &b : buckets) {
+        if (printed >= 20) break;
+        std::string word = coupling_sign_word((u32)b.bucket, b.len);
+        const char *promotion =
+            (b.held_survive >= 100 && b.held_residual_lift >= 1.25)
+                ? "yes"
+                : "no";
+        std::printf("    %d %s %llu %llu %.9f %.3f %.3f %.3f %.3f %.3f %s\n",
+                    b.len, word.c_str(), b.prefix_total, b.held_total,
+                    b.expected_prob, b.prefix_count_lift, b.held_count_lift,
+                    b.prefix_target_lift, b.held_target_lift,
+                    b.held_residual_lift, promotion);
+        std::printf("coupling_bucket_jsonl={\"len\":%d,\"word\":\"%s\","
+                    "\"bucket\":%d,\"prefix_total\":%llu,"
+                    "\"prefix_survive\":%llu,\"held_total\":%llu,"
+                    "\"held_survive\":%llu,\"expected_prob\":%.12f,"
+                    "\"prefix_count_lift\":%.9f,"
+                    "\"held_count_lift\":%.9f,"
+                    "\"prefix_target_lift\":%.9f,"
+                    "\"held_target_lift\":%.9f,"
+                    "\"prefix_residual_lift\":%.9f,"
+                    "\"held_residual_lift\":%.9f,"
+                    "\"promotion\":\"%s\"}\n",
+                    b.len, word.c_str(), b.bucket, b.prefix_total,
+                    b.prefix_survive, b.held_total, b.held_survive,
+                    b.expected_prob, b.prefix_count_lift, b.held_count_lift,
+                    b.prefix_target_lift, b.held_target_lift,
+                    b.prefix_residual_lift, b.held_residual_lift,
+                    promotion);
+        printed++;
+    }
+    if (printed == 0) {
+        std::printf("    no sign-word buckets reached the minimum prefix total\n");
+    }
+
+    u64 sample_used = stats->sample_count < COUPLING_MAX_SAMPLES
+        ? stats->sample_count
+        : COUPLING_MAX_SAMPLES;
+    for (u64 i = 0; i < sample_used; i++) {
+        const CouplingSample *s = &stats->samples[i];
+        std::printf("coupling_sample_jsonl={\"raw_draw_index\":%llu,"
+                    "\"source_hash\":%llu,\"root_index\":%d,"
+                    "\"gate_count\":%d,\"survived_target\":%d,"
+                    "\"sign_word\":\"%s\",\"A\":\"%s\",\"c\":\"%s\","
+                    "\"B_sqrt_ok\":%d,\"B\":\"%s\",\"gates\":[",
+                    s->raw_draw_index, s->source_hash, s->root_index,
+                    s->gate_count, s->survived_target,
+                    coupling_sign_word(s->sign_bits, s->gate_count).c_str(),
+                    sprint128(unpack128(s->A)).c_str(),
+                    sprint128(unpack128(s->c)).c_str(),
+                    s->b_sqrt_ok, sprint128(unpack128(s->B)).c_str());
+        for (int g = COUPLING_MIN_GATE;
+             g < COUPLING_MIN_GATE + s->gate_count && g <= gate_max; g++) {
+            if (g > COUPLING_MIN_GATE) std::printf(",");
+            int bit = (s->sign_bits & (1u << (g - COUPLING_MIN_GATE))) ? 1 : 0;
+            std::printf("{\"gate\":%d,\"s\":%d,\"x\":\"%s\",\"r\":\"%s\"}",
+                        g, bit ? 1 : -1,
+                        sprint128(unpack128(s->x[g])).c_str(),
+                        sprint128(unpack128(s->r[g])).c_str());
+        }
+        std::printf("]}\n");
+    }
 }
 
 static void print_trace_norm_ab_summary(const TraceNormABStats *stats,
@@ -3900,6 +4598,7 @@ int main(int argc, char **argv) {
     bool uprecheck_mode = std::strcmp(mode, "x16uprecheckprobe") == 0;
     bool quadprecheck_mode = std::strcmp(mode, "x16quadprecheckprobe") == 0;
     bool quadtelemetry_mode = std::strcmp(mode, "x16quadtelemetryprobe") == 0;
+    bool quadcoupling_mode = std::strcmp(mode, "x16quadcouplingprobe") == 0;
     bool ecover_probe_mode = std::strcmp(mode, "x16ecoverprobe") == 0;
     bool ecover_prefix_probe_mode =
         std::strcmp(mode, "x16ecoverprefixprobe") == 0 ||
@@ -3911,12 +4610,13 @@ int main(int argc, char **argv) {
                             ecover_probe_mode || ecover_prefix_probe_mode;
     if (std::strcmp(mode, "x16halvenonsplit") != 0 && !probe_mode &&
         !domain_probe_mode && !prefix_probe_mode && !trace_ab_mode &&
-        !trace_filter_mode && !uprecheck_mode && !quad_mode && !ecover_probe_mode &&
-        !ecover_prefix_probe_mode) {
+        !trace_filter_mode && !uprecheck_mode && !quad_mode &&
+        !quadcoupling_mode && !ecover_probe_mode && !ecover_prefix_probe_mode) {
         std::fprintf(stderr,
                      "Only x16halvenonsplit, x16stratumprobe/x16domainprobe, and "
                      "x16tracenormab/x16tracenormfilter/x16uprecheckprobe/"
                      "x16quadprecheckprobe/x16quadtelemetryprobe/"
+                     "x16quadcouplingprobe/"
                      "x16ecoverprobe plus d-prefix probe aliases "
                      "are implemented in this CUDA prototype.\n");
         return 1;
@@ -3957,6 +4657,8 @@ int main(int argc, char **argv) {
     int probe_bucket_bits = 6;
     int probe_focus_bucket = -1;
     int probe_prefix_depth = 4;
+    int coupling_gate_max = 12;
+    int coupling_word_bits = 6;
     if (prefix_probe_mode || ecover_prefix_probe_mode) probe_prefix_depth = 6;
     if (std::strcmp(mode, "x16d3probe") == 0 ||
         std::strcmp(mode, "x16ecoverd3probe") == 0) {
@@ -3993,6 +4695,10 @@ int main(int argc, char **argv) {
             probe_focus_bucket = (int)parse_u64_arg(arg + 13, 0);
         } else if (starts_with(arg, "bucket=")) {
             probe_focus_bucket = (int)parse_u64_arg(arg + 7, 0);
+        } else if (starts_with(arg, "gate_max=")) {
+            coupling_gate_max = (int)parse_u64_arg(arg + 9, 12);
+        } else if (starts_with(arg, "word_bits=")) {
+            coupling_word_bits = (int)parse_u64_arg(arg + 10, 6);
         } else {
             std::fprintf(stderr, "Unknown option: %s\n", arg);
             usage(argv[0]);
@@ -4012,6 +4718,16 @@ int main(int argc, char **argv) {
     }
     if (probe_focus_bucket >= (1 << (probe_bucket_bits + 1))) {
         std::fprintf(stderr, "focus_bucket is outside the selected bucket range.\n");
+        return 1;
+    }
+    if (coupling_gate_max < COUPLING_MIN_GATE) coupling_gate_max = COUPLING_MIN_GATE;
+    if (coupling_gate_max > COUPLING_MAX_GATE) {
+        std::fprintf(stderr, "gate_max must be <= %d.\n", COUPLING_MAX_GATE);
+        return 1;
+    }
+    if (coupling_word_bits < 1) coupling_word_bits = 1;
+    if (coupling_word_bits > COUPLING_MAX_WORD_BITS) {
+        std::fprintf(stderr, "word_bits must be <= %d.\n", COUPLING_MAX_WORD_BITS);
         return 1;
     }
     if (start_trial_base > max_trials) {
@@ -4087,6 +4803,11 @@ int main(int argc, char **argv) {
         std::printf("quad_target_depth = %d\n", probe_target_depth);
         std::printf("quad_telemetry_only = %s\n",
                     quadtelemetry_mode ? "true" : "false");
+    }
+    if (quadcoupling_mode) {
+        std::printf("coupling_gate_range = %d..%d\n",
+                    COUPLING_MIN_GATE, coupling_gate_max);
+        std::printf("coupling_word_bits = %d\n", coupling_word_bits);
     }
     std::printf("k = %d\n", params.k);
     std::printf("backend = %s\n", use_u96 ? "u96" : "generic-u128");
@@ -4227,6 +4948,80 @@ int main(int argc, char **argv) {
                                 prop.name, seed_mode, seed_offset,
                                 probe_target_depth, elapsed);
         cudaFree(d_uprecheck);
+        return 0;
+    }
+
+    if (quadcoupling_mode) {
+        if (!use_u96) {
+            std::fprintf(stderr,
+                         "x16quadcouplingprobe currently requires the u96 backend.\n");
+            return 1;
+        }
+
+        CouplingStats *d_coupling = nullptr;
+        die_cuda(cudaMalloc(&d_coupling, sizeof(CouplingStats)),
+                 "cudaMalloc coupling stats");
+
+        CouplingStats cumulative{};
+        u64 total = start_trial_base;
+        u64 chunk_nonce = start_chunk_nonce;
+        u64 split_raw_draw = start_trial_base + (max_trials - start_trial_base) / 2;
+        auto t0 = std::chrono::steady_clock::now();
+
+        while (total < max_trials) {
+            u64 remaining = max_trials - total;
+            u64 this_chunk = remaining < chunk_trials ? remaining : chunk_trials;
+            die_cuda(cudaMemset(d_coupling, 0, sizeof(CouplingStats)),
+                     "cudaMemset coupling stats");
+
+            x16quadcouplingprobe_kernel96<<<blocks, threads>>>(
+                params96, seed_offset, chunk_nonce, this_chunk, total,
+                split_raw_draw, seed_mode, coupling_gate_max,
+                coupling_word_bits, d_coupling);
+            die_cuda(cudaGetLastError(), "coupling kernel launch");
+            die_cuda(cudaDeviceSynchronize(), "coupling kernel synchronize");
+
+            CouplingStats stats{};
+            die_cuda(cudaMemcpy(&stats, d_coupling, sizeof(stats),
+                                cudaMemcpyDeviceToHost),
+                     "copy coupling stats");
+            add_coupling_stats(&cumulative, &stats);
+
+            u64 done = stats.raw_y_draws;
+            if (done > this_chunk) done = this_chunk;
+            total += done;
+            auto now = std::chrono::steady_clock::now();
+            double elapsed = std::chrono::duration<double>(now - t0).count();
+            double raw_rate = elapsed > 0.0
+                ? (double)(total - start_trial_base) / elapsed / 1e6
+                : 0.0;
+            double target_per_raw = cumulative.raw_y_draws
+                ? (double)cumulative.target_survivors /
+                  (double)cumulative.raw_y_draws
+                : 0.0;
+            std::printf("  raw_source_draws=%llu elapsed=%.3f raw_y_Mps=%.6f "
+                        "recurrence_rows=%llu target_survivors=%llu "
+                        "target_per_raw=%.12f\n",
+                        total, elapsed, raw_rate, cumulative.recurrence_rows,
+                        cumulative.target_survivors, target_per_raw);
+            std::fflush(stdout);
+
+            if (done == 0) {
+                std::fprintf(stderr,
+                             "Coupling kernel made no raw-y progress; stopping.\n");
+                break;
+            }
+            chunk_nonce++;
+        }
+
+        auto t1 = std::chrono::steady_clock::now();
+        double elapsed = std::chrono::duration<double>(t1 - t0).count();
+        print_coupling_summary(&cumulative, p,
+                               use_u96 ? "u96" : "generic-u128",
+                               prop.name, seed_mode, seed_offset,
+                               coupling_gate_max, coupling_word_bits,
+                               elapsed);
+        cudaFree(d_coupling);
         return 0;
     }
 

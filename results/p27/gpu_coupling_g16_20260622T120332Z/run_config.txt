@@ -1,0 +1,11 @@
+p=1000000000000000000000000103
+seed_offset=0
+raw_draws=100000000
+chunk_draws=100000000
+blocks=0
+threads=128
+claim_batch=1
+backend=u96
+gate_max=16
+word_bits=8
+seed_modes=identity splitmix

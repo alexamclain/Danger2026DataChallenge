@@ -1,0 +1,286 @@
+Pomerance CUDA x16halvenonsplit prototype
+
+p = 1000000000000000000000000103
+mode = x16quadcouplingprobe
+seed_offset = 0
+seed_mode = identity
+max_trials = 100000000
+chunk_trials = 100000000
+coupling_gate_range = 3..16
+coupling_word_bits = 8
+k = 45
+backend = u96
+GPU = NVIDIA A40  SMs=84  blocks=672  threads=128  claim_batch=1
+
+  raw_source_draws=100000000 elapsed=16.942 raw_y_Mps=5.902369 recurrence_rows=6256372 target_survivors=434 target_per_raw=0.000004340000
+
+Quadratic-gate recurrence-coupling summary:
+  mode=x16quadcouplingprobe backend=u96 GPU="NVIDIA A40" seed_mode=identity seed_offset=0
+  gate_range=3..16 word_bits=8 elapsed=16.942374 raw_y_Mps=5.902361
+  raw_source_draws=100000000 y_zero=0 nonsplit_y=50008701 sqrtD_y=25005112 roots_valid=50010224 prefix_attempts=50010224 prefix_success=12506274 recurrence_rows=6256372 recurrence_per_raw=0.062563720000
+  B_sqrt_sampled_globally success=6256372 fail=0 formula_unavailable=0 materialize_fail=0 actual_mismatch=0
+  target_gate=16 target_survivors=434 target_per_raw_source_draw=0.000004340000 target_per_recurrence_row=0.000069369277 target_survivor_per_sec=25.616245
+  per-gate signs:
+    gate rows plus minus unavailable plus_rate
+    3 6256372 3128872 3127500 0 0.500109648
+    4 3128872 1565642 1563230 0 0.500385442
+    5 1565642 781714 783928 0 0.499292942
+    6 781714 390338 391376 0 0.499336074
+    7 390338 195030 195308 0 0.499643898
+    8 195030 97416 97614 0 0.499492386
+    9 97416 48364 49052 0 0.496468753
+    10 48364 24132 24232 0 0.498966173
+    11 24132 12066 12066 0 0.500000000
+    12 12066 5972 6094 0 0.494944472
+    13 5972 3080 2892 0 0.515740121
+    14 3080 1518 1562 0 0.492857143
+    15 1518 766 752 0 0.504611331
+    16 766 434 332 0 0.566579634
+coupling_jsonl={"mode":"x16quadcouplingprobe","p":"1000000000000000000000000103","backend":"u96","gpu":"NVIDIA A40","seed_mode":"identity","seed_offset":0,"gate_min":3,"gate_max":16,"word_bits":8,"elapsed":16.942374,"raw_y_Mps":5.902361,"raw_source_draws":100000000,"y_zero":0,"nonsplit_y":50008701,"sqrtD_y":25005112,"roots_valid":50010224,"prefix_attempts":50010224,"prefix_success":12506274,"recurrence_rows":6256372,"recurrence_per_raw":0.062563720000,"target_survivors":434,"target_per_raw_source_draw":0.000004340000,"target_per_recurrence_row":0.000069369277,"target_survivor_per_sec":25.616245,"B_sqrt_success":6256372,"B_sqrt_fail":0,"formula_unavailable":0,"materialize_fail":0,"actual_mismatch":0,"gate3_rows":6256372,"gate3_plus":3128872,"gate3_minus":3127500,"gate3_unavailable":0,"gate4_rows":3128872,"gate4_plus":1565642,"gate4_minus":1563230,"gate4_unavailable":0,"gate5_rows":1565642,"gate5_plus":781714,"gate5_minus":783928,"gate5_unavailable":0,"gate6_rows":781714,"gate6_plus":390338,"gate6_minus":391376,"gate6_unavailable":0,"gate7_rows":390338,"gate7_plus":195030,"gate7_minus":195308,"gate7_unavailable":0,"gate8_rows":195030,"gate8_plus":97416,"gate8_minus":97614,"gate8_unavailable":0,"gate9_rows":97416,"gate9_plus":48364,"gate9_minus":49052,"gate9_unavailable":0,"gate10_rows":48364,"gate10_plus":24132,"gate10_minus":24232,"gate10_unavailable":0,"gate11_rows":24132,"gate11_plus":12066,"gate11_minus":12066,"gate11_unavailable":0,"gate12_rows":12066,"gate12_plus":5972,"gate12_minus":6094,"gate12_unavailable":0,"gate13_rows":5972,"gate13_plus":3080,"gate13_minus":2892,"gate13_unavailable":0,"gate14_rows":3080,"gate14_plus":1518,"gate14_minus":1562,"gate14_unavailable":0,"gate15_rows":1518,"gate15_plus":766,"gate15_minus":752,"gate15_unavailable":0,"gate16_rows":766,"gate16_plus":434,"gate16_minus":332,"gate16_unavailable":0}
+  pairwise sign correlations among co-observed signs:
+    gate_i gate_j n plus_i plus_j same corr note
+    3 4 3128872 3128872 1565642 1565642 0.000000 censored_or_degenerate
+coupling_pair_jsonl={"gate_i":3,"gate_j":4,"lag":1,"n":3128872,"plus_i":3128872,"plus_j":1565642,"same":1565642,"corr":0.000000000,"note":"censored_or_degenerate"}
+    3 5 1565642 1565642 781714 781714 0.000000 censored_or_degenerate
+coupling_pair_jsonl={"gate_i":3,"gate_j":5,"lag":2,"n":1565642,"plus_i":1565642,"plus_j":781714,"same":781714,"corr":0.000000000,"note":"censored_or_degenerate"}
+    3 6 781714 781714 390338 390338 0.000000 censored_or_degenerate
+coupling_pair_jsonl={"gate_i":3,"gate_j":6,"lag":3,"n":781714,"plus_i":781714,"plus_j":390338,"same":390338,"corr":0.000000000,"note":"censored_or_degenerate"}
+    3 7 390338 390338 195030 195030 0.000000 censored_or_degenerate
+coupling_pair_jsonl={"gate_i":3,"gate_j":7,"lag":4,"n":390338,"plus_i":390338,"plus_j":195030,"same":195030,"corr":0.000000000,"note":"censored_or_degenerate"}
+    3 8 195030 195030 97416 97416 0.000000 censored_or_degenerate
+coupling_pair_jsonl={"gate_i":3,"gate_j":8,"lag":5,"n":195030,"plus_i":195030,"plus_j":97416,"same":97416,"corr":0.000000000,"note":"censored_or_degenerate"}
+    3 9 97416 97416 48364 48364 0.000000 censored_or_degenerate
+coupling_pair_jsonl={"gate_i":3,"gate_j":9,"lag":6,"n":97416,"plus_i":97416,"plus_j":48364,"same":48364,"corr":0.000000000,"note":"censored_or_degenerate"}
+    3 10 48364 48364 24132 24132 0.000000 censored_or_degenerate
+coupling_pair_jsonl={"gate_i":3,"gate_j":10,"lag":7,"n":48364,"plus_i":48364,"plus_j":24132,"same":24132,"corr":0.000000000,"note":"censored_or_degenerate"}
+    3 11 24132 24132 12066 12066 0.000000 censored_or_degenerate
+coupling_pair_jsonl={"gate_i":3,"gate_j":11,"lag":8,"n":24132,"plus_i":24132,"plus_j":12066,"same":12066,"corr":0.000000000,"note":"censored_or_degenerate"}
+    3 12 12066 12066 5972 5972 0.000000 censored_or_degenerate
+coupling_pair_jsonl={"gate_i":3,"gate_j":12,"lag":9,"n":12066,"plus_i":12066,"plus_j":5972,"same":5972,"corr":0.000000000,"note":"censored_or_degenerate"}
+    3 13 5972 5972 3080 3080 0.000000 censored_or_degenerate
+coupling_pair_jsonl={"gate_i":3,"gate_j":13,"lag":10,"n":5972,"plus_i":5972,"plus_j":3080,"same":3080,"corr":0.000000000,"note":"censored_or_degenerate"}
+    3 14 3080 3080 1518 1518 0.000000 censored_or_degenerate
+coupling_pair_jsonl={"gate_i":3,"gate_j":14,"lag":11,"n":3080,"plus_i":3080,"plus_j":1518,"same":1518,"corr":0.000000000,"note":"censored_or_degenerate"}
+    3 15 1518 1518 766 766 0.000000 censored_or_degenerate
+coupling_pair_jsonl={"gate_i":3,"gate_j":15,"lag":12,"n":1518,"plus_i":1518,"plus_j":766,"same":766,"corr":0.000000000,"note":"censored_or_degenerate"}
+    3 16 766 766 434 434 0.000000 censored_or_degenerate
+coupling_pair_jsonl={"gate_i":3,"gate_j":16,"lag":13,"n":766,"plus_i":766,"plus_j":434,"same":434,"corr":0.000000000,"note":"censored_or_degenerate"}
+    4 5 1565642 1565642 781714 781714 0.000000 censored_or_degenerate
+coupling_pair_jsonl={"gate_i":4,"gate_j":5,"lag":1,"n":1565642,"plus_i":1565642,"plus_j":781714,"same":781714,"corr":0.000000000,"note":"censored_or_degenerate"}
+    4 6 781714 781714 390338 390338 0.000000 censored_or_degenerate
+coupling_pair_jsonl={"gate_i":4,"gate_j":6,"lag":2,"n":781714,"plus_i":781714,"plus_j":390338,"same":390338,"corr":0.000000000,"note":"censored_or_degenerate"}
+    4 7 390338 390338 195030 195030 0.000000 censored_or_degenerate
+coupling_pair_jsonl={"gate_i":4,"gate_j":7,"lag":3,"n":390338,"plus_i":390338,"plus_j":195030,"same":195030,"corr":0.000000000,"note":"censored_or_degenerate"}
+    4 8 195030 195030 97416 97416 0.000000 censored_or_degenerate
+coupling_pair_jsonl={"gate_i":4,"gate_j":8,"lag":4,"n":195030,"plus_i":195030,"plus_j":97416,"same":97416,"corr":0.000000000,"note":"censored_or_degenerate"}
+    4 9 97416 97416 48364 48364 0.000000 censored_or_degenerate
+coupling_pair_jsonl={"gate_i":4,"gate_j":9,"lag":5,"n":97416,"plus_i":97416,"plus_j":48364,"same":48364,"corr":0.000000000,"note":"censored_or_degenerate"}
+    4 10 48364 48364 24132 24132 0.000000 censored_or_degenerate
+coupling_pair_jsonl={"gate_i":4,"gate_j":10,"lag":6,"n":48364,"plus_i":48364,"plus_j":24132,"same":24132,"corr":0.000000000,"note":"censored_or_degenerate"}
+    4 11 24132 24132 12066 12066 0.000000 censored_or_degenerate
+coupling_pair_jsonl={"gate_i":4,"gate_j":11,"lag":7,"n":24132,"plus_i":24132,"plus_j":12066,"same":12066,"corr":0.000000000,"note":"censored_or_degenerate"}
+    4 12 12066 12066 5972 5972 0.000000 censored_or_degenerate
+coupling_pair_jsonl={"gate_i":4,"gate_j":12,"lag":8,"n":12066,"plus_i":12066,"plus_j":5972,"same":5972,"corr":0.000000000,"note":"censored_or_degenerate"}
+    4 13 5972 5972 3080 3080 0.000000 censored_or_degenerate
+coupling_pair_jsonl={"gate_i":4,"gate_j":13,"lag":9,"n":5972,"plus_i":5972,"plus_j":3080,"same":3080,"corr":0.000000000,"note":"censored_or_degenerate"}
+    4 14 3080 3080 1518 1518 0.000000 censored_or_degenerate
+coupling_pair_jsonl={"gate_i":4,"gate_j":14,"lag":10,"n":3080,"plus_i":3080,"plus_j":1518,"same":1518,"corr":0.000000000,"note":"censored_or_degenerate"}
+    4 15 1518 1518 766 766 0.000000 censored_or_degenerate
+coupling_pair_jsonl={"gate_i":4,"gate_j":15,"lag":11,"n":1518,"plus_i":1518,"plus_j":766,"same":766,"corr":0.000000000,"note":"censored_or_degenerate"}
+    4 16 766 766 434 434 0.000000 censored_or_degenerate
+coupling_pair_jsonl={"gate_i":4,"gate_j":16,"lag":12,"n":766,"plus_i":766,"plus_j":434,"same":434,"corr":0.000000000,"note":"censored_or_degenerate"}
+    5 6 781714 781714 390338 390338 0.000000 censored_or_degenerate
+coupling_pair_jsonl={"gate_i":5,"gate_j":6,"lag":1,"n":781714,"plus_i":781714,"plus_j":390338,"same":390338,"corr":0.000000000,"note":"censored_or_degenerate"}
+    5 7 390338 390338 195030 195030 0.000000 censored_or_degenerate
+coupling_pair_jsonl={"gate_i":5,"gate_j":7,"lag":2,"n":390338,"plus_i":390338,"plus_j":195030,"same":195030,"corr":0.000000000,"note":"censored_or_degenerate"}
+    5 8 195030 195030 97416 97416 0.000000 censored_or_degenerate
+coupling_pair_jsonl={"gate_i":5,"gate_j":8,"lag":3,"n":195030,"plus_i":195030,"plus_j":97416,"same":97416,"corr":0.000000000,"note":"censored_or_degenerate"}
+    5 9 97416 97416 48364 48364 0.000000 censored_or_degenerate
+coupling_pair_jsonl={"gate_i":5,"gate_j":9,"lag":4,"n":97416,"plus_i":97416,"plus_j":48364,"same":48364,"corr":0.000000000,"note":"censored_or_degenerate"}
+    5 10 48364 48364 24132 24132 0.000000 censored_or_degenerate
+coupling_pair_jsonl={"gate_i":5,"gate_j":10,"lag":5,"n":48364,"plus_i":48364,"plus_j":24132,"same":24132,"corr":0.000000000,"note":"censored_or_degenerate"}
+    5 11 24132 24132 12066 12066 0.000000 censored_or_degenerate
+coupling_pair_jsonl={"gate_i":5,"gate_j":11,"lag":6,"n":24132,"plus_i":24132,"plus_j":12066,"same":12066,"corr":0.000000000,"note":"censored_or_degenerate"}
+    5 12 12066 12066 5972 5972 0.000000 censored_or_degenerate
+coupling_pair_jsonl={"gate_i":5,"gate_j":12,"lag":7,"n":12066,"plus_i":12066,"plus_j":5972,"same":5972,"corr":0.000000000,"note":"censored_or_degenerate"}
+    5 13 5972 5972 3080 3080 0.000000 censored_or_degenerate
+coupling_pair_jsonl={"gate_i":5,"gate_j":13,"lag":8,"n":5972,"plus_i":5972,"plus_j":3080,"same":3080,"corr":0.000000000,"note":"censored_or_degenerate"}
+    5 14 3080 3080 1518 1518 0.000000 censored_or_degenerate
+coupling_pair_jsonl={"gate_i":5,"gate_j":14,"lag":9,"n":3080,"plus_i":3080,"plus_j":1518,"same":1518,"corr":0.000000000,"note":"censored_or_degenerate"}
+    5 15 1518 1518 766 766 0.000000 censored_or_degenerate
+coupling_pair_jsonl={"gate_i":5,"gate_j":15,"lag":10,"n":1518,"plus_i":1518,"plus_j":766,"same":766,"corr":0.000000000,"note":"censored_or_degenerate"}
+    5 16 766 766 434 434 0.000000 censored_or_degenerate
+coupling_pair_jsonl={"gate_i":5,"gate_j":16,"lag":11,"n":766,"plus_i":766,"plus_j":434,"same":434,"corr":0.000000000,"note":"censored_or_degenerate"}
+    6 7 390338 390338 195030 195030 0.000000 censored_or_degenerate
+coupling_pair_jsonl={"gate_i":6,"gate_j":7,"lag":1,"n":390338,"plus_i":390338,"plus_j":195030,"same":195030,"corr":0.000000000,"note":"censored_or_degenerate"}
+    6 8 195030 195030 97416 97416 0.000000 censored_or_degenerate
+coupling_pair_jsonl={"gate_i":6,"gate_j":8,"lag":2,"n":195030,"plus_i":195030,"plus_j":97416,"same":97416,"corr":0.000000000,"note":"censored_or_degenerate"}
+    6 9 97416 97416 48364 48364 0.000000 censored_or_degenerate
+coupling_pair_jsonl={"gate_i":6,"gate_j":9,"lag":3,"n":97416,"plus_i":97416,"plus_j":48364,"same":48364,"corr":0.000000000,"note":"censored_or_degenerate"}
+    6 10 48364 48364 24132 24132 0.000000 censored_or_degenerate
+coupling_pair_jsonl={"gate_i":6,"gate_j":10,"lag":4,"n":48364,"plus_i":48364,"plus_j":24132,"same":24132,"corr":0.000000000,"note":"censored_or_degenerate"}
+    6 11 24132 24132 12066 12066 0.000000 censored_or_degenerate
+coupling_pair_jsonl={"gate_i":6,"gate_j":11,"lag":5,"n":24132,"plus_i":24132,"plus_j":12066,"same":12066,"corr":0.000000000,"note":"censored_or_degenerate"}
+    6 12 12066 12066 5972 5972 0.000000 censored_or_degenerate
+coupling_pair_jsonl={"gate_i":6,"gate_j":12,"lag":6,"n":12066,"plus_i":12066,"plus_j":5972,"same":5972,"corr":0.000000000,"note":"censored_or_degenerate"}
+    6 13 5972 5972 3080 3080 0.000000 censored_or_degenerate
+coupling_pair_jsonl={"gate_i":6,"gate_j":13,"lag":7,"n":5972,"plus_i":5972,"plus_j":3080,"same":3080,"corr":0.000000000,"note":"censored_or_degenerate"}
+    6 14 3080 3080 1518 1518 0.000000 censored_or_degenerate
+coupling_pair_jsonl={"gate_i":6,"gate_j":14,"lag":8,"n":3080,"plus_i":3080,"plus_j":1518,"same":1518,"corr":0.000000000,"note":"censored_or_degenerate"}
+    6 15 1518 1518 766 766 0.000000 censored_or_degenerate
+coupling_pair_jsonl={"gate_i":6,"gate_j":15,"lag":9,"n":1518,"plus_i":1518,"plus_j":766,"same":766,"corr":0.000000000,"note":"censored_or_degenerate"}
+    6 16 766 766 434 434 0.000000 censored_or_degenerate
+coupling_pair_jsonl={"gate_i":6,"gate_j":16,"lag":10,"n":766,"plus_i":766,"plus_j":434,"same":434,"corr":0.000000000,"note":"censored_or_degenerate"}
+    7 8 195030 195030 97416 97416 0.000000 censored_or_degenerate
+coupling_pair_jsonl={"gate_i":7,"gate_j":8,"lag":1,"n":195030,"plus_i":195030,"plus_j":97416,"same":97416,"corr":0.000000000,"note":"censored_or_degenerate"}
+    7 9 97416 97416 48364 48364 0.000000 censored_or_degenerate
+coupling_pair_jsonl={"gate_i":7,"gate_j":9,"lag":2,"n":97416,"plus_i":97416,"plus_j":48364,"same":48364,"corr":0.000000000,"note":"censored_or_degenerate"}
+    7 10 48364 48364 24132 24132 0.000000 censored_or_degenerate
+coupling_pair_jsonl={"gate_i":7,"gate_j":10,"lag":3,"n":48364,"plus_i":48364,"plus_j":24132,"same":24132,"corr":0.000000000,"note":"censored_or_degenerate"}
+    7 11 24132 24132 12066 12066 0.000000 censored_or_degenerate
+coupling_pair_jsonl={"gate_i":7,"gate_j":11,"lag":4,"n":24132,"plus_i":24132,"plus_j":12066,"same":12066,"corr":0.000000000,"note":"censored_or_degenerate"}
+    7 12 12066 12066 5972 5972 0.000000 censored_or_degenerate
+coupling_pair_jsonl={"gate_i":7,"gate_j":12,"lag":5,"n":12066,"plus_i":12066,"plus_j":5972,"same":5972,"corr":0.000000000,"note":"censored_or_degenerate"}
+    7 13 5972 5972 3080 3080 0.000000 censored_or_degenerate
+coupling_pair_jsonl={"gate_i":7,"gate_j":13,"lag":6,"n":5972,"plus_i":5972,"plus_j":3080,"same":3080,"corr":0.000000000,"note":"censored_or_degenerate"}
+    7 14 3080 3080 1518 1518 0.000000 censored_or_degenerate
+coupling_pair_jsonl={"gate_i":7,"gate_j":14,"lag":7,"n":3080,"plus_i":3080,"plus_j":1518,"same":1518,"corr":0.000000000,"note":"censored_or_degenerate"}
+    7 15 1518 1518 766 766 0.000000 censored_or_degenerate
+coupling_pair_jsonl={"gate_i":7,"gate_j":15,"lag":8,"n":1518,"plus_i":1518,"plus_j":766,"same":766,"corr":0.000000000,"note":"censored_or_degenerate"}
+    7 16 766 766 434 434 0.000000 censored_or_degenerate
+coupling_pair_jsonl={"gate_i":7,"gate_j":16,"lag":9,"n":766,"plus_i":766,"plus_j":434,"same":434,"corr":0.000000000,"note":"censored_or_degenerate"}
+    8 9 97416 97416 48364 48364 0.000000 censored_or_degenerate
+coupling_pair_jsonl={"gate_i":8,"gate_j":9,"lag":1,"n":97416,"plus_i":97416,"plus_j":48364,"same":48364,"corr":0.000000000,"note":"censored_or_degenerate"}
+    8 10 48364 48364 24132 24132 0.000000 censored_or_degenerate
+coupling_pair_jsonl={"gate_i":8,"gate_j":10,"lag":2,"n":48364,"plus_i":48364,"plus_j":24132,"same":24132,"corr":0.000000000,"note":"censored_or_degenerate"}
+    8 11 24132 24132 12066 12066 0.000000 censored_or_degenerate
+coupling_pair_jsonl={"gate_i":8,"gate_j":11,"lag":3,"n":24132,"plus_i":24132,"plus_j":12066,"same":12066,"corr":0.000000000,"note":"censored_or_degenerate"}
+    8 12 12066 12066 5972 5972 0.000000 censored_or_degenerate
+coupling_pair_jsonl={"gate_i":8,"gate_j":12,"lag":4,"n":12066,"plus_i":12066,"plus_j":5972,"same":5972,"corr":0.000000000,"note":"censored_or_degenerate"}
+    8 13 5972 5972 3080 3080 0.000000 censored_or_degenerate
+coupling_pair_jsonl={"gate_i":8,"gate_j":13,"lag":5,"n":5972,"plus_i":5972,"plus_j":3080,"same":3080,"corr":0.000000000,"note":"censored_or_degenerate"}
+    8 14 3080 3080 1518 1518 0.000000 censored_or_degenerate
+coupling_pair_jsonl={"gate_i":8,"gate_j":14,"lag":6,"n":3080,"plus_i":3080,"plus_j":1518,"same":1518,"corr":0.000000000,"note":"censored_or_degenerate"}
+    8 15 1518 1518 766 766 0.000000 censored_or_degenerate
+coupling_pair_jsonl={"gate_i":8,"gate_j":15,"lag":7,"n":1518,"plus_i":1518,"plus_j":766,"same":766,"corr":0.000000000,"note":"censored_or_degenerate"}
+    8 16 766 766 434 434 0.000000 censored_or_degenerate
+coupling_pair_jsonl={"gate_i":8,"gate_j":16,"lag":8,"n":766,"plus_i":766,"plus_j":434,"same":434,"corr":0.000000000,"note":"censored_or_degenerate"}
+    9 10 48364 48364 24132 24132 0.000000 censored_or_degenerate
+coupling_pair_jsonl={"gate_i":9,"gate_j":10,"lag":1,"n":48364,"plus_i":48364,"plus_j":24132,"same":24132,"corr":0.000000000,"note":"censored_or_degenerate"}
+    9 11 24132 24132 12066 12066 0.000000 censored_or_degenerate
+coupling_pair_jsonl={"gate_i":9,"gate_j":11,"lag":2,"n":24132,"plus_i":24132,"plus_j":12066,"same":12066,"corr":0.000000000,"note":"censored_or_degenerate"}
+    9 12 12066 12066 5972 5972 0.000000 censored_or_degenerate
+coupling_pair_jsonl={"gate_i":9,"gate_j":12,"lag":3,"n":12066,"plus_i":12066,"plus_j":5972,"same":5972,"corr":0.000000000,"note":"censored_or_degenerate"}
+    9 13 5972 5972 3080 3080 0.000000 censored_or_degenerate
+coupling_pair_jsonl={"gate_i":9,"gate_j":13,"lag":4,"n":5972,"plus_i":5972,"plus_j":3080,"same":3080,"corr":0.000000000,"note":"censored_or_degenerate"}
+    9 14 3080 3080 1518 1518 0.000000 censored_or_degenerate
+coupling_pair_jsonl={"gate_i":9,"gate_j":14,"lag":5,"n":3080,"plus_i":3080,"plus_j":1518,"same":1518,"corr":0.000000000,"note":"censored_or_degenerate"}
+    9 15 1518 1518 766 766 0.000000 censored_or_degenerate
+coupling_pair_jsonl={"gate_i":9,"gate_j":15,"lag":6,"n":1518,"plus_i":1518,"plus_j":766,"same":766,"corr":0.000000000,"note":"censored_or_degenerate"}
+    9 16 766 766 434 434 0.000000 censored_or_degenerate
+coupling_pair_jsonl={"gate_i":9,"gate_j":16,"lag":7,"n":766,"plus_i":766,"plus_j":434,"same":434,"corr":0.000000000,"note":"censored_or_degenerate"}
+    10 11 24132 24132 12066 12066 0.000000 censored_or_degenerate
+coupling_pair_jsonl={"gate_i":10,"gate_j":11,"lag":1,"n":24132,"plus_i":24132,"plus_j":12066,"same":12066,"corr":0.000000000,"note":"censored_or_degenerate"}
+    10 12 12066 12066 5972 5972 0.000000 censored_or_degenerate
+coupling_pair_jsonl={"gate_i":10,"gate_j":12,"lag":2,"n":12066,"plus_i":12066,"plus_j":5972,"same":5972,"corr":0.000000000,"note":"censored_or_degenerate"}
+    10 13 5972 5972 3080 3080 0.000000 censored_or_degenerate
+coupling_pair_jsonl={"gate_i":10,"gate_j":13,"lag":3,"n":5972,"plus_i":5972,"plus_j":3080,"same":3080,"corr":0.000000000,"note":"censored_or_degenerate"}
+    10 14 3080 3080 1518 1518 0.000000 censored_or_degenerate
+coupling_pair_jsonl={"gate_i":10,"gate_j":14,"lag":4,"n":3080,"plus_i":3080,"plus_j":1518,"same":1518,"corr":0.000000000,"note":"censored_or_degenerate"}
+    10 15 1518 1518 766 766 0.000000 censored_or_degenerate
+coupling_pair_jsonl={"gate_i":10,"gate_j":15,"lag":5,"n":1518,"plus_i":1518,"plus_j":766,"same":766,"corr":0.000000000,"note":"censored_or_degenerate"}
+    10 16 766 766 434 434 0.000000 censored_or_degenerate
+coupling_pair_jsonl={"gate_i":10,"gate_j":16,"lag":6,"n":766,"plus_i":766,"plus_j":434,"same":434,"corr":0.000000000,"note":"censored_or_degenerate"}
+    11 12 12066 12066 5972 5972 0.000000 censored_or_degenerate
+coupling_pair_jsonl={"gate_i":11,"gate_j":12,"lag":1,"n":12066,"plus_i":12066,"plus_j":5972,"same":5972,"corr":0.000000000,"note":"censored_or_degenerate"}
+    11 13 5972 5972 3080 3080 0.000000 censored_or_degenerate
+coupling_pair_jsonl={"gate_i":11,"gate_j":13,"lag":2,"n":5972,"plus_i":5972,"plus_j":3080,"same":3080,"corr":0.000000000,"note":"censored_or_degenerate"}
+    11 14 3080 3080 1518 1518 0.000000 censored_or_degenerate
+coupling_pair_jsonl={"gate_i":11,"gate_j":14,"lag":3,"n":3080,"plus_i":3080,"plus_j":1518,"same":1518,"corr":0.000000000,"note":"censored_or_degenerate"}
+    11 15 1518 1518 766 766 0.000000 censored_or_degenerate
+coupling_pair_jsonl={"gate_i":11,"gate_j":15,"lag":4,"n":1518,"plus_i":1518,"plus_j":766,"same":766,"corr":0.000000000,"note":"censored_or_degenerate"}
+    11 16 766 766 434 434 0.000000 censored_or_degenerate
+coupling_pair_jsonl={"gate_i":11,"gate_j":16,"lag":5,"n":766,"plus_i":766,"plus_j":434,"same":434,"corr":0.000000000,"note":"censored_or_degenerate"}
+    12 13 5972 5972 3080 3080 0.000000 censored_or_degenerate
+coupling_pair_jsonl={"gate_i":12,"gate_j":13,"lag":1,"n":5972,"plus_i":5972,"plus_j":3080,"same":3080,"corr":0.000000000,"note":"censored_or_degenerate"}
+    12 14 3080 3080 1518 1518 0.000000 censored_or_degenerate
+coupling_pair_jsonl={"gate_i":12,"gate_j":14,"lag":2,"n":3080,"plus_i":3080,"plus_j":1518,"same":1518,"corr":0.000000000,"note":"censored_or_degenerate"}
+    12 15 1518 1518 766 766 0.000000 censored_or_degenerate
+coupling_pair_jsonl={"gate_i":12,"gate_j":15,"lag":3,"n":1518,"plus_i":1518,"plus_j":766,"same":766,"corr":0.000000000,"note":"censored_or_degenerate"}
+    12 16 766 766 434 434 0.000000 censored_or_degenerate
+coupling_pair_jsonl={"gate_i":12,"gate_j":16,"lag":4,"n":766,"plus_i":766,"plus_j":434,"same":434,"corr":0.000000000,"note":"censored_or_degenerate"}
+    13 14 3080 3080 1518 1518 0.000000 censored_or_degenerate
+coupling_pair_jsonl={"gate_i":13,"gate_j":14,"lag":1,"n":3080,"plus_i":3080,"plus_j":1518,"same":1518,"corr":0.000000000,"note":"censored_or_degenerate"}
+    13 15 1518 1518 766 766 0.000000 censored_or_degenerate
+coupling_pair_jsonl={"gate_i":13,"gate_j":15,"lag":2,"n":1518,"plus_i":1518,"plus_j":766,"same":766,"corr":0.000000000,"note":"censored_or_degenerate"}
+    13 16 766 766 434 434 0.000000 censored_or_degenerate
+coupling_pair_jsonl={"gate_i":13,"gate_j":16,"lag":3,"n":766,"plus_i":766,"plus_j":434,"same":434,"corr":0.000000000,"note":"censored_or_degenerate"}
+    14 15 1518 1518 766 766 0.000000 censored_or_degenerate
+coupling_pair_jsonl={"gate_i":14,"gate_j":15,"lag":1,"n":1518,"plus_i":1518,"plus_j":766,"same":766,"corr":0.000000000,"note":"censored_or_degenerate"}
+    14 16 766 766 434 434 0.000000 censored_or_degenerate
+coupling_pair_jsonl={"gate_i":14,"gate_j":16,"lag":2,"n":766,"plus_i":766,"plus_j":434,"same":434,"corr":0.000000000,"note":"censored_or_degenerate"}
+    15 16 766 766 434 434 0.000000 censored_or_degenerate
+coupling_pair_jsonl={"gate_i":15,"gate_j":16,"lag":1,"n":766,"plus_i":766,"plus_j":434,"same":434,"corr":0.000000000,"note":"censored_or_degenerate"}
+coupling_lag_jsonl={"lag":1,"n":6254910,"plus_i":6254910,"plus_j":3126472,"same":3126472,"corr":0.000000000}
+coupling_lag_jsonl={"lag":2,"n":3126038,"plus_i":3126038,"plus_j":1560830,"same":1560830,"corr":0.000000000}
+coupling_lag_jsonl={"lag":3,"n":1560396,"plus_i":1560396,"plus_j":779116,"same":779116,"corr":0.000000000}
+coupling_lag_jsonl={"lag":4,"n":778682,"plus_i":778682,"plus_j":388778,"same":388778,"corr":0.000000000}
+coupling_lag_jsonl={"lag":5,"n":388344,"plus_i":388344,"plus_j":193748,"same":193748,"corr":0.000000000}
+coupling_lag_jsonl={"lag":6,"n":193314,"plus_i":193314,"plus_j":96332,"same":96332,"corr":0.000000000}
+coupling_lag_jsonl={"lag":7,"n":95898,"plus_i":95898,"plus_j":47968,"same":47968,"corr":0.000000000}
+coupling_lag_jsonl={"lag":8,"n":47534,"plus_i":47534,"plus_j":23836,"same":23836,"corr":0.000000000}
+coupling_lag_jsonl={"lag":9,"n":23402,"plus_i":23402,"plus_j":11770,"same":11770,"corr":0.000000000}
+coupling_lag_jsonl={"lag":10,"n":11336,"plus_i":11336,"plus_j":5798,"same":5798,"corr":0.000000000}
+coupling_lag_jsonl={"lag":11,"n":5364,"plus_i":5364,"plus_j":2718,"same":2718,"corr":0.000000000}
+coupling_lag_jsonl={"lag":12,"n":2284,"plus_i":2284,"plus_j":1200,"same":1200,"corr":0.000000000}
+coupling_lag_jsonl={"lag":13,"n":766,"plus_i":766,"plus_j":434,"same":434,"corr":0.000000000}
+  top sign-word buckets selected by prefix count-lift deviation (min prefix total 100):
+    len word prefix_total held_total expected_prob prefix_count_lift held_count_lift prefix_target_lift held_target_lift held_residual_lift promotion
+    8 ++++++++ 12030 12102 0.003906250 0.985 0.990 268.420 250.147 0.977 no
+coupling_bucket_jsonl={"len":8,"word":"++++++++","bucket":255,"prefix_total":12030,"prefix_survive":224,"held_total":12102,"held_survive":210,"expected_prob":0.003906250000,"prefix_count_lift":0.984973122,"held_count_lift":0.989904489,"prefix_target_lift":268.420218272,"held_target_lift":250.146816575,"prefix_residual_lift":1.048516478,"held_residual_lift":0.977136002,"promotion":"no"}
+    7 +++++++ 24096 24268 0.007812500 0.986 0.993 134.010 124.744 0.975 no
+coupling_bucket_jsonl={"len":7,"word":"+++++++","bucket":127,"prefix_total":24096,"prefix_survive":224,"held_total":24268,"held_survive":210,"expected_prob":0.007812500000,"prefix_count_lift":0.986446897,"held_count_lift":0.992521986,"prefix_target_lift":134.009596025,"held_target_lift":124.743562477,"prefix_residual_lift":1.046949969,"held_residual_lift":0.974559082,"promotion":"no"}
+    8 +++++++- 12066 12166 0.003906250 0.988 0.995 0.000 0.000 0.000 no
+coupling_bucket_jsonl={"len":8,"word":"+++++++-","bucket":127,"prefix_total":12066,"prefix_survive":0,"held_total":12166,"held_survive":0,"expected_prob":0.003906250000,"prefix_count_lift":0.987920672,"held_count_lift":0.995139483,"prefix_target_lift":0.000000000,"held_target_lift":0.000000000,"prefix_residual_lift":0.000000000,"held_residual_lift":0.000000000,"promotion":"no"}
+    7 ++++++- 24606 24446 0.007812500 1.007 1.000 0.000 0.000 0.000 no
+coupling_bucket_jsonl={"len":7,"word":"++++++-","bucket":63,"prefix_total":24606,"prefix_survive":0,"held_total":24446,"held_survive":0,"expected_prob":0.007812500000,"prefix_count_lift":1.007325379,"held_count_lift":0.999801898,"prefix_target_lift":0.000000000,"held_target_lift":0.000000000,"prefix_residual_lift":0.000000000,"held_residual_lift":0.000000000,"promotion":"no"}
+    5 ++++- 97134 98174 0.031250000 0.994 1.004 0.000 0.000 0.000 no
+coupling_bucket_jsonl={"len":5,"word":"++++-","bucket":15,"prefix_total":97134,"prefix_survive":0,"held_total":98174,"held_survive":0,"expected_prob":0.031250000000,"prefix_count_lift":0.994122809,"held_count_lift":1.003789491,"prefix_target_lift":0.000000000,"held_target_lift":0.000000000,"prefix_residual_lift":0.000000000,"held_residual_lift":0.000000000,"promotion":"no"}
+    6 ++++++ 48702 48714 0.015625000 0.997 0.996 66.303 62.144 0.971 no
+coupling_bucket_jsonl={"len":6,"word":"++++++","bucket":63,"prefix_total":48702,"prefix_survive":224,"held_total":48714,"held_survive":210,"expected_prob":0.015625000000,"prefix_count_lift":0.996886138,"held_count_lift":0.996161942,"prefix_target_lift":66.303133871,"held_target_lift":62.143875974,"prefix_residual_lift":1.035986467,"held_residual_lift":0.970998062,"promotion":"no"}
+    4 ++++ 194828 195510 0.062500000 0.997 1.000 16.574 15.484 0.968 no
+coupling_bucket_jsonl={"len":4,"word":"++++","bucket":15,"prefix_total":194828,"prefix_survive":224,"held_total":195510,"held_survive":210,"expected_prob":0.062500000000,"prefix_count_lift":0.996988484,"held_count_lift":0.999505385,"prefix_target_lift":16.574081887,"held_target_lift":15.483999663,"prefix_residual_lift":1.035880118,"held_residual_lift":0.967749979,"promotion":"no"}
+    6 +++++- 48992 48622 0.015625000 1.003 0.994 0.000 0.000 0.000 no
+coupling_bucket_jsonl={"len":6,"word":"+++++-","bucket":31,"prefix_total":48992,"prefix_survive":0,"held_total":48622,"held_survive":0,"expected_prob":0.015625000000,"prefix_count_lift":1.002822177,"held_count_lift":0.994280617,"prefix_target_lift":0.000000000,"held_target_lift":0.000000000,"prefix_residual_lift":0.000000000,"held_residual_lift":0.000000000,"promotion":"no"}
+    4 +++- 195904 195472 0.062500000 1.002 0.999 0.000 0.000 0.000 no
+coupling_bucket_jsonl={"len":4,"word":"+++-","bucket":7,"prefix_total":195904,"prefix_survive":0,"held_total":195472,"held_survive":0,"expected_prob":0.062500000000,"prefix_count_lift":1.002494672,"held_count_lift":0.999311118,"prefix_target_lift":0.000000000,"held_target_lift":0.000000000,"prefix_residual_lift":0.000000000,"held_residual_lift":0.000000000,"promotion":"no"}
+    3 ++- 391632 392296 0.125000000 1.002 1.003 0.000 0.000 0.000 no
+coupling_bucket_jsonl={"len":3,"word":"++-","bucket":3,"prefix_total":391632,"prefix_survive":0,"held_total":392296,"held_survive":0,"expected_prob":0.125000000000,"prefix_count_lift":1.002044351,"held_count_lift":1.002767031,"prefix_target_lift":0.000000000,"held_target_lift":0.000000000,"prefix_residual_lift":0.000000000,"held_residual_lift":0.000000000,"promotion":"no"}
+    2 ++ 782364 783278 0.250000000 1.001 1.001 4.127 3.865 0.966 no
+coupling_bucket_jsonl={"len":2,"word":"++","bucket":3,"prefix_total":782364,"prefix_survive":224,"held_total":783278,"held_survive":210,"expected_prob":0.250000000000,"prefix_count_lift":1.000892965,"held_count_lift":1.001087641,"prefix_target_lift":4.127356609,"held_target_lift":3.864881657,"prefix_residual_lift":1.031839152,"held_residual_lift":0.966220414,"promotion":"no"}
+    2 +- 781256 781974 0.250000000 0.999 0.999 0.000 0.000 0.000 no
+coupling_bucket_jsonl={"len":2,"word":"+-","bucket":1,"prefix_total":781256,"prefix_survive":0,"held_total":781974,"held_survive":0,"expected_prob":0.250000000000,"prefix_count_lift":0.999475479,"held_count_lift":0.999421032,"prefix_target_lift":0.000000000,"held_target_lift":0.000000000,"prefix_residual_lift":0.000000000,"held_residual_lift":0.000000000,"promotion":"no"}
+    3 +++ 390732 390982 0.125000000 1.000 0.999 8.264 7.743 0.968 no
+coupling_bucket_jsonl={"len":3,"word":"+++","bucket":7,"prefix_total":390732,"prefix_survive":224,"held_total":390982,"held_survive":210,"expected_prob":0.125000000000,"prefix_count_lift":0.999741578,"held_count_lift":0.999408252,"prefix_target_lift":8.264220043,"held_target_lift":7.742752286,"prefix_residual_lift":1.033027505,"held_residual_lift":0.967844036,"promotion":"no"}
+    1 + 1563620 1565252 0.500000000 1.000 1.000 2.065 1.934 0.967 no
+coupling_bucket_jsonl={"len":1,"word":"+","bucket":1,"prefix_total":1563620,"prefix_survive":224,"held_total":1565252,"held_survive":210,"expected_prob":0.500000000000,"prefix_count_lift":1.000184222,"held_count_lift":1.000254337,"prefix_target_lift":2.065140652,"held_target_lift":1.934050731,"prefix_residual_lift":1.032570326,"held_residual_lift":0.967025365,"promotion":"no"}
+    1 - 1563044 1564456 0.500000000 1.000 1.000 0.000 0.000 0.000 no
+coupling_bucket_jsonl={"len":1,"word":"-","bucket":0,"prefix_total":1563044,"prefix_survive":0,"held_total":1564456,"held_survive":0,"expected_prob":0.500000000000,"prefix_count_lift":0.999815778,"held_count_lift":0.999745663,"prefix_target_lift":0.000000000,"held_target_lift":0.000000000,"prefix_residual_lift":0.000000000,"held_residual_lift":0.000000000,"promotion":"no"}
+    5 +++++ 97694 97336 0.031250000 1.000 0.995 33.053 31.101 0.972 no
+coupling_bucket_jsonl={"len":5,"word":"+++++","bucket":31,"prefix_total":97694,"prefix_survive":224,"held_total":97336,"held_survive":210,"expected_prob":0.031250000000,"prefix_count_lift":0.999854158,"held_count_lift":0.995221279,"prefix_target_lift":33.053158083,"held_target_lift":31.101306548,"prefix_residual_lift":1.032911190,"held_residual_lift":0.971915830,"promotion":"no"}
+coupling_sample_jsonl={"raw_draw_index":11276,"source_hash":13359071754824811423,"root_index":0,"gate_count":3,"survived_target":0,"sign_word":"++-","A":"510672633586808445531552811","c":"38937765126809064459971750","B_sqrt_ok":1,"B":"812334086019319822856566734","gates":[{"gate":3,"s":1,"x":"55960958715478333299089787","r":"531603564481625141012016773"},{"gate":4,"s":1,"x":"316308176979655070969133263","r":"670238957793652952425201632"},{"gate":5,"s":-1,"x":"626102124522356925996045900","r":"197270738979811243413557197"}]}
+coupling_sample_jsonl={"raw_draw_index":4950,"source_hash":9003890148523019147,"root_index":0,"gate_count":4,"survived_target":0,"sign_word":"+++-","A":"337331064022482156519095326","c":"877228088114893713848504512","B_sqrt_ok":1,"B":"821731514765467769542512714","gates":[{"gate":3,"s":1,"x":"98489535253600950891828871","r":"787305802035961522573332083"},{"gate":4,"s":1,"x":"499327688821723818281724766","r":"159273605079745726028451206"},{"gate":5,"s":1,"x":"45508513333832071336732348","r":"487193412842921751238917119"},{"gate":6,"s":-1,"x":"487142805894660697625631644","r":"987602268170668834545553418"}]}
+coupling_sample_jsonl={"raw_draw_index":4296,"source_hash":14361163755112836549,"root_index":0,"gate_count":2,"survived_target":0,"sign_word":"+-","A":"352777569020531835046511036","c":"710100443341903520510121895","B_sqrt_ok":1,"B":"420009624024341542274372533","gates":[{"gate":3,"s":1,"x":"164612372996688437586638349","r":"346290173890331806922610839"},{"gate":4,"s":-1,"x":"805228927209047240266443557","r":"797288053906321220055853054"}]}
+coupling_sample_jsonl={"raw_draw_index":5197,"source_hash":2036800389235916113,"root_index":0,"gate_count":1,"survived_target":0,"sign_word":"-","A":"491914683859792103047902908","c":"613011103954208208191489493","B_sqrt_ok":1,"B":"400295279108879033363275902","gates":[{"gate":3,"s":-1,"x":"76070950105905100168281296","r":"36436406350980172471133936"}]}
+coupling_sample_jsonl={"raw_draw_index":15918,"source_hash":5454443766386736605,"root_index":0,"gate_count":4,"survived_target":0,"sign_word":"+++-","A":"787120234951863089458661916","c":"572106317862823592573176973","B_sqrt_ok":1,"B":"889034321283964729120864453","gates":[{"gate":3,"s":1,"x":"724134988954194857684056198","r":"912806910019150326205771320"},{"gate":4,"s":1,"x":"906392520862959342286222322","r":"715668820813081599370768993"},{"gate":5,"s":1,"x":"374112124989550516484877113","r":"569089356663681749685868514"},{"gate":6,"s":-1,"x":"43307472678449696378219032","r":"316346360837889855633615685"}]}
+coupling_sample_jsonl={"raw_draw_index":10062,"source_hash":3729329595439055111,"root_index":0,"gate_count":5,"survived_target":0,"sign_word":"++++-","A":"722565854432656026729035212","c":"878746315369457061556394214","B_sqrt_ok":1,"B":"151320861501971401400142391","gates":[{"gate":3,"s":1,"x":"268985448093242186848254516","r":"618026570517874417916112130"},{"gate":4,"s":1,"x":"454734170146548239159604071","r":"606167455013670823463097330"},{"gate":5,"s":1,"x":"375783823051687439863690018","r":"147771561953978827295864191"},{"gate":6,"s":1,"x":"347610646351103491545477541","r":"192272262436739931546809639"},{"gate":7,"s":-1,"x":"619705338617224758147992086","r":"295828721461625548610898851"}]}
+coupling_sample_jsonl={"raw_draw_index":20762,"source_hash":12242667922142868391,"root_index":0,"gate_count":1,"survived_target":0,"sign_word":"-","A":"498190141344544329393156241","c":"589086357534481592529567089","B_sqrt_ok":1,"B":"3827488780112852437281575","gates":[{"gate":3,"s":-1,"x":"553425633230532391802412519","r":"925584048677378904917675017"}]}
+coupling_sample_jsonl={"raw_draw_index":8903,"source_hash":4248120356144675874,"root_index":0,"gate_count":3,"survived_target":0,"sign_word":"++-","A":"147368620271184551741501025","c":"652526638912302394244720408","B_sqrt_ok":1,"B":"457351640343597732101380555","gates":[{"gate":3,"s":1,"x":"60523169946323968754053137","r":"167955030407970855263543367"},{"gate":4,"s":1,"x":"345101475418830092337568631","r":"269133499283844936941683669"},{"gate":5,"s":-1,"x":"173895064418272993955463964","r":"934913722409865974821588493"}]}
+coupling_sample_jsonl={"raw_draw_index":9538,"source_hash":8236828629268433426,"root_index":0,"gate_count":6,"survived_target":0,"sign_word":"+++++-","A":"240438383806384404316746262","c":"435437597889028060426248516","B_sqrt_ok":1,"B":"216695366050407378110420260","gates":[{"gate":3,"s":1,"x":"761059072021797236592937797","r":"803421179838425316656101133"},{"gate":4,"s":1,"x":"691296394959264412511108262","r":"990891164006952221633819105"},{"gate":5,"s":1,"x":"791331622040030404231348085","r":"407317098769832398599603350"},{"gate":6,"s":1,"x":"234471725739857960983799869","r":"436014941977493290154589601"},{"gate":7,"s":1,"x":"720902950724055704891714381","r":"619438937352185240001525633"},{"gate":8,"s":-1,"x":"533965900945236982881757448","r":"260939673953726788155999960"}]}
+coupling_sample_jsonl={"raw_draw_index":3098,"source_hash":5891939876198248196,"root_index":0,"gate_count":3,"survived_target":0,"sign_word":"++-","A":"277185544725260393961053069","c":"603343170638187548905417110","B_sqrt_ok":1,"B":"872769671182420186677458241","gates":[{"gate":3,"s":1,"x":"896146415048392588344766832","r":"449388974175983880818580724"},{"gate":4,"s":1,"x":"754741087160798763985800394","r":"460718180421826532703828375"},{"gate":5,"s":-1,"x":"896371131242931595216122874","r":"208580502172446217747296776"}]}
+coupling_sample_jsonl={"raw_draw_index":16394,"source_hash":9924628918961260804,"root_index":0,"gate_count":3,"survived_target":0,"sign_word":"++-","A":"158107416575493557444035311","c":"888024403801181491883299800","B_sqrt_ok":1,"B":"145609934718126474520686291","gates":[{"gate":3,"s":1,"x":"301211834686323033499151399","r":"646455075335560618079533017"},{"gate":4,"s":1,"x":"600982681276585421985229317","r":"71466088844905035376677840"},{"gate":5,"s":-1,"x":"351405101459455241304853375","r":"122523854531023726124578591"}]}
+coupling_sample_jsonl={"raw_draw_index":17723,"source_hash":9128634355869232889,"root_index":0,"gate_count":1,"survived_target":0,"sign_word":"-","A":"182114863709387439370477971","c":"868043561072175285929467934","B_sqrt_ok":1,"B":"440507709144237085826113267","gates":[{"gate":3,"s":-1,"x":"246099933725500698629456924","r":"850929755810996079789311105"}]}
+coupling_sample_jsonl={"raw_draw_index":17747,"source_hash":13321070666433545062,"root_index":0,"gate_count":1,"survived_target":0,"sign_word":"-","A":"525922072483124962817727499","c":"15822607595287861662264640","B_sqrt_ok":1,"B":"606981012335542178423481393","gates":[{"gate":3,"s":-1,"x":"502990809200633245968746639","r":"189084116398464307320179118"}]}
+coupling_sample_jsonl={"raw_draw_index":20770,"source_hash":14967113344484581591,"root_index":0,"gate_count":1,"survived_target":0,"sign_word":"-","A":"742007163130649864210192154","c":"302750746106693069809879566","B_sqrt_ok":1,"B":"183763442083716139831373566","gates":[{"gate":3,"s":-1,"x":"80683761811398496878800860","r":"249976690244781713364933095"}]}
+coupling_sample_jsonl={"raw_draw_index":2259,"source_hash":10429148667489574751,"root_index":0,"gate_count":2,"survived_target":0,"sign_word":"+-","A":"463025735518174407283918241","c":"127011977047197757211083778","B_sqrt_ok":1,"B":"998237917176701449896910445","gates":[{"gate":3,"s":1,"x":"748972119713607391818974461","r":"95737535970465619718564629"},{"gate":4,"s":-1,"x":"372541293920308135983677460","r":"316807386438102101398470930"}]}
+coupling_sample_jsonl={"raw_draw_index":17680,"source_hash":10380320784037999726,"root_index":0,"gate_count":1,"survived_target":0,"sign_word":"-","A":"846564725879693363200179110","c":"777113475266360461092186369","B_sqrt_ok":1,"B":"547517022516903254727819885","gates":[{"gate":3,"s":-1,"x":"343209663722624843328557038","r":"558525434464053299534232396"}]}

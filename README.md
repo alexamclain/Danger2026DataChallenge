@@ -131,12 +131,14 @@ The p27 quadratic-gate recurrence can also be tested on GPU in bounded form:
 ```text
 x16quadprecheckprobe   post-d2 legal rows, short-circuit on chi(r^2+c*r+1)
 x16quadtelemetryprobe  post-d2 legal rows, materialize formula-vs-actual gates
+x16quadcouplingprobe   raw-source recurrence sign-word coupling telemetry
 ```
 
 Use:
 
 ```sh
 scripts/p27_gpu_quad_probe.sh
+scripts/p27_gpu_coupling_probe.sh
 ```
 
 The runner defaults to `TARGET_DEPTH=13` so `x16quadtelemetryprobe` observes
@@ -145,6 +147,13 @@ actual signs, mismatch counts, survivor/sec, and sqrt counters.  This is not a
 random `(R,L)` conic-pair source scan: the p27 legal-incidence screen shows
 that free random `(R,L)` hits legal rows at only about `constant/q`, so raw
 `(R,L)` is not a production sampler without a legal pullback.
+
+The coupling runner defaults to `RAW_DRAWS=100000000` and `GATE_MAX=12`, so
+its denominator is raw X1(16) y-source draws.  It reports recurrence-domain
+incidence, per-gate sign counts, short sign-word buckets with train/heldout
+checks, pair/lag tables, source-normalized target survivors, and a small
+same-stream sample of `(A,c,x_j,r_j,s_j)` rows.  Set `GATE_MAX=16` only after
+the gates 3 through 12 run is cheap enough.
 
 The automatic backend uses a specialized 96-bit field path for `p < 2^96`,
 which covers p23, p25, and p26, and falls back to the generic 128-bit path for
