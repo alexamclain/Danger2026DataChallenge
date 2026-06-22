@@ -1,0 +1,10 @@
+p27 K-line monic cubic stdin probe
+q = 991
+rows = 36
+plus = 18
+minus = 18
+tested_monic_cubics = 973242271
+exact_cubics = 0
+exact_irreducible_cubics = 0
+best good=34/36 zeros=0 polarity=-1 coeffs=K^3+11*K^2+341*K+988
+p27_kline_cubic_stdin_probe_rows=1/1

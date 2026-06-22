@@ -1737,7 +1737,43 @@ the classes remain independent in the divisor/Kummer group, or the only
 relations are small-field Frobenius artifacts that do not survive p27 samples
 ```
 
-### Test D: Bounded GPU Legal-Pullback Telemetry
+### Test D: K-Line Branch-Cover Extraction
+
+Use the signed-doubling Kummer line:
+
+```text
+K = x([2]P),  E': V^2 = U^3 + 4U
+```
+
+Current finite-field status:
+
+```text
+degree <=2 K-polynomial characters are killed
+shared small-integer degree 3/4 K-polynomials are killed
+split degree <=4 branch divisors from rational linears / irreducible
+quadratics are killed
+q607 and q991 monic cubics are killed, while q863 exact cubics are unstable
+local interpolation artifacts
+```
+
+See [P27 K-Line Cubic Stdin Probe](p27_kline_cubic_stdin_probe_20260622.md).
+
+Promotion bar:
+
+```text
+Magma/Sage branch-cover normalization in q1471/q1607/q1847 with genus <= 1,
+or a named stable branch-class relation that sources d3 without a fresh
+half-loss
+```
+
+Kill condition:
+
+```text
+the recovered d3 cover over P1_K is high-genus/generic, or d4 is an unrelated
+fresh cover after d3
+```
+
+### Test E: Bounded GPU Legal-Pullback Telemetry
 
 Only run this if the GPU implementation samples legal pullback rows, not free
 random `(R,L)`.
@@ -1767,7 +1803,7 @@ the sampler is just free `(R,L)`, legal hits are still constant/q, or the
 pullback pays the same Legendre/square-root toll as ordinary halving
 ```
 
-### Test E: Trace/Norm Half-Norm Phase Identity
+### Test F: Trace/Norm Half-Norm Phase Identity
 
 Use this as an expert/theorem ask, not as another product scan.  The target is
 the same-boundary Hilbert-90 pair:
@@ -1795,8 +1831,8 @@ anti-trace squareclasses
 Current decision:
 
 ```text
-GPU is justified for Test D telemetry only after a legal pullback sampler
-exists.  Without that, the next best work is CAS/theory on Test A, Test B, or
-Test C.  Bplus-only GPU telemetry is bounded validation, not a production
-moonshot.
+GPU is justified for Test E telemetry only after a legal pullback sampler
+exists.  Without that, the next best work is CAS/theory on Test A, Test B,
+Test C, or Test D.  Bplus-only GPU telemetry is bounded validation, not a
+production moonshot.
 ```

@@ -128,6 +128,13 @@ The direct A-projection prefix profile confirms the demotion.  On 3,000-row
 p27 train/heldout samples through depth 8, unique `A` and unique `(A,x)` shrink
 in exact lockstep, with scaled half-loss near `1` and `avg_x_per_A=2` at every
 depth.  There is no A-bucket source hiding behind the selected prefixes.
+The K-line cubic pilot now has a reusable solver:
+[P27 K-Line Cubic Stdin Probe](p27_kline_cubic_stdin_probe_20260622.md).
+It reproduces the q607 negative hardcoded pilot, finds many exact q863 cubics,
+and then finds no q991 cubic.  This field-to-field instability kills q863
+exact cubics as source candidates and reinforces the rule that K-line
+promotion needs branch-cover/genus extraction in q1471/q1607/q1847, not
+small-field interpolation fits.
 The extension-field source count now gives a staged-geometry substitute for the
 memory-heavy online Magma pullback.  Over `GF(7^n)` and `GF(23^n)`, the legal
 label-2/compactD source is curve-sized, but selected prefixes still reduce

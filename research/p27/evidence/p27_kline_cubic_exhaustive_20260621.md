@@ -74,6 +74,13 @@ There were no exact reducible or irreducible cubic character explanations.
 The best cubic missed one row, which is useful only as a warning that small
 samples can look close without defining a stable source.
 
+Follow-up:
+[P27 K-Line Cubic Stdin Probe](p27_kline_cubic_stdin_probe_20260622.md)
+replays this q607 result with a reusable row-fed solver, then tests q863 and
+q991.  q863 has many exact cubics, but q991 has none, confirming that small
+fields are interpolation-prone and should not promote K-line cubic formulas
+without q1471/q1607/q1847 branch-class survival.
+
 ## Interpretation
 
 Positive:
