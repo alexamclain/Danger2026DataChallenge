@@ -1,0 +1,39 @@
+p27 trace/norm Dplus U-cover rational reconstruction probe
+question = do four-U cover coefficients have low-degree rational formulas?
+p = 1000000000000000000000000103
+quartic = prod(Z-U_i) = Z^4 - e1 Z^3 + e2 Z^2 - e3 Z + e4
+seed_groups = 121,122;123,124
+chunks = 0,1
+tids = 0:64
+draws_per_thread = 512
+rows = 150
+train = 100
+heldout = 50
+max_degree = 20
+sample_stats:
+  D_+1 = 288
+  D_-1 = 283
+  D_0 = 561
+  Dplus_no_valid_candidate = 138
+  Dplus_y = 288
+  U_count_4 = 150
+  accepted_rows = 150
+  nonsplit_y = 1132
+  raw_y_draws = 2253
+screen:
+  variable=t coeff=e1 verdict=none_deg_le_20
+  variable=t coeff=e2 verdict=none_deg_le_20
+  variable=t coeff=e3 verdict=none_deg_le_20
+  variable=t coeff=e4 verdict=none_deg_le_20
+  variable=a coeff=e1 verdict=none_deg_le_20
+  variable=a coeff=e2 verdict=none_deg_le_20
+  variable=a coeff=e3 verdict=none_deg_le_20
+  variable=a coeff=e4 verdict=none_deg_le_20
+  variable=A coeff=e1 verdict=none_deg_le_20
+  variable=A coeff=e2 verdict=none_deg_le_20
+  variable=A coeff=e3 verdict=none_deg_le_20
+  variable=A coeff=e4 verdict=none_deg_le_20
+verdict:
+  promote_visible_four_U_cover = 0 unless a screen verdict is degree_*
+  continue = CAS/quotient extraction for the four-U cover and x6 class
+p27_trace_norm_dplus_ucover_rational_probe_rows=1/1

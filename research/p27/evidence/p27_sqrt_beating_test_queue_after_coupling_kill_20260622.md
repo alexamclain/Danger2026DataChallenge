@@ -198,6 +198,14 @@ d3 = chi(x6)
 on the whole second-halving sheet.  The live comparison is therefore between
 the `x6` squareclass and the H90 payload `A_eta`, not a generic d3 sign.
 
+Third update:
+[P27 Trace/Norm Dplus Four-U Rational Screen](p27_trace_norm_dplus_ucover_rational_screen_20260622.md)
+tests the cheap visible-cover hypothesis.  The elementary coefficients of
+`prod(Z-U_i)` for the four `U=x6+1/x6` values have no rational formula of
+degree `(20,20)` in `t`, `a=t-1/t`, or `A` on a `100` train / `50` heldout
+screen.  This kills the simple visible four-`U` source formula and leaves the
+work as cover normalization / class comparison.
+
 This is the most concrete bridge test after the coupling kill.  We know:
 
 ```text
@@ -230,6 +238,8 @@ use d3 = chi(x6) after U=x6+1/x6 and chi(U+A)=+1
 compare the x6 squareclass with A_eta = U_eta + z*W_eta
 record whether the pulled-back A-level d3 class equals, differs by coboundary,
 or shares a quotient/Prym factor with the H90 class
+do not retry low-degree rational coefficient fits for prod(Z-U_i) in t,a,A
+through degree 20
 ```
 
 Promote:

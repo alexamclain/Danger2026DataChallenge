@@ -32,6 +32,14 @@ the halving tree.  It is the squareclass of the `x6` quadratic layer after
 it gives a sharper CAS comparison target than the previous generic A-level
 statement.
 
+Follow-up visible-formula screen:
+[P27 Trace/Norm Dplus Four-U Rational Screen](p27_trace_norm_dplus_ucover_rational_screen_20260622.md)
+tests whether the elementary coefficients of the four-`U` quartic are
+low-degree rational functions of `t`, `a=t-1/t`, or `A`.  The answer is
+negative through degree `(20,20)` on a `100` train / `50` heldout screen.
+So the four-`U` object remains a CAS cover/class target, not a cheap visible
+base formula.
+
 ## Probe
 
 Gate:
@@ -211,6 +219,8 @@ continue = GPU fused-Dplus telemetry may emit U/x6 only as support for this
            class comparison
 
 kill = searching U+A; it is already square in the tested Dplus domain
+kill = low-degree rational formulas for the four-U quartic coefficients in
+       t,a,A through degree 20
 kill = treating d3 as an arbitrary eight-branch sign
 kill = GPU production from x6 buckets before a source/coboundary exists
 ```
@@ -218,6 +228,7 @@ kill = GPU production from x6 buckets before a source/coboundary exists
 ## Linked Artifacts
 
 - [P27 Trace/Norm Dplus A-Coordinate Bridge](p27_trace_norm_dplus_a_coordinate_bridge_20260622.md)
+- [P27 Trace/Norm Dplus Four-U Rational Screen](p27_trace_norm_dplus_ucover_rational_screen_20260622.md)
 - [P27 Sqrt-Beating Test Queue After Coupling Kill](p27_sqrt_beating_test_queue_after_coupling_kill_20260622.md)
 - [P27 Trace/Norm Dplus H90 Branch Class](p27_trace_norm_dplus_h90_branch_class_20260622.md)
 - [P27 Trace/Norm Dplus H90 Payload Screen](p27_trace_norm_dplus_h90_payload_screen_20260622.md)

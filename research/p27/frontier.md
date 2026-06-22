@@ -2153,6 +2153,11 @@ After `Dplus`, every tested y has four `U=x6+1/x6` values and eight `x6`
 values; `chi(U+A)=+1`, so `d3=chi(x6)` across the whole second-halving sheet.
 This makes the next CAS comparison `x6` squareclass versus H90 `A_eta`, not an
 undifferentiated A-level sign.
+The cheap visible formula for the four-`U` cover is negative:
+[P27 Trace/Norm Dplus Four-U Rational Screen](evidence/p27_trace_norm_dplus_ucover_rational_screen_20260622.md).
+No elementary coefficient of `prod(Z-U_i)` is a rational function of degree
+`(20,20)` in `t`, `a=t-1/t`, or `A` on the train/heldout screen.  Continue with
+cover normalization and class comparison, not coefficient fishing.
 
 ### Card 4c: K-Line Fit Significance
 

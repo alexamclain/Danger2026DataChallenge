@@ -103,13 +103,30 @@
           "all 8 x6 branches over one y have the same squareclass"
         ]
       },
+      "four_U_visible_formula_screen": {
+        "status": "negative through rational degree (20,20)",
+        "evidence": "research/p27/evidence/p27_trace_norm_dplus_ucover_rational_screen_20260622.md",
+        "variables": [
+          "t",
+          "a=t-1/t",
+          "A"
+        ],
+        "coefficients": [
+          "e1",
+          "e2",
+          "e3",
+          "e4"
+        ],
+        "verdict": "no low-degree visible rational formula for prod(Z-U_i) coefficients"
+      },
       "inputs": [
         "research/p27/evidence/p27_trace_norm_dplus_h90_quartic_model_20260622.md",
         "research/p27/evidence/p27_trace_norm_dplus_h90_branch_class_20260622.md",
         "research/p27/evidence/p27_trace_norm_dplus_h90_payload_screen_20260622.md",
         "research/p27/evidence/p27_trace_norm_dplus_a_descent_20260622.md",
         "research/p27/evidence/p27_trace_norm_dplus_a_coordinate_bridge_20260622.md",
-        "research/p27/evidence/p27_trace_norm_dplus_x6_uclass_20260622.md"
+        "research/p27/evidence/p27_trace_norm_dplus_x6_uclass_20260622.md",
+        "research/p27/evidence/p27_trace_norm_dplus_ucover_rational_screen_20260622.md"
       ],
       "same_stream_columns": [
         "y",
@@ -125,7 +142,8 @@
         "use exact A = (t - 1/t)^4/4 - 2",
         "use U=x6+1/x6 and the observed/target identity chi(U+A)=+1",
         "compare the x6 squareclass d3=chi(x6) with A_eta = U_eta + z*W_eta",
-        "record whether the x6 squareclass equals, differs by coboundary from, or shares a quotient/Prym factor with A_eta"
+        "record whether the x6 squareclass equals, differs by coboundary from, or shares a quotient/Prym factor with A_eta",
+        "do not retry low-degree rational coefficient fits for prod(Z-U_i) in t,a,A through degree 20"
       ],
       "promote_if": "quotient/Prym/coboundary relation between A_eta and the x6 squareclass, or sourceable recurrence controlling later gates",
       "kill_if": "x6 squareclass is independent of the H90 payload and successive A-level classes"

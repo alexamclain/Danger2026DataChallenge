@@ -225,6 +225,10 @@ Each analyzed y has four `U` values and eight `x6` values, with all eight
 `x6` branches sharing one squareclass.  A GPU telemetry mode should emit
 `x6`/`U` only if it is supporting the class comparison with H90 `A_eta`;
 this is not yet a production bucket.
+Follow-up [P27 Trace/Norm Dplus Four-U Rational Screen](p27_trace_norm_dplus_ucover_rational_screen_20260622.md)
+kills low-degree rational formulas for the four-`U` quartic coefficients in
+`t`, `a=t-1/t`, and `A` through degree `(20,20)`, so do not treat the four-`U`
+cover as a simple visible GPU source formula.
 
 Promotion:
 
