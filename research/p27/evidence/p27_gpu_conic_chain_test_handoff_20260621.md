@@ -33,6 +33,7 @@ research/p27/evidence/p27_gpu_search_space_narrowing_20260621.md
 research/p27/evidence/p27_gpu_uprecheck_probe_20260621.md
 research/p27/evidence/p27_conic_pair_invariant_relation_20260621.md
 research/p27/evidence/p27_conic_pair_kummer_z_relation_20260621.md
+research/p27/evidence/p27_a_projection_prefix_profile_20260621.md
 ```
 
 The recurrence is exact in the tested p27 tower:
@@ -178,6 +179,12 @@ After adjoining `Z^2=-(L+a)(L-a)cR`, simple pairs involving `Z` remain
 full-rank through degree 20 except `(A,Z)`, and the `(A,Z)` exception is only a
 univariate A-projection polynomial.  Do not launch GPU bucket searches for
 first-Z-layer pair relations without a new theorem-specified coordinate.
+
+The A-projection prefix profile is also negative:
+[P27 A-Projection Selected-Prefix Profile](p27_a_projection_prefix_profile_20260621.md).
+On p27 train/heldout samples through depth 8, unique `A` and unique `(A,x)`
+shrink in lockstep with ordinary half-loss.  Do not run GPU A-bucket searches
+from selected-prefix filters; they do not produce a smaller source space.
 
 Report:
 

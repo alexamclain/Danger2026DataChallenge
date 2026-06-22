@@ -124,6 +124,10 @@ degree 20 except `(A,Z)`.  The `(A,Z)` relation extracts to a univariate
 polynomial in `A`, plus its product with `Z`; it is the finite A-projection of
 the selected small-field rows, not a Kummer-root quotient.  The A-projection
 count grows at constant-density small-field scale, so this is not a p27 source.
+The direct A-projection prefix profile confirms the demotion.  On 3,000-row
+p27 train/heldout samples through depth 8, unique `A` and unique `(A,x)` shrink
+in exact lockstep, with scaled half-loss near `1` and `avg_x_per_A=2` at every
+depth.  There is no A-bucket source hiding behind the selected prefixes.
 ```
 
 Concrete next K/S test:
@@ -152,6 +156,7 @@ no F_p descent of the sqrt(-1)-twisted alpha quotient
 no useful low-genus/function-field structure for the conic-chain pullback
 another low-degree plane-curve screen in raw or obvious invariant coordinates
 another simple first-Z-layer pair scan without a new theorem-specified coordinate
+an A-projection or A-bucket search based only on selected-prefix filters
 ```
 
 ## Current Alpha Status

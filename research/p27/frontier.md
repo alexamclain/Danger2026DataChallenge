@@ -784,6 +784,14 @@ constant-density small-field scale.  This kills the first-Z-layer simple
 pair-quotient hope and pushes the live route to staged normalization/components
 or a named Kummer/Hilbert-90 theorem.
 
+The A-projection shortcut is now explicitly killed:
+[P27 A-Projection Selected-Prefix Profile](evidence/p27_a_projection_prefix_profile_20260621.md).
+On 3,000-row p27 train/heldout samples, unique `A` and unique `(A,x)` shrink in
+lockstep through depth 8.  The scaled half-loss stays near `1`, and
+`avg_x_per_A` remains exactly `2` at every p27 sampled prefix.  Thus the tower
+does not reveal a smaller A-bucket source; the univariate small-field
+polynomials are finite A-projection artifacts, not p27 laws.
+
 The K-line now has a cleaner coordinate for that extraction:
 [P27 Kummer Belyi Structure Probe](evidence/p27_kummer_belyi_structure_probe_20260621.md).
 Symbolically,

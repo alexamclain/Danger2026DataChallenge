@@ -1,0 +1,172 @@
+p27 A-projection selected-prefix profile
+depth d = legal source plus selected gates d3..d_{d+2}
+q1607:
+  unique_ax = 196
+  unique_A = 49
+  depth0: ax=196 A=49 ax_rate=1.000000000 A_rate=1.000000000 A_over_p=3.049160e-02 A_over_sqrtp=1.222329e+00 avg_x_per_A=4.000000 scaled_A=1.000000 scaled_ax=1.000000
+  depth1: ax=112 A=28 ax_rate=0.571428571 A_rate=0.571428571 A_over_p=1.742377e-02 A_over_sqrtp=6.984738e-01 avg_x_per_A=4.000000 scaled_A=1.142857 scaled_ax=1.142857
+  depth2: ax=76 A=19 ax_rate=0.387755102 A_rate=0.387755102 A_over_p=1.182327e-02 A_over_sqrtp=4.739643e-01 avg_x_per_A=4.000000 scaled_A=1.551020 scaled_ax=1.551020
+  depth3: ax=76 A=19 ax_rate=0.387755102 A_rate=0.387755102 A_over_p=1.182327e-02 A_over_sqrtp=4.739643e-01 avg_x_per_A=4.000000 scaled_A=3.102041 scaled_ax=3.102041
+  depth4: ax=0 A=0 ax_rate=0.000000000 A_rate=0.000000000 A_over_p=0.000000e+00 A_over_sqrtp=0.000000e+00 avg_x_per_A=0.000000 scaled_A=0.000000 scaled_ax=0.000000
+  depth5: ax=0 A=0 ax_rate=0.000000000 A_rate=0.000000000 A_over_p=0.000000e+00 A_over_sqrtp=0.000000e+00 avg_x_per_A=0.000000 scaled_A=0.000000 scaled_ax=0.000000
+  depth6: ax=0 A=0 ax_rate=0.000000000 A_rate=0.000000000 A_over_p=0.000000e+00 A_over_sqrtp=0.000000e+00 avg_x_per_A=0.000000 scaled_A=0.000000 scaled_ax=0.000000
+  depth7: ax=0 A=0 ax_rate=0.000000000 A_rate=0.000000000 A_over_p=0.000000e+00 A_over_sqrtp=0.000000e+00 avg_x_per_A=0.000000 scaled_A=0.000000 scaled_ax=0.000000
+  depth8: ax=0 A=0 ax_rate=0.000000000 A_rate=0.000000000 A_over_p=0.000000e+00 A_over_sqrtp=0.000000e+00 avg_x_per_A=0.000000 scaled_A=0.000000 scaled_ax=0.000000
+  sqrt_p = 40.087405
+q1847:
+  unique_ax = 252
+  unique_A = 63
+  depth0: ax=252 A=63 ax_rate=1.000000000 A_rate=1.000000000 A_over_p=3.410937e-02 A_over_sqrtp=1.465909e+00 avg_x_per_A=4.000000 scaled_A=1.000000 scaled_ax=1.000000
+  depth1: ax=180 A=45 ax_rate=0.714285714 A_rate=0.714285714 A_over_p=2.436383e-02 A_over_sqrtp=1.047078e+00 avg_x_per_A=4.000000 scaled_A=1.428571 scaled_ax=1.428571
+  depth2: ax=76 A=19 ax_rate=0.301587302 A_rate=0.301587302 A_over_p=1.028695e-02 A_over_sqrtp=4.420996e-01 avg_x_per_A=4.000000 scaled_A=1.206349 scaled_ax=1.206349
+  depth3: ax=0 A=0 ax_rate=0.000000000 A_rate=0.000000000 A_over_p=0.000000e+00 A_over_sqrtp=0.000000e+00 avg_x_per_A=0.000000 scaled_A=0.000000 scaled_ax=0.000000
+  depth4: ax=0 A=0 ax_rate=0.000000000 A_rate=0.000000000 A_over_p=0.000000e+00 A_over_sqrtp=0.000000e+00 avg_x_per_A=0.000000 scaled_A=0.000000 scaled_ax=0.000000
+  depth5: ax=0 A=0 ax_rate=0.000000000 A_rate=0.000000000 A_over_p=0.000000e+00 A_over_sqrtp=0.000000e+00 avg_x_per_A=0.000000 scaled_A=0.000000 scaled_ax=0.000000
+  depth6: ax=0 A=0 ax_rate=0.000000000 A_rate=0.000000000 A_over_p=0.000000e+00 A_over_sqrtp=0.000000e+00 avg_x_per_A=0.000000 scaled_A=0.000000 scaled_ax=0.000000
+  depth7: ax=0 A=0 ax_rate=0.000000000 A_rate=0.000000000 A_over_p=0.000000e+00 A_over_sqrtp=0.000000e+00 avg_x_per_A=0.000000 scaled_A=0.000000 scaled_ax=0.000000
+  depth8: ax=0 A=0 ax_rate=0.000000000 A_rate=0.000000000 A_over_p=0.000000e+00 A_over_sqrtp=0.000000e+00 avg_x_per_A=0.000000 scaled_A=0.000000 scaled_ax=0.000000
+  sqrt_p = 42.976738
+q2087:
+  unique_ax = 228
+  unique_A = 57
+  depth0: ax=228 A=57 ax_rate=1.000000000 A_rate=1.000000000 A_over_p=2.731193e-02 A_over_sqrtp=1.247710e+00 avg_x_per_A=4.000000 scaled_A=1.000000 scaled_ax=1.000000
+  depth1: ax=100 A=25 ax_rate=0.438596491 A_rate=0.438596491 A_over_p=1.197892e-02 A_over_sqrtp=5.472412e-01 avg_x_per_A=4.000000 scaled_A=0.877193 scaled_ax=0.877193
+  depth2: ax=72 A=18 ax_rate=0.315789474 A_rate=0.315789474 A_over_p=8.624820e-03 A_over_sqrtp=3.940137e-01 avg_x_per_A=4.000000 scaled_A=1.263158 scaled_ax=1.263158
+  depth3: ax=72 A=18 ax_rate=0.315789474 A_rate=0.315789474 A_over_p=8.624820e-03 A_over_sqrtp=3.940137e-01 avg_x_per_A=4.000000 scaled_A=2.526316 scaled_ax=2.526316
+  depth4: ax=72 A=18 ax_rate=0.315789474 A_rate=0.315789474 A_over_p=8.624820e-03 A_over_sqrtp=3.940137e-01 avg_x_per_A=4.000000 scaled_A=5.052632 scaled_ax=5.052632
+  depth5: ax=72 A=18 ax_rate=0.315789474 A_rate=0.315789474 A_over_p=8.624820e-03 A_over_sqrtp=3.940137e-01 avg_x_per_A=4.000000 scaled_A=10.105263 scaled_ax=10.105263
+  depth6: ax=0 A=0 ax_rate=0.000000000 A_rate=0.000000000 A_over_p=0.000000e+00 A_over_sqrtp=0.000000e+00 avg_x_per_A=0.000000 scaled_A=0.000000 scaled_ax=0.000000
+  depth7: ax=0 A=0 ax_rate=0.000000000 A_rate=0.000000000 A_over_p=0.000000e+00 A_over_sqrtp=0.000000e+00 avg_x_per_A=0.000000 scaled_A=0.000000 scaled_ax=0.000000
+  depth8: ax=0 A=0 ax_rate=0.000000000 A_rate=0.000000000 A_over_p=0.000000e+00 A_over_sqrtp=0.000000e+00 avg_x_per_A=0.000000 scaled_A=0.000000 scaled_ax=0.000000
+  sqrt_p = 45.683695
+q2207:
+  unique_ax = 256
+  unique_A = 64
+  depth0: ax=256 A=64 ax_rate=1.000000000 A_rate=1.000000000 A_over_p=2.899864e-02 A_over_sqrtp=1.362319e+00 avg_x_per_A=4.000000 scaled_A=1.000000 scaled_ax=1.000000
+  depth1: ax=128 A=32 ax_rate=0.500000000 A_rate=0.500000000 A_over_p=1.449932e-02 A_over_sqrtp=6.811595e-01 avg_x_per_A=4.000000 scaled_A=1.000000 scaled_ax=1.000000
+  depth2: ax=0 A=0 ax_rate=0.000000000 A_rate=0.000000000 A_over_p=0.000000e+00 A_over_sqrtp=0.000000e+00 avg_x_per_A=0.000000 scaled_A=0.000000 scaled_ax=0.000000
+  depth3: ax=0 A=0 ax_rate=0.000000000 A_rate=0.000000000 A_over_p=0.000000e+00 A_over_sqrtp=0.000000e+00 avg_x_per_A=0.000000 scaled_A=0.000000 scaled_ax=0.000000
+  depth4: ax=0 A=0 ax_rate=0.000000000 A_rate=0.000000000 A_over_p=0.000000e+00 A_over_sqrtp=0.000000e+00 avg_x_per_A=0.000000 scaled_A=0.000000 scaled_ax=0.000000
+  depth5: ax=0 A=0 ax_rate=0.000000000 A_rate=0.000000000 A_over_p=0.000000e+00 A_over_sqrtp=0.000000e+00 avg_x_per_A=0.000000 scaled_A=0.000000 scaled_ax=0.000000
+  depth6: ax=0 A=0 ax_rate=0.000000000 A_rate=0.000000000 A_over_p=0.000000e+00 A_over_sqrtp=0.000000e+00 avg_x_per_A=0.000000 scaled_A=0.000000 scaled_ax=0.000000
+  depth7: ax=0 A=0 ax_rate=0.000000000 A_rate=0.000000000 A_over_p=0.000000e+00 A_over_sqrtp=0.000000e+00 avg_x_per_A=0.000000 scaled_A=0.000000 scaled_ax=0.000000
+  depth8: ax=0 A=0 ax_rate=0.000000000 A_rate=0.000000000 A_over_p=0.000000e+00 A_over_sqrtp=0.000000e+00 avg_x_per_A=0.000000 scaled_A=0.000000 scaled_ax=0.000000
+  sqrt_p = 46.978719
+q2239:
+  unique_ax = 344
+  unique_A = 86
+  depth0: ax=344 A=86 ax_rate=1.000000000 A_rate=1.000000000 A_over_p=3.841000e-02 A_over_sqrtp=1.817487e+00 avg_x_per_A=4.000000 scaled_A=1.000000 scaled_ax=1.000000
+  depth1: ax=208 A=52 ax_rate=0.604651163 A_rate=0.604651163 A_over_p=2.322465e-02 A_over_sqrtp=1.098946e+00 avg_x_per_A=4.000000 scaled_A=1.209302 scaled_ax=1.209302
+  depth2: ax=104 A=26 ax_rate=0.302325581 A_rate=0.302325581 A_over_p=1.161233e-02 A_over_sqrtp=5.494729e-01 avg_x_per_A=4.000000 scaled_A=1.209302 scaled_ax=1.209302
+  depth3: ax=0 A=0 ax_rate=0.000000000 A_rate=0.000000000 A_over_p=0.000000e+00 A_over_sqrtp=0.000000e+00 avg_x_per_A=0.000000 scaled_A=0.000000 scaled_ax=0.000000
+  depth4: ax=0 A=0 ax_rate=0.000000000 A_rate=0.000000000 A_over_p=0.000000e+00 A_over_sqrtp=0.000000e+00 avg_x_per_A=0.000000 scaled_A=0.000000 scaled_ax=0.000000
+  depth5: ax=0 A=0 ax_rate=0.000000000 A_rate=0.000000000 A_over_p=0.000000e+00 A_over_sqrtp=0.000000e+00 avg_x_per_A=0.000000 scaled_A=0.000000 scaled_ax=0.000000
+  depth6: ax=0 A=0 ax_rate=0.000000000 A_rate=0.000000000 A_over_p=0.000000e+00 A_over_sqrtp=0.000000e+00 avg_x_per_A=0.000000 scaled_A=0.000000 scaled_ax=0.000000
+  depth7: ax=0 A=0 ax_rate=0.000000000 A_rate=0.000000000 A_over_p=0.000000e+00 A_over_sqrtp=0.000000e+00 avg_x_per_A=0.000000 scaled_A=0.000000 scaled_ax=0.000000
+  depth8: ax=0 A=0 ax_rate=0.000000000 A_rate=0.000000000 A_over_p=0.000000e+00 A_over_sqrtp=0.000000e+00 avg_x_per_A=0.000000 scaled_A=0.000000 scaled_ax=0.000000
+  sqrt_p = 47.318073
+q2287:
+  unique_ax = 280
+  unique_A = 70
+  depth0: ax=280 A=70 ax_rate=1.000000000 A_rate=1.000000000 A_over_p=3.060778e-02 A_over_sqrtp=1.463743e+00 avg_x_per_A=4.000000 scaled_A=1.000000 scaled_ax=1.000000
+  depth1: ax=120 A=30 ax_rate=0.428571429 A_rate=0.428571429 A_over_p=1.311762e-02 A_over_sqrtp=6.273186e-01 avg_x_per_A=4.000000 scaled_A=0.857143 scaled_ax=0.857143
+  depth2: ax=120 A=30 ax_rate=0.428571429 A_rate=0.428571429 A_over_p=1.311762e-02 A_over_sqrtp=6.273186e-01 avg_x_per_A=4.000000 scaled_A=1.714286 scaled_ax=1.714286
+  depth3: ax=0 A=0 ax_rate=0.000000000 A_rate=0.000000000 A_over_p=0.000000e+00 A_over_sqrtp=0.000000e+00 avg_x_per_A=0.000000 scaled_A=0.000000 scaled_ax=0.000000
+  depth4: ax=0 A=0 ax_rate=0.000000000 A_rate=0.000000000 A_over_p=0.000000e+00 A_over_sqrtp=0.000000e+00 avg_x_per_A=0.000000 scaled_A=0.000000 scaled_ax=0.000000
+  depth5: ax=0 A=0 ax_rate=0.000000000 A_rate=0.000000000 A_over_p=0.000000e+00 A_over_sqrtp=0.000000e+00 avg_x_per_A=0.000000 scaled_A=0.000000 scaled_ax=0.000000
+  depth6: ax=0 A=0 ax_rate=0.000000000 A_rate=0.000000000 A_over_p=0.000000e+00 A_over_sqrtp=0.000000e+00 avg_x_per_A=0.000000 scaled_A=0.000000 scaled_ax=0.000000
+  depth7: ax=0 A=0 ax_rate=0.000000000 A_rate=0.000000000 A_over_p=0.000000e+00 A_over_sqrtp=0.000000e+00 avg_x_per_A=0.000000 scaled_A=0.000000 scaled_ax=0.000000
+  depth8: ax=0 A=0 ax_rate=0.000000000 A_rate=0.000000000 A_over_p=0.000000e+00 A_over_sqrtp=0.000000e+00 avg_x_per_A=0.000000 scaled_A=0.000000 scaled_ax=0.000000
+  sqrt_p = 47.822589
+q2311:
+  unique_ax = 312
+  unique_A = 78
+  depth0: ax=312 A=78 ax_rate=1.000000000 A_rate=1.000000000 A_over_p=3.375162e-02 A_over_sqrtp=1.622537e+00 avg_x_per_A=4.000000 scaled_A=1.000000 scaled_ax=1.000000
+  depth1: ax=192 A=48 ax_rate=0.615384615 A_rate=0.615384615 A_over_p=2.077023e-02 A_over_sqrtp=9.984844e-01 avg_x_per_A=4.000000 scaled_A=1.230769 scaled_ax=1.230769
+  depth2: ax=192 A=48 ax_rate=0.615384615 A_rate=0.615384615 A_over_p=2.077023e-02 A_over_sqrtp=9.984844e-01 avg_x_per_A=4.000000 scaled_A=2.461538 scaled_ax=2.461538
+  depth3: ax=0 A=0 ax_rate=0.000000000 A_rate=0.000000000 A_over_p=0.000000e+00 A_over_sqrtp=0.000000e+00 avg_x_per_A=0.000000 scaled_A=0.000000 scaled_ax=0.000000
+  depth4: ax=0 A=0 ax_rate=0.000000000 A_rate=0.000000000 A_over_p=0.000000e+00 A_over_sqrtp=0.000000e+00 avg_x_per_A=0.000000 scaled_A=0.000000 scaled_ax=0.000000
+  depth5: ax=0 A=0 ax_rate=0.000000000 A_rate=0.000000000 A_over_p=0.000000e+00 A_over_sqrtp=0.000000e+00 avg_x_per_A=0.000000 scaled_A=0.000000 scaled_ax=0.000000
+  depth6: ax=0 A=0 ax_rate=0.000000000 A_rate=0.000000000 A_over_p=0.000000e+00 A_over_sqrtp=0.000000e+00 avg_x_per_A=0.000000 scaled_A=0.000000 scaled_ax=0.000000
+  depth7: ax=0 A=0 ax_rate=0.000000000 A_rate=0.000000000 A_over_p=0.000000e+00 A_over_sqrtp=0.000000e+00 avg_x_per_A=0.000000 scaled_A=0.000000 scaled_ax=0.000000
+  depth8: ax=0 A=0 ax_rate=0.000000000 A_rate=0.000000000 A_over_p=0.000000e+00 A_over_sqrtp=0.000000e+00 avg_x_per_A=0.000000 scaled_A=0.000000 scaled_ax=0.000000
+  sqrt_p = 48.072861
+q2351:
+  unique_ax = 316
+  unique_A = 79
+  depth0: ax=316 A=79 ax_rate=1.000000000 A_rate=1.000000000 A_over_p=3.360272e-02 A_over_sqrtp=1.629299e+00 avg_x_per_A=4.000000 scaled_A=1.000000 scaled_ax=1.000000
+  depth1: ax=200 A=50 ax_rate=0.632911392 A_rate=0.632911392 A_over_p=2.126755e-02 A_over_sqrtp=1.031202e+00 avg_x_per_A=4.000000 scaled_A=1.265823 scaled_ax=1.265823
+  depth2: ax=140 A=35 ax_rate=0.443037975 A_rate=0.443037975 A_over_p=1.488728e-02 A_over_sqrtp=7.218413e-01 avg_x_per_A=4.000000 scaled_A=1.772152 scaled_ax=1.772152
+  depth3: ax=0 A=0 ax_rate=0.000000000 A_rate=0.000000000 A_over_p=0.000000e+00 A_over_sqrtp=0.000000e+00 avg_x_per_A=0.000000 scaled_A=0.000000 scaled_ax=0.000000
+  depth4: ax=0 A=0 ax_rate=0.000000000 A_rate=0.000000000 A_over_p=0.000000e+00 A_over_sqrtp=0.000000e+00 avg_x_per_A=0.000000 scaled_A=0.000000 scaled_ax=0.000000
+  depth5: ax=0 A=0 ax_rate=0.000000000 A_rate=0.000000000 A_over_p=0.000000e+00 A_over_sqrtp=0.000000e+00 avg_x_per_A=0.000000 scaled_A=0.000000 scaled_ax=0.000000
+  depth6: ax=0 A=0 ax_rate=0.000000000 A_rate=0.000000000 A_over_p=0.000000e+00 A_over_sqrtp=0.000000e+00 avg_x_per_A=0.000000 scaled_A=0.000000 scaled_ax=0.000000
+  depth7: ax=0 A=0 ax_rate=0.000000000 A_rate=0.000000000 A_over_p=0.000000e+00 A_over_sqrtp=0.000000e+00 avg_x_per_A=0.000000 scaled_A=0.000000 scaled_ax=0.000000
+  depth8: ax=0 A=0 ax_rate=0.000000000 A_rate=0.000000000 A_over_p=0.000000e+00 A_over_sqrtp=0.000000e+00 avg_x_per_A=0.000000 scaled_A=0.000000 scaled_ax=0.000000
+  sqrt_p = 48.487112
+q2383:
+  unique_ax = 264
+  unique_A = 66
+  depth0: ax=264 A=66 ax_rate=1.000000000 A_rate=1.000000000 A_over_p=2.769618e-02 A_over_sqrtp=1.352016e+00 avg_x_per_A=4.000000 scaled_A=1.000000 scaled_ax=1.000000
+  depth1: ax=144 A=36 ax_rate=0.545454545 A_rate=0.545454545 A_over_p=1.510701e-02 A_over_sqrtp=7.374634e-01 avg_x_per_A=4.000000 scaled_A=1.090909 scaled_ax=1.090909
+  depth2: ax=96 A=24 ax_rate=0.363636364 A_rate=0.363636364 A_over_p=1.007134e-02 A_over_sqrtp=4.916423e-01 avg_x_per_A=4.000000 scaled_A=1.454545 scaled_ax=1.454545
+  depth3: ax=0 A=0 ax_rate=0.000000000 A_rate=0.000000000 A_over_p=0.000000e+00 A_over_sqrtp=0.000000e+00 avg_x_per_A=0.000000 scaled_A=0.000000 scaled_ax=0.000000
+  depth4: ax=0 A=0 ax_rate=0.000000000 A_rate=0.000000000 A_over_p=0.000000e+00 A_over_sqrtp=0.000000e+00 avg_x_per_A=0.000000 scaled_A=0.000000 scaled_ax=0.000000
+  depth5: ax=0 A=0 ax_rate=0.000000000 A_rate=0.000000000 A_over_p=0.000000e+00 A_over_sqrtp=0.000000e+00 avg_x_per_A=0.000000 scaled_A=0.000000 scaled_ax=0.000000
+  depth6: ax=0 A=0 ax_rate=0.000000000 A_rate=0.000000000 A_over_p=0.000000e+00 A_over_sqrtp=0.000000e+00 avg_x_per_A=0.000000 scaled_A=0.000000 scaled_ax=0.000000
+  depth7: ax=0 A=0 ax_rate=0.000000000 A_rate=0.000000000 A_over_p=0.000000e+00 A_over_sqrtp=0.000000e+00 avg_x_per_A=0.000000 scaled_A=0.000000 scaled_ax=0.000000
+  depth8: ax=0 A=0 ax_rate=0.000000000 A_rate=0.000000000 A_over_p=0.000000e+00 A_over_sqrtp=0.000000e+00 avg_x_per_A=0.000000 scaled_A=0.000000 scaled_ax=0.000000
+  sqrt_p = 48.815981
+q2399:
+  unique_ax = 168
+  unique_A = 42
+  depth0: ax=168 A=42 ax_rate=1.000000000 A_rate=1.000000000 A_over_p=1.750729e-02 A_over_sqrtp=8.575001e-01 avg_x_per_A=4.000000 scaled_A=1.000000 scaled_ax=1.000000
+  depth1: ax=84 A=21 ax_rate=0.500000000 A_rate=0.500000000 A_over_p=8.753647e-03 A_over_sqrtp=4.287500e-01 avg_x_per_A=4.000000 scaled_A=1.000000 scaled_ax=1.000000
+  depth2: ax=32 A=8 ax_rate=0.190476190 A_rate=0.190476190 A_over_p=3.334723e-03 A_over_sqrtp=1.633333e-01 avg_x_per_A=4.000000 scaled_A=0.761905 scaled_ax=0.761905
+  depth3: ax=0 A=0 ax_rate=0.000000000 A_rate=0.000000000 A_over_p=0.000000e+00 A_over_sqrtp=0.000000e+00 avg_x_per_A=0.000000 scaled_A=0.000000 scaled_ax=0.000000
+  depth4: ax=0 A=0 ax_rate=0.000000000 A_rate=0.000000000 A_over_p=0.000000e+00 A_over_sqrtp=0.000000e+00 avg_x_per_A=0.000000 scaled_A=0.000000 scaled_ax=0.000000
+  depth5: ax=0 A=0 ax_rate=0.000000000 A_rate=0.000000000 A_over_p=0.000000e+00 A_over_sqrtp=0.000000e+00 avg_x_per_A=0.000000 scaled_A=0.000000 scaled_ax=0.000000
+  depth6: ax=0 A=0 ax_rate=0.000000000 A_rate=0.000000000 A_over_p=0.000000e+00 A_over_sqrtp=0.000000e+00 avg_x_per_A=0.000000 scaled_A=0.000000 scaled_ax=0.000000
+  depth7: ax=0 A=0 ax_rate=0.000000000 A_rate=0.000000000 A_over_p=0.000000e+00 A_over_sqrtp=0.000000e+00 avg_x_per_A=0.000000 scaled_A=0.000000 scaled_ax=0.000000
+  depth8: ax=0 A=0 ax_rate=0.000000000 A_rate=0.000000000 A_over_p=0.000000e+00 A_over_sqrtp=0.000000e+00 avg_x_per_A=0.000000 scaled_A=0.000000 scaled_ax=0.000000
+  sqrt_p = 48.979588
+q2423:
+  unique_ax = 276
+  unique_A = 69
+  depth0: ax=276 A=69 ax_rate=1.000000000 A_rate=1.000000000 A_over_p=2.847709e-02 A_over_sqrtp=1.401756e+00 avg_x_per_A=4.000000 scaled_A=1.000000 scaled_ax=1.000000
+  depth1: ax=80 A=20 ax_rate=0.289855072 A_rate=0.289855072 A_over_p=8.254230e-03 A_over_sqrtp=4.063060e-01 avg_x_per_A=4.000000 scaled_A=0.579710 scaled_ax=0.579710
+  depth2: ax=0 A=0 ax_rate=0.000000000 A_rate=0.000000000 A_over_p=0.000000e+00 A_over_sqrtp=0.000000e+00 avg_x_per_A=0.000000 scaled_A=0.000000 scaled_ax=0.000000
+  depth3: ax=0 A=0 ax_rate=0.000000000 A_rate=0.000000000 A_over_p=0.000000e+00 A_over_sqrtp=0.000000e+00 avg_x_per_A=0.000000 scaled_A=0.000000 scaled_ax=0.000000
+  depth4: ax=0 A=0 ax_rate=0.000000000 A_rate=0.000000000 A_over_p=0.000000e+00 A_over_sqrtp=0.000000e+00 avg_x_per_A=0.000000 scaled_A=0.000000 scaled_ax=0.000000
+  depth5: ax=0 A=0 ax_rate=0.000000000 A_rate=0.000000000 A_over_p=0.000000e+00 A_over_sqrtp=0.000000e+00 avg_x_per_A=0.000000 scaled_A=0.000000 scaled_ax=0.000000
+  depth6: ax=0 A=0 ax_rate=0.000000000 A_rate=0.000000000 A_over_p=0.000000e+00 A_over_sqrtp=0.000000e+00 avg_x_per_A=0.000000 scaled_A=0.000000 scaled_ax=0.000000
+  depth7: ax=0 A=0 ax_rate=0.000000000 A_rate=0.000000000 A_over_p=0.000000e+00 A_over_sqrtp=0.000000e+00 avg_x_per_A=0.000000 scaled_A=0.000000 scaled_ax=0.000000
+  depth8: ax=0 A=0 ax_rate=0.000000000 A_rate=0.000000000 A_over_p=0.000000e+00 A_over_sqrtp=0.000000e+00 avg_x_per_A=0.000000 scaled_A=0.000000 scaled_ax=0.000000
+  sqrt_p = 49.223978
+p27_train:
+  unique_ax = 3000
+  unique_A = 1500
+  depth0: ax=3000 A=1500 ax_rate=1.000000000 A_rate=1.000000000 A_over_p=1.500000e-24 A_over_sqrtp=4.743416e-11 avg_x_per_A=2.000000 scaled_A=1.000000 scaled_ax=1.000000
+  depth1: ax=1494 A=747 ax_rate=0.498000000 A_rate=0.498000000 A_over_p=7.470000e-25 A_over_sqrtp=2.362221e-11 avg_x_per_A=2.000000 scaled_A=0.996000 scaled_ax=0.996000
+  depth2: ax=776 A=388 ax_rate=0.258666667 A_rate=0.258666667 A_over_p=3.880000e-25 A_over_sqrtp=1.226964e-11 avg_x_per_A=2.000000 scaled_A=1.034667 scaled_ax=1.034667
+  depth3: ax=380 A=190 ax_rate=0.126666667 A_rate=0.126666667 A_over_p=1.900000e-25 A_over_sqrtp=6.008328e-12 avg_x_per_A=2.000000 scaled_A=1.013333 scaled_ax=1.013333
+  depth4: ax=190 A=95 ax_rate=0.063333333 A_rate=0.063333333 A_over_p=9.500000e-26 A_over_sqrtp=3.004164e-12 avg_x_per_A=2.000000 scaled_A=1.013333 scaled_ax=1.013333
+  depth5: ax=100 A=50 ax_rate=0.033333333 A_rate=0.033333333 A_over_p=5.000000e-26 A_over_sqrtp=1.581139e-12 avg_x_per_A=2.000000 scaled_A=1.066667 scaled_ax=1.066667
+  depth6: ax=58 A=29 ax_rate=0.019333333 A_rate=0.019333333 A_over_p=2.900000e-26 A_over_sqrtp=9.170605e-13 avg_x_per_A=2.000000 scaled_A=1.237333 scaled_ax=1.237333
+  depth7: ax=28 A=14 ax_rate=0.009333333 A_rate=0.009333333 A_over_p=1.400000e-26 A_over_sqrtp=4.427189e-13 avg_x_per_A=2.000000 scaled_A=1.194667 scaled_ax=1.194667
+  depth8: ax=10 A=5 ax_rate=0.003333333 A_rate=0.003333333 A_over_p=5.000000e-27 A_over_sqrtp=1.581139e-13 avg_x_per_A=2.000000 scaled_A=0.853333 scaled_ax=0.853333
+  sqrt_p = 31622776601683.792969
+p27_heldout:
+  unique_ax = 3000
+  unique_A = 1500
+  depth0: ax=3000 A=1500 ax_rate=1.000000000 A_rate=1.000000000 A_over_p=1.500000e-24 A_over_sqrtp=4.743416e-11 avg_x_per_A=2.000000 scaled_A=1.000000 scaled_ax=1.000000
+  depth1: ax=1558 A=779 ax_rate=0.519333333 A_rate=0.519333333 A_over_p=7.790000e-25 A_over_sqrtp=2.463414e-11 avg_x_per_A=2.000000 scaled_A=1.038667 scaled_ax=1.038667
+  depth2: ax=758 A=379 ax_rate=0.252666667 A_rate=0.252666667 A_over_p=3.790000e-25 A_over_sqrtp=1.198503e-11 avg_x_per_A=2.000000 scaled_A=1.010667 scaled_ax=1.010667
+  depth3: ax=362 A=181 ax_rate=0.120666667 A_rate=0.120666667 A_over_p=1.810000e-25 A_over_sqrtp=5.723723e-12 avg_x_per_A=2.000000 scaled_A=0.965333 scaled_ax=0.965333
+  depth4: ax=182 A=91 ax_rate=0.060666667 A_rate=0.060666667 A_over_p=9.100000e-26 A_over_sqrtp=2.877673e-12 avg_x_per_A=2.000000 scaled_A=0.970667 scaled_ax=0.970667
+  depth5: ax=80 A=40 ax_rate=0.026666667 A_rate=0.026666667 A_over_p=4.000000e-26 A_over_sqrtp=1.264911e-12 avg_x_per_A=2.000000 scaled_A=0.853333 scaled_ax=0.853333
+  depth6: ax=50 A=25 ax_rate=0.016666667 A_rate=0.016666667 A_over_p=2.500000e-26 A_over_sqrtp=7.905694e-13 avg_x_per_A=2.000000 scaled_A=1.066667 scaled_ax=1.066667
+  depth7: ax=22 A=11 ax_rate=0.007333333 A_rate=0.007333333 A_over_p=1.100000e-26 A_over_sqrtp=3.478505e-13 avg_x_per_A=2.000000 scaled_A=0.938667 scaled_ax=0.938667
+  depth8: ax=12 A=6 ax_rate=0.004000000 A_rate=0.004000000 A_over_p=6.000000e-27 A_over_sqrtp=1.897367e-13 avg_x_per_A=2.000000 scaled_A=1.024000 scaled_ax=1.024000
+  sqrt_p = 31622776601683.792969
+p27_a_projection_prefix_profile_probe_rows=1/1

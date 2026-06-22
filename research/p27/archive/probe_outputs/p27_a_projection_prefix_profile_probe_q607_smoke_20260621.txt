@@ -1,0 +1,12 @@
+p27 A-projection selected-prefix profile
+depth d = legal source plus selected gates d3..d_{d+2}
+q607:
+  unique_ax = 128
+  unique_A = 32
+  depth0: ax=128 A=32 ax_rate=1.000000000 A_rate=1.000000000 A_over_p=0.052718287 A_over_sqrtp=1.298840 avg_x_per_A=4.000000 scaled_A=1.000000 scaled_ax=1.000000
+  depth1: ax=64 A=16 ax_rate=0.500000000 A_rate=0.500000000 A_over_p=0.026359143 A_over_sqrtp=0.649420 avg_x_per_A=4.000000 scaled_A=1.000000 scaled_ax=1.000000
+  depth2: ax=0 A=0 ax_rate=0.000000000 A_rate=0.000000000 A_over_p=0.000000000 A_over_sqrtp=0.000000 avg_x_per_A=0.000000 scaled_A=0.000000 scaled_ax=0.000000
+  depth3: ax=0 A=0 ax_rate=0.000000000 A_rate=0.000000000 A_over_p=0.000000000 A_over_sqrtp=0.000000 avg_x_per_A=0.000000 scaled_A=0.000000 scaled_ax=0.000000
+  depth4: ax=0 A=0 ax_rate=0.000000000 A_rate=0.000000000 A_over_p=0.000000000 A_over_sqrtp=0.000000 avg_x_per_A=0.000000 scaled_A=0.000000 scaled_ax=0.000000
+  sqrt_p = 24.637370
+p27_a_projection_prefix_profile_probe_rows=1/1
