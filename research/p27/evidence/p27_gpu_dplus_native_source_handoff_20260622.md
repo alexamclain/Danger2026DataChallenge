@@ -42,6 +42,7 @@ research/p27/evidence/p27_trace_norm_dplus_relative_descent_20260622.md
 research/p27/evidence/p27_trace_norm_dplus_h90_quotient_20260622.md
 research/p27/evidence/p27_trace_norm_dplus_h90_quartic_model_20260622.md
 research/p27/evidence/p27_trace_norm_dplus_h90_branch_class_20260622.md
+research/p27/evidence/p27_trace_norm_dplus_h90_payload_screen_20260622.md
 ```
 
 Do not retest these killed routes:
@@ -53,6 +54,7 @@ eps_h/eps_v, H/VQ, eps_h/eps_v/T_line orientation buckets
 low-weight tested a/g/m quotient-character products
 bare conic quotient a^2+g^2=4 as a standalone Dplus sampler
 H90 elliptic quotient alone as a Dplus sampler
+H90 eta/U/W/rho payload sign buckets as production filters
 full genus-69 orientation-cover sampling as the first production plan
 seed-order or compact-bucket fishing without a named invariant
 ```
@@ -132,6 +134,7 @@ do not treat the genus-17 relative cover as a production source unless a
 do not treat E_h90 alone as a source; the hard object is the degree-4 cover
 use the two eta-normalized quartics if testing H90 branch/Kummer structure
 the named second-layer payload is A_eta = U_eta + z*W_eta
+do not use A_eta squareclass or low-weight eta/U/W/rho products as filters
 sample a partial source that provably covers a fixed Dplus component
 sample a fused recurrence source that emits Dplus plus a later selected gate
 ```

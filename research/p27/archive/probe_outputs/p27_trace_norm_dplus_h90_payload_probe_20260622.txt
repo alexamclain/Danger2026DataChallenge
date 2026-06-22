@@ -1,0 +1,717 @@
+p27 trace/norm Dplus H90 payload probe
+question = does A_eta or its H90 telemetry predict post-Dplus d3/d4?
+p = 1000000000000000000000000103
+seed_groups = 121,122;123,124
+group1_seeds_121_122_sample:
+  D_+1 = 16485
+  D_-1 = 16316
+  D_zero = 32965
+  Dplus_candidates = 16398
+  Dplus_no_valid_candidate = 8286
+  Dplus_y = 16485
+  d1_+1 = 16398
+  d2_+1 = 16398
+  d3_+1 = 8298
+  d3_-1 = 8100
+  d4_+1 = 4062
+  d4_-1 = 4236
+  d4_0 = 8100
+  h90_A_actual_+1 = 16398
+  h90_A_actual_conj_+1 = 16398
+  h90_A_other_minus_+1 = 16398
+  h90_A_other_plus_+1 = 16398
+  h90_enriched_rows = 16398
+  nonsplit_y = 65766
+  raw_y_draws = 131072
+group1_seeds_121_122_d3_eta:
+  eta_+1_minus = 3976
+  eta_+1_plus = 4158
+  eta_+1_plus_rate_x1000000 = 511187
+  eta_+1_total = 8134
+  eta_-1_minus = 4124
+  eta_-1_plus = 4140
+  eta_-1_plus_rate_x1000000 = 500968
+  eta_-1_total = 8264
+  rows = 16398
+  target_minus = 8100
+  target_plus = 8298
+  target_plus_rate_x1000000 = 506037
+group1_seeds_121_122_d3_root_eta:
+  root_eta_+1_minus = 4050
+  root_eta_+1_plus = 4149
+  root_eta_+1_plus_rate_x1000000 = 506037
+  root_eta_+1_total = 8199
+  root_eta_-1_minus = 4050
+  root_eta_-1_plus = 4149
+  root_eta_-1_plus_rate_x1000000 = 506037
+  root_eta_-1_total = 8199
+  rows = 16398
+  target_minus = 8100
+  target_plus = 8298
+  target_plus_rate_x1000000 = 506037
+group1_seeds_121_122_d3_A_actual:
+  A_actual_+1_minus = 8100
+  A_actual_+1_plus = 8298
+  A_actual_+1_plus_rate_x1000000 = 506037
+  A_actual_+1_total = 16398
+  rows = 16398
+  target_minus = 8100
+  target_plus = 8298
+  target_plus_rate_x1000000 = 506037
+group1_seeds_121_122_d3_A_other_plus:
+  A_other_plus_+1_minus = 8100
+  A_other_plus_+1_plus = 8298
+  A_other_plus_+1_plus_rate_x1000000 = 506037
+  A_other_plus_+1_total = 16398
+  rows = 16398
+  target_minus = 8100
+  target_plus = 8298
+  target_plus_rate_x1000000 = 506037
+group1_seeds_121_122_d3_A_other_minus:
+  A_other_minus_+1_minus = 8100
+  A_other_minus_+1_plus = 8298
+  A_other_minus_+1_plus_rate_x1000000 = 506037
+  A_other_minus_+1_total = 16398
+  rows = 16398
+  target_minus = 8100
+  target_plus = 8298
+  target_plus_rate_x1000000 = 506037
+group1_seeds_121_122_d3_U_actual:
+  U_actual_+1_minus = 3994
+  U_actual_+1_plus = 4274
+  U_actual_+1_plus_rate_x1000000 = 516932
+  U_actual_+1_total = 8268
+  U_actual_-1_minus = 4106
+  U_actual_-1_plus = 4024
+  U_actual_-1_plus_rate_x1000000 = 494956
+  U_actual_-1_total = 8130
+  rows = 16398
+  target_minus = 8100
+  target_plus = 8298
+  target_plus_rate_x1000000 = 506037
+group1_seeds_121_122_d3_W_actual:
+  W_actual_+1_minus = 3958
+  W_actual_+1_plus = 4138
+  W_actual_+1_plus_rate_x1000000 = 511116
+  W_actual_+1_total = 8096
+  W_actual_-1_minus = 4142
+  W_actual_-1_plus = 4160
+  W_actual_-1_plus_rate_x1000000 = 501084
+  W_actual_-1_total = 8302
+  rows = 16398
+  target_minus = 8100
+  target_plus = 8298
+  target_plus_rate_x1000000 = 506037
+group1_seeds_121_122_d3_U_other:
+  U_other_+1_minus = 4058
+  U_other_+1_plus = 4058
+  U_other_+1_plus_rate_x1000000 = 500000
+  U_other_+1_total = 8116
+  U_other_-1_minus = 4042
+  U_other_-1_plus = 4240
+  U_other_-1_plus_rate_x1000000 = 511953
+  U_other_-1_total = 8282
+  rows = 16398
+  target_minus = 8100
+  target_plus = 8298
+  target_plus_rate_x1000000 = 506037
+group1_seeds_121_122_d3_W_other:
+  W_other_+1_minus = 4068
+  W_other_+1_plus = 4102
+  W_other_+1_plus_rate_x1000000 = 502080
+  W_other_+1_total = 8170
+  W_other_-1_minus = 4032
+  W_other_-1_plus = 4196
+  W_other_-1_plus_rate_x1000000 = 509965
+  W_other_-1_total = 8228
+  rows = 16398
+  target_minus = 8100
+  target_plus = 8298
+  target_plus_rate_x1000000 = 506037
+group1_seeds_121_122_d3_rho_actual:
+  rho_actual_+1_minus = 8100
+  rho_actual_+1_plus = 8298
+  rho_actual_+1_plus_rate_x1000000 = 506037
+  rho_actual_+1_total = 16398
+  rows = 16398
+  target_minus = 8100
+  target_plus = 8298
+  target_plus_rate_x1000000 = 506037
+group1_seeds_121_122_d3_rho_other_plus:
+  rho_other_plus_+1_minus = 8100
+  rho_other_plus_+1_plus = 8298
+  rho_other_plus_+1_plus_rate_x1000000 = 506037
+  rho_other_plus_+1_total = 16398
+  rows = 16398
+  target_minus = 8100
+  target_plus = 8298
+  target_plus_rate_x1000000 = 506037
+group1_seeds_121_122_d3_rho_other_minus:
+  rho_other_minus_+1_minus = 8100
+  rho_other_minus_+1_plus = 8298
+  rho_other_minus_+1_plus_rate_x1000000 = 506037
+  rho_other_minus_+1_total = 16398
+  rows = 16398
+  target_minus = 8100
+  target_plus = 8298
+  target_plus_rate_x1000000 = 506037
+group1_seeds_121_122_d3_root_rho_actual:
+  root_rho_actual_+1_minus = 4050
+  root_rho_actual_+1_plus = 4149
+  root_rho_actual_+1_plus_rate_x1000000 = 506037
+  root_rho_actual_+1_total = 8199
+  root_rho_actual_-1_minus = 4050
+  root_rho_actual_-1_plus = 4149
+  root_rho_actual_-1_plus_rate_x1000000 = 506037
+  root_rho_actual_-1_total = 8199
+  rows = 16398
+  target_minus = 8100
+  target_plus = 8298
+  target_plus_rate_x1000000 = 506037
+group1_seeds_121_122_d3_root_A_other_plus:
+  root_A_other_plus_+1_minus = 4050
+  root_A_other_plus_+1_plus = 4149
+  root_A_other_plus_+1_plus_rate_x1000000 = 506037
+  root_A_other_plus_+1_total = 8199
+  root_A_other_plus_-1_minus = 4050
+  root_A_other_plus_-1_plus = 4149
+  root_A_other_plus_-1_plus_rate_x1000000 = 506037
+  root_A_other_plus_-1_total = 8199
+  rows = 16398
+  target_minus = 8100
+  target_plus = 8298
+  target_plus_rate_x1000000 = 506037
+group1_seeds_121_122_d4_eta:
+  eta_+1_minus = 2152
+  eta_+1_plus = 2006
+  eta_+1_plus_rate_x1000000 = 482443
+  eta_+1_total = 4158
+  eta_-1_minus = 2084
+  eta_-1_plus = 2056
+  eta_-1_plus_rate_x1000000 = 496618
+  eta_-1_total = 4140
+  rows = 8298
+  target_minus = 4236
+  target_plus = 4062
+  target_plus_rate_x1000000 = 489515
+group1_seeds_121_122_d4_root_eta:
+  root_eta_+1_minus = 2118
+  root_eta_+1_plus = 2031
+  root_eta_+1_plus_rate_x1000000 = 489515
+  root_eta_+1_total = 4149
+  root_eta_-1_minus = 2118
+  root_eta_-1_plus = 2031
+  root_eta_-1_plus_rate_x1000000 = 489515
+  root_eta_-1_total = 4149
+  rows = 8298
+  target_minus = 4236
+  target_plus = 4062
+  target_plus_rate_x1000000 = 489515
+group1_seeds_121_122_d4_A_actual:
+  A_actual_+1_minus = 4236
+  A_actual_+1_plus = 4062
+  A_actual_+1_plus_rate_x1000000 = 489515
+  A_actual_+1_total = 8298
+  rows = 8298
+  target_minus = 4236
+  target_plus = 4062
+  target_plus_rate_x1000000 = 489515
+group1_seeds_121_122_d4_A_other_plus:
+  A_other_plus_+1_minus = 4236
+  A_other_plus_+1_plus = 4062
+  A_other_plus_+1_plus_rate_x1000000 = 489515
+  A_other_plus_+1_total = 8298
+  rows = 8298
+  target_minus = 4236
+  target_plus = 4062
+  target_plus_rate_x1000000 = 489515
+group1_seeds_121_122_d4_A_other_minus:
+  A_other_minus_+1_minus = 4236
+  A_other_minus_+1_plus = 4062
+  A_other_minus_+1_plus_rate_x1000000 = 489515
+  A_other_minus_+1_total = 8298
+  rows = 8298
+  target_minus = 4236
+  target_plus = 4062
+  target_plus_rate_x1000000 = 489515
+group1_seeds_121_122_d4_U_actual:
+  U_actual_+1_minus = 2206
+  U_actual_+1_plus = 2068
+  U_actual_+1_plus_rate_x1000000 = 483855
+  U_actual_+1_total = 4274
+  U_actual_-1_minus = 2030
+  U_actual_-1_plus = 1994
+  U_actual_-1_plus_rate_x1000000 = 495526
+  U_actual_-1_total = 4024
+  rows = 8298
+  target_minus = 4236
+  target_plus = 4062
+  target_plus_rate_x1000000 = 489515
+group1_seeds_121_122_d4_W_actual:
+  W_actual_+1_minus = 2070
+  W_actual_+1_plus = 2068
+  W_actual_+1_plus_rate_x1000000 = 499758
+  W_actual_+1_total = 4138
+  W_actual_-1_minus = 2166
+  W_actual_-1_plus = 1994
+  W_actual_-1_plus_rate_x1000000 = 479326
+  W_actual_-1_total = 4160
+  rows = 8298
+  target_minus = 4236
+  target_plus = 4062
+  target_plus_rate_x1000000 = 489515
+group1_seeds_121_122_d4_U_other:
+  U_other_+1_minus = 2054
+  U_other_+1_plus = 2004
+  U_other_+1_plus_rate_x1000000 = 493839
+  U_other_+1_total = 4058
+  U_other_-1_minus = 2182
+  U_other_-1_plus = 2058
+  U_other_-1_plus_rate_x1000000 = 485377
+  U_other_-1_total = 4240
+  rows = 8298
+  target_minus = 4236
+  target_plus = 4062
+  target_plus_rate_x1000000 = 489515
+group1_seeds_121_122_d4_W_other:
+  W_other_+1_minus = 2116
+  W_other_+1_plus = 1986
+  W_other_+1_plus_rate_x1000000 = 484154
+  W_other_+1_total = 4102
+  W_other_-1_minus = 2120
+  W_other_-1_plus = 2076
+  W_other_-1_plus_rate_x1000000 = 494756
+  W_other_-1_total = 4196
+  rows = 8298
+  target_minus = 4236
+  target_plus = 4062
+  target_plus_rate_x1000000 = 489515
+group1_seeds_121_122_d4_rho_actual:
+  rho_actual_+1_minus = 4236
+  rho_actual_+1_plus = 4062
+  rho_actual_+1_plus_rate_x1000000 = 489515
+  rho_actual_+1_total = 8298
+  rows = 8298
+  target_minus = 4236
+  target_plus = 4062
+  target_plus_rate_x1000000 = 489515
+group1_seeds_121_122_d4_rho_other_plus:
+  rho_other_plus_+1_minus = 4236
+  rho_other_plus_+1_plus = 4062
+  rho_other_plus_+1_plus_rate_x1000000 = 489515
+  rho_other_plus_+1_total = 8298
+  rows = 8298
+  target_minus = 4236
+  target_plus = 4062
+  target_plus_rate_x1000000 = 489515
+group1_seeds_121_122_d4_rho_other_minus:
+  rho_other_minus_+1_minus = 4236
+  rho_other_minus_+1_plus = 4062
+  rho_other_minus_+1_plus_rate_x1000000 = 489515
+  rho_other_minus_+1_total = 8298
+  rows = 8298
+  target_minus = 4236
+  target_plus = 4062
+  target_plus_rate_x1000000 = 489515
+group1_seeds_121_122_d4_root_rho_actual:
+  root_rho_actual_+1_minus = 2118
+  root_rho_actual_+1_plus = 2031
+  root_rho_actual_+1_plus_rate_x1000000 = 489515
+  root_rho_actual_+1_total = 4149
+  root_rho_actual_-1_minus = 2118
+  root_rho_actual_-1_plus = 2031
+  root_rho_actual_-1_plus_rate_x1000000 = 489515
+  root_rho_actual_-1_total = 4149
+  rows = 8298
+  target_minus = 4236
+  target_plus = 4062
+  target_plus_rate_x1000000 = 489515
+group1_seeds_121_122_d4_root_A_other_plus:
+  root_A_other_plus_+1_minus = 2118
+  root_A_other_plus_+1_plus = 2031
+  root_A_other_plus_+1_plus_rate_x1000000 = 489515
+  root_A_other_plus_+1_total = 4149
+  root_A_other_plus_-1_minus = 2118
+  root_A_other_plus_-1_plus = 2031
+  root_A_other_plus_-1_plus_rate_x1000000 = 489515
+  root_A_other_plus_-1_total = 4149
+  rows = 8298
+  target_minus = 4236
+  target_plus = 4062
+  target_plus_rate_x1000000 = 489515
+group2_seeds_123_124_sample:
+  D_+1 = 16454
+  D_-1 = 16293
+  D_zero = 32723
+  Dplus_candidates = 16122
+  Dplus_no_valid_candidate = 8393
+  Dplus_y = 16454
+  d1_+1 = 16122
+  d2_+1 = 16122
+  d3_+1 = 7972
+  d3_-1 = 8150
+  d4_+1 = 3904
+  d4_-1 = 4068
+  d4_0 = 8150
+  h90_A_actual_+1 = 16122
+  h90_A_actual_conj_+1 = 16122
+  h90_A_other_minus_+1 = 16122
+  h90_A_other_plus_+1 = 16122
+  h90_enriched_rows = 16122
+  nonsplit_y = 65470
+  raw_y_draws = 131072
+group2_seeds_123_124_d3_eta:
+  eta_+1_minus = 4092
+  eta_+1_plus = 3998
+  eta_+1_plus_rate_x1000000 = 494190
+  eta_+1_total = 8090
+  eta_-1_minus = 4058
+  eta_-1_plus = 3974
+  eta_-1_plus_rate_x1000000 = 494770
+  eta_-1_total = 8032
+  rows = 16122
+  target_minus = 8150
+  target_plus = 7972
+  target_plus_rate_x1000000 = 494479
+group2_seeds_123_124_d3_root_eta:
+  root_eta_+1_minus = 4075
+  root_eta_+1_plus = 3986
+  root_eta_+1_plus_rate_x1000000 = 494479
+  root_eta_+1_total = 8061
+  root_eta_-1_minus = 4075
+  root_eta_-1_plus = 3986
+  root_eta_-1_plus_rate_x1000000 = 494479
+  root_eta_-1_total = 8061
+  rows = 16122
+  target_minus = 8150
+  target_plus = 7972
+  target_plus_rate_x1000000 = 494479
+group2_seeds_123_124_d3_A_actual:
+  A_actual_+1_minus = 8150
+  A_actual_+1_plus = 7972
+  A_actual_+1_plus_rate_x1000000 = 494479
+  A_actual_+1_total = 16122
+  rows = 16122
+  target_minus = 8150
+  target_plus = 7972
+  target_plus_rate_x1000000 = 494479
+group2_seeds_123_124_d3_A_other_plus:
+  A_other_plus_+1_minus = 8150
+  A_other_plus_+1_plus = 7972
+  A_other_plus_+1_plus_rate_x1000000 = 494479
+  A_other_plus_+1_total = 16122
+  rows = 16122
+  target_minus = 8150
+  target_plus = 7972
+  target_plus_rate_x1000000 = 494479
+group2_seeds_123_124_d3_A_other_minus:
+  A_other_minus_+1_minus = 8150
+  A_other_minus_+1_plus = 7972
+  A_other_minus_+1_plus_rate_x1000000 = 494479
+  A_other_minus_+1_total = 16122
+  rows = 16122
+  target_minus = 8150
+  target_plus = 7972
+  target_plus_rate_x1000000 = 494479
+group2_seeds_123_124_d3_U_actual:
+  U_actual_+1_minus = 4050
+  U_actual_+1_plus = 3952
+  U_actual_+1_plus_rate_x1000000 = 493876
+  U_actual_+1_total = 8002
+  U_actual_-1_minus = 4100
+  U_actual_-1_plus = 4020
+  U_actual_-1_plus_rate_x1000000 = 495073
+  U_actual_-1_total = 8120
+  rows = 16122
+  target_minus = 8150
+  target_plus = 7972
+  target_plus_rate_x1000000 = 494479
+group2_seeds_123_124_d3_W_actual:
+  W_actual_+1_minus = 4026
+  W_actual_+1_plus = 3974
+  W_actual_+1_plus_rate_x1000000 = 496750
+  W_actual_+1_total = 8000
+  W_actual_-1_minus = 4124
+  W_actual_-1_plus = 3998
+  W_actual_-1_plus_rate_x1000000 = 492243
+  W_actual_-1_total = 8122
+  rows = 16122
+  target_minus = 8150
+  target_plus = 7972
+  target_plus_rate_x1000000 = 494479
+group2_seeds_123_124_d3_U_other:
+  U_other_+1_minus = 4124
+  U_other_+1_plus = 3916
+  U_other_+1_plus_rate_x1000000 = 487064
+  U_other_+1_total = 8040
+  U_other_-1_minus = 4026
+  U_other_-1_plus = 4056
+  U_other_-1_plus_rate_x1000000 = 501855
+  U_other_-1_total = 8082
+  rows = 16122
+  target_minus = 8150
+  target_plus = 7972
+  target_plus_rate_x1000000 = 494479
+group2_seeds_123_124_d3_W_other:
+  W_other_+1_minus = 4012
+  W_other_+1_plus = 3964
+  W_other_+1_plus_rate_x1000000 = 496990
+  W_other_+1_total = 7976
+  W_other_-1_minus = 4138
+  W_other_-1_plus = 4008
+  W_other_-1_plus_rate_x1000000 = 492020
+  W_other_-1_total = 8146
+  rows = 16122
+  target_minus = 8150
+  target_plus = 7972
+  target_plus_rate_x1000000 = 494479
+group2_seeds_123_124_d3_rho_actual:
+  rho_actual_+1_minus = 8150
+  rho_actual_+1_plus = 7972
+  rho_actual_+1_plus_rate_x1000000 = 494479
+  rho_actual_+1_total = 16122
+  rows = 16122
+  target_minus = 8150
+  target_plus = 7972
+  target_plus_rate_x1000000 = 494479
+group2_seeds_123_124_d3_rho_other_plus:
+  rho_other_plus_+1_minus = 8150
+  rho_other_plus_+1_plus = 7972
+  rho_other_plus_+1_plus_rate_x1000000 = 494479
+  rho_other_plus_+1_total = 16122
+  rows = 16122
+  target_minus = 8150
+  target_plus = 7972
+  target_plus_rate_x1000000 = 494479
+group2_seeds_123_124_d3_rho_other_minus:
+  rho_other_minus_+1_minus = 8150
+  rho_other_minus_+1_plus = 7972
+  rho_other_minus_+1_plus_rate_x1000000 = 494479
+  rho_other_minus_+1_total = 16122
+  rows = 16122
+  target_minus = 8150
+  target_plus = 7972
+  target_plus_rate_x1000000 = 494479
+group2_seeds_123_124_d3_root_rho_actual:
+  root_rho_actual_+1_minus = 4075
+  root_rho_actual_+1_plus = 3986
+  root_rho_actual_+1_plus_rate_x1000000 = 494479
+  root_rho_actual_+1_total = 8061
+  root_rho_actual_-1_minus = 4075
+  root_rho_actual_-1_plus = 3986
+  root_rho_actual_-1_plus_rate_x1000000 = 494479
+  root_rho_actual_-1_total = 8061
+  rows = 16122
+  target_minus = 8150
+  target_plus = 7972
+  target_plus_rate_x1000000 = 494479
+group2_seeds_123_124_d3_root_A_other_plus:
+  root_A_other_plus_+1_minus = 4075
+  root_A_other_plus_+1_plus = 3986
+  root_A_other_plus_+1_plus_rate_x1000000 = 494479
+  root_A_other_plus_+1_total = 8061
+  root_A_other_plus_-1_minus = 4075
+  root_A_other_plus_-1_plus = 3986
+  root_A_other_plus_-1_plus_rate_x1000000 = 494479
+  root_A_other_plus_-1_total = 8061
+  rows = 16122
+  target_minus = 8150
+  target_plus = 7972
+  target_plus_rate_x1000000 = 494479
+group2_seeds_123_124_d4_eta:
+  eta_+1_minus = 2072
+  eta_+1_plus = 1926
+  eta_+1_plus_rate_x1000000 = 481740
+  eta_+1_total = 3998
+  eta_-1_minus = 1996
+  eta_-1_plus = 1978
+  eta_-1_plus_rate_x1000000 = 497735
+  eta_-1_total = 3974
+  rows = 7972
+  target_minus = 4068
+  target_plus = 3904
+  target_plus_rate_x1000000 = 489713
+group2_seeds_123_124_d4_root_eta:
+  root_eta_+1_minus = 2034
+  root_eta_+1_plus = 1952
+  root_eta_+1_plus_rate_x1000000 = 489713
+  root_eta_+1_total = 3986
+  root_eta_-1_minus = 2034
+  root_eta_-1_plus = 1952
+  root_eta_-1_plus_rate_x1000000 = 489713
+  root_eta_-1_total = 3986
+  rows = 7972
+  target_minus = 4068
+  target_plus = 3904
+  target_plus_rate_x1000000 = 489713
+group2_seeds_123_124_d4_A_actual:
+  A_actual_+1_minus = 4068
+  A_actual_+1_plus = 3904
+  A_actual_+1_plus_rate_x1000000 = 489713
+  A_actual_+1_total = 7972
+  rows = 7972
+  target_minus = 4068
+  target_plus = 3904
+  target_plus_rate_x1000000 = 489713
+group2_seeds_123_124_d4_A_other_plus:
+  A_other_plus_+1_minus = 4068
+  A_other_plus_+1_plus = 3904
+  A_other_plus_+1_plus_rate_x1000000 = 489713
+  A_other_plus_+1_total = 7972
+  rows = 7972
+  target_minus = 4068
+  target_plus = 3904
+  target_plus_rate_x1000000 = 489713
+group2_seeds_123_124_d4_A_other_minus:
+  A_other_minus_+1_minus = 4068
+  A_other_minus_+1_plus = 3904
+  A_other_minus_+1_plus_rate_x1000000 = 489713
+  A_other_minus_+1_total = 7972
+  rows = 7972
+  target_minus = 4068
+  target_plus = 3904
+  target_plus_rate_x1000000 = 489713
+group2_seeds_123_124_d4_U_actual:
+  U_actual_+1_minus = 2020
+  U_actual_+1_plus = 1932
+  U_actual_+1_plus_rate_x1000000 = 488866
+  U_actual_+1_total = 3952
+  U_actual_-1_minus = 2048
+  U_actual_-1_plus = 1972
+  U_actual_-1_plus_rate_x1000000 = 490547
+  U_actual_-1_total = 4020
+  rows = 7972
+  target_minus = 4068
+  target_plus = 3904
+  target_plus_rate_x1000000 = 489713
+group2_seeds_123_124_d4_W_actual:
+  W_actual_+1_minus = 2034
+  W_actual_+1_plus = 1940
+  W_actual_+1_plus_rate_x1000000 = 488173
+  W_actual_+1_total = 3974
+  W_actual_-1_minus = 2034
+  W_actual_-1_plus = 1964
+  W_actual_-1_plus_rate_x1000000 = 491245
+  W_actual_-1_total = 3998
+  rows = 7972
+  target_minus = 4068
+  target_plus = 3904
+  target_plus_rate_x1000000 = 489713
+group2_seeds_123_124_d4_U_other:
+  U_other_+1_minus = 2008
+  U_other_+1_plus = 1908
+  U_other_+1_plus_rate_x1000000 = 487231
+  U_other_+1_total = 3916
+  U_other_-1_minus = 2060
+  U_other_-1_plus = 1996
+  U_other_-1_plus_rate_x1000000 = 492110
+  U_other_-1_total = 4056
+  rows = 7972
+  target_minus = 4068
+  target_plus = 3904
+  target_plus_rate_x1000000 = 489713
+group2_seeds_123_124_d4_W_other:
+  W_other_+1_minus = 2080
+  W_other_+1_plus = 1884
+  W_other_+1_plus_rate_x1000000 = 475277
+  W_other_+1_total = 3964
+  W_other_-1_minus = 1988
+  W_other_-1_plus = 2020
+  W_other_-1_plus_rate_x1000000 = 503992
+  W_other_-1_total = 4008
+  rows = 7972
+  target_minus = 4068
+  target_plus = 3904
+  target_plus_rate_x1000000 = 489713
+group2_seeds_123_124_d4_rho_actual:
+  rho_actual_+1_minus = 4068
+  rho_actual_+1_plus = 3904
+  rho_actual_+1_plus_rate_x1000000 = 489713
+  rho_actual_+1_total = 7972
+  rows = 7972
+  target_minus = 4068
+  target_plus = 3904
+  target_plus_rate_x1000000 = 489713
+group2_seeds_123_124_d4_rho_other_plus:
+  rho_other_plus_+1_minus = 4068
+  rho_other_plus_+1_plus = 3904
+  rho_other_plus_+1_plus_rate_x1000000 = 489713
+  rho_other_plus_+1_total = 7972
+  rows = 7972
+  target_minus = 4068
+  target_plus = 3904
+  target_plus_rate_x1000000 = 489713
+group2_seeds_123_124_d4_rho_other_minus:
+  rho_other_minus_+1_minus = 4068
+  rho_other_minus_+1_plus = 3904
+  rho_other_minus_+1_plus_rate_x1000000 = 489713
+  rho_other_minus_+1_total = 7972
+  rows = 7972
+  target_minus = 4068
+  target_plus = 3904
+  target_plus_rate_x1000000 = 489713
+group2_seeds_123_124_d4_root_rho_actual:
+  root_rho_actual_+1_minus = 2034
+  root_rho_actual_+1_plus = 1952
+  root_rho_actual_+1_plus_rate_x1000000 = 489713
+  root_rho_actual_+1_total = 3986
+  root_rho_actual_-1_minus = 2034
+  root_rho_actual_-1_plus = 1952
+  root_rho_actual_-1_plus_rate_x1000000 = 489713
+  root_rho_actual_-1_total = 3986
+  rows = 7972
+  target_minus = 4068
+  target_plus = 3904
+  target_plus_rate_x1000000 = 489713
+group2_seeds_123_124_d4_root_A_other_plus:
+  root_A_other_plus_+1_minus = 2034
+  root_A_other_plus_+1_plus = 1952
+  root_A_other_plus_+1_plus_rate_x1000000 = 489713
+  root_A_other_plus_+1_total = 3986
+  root_A_other_plus_-1_minus = 2034
+  root_A_other_plus_-1_plus = 1952
+  root_A_other_plus_-1_plus_rate_x1000000 = 489713
+  root_A_other_plus_-1_total = 3986
+  rows = 7972
+  target_minus = 4068
+  target_plus = 3904
+  target_plus_rate_x1000000 = 489713
+train_group = group1_seeds_121_122
+heldout_group = group2_seeds_123_124
+h90_payload_span_d3:
+  features = eta, root_eta, A_actual, A_other_plus, A_other_minus, U_actual, W_actual, U_other, W_other, rho_actual, rho_other_plus, rho_other_minus, root_rho_actual, root_A_other_plus
+  train_rows = 16398
+  heldout_rows = 16122
+  exact_combo_weight_le_3 = none
+  best_low_weight_train_heldout max_weight=3:
+    train=8380/16398 0.511037931 heldout=8052/16122 0.499441757 weight=1 combo=U_actual
+    train=8380/16398 0.511037931 heldout=8052/16122 0.499441757 weight=2 combo=A_actual * U_actual
+    train=8380/16398 0.511037931 heldout=8052/16122 0.499441757 weight=2 combo=A_other_plus * U_actual
+    train=8380/16398 0.511037931 heldout=8052/16122 0.499441757 weight=2 combo=A_other_minus * U_actual
+    train=8380/16398 0.511037931 heldout=8052/16122 0.499441757 weight=2 combo=U_actual * rho_actual
+    train=8380/16398 0.511037931 heldout=8052/16122 0.499441757 weight=2 combo=U_actual * rho_other_plus
+    train=8380/16398 0.511037931 heldout=8052/16122 0.499441757 weight=2 combo=U_actual * rho_other_minus
+    train=8380/16398 0.511037931 heldout=8052/16122 0.499441757 weight=3 combo=A_actual * A_other_plus * U_actual
+    train=8380/16398 0.511037931 heldout=8052/16122 0.499441757 weight=3 combo=A_actual * A_other_minus * U_actual
+    train=8380/16398 0.511037931 heldout=8052/16122 0.499441757 weight=3 combo=A_other_plus * A_other_minus * U_actual
+    train=8380/16398 0.511037931 heldout=8052/16122 0.499441757 weight=3 combo=A_actual * U_actual * rho_actual
+    train=8380/16398 0.511037931 heldout=8052/16122 0.499441757 weight=3 combo=A_other_plus * U_actual * rho_actual
+h90_payload_span_d4:
+  features = eta, root_eta, A_actual, A_other_plus, A_other_minus, U_actual, W_actual, U_other, W_other, rho_actual, rho_other_plus, rho_other_minus, root_rho_actual, root_A_other_plus
+  train_rows = 8298
+  heldout_rows = 7972
+  exact_combo_weight_le_3 = none
+  best_low_weight_train_heldout max_weight=3:
+    train=4300/8298 0.518197156 heldout=3978/7972 0.498996488 weight=2 combo=-eta * U_other
+    train=4300/8298 0.518197156 heldout=3978/7972 0.498996488 weight=3 combo=-eta * A_actual * U_other
+    train=4300/8298 0.518197156 heldout=3978/7972 0.498996488 weight=3 combo=-eta * A_other_plus * U_other
+    train=4300/8298 0.518197156 heldout=3978/7972 0.498996488 weight=3 combo=-eta * A_other_minus * U_other
+    train=4300/8298 0.518197156 heldout=3978/7972 0.498996488 weight=3 combo=-eta * U_other * rho_actual
+    train=4300/8298 0.518197156 heldout=3978/7972 0.498996488 weight=3 combo=-eta * U_other * rho_other_plus
+    train=4300/8298 0.518197156 heldout=3978/7972 0.498996488 weight=3 combo=-eta * U_other * rho_other_minus
+    train=4300/8298 0.518197156 heldout=3978/7972 0.498996488 weight=3 combo=-root_eta * U_other * root_rho_actual
+    train=4300/8298 0.518197156 heldout=3978/7972 0.498996488 weight=3 combo=-root_eta * U_other * root_A_other_plus
+    train=4250/8298 0.512171608 heldout=3942/7972 0.494480682 weight=3 combo=U_actual * W_actual * W_other
+    train=4242/8298 0.511207520 heldout=4064/7972 0.509784245 weight=2 combo=U_actual * W_other
+    train=4242/8298 0.511207520 heldout=4064/7972 0.509784245 weight=3 combo=A_actual * U_actual * W_other
+p27_trace_norm_dplus_h90_payload_probe_rows=1/1

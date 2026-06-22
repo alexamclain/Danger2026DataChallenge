@@ -24,6 +24,13 @@ degree-4 cover is not secretly two cheap independent sourceable gates.  Any
 win now needs a special relation of this second-layer Kummer class to `d3`, or
 a non-obvious Prym/quotient.
 
+Follow-up telemetry:
+[P27 Trace/Norm Dplus H90 Payload Screen](p27_trace_norm_dplus_h90_payload_screen_20260622.md).
+On production-style Dplus rows, `A_eta` and its opposite-eta variants are
+already square, and low-weight products of `eta,U,W,rho` features do not
+predict `d3` or `d4` on heldout.  This closes the cheap finite-field bucket
+version of the branch-class idea.
+
 ## Symbolic Probe
 
 Gate:
@@ -150,6 +157,7 @@ Positive:
 The branch/Kummer class is explicit.
 The first quadratic layer is exactly the known domain-spin cover.
 The second-layer class has a concrete formula A_eta = U_eta + z*W_eta.
+The cheap row-level payload screen is complete.
 ```
 
 Negative:
@@ -157,6 +165,7 @@ Negative:
 ```text
 There is no hidden low-genus first-resolvent shortcut.
 The second-layer branch divisor degree is 16, not a tiny sourceable support.
+The A_eta squareclass is tautological after Dplus.
 This does not justify GPU production by itself.
 ```
 
@@ -193,12 +202,14 @@ continue = use A_eta as the named payload for GPU telemetry only if cheap
 
 kill = searching for a new first quadratic resolvent
 kill = treating L_eta as branch support; it is square/even on E_h90
+kill = low-weight eta/U/W/rho payload sign buckets
 kill = treating eta quartic as sourceable without d3 coupling or quotient split
 ```
 
 ## Linked Artifacts
 
 - Normalized quartic: [P27 Trace/Norm Dplus H90 Quartic Model](p27_trace_norm_dplus_h90_quartic_model_20260622.md)
+- Payload screen: [P27 Trace/Norm Dplus H90 Payload Screen](p27_trace_norm_dplus_h90_payload_screen_20260622.md)
 - H90 quotient: [P27 Trace/Norm Dplus H90 Quotient](p27_trace_norm_dplus_h90_quotient_20260622.md)
 - Relative descent: [P27 Trace/Norm Dplus Relative Descent](p27_trace_norm_dplus_relative_descent_20260622.md)
 - GPU handoff: [P27 GPU Dplus-Native Source Handoff](p27_gpu_dplus_native_source_handoff_20260622.md)

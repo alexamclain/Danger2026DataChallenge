@@ -386,6 +386,14 @@ cover `E_h90(z)`.  Magma reports odd branch divisor degree `16` for this
 second layer, giving genus `17`.  This kills a hidden low-genus first-resolvent
 shortcut; the next real test is whether this named second-layer class equals,
 recurs with, or predicts `d3`.
+The cheap finite-field payload screen is now negative:
+[P27 Trace/Norm Dplus H90 Payload Screen](evidence/p27_trace_norm_dplus_h90_payload_screen_20260622.md).
+On `16,398` train and `16,122` heldout Dplus candidates, all `A_eta`
+squareclasses are already `+1`, including opposite-eta variants.  Products of
+`eta`, `U`, `W`, `rho`, and root-orientation features have no exact
+weight-`<=3` predictor; train skews such as `U_actual` for `d3` and
+`-eta*U_other` for `d4` collapse on heldout.  The remaining Dplus-H90 test is
+actual d3 Kummer/divisor extraction on `E_h90(z)`, not more sign buckets.
 
 The naive orientation-source cover is now priced:
 [P27 Trace/Norm Source-Orientation Cover](evidence/p27_trace_norm_source_orientation_cover_20260621.md).
