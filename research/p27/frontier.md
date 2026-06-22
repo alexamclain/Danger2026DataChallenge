@@ -764,6 +764,16 @@ nonzero total-degree relation through degree `20`.  This kills the easiest
 "low-degree plane curve in raw `(R,L)`" source, and pushes the quotient search
 to the repeated Kummer tower variables instead.
 
+The obvious invariant-coordinate quotient screen is also negative:
+[P27 Conic-Pair Invariant Relation Screen](evidence/p27_conic_pair_invariant_relation_20260621.md).
+The same legal d3-plus preimages were tested in target coordinates `(A,x)`,
+signed conic coordinates `(c,r)`, and symmetric pairs such as
+`(R+1/R,L+a^2/L)`, `((R-1/R)^2,L+a^2/L)`, and
+`(R+1/R,(L+a)(L-a))`.  Through degree `20`, q1847/q2087 have no extra nullity
+in any tested pair system, and the only q1607 degree-20 artifact does not
+repeat.  This spends the cheap invariant plane-curve idea; the remaining live
+route must retain selector roots `Z_j` or use staged pullback/normalization.
+
 The K-line now has a cleaner coordinate for that extraction:
 [P27 Kummer Belyi Structure Probe](evidence/p27_kummer_belyi_structure_probe_20260621.md).
 Symbolically,

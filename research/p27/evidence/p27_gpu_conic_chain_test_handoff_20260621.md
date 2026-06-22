@@ -31,6 +31,7 @@ research/p27/evidence/p27_quadratic_gate_recurrence_20260621.md
 research/p27/evidence/p27_conic_chain_source_screen_20260621.md
 research/p27/evidence/p27_gpu_search_space_narrowing_20260621.md
 research/p27/evidence/p27_gpu_uprecheck_probe_20260621.md
+research/p27/evidence/p27_conic_pair_invariant_relation_20260621.md
 ```
 
 The recurrence is exact in the tested p27 tower:
@@ -162,6 +163,13 @@ The raw `(R,L)` low-degree quotient screen is negative:
 Do not ask GPU to search random `(R,L)` or low-degree raw plane-curve buckets.
 The remaining GPU-relevant target is a quotient/source in the repeated Kummer
 tower variables.
+
+The obvious invariant-coordinate quotient screen is also negative:
+[P27 Conic-Pair Invariant Relation Screen](p27_conic_pair_invariant_relation_20260621.md).
+Do not spend GPU time on bucket searches in simple symmetric pairs like
+`(R+1/R,L+a^2/L)`, `((R-1/R)^2,L+a^2/L)`, `(R+1/R,(L+a)(L-a))`,
+or `(c,r)`.  q1847/q2087 show no extra low-degree relation through degree 20,
+and the only q1607 degree-20 artifact failed to repeat.
 
 Report:
 

@@ -112,6 +112,12 @@ The raw `(R,L)` quotient screen is negative through total degree 20 on
 q1607/q1847/q2087.  The legal d3-plus preimages are not a small plane curve in
 the free sampler parameters, so the live quotient search must use tower/Kummer
 variables rather than raw `(R,L)` alone.
+The follow-up invariant-coordinate screen is also negative through degree 20
+in the obvious pair systems: `(A,x)`, `(c,r)`, `(r,d)`,
+`(R+1/R,L+a^2/L)`, `((R-1/R)^2,L+a^2/L)`,
+`(R+1/R,(L+a)(L-a))`, and related pairs.  q1847/q2087 have no extra nullity;
+the only q1607 degree-20 artifact does not repeat.  This kills the cheap
+"maybe the quotient is a plane curve after symmetrizing" path.
 ```
 
 Concrete next K/S test:
@@ -138,6 +144,7 @@ Kill condition:
 no low-genus quotient of the genus-37 layer, or d4 is a fresh unrelated cover
 no F_p descent of the sqrt(-1)-twisted alpha quotient
 no useful low-genus/function-field structure for the conic-chain pullback
+another low-degree plane-curve screen in raw or obvious invariant coordinates
 ```
 
 ## Current Alpha Status

@@ -1,0 +1,366 @@
+p27 conic-pair invariant relation probe
+points = sampler preimages of legal d3-plus classes
+nullity_extra = nullity beyond finite interpolation forced by unique count
+q1607 A_x:
+  rows = 1792
+  unique = 112
+  degenerate = 0
+  legal_unique_d3_plus_A_x = 112
+  plus_target_preimages = 1792
+  minus_target_preimages = 0
+  deg16: monomials=153 rank=112 nullity=41 forced=41 extra=0
+  deg18: monomials=190 rank=112 nullity=78 forced=78 extra=0
+  deg20: monomials=231 rank=112 nullity=119 forced=119 extra=0
+q1607 c_r:
+  rows = 1792
+  unique = 448
+  degenerate = 0
+  legal_unique_d3_plus_A_x = 112
+  plus_target_preimages = 1792
+  minus_target_preimages = 0
+  deg16: monomials=153 rank=153 nullity=0 forced=0 extra=0
+  deg18: monomials=190 rank=190 nullity=0 forced=0 extra=0
+  deg20: monomials=231 rank=231 nullity=0 forced=0 extra=0
+q1607 r_d:
+  rows = 1792
+  unique = 448
+  degenerate = 0
+  legal_unique_d3_plus_A_x = 112
+  plus_target_preimages = 1792
+  minus_target_preimages = 0
+  deg16: monomials=153 rank=153 nullity=0 forced=0 extra=0
+  deg18: monomials=190 rank=190 nullity=0 forced=0 extra=0
+  deg20: monomials=231 rank=231 nullity=0 forced=0 extra=0
+q1607 s_m:
+  rows = 1792
+  unique = 448
+  degenerate = 0
+  legal_unique_d3_plus_A_x = 112
+  plus_target_preimages = 1792
+  minus_target_preimages = 0
+  deg16: monomials=153 rank=153 nullity=0 forced=0 extra=0
+  deg18: monomials=190 rank=190 nullity=0 forced=0 extra=0
+  deg20: monomials=231 rank=231 nullity=0 forced=0 extra=0
+q1607 s_n:
+  rows = 1792
+  unique = 448
+  degenerate = 0
+  legal_unique_d3_plus_A_x = 112
+  plus_target_preimages = 1792
+  minus_target_preimages = 0
+  deg16: monomials=153 rank=153 nullity=0 forced=0 extra=0
+  deg18: monomials=190 rank=190 nullity=0 forced=0 extra=0
+  deg20: monomials=231 rank=231 nullity=0 forced=0 extra=0
+q1607 a2_m:
+  rows = 1792
+  unique = 224
+  degenerate = 0
+  legal_unique_d3_plus_A_x = 112
+  plus_target_preimages = 1792
+  minus_target_preimages = 0
+  deg16: monomials=153 rank=153 nullity=0 forced=0 extra=0
+  deg18: monomials=190 rank=190 nullity=0 forced=0 extra=0
+  deg20: monomials=231 rank=222 nullity=9 forced=7 extra=2
+  deg20_relation_terms=113 self_mismatches=0
+q1607 a2_n:
+  rows = 1792
+  unique = 224
+  degenerate = 0
+  legal_unique_d3_plus_A_x = 112
+  plus_target_preimages = 1792
+  minus_target_preimages = 0
+  deg16: monomials=153 rank=153 nullity=0 forced=0 extra=0
+  deg18: monomials=190 rank=190 nullity=0 forced=0 extra=0
+  deg20: monomials=231 rank=222 nullity=9 forced=7 extra=2
+  deg20_relation_terms=113 self_mismatches=0
+q1607 s_w:
+  rows = 1792
+  unique = 448
+  degenerate = 0
+  legal_unique_d3_plus_A_x = 112
+  plus_target_preimages = 1792
+  minus_target_preimages = 0
+  deg16: monomials=153 rank=153 nullity=0 forced=0 extra=0
+  deg18: monomials=190 rank=190 nullity=0 forced=0 extra=0
+  deg20: monomials=231 rank=231 nullity=0 forced=0 extra=0
+q1607 a2_w:
+  rows = 1792
+  unique = 224
+  degenerate = 0
+  legal_unique_d3_plus_A_x = 112
+  plus_target_preimages = 1792
+  minus_target_preimages = 0
+  deg16: monomials=153 rank=153 nullity=0 forced=0 extra=0
+  deg18: monomials=190 rank=190 nullity=0 forced=0 extra=0
+  deg20: monomials=231 rank=224 nullity=7 forced=7 extra=0
+q1607 s_lsym:
+  rows = 1792
+  unique = 896
+  degenerate = 0
+  legal_unique_d3_plus_A_x = 112
+  plus_target_preimages = 1792
+  minus_target_preimages = 0
+  deg16: monomials=153 rank=153 nullity=0 forced=0 extra=0
+  deg18: monomials=190 rank=190 nullity=0 forced=0 extra=0
+  deg20: monomials=231 rank=231 nullity=0 forced=0 extra=0
+q1607 s_lanti:
+  rows = 1792
+  unique = 896
+  degenerate = 0
+  legal_unique_d3_plus_A_x = 112
+  plus_target_preimages = 1792
+  minus_target_preimages = 0
+  deg16: monomials=153 rank=153 nullity=0 forced=0 extra=0
+  deg18: monomials=190 rank=190 nullity=0 forced=0 extra=0
+  deg20: monomials=231 rank=231 nullity=0 forced=0 extra=0
+q1607 m_n:
+  rows = 1792
+  unique = 448
+  degenerate = 0
+  legal_unique_d3_plus_A_x = 112
+  plus_target_preimages = 1792
+  minus_target_preimages = 0
+  deg16: monomials=153 rank=153 nullity=0 forced=0 extra=0
+  deg18: monomials=190 rank=190 nullity=0 forced=0 extra=0
+  deg20: monomials=231 rank=231 nullity=0 forced=0 extra=0
+q1847 A_x:
+  rows = 2880
+  unique = 180
+  degenerate = 0
+  legal_unique_d3_plus_A_x = 180
+  plus_target_preimages = 2880
+  minus_target_preimages = 0
+  deg16: monomials=153 rank=153 nullity=0 forced=0 extra=0
+  deg18: monomials=190 rank=180 nullity=10 forced=10 extra=0
+  deg20: monomials=231 rank=180 nullity=51 forced=51 extra=0
+q1847 c_r:
+  rows = 2880
+  unique = 720
+  degenerate = 0
+  legal_unique_d3_plus_A_x = 180
+  plus_target_preimages = 2880
+  minus_target_preimages = 0
+  deg16: monomials=153 rank=153 nullity=0 forced=0 extra=0
+  deg18: monomials=190 rank=190 nullity=0 forced=0 extra=0
+  deg20: monomials=231 rank=231 nullity=0 forced=0 extra=0
+q1847 r_d:
+  rows = 2880
+  unique = 720
+  degenerate = 0
+  legal_unique_d3_plus_A_x = 180
+  plus_target_preimages = 2880
+  minus_target_preimages = 0
+  deg16: monomials=153 rank=153 nullity=0 forced=0 extra=0
+  deg18: monomials=190 rank=190 nullity=0 forced=0 extra=0
+  deg20: monomials=231 rank=231 nullity=0 forced=0 extra=0
+q1847 s_m:
+  rows = 2880
+  unique = 720
+  degenerate = 0
+  legal_unique_d3_plus_A_x = 180
+  plus_target_preimages = 2880
+  minus_target_preimages = 0
+  deg16: monomials=153 rank=153 nullity=0 forced=0 extra=0
+  deg18: monomials=190 rank=190 nullity=0 forced=0 extra=0
+  deg20: monomials=231 rank=231 nullity=0 forced=0 extra=0
+q1847 s_n:
+  rows = 2880
+  unique = 720
+  degenerate = 0
+  legal_unique_d3_plus_A_x = 180
+  plus_target_preimages = 2880
+  minus_target_preimages = 0
+  deg16: monomials=153 rank=153 nullity=0 forced=0 extra=0
+  deg18: monomials=190 rank=190 nullity=0 forced=0 extra=0
+  deg20: monomials=231 rank=231 nullity=0 forced=0 extra=0
+q1847 a2_m:
+  rows = 2880
+  unique = 360
+  degenerate = 0
+  legal_unique_d3_plus_A_x = 180
+  plus_target_preimages = 2880
+  minus_target_preimages = 0
+  deg16: monomials=153 rank=153 nullity=0 forced=0 extra=0
+  deg18: monomials=190 rank=190 nullity=0 forced=0 extra=0
+  deg20: monomials=231 rank=231 nullity=0 forced=0 extra=0
+q1847 a2_n:
+  rows = 2880
+  unique = 360
+  degenerate = 0
+  legal_unique_d3_plus_A_x = 180
+  plus_target_preimages = 2880
+  minus_target_preimages = 0
+  deg16: monomials=153 rank=153 nullity=0 forced=0 extra=0
+  deg18: monomials=190 rank=190 nullity=0 forced=0 extra=0
+  deg20: monomials=231 rank=231 nullity=0 forced=0 extra=0
+q1847 s_w:
+  rows = 2880
+  unique = 720
+  degenerate = 0
+  legal_unique_d3_plus_A_x = 180
+  plus_target_preimages = 2880
+  minus_target_preimages = 0
+  deg16: monomials=153 rank=153 nullity=0 forced=0 extra=0
+  deg18: monomials=190 rank=190 nullity=0 forced=0 extra=0
+  deg20: monomials=231 rank=231 nullity=0 forced=0 extra=0
+q1847 a2_w:
+  rows = 2880
+  unique = 360
+  degenerate = 0
+  legal_unique_d3_plus_A_x = 180
+  plus_target_preimages = 2880
+  minus_target_preimages = 0
+  deg16: monomials=153 rank=153 nullity=0 forced=0 extra=0
+  deg18: monomials=190 rank=190 nullity=0 forced=0 extra=0
+  deg20: monomials=231 rank=231 nullity=0 forced=0 extra=0
+q1847 s_lsym:
+  rows = 2880
+  unique = 1436
+  degenerate = 0
+  legal_unique_d3_plus_A_x = 180
+  plus_target_preimages = 2880
+  minus_target_preimages = 0
+  deg16: monomials=153 rank=153 nullity=0 forced=0 extra=0
+  deg18: monomials=190 rank=190 nullity=0 forced=0 extra=0
+  deg20: monomials=231 rank=231 nullity=0 forced=0 extra=0
+q1847 s_lanti:
+  rows = 2880
+  unique = 1434
+  degenerate = 0
+  legal_unique_d3_plus_A_x = 180
+  plus_target_preimages = 2880
+  minus_target_preimages = 0
+  deg16: monomials=153 rank=153 nullity=0 forced=0 extra=0
+  deg18: monomials=190 rank=190 nullity=0 forced=0 extra=0
+  deg20: monomials=231 rank=231 nullity=0 forced=0 extra=0
+q1847 m_n:
+  rows = 2880
+  unique = 720
+  degenerate = 0
+  legal_unique_d3_plus_A_x = 180
+  plus_target_preimages = 2880
+  minus_target_preimages = 0
+  deg16: monomials=153 rank=153 nullity=0 forced=0 extra=0
+  deg18: monomials=190 rank=190 nullity=0 forced=0 extra=0
+  deg20: monomials=231 rank=231 nullity=0 forced=0 extra=0
+q2087 A_x:
+  rows = 1600
+  unique = 100
+  degenerate = 0
+  legal_unique_d3_plus_A_x = 100
+  plus_target_preimages = 1600
+  minus_target_preimages = 0
+  deg16: monomials=153 rank=100 nullity=53 forced=53 extra=0
+  deg18: monomials=190 rank=100 nullity=90 forced=90 extra=0
+  deg20: monomials=231 rank=100 nullity=131 forced=131 extra=0
+q2087 c_r:
+  rows = 1600
+  unique = 400
+  degenerate = 0
+  legal_unique_d3_plus_A_x = 100
+  plus_target_preimages = 1600
+  minus_target_preimages = 0
+  deg16: monomials=153 rank=153 nullity=0 forced=0 extra=0
+  deg18: monomials=190 rank=190 nullity=0 forced=0 extra=0
+  deg20: monomials=231 rank=231 nullity=0 forced=0 extra=0
+q2087 r_d:
+  rows = 1600
+  unique = 400
+  degenerate = 0
+  legal_unique_d3_plus_A_x = 100
+  plus_target_preimages = 1600
+  minus_target_preimages = 0
+  deg16: monomials=153 rank=153 nullity=0 forced=0 extra=0
+  deg18: monomials=190 rank=190 nullity=0 forced=0 extra=0
+  deg20: monomials=231 rank=231 nullity=0 forced=0 extra=0
+q2087 s_m:
+  rows = 1600
+  unique = 400
+  degenerate = 0
+  legal_unique_d3_plus_A_x = 100
+  plus_target_preimages = 1600
+  minus_target_preimages = 0
+  deg16: monomials=153 rank=153 nullity=0 forced=0 extra=0
+  deg18: monomials=190 rank=190 nullity=0 forced=0 extra=0
+  deg20: monomials=231 rank=231 nullity=0 forced=0 extra=0
+q2087 s_n:
+  rows = 1600
+  unique = 400
+  degenerate = 0
+  legal_unique_d3_plus_A_x = 100
+  plus_target_preimages = 1600
+  minus_target_preimages = 0
+  deg16: monomials=153 rank=153 nullity=0 forced=0 extra=0
+  deg18: monomials=190 rank=190 nullity=0 forced=0 extra=0
+  deg20: monomials=231 rank=231 nullity=0 forced=0 extra=0
+q2087 a2_m:
+  rows = 1600
+  unique = 200
+  degenerate = 0
+  legal_unique_d3_plus_A_x = 100
+  plus_target_preimages = 1600
+  minus_target_preimages = 0
+  deg16: monomials=153 rank=153 nullity=0 forced=0 extra=0
+  deg18: monomials=190 rank=190 nullity=0 forced=0 extra=0
+  deg20: monomials=231 rank=200 nullity=31 forced=31 extra=0
+q2087 a2_n:
+  rows = 1600
+  unique = 200
+  degenerate = 0
+  legal_unique_d3_plus_A_x = 100
+  plus_target_preimages = 1600
+  minus_target_preimages = 0
+  deg16: monomials=153 rank=153 nullity=0 forced=0 extra=0
+  deg18: monomials=190 rank=190 nullity=0 forced=0 extra=0
+  deg20: monomials=231 rank=200 nullity=31 forced=31 extra=0
+q2087 s_w:
+  rows = 1600
+  unique = 400
+  degenerate = 0
+  legal_unique_d3_plus_A_x = 100
+  plus_target_preimages = 1600
+  minus_target_preimages = 0
+  deg16: monomials=153 rank=153 nullity=0 forced=0 extra=0
+  deg18: monomials=190 rank=190 nullity=0 forced=0 extra=0
+  deg20: monomials=231 rank=231 nullity=0 forced=0 extra=0
+q2087 a2_w:
+  rows = 1600
+  unique = 200
+  degenerate = 0
+  legal_unique_d3_plus_A_x = 100
+  plus_target_preimages = 1600
+  minus_target_preimages = 0
+  deg16: monomials=153 rank=153 nullity=0 forced=0 extra=0
+  deg18: monomials=190 rank=190 nullity=0 forced=0 extra=0
+  deg20: monomials=231 rank=200 nullity=31 forced=31 extra=0
+q2087 s_lsym:
+  rows = 1600
+  unique = 800
+  degenerate = 0
+  legal_unique_d3_plus_A_x = 100
+  plus_target_preimages = 1600
+  minus_target_preimages = 0
+  deg16: monomials=153 rank=153 nullity=0 forced=0 extra=0
+  deg18: monomials=190 rank=190 nullity=0 forced=0 extra=0
+  deg20: monomials=231 rank=231 nullity=0 forced=0 extra=0
+q2087 s_lanti:
+  rows = 1600
+  unique = 800
+  degenerate = 0
+  legal_unique_d3_plus_A_x = 100
+  plus_target_preimages = 1600
+  minus_target_preimages = 0
+  deg16: monomials=153 rank=153 nullity=0 forced=0 extra=0
+  deg18: monomials=190 rank=190 nullity=0 forced=0 extra=0
+  deg20: monomials=231 rank=231 nullity=0 forced=0 extra=0
+q2087 m_n:
+  rows = 1600
+  unique = 400
+  degenerate = 0
+  legal_unique_d3_plus_A_x = 100
+  plus_target_preimages = 1600
+  minus_target_preimages = 0
+  deg16: monomials=153 rank=153 nullity=0 forced=0 extra=0
+  deg18: monomials=190 rank=190 nullity=0 forced=0 extra=0
+  deg20: monomials=231 rank=231 nullity=0 forced=0 extra=0
+p27_conic_pair_invariant_relation_probe_rows=1/1
