@@ -39,6 +39,7 @@ Supporting verdicts:
 ```text
 compactD_R/beta/d_next squareclass smoke = pass over q7/q23
 no-R genus pressure = genus <= 1 violated in 5/7 fields if one component
+no-R closed-point pressure = degree 2 and 3 closed points both nonzero
 reduced lift visible classifier = killed
 gamma visible square triviality = killed
 oriented alpha/beta word = tautological, not a source
@@ -98,7 +99,21 @@ field of definition
 singular/boundary points added by completion
 ```
 
-3. Compute quotient/Prym structure under the available symmetries:
+3. Compare degree-2 and degree-3 base changes:
+
+```text
+normalize over GF(7^2) and GF(7^3)
+normalize over GF(23^2) and GF(23^3), or give a reason one base is enough
+compute component count after each base change
+compute Frobenius permutation of components
+track whether gamma descends to components or permutes between them
+```
+
+This comparison is required because the closed-point transform has no degree-1
+points but has nonzero coprime degree-2 and degree-3 closed points in both
+base-field families.
+
+4. Compute quotient/Prym structure under the available symmetries:
 
 ```text
 W -> -W
@@ -108,7 +123,7 @@ X -> 1/X, if the reciprocal B involution lifts on the normalized model
 any component permutation induced by these maps
 ```
 
-4. For every genus `0` or `1` quotient, test whether the selected class
+5. For every genus `0` or `1` quotient, test whether the selected class
 descends nontrivially:
 
 ```text
@@ -118,7 +133,7 @@ materialization class x6^2 - Unext*x6 + 1
 f4/f3 class from the second reduced-fiber fixture
 ```
 
-5. Compare the f3 and f4 classes:
+6. Compare the f3 and f4 classes:
 
 ```text
 pullback

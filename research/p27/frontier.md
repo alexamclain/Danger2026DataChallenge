@@ -1234,6 +1234,12 @@ That ask is now packaged as an executable packet:
 Promote only a direct source map, a low-genus quotient carrying the selected
 class, or an f3/f4 coupling; kill constant-factor filters and GPU prechecks
 that pay a fresh classification toll.
+The extension behavior now has a sharper routing test:
+[P27 B-Line No-R Closed-Point Pressure](evidence/p27_b_line_noR_closed_point_pressure_20260622.md).
+Over both base `7` and base `23`, there are no degree-1 affine closed points
+but there are nonzero closed points in coprime degrees `2` and `3`.  This
+requires the CAS pass to compare degree-2 and degree-3 base changes and compute
+Frobenius component permutation/gamma descent, not just one small-field genus.
 The B-line visible two-gate quartic shortcut is closed as well:
 [P27 B-Line Gate4-Prefix Quartic q1847 Screen](evidence/p27_b_line_gate4_prefix_quartic_q1847_screen_20260622.md).
 It scans `6,300,872,423` q1847 coefficient triples for

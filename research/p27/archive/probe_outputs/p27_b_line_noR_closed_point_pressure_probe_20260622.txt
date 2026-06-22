@@ -1,0 +1,29 @@
+p27 B-line no-R closed-point/component pressure
+interpretation = affine Mobius transform; use as CAS component/quotient routing
+
+base GF(7)
+degree q noR_points noR_per_q gamma_points gamma_per_noR closed_noR closed_gamma
+1 7 0 0.000000000 0 0.000000000 0 0
+2 49 8 0.163265306 8 1.000000000 4 4
+3 343 288 0.839650146 144 0.500000000 96 48
+4 2401 1688 0.703040400 1680 0.995260664 420 418
+5 16807 18880 1.123341465 19520 1.033898305 3776 3904
+6 117649 124808 1.060850496 126728 1.015383629 20752 21096
+low_nonzero_closed_degrees = [2, 3, 4, 5, 6]
+coprime_nonzero_degree_pairs = [(2, 3), (2, 5), (3, 4), (3, 5), (4, 5), (5, 6)]
+
+base GF(23)
+degree q noR_points noR_per_q gamma_points gamma_per_noR closed_noR closed_gamma
+1 23 0 0.000000000 0 0.000000000 0 0
+2 529 648 1.224952741 520 0.802469136 324 260
+3 12167 12768 1.049395907 13296 1.041353383 4256 4432
+low_nonzero_closed_degrees = [2, 3]
+coprime_nonzero_degree_pairs = [(2, 3)]
+
+base GF(607)
+degree q noR_points noR_per_q gamma_points gamma_per_noR closed_noR closed_gamma
+1 607 1044 1.719934102 1036 0.992337165 1044 1036
+low_nonzero_closed_degrees = [1]
+coprime_nonzero_degree_pairs = []
+
+p27_b_line_noR_closed_point_pressure_probe_rows=1/1

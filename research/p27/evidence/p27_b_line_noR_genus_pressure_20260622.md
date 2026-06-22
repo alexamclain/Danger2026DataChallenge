@@ -71,6 +71,14 @@ genus_one_violations_if_one_component = 5/7
 max_g_min_if_one_component = 11
 ```
 
+Closed-point follow-up:
+[P27 B-Line No-R Closed-Point Pressure](p27_b_line_noR_closed_point_pressure_20260622.md).
+After adding the missing low-degree counts, the affine Mobius transform has no
+degree-1 closed points but nonzero coprime degree-2 and degree-3 closed points
+over both base `7` and base `23`.  Thus the next CAS pass must compare degree
+`2` and `3` base changes and Frobenius component permutation; a single
+extension-degree unlock is not supported.
+
 ## Interpretation
 
 Positive:
