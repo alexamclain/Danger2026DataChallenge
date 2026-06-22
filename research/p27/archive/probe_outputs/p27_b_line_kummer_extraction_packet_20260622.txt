@@ -26,6 +26,7 @@ Known finite-field facts to preserve:
   - no rational-linear support of weight <=4 for d3(B)
   - no one irreducible quadratic times <=2 linears for d3(B)
   - no product of two irreducible quadratics for d3(B)
+  - no product of two irreducible quadratics for the legal B-domain
 
 Source equations for the d3 all-plus cover over P1_B:
   variables: X, W, T, beta, R, z, Y, eta, Bline

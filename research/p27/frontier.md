@@ -986,6 +986,11 @@ It packages the quotient `B=8X^2/(X^2-1)^2`, the branch resultant
 `P1_B`, and a q1607 Magma sanity fixture.  The next accepted B-line result is
 a normalization/genus/branch-divisor computation over q1607/q1847/q2087, not
 another visible-factor or bucket screen.
+The legal-domain split degree-4 screen is now negative too:
+[P27 B-Line Legal-Domain Two-Quadratic Support Screen](evidence/p27_b_line_legal_two_quadratic_support_20260622.md).
+Inside the core B bucket, the legal B subset is not a product of two
+irreducible quadratic branch factors in q1607/q1847/q2087.  This kills the
+nearest low-degree split-divisor sampler for the `core B -> legal B` step.
 
 The B-line target is now stronger than a one-bit descent:
 [P27 B-Line Extension Counts And Deep Descent](evidence/p27_b_line_extension_and_deep_descent_20260622.md).

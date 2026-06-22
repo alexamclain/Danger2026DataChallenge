@@ -15,6 +15,10 @@ and one irreducible quadratic times up to two rational linears.
 It does not kill every degree-4 divisor on `P1_B`: irreducible quartic support
 or cubic-plus-linear support would require a different extraction method.
 
+Follow-up: the same two-quadratic support test is now also negative for the
+legal B-domain inside the core B bucket:
+[P27 B-Line Legal-Domain Two-Quadratic Support Screen](p27_b_line_legal_two_quadratic_support_20260622.md).
+
 ## Artifacts
 
 Updated probe:

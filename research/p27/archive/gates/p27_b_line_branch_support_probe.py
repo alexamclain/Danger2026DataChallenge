@@ -270,7 +270,13 @@ def print_counter(prefix: str, stats: Counter) -> None:
         print(f"  {key} = {stats[key]}")
 
 
-def run_field(q: int, max_weight: int, quadratic_d3: bool, quadratic_pair_d3: bool) -> None:
+def run_field(
+    q: int,
+    max_weight: int,
+    quadratic_d3: bool,
+    quadratic_pair_d3: bool,
+    quadratic_pair_legal: bool,
+) -> None:
     d3, d4, stats = legal_b_maps(q)
     core = core_b_values(q)
     stats["core_B"] = len(core)
@@ -308,7 +314,9 @@ def run_field(q: int, max_weight: int, quadratic_d3: bool, quadratic_pair_d3: bo
                     f"linear_factors={','.join(str(f) for f in factors) if factors else 'none'}"
                 )
 
-        if quadratic_pair_d3 and name == "d3_on_legalB":
+        if (quadratic_pair_d3 and name == "d3_on_legalB") or (
+            quadratic_pair_legal and name == "d2legal_on_coreB"
+        ):
             pair_stats, pair_solution = irreducible_quadratic_pair_search(q, rows)
             print_counter(f"q{q}_{name}_two_quadratic_support_stats", pair_stats)
             if pair_solution is None:
@@ -330,6 +338,7 @@ def main() -> int:
     parser.add_argument("--max-weight", type=int, default=4)
     parser.add_argument("--quadratic-d3", action="store_true")
     parser.add_argument("--quadratic-pair-d3", action="store_true")
+    parser.add_argument("--quadratic-pair-legal", action="store_true")
     args = parser.parse_args()
 
     print("p27 B-line branch-support probe")
@@ -338,8 +347,15 @@ def main() -> int:
     print(f"max_weight = {args.max_weight}")
     print(f"quadratic_d3 = {args.quadratic_d3}")
     print(f"quadratic_pair_d3 = {args.quadratic_pair_d3}")
+    print(f"quadratic_pair_legal = {args.quadratic_pair_legal}")
     for q in parse_ints(args.small_primes):
-        run_field(q, args.max_weight, args.quadratic_d3, args.quadratic_pair_d3)
+        run_field(
+            q,
+            args.max_weight,
+            args.quadratic_d3,
+            args.quadratic_pair_d3,
+            args.quadratic_pair_legal,
+        )
     print("p27_b_line_branch_support_probe_rows=1/1")
     return 0
 

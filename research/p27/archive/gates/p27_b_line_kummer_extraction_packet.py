@@ -157,6 +157,7 @@ def main() -> int:
     print("  - no rational-linear support of weight <=4 for d3(B)")
     print("  - no one irreducible quadratic times <=2 linears for d3(B)")
     print("  - no product of two irreducible quadratics for d3(B)")
+    print("  - no product of two irreducible quadratics for the legal B-domain")
     print()
 
     print("Source equations for the d3 all-plus cover over P1_B:")
