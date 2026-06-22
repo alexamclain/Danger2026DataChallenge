@@ -1,0 +1,636 @@
+p27 conic-pair B/K-enhanced relation probe
+rows = conic-pair sampler preimages of legal d3-plus targets
+added source coordinates = B, K, and S when single-valued
+pair_degrees = [2, 4, 6, 8, 10, 12]
+triple_degrees = [2, 4, 6]
+q1607_base:
+  all_ax = 196
+  d3plus_missing_or_mixed_S = 112
+  d3plus_targets = 112
+  draws = 2579236
+  enum_compact_not_target = 805
+  enum_no_label2_candidate = 408
+  target_preimage_rows = 1792
+  unique_preimage_rows = 1792
+q1607_B_R:
+  transform_rows = 1792
+  transform_unique = 448
+  transform_degenerate = 0
+  deg2: monomials=6 rank=6 nullity=0 forced=0 extra=0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg6: monomials=28 rank=28 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+  deg10: monomials=66 rank=66 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+q1607_B_L:
+  transform_rows = 1792
+  transform_unique = 448
+  transform_degenerate = 0
+  deg2: monomials=6 rank=6 nullity=0 forced=0 extra=0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg6: monomials=28 rank=28 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+  deg10: monomials=66 rank=66 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+q1607_B_s:
+  transform_rows = 1792
+  transform_unique = 224
+  transform_degenerate = 0
+  deg2: monomials=6 rank=6 nullity=0 forced=0 extra=0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg6: monomials=28 rank=28 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+  deg10: monomials=66 rank=66 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+q1607_B_m:
+  transform_rows = 1792
+  transform_unique = 224
+  transform_degenerate = 0
+  deg2: monomials=6 rank=6 nullity=0 forced=0 extra=0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg6: monomials=28 rank=28 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+  deg10: monomials=66 rank=66 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+q1607_B_n:
+  transform_rows = 1792
+  transform_unique = 224
+  transform_degenerate = 0
+  deg2: monomials=6 rank=6 nullity=0 forced=0 extra=0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg6: monomials=28 rank=28 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+  deg10: monomials=66 rank=66 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+q1607_B_w:
+  transform_rows = 1792
+  transform_unique = 224
+  transform_degenerate = 0
+  deg2: monomials=6 rank=6 nullity=0 forced=0 extra=0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg6: monomials=28 rank=28 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+  deg10: monomials=66 rank=66 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+q1607_B_c:
+  transform_rows = 1792
+  transform_unique = 56
+  transform_degenerate = 0
+  deg2: monomials=6 rank=5 nullity=1 forced=0 extra=1
+  deg2_relation_terms=3 self_mismatches=0
+  deg4: monomials=15 rank=9 nullity=6 forced=0 extra=6
+  deg4_relation_terms=3 self_mismatches=0
+  deg6: monomials=28 rank=13 nullity=15 forced=0 extra=15
+  deg6_relation_terms=3 self_mismatches=0
+  deg8: monomials=45 rank=17 nullity=28 forced=0 extra=28
+  deg8_relation_terms=3 self_mismatches=0
+  deg10: monomials=66 rank=21 nullity=45 forced=10 extra=35
+  deg10_relation_terms=3 self_mismatches=0
+  deg12: monomials=91 rank=25 nullity=66 forced=35 extra=31
+  deg12_relation_terms=3 self_mismatches=0
+q1607_B_r:
+  transform_rows = 1792
+  transform_unique = 224
+  transform_degenerate = 0
+  deg2: monomials=6 rank=6 nullity=0 forced=0 extra=0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg6: monomials=28 rank=28 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+  deg10: monomials=66 rank=66 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+q1607_K_R:
+  transform_rows = 1792
+  transform_unique = 448
+  transform_degenerate = 0
+  deg2: monomials=6 rank=6 nullity=0 forced=0 extra=0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg6: monomials=28 rank=28 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+  deg10: monomials=66 rank=66 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+q1607_K_L:
+  transform_rows = 1792
+  transform_unique = 448
+  transform_degenerate = 0
+  deg2: monomials=6 rank=6 nullity=0 forced=0 extra=0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg6: monomials=28 rank=28 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+  deg10: monomials=66 rank=66 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+q1607_K_s:
+  transform_rows = 1792
+  transform_unique = 224
+  transform_degenerate = 0
+  deg2: monomials=6 rank=6 nullity=0 forced=0 extra=0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg6: monomials=28 rank=28 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+  deg10: monomials=66 rank=66 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+q1607_K_m:
+  transform_rows = 1792
+  transform_unique = 224
+  transform_degenerate = 0
+  deg2: monomials=6 rank=6 nullity=0 forced=0 extra=0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg6: monomials=28 rank=28 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+  deg10: monomials=66 rank=66 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+q1607_S_R:
+  transform_rows = 0
+  transform_unique = 0
+  transform_degenerate = 1792
+  deg2: monomials=0 rank=0 nullity=0 forced=0 extra=0
+  deg4: monomials=0 rank=0 nullity=0 forced=0 extra=0
+  deg6: monomials=0 rank=0 nullity=0 forced=0 extra=0
+  deg8: monomials=0 rank=0 nullity=0 forced=0 extra=0
+  deg10: monomials=0 rank=0 nullity=0 forced=0 extra=0
+  deg12: monomials=0 rank=0 nullity=0 forced=0 extra=0
+q1607_S_L:
+  transform_rows = 0
+  transform_unique = 0
+  transform_degenerate = 1792
+  deg2: monomials=0 rank=0 nullity=0 forced=0 extra=0
+  deg4: monomials=0 rank=0 nullity=0 forced=0 extra=0
+  deg6: monomials=0 rank=0 nullity=0 forced=0 extra=0
+  deg8: monomials=0 rank=0 nullity=0 forced=0 extra=0
+  deg10: monomials=0 rank=0 nullity=0 forced=0 extra=0
+  deg12: monomials=0 rank=0 nullity=0 forced=0 extra=0
+q1607_B_R_L:
+  transform_rows = 1792
+  transform_unique = 1792
+  transform_degenerate = 0
+  deg2: monomials=10 rank=10 nullity=0 forced=0 extra=0
+  deg4: monomials=35 rank=35 nullity=0 forced=0 extra=0
+  deg6: monomials=84 rank=84 nullity=0 forced=0 extra=0
+q1607_B_s_m:
+  transform_rows = 1792
+  transform_unique = 448
+  transform_degenerate = 0
+  deg2: monomials=10 rank=10 nullity=0 forced=0 extra=0
+  deg4: monomials=35 rank=34 nullity=1 forced=0 extra=1
+  deg4_relation_terms=5 self_mismatches=0
+  deg6: monomials=84 rank=74 nullity=10 forced=0 extra=10
+  deg6_relation_terms=5 self_mismatches=0
+q1607_B_c_r:
+  transform_rows = 1792
+  transform_unique = 448
+  transform_degenerate = 0
+  deg2: monomials=10 rank=9 nullity=1 forced=0 extra=1
+  deg2_relation_terms=3 self_mismatches=0
+  deg4: monomials=35 rank=25 nullity=10 forced=0 extra=10
+  deg4_relation_terms=3 self_mismatches=0
+  deg6: monomials=84 rank=49 nullity=35 forced=0 extra=35
+  deg6_relation_terms=3 self_mismatches=0
+q1607_B_s_w:
+  transform_rows = 1792
+  transform_unique = 448
+  transform_degenerate = 0
+  deg2: monomials=10 rank=10 nullity=0 forced=0 extra=0
+  deg4: monomials=35 rank=35 nullity=0 forced=0 extra=0
+  deg6: monomials=84 rank=83 nullity=1 forced=0 extra=1
+  deg6_relation_terms=13 self_mismatches=0
+q1607_K_R_L:
+  transform_rows = 1792
+  transform_unique = 1792
+  transform_degenerate = 0
+  deg2: monomials=10 rank=10 nullity=0 forced=0 extra=0
+  deg4: monomials=35 rank=35 nullity=0 forced=0 extra=0
+  deg6: monomials=84 rank=84 nullity=0 forced=0 extra=0
+q1607_K_s_m:
+  transform_rows = 1792
+  transform_unique = 448
+  transform_degenerate = 0
+  deg2: monomials=10 rank=10 nullity=0 forced=0 extra=0
+  deg4: monomials=35 rank=35 nullity=0 forced=0 extra=0
+  deg6: monomials=84 rank=84 nullity=0 forced=0 extra=0
+q1607_S_R_L:
+  transform_rows = 0
+  transform_unique = 0
+  transform_degenerate = 1792
+  deg2: monomials=0 rank=0 nullity=0 forced=0 extra=0
+  deg4: monomials=0 rank=0 nullity=0 forced=0 extra=0
+  deg6: monomials=0 rank=0 nullity=0 forced=0 extra=0
+q1847_base:
+  all_ax = 252
+  d3plus_missing_or_mixed_S = 180
+  d3plus_targets = 180
+  draws = 3407716
+  enum_compact_not_target = 873
+  enum_no_label2_candidate = 468
+  target_preimage_rows = 2880
+  unique_preimage_rows = 2880
+q1847_B_R:
+  transform_rows = 2880
+  transform_unique = 720
+  transform_degenerate = 0
+  deg2: monomials=6 rank=6 nullity=0 forced=0 extra=0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg6: monomials=28 rank=28 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+  deg10: monomials=66 rank=66 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+q1847_B_L:
+  transform_rows = 2880
+  transform_unique = 714
+  transform_degenerate = 0
+  deg2: monomials=6 rank=6 nullity=0 forced=0 extra=0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg6: monomials=28 rank=28 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+  deg10: monomials=66 rank=66 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+q1847_B_s:
+  transform_rows = 2880
+  transform_unique = 360
+  transform_degenerate = 0
+  deg2: monomials=6 rank=6 nullity=0 forced=0 extra=0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg6: monomials=28 rank=28 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+  deg10: monomials=66 rank=66 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+q1847_B_m:
+  transform_rows = 2880
+  transform_unique = 360
+  transform_degenerate = 0
+  deg2: monomials=6 rank=6 nullity=0 forced=0 extra=0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg6: monomials=28 rank=28 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+  deg10: monomials=66 rank=66 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+q1847_B_n:
+  transform_rows = 2880
+  transform_unique = 360
+  transform_degenerate = 0
+  deg2: monomials=6 rank=6 nullity=0 forced=0 extra=0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg6: monomials=28 rank=28 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+  deg10: monomials=66 rank=66 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+q1847_B_w:
+  transform_rows = 2880
+  transform_unique = 360
+  transform_degenerate = 0
+  deg2: monomials=6 rank=6 nullity=0 forced=0 extra=0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg6: monomials=28 rank=28 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+  deg10: monomials=66 rank=66 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+q1847_B_c:
+  transform_rows = 2880
+  transform_unique = 90
+  transform_degenerate = 0
+  deg2: monomials=6 rank=5 nullity=1 forced=0 extra=1
+  deg2_relation_terms=3 self_mismatches=0
+  deg4: monomials=15 rank=9 nullity=6 forced=0 extra=6
+  deg4_relation_terms=3 self_mismatches=0
+  deg6: monomials=28 rank=13 nullity=15 forced=0 extra=15
+  deg6_relation_terms=3 self_mismatches=0
+  deg8: monomials=45 rank=17 nullity=28 forced=0 extra=28
+  deg8_relation_terms=3 self_mismatches=0
+  deg10: monomials=66 rank=21 nullity=45 forced=0 extra=45
+  deg10_relation_terms=3 self_mismatches=0
+  deg12: monomials=91 rank=25 nullity=66 forced=1 extra=65
+  deg12_relation_terms=3 self_mismatches=0
+q1847_B_r:
+  transform_rows = 2880
+  transform_unique = 360
+  transform_degenerate = 0
+  deg2: monomials=6 rank=6 nullity=0 forced=0 extra=0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg6: monomials=28 rank=28 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+  deg10: monomials=66 rank=66 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+q1847_K_R:
+  transform_rows = 2880
+  transform_unique = 720
+  transform_degenerate = 0
+  deg2: monomials=6 rank=6 nullity=0 forced=0 extra=0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg6: monomials=28 rank=28 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+  deg10: monomials=66 rank=66 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+q1847_K_L:
+  transform_rows = 2880
+  transform_unique = 714
+  transform_degenerate = 0
+  deg2: monomials=6 rank=6 nullity=0 forced=0 extra=0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg6: monomials=28 rank=28 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+  deg10: monomials=66 rank=66 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+q1847_K_s:
+  transform_rows = 2880
+  transform_unique = 360
+  transform_degenerate = 0
+  deg2: monomials=6 rank=6 nullity=0 forced=0 extra=0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg6: monomials=28 rank=28 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+  deg10: monomials=66 rank=66 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+q1847_K_m:
+  transform_rows = 2880
+  transform_unique = 360
+  transform_degenerate = 0
+  deg2: monomials=6 rank=6 nullity=0 forced=0 extra=0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg6: monomials=28 rank=28 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+  deg10: monomials=66 rank=66 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+q1847_S_R:
+  transform_rows = 0
+  transform_unique = 0
+  transform_degenerate = 2880
+  deg2: monomials=0 rank=0 nullity=0 forced=0 extra=0
+  deg4: monomials=0 rank=0 nullity=0 forced=0 extra=0
+  deg6: monomials=0 rank=0 nullity=0 forced=0 extra=0
+  deg8: monomials=0 rank=0 nullity=0 forced=0 extra=0
+  deg10: monomials=0 rank=0 nullity=0 forced=0 extra=0
+  deg12: monomials=0 rank=0 nullity=0 forced=0 extra=0
+q1847_S_L:
+  transform_rows = 0
+  transform_unique = 0
+  transform_degenerate = 2880
+  deg2: monomials=0 rank=0 nullity=0 forced=0 extra=0
+  deg4: monomials=0 rank=0 nullity=0 forced=0 extra=0
+  deg6: monomials=0 rank=0 nullity=0 forced=0 extra=0
+  deg8: monomials=0 rank=0 nullity=0 forced=0 extra=0
+  deg10: monomials=0 rank=0 nullity=0 forced=0 extra=0
+  deg12: monomials=0 rank=0 nullity=0 forced=0 extra=0
+q1847_B_R_L:
+  transform_rows = 2880
+  transform_unique = 2880
+  transform_degenerate = 0
+  deg2: monomials=10 rank=10 nullity=0 forced=0 extra=0
+  deg4: monomials=35 rank=35 nullity=0 forced=0 extra=0
+  deg6: monomials=84 rank=84 nullity=0 forced=0 extra=0
+q1847_B_s_m:
+  transform_rows = 2880
+  transform_unique = 720
+  transform_degenerate = 0
+  deg2: monomials=10 rank=10 nullity=0 forced=0 extra=0
+  deg4: monomials=35 rank=34 nullity=1 forced=0 extra=1
+  deg4_relation_terms=5 self_mismatches=0
+  deg6: monomials=84 rank=74 nullity=10 forced=0 extra=10
+  deg6_relation_terms=5 self_mismatches=0
+q1847_B_c_r:
+  transform_rows = 2880
+  transform_unique = 720
+  transform_degenerate = 0
+  deg2: monomials=10 rank=9 nullity=1 forced=0 extra=1
+  deg2_relation_terms=3 self_mismatches=0
+  deg4: monomials=35 rank=25 nullity=10 forced=0 extra=10
+  deg4_relation_terms=3 self_mismatches=0
+  deg6: monomials=84 rank=49 nullity=35 forced=0 extra=35
+  deg6_relation_terms=3 self_mismatches=0
+q1847_B_s_w:
+  transform_rows = 2880
+  transform_unique = 720
+  transform_degenerate = 0
+  deg2: monomials=10 rank=10 nullity=0 forced=0 extra=0
+  deg4: monomials=35 rank=35 nullity=0 forced=0 extra=0
+  deg6: monomials=84 rank=83 nullity=1 forced=0 extra=1
+  deg6_relation_terms=13 self_mismatches=0
+q1847_K_R_L:
+  transform_rows = 2880
+  transform_unique = 2880
+  transform_degenerate = 0
+  deg2: monomials=10 rank=10 nullity=0 forced=0 extra=0
+  deg4: monomials=35 rank=35 nullity=0 forced=0 extra=0
+  deg6: monomials=84 rank=84 nullity=0 forced=0 extra=0
+q1847_K_s_m:
+  transform_rows = 2880
+  transform_unique = 720
+  transform_degenerate = 0
+  deg2: monomials=10 rank=10 nullity=0 forced=0 extra=0
+  deg4: monomials=35 rank=35 nullity=0 forced=0 extra=0
+  deg6: monomials=84 rank=84 nullity=0 forced=0 extra=0
+q1847_S_R_L:
+  transform_rows = 0
+  transform_unique = 0
+  transform_degenerate = 2880
+  deg2: monomials=0 rank=0 nullity=0 forced=0 extra=0
+  deg4: monomials=0 rank=0 nullity=0 forced=0 extra=0
+  deg6: monomials=0 rank=0 nullity=0 forced=0 extra=0
+q2087_base:
+  all_ax = 228
+  d3plus_missing_or_mixed_S = 100
+  d3plus_targets = 100
+  draws = 4351396
+  enum_compact_not_target = 1109
+  enum_no_label2_candidate = 520
+  target_preimage_rows = 1600
+  unique_preimage_rows = 1600
+q2087_B_R:
+  transform_rows = 1600
+  transform_unique = 400
+  transform_degenerate = 0
+  deg2: monomials=6 rank=6 nullity=0 forced=0 extra=0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg6: monomials=28 rank=28 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+  deg10: monomials=66 rank=66 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+q2087_B_L:
+  transform_rows = 1600
+  transform_unique = 400
+  transform_degenerate = 0
+  deg2: monomials=6 rank=6 nullity=0 forced=0 extra=0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg6: monomials=28 rank=28 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+  deg10: monomials=66 rank=66 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+q2087_B_s:
+  transform_rows = 1600
+  transform_unique = 200
+  transform_degenerate = 0
+  deg2: monomials=6 rank=6 nullity=0 forced=0 extra=0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg6: monomials=28 rank=28 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+  deg10: monomials=66 rank=66 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+q2087_B_m:
+  transform_rows = 1600
+  transform_unique = 200
+  transform_degenerate = 0
+  deg2: monomials=6 rank=6 nullity=0 forced=0 extra=0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg6: monomials=28 rank=28 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+  deg10: monomials=66 rank=66 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+q2087_B_n:
+  transform_rows = 1600
+  transform_unique = 200
+  transform_degenerate = 0
+  deg2: monomials=6 rank=6 nullity=0 forced=0 extra=0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg6: monomials=28 rank=28 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+  deg10: monomials=66 rank=66 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+q2087_B_w:
+  transform_rows = 1600
+  transform_unique = 200
+  transform_degenerate = 0
+  deg2: monomials=6 rank=6 nullity=0 forced=0 extra=0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg6: monomials=28 rank=28 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+  deg10: monomials=66 rank=66 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+q2087_B_c:
+  transform_rows = 1600
+  transform_unique = 50
+  transform_degenerate = 0
+  deg2: monomials=6 rank=5 nullity=1 forced=0 extra=1
+  deg2_relation_terms=3 self_mismatches=0
+  deg4: monomials=15 rank=9 nullity=6 forced=0 extra=6
+  deg4_relation_terms=3 self_mismatches=0
+  deg6: monomials=28 rank=13 nullity=15 forced=0 extra=15
+  deg6_relation_terms=3 self_mismatches=0
+  deg8: monomials=45 rank=17 nullity=28 forced=0 extra=28
+  deg8_relation_terms=3 self_mismatches=0
+  deg10: monomials=66 rank=21 nullity=45 forced=16 extra=29
+  deg10_relation_terms=3 self_mismatches=0
+  deg12: monomials=91 rank=25 nullity=66 forced=41 extra=25
+  deg12_relation_terms=3 self_mismatches=0
+q2087_B_r:
+  transform_rows = 1600
+  transform_unique = 200
+  transform_degenerate = 0
+  deg2: monomials=6 rank=6 nullity=0 forced=0 extra=0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg6: monomials=28 rank=28 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+  deg10: monomials=66 rank=66 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+q2087_K_R:
+  transform_rows = 1600
+  transform_unique = 400
+  transform_degenerate = 0
+  deg2: monomials=6 rank=6 nullity=0 forced=0 extra=0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg6: monomials=28 rank=28 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+  deg10: monomials=66 rank=66 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+q2087_K_L:
+  transform_rows = 1600
+  transform_unique = 400
+  transform_degenerate = 0
+  deg2: monomials=6 rank=6 nullity=0 forced=0 extra=0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg6: monomials=28 rank=28 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+  deg10: monomials=66 rank=66 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+q2087_K_s:
+  transform_rows = 1600
+  transform_unique = 200
+  transform_degenerate = 0
+  deg2: monomials=6 rank=6 nullity=0 forced=0 extra=0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg6: monomials=28 rank=28 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+  deg10: monomials=66 rank=66 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+q2087_K_m:
+  transform_rows = 1600
+  transform_unique = 200
+  transform_degenerate = 0
+  deg2: monomials=6 rank=6 nullity=0 forced=0 extra=0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg6: monomials=28 rank=28 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+  deg10: monomials=66 rank=66 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+q2087_S_R:
+  transform_rows = 0
+  transform_unique = 0
+  transform_degenerate = 1600
+  deg2: monomials=0 rank=0 nullity=0 forced=0 extra=0
+  deg4: monomials=0 rank=0 nullity=0 forced=0 extra=0
+  deg6: monomials=0 rank=0 nullity=0 forced=0 extra=0
+  deg8: monomials=0 rank=0 nullity=0 forced=0 extra=0
+  deg10: monomials=0 rank=0 nullity=0 forced=0 extra=0
+  deg12: monomials=0 rank=0 nullity=0 forced=0 extra=0
+q2087_S_L:
+  transform_rows = 0
+  transform_unique = 0
+  transform_degenerate = 1600
+  deg2: monomials=0 rank=0 nullity=0 forced=0 extra=0
+  deg4: monomials=0 rank=0 nullity=0 forced=0 extra=0
+  deg6: monomials=0 rank=0 nullity=0 forced=0 extra=0
+  deg8: monomials=0 rank=0 nullity=0 forced=0 extra=0
+  deg10: monomials=0 rank=0 nullity=0 forced=0 extra=0
+  deg12: monomials=0 rank=0 nullity=0 forced=0 extra=0
+q2087_B_R_L:
+  transform_rows = 1600
+  transform_unique = 1600
+  transform_degenerate = 0
+  deg2: monomials=10 rank=10 nullity=0 forced=0 extra=0
+  deg4: monomials=35 rank=35 nullity=0 forced=0 extra=0
+  deg6: monomials=84 rank=84 nullity=0 forced=0 extra=0
+q2087_B_s_m:
+  transform_rows = 1600
+  transform_unique = 400
+  transform_degenerate = 0
+  deg2: monomials=10 rank=10 nullity=0 forced=0 extra=0
+  deg4: monomials=35 rank=34 nullity=1 forced=0 extra=1
+  deg4_relation_terms=5 self_mismatches=0
+  deg6: monomials=84 rank=74 nullity=10 forced=0 extra=10
+  deg6_relation_terms=5 self_mismatches=0
+q2087_B_c_r:
+  transform_rows = 1600
+  transform_unique = 400
+  transform_degenerate = 0
+  deg2: monomials=10 rank=9 nullity=1 forced=0 extra=1
+  deg2_relation_terms=3 self_mismatches=0
+  deg4: monomials=35 rank=25 nullity=10 forced=0 extra=10
+  deg4_relation_terms=3 self_mismatches=0
+  deg6: monomials=84 rank=49 nullity=35 forced=0 extra=35
+  deg6_relation_terms=3 self_mismatches=0
+q2087_B_s_w:
+  transform_rows = 1600
+  transform_unique = 400
+  transform_degenerate = 0
+  deg2: monomials=10 rank=10 nullity=0 forced=0 extra=0
+  deg4: monomials=35 rank=35 nullity=0 forced=0 extra=0
+  deg6: monomials=84 rank=83 nullity=1 forced=0 extra=1
+  deg6_relation_terms=13 self_mismatches=0
+q2087_K_R_L:
+  transform_rows = 1600
+  transform_unique = 1600
+  transform_degenerate = 0
+  deg2: monomials=10 rank=10 nullity=0 forced=0 extra=0
+  deg4: monomials=35 rank=35 nullity=0 forced=0 extra=0
+  deg6: monomials=84 rank=84 nullity=0 forced=0 extra=0
+q2087_K_s_m:
+  transform_rows = 1600
+  transform_unique = 400
+  transform_degenerate = 0
+  deg2: monomials=10 rank=10 nullity=0 forced=0 extra=0
+  deg4: monomials=35 rank=35 nullity=0 forced=0 extra=0
+  deg6: monomials=84 rank=84 nullity=0 forced=0 extra=0
+q2087_S_R_L:
+  transform_rows = 0
+  transform_unique = 0
+  transform_degenerate = 1600
+  deg2: monomials=0 rank=0 nullity=0 forced=0 extra=0
+  deg4: monomials=0 rank=0 nullity=0 forced=0 extra=0
+  deg6: monomials=0 rank=0 nullity=0 forced=0 extra=0
+p27_conic_pair_b_enhanced_relation_probe_rows=1/1

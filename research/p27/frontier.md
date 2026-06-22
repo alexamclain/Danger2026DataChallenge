@@ -777,6 +777,15 @@ again show local all-plus plateaus, but their stopping gates disagree.  This
 kills GPU sign-word bucket hunting from short conic words alone; GPU
 recurrence telemetry is now only a larger-scale confirmation unless a
 legal-pullback sampler or quotient appears.
+The first B-enhanced legal-pullback relation screen gives a useful staging
+surface:
+[P27 Conic-Pair B/K-Enhanced Pullback Screen](evidence/p27_conic_pair_b_enhanced_pullback_20260622.md).
+Raw `(B,R)`, `(B,L)`, `(K,R)`, `(K,L)`, and `(B,R,L)` systems remain
+full-rank, but `(B,s,m)` has the stable equation
+`m^2*(B^2+s^2-4)=4*s^2*(s^2-4)`, with `s=R+1/R` and `m=L+a^2/L`.
+Together with the tautology `B^2+c^2=4`, this is a cleaner CAS staging
+coordinate for the legal pullback.  It still does not select the sparse legal
+B-domain, so it is not a GPU sampler by itself.
 
 The first raw quotient screen is negative:
 [P27 Conic-Pair Low-Degree Relation Screen](evidence/p27_conic_pair_lowdegree_relation_20260621.md).

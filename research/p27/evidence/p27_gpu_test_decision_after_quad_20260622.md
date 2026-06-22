@@ -55,6 +55,11 @@ transfer stably.  This lowers the priority of GPU sign-word bucket hunting
 unless the GPU run is explicitly a much larger confirmation with the same
 source-normalized accounting.
 
+Update: [P27 Conic-Pair B/K-Enhanced Pullback Screen](p27_conic_pair_b_enhanced_pullback_20260622.md)
+found a useful staging equation,
+`m^2*(B^2+s^2-4)=4*s^2*(s^2-4)`, but it does not impose the sparse legal
+B-domain.  Treat it as CAS input, not as a direct GPU sampler.
+
 ## Interpretation
 
 The GPU has validated a mathematical coordinate system, not a production

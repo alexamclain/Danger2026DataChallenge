@@ -185,6 +185,13 @@ heldout depth-14 survivor tail has only two rows.  q1607/q1847/q2087 show
 local plateaus, but their kill gates disagree.  This kills GPU sign-word
 bucket hunting from short conic words alone; use GPU only for much larger
 bounded confirmation or for a direct legal-pullback sampler.
+The B/K-enhanced legal-pullback screen gives one positive staging coordinate:
+[P27 Conic-Pair B/K-Enhanced Pullback Screen](p27_conic_pair_b_enhanced_pullback_20260622.md).
+It finds the expected `B^2+c^2=4` and the stable surface
+`m^2*(B^2+s^2-4)=4*s^2*(s^2-4)`, where `s=R+1/R` and `m=L+a^2/L`.
+All direct `(B,R)`, `(B,L)`, `(K,R)`, `(K,L)`, and `(B,R,L)` shortcuts remain
+full-rank.  This is a CAS staging win, not a source sampler: the legal B-domain
+still has to be imposed.
 The base-curve sampler test is negative.  In q1607/q1847/q2087 the base curve
 has exactly `q` affine `(K,A)` points and contains every realized legal d2
 point, but only `49/1607`, `63/1847`, and `57/2087` base points are realized
