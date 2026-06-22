@@ -2140,6 +2140,13 @@ mainline, fused/native `Dplus` is the only immediate GPU engineering ask, and
 the new bridge test is reconstructing whether `Dplus` H90 coordinates map
 cheaply to the A-level `d3` surface.  More gamma/sign-word GPU buckets stay
 killed unless CAS names a quotient or source.
+The coordinate bridge part is now solved:
+[P27 Trace/Norm Dplus A-Coordinate Bridge](evidence/p27_trace_norm_dplus_a_coordinate_bridge_20260622.md).
+On same-stream `Dplus` rows, `A = (t - 1/t)^4/4 - 2` exactly matches the
+candidate A, so the next cross-lane question is not finding `A`; it is comparing
+the pulled-back A-level `d3` class with the H90 payload
+`A_eta = U_eta + z*W_eta`.  The bridge is not a source shrink by itself:
+`d3/d4` remain balanced half-gates in the probe.
 
 ### Card 4c: K-Line Fit Significance
 

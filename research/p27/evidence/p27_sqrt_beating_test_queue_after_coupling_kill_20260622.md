@@ -171,6 +171,20 @@ Can the Dplus H90/quotient coordinates map cheaply to the A-line coordinate
 that carries post-Dplus d3/d4?
 ```
 
+Status update:
+[P27 Trace/Norm Dplus A-Coordinate Bridge](p27_trace_norm_dplus_a_coordinate_bridge_20260622.md)
+solves the coordinate part of this test.  On same-stream `Dplus` rows,
+
+```text
+A = (t^8 - 4*t^6 - 2*t^4 - 4*t^2 + 1)/(4*t^4)
+A = (t - 1/t)^4/4 - 2
+```
+
+matches the candidate A exactly, and both candidate roots for one `y` share
+the same A.  Therefore the remaining bridge test is not to find `A`; it is to
+compare the pulled-back A-level `d3` Kummer class with the H90 second-layer
+payload `A_eta = U_eta + z*W_eta`.
+
 This is the most concrete bridge test after the coupling kill.  We know:
 
 ```text
@@ -198,24 +212,24 @@ root/sheet ids needed for replay
 Required analysis:
 
 ```text
-try bounded rational reconstruction A = R(t,w,z,eta) or A = R(a,g,z,eta)
+use the exact map A = (t - 1/t)^4/4 - 2
 compare the induced d3 class with A_eta = U_eta + z*W_eta
-record whether the map is low-degree, high-degree/generic, or sheet-dependent
+record whether the pulled-back A-level d3 class equals, differs by coboundary,
+or shares a quotient/Prym factor with the H90 class
 ```
 
 Promote:
 
 ```text
-a low-degree/sourceable map from Dplus H90 coordinates to the A-level d3 class,
-or a quotient/Prym relation between A_eta and d3
+a quotient/Prym/coboundary relation between A_eta and the pulled-back A-level
+d3 class, or a sourceable recurrence controlling later gates
 ```
 
 Kill:
 
 ```text
-no stable bounded-degree map appears across heldout streams, and the A-level
-class remains independent of the H90 payload except through ordinary candidate
-materialization
+the pulled-back A-level d3 class is independent of the H90 payload except
+through ordinary candidate materialization
 ```
 
 ## Priority
@@ -223,8 +237,8 @@ materialization
 ```text
 1. A-level Kummer extraction is the mathematical mainline.
 2. Dplus fused/native pricing is the only immediate GPU implementation ask.
-3. Dplus-to-A bridge reconstruction is the next cross-lane telemetry ask if
-   the fused path can emit the required columns cheaply.
+3. Dplus-to-A coordinate reconstruction is solved; the next cross-lane task is
+   class comparison between pulled-back A-level d3 and H90 A_eta.
 4. Gamma4/Gamma5 is offline CAS only until it names a quotient/source.
 ```
 
@@ -234,10 +248,11 @@ materialization
 continue = normalized A-level Kummer extraction
 continue = offline CAS comparison of gamma4/gamma5
 continue = fused/native Dplus pricing with A/d3 telemetry columns
-continue = Dplus-to-A map reconstruction if same-stream rows are available
+continue = Dplus/H90 A_eta versus pulled-back A-level d3 class comparison
 
 kill = more sign-word/gamma bucket GPU scans
 kill = standalone H90 payload sign screens
+kill = searching for another low-degree Dplus-to-A coordinate map
 kill = visible low-degree A/B/K formula fishing without a divisor reason
 kill = large p27 production run based only on the current Dplus classifier
 ```

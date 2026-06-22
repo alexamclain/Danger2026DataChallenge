@@ -81,13 +81,23 @@
     },
     {
       "name": "dplus_to_a_bridge_reconstruction",
-      "kind": "gpu_cas_bridge",
-      "question": "Can Dplus H90/quotient coordinates map cheaply to the A-line coordinate that carries post-Dplus d3/d4?",
+      "kind": "gpu_cas_bridge_completed_coordinate_map",
+      "question": "Can the solved Dplus-to-A coordinate bridge be used to compare the H90 payload class with the pulled-back A-level d3 class?",
+      "status": "coordinate bridge solved by research/p27/evidence/p27_trace_norm_dplus_a_coordinate_bridge_20260622.md",
+      "coordinate_map": [
+        "t = y - 1",
+        "a = t - 1/t",
+        "A = (t^8 - 4*t^6 - 2*t^4 - 4*t^2 + 1)/(4*t^4)",
+        "A = a^4/4 - 2",
+        "A + 2 = ((t^2 - 1)^2/(2*t^2))^2",
+        "A - 2 = -(((t^2 + 1)*w)/(2*t^2))^2"
+      ],
       "inputs": [
         "research/p27/evidence/p27_trace_norm_dplus_h90_quartic_model_20260622.md",
         "research/p27/evidence/p27_trace_norm_dplus_h90_branch_class_20260622.md",
         "research/p27/evidence/p27_trace_norm_dplus_h90_payload_screen_20260622.md",
-        "research/p27/evidence/p27_trace_norm_dplus_a_descent_20260622.md"
+        "research/p27/evidence/p27_trace_norm_dplus_a_descent_20260622.md",
+        "research/p27/evidence/p27_trace_norm_dplus_a_coordinate_bridge_20260622.md"
       ],
       "same_stream_columns": [
         "y",
@@ -100,12 +110,12 @@
         "root/sheet ids needed for replay"
       ],
       "required_analysis": [
-        "try bounded rational reconstruction A = R(t,w,z,eta) or A = R(a,g,z,eta)",
+        "use exact A = (t - 1/t)^4/4 - 2",
         "compare the induced d3 class with A_eta = U_eta + z*W_eta",
-        "record whether the map is low-degree, high-degree/generic, or sheet-dependent"
+        "record whether pulled-back A-level d3 equals, differs by coboundary from, or shares a quotient/Prym factor with A_eta"
       ],
-      "promote_if": "low-degree/sourceable map from Dplus H90 coordinates to A-level d3 class or quotient/Prym relation between A_eta and d3",
-      "kill_if": "no stable bounded-degree map across heldout streams and A-level class remains independent of H90 payload except through ordinary candidate materialization"
+      "promote_if": "quotient/Prym/coboundary relation between A_eta and pulled-back A-level d3, or sourceable recurrence controlling later gates",
+      "kill_if": "pulled-back A-level d3 class is independent of the H90 payload except through ordinary candidate materialization"
     }
   ],
   "priority_order": [

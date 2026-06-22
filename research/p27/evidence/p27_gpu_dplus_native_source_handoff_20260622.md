@@ -198,6 +198,19 @@ same A-descent persists at GPU scale, and should route later-gate class work
 to the A-level Kummer extraction packet unless it finds a genuine trace/norm
 class not visible on A.
 
+Coordinate bridge update:
+[P27 Trace/Norm Dplus A-Coordinate Bridge](p27_trace_norm_dplus_a_coordinate_bridge_20260622.md)
+shows that the A coordinate is already cheap from the H90/base coordinate:
+
+```text
+t = y - 1
+A = (t - 1/t)^4/4 - 2
+```
+
+So a fused-Dplus GPU telemetry mode can emit A-level columns from `y/t`
+without first materializing root-dependent candidate A.  This is only a
+telemetry/source-accounting convenience; it does not by itself predict `d3/d4`.
+
 Promotion:
 
 ```text
