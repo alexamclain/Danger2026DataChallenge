@@ -113,6 +113,14 @@ replays the K/S and H90 checks in the actual p27-signature fields
 q1607/q1847/q2087 with zero mismatches.  The broader fallback queue is now
 packaged in [P27 Post-Quartic CAS Suite Handoff](p27_post_quartic_cas_suite_handoff_20260622.md).
 
+Update:
+[P27 K/Sroot Prefix Profile](p27_sroot_prefix_profile_20260622.md)
+checks whether `Sroot` gives a stronger selected-prefix sampler than `K`.
+It does not: in q1607/q1847/q2087 and exact extension checks, Sroot counts are
+exactly doubled K counts with identical prefix ratios and no mixed groups.
+This strengthens `Sroot` as the normalization coordinate but kills Sroot
+prefix density as a GPU/source shortcut.
+
 ## Why This Is The Right Next Test
 
 Already killed:
@@ -162,6 +170,7 @@ continue = alpha-equivariant quotient/Prym extraction if the model is tractable
 
 kill = broader visible K/S coefficient scans
 kill = odd Sroot semi-invariant classes
+kill = Sroot prefix-density bucket production
 kill = GPU production work until this yields a direct sampler or cheap test
 ```
 

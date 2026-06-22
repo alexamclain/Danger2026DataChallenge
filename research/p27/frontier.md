@@ -931,6 +931,12 @@ K/lambda branch class extraction with the rational K-square stratum preserved,
 and the trace/norm half-norm phase identity.  GPU is demoted to bounded
 telemetry or direct-sampler testing until one of those produces a named class
 or source.
+The K/Sroot density shortcut is now priced too:
+[P27 K/Sroot Prefix Profile](evidence/p27_sroot_prefix_profile_20260622.md).
+It shows that selected prefix bits descend cleanly to both K and Sroot, but
+Sroot is only a doubled K grouping with identical all-plus prefix ratios.  This
+strengthens Sroot as the normalization coordinate for CAS and kills Sroot
+prefix buckets as a GPU/source shortcut.
 The direct sign-word coupling telemetry now agrees:
 [P27 Conic Sign-Word Coupling Probe](evidence/p27_conic_signword_coupling_20260622.md).
 On `4000 + 4000` p27 train/heldout unique `(A,x5)` rows, the all-plus conic

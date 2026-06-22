@@ -130,6 +130,12 @@ genus/support field degrees
 whether lambda-level structure lifts back to the K-square stratum
 ```
 
+The K/Sroot prefix-density shortcut is now closed:
+[P27 K/Sroot Prefix Profile](p27_sroot_prefix_profile_20260622.md).
+Sroot is still the cleaner normalization coordinate, but in every tested field
+it is just a doubled K grouping with identical selected-prefix ratios.  Use it
+for branch extraction, not GPU bucket production.
+
 First bounded subtest, now closed in the decisive field:
 
 ```text

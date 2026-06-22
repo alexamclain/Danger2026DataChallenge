@@ -167,6 +167,12 @@ fiber has 64 rows and one selected A, while every Sroot fiber has 32 rows and
 one selected A; all tracked fiber histograms have zero anomalous fibers.  This
 promotes Sroot as the cleaner CAS coordinate and kills rational-fiber anomaly
 search as a source of sqrt beating.
+The K/Sroot prefix profile now adds the next negative:
+[P27 K/Sroot Prefix Profile](p27_sroot_prefix_profile_20260622.md).
+Selected bits `d3..d8` descend to K and Sroot with no mixed groups, but Sroot
+is exactly a doubled copy of K for prefix-density purposes.  The q2087 plateau
+through gate7 is field-local and stops at gate8; q1607/q1847 stop at different
+gates.  So Sroot remains a normalization coordinate, not a GPU/source bucket.
 The K/A graph is now explicit.  With `L=K^2`, all d2-plus rows satisfy
 `64(A-2)^2(A+2)L^2 + 64(A+2)(A+14)(3A+10)L - (A-2)^4 = 0`, with
 discriminant `256(A+2)(A+6)^2(A^2+60A+132)^2`.  This is the first-half source
@@ -423,6 +429,7 @@ another ad hoc two-step Kummer trivariate bucket scan without a new coordinate
 K-line affine or reciprocal-affine recurrence scans
 K/Sroot reverse-root plane relation scans in `z`, `x6`, `r`, or `z +/- 1/z`
 K/Sroot bucket searches based only on the constant-fiber extension counts
+K/Sroot prefix-density buckets without a named class or recurrence
 rational K/Sroot fiber-anomaly searches
 direct GPU sampling of the K/A base curve
 an A-projection or A-bucket search based only on selected-prefix filters
