@@ -220,6 +220,12 @@ conjugation on both sides.  There is no exact full-domain recurrence for
 `d3 -> d4` or later transitions in q1607/q1847/q2087.  The few perfect-looking
 later rows cover only small one-sided tails, so they do not promote an A-line
 dynamic sampler.
+The K/lambda branch-dynamics analogue is also negative:
+[P27 Lambda Monomial Recurrence Screen](p27_lambda_monomial_recurrence_screen_20260622.md).
+It tests S3-conjugated `lambda -> lambda^m` maps for `m=2..12` on
+`lambda=-K^2/4`.  No exact `d3/d4` recurrence appears in q1471/q1607/q1847,
+and coverage is low.  Lambda is still a normalization coordinate for
+branch-class extraction, not a source or recurrence by itself.
 The B/K-enhanced legal-pullback screen gives one positive staging coordinate:
 [P27 Conic-Pair B/K-Enhanced Pullback Screen](p27_conic_pair_b_enhanced_pullback_20260622.md).
 It finds the expected `B^2+c^2=4` and the stable surface

@@ -121,6 +121,13 @@ The lambda coordinate can still help a symbolic branch-class computation over
 the algebraic closure, but any useful p27 source must lift back to the
 rational `K` square stratum.
 
+Follow-up:
+[P27 Lambda Monomial Recurrence Screen](p27_lambda_monomial_recurrence_screen_20260622.md)
+tests the canonical Belyi dynamics on this normalized line,
+`lambda -> lambda^m` with S3 conjugation, for `m=2..12`.  It finds no exact
+`d3/d4` recurrence in q1471/q1607/q1847, so lambda remains a normalization
+coordinate rather than a recurrence/source shortcut.
+
 ## Next Test
 
 Use `lambda` only as a normalization aid.  The live source question is:

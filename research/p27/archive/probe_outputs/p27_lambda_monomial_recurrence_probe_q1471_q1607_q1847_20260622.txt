@@ -1,0 +1,235 @@
+p27 lambda monomial Belyi recurrence probe
+screen = d4(lambda) or d3(lambda) via S3-conjugated lambda -> lambda^m
+degrees = 2,3,4,5,6,7,8,9,10,11,12
+q1471_setup:
+  chi_minus_one = -1
+  chi_two = 1
+  d3_lambda_rows = 50
+  d4_lambda_rows = 28
+  q_mod_16 = 15
+  setup_d3_eprime_input_rows = 200
+  setup_d3_eprime_minus = 44
+  setup_d3_eprime_plus = 56
+  setup_d3_eprime_quotient_rows = 100
+  setup_d3_k_input_rows = 100
+  setup_d3_k_k_rows = 50
+  setup_d3_k_minus = 22
+  setup_d3_k_plus = 28
+  setup_d3_lambda_input_k_rows = 50
+  setup_d3_lambda_lambda_rows = 50
+  setup_d3_lambda_minus = 22
+  setup_d3_lambda_plus = 28
+  setup_d4_eprime_input_rows = 112
+  setup_d4_eprime_minus = 28
+  setup_d4_eprime_plus = 28
+  setup_d4_eprime_quotient_rows = 56
+  setup_d4_k_input_rows = 56
+  setup_d4_k_k_rows = 28
+  setup_d4_k_minus = 14
+  setup_d4_k_plus = 14
+  setup_d4_lambda_input_k_rows = 28
+  setup_d4_lambda_lambda_rows = 28
+  setup_d4_lambda_minus = 14
+  setup_d4_lambda_plus = 14
+  setup_enum_compact_not_target = 837
+  setup_enum_no_label2_candidate = 424
+  setup_quotient_d3_minus_E_points = 88
+  setup_quotient_d3_missing_on_E_orbit = 0
+  setup_quotient_d3_not_descended_to_E = 0
+  setup_quotient_d3_plus_E_points = 112
+  setup_quotient_d3_quotient_rows = 200
+  setup_quotient_d4_minus_E_points_after_d3 = 56
+  setup_quotient_d4_missing_on_E_orbit = 0
+  setup_quotient_d4_not_descended_to_E = 0
+  setup_quotient_d4_plus_E_points_after_d3 = 56
+  setup_quotient_d4_quotient_rows_after_d3 = 112
+  setup_quotient_orbit_size_4 = 200
+  setup_quotient_oriented_candidates = 800
+  setup_quotient_quotient_E_points = 200
+q1471_lambda_monomial_recurrence_stats:
+  forward_best_coverage_x1000000 = 142857
+  forward_best_covered = 4
+  forward_best_match_x1000000 = 107142
+  forward_best_matches = 3
+  maps_tested = 396
+  reverse_best_coverage_x1000000 = 140000
+  reverse_best_covered = 7
+  reverse_best_match_x1000000 = 100000
+  reverse_best_matches = 5
+q1471_forward_d4_eq_d3_lambda_monomial_best:
+  1-u o u^5 o 1-u polarity=1 covered=4/28 matches=3 undefined=0
+  1-u o u^5 o (u-1)/u polarity=-1 covered=4/28 matches=3 undefined=0
+  1-u o u^6 o u polarity=1 covered=4/28 matches=3 undefined=0
+  1-u o u^6 o 1/u polarity=-1 covered=4/28 matches=3 undefined=0
+  1-u o u^6 o 1/(1-u) polarity=-1 covered=4/28 matches=3 undefined=0
+  1-u o u^6 o u/(u-1) polarity=1 covered=4/28 matches=3 undefined=0
+  1-u o u^10 o u polarity=-1 covered=4/28 matches=3 undefined=0
+  1-u o u^10 o 1/u polarity=1 covered=4/28 matches=3 undefined=0
+  1-u o u^10 o 1/(1-u) polarity=1 covered=4/28 matches=3 undefined=0
+  1-u o u^10 o u/(u-1) polarity=-1 covered=4/28 matches=3 undefined=0
+q1471_reverse_d3_eq_d4_lambda_monomial_best:
+  1-u o u^10 o u/(u-1) polarity=1 covered=7/50 matches=5 undefined=0
+  1/(1-u) o u^10 o u/(u-1) polarity=-1 covered=7/50 matches=5 undefined=0
+  u/(u-1) o u^10 o (u-1)/u polarity=-1 covered=7/50 matches=5 undefined=0
+  (u-1)/u o u^10 o (u-1)/u polarity=1 covered=7/50 matches=5 undefined=0
+  1-u o u^10 o u/(u-1) polarity=-1 covered=7/50 matches=2 undefined=0
+  1/(1-u) o u^10 o u/(u-1) polarity=1 covered=7/50 matches=2 undefined=0
+  u/(u-1) o u^10 o (u-1)/u polarity=1 covered=7/50 matches=2 undefined=0
+  (u-1)/u o u^10 o (u-1)/u polarity=-1 covered=7/50 matches=2 undefined=0
+  1-u o u^5 o 1-u polarity=1 covered=6/50 matches=4 undefined=0
+  1-u o u^5 o (u-1)/u polarity=1 covered=6/50 matches=4 undefined=0
+q1607_setup:
+  chi_minus_one = -1
+  chi_two = 1
+  d3_lambda_rows = 49
+  d4_lambda_rows = 28
+  q_mod_16 = 7
+  setup_d3_eprime_input_rows = 196
+  setup_d3_eprime_minus = 42
+  setup_d3_eprime_plus = 56
+  setup_d3_eprime_quotient_rows = 98
+  setup_d3_k_input_rows = 98
+  setup_d3_k_k_rows = 49
+  setup_d3_k_minus = 21
+  setup_d3_k_plus = 28
+  setup_d3_lambda_input_k_rows = 49
+  setup_d3_lambda_lambda_rows = 49
+  setup_d3_lambda_minus = 21
+  setup_d3_lambda_plus = 28
+  setup_d4_eprime_input_rows = 112
+  setup_d4_eprime_minus = 18
+  setup_d4_eprime_plus = 38
+  setup_d4_eprime_quotient_rows = 56
+  setup_d4_k_input_rows = 56
+  setup_d4_k_k_rows = 28
+  setup_d4_k_minus = 9
+  setup_d4_k_plus = 19
+  setup_d4_lambda_input_k_rows = 28
+  setup_d4_lambda_lambda_rows = 28
+  setup_d4_lambda_minus = 9
+  setup_d4_lambda_plus = 19
+  setup_enum_compact_not_target = 805
+  setup_enum_no_label2_candidate = 408
+  setup_quotient_d3_minus_E_points = 84
+  setup_quotient_d3_missing_on_E_orbit = 0
+  setup_quotient_d3_not_descended_to_E = 0
+  setup_quotient_d3_plus_E_points = 112
+  setup_quotient_d3_quotient_rows = 196
+  setup_quotient_d4_minus_E_points_after_d3 = 36
+  setup_quotient_d4_missing_on_E_orbit = 0
+  setup_quotient_d4_not_descended_to_E = 0
+  setup_quotient_d4_plus_E_points_after_d3 = 76
+  setup_quotient_d4_quotient_rows_after_d3 = 112
+  setup_quotient_orbit_size_4 = 196
+  setup_quotient_oriented_candidates = 784
+  setup_quotient_quotient_E_points = 196
+q1607_lambda_monomial_recurrence_stats:
+  forward_best_coverage_x1000000 = 178571
+  forward_best_covered = 5
+  forward_best_match_x1000000 = 142857
+  forward_best_matches = 4
+  maps_tested = 396
+  reverse_best_coverage_x1000000 = 122448
+  reverse_best_covered = 6
+  reverse_best_match_x1000000 = 81632
+  reverse_best_matches = 4
+q1607_forward_d4_eq_d3_lambda_monomial_best:
+  1-u o u^5 o u/(u-1) polarity=1 covered=5/28 matches=4 undefined=0
+  1/(1-u) o u^6 o (u-1)/u polarity=1 covered=5/28 matches=4 undefined=0
+  1/(1-u) o u^9 o 1/(1-u) polarity=-1 covered=5/28 matches=4 undefined=0
+  u/(u-1) o u^6 o u/(u-1) polarity=1 covered=5/28 matches=4 undefined=0
+  u/(u-1) o u^9 o 1-u polarity=-1 covered=5/28 matches=4 undefined=0
+  (u-1)/u o u^5 o (u-1)/u polarity=1 covered=5/28 matches=4 undefined=0
+  1/(1-u) o u^2 o 1-u polarity=-1 covered=5/28 matches=3 undefined=0
+  1/(1-u) o u^4 o u/(u-1) polarity=1 covered=5/28 matches=3 undefined=0
+  1/(1-u) o u^11 o 1/(1-u) polarity=-1 covered=5/28 matches=3 undefined=1
+  u/(u-1) o u^2 o 1/(1-u) polarity=-1 covered=5/28 matches=3 undefined=0
+q1607_reverse_d3_eq_d4_lambda_monomial_best:
+  u o u^3 o u polarity=-1 covered=6/49 matches=4 undefined=0
+  1/u o u^3 o 1/u polarity=-1 covered=6/49 matches=4 undefined=0
+  u o u^3 o u polarity=1 covered=6/49 matches=2 undefined=0
+  1/u o u^3 o 1/u polarity=1 covered=6/49 matches=2 undefined=0
+  1-u o u^12 o 1-u polarity=-1 covered=5/49 matches=5 undefined=0
+  (u-1)/u o u^12 o 1/(1-u) polarity=-1 covered=5/49 matches=5 undefined=0
+  1-u o u^3 o 1-u polarity=1 covered=5/49 matches=4 undefined=0
+  1/(1-u) o u^2 o 1-u polarity=1 covered=5/49 matches=4 undefined=0
+  u/(u-1) o u^2 o 1/(1-u) polarity=1 covered=5/49 matches=4 undefined=0
+  (u-1)/u o u^3 o 1/(1-u) polarity=1 covered=5/49 matches=4 undefined=0
+q1847_setup:
+  chi_minus_one = -1
+  chi_two = 1
+  d3_lambda_rows = 63
+  d4_lambda_rows = 45
+  q_mod_16 = 7
+  setup_d3_eprime_input_rows = 252
+  setup_d3_eprime_minus = 36
+  setup_d3_eprime_plus = 90
+  setup_d3_eprime_quotient_rows = 126
+  setup_d3_k_input_rows = 126
+  setup_d3_k_k_rows = 63
+  setup_d3_k_minus = 18
+  setup_d3_k_plus = 45
+  setup_d3_lambda_input_k_rows = 63
+  setup_d3_lambda_lambda_rows = 63
+  setup_d3_lambda_minus = 18
+  setup_d3_lambda_plus = 45
+  setup_d4_eprime_input_rows = 180
+  setup_d4_eprime_minus = 52
+  setup_d4_eprime_plus = 38
+  setup_d4_eprime_quotient_rows = 90
+  setup_d4_k_input_rows = 90
+  setup_d4_k_k_rows = 45
+  setup_d4_k_minus = 26
+  setup_d4_k_plus = 19
+  setup_d4_lambda_input_k_rows = 45
+  setup_d4_lambda_lambda_rows = 45
+  setup_d4_lambda_minus = 26
+  setup_d4_lambda_plus = 19
+  setup_enum_compact_not_target = 873
+  setup_enum_no_label2_candidate = 468
+  setup_quotient_d3_minus_E_points = 72
+  setup_quotient_d3_missing_on_E_orbit = 0
+  setup_quotient_d3_not_descended_to_E = 0
+  setup_quotient_d3_plus_E_points = 180
+  setup_quotient_d3_quotient_rows = 252
+  setup_quotient_d4_minus_E_points_after_d3 = 104
+  setup_quotient_d4_missing_on_E_orbit = 0
+  setup_quotient_d4_not_descended_to_E = 0
+  setup_quotient_d4_plus_E_points_after_d3 = 76
+  setup_quotient_d4_quotient_rows_after_d3 = 180
+  setup_quotient_orbit_size_4 = 252
+  setup_quotient_oriented_candidates = 1008
+  setup_quotient_quotient_E_points = 252
+q1847_lambda_monomial_recurrence_stats:
+  forward_best_coverage_x1000000 = 200000
+  forward_best_covered = 9
+  forward_best_match_x1000000 = 155555
+  forward_best_matches = 7
+  maps_tested = 396
+  reverse_best_coverage_x1000000 = 158730
+  reverse_best_covered = 10
+  reverse_best_match_x1000000 = 95238
+  reverse_best_matches = 6
+q1847_forward_d4_eq_d3_lambda_monomial_best:
+  1/(1-u) o u^7 o (u-1)/u polarity=1 covered=9/45 matches=7 undefined=0
+  u/(u-1) o u^7 o u/(u-1) polarity=1 covered=9/45 matches=7 undefined=0
+  1-u o u^3 o 1-u polarity=-1 covered=9/45 matches=5 undefined=0
+  1-u o u^11 o (u-1)/u polarity=-1 covered=9/45 matches=5 undefined=0
+  (u-1)/u o u^3 o 1/(1-u) polarity=-1 covered=9/45 matches=5 undefined=0
+  (u-1)/u o u^11 o u/(u-1) polarity=-1 covered=9/45 matches=5 undefined=0
+  1-u o u^3 o 1-u polarity=1 covered=9/45 matches=4 undefined=0
+  1-u o u^11 o (u-1)/u polarity=1 covered=9/45 matches=4 undefined=0
+  (u-1)/u o u^3 o 1/(1-u) polarity=1 covered=9/45 matches=4 undefined=0
+  (u-1)/u o u^11 o u/(u-1) polarity=1 covered=9/45 matches=4 undefined=0
+q1847_reverse_d3_eq_d4_lambda_monomial_best:
+  1/(1-u) o u^12 o (u-1)/u polarity=-1 covered=10/63 matches=6 undefined=0
+  u/(u-1) o u^12 o u/(u-1) polarity=-1 covered=10/63 matches=6 undefined=0
+  1/(1-u) o u^12 o (u-1)/u polarity=1 covered=10/63 matches=4 undefined=0
+  u/(u-1) o u^12 o u/(u-1) polarity=1 covered=10/63 matches=4 undefined=0
+  1-u o u^11 o (u-1)/u polarity=1 covered=9/63 matches=6 undefined=0
+  (u-1)/u o u^11 o u/(u-1) polarity=1 covered=9/63 matches=6 undefined=0
+  1-u o u^3 o 1-u polarity=-1 covered=9/63 matches=5 undefined=0
+  (u-1)/u o u^3 o 1/(1-u) polarity=-1 covered=9/63 matches=5 undefined=0
+  1-u o u^3 o 1-u polarity=1 covered=9/63 matches=4 undefined=0
+  (u-1)/u o u^3 o 1/(1-u) polarity=1 covered=9/63 matches=4 undefined=0
+p27_lambda_monomial_recurrence_probe_rows=1/1

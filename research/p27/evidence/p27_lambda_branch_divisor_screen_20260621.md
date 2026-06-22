@@ -123,6 +123,12 @@ explains the decisive d3 bit.
 No GPU sampler follows from this lambda-line family.
 ```
 
+The canonical lambda branch-dynamics recurrence is now negative too:
+[P27 Lambda Monomial Recurrence Screen](p27_lambda_monomial_recurrence_screen_20260622.md).
+It tests S3-conjugated maps `lambda -> lambda^m` for `m=2..12` and finds no
+exact forward or reverse `d3/d4` recurrence in q1471/q1607/q1847.  The best
+forward coverages are only `4/28`, `5/28`, and `9/45`.
+
 What remains:
 
 ```text
@@ -156,6 +162,7 @@ fresh half-cover.
 continue = Magma/Sage branch-class extraction over lambda
 continue = exact irreducible cubic/quartic support only if it is not blind fitting
 kill = split degree <=4 lambda branch divisors for d3
+kill = S3-conjugated lambda monomial recurrences for m=2..12
 kill = q1471/q1607-only d4 lambda fits as recurrence evidence
 ```
 

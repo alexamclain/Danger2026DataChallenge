@@ -906,6 +906,13 @@ main `d3 -> d4` best coverages are only `10/28`, `17/45`, and `9/25`.  Later
 perfect-looking rows are low-coverage small-field one-sided tails.  This
 leaves normalized A-cover Kummer extraction, not A-line dynamics, as the live
 route.
+The K/lambda normalized branch line has the same negative outcome:
+[P27 Lambda Monomial Recurrence Screen](evidence/p27_lambda_monomial_recurrence_screen_20260622.md).
+It tests S3-conjugated `lambda -> lambda^m` maps for `m=2..12` on
+`lambda=-K^2/4`.  There is no exact forward or reverse `d3/d4` recurrence in
+q1471/q1607/q1847, with best forward coverages only `4/28`, `5/28`, and
+`9/45`.  Thus lambda remains useful for branch-class normalization, not as a
+standalone recurrence/source.
 The direct sign-word coupling telemetry now agrees:
 [P27 Conic Sign-Word Coupling Probe](evidence/p27_conic_signword_coupling_20260622.md).
 On `4000 + 4000` p27 train/heldout unique `(A,x5)` rows, the all-plus conic
