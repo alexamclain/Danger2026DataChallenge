@@ -960,6 +960,32 @@ Do not ask GPU to sample the base curve directly; it mostly produces non-legal
 points and does not avoid the legal-cover toll.
 ```
 
+B-parameter follow-up:
+[P27 B-Parameter Base-Curve Sampler Probe](p27_kline_base_param_sampler_20260622.md).
+
+```text
+A = B^2 - 2
+branch0: L = -(B + 2)^4 / (8 B (B - 2)^2)
+branch1: L =  (B - 2)^4 / (8 B (B + 2)^2)
+
+stable all-recall bucket:
+  atoms = K, B+2, B-2, L
+  bits  = 0, 0,   1,   0
+
+q1607/q1847/q2087:
+  d2 all-recall lift ~= 8.04x
+  d3plus all-recall lift ~= 8.04x
+```
+
+Updated GPU action:
+
+```text
+Yes to a bounded same-stream GPU telemetry probe of the B bucket if it is cheap
+to emit the four squareclass bits along the existing p27 path.
+No to a larger production GPU run from this alone: the win is constant-factor,
+not below-sqrt, and the sharper partial buckets are field-sensitive.
+```
+
 K/S first-half cover update:
 [P27 K/S First-Half Cover Magma Smoke](p27_ks_first_half_cover_magma_20260621.md).
 [P27 K/S First-Half Alpha-Lift Obstruction](p27_ks_first_half_alpha_lift_obstruction_20260621.md).

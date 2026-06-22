@@ -935,6 +935,18 @@ curve is a good normalization coordinate, not a direct GPU source.  The live
 object is still the additional legal cover over the base, especially the d3
 reverse-root cover over `P1_Sroot`.
 
+The B-rationalized follow-up is positive as bounded telemetry, but not as a
+production source:
+[P27 B-Parameter Base-Curve Sampler Probe](evidence/p27_kline_base_param_sampler_20260622.md).
+With `A=B^2-2`, the base branches are
+`L=-(B+2)^4/(8B(B-2)^2)` and `L=(B-2)^4/(8B(B+2)^2)`.  Across
+q1607/q1847/q2087, every realized legal d2 row and every d3plus row lies in
+the same core bucket for `K`, `B+2`, `B-2`, and `L`, with about `8.04x`
+all-recall lift.  That is a real constant-factor scope shrink and a good
+bounded GPU telemetry target.  It is not sqrt-beating by itself: the bucket is
+still field-sized, and the higher-lift partial buckets are not stable enough
+to promote without a theorem.
+
 The first Belyi-normalized source family is now killed:
 [P27 Lambda Branch-Divisor Screen](evidence/p27_lambda_branch_divisor_screen_20260621.md).
 It tested `z^2=f(lambda)` with `deg_lambda(f)<=4`, where

@@ -161,6 +161,13 @@ point, but only `49/1607`, `63/1847`, and `57/2087` base points are realized
 by the legal source.  Natural K/A squareclass atoms up to weight 4 do not pick
 out the legal subset.  So the base curve is a CAS coordinate, not a direct GPU
 sampler.
+The B-parameter follow-up is a real but only constant-factor improvement.
+After adjoining `B` with `A=B^2-2`, all realized d2 and d3plus rows in
+q1607/q1847/q2087 lie in a stable bucket for `K`, `B+2`, `B-2`, and `L=K^2`;
+the bucket has about `8.04x` all-recall lift in each promotion field.  This is
+worth bounded GPU telemetry if the four bits are cheap to emit, but it is not
+a production source because the surviving bucket is still field-sized and the
+sharper partial buckets vary by field.
 The two-step Kummer quotient screen is now negative too.  After adjoining the
 first root `Z0`, the next selector `S1`, and when available the second root
 `Z1`, all obvious selector/root pair systems are full-rank through degree 12 on
