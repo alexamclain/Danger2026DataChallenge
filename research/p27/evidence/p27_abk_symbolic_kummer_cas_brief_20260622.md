@@ -44,6 +44,7 @@ Online calculator output:
 ```text
 research/p27/archive/probe_outputs/p27_abk_f3_f4_localized_noR_q7_magma_20260622.xml
 research/p27/archive/probe_outputs/p27_abk_f3_f4_localized_noR_q7_magma_retry_20260622.xml
+research/p27/archive/probe_outputs/p27_abk_f3_f4_localized_noR_q7_magma_retry2_20260622.xml
 ```
 
 ## Coordinates
@@ -204,6 +205,13 @@ The current saved online output is:
 ```
 
 A later retry reached the service but returned:
+
+```text
+504 Gateway Timeout
+```
+
+A 2026-06-22 retry after successful smaller H90 function-field Magma tests
+again returned:
 
 ```text
 504 Gateway Timeout

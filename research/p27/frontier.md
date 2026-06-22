@@ -2154,7 +2154,10 @@ GPU remains limited to `Dplus` fused pricing and bounded telemetry.
 The first executable q7 chart for that brief is
 `archive/fixtures/p27_abk_f3_f4_localized_noR_q7_magma.m`; the online Magma
 calculator was temporarily disabled when submitted, so no genus/dimension
-answer exists yet.
+answer exists yet.  A later retry, and a second retry on 2026-06-22 after
+successful smaller H90 function-field Magma tests, both returned `504 Gateway
+Timeout`; this remains an offline Magma/Sage normalization task rather than an
+online-calculator task.
 Finite-field chart counts are now available:
 [P27 A/B/K F3/F4 Chart Count](evidence/p27_abk_f3_f4_chart_count_20260622.md).
 They show that the f3-plus-only B fibers reproduce the prior gamma handoff,
