@@ -953,11 +953,12 @@ future promotion fields should look like q1607, q1847, q2039, and other
 The K-line recurrence loophole is now closed for small Lattes maps:
 [P27 K-Line Lattes Recurrence Screen](evidence/p27_k_lattes_recurrence_20260621.md).
 It tested `d4(K) = +/- d3(x([m]Q))` and
-`d4(K) = +/- d3(x([m]Q+(0,0)))` for `m=1..16` on the reduced Kummer line.
+`d4(K) = +/- d3(x([m]Q+(0,0)))` for `m=1..24` on the reduced Kummer line.
 In the promotion fields, only identity has full coverage, except for the
 already-local q1471 `K -> 4/K` artifact; the scores are raw d4 bias
-(`14/28`, `19/28`, `26/45`).  Nontrivial maps cover at most `13/28` in q1607
-and `19/45` in q1847.  So a d4-from-d3 Lattes recurrence is not the
+(`14/28`, `19/28`, `26/45`, `18/25` in q2087).  Nontrivial maps cover at most
+`13/28` in q1607, `19/45` in q1847, and `10/25` in q2087.  So a
+d4-from-d3 Lattes recurrence is not the
 sqrt-beating mechanism; compare d4 only after the actual d3 branch class is
 named.
 
@@ -1130,6 +1131,12 @@ It asks the GPU to emit `Bplus`, selected bits `d3..dN`, mixed-B examples, and
 source-normalized prefix counts from the same p27 stream.  Promotion requires
 large-scale no-mixed-B persistence plus either a source-normalized recurrence
 or a named Kummer/divisor hypothesis.  It is not a B-bucket production hunt.
+The B-line prefix-density screen has also been strengthened:
+[P27 B-Line Prefix Profile](evidence/p27_b_line_prefix_profile_20260622.md).
+Small extension fields show field-dependent late plateaus, but a larger
+`6000 + 6000` p27 train/heldout B-group sample has no mixed groups and thins
+close to independent half-loss through meaningful depths.  This keeps B as a
+Kummer-extraction surface, not as a count-only sampler.
 The first Magma staging smoke sets the extraction boundary:
 [P27 B-Line Magma Staging Smoke](evidence/p27_b_line_magma_staging_20260622.md).
 Over q7, the eta=`+1` legal B-cover saturation succeeds as a dimension-1

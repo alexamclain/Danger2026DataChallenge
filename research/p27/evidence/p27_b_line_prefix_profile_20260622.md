@@ -21,6 +21,7 @@ Probe:
 
 ```text
 research/p27/archive/gates/p27_b_line_prefix_profile_probe.py
+research/p27/archive/gates/p27_b_line_prefix_extension_count_probe.py
 ```
 
 Outputs:
@@ -32,6 +33,8 @@ research/p27/archive/probe_outputs/p27_b_line_prefix_profile_probe_q1607_gate8_2
 research/p27/archive/probe_outputs/p27_b_line_prefix_profile_probe_q1847_gate8_20260622.txt
 research/p27/archive/probe_outputs/p27_b_line_prefix_profile_probe_q2087_gate8_20260622.txt
 research/p27/archive/probe_outputs/p27_b_line_deep_descent_probe_p27_train_heldout_gate16_20260622.txt
+research/p27/archive/probe_outputs/p27_b_line_prefix_extension_count_probe_q31_degrees1_3_gate8_20260622.txt
+research/p27/archive/probe_outputs/p27_b_line_deep_descent_probe_p27_12k_heldout_12k_gate14_20260622.txt
 ```
 
 Commands:
@@ -80,6 +83,22 @@ python3 -u research/p27/archive/gates/p27_b_line_deep_descent_probe.py \
   --max-draws 3000000 \
   --max-gate 16 \
   | tee research/p27/archive/probe_outputs/p27_b_line_deep_descent_probe_p27_train_heldout_gate16_20260622.txt
+
+PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=research/p27/archive/gates \
+python3 -u research/p27/archive/gates/p27_b_line_prefix_extension_count_probe.py \
+  --q 31 \
+  --degrees 1,2,3 \
+  --max-gate 8 \
+  | tee research/p27/archive/probe_outputs/p27_b_line_prefix_extension_count_probe_q31_degrees1_3_gate8_20260622.txt
+
+PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=research/p27/archive/gates \
+python3 -u research/p27/archive/gates/p27_b_line_deep_descent_probe.py \
+  --small-primes '' \
+  --p27-target 12000 \
+  --p27-heldout-target 12000 \
+  --max-draws 5000000 \
+  --max-gate 14 \
+  | tee research/p27/archive/probe_outputs/p27_b_line_deep_descent_probe_p27_12k_heldout_12k_gate14_20260622.txt
 ```
 
 ## Exact Small-Field Profiles
@@ -106,6 +125,13 @@ GF(23^3), legal_B = 399:
   gate6: plus=84,  scaled=3.3684
   gate7: plus=84,  scaled=6.7368
   gate8: plus=84,  scaled=13.4737
+
+GF(31^3), legal_B = 930:
+  gate3: plus=465, scaled=1.0000
+  gate4: plus=225, scaled=0.9677
+  gate5: plus=75,  scaled=0.6452
+  gate6: plus=75,  scaled=1.2903
+  gate7: plus=0
 
 GF(1607), legal_B = 49:
   gate3: plus=28, scaled=1.1429
@@ -175,6 +201,48 @@ gate16    1 / 4000
 Through the range with meaningful counts, this is consistent with ordinary
 half-loss behavior.  The late scaled ratios are dominated by tiny tails.
 
+The larger 2026-06-22 p27 check used `6000` B groups in train and `6000` B
+groups in heldout, with no mixed B groups reported.
+
+Train all-plus prefix:
+
+```text
+gate3  3024 / 6000
+gate4  1516 / 6000
+gate5   771 / 6000
+gate6   374 / 6000
+gate7   195 / 6000
+gate8   104 / 6000
+gate9    50 / 6000
+gate10   25 / 6000
+gate11    9 / 6000
+gate12    3 / 6000
+gate13    2 / 6000
+gate14    1 / 6000
+```
+
+Heldout all-plus prefix:
+
+```text
+gate3  3044 / 6000
+gate4  1493 / 6000
+gate5   755 / 6000
+gate6   363 / 6000
+gate7   171 / 6000
+gate8    86 / 6000
+gate9    43 / 6000
+gate10   23 / 6000
+gate11    9 / 6000
+gate12    7 / 6000
+gate13    4 / 6000
+gate14    4 / 6000
+```
+
+This reinforces the earlier read.  Through `gate10`, where the counts are
+still meaningful, both train and heldout are close to independent half-loss.
+The small-field plateaus are field-dependent and do not transfer to p27 at the
+current sample scale.
+
 ## Interpretation
 
 Positive:
@@ -202,6 +270,8 @@ Continue:
 exact divisor/Kummer class extraction for f3(B), f4(B), ...
 comparison of those classes in the function field, not visible-factor scans
 bounded GPU Bplus+d3..dN telemetry only as a no-mixed / density confirmation
+large GPU B-line telemetry should report source-normalized prefix counts and
+mixed-B examples, not only conditional bucket lifts
 ```
 
 Shift priority back to the more credible sqrt-beating tests:
