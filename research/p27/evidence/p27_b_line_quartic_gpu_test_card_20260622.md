@@ -119,6 +119,12 @@ Packet generator:
 research/p27/archive/gates/p27_b_line_quartic_target_packet.py
 ```
 
+Hit verifier:
+
+```text
+research/p27/archive/gates/p27_b_line_quartic_verify.py
+```
+
 Generation command:
 
 ```bash
@@ -150,6 +156,17 @@ for a in F_q:
 Report both polarities.  Exclude zeros in the Legendre table as the existing
 cubic solver does; an exact source selector should not vanish on the sampled B
 domain.
+
+Verifier command template for any returned hit:
+
+```bash
+PYTHONDONTWRITEBYTECODE=1 \
+python3 -u research/p27/archive/gates/p27_b_line_quartic_verify.py \
+  --field <q> \
+  --family <family> \
+  --coeffs <a,b,c,d> \
+  --polarity <1-or--1>
+```
 
 Packet sanity counts:
 
