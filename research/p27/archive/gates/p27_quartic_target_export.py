@@ -8,6 +8,7 @@ from pathlib import Path
 from typing import Any
 
 import p27_b_line_quartic_verify as b_verify
+import p27_dplus_rowbit_u_lowgenus_verify as u_verify
 import p27_kline_quartic_verify as k_verify
 import p27_lambda_lowgenus_verify as lambda_verify
 
@@ -21,6 +22,7 @@ COORDS = {
         lambda_verify.target_entry,
         "lambda",
     ),
+    "u": (u_verify.DEFAULT_PACKET, u_verify.load_packet, u_verify.target_entry, "u"),
 }
 
 

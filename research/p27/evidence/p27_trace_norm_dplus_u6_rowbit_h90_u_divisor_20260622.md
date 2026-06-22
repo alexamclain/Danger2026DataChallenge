@@ -38,6 +38,13 @@ Target packet:
 research/p27/archive/fixtures/p27_dplus_rowbit_u_divisor_targets_20260622.json
 ```
 
+Verifier/export helpers:
+
+```text
+research/p27/archive/gates/p27_dplus_rowbit_u_lowgenus_verify.py
+research/p27/archive/gates/p27_quartic_target_export.py
+```
+
 Command:
 
 ```bash
@@ -48,6 +55,20 @@ python3 -u research/p27/archive/gates/p27_trace_norm_dplus_u6_rowbit_h90_u_divis
   --include-bare \
   --json-out research/p27/archive/fixtures/p27_dplus_rowbit_u_divisor_targets_20260622.json \
   | tee research/p27/archive/probe_outputs/p27_trace_norm_dplus_u6_rowbit_h90_u_divisor_probe_20260622.txt
+```
+
+Verifier/export smoke:
+
+```bash
+PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=research/p27/archive/gates \
+python3 research/p27/archive/gates/p27_dplus_rowbit_u_lowgenus_verify.py \
+  --list-targets
+
+PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=research/p27/archive/gates \
+python3 research/p27/archive/gates/p27_quartic_target_export.py \
+  --coordinate u \
+  --field 1847 \
+  --family dplus_h90_soluble_rowbit_u
 ```
 
 ## Result
