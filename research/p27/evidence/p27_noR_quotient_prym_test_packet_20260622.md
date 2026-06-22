@@ -42,6 +42,7 @@ no-R genus pressure = genus <= 1 violated in 5/7 fields if one component
 no-R closed-point pressure = degree 2 and 3 closed points both nonzero
 no-R Frobenius fiber profile = degree-3 B orbits plus quadratic fiber splitting
 no-R coordinate degree profile = cubic B-orbit, quadratic fixed-B/fiber split
+no-R B-orbit invariant screen = square Norm(B) support, no visible trace/norm gamma selector
 no-R quadratic subcover classifier = W/T-only killed; beta_U and hidden_mixed remain
 no-R fixed-B character screen = beta_U support chi(B)=+1; no stable gamma law
 no-R beta_U norm descent = gamma is Norm(Unext+2), half-size/full-size fiber split
@@ -138,6 +139,22 @@ quadratic fixed-B hidden_mixed_fixedB subcover test
 Do not spend CAS/GPU effort on the `W/T`-only fixed-`B` subcover as a selected
 gamma source: the quadratic classifier finds it is always an 8-point
 zero-selector branch in the tested guard fields.
+
+For the B-orbit tests, carry forward the visible invariant screen:
+
+```text
+active degree-2/3 B-orbits have chi(Norm(B))=+1
+degree-2 orbit discriminant has chi=-1
+degree-3 orbit discriminant has chi=+1
+gamma is Frobenius-stable at the B-row signature level
+```
+
+This is only support/component data.  The trace/norm/discriminant character
+screen does not select `gamma`: degree-2 orbits are mostly or exactly
+half/half, and the exact `GF(7^3)` linear character fails in `GF(23^3)`.
+Promote the B-orbit subtest only if normalization finds a quotient/Prym factor
+carrying `gamma` or coupling f3/f4; do not promote square `Norm(B)` support as
+a sampler.
 
 For the `beta_U_fixedB` test, impose `chi(B)=+1` as a support gate.  Do not
 promote that support gate as a sampler unless the gamma/f4 class descends on

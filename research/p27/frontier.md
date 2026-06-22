@@ -1251,6 +1251,14 @@ Cubic activity is a `B`-orbit phenomenon; quadratic activity includes fixed-`B`
 fiber extensions, with a clean `GF(7^2)` case where only `W` or `T` leaves the
 base field.  The next no-R CAS run should split into cubic B-orbit and
 quadratic fixed-B fiber subtests.
+The B-orbit invariant screen now closes the visible shortcut:
+[P27 B-Line No-R B-Orbit Invariant Screen](evidence/p27_b_line_noR_borbit_invariant_screen_20260622.md).
+Active degree-2 and degree-3 B-orbits have square `Norm(B)` and stable
+Frobenius signatures, so this is real component/support structure.  But
+`Norm(B)` is not a gamma selector: degree-2 orbits are mostly or exactly
+half/half, and the one exact cubic linear law in `GF(7^3)` fails at
+`GF(23^3)`.  Keep B-orbit as a quotient/Prym extraction target, not as a GPU
+bucket or trace/norm character sampler.
 The quadratic split has already killed one tempting branch:
 [P27 B-Line No-R Quadratic Subcover Classifier](evidence/p27_b_line_noR_quadratic_subcover_classifier_20260622.md).
 Across `q = 7, 23, 71, 103, 167`, the `W/T`-only fixed-`B` class is always an
