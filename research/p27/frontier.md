@@ -1220,6 +1220,13 @@ recurrence appears in q1607/q1847/q2087, and the best maps cover only
 `7/28`, `12/45`, and `6/25` of the forward domains.  This closes the natural
 hidden-`X` doubling/tripling shortcut and leaves actual B-line
 Kummer/divisor-class extraction as the live route.
+The adjacent monomial Belyi family is also negative:
+[P27 B-Line Monomial Belyi Recurrence Screen](evidence/p27_b_line_monomial_belyi_recurrence_screen_20260622.md).
+With `u=-B/2`, it tests `u -> u^m` for `m=2..12`, conjugated by the branch-S3
+symmetries.  Again there is no exact forward or reverse `d3/d4` recurrence in
+q1607/q1847/q2087; best forward coverages are only `5/28`, `10/45`, and
+`4/25`.  This closes the canonical B-line branch dynamics short of actual
+Kummer/divisor-class extraction.
 
 The B-line target is now stronger than a one-bit descent:
 [P27 B-Line Extension Counts And Deep Descent](evidence/p27_b_line_extension_and_deep_descent_20260622.md).

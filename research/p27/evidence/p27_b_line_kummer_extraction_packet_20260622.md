@@ -110,6 +110,7 @@ two irreducible quadratic branch factors for d3(B)
 two irreducible quadratic branch factors for the legal B-domain
 visible Belyi S3 orbit sampler on B
 Belyi-conjugated hidden-X power maps X -> X^m, m=2..6, as d3/d4 recurrence
+S3-conjugated monomial Belyi maps u -> u^m, u=-B/2, m=2..12
 B-line prefix counts alone as a below-sqrt sampler
 large GPU search from B buckets without an extracted class
 ```
@@ -184,6 +185,12 @@ q1607/q1847/q2087, and the best maps cover only a minority of the relevant
 domains.  Thus hidden-`X` doubling/tripling is not the missing sourceable
 B-line recurrence.
 
+Update: the adjacent monomial Belyi family is also negative:
+[P27 B-Line Monomial Belyi Recurrence Screen](p27_b_line_monomial_belyi_recurrence_screen_20260622.md).
+After normalizing `u=-B/2`, it tests S3-conjugated maps `u -> u^m` for
+`m=2..12`.  There are no exact forward or reverse `d3/d4` recurrences in
+q1607/q1847/q2087, and coverage is lower than in the hidden-`X` power screen.
+
 Update: the bounded visible quartic d3 family has now been tested in the
 decisive q1847 B/K screens:
 [P27 B-Line Quartic GPU Test Card](p27_b_line_quartic_gpu_test_card_20260622.md).
@@ -216,6 +223,7 @@ kill = treating one-bit conditional lift as sqrt-beating
 kill = visible monic quartic d3 promotion after the q1847 B/K negatives
 kill = degree-one rational B-line recurrence
 kill = hidden-X power-map B-line recurrence for m=2..6
+kill = monomial Belyi B-line recurrence u -> u^m for m=2..12
 ```
 
 ```text

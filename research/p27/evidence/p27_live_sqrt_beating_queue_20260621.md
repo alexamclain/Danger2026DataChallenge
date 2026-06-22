@@ -296,6 +296,12 @@ all six Belyi symmetries on both sides.  There are no exact forward or reverse
 only `7/28`, `12/45`, and `6/25`.  So even the principled B-line
 doubling/tripling correspondences do not supply the missing multi-gate
 coupling.
+The monomial Belyi family on `u=-B/2` is also closed:
+[P27 B-Line Monomial Belyi Recurrence Screen](p27_b_line_monomial_belyi_recurrence_screen_20260622.md).
+It tests S3-conjugated `u -> u^m` maps for `m=2..12`; there are no exact
+forward or reverse `d3/d4` recurrences, and best forward coverages are only
+`5/28`, `10/45`, and `4/25`.  This removes the adjacent canonical Belyi
+dynamics shortcut.
 The B-line result is now multi-gate: extension counts over `GF(7^n)` and
 `GF(23^n)` keep legal B inside the core bucket with no d3/d4 mixed groups,
 while p27 train/heldout deep-descent probes show no mixed B groups through
