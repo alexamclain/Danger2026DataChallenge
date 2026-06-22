@@ -31,6 +31,7 @@ research/p27/evidence/p27_hv_trace_coupling_audit_20260621.md
 research/p27/evidence/p27_trace_norm_elliptic_line_coset_20260621.md
 research/p27/evidence/p27_trace_norm_dplus_prefix_identity_20260621.md
 research/p27/evidence/p27_trace_norm_post_dplus_screen_20260621.md
+research/p27/evidence/p27_trace_norm_orientation_phase_screen_20260622.md
 ```
 
 Evaluator:
@@ -64,6 +65,7 @@ first 2-isogeny branch-character products
 large-factor quotient collisions for m=345451 and small multiples
 simple Tr/anti-Tr/Norm of H, V, HV, pref_HV, BC_HV
 low-weight post-Dplus products from H/VQ/X/T_line/root atoms
+post-Dplus eps_h/eps_v, H/VQ, eps_h/eps_v/T_line orientation buckets
 ```
 
 ## Machine Check

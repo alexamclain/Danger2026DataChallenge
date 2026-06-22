@@ -158,6 +158,12 @@ genus-21 base and predicted genus 69 after the final `D_plus` square root.  So
 the direct full-cover sampler is not the first production route; the live
 route is quotient/Prym extraction or recurrence/coupling telemetry.
 
+Follow-up orientation telemetry:
+[P27 Trace/Norm Orientation Phase Screen](p27_trace_norm_orientation_phase_screen_20260622.md).
+The exact `eps_h/eps_v` phases and nearby `H/VQ/T_line` buckets do not
+stably predict `d3` or `d4`; they should remain diagnostic data, not GPU
+production filters.
+
 Negative:
 
 ```text
@@ -209,6 +215,7 @@ continue = use this exact core formula for any further D_plus telemetry
 
 kill = treating fixed d2/d3/d4 prefixes as source shrink
 kill = searching for D_plus as a tiny R(a) character
+kill = using eps_h/eps_v or H/VQ/T_line buckets as post-Dplus filters
 kill = promoting current trace/norm classifier as production without a direct
        sampler or cheaper orientation source
 ```

@@ -297,6 +297,13 @@ failures, confirming the reconstruction.  The next gate was flat:
 All low-weight products of the named `H`, `VQ`, `X_pref`, root, quotient, and
 `T_line` atoms failed, with the best train lifts collapsing to about `0.49` to
 `0.50` on heldout.  This kills the cheap post-Dplus trace/norm-character route.
+The exact orientation follow-up is also negative:
+[P27 Trace/Norm Orientation Phase Screen](evidence/p27_trace_norm_orientation_phase_screen_20260622.md).
+It attached the actual `D_plus` cover signs `eps_h=chi(t)` and
+`eps_v=chi((t+1)C)` to C-style rows.  Across heldout seed groups, `d3` and
+`d4` by `eps_h/eps_v`, `H/VQ`, `eps_h/eps_v/T_line`, and
+`hcore_chi/vcore_chi` stayed near half; the apparent high `d4` bucket moved
+between groups.  This kills orientation buckets as a GPU/source shortcut.
 The surviving trace/norm/quotient task is now formalized as a narrow test card:
 [P27 Trace/Norm Half-Norm Test Card](evidence/p27_trace_norm_halfnorm_test_card_20260622.md).
 It accepts only a finite-field squareclass, divisor/theta identity, or direct

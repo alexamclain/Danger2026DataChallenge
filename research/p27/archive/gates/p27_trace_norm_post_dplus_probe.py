@@ -334,7 +334,8 @@ def collect_rows(args: argparse.Namespace) -> tuple[list[dict[str, int]], Counte
                         if prof["d1"] != 1 or prof["d2"] != 1:
                             stats["Dplus_prefix_failure"] += 1
                             continue
-                        row = {name: int(parts.get(name, 0)) for name in PRE_FEATURES}
+                        row = {"y": int(y)}
+                        row.update({name: int(parts.get(name, 0)) for name in PRE_FEATURES})
                         root = 0
                         # Reconstruct the same root just for named root features.
                         for ri, aa, xxp in candidates:

@@ -1,0 +1,647 @@
+p27 trace/norm orientation phase probe
+question = do Dplus orientation signs bias post-Dplus selected gates?
+p = 1000000000000000000000000103
+seed_groups = 121,122;123,124
+group1_seeds_121_122_sample:
+  D_+1 = 16485
+  D_-1 = 16316
+  D_zero = 32965
+  Dplus_candidates = 16398
+  Dplus_no_valid_candidate = 8286
+  Dplus_y = 16485
+  d1_+1 = 16398
+  d2_+1 = 16398
+  d3_+1 = 8298
+  d3_-1 = 8100
+  d4_+1 = 4062
+  d4_-1 = 4236
+  d4_0 = 8100
+  nonsplit_y = 65766
+  raw_y_draws = 131072
+group1_seeds_121_122_usable_rows = 16398
+group1_seeds_121_122_d3_eps_h_eps_v:
+  rows = 16398
+  state_eps_h=+1,eps_v=+1_minus = 2010
+  state_eps_h=+1,eps_v=+1_plus = 2070
+  state_eps_h=+1,eps_v=+1_plus_rate_x1000000 = 507352
+  state_eps_h=+1,eps_v=+1_source_share_x1000000 = 248810
+  state_eps_h=+1,eps_v=+1_total = 4080
+  state_eps_h=+1,eps_v=-1_minus = 2012
+  state_eps_h=+1,eps_v=-1_plus = 2078
+  state_eps_h=+1,eps_v=-1_plus_rate_x1000000 = 508068
+  state_eps_h=+1,eps_v=-1_source_share_x1000000 = 249420
+  state_eps_h=+1,eps_v=-1_total = 4090
+  state_eps_h=-1,eps_v=+1_minus = 2112
+  state_eps_h=-1,eps_v=+1_plus = 2062
+  state_eps_h=-1,eps_v=+1_plus_rate_x1000000 = 494010
+  state_eps_h=-1,eps_v=+1_source_share_x1000000 = 254543
+  state_eps_h=-1,eps_v=+1_total = 4174
+  state_eps_h=-1,eps_v=-1_minus = 1966
+  state_eps_h=-1,eps_v=-1_plus = 2088
+  state_eps_h=-1,eps_v=-1_plus_rate_x1000000 = 515046
+  state_eps_h=-1,eps_v=-1_source_share_x1000000 = 247225
+  state_eps_h=-1,eps_v=-1_total = 4054
+  states = 4
+  target_minus = 8100
+  target_plus = 8298
+  target_plus_rate_x1000000 = 506037
+group1_seeds_121_122_d3_eps_h_eps_v_table:
+  state total plus minus plus_rate source_share
+  eps_h=+1,eps_v=+1 4080 2070 2010 0.507352000 0.248810000
+  eps_h=+1,eps_v=-1 4090 2078 2012 0.508068000 0.249420000
+  eps_h=-1,eps_v=+1 4174 2062 2112 0.494010000 0.254543000
+  eps_h=-1,eps_v=-1 4054 2088 1966 0.515046000 0.247225000
+group1_seeds_121_122_d3_H_VQ:
+  rows = 16398
+  state_H=+1,VQ=+1_minus = 2008
+  state_H=+1,VQ=+1_plus = 2048
+  state_H=+1,VQ=+1_plus_rate_x1000000 = 504930
+  state_H=+1,VQ=+1_source_share_x1000000 = 247347
+  state_H=+1,VQ=+1_total = 4056
+  state_H=+1,VQ=-1_minus = 2060
+  state_H=+1,VQ=-1_plus = 2050
+  state_H=+1,VQ=-1_plus_rate_x1000000 = 498783
+  state_H=+1,VQ=-1_source_share_x1000000 = 250640
+  state_H=+1,VQ=-1_total = 4110
+  state_H=-1,VQ=+1_minus = 2018
+  state_H=-1,VQ=+1_plus = 2100
+  state_H=-1,VQ=+1_plus_rate_x1000000 = 509956
+  state_H=-1,VQ=+1_source_share_x1000000 = 251128
+  state_H=-1,VQ=+1_total = 4118
+  state_H=-1,VQ=-1_minus = 2014
+  state_H=-1,VQ=-1_plus = 2100
+  state_H=-1,VQ=-1_plus_rate_x1000000 = 510452
+  state_H=-1,VQ=-1_source_share_x1000000 = 250884
+  state_H=-1,VQ=-1_total = 4114
+  states = 4
+  target_minus = 8100
+  target_plus = 8298
+  target_plus_rate_x1000000 = 506037
+group1_seeds_121_122_d3_H_VQ_table:
+  state total plus minus plus_rate source_share
+  H=+1,VQ=+1 4056 2048 2008 0.504930000 0.247347000
+  H=+1,VQ=-1 4110 2050 2060 0.498783000 0.250640000
+  H=-1,VQ=+1 4118 2100 2018 0.509956000 0.251128000
+  H=-1,VQ=-1 4114 2100 2014 0.510452000 0.250884000
+group1_seeds_121_122_d3_eps_h_eps_v_T_line:
+  rows = 16398
+  state_eps_h=+1,eps_v=+1,T_line=+1_minus = 1042
+  state_eps_h=+1,eps_v=+1,T_line=+1_plus = 1100
+  state_eps_h=+1,eps_v=+1,T_line=+1_plus_rate_x1000000 = 513538
+  state_eps_h=+1,eps_v=+1,T_line=+1_source_share_x1000000 = 130625
+  state_eps_h=+1,eps_v=+1,T_line=+1_total = 2142
+  state_eps_h=+1,eps_v=+1,T_line=-1_minus = 968
+  state_eps_h=+1,eps_v=+1,T_line=-1_plus = 970
+  state_eps_h=+1,eps_v=+1,T_line=-1_plus_rate_x1000000 = 500515
+  state_eps_h=+1,eps_v=+1,T_line=-1_source_share_x1000000 = 118185
+  state_eps_h=+1,eps_v=+1,T_line=-1_total = 1938
+  state_eps_h=+1,eps_v=-1,T_line=+1_minus = 1012
+  state_eps_h=+1,eps_v=-1,T_line=+1_plus = 1050
+  state_eps_h=+1,eps_v=-1,T_line=+1_plus_rate_x1000000 = 509214
+  state_eps_h=+1,eps_v=-1,T_line=+1_source_share_x1000000 = 125747
+  state_eps_h=+1,eps_v=-1,T_line=+1_total = 2062
+  state_eps_h=+1,eps_v=-1,T_line=-1_minus = 1000
+  state_eps_h=+1,eps_v=-1,T_line=-1_plus = 1028
+  state_eps_h=+1,eps_v=-1,T_line=-1_plus_rate_x1000000 = 506903
+  state_eps_h=+1,eps_v=-1,T_line=-1_source_share_x1000000 = 123673
+  state_eps_h=+1,eps_v=-1,T_line=-1_total = 2028
+  state_eps_h=-1,eps_v=+1,T_line=+1_minus = 1084
+  state_eps_h=-1,eps_v=+1,T_line=+1_plus = 1028
+  state_eps_h=-1,eps_v=+1,T_line=+1_plus_rate_x1000000 = 486742
+  state_eps_h=-1,eps_v=+1,T_line=+1_source_share_x1000000 = 128796
+  state_eps_h=-1,eps_v=+1,T_line=+1_total = 2112
+  state_eps_h=-1,eps_v=+1,T_line=-1_minus = 1028
+  state_eps_h=-1,eps_v=+1,T_line=-1_plus = 1034
+  state_eps_h=-1,eps_v=+1,T_line=-1_plus_rate_x1000000 = 501454
+  state_eps_h=-1,eps_v=+1,T_line=-1_source_share_x1000000 = 125747
+  state_eps_h=-1,eps_v=+1,T_line=-1_total = 2062
+  state_eps_h=-1,eps_v=-1,T_line=+1_minus = 958
+  state_eps_h=-1,eps_v=-1,T_line=+1_plus = 1052
+  state_eps_h=-1,eps_v=-1,T_line=+1_plus_rate_x1000000 = 523383
+  state_eps_h=-1,eps_v=-1,T_line=+1_source_share_x1000000 = 122575
+  state_eps_h=-1,eps_v=-1,T_line=+1_total = 2010
+  state_eps_h=-1,eps_v=-1,T_line=-1_minus = 1008
+  state_eps_h=-1,eps_v=-1,T_line=-1_plus = 1036
+  state_eps_h=-1,eps_v=-1,T_line=-1_plus_rate_x1000000 = 506849
+  state_eps_h=-1,eps_v=-1,T_line=-1_source_share_x1000000 = 124649
+  state_eps_h=-1,eps_v=-1,T_line=-1_total = 2044
+  states = 8
+  target_minus = 8100
+  target_plus = 8298
+  target_plus_rate_x1000000 = 506037
+group1_seeds_121_122_d3_eps_h_eps_v_T_line_table:
+  state total plus minus plus_rate source_share
+  eps_h=+1,eps_v=+1,T_line=+1 2142 1100 1042 0.513538000 0.130625000
+  eps_h=+1,eps_v=+1,T_line=-1 1938 970 968 0.500515000 0.118185000
+  eps_h=+1,eps_v=-1,T_line=+1 2062 1050 1012 0.509214000 0.125747000
+  eps_h=+1,eps_v=-1,T_line=-1 2028 1028 1000 0.506903000 0.123673000
+  eps_h=-1,eps_v=+1,T_line=+1 2112 1028 1084 0.486742000 0.128796000
+  eps_h=-1,eps_v=+1,T_line=-1 2062 1034 1028 0.501454000 0.125747000
+  eps_h=-1,eps_v=-1,T_line=+1 2010 1052 958 0.523383000 0.122575000
+  eps_h=-1,eps_v=-1,T_line=-1 2044 1036 1008 0.506849000 0.124649000
+group1_seeds_121_122_d3_hcore_chi_vcore_chi:
+  rows = 16398
+  state_hcore_chi=+1,vcore_chi=+1_minus = 2046
+  state_hcore_chi=+1,vcore_chi=+1_plus = 2098
+  state_hcore_chi=+1,vcore_chi=+1_plus_rate_x1000000 = 506274
+  state_hcore_chi=+1,vcore_chi=+1_source_share_x1000000 = 252713
+  state_hcore_chi=+1,vcore_chi=+1_total = 4144
+  state_hcore_chi=+1,vcore_chi=-1_minus = 2022
+  state_hcore_chi=+1,vcore_chi=-1_plus = 2000
+  state_hcore_chi=+1,vcore_chi=-1_plus_rate_x1000000 = 497265
+  state_hcore_chi=+1,vcore_chi=-1_source_share_x1000000 = 245273
+  state_hcore_chi=+1,vcore_chi=-1_total = 4022
+  state_hcore_chi=-1,vcore_chi=+1_minus = 1982
+  state_hcore_chi=-1,vcore_chi=+1_plus = 2068
+  state_hcore_chi=-1,vcore_chi=+1_plus_rate_x1000000 = 510617
+  state_hcore_chi=-1,vcore_chi=+1_source_share_x1000000 = 246981
+  state_hcore_chi=-1,vcore_chi=+1_total = 4050
+  state_hcore_chi=-1,vcore_chi=-1_minus = 2050
+  state_hcore_chi=-1,vcore_chi=-1_plus = 2132
+  state_hcore_chi=-1,vcore_chi=-1_plus_rate_x1000000 = 509803
+  state_hcore_chi=-1,vcore_chi=-1_source_share_x1000000 = 255031
+  state_hcore_chi=-1,vcore_chi=-1_total = 4182
+  states = 4
+  target_minus = 8100
+  target_plus = 8298
+  target_plus_rate_x1000000 = 506037
+group1_seeds_121_122_d3_hcore_chi_vcore_chi_table:
+  state total plus minus plus_rate source_share
+  hcore_chi=+1,vcore_chi=+1 4144 2098 2046 0.506274000 0.252713000
+  hcore_chi=+1,vcore_chi=-1 4022 2000 2022 0.497265000 0.245273000
+  hcore_chi=-1,vcore_chi=+1 4050 2068 1982 0.510617000 0.246981000
+  hcore_chi=-1,vcore_chi=-1 4182 2132 2050 0.509803000 0.255031000
+group1_seeds_121_122_d4_eps_h_eps_v:
+  rows = 8298
+  state_eps_h=+1,eps_v=+1_minus = 1136
+  state_eps_h=+1,eps_v=+1_plus = 934
+  state_eps_h=+1,eps_v=+1_plus_rate_x1000000 = 451207
+  state_eps_h=+1,eps_v=+1_source_share_x1000000 = 249457
+  state_eps_h=+1,eps_v=+1_total = 2070
+  state_eps_h=+1,eps_v=-1_minus = 1044
+  state_eps_h=+1,eps_v=-1_plus = 1034
+  state_eps_h=+1,eps_v=-1_plus_rate_x1000000 = 497593
+  state_eps_h=+1,eps_v=-1_source_share_x1000000 = 250421
+  state_eps_h=+1,eps_v=-1_total = 2078
+  state_eps_h=-1,eps_v=+1_minus = 1040
+  state_eps_h=-1,eps_v=+1_plus = 1022
+  state_eps_h=-1,eps_v=+1_plus_rate_x1000000 = 495635
+  state_eps_h=-1,eps_v=+1_source_share_x1000000 = 248493
+  state_eps_h=-1,eps_v=+1_total = 2062
+  state_eps_h=-1,eps_v=-1_minus = 1016
+  state_eps_h=-1,eps_v=-1_plus = 1072
+  state_eps_h=-1,eps_v=-1_plus_rate_x1000000 = 513409
+  state_eps_h=-1,eps_v=-1_source_share_x1000000 = 251626
+  state_eps_h=-1,eps_v=-1_total = 2088
+  states = 4
+  target_minus = 4236
+  target_plus = 4062
+  target_plus_rate_x1000000 = 489515
+group1_seeds_121_122_d4_eps_h_eps_v_table:
+  state total plus minus plus_rate source_share
+  eps_h=+1,eps_v=+1 2070 934 1136 0.451207000 0.249457000
+  eps_h=+1,eps_v=-1 2078 1034 1044 0.497593000 0.250421000
+  eps_h=-1,eps_v=+1 2062 1022 1040 0.495635000 0.248493000
+  eps_h=-1,eps_v=-1 2088 1072 1016 0.513409000 0.251626000
+group1_seeds_121_122_d4_H_VQ:
+  rows = 8298
+  state_H=+1,VQ=+1_minus = 1078
+  state_H=+1,VQ=+1_plus = 970
+  state_H=+1,VQ=+1_plus_rate_x1000000 = 473632
+  state_H=+1,VQ=+1_source_share_x1000000 = 246806
+  state_H=+1,VQ=+1_total = 2048
+  state_H=+1,VQ=-1_minus = 996
+  state_H=+1,VQ=-1_plus = 1054
+  state_H=+1,VQ=-1_plus_rate_x1000000 = 514146
+  state_H=+1,VQ=-1_source_share_x1000000 = 247047
+  state_H=+1,VQ=-1_total = 2050
+  state_H=-1,VQ=+1_minus = 1060
+  state_H=-1,VQ=+1_plus = 1040
+  state_H=-1,VQ=+1_plus_rate_x1000000 = 495238
+  state_H=-1,VQ=+1_source_share_x1000000 = 253073
+  state_H=-1,VQ=+1_total = 2100
+  state_H=-1,VQ=-1_minus = 1102
+  state_H=-1,VQ=-1_plus = 998
+  state_H=-1,VQ=-1_plus_rate_x1000000 = 475238
+  state_H=-1,VQ=-1_source_share_x1000000 = 253073
+  state_H=-1,VQ=-1_total = 2100
+  states = 4
+  target_minus = 4236
+  target_plus = 4062
+  target_plus_rate_x1000000 = 489515
+group1_seeds_121_122_d4_H_VQ_table:
+  state total plus minus plus_rate source_share
+  H=+1,VQ=+1 2048 970 1078 0.473632000 0.246806000
+  H=+1,VQ=-1 2050 1054 996 0.514146000 0.247047000
+  H=-1,VQ=+1 2100 1040 1060 0.495238000 0.253073000
+  H=-1,VQ=-1 2100 998 1102 0.475238000 0.253073000
+group1_seeds_121_122_d4_eps_h_eps_v_T_line:
+  rows = 8298
+  state_eps_h=+1,eps_v=+1,T_line=+1_minus = 602
+  state_eps_h=+1,eps_v=+1,T_line=+1_plus = 498
+  state_eps_h=+1,eps_v=+1,T_line=+1_plus_rate_x1000000 = 452727
+  state_eps_h=+1,eps_v=+1,T_line=+1_source_share_x1000000 = 132562
+  state_eps_h=+1,eps_v=+1,T_line=+1_total = 1100
+  state_eps_h=+1,eps_v=+1,T_line=-1_minus = 534
+  state_eps_h=+1,eps_v=+1,T_line=-1_plus = 436
+  state_eps_h=+1,eps_v=+1,T_line=-1_plus_rate_x1000000 = 449484
+  state_eps_h=+1,eps_v=+1,T_line=-1_source_share_x1000000 = 116895
+  state_eps_h=+1,eps_v=+1,T_line=-1_total = 970
+  state_eps_h=+1,eps_v=-1,T_line=+1_minus = 496
+  state_eps_h=+1,eps_v=-1,T_line=+1_plus = 554
+  state_eps_h=+1,eps_v=-1,T_line=+1_plus_rate_x1000000 = 527619
+  state_eps_h=+1,eps_v=-1,T_line=+1_source_share_x1000000 = 126536
+  state_eps_h=+1,eps_v=-1,T_line=+1_total = 1050
+  state_eps_h=+1,eps_v=-1,T_line=-1_minus = 548
+  state_eps_h=+1,eps_v=-1,T_line=-1_plus = 480
+  state_eps_h=+1,eps_v=-1,T_line=-1_plus_rate_x1000000 = 466926
+  state_eps_h=+1,eps_v=-1,T_line=-1_source_share_x1000000 = 123885
+  state_eps_h=+1,eps_v=-1,T_line=-1_total = 1028
+  state_eps_h=-1,eps_v=+1,T_line=+1_minus = 530
+  state_eps_h=-1,eps_v=+1,T_line=+1_plus = 498
+  state_eps_h=-1,eps_v=+1,T_line=+1_plus_rate_x1000000 = 484435
+  state_eps_h=-1,eps_v=+1,T_line=+1_source_share_x1000000 = 123885
+  state_eps_h=-1,eps_v=+1,T_line=+1_total = 1028
+  state_eps_h=-1,eps_v=+1,T_line=-1_minus = 510
+  state_eps_h=-1,eps_v=+1,T_line=-1_plus = 524
+  state_eps_h=-1,eps_v=+1,T_line=-1_plus_rate_x1000000 = 506769
+  state_eps_h=-1,eps_v=+1,T_line=-1_source_share_x1000000 = 124608
+  state_eps_h=-1,eps_v=+1,T_line=-1_total = 1034
+  state_eps_h=-1,eps_v=-1,T_line=+1_minus = 496
+  state_eps_h=-1,eps_v=-1,T_line=+1_plus = 556
+  state_eps_h=-1,eps_v=-1,T_line=+1_plus_rate_x1000000 = 528517
+  state_eps_h=-1,eps_v=-1,T_line=+1_source_share_x1000000 = 126777
+  state_eps_h=-1,eps_v=-1,T_line=+1_total = 1052
+  state_eps_h=-1,eps_v=-1,T_line=-1_minus = 520
+  state_eps_h=-1,eps_v=-1,T_line=-1_plus = 516
+  state_eps_h=-1,eps_v=-1,T_line=-1_plus_rate_x1000000 = 498069
+  state_eps_h=-1,eps_v=-1,T_line=-1_source_share_x1000000 = 124849
+  state_eps_h=-1,eps_v=-1,T_line=-1_total = 1036
+  states = 8
+  target_minus = 4236
+  target_plus = 4062
+  target_plus_rate_x1000000 = 489515
+group1_seeds_121_122_d4_eps_h_eps_v_T_line_table:
+  state total plus minus plus_rate source_share
+  eps_h=+1,eps_v=+1,T_line=+1 1100 498 602 0.452727000 0.132562000
+  eps_h=+1,eps_v=+1,T_line=-1 970 436 534 0.449484000 0.116895000
+  eps_h=+1,eps_v=-1,T_line=+1 1050 554 496 0.527619000 0.126536000
+  eps_h=+1,eps_v=-1,T_line=-1 1028 480 548 0.466926000 0.123885000
+  eps_h=-1,eps_v=+1,T_line=+1 1028 498 530 0.484435000 0.123885000
+  eps_h=-1,eps_v=+1,T_line=-1 1034 524 510 0.506769000 0.124608000
+  eps_h=-1,eps_v=-1,T_line=+1 1052 556 496 0.528517000 0.126777000
+  eps_h=-1,eps_v=-1,T_line=-1 1036 516 520 0.498069000 0.124849000
+group1_seeds_121_122_d4_hcore_chi_vcore_chi:
+  rows = 8298
+  state_hcore_chi=+1,vcore_chi=+1_minus = 1042
+  state_hcore_chi=+1,vcore_chi=+1_plus = 1056
+  state_hcore_chi=+1,vcore_chi=+1_plus_rate_x1000000 = 503336
+  state_hcore_chi=+1,vcore_chi=+1_source_share_x1000000 = 252832
+  state_hcore_chi=+1,vcore_chi=+1_total = 2098
+  state_hcore_chi=+1,vcore_chi=-1_minus = 1032
+  state_hcore_chi=+1,vcore_chi=-1_plus = 968
+  state_hcore_chi=+1,vcore_chi=-1_plus_rate_x1000000 = 484000
+  state_hcore_chi=+1,vcore_chi=-1_source_share_x1000000 = 241021
+  state_hcore_chi=+1,vcore_chi=-1_total = 2000
+  state_hcore_chi=-1,vcore_chi=+1_minus = 1080
+  state_hcore_chi=-1,vcore_chi=+1_plus = 988
+  state_hcore_chi=-1,vcore_chi=+1_plus_rate_x1000000 = 477756
+  state_hcore_chi=-1,vcore_chi=+1_source_share_x1000000 = 249216
+  state_hcore_chi=-1,vcore_chi=+1_total = 2068
+  state_hcore_chi=-1,vcore_chi=-1_minus = 1082
+  state_hcore_chi=-1,vcore_chi=-1_plus = 1050
+  state_hcore_chi=-1,vcore_chi=-1_plus_rate_x1000000 = 492495
+  state_hcore_chi=-1,vcore_chi=-1_source_share_x1000000 = 256929
+  state_hcore_chi=-1,vcore_chi=-1_total = 2132
+  states = 4
+  target_minus = 4236
+  target_plus = 4062
+  target_plus_rate_x1000000 = 489515
+group1_seeds_121_122_d4_hcore_chi_vcore_chi_table:
+  state total plus minus plus_rate source_share
+  hcore_chi=+1,vcore_chi=+1 2098 1056 1042 0.503336000 0.252832000
+  hcore_chi=+1,vcore_chi=-1 2000 968 1032 0.484000000 0.241021000
+  hcore_chi=-1,vcore_chi=+1 2068 988 1080 0.477756000 0.249216000
+  hcore_chi=-1,vcore_chi=-1 2132 1050 1082 0.492495000 0.256929000
+group2_seeds_123_124_sample:
+  D_+1 = 16454
+  D_-1 = 16293
+  D_zero = 32723
+  Dplus_candidates = 16122
+  Dplus_no_valid_candidate = 8393
+  Dplus_y = 16454
+  d1_+1 = 16122
+  d2_+1 = 16122
+  d3_+1 = 7972
+  d3_-1 = 8150
+  d4_+1 = 3904
+  d4_-1 = 4068
+  d4_0 = 8150
+  nonsplit_y = 65470
+  raw_y_draws = 131072
+group2_seeds_123_124_usable_rows = 16122
+group2_seeds_123_124_d3_eps_h_eps_v:
+  rows = 16122
+  state_eps_h=+1,eps_v=+1_minus = 2090
+  state_eps_h=+1,eps_v=+1_plus = 2002
+  state_eps_h=+1,eps_v=+1_plus_rate_x1000000 = 489247
+  state_eps_h=+1,eps_v=+1_source_share_x1000000 = 253814
+  state_eps_h=+1,eps_v=+1_total = 4092
+  state_eps_h=+1,eps_v=-1_minus = 2012
+  state_eps_h=+1,eps_v=-1_plus = 1818
+  state_eps_h=+1,eps_v=-1_plus_rate_x1000000 = 474673
+  state_eps_h=+1,eps_v=-1_source_share_x1000000 = 237563
+  state_eps_h=+1,eps_v=-1_total = 3830
+  state_eps_h=-1,eps_v=+1_minus = 2046
+  state_eps_h=-1,eps_v=+1_plus = 2156
+  state_eps_h=-1,eps_v=+1_plus_rate_x1000000 = 513089
+  state_eps_h=-1,eps_v=+1_source_share_x1000000 = 260637
+  state_eps_h=-1,eps_v=+1_total = 4202
+  state_eps_h=-1,eps_v=-1_minus = 2002
+  state_eps_h=-1,eps_v=-1_plus = 1996
+  state_eps_h=-1,eps_v=-1_plus_rate_x1000000 = 499249
+  state_eps_h=-1,eps_v=-1_source_share_x1000000 = 247984
+  state_eps_h=-1,eps_v=-1_total = 3998
+  states = 4
+  target_minus = 8150
+  target_plus = 7972
+  target_plus_rate_x1000000 = 494479
+group2_seeds_123_124_d3_eps_h_eps_v_table:
+  state total plus minus plus_rate source_share
+  eps_h=+1,eps_v=+1 4092 2002 2090 0.489247000 0.253814000
+  eps_h=+1,eps_v=-1 3830 1818 2012 0.474673000 0.237563000
+  eps_h=-1,eps_v=+1 4202 2156 2046 0.513089000 0.260637000
+  eps_h=-1,eps_v=-1 3998 1996 2002 0.499249000 0.247984000
+group2_seeds_123_124_d3_H_VQ:
+  rows = 16122
+  state_H=+1,VQ=+1_minus = 2084
+  state_H=+1,VQ=+1_plus = 1890
+  state_H=+1,VQ=+1_plus_rate_x1000000 = 475591
+  state_H=+1,VQ=+1_source_share_x1000000 = 246495
+  state_H=+1,VQ=+1_total = 3974
+  state_H=+1,VQ=-1_minus = 2076
+  state_H=+1,VQ=-1_plus = 2096
+  state_H=+1,VQ=-1_plus_rate_x1000000 = 502396
+  state_H=+1,VQ=-1_source_share_x1000000 = 258776
+  state_H=+1,VQ=-1_total = 4172
+  state_H=-1,VQ=+1_minus = 1972
+  state_H=-1,VQ=+1_plus = 2056
+  state_H=-1,VQ=+1_plus_rate_x1000000 = 510427
+  state_H=-1,VQ=+1_source_share_x1000000 = 249844
+  state_H=-1,VQ=+1_total = 4028
+  state_H=-1,VQ=-1_minus = 2018
+  state_H=-1,VQ=-1_plus = 1930
+  state_H=-1,VQ=-1_plus_rate_x1000000 = 488855
+  state_H=-1,VQ=-1_source_share_x1000000 = 244882
+  state_H=-1,VQ=-1_total = 3948
+  states = 4
+  target_minus = 8150
+  target_plus = 7972
+  target_plus_rate_x1000000 = 494479
+group2_seeds_123_124_d3_H_VQ_table:
+  state total plus minus plus_rate source_share
+  H=+1,VQ=+1 3974 1890 2084 0.475591000 0.246495000
+  H=+1,VQ=-1 4172 2096 2076 0.502396000 0.258776000
+  H=-1,VQ=+1 4028 2056 1972 0.510427000 0.249844000
+  H=-1,VQ=-1 3948 1930 2018 0.488855000 0.244882000
+group2_seeds_123_124_d3_eps_h_eps_v_T_line:
+  rows = 16122
+  state_eps_h=+1,eps_v=+1,T_line=+1_minus = 1008
+  state_eps_h=+1,eps_v=+1,T_line=+1_plus = 1036
+  state_eps_h=+1,eps_v=+1,T_line=+1_plus_rate_x1000000 = 506849
+  state_eps_h=+1,eps_v=+1,T_line=+1_source_share_x1000000 = 126783
+  state_eps_h=+1,eps_v=+1,T_line=+1_total = 2044
+  state_eps_h=+1,eps_v=+1,T_line=-1_minus = 1082
+  state_eps_h=+1,eps_v=+1,T_line=-1_plus = 966
+  state_eps_h=+1,eps_v=+1,T_line=-1_plus_rate_x1000000 = 471679
+  state_eps_h=+1,eps_v=+1,T_line=-1_source_share_x1000000 = 127031
+  state_eps_h=+1,eps_v=+1,T_line=-1_total = 2048
+  state_eps_h=+1,eps_v=-1,T_line=+1_minus = 1040
+  state_eps_h=+1,eps_v=-1,T_line=+1_plus = 936
+  state_eps_h=+1,eps_v=-1,T_line=+1_plus_rate_x1000000 = 473684
+  state_eps_h=+1,eps_v=-1,T_line=+1_source_share_x1000000 = 122565
+  state_eps_h=+1,eps_v=-1,T_line=+1_total = 1976
+  state_eps_h=+1,eps_v=-1,T_line=-1_minus = 972
+  state_eps_h=+1,eps_v=-1,T_line=-1_plus = 882
+  state_eps_h=+1,eps_v=-1,T_line=-1_plus_rate_x1000000 = 475728
+  state_eps_h=+1,eps_v=-1,T_line=-1_source_share_x1000000 = 114998
+  state_eps_h=+1,eps_v=-1,T_line=-1_total = 1854
+  state_eps_h=-1,eps_v=+1,T_line=+1_minus = 1002
+  state_eps_h=-1,eps_v=+1,T_line=+1_plus = 1064
+  state_eps_h=-1,eps_v=+1,T_line=+1_plus_rate_x1000000 = 515004
+  state_eps_h=-1,eps_v=+1,T_line=+1_source_share_x1000000 = 128147
+  state_eps_h=-1,eps_v=+1,T_line=+1_total = 2066
+  state_eps_h=-1,eps_v=+1,T_line=-1_minus = 1044
+  state_eps_h=-1,eps_v=+1,T_line=-1_plus = 1092
+  state_eps_h=-1,eps_v=+1,T_line=-1_plus_rate_x1000000 = 511235
+  state_eps_h=-1,eps_v=+1,T_line=-1_source_share_x1000000 = 132489
+  state_eps_h=-1,eps_v=+1,T_line=-1_total = 2136
+  state_eps_h=-1,eps_v=-1,T_line=+1_minus = 988
+  state_eps_h=-1,eps_v=-1,T_line=+1_plus = 970
+  state_eps_h=-1,eps_v=-1,T_line=+1_plus_rate_x1000000 = 495403
+  state_eps_h=-1,eps_v=-1,T_line=+1_source_share_x1000000 = 121448
+  state_eps_h=-1,eps_v=-1,T_line=+1_total = 1958
+  state_eps_h=-1,eps_v=-1,T_line=-1_minus = 1014
+  state_eps_h=-1,eps_v=-1,T_line=-1_plus = 1026
+  state_eps_h=-1,eps_v=-1,T_line=-1_plus_rate_x1000000 = 502941
+  state_eps_h=-1,eps_v=-1,T_line=-1_source_share_x1000000 = 126535
+  state_eps_h=-1,eps_v=-1,T_line=-1_total = 2040
+  states = 8
+  target_minus = 8150
+  target_plus = 7972
+  target_plus_rate_x1000000 = 494479
+group2_seeds_123_124_d3_eps_h_eps_v_T_line_table:
+  state total plus minus plus_rate source_share
+  eps_h=+1,eps_v=+1,T_line=+1 2044 1036 1008 0.506849000 0.126783000
+  eps_h=+1,eps_v=+1,T_line=-1 2048 966 1082 0.471679000 0.127031000
+  eps_h=+1,eps_v=-1,T_line=+1 1976 936 1040 0.473684000 0.122565000
+  eps_h=+1,eps_v=-1,T_line=-1 1854 882 972 0.475728000 0.114998000
+  eps_h=-1,eps_v=+1,T_line=+1 2066 1064 1002 0.515004000 0.128147000
+  eps_h=-1,eps_v=+1,T_line=-1 2136 1092 1044 0.511235000 0.132489000
+  eps_h=-1,eps_v=-1,T_line=+1 1958 970 988 0.495403000 0.121448000
+  eps_h=-1,eps_v=-1,T_line=-1 2040 1026 1014 0.502941000 0.126535000
+group2_seeds_123_124_d3_hcore_chi_vcore_chi:
+  rows = 16122
+  state_hcore_chi=+1,vcore_chi=+1_minus = 2026
+  state_hcore_chi=+1,vcore_chi=+1_plus = 2002
+  state_hcore_chi=+1,vcore_chi=+1_plus_rate_x1000000 = 497020
+  state_hcore_chi=+1,vcore_chi=+1_source_share_x1000000 = 249844
+  state_hcore_chi=+1,vcore_chi=+1_total = 4028
+  state_hcore_chi=+1,vcore_chi=-1_minus = 2134
+  state_hcore_chi=+1,vcore_chi=-1_plus = 1984
+  state_hcore_chi=+1,vcore_chi=-1_plus_rate_x1000000 = 481787
+  state_hcore_chi=+1,vcore_chi=-1_source_share_x1000000 = 255427
+  state_hcore_chi=+1,vcore_chi=-1_total = 4118
+  state_hcore_chi=-1,vcore_chi=+1_minus = 1978
+  state_hcore_chi=-1,vcore_chi=+1_plus = 1982
+  state_hcore_chi=-1,vcore_chi=+1_plus_rate_x1000000 = 500505
+  state_hcore_chi=-1,vcore_chi=+1_source_share_x1000000 = 245627
+  state_hcore_chi=-1,vcore_chi=+1_total = 3960
+  state_hcore_chi=-1,vcore_chi=-1_minus = 2012
+  state_hcore_chi=-1,vcore_chi=-1_plus = 2004
+  state_hcore_chi=-1,vcore_chi=-1_plus_rate_x1000000 = 499003
+  state_hcore_chi=-1,vcore_chi=-1_source_share_x1000000 = 249100
+  state_hcore_chi=-1,vcore_chi=-1_total = 4016
+  states = 4
+  target_minus = 8150
+  target_plus = 7972
+  target_plus_rate_x1000000 = 494479
+group2_seeds_123_124_d3_hcore_chi_vcore_chi_table:
+  state total plus minus plus_rate source_share
+  hcore_chi=+1,vcore_chi=+1 4028 2002 2026 0.497020000 0.249844000
+  hcore_chi=+1,vcore_chi=-1 4118 1984 2134 0.481787000 0.255427000
+  hcore_chi=-1,vcore_chi=+1 3960 1982 1978 0.500505000 0.245627000
+  hcore_chi=-1,vcore_chi=-1 4016 2004 2012 0.499003000 0.249100000
+group2_seeds_123_124_d4_eps_h_eps_v:
+  rows = 7972
+  state_eps_h=+1,eps_v=+1_minus = 1028
+  state_eps_h=+1,eps_v=+1_plus = 974
+  state_eps_h=+1,eps_v=+1_plus_rate_x1000000 = 486513
+  state_eps_h=+1,eps_v=+1_source_share_x1000000 = 251128
+  state_eps_h=+1,eps_v=+1_total = 2002
+  state_eps_h=+1,eps_v=-1_minus = 926
+  state_eps_h=+1,eps_v=-1_plus = 892
+  state_eps_h=+1,eps_v=-1_plus_rate_x1000000 = 490649
+  state_eps_h=+1,eps_v=-1_source_share_x1000000 = 228048
+  state_eps_h=+1,eps_v=-1_total = 1818
+  state_eps_h=-1,eps_v=+1_minus = 1070
+  state_eps_h=-1,eps_v=+1_plus = 1086
+  state_eps_h=-1,eps_v=+1_plus_rate_x1000000 = 503710
+  state_eps_h=-1,eps_v=+1_source_share_x1000000 = 270446
+  state_eps_h=-1,eps_v=+1_total = 2156
+  state_eps_h=-1,eps_v=-1_minus = 1044
+  state_eps_h=-1,eps_v=-1_plus = 952
+  state_eps_h=-1,eps_v=-1_plus_rate_x1000000 = 476953
+  state_eps_h=-1,eps_v=-1_source_share_x1000000 = 250376
+  state_eps_h=-1,eps_v=-1_total = 1996
+  states = 4
+  target_minus = 4068
+  target_plus = 3904
+  target_plus_rate_x1000000 = 489713
+group2_seeds_123_124_d4_eps_h_eps_v_table:
+  state total plus minus plus_rate source_share
+  eps_h=+1,eps_v=+1 2002 974 1028 0.486513000 0.251128000
+  eps_h=+1,eps_v=-1 1818 892 926 0.490649000 0.228048000
+  eps_h=-1,eps_v=+1 2156 1086 1070 0.503710000 0.270446000
+  eps_h=-1,eps_v=-1 1996 952 1044 0.476953000 0.250376000
+group2_seeds_123_124_d4_H_VQ:
+  rows = 7972
+  state_H=+1,VQ=+1_minus = 986
+  state_H=+1,VQ=+1_plus = 904
+  state_H=+1,VQ=+1_plus_rate_x1000000 = 478306
+  state_H=+1,VQ=+1_source_share_x1000000 = 237079
+  state_H=+1,VQ=+1_total = 1890
+  state_H=+1,VQ=-1_minus = 1058
+  state_H=+1,VQ=-1_plus = 1038
+  state_H=+1,VQ=-1_plus_rate_x1000000 = 495229
+  state_H=+1,VQ=-1_source_share_x1000000 = 262920
+  state_H=+1,VQ=-1_total = 2096
+  state_H=-1,VQ=+1_minus = 1056
+  state_H=-1,VQ=+1_plus = 1000
+  state_H=-1,VQ=+1_plus_rate_x1000000 = 486381
+  state_H=-1,VQ=+1_source_share_x1000000 = 257902
+  state_H=-1,VQ=+1_total = 2056
+  state_H=-1,VQ=-1_minus = 968
+  state_H=-1,VQ=-1_plus = 962
+  state_H=-1,VQ=-1_plus_rate_x1000000 = 498445
+  state_H=-1,VQ=-1_source_share_x1000000 = 242097
+  state_H=-1,VQ=-1_total = 1930
+  states = 4
+  target_minus = 4068
+  target_plus = 3904
+  target_plus_rate_x1000000 = 489713
+group2_seeds_123_124_d4_H_VQ_table:
+  state total plus minus plus_rate source_share
+  H=+1,VQ=+1 1890 904 986 0.478306000 0.237079000
+  H=+1,VQ=-1 2096 1038 1058 0.495229000 0.262920000
+  H=-1,VQ=+1 2056 1000 1056 0.486381000 0.257902000
+  H=-1,VQ=-1 1930 962 968 0.498445000 0.242097000
+group2_seeds_123_124_d4_eps_h_eps_v_T_line:
+  rows = 7972
+  state_eps_h=+1,eps_v=+1,T_line=+1_minus = 542
+  state_eps_h=+1,eps_v=+1,T_line=+1_plus = 494
+  state_eps_h=+1,eps_v=+1,T_line=+1_plus_rate_x1000000 = 476833
+  state_eps_h=+1,eps_v=+1,T_line=+1_source_share_x1000000 = 129954
+  state_eps_h=+1,eps_v=+1,T_line=+1_total = 1036
+  state_eps_h=+1,eps_v=+1,T_line=-1_minus = 486
+  state_eps_h=+1,eps_v=+1,T_line=-1_plus = 480
+  state_eps_h=+1,eps_v=+1,T_line=-1_plus_rate_x1000000 = 496894
+  state_eps_h=+1,eps_v=+1,T_line=-1_source_share_x1000000 = 121174
+  state_eps_h=+1,eps_v=+1,T_line=-1_total = 966
+  state_eps_h=+1,eps_v=-1,T_line=+1_minus = 474
+  state_eps_h=+1,eps_v=-1,T_line=+1_plus = 462
+  state_eps_h=+1,eps_v=-1,T_line=+1_plus_rate_x1000000 = 493589
+  state_eps_h=+1,eps_v=-1,T_line=+1_source_share_x1000000 = 117410
+  state_eps_h=+1,eps_v=-1,T_line=+1_total = 936
+  state_eps_h=+1,eps_v=-1,T_line=-1_minus = 452
+  state_eps_h=+1,eps_v=-1,T_line=-1_plus = 430
+  state_eps_h=+1,eps_v=-1,T_line=-1_plus_rate_x1000000 = 487528
+  state_eps_h=+1,eps_v=-1,T_line=-1_source_share_x1000000 = 110637
+  state_eps_h=+1,eps_v=-1,T_line=-1_total = 882
+  state_eps_h=-1,eps_v=+1,T_line=+1_minus = 564
+  state_eps_h=-1,eps_v=+1,T_line=+1_plus = 500
+  state_eps_h=-1,eps_v=+1,T_line=+1_plus_rate_x1000000 = 469924
+  state_eps_h=-1,eps_v=+1,T_line=+1_source_share_x1000000 = 133467
+  state_eps_h=-1,eps_v=+1,T_line=+1_total = 1064
+  state_eps_h=-1,eps_v=+1,T_line=-1_minus = 506
+  state_eps_h=-1,eps_v=+1,T_line=-1_plus = 586
+  state_eps_h=-1,eps_v=+1,T_line=-1_plus_rate_x1000000 = 536630
+  state_eps_h=-1,eps_v=+1,T_line=-1_source_share_x1000000 = 136979
+  state_eps_h=-1,eps_v=+1,T_line=-1_total = 1092
+  state_eps_h=-1,eps_v=-1,T_line=+1_minus = 496
+  state_eps_h=-1,eps_v=-1,T_line=+1_plus = 474
+  state_eps_h=-1,eps_v=-1,T_line=+1_plus_rate_x1000000 = 488659
+  state_eps_h=-1,eps_v=-1,T_line=+1_source_share_x1000000 = 121675
+  state_eps_h=-1,eps_v=-1,T_line=+1_total = 970
+  state_eps_h=-1,eps_v=-1,T_line=-1_minus = 548
+  state_eps_h=-1,eps_v=-1,T_line=-1_plus = 478
+  state_eps_h=-1,eps_v=-1,T_line=-1_plus_rate_x1000000 = 465886
+  state_eps_h=-1,eps_v=-1,T_line=-1_source_share_x1000000 = 128700
+  state_eps_h=-1,eps_v=-1,T_line=-1_total = 1026
+  states = 8
+  target_minus = 4068
+  target_plus = 3904
+  target_plus_rate_x1000000 = 489713
+group2_seeds_123_124_d4_eps_h_eps_v_T_line_table:
+  state total plus minus plus_rate source_share
+  eps_h=+1,eps_v=+1,T_line=+1 1036 494 542 0.476833000 0.129954000
+  eps_h=+1,eps_v=+1,T_line=-1 966 480 486 0.496894000 0.121174000
+  eps_h=+1,eps_v=-1,T_line=+1 936 462 474 0.493589000 0.117410000
+  eps_h=+1,eps_v=-1,T_line=-1 882 430 452 0.487528000 0.110637000
+  eps_h=-1,eps_v=+1,T_line=+1 1064 500 564 0.469924000 0.133467000
+  eps_h=-1,eps_v=+1,T_line=-1 1092 586 506 0.536630000 0.136979000
+  eps_h=-1,eps_v=-1,T_line=+1 970 474 496 0.488659000 0.121675000
+  eps_h=-1,eps_v=-1,T_line=-1 1026 478 548 0.465886000 0.128700000
+group2_seeds_123_124_d4_hcore_chi_vcore_chi:
+  rows = 7972
+  state_hcore_chi=+1,vcore_chi=+1_minus = 1062
+  state_hcore_chi=+1,vcore_chi=+1_plus = 940
+  state_hcore_chi=+1,vcore_chi=+1_plus_rate_x1000000 = 469530
+  state_hcore_chi=+1,vcore_chi=+1_source_share_x1000000 = 251128
+  state_hcore_chi=+1,vcore_chi=+1_total = 2002
+  state_hcore_chi=+1,vcore_chi=-1_minus = 982
+  state_hcore_chi=+1,vcore_chi=-1_plus = 1002
+  state_hcore_chi=+1,vcore_chi=-1_plus_rate_x1000000 = 505040
+  state_hcore_chi=+1,vcore_chi=-1_source_share_x1000000 = 248871
+  state_hcore_chi=+1,vcore_chi=-1_total = 1984
+  state_hcore_chi=-1,vcore_chi=+1_minus = 1010
+  state_hcore_chi=-1,vcore_chi=+1_plus = 972
+  state_hcore_chi=-1,vcore_chi=+1_plus_rate_x1000000 = 490413
+  state_hcore_chi=-1,vcore_chi=+1_source_share_x1000000 = 248620
+  state_hcore_chi=-1,vcore_chi=+1_total = 1982
+  state_hcore_chi=-1,vcore_chi=-1_minus = 1014
+  state_hcore_chi=-1,vcore_chi=-1_plus = 990
+  state_hcore_chi=-1,vcore_chi=-1_plus_rate_x1000000 = 494011
+  state_hcore_chi=-1,vcore_chi=-1_source_share_x1000000 = 251379
+  state_hcore_chi=-1,vcore_chi=-1_total = 2004
+  states = 4
+  target_minus = 4068
+  target_plus = 3904
+  target_plus_rate_x1000000 = 489713
+group2_seeds_123_124_d4_hcore_chi_vcore_chi_table:
+  state total plus minus plus_rate source_share
+  hcore_chi=+1,vcore_chi=+1 2002 940 1062 0.469530000 0.251128000
+  hcore_chi=+1,vcore_chi=-1 1984 1002 982 0.505040000 0.248871000
+  hcore_chi=-1,vcore_chi=+1 1982 972 1010 0.490413000 0.248620000
+  hcore_chi=-1,vcore_chi=-1 2004 990 1014 0.494011000 0.251379000
+p27_trace_norm_orientation_phase_probe_rows=1/1
