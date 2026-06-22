@@ -50,6 +50,12 @@ relative Hilbert-90/Kummer class over `z^2=F`.  The reduced relative cover
 prices at genus `17` over `q=607`, versus the naive genus-69 full
 orientation-source cover.
 
+Follow-up H90 quotient:
+[P27 Trace/Norm Dplus H90 Quotient](p27_trace_norm_dplus_h90_quotient_20260622.md).
+The genus-17 relative cover is a degree-4 cyclic/H90 cover over the elliptic
+curve `w^2=-(t^2+2t-1)(t^2-2t-1)`.  This is the preferred extraction target
+over the full orientation-source cover.
+
 ## Cover
 
 Use:
@@ -164,6 +170,7 @@ trace/norm quotient, rather than adjoining both orientation roots separately.
 continue = trace/norm D_plus as a structural narrowing lead
 continue = exact Kummer/divisor extraction on the Dplus conic quotient
 continue = relative Hilbert-90/Kummer extraction over the domain-spin cover
+continue = cyclic-quartic/Kummer extraction over the H90 elliptic quotient
 continue = quotient/Prym/decomposition of the genus-17 relative cover
 continue = quotient/Prym decomposition of the genus-69 source components
 continue = GPU recurrence/coupling telemetry for D_plus versus later gates
@@ -171,6 +178,7 @@ continue = GPU recurrence/coupling telemetry for D_plus versus later gates
 kill = direct full-orientation-cover sampler as the first production plan
 kill = bare conic quotient as a standalone Dplus sampler
 kill = genus-17 relative cover as a direct source without further splitting
+kill = H90 elliptic quotient alone as a Dplus sampler
 kill = low-weight tested a/g/m quotient-character products
 kill = eps_h/eps_v or H/VQ/T_line buckets as post-Dplus GPU filters
 kill = treating eps_h and eps_v as free once Dplus is named
@@ -186,6 +194,7 @@ kill = another tiny R(a) character scan for Dplus
 - Orientation phase screen: [P27 Trace/Norm Orientation Phase Screen](p27_trace_norm_orientation_phase_screen_20260622.md)
 - Quotient symmetry: [P27 Trace/Norm Dplus Quotient Symmetry](p27_trace_norm_dplus_quotient_symmetry_20260622.md)
 - Relative descent: [P27 Trace/Norm Dplus Relative Descent](p27_trace_norm_dplus_relative_descent_20260622.md)
+- H90 quotient: [P27 Trace/Norm Dplus H90 Quotient](p27_trace_norm_dplus_h90_quotient_20260622.md)
 - GPU narrowing: [P27 GPU Search-Space Narrowing Probe](p27_gpu_search_space_narrowing_20260621.md)
 
 ```text

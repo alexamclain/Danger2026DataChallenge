@@ -179,6 +179,12 @@ the domain-spin cover; the bare conic is not a standalone `Dplus` source.
 Online Magma over `q=607` prices the reduced relative Dplus cover at genus
 `17` for every fixed orientation sign pair.
 
+Follow-up H90 quotient:
+[P27 Trace/Norm Dplus H90 Quotient](p27_trace_norm_dplus_h90_quotient_20260622.md).
+The order-4 lift fixes `t,w`; the quotient is the genus-1 curve
+`w^2=-(t^2+2t-1)(t^2-2t-1)`, and the relative cover is degree `4` over this
+elliptic base.
+
 Negative:
 
 ```text
@@ -227,6 +233,7 @@ selected x-square gate, rather than just acting as a one-time 4x stratum.
 continue = Magma/Sage quotient decomposition of the named D_plus cover
 continue = exact descended Kummer/divisor extraction on a^2+g^2=4
 continue = relative Hilbert-90/Kummer extraction over z^2=F
+continue = cyclic-quartic/Kummer extraction over E_h90
 continue = quotient/Prym/decomposition of the genus-17 relative cover
 continue = GPU direct-source experiment if a quotient map is found
 continue = use this exact core formula for any further D_plus telemetry
@@ -236,6 +243,7 @@ kill = searching for D_plus as a tiny R(a) character
 kill = low-weight tested a/g/m quotient-character products
 kill = standalone R(m) search on the bare conic quotient
 kill = treating genus 17 as a direct source without further structure
+kill = treating the H90 elliptic quotient alone as a source
 kill = using eps_h/eps_v or H/VQ/T_line buckets as post-Dplus filters
 kill = promoting current trace/norm classifier as production without a direct
        sampler or cheaper orientation source
@@ -253,6 +261,7 @@ kill = promoting current trace/norm classifier as production without a direct
 - Magma D_plus XML: `research/p27/archive/probe_outputs/p27_trace_norm_dplus_cover_q607_magma_20260621.xml`
 - Quotient symmetry: [P27 Trace/Norm Dplus Quotient Symmetry](p27_trace_norm_dplus_quotient_symmetry_20260622.md)
 - Relative descent: [P27 Trace/Norm Dplus Relative Descent](p27_trace_norm_dplus_relative_descent_20260622.md)
+- H90 quotient: [P27 Trace/Norm Dplus H90 Quotient](p27_trace_norm_dplus_h90_quotient_20260622.md)
 - Related GPU note: [P27 GPU Search-Space Narrowing Probe](p27_gpu_search_space_narrowing_20260621.md)
 - Prior spin note: [P27 Trace/Norm Spin Obstruction](p27_trace_norm_spin_obstruction_20260621.md)
 

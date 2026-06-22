@@ -150,6 +150,13 @@ but it is still not a genus-0/genus-1 direct sampler.  The useful next object
 is a special quotient/Prym/decomposition of the genus-17 relative cover, or a
 relation from this cover to `d3`.
 
+Follow-up:
+[P27 Trace/Norm Dplus H90 Quotient](p27_trace_norm_dplus_h90_quotient_20260622.md).
+The relative identity gives an explicit order-4 lift
+`alpha(t,z,w,s)=(t,-z,w,z*S/s)`.  The quotient is the elliptic curve
+`w^2=-(t^2+2t-1)(t^2-2t-1)`, and Magma prices the relative cover as a degree-4
+genus-17 cover over that elliptic base.
+
 ## Interpretation
 
 Positive:
@@ -159,6 +166,7 @@ The quotient-symmetry fiber constancy is explained exactly.
 The hard class is now a named relative Kummer/Hilbert-90 problem.
 The known domain-spin gate is the boundary term, not disposable bookkeeping.
 The reduced relative Dplus cover prices at genus 17, not genus 69.
+The H90 quotient base is an explicit genus-1 curve.
 ```
 
 Negative:
@@ -168,6 +176,7 @@ Dplus is not a free rational character on a^2+g^2=4.
 The failed low-weight a/g/m character screen was testing the wrong level.
 Sampling the conic quotient alone cannot impose Dplus.
 Genus 17 is still too large to promote as a direct production sampler.
+The degree-4 cover over the elliptic quotient remains the hard object.
 ```
 
 ## Next Test
@@ -196,6 +205,7 @@ Norm_z(u) = z^2*S^2
 
 ```text
 continue = relative Hilbert-90/Kummer extraction using u0,u1,S
+continue = cyclic-quartic/Kummer extraction over E_h90
 continue = quotient/Prym/decomposition of the genus-17 relative cover
 continue = quotient coordinates a=t-1/t, g=w/t only together with the
            domain-spin cover
@@ -204,12 +214,14 @@ continue = GPU only after the relative source map or d3 coupling is named
 kill = standalone R(m) search on the conic parameter line
 kill = treating the conic quotient as a direct Dplus sampler
 kill = treating the genus-17 relative cover as an immediate production source
+kill = treating E_h90 alone as a Dplus source
 kill = low-weight a/g/m character buckets as the Dplus class
 ```
 
 ## Linked Artifacts
 
 - Quotient symmetry: [P27 Trace/Norm Dplus Quotient Symmetry](p27_trace_norm_dplus_quotient_symmetry_20260622.md)
+- H90 quotient: [P27 Trace/Norm Dplus H90 Quotient](p27_trace_norm_dplus_h90_quotient_20260622.md)
 - Dplus cover: [P27 Trace/Norm D_plus Cover](p27_trace_norm_dplus_cover_20260621.md)
 - Source-orientation pricing: [P27 Trace/Norm Source-Orientation Cover](p27_trace_norm_source_orientation_cover_20260621.md)
 - GPU handoff: [P27 GPU Dplus-Native Source Handoff](p27_gpu_dplus_native_source_handoff_20260622.md)

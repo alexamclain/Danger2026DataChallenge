@@ -362,6 +362,14 @@ genus `17`, uniformly for the four fixed orientation sign pairs.  That is a
 real reduction from the naive genus-69 full orientation-source cover, but still
 not a direct production source without a special quotient/Prym or `d3`
 coupling.
+The H90 quotient is now explicit:
+[P27 Trace/Norm Dplus H90 Quotient](evidence/p27_trace_norm_dplus_h90_quotient_20260622.md).
+The lift `alpha(t,z,w,s)=(t,-z,w,z*S/s)` has `alpha^2` equal to the `s`-deck
+involution and fixes `t,w`.  Magma confirms the quotient base
+`w^2=-(t^2+2t-1)(t^2-2t-1)` has genus `1`, while the relative `Dplus` cover is
+degree `4` over it and genus `17`.  This turns the lane into a precise
+cyclic-quartic/Kummer-class extraction over an elliptic curve; it is still not
+a GPU source until that class splits, recurs, or couples to `d3`.
 
 The naive orientation-source cover is now priced:
 [P27 Trace/Norm Source-Orientation Cover](evidence/p27_trace_norm_source_orientation_cover_20260621.md).
