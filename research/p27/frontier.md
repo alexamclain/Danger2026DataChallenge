@@ -2151,6 +2151,11 @@ The mixed-guard update removes that specific weakness:
 In q4999/q5783/q6007/q6247, `f5(B)` has both signs and the exact transition
 still holds on every selected B row.  This strengthens the repeated-Kummer
 CAS target, while p27/GPU telemetry still kills gamma bucket production.
+The cheap visible-source explanation is negative:
+[P27 B-Line F5 Visible Character Screen](evidence/p27_b_line_f5_visible_character_20260622.md).
+No named B atom and no split linear support of degree `<=2` explains the mixed
+`f5(B)` signs, so the live route remains Kummer/Prym extraction rather than a
+base-line character bucket.
 P27 telemetry now sets the practical boundary:
 [P27 Gamma-Chain 20k Telemetry](evidence/p27_gamma_chain_p27_20k_telemetry_20260622.md).
 On `20k + 20k` train/heldout samples, gamma products and V4 phase links stay

@@ -37,6 +37,10 @@ signs.  The exact transition survives: every selected `f4=+1` B row has
 So this result is no longer merely a one-sided small-field tail.  It is a
 stronger CAS regression for the repeated Kummer class, while still lacking a
 source denominator.
+The visible-character follow-up
+[P27 B-Line F5 Visible Character Screen](p27_b_line_f5_visible_character_20260622.md)
+finds no exact named B atom and no exact split degree-2 linear support for the
+mixed `f5(B)` signs.
 
 ## Probe
 
@@ -182,6 +186,7 @@ continue = include mixed-f5 q4999/q5783/q6007/q6247 as regression fields
 continue = bounded GPU telemetry can emit gamma_4/gamma_5 with denominators
 
 kill = reading exact mixed-guard transitions as a source law without a quotient/source
+kill = visible B atoms or split degree-2 linear support as f5 source selectors
 kill = gamma bucket production without raw-source lift
 kill = materialization/orientation halves as production filters
 ```
@@ -190,6 +195,7 @@ kill = materialization/orientation halves as production filters
 
 - [P27 A/B/K F3/F4 Chart Count](p27_abk_f3_f4_chart_count_20260622.md)
 - [P27 A/B/K F4/F5 Mixed-Guard Transition](p27_abk_f4_f5_mixed_guard_20260622.md)
+- [P27 B-Line F5 Visible Character Screen](p27_b_line_f5_visible_character_20260622.md)
 - [P27 B-Line Second Reduced-Fiber Fixture](p27_b_line_second_reduced_fiber_20260622.md)
 - [P27 B-Line Kummer Fixture Packet](p27_b_line_kummer_fixture_packet_20260622.md)
 - [P27 B-Line Gamma Class Handoff](p27_b_line_gamma_class_handoff_20260622.md)

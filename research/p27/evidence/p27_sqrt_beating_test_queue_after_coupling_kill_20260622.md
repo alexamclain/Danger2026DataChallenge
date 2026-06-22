@@ -89,6 +89,9 @@ shows the repeated transition is exact in mixed-`f5` guard fields
 `q4999,q5783,q6007,q6247`, not only in one-sided q1607/q1847/q2087 tails.
 This raises the priority of the offline class-comparison question, while
 GPU recurrence-coupling still kills current sign-word production.
+Follow-up [P27 B-Line F5 Visible Character Screen](p27_b_line_f5_visible_character_20260622.md)
+finds no exact named B atom or split degree-2 linear support for those mixed
+`f5(B)` signs, so do not turn this into a visible B-bucket search.
 
 Inputs:
 
@@ -318,6 +321,7 @@ continue = fused/native Dplus pricing with A/d3 telemetry columns
 continue = Dplus/H90 A_eta versus pulled-back A-level d3 class comparison
 
 kill = more sign-word/gamma bucket GPU scans
+kill = visible f5(B) B-atom/split-linear bucket searches
 kill = naked reciprocal-tower source sampling
 kill = standalone H90 payload sign screens
 kill = simple H90/rho coboundary bucket screens for chi(x6)

@@ -24,6 +24,12 @@ This strengthens the CAS class-comparison target: the f5/f4 gamma class is not
 just a one-sided small-field tail.  It is still not a GPU production source
 without a quotient, coboundary, recurrence, or direct source map.
 
+Visible-character follow-up:
+[P27 B-Line F5 Visible Character Screen](p27_b_line_f5_visible_character_20260622.md)
+finds no exact named B atom and no exact split linear support of degree `<=2`
+for these mixed `f5(B)` signs.  This keeps the result in the Kummer/class
+extraction lane rather than promoting a cheap base-line character source.
+
 ## Artifacts
 
 Fixtures:
@@ -151,6 +157,7 @@ continue = use mixed-f5 q4999/q5783/q6007/q6247 as regression fields
 continue = search for a theorem-shaped quotient/coboundary explaining the exact transition
 
 kill = dismissing f4/f5 recurrence as merely one-sided q1607/q1847/q2087 tails
+kill = visible B atoms or split degree-2 branch support as f5 selectors
 kill = GPU gamma bucket production without source-normalized lift
 kill = materialization/orientation halves as production filters
 ```
