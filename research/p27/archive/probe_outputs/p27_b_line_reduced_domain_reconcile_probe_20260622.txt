@@ -1,0 +1,190 @@
+p27 B-line reduced-domain reconciliation probe
+question = does the reduced point-count B-domain match the frozen legal B-domain?
+fixture = research/p27/archive/fixtures/p27_b_line_reduced_fiber_fixture_20260622.json
+small_primes = 1607,1847,2087
+unit = 16
+q=1607:
+domain_sizes:
+  core_B = 200
+  fixture_B = 49
+  fixture_equals_legal_b_maps = 1
+  legal_b_maps_B = 49
+  pointcount_B = 100
+domain_intersections:
+  core_minus_pointcount = 150
+  fixture_minus_pointcount = 0
+  pointcount_cap_core = 50
+  pointcount_cap_fixture = 49
+  pointcount_core_minus_fixture = 1
+  pointcount_minus_core = 50
+  pointcount_minus_fixture = 51
+pointcount_setup_stats:
+  U_materialization_roots_0 = 1504
+  U_materialization_roots_0_selector_chi_-1 = 704
+  U_materialization_roots_0_selector_chi_1 = 800
+  U_materialization_roots_2 = 1696
+  U_materialization_roots_2_selector_chi_-1 = 800
+  U_materialization_roots_2_selector_chi_1 = 896
+  bad_X_denominator = 3
+  compactD_not_square = 800
+  first_half_beta_not_square = 400
+  legal_R_points = 800
+  legal_chart_points = 1600
+  materialized_x6_from_selector_minus_U = 1600
+  materialized_x6_from_selector_plus_U = 1792
+  materialized_x6_points = 3392
+  reduced_U_points = 3200
+  selector_chi_-1 = 1504
+  selector_chi_1 = 1696
+  selector_gamma_points = 3392
+  x6_chi_-1 = 1600
+  x6_chi_1 = 1792
+legal_b_maps_setup_stats:
+  d3_labeled_B = 49
+  d4_labeled_B = 28
+  enum_compact_not_target = 805
+  enum_no_label2_candidate = 408
+  legal_B = 49
+pointcount_all_lift_hist:
+  lift_units_0 = 22
+  lift_units_1 = 50
+  lift_units_2 = 28
+fixture_lift_hist:
+  lift_units_0 = 21
+  lift_units_2 = 28
+pointcount_minus_fixture_lift_hist:
+  lift_units_0 = 1
+  lift_units_1 = 50
+pointcount_not_core_lift_hist:
+  lift_units_1 = 50
+pointcount_core_not_fixture_lift_hist:
+  lift_units_0 = 1
+fixture_lift_sign_check:
+  fixture_observed_lift_0 = 21
+  fixture_observed_lift_2 = 28
+  fixture_sign_minus_rows = 21
+  fixture_sign_plus_rows = 28
+pointcount_core_not_fixture_values = [1]
+q=1847:
+domain_sizes:
+  core_B = 230
+  fixture_B = 63
+  fixture_equals_legal_b_maps = 1
+  legal_b_maps_B = 63
+  pointcount_B = 128
+domain_intersections:
+  core_minus_pointcount = 166
+  fixture_minus_pointcount = 0
+  pointcount_cap_core = 64
+  pointcount_cap_fixture = 63
+  pointcount_core_minus_fixture = 1
+  pointcount_minus_core = 64
+  pointcount_minus_fixture = 65
+pointcount_setup_stats:
+  U_materialization_roots_0 = 1632
+  U_materialization_roots_0_selector_chi_-1 = 608
+  U_materialization_roots_0_selector_chi_1 = 1024
+  U_materialization_roots_2 = 2464
+  U_materialization_roots_2_selector_chi_-1 = 1024
+  U_materialization_roots_2_selector_chi_1 = 1440
+  bad_X_denominator = 3
+  compactD_not_square = 868
+  first_half_beta_not_square = 460
+  legal_R_points = 1024
+  legal_chart_points = 2048
+  materialized_x6_from_selector_minus_U = 2048
+  materialized_x6_from_selector_plus_U = 2880
+  materialized_x6_points = 4928
+  reduced_U_points = 4096
+  selector_chi_-1 = 1632
+  selector_chi_1 = 2464
+  selector_gamma_points = 4928
+  x6_chi_-1 = 2048
+  x6_chi_1 = 2880
+legal_b_maps_setup_stats:
+  d3_labeled_B = 63
+  d4_labeled_B = 45
+  enum_compact_not_target = 873
+  enum_no_label2_candidate = 468
+  legal_B = 63
+pointcount_all_lift_hist:
+  lift_units_0 = 19
+  lift_units_1 = 64
+  lift_units_2 = 45
+fixture_lift_hist:
+  lift_units_0 = 18
+  lift_units_2 = 45
+pointcount_minus_fixture_lift_hist:
+  lift_units_0 = 1
+  lift_units_1 = 64
+pointcount_not_core_lift_hist:
+  lift_units_1 = 64
+pointcount_core_not_fixture_lift_hist:
+  lift_units_0 = 1
+fixture_lift_sign_check:
+  fixture_observed_lift_0 = 18
+  fixture_observed_lift_2 = 45
+  fixture_sign_minus_rows = 18
+  fixture_sign_plus_rows = 45
+pointcount_core_not_fixture_values = [1]
+q=2087:
+domain_sizes:
+  core_B = 260
+  fixture_B = 57
+  fixture_equals_legal_b_maps = 1
+  legal_b_maps_B = 57
+  pointcount_B = 114
+domain_intersections:
+  core_minus_pointcount = 203
+  fixture_minus_pointcount = 0
+  pointcount_cap_core = 57
+  pointcount_cap_fixture = 57
+  pointcount_core_minus_fixture = 0
+  pointcount_minus_core = 57
+  pointcount_minus_fixture = 57
+pointcount_setup_stats:
+  U_materialization_roots_0 = 1936
+  U_materialization_roots_0_selector_chi_-1 = 1024
+  U_materialization_roots_0_selector_chi_1 = 912
+  U_materialization_roots_2 = 1712
+  U_materialization_roots_2_selector_chi_-1 = 912
+  U_materialization_roots_2_selector_chi_1 = 800
+  bad_X_denominator = 3
+  compactD_not_square = 1104
+  first_half_beta_not_square = 520
+  legal_R_points = 912
+  legal_chart_points = 1824
+  materialized_x6_from_selector_minus_U = 1824
+  materialized_x6_from_selector_plus_U = 1600
+  materialized_x6_points = 3424
+  reduced_U_points = 3648
+  selector_chi_-1 = 1936
+  selector_chi_1 = 1712
+  selector_gamma_points = 3424
+  x6_chi_-1 = 1824
+  x6_chi_1 = 1600
+legal_b_maps_setup_stats:
+  d3_labeled_B = 57
+  d4_labeled_B = 25
+  enum_compact_not_target = 1109
+  enum_no_label2_candidate = 520
+  legal_B = 57
+pointcount_all_lift_hist:
+  lift_units_0 = 32
+  lift_units_1 = 57
+  lift_units_2 = 25
+fixture_lift_hist:
+  lift_units_0 = 32
+  lift_units_2 = 25
+pointcount_minus_fixture_lift_hist:
+  lift_units_1 = 57
+pointcount_not_core_lift_hist:
+  lift_units_1 = 57
+pointcount_core_not_fixture_lift_hist:
+fixture_lift_sign_check:
+  fixture_observed_lift_0 = 32
+  fixture_observed_lift_2 = 25
+  fixture_sign_minus_rows = 32
+  fixture_sign_plus_rows = 25
+pointcount_core_not_fixture_values = []
+p27_b_line_reduced_domain_reconcile_probe_rows=1/1

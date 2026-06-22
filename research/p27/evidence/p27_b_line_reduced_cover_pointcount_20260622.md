@@ -131,14 +131,24 @@ tests whether the `0/mixed/full` B-fiber profile is the sum of two visible
 B-line characters.  Named atoms, all rational-linear pairs, and all pairs of
 monic irreducible quadratics are negative across q1607/q1847/q2087.
 
+Domain reconciliation:
+[P27 B-Line Reduced-Domain Reconciliation](p27_b_line_reduced_domain_reconcile_20260622.md)
+shows that the mixed fibers are outside the frozen selected-source legal
+B-domain.  On the legal fixture rows, `lift_units=2` exactly matches `d3 plus`
+and `lift_units=0` exactly matches `d3 minus`.  Thus the point-count chart is
+a larger CAS staging object; it must be cut down by the legal/core source
+conditions before extracting the actual Kummer class.
+
 ## Continue / Kill
 
 ```text
 continue = offline normalize the U cover plus x6-materialization/selector layers
+continue = impose the selected-source legal/core cut before interpreting lift buckets
 continue = extract branch divisor/classes for the B-fibers with 0/32/64 lifts
 continue = compare the resulting f3 class against f4/f3 after normalization
 
 kill = treating the bare U double cover as the whole d3 source
+kill = treating mixed all-chart fibers as legal-source ambiguity
 kill = two-visible-character classifier for the B-fiber lift profile
 kill = GPU production before a named source map or recurrence is extracted
 kill = online Magma for this extraction path

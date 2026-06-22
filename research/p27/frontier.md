@@ -1003,6 +1003,13 @@ Across q1607/q1847/q2087, no pair of named atoms, rational-linear factors, or
 monic irreducible quadratic factors classifies the 0/mixed/full B-fiber lift
 profile.  This closes the obvious two-character sampler shortcut and keeps the
 lane pointed at actual branch/Kummer extraction.
+That result is now reconciled with the frozen legal B fixture:
+[P27 B-Line Reduced-Domain Reconciliation](evidence/p27_b_line_reduced_domain_reconcile_20260622.md).
+The legal fixture equals `legal_b_maps`, is contained in the point-count chart,
+and has no mixed fibers: `lift_units=2` is exactly `d3 plus`, while
+`lift_units=0` is exactly `d3 minus`.  The mixed point-count fibers are outside
+the selected-source legal domain, so the next CAS pass must impose that
+legal/core cut before extracting branch/Kummer classes.
 The B-line visible two-gate quartic shortcut is closed as well:
 [P27 B-Line Gate4-Prefix Quartic q1847 Screen](evidence/p27_b_line_gate4_prefix_quartic_q1847_screen_20260622.md).
 It scans `6,300,872,423` q1847 coefficient triples for

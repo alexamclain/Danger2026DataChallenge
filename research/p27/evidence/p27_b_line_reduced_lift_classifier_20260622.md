@@ -134,6 +134,14 @@ The reduced-cover lift profile is now a precise finite-field target.
 The nearest two-character sampler shape has a direct promotion-field verdict.
 ```
 
+Domain reconciliation:
+[P27 B-Line Reduced-Domain Reconciliation](p27_b_line_reduced_domain_reconcile_20260622.md)
+shows that the mixed lift fibers are outside the frozen selected-source legal
+B-domain.  On legal B rows, the lift profile is only `0/full` and exactly
+matches the known `d3(B)` sign.  Therefore this classifier screen is a
+negative result for the larger point-count chart as a sampler, not a new
+obstruction inside the legal B fixture.
+
 Negative:
 
 ```text
@@ -142,16 +150,19 @@ the 0/mixed/full lift profile.
 This gives no GPU source bucket.
 The reduced-cover lane still needs actual branch/Kummer extraction, not more
 visible low-degree classifier hunting.
+The all-chart mixed fibers are not legal-source d3 ambiguity.
 ```
 
 ## Continue / Kill
 
 ```text
 continue = offline branch/Kummer extraction for the reduced cover with selector layer
+continue = impose legal/core constraints before interpreting all-chart fibers
 continue = derive the true branch support from normalization, then test it
 continue = compare f4/f3 after the f3 class is extracted
 
 kill = two-visible-character classifier for reduced-cover lift profile
+kill = treating all-chart mixed fibers as legal-source buckets
 kill = rational-linear B bucket sampler from this profile
 kill = irreducible-quadratic-pair B bucket sampler from this profile
 kill = GPU production from reduced-cover lift buckets alone

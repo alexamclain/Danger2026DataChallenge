@@ -151,11 +151,20 @@ linears, or two monic irreducible quadratic characters on `P1_B` in the
 promotion fields.  This kills the nearest low-degree sampler interpretation
 of the point-count profile.
 
+Domain reconciliation:
+[P27 B-Line Reduced-Domain Reconciliation](p27_b_line_reduced_domain_reconcile_20260622.md).
+The frozen legal B fixture equals `legal_b_maps` and sits inside the
+point-count chart.  On those legal rows, the selector lift is exactly `0/full`
+and matches `d3(B)` with zero mismatches; the mixed point-count fibers are
+outside the selected-source legal domain.  CAS must impose that legal/core cut
+before interpreting the reduced-cover branch classes.
+
 Required computation:
 
 ```text
 normalize the reduced 4-u / 8-x legal+d3 cover over P1_B/P1_A/P1_Sroot
 include x6^2-U*x6+1 and gamma^2=U+2 in the offline branch/class extraction
+impose the selected-source legal/core cut before using all-chart lift buckets
 extract branch divisor degree, support field degrees, components, genus
 if d3 is tractable, compare f4/f3 in the Kummer group
 use f5/f6 only as regression checks until larger data supports them
