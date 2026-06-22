@@ -79,6 +79,14 @@ closed degrees 2 and 3 are both nonzero
 degree 2 and degree 3 are coprime
 ```
 
+Frobenius-fiber follow-up:
+[P27 B-Line No-R Frobenius Fiber Profile](p27_b_line_noR_frobenius_fiber_20260622.md).
+The degree-3 activity in both base families sits over degree-3 `B` orbits,
+while the quadratic fields also include fiber-level extension behavior over
+some base-field `B` values.  Gamma counts are stable on Frobenius `B` orbits
+in the tested fields.  Thus the CAS pass must distinguish `B`-orbit degree
+from splitting inside a fixed `B` fiber.
+
 ## Interpretation
 
 Positive:
@@ -118,9 +126,11 @@ and degree-3 normalizations both show generic fresh Kummer behavior.
 ```text
 continue = include GF(q^2)/GF(q^3) component comparison in the no-R CAS packet
 continue = compute Frobenius component permutation and gamma descent data
+continue = distinguish B-orbit degree from fiber-extension degree above fixed B
 continue = use closed-point counts as sanity checks for normalized components
 
 kill = one-extension-degree source story
+kill = single B-degree source law
 kill = GPU production from extension-count behavior alone
 kill = interpreting no degree-1 points as a sqrt-beating obstruction or win
 ```

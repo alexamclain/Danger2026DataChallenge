@@ -40,6 +40,7 @@ Supporting verdicts:
 compactD_R/beta/d_next squareclass smoke = pass over q7/q23
 no-R genus pressure = genus <= 1 violated in 5/7 fields if one component
 no-R closed-point pressure = degree 2 and 3 closed points both nonzero
+no-R Frobenius fiber profile = degree-3 B orbits plus quadratic fiber splitting
 reduced lift visible classifier = killed
 gamma visible square triviality = killed
 oriented alpha/beta word = tautological, not a source
@@ -107,11 +108,14 @@ normalize over GF(23^2) and GF(23^3), or give a reason one base is enough
 compute component count after each base change
 compute Frobenius permutation of components
 track whether gamma descends to components or permutes between them
+separate B-orbit degree from extension splitting inside a fixed B fiber
 ```
 
 This comparison is required because the closed-point transform has no degree-1
 points but has nonzero coprime degree-2 and degree-3 closed points in both
-base-field families.
+base-field families.  The finite-field Frobenius-fiber screen further shows
+that degree-3 activity sits over degree-3 `B` orbits, while quadratic activity
+can also occur above base-field `B` values.
 
 4. Compute quotient/Prym structure under the available symmetries:
 

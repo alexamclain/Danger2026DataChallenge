@@ -1240,6 +1240,11 @@ Over both base `7` and base `23`, there are no degree-1 affine closed points
 but there are nonzero closed points in coprime degrees `2` and `3`.  This
 requires the CAS pass to compare degree-2 and degree-3 base changes and compute
 Frobenius component permutation/gamma descent, not just one small-field genus.
+The fiber-level localization is now recorded too:
+[P27 B-Line No-R Frobenius Fiber Profile](evidence/p27_b_line_noR_frobenius_fiber_20260622.md).
+Degree-3 activity sits over degree-3 `B` orbits in both base families, while
+quadratic activity can occur by fiber splitting over base-field `B` values.
+So the CAS pass must separate B-orbit degree from fiber-extension degree.
 The B-line visible two-gate quartic shortcut is closed as well:
 [P27 B-Line Gate4-Prefix Quartic q1847 Screen](evidence/p27_b_line_gate4_prefix_quartic_q1847_screen_20260622.md).
 It scans `6,300,872,423` q1847 coefficient triples for
