@@ -1,0 +1,16 @@
+p27 K-line quartic chunk probe
+packet = research/p27/archive/fixtures/p27_kline_quartic_targets_20260622.json
+field = 1471
+family = d3_on_K
+chunk_stats:
+  end = 2000
+  exact_quartics = 0
+  field = 1471
+  polarity_-1_hits = 0
+  polarity_1_hits = 0
+  requested_count = 2000
+  rows = 50
+  start = 0
+  triples_scanned = 2000
+hit_samples:
+p27_kline_quartic_chunk_probe_rows=1/1

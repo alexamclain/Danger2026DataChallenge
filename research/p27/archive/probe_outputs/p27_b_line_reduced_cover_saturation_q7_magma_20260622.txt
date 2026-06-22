@@ -1,0 +1,9 @@
+The computation exceeded the memory limit and so was terminated prematurely.
+Current total memory usage: 357.1MB, failed memory request: 32.0MB
+System Error: User memory limit has been reached
+Runtime error: Variable 'Isat' has not been initialized
+User error: Identifier 'S' has not been declared or assigned
+RESULT p27_b_line_reduced_cover_saturation_q7 done
+Calculations are restricted to 60 seconds.
+Running Magma V2.29-8.
+Seed: 3750532871; Total time: 10.269 seconds; Total memory usage: 357.09MB.

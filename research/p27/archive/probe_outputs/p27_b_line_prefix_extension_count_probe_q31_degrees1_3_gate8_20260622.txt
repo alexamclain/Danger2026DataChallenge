@@ -1,0 +1,129 @@
+p27 B-line prefix extension-count probe
+B = 8 X^2/(X^2 - 1)^2, A+2=B^2
+counts = legal B and all-plus prefixes for d3..dN
+max_gate = 8
+GF(31^1) N=31:
+  B_degenerate = 1
+  candidate_invalid_not_nonsplit = 32
+  compact_not_target = 40
+  core_B = 3
+  core_B_without_legal = 3
+  deduped_ax = 0
+  field_size = 31
+  gate3_active_B = 0
+  gate4_active_B = 0
+  gate5_active_B = 0
+  gate6_active_B = 0
+  gate7_active_B = 0
+  gate8_active_B = 0
+  legal_B = 0
+  legal_B_in_core = 0
+  legal_B_missing_core = 0
+  modulus_degree = 1
+  prefix_d2_legal_B = 0
+  prefix_gate3_all_plus_B = 0
+  prefix_gate4_all_plus_B = 0
+  prefix_gate5_all_plus_B = 0
+  prefix_gate6_all_plus_B = 0
+  prefix_gate7_all_plus_B = 0
+  prefix_gate8_all_plus_B = 0
+  skip_X_degenerate = 2
+  source_rows = 16
+  core_B/N = 0.096774194
+  legal_B/N = 0.000000000
+  legal_B/core_B = 0.000000000
+  prefix_gate3/legal_B = 0.000000000 step_rate=0.000000000 scaled_by_half=0.000000
+  prefix_gate4/legal_B = 0.000000000 step_rate=0.000000000 scaled_by_half=0.000000
+  prefix_gate5/legal_B = 0.000000000 step_rate=0.000000000 scaled_by_half=0.000000
+  prefix_gate6/legal_B = 0.000000000 step_rate=0.000000000 scaled_by_half=0.000000
+  prefix_gate7/legal_B = 0.000000000 step_rate=0.000000000 scaled_by_half=0.000000
+  prefix_gate8/legal_B = 0.000000000 step_rate=0.000000000 scaled_by_half=0.000000
+GF(31^2) N=961:
+  B_degenerate = 1
+  B_group_size_8 = 16
+  candidate_invalid_not_nonsplit = 1096
+  candidates = 384
+  compact_not_target = 268
+  core_B = 48
+  core_B_without_legal = 32
+  d2_minus = 256
+  d2_plus_candidates = 128
+  deduped_ax = 64
+  field_size = 961
+  gate3_active_B = 16
+  gate3_minus_B = 16
+  gate4_active_B = 0
+  gate5_active_B = 0
+  gate6_active_B = 0
+  gate7_active_B = 0
+  gate8_active_B = 0
+  legal_B = 16
+  legal_B_in_core = 16
+  legal_B_missing_core = 0
+  modulus_degree = 2
+  prefix_d2_legal_B = 16
+  prefix_gate3_all_plus_B = 0
+  prefix_gate4_all_plus_B = 0
+  prefix_gate5_all_plus_B = 0
+  prefix_gate6_all_plus_B = 0
+  prefix_gate7_all_plus_B = 0
+  prefix_gate8_all_plus_B = 0
+  skip_X_degenerate = 2
+  source_rows = 740
+  core_B/N = 0.049947971
+  legal_B/N = 0.016649324
+  legal_B/core_B = 0.333333333
+  prefix_gate3/legal_B = 0.000000000 step_rate=0.000000000 scaled_by_half=0.000000
+  prefix_gate4/legal_B = 0.000000000 step_rate=0.000000000 scaled_by_half=0.000000
+  prefix_gate5/legal_B = 0.000000000 step_rate=0.000000000 scaled_by_half=0.000000
+  prefix_gate6/legal_B = 0.000000000 step_rate=0.000000000 scaled_by_half=0.000000
+  prefix_gate7/legal_B = 0.000000000 step_rate=0.000000000 scaled_by_half=0.000000
+  prefix_gate8/legal_B = 0.000000000 step_rate=0.000000000 scaled_by_half=0.000000
+GF(31^3) N=29791:
+  B_degenerate = 1
+  B_group_size_16 = 930
+  candidate_invalid_not_nonsplit = 14432
+  candidates = 14880
+  compact_not_target = 14200
+  core_B = 3723
+  core_B_without_legal = 2793
+  d2_plus_candidates = 14880
+  deduped_ax = 3720
+  field_size = 29791
+  gate3_active_B = 930
+  gate3_minus_B = 465
+  gate3_plus_B = 465
+  gate4_active_B = 465
+  gate4_minus_B = 240
+  gate4_plus_B = 225
+  gate5_active_B = 225
+  gate5_minus_B = 150
+  gate5_plus_B = 75
+  gate6_active_B = 75
+  gate6_plus_B = 75
+  gate7_active_B = 75
+  gate7_minus_B = 75
+  gate8_active_B = 0
+  legal_B = 930
+  legal_B_in_core = 930
+  legal_B_missing_core = 0
+  modulus_degree = 3
+  prefix_d2_legal_B = 930
+  prefix_gate3_all_plus_B = 465
+  prefix_gate4_all_plus_B = 225
+  prefix_gate5_all_plus_B = 75
+  prefix_gate6_all_plus_B = 75
+  prefix_gate7_all_plus_B = 0
+  prefix_gate8_all_plus_B = 0
+  skip_X_degenerate = 2
+  source_rows = 14656
+  core_B/N = 0.124970629
+  legal_B/N = 0.031217482
+  legal_B/core_B = 0.249798550
+  prefix_gate3/legal_B = 0.500000000 step_rate=0.500000000 scaled_by_half=1.000000
+  prefix_gate4/legal_B = 0.241935484 step_rate=0.483870968 scaled_by_half=0.967742
+  prefix_gate5/legal_B = 0.080645161 step_rate=0.333333333 scaled_by_half=0.645161
+  prefix_gate6/legal_B = 0.080645161 step_rate=1.000000000 scaled_by_half=1.290323
+  prefix_gate7/legal_B = 0.000000000 step_rate=0.000000000 scaled_by_half=0.000000
+  prefix_gate8/legal_B = 0.000000000 step_rate=0.000000000 scaled_by_half=0.000000
+p27_b_line_prefix_extension_count_probe_rows=1/1

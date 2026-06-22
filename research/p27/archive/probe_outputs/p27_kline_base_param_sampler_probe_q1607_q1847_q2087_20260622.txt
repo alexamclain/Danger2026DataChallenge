@@ -1,0 +1,375 @@
+p27 B-parameter base-curve sampler viability probe
+A = B^2 - 2
+branch0 L = -(B + 2)^4 / (8 B (B - 2)^2)
+branch1 L =  (B - 2)^4 / (8 B (B + 2)^2)
+atoms = ['branch', 'K', 'K+1', 'K-1', 'K^2+4', 'L', 'L+1', 'B', 'B+1', 'B-1', 'B+2', 'B-2', 'B^2+1', 'B^2-4', 'A+2', 'A-2', 'A+6', 'A+14', '3A+10', 'A^2+60A+132']
+q1607_param_sampler_stats:
+  branch_0_rows = 1604
+  branch_0_target_rows = 49
+  branch_1_rows = 1604
+  branch_1_target_rows = 49
+  enum_compact_not_target = 805
+  enum_no_label2_candidate = 408
+  param_rows = 3208
+  param_rows_per_KA_2 = 1604
+  realized_d2_KA = 49
+  realized_d3plus_KA = 28
+  target_rows = 98
+  unique_KA = 1604
+  unique_KA_in_d2 = 49
+  unique_KA_in_d3plus = 28
+  unique_KA_missing_d2 = 0
+  unique_KA_missing_d3plus = 0
+q1607_d2_score_stats:
+  scored_rows = 3204
+  target_rows = 98
+  zero_atom_skip = 4
+q1607_d2_baseline:
+  total = 3204
+  positives = 98
+  positive_rate = 0.030586767
+q1607_d2_best_parity_combos:
+  good=3106/3204 rate=0.969413233 polarity=1 weight=0 combo=1
+  good=3106/3204 rate=0.969413233 polarity=1 weight=1 combo=K^2+4
+  good=3106/3204 rate=0.969413233 polarity=1 weight=1 combo=L
+  good=3106/3204 rate=0.969413233 polarity=1 weight=1 combo=A+2
+  good=3106/3204 rate=0.969413233 polarity=-1 weight=2 combo=branch * B
+  good=3106/3204 rate=0.969413233 polarity=1 weight=2 combo=K^2+4 * L
+  good=3106/3204 rate=0.969413233 polarity=1 weight=2 combo=K^2+4 * A+2
+  good=3106/3204 rate=0.969413233 polarity=1 weight=2 combo=L * A+2
+  good=3106/3204 rate=0.969413233 polarity=1 weight=2 combo=L+1 * A^2+60A+132
+  good=3106/3204 rate=0.969413233 polarity=1 weight=2 combo=B^2-4 * A-2
+  good=3106/3204 rate=0.969413233 polarity=-1 weight=3 combo=branch * K^2+4 * B
+  good=3106/3204 rate=0.969413233 polarity=-1 weight=3 combo=branch * L * B
+q1607_d2_best_buckets_min_count_12:
+  lift=10.008330 precision=0.306122449 recall=0.612244898 hits=60/196 weight=4 bits=0101 combo=K * K+1 * B+2 * B-2
+  lift=10.008330 precision=0.306122449 recall=0.612244898 hits=60/196 weight=4 bits=0101 combo=K * K+1 * B+2 * B^2-4
+  lift=10.008330 precision=0.306122449 recall=0.612244898 hits=60/196 weight=4 bits=0101 combo=K * K+1 * B+2 * A-2
+  lift=10.008330 precision=0.306122449 recall=0.612244898 hits=60/196 weight=4 bits=0111 combo=K * K+1 * B-2 * B^2-4
+  lift=10.008330 precision=0.306122449 recall=0.612244898 hits=60/196 weight=4 bits=0111 combo=K * K+1 * B-2 * A-2
+  lift=9.154286 precision=0.280000000 recall=0.571428571 hits=56/200 weight=4 bits=0011 combo=K * B+2 * B-2 * A+14
+  lift=9.154286 precision=0.280000000 recall=0.571428571 hits=56/200 weight=4 bits=0011 combo=K * B+2 * B^2-4 * A+14
+  lift=9.154286 precision=0.280000000 recall=0.571428571 hits=56/200 weight=4 bits=0011 combo=K * B+2 * A-2 * A+14
+  lift=9.154286 precision=0.280000000 recall=0.571428571 hits=56/200 weight=4 bits=0111 combo=K * B-2 * B^2-4 * A+14
+  lift=9.154286 precision=0.280000000 recall=0.571428571 hits=56/200 weight=4 bits=0111 combo=K * B-2 * A-2 * A+14
+  lift=8.884206 precision=0.271739130 recall=0.510204082 hits=50/184 weight=4 bits=0011 combo=K * B+2 * B-2 * B^2+1
+  lift=8.884206 precision=0.271739130 recall=0.510204082 hits=50/184 weight=4 bits=0011 combo=K * B+2 * B^2+1 * B^2-4
+q1607_d2_core_K_Bpm_best_buckets:
+  extra=K+1 lift=10.008330 precision=0.306122449 recall=0.612244898 hits=60/196 bits=0011
+  extra=A+14 lift=9.154286 precision=0.280000000 recall=0.571428571 hits=56/200 bits=0011
+  extra=B^2+1 lift=8.884206 precision=0.271739130 recall=0.510204082 hits=50/184 bits=0011
+  extra=K-1 lift=8.854592 precision=0.270833333 recall=0.530612245 hits=52/192 bits=0011
+  extra=B+1 lift=8.620774 precision=0.263681592 recall=0.540816327 hits=53/201 bits=0011
+  extra=B-1 lift=8.620774 precision=0.263681592 recall=0.540816327 hits=53/201 bits=0010
+  extra=L+1 lift=8.562682 precision=0.261904762 recall=0.448979592 hits=44/168 bits=0011
+  extra=A^2+60A+132 lift=8.562682 precision=0.261904762 recall=0.448979592 hits=44/168 bits=0011
+  extra=A+6 lift=8.333733 precision=0.254901961 recall=0.530612245 hits=52/204 bits=0010
+  extra=3A+10 lift=8.173469 precision=0.250000000 recall=0.510204082 hits=50/200 bits=0011
+  extra=K^2+4 lift=8.050251 precision=0.246231156 recall=1.000000000 hits=98/398 bits=0010
+  extra=L lift=8.050251 precision=0.246231156 recall=1.000000000 hits=98/398 bits=0010
+q1607_d2_core_K_Bpm_all_recall_buckets:
+  extra=K^2+4 lift=8.050251 precision=0.246231156 recall=1.000000000 hits=98/398 bits=0010
+  extra=L lift=8.050251 precision=0.246231156 recall=1.000000000 hits=98/398 bits=0010
+  extra=B^2-4 lift=8.050251 precision=0.246231156 recall=1.000000000 hits=98/398 bits=0011
+  extra=A+2 lift=8.050251 precision=0.246231156 recall=1.000000000 hits=98/398 bits=0010
+  extra=A-2 lift=8.050251 precision=0.246231156 recall=1.000000000 hits=98/398 bits=0011
+q1607_d3plus_score_stats:
+  scored_rows = 3204
+  target_rows = 56
+  zero_atom_skip = 4
+q1607_d3plus_baseline:
+  total = 3204
+  positives = 56
+  positive_rate = 0.017478152
+q1607_d3plus_best_parity_combos:
+  good=3148/3204 rate=0.982521848 polarity=1 weight=0 combo=1
+  good=3148/3204 rate=0.982521848 polarity=1 weight=1 combo=K^2+4
+  good=3148/3204 rate=0.982521848 polarity=1 weight=1 combo=L
+  good=3148/3204 rate=0.982521848 polarity=1 weight=1 combo=A+2
+  good=3148/3204 rate=0.982521848 polarity=-1 weight=2 combo=branch * B
+  good=3148/3204 rate=0.982521848 polarity=1 weight=2 combo=K^2+4 * L
+  good=3148/3204 rate=0.982521848 polarity=1 weight=2 combo=K^2+4 * A+2
+  good=3148/3204 rate=0.982521848 polarity=1 weight=2 combo=L * A+2
+  good=3148/3204 rate=0.982521848 polarity=1 weight=2 combo=L+1 * A^2+60A+132
+  good=3148/3204 rate=0.982521848 polarity=1 weight=2 combo=B^2-4 * A-2
+  good=3148/3204 rate=0.982521848 polarity=-1 weight=3 combo=branch * K^2+4 * B
+  good=3148/3204 rate=0.982521848 polarity=-1 weight=3 combo=branch * L * B
+q1607_d3plus_best_buckets_min_count_12:
+  lift=10.870714 precision=0.190000000 recall=0.678571429 hits=38/200 weight=4 bits=0011 combo=K * B+2 * B-2 * A+14
+  lift=10.870714 precision=0.190000000 recall=0.678571429 hits=38/200 weight=4 bits=0011 combo=K * B+2 * B^2-4 * A+14
+  lift=10.870714 precision=0.190000000 recall=0.678571429 hits=38/200 weight=4 bits=0011 combo=K * B+2 * A-2 * A+14
+  lift=10.870714 precision=0.190000000 recall=0.678571429 hits=38/200 weight=4 bits=0111 combo=K * B-2 * B^2-4 * A+14
+  lift=10.870714 precision=0.190000000 recall=0.678571429 hits=38/200 weight=4 bits=0111 combo=K * B-2 * A-2 * A+14
+  lift=10.572205 precision=0.184782609 recall=0.607142857 hits=34/184 weight=4 bits=0011 combo=K * B+2 * B-2 * B^2+1
+  lift=10.572205 precision=0.184782609 recall=0.607142857 hits=34/184 weight=4 bits=0011 combo=K * B+2 * B^2+1 * B^2-4
+  lift=10.572205 precision=0.184782609 recall=0.607142857 hits=34/184 weight=4 bits=0011 combo=K * B+2 * B^2+1 * A-2
+  lift=10.572205 precision=0.184782609 recall=0.607142857 hits=34/184 weight=4 bits=0111 combo=K * B-2 * B^2+1 * B^2-4
+  lift=10.572205 precision=0.184782609 recall=0.607142857 hits=34/184 weight=4 bits=0111 combo=K * B-2 * B^2+1 * A-2
+  lift=9.154286 precision=0.160000000 recall=0.571428571 hits=32/200 weight=4 bits=0011 combo=K * B+2 * B-2 * 3A+10
+  lift=9.154286 precision=0.160000000 recall=0.571428571 hits=32/200 weight=4 bits=0011 combo=K * B+2 * B^2-4 * 3A+10
+q1607_d3plus_core_K_Bpm_best_buckets:
+  extra=A+14 lift=10.870714 precision=0.190000000 recall=0.678571429 hits=38/200 bits=0011
+  extra=B^2+1 lift=10.572205 precision=0.184782609 recall=0.607142857 hits=34/184 bits=0011
+  extra=3A+10 lift=9.154286 precision=0.160000000 recall=0.571428571 hits=32/200 bits=0011
+  extra=K+1 lift=8.757289 precision=0.153061224 recall=0.535714286 hits=30/196 bits=0011
+  extra=B+1 lift=8.539446 precision=0.149253731 recall=0.535714286 hits=30/201 bits=0011
+  extra=B-1 lift=8.539446 precision=0.149253731 recall=0.535714286 hits=30/201 bits=0010
+  extra=L+1 lift=8.457764 precision=0.147826087 recall=0.607142857 hits=34/230 bits=0010
+  extra=A^2+60A+132 lift=8.457764 precision=0.147826087 recall=0.607142857 hits=34/230 bits=0010
+  extra=A+6 lift=8.413866 precision=0.147058824 recall=0.535714286 hits=30/204 bits=0010
+  extra=K-1 lift=8.332178 precision=0.145631068 recall=0.535714286 hits=30/206 bits=0010
+  extra=K^2+4 lift=8.050251 precision=0.140703518 recall=1.000000000 hits=56/398 bits=0010
+  extra=L lift=8.050251 precision=0.140703518 recall=1.000000000 hits=56/398 bits=0010
+q1607_d3plus_core_K_Bpm_all_recall_buckets:
+  extra=K^2+4 lift=8.050251 precision=0.140703518 recall=1.000000000 hits=56/398 bits=0010
+  extra=L lift=8.050251 precision=0.140703518 recall=1.000000000 hits=56/398 bits=0010
+  extra=B^2-4 lift=8.050251 precision=0.140703518 recall=1.000000000 hits=56/398 bits=0011
+  extra=A+2 lift=8.050251 precision=0.140703518 recall=1.000000000 hits=56/398 bits=0010
+  extra=A-2 lift=8.050251 precision=0.140703518 recall=1.000000000 hits=56/398 bits=0011
+q1847_param_sampler_stats:
+  branch_0_rows = 1844
+  branch_0_target_rows = 63
+  branch_1_rows = 1844
+  branch_1_target_rows = 63
+  enum_compact_not_target = 873
+  enum_no_label2_candidate = 468
+  param_rows = 3688
+  param_rows_per_KA_2 = 1844
+  realized_d2_KA = 63
+  realized_d3plus_KA = 45
+  target_rows = 126
+  unique_KA = 1844
+  unique_KA_in_d2 = 63
+  unique_KA_in_d3plus = 45
+  unique_KA_missing_d2 = 0
+  unique_KA_missing_d3plus = 0
+q1847_d2_score_stats:
+  scored_rows = 3684
+  target_rows = 126
+  zero_atom_skip = 4
+q1847_d2_baseline:
+  total = 3684
+  positives = 126
+  positive_rate = 0.034201954
+q1847_d2_best_parity_combos:
+  good=3558/3684 rate=0.965798046 polarity=1 weight=0 combo=1
+  good=3558/3684 rate=0.965798046 polarity=1 weight=1 combo=K^2+4
+  good=3558/3684 rate=0.965798046 polarity=1 weight=1 combo=L
+  good=3558/3684 rate=0.965798046 polarity=1 weight=1 combo=A+2
+  good=3558/3684 rate=0.965798046 polarity=-1 weight=2 combo=branch * B
+  good=3558/3684 rate=0.965798046 polarity=1 weight=2 combo=K^2+4 * L
+  good=3558/3684 rate=0.965798046 polarity=1 weight=2 combo=K^2+4 * A+2
+  good=3558/3684 rate=0.965798046 polarity=1 weight=2 combo=L * A+2
+  good=3558/3684 rate=0.965798046 polarity=1 weight=2 combo=L+1 * A^2+60A+132
+  good=3558/3684 rate=0.965798046 polarity=1 weight=2 combo=B^2-4 * A-2
+  good=3558/3684 rate=0.965798046 polarity=-1 weight=3 combo=branch * K^2+4 * B
+  good=3558/3684 rate=0.965798046 polarity=-1 weight=3 combo=branch * L * B
+q1847_d2_best_buckets_min_count_12:
+  lift=9.489557 precision=0.324561404 recall=0.587301587 hits=74/228 weight=4 bits=0010 combo=K * B+2 * B-2 * 3A+10
+  lift=9.489557 precision=0.324561404 recall=0.587301587 hits=74/228 weight=4 bits=0010 combo=K * B+2 * B^2-4 * 3A+10
+  lift=9.489557 precision=0.324561404 recall=0.587301587 hits=74/228 weight=4 bits=0010 combo=K * B+2 * A-2 * 3A+10
+  lift=9.489557 precision=0.324561404 recall=0.587301587 hits=74/228 weight=4 bits=0110 combo=K * B-2 * B^2-4 * 3A+10
+  lift=9.489557 precision=0.324561404 recall=0.587301587 hits=74/228 weight=4 bits=0110 combo=K * B-2 * A-2 * 3A+10
+  lift=9.407039 precision=0.321739130 recall=0.587301587 hits=74/230 weight=4 bits=0011 combo=K * B+2 * B-2 * A+14
+  lift=9.407039 precision=0.321739130 recall=0.587301587 hits=74/230 weight=4 bits=0011 combo=K * B+2 * B^2-4 * A+14
+  lift=9.407039 precision=0.321739130 recall=0.587301587 hits=74/230 weight=4 bits=0011 combo=K * B+2 * A-2 * A+14
+  lift=9.407039 precision=0.321739130 recall=0.587301587 hits=74/230 weight=4 bits=0111 combo=K * B-2 * B^2-4 * A+14
+  lift=9.407039 precision=0.321739130 recall=0.587301587 hits=74/230 weight=4 bits=0111 combo=K * B-2 * A-2 * A+14
+  lift=8.875850 precision=0.303571429 recall=0.539682540 hits=68/224 weight=4 bits=0010 combo=K * B+2 * B-2 * B^2+1
+  lift=8.875850 precision=0.303571429 recall=0.539682540 hits=68/224 weight=4 bits=0001 combo=K * B+2 * B^2+1 * B^2-4
+q1847_d2_core_K_Bpm_best_buckets:
+  extra=3A+10 lift=9.489557 precision=0.324561404 recall=0.587301587 hits=74/228 bits=0010
+  extra=A+14 lift=9.407039 precision=0.321739130 recall=0.587301587 hits=74/230 bits=0011
+  extra=B^2+1 lift=8.875850 precision=0.303571429 recall=0.539682540 hits=68/224 bits=0010
+  extra=K+1 lift=8.585790 precision=0.293650794 recall=0.587301587 hits=74/252 bits=0011
+  extra=B+1 lift=8.171345 precision=0.279475983 recall=0.507936508 hits=64/229 bits=0010
+  extra=B-1 lift=8.171345 precision=0.279475983 recall=0.507936508 hits=64/229 bits=0011
+  extra=L+1 lift=8.165594 precision=0.279279279 recall=0.492063492 hits=62/222 bits=0011
+  extra=A^2+60A+132 lift=8.165594 precision=0.279279279 recall=0.492063492 hits=62/222 bits=0011
+  extra=A+6 lift=8.065681 precision=0.275862069 recall=0.507936508 hits=64/232 bits=0010
+  extra=K-1 lift=8.047182 precision=0.275229358 recall=0.476190476 hits=60/218 bits=0010
+  extra=K^2+4 lift=8.043668 precision=0.275109170 recall=1.000000000 hits=126/458 bits=0010
+  extra=L lift=8.043668 precision=0.275109170 recall=1.000000000 hits=126/458 bits=0010
+q1847_d2_core_K_Bpm_all_recall_buckets:
+  extra=K^2+4 lift=8.043668 precision=0.275109170 recall=1.000000000 hits=126/458 bits=0010
+  extra=L lift=8.043668 precision=0.275109170 recall=1.000000000 hits=126/458 bits=0010
+  extra=B^2-4 lift=8.043668 precision=0.275109170 recall=1.000000000 hits=126/458 bits=0011
+  extra=A+2 lift=8.043668 precision=0.275109170 recall=1.000000000 hits=126/458 bits=0010
+  extra=A-2 lift=8.043668 precision=0.275109170 recall=1.000000000 hits=126/458 bits=0011
+q1847_d3plus_score_stats:
+  scored_rows = 3684
+  target_rows = 90
+  zero_atom_skip = 4
+q1847_d3plus_baseline:
+  total = 3684
+  positives = 90
+  positive_rate = 0.024429967
+q1847_d3plus_best_parity_combos:
+  good=3594/3684 rate=0.975570033 polarity=1 weight=0 combo=1
+  good=3594/3684 rate=0.975570033 polarity=1 weight=1 combo=K^2+4
+  good=3594/3684 rate=0.975570033 polarity=1 weight=1 combo=L
+  good=3594/3684 rate=0.975570033 polarity=1 weight=1 combo=A+2
+  good=3594/3684 rate=0.975570033 polarity=-1 weight=2 combo=branch * B
+  good=3594/3684 rate=0.975570033 polarity=1 weight=2 combo=K^2+4 * L
+  good=3594/3684 rate=0.975570033 polarity=1 weight=2 combo=K^2+4 * A+2
+  good=3594/3684 rate=0.975570033 polarity=1 weight=2 combo=L * A+2
+  good=3594/3684 rate=0.975570033 polarity=1 weight=2 combo=L+1 * A^2+60A+132
+  good=3594/3684 rate=0.975570033 polarity=1 weight=2 combo=B^2-4 * A-2
+  good=3594/3684 rate=0.975570033 polarity=-1 weight=3 combo=branch * K^2+4 * B
+  good=3594/3684 rate=0.975570033 polarity=-1 weight=3 combo=branch * L * B
+q1847_d3plus_best_buckets_min_count_12:
+  lift=9.694737 precision=0.236842105 recall=0.600000000 hits=54/228 weight=4 bits=0010 combo=K * B+2 * B-2 * 3A+10
+  lift=9.694737 precision=0.236842105 recall=0.600000000 hits=54/228 weight=4 bits=0010 combo=K * B+2 * B^2-4 * 3A+10
+  lift=9.694737 precision=0.236842105 recall=0.600000000 hits=54/228 weight=4 bits=0010 combo=K * B+2 * A-2 * 3A+10
+  lift=9.694737 precision=0.236842105 recall=0.600000000 hits=54/228 weight=4 bits=0110 combo=K * B-2 * B^2-4 * 3A+10
+  lift=9.694737 precision=0.236842105 recall=0.600000000 hits=54/228 weight=4 bits=0110 combo=K * B-2 * A-2 * 3A+10
+  lift=9.219219 precision=0.225225225 recall=0.555555556 hits=50/222 weight=4 bits=0101 combo=K * L+1 * B+2 * B-2
+  lift=9.219219 precision=0.225225225 recall=0.555555556 hits=50/222 weight=4 bits=0101 combo=K * L+1 * B+2 * B^2-4
+  lift=9.219219 precision=0.225225225 recall=0.555555556 hits=50/222 weight=4 bits=0101 combo=K * L+1 * B+2 * A-2
+  lift=9.219219 precision=0.225225225 recall=0.555555556 hits=50/222 weight=4 bits=0111 combo=K * L+1 * B-2 * B^2-4
+  lift=9.219219 precision=0.225225225 recall=0.555555556 hits=50/222 weight=4 bits=0111 combo=K * L+1 * B-2 * A-2
+  lift=9.219219 precision=0.225225225 recall=0.555555556 hits=50/222 weight=4 bits=0011 combo=K * B+2 * B-2 * A^2+60A+132
+  lift=9.219219 precision=0.225225225 recall=0.555555556 hits=50/222 weight=4 bits=0011 combo=K * B+2 * B^2-4 * A^2+60A+132
+q1847_d3plus_core_K_Bpm_best_buckets:
+  extra=3A+10 lift=9.694737 precision=0.236842105 recall=0.600000000 hits=54/228 bits=0010
+  extra=L+1 lift=9.219219 precision=0.225225225 recall=0.555555556 hits=50/222 bits=0011
+  extra=A^2+60A+132 lift=9.219219 precision=0.225225225 recall=0.555555556 hits=50/222 bits=0011
+  extra=K+1 lift=9.096296 precision=0.222222222 recall=0.622222222 hits=56/252 bits=0011
+  extra=B^2+1 lift=8.771429 precision=0.214285714 recall=0.533333333 hits=48/224 bits=0010
+  extra=A+14 lift=8.542609 precision=0.208695652 recall=0.533333333 hits=48/230 bits=0011
+  extra=K-1 lift=8.527778 precision=0.208333333 recall=0.555555556 hits=50/240 bits=0011
+  extra=A+6 lift=8.331563 precision=0.203539823 recall=0.511111111 hits=46/226 bits=0011
+  extra=K^2+4 lift=8.043668 precision=0.196506550 recall=1.000000000 hits=90/458 bits=0010
+  extra=L lift=8.043668 precision=0.196506550 recall=1.000000000 hits=90/458 bits=0010
+  extra=B^2-4 lift=8.043668 precision=0.196506550 recall=1.000000000 hits=90/458 bits=0011
+  extra=A+2 lift=8.043668 precision=0.196506550 recall=1.000000000 hits=90/458 bits=0010
+q1847_d3plus_core_K_Bpm_all_recall_buckets:
+  extra=K^2+4 lift=8.043668 precision=0.196506550 recall=1.000000000 hits=90/458 bits=0010
+  extra=L lift=8.043668 precision=0.196506550 recall=1.000000000 hits=90/458 bits=0010
+  extra=B^2-4 lift=8.043668 precision=0.196506550 recall=1.000000000 hits=90/458 bits=0011
+  extra=A+2 lift=8.043668 precision=0.196506550 recall=1.000000000 hits=90/458 bits=0010
+  extra=A-2 lift=8.043668 precision=0.196506550 recall=1.000000000 hits=90/458 bits=0011
+q2087_param_sampler_stats:
+  branch_0_rows = 2084
+  branch_0_target_rows = 57
+  branch_1_rows = 2084
+  branch_1_target_rows = 57
+  enum_compact_not_target = 1109
+  enum_no_label2_candidate = 520
+  param_rows = 4168
+  param_rows_per_KA_2 = 2084
+  realized_d2_KA = 57
+  realized_d3plus_KA = 25
+  target_rows = 114
+  unique_KA = 2084
+  unique_KA_in_d2 = 57
+  unique_KA_in_d3plus = 25
+  unique_KA_missing_d2 = 0
+  unique_KA_missing_d3plus = 0
+q2087_d2_score_stats:
+  scored_rows = 4164
+  target_rows = 114
+  zero_atom_skip = 4
+q2087_d2_baseline:
+  total = 4164
+  positives = 114
+  positive_rate = 0.027377522
+q2087_d2_best_parity_combos:
+  good=4050/4164 rate=0.972622478 polarity=1 weight=0 combo=1
+  good=4050/4164 rate=0.972622478 polarity=1 weight=1 combo=K^2+4
+  good=4050/4164 rate=0.972622478 polarity=1 weight=1 combo=L
+  good=4050/4164 rate=0.972622478 polarity=1 weight=1 combo=A+2
+  good=4050/4164 rate=0.972622478 polarity=-1 weight=2 combo=branch * B
+  good=4050/4164 rate=0.972622478 polarity=1 weight=2 combo=K^2+4 * L
+  good=4050/4164 rate=0.972622478 polarity=1 weight=2 combo=K^2+4 * A+2
+  good=4050/4164 rate=0.972622478 polarity=1 weight=2 combo=L * A+2
+  good=4050/4164 rate=0.972622478 polarity=1 weight=2 combo=L+1 * A^2+60A+132
+  good=4050/4164 rate=0.972622478 polarity=1 weight=2 combo=B^2-4 * A-2
+  good=4050/4164 rate=0.972622478 polarity=-1 weight=3 combo=branch * K^2+4 * B
+  good=4050/4164 rate=0.972622478 polarity=-1 weight=3 combo=branch * L * B
+q2087_d2_best_buckets_min_count_12:
+  lift=9.540456 precision=0.261194030 recall=0.614035088 hits=70/268 weight=4 bits=0010 combo=K * B+2 * B-2 * B^2+1
+  lift=9.540456 precision=0.261194030 recall=0.614035088 hits=70/268 weight=4 bits=0001 combo=K * B+2 * B^2+1 * B^2-4
+  lift=9.540456 precision=0.261194030 recall=0.614035088 hits=70/268 weight=4 bits=0001 combo=K * B+2 * B^2+1 * A-2
+  lift=9.540456 precision=0.261194030 recall=0.614035088 hits=70/268 weight=4 bits=0101 combo=K * B-2 * B^2+1 * B^2-4
+  lift=9.540456 precision=0.261194030 recall=0.614035088 hits=70/268 weight=4 bits=0101 combo=K * B-2 * B^2+1 * A-2
+  lift=9.131579 precision=0.250000000 recall=0.596491228 hits=68/272 weight=4 bits=0010 combo=K * B+2 * B-2 * A+6
+  lift=9.131579 precision=0.250000000 recall=0.596491228 hits=68/272 weight=4 bits=0010 combo=K * B+2 * B^2-4 * A+6
+  lift=9.131579 precision=0.250000000 recall=0.596491228 hits=68/272 weight=4 bits=0010 combo=K * B+2 * A-2 * A+6
+  lift=9.131579 precision=0.250000000 recall=0.596491228 hits=68/272 weight=4 bits=0110 combo=K * B-2 * B^2-4 * A+6
+  lift=9.131579 precision=0.250000000 recall=0.596491228 hits=68/272 weight=4 bits=0110 combo=K * B-2 * A-2 * A+6
+  lift=8.743751 precision=0.239382239 recall=0.543859649 hits=62/259 weight=4 bits=0001 combo=K * B+1 * B+2 * B-2
+  lift=8.743751 precision=0.239382239 recall=0.543859649 hits=62/259 weight=4 bits=0001 combo=K * B+1 * B+2 * B^2-4
+q2087_d2_core_K_Bpm_best_buckets:
+  extra=B^2+1 lift=9.540456 precision=0.261194030 recall=0.614035088 hits=70/268 bits=0010
+  extra=A+6 lift=9.131579 precision=0.250000000 recall=0.596491228 hits=68/272 bits=0010
+  extra=B+1 lift=8.743751 precision=0.239382239 recall=0.543859649 hits=62/259 bits=0010
+  extra=B-1 lift=8.743751 precision=0.239382239 recall=0.543859649 hits=62/259 bits=0011
+  extra=K+1 lift=8.667261 precision=0.237288136 recall=0.491228070 hits=56/236 bits=0011
+  extra=L+1 lift=8.513653 precision=0.233082707 recall=0.543859649 hits=62/266 bits=0011
+  extra=A^2+60A+132 lift=8.513653 precision=0.233082707 recall=0.543859649 hits=62/266 bits=0011
+  extra=3A+10 lift=8.494492 precision=0.232558140 recall=0.526315789 hits=60/258 bits=0011
+  extra=K-1 lift=8.314934 precision=0.227642276 recall=0.491228070 hits=56/246 bits=0011
+  extra=A+14 lift=8.148178 precision=0.223076923 recall=0.508771930 hits=58/260 bits=0010
+  extra=K^2+4 lift=8.038610 precision=0.220077220 recall=1.000000000 hits=114/518 bits=0010
+  extra=L lift=8.038610 precision=0.220077220 recall=1.000000000 hits=114/518 bits=0010
+q2087_d2_core_K_Bpm_all_recall_buckets:
+  extra=K^2+4 lift=8.038610 precision=0.220077220 recall=1.000000000 hits=114/518 bits=0010
+  extra=L lift=8.038610 precision=0.220077220 recall=1.000000000 hits=114/518 bits=0010
+  extra=B^2-4 lift=8.038610 precision=0.220077220 recall=1.000000000 hits=114/518 bits=0011
+  extra=A+2 lift=8.038610 precision=0.220077220 recall=1.000000000 hits=114/518 bits=0010
+  extra=A-2 lift=8.038610 precision=0.220077220 recall=1.000000000 hits=114/518 bits=0011
+q2087_d3plus_score_stats:
+  scored_rows = 4164
+  target_rows = 50
+  zero_atom_skip = 4
+q2087_d3plus_baseline:
+  total = 4164
+  positives = 50
+  positive_rate = 0.012007685
+q2087_d3plus_best_parity_combos:
+  good=4114/4164 rate=0.987992315 polarity=1 weight=0 combo=1
+  good=4114/4164 rate=0.987992315 polarity=1 weight=1 combo=K^2+4
+  good=4114/4164 rate=0.987992315 polarity=1 weight=1 combo=L
+  good=4114/4164 rate=0.987992315 polarity=1 weight=1 combo=A+2
+  good=4114/4164 rate=0.987992315 polarity=-1 weight=2 combo=branch * B
+  good=4114/4164 rate=0.987992315 polarity=1 weight=2 combo=K^2+4 * L
+  good=4114/4164 rate=0.987992315 polarity=1 weight=2 combo=K^2+4 * A+2
+  good=4114/4164 rate=0.987992315 polarity=1 weight=2 combo=L * A+2
+  good=4114/4164 rate=0.987992315 polarity=1 weight=2 combo=L+1 * A^2+60A+132
+  good=4114/4164 rate=0.987992315 polarity=1 weight=2 combo=B^2-4 * A-2
+  good=4114/4164 rate=0.987992315 polarity=-1 weight=3 combo=branch * K^2+4 * B
+  good=4114/4164 rate=0.987992315 polarity=-1 weight=3 combo=branch * L * B
+q2087_d3plus_best_buckets_min_count_12:
+  lift=12.187317 precision=0.146341463 recall=0.720000000 hits=36/246 weight=4 bits=0101 combo=K * K-1 * B+2 * B-2
+  lift=12.187317 precision=0.146341463 recall=0.720000000 hits=36/246 weight=4 bits=0101 combo=K * K-1 * B+2 * B^2-4
+  lift=12.187317 precision=0.146341463 recall=0.720000000 hits=36/246 weight=4 bits=0101 combo=K * K-1 * B+2 * A-2
+  lift=12.187317 precision=0.146341463 recall=0.720000000 hits=36/246 weight=4 bits=0111 combo=K * K-1 * B-2 * B^2-4
+  lift=12.187317 precision=0.146341463 recall=0.720000000 hits=36/246 weight=4 bits=0111 combo=K * K-1 * B-2 * A-2
+  lift=11.022353 precision=0.132352941 recall=0.720000000 hits=36/272 weight=4 bits=0010 combo=K * B+2 * B-2 * A+6
+  lift=11.022353 precision=0.132352941 recall=0.720000000 hits=36/272 weight=4 bits=0010 combo=K * B+2 * B^2-4 * A+6
+  lift=11.022353 precision=0.132352941 recall=0.720000000 hits=36/272 weight=4 bits=0010 combo=K * B+2 * A-2 * A+6
+  lift=11.022353 precision=0.132352941 recall=0.720000000 hits=36/272 weight=4 bits=0110 combo=K * B-2 * B^2-4 * A+6
+  lift=11.022353 precision=0.132352941 recall=0.720000000 hits=36/272 weight=4 bits=0110 combo=K * B-2 * A-2 * A+6
+  lift=9.914286 precision=0.119047619 recall=0.600000000 hits=30/252 weight=4 bits=0001 combo=K * L+1 * B+2 * B-2
+  lift=9.914286 precision=0.119047619 recall=0.600000000 hits=30/252 weight=4 bits=0001 combo=K * L+1 * B+2 * B^2-4
+q2087_d3plus_core_K_Bpm_best_buckets:
+  extra=K-1 lift=12.187317 precision=0.146341463 recall=0.720000000 hits=36/246 bits=0011
+  extra=A+6 lift=11.022353 precision=0.132352941 recall=0.720000000 hits=36/272 bits=0010
+  extra=L+1 lift=9.914286 precision=0.119047619 recall=0.600000000 hits=30/252 bits=0010
+  extra=A^2+60A+132 lift=9.914286 precision=0.119047619 recall=0.600000000 hits=30/252 bits=0010
+  extra=3A+10 lift=9.683721 precision=0.116279070 recall=0.600000000 hits=30/258 bits=0011
+  extra=A+14 lift=9.038140 precision=0.108527132 recall=0.560000000 hits=28/258 bits=0011
+  extra=K+1 lift=8.859574 precision=0.106382979 recall=0.600000000 hits=30/282 bits=0010
+  extra=B+1 lift=8.681699 precision=0.104247104 recall=0.540000000 hits=27/259 bits=0011
+  extra=B-1 lift=8.681699 precision=0.104247104 recall=0.540000000 hits=27/259 bits=0010
+  extra=B^2+1 lift=8.661120 precision=0.104000000 recall=0.520000000 hits=26/250 bits=0011
+  extra=K^2+4 lift=8.038610 precision=0.096525097 recall=1.000000000 hits=50/518 bits=0010
+  extra=L lift=8.038610 precision=0.096525097 recall=1.000000000 hits=50/518 bits=0010
+q2087_d3plus_core_K_Bpm_all_recall_buckets:
+  extra=K^2+4 lift=8.038610 precision=0.096525097 recall=1.000000000 hits=50/518 bits=0010
+  extra=L lift=8.038610 precision=0.096525097 recall=1.000000000 hits=50/518 bits=0010
+  extra=B^2-4 lift=8.038610 precision=0.096525097 recall=1.000000000 hits=50/518 bits=0011
+  extra=A+2 lift=8.038610 precision=0.096525097 recall=1.000000000 hits=50/518 bits=0010
+  extra=A-2 lift=8.038610 precision=0.096525097 recall=1.000000000 hits=50/518 bits=0011
+p27_kline_base_param_sampler_probe_rows=1/1

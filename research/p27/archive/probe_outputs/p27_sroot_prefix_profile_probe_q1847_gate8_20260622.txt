@@ -1,0 +1,101 @@
+p27 K/Sroot prefix-profile probe
+question = do K or Sroot selected prefixes thin randomly or show coupling?
+source = residual E/T + compactD=-1 + label-2 candidate map
+coordinates = K=x([2]P), Sroot^2=K
+GF(1847^1) N=1847 max_gate=8:
+  collect_stats:
+  K_group_size_16 = 63
+  K_to_Sroot_size_hist_keys = 2
+  Sroot_group_size_8 = 126
+  candidate_invalid_degenerate_A = 16
+  candidate_invalid_not_nonsplit = 920
+  candidates = 1008
+  compact_not_target = 868
+  d2_plus_candidates = 1008
+  ks_degenerate = 1
+  legal_K = 63
+  legal_Sroot = 126
+  skip_X_degenerate = 2
+  source_rows = 972
+  unique_A_x5 = 252
+  unique_K_seen = 231
+  unique_Sroot_seen = 461
+  K_prefix_stats:
+  gate3_active_groups = 63
+  gate3_minus_groups = 18
+  gate3_plus_groups = 45
+  gate3_prefix_plus_groups = 45
+  gate3_scaled_x1000000 = 1428571
+  gate4_active_groups = 45
+  gate4_minus_groups = 26
+  gate4_plus_groups = 19
+  gate4_prefix_plus_groups = 19
+  gate4_scaled_x1000000 = 1206349
+  gate5_active_groups = 19
+  gate5_minus_groups = 19
+  gate5_prefix_plus_groups = 0
+  gate5_scaled_x1000000 = 0
+  gate6_active_groups = 0
+  gate6_prefix_plus_groups = 0
+  gate6_scaled_x1000000 = 0
+  gate7_active_groups = 0
+  gate7_prefix_plus_groups = 0
+  gate7_scaled_x1000000 = 0
+  gate8_active_groups = 0
+  gate8_prefix_plus_groups = 0
+  gate8_scaled_x1000000 = 0
+  initial_groups = 63
+  K_pattern_stats:
+  first_stop_gate_3_minus = 18
+  first_stop_gate_4_minus = 26
+  first_stop_gate_5_minus = 19
+  pattern_minus,missing,missing,missing,missing,missing = 18
+  pattern_plus,minus,missing,missing,missing,missing = 26
+  pattern_plus,plus,minus,missing,missing,missing = 19
+  K_scaled_prefix:
+    gate3: plus=45 rate=0.714285714 step_rate=0.714285714 scaled=1.428571429
+    gate4: plus=19 rate=0.301587302 step_rate=0.422222222 scaled=1.206349206
+    gate5: plus=0 rate=0.000000000 step_rate=0.000000000 scaled=0.000000000
+    gate6: plus=0 rate=0.000000000 step_rate=0.000000000 scaled=0.000000000
+    gate7: plus=0 rate=0.000000000 step_rate=0.000000000 scaled=0.000000000
+    gate8: plus=0 rate=0.000000000 step_rate=0.000000000 scaled=0.000000000
+  Sroot_prefix_stats:
+  gate3_active_groups = 126
+  gate3_minus_groups = 36
+  gate3_plus_groups = 90
+  gate3_prefix_plus_groups = 90
+  gate3_scaled_x1000000 = 1428571
+  gate4_active_groups = 90
+  gate4_minus_groups = 52
+  gate4_plus_groups = 38
+  gate4_prefix_plus_groups = 38
+  gate4_scaled_x1000000 = 1206349
+  gate5_active_groups = 38
+  gate5_minus_groups = 38
+  gate5_prefix_plus_groups = 0
+  gate5_scaled_x1000000 = 0
+  gate6_active_groups = 0
+  gate6_prefix_plus_groups = 0
+  gate6_scaled_x1000000 = 0
+  gate7_active_groups = 0
+  gate7_prefix_plus_groups = 0
+  gate7_scaled_x1000000 = 0
+  gate8_active_groups = 0
+  gate8_prefix_plus_groups = 0
+  gate8_scaled_x1000000 = 0
+  initial_groups = 126
+  Sroot_pattern_stats:
+  first_stop_gate_3_minus = 36
+  first_stop_gate_4_minus = 52
+  first_stop_gate_5_minus = 38
+  pattern_minus,missing,missing,missing,missing,missing = 36
+  pattern_plus,minus,missing,missing,missing,missing = 52
+  pattern_plus,plus,minus,missing,missing,missing = 38
+  Sroot_scaled_prefix:
+    gate3: plus=90 rate=0.714285714 step_rate=0.714285714 scaled=1.428571429
+    gate4: plus=38 rate=0.301587302 step_rate=0.422222222 scaled=1.206349206
+    gate5: plus=0 rate=0.000000000 step_rate=0.000000000 scaled=0.000000000
+    gate6: plus=0 rate=0.000000000 step_rate=0.000000000 scaled=0.000000000
+    gate7: plus=0 rate=0.000000000 step_rate=0.000000000 scaled=0.000000000
+    gate8: plus=0 rate=0.000000000 step_rate=0.000000000 scaled=0.000000000
+p27_sroot_prefix_profile_probe_rows=1/1

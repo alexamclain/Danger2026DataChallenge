@@ -1,0 +1,54 @@
+p27 B-line extension prefix-profile probe
+question = do B-line all-plus prefixes thin randomly or show coupling?
+GF(1847^1) N=1847 max_gate=8:
+  collect_stats:
+  B_group_size_16 = 63
+  candidate_invalid_degenerate_A = 16
+  candidate_invalid_not_nonsplit = 920
+  candidates = 1008
+  compact_not_target = 869
+  d2_plus_candidates = 1008
+  legal_B = 63
+  skip_B_degenerate = 2
+  source_rows = 972
+  unique_A_x5 = 252
+  prefix_stats:
+  gate3_active_B = 63
+  gate3_minus_B = 18
+  gate3_plus_B = 45
+  gate3_prefix_plus_B = 45
+  gate3_scaled_x1000000 = 1428571
+  gate4_active_B = 45
+  gate4_minus_B = 26
+  gate4_plus_B = 19
+  gate4_prefix_plus_B = 19
+  gate4_scaled_x1000000 = 1206349
+  gate5_active_B = 19
+  gate5_minus_B = 19
+  gate5_prefix_plus_B = 0
+  gate5_scaled_x1000000 = 0
+  gate6_active_B = 0
+  gate6_prefix_plus_B = 0
+  gate6_scaled_x1000000 = 0
+  gate7_active_B = 0
+  gate7_prefix_plus_B = 0
+  gate7_scaled_x1000000 = 0
+  gate8_active_B = 0
+  gate8_prefix_plus_B = 0
+  gate8_scaled_x1000000 = 0
+  initial_legal_B = 63
+  pattern_stats:
+  first_stop_gate_3_minus = 18
+  first_stop_gate_4_minus = 26
+  first_stop_gate_5_minus = 19
+  pattern_minus,missing,missing,missing,missing,missing = 18
+  pattern_plus,minus,missing,missing,missing,missing = 26
+  pattern_plus,plus,minus,missing,missing,missing = 19
+  scaled_prefix:
+    gate3: plus=45 rate=0.714285714 scaled=1.428571429
+    gate4: plus=19 rate=0.301587302 scaled=1.206349206
+    gate5: plus=0 rate=0.000000000 scaled=0.000000000
+    gate6: plus=0 rate=0.000000000 scaled=0.000000000
+    gate7: plus=0 rate=0.000000000 scaled=0.000000000
+    gate8: plus=0 rate=0.000000000 scaled=0.000000000
+p27_b_line_prefix_profile_probe_rows=1/1

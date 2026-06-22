@@ -227,10 +227,41 @@ c = s*d/(2*r)
 ```
 
 Then `h^2=r^2+c*r+1`, `g^2=r^2-c*r+1`, and
-`R^2-(h+g)R+1=0`.  This is the current best bounded GPU structure test:
-instrument the formula, try the direct pair sampler, and report whether it
-feeds legal label-2/compactD rows or just reparametrizes the ordinary half
-loss.
+`R^2-(h+g)R+1=0`.  The legal incidence screen now shows the important split:
+[P27 Conic-Pair Sampler Legal Incidence](p27_conic_pair_sampler_legal_incidence_20260621.md).
+The sampler image covers every legal d3-plus `(A,x5)` class tested and no
+d3-minus classes, but random free `(R,L)` hits legal rows at only about
+`constant/q`.  So instrument the formula and test any implemented legal
+pullback source; do not promote raw random `(R,L)` as a production sampler.
+
+The next selector is also explicit now:
+[P27 Conic-Pair D4 Recurrence](p27_conic_pair_d4_recurrence_20260621.md).
+With `a=R-1/R` and `L=h-g-2r`, the d4 gate is:
+
+```text
+d4 = chi(-(L+a)(L-a)cR)
+```
+
+because the quotient with `R^2+cR+1` is `2` times a square and p27 has
+`chi(2)=+1`.  GPU should log this only when legal conic-pair variables are
+already available.  This is not a license to run raw random `(R,L)`.
+
+The same selector repeats at d5:
+[P27 Conic-Pair D5 Tower](p27_conic_pair_d5_tower_20260621.md).  Treat this as
+legal-tower telemetry or CAS/source work; it is still not a production GPU
+path without a legal tower sampler or quotient.
+
+The legal-depth screen
+[P27 Legal Conic Tower Depth](p27_legal_conic_tower_depth_20260621.md)
+confirms the original legal source still thins like selected half-gates on
+p27 samples.  Do not spend GPU time merely evaluating deeper legal conic-chain
+prefixes unless a quotient or tower sampler is supplied.
+
+The raw `(R,L)` low-degree quotient screen is negative:
+[P27 Conic-Pair Low-Degree Relation Screen](p27_conic_pair_lowdegree_relation_20260621.md).
+Do not spend GPU time on random `(R,L)` buckets or raw low-degree plane-curve
+filters.  Any GPU follow-up needs a quotient/source in the repeated Kummer
+tower variables.
 
 Packet source warning:
 [P27 Label-2 E[2] Packet Source Probe](p27_label2_e2_packet_source_probe_20260621.md).
@@ -314,14 +345,15 @@ any branch/sign mismatch count
 baseline = raw p27 X1(16) nonsplit halving path
 candidate A = recurrence telemetry:
               next_gate = chi(r_j^2 + c*r_j + 1)
-candidate B = direct one-step pair sampler from (R,L)
+candidate B = legal pullback of the one-step pair sampler, if implemented
 candidate C = two-step chain pressure if B maps to legal rows
 ```
 
 Report mismatch counts, legal pullback rate, d3/d4/d5 rates, and effective
-deep survivors/sec.  Promote only if the sampler/source gives a real heldout
-rate lift or controls more than one selected gate without paying a new
-independent Legendre/sqrt toll.  Use
+deep survivors/sec.  Do not run free random `(R,L)` as a production source:
+CPU guard fields show legal hits are only `~constant/q` per draw.  Promote only
+if the legal pullback source gives a real heldout rate lift or controls more
+than one selected gate without paying a new independent Legendre/sqrt toll. Use
 [P27 GPU Conic-Chain Test Handoff](p27_gpu_conic_chain_test_handoff_20260621.md)
 as the exact brief.
 

@@ -1,0 +1,13 @@
+p27 quartic fast chunk probe
+rows_file = /tmp/p27_B_1607_d3_rows.txt
+field = 1607
+rows = 49
+start = 0
+end = 10000000
+triples_scanned = 10000000
+polarity_-1_hits = 0
+polarity_1_hits = 0
+exact_quartics = 0
+elapsed_seconds = 3.767139
+throughput_triples_per_second = 2654534.383
+p27_quartic_chunk_fast_rows=1/1

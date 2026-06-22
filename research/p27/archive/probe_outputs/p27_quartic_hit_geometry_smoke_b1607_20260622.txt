@@ -1,0 +1,33 @@
+p27 quartic hit geometry analyzer
+coordinate = B
+packet = research/p27/archive/fixtures/p27_b_line_quartic_targets_20260622.json
+field = 1607
+family = d3_on_legalB
+coeffs = 0,0,0,1
+polarity = 1
+verify_stats:
+  matches = 22
+  minus_rows = 21
+  mismatches = 27
+  plus_rows = 28
+  rows = 49
+  zeros = 0
+verifier_pass = 0
+geometry:
+  degree = 4
+  discriminant_mod_q = 256
+  factor_degrees = [(2, 1), (2, 1)]
+  normalization_genus = 1
+  repeated_gcd_degree = 0
+  squarefree_degree = 4
+  squarefree_factor_degrees = [(2, 1), (2, 1)]
+point_count:
+  affine_points = 1606
+  infinity_points_model = 2
+  nonsquare_x_values = 804
+  projective_points_model = 1608
+  square_x_values = 803
+  zero_x_values = 0
+promotion_read:
+  status = not_a_verified_hit
+p27_quartic_hit_geometry_rows=1/1

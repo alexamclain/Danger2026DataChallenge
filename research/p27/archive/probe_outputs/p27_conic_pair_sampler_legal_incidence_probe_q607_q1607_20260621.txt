@@ -1,0 +1,54 @@
+p27 conic-pair sampler legal incidence probe
+sampler parameters = nonzero R,L
+image coordinate = (A=2-c^2, x=r^2)
+q607:
+  draws = 367236
+  enum_compact_not_target = 293
+  enum_no_label2_candidate = 184
+  nondegenerate_outputs = 367236
+  oriented_legal_candidates = 512
+  raw_cr_unique_A_x = 92416
+  raw_cr_unique_d3_minus_A_x = 64
+  raw_cr_unique_d3_plus_A_x = 64
+  raw_cr_unique_legal_A_x = 128
+  sampler_d3_minus_draw_multiplicity = 0
+  sampler_d3_plus_draw_multiplicity = 1024
+  sampler_legal_draw_multiplicity = 1024
+  sampler_unique_d3_minus_A_x = 0
+  sampler_unique_d3_plus_A_x = 64
+  sampler_unique_legal_A_x = 64
+  unique_A_x = 17479
+  unique_d3_minus_A_x = 64
+  unique_d3_plus_A_x = 64
+  unique_legal_A_x = 128
+  sampler_legal_draw_rate = 0.002788398
+  sampler_d3_plus_draw_rate = 0.002788398
+  sampler_legal_unique_rate = 0.003661537
+  sampler_d3_plus_unique_rate = 0.003661537
+  legal_covered_by_sampler_rate = 0.500000000
+  d3_plus_covered_by_sampler_rate = 1.000000000
+  sampler_d3_plus_draw_rate_times_q = 1.692557375
+q1607:
+  draws = 2579236
+  enum_compact_not_target = 805
+  enum_no_label2_candidate = 408
+  nondegenerate_outputs = 2579236
+  oriented_legal_candidates = 784
+  sampler_d3_minus_draw_multiplicity = 0
+  sampler_d3_plus_draw_multiplicity = 1792
+  sampler_legal_draw_multiplicity = 1792
+  sampler_unique_d3_minus_A_x = 0
+  sampler_unique_d3_plus_A_x = 112
+  sampler_unique_legal_A_x = 112
+  unique_A_x = 121604
+  unique_d3_minus_A_x = 84
+  unique_d3_plus_A_x = 112
+  unique_legal_A_x = 196
+  sampler_legal_draw_rate = 0.000694779
+  sampler_d3_plus_draw_rate = 0.000694779
+  sampler_legal_unique_rate = 0.000921022
+  sampler_d3_plus_unique_rate = 0.000921022
+  legal_covered_by_sampler_rate = 0.571428571
+  d3_plus_covered_by_sampler_rate = 1.000000000
+  sampler_d3_plus_draw_rate_times_q = 1.116510471
+p27_conic_pair_sampler_legal_incidence_probe_rows=1/1

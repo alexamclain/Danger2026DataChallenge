@@ -1,0 +1,67 @@
+p27 B-line reduced-cover symbolic packet
+purpose = normalize the reduced 4-u d3 cover over legal B
+variables = X, W, T, beta, R, eta, Bline, Unext
+materialized x6, reverse z, and Y are not needed for this reduced cover
+
+Equations:
+eta_branch = (eta - 1)*(eta + 1)
+E_W = W**2 - X**3 + X
+T_cover = T**2 - X**5 - 2*X**4 - 2*X**2 + X
+compactD_R = R**2*X - 2*T*W**2*X**4 - 2*T*W**2*X**3 - 2*T*W**2*X**2 - 2*T*W**2*X - T*W*X**6 - 2*T*W*X**5 - T*W*X**4 + T*W*X**2 + 2*T*W*X + T*W - W**2*X**7 - 3*W**2*X**6 - 3*W**2*X**5 - 5*W**2*X**4 - 3*W**2*X**3 - W**2*X**2 - W**2*X + W**2 - 2*W*X**8 - 4*W*X**7 - 2*W*X**6 - 8*W*X**5 + 2*W*X**4 - 4*W*X**3 + 2*W*X**2
+Bline_relation = Bline*X**4 - 2*Bline*X**2 + Bline - 8*X**2
+first_half_beta = -64*T**2*W**2*X**2*eta**2 - 32*T**2*W*X**4*eta - 32*T**2*W*X**3*eta + 32*T**2*W*X**2*eta + 32*T**2*W*X*eta + T**2*X**6*beta**2 + 2*T**2*X**5*beta**2 - T**2*X**4*beta**2 - 4*T**2*X**3*beta**2 - T**2*X**2*beta**2 + 2*T**2*X*beta**2 + T**2*beta**2 - 64*T*W*X**6*eta - 64*T*W*X**5*eta + 64*T*W*X**4*eta + 64*T*W*X**3*eta - 4*T*X**8*beta**2 - 32*T*X**8 - 8*T*X**7*beta**2 - 64*T*X**7 + 4*T*X**6*beta**2 + 32*T*X**6 + 16*T*X**5*beta**2 + 128*T*X**5 + 4*T*X**4*beta**2 + 32*T*X**4 - 8*T*X**3*beta**2 - 64*T*X**3 - 4*T*X**2*beta**2 - 32*T*X**2 + 4*X**10*beta**2 + 8*X**9*beta**2 - 4*X**8*beta**2 - 16*X**7*beta**2 - 4*X**6*beta**2 + 8*X**5*beta**2 + 4*X**4*beta**2
+reduced_Unext = A_den*(Unext*U_den - x5_num)^2 - (A_den*x5_num^2 + 2*A_num*x5_num*U_den + 4*A_den*U_den^2)
+
+Auxiliary:
+A_num = -2*(X**8 - 4*X**6 - 26*X**4 - 4*X**2 + 1)
+A_den = (X - 1)**4*(X + 1)**4
+U_num = 2*(4*T*W*X*eta + T*X**3 + T*X**2 - T*X - T + 2*X**5 + 2*X**4 - 2*X**3 - 2*X**2)
+U_den = (T - 2*X**2)*(X - 1)*(X + 1)**2
+x5_num = 8*T*W*X*eta + T*X**3*beta + 2*T*X**3 + T*X**2*beta + 2*T*X**2 - T*X*beta - 2*T*X - T*beta - 2*T - 2*X**5*beta + 4*X**5 - 2*X**4*beta + 4*X**4 + 2*X**3*beta - 4*X**3 + 2*X**2*beta - 4*X**2
+x5_den = 2*(T - 2*X**2)*(X - 1)*(X + 1)**2
+criterion_num = W*(X**2 + 1)*(2*T*W*X**2 + 2*T*W*X + T*X**4 + 2*T*X**3 - 2*T*X - T + W*X**5 + 3*W*X**4 + 2*W*X**3 + 2*W*X**2 + W*X - W + 2*X**6 + 4*X**5 + 4*X**3 - 2*X**2)
+selector = Unext + 2
+materialize_x6 = -Unext*x6 + x6**2 + 1
+
+CAS task:
+  1. Work over q1607/q1847/q2087 or another q=7 mod 16 guard field.
+  2. Saturate by the usual denominator and branch factors.
+  3. Normalize the map to P1_Bline with the reduced_Unext equation.
+  4. Compute genus/components/quotients and test selector chi(Unext+2).
+  5. Compare f4 only after this reduced f3 cover is understood.
+
+Validation:
+q=1607:
+  A_B_identity_mismatch = 0
+  B_degenerate = 0
+  d2_minus = 0
+  d2_plus_candidates = 784
+  enum_compact_not_target = 805
+  enum_no_label2_candidate = 408
+  reduced_equation_mismatch = 0
+  selector_mismatch = 0
+  validated_branches = 1568
+  x6_zero = 0
+q=1847:
+  A_B_identity_mismatch = 0
+  B_degenerate = 0
+  d2_minus = 0
+  d2_plus_candidates = 1008
+  enum_compact_not_target = 873
+  enum_no_label2_candidate = 468
+  reduced_equation_mismatch = 0
+  selector_mismatch = 0
+  validated_branches = 2016
+  x6_zero = 0
+q=2087:
+  A_B_identity_mismatch = 0
+  B_degenerate = 0
+  d2_minus = 0
+  d2_plus_candidates = 912
+  enum_compact_not_target = 1109
+  enum_no_label2_candidate = 520
+  reduced_equation_mismatch = 0
+  selector_mismatch = 0
+  validated_branches = 1824
+  x6_zero = 0
+p27_b_line_reduced_cover_symbolic_packet_rows=1/1

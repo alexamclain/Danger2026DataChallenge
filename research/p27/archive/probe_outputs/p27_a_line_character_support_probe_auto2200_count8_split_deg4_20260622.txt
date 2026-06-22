@@ -1,0 +1,735 @@
+p27 A-line character support probe
+screen = d_j(A) as chi(low-degree branch support on P1_A)
+depth = 6
+min_rows = 40
+max_split_weight = 4
+quadratic_gates = none
+q2207_base:
+  enum_compact_not_target = 1101
+  enum_no_label2_candidate = 560
+  sqrt_q_floor = 46
+  unique_A = 64
+  unique_ax = 256
+q2207_d3_target_stats:
+  domain_A = 64
+  domain_points = 256
+  gate_d = 3
+  groups = 64
+  minus_A = 32
+  plus_A = 32
+  quad_pair_expected_exact_x1e12 = 321244
+  quad_plus_expected_exact_x1e12 = 606324
+  rows = 64
+  split_expected_exact_x1e12 = 95188
+  split_family_size = 877956463672
+  split_verdict_code = 0
+q2207_d3_split_support_stats:
+  candidate_linear_factors = 2143
+  minus_rows = 32
+  pair_xors = 2295153
+  plus_rows = 32
+  rows = 64
+  target_weight = 32
+q2207_d3_split_support_result: none_weight_le_4
+q2207_d4_target_stats:
+  domain_A = 64
+  domain_points = 256
+  gate_d = 4
+  groups = 32
+  minus_A = 32
+  quad_pair_expected_exact_x1e12 = 1379736039173323
+  quad_plus_expected_exact_x1e12 = 2682478934862185
+  rows = 32
+  split_expected_exact_x1e12 = 433807857707142
+  split_family_size = 931595280800
+  split_verdict_code = 3
+q2207_d4_split_support_result: skipped_rows_lt_40
+q2207_d5_target_stats:
+  domain_A = 64
+  domain_points = 256
+  gate_d = 5
+  groups = 0
+  quad_pair_expected_exact_x1e12 = 0
+  quad_plus_expected_exact_x1e12 = 0
+  rows = 0
+  split_expected_exact_x1e12 = 0
+  split_family_size = 987655152648
+  split_verdict_code = 0
+q2207_d5_split_support_result: skipped_rows_lt_40
+q2207_d6_target_stats:
+  domain_A = 64
+  domain_points = 256
+  gate_d = 6
+  groups = 0
+  quad_pair_expected_exact_x1e12 = 0
+  quad_plus_expected_exact_x1e12 = 0
+  rows = 0
+  split_expected_exact_x1e12 = 0
+  split_family_size = 987655152648
+  split_verdict_code = 0
+q2207_d6_split_support_result: skipped_rows_lt_40
+q2207_d7_target_stats:
+  domain_A = 64
+  domain_points = 256
+  gate_d = 7
+  groups = 0
+  quad_pair_expected_exact_x1e12 = 0
+  quad_plus_expected_exact_x1e12 = 0
+  rows = 0
+  split_expected_exact_x1e12 = 0
+  split_family_size = 987655152648
+  split_verdict_code = 0
+q2207_d7_split_support_result: skipped_rows_lt_40
+q2207_d8_target_stats:
+  domain_A = 64
+  domain_points = 256
+  gate_d = 8
+  groups = 0
+  quad_pair_expected_exact_x1e12 = 0
+  quad_plus_expected_exact_x1e12 = 0
+  rows = 0
+  split_expected_exact_x1e12 = 0
+  split_family_size = 987655152648
+  split_verdict_code = 0
+q2207_d8_split_support_result: skipped_rows_lt_40
+q2239_base:
+  enum_compact_not_target = 741
+  enum_no_label2_candidate = 488
+  sqrt_q_floor = 47
+  unique_A = 86
+  unique_ax = 344
+q2239_d3_target_stats:
+  domain_A = 86
+  domain_points = 344
+  gate_d = 3
+  groups = 86
+  minus_A = 34
+  plus_A = 52
+  quad_pair_expected_exact_x1e12 = 0
+  quad_plus_expected_exact_x1e12 = 0
+  rows = 86
+  split_expected_exact_x1e12 = 0
+  split_family_size = 894462814407
+  split_verdict_code = 0
+q2239_d3_split_support_stats:
+  candidate_linear_factors = 2153
+  minus_rows = 34
+  pair_xors = 2316628
+  plus_rows = 52
+  rows = 86
+  target_weight = 34
+q2239_d3_split_support_result: none_weight_le_4
+q2239_d4_target_stats:
+  domain_A = 86
+  domain_points = 344
+  gate_d = 4
+  groups = 52
+  minus_A = 26
+  plus_A = 26
+  quad_pair_expected_exact_x1e12 = 1393826634
+  quad_plus_expected_exact_x1e12 = 2662077457
+  rows = 52
+  split_expected_exact_x1e12 = 422919558
+  split_family_size = 952330182993
+  split_verdict_code = 0
+q2239_d4_split_support_stats:
+  candidate_linear_factors = 2187
+  minus_rows = 26
+  pair_xors = 2390391
+  plus_rows = 26
+  rows = 52
+  target_weight = 26
+q2239_d4_split_support_result: none_weight_le_4
+q2239_d5_target_stats:
+  domain_A = 86
+  domain_points = 344
+  gate_d = 5
+  groups = 26
+  minus_A = 26
+  quad_pair_expected_exact_x1e12 = 93538122026950128
+  quad_plus_expected_exact_x1e12 = 182920972057342528
+  rows = 26
+  split_expected_exact_x1e12 = 29755882011115552
+  split_family_size = 998441719542
+  split_verdict_code = 3
+q2239_d5_split_support_result: skipped_rows_lt_40
+q2239_d6_target_stats:
+  domain_A = 86
+  domain_points = 344
+  gate_d = 6
+  groups = 0
+  quad_pair_expected_exact_x1e12 = 0
+  quad_plus_expected_exact_x1e12 = 0
+  rows = 0
+  split_expected_exact_x1e12 = 0
+  split_family_size = 1046207857520
+  split_verdict_code = 0
+q2239_d6_split_support_result: skipped_rows_lt_40
+q2239_d7_target_stats:
+  domain_A = 86
+  domain_points = 344
+  gate_d = 7
+  groups = 0
+  quad_pair_expected_exact_x1e12 = 0
+  quad_plus_expected_exact_x1e12 = 0
+  rows = 0
+  split_expected_exact_x1e12 = 0
+  split_family_size = 1046207857520
+  split_verdict_code = 0
+q2239_d7_split_support_result: skipped_rows_lt_40
+q2239_d8_target_stats:
+  domain_A = 86
+  domain_points = 344
+  gate_d = 8
+  groups = 0
+  quad_pair_expected_exact_x1e12 = 0
+  quad_plus_expected_exact_x1e12 = 0
+  rows = 0
+  split_expected_exact_x1e12 = 0
+  split_family_size = 1046207857520
+  split_verdict_code = 0
+q2239_d8_split_support_result: skipped_rows_lt_40
+q2287_base:
+  enum_compact_not_target = 1133
+  enum_no_label2_candidate = 560
+  sqrt_q_floor = 47
+  unique_A = 70
+  unique_ax = 280
+q2287_d3_target_stats:
+  domain_A = 70
+  domain_points = 280
+  gate_d = 3
+  groups = 70
+  minus_A = 40
+  plus_A = 30
+  quad_pair_expected_exact_x1e12 = 5787
+  quad_plus_expected_exact_x1e12 = 10887
+  rows = 70
+  split_expected_exact_x1e12 = 1703
+  split_family_size = 1005681686263
+  split_verdict_code = 0
+q2287_d3_split_support_stats:
+  candidate_linear_factors = 2217
+  minus_rows = 40
+  pair_xors = 2456436
+  plus_rows = 30
+  rows = 70
+  target_weight = 40
+q2287_d3_split_support_result: none_weight_le_4
+q2287_d4_target_stats:
+  domain_A = 70
+  domain_points = 280
+  gate_d = 4
+  groups = 30
+  plus_A = 30
+  quad_pair_expected_exact_x1e12 = 6363925490269437
+  quad_plus_expected_exact_x1e12 = 12407040279943496
+  rows = 30
+  split_expected_exact_x1e12 = 2012153213793411
+  split_family_size = 1080266530973
+  split_verdict_code = 3
+q2287_d4_split_support_result: skipped_rows_lt_40
+q2287_d5_target_stats:
+  domain_A = 70
+  domain_points = 280
+  gate_d = 5
+  groups = 30
+  minus_A = 30
+  quad_pair_expected_exact_x1e12 = 6363925490269437
+  quad_plus_expected_exact_x1e12 = 12407040279943496
+  rows = 30
+  split_expected_exact_x1e12 = 2012153213793411
+  split_family_size = 1080266530973
+  split_verdict_code = 3
+q2287_d5_split_support_result: skipped_rows_lt_40
+q2287_d6_target_stats:
+  domain_A = 70
+  domain_points = 280
+  gate_d = 6
+  groups = 0
+  quad_pair_expected_exact_x1e12 = 0
+  quad_plus_expected_exact_x1e12 = 0
+  rows = 0
+  split_expected_exact_x1e12 = 0
+  split_family_size = 1138870572268
+  split_verdict_code = 0
+q2287_d6_split_support_result: skipped_rows_lt_40
+q2287_d7_target_stats:
+  domain_A = 70
+  domain_points = 280
+  gate_d = 7
+  groups = 0
+  quad_pair_expected_exact_x1e12 = 0
+  quad_plus_expected_exact_x1e12 = 0
+  rows = 0
+  split_expected_exact_x1e12 = 0
+  split_family_size = 1138870572268
+  split_verdict_code = 0
+q2287_d7_split_support_result: skipped_rows_lt_40
+q2287_d8_target_stats:
+  domain_A = 70
+  domain_points = 280
+  gate_d = 8
+  groups = 0
+  quad_pair_expected_exact_x1e12 = 0
+  quad_plus_expected_exact_x1e12 = 0
+  rows = 0
+  split_expected_exact_x1e12 = 0
+  split_family_size = 1138870572268
+  split_verdict_code = 0
+q2287_d8_split_support_result: skipped_rows_lt_40
+q2311_base:
+  enum_compact_not_target = 1109
+  enum_no_label2_candidate = 576
+  sqrt_q_floor = 48
+  unique_A = 78
+  unique_ax = 312
+q2311_d3_target_stats:
+  domain_A = 78
+  domain_points = 312
+  gate_d = 3
+  groups = 78
+  minus_A = 30
+  plus_A = 48
+  quad_pair_expected_exact_x1e12 = 23
+  quad_plus_expected_exact_x1e12 = 44
+  rows = 78
+  split_expected_exact_x1e12 = 6
+  split_family_size = 1035036004387
+  split_verdict_code = 0
+q2311_d3_split_support_stats:
+  candidate_linear_factors = 2233
+  minus_rows = 30
+  pair_xors = 2492028
+  plus_rows = 48
+  rows = 78
+  target_weight = 30
+q2311_d3_split_support_result: none_weight_le_4
+q2311_d4_target_stats:
+  domain_A = 78
+  domain_points = 312
+  gate_d = 4
+  groups = 48
+  plus_A = 48
+  quad_pair_expected_exact_x1e12 = 25311869937
+  quad_plus_expected_exact_x1e12 = 48585120460
+  rows = 48
+  split_expected_exact_x1e12 = 7757720356
+  split_family_size = 1091802078342
+  split_verdict_code = 0
+q2311_d4_split_support_result: skipped_one_sided
+q2311_d5_target_stats:
+  domain_A = 78
+  domain_points = 312
+  gate_d = 5
+  groups = 48
+  minus_A = 48
+  quad_pair_expected_exact_x1e12 = 25311869937
+  quad_plus_expected_exact_x1e12 = 48585120460
+  rows = 48
+  split_expected_exact_x1e12 = 7757720356
+  split_family_size = 1091802078342
+  split_verdict_code = 0
+q2311_d5_split_support_result: skipped_one_sided
+q2311_d6_target_stats:
+  domain_A = 78
+  domain_points = 312
+  gate_d = 6
+  groups = 0
+  quad_pair_expected_exact_x1e12 = 0
+  quad_plus_expected_exact_x1e12 = 0
+  rows = 0
+  split_expected_exact_x1e12 = 0
+  split_family_size = 1187444781986
+  split_verdict_code = 0
+q2311_d6_split_support_result: skipped_rows_lt_40
+q2311_d7_target_stats:
+  domain_A = 78
+  domain_points = 312
+  gate_d = 7
+  groups = 0
+  quad_pair_expected_exact_x1e12 = 0
+  quad_plus_expected_exact_x1e12 = 0
+  rows = 0
+  split_expected_exact_x1e12 = 0
+  split_family_size = 1187444781986
+  split_verdict_code = 0
+q2311_d7_split_support_result: skipped_rows_lt_40
+q2311_d8_target_stats:
+  domain_A = 78
+  domain_points = 312
+  gate_d = 8
+  groups = 0
+  quad_pair_expected_exact_x1e12 = 0
+  quad_plus_expected_exact_x1e12 = 0
+  rows = 0
+  split_expected_exact_x1e12 = 0
+  split_family_size = 1187444781986
+  split_verdict_code = 0
+q2311_d8_split_support_result: skipped_rows_lt_40
+q2351_base:
+  enum_compact_not_target = 1277
+  enum_no_label2_candidate = 632
+  sqrt_q_floor = 48
+  unique_A = 79
+  unique_ax = 316
+q2351_d3_target_stats:
+  domain_A = 79
+  domain_points = 316
+  gate_d = 3
+  groups = 79
+  minus_A = 29
+  plus_A = 50
+  quad_pair_expected_exact_x1e12 = 12
+  quad_plus_expected_exact_x1e12 = 23
+  rows = 79
+  split_expected_exact_x1e12 = 3
+  split_family_size = 1109278315608
+  split_verdict_code = 0
+q2351_d3_split_support_stats:
+  candidate_linear_factors = 2272
+  minus_rows = 29
+  pair_xors = 2579856
+  plus_rows = 50
+  rows = 79
+  target_weight = 29
+q2351_d3_split_support_result: none_weight_le_4
+q2351_d4_target_stats:
+  domain_A = 79
+  domain_points = 316
+  gate_d = 4
+  groups = 50
+  minus_A = 15
+  plus_A = 35
+  quad_pair_expected_exact_x1e12 = 6777684762
+  quad_plus_expected_exact_x1e12 = 12996093119
+  rows = 50
+  split_expected_exact_x1e12 = 2073044866
+  split_family_size = 1167020511176
+  split_verdict_code = 0
+q2351_d4_split_support_stats:
+  candidate_linear_factors = 2301
+  minus_rows = 15
+  pair_xors = 2646150
+  plus_rows = 35
+  rows = 50
+  target_weight = 15
+q2351_d4_split_support_result: none_weight_le_4
+q2351_d5_target_stats:
+  domain_A = 79
+  domain_points = 316
+  gate_d = 5
+  groups = 35
+  minus_A = 35
+  quad_pair_expected_exact_x1e12 = 222091174307570
+  quad_plus_expected_exact_x1e12 = 431425089830008
+  rows = 35
+  split_expected_exact_x1e12 = 69718625654990
+  split_family_size = 1197756868441
+  split_verdict_code = 3
+q2351_d5_split_support_result: skipped_rows_lt_40
+q2351_d6_target_stats:
+  domain_A = 79
+  domain_points = 316
+  gate_d = 6
+  groups = 0
+  quad_pair_expected_exact_x1e12 = 0
+  quad_plus_expected_exact_x1e12 = 0
+  rows = 0
+  split_expected_exact_x1e12 = 0
+  split_family_size = 1271834284476
+  split_verdict_code = 0
+q2351_d6_split_support_result: skipped_rows_lt_40
+q2351_d7_target_stats:
+  domain_A = 79
+  domain_points = 316
+  gate_d = 7
+  groups = 0
+  quad_pair_expected_exact_x1e12 = 0
+  quad_plus_expected_exact_x1e12 = 0
+  rows = 0
+  split_expected_exact_x1e12 = 0
+  split_family_size = 1271834284476
+  split_verdict_code = 0
+q2351_d7_split_support_result: skipped_rows_lt_40
+q2351_d8_target_stats:
+  domain_A = 79
+  domain_points = 316
+  gate_d = 8
+  groups = 0
+  quad_pair_expected_exact_x1e12 = 0
+  quad_plus_expected_exact_x1e12 = 0
+  rows = 0
+  split_expected_exact_x1e12 = 0
+  split_family_size = 1271834284476
+  split_verdict_code = 0
+q2351_d8_split_support_result: skipped_rows_lt_40
+q2383_base:
+  enum_compact_not_target = 1069
+  enum_no_label2_candidate = 528
+  sqrt_q_floor = 48
+  unique_A = 66
+  unique_ax = 264
+q2383_d3_target_stats:
+  domain_A = 66
+  domain_points = 264
+  gate_d = 3
+  groups = 66
+  minus_A = 30
+  plus_A = 36
+  quad_pair_expected_exact_x1e12 = 109167
+  quad_plus_expected_exact_x1e12 = 206583
+  rows = 66
+  split_expected_exact_x1e12 = 32521
+  split_family_size = 1199827318788
+  split_verdict_code = 0
+q2383_d3_split_support_stats:
+  candidate_linear_factors = 2317
+  minus_rows = 30
+  pair_xors = 2683086
+  plus_rows = 36
+  rows = 66
+  target_weight = 30
+q2383_d3_split_support_result: none_weight_le_4
+q2383_d4_target_stats:
+  domain_A = 66
+  domain_points = 264
+  gate_d = 4
+  groups = 36
+  minus_A = 12
+  plus_A = 24
+  quad_pair_expected_exact_x1e12 = 117217354848427
+  quad_plus_expected_exact_x1e12 = 227597401680744
+  rows = 36
+  split_expected_exact_x1e12 = 36763926939835
+  split_family_size = 1263198911033
+  split_verdict_code = 3
+q2383_d4_split_support_result: skipped_rows_lt_40
+q2383_d5_target_stats:
+  domain_A = 66
+  domain_points = 264
+  gate_d = 5
+  groups = 24
+  minus_A = 24
+  quad_pair_expected_exact_x1e12 = 480122285459160832
+  quad_plus_expected_exact_x1e12 = 941794191838860544
+  rows = 24
+  split_expected_exact_x1e12 = 153689119628667840
+  split_family_size = 1289237778430
+  split_verdict_code = 3
+q2383_d5_split_support_result: skipped_rows_lt_40
+q2383_d6_target_stats:
+  domain_A = 66
+  domain_points = 264
+  gate_d = 6
+  groups = 0
+  quad_pair_expected_exact_x1e12 = 0
+  quad_plus_expected_exact_x1e12 = 0
+  rows = 0
+  split_expected_exact_x1e12 = 0
+  split_family_size = 1342521109412
+  split_verdict_code = 0
+q2383_d6_split_support_result: skipped_rows_lt_40
+q2383_d7_target_stats:
+  domain_A = 66
+  domain_points = 264
+  gate_d = 7
+  groups = 0
+  quad_pair_expected_exact_x1e12 = 0
+  quad_plus_expected_exact_x1e12 = 0
+  rows = 0
+  split_expected_exact_x1e12 = 0
+  split_family_size = 1342521109412
+  split_verdict_code = 0
+q2383_d7_split_support_result: skipped_rows_lt_40
+q2383_d8_target_stats:
+  domain_A = 66
+  domain_points = 264
+  gate_d = 8
+  groups = 0
+  quad_pair_expected_exact_x1e12 = 0
+  quad_plus_expected_exact_x1e12 = 0
+  rows = 0
+  split_expected_exact_x1e12 = 0
+  split_family_size = 1342521109412
+  split_verdict_code = 0
+q2383_d8_split_support_result: skipped_rows_lt_40
+q2399_base:
+  enum_compact_not_target = 1461
+  enum_no_label2_candidate = 600
+  sqrt_q_floor = 48
+  unique_A = 42
+  unique_ax = 168
+q2399_d3_target_stats:
+  domain_A = 42
+  domain_points = 168
+  gate_d = 3
+  groups = 42
+  minus_A = 21
+  plus_A = 21
+  quad_pair_expected_exact_x1e12 = 1881218301878
+  quad_plus_expected_exact_x1e12 = 3634905735681
+  rows = 42
+  split_expected_exact_x1e12 = 584291349013
+  split_family_size = 1284870264498
+  split_verdict_code = 2
+q2399_d3_split_support_stats:
+  candidate_linear_factors = 2357
+  minus_rows = 21
+  pair_xors = 2776546
+  plus_rows = 21
+  rows = 42
+  target_weight = 21
+q2399_d3_split_support_result: none_weight_le_4
+q2399_d4_target_stats:
+  domain_A = 42
+  domain_points = 168
+  gate_d = 4
+  groups = 21
+  minus_A = 13
+  plus_A = 8
+  quad_pair_expected_exact_x1e12 = 3945200724221229568
+  quad_plus_expected_exact_x1e12 = 7759361184532165632
+  rows = 21
+  split_expected_exact_x1e12 = 1269613928086280704
+  split_family_size = 1331286694257
+  split_verdict_code = 3
+q2399_d4_split_support_result: skipped_rows_lt_40
+q2399_d5_target_stats:
+  domain_A = 42
+  domain_points = 168
+  gate_d = 5
+  groups = 8
+  minus_A = 8
+  quad_pair_expected_exact_x1e12 = 32319084332820312621056
+  quad_plus_expected_exact_x1e12 = 64261427550289060167680
+  rows = 8
+  split_expected_exact_x1e12 = 10630030326296874057728
+  split_family_size = 1360643881766
+  split_verdict_code = 3
+q2399_d5_split_support_result: skipped_rows_lt_40
+q2399_d6_target_stats:
+  domain_A = 42
+  domain_points = 168
+  gate_d = 6
+  groups = 0
+  quad_pair_expected_exact_x1e12 = 0
+  quad_plus_expected_exact_x1e12 = 0
+  rows = 0
+  split_expected_exact_x1e12 = 0
+  split_family_size = 1378949518200
+  split_verdict_code = 0
+q2399_d6_split_support_result: skipped_rows_lt_40
+q2399_d7_target_stats:
+  domain_A = 42
+  domain_points = 168
+  gate_d = 7
+  groups = 0
+  quad_pair_expected_exact_x1e12 = 0
+  quad_plus_expected_exact_x1e12 = 0
+  rows = 0
+  split_expected_exact_x1e12 = 0
+  split_family_size = 1378949518200
+  split_verdict_code = 0
+q2399_d7_split_support_result: skipped_rows_lt_40
+q2399_d8_target_stats:
+  domain_A = 42
+  domain_points = 168
+  gate_d = 8
+  groups = 0
+  quad_pair_expected_exact_x1e12 = 0
+  quad_plus_expected_exact_x1e12 = 0
+  rows = 0
+  split_expected_exact_x1e12 = 0
+  split_family_size = 1378949518200
+  split_verdict_code = 0
+q2399_d8_split_support_result: skipped_rows_lt_40
+q2423_base:
+  enum_compact_not_target = 1265
+  enum_no_label2_candidate = 604
+  sqrt_q_floor = 49
+  unique_A = 69
+  unique_ax = 276
+q2423_d3_target_stats:
+  domain_A = 69
+  domain_points = 276
+  gate_d = 3
+  groups = 69
+  minus_A = 49
+  plus_A = 20
+  quad_pair_expected_exact_x1e12 = 14585
+  quad_plus_expected_exact_x1e12 = 27556
+  rows = 69
+  split_expected_exact_x1e12 = 4331
+  split_family_size = 1278339811815
+  split_verdict_code = 0
+q2423_d3_split_support_stats:
+  candidate_linear_factors = 2354
+  minus_rows = 49
+  pair_xors = 2769481
+  plus_rows = 20
+  rows = 69
+  target_weight = 49
+q2423_d3_split_support_result: none_weight_le_4
+q2423_d4_target_stats:
+  domain_A = 69
+  domain_points = 276
+  gate_d = 4
+  groups = 20
+  minus_A = 20
+  quad_pair_expected_exact_x1e12 = 8210986711751938048
+  quad_plus_expected_exact_x1e12 = 16165384111349106688
+  rows = 20
+  split_expected_exact_x1e12 = 2647726618589401088
+  split_family_size = 1388171293407
+  split_verdict_code = 3
+q2423_d4_split_support_result: skipped_rows_lt_40
+q2423_d5_target_stats:
+  domain_A = 69
+  domain_points = 276
+  gate_d = 5
+  groups = 0
+  quad_pair_expected_exact_x1e12 = 0
+  quad_plus_expected_exact_x1e12 = 0
+  rows = 0
+  split_expected_exact_x1e12 = 0
+  split_family_size = 1434975892302
+  split_verdict_code = 0
+q2423_d5_split_support_result: skipped_rows_lt_40
+q2423_d6_target_stats:
+  domain_A = 69
+  domain_points = 276
+  gate_d = 6
+  groups = 0
+  quad_pair_expected_exact_x1e12 = 0
+  quad_plus_expected_exact_x1e12 = 0
+  rows = 0
+  split_expected_exact_x1e12 = 0
+  split_family_size = 1434975892302
+  split_verdict_code = 0
+q2423_d6_split_support_result: skipped_rows_lt_40
+q2423_d7_target_stats:
+  domain_A = 69
+  domain_points = 276
+  gate_d = 7
+  groups = 0
+  quad_pair_expected_exact_x1e12 = 0
+  quad_plus_expected_exact_x1e12 = 0
+  rows = 0
+  split_expected_exact_x1e12 = 0
+  split_family_size = 1434975892302
+  split_verdict_code = 0
+q2423_d7_split_support_result: skipped_rows_lt_40
+q2423_d8_target_stats:
+  domain_A = 69
+  domain_points = 276
+  gate_d = 8
+  groups = 0
+  quad_pair_expected_exact_x1e12 = 0
+  quad_plus_expected_exact_x1e12 = 0
+  rows = 0
+  split_expected_exact_x1e12 = 0
+  split_family_size = 1434975892302
+  split_verdict_code = 0
+q2423_d8_split_support_result: skipped_rows_lt_40
+p27_a_line_character_support_probe_rows=1/1

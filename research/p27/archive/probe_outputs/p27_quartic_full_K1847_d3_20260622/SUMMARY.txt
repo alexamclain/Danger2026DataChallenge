@@ -1,0 +1,17 @@
+p27 quartic fast shard summary
+coordinate = K
+field = 1847
+family = d3_on_K
+rows = 63
+plus = 45
+minus = 18
+total_triples = 6300872423
+full_triples = 6300872423
+triples_scanned = 6300872423
+polarity_-1_hits = 0
+polarity_1_hits = 0
+exact_quartics = 0
+wall_seconds = 499.681562
+wall_throughput_triples_per_second = 12609775.711
+hit_samples:
+p27_quartic_fast_shard_runner_rows=1/1

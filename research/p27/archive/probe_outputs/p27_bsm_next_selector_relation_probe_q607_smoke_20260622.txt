@@ -1,0 +1,71 @@
+p27 BSM next-selector relation probe
+legal surface = BSM surface with B in legal B-domain
+targets = d3plus, d4plus_after_d3, d4minus_after_d3
+pair_degrees = [2, 4]
+triple_degrees = [2, 4]
+q607_base:
+  d3plus_B = 16
+  d3plus_rows = 512
+  d3plus_rows_per_B_32 = 16
+  d4minus_after_d3_B = 16
+  d4minus_after_d3_rows = 512
+  d4minus_after_d3_rows_per_B_32 = 16
+  d4plus_after_d3_B = 0
+  d4plus_after_d3_rows = 0
+  data_d3plus_bax = 64
+  data_d4minus_bax = 64
+  data_d4plus_bax = 0
+  data_enum_compact_not_target = 293
+  data_enum_no_label2_candidate = 184
+  data_legal_B = 32
+  data_legal_bax = 128
+  inconsistent_den0_pairs = 64
+  legal_surface_rows = 19200
+  skip_m0 = 96
+  surface_rows_per_B_568 = 16
+  surface_rows_per_B_632 = 16
+q607_B_s:
+  legal_rows = 19200
+  legal_unique = 9600
+  d3plus_rows = 512
+  d3plus_unique = 256
+  d4plus_after_d3_rows = 0
+  d4plus_after_d3_unique = 0
+  d4minus_after_d3_rows = 512
+  d4minus_after_d3_unique = 256
+  deg2: legal_extra=0 d3_extra=0 d3_minus_legal=0 d4plus_extra=0 d4plus_minus_d3=0 d4minus_extra=0 d4minus_minus_d3=0
+  deg4: legal_extra=0 d3_extra=0 d3_minus_legal=0 d4plus_extra=0 d4plus_minus_d3=0 d4minus_extra=0 d4minus_minus_d3=0
+q607_B_m:
+  legal_rows = 19200
+  legal_unique = 4800
+  d3plus_rows = 512
+  d3plus_unique = 128
+  d4plus_after_d3_rows = 0
+  d4plus_after_d3_unique = 0
+  d4minus_after_d3_rows = 512
+  d4minus_after_d3_unique = 128
+  deg2: legal_extra=0 d3_extra=0 d3_minus_legal=0 d4plus_extra=0 d4plus_minus_d3=0 d4minus_extra=0 d4minus_minus_d3=0
+  deg4: legal_extra=0 d3_extra=0 d3_minus_legal=0 d4plus_extra=0 d4plus_minus_d3=0 d4minus_extra=0 d4minus_minus_d3=0
+q607_s_m:
+  legal_rows = 19200
+  legal_unique = 19200
+  d3plus_rows = 512
+  d3plus_unique = 512
+  d4plus_after_d3_rows = 0
+  d4plus_after_d3_unique = 0
+  d4minus_after_d3_rows = 512
+  d4minus_after_d3_unique = 512
+  deg2: legal_extra=0 d3_extra=0 d3_minus_legal=0 d4plus_extra=0 d4plus_minus_d3=0 d4minus_extra=0 d4minus_minus_d3=0
+  deg4: legal_extra=0 d3_extra=0 d3_minus_legal=0 d4plus_extra=0 d4plus_minus_d3=0 d4minus_extra=0 d4minus_minus_d3=0
+q607_B_s_m:
+  legal_rows = 19200
+  legal_unique = 19200
+  d3plus_rows = 512
+  d3plus_unique = 512
+  d4plus_after_d3_rows = 0
+  d4plus_after_d3_unique = 0
+  d4minus_after_d3_rows = 512
+  d4minus_after_d3_unique = 512
+  deg2: legal_extra=0 d3_extra=0 d3_minus_legal=0 d4plus_extra=0 d4plus_minus_d3=0 d4minus_extra=0 d4minus_minus_d3=0
+  deg4: legal_extra=1 d3_extra=1 d3_minus_legal=0 d4plus_extra=0 d4plus_minus_d3=-1 d4minus_extra=1 d4minus_minus_d3=0
+p27_bsm_next_selector_relation_probe_rows=1/1

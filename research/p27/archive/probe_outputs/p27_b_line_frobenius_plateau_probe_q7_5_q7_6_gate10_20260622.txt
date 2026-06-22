@@ -1,0 +1,95 @@
+p27 B-line Frobenius plateau probe
+question = are all-plus plateau sets subfield/Frobenius-short sources?
+max_gate = 10
+GF(7^5) N=16807 max_gate=10:
+  collect_stats:
+  B_degenerate = 1
+  B_group_size_16 = 590
+  candidate_invalid_not_nonsplit = 8400
+  candidates = 9440
+  compact_not_target = 7880
+  d2_plus_candidates = 9440
+  deduped_ax = 2360
+  legal_B = 590
+  skip_X_degenerate = 2
+  source_rows = 8920
+  all_legal_B:
+  count = 590
+  frobenius_orbit_5 = 590
+  min_subfield_degree_5 = 590
+  prefix_survival_sets:
+    gate3: count=315 rate=0.533898305 scaled=1.067796610
+      frobenius_orbit_5 = 315
+      min_subfield_degree_5 = 315
+    gate4: count=140 rate=0.237288136 scaled=0.949152542
+      frobenius_orbit_5 = 140
+      min_subfield_degree_5 = 140
+    gate5: count=140 rate=0.237288136 scaled=1.898305085
+      frobenius_orbit_5 = 140
+      min_subfield_degree_5 = 140
+    gate6: count=0 rate=0.000000000 scaled=0.000000000
+    gate7: count=0 rate=0.000000000 scaled=0.000000000
+    gate8: count=0 rate=0.000000000 scaled=0.000000000
+    gate9: count=0 rate=0.000000000 scaled=0.000000000
+    gate10: count=0 rate=0.000000000 scaled=0.000000000
+  first_stop_sets:
+    gate3_minus: count=275
+      frobenius_orbit_5 = 275
+      min_subfield_degree_5 = 275
+    gate4_minus: count=175
+      frobenius_orbit_5 = 175
+      min_subfield_degree_5 = 175
+    gate6_minus: count=140
+      frobenius_orbit_5 = 140
+      min_subfield_degree_5 = 140
+GF(7^6) N=117649 max_gate=10:
+  collect_stats:
+  B_degenerate = 1
+  B_group_size_8 = 3576
+  candidate_invalid_not_nonsplit = 62400
+  candidates = 57792
+  compact_not_target = 60112
+  d2_minus = 29184
+  d2_plus_candidates = 28608
+  deduped_ax = 14304
+  legal_B = 3576
+  skip_X_degenerate = 2
+  source_rows = 60096
+  all_legal_B:
+  count = 3576
+  frobenius_orbit_6 = 3576
+  min_subfield_degree_6 = 3576
+  prefix_survival_sets:
+    gate3: count=1896 rate=0.530201342 scaled=1.060402685
+      frobenius_orbit_6 = 1896
+      min_subfield_degree_6 = 1896
+    gate4: count=1128 rate=0.315436242 scaled=1.261744966
+      frobenius_orbit_6 = 1128
+      min_subfield_degree_6 = 1128
+    gate5: count=600 rate=0.167785235 scaled=1.342281879
+      frobenius_orbit_6 = 600
+      min_subfield_degree_6 = 600
+    gate6: count=360 rate=0.100671141 scaled=1.610738255
+      frobenius_orbit_6 = 360
+      min_subfield_degree_6 = 360
+    gate7: count=0 rate=0.000000000 scaled=0.000000000
+    gate8: count=0 rate=0.000000000 scaled=0.000000000
+    gate9: count=0 rate=0.000000000 scaled=0.000000000
+    gate10: count=0 rate=0.000000000 scaled=0.000000000
+  first_stop_sets:
+    gate3_minus: count=1680
+      frobenius_orbit_6 = 1680
+      min_subfield_degree_6 = 1680
+    gate4_minus: count=768
+      frobenius_orbit_6 = 768
+      min_subfield_degree_6 = 768
+    gate5_minus: count=528
+      frobenius_orbit_6 = 528
+      min_subfield_degree_6 = 528
+    gate6_minus: count=240
+      frobenius_orbit_6 = 240
+      min_subfield_degree_6 = 240
+    gate7_minus: count=360
+      frobenius_orbit_6 = 360
+      min_subfield_degree_6 = 360
+p27_b_line_frobenius_plateau_probe_rows=1/1

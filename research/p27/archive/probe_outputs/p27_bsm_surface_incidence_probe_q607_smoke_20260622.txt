@@ -1,0 +1,36 @@
+p27 BSM surface incidence probe
+surface = m^2*(B^2+s^2-4)=4*s^2*(s^2-4)
+target = legal/d3-plus label-2 compactD rows
+q607:
+  data_d3minus_ax = 64
+  data_d3plus_ax = 64
+  data_d3plus_b = 16
+  data_enum_compact_not_target = 293
+  data_enum_no_label2_candidate = 184
+  data_legal_ax = 128
+  data_legal_b = 32
+  degenerate_all_m_pairs = 4
+  inconsistent_den0_pairs = 604
+  skip_degenerate_B = 3
+  skip_m0 = 1817
+  surface_d3plus_ax_points_unsigned_B = 1024
+  surface_d3plus_bax_points = 512
+  surface_legal_ax_points_unsigned_B = 1024
+  surface_legal_bax_points = 512
+  surface_no_m_root_pairs = 183012
+  surface_points = 366024
+  surface_points_with_d3plus_B = 10112
+  surface_points_with_legal_B = 19200
+  surface_unique_ax = 34579
+  surface_unique_bax = 68856
+  surface_unique_d3plus_ax = 64
+  surface_unique_d3plus_bax = 64
+  surface_unique_legal_ax = 64
+  surface_unique_legal_bax = 64
+  surface_points_per_q2 = 0.993418356
+  d3plus_bax_rate_on_surface = 0.001398815
+  d3plus_bax_rate_times_q = 0.849080935
+  legal_bax_rate_on_surface = 0.001398815
+  legal_B_rate_on_surface = 0.052455577
+  d3plus_B_rate_on_surface = 0.027626604
+p27_bsm_surface_incidence_probe_rows=1/1

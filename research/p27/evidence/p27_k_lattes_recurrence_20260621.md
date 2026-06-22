@@ -20,7 +20,7 @@ K -> x([m]Q)
 K -> x([m]Q + (0,0)) = 4 / x([m]Q)
 ```
 
-for `m=1..16`, asking whether:
+for `m=1..24`, asking whether:
 
 ```text
 d4(K) = +/- d3(phi_m(K)).
@@ -45,6 +45,7 @@ Outputs:
 ```text
 research/p27/archive/probe_outputs/p27_k_lattes_recurrence_probe_20260621.txt
 research/p27/archive/probe_outputs/p27_k_lattes_recurrence_probe_extended_20260621.txt
+research/p27/archive/probe_outputs/p27_k_lattes_recurrence_probe_q1471_q1607_q1847_q2087_20260622.txt
 ```
 
 Commands:
@@ -63,6 +64,13 @@ python3 -u research/p27/archive/gates/p27_k_lattes_recurrence_probe.py \
   --multipliers 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16 \
   --limit 10 \
   | tee research/p27/archive/probe_outputs/p27_k_lattes_recurrence_probe_extended_20260621.txt
+
+PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=research/p27/archive/gates \
+python3 -u research/p27/archive/gates/p27_k_lattes_recurrence_probe.py \
+  --small-primes 1471,1607,1847,2087 \
+  --multipliers 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24 \
+  --limit 12 \
+  | tee research/p27/archive/probe_outputs/p27_k_lattes_recurrence_probe_q1471_q1607_q1847_q2087_20260622.txt
 ```
 
 ## Promotion Fields
@@ -105,6 +113,22 @@ best full coverage = 26/45 = 0.577777778
 Again the only full-coverage map is identity, scoring as raw d4 majority.  The
 largest non-identity coverage is `19/45`.
 
+For `q=2087`:
+
+```text
+d3 K rows = 57
+d4 K rows = 25
+full coverage maps = 1
+best full coverage = 18/25 = 0.720000000
+```
+
+Again the only full-coverage map is identity, scoring as the raw d4 majority.
+The largest non-identity coverage in the `m<=24` run is `10/25`, not a
+sampler-relevant recurrence.
+
+The 2026-06-22 follow-up also extends the promotion-field check from
+`m<=16` to `m<=24`; no new high-coverage or exact nontrivial map appears.
+
 ## Extended Fields
 
 The small-field extension explains the possible false positives:
@@ -132,7 +156,8 @@ class extraction says otherwise.
 Negative:
 
 ```text
-No small Lattes map K -> x([m]Q) gives a high-coverage d4-from-d3 law.
+No small Lattes map K -> x([m]Q), now tested through m <= 24, gives a
+high-coverage d4-from-d3 law.
 No composition with the rational 2-torsion map K -> 4/K promotes.
 The identity scores are raw field bias, not recurrence structure.
 ```
@@ -144,7 +169,7 @@ continue = actual branch-class/genus extraction over P1_K and P1_Sroot
 continue = compare d3 and d4 only after d3 branch class is named
 continue = promote only a stable class, genus <=1 source, or cheap sampler
 
-kill = K-line Lattes recurrences with m <= 16 as a sqrt-beating route
+kill = K-line Lattes recurrences with m <= 24 as a sqrt-beating route
 kill = d4-from-d3 via K -> 4/K or small multiplication maps
 kill = promoting constant-d4 small fields as recurrence evidence
 ```
@@ -157,6 +182,7 @@ kill = promoting constant-d4 small fields as recurrence evidence
 - Gate: `research/p27/archive/gates/p27_k_lattes_recurrence_probe.py`
 - Output: `research/p27/archive/probe_outputs/p27_k_lattes_recurrence_probe_20260621.txt`
 - Extended output: `research/p27/archive/probe_outputs/p27_k_lattes_recurrence_probe_extended_20260621.txt`
+- 2026-06-22 output: `research/p27/archive/probe_outputs/p27_k_lattes_recurrence_probe_q1471_q1607_q1847_q2087_20260622.txt`
 
 ```text
 p27_k_lattes_recurrence_probe_rows=1/1

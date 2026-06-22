@@ -1,0 +1,508 @@
+p27 B/K signed-root relation probe
+cover = K^2 - (B-2)^4/(8*B*(B+2)^2)
+degrees = [2, 4, 6, 8, 10, 12]
+q1471_d3_setup:
+  B_d3_labeled_B = 50
+  B_d4_labeled_B = 28
+  B_enum_compact_not_target = 837
+  B_enum_no_label2_candidate = 424
+  B_legal_B = 50
+  K_d3_eprime_input_rows = 200
+  K_d3_eprime_minus = 44
+  K_d3_eprime_plus = 56
+  K_d3_eprime_quotient_rows = 100
+  K_d3_k_input_rows = 100
+  K_d3_k_k_rows = 50
+  K_d3_k_minus = 22
+  K_d3_k_plus = 28
+  K_d3_s_input_rows = 100
+  K_d3_s_minus = 44
+  K_d3_s_paired_s_neg_s = 100
+  K_d3_s_plus = 56
+  K_d3_s_s_rows = 100
+  K_d4_eprime_input_rows = 112
+  K_d4_eprime_minus = 28
+  K_d4_eprime_plus = 28
+  K_d4_eprime_quotient_rows = 56
+  K_d4_k_input_rows = 56
+  K_d4_k_k_rows = 28
+  K_d4_k_minus = 14
+  K_d4_k_plus = 14
+  K_d4_s_input_rows = 56
+  K_d4_s_minus = 28
+  K_d4_s_paired_s_neg_s = 56
+  K_d4_s_plus = 28
+  K_d4_s_s_rows = 56
+  K_enum_compact_not_target = 837
+  K_enum_no_label2_candidate = 424
+  K_quotient_d3_minus_E_points = 88
+  K_quotient_d3_missing_on_E_orbit = 0
+  K_quotient_d3_not_descended_to_E = 0
+  K_quotient_d3_plus_E_points = 112
+  K_quotient_d3_quotient_rows = 200
+  K_quotient_d4_minus_E_points_after_d3 = 56
+  K_quotient_d4_missing_on_E_orbit = 0
+  K_quotient_d4_not_descended_to_E = 0
+  K_quotient_d4_plus_E_points_after_d3 = 56
+  K_quotient_d4_quotient_rows_after_d3 = 112
+  K_quotient_orbit_size_4 = 200
+  K_quotient_oriented_candidates = 800
+  K_quotient_quotient_E_points = 200
+  K_roots_2 = 50
+  cover_rows = 100
+  cover_unique = 100
+  selected_rows = 50
+  selected_unique = 50
+q1471_d3_B_K:
+  cover_rows = 100
+  cover_unique = 100
+  selected_rows = 50
+  selected_unique = 50
+  deg2: cover_rank=6 cover_extra=0 selected_rank=6 selected_extra=0 selected_minus_cover_extra=0
+  deg4: cover_rank=15 cover_extra=0 selected_rank=15 selected_extra=0 selected_minus_cover_extra=0
+  deg6: cover_rank=25 cover_extra=3 selected_rank=25 selected_extra=3 selected_minus_cover_extra=0
+  deg8: cover_rank=35 cover_extra=10 selected_rank=35 selected_extra=10 selected_minus_cover_extra=0
+  deg10: cover_rank=45 cover_extra=21 selected_rank=45 selected_extra=5 selected_minus_cover_extra=-16
+  deg12: cover_rank=55 cover_extra=36 selected_rank=50 selected_extra=0 selected_minus_cover_extra=-36
+q1471_d4_setup:
+  B_d3_labeled_B = 50
+  B_d4_labeled_B = 28
+  B_enum_compact_not_target = 837
+  B_enum_no_label2_candidate = 424
+  B_legal_B = 50
+  K_d3_eprime_input_rows = 200
+  K_d3_eprime_minus = 44
+  K_d3_eprime_plus = 56
+  K_d3_eprime_quotient_rows = 100
+  K_d3_k_input_rows = 100
+  K_d3_k_k_rows = 50
+  K_d3_k_minus = 22
+  K_d3_k_plus = 28
+  K_d3_s_input_rows = 100
+  K_d3_s_minus = 44
+  K_d3_s_paired_s_neg_s = 100
+  K_d3_s_plus = 56
+  K_d3_s_s_rows = 100
+  K_d4_eprime_input_rows = 112
+  K_d4_eprime_minus = 28
+  K_d4_eprime_plus = 28
+  K_d4_eprime_quotient_rows = 56
+  K_d4_k_input_rows = 56
+  K_d4_k_k_rows = 28
+  K_d4_k_minus = 14
+  K_d4_k_plus = 14
+  K_d4_s_input_rows = 56
+  K_d4_s_minus = 28
+  K_d4_s_paired_s_neg_s = 56
+  K_d4_s_plus = 28
+  K_d4_s_s_rows = 56
+  K_enum_compact_not_target = 837
+  K_enum_no_label2_candidate = 424
+  K_quotient_d3_minus_E_points = 88
+  K_quotient_d3_missing_on_E_orbit = 0
+  K_quotient_d3_not_descended_to_E = 0
+  K_quotient_d3_plus_E_points = 112
+  K_quotient_d3_quotient_rows = 200
+  K_quotient_d4_minus_E_points_after_d3 = 56
+  K_quotient_d4_missing_on_E_orbit = 0
+  K_quotient_d4_not_descended_to_E = 0
+  K_quotient_d4_plus_E_points_after_d3 = 56
+  K_quotient_d4_quotient_rows_after_d3 = 112
+  K_quotient_orbit_size_4 = 200
+  K_quotient_oriented_candidates = 800
+  K_quotient_quotient_E_points = 200
+  K_roots_2 = 28
+  cover_rows = 56
+  cover_unique = 56
+  selected_rows = 28
+  selected_unique = 28
+q1471_d4_B_K:
+  cover_rows = 56
+  cover_unique = 56
+  selected_rows = 28
+  selected_unique = 28
+  deg2: cover_rank=6 cover_extra=0 selected_rank=6 selected_extra=0 selected_minus_cover_extra=0
+  deg4: cover_rank=15 cover_extra=0 selected_rank=15 selected_extra=0 selected_minus_cover_extra=0
+  deg6: cover_rank=25 cover_extra=3 selected_rank=25 selected_extra=3 selected_minus_cover_extra=0
+  deg8: cover_rank=35 cover_extra=10 selected_rank=28 selected_extra=0 selected_minus_cover_extra=-10
+  deg10: cover_rank=45 cover_extra=11 selected_rank=28 selected_extra=0 selected_minus_cover_extra=-11
+  deg12: cover_rank=54 cover_extra=2 selected_rank=28 selected_extra=0 selected_minus_cover_extra=-2
+q1607_d3_setup:
+  B_d3_labeled_B = 49
+  B_d4_labeled_B = 28
+  B_enum_compact_not_target = 805
+  B_enum_no_label2_candidate = 408
+  B_legal_B = 49
+  K_d3_eprime_input_rows = 196
+  K_d3_eprime_minus = 42
+  K_d3_eprime_plus = 56
+  K_d3_eprime_quotient_rows = 98
+  K_d3_k_input_rows = 98
+  K_d3_k_k_rows = 49
+  K_d3_k_minus = 21
+  K_d3_k_plus = 28
+  K_d3_s_input_rows = 98
+  K_d3_s_minus = 42
+  K_d3_s_paired_s_neg_s = 98
+  K_d3_s_plus = 56
+  K_d3_s_s_rows = 98
+  K_d4_eprime_input_rows = 112
+  K_d4_eprime_minus = 18
+  K_d4_eprime_plus = 38
+  K_d4_eprime_quotient_rows = 56
+  K_d4_k_input_rows = 56
+  K_d4_k_k_rows = 28
+  K_d4_k_minus = 9
+  K_d4_k_plus = 19
+  K_d4_s_input_rows = 56
+  K_d4_s_minus = 18
+  K_d4_s_paired_s_neg_s = 56
+  K_d4_s_plus = 38
+  K_d4_s_s_rows = 56
+  K_enum_compact_not_target = 805
+  K_enum_no_label2_candidate = 408
+  K_quotient_d3_minus_E_points = 84
+  K_quotient_d3_missing_on_E_orbit = 0
+  K_quotient_d3_not_descended_to_E = 0
+  K_quotient_d3_plus_E_points = 112
+  K_quotient_d3_quotient_rows = 196
+  K_quotient_d4_minus_E_points_after_d3 = 36
+  K_quotient_d4_missing_on_E_orbit = 0
+  K_quotient_d4_not_descended_to_E = 0
+  K_quotient_d4_plus_E_points_after_d3 = 76
+  K_quotient_d4_quotient_rows_after_d3 = 112
+  K_quotient_orbit_size_4 = 196
+  K_quotient_oriented_candidates = 784
+  K_quotient_quotient_E_points = 196
+  K_roots_2 = 49
+  cover_rows = 98
+  cover_unique = 98
+  selected_rows = 49
+  selected_unique = 49
+q1607_d3_B_K:
+  cover_rows = 98
+  cover_unique = 98
+  selected_rows = 49
+  selected_unique = 49
+  deg2: cover_rank=6 cover_extra=0 selected_rank=6 selected_extra=0 selected_minus_cover_extra=0
+  deg4: cover_rank=15 cover_extra=0 selected_rank=15 selected_extra=0 selected_minus_cover_extra=0
+  deg6: cover_rank=25 cover_extra=3 selected_rank=25 selected_extra=3 selected_minus_cover_extra=0
+  deg8: cover_rank=35 cover_extra=10 selected_rank=35 selected_extra=10 selected_minus_cover_extra=0
+  deg10: cover_rank=45 cover_extra=21 selected_rank=45 selected_extra=4 selected_minus_cover_extra=-17
+  deg12: cover_rank=55 cover_extra=36 selected_rank=49 selected_extra=0 selected_minus_cover_extra=-36
+q1607_d4_setup:
+  B_d3_labeled_B = 49
+  B_d4_labeled_B = 28
+  B_enum_compact_not_target = 805
+  B_enum_no_label2_candidate = 408
+  B_legal_B = 49
+  K_d3_eprime_input_rows = 196
+  K_d3_eprime_minus = 42
+  K_d3_eprime_plus = 56
+  K_d3_eprime_quotient_rows = 98
+  K_d3_k_input_rows = 98
+  K_d3_k_k_rows = 49
+  K_d3_k_minus = 21
+  K_d3_k_plus = 28
+  K_d3_s_input_rows = 98
+  K_d3_s_minus = 42
+  K_d3_s_paired_s_neg_s = 98
+  K_d3_s_plus = 56
+  K_d3_s_s_rows = 98
+  K_d4_eprime_input_rows = 112
+  K_d4_eprime_minus = 18
+  K_d4_eprime_plus = 38
+  K_d4_eprime_quotient_rows = 56
+  K_d4_k_input_rows = 56
+  K_d4_k_k_rows = 28
+  K_d4_k_minus = 9
+  K_d4_k_plus = 19
+  K_d4_s_input_rows = 56
+  K_d4_s_minus = 18
+  K_d4_s_paired_s_neg_s = 56
+  K_d4_s_plus = 38
+  K_d4_s_s_rows = 56
+  K_enum_compact_not_target = 805
+  K_enum_no_label2_candidate = 408
+  K_quotient_d3_minus_E_points = 84
+  K_quotient_d3_missing_on_E_orbit = 0
+  K_quotient_d3_not_descended_to_E = 0
+  K_quotient_d3_plus_E_points = 112
+  K_quotient_d3_quotient_rows = 196
+  K_quotient_d4_minus_E_points_after_d3 = 36
+  K_quotient_d4_missing_on_E_orbit = 0
+  K_quotient_d4_not_descended_to_E = 0
+  K_quotient_d4_plus_E_points_after_d3 = 76
+  K_quotient_d4_quotient_rows_after_d3 = 112
+  K_quotient_orbit_size_4 = 196
+  K_quotient_oriented_candidates = 784
+  K_quotient_quotient_E_points = 196
+  K_roots_2 = 28
+  cover_rows = 56
+  cover_unique = 56
+  selected_rows = 28
+  selected_unique = 28
+q1607_d4_B_K:
+  cover_rows = 56
+  cover_unique = 56
+  selected_rows = 28
+  selected_unique = 28
+  deg2: cover_rank=6 cover_extra=0 selected_rank=6 selected_extra=0 selected_minus_cover_extra=0
+  deg4: cover_rank=15 cover_extra=0 selected_rank=15 selected_extra=0 selected_minus_cover_extra=0
+  deg6: cover_rank=25 cover_extra=3 selected_rank=25 selected_extra=3 selected_minus_cover_extra=0
+  deg8: cover_rank=35 cover_extra=10 selected_rank=28 selected_extra=0 selected_minus_cover_extra=-10
+  deg10: cover_rank=45 cover_extra=11 selected_rank=28 selected_extra=0 selected_minus_cover_extra=-11
+  deg12: cover_rank=54 cover_extra=2 selected_rank=28 selected_extra=0 selected_minus_cover_extra=-2
+q1847_d3_setup:
+  B_d3_labeled_B = 63
+  B_d4_labeled_B = 45
+  B_enum_compact_not_target = 873
+  B_enum_no_label2_candidate = 468
+  B_legal_B = 63
+  K_d3_eprime_input_rows = 252
+  K_d3_eprime_minus = 36
+  K_d3_eprime_plus = 90
+  K_d3_eprime_quotient_rows = 126
+  K_d3_k_input_rows = 126
+  K_d3_k_k_rows = 63
+  K_d3_k_minus = 18
+  K_d3_k_plus = 45
+  K_d3_s_input_rows = 126
+  K_d3_s_minus = 36
+  K_d3_s_paired_s_neg_s = 126
+  K_d3_s_plus = 90
+  K_d3_s_s_rows = 126
+  K_d4_eprime_input_rows = 180
+  K_d4_eprime_minus = 52
+  K_d4_eprime_plus = 38
+  K_d4_eprime_quotient_rows = 90
+  K_d4_k_input_rows = 90
+  K_d4_k_k_rows = 45
+  K_d4_k_minus = 26
+  K_d4_k_plus = 19
+  K_d4_s_input_rows = 90
+  K_d4_s_minus = 52
+  K_d4_s_paired_s_neg_s = 90
+  K_d4_s_plus = 38
+  K_d4_s_s_rows = 90
+  K_enum_compact_not_target = 873
+  K_enum_no_label2_candidate = 468
+  K_quotient_d3_minus_E_points = 72
+  K_quotient_d3_missing_on_E_orbit = 0
+  K_quotient_d3_not_descended_to_E = 0
+  K_quotient_d3_plus_E_points = 180
+  K_quotient_d3_quotient_rows = 252
+  K_quotient_d4_minus_E_points_after_d3 = 104
+  K_quotient_d4_missing_on_E_orbit = 0
+  K_quotient_d4_not_descended_to_E = 0
+  K_quotient_d4_plus_E_points_after_d3 = 76
+  K_quotient_d4_quotient_rows_after_d3 = 180
+  K_quotient_orbit_size_4 = 252
+  K_quotient_oriented_candidates = 1008
+  K_quotient_quotient_E_points = 252
+  K_roots_2 = 63
+  cover_rows = 126
+  cover_unique = 126
+  selected_rows = 63
+  selected_unique = 63
+q1847_d3_B_K:
+  cover_rows = 126
+  cover_unique = 126
+  selected_rows = 63
+  selected_unique = 63
+  deg2: cover_rank=6 cover_extra=0 selected_rank=6 selected_extra=0 selected_minus_cover_extra=0
+  deg4: cover_rank=15 cover_extra=0 selected_rank=15 selected_extra=0 selected_minus_cover_extra=0
+  deg6: cover_rank=25 cover_extra=3 selected_rank=25 selected_extra=3 selected_minus_cover_extra=0
+  deg8: cover_rank=35 cover_extra=10 selected_rank=35 selected_extra=10 selected_minus_cover_extra=0
+  deg10: cover_rank=45 cover_extra=21 selected_rank=45 selected_extra=18 selected_minus_cover_extra=-3
+  deg12: cover_rank=55 cover_extra=36 selected_rank=55 selected_extra=8 selected_minus_cover_extra=-28
+q1847_d4_setup:
+  B_d3_labeled_B = 63
+  B_d4_labeled_B = 45
+  B_enum_compact_not_target = 873
+  B_enum_no_label2_candidate = 468
+  B_legal_B = 63
+  K_d3_eprime_input_rows = 252
+  K_d3_eprime_minus = 36
+  K_d3_eprime_plus = 90
+  K_d3_eprime_quotient_rows = 126
+  K_d3_k_input_rows = 126
+  K_d3_k_k_rows = 63
+  K_d3_k_minus = 18
+  K_d3_k_plus = 45
+  K_d3_s_input_rows = 126
+  K_d3_s_minus = 36
+  K_d3_s_paired_s_neg_s = 126
+  K_d3_s_plus = 90
+  K_d3_s_s_rows = 126
+  K_d4_eprime_input_rows = 180
+  K_d4_eprime_minus = 52
+  K_d4_eprime_plus = 38
+  K_d4_eprime_quotient_rows = 90
+  K_d4_k_input_rows = 90
+  K_d4_k_k_rows = 45
+  K_d4_k_minus = 26
+  K_d4_k_plus = 19
+  K_d4_s_input_rows = 90
+  K_d4_s_minus = 52
+  K_d4_s_paired_s_neg_s = 90
+  K_d4_s_plus = 38
+  K_d4_s_s_rows = 90
+  K_enum_compact_not_target = 873
+  K_enum_no_label2_candidate = 468
+  K_quotient_d3_minus_E_points = 72
+  K_quotient_d3_missing_on_E_orbit = 0
+  K_quotient_d3_not_descended_to_E = 0
+  K_quotient_d3_plus_E_points = 180
+  K_quotient_d3_quotient_rows = 252
+  K_quotient_d4_minus_E_points_after_d3 = 104
+  K_quotient_d4_missing_on_E_orbit = 0
+  K_quotient_d4_not_descended_to_E = 0
+  K_quotient_d4_plus_E_points_after_d3 = 76
+  K_quotient_d4_quotient_rows_after_d3 = 180
+  K_quotient_orbit_size_4 = 252
+  K_quotient_oriented_candidates = 1008
+  K_quotient_quotient_E_points = 252
+  K_roots_2 = 45
+  cover_rows = 90
+  cover_unique = 90
+  selected_rows = 45
+  selected_unique = 45
+q1847_d4_B_K:
+  cover_rows = 90
+  cover_unique = 90
+  selected_rows = 45
+  selected_unique = 45
+  deg2: cover_rank=6 cover_extra=0 selected_rank=6 selected_extra=0 selected_minus_cover_extra=0
+  deg4: cover_rank=15 cover_extra=0 selected_rank=15 selected_extra=0 selected_minus_cover_extra=0
+  deg6: cover_rank=25 cover_extra=3 selected_rank=25 selected_extra=3 selected_minus_cover_extra=0
+  deg8: cover_rank=35 cover_extra=10 selected_rank=35 selected_extra=10 selected_minus_cover_extra=0
+  deg10: cover_rank=45 cover_extra=21 selected_rank=45 selected_extra=0 selected_minus_cover_extra=-21
+  deg12: cover_rank=55 cover_extra=35 selected_rank=45 selected_extra=0 selected_minus_cover_extra=-35
+q2087_d3_setup:
+  B_d3_labeled_B = 57
+  B_d4_labeled_B = 25
+  B_enum_compact_not_target = 1109
+  B_enum_no_label2_candidate = 520
+  B_legal_B = 57
+  K_d3_eprime_input_rows = 228
+  K_d3_eprime_minus = 64
+  K_d3_eprime_plus = 50
+  K_d3_eprime_quotient_rows = 114
+  K_d3_k_input_rows = 114
+  K_d3_k_k_rows = 57
+  K_d3_k_minus = 32
+  K_d3_k_plus = 25
+  K_d3_s_input_rows = 114
+  K_d3_s_minus = 64
+  K_d3_s_paired_s_neg_s = 114
+  K_d3_s_plus = 50
+  K_d3_s_s_rows = 114
+  K_d4_eprime_input_rows = 100
+  K_d4_eprime_minus = 14
+  K_d4_eprime_plus = 36
+  K_d4_eprime_quotient_rows = 50
+  K_d4_k_input_rows = 50
+  K_d4_k_k_rows = 25
+  K_d4_k_minus = 7
+  K_d4_k_plus = 18
+  K_d4_s_input_rows = 50
+  K_d4_s_minus = 14
+  K_d4_s_paired_s_neg_s = 50
+  K_d4_s_plus = 36
+  K_d4_s_s_rows = 50
+  K_enum_compact_not_target = 1109
+  K_enum_no_label2_candidate = 520
+  K_quotient_d3_minus_E_points = 128
+  K_quotient_d3_missing_on_E_orbit = 0
+  K_quotient_d3_not_descended_to_E = 0
+  K_quotient_d3_plus_E_points = 100
+  K_quotient_d3_quotient_rows = 228
+  K_quotient_d4_minus_E_points_after_d3 = 28
+  K_quotient_d4_missing_on_E_orbit = 0
+  K_quotient_d4_not_descended_to_E = 0
+  K_quotient_d4_plus_E_points_after_d3 = 72
+  K_quotient_d4_quotient_rows_after_d3 = 100
+  K_quotient_orbit_size_4 = 228
+  K_quotient_oriented_candidates = 912
+  K_quotient_quotient_E_points = 228
+  K_roots_2 = 57
+  cover_rows = 114
+  cover_unique = 114
+  selected_rows = 57
+  selected_unique = 57
+q2087_d3_B_K:
+  cover_rows = 114
+  cover_unique = 114
+  selected_rows = 57
+  selected_unique = 57
+  deg2: cover_rank=6 cover_extra=0 selected_rank=6 selected_extra=0 selected_minus_cover_extra=0
+  deg4: cover_rank=15 cover_extra=0 selected_rank=15 selected_extra=0 selected_minus_cover_extra=0
+  deg6: cover_rank=25 cover_extra=3 selected_rank=25 selected_extra=3 selected_minus_cover_extra=0
+  deg8: cover_rank=35 cover_extra=10 selected_rank=35 selected_extra=10 selected_minus_cover_extra=0
+  deg10: cover_rank=45 cover_extra=21 selected_rank=45 selected_extra=12 selected_minus_cover_extra=-9
+  deg12: cover_rank=55 cover_extra=36 selected_rank=55 selected_extra=2 selected_minus_cover_extra=-34
+q2087_d4_setup:
+  B_d3_labeled_B = 57
+  B_d4_labeled_B = 25
+  B_enum_compact_not_target = 1109
+  B_enum_no_label2_candidate = 520
+  B_legal_B = 57
+  K_d3_eprime_input_rows = 228
+  K_d3_eprime_minus = 64
+  K_d3_eprime_plus = 50
+  K_d3_eprime_quotient_rows = 114
+  K_d3_k_input_rows = 114
+  K_d3_k_k_rows = 57
+  K_d3_k_minus = 32
+  K_d3_k_plus = 25
+  K_d3_s_input_rows = 114
+  K_d3_s_minus = 64
+  K_d3_s_paired_s_neg_s = 114
+  K_d3_s_plus = 50
+  K_d3_s_s_rows = 114
+  K_d4_eprime_input_rows = 100
+  K_d4_eprime_minus = 14
+  K_d4_eprime_plus = 36
+  K_d4_eprime_quotient_rows = 50
+  K_d4_k_input_rows = 50
+  K_d4_k_k_rows = 25
+  K_d4_k_minus = 7
+  K_d4_k_plus = 18
+  K_d4_s_input_rows = 50
+  K_d4_s_minus = 14
+  K_d4_s_paired_s_neg_s = 50
+  K_d4_s_plus = 36
+  K_d4_s_s_rows = 50
+  K_enum_compact_not_target = 1109
+  K_enum_no_label2_candidate = 520
+  K_quotient_d3_minus_E_points = 128
+  K_quotient_d3_missing_on_E_orbit = 0
+  K_quotient_d3_not_descended_to_E = 0
+  K_quotient_d3_plus_E_points = 100
+  K_quotient_d3_quotient_rows = 228
+  K_quotient_d4_minus_E_points_after_d3 = 28
+  K_quotient_d4_missing_on_E_orbit = 0
+  K_quotient_d4_not_descended_to_E = 0
+  K_quotient_d4_plus_E_points_after_d3 = 72
+  K_quotient_d4_quotient_rows_after_d3 = 100
+  K_quotient_orbit_size_4 = 228
+  K_quotient_oriented_candidates = 912
+  K_quotient_quotient_E_points = 228
+  K_roots_2 = 25
+  cover_rows = 50
+  cover_unique = 50
+  selected_rows = 25
+  selected_unique = 25
+q2087_d4_B_K:
+  cover_rows = 50
+  cover_unique = 50
+  selected_rows = 25
+  selected_unique = 25
+  deg2: cover_rank=6 cover_extra=0 selected_rank=6 selected_extra=0 selected_minus_cover_extra=0
+  deg4: cover_rank=15 cover_extra=0 selected_rank=15 selected_extra=0 selected_minus_cover_extra=0
+  deg6: cover_rank=25 cover_extra=3 selected_rank=25 selected_extra=0 selected_minus_cover_extra=-3
+  deg8: cover_rank=35 cover_extra=10 selected_rank=25 selected_extra=0 selected_minus_cover_extra=-10
+  deg10: cover_rank=45 cover_extra=5 selected_rank=25 selected_extra=0 selected_minus_cover_extra=-5
+  deg12: cover_rank=50 cover_extra=0 selected_rank=25 selected_extra=0 selected_minus_cover_extra=0
+p27_b_kline_root_relation_probe_rows=1/1

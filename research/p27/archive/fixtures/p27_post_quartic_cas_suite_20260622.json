@@ -1,0 +1,127 @@
+{
+  "name": "p27_post_quartic_cas_suite",
+  "date": "2026-06-22",
+  "purpose": "Executable fallback queue after the full B/K monic quartic GPU suite is negative or after a quartic hit needs deeper sourceability analysis.",
+  "target_prime": "1000000000000000000000000103",
+  "entry_condition": "Run after the full quartic GPU suite has no stable q1847/guard-field d3 hit, or when a quartic hit needs branch/genus/sourceability follow-up.",
+  "guard_fields": [1607, 1847, 2087],
+  "field_signature": {
+    "q_mod_16": 7,
+    "chi_minus_one": -1,
+    "chi_two": 1
+  },
+  "cheap_sanity": {
+    "task": "K/S guard-field sanity",
+    "probe": "research/p27/archive/gates/p27_ks_guard_sanity_probe.py",
+    "output": "research/p27/archive/probe_outputs/p27_ks_guard_sanity_probe_q1607_q1847_q2087_20260622.txt",
+    "evidence": "research/p27/evidence/p27_ks_guard_field_sanity_20260622.md",
+    "result": "zero mismatches over q1607/q1847/q2087"
+  },
+  "tasks": [
+    {
+      "priority": 10,
+      "name": "Normalize d3 source over P1_K",
+      "route": "K/S",
+      "input_equations": [
+        "research/p27/archive/gates/p27_ks_branch_extraction_packet.py",
+        "research/p27/archive/gates/p27_kummer_branch_extraction_handoff.py"
+      ],
+      "guard_fields": [1607, 1847, 2087],
+      "compute": [
+        "normalized cover over P1_K",
+        "branch divisor degree",
+        "branch support field degrees",
+        "genus",
+        "component count",
+        "compare d3 class across guard fields"
+      ],
+      "promote_if": "stable genus <= 1, named recurrence/sourceable walk, or cheap direct sampler",
+      "kill_if": "high/generic branch degree or only visible K branch atoms"
+    },
+    {
+      "priority": 20,
+      "name": "Normalize d3 source over P1_Sroot",
+      "route": "K/S",
+      "input_equations": [
+        "research/p27/archive/gates/p27_ks_branch_extraction_packet.py"
+      ],
+      "guard_fields": [1607, 1847, 2087],
+      "compute": [
+        "normalized cover over P1_Sroot",
+        "Sroot -> -Sroot decomposition",
+        "branch support field degrees",
+        "genus",
+        "whether class descends to K or needs signed Sroot"
+      ],
+      "promote_if": "stable low-genus signed source or recurrence",
+      "kill_if": "only odd semi-invariant classes or high/generic branch degree"
+    },
+    {
+      "priority": 30,
+      "name": "Carry H90/order-4 action through the normalized K/S model",
+      "route": "K/S H90",
+      "input_equations": [
+        "research/p27/archive/gates/p27_ks_branch_extraction_packet.py",
+        "research/p27/evidence/p27_label2_h90_order4_lift_20260621.md"
+      ],
+      "guard_fields": [1607, 1847, 2087],
+      "compute": [
+        "alpha action on normalized model if feasible",
+        "quotient/Prym decomposition",
+        "whether d3/d4 class is alpha-coupled"
+      ],
+      "promote_if": "alpha quotient gives low-genus source or recurrence",
+      "kill_if": "alpha does not preserve a useful low-genus factor"
+    },
+    {
+      "priority": 40,
+      "name": "Offline B-line legal cover normalization",
+      "route": "B-line",
+      "input_fixtures": [
+        "research/p27/archive/fixtures/p27_b_line_legal_saturation_q7_magma.m",
+        "research/p27/archive/fixtures/p27_b_line_legal_cover_q7_magma.m",
+        "research/p27/archive/fixtures/p27_b_line_d3_cover_q7_magma.m"
+      ],
+      "guard_fields": [1607, 1847, 2087],
+      "compute": [
+        "saturated legal B-cover over P1_B",
+        "d3 all-plus B-cover",
+        "branch divisor degree",
+        "genus",
+        "component count",
+        "projection degree to B"
+      ],
+      "promote_if": "low-genus B-line cover, recurrence, or sourceable projection",
+      "kill_if": "high genus/generic cover with no quotient after saturation"
+    },
+    {
+      "priority": 50,
+      "name": "Compare B/K bridge after any named class",
+      "route": "B/K bridge",
+      "input_evidence": [
+        "research/p27/evidence/p27_b_kline_bridge_20260622.md",
+        "research/p27/evidence/p27_b_kline_signed_root_relation_20260622.md"
+      ],
+      "guard_fields": [1607, 1847, 2087],
+      "compute": [
+        "pullback across K^2=(B-2)^4/(8B(B+2)^2)",
+        "whether named class is visible in both coordinates",
+        "whether signed K root is essential"
+      ],
+      "promote_if": "bridge exposes a lower-genus or recurring class",
+      "kill_if": "class remains coordinate-local and high genus"
+    }
+  ],
+  "do_not_run": [
+    "broader visible K/S coefficient scans",
+    "K degree 1/2 screens",
+    "small integer K degree 3/4 coefficient scans",
+    "split K/S branch divisors of degree <=4",
+    "odd Sroot semi-invariant classes in the p27 sign regime",
+    "online Magma as the main B-line normalization engine"
+  ],
+  "acceptance": {
+    "promote": "stable low-genus/sourceable/recurrent class across q1607/q1847/q2087",
+    "kill": "high/generic branch degree and unrelated fresh d4 half-cover after exact normalization"
+  }
+}

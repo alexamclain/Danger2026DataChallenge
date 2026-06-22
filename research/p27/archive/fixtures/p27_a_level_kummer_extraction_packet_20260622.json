@@ -1,0 +1,1214 @@
+{
+  "acceptance": {
+    "kill": "independent fresh half-covers for d3..d10 on the normalized A-level object",
+    "promote": "low-genus/sourceable/recurrent A-line class that improves source-normalized half-loss"
+  },
+  "cas_tasks": [
+    {
+      "compute": [
+        "A-line function field or correspondence carrying the d3 character",
+        "branch divisor degree and support field degrees",
+        "normalization genus and component count",
+        "whether d3 is sourceable despite no visible degree <=4 support"
+      ],
+      "kill_if": "high/generic branch degree with no quotient or recurrence",
+      "name": "Recover normalized A-cover for d3",
+      "priority": 10,
+      "promote_if": "stable low-genus/sourceable class or named correspondence across guard fields"
+    },
+    {
+      "compute": [
+        "d4 class on d3-plus prefix",
+        "d5/d6 classes when enough guard-field rows exist",
+        "pullback/translate/coboundary/iterate relation among successive classes",
+        "first p27-relevant recurrence candidate for d3..d10"
+      ],
+      "kill_if": "successive characters are independent fresh half-covers",
+      "name": "Compare successive A-line classes",
+      "priority": 20,
+      "promote_if": "one class/correspondence controls multiple selected gates"
+    }
+  ],
+  "date": "2026-06-22",
+  "do_not_run": [
+    "blind low-degree A polynomial scans",
+    "visible degree <=4 branch support without a new divisor reason",
+    "GPU A-bucket production before a source law exists"
+  ],
+  "field_signature": {
+    "chi_minus_one": -1,
+    "chi_two": 1,
+    "q_mod_16": 7
+  },
+  "fixtures": [
+    {
+      "base": {
+        "enum_compact_not_target": 805,
+        "enum_no_label2_candidate": 408,
+        "unique_A": 49,
+        "unique_ax": 196
+      },
+      "field": 1607,
+      "gates": [
+        {
+          "gate": "d3",
+          "minus_count": 21,
+          "mixed_A_groups": 0,
+          "mixed_A_rows": 0,
+          "plus_count": 28,
+          "row_count": 49,
+          "rows": [
+            {
+              "A": 16,
+              "sign": "plus"
+            },
+            {
+              "A": 46,
+              "sign": "minus"
+            },
+            {
+              "A": 87,
+              "sign": "minus"
+            },
+            {
+              "A": 90,
+              "sign": "minus"
+            },
+            {
+              "A": 144,
+              "sign": "minus"
+            },
+            {
+              "A": 223,
+              "sign": "plus"
+            },
+            {
+              "A": 409,
+              "sign": "plus"
+            },
+            {
+              "A": 444,
+              "sign": "plus"
+            },
+            {
+              "A": 542,
+              "sign": "minus"
+            },
+            {
+              "A": 595,
+              "sign": "plus"
+            },
+            {
+              "A": 598,
+              "sign": "plus"
+            },
+            {
+              "A": 685,
+              "sign": "plus"
+            },
+            {
+              "A": 693,
+              "sign": "plus"
+            },
+            {
+              "A": 744,
+              "sign": "plus"
+            },
+            {
+              "A": 753,
+              "sign": "minus"
+            },
+            {
+              "A": 773,
+              "sign": "plus"
+            },
+            {
+              "A": 778,
+              "sign": "plus"
+            },
+            {
+              "A": 792,
+              "sign": "plus"
+            },
+            {
+              "A": 848,
+              "sign": "plus"
+            },
+            {
+              "A": 875,
+              "sign": "plus"
+            },
+            {
+              "A": 916,
+              "sign": "minus"
+            },
+            {
+              "A": 935,
+              "sign": "plus"
+            },
+            {
+              "A": 968,
+              "sign": "minus"
+            },
+            {
+              "A": 1007,
+              "sign": "minus"
+            },
+            {
+              "A": 1014,
+              "sign": "plus"
+            },
+            {
+              "A": 1022,
+              "sign": "plus"
+            },
+            {
+              "A": 1040,
+              "sign": "minus"
+            },
+            {
+              "A": 1050,
+              "sign": "plus"
+            },
+            {
+              "A": 1075,
+              "sign": "plus"
+            },
+            {
+              "A": 1077,
+              "sign": "minus"
+            },
+            {
+              "A": 1080,
+              "sign": "minus"
+            },
+            {
+              "A": 1086,
+              "sign": "plus"
+            },
+            {
+              "A": 1100,
+              "sign": "minus"
+            },
+            {
+              "A": 1139,
+              "sign": "minus"
+            },
+            {
+              "A": 1168,
+              "sign": "minus"
+            },
+            {
+              "A": 1217,
+              "sign": "minus"
+            },
+            {
+              "A": 1295,
+              "sign": "minus"
+            },
+            {
+              "A": 1303,
+              "sign": "plus"
+            },
+            {
+              "A": 1335,
+              "sign": "plus"
+            },
+            {
+              "A": 1373,
+              "sign": "plus"
+            },
+            {
+              "A": 1430,
+              "sign": "minus"
+            },
+            {
+              "A": 1431,
+              "sign": "plus"
+            },
+            {
+              "A": 1444,
+              "sign": "minus"
+            },
+            {
+              "A": 1450,
+              "sign": "plus"
+            },
+            {
+              "A": 1466,
+              "sign": "plus"
+            },
+            {
+              "A": 1544,
+              "sign": "plus"
+            },
+            {
+              "A": 1560,
+              "sign": "minus"
+            },
+            {
+              "A": 1575,
+              "sign": "minus"
+            },
+            {
+              "A": 1586,
+              "sign": "plus"
+            }
+          ]
+        },
+        {
+          "gate": "d4",
+          "minus_count": 9,
+          "mixed_A_groups": 0,
+          "mixed_A_rows": 0,
+          "plus_count": 19,
+          "row_count": 28,
+          "rows": [
+            {
+              "A": 16,
+              "sign": "plus"
+            },
+            {
+              "A": 223,
+              "sign": "plus"
+            },
+            {
+              "A": 409,
+              "sign": "minus"
+            },
+            {
+              "A": 444,
+              "sign": "minus"
+            },
+            {
+              "A": 595,
+              "sign": "plus"
+            },
+            {
+              "A": 598,
+              "sign": "plus"
+            },
+            {
+              "A": 685,
+              "sign": "minus"
+            },
+            {
+              "A": 693,
+              "sign": "plus"
+            },
+            {
+              "A": 744,
+              "sign": "plus"
+            },
+            {
+              "A": 773,
+              "sign": "plus"
+            },
+            {
+              "A": 778,
+              "sign": "plus"
+            },
+            {
+              "A": 792,
+              "sign": "plus"
+            },
+            {
+              "A": 848,
+              "sign": "plus"
+            },
+            {
+              "A": 875,
+              "sign": "plus"
+            },
+            {
+              "A": 935,
+              "sign": "minus"
+            },
+            {
+              "A": 1014,
+              "sign": "minus"
+            },
+            {
+              "A": 1022,
+              "sign": "plus"
+            },
+            {
+              "A": 1050,
+              "sign": "plus"
+            },
+            {
+              "A": 1075,
+              "sign": "minus"
+            },
+            {
+              "A": 1086,
+              "sign": "plus"
+            },
+            {
+              "A": 1303,
+              "sign": "plus"
+            },
+            {
+              "A": 1335,
+              "sign": "minus"
+            },
+            {
+              "A": 1373,
+              "sign": "plus"
+            },
+            {
+              "A": 1431,
+              "sign": "plus"
+            },
+            {
+              "A": 1450,
+              "sign": "minus"
+            },
+            {
+              "A": 1466,
+              "sign": "plus"
+            },
+            {
+              "A": 1544,
+              "sign": "minus"
+            },
+            {
+              "A": 1586,
+              "sign": "plus"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "base": {
+        "enum_compact_not_target": 873,
+        "enum_no_label2_candidate": 468,
+        "unique_A": 63,
+        "unique_ax": 252
+      },
+      "field": 1847,
+      "gates": [
+        {
+          "gate": "d3",
+          "minus_count": 18,
+          "mixed_A_groups": 0,
+          "mixed_A_rows": 0,
+          "plus_count": 45,
+          "row_count": 63,
+          "rows": [
+            {
+              "A": 21,
+              "sign": "plus"
+            },
+            {
+              "A": 47,
+              "sign": "plus"
+            },
+            {
+              "A": 85,
+              "sign": "plus"
+            },
+            {
+              "A": 165,
+              "sign": "plus"
+            },
+            {
+              "A": 174,
+              "sign": "minus"
+            },
+            {
+              "A": 188,
+              "sign": "plus"
+            },
+            {
+              "A": 212,
+              "sign": "plus"
+            },
+            {
+              "A": 250,
+              "sign": "minus"
+            },
+            {
+              "A": 276,
+              "sign": "minus"
+            },
+            {
+              "A": 281,
+              "sign": "plus"
+            },
+            {
+              "A": 286,
+              "sign": "plus"
+            },
+            {
+              "A": 294,
+              "sign": "plus"
+            },
+            {
+              "A": 295,
+              "sign": "plus"
+            },
+            {
+              "A": 297,
+              "sign": "minus"
+            },
+            {
+              "A": 300,
+              "sign": "plus"
+            },
+            {
+              "A": 320,
+              "sign": "plus"
+            },
+            {
+              "A": 331,
+              "sign": "plus"
+            },
+            {
+              "A": 360,
+              "sign": "plus"
+            },
+            {
+              "A": 376,
+              "sign": "minus"
+            },
+            {
+              "A": 412,
+              "sign": "minus"
+            },
+            {
+              "A": 428,
+              "sign": "minus"
+            },
+            {
+              "A": 447,
+              "sign": "plus"
+            },
+            {
+              "A": 563,
+              "sign": "minus"
+            },
+            {
+              "A": 621,
+              "sign": "plus"
+            },
+            {
+              "A": 631,
+              "sign": "minus"
+            },
+            {
+              "A": 665,
+              "sign": "minus"
+            },
+            {
+              "A": 666,
+              "sign": "plus"
+            },
+            {
+              "A": 717,
+              "sign": "minus"
+            },
+            {
+              "A": 722,
+              "sign": "plus"
+            },
+            {
+              "A": 734,
+              "sign": "plus"
+            },
+            {
+              "A": 766,
+              "sign": "plus"
+            },
+            {
+              "A": 793,
+              "sign": "plus"
+            },
+            {
+              "A": 810,
+              "sign": "plus"
+            },
+            {
+              "A": 822,
+              "sign": "minus"
+            },
+            {
+              "A": 845,
+              "sign": "plus"
+            },
+            {
+              "A": 933,
+              "sign": "plus"
+            },
+            {
+              "A": 1005,
+              "sign": "plus"
+            },
+            {
+              "A": 1076,
+              "sign": "plus"
+            },
+            {
+              "A": 1233,
+              "sign": "minus"
+            },
+            {
+              "A": 1255,
+              "sign": "plus"
+            },
+            {
+              "A": 1297,
+              "sign": "plus"
+            },
+            {
+              "A": 1304,
+              "sign": "minus"
+            },
+            {
+              "A": 1319,
+              "sign": "plus"
+            },
+            {
+              "A": 1322,
+              "sign": "plus"
+            },
+            {
+              "A": 1398,
+              "sign": "minus"
+            },
+            {
+              "A": 1427,
+              "sign": "plus"
+            },
+            {
+              "A": 1436,
+              "sign": "plus"
+            },
+            {
+              "A": 1463,
+              "sign": "plus"
+            },
+            {
+              "A": 1466,
+              "sign": "minus"
+            },
+            {
+              "A": 1539,
+              "sign": "plus"
+            },
+            {
+              "A": 1544,
+              "sign": "minus"
+            },
+            {
+              "A": 1585,
+              "sign": "plus"
+            },
+            {
+              "A": 1596,
+              "sign": "plus"
+            },
+            {
+              "A": 1598,
+              "sign": "plus"
+            },
+            {
+              "A": 1612,
+              "sign": "plus"
+            },
+            {
+              "A": 1633,
+              "sign": "plus"
+            },
+            {
+              "A": 1646,
+              "sign": "plus"
+            },
+            {
+              "A": 1665,
+              "sign": "plus"
+            },
+            {
+              "A": 1699,
+              "sign": "plus"
+            },
+            {
+              "A": 1710,
+              "sign": "plus"
+            },
+            {
+              "A": 1721,
+              "sign": "minus"
+            },
+            {
+              "A": 1765,
+              "sign": "plus"
+            },
+            {
+              "A": 1810,
+              "sign": "plus"
+            }
+          ]
+        },
+        {
+          "gate": "d4",
+          "minus_count": 26,
+          "mixed_A_groups": 0,
+          "mixed_A_rows": 0,
+          "plus_count": 19,
+          "row_count": 45,
+          "rows": [
+            {
+              "A": 21,
+              "sign": "plus"
+            },
+            {
+              "A": 47,
+              "sign": "minus"
+            },
+            {
+              "A": 85,
+              "sign": "plus"
+            },
+            {
+              "A": 165,
+              "sign": "plus"
+            },
+            {
+              "A": 188,
+              "sign": "minus"
+            },
+            {
+              "A": 212,
+              "sign": "minus"
+            },
+            {
+              "A": 281,
+              "sign": "minus"
+            },
+            {
+              "A": 286,
+              "sign": "plus"
+            },
+            {
+              "A": 294,
+              "sign": "plus"
+            },
+            {
+              "A": 295,
+              "sign": "plus"
+            },
+            {
+              "A": 300,
+              "sign": "minus"
+            },
+            {
+              "A": 320,
+              "sign": "minus"
+            },
+            {
+              "A": 331,
+              "sign": "minus"
+            },
+            {
+              "A": 360,
+              "sign": "minus"
+            },
+            {
+              "A": 447,
+              "sign": "minus"
+            },
+            {
+              "A": 621,
+              "sign": "minus"
+            },
+            {
+              "A": 666,
+              "sign": "minus"
+            },
+            {
+              "A": 722,
+              "sign": "minus"
+            },
+            {
+              "A": 734,
+              "sign": "plus"
+            },
+            {
+              "A": 766,
+              "sign": "plus"
+            },
+            {
+              "A": 793,
+              "sign": "plus"
+            },
+            {
+              "A": 810,
+              "sign": "minus"
+            },
+            {
+              "A": 845,
+              "sign": "plus"
+            },
+            {
+              "A": 933,
+              "sign": "plus"
+            },
+            {
+              "A": 1005,
+              "sign": "minus"
+            },
+            {
+              "A": 1076,
+              "sign": "minus"
+            },
+            {
+              "A": 1255,
+              "sign": "plus"
+            },
+            {
+              "A": 1297,
+              "sign": "minus"
+            },
+            {
+              "A": 1319,
+              "sign": "minus"
+            },
+            {
+              "A": 1322,
+              "sign": "minus"
+            },
+            {
+              "A": 1427,
+              "sign": "minus"
+            },
+            {
+              "A": 1436,
+              "sign": "plus"
+            },
+            {
+              "A": 1463,
+              "sign": "minus"
+            },
+            {
+              "A": 1539,
+              "sign": "plus"
+            },
+            {
+              "A": 1585,
+              "sign": "minus"
+            },
+            {
+              "A": 1596,
+              "sign": "plus"
+            },
+            {
+              "A": 1598,
+              "sign": "minus"
+            },
+            {
+              "A": 1612,
+              "sign": "plus"
+            },
+            {
+              "A": 1633,
+              "sign": "minus"
+            },
+            {
+              "A": 1646,
+              "sign": "plus"
+            },
+            {
+              "A": 1665,
+              "sign": "minus"
+            },
+            {
+              "A": 1699,
+              "sign": "plus"
+            },
+            {
+              "A": 1710,
+              "sign": "plus"
+            },
+            {
+              "A": 1765,
+              "sign": "minus"
+            },
+            {
+              "A": 1810,
+              "sign": "minus"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "base": {
+        "enum_compact_not_target": 1109,
+        "enum_no_label2_candidate": 520,
+        "unique_A": 57,
+        "unique_ax": 228
+      },
+      "field": 2087,
+      "gates": [
+        {
+          "gate": "d3",
+          "minus_count": 32,
+          "mixed_A_groups": 0,
+          "mixed_A_rows": 0,
+          "plus_count": 25,
+          "row_count": 57,
+          "rows": [
+            {
+              "A": 16,
+              "sign": "plus"
+            },
+            {
+              "A": 30,
+              "sign": "minus"
+            },
+            {
+              "A": 44,
+              "sign": "plus"
+            },
+            {
+              "A": 45,
+              "sign": "minus"
+            },
+            {
+              "A": 79,
+              "sign": "minus"
+            },
+            {
+              "A": 85,
+              "sign": "minus"
+            },
+            {
+              "A": 121,
+              "sign": "plus"
+            },
+            {
+              "A": 182,
+              "sign": "minus"
+            },
+            {
+              "A": 254,
+              "sign": "plus"
+            },
+            {
+              "A": 283,
+              "sign": "plus"
+            },
+            {
+              "A": 305,
+              "sign": "plus"
+            },
+            {
+              "A": 319,
+              "sign": "plus"
+            },
+            {
+              "A": 325,
+              "sign": "minus"
+            },
+            {
+              "A": 356,
+              "sign": "minus"
+            },
+            {
+              "A": 384,
+              "sign": "minus"
+            },
+            {
+              "A": 396,
+              "sign": "minus"
+            },
+            {
+              "A": 505,
+              "sign": "minus"
+            },
+            {
+              "A": 568,
+              "sign": "plus"
+            },
+            {
+              "A": 573,
+              "sign": "minus"
+            },
+            {
+              "A": 594,
+              "sign": "minus"
+            },
+            {
+              "A": 654,
+              "sign": "plus"
+            },
+            {
+              "A": 737,
+              "sign": "plus"
+            },
+            {
+              "A": 755,
+              "sign": "plus"
+            },
+            {
+              "A": 756,
+              "sign": "plus"
+            },
+            {
+              "A": 814,
+              "sign": "minus"
+            },
+            {
+              "A": 820,
+              "sign": "plus"
+            },
+            {
+              "A": 838,
+              "sign": "minus"
+            },
+            {
+              "A": 937,
+              "sign": "plus"
+            },
+            {
+              "A": 1065,
+              "sign": "minus"
+            },
+            {
+              "A": 1074,
+              "sign": "minus"
+            },
+            {
+              "A": 1077,
+              "sign": "plus"
+            },
+            {
+              "A": 1082,
+              "sign": "minus"
+            },
+            {
+              "A": 1087,
+              "sign": "minus"
+            },
+            {
+              "A": 1162,
+              "sign": "minus"
+            },
+            {
+              "A": 1186,
+              "sign": "plus"
+            },
+            {
+              "A": 1364,
+              "sign": "minus"
+            },
+            {
+              "A": 1377,
+              "sign": "plus"
+            },
+            {
+              "A": 1392,
+              "sign": "minus"
+            },
+            {
+              "A": 1395,
+              "sign": "minus"
+            },
+            {
+              "A": 1411,
+              "sign": "minus"
+            },
+            {
+              "A": 1419,
+              "sign": "plus"
+            },
+            {
+              "A": 1422,
+              "sign": "minus"
+            },
+            {
+              "A": 1427,
+              "sign": "minus"
+            },
+            {
+              "A": 1435,
+              "sign": "plus"
+            },
+            {
+              "A": 1581,
+              "sign": "plus"
+            },
+            {
+              "A": 1615,
+              "sign": "plus"
+            },
+            {
+              "A": 1637,
+              "sign": "plus"
+            },
+            {
+              "A": 1755,
+              "sign": "plus"
+            },
+            {
+              "A": 1780,
+              "sign": "plus"
+            },
+            {
+              "A": 1798,
+              "sign": "minus"
+            },
+            {
+              "A": 1815,
+              "sign": "minus"
+            },
+            {
+              "A": 1817,
+              "sign": "minus"
+            },
+            {
+              "A": 1904,
+              "sign": "minus"
+            },
+            {
+              "A": 1959,
+              "sign": "plus"
+            },
+            {
+              "A": 1967,
+              "sign": "minus"
+            },
+            {
+              "A": 2001,
+              "sign": "minus"
+            },
+            {
+              "A": 2065,
+              "sign": "minus"
+            }
+          ]
+        },
+        {
+          "gate": "d4",
+          "minus_count": 7,
+          "mixed_A_groups": 0,
+          "mixed_A_rows": 0,
+          "plus_count": 18,
+          "row_count": 25,
+          "rows": [
+            {
+              "A": 16,
+              "sign": "plus"
+            },
+            {
+              "A": 44,
+              "sign": "plus"
+            },
+            {
+              "A": 121,
+              "sign": "plus"
+            },
+            {
+              "A": 254,
+              "sign": "plus"
+            },
+            {
+              "A": 283,
+              "sign": "plus"
+            },
+            {
+              "A": 305,
+              "sign": "plus"
+            },
+            {
+              "A": 319,
+              "sign": "plus"
+            },
+            {
+              "A": 568,
+              "sign": "minus"
+            },
+            {
+              "A": 654,
+              "sign": "minus"
+            },
+            {
+              "A": 737,
+              "sign": "plus"
+            },
+            {
+              "A": 755,
+              "sign": "plus"
+            },
+            {
+              "A": 756,
+              "sign": "minus"
+            },
+            {
+              "A": 820,
+              "sign": "plus"
+            },
+            {
+              "A": 937,
+              "sign": "plus"
+            },
+            {
+              "A": 1077,
+              "sign": "plus"
+            },
+            {
+              "A": 1186,
+              "sign": "plus"
+            },
+            {
+              "A": 1377,
+              "sign": "plus"
+            },
+            {
+              "A": 1419,
+              "sign": "minus"
+            },
+            {
+              "A": 1435,
+              "sign": "plus"
+            },
+            {
+              "A": 1581,
+              "sign": "minus"
+            },
+            {
+              "A": 1615,
+              "sign": "plus"
+            },
+            {
+              "A": 1637,
+              "sign": "minus"
+            },
+            {
+              "A": 1755,
+              "sign": "plus"
+            },
+            {
+              "A": 1780,
+              "sign": "plus"
+            },
+            {
+              "A": 1959,
+              "sign": "minus"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "name": "p27_a_level_kummer_extraction_packet",
+  "purpose": "Finite-field fixtures and CAS acceptance criteria for extracting the normalized A-line Kummer/divisor classes behind selected gates d3..d10.",
+  "source_coordinate": {
+    "A": "Montgomery A parameter after legal label-2/compactD source",
+    "fact": "selected gates descend to whole A-fibers in p27 samples",
+    "negative": "visible degree <=4 branch support on P1_A is killed for d3 in q1607/q1847/q2087"
+  },
+  "target_prime": "1000000000000000000000000103"
+}

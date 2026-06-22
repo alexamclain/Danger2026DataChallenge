@@ -1,0 +1,74 @@
+p27 B/A fixture bridge probe
+relation = A - (B^2 - 2)
+fields = [1607, 1847, 2087]
+q=1607:
+  gates = [3, 4]
+  gate3_bridge:
+  A_has_matching_B_sign = 49
+  A_preimages_1 = 49
+  A_rows = 49
+  B_checked = 49
+  B_rows = 49
+  B_to_A_sign_match = 49
+  exact_signed_bijection = 1
+  gate3_rows = 49
+  gate4_bridge:
+  A_has_matching_B_sign = 28
+  A_preimages_1 = 28
+  A_rows = 28
+  B_checked = 28
+  B_rows = 28
+  B_to_A_sign_match = 28
+  exact_signed_bijection = 1
+  gate4_rows = 28
+q=1847:
+  gates = [3, 4]
+  gate3_bridge:
+  A_has_matching_B_sign = 63
+  A_preimages_1 = 63
+  A_rows = 63
+  B_checked = 63
+  B_rows = 63
+  B_to_A_sign_match = 63
+  exact_signed_bijection = 1
+  gate3_rows = 63
+  gate4_bridge:
+  A_has_matching_B_sign = 45
+  A_preimages_1 = 45
+  A_rows = 45
+  B_checked = 45
+  B_rows = 45
+  B_to_A_sign_match = 45
+  exact_signed_bijection = 1
+  gate4_rows = 45
+q=2087:
+  gates = [3, 4]
+  gate3_bridge:
+  A_has_matching_B_sign = 57
+  A_preimages_1 = 57
+  A_rows = 57
+  B_checked = 57
+  B_rows = 57
+  B_to_A_sign_match = 57
+  exact_signed_bijection = 1
+  gate3_rows = 57
+  gate4_bridge:
+  A_has_matching_B_sign = 25
+  A_preimages_1 = 25
+  A_rows = 25
+  B_checked = 25
+  B_rows = 25
+  B_to_A_sign_match = 25
+  exact_signed_bijection = 1
+  gate4_rows = 25
+total_bridge:
+  A_has_matching_B_sign = 267
+  A_preimages_1 = 267
+  A_rows = 267
+  B_checked = 267
+  B_rows = 267
+  B_to_A_sign_match = 267
+  exact_signed_bijection = 6
+  gate3_rows = 169
+  gate4_rows = 98
+p27_b_a_fixture_bridge_probe_rows=1/1

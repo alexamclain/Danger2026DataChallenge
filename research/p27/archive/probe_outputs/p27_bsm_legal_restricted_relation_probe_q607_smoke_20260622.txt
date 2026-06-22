@@ -1,0 +1,52 @@
+p27 BSM legal-restricted relation probe
+legal surface = BSM surface with B in legal B-domain
+target = canonical d3-plus B/A/x rows inside that surface
+pair_degrees = [2, 4]
+triple_degrees = [2, 4]
+q607_base:
+  data_d3minus_ax = 64
+  data_d3plus_ax = 64
+  data_d3plus_b = 16
+  data_enum_compact_not_target = 293
+  data_enum_no_label2_candidate = 184
+  data_legal_ax = 128
+  data_legal_b = 32
+  inconsistent_den0_pairs = 64
+  legal_B = 32
+  legal_surface_rows = 19200
+  skip_m0 = 96
+  surface_no_m_root_pairs = 9664
+  surface_rows_per_B_568 = 16
+  surface_rows_per_B_632 = 16
+  target_B = 16
+  target_rows = 512
+  target_rows_per_B_32 = 16
+q607_B_s:
+  legal_rows = 19200
+  legal_unique = 9600
+  target_rows = 512
+  target_unique = 256
+  deg2: legal_rank=6 legal_extra=0 target_rank=6 target_extra=0 target_minus_legal_extra=0
+  deg4: legal_rank=15 legal_extra=0 target_rank=15 target_extra=0 target_minus_legal_extra=0
+q607_B_m:
+  legal_rows = 19200
+  legal_unique = 4800
+  target_rows = 512
+  target_unique = 128
+  deg2: legal_rank=6 legal_extra=0 target_rank=6 target_extra=0 target_minus_legal_extra=0
+  deg4: legal_rank=15 legal_extra=0 target_rank=15 target_extra=0 target_minus_legal_extra=0
+q607_s_m:
+  legal_rows = 19200
+  legal_unique = 19200
+  target_rows = 512
+  target_unique = 512
+  deg2: legal_rank=6 legal_extra=0 target_rank=6 target_extra=0 target_minus_legal_extra=0
+  deg4: legal_rank=15 legal_extra=0 target_rank=15 target_extra=0 target_minus_legal_extra=0
+q607_B_s_m:
+  legal_rows = 19200
+  legal_unique = 19200
+  target_rows = 512
+  target_unique = 512
+  deg2: legal_rank=10 legal_extra=0 target_rank=10 target_extra=0 target_minus_legal_extra=0
+  deg4: legal_rank=34 legal_extra=1 target_rank=34 target_extra=1 target_minus_legal_extra=0
+p27_bsm_legal_restricted_relation_probe_rows=1/1

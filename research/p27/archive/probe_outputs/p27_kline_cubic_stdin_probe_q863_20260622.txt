@@ -1,0 +1,68 @@
+exact_cubic q=863 polarity=1 coeffs=K^3+3*K^2+537*K+11 irreducible=0
+exact_cubic q=863 polarity=-1 coeffs=K^3+4*K^2+646*K+307 irreducible=0
+exact_cubic q=863 polarity=1 coeffs=K^3+11*K^2+852*K+858 irreducible=1
+exact_cubic q=863 polarity=-1 coeffs=K^3+34*K^2+170*K+714 irreducible=0
+exact_cubic q=863 polarity=1 coeffs=K^3+35*K^2+600*K+466 irreducible=0
+exact_cubic q=863 polarity=-1 coeffs=K^3+38*K^2+812*K+5 irreducible=0
+exact_cubic q=863 polarity=-1 coeffs=K^3+48*K^2+841*K+530 irreducible=0
+exact_cubic q=863 polarity=1 coeffs=K^3+63*K^2+743*K+351 irreducible=0
+exact_cubic q=863 polarity=-1 coeffs=K^3+70*K^2+354*K+149 irreducible=0
+exact_cubic q=863 polarity=-1 coeffs=K^3+92*K^2+668*K+467 irreducible=0
+exact_cubic q=863 polarity=-1 coeffs=K^3+118*K^2+386*K+298 irreducible=1
+exact_cubic q=863 polarity=1 coeffs=K^3+133*K^2+539*K+151 irreducible=1
+exact_cubic q=863 polarity=1 coeffs=K^3+145*K^2+713*K+81 irreducible=0
+exact_cubic q=863 polarity=1 coeffs=K^3+162*K^2+213*K+297 irreducible=1
+exact_cubic q=863 polarity=-1 coeffs=K^3+239*K^2+292*K+247 irreducible=1
+exact_cubic q=863 polarity=1 coeffs=K^3+278*K^2+170*K+431 irreducible=1
+exact_cubic q=863 polarity=-1 coeffs=K^3+293*K^2+103*K+360 irreducible=0
+exact_cubic q=863 polarity=-1 coeffs=K^3+314*K^2+179*K+714 irreducible=1
+exact_cubic q=863 polarity=1 coeffs=K^3+333*K^2+32*K+861 irreducible=0
+exact_cubic q=863 polarity=1 coeffs=K^3+353*K^2+680*K+724 irreducible=1
+exact_cubic q=863 polarity=-1 coeffs=K^3+356*K^2+441*K+834 irreducible=0
+exact_cubic q=863 polarity=1 coeffs=K^3+376*K^2+338*K+275 irreducible=1
+exact_cubic q=863 polarity=1 coeffs=K^3+378*K^2+648*K+677 irreducible=1
+exact_cubic q=863 polarity=1 coeffs=K^3+379*K^2+792*K+475 irreducible=1
+exact_cubic q=863 polarity=1 coeffs=K^3+391*K^2+337*K+641 irreducible=0
+exact_cubic q=863 polarity=1 coeffs=K^3+402*K^2+142*K+290 irreducible=1
+exact_cubic q=863 polarity=1 coeffs=K^3+416*K^2+131*K+739 irreducible=0
+exact_cubic q=863 polarity=1 coeffs=K^3+434*K^2+243*K+366 irreducible=0
+exact_cubic q=863 polarity=1 coeffs=K^3+461*K^2+68*K+709 irreducible=1
+exact_cubic q=863 polarity=-1 coeffs=K^3+468*K^2+370*K+454 irreducible=0
+exact_cubic q=863 polarity=-1 coeffs=K^3+477*K^2+812*K+358 irreducible=0
+exact_cubic q=863 polarity=1 coeffs=K^3+493*K^2+706*K+342 irreducible=0
+exact_cubic q=863 polarity=-1 coeffs=K^3+504*K^2+295*K+395 irreducible=0
+exact_cubic q=863 polarity=-1 coeffs=K^3+507*K^2+227*K+711 irreducible=1
+exact_cubic q=863 polarity=1 coeffs=K^3+525*K^2+5*K+488 irreducible=0
+exact_cubic q=863 polarity=-1 coeffs=K^3+533*K^2+528*K+138 irreducible=0
+exact_cubic q=863 polarity=1 coeffs=K^3+546*K^2+139*K+39 irreducible=0
+exact_cubic q=863 polarity=-1 coeffs=K^3+567*K^2+375*K+756 irreducible=0
+exact_cubic q=863 polarity=1 coeffs=K^3+574*K^2+108*K+240 irreducible=0
+exact_cubic q=863 polarity=1 coeffs=K^3+588*K^2+37*K+272 irreducible=0
+exact_cubic q=863 polarity=-1 coeffs=K^3+609*K^2+28*K+193 irreducible=0
+exact_cubic q=863 polarity=-1 coeffs=K^3+611*K^2+533*K+335 irreducible=0
+exact_cubic q=863 polarity=1 coeffs=K^3+641*K^2+293*K+332 irreducible=0
+exact_cubic q=863 polarity=1 coeffs=K^3+656*K^2+162*K+799 irreducible=0
+exact_cubic q=863 polarity=-1 coeffs=K^3+658*K^2+46*K+692 irreducible=0
+exact_cubic q=863 polarity=1 coeffs=K^3+663*K^2+120*K+427 irreducible=1
+exact_cubic q=863 polarity=-1 coeffs=K^3+688*K^2+819*K+712 irreducible=0
+exact_cubic q=863 polarity=-1 coeffs=K^3+730*K^2+629*K+326 irreducible=0
+exact_cubic q=863 polarity=1 coeffs=K^3+744*K^2+768*K+233 irreducible=0
+exact_cubic q=863 polarity=1 coeffs=K^3+747*K^2+434*K+299 irreducible=0
+exact_cubic q=863 polarity=-1 coeffs=K^3+754*K^2+261*K+262 irreducible=0
+exact_cubic q=863 polarity=-1 coeffs=K^3+776*K^2+359*K+286 irreducible=1
+exact_cubic q=863 polarity=1 coeffs=K^3+804*K^2+542*K+606 irreducible=0
+exact_cubic q=863 polarity=1 coeffs=K^3+831*K^2+401*K+500 irreducible=1
+exact_cubic q=863 polarity=-1 coeffs=K^3+836*K^2+325*K+164 irreducible=0
+exact_cubic q=863 polarity=-1 coeffs=K^3+841*K^2+429*K+446 irreducible=0
+exact_cubic q=863 polarity=-1 coeffs=K^3+857*K^2+185*K+129 irreducible=1
+exact_cubic q=863 polarity=1 coeffs=K^3+857*K^2+445*K+413 irreducible=1
+p27 K-line monic cubic stdin probe
+q = 863
+rows = 24
+plus = 12
+minus = 12
+tested_monic_cubics = 642735647
+exact_cubics = 58
+exact_irreducible_cubics = 19
+best good=24/24 zeros=0 polarity=1 coeffs=K^3+3*K^2+537*K+11
+p27_kline_cubic_stdin_probe_rows=1/1

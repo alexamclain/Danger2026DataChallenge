@@ -1,0 +1,49 @@
+p27 B-line branch-support probe
+screens = d2 legal on core B, d3 on legal B, d4 after d3 on legal B
+factor families = rational linears; optional irreducible quadratic tests
+max_weight = 4
+quadratic_d3 = False
+quadratic_pair_d3 = False
+quadratic_pair_legal = True
+q1607_b_line_domain_stats:
+  core_B = 200
+  d3_labeled_B = 49
+  d4_labeled_B = 28
+  enum_compact_not_target = 805
+  enum_no_label2_candidate = 408
+  legal_B = 49
+  legal_B_in_core = 49
+  legal_B_missing_core = 0
+q1607_d2legal_on_coreB_linear_support_stats:
+  candidate_linear_factors = 1407
+  minus_rows = 151
+  pair_xors = 987716
+  plus_rows = 49
+  rows = 200
+  target_weight = 151
+q1607_d2legal_on_coreB_linear_support_result: none_weight_le_4
+q1607_d2legal_on_coreB_two_quadratic_support_stats:
+  irreducible_quadratics_tested = 1290421
+  minus_rows = 151
+  plus_rows = 49
+  rows = 200
+  target_weight = 151
+  unique_quadratic_masks = 1290421
+q1607_d2legal_on_coreB_two_quadratic_support_result: none_two_irreducible_quadratics
+q1607_d3_on_legalB_linear_support_stats:
+  candidate_linear_factors = 1558
+  minus_rows = 21
+  pair_xors = 1211347
+  plus_rows = 28
+  rows = 49
+  target_weight = 21
+q1607_d3_on_legalB_linear_support_result: none_weight_le_4
+q1607_d4_on_d3plusB_linear_support_stats:
+  candidate_linear_factors = 1579
+  minus_rows = 9
+  pair_xors = 1241365
+  plus_rows = 19
+  rows = 28
+  target_weight = 9
+q1607_d4_on_d3plusB_linear_support_result: weight=3 polarity=-1 factors=19,216,659
+p27_b_line_branch_support_probe_rows=1/1

@@ -1,0 +1,39 @@
+p27 extension-field legal selected-prefix count probe
+source = residual E/T cover + compactD=-1 + label-2 candidate map
+GF(23^1) N=23:
+  source_rows = 4
+  oriented_candidates = 0
+  unique_ax = 0
+  unique_A = 0
+  candidate_invalid_not_nonsplit = 8
+  depth0: ax=0 A=0 ax/N=0.000000000 A/N=0.000000000 scaled_ax=0.000000 scaled_A=0.000000
+  depth1: ax=0 A=0 ax/N=0.000000000 A/N=0.000000000 scaled_ax=0.000000 scaled_A=0.000000
+  depth2: ax=0 A=0 ax/N=0.000000000 A/N=0.000000000 scaled_ax=0.000000 scaled_A=0.000000
+  depth3: ax=0 A=0 ax/N=0.000000000 A/N=0.000000000 scaled_ax=0.000000 scaled_A=0.000000
+  depth4: ax=0 A=0 ax/N=0.000000000 A/N=0.000000000 scaled_ax=0.000000 scaled_A=0.000000
+  depth5: ax=0 A=0 ax/N=0.000000000 A/N=0.000000000 scaled_ax=0.000000 scaled_A=0.000000
+GF(23^2) N=529:
+  source_rows = 256
+  oriented_candidates = 192
+  unique_ax = 96
+  unique_A = 24
+  candidate_invalid_not_nonsplit = 320
+  depth0: ax=96 A=24 ax/N=0.181474480 A/N=0.045368620 scaled_ax=1.000000 scaled_A=1.000000
+  depth1: ax=32 A=8 ax/N=0.060491493 A/N=0.015122873 scaled_ax=0.666667 scaled_A=0.666667
+  depth2: ax=32 A=8 ax/N=0.060491493 A/N=0.015122873 scaled_ax=1.333333 scaled_A=1.333333
+  depth3: ax=32 A=8 ax/N=0.060491493 A/N=0.015122873 scaled_ax=2.666667 scaled_A=2.666667
+  depth4: ax=0 A=0 ax/N=0.000000000 A/N=0.000000000 scaled_ax=0.000000 scaled_A=0.000000
+  depth5: ax=0 A=0 ax/N=0.000000000 A/N=0.000000000 scaled_ax=0.000000 scaled_A=0.000000
+GF(23^3) N=12167:
+  source_rows = 6232
+  oriented_candidates = 6384
+  unique_ax = 1596
+  unique_A = 399
+  candidate_invalid_not_nonsplit = 6080
+  depth0: ax=1596 A=399 ax/N=0.131174488 A/N=0.032793622 scaled_ax=1.000000 scaled_A=1.000000
+  depth1: ax=864 A=216 ax/N=0.071011753 A/N=0.017752938 scaled_ax=1.082707 scaled_A=1.082707
+  depth2: ax=480 A=120 ax/N=0.039450974 A/N=0.009862743 scaled_ax=1.203008 scaled_A=1.203008
+  depth3: ax=336 A=84 ax/N=0.027615682 A/N=0.006903920 scaled_ax=1.684211 scaled_A=1.684211
+  depth4: ax=336 A=84 ax/N=0.027615682 A/N=0.006903920 scaled_ax=3.368421 scaled_A=3.368421
+  depth5: ax=336 A=84 ax/N=0.027615682 A/N=0.006903920 scaled_ax=6.736842 scaled_A=6.736842
+p27_extension_prefix_count_probe_rows=1/1

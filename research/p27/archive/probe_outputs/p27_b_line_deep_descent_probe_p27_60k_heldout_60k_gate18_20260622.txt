@@ -1,0 +1,160 @@
+p27 B-line deep selected-gate descent probe
+question = do d3,d4,d5,... descend to original Bplus?
+max_gate = 18
+p27_train_sample_stats:
+  oriented_candidates_raw = 240000
+  sample_candidate_invalid_not_nonsplit = 119176
+  sample_compact_not_target = 118914
+  sample_no_t = 118683
+  sample_no_w = 237002
+  sample_pair_incomplete = 59588
+  sample_rows = 60000
+  sample_x_draws = 474936
+p27_train_b_group_stats:
+  B_group_size_8 = 30000
+  B_groups = 30000
+  d2_plus_candidates = 240000
+  deduped_candidates = 240000
+p27_train_deep_descent_stats:
+  gate10_active_B = 222
+  gate10_minus_B = 105
+  gate10_plus_B = 117
+  gate11_active_B = 117
+  gate11_minus_B = 55
+  gate11_plus_B = 62
+  gate12_active_B = 62
+  gate12_minus_B = 34
+  gate12_plus_B = 28
+  gate13_active_B = 28
+  gate13_minus_B = 10
+  gate13_plus_B = 18
+  gate14_active_B = 18
+  gate14_minus_B = 9
+  gate14_plus_B = 9
+  gate15_active_B = 9
+  gate15_minus_B = 7
+  gate15_plus_B = 2
+  gate16_active_B = 2
+  gate16_minus_B = 2
+  gate17_active_B = 0
+  gate18_active_B = 0
+  gate3_active_B = 30000
+  gate3_minus_B = 15033
+  gate3_plus_B = 14967
+  gate4_active_B = 14967
+  gate4_minus_B = 7482
+  gate4_plus_B = 7485
+  gate5_active_B = 7485
+  gate5_minus_B = 3725
+  gate5_plus_B = 3760
+  gate6_active_B = 3760
+  gate6_minus_B = 1904
+  gate6_plus_B = 1856
+  gate7_active_B = 1856
+  gate7_minus_B = 902
+  gate7_plus_B = 954
+  gate8_active_B = 954
+  gate8_minus_B = 464
+  gate8_plus_B = 490
+  gate9_active_B = 490
+  gate9_minus_B = 268
+  gate9_plus_B = 222
+p27_train_prefix_table:
+  gate active plus minus mixed missing transition_rate prefix_rate scaled_half_loss source_draws_per_plus
+  3 30000 14967 15033 0 0 0.498900000 0.498900000 0.997800000 31.732211
+  4 14967 7485 7482 0 0 0.500100220 0.249500000 0.998000000 63.451703
+  5 7485 3760 3725 0 0 0.502338009 0.125333333 1.002666667 126.312766
+  6 3760 1856 1904 0 0 0.493617021 0.061866667 0.989866667 255.892241
+  7 1856 954 902 0 0 0.514008621 0.031800000 1.017600000 497.836478
+  8 954 490 464 0 0 0.513626834 0.016333333 1.045333333 969.257143
+  9 490 222 268 0 0 0.453061224 0.007400000 0.947200000 2139.351351
+  10 222 117 105 0 0 0.527027027 0.003900000 0.998400000 4059.282051
+  11 117 62 55 0 0 0.529914530 0.002066667 1.058133333 7660.258065
+  12 62 28 34 0 0 0.451612903 0.000933333 0.955733333 16962.000000
+  13 28 18 10 0 0 0.642857143 0.000600000 1.228800000 26385.333333
+  14 18 9 9 0 0 0.500000000 0.000300000 1.228800000 52770.666667
+  15 9 2 7 0 0 0.222222222 0.000066667 0.546133333 237468.000000
+  16 2 0 2 0 0 0.000000000 0.000000000 0.000000000 inf
+  17 0 0 0 0 0 0.000000000 0.000000000 0.000000000 inf
+  18 0 0 0 0 0 0.000000000 0.000000000 0.000000000 inf
+p27_heldout_sample_stats:
+  oriented_candidates_raw = 240000
+  sample_candidate_invalid_not_nonsplit = 119494
+  sample_compact_not_target = 119531
+  sample_no_t = 118893
+  sample_no_w = 238648
+  sample_pair_incomplete = 59747
+  sample_rows = 60000
+  sample_x_draws = 477180
+p27_heldout_b_group_stats:
+  B_group_size_8 = 30000
+  B_groups = 30000
+  d2_plus_candidates = 240000
+  deduped_candidates = 240000
+p27_heldout_deep_descent_stats:
+  gate10_active_B = 231
+  gate10_minus_B = 111
+  gate10_plus_B = 120
+  gate11_active_B = 120
+  gate11_minus_B = 65
+  gate11_plus_B = 55
+  gate12_active_B = 55
+  gate12_minus_B = 24
+  gate12_plus_B = 31
+  gate13_active_B = 31
+  gate13_minus_B = 18
+  gate13_plus_B = 13
+  gate14_active_B = 13
+  gate14_minus_B = 6
+  gate14_plus_B = 7
+  gate15_active_B = 7
+  gate15_minus_B = 2
+  gate15_plus_B = 5
+  gate16_active_B = 5
+  gate16_minus_B = 3
+  gate16_plus_B = 2
+  gate17_active_B = 2
+  gate17_plus_B = 2
+  gate18_active_B = 2
+  gate18_minus_B = 1
+  gate18_plus_B = 1
+  gate3_active_B = 30000
+  gate3_minus_B = 14935
+  gate3_plus_B = 15065
+  gate4_active_B = 15065
+  gate4_minus_B = 7516
+  gate4_plus_B = 7549
+  gate5_active_B = 7549
+  gate5_minus_B = 3729
+  gate5_plus_B = 3820
+  gate6_active_B = 3820
+  gate6_minus_B = 1913
+  gate6_plus_B = 1907
+  gate7_active_B = 1907
+  gate7_minus_B = 953
+  gate7_plus_B = 954
+  gate8_active_B = 954
+  gate8_minus_B = 464
+  gate8_plus_B = 490
+  gate9_active_B = 490
+  gate9_minus_B = 259
+  gate9_plus_B = 231
+p27_heldout_prefix_table:
+  gate active plus minus mixed missing transition_rate prefix_rate scaled_half_loss source_draws_per_plus
+  3 30000 15065 14935 0 0 0.502166667 0.502166667 1.004333333 31.674743
+  4 15065 7549 7516 0 0 0.501095254 0.251633333 1.006533333 63.211021
+  5 7549 3820 3729 0 0 0.506027288 0.127333333 1.018666667 124.916230
+  6 3820 1907 1913 0 0 0.499214660 0.063566667 1.017066667 250.225485
+  7 1907 954 953 0 0 0.500262192 0.031800000 1.017600000 500.188679
+  8 954 490 464 0 0 0.513626834 0.016333333 1.045333333 973.836735
+  9 490 231 259 0 0 0.471428571 0.007700000 0.985600000 2065.714286
+  10 231 120 111 0 0 0.519480519 0.004000000 1.024000000 3976.500000
+  11 120 55 65 0 0 0.458333333 0.001833333 0.938666667 8676.000000
+  12 55 31 24 0 0 0.563636364 0.001033333 1.058133333 15392.903226
+  13 31 13 18 0 0 0.419354839 0.000433333 0.887466667 36706.153846
+  14 13 7 6 0 0 0.538461538 0.000233333 0.955733333 68168.571429
+  15 7 5 2 0 0 0.714285714 0.000166667 1.365333333 95436.000000
+  16 5 2 3 0 0 0.400000000 0.000066667 1.092266667 238590.000000
+  17 2 2 0 0 0 1.000000000 0.000066667 2.184533333 238590.000000
+  18 2 1 1 0 0 0.500000000 0.000033333 2.184533333 477180.000000
+p27_b_line_deep_descent_probe_rows=1/1

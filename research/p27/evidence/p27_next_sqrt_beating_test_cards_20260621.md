@@ -359,6 +359,80 @@ starting surface with low genus or a sourceable walk.  This is the current
 best candidate for a real sqrt-beating structure.
 ```
 
+D6 A-descent update:
+[P27 Conic Tower D6 A-Descent](p27_conic_tower_d6_a_descent_20260622.md).
+
+```text
+After d4-plus/d5-plus, d6 has zero mixed A-groups on p27 1000/1000
+train/heldout.  This promotes the conic test from generic pullback
+normalization to a sharper A-level Kummer sequence problem:
+extract and compare the d4, d5, and d6 quadratic classes on the normalized
+A-cover.
+```
+
+Deeper A-prefix update:
+[P27 A-Level Prefix Descent](p27_a_level_prefix_descent_20260622.md).
+
+```text
+On 12000/12000 p27 train/heldout, gates d3..d14 have zero mixed A groups.
+The robust range through about d10 remains near geometric half-loss, so the
+next test is A-line Kummer class extraction or a low-degree A-character
+falsifier, not GPU A-bucket production.
+```
+
+A-character support update:
+[P27 A-Line Character Support Screen](p27_a_line_character_support_20260622.md).
+
+```text
+Visible degree <=4 branch support on P1_A is killed for d3 in
+q1607/q1847/q2087, q1847 also kills d4, and nearby fields reject split
+degree <=4 d3 support.  Do not widen blind A-polynomial scans; continue only
+with normalized-cover divisor/Kummer class extraction or a named divisor
+reason from CAS.
+```
+
+A-affine recurrence update:
+[P27 A-Line Affine Recurrence Screen](p27_a_line_affine_recurrence_screen_20260622.md).
+
+```text
+No full-coverage affine map A -> m*A+b carries d3 to d4 in q1607/q1847/q2087.
+Late exact identity maps are one-sided small-field tails with inconsistent
+signs.  Do not spend GPU or agent time on degree-one A recurrence scans unless
+a source theorem names a non-affine correspondence to test.
+```
+
+Full PGL2 recurrence update:
+[P27 A-Line PGL2 Recurrence Screen](p27_a_line_pgl2_recurrence_screen_20260622.md).
+
+```text
+No full-coverage PGL2 map A -> (a*A+b)/(c*A+d) carries d3 to d4 in
+q1607/q1847/q2087.  The best full-coverage map is still identity with raw d4
+majority bias: 19/28, 26/45, and 18/25.  Do not spend GPU or agent time on
+degree-one rational A-line recurrence scans; next A-line work is normalized
+class extraction or a theorem-shaped higher correspondence.
+```
+
+A-cover packet:
+[P27 A-Level Kummer Extraction Packet](p27_a_level_kummer_extraction_packet_20260622.md).
+
+```text
+Use the JSON fixture
+research/p27/archive/fixtures/p27_a_level_kummer_extraction_packet_20260622.json
+as the first CAS input for A-cover class extraction.  It records q1607/q1847/q2087
+A-labeled d3/d4 rows plus the exact promote/kill criteria.
+```
+
+A named-transform falsifier:
+[P27 A-Line Named-Transform Recurrence Screen](p27_a_line_named_transform_recurrence_20260622.md).
+
+```text
+The six visible A-branch S3 transforms preserving {-2,2,infinity} do not
+preserve or relate the selected A classes.  q1847 has zero non-identity d3
+coverage, and p27 train/heldout have zero non-identity d3..d8 coverage.  The
+A-cover route must be actual normalized-cover/Kummer-class extraction, not an
+orbit sampler or d_{j+1}(A)=d_j(T(A)) shortcut.
+```
+
 Updated kill rule:
 
 ```text
@@ -804,6 +878,295 @@ Updated kill rule:
 Kill the split degree <=4 K-line branch-divisor source.  The remaining K-line
 route is irreducible cubic/quartic extraction or Magma/Sage recovery of the
 actual branch divisor/genus, not more visible split-factor screens.
+```
+
+K-line degree-one recurrence update:
+[P27 K-Line Affine Recurrence Screen](p27_kline_affine_recurrence_20260621.md).
+
+```text
+Tested all K -> a*K+b and K -> a/K+b maps.
+
+q1607:
+  affine full coverage = identity only, 19/28 raw d4 majority
+  reciprocal full coverage = 0, best coverage = 6/28
+
+q1847:
+  affine full coverage = identity only, 26/45 raw d4 majority
+  reciprocal full coverage = 0, best coverage = 7/45
+
+q2087:
+  affine full coverage = identity only, 18/25 raw d4 majority
+  reciprocal full coverage = 0, best coverage = 6/25
+
+q2039:
+  identity exact only because d4 is constant
+```
+
+Updated kill rule:
+
+```text
+Kill degree-one rational K-line recurrences as a d4-from-d3 source.  The next
+K-line work must be actual branch-class/genus extraction, not affine or
+reciprocal-affine bucket searches.
+```
+
+Reverse-root relation update:
+[P27 K-Line Reverse-Z Relation Screen](p27_kline_reverse_z_relation_20260621.md).
+
+```text
+Kept the actual d3 source root x6=z^2 and tested:
+  (K,z), (Sroot,z), (K,x6), (Sroot,x6),
+  (K,r), (Sroot,r), r=x6+1/x6,
+  (K,z+1/z), (Sroot,z+1/z),
+  (K,z-1/z), (Sroot,z-1/z).
+
+q1607/q1847/q2087:
+  main systems full-rank through degree 20
+  q1607 has non-repeating degree-20 artifacts in lower projections only
+
+p27 1000-row sample:
+  7744 z rows
+  all systems full-rank through degree 12
+```
+
+Updated kill rule:
+
+```text
+Kill obvious plane-model shortcuts for the K/Sroot branch cover.  The next
+K-line work must be normalization / branch divisor / genus extraction.
+```
+
+Reverse-root extension-count update:
+[P27 K-Line Reverse-Z Extension Counts](p27_kline_reverse_z_extension_count_20260621.md).
+
+```text
+Validated against q607 and repeated on q1607/q1847/q2087 plus GF(7^n),
+GF(23^n).  Every nonempty guard field has:
+  z_rows/unique_K = 64
+  z_rows/unique_S = 32
+  unique_Ax/unique_A = 4
+
+This confirms that K/S is a structured constant-degree projection of the
+actual reverse-root cover, but unique_K and unique_S still grow at field-size
+scale.  K/Sroot enumeration is therefore not a below-sqrt sampler.
+```
+
+Updated action:
+
+```text
+Do actual branch/genus/CAS extraction for the constant-degree K/S cover.
+Do not spend GPU time on K/S bucket searches unless a new quotient or
+recurrence is named first.
+```
+
+Reverse-root fiber-profile update:
+[P27 K-Line Reverse-Z Fiber Profile](p27_kline_reverse_z_fiber_profile_20260621.md).
+
+```text
+q1607/q1847/q2087:
+  every K fiber has 64 rows, one selected A, four (A,x), eight x6,
+    sixteen z, and four r values
+  every Sroot fiber has 32 rows, one selected A, four (A,x), eight x6,
+    sixteen z, and four r values
+  anomalous_fibers = 0 for all tracked histograms
+
+Sroot is the cleaner extraction coordinate; K can merge A-values in small even
+extensions, while Sroot separates them.
+```
+
+Updated action:
+
+```text
+Prioritize offline normalization over P1_Sroot with K as a quotient check.
+Do not run rational K/Sroot fiber-anomaly searches or GPU K/S buckets.
+```
+
+K/A base-curve and GPU quadratic-gate update:
+[P27 K/A Map And GPU Quadratic-Gate Update](p27_kline_a_map_and_gpu_quad_20260622.md).
+
+```text
+With L=K^2, the d2/base source satisfies:
+  64(A-2)^2(A+2)L^2 + 64(A+2)(A+14)(3A+10)L - (A-2)^4 = 0
+
+discriminant_L:
+  256(A+2)(A+6)^2(A^2+60A+132)^2
+
+This explains the flat K/Sroot fibers but is not the d3 selector.  The formula
+vanishes on both d3-plus and d3-minus rows in p27 train/heldout and
+q607/q1607/q1847/q2087.
+```
+
+GPU result:
+
+```text
+branch: codex/add-cuda-p26-search
+commit: e153fd1 Add p27 quadratic gate GPU probe
+checked gates: 7,874,715
+gates: 3..8
+mismatches: 0
+source-normalized target rate: flat/slightly lower
+```
+
+Updated action:
+
+```text
+Do not run a larger production GPU search from this formula alone.
+Next GPU use requires either a direct legal-pullback sampler into the
+recurrence-coordinate domain or a measured multi-gate coupling law.
+```
+
+Base-curve sampler update:
+[P27 K/A Base-Curve Sampler Probe](p27_kline_base_curve_sampler_20260622.md).
+
+```text
+q1607/q1847/q2087:
+  base_KA = q
+  realized legal d2 K/A = 49, 63, 57
+  all realized legal K/A points lie on the base curve
+  natural K/A squareclass atoms up to weight 4 do not select the legal subset
+```
+
+Online Magma validation:
+[P27 K/A Base-Curve Magma Validation](p27_ka_base_curve_magma_validation_20260622.md).
+
+```text
+q607:
+  base_KA = 607
+  nondegenerate B-chart KA = 604
+  expected B-degenerate missing points = 3
+  B-chart extras = 0
+  equation/discriminant mismatches = 0
+```
+
+Updated action:
+
+```text
+Use the K/A equation as a normalization coordinate.
+Do not ask GPU to sample the base curve directly; it mostly produces non-legal
+points and does not avoid the legal-cover toll.
+The remaining source question is the legal/d3 cover over this validated base,
+not the base equation or the three B-chart degeneracies.
+```
+
+B-parameter follow-up:
+[P27 B-Parameter Base-Curve Sampler Probe](p27_kline_base_param_sampler_20260622.md).
+
+```text
+A = B^2 - 2
+branch0: L = -(B + 2)^4 / (8 B (B - 2)^2)
+branch1: L =  (B - 2)^4 / (8 B (B + 2)^2)
+
+stable all-recall bucket:
+  atoms = K, B+2, B-2, L
+  bits  = 0, 0,   1,   0
+
+q1607/q1847/q2087:
+  d2 all-recall lift ~= 8.04x
+  d3plus all-recall lift ~= 8.04x
+```
+
+Updated GPU action:
+
+```text
+Yes to a bounded same-stream GPU telemetry probe of the B bucket if it is cheap
+to emit the four squareclass bits along the existing p27 path.
+No to a larger production GPU run from this alone: the win is constant-factor,
+not below-sqrt, and the sharper partial buckets are field-sensitive.
+```
+
+B-next-gate update:
+[P27 B-Parameter Next-Gate Probe](p27_kline_base_param_nextgate_20260622.md).
+
+```text
+p27 train/heldout:
+  legal rows all stay in the core B bucket
+  d3 train-best combo does not hold out
+  d4 train-best combo weakens to about 1.015x majority-lift on heldout
+
+q1607/q1847/q2087:
+  small-field winners disagree
+```
+
+Updated action:
+
+```text
+Do not ask GPU to score B-atom next-gate buckets.
+The next beat-sqrt test is CAS/function-field extraction of the legal cover
+over the B-rationalized base curve, looking for genus <= 1 quotient,
+sourceable walk, or repeated multi-gate coupling.
+```
+
+B-source descent update:
+[P27 B-Source Descent And Branch Support](p27_b_source_descent_and_branch_20260622.md).
+
+```text
+B = 8X^2/(X^2 - 1)^2
+A + 2 = B^2
+d3 descends to Bplus on legal d2 rows
+d4 after d3 also descends to Bplus in tested samples
+```
+
+Negative branch support:
+
+```text
+d2 legal on core B:
+  no product of <=4 rational linear factors over q1607/q1847/q2087
+
+d3 on legal B:
+  no product of <=4 rational linear factors over q1607/q1847/q2087
+  no one irreducible quadratic times <=2 rational linear factors over
+  q1607/q1847/q2087
+```
+
+Updated action:
+
+```text
+Promote B-line Kummer-class extraction as the next theorem/CAS card.
+Do not continue visible B-factor bucket scans unless they are part of a
+structured divisor extraction.
+```
+
+B-line PGL2 recurrence update:
+[P27 B-Line PGL2 Recurrence Screen](p27_b_line_pgl2_recurrence_screen_20260622.md).
+
+```text
+No full-coverage PGL2 map B -> (aB+b)/(cB+d) carries d3(B) to d4(B) in
+q1607/q1847/q2087.  Best full-coverage maps are identity/raw d4-majority
+baselines: 19/28, 26/45, 18/25.
+```
+
+Updated action:
+
+```text
+Do not spend GPU or agent time on degree-one rational B-line recurrence scans.
+Compare f4/f3 only after extracting the actual B-line Kummer class, or when a
+source theorem names a higher correspondence.
+```
+
+B-line deep descent update:
+[P27 B-Line Extension Counts And Deep Descent](p27_b_line_extension_and_deep_descent_20260622.md).
+
+```text
+extension counts:
+  legal_B_missing_core = 0 in all nonempty GF(7^n), GF(23^n) tests
+  B_d3_mixed = 0
+  B_d4_mixed = 0
+  legal_B is still field-sized, roughly 0.03N in informative odd extensions
+
+p27 deep descent:
+  original Bplus determines active selected gate bits with zero mixed B groups
+  through d18 in the 60000 + 60000 p27 train/heldout sample
+  source-normalized prefix scaling stays near independent half-loss through
+  meaningful counts d3..d12
+```
+
+Updated action:
+
+```text
+Promote B-line Kummer sequence extraction:
+  f3(B), f4(B), f5(B), ...
+Compare these classes for recurrence/coupling.
+Only use GPU for bounded Bplus + deep-bit telemetry until exact classes exist.
 ```
 
 K/S first-half cover update:
@@ -1378,3 +1741,226 @@ cap, but the moonshot bottleneck has moved: fixed-prefix and visible-character
 screens are no longer the scarce work.  The scarce work is a low-genus
 quotient/source or a non-visible theta/Kummer/Hilbert-90 identity that
 controls many selected `chi(d_j)` / `chi(u_j+2)` gates at once.
+
+## Current Priority After Two-Step Kummer Screen
+
+The latest conic-pair two-step Kummer screens kill the simple `Z0/S1/Z1`
+quotient family: pair systems are flat through degree 12, and the obvious
+trivariate systems are flat through degree 6.  The current test queue should
+now be this compact list:
+
+Update after B-line prefix profiling:
+[P27 B-Line Prefix Profile](p27_b_line_prefix_profile_20260622.md) keeps
+`Bplus` as an exact descent coordinate but demotes B-bucket counting.  Small
+exact fields have late all-plus plateaus, while p27 `4000 + 4000` B-group
+train/heldout samples thin like independent half-gates through the meaningful
+range.  B-line work should therefore be divisor/Kummer extraction, not GPU
+production or bucket scoring.
+
+### Test A: Staged Legal Pullback Normalization
+
+Build the legal pullback in stages rather than as one web-Magma monolith:
+
+```text
+residual E/T compactD source
+label-2 map to (A,x)
+A = 2-c^2
+x = r^2
+h^2 = r^2+c*r+1
+g^2 = r^2-c*r+1
+r_next^2 - (h+g)r_next + 1 = 0
+Z_j^2 = -(L_j+a_j)(L_j-a_j)c*r_{j+1}
+```
+
+Report component genera, projection degrees to `E`, `E'`, and `K/lambda`,
+branch divisors, and whether any quotient controls two or more selected gates.
+The first sharpened target is now the A-level class sequence forced by
+[P27 Conic Tower D6 A-Descent](p27_conic_tower_d6_a_descent_20260622.md)
+and extended by
+[P27 A-Level Prefix Descent](p27_a_level_prefix_descent_20260622.md): compute
+the normalized A-cover carrying d3..d10 first, then compare successive
+quadratic branch divisor classes.
+
+Promotion bar:
+
+```text
+genus <= 1 quotient, sourceable low-genus component, or a recurrence that
+forces d_{j+1} from the previous Kummer class without a fresh half-loss.  A
+visible degree <=4 A-character no longer counts unless it comes from a new
+class-extraction reason.
+```
+
+Kill condition:
+
+```text
+all components are high-genus/generic and the d4/d5 classes are independent in
+the divisor/Kummer group; after the d6 update, kill only after d6 is included
+in that class comparison too.  After the deeper A-prefix update, the sharper
+kill is independence of the d3..d10 A-line classes.
+```
+
+### Test B: E/E' Double-Cover Class Extraction
+
+Extract the actual double-cover classes for the descended d3 and d4 bits on:
+
+```text
+E:  W^2 = X^3 - X
+E': V^2 = U^3 + 4U
+```
+
+Do not use more visible factor products or random low-pole scans.  Compute the
+function-field/divisor classes directly, then compare whether `d4` is a
+translate, pullback, norm, or low-degree transform of `d3`.
+
+Promotion bar:
+
+```text
+named divisor/Kummer relation with zero mismatches on q1471/q1607/q1847 and
+p27 rows, plus a sourceable walk or quotient
+```
+
+Kill condition:
+
+```text
+d3 and d4 land in unrelated classes and no low-degree quotient/translation
+survives the guard fields
+```
+
+### Test C: B-Line Kummer-Class Extraction
+
+Use `B = 8X^2/(X^2-1)^2` and `A + 2 = B^2` as the rational line coordinate.
+Extract the actual Kummer classes:
+
+```text
+f3(B), f4(B), f5(B), ...
+```
+
+Do not continue rational-linear or small visible-factor product scans.  The
+needed output is branch divisor support, class degree, and a comparison such
+as translate, pullback, norm, recurrence, or independence.
+
+Promotion bar:
+
+```text
+a named divisor/Kummer relation that predicts at least one later gate from an
+earlier class with zero mismatches on q1607/q1847/q2087 and p27 heldout rows,
+plus a source/sampler interpretation that avoids a fresh half-loss
+```
+
+Kill condition:
+
+```text
+the classes remain independent in the divisor/Kummer group, or the only
+relations are small-field Frobenius artifacts that do not survive p27 samples
+```
+
+### Test D: K-Line Branch-Cover Extraction
+
+Use the signed-doubling Kummer line:
+
+```text
+K = x([2]P),  E': V^2 = U^3 + 4U
+```
+
+Current finite-field status:
+
+```text
+degree <=2 K-polynomial characters are killed
+shared small-integer degree 3/4 K-polynomials are killed
+split degree <=4 branch divisors from rational linears / irreducible
+quadratics are killed
+q607 and q991 monic cubics are killed, while q863 exact cubics are unstable
+local interpolation artifacts
+q1471 promotion-field monic cubics are killed
+```
+
+See [P27 K-Line Cubic Stdin Probe](p27_kline_cubic_stdin_probe_20260622.md).
+Use [P27 K-Line Fit Significance](p27_kline_fit_significance_20260622.md)
+to decide whether an exact finite-field fit is meaningful.  In particular,
+q863 exact cubics are expected interpolation, while q1471/q1607/q1847 d3
+cubic or quartic fits would be strong evidence if stable.
+The q1471 cubic promotion screen is now negative:
+[P27 K-Line q1471 Cubic Promotion Screen](p27_kline_q1471_cubic_promotion_screen_20260622.md).
+The decisive q1847 B/K monic quartic d3 screens are now negative too:
+[P27 Full Quartic q1847 D3 Screen](p27_full_quartic_q1847_d3_screen_20260622.md).
+This moves the K/B line task from visible low-degree fitting to normalized
+branch-cover/Kummer-class extraction.
+
+Promotion bar:
+
+```text
+Magma/Sage branch-cover normalization in q1471/q1607/q1847 with genus <= 1,
+or a named stable branch-class relation that sources d3 without a fresh
+half-loss
+```
+
+Kill condition:
+
+```text
+the recovered d3 cover over P1_K is high-genus/generic, or d4 is an unrelated
+fresh cover after d3
+```
+
+### Test E: Bounded GPU Legal-Pullback Telemetry
+
+Only run this if the GPU implementation samples legal pullback rows, not free
+random `(R,L)`.
+
+Report:
+
+```text
+source_draws/sec
+legal_pullback_rows/sec
+d3/d4/d5 survivor rates per source draw
+same-stream baseline raw X1(16) survivor rates
+effective deep survivors/sec
+identity mismatch counts for the conic-chain formulas
+```
+
+Promotion bar:
+
+```text
+>= 1.25x effective deep survivors/sec on heldout streams, or evidence that two
+successive gates are sourced without independent half-loss
+```
+
+Kill condition:
+
+```text
+the sampler is just free `(R,L)`, legal hits are still constant/q, or the
+pullback pays the same Legendre/square-root toll as ordinary halving
+```
+
+### Test F: Trace/Norm Half-Norm Phase Identity
+
+Use this as an expert/theorem ask, not as another product scan.  The target is
+the same-boundary Hilbert-90 pair:
+
+```text
+pref(sigma)/pref = -chi(a)
+(h*vq)(sigma)/(h*vq) = -chi(a)
+T(sigma)/T = 1
+```
+
+Promotion bar:
+
+```text
+non-visible theta/additive/Kummer identity that predicts a post-Dplus or
+T_line selector with zero mismatches and gives a cheaper source
+```
+
+Kill condition:
+
+```text
+the identity reduces to already-killed visible norm, branch, trace, or
+anti-trace squareclasses
+```
+
+Current decision:
+
+```text
+GPU is justified for Test E telemetry only after a legal pullback sampler
+exists.  Without that, the next best work is CAS/theory on Test A, Test B,
+Test C, or Test D.  Bplus-only GPU telemetry is bounded validation, not a
+production moonshot.
+```

@@ -1,0 +1,564 @@
+p27 B-line trace/norm plateau probe
+question = are prefix plateaus exact trace/norm bucket unions?
+max_gate = 10
+GF(23^3) N=12167 max_gate=10:
+  collect_stats:
+  B_degenerate = 1
+  B_group_size_16 = 399
+  candidate_invalid_not_nonsplit = 6080
+  candidates = 6384
+  compact_not_target = 5928
+  d2_plus_candidates = 6384
+  deduped_ax = 1596
+  legal_B = 399
+  skip_X_degenerate = 2
+  source_rows = 6232
+  invariant_count = 3
+  gate3_target: selected=216 legal=399 rate=0.541353383
+  gate3_trace_to_1:
+  bucket_size_12 = 3
+  bucket_size_15 = 5
+  bucket_size_18 = 4
+  bucket_size_21 = 3
+  bucket_size_24 = 2
+  bucket_size_27 = 3
+  bucket_size_6 = 1
+  bucket_size_9 = 2
+  buckets = 23
+  exact_union_of_buckets = 0
+  majority_accuracy_x1000000 = 699248
+  majority_correct_rows = 279
+  mixed_buckets = 20
+  mixed_rejected_rows = 159
+  mixed_rows = 366
+  mixed_selected_rows = 207
+  pure_rejected_buckets = 2
+  pure_rejected_rows = 24
+  pure_selected_buckets = 1
+  pure_selected_rows = 9
+  selected = 216
+  total = 399
+  gate3_norm_to_1:
+  bucket_size_21 = 2
+  bucket_size_24 = 1
+  bucket_size_30 = 1
+  bucket_size_33 = 1
+  bucket_size_39 = 1
+  bucket_size_42 = 1
+  bucket_size_45 = 1
+  bucket_size_48 = 3
+  buckets = 11
+  exact_union_of_buckets = 0
+  majority_accuracy_x1000000 = 609022
+  majority_correct_rows = 243
+  mixed_buckets = 11
+  mixed_rejected_rows = 183
+  mixed_rows = 399
+  mixed_selected_rows = 216
+  selected = 216
+  total = 399
+  gate3_trace_norm_to_1:
+  bucket_size_3 = 72
+  bucket_size_6 = 29
+  bucket_size_9 = 1
+  buckets = 102
+  exact_union_of_buckets = 0
+  majority_accuracy_x1000000 = 909774
+  majority_correct_rows = 363
+  mixed_buckets = 12
+  mixed_rejected_rows = 36
+  mixed_rows = 75
+  mixed_selected_rows = 39
+  pure_rejected_buckets = 40
+  pure_rejected_rows = 147
+  pure_selected_buckets = 50
+  pure_selected_rows = 177
+  selected = 216
+  total = 399
+  gate3_best_invariant = trace_norm_to_1 accuracy_x1000000=909774 mixed_buckets=12 exact=0
+  gate4_target: selected=120 legal=399 rate=0.300751880
+  gate4_trace_to_1:
+  bucket_size_12 = 3
+  bucket_size_15 = 5
+  bucket_size_18 = 4
+  bucket_size_21 = 3
+  bucket_size_24 = 2
+  bucket_size_27 = 3
+  bucket_size_6 = 1
+  bucket_size_9 = 2
+  buckets = 23
+  exact_union_of_buckets = 0
+  majority_accuracy_x1000000 = 736842
+  majority_correct_rows = 294
+  mixed_buckets = 17
+  mixed_rejected_rows = 216
+  mixed_rows = 327
+  mixed_selected_rows = 111
+  pure_rejected_buckets = 5
+  pure_rejected_rows = 63
+  pure_selected_buckets = 1
+  pure_selected_rows = 9
+  selected = 120
+  total = 399
+  gate4_norm_to_1:
+  bucket_size_21 = 2
+  bucket_size_24 = 1
+  bucket_size_30 = 1
+  bucket_size_33 = 1
+  bucket_size_39 = 1
+  bucket_size_42 = 1
+  bucket_size_45 = 1
+  bucket_size_48 = 3
+  buckets = 11
+  exact_union_of_buckets = 0
+  majority_accuracy_x1000000 = 699248
+  majority_correct_rows = 279
+  mixed_buckets = 11
+  mixed_rejected_rows = 279
+  mixed_rows = 399
+  mixed_selected_rows = 120
+  selected = 120
+  total = 399
+  gate4_trace_norm_to_1:
+  bucket_size_3 = 72
+  bucket_size_6 = 29
+  bucket_size_9 = 1
+  buckets = 102
+  exact_union_of_buckets = 0
+  majority_accuracy_x1000000 = 924812
+  majority_correct_rows = 369
+  mixed_buckets = 10
+  mixed_rejected_rows = 30
+  mixed_rows = 60
+  mixed_selected_rows = 30
+  pure_rejected_buckets = 64
+  pure_rejected_rows = 249
+  pure_selected_buckets = 28
+  pure_selected_rows = 90
+  selected = 120
+  total = 399
+  gate4_best_invariant = trace_norm_to_1 accuracy_x1000000=924812 mixed_buckets=10 exact=0
+  gate5_target: selected=84 legal=399 rate=0.210526316
+  gate5_trace_to_1:
+  bucket_size_12 = 3
+  bucket_size_15 = 5
+  bucket_size_18 = 4
+  bucket_size_21 = 3
+  bucket_size_24 = 2
+  bucket_size_27 = 3
+  bucket_size_6 = 1
+  bucket_size_9 = 2
+  buckets = 23
+  exact_union_of_buckets = 0
+  majority_accuracy_x1000000 = 796992
+  majority_correct_rows = 318
+  mixed_buckets = 15
+  mixed_rejected_rows = 195
+  mixed_rows = 279
+  mixed_selected_rows = 84
+  pure_rejected_buckets = 8
+  pure_rejected_rows = 120
+  selected = 84
+  total = 399
+  gate5_norm_to_1:
+  bucket_size_21 = 2
+  bucket_size_24 = 1
+  bucket_size_30 = 1
+  bucket_size_33 = 1
+  bucket_size_39 = 1
+  bucket_size_42 = 1
+  bucket_size_45 = 1
+  bucket_size_48 = 3
+  buckets = 11
+  exact_union_of_buckets = 0
+  majority_accuracy_x1000000 = 789473
+  majority_correct_rows = 315
+  mixed_buckets = 11
+  mixed_rejected_rows = 315
+  mixed_rows = 399
+  mixed_selected_rows = 84
+  selected = 84
+  total = 399
+  gate5_trace_norm_to_1:
+  bucket_size_3 = 72
+  bucket_size_6 = 29
+  bucket_size_9 = 1
+  buckets = 102
+  exact_union_of_buckets = 0
+  majority_accuracy_x1000000 = 924812
+  majority_correct_rows = 369
+  mixed_buckets = 10
+  mixed_rejected_rows = 30
+  mixed_rows = 60
+  mixed_selected_rows = 30
+  pure_rejected_buckets = 75
+  pure_rejected_rows = 285
+  pure_selected_buckets = 17
+  pure_selected_rows = 54
+  selected = 84
+  total = 399
+  gate5_best_invariant = trace_norm_to_1 accuracy_x1000000=924812 mixed_buckets=10 exact=0
+  gate6_target: selected=84 legal=399 rate=0.210526316
+  gate6_trace_to_1:
+  bucket_size_12 = 3
+  bucket_size_15 = 5
+  bucket_size_18 = 4
+  bucket_size_21 = 3
+  bucket_size_24 = 2
+  bucket_size_27 = 3
+  bucket_size_6 = 1
+  bucket_size_9 = 2
+  buckets = 23
+  exact_union_of_buckets = 0
+  majority_accuracy_x1000000 = 796992
+  majority_correct_rows = 318
+  mixed_buckets = 15
+  mixed_rejected_rows = 195
+  mixed_rows = 279
+  mixed_selected_rows = 84
+  pure_rejected_buckets = 8
+  pure_rejected_rows = 120
+  selected = 84
+  total = 399
+  gate6_norm_to_1:
+  bucket_size_21 = 2
+  bucket_size_24 = 1
+  bucket_size_30 = 1
+  bucket_size_33 = 1
+  bucket_size_39 = 1
+  bucket_size_42 = 1
+  bucket_size_45 = 1
+  bucket_size_48 = 3
+  buckets = 11
+  exact_union_of_buckets = 0
+  majority_accuracy_x1000000 = 789473
+  majority_correct_rows = 315
+  mixed_buckets = 11
+  mixed_rejected_rows = 315
+  mixed_rows = 399
+  mixed_selected_rows = 84
+  selected = 84
+  total = 399
+  gate6_trace_norm_to_1:
+  bucket_size_3 = 72
+  bucket_size_6 = 29
+  bucket_size_9 = 1
+  buckets = 102
+  exact_union_of_buckets = 0
+  majority_accuracy_x1000000 = 924812
+  majority_correct_rows = 369
+  mixed_buckets = 10
+  mixed_rejected_rows = 30
+  mixed_rows = 60
+  mixed_selected_rows = 30
+  pure_rejected_buckets = 75
+  pure_rejected_rows = 285
+  pure_selected_buckets = 17
+  pure_selected_rows = 54
+  selected = 84
+  total = 399
+  gate6_best_invariant = trace_norm_to_1 accuracy_x1000000=924812 mixed_buckets=10 exact=0
+  gate7_target: selected=84 legal=399 rate=0.210526316
+  gate7_trace_to_1:
+  bucket_size_12 = 3
+  bucket_size_15 = 5
+  bucket_size_18 = 4
+  bucket_size_21 = 3
+  bucket_size_24 = 2
+  bucket_size_27 = 3
+  bucket_size_6 = 1
+  bucket_size_9 = 2
+  buckets = 23
+  exact_union_of_buckets = 0
+  majority_accuracy_x1000000 = 796992
+  majority_correct_rows = 318
+  mixed_buckets = 15
+  mixed_rejected_rows = 195
+  mixed_rows = 279
+  mixed_selected_rows = 84
+  pure_rejected_buckets = 8
+  pure_rejected_rows = 120
+  selected = 84
+  total = 399
+  gate7_norm_to_1:
+  bucket_size_21 = 2
+  bucket_size_24 = 1
+  bucket_size_30 = 1
+  bucket_size_33 = 1
+  bucket_size_39 = 1
+  bucket_size_42 = 1
+  bucket_size_45 = 1
+  bucket_size_48 = 3
+  buckets = 11
+  exact_union_of_buckets = 0
+  majority_accuracy_x1000000 = 789473
+  majority_correct_rows = 315
+  mixed_buckets = 11
+  mixed_rejected_rows = 315
+  mixed_rows = 399
+  mixed_selected_rows = 84
+  selected = 84
+  total = 399
+  gate7_trace_norm_to_1:
+  bucket_size_3 = 72
+  bucket_size_6 = 29
+  bucket_size_9 = 1
+  buckets = 102
+  exact_union_of_buckets = 0
+  majority_accuracy_x1000000 = 924812
+  majority_correct_rows = 369
+  mixed_buckets = 10
+  mixed_rejected_rows = 30
+  mixed_rows = 60
+  mixed_selected_rows = 30
+  pure_rejected_buckets = 75
+  pure_rejected_rows = 285
+  pure_selected_buckets = 17
+  pure_selected_rows = 54
+  selected = 84
+  total = 399
+  gate7_best_invariant = trace_norm_to_1 accuracy_x1000000=924812 mixed_buckets=10 exact=0
+  gate8_target: selected=84 legal=399 rate=0.210526316
+  gate8_trace_to_1:
+  bucket_size_12 = 3
+  bucket_size_15 = 5
+  bucket_size_18 = 4
+  bucket_size_21 = 3
+  bucket_size_24 = 2
+  bucket_size_27 = 3
+  bucket_size_6 = 1
+  bucket_size_9 = 2
+  buckets = 23
+  exact_union_of_buckets = 0
+  majority_accuracy_x1000000 = 796992
+  majority_correct_rows = 318
+  mixed_buckets = 15
+  mixed_rejected_rows = 195
+  mixed_rows = 279
+  mixed_selected_rows = 84
+  pure_rejected_buckets = 8
+  pure_rejected_rows = 120
+  selected = 84
+  total = 399
+  gate8_norm_to_1:
+  bucket_size_21 = 2
+  bucket_size_24 = 1
+  bucket_size_30 = 1
+  bucket_size_33 = 1
+  bucket_size_39 = 1
+  bucket_size_42 = 1
+  bucket_size_45 = 1
+  bucket_size_48 = 3
+  buckets = 11
+  exact_union_of_buckets = 0
+  majority_accuracy_x1000000 = 789473
+  majority_correct_rows = 315
+  mixed_buckets = 11
+  mixed_rejected_rows = 315
+  mixed_rows = 399
+  mixed_selected_rows = 84
+  selected = 84
+  total = 399
+  gate8_trace_norm_to_1:
+  bucket_size_3 = 72
+  bucket_size_6 = 29
+  bucket_size_9 = 1
+  buckets = 102
+  exact_union_of_buckets = 0
+  majority_accuracy_x1000000 = 924812
+  majority_correct_rows = 369
+  mixed_buckets = 10
+  mixed_rejected_rows = 30
+  mixed_rows = 60
+  mixed_selected_rows = 30
+  pure_rejected_buckets = 75
+  pure_rejected_rows = 285
+  pure_selected_buckets = 17
+  pure_selected_rows = 54
+  selected = 84
+  total = 399
+  gate8_best_invariant = trace_norm_to_1 accuracy_x1000000=924812 mixed_buckets=10 exact=0
+  gate9_target: selected=0 legal=399 rate=0.000000000
+  gate10_target: selected=0 legal=399 rate=0.000000000
+GF(103^2) N=10609 max_gate=10:
+  collect_stats:
+  B_degenerate = 1
+  B_group_size_8 = 288
+  candidate_invalid_not_nonsplit = 5120
+  candidates = 4992
+  compact_not_target = 5072
+  d2_minus = 2688
+  d2_plus_candidates = 2304
+  deduped_ax = 1152
+  legal_B = 288
+  skip_X_degenerate = 2
+  source_rows = 5056
+  invariant_count = 3
+  gate3_target: selected=160 legal=288 rate=0.555555556
+  gate3_trace_to_1:
+  bucket_size_10 = 2
+  bucket_size_2 = 48
+  bucket_size_4 = 22
+  bucket_size_6 = 10
+  bucket_size_8 = 3
+  buckets = 85
+  exact_union_of_buckets = 0
+  majority_accuracy_x1000000 = 868055
+  majority_correct_rows = 250
+  mixed_buckets = 16
+  mixed_rejected_rows = 44
+  mixed_rows = 96
+  mixed_selected_rows = 52
+  pure_rejected_buckets = 31
+  pure_rejected_rows = 84
+  pure_selected_buckets = 38
+  pure_selected_rows = 108
+  selected = 160
+  total = 288
+  gate3_norm_to_1:
+  bucket_size_10 = 4
+  bucket_size_2 = 8
+  bucket_size_4 = 10
+  bucket_size_6 = 16
+  bucket_size_8 = 12
+  buckets = 50
+  exact_union_of_buckets = 0
+  majority_accuracy_x1000000 = 694444
+  majority_correct_rows = 200
+  mixed_buckets = 34
+  mixed_rejected_rows = 116
+  mixed_rows = 236
+  mixed_selected_rows = 120
+  pure_rejected_buckets = 2
+  pure_rejected_rows = 12
+  pure_selected_buckets = 14
+  pure_selected_rows = 40
+  selected = 160
+  total = 288
+  gate3_trace_norm_to_1:
+  bucket_size_2 = 144
+  buckets = 144
+  exact_union_of_buckets = 1
+  majority_accuracy_x1000000 = 1000000
+  majority_correct_rows = 288
+  pure_rejected_buckets = 64
+  pure_rejected_rows = 128
+  pure_selected_buckets = 80
+  pure_selected_rows = 160
+  selected = 160
+  total = 288
+  gate3_best_invariant = trace_norm_to_1 accuracy_x1000000=1000000 mixed_buckets=0 exact=1
+  gate4_target: selected=96 legal=288 rate=0.333333333
+  gate4_trace_to_1:
+  bucket_size_10 = 2
+  bucket_size_2 = 48
+  bucket_size_4 = 22
+  bucket_size_6 = 10
+  bucket_size_8 = 3
+  buckets = 85
+  exact_union_of_buckets = 0
+  majority_accuracy_x1000000 = 868055
+  majority_correct_rows = 250
+  mixed_buckets = 17
+  mixed_rejected_rows = 56
+  mixed_rows = 104
+  mixed_selected_rows = 48
+  pure_rejected_buckets = 49
+  pure_rejected_rows = 136
+  pure_selected_buckets = 19
+  pure_selected_rows = 48
+  selected = 96
+  total = 288
+  gate4_norm_to_1:
+  bucket_size_10 = 4
+  bucket_size_2 = 8
+  bucket_size_4 = 10
+  bucket_size_6 = 16
+  bucket_size_8 = 12
+  buckets = 50
+  exact_union_of_buckets = 0
+  majority_accuracy_x1000000 = 736111
+  majority_correct_rows = 212
+  mixed_buckets = 32
+  mixed_rejected_rows = 136
+  mixed_rows = 220
+  mixed_selected_rows = 84
+  pure_rejected_buckets = 12
+  pure_rejected_rows = 56
+  pure_selected_buckets = 6
+  pure_selected_rows = 12
+  selected = 96
+  total = 288
+  gate4_trace_norm_to_1:
+  bucket_size_2 = 144
+  buckets = 144
+  exact_union_of_buckets = 1
+  majority_accuracy_x1000000 = 1000000
+  majority_correct_rows = 288
+  pure_rejected_buckets = 96
+  pure_rejected_rows = 192
+  pure_selected_buckets = 48
+  pure_selected_rows = 96
+  selected = 96
+  total = 288
+  gate4_best_invariant = trace_norm_to_1 accuracy_x1000000=1000000 mixed_buckets=0 exact=1
+  gate5_target: selected=48 legal=288 rate=0.166666667
+  gate5_trace_to_1:
+  bucket_size_10 = 2
+  bucket_size_2 = 48
+  bucket_size_4 = 22
+  bucket_size_6 = 10
+  bucket_size_8 = 3
+  buckets = 85
+  exact_union_of_buckets = 0
+  majority_accuracy_x1000000 = 902777
+  majority_correct_rows = 260
+  mixed_buckets = 13
+  mixed_rejected_rows = 46
+  mixed_rows = 80
+  mixed_selected_rows = 34
+  pure_rejected_buckets = 66
+  pure_rejected_rows = 194
+  pure_selected_buckets = 6
+  pure_selected_rows = 14
+  selected = 48
+  total = 288
+  gate5_norm_to_1:
+  bucket_size_10 = 4
+  bucket_size_2 = 8
+  bucket_size_4 = 10
+  bucket_size_6 = 16
+  bucket_size_8 = 12
+  buckets = 50
+  exact_union_of_buckets = 0
+  majority_accuracy_x1000000 = 847222
+  majority_correct_rows = 244
+  mixed_buckets = 18
+  mixed_rejected_rows = 88
+  mixed_rows = 132
+  mixed_selected_rows = 44
+  pure_rejected_buckets = 30
+  pure_rejected_rows = 152
+  pure_selected_buckets = 2
+  pure_selected_rows = 4
+  selected = 48
+  total = 288
+  gate5_trace_norm_to_1:
+  bucket_size_2 = 144
+  buckets = 144
+  exact_union_of_buckets = 1
+  majority_accuracy_x1000000 = 1000000
+  majority_correct_rows = 288
+  pure_rejected_buckets = 120
+  pure_rejected_rows = 240
+  pure_selected_buckets = 24
+  pure_selected_rows = 48
+  selected = 48
+  total = 288
+  gate5_best_invariant = trace_norm_to_1 accuracy_x1000000=1000000 mixed_buckets=0 exact=1
+  gate6_target: selected=0 legal=288 rate=0.000000000
+  gate7_target: selected=0 legal=288 rate=0.000000000
+  gate8_target: selected=0 legal=288 rate=0.000000000
+  gate9_target: selected=0 legal=288 rate=0.000000000
+  gate10_target: selected=0 legal=288 rate=0.000000000
+p27_b_line_trace_norm_plateau_probe_rows=1/1

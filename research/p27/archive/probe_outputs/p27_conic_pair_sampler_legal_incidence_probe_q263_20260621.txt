@@ -1,0 +1,30 @@
+p27 conic-pair sampler legal incidence probe
+sampler parameters = nonzero R,L
+image coordinate = (A=2-c^2, x=r^2)
+q263:
+  draws = 68644
+  enum_compact_not_target = 149
+  enum_no_label2_candidate = 72
+  nondegenerate_outputs = 68644
+  oriented_legal_candidates = 80
+  raw_cr_unique_A_x = 17424
+  raw_cr_unique_d3_minus_A_x = 0
+  raw_cr_unique_d3_plus_A_x = 20
+  raw_cr_unique_legal_A_x = 20
+  sampler_d3_minus_draw_multiplicity = 0
+  sampler_d3_plus_draw_multiplicity = 320
+  sampler_legal_draw_multiplicity = 320
+  sampler_unique_d3_minus_A_x = 0
+  sampler_unique_d3_plus_A_x = 20
+  sampler_unique_legal_A_x = 20
+  unique_A_x = 3332
+  unique_d3_plus_A_x = 20
+  unique_legal_A_x = 20
+  sampler_legal_draw_rate = 0.004661733
+  sampler_d3_plus_draw_rate = 0.004661733
+  sampler_legal_unique_rate = 0.006002401
+  sampler_d3_plus_unique_rate = 0.006002401
+  legal_covered_by_sampler_rate = 1.000000000
+  d3_plus_covered_by_sampler_rate = 1.000000000
+  sampler_d3_plus_draw_rate_times_q = 1.226035779
+p27_conic_pair_sampler_legal_incidence_probe_rows=1/1

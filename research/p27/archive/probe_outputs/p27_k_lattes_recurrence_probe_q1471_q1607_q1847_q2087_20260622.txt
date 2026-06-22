@@ -1,0 +1,319 @@
+p27 K-line Lattes recurrence probe
+Eprime = V^2 = U^3 + 4U
+test = d4(K) ?= +/- d3(x([m]Q)) or +/- d3(x([m]Q+T0))
+small_primes = 1471,1607,1847,2087
+multipliers = 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24
+q=1471:
+  q_mod_8 = 7
+  chi_minus_one = -1
+  k_lattes_stats:
+  coverage_12 = 6
+  coverage_28 = 2
+  coverage_4 = 6
+  coverage_5 = 2
+  coverage_6 = 12
+  coverage_7 = 2
+  coverage_8 = 18
+  d3_k_minus = 22
+  d3_k_non_eprime_x = 0
+  d3_k_plus = 28
+  d3_k_rows = 50
+  d4_k_minus = 14
+  d4_k_plus = 14
+  d4_k_rows = 28
+  full_coverage_maps = 2
+  maps_tested = 48
+  setup_d3_eprime_input_rows = 200
+  setup_d3_eprime_minus = 44
+  setup_d3_eprime_plus = 56
+  setup_d3_eprime_quotient_rows = 100
+  setup_d3_k_input_rows = 100
+  setup_d3_k_k_rows = 50
+  setup_d3_k_minus = 22
+  setup_d3_k_plus = 28
+  setup_d3_s_input_rows = 100
+  setup_d3_s_minus = 44
+  setup_d3_s_paired_s_neg_s = 100
+  setup_d3_s_plus = 56
+  setup_d3_s_s_rows = 100
+  setup_d4_eprime_input_rows = 112
+  setup_d4_eprime_minus = 28
+  setup_d4_eprime_plus = 28
+  setup_d4_eprime_quotient_rows = 56
+  setup_d4_k_input_rows = 56
+  setup_d4_k_k_rows = 28
+  setup_d4_k_minus = 14
+  setup_d4_k_plus = 14
+  setup_d4_s_input_rows = 56
+  setup_d4_s_minus = 28
+  setup_d4_s_paired_s_neg_s = 56
+  setup_d4_s_plus = 28
+  setup_d4_s_s_rows = 56
+  setup_enum_compact_not_target = 837
+  setup_enum_no_label2_candidate = 424
+  setup_quotient_d3_minus_E_points = 88
+  setup_quotient_d3_missing_on_E_orbit = 0
+  setup_quotient_d3_not_descended_to_E = 0
+  setup_quotient_d3_plus_E_points = 112
+  setup_quotient_d3_quotient_rows = 200
+  setup_quotient_d4_minus_E_points_after_d3 = 56
+  setup_quotient_d4_missing_on_E_orbit = 0
+  setup_quotient_d4_not_descended_to_E = 0
+  setup_quotient_d4_plus_E_points_after_d3 = 56
+  setup_quotient_d4_quotient_rows_after_d3 = 112
+  setup_quotient_orbit_size_4 = 200
+  setup_quotient_oriented_candidates = 800
+  setup_quotient_quotient_E_points = 200
+q1471_best_k_lattes_maps:
+  m=1 torsion=O polarity=1 good=14/28 rate=0.500000000 coverage=1.000000000 undefined=0 missing=0
+  m=1 torsion=T0=(0,0) polarity=1 good=14/28 rate=0.500000000 coverage=1.000000000 undefined=0 missing=0
+  m=7 torsion=O polarity=1 good=6/12 rate=0.500000000 coverage=0.428571429 undefined=0 missing=16
+  m=7 torsion=T0=(0,0) polarity=1 good=6/12 rate=0.500000000 coverage=0.428571429 undefined=0 missing=16
+  m=22 torsion=O polarity=1 good=6/12 rate=0.500000000 coverage=0.428571429 undefined=0 missing=16
+  m=22 torsion=T0=(0,0) polarity=1 good=6/12 rate=0.500000000 coverage=0.428571429 undefined=0 missing=16
+  m=23 torsion=O polarity=1 good=6/12 rate=0.500000000 coverage=0.428571429 undefined=2 missing=14
+  m=23 torsion=T0=(0,0) polarity=1 good=6/12 rate=0.500000000 coverage=0.428571429 undefined=2 missing=14
+  m=4 torsion=O polarity=1 good=4/8 rate=0.500000000 coverage=0.285714286 undefined=0 missing=20
+  m=4 torsion=T0=(0,0) polarity=1 good=4/8 rate=0.500000000 coverage=0.285714286 undefined=0 missing=20
+  m=5 torsion=O polarity=1 good=4/8 rate=0.500000000 coverage=0.285714286 undefined=0 missing=20
+  m=5 torsion=T0=(0,0) polarity=1 good=4/8 rate=0.500000000 coverage=0.285714286 undefined=0 missing=20
+q=1607:
+  q_mod_8 = 7
+  chi_minus_one = -1
+  k_lattes_stats:
+  coverage_0 = 1
+  coverage_10 = 6
+  coverage_12 = 1
+  coverage_13 = 1
+  coverage_28 = 1
+  coverage_3 = 2
+  coverage_4 = 6
+  coverage_5 = 3
+  coverage_6 = 8
+  coverage_7 = 11
+  coverage_8 = 6
+  coverage_9 = 2
+  d3_k_minus = 21
+  d3_k_non_eprime_x = 0
+  d3_k_plus = 28
+  d3_k_rows = 49
+  d4_k_minus = 9
+  d4_k_plus = 19
+  d4_k_rows = 28
+  exact_on_covered_maps = 2
+  full_coverage_maps = 1
+  maps_tested = 48
+  setup_d3_eprime_input_rows = 196
+  setup_d3_eprime_minus = 42
+  setup_d3_eprime_plus = 56
+  setup_d3_eprime_quotient_rows = 98
+  setup_d3_k_input_rows = 98
+  setup_d3_k_k_rows = 49
+  setup_d3_k_minus = 21
+  setup_d3_k_plus = 28
+  setup_d3_s_input_rows = 98
+  setup_d3_s_minus = 42
+  setup_d3_s_paired_s_neg_s = 98
+  setup_d3_s_plus = 56
+  setup_d3_s_s_rows = 98
+  setup_d4_eprime_input_rows = 112
+  setup_d4_eprime_minus = 18
+  setup_d4_eprime_plus = 38
+  setup_d4_eprime_quotient_rows = 56
+  setup_d4_k_input_rows = 56
+  setup_d4_k_k_rows = 28
+  setup_d4_k_minus = 9
+  setup_d4_k_plus = 19
+  setup_d4_s_input_rows = 56
+  setup_d4_s_minus = 18
+  setup_d4_s_paired_s_neg_s = 56
+  setup_d4_s_plus = 38
+  setup_d4_s_s_rows = 56
+  setup_enum_compact_not_target = 805
+  setup_enum_no_label2_candidate = 408
+  setup_quotient_d3_minus_E_points = 84
+  setup_quotient_d3_missing_on_E_orbit = 0
+  setup_quotient_d3_not_descended_to_E = 0
+  setup_quotient_d3_plus_E_points = 112
+  setup_quotient_d3_quotient_rows = 196
+  setup_quotient_d4_minus_E_points_after_d3 = 36
+  setup_quotient_d4_missing_on_E_orbit = 0
+  setup_quotient_d4_not_descended_to_E = 0
+  setup_quotient_d4_plus_E_points_after_d3 = 76
+  setup_quotient_d4_quotient_rows_after_d3 = 112
+  setup_quotient_orbit_size_4 = 196
+  setup_quotient_oriented_candidates = 784
+  setup_quotient_quotient_E_points = 196
+q1607_best_k_lattes_maps:
+  m=1 torsion=O polarity=1 good=19/28 rate=0.678571429 coverage=1.000000000 undefined=0 missing=0
+  m=15 torsion=T0=(0,0) polarity=-1 good=9/13 rate=0.692307692 coverage=0.464285714 undefined=0 missing=15
+  m=8 torsion=O polarity=1 good=6/12 rate=0.500000000 coverage=0.428571429 undefined=0 missing=16
+  m=12 torsion=T0=(0,0) polarity=-1 good=7/10 rate=0.700000000 coverage=0.357142857 undefined=0 missing=18
+  m=4 torsion=T0=(0,0) polarity=-1 good=6/10 rate=0.600000000 coverage=0.357142857 undefined=0 missing=18
+  m=14 torsion=O polarity=1 good=6/10 rate=0.600000000 coverage=0.357142857 undefined=0 missing=18
+  m=23 torsion=O polarity=1 good=6/10 rate=0.600000000 coverage=0.357142857 undefined=0 missing=18
+  m=7 torsion=O polarity=1 good=5/10 rate=0.500000000 coverage=0.357142857 undefined=0 missing=18
+  m=9 torsion=T0=(0,0) polarity=1 good=5/10 rate=0.500000000 coverage=0.357142857 undefined=0 missing=18
+  m=22 torsion=O polarity=1 good=7/9 rate=0.777777778 coverage=0.321428571 undefined=0 missing=19
+  m=10 torsion=O polarity=-1 good=6/9 rate=0.666666667 coverage=0.321428571 undefined=0 missing=19
+  m=9 torsion=O polarity=1 good=5/8 rate=0.625000000 coverage=0.285714286 undefined=0 missing=20
+q=1847:
+  q_mod_8 = 7
+  chi_minus_one = -1
+  k_lattes_stats:
+  coverage_0 = 1
+  coverage_10 = 5
+  coverage_11 = 9
+  coverage_12 = 8
+  coverage_13 = 9
+  coverage_14 = 3
+  coverage_15 = 2
+  coverage_16 = 3
+  coverage_17 = 2
+  coverage_19 = 1
+  coverage_45 = 1
+  coverage_7 = 1
+  coverage_8 = 1
+  coverage_9 = 2
+  d3_k_minus = 18
+  d3_k_non_eprime_x = 0
+  d3_k_plus = 45
+  d3_k_rows = 63
+  d4_k_minus = 26
+  d4_k_plus = 19
+  d4_k_rows = 45
+  full_coverage_maps = 1
+  maps_tested = 48
+  setup_d3_eprime_input_rows = 252
+  setup_d3_eprime_minus = 36
+  setup_d3_eprime_plus = 90
+  setup_d3_eprime_quotient_rows = 126
+  setup_d3_k_input_rows = 126
+  setup_d3_k_k_rows = 63
+  setup_d3_k_minus = 18
+  setup_d3_k_plus = 45
+  setup_d3_s_input_rows = 126
+  setup_d3_s_minus = 36
+  setup_d3_s_paired_s_neg_s = 126
+  setup_d3_s_plus = 90
+  setup_d3_s_s_rows = 126
+  setup_d4_eprime_input_rows = 180
+  setup_d4_eprime_minus = 52
+  setup_d4_eprime_plus = 38
+  setup_d4_eprime_quotient_rows = 90
+  setup_d4_k_input_rows = 90
+  setup_d4_k_k_rows = 45
+  setup_d4_k_minus = 26
+  setup_d4_k_plus = 19
+  setup_d4_s_input_rows = 90
+  setup_d4_s_minus = 52
+  setup_d4_s_paired_s_neg_s = 90
+  setup_d4_s_plus = 38
+  setup_d4_s_s_rows = 90
+  setup_enum_compact_not_target = 873
+  setup_enum_no_label2_candidate = 468
+  setup_quotient_d3_minus_E_points = 72
+  setup_quotient_d3_missing_on_E_orbit = 0
+  setup_quotient_d3_not_descended_to_E = 0
+  setup_quotient_d3_plus_E_points = 180
+  setup_quotient_d3_quotient_rows = 252
+  setup_quotient_d4_minus_E_points_after_d3 = 104
+  setup_quotient_d4_missing_on_E_orbit = 0
+  setup_quotient_d4_not_descended_to_E = 0
+  setup_quotient_d4_plus_E_points_after_d3 = 76
+  setup_quotient_d4_quotient_rows_after_d3 = 180
+  setup_quotient_orbit_size_4 = 252
+  setup_quotient_oriented_candidates = 1008
+  setup_quotient_quotient_E_points = 252
+q1847_best_k_lattes_maps:
+  m=1 torsion=O polarity=-1 good=26/45 rate=0.577777778 coverage=1.000000000 undefined=0 missing=0
+  m=15 torsion=T0=(0,0) polarity=1 good=13/19 rate=0.684210526 coverage=0.422222222 undefined=0 missing=26
+  m=12 torsion=O polarity=-1 good=11/17 rate=0.647058824 coverage=0.377777778 undefined=0 missing=28
+  m=14 torsion=O polarity=-1 good=10/17 rate=0.588235294 coverage=0.377777778 undefined=1 missing=27
+  m=19 torsion=T0=(0,0) polarity=-1 good=11/16 rate=0.687500000 coverage=0.355555556 undefined=0 missing=29
+  m=7 torsion=O polarity=-1 good=9/16 rate=0.562500000 coverage=0.355555556 undefined=1 missing=28
+  m=20 torsion=O polarity=1 good=9/16 rate=0.562500000 coverage=0.355555556 undefined=0 missing=29
+  m=13 torsion=O polarity=-1 good=9/15 rate=0.600000000 coverage=0.333333333 undefined=0 missing=30
+  m=21 torsion=T0=(0,0) polarity=-1 good=9/15 rate=0.600000000 coverage=0.333333333 undefined=2 missing=28
+  m=9 torsion=T0=(0,0) polarity=-1 good=9/14 rate=0.642857143 coverage=0.311111111 undefined=0 missing=31
+  m=13 torsion=T0=(0,0) polarity=1 good=8/14 rate=0.571428571 coverage=0.311111111 undefined=0 missing=31
+  m=22 torsion=T0=(0,0) polarity=1 good=7/14 rate=0.500000000 coverage=0.311111111 undefined=0 missing=31
+q=2087:
+  q_mod_8 = 7
+  chi_minus_one = -1
+  k_lattes_stats:
+  coverage_0 = 1
+  coverage_10 = 1
+  coverage_2 = 3
+  coverage_25 = 1
+  coverage_3 = 6
+  coverage_4 = 6
+  coverage_5 = 10
+  coverage_6 = 9
+  coverage_7 = 6
+  coverage_8 = 5
+  d3_k_minus = 32
+  d3_k_non_eprime_x = 0
+  d3_k_plus = 25
+  d3_k_rows = 57
+  d4_k_minus = 7
+  d4_k_plus = 18
+  d4_k_rows = 25
+  exact_on_covered_maps = 4
+  full_coverage_maps = 1
+  maps_tested = 48
+  setup_d3_eprime_input_rows = 228
+  setup_d3_eprime_minus = 64
+  setup_d3_eprime_plus = 50
+  setup_d3_eprime_quotient_rows = 114
+  setup_d3_k_input_rows = 114
+  setup_d3_k_k_rows = 57
+  setup_d3_k_minus = 32
+  setup_d3_k_plus = 25
+  setup_d3_s_input_rows = 114
+  setup_d3_s_minus = 64
+  setup_d3_s_paired_s_neg_s = 114
+  setup_d3_s_plus = 50
+  setup_d3_s_s_rows = 114
+  setup_d4_eprime_input_rows = 100
+  setup_d4_eprime_minus = 14
+  setup_d4_eprime_plus = 36
+  setup_d4_eprime_quotient_rows = 50
+  setup_d4_k_input_rows = 50
+  setup_d4_k_k_rows = 25
+  setup_d4_k_minus = 7
+  setup_d4_k_plus = 18
+  setup_d4_s_input_rows = 50
+  setup_d4_s_minus = 14
+  setup_d4_s_paired_s_neg_s = 50
+  setup_d4_s_plus = 36
+  setup_d4_s_s_rows = 50
+  setup_enum_compact_not_target = 1109
+  setup_enum_no_label2_candidate = 520
+  setup_quotient_d3_minus_E_points = 128
+  setup_quotient_d3_missing_on_E_orbit = 0
+  setup_quotient_d3_not_descended_to_E = 0
+  setup_quotient_d3_plus_E_points = 100
+  setup_quotient_d3_quotient_rows = 228
+  setup_quotient_d4_minus_E_points_after_d3 = 28
+  setup_quotient_d4_missing_on_E_orbit = 0
+  setup_quotient_d4_not_descended_to_E = 0
+  setup_quotient_d4_plus_E_points_after_d3 = 72
+  setup_quotient_d4_quotient_rows_after_d3 = 100
+  setup_quotient_orbit_size_4 = 228
+  setup_quotient_oriented_candidates = 912
+  setup_quotient_quotient_E_points = 228
+q2087_best_k_lattes_maps:
+  m=1 torsion=O polarity=1 good=18/25 rate=0.720000000 coverage=1.000000000 undefined=0 missing=0
+  m=13 torsion=T0=(0,0) polarity=1 good=7/10 rate=0.700000000 coverage=0.400000000 undefined=0 missing=15
+  m=19 torsion=T0=(0,0) polarity=-1 good=6/8 rate=0.750000000 coverage=0.320000000 undefined=0 missing=17
+  m=2 torsion=T0=(0,0) polarity=-1 good=5/8 rate=0.625000000 coverage=0.320000000 undefined=0 missing=17
+  m=6 torsion=T0=(0,0) polarity=-1 good=5/8 rate=0.625000000 coverage=0.320000000 undefined=0 missing=17
+  m=15 torsion=T0=(0,0) polarity=-1 good=5/8 rate=0.625000000 coverage=0.320000000 undefined=0 missing=17
+  m=2 torsion=O polarity=1 good=4/8 rate=0.500000000 coverage=0.320000000 undefined=0 missing=17
+  m=5 torsion=T0=(0,0) polarity=-1 good=5/7 rate=0.714285714 coverage=0.280000000 undefined=0 missing=18
+  m=7 torsion=T0=(0,0) polarity=1 good=5/7 rate=0.714285714 coverage=0.280000000 undefined=0 missing=18
+  m=10 torsion=O polarity=-1 good=5/7 rate=0.714285714 coverage=0.280000000 undefined=0 missing=18
+  m=14 torsion=O polarity=-1 good=5/7 rate=0.714285714 coverage=0.280000000 undefined=0 missing=18
+  m=14 torsion=T0=(0,0) polarity=1 good=5/7 rate=0.714285714 coverage=0.280000000 undefined=0 missing=18
+p27_k_lattes_recurrence_probe_rows=1/1

@@ -1,0 +1,130 @@
+p27 K/A base-curve sampler viability probe
+base curve: 64(A-2)^2(A+2)L^2 + 64(A+2)(A+14)(3A+10)L - (A-2)^4 = 0, L=K^2
+atoms = ['K', 'K+1', 'K-1', 'K^2+4', 'A+2', 'A-2', 'A+6', 'A+14', '3A+10', 'A^2+60A+132']
+q1607_base_sampler_stats:
+  base_KA = 1607
+  base_realized_d2_fraction_ppm = 30491
+  base_realized_d3plus_fraction_ppm = 17423
+  enum_compact_not_target = 805
+  enum_no_label2_candidate = 408
+  realized_d2_KA = 49
+  realized_d2_in_base = 49
+  realized_d2_missing_from_base = 0
+  realized_d3plus_KA = 28
+  realized_d3plus_in_base = 28
+  realized_d3plus_missing_from_base = 0
+q1607_d2_atom_score_stats:
+  scored_rows = 1604
+  target_rows = 49
+  zero_atom_skip = 3
+q1607_d2_best_atom_combos:
+  good=1555/1604 rate=0.969451372 polarity=1 weight=0 combo=1
+  good=1555/1604 rate=0.969451372 polarity=1 weight=1 combo=K^2+4
+  good=1555/1604 rate=0.969451372 polarity=1 weight=1 combo=A+2
+  good=1555/1604 rate=0.969451372 polarity=1 weight=2 combo=K^2+4 * A+2
+  good=861/1604 rate=0.536783042 polarity=-1 weight=3 combo=A-2 * A+14 * A^2+60A+132
+  good=861/1604 rate=0.536783042 polarity=-1 weight=4 combo=K^2+4 * A-2 * A+14 * A^2+60A+132
+  good=861/1604 rate=0.536783042 polarity=-1 weight=4 combo=A+2 * A-2 * A+14 * A^2+60A+132
+  good=855/1604 rate=0.533042394 polarity=1 weight=4 combo=K+1 * K-1 * A-2 * A+14
+  good=853/1604 rate=0.531795511 polarity=1 weight=2 combo=K-1 * A+6
+  good=853/1604 rate=0.531795511 polarity=1 weight=3 combo=K-1 * K^2+4 * A+6
+q1607_d3plus_atom_score_stats:
+  scored_rows = 1604
+  target_rows = 28
+  zero_atom_skip = 3
+q1607_d3plus_best_atom_combos:
+  good=1576/1604 rate=0.982543641 polarity=1 weight=0 combo=1
+  good=1576/1604 rate=0.982543641 polarity=1 weight=1 combo=K^2+4
+  good=1576/1604 rate=0.982543641 polarity=1 weight=1 combo=A+2
+  good=1576/1604 rate=0.982543641 polarity=1 weight=2 combo=K^2+4 * A+2
+  good=858/1604 rate=0.534912718 polarity=-1 weight=3 combo=A-2 * A+14 * A^2+60A+132
+  good=858/1604 rate=0.534912718 polarity=-1 weight=4 combo=K+1 * K-1 * A-2 * 3A+10
+  good=858/1604 rate=0.534912718 polarity=-1 weight=4 combo=K^2+4 * A-2 * A+14 * A^2+60A+132
+  good=858/1604 rate=0.534912718 polarity=-1 weight=4 combo=A+2 * A-2 * A+14 * A^2+60A+132
+  good=858/1604 rate=0.534912718 polarity=-1 weight=4 combo=A-2 * A+6 * 3A+10 * A^2+60A+132
+  good=852/1604 rate=0.531172070 polarity=1 weight=3 combo=A-2 * 3A+10 * A^2+60A+132
+q1847_base_sampler_stats:
+  base_KA = 1847
+  base_realized_d2_fraction_ppm = 34109
+  base_realized_d3plus_fraction_ppm = 24363
+  enum_compact_not_target = 873
+  enum_no_label2_candidate = 468
+  realized_d2_KA = 63
+  realized_d2_in_base = 63
+  realized_d2_missing_from_base = 0
+  realized_d3plus_KA = 45
+  realized_d3plus_in_base = 45
+  realized_d3plus_missing_from_base = 0
+q1847_d2_atom_score_stats:
+  scored_rows = 1844
+  target_rows = 63
+  zero_atom_skip = 3
+q1847_d2_best_atom_combos:
+  good=1781/1844 rate=0.965835141 polarity=1 weight=0 combo=1
+  good=1781/1844 rate=0.965835141 polarity=1 weight=1 combo=K^2+4
+  good=1781/1844 rate=0.965835141 polarity=1 weight=1 combo=A+2
+  good=1781/1844 rate=0.965835141 polarity=1 weight=2 combo=K^2+4 * A+2
+  good=985/1844 rate=0.534164859 polarity=-1 weight=1 combo=K
+  good=985/1844 rate=0.534164859 polarity=1 weight=1 combo=A-2
+  good=985/1844 rate=0.534164859 polarity=-1 weight=2 combo=K * K^2+4
+  good=985/1844 rate=0.534164859 polarity=-1 weight=2 combo=K * A+2
+  good=985/1844 rate=0.534164859 polarity=1 weight=2 combo=K * A-2
+  good=985/1844 rate=0.534164859 polarity=1 weight=2 combo=K^2+4 * A-2
+q1847_d3plus_atom_score_stats:
+  scored_rows = 1844
+  target_rows = 45
+  zero_atom_skip = 3
+q1847_d3plus_best_atom_combos:
+  good=1799/1844 rate=0.975596529 polarity=1 weight=0 combo=1
+  good=1799/1844 rate=0.975596529 polarity=1 weight=1 combo=K^2+4
+  good=1799/1844 rate=0.975596529 polarity=1 weight=1 combo=A+2
+  good=1799/1844 rate=0.975596529 polarity=1 weight=2 combo=K^2+4 * A+2
+  good=981/1844 rate=0.531995662 polarity=-1 weight=2 combo=K-1 * A^2+60A+132
+  good=981/1844 rate=0.531995662 polarity=-1 weight=3 combo=K-1 * K^2+4 * A^2+60A+132
+  good=981/1844 rate=0.531995662 polarity=-1 weight=3 combo=K-1 * A+2 * A^2+60A+132
+  good=981/1844 rate=0.531995662 polarity=-1 weight=4 combo=K-1 * K^2+4 * A+2 * A^2+60A+132
+  good=969/1844 rate=0.525488069 polarity=1 weight=2 combo=K+1 * A^2+60A+132
+  good=969/1844 rate=0.525488069 polarity=1 weight=3 combo=K+1 * K-1 * A+14
+q2087_base_sampler_stats:
+  base_KA = 2087
+  base_realized_d2_fraction_ppm = 27311
+  base_realized_d3plus_fraction_ppm = 11978
+  enum_compact_not_target = 1109
+  enum_no_label2_candidate = 520
+  realized_d2_KA = 57
+  realized_d2_in_base = 57
+  realized_d2_missing_from_base = 0
+  realized_d3plus_KA = 25
+  realized_d3plus_in_base = 25
+  realized_d3plus_missing_from_base = 0
+q2087_d2_atom_score_stats:
+  scored_rows = 2084
+  target_rows = 57
+  zero_atom_skip = 3
+q2087_d2_best_atom_combos:
+  good=2027/2084 rate=0.972648752 polarity=1 weight=0 combo=1
+  good=2027/2084 rate=0.972648752 polarity=1 weight=1 combo=K^2+4
+  good=2027/2084 rate=0.972648752 polarity=1 weight=1 combo=A+2
+  good=2027/2084 rate=0.972648752 polarity=1 weight=2 combo=K^2+4 * A+2
+  good=1113/2084 rate=0.534069098 polarity=-1 weight=4 combo=A+6 * A+14 * 3A+10 * A^2+60A+132
+  good=1109/2084 rate=0.532149712 polarity=-1 weight=3 combo=K+1 * A+6 * A^2+60A+132
+  good=1109/2084 rate=0.532149712 polarity=-1 weight=4 combo=K+1 * K^2+4 * A+6 * A^2+60A+132
+  good=1109/2084 rate=0.532149712 polarity=-1 weight=4 combo=K+1 * A+2 * A+6 * A^2+60A+132
+  good=1107/2084 rate=0.531190019 polarity=1 weight=3 combo=K-1 * A+6 * A^2+60A+132
+  good=1107/2084 rate=0.531190019 polarity=1 weight=4 combo=K-1 * K^2+4 * A+6 * A^2+60A+132
+q2087_d3plus_atom_score_stats:
+  scored_rows = 2084
+  target_rows = 25
+  zero_atom_skip = 3
+q2087_d3plus_best_atom_combos:
+  good=2059/2084 rate=0.988003839 polarity=1 weight=0 combo=1
+  good=2059/2084 rate=0.988003839 polarity=1 weight=1 combo=K^2+4
+  good=2059/2084 rate=0.988003839 polarity=1 weight=1 combo=A+2
+  good=2059/2084 rate=0.988003839 polarity=1 weight=2 combo=K^2+4 * A+2
+  good=1125/2084 rate=0.539827255 polarity=-1 weight=4 combo=A+6 * A+14 * 3A+10 * A^2+60A+132
+  good=1113/2084 rate=0.534069098 polarity=1 weight=3 combo=K-1 * A+6 * A^2+60A+132
+  good=1113/2084 rate=0.534069098 polarity=1 weight=4 combo=K-1 * K^2+4 * A+6 * A^2+60A+132
+  good=1113/2084 rate=0.534069098 polarity=1 weight=4 combo=K-1 * A+2 * A+6 * A^2+60A+132
+  good=1111/2084 rate=0.533109405 polarity=-1 weight=4 combo=K+1 * K-1 * A+14 * 3A+10
+  good=1107/2084 rate=0.531190019 polarity=-1 weight=3 combo=K+1 * A+6 * A^2+60A+132
+p27_kline_base_curve_sampler_probe_rows=1/1

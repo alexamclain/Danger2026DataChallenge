@@ -1,0 +1,137 @@
+{
+  "name": "p27_conic_tower_quotient_cas_suite",
+  "date": "2026-06-22",
+  "purpose": "CAS handoff for the repeated conic-chain Kummer selector tower. This is the conic-lane source/quotient test that could beat sqrt(p) if it produces a low-genus quotient, recurrence, or direct sampler.",
+  "target_prime": "1000000000000000000000000103",
+  "field_signature": {
+    "p_mod_8": 7,
+    "chi_2": 1,
+    "promotion_fields": [1607, 1847, 2087]
+  },
+  "base_coordinate": {
+    "A": "2 - c^2",
+    "x_j": "r_j^2",
+    "selected_gate": "chi(r_j^2 + c*r_j + 1)"
+  },
+  "tower_step": {
+    "equations": [
+      "h_j^2 = r_j^2 + c*r_j + 1",
+      "g_j^2 = r_j^2 - c*r_j + 1",
+      "r_{j+1}^2 - (h_j + g_j)*r_{j+1} + 1 = 0"
+    ],
+    "selector_divisor": [
+      "a_j = r_{j+1} - 1/r_{j+1}",
+      "L_j = h_j - g_j - 2*r_j",
+      "Z_j^2 = -(L_j + a_j)*(L_j - a_j)*c*r_{j+1}"
+    ],
+    "identity": "chi(r_{j+1}^2 + c*r_{j+1} + 1) = chi(-(L_j+a_j)(L_j-a_j)c*r_{j+1}) when chi(2)=+1"
+  },
+  "entry_condition": "Use after the raw conic-chain sampler, sign-word buckets, and low-degree two-step Kummer coordinate screens are negative. The legal pullback/quotient is the remaining sqrt-beating conic path.",
+  "inputs": {
+    "legal_source": [
+      "research/p27/evidence/p27_label2_second_gate_cover_20260621.md",
+      "research/p27/evidence/p27_conic_chain_source_screen_20260621.md",
+      "research/p27/evidence/p27_legal_conic_tower_depth_20260621.md"
+    ],
+    "selector_identity": [
+      "research/p27/evidence/p27_conic_pair_d4_recurrence_20260621.md",
+      "research/p27/evidence/p27_conic_pair_d5_tower_20260621.md",
+      "research/p27/evidence/p27_conic_tower_sign_quotient_20260622.md",
+      "research/p27/evidence/p27_conic_tower_d6_a_descent_20260622.md",
+            "research/p27/evidence/p27_a_level_prefix_descent_20260622.md",
+            "research/p27/evidence/p27_a_line_character_support_20260622.md",
+            "research/p27/evidence/p27_a_level_kummer_extraction_packet_20260622.md",
+            "research/p27/evidence/p27_a_line_named_transform_recurrence_20260622.md"
+    ],
+    "killed_shortcuts": [
+      "research/p27/evidence/p27_conic_pair_lowdegree_relation_20260621.md",
+      "research/p27/evidence/p27_conic_pair_invariant_relation_20260621.md",
+      "research/p27/evidence/p27_conic_pair_kummer_z_relation_20260621.md",
+      "research/p27/evidence/p27_conic_pair_two_step_kummer_20260621.md",
+            "research/p27/evidence/p27_conic_pair_two_step_kummer_trivar_20260621.md",
+            "research/p27/evidence/p27_conic_signword_coupling_20260622.md",
+            "research/p27/evidence/p27_a_line_character_support_20260622.md",
+            "research/p27/evidence/p27_a_line_named_transform_recurrence_20260622.md"
+    ]
+  },
+  "machine_fixtures": {
+        "a_level_kummer_packet": {
+            "generator": "research/p27/archive/gates/p27_a_level_kummer_extraction_packet.py",
+            "json": "research/p27/archive/fixtures/p27_a_level_kummer_extraction_packet_20260622.json",
+            "text": "research/p27/archive/probe_outputs/p27_a_level_kummer_extraction_packet_20260622.txt"
+        },
+        "a_line_named_transform_screen": {
+            "generator": "research/p27/archive/gates/p27_a_line_named_transform_probe.py",
+            "small_field_text": "research/p27/archive/probe_outputs/p27_a_line_named_transform_probe_q1607_q1847_q2087_20260622.txt",
+            "p27_text": "research/p27/archive/probe_outputs/p27_a_line_named_transform_probe_p27_train_heldout_20260622.txt"
+        }
+  },
+  "tasks": [
+    {
+      "priority": 10,
+      "name": "Depth-1 legal pullback quotient",
+      "construct": "legal label-2/compactD source + one conic transition",
+      "compute": [
+        "dimension",
+        "component count after saturation by nonzero denominators",
+        "obvious sign involutions, starting from the selector-preserving sign quotient already screened",
+        "quotient maps under h0/g0/r1 sign symmetries",
+        "genus of any curve quotient"
+      ],
+      "promote_if": "low-genus quotient or explicit sampler of legal d3-plus rows",
+      "kill_if": "only high-genus/generic components and no sourceable quotient"
+    },
+    {
+      "priority": 20,
+      "name": "Depth-2 repeated selector quotient",
+      "construct": "depth-1 legal pullback + second conic transition, equivalently add the repeated selector layer Z0/S1",
+      "compute": [
+        "whether the repeated divisor Z0^2=-(L0+a0)(L0-a0)c*r1 reduces the normalized tower",
+        "dimension/components/genus after quotienting obvious sign symmetries",
+        "whether d5 class is a pullback/reuse of the d4 class"
+      ],
+      "promote_if": "d5 is coupled to d4 by a low-genus quotient, recurrence, or finite source walk",
+      "kill_if": "d5 is a fresh independent half-cover on every low-genus quotient"
+    },
+    {
+      "priority": 25,
+      "name": "A-level selected-prefix Kummer class extraction",
+      "construct": "normalized A-level cover after quotienting finite conic signs and conditioning on the selected prefix",
+      "compute": [
+        "branch divisors/classes for the A-level d3 through d10 quadratic characters",
+        "whether later d_j classes are pullbacks, translates, coboundaries, or iterates of earlier classes",
+        "genus/component count of the common A-level cover carrying these characters",
+                "whether the class sequence gives a recurrence or sourceable walk controlling multiple selected gates",
+                "treat d11 through d14 as low-count routing evidence, not the first CAS target",
+                "do not retry visible degree <=4 A-line branch support without a new divisor reason",
+                "do not retry visible A-branch S3 orbit/recurrence shortcuts"
+      ],
+      "promote_if": "one low-genus/sourceable class or recurrence controls multiple selected gates beyond independent half-loss",
+      "kill_if": "d3 through d10 are independent fresh half-covers on the normalized A-level object"
+    },
+    {
+      "priority": 30,
+      "name": "Legal tower sampler test",
+      "construct": "any quotient/source map found in priorities 10 or 20",
+      "compute": [
+        "source_draw denominator",
+        "legal rows emitted",
+        "prefix depth distribution",
+        "target/source_draw versus raw X1(16)"
+      ],
+      "promote_if": "source-normalized prefix survivors beat independent half-loss by >=1.25x with heldout validation",
+      "kill_if": "sampler pays constant/q legal-incidence denominator or reproduces raw half-loss"
+    }
+  ],
+  "do_not_run": [
+    "free random (R,L) production search",
+        "short conic sign-word bucket hunt",
+        "low-degree pair/triple coordinate scans already killed",
+        "visible A-branch S3 orbit or recurrence search",
+        "GPU production from fixed conic prefixes without source-normalized lift"
+  ],
+  "acceptance": {
+    "promote": "A low-genus/sourceable quotient, reusable Kummer class, or direct legal tower sampler that compounds beyond constant-factor filtering.",
+    "kill": "The legal pullback remains high-genus/generic after quotienting obvious symmetries and the d4/d5 classes stay independent."
+  }
+}

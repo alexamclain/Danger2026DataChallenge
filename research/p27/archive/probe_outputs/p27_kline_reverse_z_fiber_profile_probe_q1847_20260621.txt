@@ -1,0 +1,77 @@
+p27 K-line reverse-z fiber-profile probe
+source = residual E/T + compactD=-1 + label-2 candidate map
+reverse source = d2 square and d3 all-plus with x6=z^2
+branch proxy = rational K/Sroot fiber histograms
+GF(1847^1) N=1847:
+  source_rows = 972
+  candidates = 1008
+  d2_plus_candidates = 1008
+  x6_branches = 2016
+  x6_square_branches = 1440
+  x6_nonsquare = 576
+  z_rows = 2880
+  unique_K = 45
+  unique_S = 90
+  K_to_S_values = 45
+  unique_S_all_seen = 90
+  K_to_S_size_hist_keys = 1
+  S_to_mixed_K = 0
+  candidate_invalid_degenerate_A = 16
+  candidate_invalid_not_nonsplit = 920
+  ks_degenerate = 1
+  compact_not_target = 868
+  unique_K/N = 0.024363833
+  unique_S/N = 0.048727666
+GF(1847_1)_K_fiber_profile:
+  fibers = 45
+  rows: 64:45
+  rows_modal = 64
+  rows_anomalous_fibers = 0
+  unique_A: 1:45
+  unique_A_modal = 1
+  unique_A_anomalous_fibers = 0
+  unique_Ax: 4:45
+  unique_Ax_modal = 4
+  unique_Ax_anomalous_fibers = 0
+  unique_x6: 8:45
+  unique_x6_modal = 8
+  unique_x6_anomalous_fibers = 0
+  unique_z: 16:45
+  unique_z_modal = 16
+  unique_z_anomalous_fibers = 0
+  unique_r: 4:45
+  unique_r_modal = 4
+  unique_r_anomalous_fibers = 0
+  unique_zsum: 8:45
+  unique_zsum_modal = 8
+  unique_zsum_anomalous_fibers = 0
+  unique_zdiff: 8:45
+  unique_zdiff_modal = 8
+  unique_zdiff_anomalous_fibers = 0
+GF(1847_1)_S_fiber_profile:
+  fibers = 90
+  rows: 32:90
+  rows_modal = 32
+  rows_anomalous_fibers = 0
+  unique_A: 1:90
+  unique_A_modal = 1
+  unique_A_anomalous_fibers = 0
+  unique_Ax: 4:90
+  unique_Ax_modal = 4
+  unique_Ax_anomalous_fibers = 0
+  unique_x6: 8:90
+  unique_x6_modal = 8
+  unique_x6_anomalous_fibers = 0
+  unique_z: 16:90
+  unique_z_modal = 16
+  unique_z_anomalous_fibers = 0
+  unique_r: 4:90
+  unique_r_modal = 4
+  unique_r_anomalous_fibers = 0
+  unique_zsum: 8:90
+  unique_zsum_modal = 8
+  unique_zsum_anomalous_fibers = 0
+  unique_zdiff: 8:90
+  unique_zdiff_modal = 8
+  unique_zdiff_anomalous_fibers = 0
+p27_kline_reverse_z_fiber_profile_probe_rows=1/1

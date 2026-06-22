@@ -1,0 +1,10 @@
+p27 conic-pair d4 symbolic identity
+a = (R - 1)*(R + 1)/R
+r = -(L**2*R**2 + R**4 - 2*R**2 + 1)/(4*L*R**2)
+c = -(R**2 + 1)*(L*R - R**2 + 1)*(L*R + R**2 - 1)/(R*(L**2*R**2 + R**4 - 2*R**2 + 1))
+next_conic = 2*(R - 1)**2*(R + 1)**2*(R**2 + 1)/(L**2*R**2 + R**4 - 2*R**2 + 1)
+d4_selector = (R**2 + 1)*(L*R - R**2 + 1)**2*(L*R + R**2 - 1)**2/(R**2*(L**2*R**2 + R**4 - 2*R**2 + 1))
+quotient = 2*R**2*(R - 1)**2*(R + 1)**2/((L*R - R**2 + 1)**2*(L*R + R**2 - 1)**2)
+quotient_is_2_times_square = 1
+p27_chi2 = 1
+p27_conic_pair_d4_symbolic_identity_rows=1/1

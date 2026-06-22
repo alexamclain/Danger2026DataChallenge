@@ -1,0 +1,15 @@
+p27 B-line reduced fiber fixture packet
+
+Purpose:
+  Freeze the reduced d3 fiber over legal B for CAS normalization.
+  Each row records 8 distinct x-roots, 4 u=x+1/x roots, and
+  polynomial coefficients over the guard field.
+
+q=1607: rows=49 plus=28 minus=21 occ32=49 x8=49 u4=49
+q=1847: rows=63 plus=45 minus=18 occ32=63 x8=63 u4=63
+q=2087: rows=57 plus=25 minus=32 occ32=57 x8=57 u4=57
+
+JSON fixture:
+  research/p27/archive/fixtures/p27_b_line_reduced_fiber_fixture_20260622.json
+
+p27_b_line_reduced_fiber_fixture_rows=1/1

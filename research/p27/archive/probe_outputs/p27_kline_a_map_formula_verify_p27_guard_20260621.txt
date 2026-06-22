@@ -1,0 +1,104 @@
+p27 K-line A-map formula verifier
+formula: P(K,A)=0 with degree 4 in K and A
+question: does P(K,A)=0 classify d3-plus among d2-plus candidates?
+p27_train_sample_stats:
+  oriented_candidates_raw = 4000
+  sample_candidate_invalid_not_nonsplit = 2070
+  sample_compact_not_target = 1977
+  sample_no_t = 2010
+  sample_no_w = 4083
+  sample_pair_incomplete = 1035
+  sample_rows = 1000
+  sample_x_draws = 8099
+p27_train_formula_stats:
+  K_classifier_mismatch = 2064
+  S_classifier_mismatch = 2064
+  candidates = 4000
+  d2_plus = 4000
+  d3_minus = 2064
+  d3_minus_K_zero_1 = 2064
+  d3_minus_S_zero_1 = 2064
+  d3_plus = 1936
+  d3_plus_K_zero_1 = 1936
+  d3_plus_S_zero_1 = 1936
+p27_heldout_sample_stats:
+  oriented_candidates_raw = 4000
+  sample_candidate_invalid_not_nonsplit = 1934
+  sample_compact_not_target = 2117
+  sample_no_t = 2024
+  sample_no_w = 4060
+  sample_pair_incomplete = 967
+  sample_rows = 1000
+  sample_x_draws = 8126
+p27_heldout_formula_stats:
+  K_classifier_mismatch = 1896
+  S_classifier_mismatch = 1896
+  candidates = 4000
+  d2_plus = 4000
+  d3_minus = 1896
+  d3_minus_K_zero_1 = 1896
+  d3_minus_S_zero_1 = 1896
+  d3_plus = 2104
+  d3_plus_K_zero_1 = 2104
+  d3_plus_S_zero_1 = 2104
+q=607:
+q607_enum_stats:
+  compact_not_target = 293
+  no_label2_candidate = 184
+q607_formula_stats:
+  K_classifier_mismatch = 256
+  S_classifier_mismatch = 256
+  candidates = 512
+  d2_plus = 512
+  d3_minus = 256
+  d3_minus_K_zero_1 = 256
+  d3_minus_S_zero_1 = 256
+  d3_plus = 256
+  d3_plus_K_zero_1 = 256
+  d3_plus_S_zero_1 = 256
+q=1607:
+q1607_enum_stats:
+  compact_not_target = 805
+  no_label2_candidate = 408
+q1607_formula_stats:
+  K_classifier_mismatch = 336
+  S_classifier_mismatch = 336
+  candidates = 784
+  d2_plus = 784
+  d3_minus = 336
+  d3_minus_K_zero_1 = 336
+  d3_minus_S_zero_1 = 336
+  d3_plus = 448
+  d3_plus_K_zero_1 = 448
+  d3_plus_S_zero_1 = 448
+q=1847:
+q1847_enum_stats:
+  compact_not_target = 873
+  no_label2_candidate = 468
+q1847_formula_stats:
+  K_classifier_mismatch = 288
+  S_classifier_mismatch = 288
+  candidates = 1008
+  d2_plus = 1008
+  d3_minus = 288
+  d3_minus_K_zero_1 = 288
+  d3_minus_S_zero_1 = 288
+  d3_plus = 720
+  d3_plus_K_zero_1 = 720
+  d3_plus_S_zero_1 = 720
+q=2087:
+q2087_enum_stats:
+  compact_not_target = 1109
+  no_label2_candidate = 520
+q2087_formula_stats:
+  K_classifier_mismatch = 512
+  S_classifier_mismatch = 512
+  candidates = 912
+  d2_plus = 912
+  d3_minus = 512
+  d3_minus_K_zero_1 = 512
+  d3_minus_S_zero_1 = 512
+  d3_plus = 400
+  d3_plus_K_zero_1 = 400
+  d3_plus_S_zero_1 = 400
+p27_kline_a_map_formula_verify_rows=1/1

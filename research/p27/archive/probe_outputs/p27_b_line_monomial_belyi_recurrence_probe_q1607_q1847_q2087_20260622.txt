@@ -1,0 +1,139 @@
+p27 B-line monomial Belyi recurrence probe
+screen = d4(B) or d3(B) via S3-conjugated u -> u^m, u=-B/2
+degrees = 2,3,4,5,6,7,8,9,10,11,12
+q1607_setup:
+  chi_minus_one = -1
+  chi_two = 1
+  core_B = 200
+  d3_B_rows = 49
+  d4_B_rows = 28
+  legal_B = 49
+  q_mod_16 = 7
+  setup_d3_labeled_B = 49
+  setup_d4_labeled_B = 28
+  setup_enum_compact_not_target = 805
+  setup_enum_no_label2_candidate = 408
+  setup_legal_B = 49
+q1607_monomial_belyi_recurrence_stats:
+  forward_best_coverage_x1000000 = 178571
+  forward_best_covered = 5
+  forward_best_match_x1000000 = 107142
+  forward_best_matches = 3
+  maps_tested = 396
+  reverse_best_coverage_x1000000 = 102040
+  reverse_best_covered = 5
+  reverse_best_match_x1000000 = 102040
+  reverse_best_matches = 5
+q1607_forward_d4_eq_d3_monomial_best:
+  -4/(B+2) o u^6 o -B-2 polarity=-1 covered=5/28 matches=3 core_images=8 legal_images=5 undefined=0
+  -4/(B+2) o u^6 o 4/B polarity=-1 covered=5/28 matches=3 core_images=9 legal_images=5 undefined=0
+  -2B/(B+2) o u^6 o B polarity=-1 covered=5/28 matches=3 core_images=9 legal_images=5 undefined=0
+  -2B/(B+2) o u^6 o -4/(B+2) polarity=-1 covered=5/28 matches=3 core_images=8 legal_images=5 undefined=0
+  -4/(B+2) o u^6 o -B-2 polarity=1 covered=5/28 matches=2 core_images=8 legal_images=5 undefined=0
+  -4/(B+2) o u^6 o 4/B polarity=1 covered=5/28 matches=2 core_images=9 legal_images=5 undefined=0
+  -2B/(B+2) o u^6 o B polarity=1 covered=5/28 matches=2 core_images=9 legal_images=5 undefined=0
+  -2B/(B+2) o u^6 o -4/(B+2) polarity=1 covered=5/28 matches=2 core_images=8 legal_images=5 undefined=0
+  B o u^9 o 4/B polarity=-1 covered=4/28 matches=3 core_images=13 legal_images=4 undefined=0
+  -B-2 o u^2 o 4/B polarity=-1 covered=4/28 matches=3 core_images=17 legal_images=4 undefined=0
+q1607_reverse_d3_eq_d4_monomial_best:
+  -B-2 o u^9 o -4/(B+2) polarity=1 covered=5/49 matches=5 core_images=10 legal_images=6 undefined=0
+  -2(B+2)/B o u^9 o -B-2 polarity=1 covered=5/49 matches=5 core_images=10 legal_images=6 undefined=0
+  -B-2 o u^9 o -4/(B+2) polarity=-1 covered=5/49 matches=0 core_images=10 legal_images=6 undefined=0
+  -2(B+2)/B o u^9 o -B-2 polarity=-1 covered=5/49 matches=0 core_images=10 legal_images=6 undefined=0
+  B o u^3 o B polarity=1 covered=4/49 matches=3 core_images=16 legal_images=6 undefined=0
+  B o u^9 o B polarity=1 covered=4/49 matches=3 core_images=10 legal_images=5 undefined=0
+  -B-2 o u^5 o -4/(B+2) polarity=1 covered=4/49 matches=3 core_images=17 legal_images=5 undefined=0
+  4/B o u^3 o 4/B polarity=1 covered=4/49 matches=3 core_images=16 legal_images=6 undefined=0
+  4/B o u^9 o 4/B polarity=1 covered=4/49 matches=3 core_images=10 legal_images=5 undefined=0
+  -2(B+2)/B o u^5 o -B-2 polarity=1 covered=4/49 matches=3 core_images=17 legal_images=5 undefined=0
+q1847_setup:
+  chi_minus_one = -1
+  chi_two = 1
+  core_B = 230
+  d3_B_rows = 63
+  d4_B_rows = 45
+  legal_B = 63
+  q_mod_16 = 7
+  setup_d3_labeled_B = 63
+  setup_d4_labeled_B = 45
+  setup_enum_compact_not_target = 873
+  setup_enum_no_label2_candidate = 468
+  setup_legal_B = 63
+q1847_monomial_belyi_recurrence_stats:
+  forward_best_coverage_x1000000 = 222222
+  forward_best_covered = 10
+  forward_best_match_x1000000 = 111111
+  forward_best_matches = 5
+  maps_tested = 396
+  reverse_best_coverage_x1000000 = 190476
+  reverse_best_covered = 12
+  reverse_best_match_x1000000 = 95238
+  reverse_best_matches = 6
+q1847_forward_d4_eq_d3_monomial_best:
+  -4/(B+2) o u^2 o 4/B polarity=1 covered=10/45 matches=5 core_images=28 legal_images=10 undefined=0
+  -4/(B+2) o u^2 o 4/B polarity=-1 covered=10/45 matches=5 core_images=28 legal_images=10 undefined=0
+  -2B/(B+2) o u^2 o B polarity=1 covered=10/45 matches=5 core_images=28 legal_images=10 undefined=0
+  -2B/(B+2) o u^2 o B polarity=-1 covered=10/45 matches=5 core_images=28 legal_images=10 undefined=0
+  -4/(B+2) o u^4 o -2(B+2)/B polarity=-1 covered=7/45 matches=5 core_images=14 legal_images=7 undefined=0
+  -2B/(B+2) o u^4 o -2B/(B+2) polarity=-1 covered=7/45 matches=5 core_images=14 legal_images=7 undefined=0
+  -4/(B+2) o u^4 o -2(B+2)/B polarity=1 covered=7/45 matches=2 core_images=14 legal_images=7 undefined=0
+  -2B/(B+2) o u^4 o -2B/(B+2) polarity=1 covered=7/45 matches=2 core_images=14 legal_images=7 undefined=0
+  B o u^5 o B polarity=1 covered=6/45 matches=4 core_images=11 legal_images=6 undefined=0
+  -B-2 o u^2 o -2(B+2)/B polarity=1 covered=6/45 matches=4 core_images=13 legal_images=6 undefined=0
+q1847_reverse_d3_eq_d4_monomial_best:
+  -4/(B+2) o u^2 o 4/B polarity=1 covered=12/63 matches=6 core_images=37 legal_images=14 undefined=0
+  -4/(B+2) o u^2 o 4/B polarity=-1 covered=12/63 matches=6 core_images=37 legal_images=14 undefined=0
+  -2B/(B+2) o u^2 o B polarity=1 covered=12/63 matches=6 core_images=37 legal_images=14 undefined=0
+  -2B/(B+2) o u^2 o B polarity=-1 covered=12/63 matches=6 core_images=37 legal_images=14 undefined=0
+  -B-2 o u^11 o -2B/(B+2) polarity=1 covered=8/63 matches=4 core_images=16 legal_images=8 undefined=0
+  -B-2 o u^11 o -2B/(B+2) polarity=-1 covered=8/63 matches=4 core_images=16 legal_images=8 undefined=0
+  -2(B+2)/B o u^11 o -2(B+2)/B polarity=1 covered=8/63 matches=4 core_images=16 legal_images=8 undefined=0
+  -2(B+2)/B o u^11 o -2(B+2)/B polarity=-1 covered=8/63 matches=4 core_images=16 legal_images=8 undefined=0
+  -B-2 o u^10 o -4/(B+2) polarity=-1 covered=7/63 matches=4 core_images=19 legal_images=7 undefined=0
+  -4/(B+2) o u^9 o -B-2 polarity=1 covered=7/63 matches=4 core_images=19 legal_images=9 undefined=0
+q2087_setup:
+  chi_minus_one = -1
+  chi_two = 1
+  core_B = 260
+  d3_B_rows = 57
+  d4_B_rows = 25
+  legal_B = 57
+  q_mod_16 = 7
+  setup_d3_labeled_B = 57
+  setup_d4_labeled_B = 25
+  setup_enum_compact_not_target = 1109
+  setup_enum_no_label2_candidate = 520
+  setup_legal_B = 57
+q2087_monomial_belyi_recurrence_stats:
+  forward_best_coverage_x1000000 = 160000
+  forward_best_covered = 4
+  forward_best_match_x1000000 = 160000
+  forward_best_matches = 4
+  maps_tested = 396
+  reverse_best_coverage_x1000000 = 70175
+  reverse_best_covered = 4
+  reverse_best_match_x1000000 = 70175
+  reverse_best_matches = 4
+q2087_forward_d4_eq_d3_monomial_best:
+  -B-2 o u^3 o -2(B+2)/B polarity=-1 covered=4/25 matches=4 core_images=12 legal_images=4 undefined=0
+  -B-2 o u^11 o -4/(B+2) polarity=-1 covered=4/25 matches=4 core_images=9 legal_images=4 undefined=0
+  -2(B+2)/B o u^3 o -2B/(B+2) polarity=-1 covered=4/25 matches=4 core_images=12 legal_images=4 undefined=0
+  -2(B+2)/B o u^11 o -B-2 polarity=-1 covered=4/25 matches=4 core_images=9 legal_images=4 undefined=0
+  -4/(B+2) o u^11 o -B-2 polarity=-1 covered=4/25 matches=3 core_images=8 legal_images=4 undefined=0
+  -2B/(B+2) o u^11 o -4/(B+2) polarity=-1 covered=4/25 matches=3 core_images=8 legal_images=4 undefined=0
+  B o u^3 o 4/B polarity=1 covered=4/25 matches=2 core_images=7 legal_images=4 undefined=0
+  B o u^3 o 4/B polarity=-1 covered=4/25 matches=2 core_images=7 legal_images=4 undefined=0
+  -B-2 o u^4 o -4/(B+2) polarity=1 covered=4/25 matches=2 core_images=6 legal_images=4 undefined=0
+  -B-2 o u^4 o -4/(B+2) polarity=-1 covered=4/25 matches=2 core_images=6 legal_images=4 undefined=0
+q2087_reverse_d3_eq_d4_monomial_best:
+  B o u^9 o B polarity=1 covered=4/57 matches=4 core_images=12 legal_images=4 undefined=0
+  4/B o u^9 o 4/B polarity=1 covered=4/57 matches=4 core_images=12 legal_images=4 undefined=0
+  -B-2 o u^6 o B polarity=1 covered=4/57 matches=2 core_images=23 legal_images=7 undefined=0
+  -B-2 o u^6 o B polarity=-1 covered=4/57 matches=2 core_images=23 legal_images=7 undefined=0
+  -B-2 o u^12 o B polarity=1 covered=4/57 matches=2 core_images=20 legal_images=5 undefined=0
+  -B-2 o u^12 o B polarity=-1 covered=4/57 matches=2 core_images=20 legal_images=5 undefined=0
+  -2(B+2)/B o u^6 o 4/B polarity=1 covered=4/57 matches=2 core_images=23 legal_images=7 undefined=0
+  -2(B+2)/B o u^6 o 4/B polarity=-1 covered=4/57 matches=2 core_images=23 legal_images=7 undefined=0
+  -2(B+2)/B o u^12 o 4/B polarity=1 covered=4/57 matches=2 core_images=20 legal_images=5 undefined=0
+  -2(B+2)/B o u^12 o 4/B polarity=-1 covered=4/57 matches=2 core_images=20 legal_images=5 undefined=0
+p27_b_line_monomial_belyi_recurrence_probe_rows=1/1

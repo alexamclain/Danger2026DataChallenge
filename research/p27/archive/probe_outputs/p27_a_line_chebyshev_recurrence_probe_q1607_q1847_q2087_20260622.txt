@@ -1,0 +1,298 @@
+p27 A-line Chebyshev recurrence probe
+screen = d_j(A) via S3-conjugated Dickson maps D_m(A)=2*T_m(A/2)
+degrees = 2,3,4,5,6,7,8,9,10,11,12
+depth = 8
+min_rows = 8
+q1607_setup:
+  base_enum_compact_not_target = 805
+  base_enum_no_label2_candidate = 408
+  base_unique_A = 49
+  base_unique_ax = 196
+  chi_minus_one = -1
+  chi_two = 1
+  gate_base_A = 49
+  gate_base_ax = 196
+  gate_d10_minus = 0
+  gate_d10_mixed = 0
+  gate_d10_plus = 0
+  gate_d10_rows = 0
+  gate_d3_minus = 21
+  gate_d3_mixed = 0
+  gate_d3_plus = 28
+  gate_d3_rows = 49
+  gate_d4_minus = 9
+  gate_d4_mixed = 0
+  gate_d4_plus = 19
+  gate_d4_rows = 28
+  gate_d5_minus = 0
+  gate_d5_mixed = 0
+  gate_d5_plus = 19
+  gate_d5_rows = 19
+  gate_d6_minus = 19
+  gate_d6_mixed = 0
+  gate_d6_plus = 0
+  gate_d6_rows = 19
+  gate_d7_minus = 0
+  gate_d7_mixed = 0
+  gate_d7_plus = 0
+  gate_d7_rows = 0
+  gate_d8_minus = 0
+  gate_d8_mixed = 0
+  gate_d8_plus = 0
+  gate_d8_rows = 0
+  gate_d9_minus = 0
+  gate_d9_mixed = 0
+  gate_d9_plus = 0
+  gate_d9_rows = 0
+  q_mod_16 = 7
+q1607_maps_kept: d3,d4,d5,d6
+q1607_chebyshev_recurrence_stats:
+  d3_to_d4_best_coverage_x1000000 = 357142
+  d3_to_d4_best_covered = 10
+  d3_to_d4_best_match_x1000000 = 321428
+  d3_to_d4_best_matches = 9
+  d3_to_d4_maps_tested = 396
+  d4_to_d5_best_coverage_x1000000 = 473684
+  d4_to_d5_best_covered = 9
+  d4_to_d5_best_match_x1000000 = 315789
+  d4_to_d5_best_matches = 6
+  d4_to_d5_maps_tested = 396
+  d5_to_d6_best_coverage_x1000000 = 315789
+  d5_to_d6_best_covered = 6
+  d5_to_d6_best_match_x1000000 = 315789
+  d5_to_d6_best_matches = 6
+  d5_to_d6_maps_tested = 396
+q1607_d3_to_d4_best:
+  id o D3 o id polarity=1 covered=10/28 matches=9 undefined=0
+  id o D5 o id polarity=1 covered=10/28 matches=7 undefined=0
+  id o D6 o id polarity=1 covered=10/28 matches=6 undefined=0
+  id o D6 o id polarity=-1 covered=10/28 matches=4 undefined=0
+  id o D5 o id polarity=-1 covered=10/28 matches=3 undefined=0
+  id o D3 o id polarity=-1 covered=10/28 matches=1 undefined=0
+  id o D2 o id polarity=1 covered=8/28 matches=7 undefined=0
+  id o D4 o swap_pm2 polarity=-1 covered=8/28 matches=7 undefined=0
+  id o D12 o id polarity=1 covered=8/28 matches=5 undefined=0
+  zminus1_over_z o D8 o inv_minus2 polarity=-1 covered=8/28 matches=5 undefined=0
+q1607_d4_to_d5_best:
+  id o D3 o id polarity=1 covered=9/19 matches=6 undefined=0
+  id o D3 o id polarity=-1 covered=9/19 matches=3 undefined=0
+  id o D6 o id polarity=1 covered=6/19 matches=5 undefined=0
+  id o D5 o id polarity=1 covered=6/19 matches=4 undefined=0
+  id o D5 o id polarity=-1 covered=6/19 matches=2 undefined=0
+  id o D6 o id polarity=-1 covered=6/19 matches=1 undefined=0
+  id o D11 o id polarity=1 covered=5/19 matches=3 undefined=0
+  id o D11 o id polarity=-1 covered=5/19 matches=2 undefined=0
+  id o D2 o id polarity=1 covered=4/19 matches=4 undefined=0
+  id o D12 o id polarity=1 covered=4/19 matches=3 undefined=0
+q1607_d5_to_d6_best:
+  id o D3 o id polarity=-1 covered=6/19 matches=6 undefined=0
+  id o D3 o id polarity=1 covered=6/19 matches=0 undefined=0
+  id o D6 o id polarity=-1 covered=5/19 matches=5 undefined=0
+  id o D6 o id polarity=1 covered=5/19 matches=0 undefined=0
+  id o D2 o id polarity=-1 covered=4/19 matches=4 undefined=0
+  id o D5 o id polarity=-1 covered=4/19 matches=4 undefined=0
+  id o D2 o id polarity=1 covered=4/19 matches=0 undefined=0
+  id o D5 o id polarity=1 covered=4/19 matches=0 undefined=0
+  id o D8 o id polarity=-1 covered=3/19 matches=3 undefined=0
+  id o D11 o id polarity=-1 covered=3/19 matches=3 undefined=0
+q1847_setup:
+  base_enum_compact_not_target = 873
+  base_enum_no_label2_candidate = 468
+  base_unique_A = 63
+  base_unique_ax = 252
+  chi_minus_one = -1
+  chi_two = 1
+  gate_base_A = 63
+  gate_base_ax = 252
+  gate_d10_minus = 0
+  gate_d10_mixed = 0
+  gate_d10_plus = 0
+  gate_d10_rows = 0
+  gate_d3_minus = 18
+  gate_d3_mixed = 0
+  gate_d3_plus = 45
+  gate_d3_rows = 63
+  gate_d4_minus = 26
+  gate_d4_mixed = 0
+  gate_d4_plus = 19
+  gate_d4_rows = 45
+  gate_d5_minus = 19
+  gate_d5_mixed = 0
+  gate_d5_plus = 0
+  gate_d5_rows = 19
+  gate_d6_minus = 0
+  gate_d6_mixed = 0
+  gate_d6_plus = 0
+  gate_d6_rows = 0
+  gate_d7_minus = 0
+  gate_d7_mixed = 0
+  gate_d7_plus = 0
+  gate_d7_rows = 0
+  gate_d8_minus = 0
+  gate_d8_mixed = 0
+  gate_d8_plus = 0
+  gate_d8_rows = 0
+  gate_d9_minus = 0
+  gate_d9_mixed = 0
+  gate_d9_plus = 0
+  gate_d9_rows = 0
+  q_mod_16 = 7
+q1847_maps_kept: d3,d4,d5
+q1847_chebyshev_recurrence_stats:
+  d3_to_d4_best_coverage_x1000000 = 377777
+  d3_to_d4_best_covered = 17
+  d3_to_d4_best_match_x1000000 = 244444
+  d3_to_d4_best_matches = 11
+  d3_to_d4_maps_tested = 396
+  d4_to_d5_best_coverage_x1000000 = 263157
+  d4_to_d5_best_covered = 5
+  d4_to_d5_best_match_x1000000 = 263157
+  d4_to_d5_best_matches = 5
+  d4_to_d5_maps_tested = 396
+q1847_d3_to_d4_best:
+  id o D12 o id polarity=-1 covered=17/45 matches=11 undefined=0
+  id o D12 o id polarity=1 covered=17/45 matches=6 undefined=0
+  id o D5 o id polarity=1 covered=15/45 matches=9 undefined=0
+  id o D5 o id polarity=-1 covered=15/45 matches=6 undefined=0
+  id o D4 o id polarity=-1 covered=13/45 matches=8 undefined=0
+  id o D6 o id polarity=1 covered=13/45 matches=8 undefined=0
+  id o D4 o id polarity=1 covered=13/45 matches=5 undefined=0
+  id o D6 o id polarity=-1 covered=13/45 matches=5 undefined=0
+  zminus1_over_z o D12 o inv_plus2 polarity=1 covered=12/45 matches=7 undefined=0
+  zminus1_over_z o D12 o z_over_zminus1 polarity=1 covered=12/45 matches=7 undefined=0
+q1847_d4_to_d5_best:
+  zminus1_over_z o D12 o inv_plus2 polarity=-1 covered=5/19 matches=5 undefined=0
+  zminus1_over_z o D12 o z_over_zminus1 polarity=-1 covered=5/19 matches=5 undefined=0
+  zminus1_over_z o D10 o inv_plus2 polarity=-1 covered=5/19 matches=3 undefined=0
+  zminus1_over_z o D10 o z_over_zminus1 polarity=-1 covered=5/19 matches=3 undefined=0
+  zminus1_over_z o D10 o inv_plus2 polarity=1 covered=5/19 matches=2 undefined=0
+  zminus1_over_z o D10 o z_over_zminus1 polarity=1 covered=5/19 matches=2 undefined=0
+  zminus1_over_z o D12 o inv_plus2 polarity=1 covered=5/19 matches=0 undefined=0
+  zminus1_over_z o D12 o z_over_zminus1 polarity=1 covered=5/19 matches=0 undefined=0
+  id o D4 o swap_pm2 polarity=-1 covered=4/19 matches=4 undefined=0
+  id o D7 o id polarity=1 covered=4/19 matches=4 undefined=0
+q2087_setup:
+  base_enum_compact_not_target = 1109
+  base_enum_no_label2_candidate = 520
+  base_unique_A = 57
+  base_unique_ax = 228
+  chi_minus_one = -1
+  chi_two = 1
+  gate_base_A = 57
+  gate_base_ax = 228
+  gate_d10_minus = 0
+  gate_d10_mixed = 0
+  gate_d10_plus = 0
+  gate_d10_rows = 0
+  gate_d3_minus = 32
+  gate_d3_mixed = 0
+  gate_d3_plus = 25
+  gate_d3_rows = 57
+  gate_d4_minus = 7
+  gate_d4_mixed = 0
+  gate_d4_plus = 18
+  gate_d4_rows = 25
+  gate_d5_minus = 0
+  gate_d5_mixed = 0
+  gate_d5_plus = 18
+  gate_d5_rows = 18
+  gate_d6_minus = 0
+  gate_d6_mixed = 0
+  gate_d6_plus = 18
+  gate_d6_rows = 18
+  gate_d7_minus = 0
+  gate_d7_mixed = 0
+  gate_d7_plus = 18
+  gate_d7_rows = 18
+  gate_d8_minus = 18
+  gate_d8_mixed = 0
+  gate_d8_plus = 0
+  gate_d8_rows = 18
+  gate_d9_minus = 0
+  gate_d9_mixed = 0
+  gate_d9_plus = 0
+  gate_d9_rows = 0
+  q_mod_16 = 7
+q2087_maps_kept: d3,d4,d5,d6,d7,d8
+q2087_chebyshev_recurrence_stats:
+  d3_to_d4_best_coverage_x1000000 = 360000
+  d3_to_d4_best_covered = 9
+  d3_to_d4_best_match_x1000000 = 240000
+  d3_to_d4_best_matches = 6
+  d3_to_d4_maps_tested = 396
+  d4_to_d5_best_coverage_x1000000 = 333333
+  d4_to_d5_best_covered = 6
+  d4_to_d5_best_match_x1000000 = 333333
+  d4_to_d5_best_matches = 6
+  d4_to_d5_maps_tested = 396
+  d5_to_d6_best_coverage_x1000000 = 333333
+  d5_to_d6_best_covered = 6
+  d5_to_d6_best_match_x1000000 = 333333
+  d5_to_d6_best_matches = 6
+  d5_to_d6_maps_tested = 396
+  d6_to_d7_best_coverage_x1000000 = 333333
+  d6_to_d7_best_covered = 6
+  d6_to_d7_best_match_x1000000 = 333333
+  d6_to_d7_best_matches = 6
+  d6_to_d7_maps_tested = 396
+  d7_to_d8_best_coverage_x1000000 = 333333
+  d7_to_d8_best_covered = 6
+  d7_to_d8_best_match_x1000000 = 333333
+  d7_to_d8_best_matches = 6
+  d7_to_d8_maps_tested = 396
+q2087_d3_to_d4_best:
+  id o D9 o id polarity=1 covered=9/25 matches=6 undefined=0
+  id o D9 o id polarity=-1 covered=9/25 matches=3 undefined=0
+  id o D4 o id polarity=1 covered=8/25 matches=5 undefined=0
+  id o D4 o id polarity=-1 covered=8/25 matches=3 undefined=0
+  inv_minus2 o D10 o inv_plus2 polarity=1 covered=7/25 matches=5 undefined=0
+  inv_minus2 o D10 o z_over_zminus1 polarity=1 covered=7/25 matches=5 undefined=0
+  z_over_zminus1 o D11 o z_over_zminus1 polarity=-1 covered=7/25 matches=5 undefined=0
+  zminus1_over_z o D11 o inv_plus2 polarity=-1 covered=7/25 matches=5 undefined=0
+  id o D11 o id polarity=-1 covered=7/25 matches=4 undefined=0
+  id o D11 o id polarity=1 covered=7/25 matches=3 undefined=0
+q2087_d4_to_d5_best:
+  id o D9 o id polarity=1 covered=6/18 matches=6 undefined=0
+  id o D9 o id polarity=-1 covered=6/18 matches=0 undefined=0
+  inv_minus2 o D10 o inv_plus2 polarity=1 covered=5/18 matches=3 undefined=0
+  inv_minus2 o D10 o z_over_zminus1 polarity=1 covered=5/18 matches=3 undefined=0
+  inv_minus2 o D10 o inv_plus2 polarity=-1 covered=5/18 matches=2 undefined=0
+  inv_minus2 o D10 o z_over_zminus1 polarity=-1 covered=5/18 matches=2 undefined=0
+  inv_minus2 o D5 o inv_minus2 polarity=-1 covered=3/18 matches=2 undefined=0
+  inv_plus2 o D5 o zminus1_over_z polarity=-1 covered=3/18 matches=2 undefined=0
+  zminus1_over_z o D6 o inv_minus2 polarity=1 covered=3/18 matches=2 undefined=0
+  zminus1_over_z o D6 o zminus1_over_z polarity=1 covered=3/18 matches=2 undefined=0
+q2087_d5_to_d6_best:
+  id o D9 o id polarity=1 covered=6/18 matches=6 undefined=0
+  id o D9 o id polarity=-1 covered=6/18 matches=0 undefined=0
+  inv_minus2 o D10 o inv_plus2 polarity=1 covered=3/18 matches=3 undefined=0
+  inv_minus2 o D10 o z_over_zminus1 polarity=1 covered=3/18 matches=3 undefined=0
+  inv_minus2 o D10 o inv_plus2 polarity=-1 covered=3/18 matches=0 undefined=0
+  inv_minus2 o D10 o z_over_zminus1 polarity=-1 covered=3/18 matches=0 undefined=0
+  id o D8 o id polarity=1 covered=2/18 matches=2 undefined=0
+  inv_minus2 o D3 o inv_minus2 polarity=1 covered=2/18 matches=2 undefined=0
+  inv_minus2 o D9 o inv_minus2 polarity=1 covered=2/18 matches=2 undefined=0
+  inv_plus2 o D3 o zminus1_over_z polarity=1 covered=2/18 matches=2 undefined=0
+q2087_d6_to_d7_best:
+  id o D9 o id polarity=1 covered=6/18 matches=6 undefined=0
+  id o D9 o id polarity=-1 covered=6/18 matches=0 undefined=0
+  inv_minus2 o D10 o inv_plus2 polarity=1 covered=3/18 matches=3 undefined=0
+  inv_minus2 o D10 o z_over_zminus1 polarity=1 covered=3/18 matches=3 undefined=0
+  inv_minus2 o D10 o inv_plus2 polarity=-1 covered=3/18 matches=0 undefined=0
+  inv_minus2 o D10 o z_over_zminus1 polarity=-1 covered=3/18 matches=0 undefined=0
+  id o D8 o id polarity=1 covered=2/18 matches=2 undefined=0
+  inv_minus2 o D3 o inv_minus2 polarity=1 covered=2/18 matches=2 undefined=0
+  inv_minus2 o D9 o inv_minus2 polarity=1 covered=2/18 matches=2 undefined=0
+  inv_plus2 o D3 o zminus1_over_z polarity=1 covered=2/18 matches=2 undefined=0
+q2087_d7_to_d8_best:
+  id o D9 o id polarity=-1 covered=6/18 matches=6 undefined=0
+  id o D9 o id polarity=1 covered=6/18 matches=0 undefined=0
+  inv_minus2 o D10 o inv_plus2 polarity=-1 covered=3/18 matches=3 undefined=0
+  inv_minus2 o D10 o z_over_zminus1 polarity=-1 covered=3/18 matches=3 undefined=0
+  inv_minus2 o D10 o inv_plus2 polarity=1 covered=3/18 matches=0 undefined=0
+  inv_minus2 o D10 o z_over_zminus1 polarity=1 covered=3/18 matches=0 undefined=0
+  id o D8 o id polarity=-1 covered=2/18 matches=2 undefined=0
+  inv_minus2 o D3 o inv_minus2 polarity=-1 covered=2/18 matches=2 undefined=0
+  inv_minus2 o D9 o inv_minus2 polarity=-1 covered=2/18 matches=2 undefined=0
+  inv_plus2 o D3 o zminus1_over_z polarity=-1 covered=2/18 matches=2 undefined=0
+p27_a_line_chebyshev_recurrence_probe_rows=1/1

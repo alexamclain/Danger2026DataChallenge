@@ -1,0 +1,134 @@
+p27 conic-pair two-step Kummer probe
+selector rows: d4-plus first lift plus next selector S1
+root rows: additionally S1 square with Z1^2=S1
+q607 base:
+  d3_plus_Ax = 64
+  d4_minus_first_lifts = 2048
+  first_lifts = 2048
+  legal_Ax = 128
+  root_rows = 0
+  selector_rows = 0
+q607 selector A_S1:
+  transform_rows = 0
+  transform_unique = 0
+  transform_degenerate = 0
+  deg2: monomials=0 rank=0 nullity=0 forced=0 extra=0
+  deg4: monomials=0 rank=0 nullity=0 forced=0 extra=0
+q607 selector Z0_S1:
+  transform_rows = 0
+  transform_unique = 0
+  transform_degenerate = 0
+  deg2: monomials=0 rank=0 nullity=0 forced=0 extra=0
+  deg4: monomials=0 rank=0 nullity=0 forced=0 extra=0
+q607 selector Z0_lpa_S1:
+  transform_rows = 0
+  transform_unique = 0
+  transform_degenerate = 0
+  deg2: monomials=0 rank=0 nullity=0 forced=0 extra=0
+  deg4: monomials=0 rank=0 nullity=0 forced=0 extra=0
+q607 selector Z0_lma_S1:
+  transform_rows = 0
+  transform_unique = 0
+  transform_degenerate = 0
+  deg2: monomials=0 rank=0 nullity=0 forced=0 extra=0
+  deg4: monomials=0 rank=0 nullity=0 forced=0 extra=0
+q607 selector Z0_cR_S1:
+  transform_rows = 0
+  transform_unique = 0
+  transform_degenerate = 0
+  deg2: monomials=0 rank=0 nullity=0 forced=0 extra=0
+  deg4: monomials=0 rank=0 nullity=0 forced=0 extra=0
+q607 selector R0_S1:
+  transform_rows = 0
+  transform_unique = 0
+  transform_degenerate = 0
+  deg2: monomials=0 rank=0 nullity=0 forced=0 extra=0
+  deg4: monomials=0 rank=0 nullity=0 forced=0 extra=0
+q607 selector R1_S1:
+  transform_rows = 0
+  transform_unique = 0
+  transform_degenerate = 0
+  deg2: monomials=0 rank=0 nullity=0 forced=0 extra=0
+  deg4: monomials=0 rank=0 nullity=0 forced=0 extra=0
+q607 selector a0_S1:
+  transform_rows = 0
+  transform_unique = 0
+  transform_degenerate = 0
+  deg2: monomials=0 rank=0 nullity=0 forced=0 extra=0
+  deg4: monomials=0 rank=0 nullity=0 forced=0 extra=0
+q607 selector a1_S1:
+  transform_rows = 0
+  transform_unique = 0
+  transform_degenerate = 0
+  deg2: monomials=0 rank=0 nullity=0 forced=0 extra=0
+  deg4: monomials=0 rank=0 nullity=0 forced=0 extra=0
+q607 selector L0_S1:
+  transform_rows = 0
+  transform_unique = 0
+  transform_degenerate = 0
+  deg2: monomials=0 rank=0 nullity=0 forced=0 extra=0
+  deg4: monomials=0 rank=0 nullity=0 forced=0 extra=0
+q607 selector L1_S1:
+  transform_rows = 0
+  transform_unique = 0
+  transform_degenerate = 0
+  deg2: monomials=0 rank=0 nullity=0 forced=0 extra=0
+  deg4: monomials=0 rank=0 nullity=0 forced=0 extra=0
+q607 selector w0_S1:
+  transform_rows = 0
+  transform_unique = 0
+  transform_degenerate = 0
+  deg2: monomials=0 rank=0 nullity=0 forced=0 extra=0
+  deg4: monomials=0 rank=0 nullity=0 forced=0 extra=0
+q607 selector w1_S1:
+  transform_rows = 0
+  transform_unique = 0
+  transform_degenerate = 0
+  deg2: monomials=0 rank=0 nullity=0 forced=0 extra=0
+  deg4: monomials=0 rank=0 nullity=0 forced=0 extra=0
+q607 root A_Z1:
+  transform_rows = 0
+  transform_unique = 0
+  transform_degenerate = 0
+  deg2: monomials=0 rank=0 nullity=0 forced=0 extra=0
+q607 root Z0_Z1:
+  transform_rows = 0
+  transform_unique = 0
+  transform_degenerate = 0
+  deg2: monomials=0 rank=0 nullity=0 forced=0 extra=0
+q607 root Z0_lpa_Z1_lpa:
+  transform_rows = 0
+  transform_unique = 0
+  transform_degenerate = 0
+  deg2: monomials=0 rank=0 nullity=0 forced=0 extra=0
+q607 root Z0_lma_Z1_lma:
+  transform_rows = 0
+  transform_unique = 0
+  transform_degenerate = 0
+  deg2: monomials=0 rank=0 nullity=0 forced=0 extra=0
+q607 root Z0_cR_Z1_cR:
+  transform_rows = 0
+  transform_unique = 0
+  transform_degenerate = 0
+  deg2: monomials=0 rank=0 nullity=0 forced=0 extra=0
+q607 root A_Zratio:
+  transform_rows = 0
+  transform_unique = 0
+  transform_degenerate = 0
+  deg2: monomials=0 rank=0 nullity=0 forced=0 extra=0
+q607 root A_Zprod:
+  transform_rows = 0
+  transform_unique = 0
+  transform_degenerate = 0
+  deg2: monomials=0 rank=0 nullity=0 forced=0 extra=0
+q607 root R0_Z1:
+  transform_rows = 0
+  transform_unique = 0
+  transform_degenerate = 0
+  deg2: monomials=0 rank=0 nullity=0 forced=0 extra=0
+q607 root R1_Z0:
+  transform_rows = 0
+  transform_unique = 0
+  transform_degenerate = 0
+  deg2: monomials=0 rank=0 nullity=0 forced=0 extra=0
+p27_conic_pair_two_step_kummer_probe_rows=1/1

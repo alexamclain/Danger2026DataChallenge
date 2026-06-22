@@ -1,0 +1,78 @@
+p27 B-line Kummer extraction packet
+
+Purpose:
+  Extract the actual d3(B) Kummer/divisor class on P1_B.
+  Use this to decide whether the B-line gives a source, recurrence,
+  or multi-gate coupling that can beat sqrt(p).
+
+B-line quotient formulas:
+  A_num: -2*(X**8 - 4*X**6 - 26*X**4 - 4*X**2 + 1)
+  A_den: (X - 1)**4*(X + 1)**4
+  B_num: 8*X**2
+  B_den: (X - 1)**2*(X + 1)**2
+  B_relation: B*X**4 - 2*B*X**2 + B - 8*X**2
+  A_plus_2_minus_B2: 0
+  B_branch_resultant: 16384*B**3*(B + 2)**2
+  K_num: (X**2 - 2*X - 1)**2*(X**2 + 2*X - 1)**2
+  K_den: 4*X*(X - 1)*(X + 1)*(X**2 + 1)**2
+  L_branch_Bplus: (B - 2)**4/(8*B*(B + 2)**2)
+  L_branch_Bminus: -(B + 2)**4/(8*B*(B - 2)**2)
+  L_relation_over_B: -(B**4 - 8*B**3*L - 8*B**3 - 32*B**2*L + 24*B**2 - 32*B*L - 32*B + 16)*(B**4 + 8*B**3*L + 8*B**3 - 32*B**2*L + 24*B**2 + 32*B*L + 32*B + 16)
+
+Known finite-field facts to preserve:
+  - legal B values stay in the core B bucket in q1607/q1847/q2087
+  - d3 descends to B with no mixed groups in p27 train/heldout
+  - d4 after d3=+1 also descends to B in tested samples
+  - no rational-linear support of weight <=4 for d3(B)
+  - no one irreducible quadratic times <=2 linears for d3(B)
+  - no product of two irreducible quadratics for d3(B)
+  - no product of two irreducible quadratics for the legal B-domain
+  - no visible Belyi S3 orbit sampler on B
+
+Source equations for the d3 all-plus cover over P1_B:
+  variables: X, W, T, beta, R, z, Y, eta, Bline
+  beta is the first-half branch root; Bline is the quotient coordinate.
+  eta_branch: (eta - 1)*(eta + 1) = 0
+  E: W**2 - X**3 + X = 0
+  T_cover: T**2 - X**5 - 2*X**4 - 2*X**2 + X = 0
+  compactD_R: X*R^2 - criterion_num = 0
+  Bline_relation: Bline*(X^2 - 1)^2 - 8*X^2 = 0
+  first_half_beta: beta^2*U_den^2 - (U_num^2 - 4*U_den^2) = 0
+  reverse_x: 4*z^2*H_num*(U_num + beta*U_den)
+             - 2*U_den*A_den*(z^4 - 1)^2 = 0
+  reverse_Y: Y^2*A_den - H_num = 0
+
+Auxiliary rational functions:
+  A_num: -2*(X**8 - 4*X**6 - 26*X**4 - 4*X**2 + 1)
+  A_den: (X - 1)**4*(X + 1)**4
+  m0: (X**2 + 1)*(X**2 + 2*X - 1)*(W*X + W + 2*X**2)
+  mt: (X + 1)*(2*W*X + X**3 + X**2 - X - 1)
+  criterion_num: W*(X**2 + 1)*(2*T*W*X**2 + 2*T*W*X + T*X**4 + 2*T*X**3 - 2*T*X - T + W*X**5 + 3*W*X**4 + 2*W*X**3 + 2*W*X**2 + W*X - W + 2*X**6 + 4*X**5 + 4*X**3 - 2*X**2)
+  U_num: 2*(4*T*W*X*eta + T*X**3 + T*X**2 - T*X - T + 2*X**5 + 2*X**4 - 2*X**3 - 2*X**2)
+  U_den: (T - 2*X**2)*(X - 1)*(X + 1)**2
+  x5_num: 8*T*W*X*eta + T*X**3*beta + 2*T*X**3 + T*X**2*beta + 2*T*X**2 - T*X*beta - 2*T*X - T*beta - 2*T - 2*X**5*beta + 4*X**5 - 2*X**4*beta + 4*X**4 + 2*X**3*beta - 4*X**3 + 2*X**2*beta - 4*X**2
+  x5_den: 2*(T - 2*X**2)*(X - 1)*(X + 1)**2
+  H_num: X**8*z**4 - 2*X**8*z**2 + X**8 - 4*X**6*z**4 + 8*X**6*z**2 - 4*X**6 + 6*X**4*z**4 + 52*X**4*z**2 + 6*X**4 - 4*X**2*z**4 + 8*X**2*z**2 - 4*X**2 + z**4 - 2*z**2 + 1
+
+Magma/Sage extraction task:
+  1. Work first over q=1607,1847,2087.
+  2. Build the legal d2 source using E, T_cover, compactD_R,
+     eta_branch, first_half_beta, and Bline_relation.
+  3. Add reverse_x and reverse_Y to form the d3 all-plus cover.
+  4. Normalize over P1_Bline.
+  5. Compute branch divisor degree, support field degrees, genus,
+     and any involutions/quotients visible over Bline.
+  6. If d3 is low-genus/sourceable, repeat for d4/d5 and compare
+     Kummer classes f3(B), f4(B), f5(B).
+
+Promotion bar:
+  - stable branch class across q1607/q1847/q2087
+  - genus <= 1, sourceable walk, or explicit recurrence/coupling
+  - target/source_draw improves without paying fresh half-losses
+
+Kill condition:
+  - high/generic branch degree
+  - only previously killed split low-degree supports appear
+  - f4/f5 are unrelated fresh Kummer classes
+
+p27_b_line_kummer_extraction_packet_rows=1/1

@@ -1,0 +1,1394 @@
+{
+  "families": [
+    "d3_on_K",
+    "d4_on_K_after_d3"
+  ],
+  "fields": [
+    1471,
+    1607,
+    1847
+  ],
+  "name": "p27_kline_quartic_targets",
+  "purpose": "Exact finite-field K rows for monic quartic support screen",
+  "quartic_family": "chi(K^4+aK^3+bK^2+cK+d), global polarity allowed",
+  "sentinel": "p27_kline_quartic_target_packet_rows=1/1",
+  "targets": [
+    {
+      "coordinate": "K",
+      "family": "d3_on_K",
+      "field": 1471,
+      "minus_count": 22,
+      "plus_count": 28,
+      "row_count": 50,
+      "rows": [
+        {
+          "K": 1,
+          "sign": -1
+        },
+        {
+          "K": 2,
+          "sign": -1
+        },
+        {
+          "K": 4,
+          "sign": -1
+        },
+        {
+          "K": 9,
+          "sign": 1
+        },
+        {
+          "K": 74,
+          "sign": 1
+        },
+        {
+          "K": 91,
+          "sign": 1
+        },
+        {
+          "K": 97,
+          "sign": 1
+        },
+        {
+          "K": 125,
+          "sign": -1
+        },
+        {
+          "K": 151,
+          "sign": -1
+        },
+        {
+          "K": 156,
+          "sign": 1
+        },
+        {
+          "K": 199,
+          "sign": 1
+        },
+        {
+          "K": 207,
+          "sign": 1
+        },
+        {
+          "K": 272,
+          "sign": 1
+        },
+        {
+          "K": 303,
+          "sign": -1
+        },
+        {
+          "K": 306,
+          "sign": -1
+        },
+        {
+          "K": 328,
+          "sign": 1
+        },
+        {
+          "K": 360,
+          "sign": -1
+        },
+        {
+          "K": 364,
+          "sign": 1
+        },
+        {
+          "K": 379,
+          "sign": -1
+        },
+        {
+          "K": 388,
+          "sign": 1
+        },
+        {
+          "K": 394,
+          "sign": 1
+        },
+        {
+          "K": 452,
+          "sign": -1
+        },
+        {
+          "K": 457,
+          "sign": 1
+        },
+        {
+          "K": 458,
+          "sign": -1
+        },
+        {
+          "K": 474,
+          "sign": -1
+        },
+        {
+          "K": 577,
+          "sign": -1
+        },
+        {
+          "K": 590,
+          "sign": 1
+        },
+        {
+          "K": 592,
+          "sign": 1
+        },
+        {
+          "K": 684,
+          "sign": 1
+        },
+        {
+          "K": 714,
+          "sign": 1
+        },
+        {
+          "K": 738,
+          "sign": 1
+        },
+        {
+          "K": 746,
+          "sign": -1
+        },
+        {
+          "K": 754,
+          "sign": 1
+        },
+        {
+          "K": 782,
+          "sign": 1
+        },
+        {
+          "K": 886,
+          "sign": -1
+        },
+        {
+          "K": 911,
+          "sign": -1
+        },
+        {
+          "K": 935,
+          "sign": -1
+        },
+        {
+          "K": 953,
+          "sign": -1
+        },
+        {
+          "K": 977,
+          "sign": -1
+        },
+        {
+          "K": 1059,
+          "sign": 1
+        },
+        {
+          "K": 1060,
+          "sign": 1
+        },
+        {
+          "K": 1153,
+          "sign": 1
+        },
+        {
+          "K": 1204,
+          "sign": -1
+        },
+        {
+          "K": 1207,
+          "sign": 1
+        },
+        {
+          "K": 1208,
+          "sign": -1
+        },
+        {
+          "K": 1247,
+          "sign": 1
+        },
+        {
+          "K": 1290,
+          "sign": -1
+        },
+        {
+          "K": 1308,
+          "sign": 1
+        },
+        {
+          "K": 1336,
+          "sign": 1
+        },
+        {
+          "K": 1392,
+          "sign": 1
+        }
+      ],
+      "sign_convention": "+1 means target/square side; -1 means complement",
+      "source_stats": {
+        "d3_eprime_input_rows": 200,
+        "d3_eprime_minus": 44,
+        "d3_eprime_plus": 56,
+        "d3_eprime_quotient_rows": 100,
+        "d3_k_input_rows": 100,
+        "d3_k_k_rows": 50,
+        "d3_k_minus": 22,
+        "d3_k_plus": 28,
+        "d3_s_input_rows": 100,
+        "d3_s_minus": 44,
+        "d3_s_paired_s_neg_s": 100,
+        "d3_s_plus": 56,
+        "d3_s_s_rows": 100,
+        "d4_eprime_input_rows": 112,
+        "d4_eprime_minus": 28,
+        "d4_eprime_plus": 28,
+        "d4_eprime_quotient_rows": 56,
+        "d4_k_input_rows": 56,
+        "d4_k_k_rows": 28,
+        "d4_k_minus": 14,
+        "d4_k_plus": 14,
+        "d4_s_input_rows": 56,
+        "d4_s_minus": 28,
+        "d4_s_paired_s_neg_s": 56,
+        "d4_s_plus": 28,
+        "d4_s_s_rows": 56,
+        "enum_compact_not_target": 837,
+        "enum_no_label2_candidate": 424,
+        "quotient_d3_minus_E_points": 88,
+        "quotient_d3_missing_on_E_orbit": 0,
+        "quotient_d3_not_descended_to_E": 0,
+        "quotient_d3_plus_E_points": 112,
+        "quotient_d3_quotient_rows": 200,
+        "quotient_d4_minus_E_points_after_d3": 56,
+        "quotient_d4_missing_on_E_orbit": 0,
+        "quotient_d4_not_descended_to_E": 0,
+        "quotient_d4_plus_E_points_after_d3": 56,
+        "quotient_d4_quotient_rows_after_d3": 112,
+        "quotient_orbit_size_4": 200,
+        "quotient_oriented_candidates": 800,
+        "quotient_quotient_E_points": 200
+      }
+    },
+    {
+      "coordinate": "K",
+      "family": "d4_on_K_after_d3",
+      "field": 1471,
+      "minus_count": 14,
+      "plus_count": 14,
+      "row_count": 28,
+      "rows": [
+        {
+          "K": 9,
+          "sign": -1
+        },
+        {
+          "K": 74,
+          "sign": 1
+        },
+        {
+          "K": 91,
+          "sign": -1
+        },
+        {
+          "K": 97,
+          "sign": -1
+        },
+        {
+          "K": 156,
+          "sign": 1
+        },
+        {
+          "K": 199,
+          "sign": 1
+        },
+        {
+          "K": 207,
+          "sign": 1
+        },
+        {
+          "K": 272,
+          "sign": -1
+        },
+        {
+          "K": 328,
+          "sign": -1
+        },
+        {
+          "K": 364,
+          "sign": 1
+        },
+        {
+          "K": 388,
+          "sign": 1
+        },
+        {
+          "K": 394,
+          "sign": -1
+        },
+        {
+          "K": 457,
+          "sign": 1
+        },
+        {
+          "K": 590,
+          "sign": -1
+        },
+        {
+          "K": 592,
+          "sign": 1
+        },
+        {
+          "K": 684,
+          "sign": 1
+        },
+        {
+          "K": 714,
+          "sign": -1
+        },
+        {
+          "K": 738,
+          "sign": 1
+        },
+        {
+          "K": 754,
+          "sign": -1
+        },
+        {
+          "K": 782,
+          "sign": -1
+        },
+        {
+          "K": 1059,
+          "sign": -1
+        },
+        {
+          "K": 1060,
+          "sign": 1
+        },
+        {
+          "K": 1153,
+          "sign": -1
+        },
+        {
+          "K": 1207,
+          "sign": -1
+        },
+        {
+          "K": 1247,
+          "sign": 1
+        },
+        {
+          "K": 1308,
+          "sign": 1
+        },
+        {
+          "K": 1336,
+          "sign": -1
+        },
+        {
+          "K": 1392,
+          "sign": 1
+        }
+      ],
+      "sign_convention": "+1 means target/square side; -1 means complement",
+      "source_stats": {
+        "d3_eprime_input_rows": 200,
+        "d3_eprime_minus": 44,
+        "d3_eprime_plus": 56,
+        "d3_eprime_quotient_rows": 100,
+        "d3_k_input_rows": 100,
+        "d3_k_k_rows": 50,
+        "d3_k_minus": 22,
+        "d3_k_plus": 28,
+        "d3_s_input_rows": 100,
+        "d3_s_minus": 44,
+        "d3_s_paired_s_neg_s": 100,
+        "d3_s_plus": 56,
+        "d3_s_s_rows": 100,
+        "d4_eprime_input_rows": 112,
+        "d4_eprime_minus": 28,
+        "d4_eprime_plus": 28,
+        "d4_eprime_quotient_rows": 56,
+        "d4_k_input_rows": 56,
+        "d4_k_k_rows": 28,
+        "d4_k_minus": 14,
+        "d4_k_plus": 14,
+        "d4_s_input_rows": 56,
+        "d4_s_minus": 28,
+        "d4_s_paired_s_neg_s": 56,
+        "d4_s_plus": 28,
+        "d4_s_s_rows": 56,
+        "enum_compact_not_target": 837,
+        "enum_no_label2_candidate": 424,
+        "quotient_d3_minus_E_points": 88,
+        "quotient_d3_missing_on_E_orbit": 0,
+        "quotient_d3_not_descended_to_E": 0,
+        "quotient_d3_plus_E_points": 112,
+        "quotient_d3_quotient_rows": 200,
+        "quotient_d4_minus_E_points_after_d3": 56,
+        "quotient_d4_missing_on_E_orbit": 0,
+        "quotient_d4_not_descended_to_E": 0,
+        "quotient_d4_plus_E_points_after_d3": 56,
+        "quotient_d4_quotient_rows_after_d3": 112,
+        "quotient_orbit_size_4": 200,
+        "quotient_oriented_candidates": 800,
+        "quotient_quotient_E_points": 200
+      }
+    },
+    {
+      "coordinate": "K",
+      "family": "d3_on_K",
+      "field": 1607,
+      "minus_count": 21,
+      "plus_count": 28,
+      "row_count": 49,
+      "rows": [
+        {
+          "K": 12,
+          "sign": -1
+        },
+        {
+          "K": 27,
+          "sign": -1
+        },
+        {
+          "K": 34,
+          "sign": 1
+        },
+        {
+          "K": 49,
+          "sign": -1
+        },
+        {
+          "K": 93,
+          "sign": -1
+        },
+        {
+          "K": 108,
+          "sign": 1
+        },
+        {
+          "K": 137,
+          "sign": 1
+        },
+        {
+          "K": 206,
+          "sign": 1
+        },
+        {
+          "K": 229,
+          "sign": -1
+        },
+        {
+          "K": 256,
+          "sign": 1
+        },
+        {
+          "K": 263,
+          "sign": -1
+        },
+        {
+          "K": 268,
+          "sign": 1
+        },
+        {
+          "K": 283,
+          "sign": 1
+        },
+        {
+          "K": 300,
+          "sign": 1
+        },
+        {
+          "K": 377,
+          "sign": -1
+        },
+        {
+          "K": 419,
+          "sign": -1
+        },
+        {
+          "K": 486,
+          "sign": 1
+        },
+        {
+          "K": 517,
+          "sign": -1
+        },
+        {
+          "K": 529,
+          "sign": 1
+        },
+        {
+          "K": 532,
+          "sign": -1
+        },
+        {
+          "K": 693,
+          "sign": 1
+        },
+        {
+          "K": 728,
+          "sign": -1
+        },
+        {
+          "K": 734,
+          "sign": 1
+        },
+        {
+          "K": 755,
+          "sign": -1
+        },
+        {
+          "K": 805,
+          "sign": -1
+        },
+        {
+          "K": 817,
+          "sign": 1
+        },
+        {
+          "K": 838,
+          "sign": 1
+        },
+        {
+          "K": 843,
+          "sign": 1
+        },
+        {
+          "K": 867,
+          "sign": 1
+        },
+        {
+          "K": 876,
+          "sign": 1
+        },
+        {
+          "K": 888,
+          "sign": 1
+        },
+        {
+          "K": 917,
+          "sign": 1
+        },
+        {
+          "K": 918,
+          "sign": 1
+        },
+        {
+          "K": 937,
+          "sign": -1
+        },
+        {
+          "K": 961,
+          "sign": 1
+        },
+        {
+          "K": 992,
+          "sign": -1
+        },
+        {
+          "K": 1083,
+          "sign": 1
+        },
+        {
+          "K": 1085,
+          "sign": -1
+        },
+        {
+          "K": 1107,
+          "sign": 1
+        },
+        {
+          "K": 1144,
+          "sign": -1
+        },
+        {
+          "K": 1168,
+          "sign": -1
+        },
+        {
+          "K": 1212,
+          "sign": -1
+        },
+        {
+          "K": 1281,
+          "sign": 1
+        },
+        {
+          "K": 1362,
+          "sign": -1
+        },
+        {
+          "K": 1432,
+          "sign": 1
+        },
+        {
+          "K": 1456,
+          "sign": 1
+        },
+        {
+          "K": 1475,
+          "sign": -1
+        },
+        {
+          "K": 1490,
+          "sign": 1
+        },
+        {
+          "K": 1529,
+          "sign": 1
+        }
+      ],
+      "sign_convention": "+1 means target/square side; -1 means complement",
+      "source_stats": {
+        "d3_eprime_input_rows": 196,
+        "d3_eprime_minus": 42,
+        "d3_eprime_plus": 56,
+        "d3_eprime_quotient_rows": 98,
+        "d3_k_input_rows": 98,
+        "d3_k_k_rows": 49,
+        "d3_k_minus": 21,
+        "d3_k_plus": 28,
+        "d3_s_input_rows": 98,
+        "d3_s_minus": 42,
+        "d3_s_paired_s_neg_s": 98,
+        "d3_s_plus": 56,
+        "d3_s_s_rows": 98,
+        "d4_eprime_input_rows": 112,
+        "d4_eprime_minus": 18,
+        "d4_eprime_plus": 38,
+        "d4_eprime_quotient_rows": 56,
+        "d4_k_input_rows": 56,
+        "d4_k_k_rows": 28,
+        "d4_k_minus": 9,
+        "d4_k_plus": 19,
+        "d4_s_input_rows": 56,
+        "d4_s_minus": 18,
+        "d4_s_paired_s_neg_s": 56,
+        "d4_s_plus": 38,
+        "d4_s_s_rows": 56,
+        "enum_compact_not_target": 805,
+        "enum_no_label2_candidate": 408,
+        "quotient_d3_minus_E_points": 84,
+        "quotient_d3_missing_on_E_orbit": 0,
+        "quotient_d3_not_descended_to_E": 0,
+        "quotient_d3_plus_E_points": 112,
+        "quotient_d3_quotient_rows": 196,
+        "quotient_d4_minus_E_points_after_d3": 36,
+        "quotient_d4_missing_on_E_orbit": 0,
+        "quotient_d4_not_descended_to_E": 0,
+        "quotient_d4_plus_E_points_after_d3": 76,
+        "quotient_d4_quotient_rows_after_d3": 112,
+        "quotient_orbit_size_4": 196,
+        "quotient_oriented_candidates": 784,
+        "quotient_quotient_E_points": 196
+      }
+    },
+    {
+      "coordinate": "K",
+      "family": "d4_on_K_after_d3",
+      "field": 1607,
+      "minus_count": 9,
+      "plus_count": 19,
+      "row_count": 28,
+      "rows": [
+        {
+          "K": 34,
+          "sign": 1
+        },
+        {
+          "K": 108,
+          "sign": 1
+        },
+        {
+          "K": 137,
+          "sign": 1
+        },
+        {
+          "K": 206,
+          "sign": 1
+        },
+        {
+          "K": 256,
+          "sign": 1
+        },
+        {
+          "K": 268,
+          "sign": 1
+        },
+        {
+          "K": 283,
+          "sign": -1
+        },
+        {
+          "K": 300,
+          "sign": -1
+        },
+        {
+          "K": 486,
+          "sign": -1
+        },
+        {
+          "K": 529,
+          "sign": 1
+        },
+        {
+          "K": 693,
+          "sign": 1
+        },
+        {
+          "K": 734,
+          "sign": 1
+        },
+        {
+          "K": 817,
+          "sign": 1
+        },
+        {
+          "K": 838,
+          "sign": 1
+        },
+        {
+          "K": 843,
+          "sign": 1
+        },
+        {
+          "K": 867,
+          "sign": -1
+        },
+        {
+          "K": 876,
+          "sign": -1
+        },
+        {
+          "K": 888,
+          "sign": 1
+        },
+        {
+          "K": 917,
+          "sign": 1
+        },
+        {
+          "K": 918,
+          "sign": 1
+        },
+        {
+          "K": 961,
+          "sign": -1
+        },
+        {
+          "K": 1083,
+          "sign": 1
+        },
+        {
+          "K": 1107,
+          "sign": 1
+        },
+        {
+          "K": 1281,
+          "sign": -1
+        },
+        {
+          "K": 1432,
+          "sign": 1
+        },
+        {
+          "K": 1456,
+          "sign": -1
+        },
+        {
+          "K": 1490,
+          "sign": 1
+        },
+        {
+          "K": 1529,
+          "sign": -1
+        }
+      ],
+      "sign_convention": "+1 means target/square side; -1 means complement",
+      "source_stats": {
+        "d3_eprime_input_rows": 196,
+        "d3_eprime_minus": 42,
+        "d3_eprime_plus": 56,
+        "d3_eprime_quotient_rows": 98,
+        "d3_k_input_rows": 98,
+        "d3_k_k_rows": 49,
+        "d3_k_minus": 21,
+        "d3_k_plus": 28,
+        "d3_s_input_rows": 98,
+        "d3_s_minus": 42,
+        "d3_s_paired_s_neg_s": 98,
+        "d3_s_plus": 56,
+        "d3_s_s_rows": 98,
+        "d4_eprime_input_rows": 112,
+        "d4_eprime_minus": 18,
+        "d4_eprime_plus": 38,
+        "d4_eprime_quotient_rows": 56,
+        "d4_k_input_rows": 56,
+        "d4_k_k_rows": 28,
+        "d4_k_minus": 9,
+        "d4_k_plus": 19,
+        "d4_s_input_rows": 56,
+        "d4_s_minus": 18,
+        "d4_s_paired_s_neg_s": 56,
+        "d4_s_plus": 38,
+        "d4_s_s_rows": 56,
+        "enum_compact_not_target": 805,
+        "enum_no_label2_candidate": 408,
+        "quotient_d3_minus_E_points": 84,
+        "quotient_d3_missing_on_E_orbit": 0,
+        "quotient_d3_not_descended_to_E": 0,
+        "quotient_d3_plus_E_points": 112,
+        "quotient_d3_quotient_rows": 196,
+        "quotient_d4_minus_E_points_after_d3": 36,
+        "quotient_d4_missing_on_E_orbit": 0,
+        "quotient_d4_not_descended_to_E": 0,
+        "quotient_d4_plus_E_points_after_d3": 76,
+        "quotient_d4_quotient_rows_after_d3": 112,
+        "quotient_orbit_size_4": 196,
+        "quotient_oriented_candidates": 784,
+        "quotient_quotient_E_points": 196
+      }
+    },
+    {
+      "coordinate": "K",
+      "family": "d3_on_K",
+      "field": 1847,
+      "minus_count": 18,
+      "plus_count": 45,
+      "row_count": 63,
+      "rows": [
+        {
+          "K": 36,
+          "sign": 1
+        },
+        {
+          "K": 54,
+          "sign": 1
+        },
+        {
+          "K": 66,
+          "sign": 1
+        },
+        {
+          "K": 75,
+          "sign": -1
+        },
+        {
+          "K": 79,
+          "sign": 1
+        },
+        {
+          "K": 82,
+          "sign": 1
+        },
+        {
+          "K": 96,
+          "sign": 1
+        },
+        {
+          "K": 126,
+          "sign": 1
+        },
+        {
+          "K": 138,
+          "sign": -1
+        },
+        {
+          "K": 155,
+          "sign": -1
+        },
+        {
+          "K": 161,
+          "sign": 1
+        },
+        {
+          "K": 189,
+          "sign": 1
+        },
+        {
+          "K": 194,
+          "sign": 1
+        },
+        {
+          "K": 215,
+          "sign": 1
+        },
+        {
+          "K": 241,
+          "sign": 1
+        },
+        {
+          "K": 252,
+          "sign": -1
+        },
+        {
+          "K": 271,
+          "sign": 1
+        },
+        {
+          "K": 297,
+          "sign": 1
+        },
+        {
+          "K": 323,
+          "sign": 1
+        },
+        {
+          "K": 338,
+          "sign": 1
+        },
+        {
+          "K": 369,
+          "sign": -1
+        },
+        {
+          "K": 377,
+          "sign": -1
+        },
+        {
+          "K": 386,
+          "sign": 1
+        },
+        {
+          "K": 444,
+          "sign": 1
+        },
+        {
+          "K": 453,
+          "sign": -1
+        },
+        {
+          "K": 454,
+          "sign": -1
+        },
+        {
+          "K": 472,
+          "sign": 1
+        },
+        {
+          "K": 534,
+          "sign": 1
+        },
+        {
+          "K": 550,
+          "sign": 1
+        },
+        {
+          "K": 579,
+          "sign": 1
+        },
+        {
+          "K": 618,
+          "sign": -1
+        },
+        {
+          "K": 731,
+          "sign": 1
+        },
+        {
+          "K": 826,
+          "sign": -1
+        },
+        {
+          "K": 832,
+          "sign": -1
+        },
+        {
+          "K": 869,
+          "sign": 1
+        },
+        {
+          "K": 906,
+          "sign": -1
+        },
+        {
+          "K": 916,
+          "sign": 1
+        },
+        {
+          "K": 925,
+          "sign": -1
+        },
+        {
+          "K": 928,
+          "sign": 1
+        },
+        {
+          "K": 940,
+          "sign": 1
+        },
+        {
+          "K": 948,
+          "sign": 1
+        },
+        {
+          "K": 964,
+          "sign": 1
+        },
+        {
+          "K": 993,
+          "sign": 1
+        },
+        {
+          "K": 1024,
+          "sign": 1
+        },
+        {
+          "K": 1061,
+          "sign": -1
+        },
+        {
+          "K": 1083,
+          "sign": 1
+        },
+        {
+          "K": 1099,
+          "sign": 1
+        },
+        {
+          "K": 1133,
+          "sign": 1
+        },
+        {
+          "K": 1152,
+          "sign": 1
+        },
+        {
+          "K": 1196,
+          "sign": 1
+        },
+        {
+          "K": 1206,
+          "sign": 1
+        },
+        {
+          "K": 1266,
+          "sign": -1
+        },
+        {
+          "K": 1306,
+          "sign": 1
+        },
+        {
+          "K": 1448,
+          "sign": 1
+        },
+        {
+          "K": 1466,
+          "sign": 1
+        },
+        {
+          "K": 1503,
+          "sign": 1
+        },
+        {
+          "K": 1642,
+          "sign": 1
+        },
+        {
+          "K": 1705,
+          "sign": -1
+        },
+        {
+          "K": 1720,
+          "sign": -1
+        },
+        {
+          "K": 1742,
+          "sign": 1
+        },
+        {
+          "K": 1764,
+          "sign": 1
+        },
+        {
+          "K": 1776,
+          "sign": -1
+        },
+        {
+          "K": 1832,
+          "sign": 1
+        }
+      ],
+      "sign_convention": "+1 means target/square side; -1 means complement",
+      "source_stats": {
+        "d3_eprime_input_rows": 252,
+        "d3_eprime_minus": 36,
+        "d3_eprime_plus": 90,
+        "d3_eprime_quotient_rows": 126,
+        "d3_k_input_rows": 126,
+        "d3_k_k_rows": 63,
+        "d3_k_minus": 18,
+        "d3_k_plus": 45,
+        "d3_s_input_rows": 126,
+        "d3_s_minus": 36,
+        "d3_s_paired_s_neg_s": 126,
+        "d3_s_plus": 90,
+        "d3_s_s_rows": 126,
+        "d4_eprime_input_rows": 180,
+        "d4_eprime_minus": 52,
+        "d4_eprime_plus": 38,
+        "d4_eprime_quotient_rows": 90,
+        "d4_k_input_rows": 90,
+        "d4_k_k_rows": 45,
+        "d4_k_minus": 26,
+        "d4_k_plus": 19,
+        "d4_s_input_rows": 90,
+        "d4_s_minus": 52,
+        "d4_s_paired_s_neg_s": 90,
+        "d4_s_plus": 38,
+        "d4_s_s_rows": 90,
+        "enum_compact_not_target": 873,
+        "enum_no_label2_candidate": 468,
+        "quotient_d3_minus_E_points": 72,
+        "quotient_d3_missing_on_E_orbit": 0,
+        "quotient_d3_not_descended_to_E": 0,
+        "quotient_d3_plus_E_points": 180,
+        "quotient_d3_quotient_rows": 252,
+        "quotient_d4_minus_E_points_after_d3": 104,
+        "quotient_d4_missing_on_E_orbit": 0,
+        "quotient_d4_not_descended_to_E": 0,
+        "quotient_d4_plus_E_points_after_d3": 76,
+        "quotient_d4_quotient_rows_after_d3": 180,
+        "quotient_orbit_size_4": 252,
+        "quotient_oriented_candidates": 1008,
+        "quotient_quotient_E_points": 252
+      }
+    },
+    {
+      "coordinate": "K",
+      "family": "d4_on_K_after_d3",
+      "field": 1847,
+      "minus_count": 26,
+      "plus_count": 19,
+      "row_count": 45,
+      "rows": [
+        {
+          "K": 36,
+          "sign": -1
+        },
+        {
+          "K": 54,
+          "sign": 1
+        },
+        {
+          "K": 66,
+          "sign": 1
+        },
+        {
+          "K": 79,
+          "sign": -1
+        },
+        {
+          "K": 82,
+          "sign": 1
+        },
+        {
+          "K": 96,
+          "sign": -1
+        },
+        {
+          "K": 126,
+          "sign": 1
+        },
+        {
+          "K": 161,
+          "sign": -1
+        },
+        {
+          "K": 189,
+          "sign": -1
+        },
+        {
+          "K": 194,
+          "sign": 1
+        },
+        {
+          "K": 215,
+          "sign": -1
+        },
+        {
+          "K": 241,
+          "sign": 1
+        },
+        {
+          "K": 271,
+          "sign": -1
+        },
+        {
+          "K": 297,
+          "sign": -1
+        },
+        {
+          "K": 323,
+          "sign": -1
+        },
+        {
+          "K": 338,
+          "sign": -1
+        },
+        {
+          "K": 386,
+          "sign": 1
+        },
+        {
+          "K": 444,
+          "sign": 1
+        },
+        {
+          "K": 472,
+          "sign": -1
+        },
+        {
+          "K": 534,
+          "sign": -1
+        },
+        {
+          "K": 550,
+          "sign": -1
+        },
+        {
+          "K": 579,
+          "sign": -1
+        },
+        {
+          "K": 731,
+          "sign": -1
+        },
+        {
+          "K": 869,
+          "sign": 1
+        },
+        {
+          "K": 916,
+          "sign": -1
+        },
+        {
+          "K": 928,
+          "sign": -1
+        },
+        {
+          "K": 940,
+          "sign": 1
+        },
+        {
+          "K": 948,
+          "sign": 1
+        },
+        {
+          "K": 964,
+          "sign": -1
+        },
+        {
+          "K": 993,
+          "sign": 1
+        },
+        {
+          "K": 1024,
+          "sign": 1
+        },
+        {
+          "K": 1083,
+          "sign": 1
+        },
+        {
+          "K": 1099,
+          "sign": 1
+        },
+        {
+          "K": 1133,
+          "sign": 1
+        },
+        {
+          "K": 1152,
+          "sign": -1
+        },
+        {
+          "K": 1196,
+          "sign": -1
+        },
+        {
+          "K": 1206,
+          "sign": -1
+        },
+        {
+          "K": 1306,
+          "sign": -1
+        },
+        {
+          "K": 1448,
+          "sign": -1
+        },
+        {
+          "K": 1466,
+          "sign": -1
+        },
+        {
+          "K": 1503,
+          "sign": 1
+        },
+        {
+          "K": 1642,
+          "sign": 1
+        },
+        {
+          "K": 1742,
+          "sign": 1
+        },
+        {
+          "K": 1764,
+          "sign": -1
+        },
+        {
+          "K": 1832,
+          "sign": -1
+        }
+      ],
+      "sign_convention": "+1 means target/square side; -1 means complement",
+      "source_stats": {
+        "d3_eprime_input_rows": 252,
+        "d3_eprime_minus": 36,
+        "d3_eprime_plus": 90,
+        "d3_eprime_quotient_rows": 126,
+        "d3_k_input_rows": 126,
+        "d3_k_k_rows": 63,
+        "d3_k_minus": 18,
+        "d3_k_plus": 45,
+        "d3_s_input_rows": 126,
+        "d3_s_minus": 36,
+        "d3_s_paired_s_neg_s": 126,
+        "d3_s_plus": 90,
+        "d3_s_s_rows": 126,
+        "d4_eprime_input_rows": 180,
+        "d4_eprime_minus": 52,
+        "d4_eprime_plus": 38,
+        "d4_eprime_quotient_rows": 90,
+        "d4_k_input_rows": 90,
+        "d4_k_k_rows": 45,
+        "d4_k_minus": 26,
+        "d4_k_plus": 19,
+        "d4_s_input_rows": 90,
+        "d4_s_minus": 52,
+        "d4_s_paired_s_neg_s": 90,
+        "d4_s_plus": 38,
+        "d4_s_s_rows": 90,
+        "enum_compact_not_target": 873,
+        "enum_no_label2_candidate": 468,
+        "quotient_d3_minus_E_points": 72,
+        "quotient_d3_missing_on_E_orbit": 0,
+        "quotient_d3_not_descended_to_E": 0,
+        "quotient_d3_plus_E_points": 180,
+        "quotient_d3_quotient_rows": 252,
+        "quotient_d4_minus_E_points_after_d3": 104,
+        "quotient_d4_missing_on_E_orbit": 0,
+        "quotient_d4_not_descended_to_E": 0,
+        "quotient_d4_plus_E_points_after_d3": 76,
+        "quotient_d4_quotient_rows_after_d3": 180,
+        "quotient_orbit_size_4": 252,
+        "quotient_oriented_candidates": 1008,
+        "quotient_quotient_E_points": 252
+      }
+    }
+  ],
+  "zero_policy": "exclude quartics that vanish on any listed K row"
+}

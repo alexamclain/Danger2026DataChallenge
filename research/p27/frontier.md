@@ -1,6 +1,6 @@
 # P27 Frontier
 
-Updated: 2026-06-21
+Updated: 2026-06-22
 
 ## Target
 
@@ -297,9 +297,11 @@ failures, confirming the reconstruction.  The next gate was flat:
 All low-weight products of the named `H`, `VQ`, `X_pref`, root, quotient, and
 `T_line` atoms failed, with the best train lifts collapsing to about `0.49` to
 `0.50` on heldout.  This kills the cheap post-Dplus trace/norm-character route.
-The surviving trace/norm/quotient task is function-field extraction of the
-actual `d3`/`d4` double covers on `E: W^2=X^3-X` or the 2-isogenous quotient
-`E': V^2=U^3+4U`.
+The surviving trace/norm/quotient task is now formalized as a narrow test card:
+[P27 Trace/Norm Half-Norm Test Card](evidence/p27_trace_norm_halfnorm_test_card_20260622.md).
+It accepts only a finite-field squareclass, divisor/theta identity, or direct
+source map on `C: b^2=16-a^4` / `E: v^2=u^3-u`, with heldout evaluator checks
+and raw-source accounting.  Broad trace/norm feature searches remain killed.
 
 The first exact small-field check of that trace/norm quotient changes the
 math ask:
@@ -448,6 +450,18 @@ field.  The `q=1087` d4 exact pairs occur on only `40` rows and disappear at
 visible reducible-conic source; the next cheap algebraic step is irreducible
 conics or direct function-field extraction.
 
+The exact single-section follow-up now kills that cheap irreducible-conic-sized
+gap too:
+[P27 E-Quotient L(4O) Exact Section Screen](evidence/p27_equotient_l4_section_exact_screen_20260622.md).
+It exhaustively tested projective sections `a+bX+cX^2+dW` on
+`E: W^2=X^3-X`.  For d3, p27-compatible fields
+`q=487,599,727,919,1607` all have zero exact `L(4O)` sections.  For d4, the
+smaller p27-compatible fields are one-sided after conditioning on d3, but the
+non-degenerate `q=1607` check has `112` rows split `76/36` and also zero exact
+sections.  This closes the nearest low-pole E-section route.  The live E
+route is now actual double-cover/Kummer-class extraction, a higher named
+divisor class, or a recurrence arising from the normalized cover.
+
 The first broader recurrence screen is also negative:
 [P27 E-Quotient Affine-Walk Recurrence](evidence/p27_equotient_affine_walk_recurrence_20260621.md).
 It tested every map `P -> [m]P + Q` over `q=1087,1471,1607`, for
@@ -572,8 +586,66 @@ no exact irreducible cubic.  The best miss was `31/32`.  This is only a local
 falsifier, not a p27 proof, but it reinforces the current rule: do actual
 K/S branch-class and genus extraction rather than widening blind cubic scans.
 
-That ask is now packaged as a concrete handoff:
+The visible K-polynomial source shape has now had its decisive q1847 d3
+screen:
+[P27 K-Line Quartic GPU Test Card](evidence/p27_kline_quartic_gpu_test_card_20260622.md).
+The full monic quartic q1847 test for `d3_on_K` found zero exact quartics:
+[P27 Full Quartic q1847 D3 Screen](evidence/p27_full_quartic_q1847_d3_screen_20260622.md).
+A q1847 d3 hit would have been highly non-random
+(`expected_exact ~= 2.52e-6`), so this kills the decisive K-line visible
+degree-4 polynomial source shape.  q1471/q1607 closure is now bookkeeping
+rather than a promotion path unless a new named class changes the target.
+The B/K coordinate bridge is now explicit:
+[P27 B-Line / K-Line Bridge](evidence/p27_b_kline_bridge_20260622.md).
+For q1471/q1607/q1847/q2087, the relation
+`K^2=(B-2)^4/(8B(B+2)^2)` maps every legal B d3/d4 row to a present signed K
+class with the same target sign.  The B-line and K-line quartic GPU screens
+are therefore coordinate alternatives for the same descended class, not
+independent confirmations.
+The signed-root selector over that bridge is not a shortcut:
+[P27 B/K Signed-Root Relation Screen](evidence/p27_b_kline_signed_root_relation_20260622.md).
+The selected K sheet has no positive extra low-degree plane relation beyond
+the inherited bridge cover in q1471/q1607/q1847/q2087.
+The descended even-quartic subcase is also dead:
+[P27 K-Line Even-Quartic Screen](evidence/p27_kline_even_quartic_screen_20260622.md).
+Over q1471/q1607/q1847, `chi(K^4+a*K^2+b)` has zero exact hits for both
+`d3_on_K` and `d4_on_K_after_d3`.  So the completed q1847 screen correctly
+tested full quartics with odd K terms and the signed K sheet, not a
+`K^2`-only proxy.
+The visible Belyi reciprocal subcase is dead too:
+[P27 K-Line Belyi-Reciprocal Quartic Screen](evidence/p27_kline_reciprocal_quartic_screen_20260622.md).
+The two shapes preserved by `K -> 4/K`,
+`K^4+aK^3+bK^2+4aK+16` and `K^4+aK^3-4aK-16`, have zero exact hits over
+q1471/q1607/q1847.  Thus the full q1847 coefficient-triple screen was the
+right decisive test.
+The full B/K quartic handoff is now partly executed and locally checkable:
+[P27 Full Quartic GPU Suite Handoff](evidence/p27_full_quartic_gpu_suite_handoff_20260622.md)
+and
+`research/p27/archive/fixtures/p27_full_quartic_gpu_suite_20260622.json`
+give the run order, verifier commands, exact packets, and promotion/kill
+rules for the B-line/K-line monic-quartic test.  The q1847 `d3` screens in
+both B and K coordinates are complete and negative, using a new fast local C
+oracle.  This closes the visible q1847 monic-quartic `d3` promotion route.
+Remaining quartic work is optional closure bookkeeping, gate4-prefix closure,
+or hit verification if another agent produces a candidate; it is no longer
+the front-door sqrt-beating lane.
+If a hit appears, the promotion-side verifier is also ready:
+[P27 Quartic Hit Geometry Promotion Tool](evidence/p27_quartic_hit_geometry_promotion_tool_20260622.md)
+checks the frozen target rows and classifies `z^2=f(B)` or `z^2=f(K)` by
+squarefree degree, factor degrees, finite-field point count, and normalization
+genus.
+
+The fallback branch-extraction ask remains packaged as a separate concrete
+handoff:
 [P27 Kummer Branch-Extraction Handoff](evidence/p27_kummer_branch_extraction_handoff_20260621.md).
+That fallback is now organized as an ordered CAS suite:
+[P27 Post-Quartic CAS Suite Handoff](evidence/p27_post_quartic_cas_suite_handoff_20260622.md)
+with manifest
+`research/p27/archive/fixtures/p27_post_quartic_cas_suite_20260622.json`.
+The cheap K/S guard-field sanity layer is complete:
+[P27 K/S Guard-Field Sanity](evidence/p27_ks_guard_field_sanity_20260622.md)
+checks q1607/q1847/q2087 with zero mismatches for the K/S map and H90
+identities.
 It records the map from the residual `E: W^2=X^3-X` through
 `E': V^2=U^3+4U` to
 `K=x([2]P)=((X^2-2X-1)^2*(X^2+2X-1)^2)/(4X(X-1)(X+1)(X^2+1)^2)`,
@@ -721,6 +793,313 @@ telemetry test.  A large production hunt should wait until the direct sampler
 either pulls back to legal rows at useful rate or controls more than one
 selected gate without paying a fresh half-loss.
 
+The direct sampler incidence is now measured:
+[P27 Conic-Pair Sampler Legal Incidence](evidence/p27_conic_pair_sampler_legal_incidence_20260621.md).
+Across q263/q607/q1607/q1847/q2087 it covers every legal d3-plus `(A,x5)`
+class tested and zero d3-minus classes, so the structure is real.  But random
+free `(R,L)` hits legal rows at only about `constant/q` per draw, so the raw
+two-dimensional sampler is killed as a production GPU source.  The live target
+is sharper: find the legal pullback/quotient or a d4 recurrence on the
+intersection.
+
+The d4 recurrence now has an exact selector:
+[P27 Conic-Pair D4 Recurrence](evidence/p27_conic_pair_d4_recurrence_20260621.md).
+With `a=R-1/R` and `L=h-g-2r`, the next gate satisfies
+`chi(R^2+cR+1)=chi(-(L+a)(L-a)cR)` because the quotient is `2` times a square
+and p27 has `chi(2)=+1`.  This held on q1607/q1847/q2087 and on 1,000-row p27
+train/heldout samples.  The selected next coordinate still does not re-enter
+the original legal label-2/compactD source in the guard fields, so the live
+test is now the legal pullback with `Z^2=-(L+a)(L-a)cR`, not blind iteration of
+the same sampler.
+
+The repeated-tower check is positive:
+[P27 Conic-Pair D5 Tower](evidence/p27_conic_pair_d5_tower_20260621.md).
+After adjoining the d4 selector root, the same product law gives d5 with zero
+mismatches on q1607/q1847/q2087 and p27 train/heldout samples, including a
+larger `1500 + 1500` p27 confirmation.  This promotes the conic-chain lead
+from a one-off d4 identity to a recursive Kummer selector tower.  The
+obstruction remains source-side: the selected one-step and two-step
+coordinates do not re-enter the original legal label-2/compactD source in the
+guard fields.
+
+The legal source-side depth screen is now explicit:
+[P27 Legal Conic Tower Depth](evidence/p27_legal_conic_tower_depth_20260621.md).
+In q1607/q1847/q2087, legal conic-chain lift existence matches selected-prefix
+bits through depth 5 with zero mismatches.  On the larger p27 train/heldout
+samples, prefix rates through depths 1-5 are about
+`0.481/0.245/0.104/0.057/0.028` and
+`0.519/0.240/0.111/0.061/0.028`.  Thus the tower is exact, but not
+density-beating on the original legal source without a quotient or direct
+tower sampler.
+The remaining conic moonshot is now packaged as:
+[P27 Conic Tower Quotient CAS Handoff](evidence/p27_conic_tower_quotient_cas_handoff_20260622.md)
+with manifest
+`research/p27/archive/fixtures/p27_conic_tower_quotient_cas_suite_20260622.json`.
+It asks for depth-1/depth-2 legal-pullback quotients, genus/components, and a
+direct legal tower sampler if a quotient appears.
+The first quotient sanity screen is now in:
+[P27 Conic Tower Sign-Quotient Probe](evidence/p27_conic_tower_sign_quotient_20260622.md).
+The obvious sign quotients preserve d5 and even descend to `A`/`(A,x)` on p27
+samples, but they collapse only finite multiplicities.  A-space still thins
+like random half-loss, so this is CAS staging, not a GPU sign-bucket source.
+The d6 continuation is now positive too:
+[P27 Conic Tower D6 A-Descent](evidence/p27_conic_tower_d6_a_descent_20260622.md).
+On `1000 + 1000` p27 train/heldout rows, d6 has zero mixed `A` groups after
+d4-plus/d5-plus (`49` and `54` base-A groups respectively).  This promotes an
+A-level Kummer-class extraction for d4/d5/d6, but still not a GPU A-bucket run:
+the older A-prefix profile shows ordinary half-loss on A-space.
+The cheap deeper follow-up is stronger:
+[P27 A-Level Prefix Descent](evidence/p27_a_level_prefix_descent_20260622.md).
+On `12000 + 12000` p27 train/heldout samples, selected gates d3..d14 all have
+zero mixed A groups.  Robust counts through about d10 stay near the geometric
+half-loss baseline, so the moonshot target is a normalized A-line Kummer
+sequence/class extraction, not a prefix-count source.
+The first visible A-character falsifier is now negative:
+[P27 A-Line Character Support Screen](evidence/p27_a_line_character_support_20260622.md).
+Complete degree `<= 4` branch-support families on `P1_A` are killed for d3 in
+q1607/q1847/q2087, q1847 also kills d4, and nearby `7 mod 8` fields reject
+split degree `<= 4` d3 support.  Do not widen blind A-polynomial scans; the
+next real test is divisor/Kummer class extraction on the normalized A-cover.
+That extraction now has a concrete packet:
+[P27 A-Level Kummer Extraction Packet](evidence/p27_a_level_kummer_extraction_packet_20260622.md).
+It emits a JSON fixture of A-labeled d3/d4 rows over q1607/q1847/q2087 and
+asks CAS to recover the normalized A-cover, branch divisor data, genus, and
+successive Kummer-class relations.  This is the next first-class conic/A-line
+test that could still beat sqrt if it finds recurrence rather than fresh
+half-covers.
+The A/B row-level bridge is exact:
+[P27 B/A Fixture Bridge](evidence/p27_b_a_fixture_bridge_20260622.md).
+Across q1607/q1847/q2087 and gates d3/d4, `A=B^2-2` gives `267/267`
+row-level sign matches with no missing rows, uncovered A rows, or collisions.
+This folds A into the coordinated A/B/K/Sroot class-extraction problem; it is
+not a separate GPU A-bucket lane.
+The cheap visible-transform recurrence is now closed:
+[P27 A-Line Named-Transform Recurrence Screen](evidence/p27_a_line_named_transform_recurrence_20260622.md).
+The S3 group preserving the visible A-branch set `{-2,2,infinity}` almost
+never maps the legal A-domain back to itself.  In q1847 it has zero
+non-identity d3 coverage, and in p27 `4000 + 4000` train/heldout samples every
+non-identity transform has zero d3..d8 coverage.  So the A-line route cannot
+be promoted through a visible orbit or `d_{j+1}(A)=d_j(T(A))` shortcut; it
+still needs actual normalized-cover/Kummer-class extraction.
+The broader affine A-line recurrence is now killed too:
+[P27 A-Line Affine Recurrence Screen](evidence/p27_a_line_affine_recurrence_screen_20260622.md).
+It tests every full-coverage map `A -> m*A+b` for the meaningful
+`d3 -> d4` transition in q1607/q1847/q2087.  All three promotion fields have
+zero exact affine recurrences; the best full-coverage maps are identity and
+score only the raw d4 bias (`19/28`, `26/45`, `18/25`).  Later exact identity
+maps occur only in small-field one-sided tails with field-dependent signs and
+stop gates.  Thus an A-line win must be a normalized Kummer class,
+non-affine correspondence, coboundary, or higher structure, not a cheap
+degree-one A recurrence.
+The full degree-one rational A-line recurrence is killed as well:
+[P27 A-Line PGL2 Recurrence Screen](evidence/p27_a_line_pgl2_recurrence_screen_20260622.md).
+It enumerates every full-coverage PGL2 map
+`A -> (aA+b)/(cA+d)` for the same `d3 -> d4` transition.  q1607, q1847, and
+q2087 all have zero exact PGL2 recurrences; again the best maps are identity
+with raw d4-bias scores.  Do not spend more agent or GPU time on degree-one
+A-line recurrence scans unless a theorem supplies a different object.
+The first theorem-shaped higher A-correspondence is negative too:
+[P27 A-Level Power-Correspondence Screen](evidence/p27_a_level_power_correspondence_screen_20260622.md).
+It projects the hidden-`X` power maps from the B-line through `A=B^2-2`,
+allowing both B roots and all Belyi conjugations for `X -> X^m`, `m=2..6`.
+There are no exact forward or reverse `d3/d4` recurrences in
+q1607/q1847/q2087.  The best forward coverage is only `9/28`, `17/45`, and
+`11/25`, so forgetting B sign does not recover a sourceable hidden-`X`
+recurrence.
+The canonical Chebyshev/Dickson self-maps of the A branch set are now negative:
+[P27 A-Line Chebyshev Recurrence Screen](evidence/p27_a_line_chebyshev_recurrence_screen_20260622.md).
+It tests `D_m(A)=2*T_m(A/2)` for `m=2..12`, conjugated by the six branch-S3
+symmetries.  No full-domain recurrence appears in q1607/q1847/q2087; the
+main `d3 -> d4` best coverages are only `10/28`, `17/45`, and `9/25`.  Later
+perfect-looking rows are low-coverage small-field one-sided tails.  This
+leaves normalized A-cover Kummer extraction, not A-line dynamics, as the live
+route.
+The K/lambda normalized branch line has the same negative outcome:
+[P27 Lambda Monomial Recurrence Screen](evidence/p27_lambda_monomial_recurrence_screen_20260622.md).
+It tests S3-conjugated `lambda -> lambda^m` maps for `m=2..12` on
+`lambda=-K^2/4`.  There is no exact forward or reverse `d3/d4` recurrence in
+q1471/q1607/q1847, with best forward coverages only `4/28`, `5/28`, and
+`9/45`.  Thus lambda remains useful for branch-class normalization, not as a
+standalone recurrence/source.
+The lambda low-genus subcase is sharpened:
+[P27 Lambda Low-Genus Screen](evidence/p27_lambda_lowgenus_screen_20260622.md).
+It freezes lambda targets and exhausts all monic cubic support for
+`d3_on_lambda` in q1471/q1607/q1847, finding zero exact cubics.  The decisive
+q1847 exact monic quartic screen is now closed too:
+[P27 Lambda Quartic q1847 D3 Screen](evidence/p27_lambda_quartic_q1847_d3_screen_20260622.md).
+It scans `6,300,872,423` coefficient triples and finds zero exact quartics.
+Thus lambda is no longer a GPU quartic target; it remains a normalization
+coordinate for actual K-level branch-class extraction with the K-square stratum
+preserved.
+The compact synthesis after these closures is:
+[P27 Post-Branch-Dynamics Test Frontier](evidence/p27_post_branch_dynamics_test_frontier_20260622.md).
+It lists the closed branch-map families and the remaining first-class tests:
+coordinated A/B/K/Sroot Kummer extraction with the rational K-square stratum
+preserved, BSM staged legal-pullback normalization, and the trace/norm
+half-norm phase identity.  GPU is demoted to bounded telemetry or
+direct-sampler testing until one of those produces a named class or source.
+The K/Sroot density shortcut is now priced too:
+[P27 K/Sroot Prefix Profile](evidence/p27_sroot_prefix_profile_20260622.md).
+It shows that selected prefix bits descend cleanly to both K and Sroot, but
+Sroot is only a doubled K grouping with identical all-plus prefix ratios.  This
+strengthens Sroot as the normalization coordinate for CAS and kills Sroot
+prefix buckets as a GPU/source shortcut.
+The compact K/Sroot class fixture is now frozen:
+[P27 K/Sroot Kummer Fixture Packet](evidence/p27_ksroot_kummer_fixture_packet_20260622.md).
+It records conditional `f3/f4/f5/f6` rows over q1607/q1847/q2087 for both K
+and signed Sroot, with `Sroot^2=K` included row-by-row.  Every K row has two
+Sroot rows and the signs double, so the live test is normalized `f3` branch
+class extraction preserving K-square rationality, then `f4/f3` comparison.
+The row-level coordinate bridge is exact:
+[P27 B/K/Sroot Fixture Bridge](evidence/p27_b_ksroot_fixture_bridge_20260622.md).
+Through every nonempty recorded gate, B rows map to exactly one signed K row
+and two Sroot rows with matching signs.  This collapses B-line and K/Sroot to
+one coordinated class-extraction lane rather than independent evidence.
+The A quotient view has now been bridged too:
+[P27 B/A Fixture Bridge](evidence/p27_b_a_fixture_bridge_20260622.md).
+For the frozen d3/d4 fixtures, A is exactly the quotient coordinate
+`A=B^2-2` with signs preserved.  The live CAS ask is therefore one
+A/B/K/Sroot normalized-class extraction, choosing whichever coordinate makes
+the branch divisor easiest.
+The first local fiber-invariant extraction is now done:
+[P27 B-Line Fiber Invariant Probe](evidence/p27_b_line_fiber_invariant_probe_20260622.md).
+For every legal B in q1607/q1847/q2087, the d3 next-root fiber has `32`
+occurrences but only `8` distinct x-roots, closed under `x -> 1/x`, hence
+`4` values of `u=x+1/x`; all satisfy `f3=chi(u+2)`.  The full product/norm is
+always square, power sums through exponent `64` have no exact or near
+selector, and the four-u coefficients are maximal-degree on the legal-B set.
+So the next CAS object is the reduced 4-u/8-x cover, not a GPU symmetric
+invariant sampler.  The exact row-level fixture is
+`research/p27/archive/fixtures/p27_b_line_reduced_fiber_fixture_20260622.json`.
+The reduced-cover plane relation screen is now negative too:
+[P27 B-Line Reduced-Fiber Relation Screen](evidence/p27_b_line_reduced_fiber_relation_20260622.md).
+Across q1607/q1847/q2087, `(B,u)`, `(B,u^2)`, `(B,u+2)`, `(A,u)`,
+`(lambda,u)`, `(mu,u)`, and the f3 plus/minus subcovers all have
+`extra_nullity=0` through total degree `20`.  This kills the cheap plane-model
+route; the remaining test is actual normalization/genus/quotient extraction
+of the reduced cover.
+The reduced-cover symbolic handoff is now explicit:
+[P27 B-Line Reduced-Cover Symbolic Packet](evidence/p27_b_line_reduced_cover_symbolic_packet_20260622.md).
+It rewrites the d3 cover using `Unext=x6+1/x6` and
+`(Unext-2*x5)^2=4*(x5^2+A*x5+1)`, then emits that equation in the B-line
+source variables.  Validation over q1607/q1847/q2087 has zero reduced-equation
+or selector mismatches.  This is the first CAS normalization target before the
+full reverse `z,Y` cover.
+The first online Magma smoke for this reduced cover is cautionary:
+[P27 B-Line Reduced-Cover Magma Smoke](evidence/p27_b_line_reduced_cover_magma_smoke_20260622.md).
+Even over q7, the saturation-only fixture exceeds the online calculator memory
+limit during `Saturation(I,bad)`.  The reduced cover remains the right first
+offline CAS/expert object, but this is not a GPU-production green light.
+The B-line visible two-gate quartic shortcut is closed as well:
+[P27 B-Line Gate4-Prefix Quartic q1847 Screen](evidence/p27_b_line_gate4_prefix_quartic_q1847_screen_20260622.md).
+It scans `6,300,872,423` q1847 coefficient triples for
+`gate4_prefix_on_legalB` and finds zero exact quartics.  Together with the
+q1847 B/K d3 quartic kills, this pushes the B-line lane fully back to
+normalized Kummer/divisor class extraction.
+The direct sign-word coupling telemetry now agrees:
+[P27 Conic Sign-Word Coupling Probe](evidence/p27_conic_signword_coupling_20260622.md).
+On `4000 + 4000` p27 train/heldout unique `(A,x5)` rows, the all-plus conic
+prefix thins like independent half-gates through the meaningful range; scaled
+half-loss stays near `1` until tiny tails dominate.  Exact q1607/q1847/q2087
+again show local all-plus plateaus, but their stopping gates disagree.  This
+kills GPU sign-word bucket hunting from short conic words alone; GPU
+recurrence telemetry is now only a larger-scale confirmation unless a
+legal-pullback sampler or quotient appears.
+The first B-enhanced legal-pullback relation screen gives a useful staging
+surface:
+[P27 Conic-Pair B/K-Enhanced Pullback Screen](evidence/p27_conic_pair_b_enhanced_pullback_20260622.md).
+Raw `(B,R)`, `(B,L)`, `(K,R)`, `(K,L)`, and `(B,R,L)` systems remain
+full-rank, but `(B,s,m)` has the stable equation
+`m^2*(B^2+s^2-4)=4*s^2*(s^2-4)`, with `s=R+1/R` and `m=L+a^2/L`.
+Together with the tautology `B^2+c^2=4`, this is a cleaner CAS staging
+coordinate for the legal pullback.  It still does not select the sparse legal
+B-domain, so it is not a GPU sampler by itself.
+The incidence follow-up prices that surface:
+[P27 BSM Surface Incidence Probe](evidence/p27_bsm_surface_incidence_20260622.md).
+Over q1607/q1847/q2087 the BSM surface has about `q^2` points and hits
+canonical d3-plus `(B,A,x)` rows at `constant/q` density
+(`rate*q` about `0.38..0.78`).  It captures all canonical d3-plus target rows
+and no canonical d3-minus rows, so it is a good staged model, but it does not
+solve the legal B-domain denominator.
+The legal-B-restricted relation follow-up is also negative:
+[P27 BSM Legal-Restricted Relation Screen](evidence/p27_bsm_legal_restricted_relations_20260622.md).
+In q1607/q1847/q2087, the target rows have no extra low-degree relation beyond
+the legal-B-restricted BSM surface in `(B,s)`, `(B,m)`, or `(s,m)` through
+degree `12`.  In `(B,s,m)`, degree `4` gives exactly the inherited BSM
+equation on both the full legal surface and the target subset
+(`target_minus_legal_extra=0`).  This kills the legal-B BSM surface as a
+GPU-promotable bucket/source until a true legal-B cover or next Kummer selector
+is added.
+The next-selector version is now negative too:
+[P27 BSM Next-Selector Relation Screen](evidence/p27_bsm_next_selector_relation_20260622.md).
+It asks whether `d4+` after `d3+` gets a new low-degree relation on the same
+staged surface.  Across q1607/q1847/q2087, `(B,s)`, `(B,m)`, and `(s,m)` have
+no `d4+` extra relation through degree `12`, and `(B,s,m)` degree `4` is again
+only the inherited BSM equation shared by legal, `d3+`, `d4+`, and `d4-`.
+So BSM remains CAS staging, not a visible two-gate coupling.
+
+The first raw quotient screen is negative:
+[P27 Conic-Pair Low-Degree Relation Screen](evidence/p27_conic_pair_lowdegree_relation_20260621.md).
+For q1607/q1847/q2087, the legal d3-plus sampler preimages in `(R,L)` have no
+nonzero total-degree relation through degree `20`.  This kills the easiest
+"low-degree plane curve in raw `(R,L)`" source, and pushes the quotient search
+to the repeated Kummer tower variables instead.
+
+The obvious invariant-coordinate quotient screen is also negative:
+[P27 Conic-Pair Invariant Relation Screen](evidence/p27_conic_pair_invariant_relation_20260621.md).
+The same legal d3-plus preimages were tested in target coordinates `(A,x)`,
+signed conic coordinates `(c,r)`, and symmetric pairs such as
+`(R+1/R,L+a^2/L)`, `((R-1/R)^2,L+a^2/L)`, and
+`(R+1/R,(L+a)(L-a))`.  Through degree `20`, q1847/q2087 have no extra nullity
+in any tested pair system, and the only q1607 degree-20 artifact does not
+repeat.  This spends the cheap invariant plane-curve idea; the remaining live
+route must retain selector roots `Z_j` or use staged pullback/normalization.
+
+The first selector-root layer has now been screened too:
+[P27 Conic-Pair Kummer-Z Relation Screen](evidence/p27_conic_pair_kummer_z_relation_20260621.md).
+After adjoining `Z^2=-(L+a)(L-a)cR`, all tested simple pairs involving `Z` are
+full-rank through degree `20` except `(A,Z)`.  Extracting `(A,Z)` shows the
+exception is only a univariate `A`-projection polynomial, with the next
+relation equal to that polynomial times `Z`; the A-projection grows at
+constant-density small-field scale.  This kills the first-Z-layer simple
+pair-quotient hope and pushes the live route to staged normalization/components
+or a named Kummer/Hilbert-90 theorem.
+
+The A-projection shortcut is now explicitly killed:
+[P27 A-Projection Selected-Prefix Profile](evidence/p27_a_projection_prefix_profile_20260621.md).
+On 3,000-row p27 train/heldout samples, unique `A` and unique `(A,x)` shrink in
+lockstep through depth 8.  The scaled half-loss stays near `1`, and
+`avg_x_per_A` remains exactly `2` at every p27 sampled prefix.  Thus the tower
+does not reveal a smaller A-bucket source; the univariate small-field
+polynomials are finite A-projection artifacts, not p27 laws.
+
+Extension-field counts give the first staged-geometry substitute:
+[P27 Extension-Field Selected-Prefix Counts](evidence/p27_extension_prefix_count_20260621.md).
+The trusted residual `E/T`, `compactD=-1`, label-2 map, and selected-prefix
+equations were counted over `GF(7^n)` and `GF(23^n)`.  The source is
+curve-sized over extension fields, but selected prefixes still reduce unique
+`A` and unique `(A,x)` together.  Local Frobenius tails appear, but there is no
+stable source collapse that extrapolates to p27 or beats sqrt.
+
+The two-step Kummer shortcut is also killed:
+[P27 Conic-Pair Two-Step Kummer Screen](evidence/p27_conic_pair_two_step_kummer_20260621.md).
+After adjoining `Z0^2=-(L0+a0)(L0-a0)c*r1`, the next selector
+`S1=-(L1+a1)(L1-a1)c*r2`, and when available `Z1^2=S1`, all obvious
+selector/root pair systems are full-rank through degree `12` on
+q1607/q1847/q2087.  This rules out the simple `(Z0,S1)`, `(Z0,Z1)`,
+normalized-root, ratio, and product quotients.  The live conic-chain route is
+therefore staged normalization/components or a theorem-level repeated
+Kummer/Hilbert-90 identity, not a GPU bucket search in simple two-root
+coordinates.
+
+The next cheap bucket generalization is also negative:
+[P27 Conic-Pair Two-Step Kummer Trivariate Screen](evidence/p27_conic_pair_two_step_kummer_trivar_20260621.md).
+Selector/root triples such as `(A,Z0,S1)`, `(A,Z0,Z1)`,
+`(A,Z1/Z0,Z0*Z1)`, normalized-root triples, and `(R_j,Z0,Z1)` are full-rank
+through degree `6` on q1607/q1847/q2087.  This spends the obvious
+three-coordinate surface search; continuing now needs a staged component
+calculation or a theorem-specified coordinate, not larger ad hoc bucket scans.
+
 The K-line now has a cleaner coordinate for that extraction:
 [P27 Kummer Belyi Structure Probe](evidence/p27_kummer_belyi_structure_probe_20260621.md).
 Symbolically,
@@ -758,13 +1137,252 @@ future promotion fields should look like q1607, q1847, q2039, and other
 The K-line recurrence loophole is now closed for small Lattes maps:
 [P27 K-Line Lattes Recurrence Screen](evidence/p27_k_lattes_recurrence_20260621.md).
 It tested `d4(K) = +/- d3(x([m]Q))` and
-`d4(K) = +/- d3(x([m]Q+(0,0)))` for `m=1..16` on the reduced Kummer line.
+`d4(K) = +/- d3(x([m]Q+(0,0)))` for `m=1..24` on the reduced Kummer line.
 In the promotion fields, only identity has full coverage, except for the
 already-local q1471 `K -> 4/K` artifact; the scores are raw d4 bias
-(`14/28`, `19/28`, `26/45`).  Nontrivial maps cover at most `13/28` in q1607
-and `19/45` in q1847.  So a d4-from-d3 Lattes recurrence is not the
+(`14/28`, `19/28`, `26/45`, `18/25` in q2087).  Nontrivial maps cover at most
+`13/28` in q1607, `19/45` in q1847, and `10/25` in q2087.  So a
+d4-from-d3 Lattes recurrence is not the
 sqrt-beating mechanism; compare d4 only after the actual d3 branch class is
 named.
+
+The broader degree-one K-line recurrence screen is negative too:
+[P27 K-Line Affine Recurrence Screen](evidence/p27_kline_affine_recurrence_20260621.md).
+It tested all maps `K -> a*K+b` and `K -> a/K+b` over p27-signature fields
+q1607/q1847/q2039/q2087.  In the non-degenerate promotion fields, the only
+full-coverage affine map is identity, scoring as raw d4 bias
+(`19/28`, `26/45`, `18/25`), and reciprocal-affine maps cover at most
+`6/28`, `7/45`, and `6/25`.  q2039 has full exact identity only because d4 is
+constant there.  This kills the sourceable degree-one rational recurrence
+loophole; the K-line route now really needs branch-divisor/Kummer-class/genus
+extraction.
+
+The first actual reverse-root branch proxy is negative:
+[P27 K-Line Reverse-Z Relation Screen](evidence/p27_kline_reverse_z_relation_20260621.md).
+Instead of using only the sign bit, it keeps the d3 all-plus source root
+`x6=z^2` and screens `(K,z)`, `(Sroot,z)`, `(K,x6)`, `(K,r)`, and normalized
+`z +/- 1/z` coordinates.  On q1847/q2087 all systems are full-rank through
+degree `20`; q1607 has only non-repeating degree-20 artifacts in lower
+multiplicity projections, while `(K,z)` and `(Sroot,z)` stay full-rank.  On a
+1,000-row p27 sample, all systems are full-rank through degree `12`.  This
+kills the obvious plane-model shortcut for the branch cover.  The surviving
+K-line work is now literal normalization / branch divisor / genus extraction
+over `P1_K` or `P1_Sroot`.
+
+The reverse-root extension count is now in:
+[P27 K-Line Reverse-Z Extension Counts](evidence/p27_kline_reverse_z_extension_count_20260621.md).
+It validates against q607 and repeats on q1607/q1847/q2087 plus
+`GF(7^n)`/`GF(23^n)`: the actual reverse-root cover has exact constant fibers
+`z_rows/unique_K = 64`, `z_rows/unique_S = 32`, and `unique_Ax/unique_A = 4`
+on every nonempty guard field.  That is strong evidence that K/S is a real
+structured projection, but `unique_K` and `unique_S` still grow at field-size
+scale.  So K/Sroot enumeration is not a below-sqrt sampler by itself; the
+next useful work is the actual branch/genus/CAS extraction of this
+constant-degree cover, not a GPU bucket search on K or Sroot.
+
+The rational fiber profile is even cleaner:
+[P27 K-Line Reverse-Z Fiber Profile](evidence/p27_kline_reverse_z_fiber_profile_20260621.md).
+On q1607/q1847/q2087, every selected K fiber has `64` z-rows, one selected
+`A`, four `(A,x)` values, eight `x6` values, sixteen `z` values, and four
+`r=x6+1/x6` values.  Every selected Sroot fiber has exactly half the rows
+with the same one-`A` structure.  There are zero anomalous rational fibers in
+the promotion fields.  This makes Sroot the cleaner branch-extraction
+coordinate, but it also kills the hope that rational K/Sroot fiber anomalies
+are the sqrt-beating source.
+
+The K/A graph now has an exact equation and a matching GPU interpretation:
+[P27 K/A Map And GPU Quadratic-Gate Update](evidence/p27_kline_a_map_and_gpu_quad_20260622.md).
+With `L=K^2`, the first-half source satisfies
+`64(A-2)^2(A+2)L^2 + 64(A+2)(A+14)(3A+10)L - (A-2)^4 = 0`,
+whose discriminant in `L` is
+`256(A+2)(A+6)^2(A^2+60A+132)^2`.  This explains the clean K/S fibers and
+shows that Sroot is the natural first-half coordinate.  But the formula
+vanishes on both d3-plus and d3-minus d2-plus candidates in p27 train/heldout
+and q607/q1607/q1847/q2087, so it is not the missing d3 selector.  The new GPU
+quadratic-gate run then checked `7,874,715` gates across gates `3..8` with
+zero mismatches, but its recurrence-coordinate domain is only a conditional
+half-scope: source-normalized target rate remains flat or slightly lower.
+The next sqrt-beating test is therefore a direct legal-pullback/quotient
+sampler for this recurrence domain, or a coupling law across many
+`chi(r_j^2+c*r_j+1)` signs.
+The GPU decision memo records the operational boundary:
+[P27 GPU Test Decision After Quadratic Probe](evidence/p27_gpu_test_decision_after_quad_20260622.md).
+Use GPU next for bounded recurrence-coupling telemetry or for a direct
+legal-pullback sampler once one exists; do not launch a large production run
+from the fixed quadratic precheck alone.
+
+The direct base-curve sampler test is negative:
+[P27 K/A Base-Curve Sampler Probe](evidence/p27_kline_base_curve_sampler_20260622.md).
+Over q1607/q1847/q2087, the explicit base curve has exactly `q` affine
+`(K,A)` points and contains every realized legal d2 point, but the realized
+legal subset is only `49/1607`, `63/1847`, and `57/2087` respectively.
+Low-weight squareclass products of the natural K/A atoms do not identify this
+subset; their best nontrivial scores are only about `0.53`.  Thus the base
+curve is a good normalization coordinate, not a direct GPU source.  The live
+object is still the additional legal cover over the base, especially the d3
+reverse-root cover over `P1_Sroot`.
+Online Magma now independently validates the base equation and B chart:
+[P27 K/A Base-Curve Magma Validation](evidence/p27_ka_base_curve_magma_validation_20260622.md).
+In q607, `base_KA=607`, the nondegenerate B chart covers `604` of them, the
+only missing points are the expected three B-degeneracies, and equation plus
+discriminant checks have zero mismatches.  So the remaining obstruction is the
+legal/d3 cover, not the K/A base model.
+
+The B-rationalized follow-up is positive as bounded telemetry, but not as a
+production source:
+[P27 B-Parameter Base-Curve Sampler Probe](evidence/p27_kline_base_param_sampler_20260622.md).
+With `A=B^2-2`, the base branches are
+`L=-(B+2)^4/(8B(B-2)^2)` and `L=(B-2)^4/(8B(B+2)^2)`.  Across
+q1607/q1847/q2087, every realized legal d2 row and every d3plus row lies in
+the same core bucket for `K`, `B+2`, `B-2`, and `L`, with about `8.04x`
+all-recall lift.  That is a real constant-factor scope shrink and a good
+bounded GPU telemetry target.  It is not sqrt-beating by itself: the bucket is
+still field-sized, and the higher-lift partial buckets are not stable enough
+to promote without a theorem.
+
+The direct next-gate version of that idea is now negative:
+[P27 B-Parameter Next-Gate Probe](evidence/p27_kline_base_param_nextgate_20260622.md).
+After conditioning on actual legal `d2` rows, the core B bucket still contains
+all rows in p27 train/heldout and q1607/q1847/q2087.  But B/K/A atom products
+do not stably predict `d3` or `d4`: the p27 train-best `d3` parity combo drops
+below majority on heldout, and the train-best `d4` combo falls from `1.087x`
+majority-lift to only `1.015x` on heldout.  So the B route is no longer a GPU
+bucket-search route; it is a function-field/CAS cover-extraction route over
+the B-rationalized base curve.
+
+The B route now has its first real quotient theorem target:
+[P27 B-Source Descent And Branch Support](evidence/p27_b_source_descent_and_branch_20260622.md).
+Symbolically, on the residual source
+`A+2=(8X^2/(X^2-1)^2)^2`, so `B=8X^2/(X^2-1)^2` is a genus-0 quotient of the
+source, not merely a fitted square root.  In p27 train/heldout and
+q1607/q1847/q2087, `d3` and `d4` after `d3=+1` descend to `Bplus` with no
+mixed groups.  This is positive and narrows the moonshot to a Kummer class on
+`P1_B`.  The nearest branch supports are negative: `d2` on the B core and `d3`
+on legal B have no rational-linear support of weight `<=4`, and `d3` is not
+one irreducible quadratic times `<=2` rational linear factors in any promotion
+field.  The structured split degree-4 follow-up is also negative:
+[P27 B-Line Two-Quadratic Support Screen](evidence/p27_b_line_two_quadratic_support_20260622.md).
+It enumerates all monic irreducible quadratic character vectors in
+q1607/q1847/q2087 and finds no pair whose product matches `d3(B)`.  The next
+serious test is Magma/Sage divisor extraction for the descended `d3(B)` class,
+including possible irreducible quartic, cubic-plus-linear, or higher
+non-visible support, not another B-bucket scan.
+That extraction now has a concrete packet:
+[P27 B-Line Kummer Extraction Packet](evidence/p27_b_line_kummer_extraction_packet_20260622.md).
+It packages the quotient `B=8X^2/(X^2-1)^2`, the branch resultant
+`16384*B^3*(B+2)^2`, the source equations for the d3 all-plus cover over
+`P1_B`, and a q1607 Magma sanity fixture.  The next accepted B-line result is
+a normalization/genus/branch-divisor computation over q1607/q1847/q2087, not
+another visible-factor or bucket screen.
+The compact row-level handoff is now also frozen:
+[P27 B-Line Kummer Fixture Packet](evidence/p27_b_line_kummer_fixture_packet_20260622.md).
+It records the conditional classes `f3(B), f4(B), f5(B), f6(B)` over
+q1607/q1847/q2087.  This sharpens the CAS ask to `f3` first, then `f4/f3`.
+The later `f5/f6` rows are already small-field tail dominated and should not
+be treated as recurrence evidence without larger heldout support.
+The legal-domain split degree-4 screen is now negative too:
+[P27 B-Line Legal-Domain Two-Quadratic Support Screen](evidence/p27_b_line_legal_two_quadratic_support_20260622.md).
+Inside the core B bucket, the legal B subset is not a product of two
+irreducible quadratic branch factors in q1607/q1847/q2087.  This kills the
+nearest low-degree split-divisor sampler for the `core B -> legal B` step.
+The monic cubic genus-1 route is also closed:
+[P27 B-Line Cubic Support Screen](evidence/p27_b_line_cubic_support_20260622.md).
+The exact bitset solver tests every cubic `B^3+aB^2+bB+c`, with global
+polarity allowed.  In q1607/q1847/q2087, both the legal B-domain and the
+decisive `d3(B)` selector have `exact_cubics = 0`.  Local d4 cubics appear in
+q1607/q2087 on only 28/25 rows, but q1847 has 45 d4 rows and zero exact
+cubics, so those are interpolation artifacts.  This kills the visible cubic
+genus-1 B-line source; the remaining low-genus B cases must come from actual
+class extraction, not coefficient guessing.
+The stronger combined-prefix cubic shortcut is now closed as well:
+[P27 B-Line Prefix Cubic Support Screen](evidence/p27_b_line_prefix_cubic_support_20260622.md).
+This tests whether a single genus-1 cubic on `P1_B` selects the all-plus prefix
+directly, even if the individual `d3(B)` and `d4(B)` characters look generic.
+For the combined gate4 prefix, q1607/q1847/q2087 all have `exact_cubics = 0`.
+For gate5, q1607 and q2087 keep their small-field plateau subsets but still
+have zero exact cubics; q1847 is one-sided with no plus tail.  So the B-line
+plateaus are not visible cubic source laws.
+The visible Belyi orbit shortcut is also negative:
+[P27 B-Line Belyi-Orbit Screen](evidence/p27_b_line_belyi_orbit_20260622.md).
+The six Möbius transforms preserving `{0,-2,infinity}` send every non-identity
+image of a core B value outside the core bucket in q1607/q1847/q2087.  Thus the
+B-line branch-set symmetry gives no orbit sampler or GPU reason.
+The broader degree-one rational recurrence shortcut is negative too:
+[P27 B-Line PGL2 Recurrence Screen](evidence/p27_b_line_pgl2_recurrence_screen_20260622.md).
+It tests every full-coverage map `B -> (aB+b)/(cB+d)` for
+`d4(B) = +/- d3(phi(B))` in q1607/q1847/q2087.  All three fields have zero
+exact recurrences; the best full-coverage maps are identity maps scoring raw
+d4 majority bias (`19/28`, `26/45`, `18/25`).  So the B-line coupling target
+is extracted Kummer classes or a theorem-shaped higher correspondence, not
+degree-one rational B maps.
+The nearest theorem-shaped higher correspondence is now negative as well:
+[P27 B-Line Power-Map Recurrence Screen](evidence/p27_b_line_power_recurrence_screen_20260622.md).
+It tests the hidden-`X` maps induced by `X -> X^m` for `m=2..6`, with all
+Belyi branch symmetries on both sides.  No exact `d3 -> d4` or reverse
+recurrence appears in q1607/q1847/q2087, and the best maps cover only
+`7/28`, `12/45`, and `6/25` of the forward domains.  This closes the natural
+hidden-`X` doubling/tripling shortcut and leaves actual B-line
+Kummer/divisor-class extraction as the live route.
+The adjacent monomial Belyi family is also negative:
+[P27 B-Line Monomial Belyi Recurrence Screen](evidence/p27_b_line_monomial_belyi_recurrence_screen_20260622.md).
+With `u=-B/2`, it tests `u -> u^m` for `m=2..12`, conjugated by the branch-S3
+symmetries.  Again there is no exact forward or reverse `d3/d4` recurrence in
+q1607/q1847/q2087; best forward coverages are only `5/28`, `10/45`, and
+`4/25`.  This closes the canonical B-line branch dynamics short of actual
+Kummer/divisor-class extraction.
+
+The B-line target is now stronger than a one-bit descent:
+[P27 B-Line Extension Counts And Deep Descent](evidence/p27_b_line_extension_and_deep_descent_20260622.md).
+Extension counts over `GF(7^n)` and `GF(23^n)` show that legal B values stay
+inside the core B bucket with no misses, and that `d3`/`d4` remain unmixed on
+B.  The legal B-domain is still field-sized, about `0.03N` in the informative
+odd extensions, so counts alone do not give a below-sqrt sampler.  But deep
+p27 train/heldout tests show no mixed B groups through `d12`: the original
+`Bplus` value determines every active selected gate bit tested.  This changes
+the live B moonshot from "find d3(B)" to "extract the B-line Kummer sequence
+`f3(B), f4(B), ...` and test whether those classes recur or couple."  That is
+the first B-lane mechanism that could genuinely amortize multiple half-losses.
+The larger p27 source-normalized check is now in:
+[P27 B-Line 60K Prefix Scaling](evidence/p27_b_line_prefix_scaling_60k_20260622.md).
+On `60000 + 60000` p27 train/heldout rows, there are again zero mixed B groups
+through `d18`, but scaled half-loss remains near `1` through meaningful counts
+(`d3..d12`).  Train's `d13/d14` bump is only `18/9` rows and does not transfer
+to heldout; heldout's larger `d15+` values are single-digit tails.  So B is a
+real Kummer-sequence surface, not a count-only sampler or B-bucket GPU reason.
+That GPU follow-up is now bounded and pre-registered:
+[P27 B-Line Deep-Prefix GPU Telemetry Handoff](evidence/p27_b_line_deep_prefix_gpu_telemetry_handoff_20260622.md)
+with manifest
+`research/p27/archive/fixtures/p27_b_line_deep_prefix_gpu_telemetry_suite_20260622.json`.
+It asks the GPU to emit `Bplus`, selected bits `d3..dN`, mixed-B examples, and
+source-normalized prefix counts from the same p27 stream.  Promotion requires
+large-scale no-mixed-B persistence plus either a source-normalized recurrence
+or a named Kummer/divisor hypothesis.  It is not a B-bucket production hunt.
+The B-line prefix-density screen has also been strengthened:
+[P27 B-Line Prefix Profile](evidence/p27_b_line_prefix_profile_20260622.md).
+Small extension fields show field-dependent late plateaus, but a larger
+`6000 + 6000` p27 train/heldout B-group sample has no mixed groups and thins
+close to independent half-loss through meaningful depths.  This keeps B as a
+Kummer-extraction surface, not as a count-only sampler.
+The first Magma staging smoke sets the extraction boundary:
+[P27 B-Line Magma Staging Smoke](evidence/p27_b_line_magma_staging_20260622.md).
+Over q7, the eta=`+1` legal B-cover saturation succeeds as a dimension-1
+scheme with `93` basis polynomials.  But adding point/curve/component calls to
+that legal cover returns a web-calculator `504`, and the full legal+d3
+reverse-source fixture also returns `504`.  So the B-line CAS target is
+concrete, but online Magma is only a syntax/saturation sanity tool here.  The
+next real extraction needs offline Magma/Sage or a specialized elimination over
+`Bline`.
+The first specialized elimination proxy is negative:
+[P27 B-Line Reverse-Z Relation Screen](evidence/p27_b_line_reverse_z_relation_20260622.md).
+It keeps the actual d3 all-plus root `z` with `x6=z^2` and tests B-line plane
+models in `(B,z)`, `(B,x6)`, `(B,r)`, `z+/-1/z`, Belyi-normalized B
+coordinates, and branch-normalized `z` coordinates.  The actual `(B,z)` cover
+and branch-normalized systems are full-rank through total degree `20` in
+q1607/q1847/q2087, and a 1,000-row p27 sample is full-rank through degree
+`12`.  Only q1607 has degree-20 artifacts in compressed `z+/-1/z`
+projections, and they do not repeat.  This kills the nearest B-line
+reverse-root plane-model sampler; the surviving B route remains actual
+normalization / branch-divisor / genus extraction over `P1_B`.
 
 The first Belyi-normalized source family is now killed:
 [P27 Lambda Branch-Divisor Screen](evidence/p27_lambda_branch_divisor_screen_20260621.md).
@@ -776,6 +1394,25 @@ q1471/q1607 but disappear at q1847.  This rules out the nearest genus `<=1`
 lambda-line sampler for the decisive next bit.  The surviving K/lambda route
 is not coefficient-bound widening; it is actual branch-class/genus extraction,
 including possible irreducible cubic/quartic support or a higher-degree class.
+
+The remaining visible low-genus B-line d3 family has now had its decisive
+q1847 exact screen:
+[P27 B-Line Quartic GPU Test Card](evidence/p27_b_line_quartic_gpu_test_card_20260622.md).
+The full q1847 monic quartic support test
+`chi(B^4+aB^3+bB^2+cB+d)` for `d3_on_legalB` found zero exact quartics:
+[P27 Full Quartic q1847 D3 Screen](evidence/p27_full_quartic_q1847_d3_screen_20260622.md).
+Since q1847 had expected random exact count about `2.52e-6`, this sharply
+downgrades the visible genus-1 B-line support route.  q2087/q1607 closure or
+gate4-prefix quartics are now optional closure tests; the live B-line work is
+normalization / branch-divisor / Kummer-class extraction, not another visible
+d3 quartic hunt.
+The visible Belyi-involution subfamilies are now dead:
+[P27 B-Line Belyi-Involution Quartic Screen](evidence/p27_b_line_involution_quartic_screen_20260622.md).
+The five small families attached to the three order-2 symmetries of
+`{0,-2,infinity}` have zero exact hits over q1607/q1847/q2087 for both
+`d3_on_legalB` and `gate4_prefix_on_legalB`.  The completed full q1847
+B-line screen was therefore the right decisive test, not a branch-symmetry
+proxy.
 
 There is also a rational-source obstruction to treating `lambda` as the next
 quotient:
@@ -1024,6 +1661,105 @@ throughput win.
 Equivalent x-square request: report prefix filters as `x_4 square`,
 `x_4,x_5 square`, and `x_4,x_5,x_6 square`.  For nonsplit rows this is the same
 gate sequence and is the cleaner 2-descent language.
+
+### Card 4b: B-Line Prefix Profile
+
+The B-line quotient is exact structure but not a direct source win:
+[P27 B-Line Prefix Profile](evidence/p27_b_line_prefix_profile_20260622.md),
+updated by
+[P27 B-Line 60K Prefix Scaling](evidence/p27_b_line_prefix_scaling_60k_20260622.md).
+
+The original `Bplus` value still determines the selected gate sequence in
+p27 samples, with no mixed B groups through `d18` in the latest
+`60000 + 60000` train/heldout check.  But the all-plus population thins close
+to one independent half-loss per gate through the meaningful range:
+
+```text
+p27 train gate3..gate12 scaled_half_loss:
+  0.9978, 0.9980, 1.0027, 0.9899, 1.0176,
+  1.0453, 0.9472, 0.9984, 1.0581, 0.9557
+
+p27 heldout gate3..gate12 scaled_half_loss:
+  1.0043, 1.0065, 1.0187, 1.0171, 1.0176,
+  1.0453, 0.9856, 1.0240, 0.9387, 1.0581
+```
+
+Small exact guard fields sometimes show late all-plus plateaus, but the
+collapse gate varies by field.  Treat those as finite-field artifacts unless a
+named divisor/Kummer relation explains them and survives p27 rows.
+
+Status: B-line remains a clean Kummer-class extraction surface; do not run a
+large GPU production search based only on Bplus buckets.
+
+Extension-field update:
+[P27 B-Line Prefix Extension Ladder](evidence/p27_b_line_prefix_extension_ladder_20260622.md)
+pushes that verdict through `GF(7^n)`, `GF(23^n)`, and `GF(103^n)`.  Legal B
+continues to have zero core-bucket misses, but all-plus plateaus stop at
+field-dependent gates: `GF(7^6)` dies at `d7`, `GF(23^3)` at `d9`, and
+`GF(103^2)` at `d6`.  This kills B-prefix counts alone as a transferable
+below-sqrt sampler; the live B-line work is still Kummer-sequence extraction
+for `f3(B), f4(B), ...`.
+
+Subfield audit:
+[P27 B-Line Frobenius Plateau Audit](evidence/p27_b_line_frobenius_plateau_audit_20260622.md)
+then checks the obvious explanation for those plateaus.  In `GF(7^5)`,
+`GF(7^6)`, `GF(23^3)`, and `GF(103^2)`, every tested legal, survival, and
+first-stop B set has full extension degree and full Frobenius orbit size.
+So the local plateaus are not proper-subfield or short-orbit samplers.
+
+Trace/norm audit:
+[P27 B-Line Trace/Norm Plateau Audit](evidence/p27_b_line_trace_norm_plateau_audit_20260622.md)
+then tests the next named Frobenius-invariant buckets.  Trace+norm is exact in
+relative quadratic extensions only, where it records conjugate pairs; prime
+degree fields remain mixed.  This is regression data for Kummer/Frobenius
+class extraction, not a p27 sampler.
+
+Follow-up: [P27 B-Line Reverse-Z Relation Screen](evidence/p27_b_line_reverse_z_relation_20260622.md)
+keeps the actual d3 reverse-source root and kills low-degree B-line plane
+models in `(B,z)` and nearby branch-normalized coordinates through degree `20`
+in q1607/q1847/q2087.  This reinforces that the B-line path needs real
+normalization/genus extraction, not a GPU sampler from obvious B projections.
+
+The post-quad moonshot queue is now consolidated:
+[P27 First-Class Moonshot Tests After Quadratic Probe](evidence/p27_first_class_moonshot_tests_after_quad_20260622.md).
+After the GPU quadratic-gate validation and the q1847 B/K/lambda quartic
+closures, the first-class tests are coordinated A/B/K/Sroot Kummer-sequence
+extraction, BSM staged legal-pullback normalization, and the trace/norm
+half-norm phase identity.  GPU is reserved for bounded telemetry or a named
+direct sampler; fixed one-bit filters and visible quartic buckets are not
+production moonshots.
+
+### Card 4c: K-Line Fit Significance
+
+K-line exact fits now have a quantitative promotion rule:
+[P27 K-Line Fit Significance](evidence/p27_kline_fit_significance_20260622.md).
+
+The q863 exact cubic burst is expected interpolation, not structure:
+
+```text
+q863 d3 monic cubic expected exact fits ~= 76.6
+observed exact cubics = 58
+```
+
+By contrast, exact d3 cubics in the promotion fields would be highly
+non-random:
+
+```text
+q1471 expected ~= 5.65e-6
+q1607 expected ~= 1.47e-5
+q1847 expected ~= 1.37e-9
+```
+
+Status: promote only stable promotion-field d3 low-degree formulas or
+branch-cover/genus extraction.  Demote q863 cubics and low-row d4 local fits.
+
+Promotion-field update:
+[P27 K-Line q1471 Cubic Promotion Screen](evidence/p27_kline_q1471_cubic_promotion_screen_20260622.md)
+exhausted all `3,183,010,111` monic cubics over q1471 and found no exact d3
+cubic.  Since degree `<=2` was already killed, the K-line source shape
+`z^2 = cubic(K)` is now dead in the first promotion field.  The K-line
+moonshot is reduced to quartic/non-polynomial branch-cover extraction and
+genus/sourceability.
 
 ### Card 5: Elliptic Line Identity
 

@@ -1,0 +1,206 @@
+{
+  "name": "p27_full_quartic_gpu_suite",
+  "date": "2026-06-22",
+  "purpose": "Unified bounded exact-support suite for the p27 B-line/K-line monic quartic source tests; q1847 d3 decisive screens are now complete and negative.",
+  "target_prime": "1000000000000000000000000103",
+  "zero_policy": "Exclude quartics that vanish on any listed target row.",
+  "global_polarity": true,
+  "coefficient_family": "monic quartic: X^4 + a*X^3 + b*X^2 + c*X + d",
+  "flattened_index": {
+    "index": "(a*q + b)*q + c",
+    "a": "index // q^2",
+    "b": "(index % q^2) // q",
+    "c": "index % q",
+    "d": "solved by bitset intersection over constant terms"
+  },
+  "report_fields": [
+    "coordinate",
+    "field",
+    "family",
+    "triples_scanned",
+    "exact_quartics",
+    "polarity_1_hits",
+    "polarity_-1_hits",
+    "sample_hits",
+    "throughput_triples_per_second",
+    "verifier_pass_count",
+    "quartic_hit_geometry_result",
+    "notes"
+  ],
+  "coordinate_suites": {
+    "B": {
+      "coordinate": "B",
+      "packet": "research/p27/archive/fixtures/p27_b_line_quartic_targets_20260622.json",
+      "verifier": "research/p27/archive/gates/p27_b_line_quartic_verify.py",
+      "reference_chunk_runner": "research/p27/archive/gates/p27_b_line_quartic_chunk_probe.py",
+      "test_card": "research/p27/evidence/p27_b_line_quartic_gpu_test_card_20260622.md",
+      "formula": "chi(B^4 + aB^3 + bB^2 + cB + d)",
+      "tasks": [
+        {
+          "priority": 10,
+          "field": 1607,
+          "family": "d3_on_legalB",
+          "role": "implementation_smoke",
+          "rows": 49,
+          "plus": 28,
+          "minus": 21,
+          "coefficient_triples": 4149995543,
+          "expected_random_exact": 0.02369320
+        },
+        {
+          "priority": 20,
+          "field": 1847,
+          "family": "d3_on_legalB",
+          "role": "decisive_promotion_field",
+          "rows": 63,
+          "plus": 45,
+          "minus": 18,
+          "coefficient_triples": 6300872423,
+          "expected_random_exact": 0.000002523526,
+          "status": "complete_negative",
+          "result": {
+            "triples_scanned": 6300872423,
+            "polarity_1_hits": 0,
+            "polarity_-1_hits": 0,
+            "exact_quartics": 0,
+            "wall_seconds": 501.012820,
+            "wall_throughput_triples_per_second": 12576269.851,
+            "summary": "research/p27/archive/probe_outputs/p27_quartic_full_B1847_d3_20260622/SUMMARY.txt",
+            "evidence": "research/p27/evidence/p27_full_quartic_q1847_d3_screen_20260622.md"
+          }
+        },
+        {
+          "priority": 30,
+          "field": 2087,
+          "family": "d3_on_legalB",
+          "role": "independent_promotion_guard",
+          "rows": 57,
+          "plus": 25,
+          "minus": 32,
+          "coefficient_triples": 9090072503,
+          "expected_random_exact": 0.0002632753
+        },
+        {
+          "priority": 40,
+          "field": 1847,
+          "family": "gate4_prefix_on_legalB",
+          "role": "combined_prefix_recurrence_probe",
+          "rows": 63,
+          "plus": 19,
+          "minus": 44,
+          "coefficient_triples": 6300872423,
+          "expected_random_exact": 0.000002523526
+        },
+        {
+          "priority": 50,
+          "field": 2087,
+          "family": "gate4_prefix_on_legalB",
+          "role": "combined_prefix_guard",
+          "rows": 57,
+          "plus": 18,
+          "minus": 39,
+          "coefficient_triples": 9090072503,
+          "expected_random_exact": 0.0002632753
+        },
+        {
+          "priority": 90,
+          "field": 1847,
+          "family": "legal_on_coreB",
+          "role": "optional_extremely_strong_legal_source_screen",
+          "rows": 230,
+          "plus": 63,
+          "minus": 167,
+          "coefficient_triples": 6300872423,
+          "expected_random_exact": 1.348958e-56
+        }
+      ],
+      "killed_subfamilies": [
+        "research/p27/evidence/p27_b_line_involution_quartic_screen_20260622.md",
+        "research/p27/evidence/p27_b_line_belyi_orbit_20260622.md"
+      ]
+    },
+    "K": {
+      "coordinate": "K",
+      "packet": "research/p27/archive/fixtures/p27_kline_quartic_targets_20260622.json",
+      "verifier": "research/p27/archive/gates/p27_kline_quartic_verify.py",
+      "reference_chunk_runner": "research/p27/archive/gates/p27_kline_quartic_chunk_probe.py",
+      "test_card": "research/p27/evidence/p27_kline_quartic_gpu_test_card_20260622.md",
+      "formula": "chi(K^4 + aK^3 + bK^2 + cK + d)",
+      "tasks": [
+        {
+          "priority": 10,
+          "field": 1471,
+          "family": "d3_on_K",
+          "role": "implementation_smoke",
+          "rows": 50,
+          "plus": 28,
+          "minus": 22,
+          "coefficient_triples": 3183010111,
+          "expected_random_exact": 0.008317272
+        },
+        {
+          "priority": 20,
+          "field": 1607,
+          "family": "d3_on_K",
+          "role": "promotion_guard",
+          "rows": 49,
+          "plus": 28,
+          "minus": 21,
+          "coefficient_triples": 4149995543,
+          "expected_random_exact": 0.02369320
+        },
+        {
+          "priority": 30,
+          "field": 1847,
+          "family": "d3_on_K",
+          "role": "decisive_promotion_field",
+          "rows": 63,
+          "plus": 45,
+          "minus": 18,
+          "coefficient_triples": 6300872423,
+          "expected_random_exact": 0.000002523526,
+          "status": "complete_negative",
+          "result": {
+            "triples_scanned": 6300872423,
+            "polarity_1_hits": 0,
+            "polarity_-1_hits": 0,
+            "exact_quartics": 0,
+            "wall_seconds": 499.681562,
+            "wall_throughput_triples_per_second": 12609775.711,
+            "summary": "research/p27/archive/probe_outputs/p27_quartic_full_K1847_d3_20260622/SUMMARY.txt",
+            "evidence": "research/p27/evidence/p27_full_quartic_q1847_d3_screen_20260622.md"
+          }
+        },
+        {
+          "priority": 60,
+          "field": 1847,
+          "family": "d4_on_K_after_d3",
+          "role": "optional_recurrence_clue_after_d3",
+          "rows": 45,
+          "plus": 19,
+          "minus": 26,
+          "coefficient_triples": 6300872423,
+          "expected_random_exact": 0.6615273
+        }
+      ],
+      "killed_subfamilies": [
+        "research/p27/evidence/p27_kline_even_quartic_screen_20260622.md",
+        "research/p27/evidence/p27_kline_reciprocal_quartic_screen_20260622.md",
+        "research/p27/evidence/p27_b_kline_signed_root_relation_20260622.md"
+      ]
+    }
+  },
+  "bridge": {
+    "evidence": "research/p27/evidence/p27_b_kline_bridge_20260622.md",
+    "relation": "K^2 = (B - 2)^4 / (8*B*(B + 2)^2)",
+    "interpretation": "B-line and K-line positives are coordinate alternatives for one descended class, not independent confirmation."
+  },
+  "latest_result": {
+    "status": "q1847_d3_decisive_negative",
+    "evidence": "research/p27/evidence/p27_full_quartic_q1847_d3_screen_20260622.md",
+    "summary": "The decisive q1847 d3 monic quartic screens found exact_quartics=0 in both B and K coordinates.",
+    "interpretation": "Visible monic-quartic d3 promotion is dead in the decisive field; remaining work is optional closure, gate4-prefix closure, or offline branch/genus/Kummer extraction."
+  },
+  "promotion_rule": "Promote only a new named quartic/class result that overcomes the q1847 d3 negatives, then verify with the coordinate verifier and construct z^2=f(B) or z^2=f(K) for genus/sourceability.",
+  "kill_rule": "The decisive B-line and K-line q1847 d3 screens are complete negative, closing the visible low-genus monic-quartic d3 route and moving the live lane to offline branch/genus/Kummer extraction."
+}

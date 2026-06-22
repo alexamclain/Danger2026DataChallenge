@@ -1,0 +1,258 @@
+p27 A-line PGL2 recurrence probe
+screen = d_{j+1}(A) = +/- d_j((a*A+b)/(c*A+d))
+depth = 8
+min_rows = 20
+q1607_base:
+  enum_compact_not_target = 805
+  enum_no_label2_candidate = 408
+  unique_A = 49
+  unique_ax = 196
+q1607_d3_target:
+  domain_A = 49
+  domain_points = 196
+  gate_d = 3
+  groups = 49
+  minus_A = 21
+  plus_A = 28
+  rows = 49
+q1607_d4_target:
+  domain_A = 49
+  domain_points = 196
+  gate_d = 4
+  groups = 28
+  minus_A = 9
+  plus_A = 19
+  rows = 28
+q1607_d5_target:
+  domain_A = 49
+  domain_points = 196
+  gate_d = 5
+  groups = 19
+  plus_A = 19
+  rows = 19
+q1607_d6_target:
+  domain_A = 49
+  domain_points = 196
+  gate_d = 6
+  groups = 19
+  minus_A = 19
+  rows = 19
+q1607_d7_target:
+  domain_A = 49
+  domain_points = 196
+  gate_d = 7
+  groups = 0
+  rows = 0
+q1607_d8_target:
+  domain_A = 49
+  domain_points = 196
+  gate_d = 8
+  groups = 0
+  rows = 0
+q1607_d9_target:
+  domain_A = 49
+  domain_points = 196
+  gate_d = 9
+  groups = 0
+  rows = 0
+q1607_d10_target:
+  domain_A = 49
+  domain_points = 196
+  gate_d = 10
+  groups = 0
+  rows = 0
+q1607_d3_to_d4_pgl2_stats:
+  best_coverage_x1000000 = 1000000
+  best_covered = 28
+  best_match_x1000000 = 678571
+  best_matches = 19
+  candidate_poles = 3370
+  distinct_pgl2_maps = 110544
+  exact_pgl2_recurrences = 0
+  next_rows = 28
+  pgl2_maps_tested = 110544
+  prev_rows = 49
+q1607_d3_to_d4_exact_pgl2:
+  none
+q1607_d3_to_d4_best_pgl2:
+  phi=(1*A+0)/(0*A+1) polarity=1 covered=28 matches=19
+  phi=(1*A+0)/(0*A+1) polarity=-1 covered=28 matches=9
+  phi=(1*A+334)/(406*A+844) polarity=-1 covered=8 matches=8
+  phi=(1*A+433)/(396*A+1397) polarity=-1 covered=8 matches=8
+  phi=(1*A+1031)/(349*A+1552) polarity=-1 covered=9 matches=7
+q1607_d4_to_d5_pgl2_result: skipped_rows_lt_20
+q1607_d5_to_d6_pgl2_result: skipped_rows_lt_20
+q1607_d6_to_d7_pgl2_result: skipped_rows_lt_20
+q1607_d7_to_d8_pgl2_result: skipped_rows_lt_20
+q1607_d8_to_d9_pgl2_result: skipped_rows_lt_20
+q1607_d9_to_d10_pgl2_result: skipped_rows_lt_20
+q1847_base:
+  enum_compact_not_target = 873
+  enum_no_label2_candidate = 468
+  unique_A = 63
+  unique_ax = 252
+q1847_d3_target:
+  domain_A = 63
+  domain_points = 252
+  gate_d = 3
+  groups = 63
+  minus_A = 18
+  plus_A = 45
+  rows = 63
+q1847_d4_target:
+  domain_A = 63
+  domain_points = 252
+  gate_d = 4
+  groups = 45
+  minus_A = 26
+  plus_A = 19
+  rows = 45
+q1847_d5_target:
+  domain_A = 63
+  domain_points = 252
+  gate_d = 5
+  groups = 19
+  minus_A = 19
+  rows = 19
+q1847_d6_target:
+  domain_A = 63
+  domain_points = 252
+  gate_d = 6
+  groups = 0
+  rows = 0
+q1847_d7_target:
+  domain_A = 63
+  domain_points = 252
+  gate_d = 7
+  groups = 0
+  rows = 0
+q1847_d8_target:
+  domain_A = 63
+  domain_points = 252
+  gate_d = 8
+  groups = 0
+  rows = 0
+q1847_d9_target:
+  domain_A = 63
+  domain_points = 252
+  gate_d = 9
+  groups = 0
+  rows = 0
+q1847_d10_target:
+  domain_A = 63
+  domain_points = 252
+  gate_d = 10
+  groups = 0
+  rows = 0
+q1847_d3_to_d4_pgl2_stats:
+  best_coverage_x1000000 = 1000000
+  best_covered = 45
+  best_match_x1000000 = 577777
+  best_matches = 26
+  candidate_poles = 10864
+  distinct_pgl2_maps = 238266
+  exact_pgl2_recurrences = 0
+  next_rows = 45
+  pgl2_maps_tested = 238266
+  prev_rows = 63
+q1847_d3_to_d4_exact_pgl2:
+  none
+q1847_d3_to_d4_best_pgl2:
+  phi=(1*A+0)/(0*A+1) polarity=-1 covered=45 matches=26
+  phi=(1*A+0)/(0*A+1) polarity=1 covered=45 matches=19
+  phi=(1*A+1664)/(625*A+324) polarity=1 covered=10 matches=9
+  phi=(1*A+554)/(674*A+1345) polarity=-1 covered=10 matches=9
+  phi=(1*A+512)/(478*A+1846) polarity=-1 covered=10 matches=9
+q1847_d4_to_d5_pgl2_result: skipped_rows_lt_20
+q1847_d5_to_d6_pgl2_result: skipped_rows_lt_20
+q1847_d6_to_d7_pgl2_result: skipped_rows_lt_20
+q1847_d7_to_d8_pgl2_result: skipped_rows_lt_20
+q1847_d8_to_d9_pgl2_result: skipped_rows_lt_20
+q1847_d9_to_d10_pgl2_result: skipped_rows_lt_20
+q2087_base:
+  enum_compact_not_target = 1109
+  enum_no_label2_candidate = 520
+  unique_A = 57
+  unique_ax = 228
+q2087_d3_target:
+  domain_A = 57
+  domain_points = 228
+  gate_d = 3
+  groups = 57
+  minus_A = 32
+  plus_A = 25
+  rows = 57
+q2087_d4_target:
+  domain_A = 57
+  domain_points = 228
+  gate_d = 4
+  groups = 25
+  minus_A = 7
+  plus_A = 18
+  rows = 25
+q2087_d5_target:
+  domain_A = 57
+  domain_points = 228
+  gate_d = 5
+  groups = 18
+  plus_A = 18
+  rows = 18
+q2087_d6_target:
+  domain_A = 57
+  domain_points = 228
+  gate_d = 6
+  groups = 18
+  plus_A = 18
+  rows = 18
+q2087_d7_target:
+  domain_A = 57
+  domain_points = 228
+  gate_d = 7
+  groups = 18
+  plus_A = 18
+  rows = 18
+q2087_d8_target:
+  domain_A = 57
+  domain_points = 228
+  gate_d = 8
+  groups = 18
+  minus_A = 18
+  rows = 18
+q2087_d9_target:
+  domain_A = 57
+  domain_points = 228
+  gate_d = 9
+  groups = 0
+  rows = 0
+q2087_d10_target:
+  domain_A = 57
+  domain_points = 228
+  gate_d = 10
+  groups = 0
+  rows = 0
+q2087_d3_to_d4_pgl2_stats:
+  best_coverage_x1000000 = 1000000
+  best_covered = 25
+  best_match_x1000000 = 720000
+  best_matches = 18
+  candidate_poles = 3818
+  distinct_pgl2_maps = 175560
+  exact_pgl2_recurrences = 0
+  next_rows = 25
+  pgl2_maps_tested = 175560
+  prev_rows = 57
+q2087_d3_to_d4_exact_pgl2:
+  none
+q2087_d3_to_d4_best_pgl2:
+  phi=(1*A+0)/(0*A+1) polarity=1 covered=25 matches=18
+  phi=(1*A+0)/(0*A+1) polarity=-1 covered=25 matches=7
+  phi=(1*A+21)/(227*A+491) polarity=1 covered=10 matches=7
+  phi=(1*A+905)/(1624*A+2086) polarity=1 covered=8 matches=7
+  phi=(1*A+1331)/(1090*A+416) polarity=-1 covered=8 matches=7
+q2087_d4_to_d5_pgl2_result: skipped_rows_lt_20
+q2087_d5_to_d6_pgl2_result: skipped_rows_lt_20
+q2087_d6_to_d7_pgl2_result: skipped_rows_lt_20
+q2087_d7_to_d8_pgl2_result: skipped_rows_lt_20
+q2087_d8_to_d9_pgl2_result: skipped_rows_lt_20
+q2087_d9_to_d10_pgl2_result: skipped_rows_lt_20
+p27_a_line_pgl2_recurrence_probe_rows=1/1

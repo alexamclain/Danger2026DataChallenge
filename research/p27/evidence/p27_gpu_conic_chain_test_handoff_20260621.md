@@ -31,6 +31,10 @@ research/p27/evidence/p27_quadratic_gate_recurrence_20260621.md
 research/p27/evidence/p27_conic_chain_source_screen_20260621.md
 research/p27/evidence/p27_gpu_search_space_narrowing_20260621.md
 research/p27/evidence/p27_gpu_uprecheck_probe_20260621.md
+research/p27/evidence/p27_conic_pair_invariant_relation_20260621.md
+research/p27/evidence/p27_conic_pair_kummer_z_relation_20260621.md
+research/p27/evidence/p27_a_projection_prefix_profile_20260621.md
+research/p27/evidence/p27_extension_prefix_count_20260621.md
 ```
 
 The recurrence is exact in the tested p27 tower:
@@ -121,18 +125,97 @@ formula mismatch count = 0
 This experiment is mostly a GPU implementation check.  It should be small:
 use same-stream telemetry, not a production cap.
 
-## GPU Experiment B: Direct Pair-Source Probe
+## GPU Experiment B: Legal Pullback Source Probe
 
-Implement the `(R,L) -> (c,r,h,g,A,x)` sampler above and test whether its
-outputs can be fed into, or pulled back to, the legal p27 label-2/compactD
-path.
+The direct free `(R,L) -> (c,r,h,g,A,x)` sampler is now screened:
+[P27 Conic-Pair Sampler Legal Incidence](p27_conic_pair_sampler_legal_incidence_20260621.md).
+It covers every legal d3-plus `(A,x5)` class tested and no d3-minus classes,
+but legal hits occur at about `constant/q` per random `(R,L)` draw.  Therefore
+do not benchmark a raw random `(R,L)` production sampler as if it were already
+a win.
+
+The useful GPU/CPU experiment is narrower: test a legal pullback source, if
+one is implemented, that samples the conic-pair intersection with the
+label-2/compactD locus rather than sampling free two-dimensional `(R,L)`.
+
+The d4 selector on that legal pullback is now explicit:
+[P27 Conic-Pair D4 Recurrence](p27_conic_pair_d4_recurrence_20260621.md).
+With `a=R-1/R` and `L=h-g-2r`,
+
+```text
+d4 = chi(-(L+a)(L-a)cR).
+```
+
+GPU should report this selector only if the legal conic-pair variables are
+already available.  It is not a reason to run free random `(R,L)`.
+
+The d5 tower screen shows the same selector repeats one level later:
+[P27 Conic-Pair D5 Tower](p27_conic_pair_d5_tower_20260621.md).  GPU should
+treat this as tower telemetry or legal-pullback work, not as a production
+source until a legal tower sampler exists.
+
+The legal source depth screen is also explicit now:
+[P27 Legal Conic Tower Depth](p27_legal_conic_tower_depth_20260621.md).
+On p27 train/heldout samples, the legal tower still thins roughly like
+successive selected half-gates through depth 5.  GPU should therefore look for
+a quotient/legal tower sampler, not just evaluate the original legal source
+with more depth gates.
+
+The CAS form of that quotient/sampler ask is now packaged:
+[P27 Conic Tower Quotient CAS Handoff](p27_conic_tower_quotient_cas_handoff_20260622.md).
+Use this as the source of truth before starting new GPU conic work.
+
+The raw `(R,L)` low-degree quotient screen is negative:
+[P27 Conic-Pair Low-Degree Relation Screen](p27_conic_pair_lowdegree_relation_20260621.md).
+Do not ask GPU to search random `(R,L)` or low-degree raw plane-curve buckets.
+The remaining GPU-relevant target is a quotient/source in the repeated Kummer
+tower variables.
+
+The obvious invariant-coordinate quotient screen is also negative:
+[P27 Conic-Pair Invariant Relation Screen](p27_conic_pair_invariant_relation_20260621.md).
+Do not spend GPU time on bucket searches in simple symmetric pairs like
+`(R+1/R,L+a^2/L)`, `((R-1/R)^2,L+a^2/L)`, `(R+1/R,(L+a)(L-a))`,
+or `(c,r)`.  q1847/q2087 show no extra low-degree relation through degree 20,
+and the only q1607 degree-20 artifact failed to repeat.
+
+The first Kummer-root layer was also screened:
+[P27 Conic-Pair Kummer-Z Relation Screen](p27_conic_pair_kummer_z_relation_20260621.md).
+After adjoining `Z^2=-(L+a)(L-a)cR`, simple pairs involving `Z` remain
+full-rank through degree 20 except `(A,Z)`, and the `(A,Z)` exception is only a
+univariate A-projection polynomial.  Do not launch GPU bucket searches for
+first-Z-layer pair relations without a new theorem-specified coordinate.
+
+The A-projection prefix profile is also negative:
+[P27 A-Projection Selected-Prefix Profile](p27_a_projection_prefix_profile_20260621.md).
+On p27 train/heldout samples through depth 8, unique `A` and unique `(A,x)`
+shrink in lockstep with ordinary half-loss.  Do not run GPU A-bucket searches
+from selected-prefix filters; they do not produce a smaller source space.
+
+Extension-field selected-prefix counts agree:
+[P27 Extension-Field Selected-Prefix Counts](p27_extension_prefix_count_20260621.md).
+The legal source is curve-sized over `GF(7^n)` and `GF(23^n)`, but selected
+prefixes do not produce a stable smaller source.  Treat local extension-field
+tails as geometry diagnostics, not as GPU source-enumeration targets.
+
+The obvious two-step Kummer quotient is also negative:
+[P27 Conic-Pair Two-Step Kummer Screen](p27_conic_pair_two_step_kummer_20260621.md).
+After adjoining `Z0`, `S1`, and `Z1`, selector/root pair systems are full-rank
+through degree 12 on q1607/q1847/q2087.  Do not use GPU time on bucket
+searches in simple `Z0/S1/Z1`, normalized-root, ratio, or product coordinates.
+The remaining GPU-relevant conic work is legal-pullback telemetry or a
+new theorem-specified tower coordinate.
+
+The trivariate version is negative as well:
+[P27 Conic-Pair Two-Step Kummer Trivariate Screen](p27_conic_pair_two_step_kummer_trivar_20260621.md).
+Simple `A/R/L/S1/Z0/Z1` triples are full-rank through degree 6 on the same
+guard fields.  This further argues against GPU bucket searches in obvious
+two-step Kummer coordinates.
 
 Report:
 
 ```text
-raw (R,L) draws/sec
-nondegenerate sampler outputs/sec
-valid A/x rows/sec
+source draws/sec
+nondegenerate legal-pullback outputs/sec
 rows accepted by the existing legal verifier/path
 d3/d4/d5 survivor rates from sampler outputs
 same metrics for the ordinary raw X1(16) baseline
@@ -149,7 +232,8 @@ or a direct source into a named legal stratum that avoids a fresh 1/2 loss.
 Kill condition:
 
 ```text
-sampler outputs do not map back to legal label-2/compactD rows at useful rate,
+legal pullback is not implemented,
+raw free (R,L) is the only source,
 or the legal pullback costs erase the sourced conic gate.
 ```
 
@@ -183,6 +267,7 @@ than merely improving a constant factor.
 
 ```text
 do not run a large blind p27 production search from this handoff
+do not run raw random `(R,L)` as a production sampler
 do not retest fixed d2/d3/d4 prefixes as if they already shrink raw source scope
 do not promote independent u+2 Legendre prechecks; that GPU result is negative
 do not treat trace/norm D_plus as production until there is a direct sampler

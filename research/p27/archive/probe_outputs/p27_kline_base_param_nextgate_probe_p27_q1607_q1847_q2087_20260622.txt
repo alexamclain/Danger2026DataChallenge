@@ -1,0 +1,421 @@
+p27 B-parameter next-gate probe
+atoms = ['branch', 'K', 'K+1', 'K-1', 'K^2+4', 'L', 'L+1', 'B', 'B+1', 'B-1', 'B+2', 'B-2', 'B^2+1', 'B^2-4', 'A+2', 'A-2', 'A+6', 'A+14', '3A+10', 'A^2+60A+132']
+core_bucket = {'K': 0, 'B+2': 0, 'B-2': 1, 'L': 0}
+p27_train_sample_stats:
+  oriented_candidates_raw = 24000
+  sample_candidate_invalid_not_nonsplit = 11842
+  sample_compact_not_target = 11777
+  sample_no_t = 11867
+  sample_no_w = 23525
+  sample_pair_incomplete = 5921
+  sample_rows = 6000
+  sample_x_draws = 47241
+p27_train_legal_param_stats:
+  core_bucket_rows = 6000
+  d3_minus_KA = 1506
+  d3_plus_KA = 1494
+  d4_minus_after_d3_KA = 741
+  d4_plus_after_d3_KA = 753
+  deduped_candidates = 24000
+  group_size_8 = 3000
+  legal_KA = 3000
+  param_rows = 6000
+  param_rows_per_KA_2 = 3000
+p27_train_d3_stats:
+  minus_rows = 3012
+  plus_rows = 2988
+  scored_rows = 6000
+p27_train_d3_baseline:
+  plus_rate = 0.498000000
+  majority_rate = 0.502000000
+p27_train_d3_best_parity_combos:
+  good=3188/6000 rate=0.531333333 majority_lift=1.058433 polarity=-1 weight=3 combo=K-1 * A+14 * 3A+10
+  good=3188/6000 rate=0.531333333 majority_lift=1.058433 polarity=-1 weight=4 combo=K * K-1 * A+14 * 3A+10
+  good=3188/6000 rate=0.531333333 majority_lift=1.058433 polarity=-1 weight=4 combo=K-1 * K^2+4 * A+14 * 3A+10
+  good=3188/6000 rate=0.531333333 majority_lift=1.058433 polarity=-1 weight=4 combo=K-1 * L * A+14 * 3A+10
+  good=3188/6000 rate=0.531333333 majority_lift=1.058433 polarity=-1 weight=4 combo=K-1 * B+2 * A+14 * 3A+10
+  good=3188/6000 rate=0.531333333 majority_lift=1.058433 polarity=1 weight=4 combo=K-1 * B-2 * A+14 * 3A+10
+  good=3188/6000 rate=0.531333333 majority_lift=1.058433 polarity=1 weight=4 combo=K-1 * B^2-4 * A+14 * 3A+10
+  good=3188/6000 rate=0.531333333 majority_lift=1.058433 polarity=-1 weight=4 combo=K-1 * A+2 * A+14 * 3A+10
+  good=3188/6000 rate=0.531333333 majority_lift=1.058433 polarity=1 weight=4 combo=K-1 * A-2 * A+14 * 3A+10
+  good=3184/6000 rate=0.530666667 majority_lift=1.057105 polarity=-1 weight=2 combo=K-1 * A+14
+  good=3184/6000 rate=0.530666667 majority_lift=1.057105 polarity=-1 weight=3 combo=K * K-1 * A+14
+  good=3184/6000 rate=0.530666667 majority_lift=1.057105 polarity=-1 weight=3 combo=K-1 * K^2+4 * A+14
+p27_train_d3_best_buckets_min_count_24:
+  majority_lift=1.276145 precision=0.640625000 hits=246/384 weight=4 bits=0001 combo=K+1 * K-1 * B^2+1 * A+6
+  majority_lift=1.241266 precision=0.623115578 hits=248/398 weight=4 bits=0100 combo=K-1 * L+1 * A+14 * 3A+10
+  majority_lift=1.241266 precision=0.623115578 hits=248/398 weight=4 bits=0001 combo=K-1 * A+14 * 3A+10 * A^2+60A+132
+  majority_lift=1.229775 precision=0.617346939 hits=242/392 weight=4 bits=0001 combo=K-1 * L+1 * B^2+1 * A+6
+  majority_lift=1.229775 precision=0.617346939 hits=242/392 weight=4 bits=0010 combo=K-1 * B^2+1 * A+6 * A^2+60A+132
+  majority_lift=1.226800 precision=0.615853659 hits=202/328 weight=4 bits=1000 combo=K-1 * L+1 * A+6 * A+14
+  majority_lift=1.226800 precision=0.615853659 hits=202/328 weight=4 bits=1000 combo=K-1 * A+6 * A+14 * A^2+60A+132
+  majority_lift=1.225046 precision=0.614973262 hits=230/374 weight=4 bits=0000 combo=K+1 * K-1 * B^2+1 * A+14
+  majority_lift=1.217926 precision=0.611398964 hits=236/386 weight=4 bits=0000 combo=K+1 * K-1 * A+14 * 3A+10
+  majority_lift=1.213981 precision=0.609418283 hits=220/361 weight=4 bits=1000 combo=K-1 * B+1 * A+14 * 3A+10
+  majority_lift=1.213981 precision=0.609418283 hits=220/361 weight=4 bits=1100 combo=K-1 * B-1 * A+14 * 3A+10
+  majority_lift=1.213537 precision=0.609195402 hits=212/348 weight=4 bits=0000 combo=K+1 * K-1 * L+1 * B^2+1
+p27_train_d4_stats:
+  minus_rows = 1482
+  plus_rows = 1506
+  scored_rows = 2988
+  target_missing = 3012
+p27_train_d4_baseline:
+  plus_rate = 0.504016064
+  majority_rate = 0.504016064
+p27_train_d4_best_parity_combos:
+  good=1638/2988 rate=0.548192771 majority_lift=1.087649 polarity=1 weight=2 combo=B^2+1 * 3A+10
+  good=1638/2988 rate=0.548192771 majority_lift=1.087649 polarity=1 weight=3 combo=K * B^2+1 * 3A+10
+  good=1638/2988 rate=0.548192771 majority_lift=1.087649 polarity=1 weight=3 combo=K^2+4 * B^2+1 * 3A+10
+  good=1638/2988 rate=0.548192771 majority_lift=1.087649 polarity=1 weight=3 combo=L * B^2+1 * 3A+10
+  good=1638/2988 rate=0.548192771 majority_lift=1.087649 polarity=1 weight=3 combo=B+2 * B^2+1 * 3A+10
+  good=1638/2988 rate=0.548192771 majority_lift=1.087649 polarity=-1 weight=3 combo=B-2 * B^2+1 * 3A+10
+  good=1638/2988 rate=0.548192771 majority_lift=1.087649 polarity=-1 weight=3 combo=B^2+1 * B^2-4 * 3A+10
+  good=1638/2988 rate=0.548192771 majority_lift=1.087649 polarity=1 weight=3 combo=B^2+1 * A+2 * 3A+10
+  good=1638/2988 rate=0.548192771 majority_lift=1.087649 polarity=-1 weight=3 combo=B^2+1 * A-2 * 3A+10
+  good=1638/2988 rate=0.548192771 majority_lift=1.087649 polarity=-1 weight=4 combo=branch * B * B^2+1 * 3A+10
+  good=1638/2988 rate=0.548192771 majority_lift=1.087649 polarity=1 weight=4 combo=K * K^2+4 * B^2+1 * 3A+10
+  good=1638/2988 rate=0.548192771 majority_lift=1.087649 polarity=1 weight=4 combo=K * L * B^2+1 * 3A+10
+p27_train_d4_best_buckets_min_count_24:
+  majority_lift=1.369949 precision=0.690476190 hits=116/168 weight=4 bits=0001 combo=K+1 * B^2+1 * A+14 * 3A+10
+  majority_lift=1.333732 precision=0.672222222 hits=121/180 weight=4 bits=0101 combo=K+1 * B+1 * B^2+1 * 3A+10
+  majority_lift=1.333732 precision=0.672222222 hits=121/180 weight=4 bits=0001 combo=K+1 * B-1 * B^2+1 * 3A+10
+  majority_lift=1.315019 precision=0.662790698 hits=114/172 weight=4 bits=1010 combo=L+1 * B+1 * B-1 * A+6
+  majority_lift=1.315019 precision=0.662790698 hits=114/172 weight=4 bits=0101 combo=B+1 * B-1 * A+6 * A^2+60A+132
+  majority_lift=1.314442 precision=0.662500000 hits=106/160 weight=4 bits=0001 combo=K+1 * L+1 * B^2+1 * 3A+10
+  majority_lift=1.314442 precision=0.662500000 hits=106/160 weight=4 bits=0010 combo=K+1 * B^2+1 * 3A+10 * A^2+60A+132
+  majority_lift=1.289641 precision=0.650000000 hits=130/200 weight=4 bits=1011 combo=B+1 * B-1 * B^2+1 * 3A+10
+  majority_lift=1.287531 precision=0.648936170 hits=122/188 weight=4 bits=1001 combo=B+1 * B-1 * B^2+1 * 3A+10
+  majority_lift=1.285132 precision=0.647727273 hits=114/176 weight=4 bits=0100 combo=K-1 * A+6 * A+14 * 3A+10
+  majority_lift=1.281375 precision=0.645833333 hits=124/192 weight=4 bits=0101 combo=K+1 * K-1 * B^2+1 * 3A+10
+  majority_lift=1.280041 precision=0.645161290 hits=120/186 weight=4 bits=0100 combo=B+1 * B-1 * A+6 * 3A+10
+p27_heldout_sample_stats:
+  oriented_candidates_raw = 24000
+  sample_candidate_invalid_not_nonsplit = 11730
+  sample_compact_not_target = 12029
+  sample_no_t = 12113
+  sample_no_w = 24247
+  sample_pair_incomplete = 5865
+  sample_rows = 6000
+  sample_x_draws = 48307
+p27_heldout_legal_param_stats:
+  core_bucket_rows = 6000
+  d3_minus_KA = 1474
+  d3_plus_KA = 1526
+  d4_minus_after_d3_KA = 787
+  d4_plus_after_d3_KA = 739
+  deduped_candidates = 24000
+  group_size_8 = 3000
+  legal_KA = 3000
+  param_rows = 6000
+  param_rows_per_KA_2 = 3000
+p27_heldout_d3_stats:
+  minus_rows = 2948
+  plus_rows = 3052
+  scored_rows = 6000
+p27_heldout_d3_baseline:
+  plus_rate = 0.508666667
+  majority_rate = 0.508666667
+p27_heldout_d3_best_parity_combos:
+  good=3134/6000 rate=0.522333333 majority_lift=1.026868 polarity=-1 weight=2 combo=L+1 * 3A+10
+  good=3134/6000 rate=0.522333333 majority_lift=1.026868 polarity=-1 weight=2 combo=3A+10 * A^2+60A+132
+  good=3134/6000 rate=0.522333333 majority_lift=1.026868 polarity=-1 weight=3 combo=K * L+1 * 3A+10
+  good=3134/6000 rate=0.522333333 majority_lift=1.026868 polarity=-1 weight=3 combo=K * 3A+10 * A^2+60A+132
+  good=3134/6000 rate=0.522333333 majority_lift=1.026868 polarity=-1 weight=3 combo=K^2+4 * L+1 * 3A+10
+  good=3134/6000 rate=0.522333333 majority_lift=1.026868 polarity=-1 weight=3 combo=K^2+4 * 3A+10 * A^2+60A+132
+  good=3134/6000 rate=0.522333333 majority_lift=1.026868 polarity=-1 weight=3 combo=L * L+1 * 3A+10
+  good=3134/6000 rate=0.522333333 majority_lift=1.026868 polarity=-1 weight=3 combo=L * 3A+10 * A^2+60A+132
+  good=3134/6000 rate=0.522333333 majority_lift=1.026868 polarity=-1 weight=3 combo=L+1 * B+2 * 3A+10
+  good=3134/6000 rate=0.522333333 majority_lift=1.026868 polarity=1 weight=3 combo=L+1 * B-2 * 3A+10
+  good=3134/6000 rate=0.522333333 majority_lift=1.026868 polarity=1 weight=3 combo=L+1 * B^2-4 * 3A+10
+  good=3134/6000 rate=0.522333333 majority_lift=1.026868 polarity=-1 weight=3 combo=L+1 * A+2 * 3A+10
+p27_heldout_d3_best_buckets_min_count_24:
+  majority_lift=1.196197 precision=0.608465608 hits=230/378 weight=4 bits=0110 combo=K+1 * K-1 * A+6 * A+14
+  majority_lift=1.195768 precision=0.608247423 hits=236/388 weight=4 bits=1000 combo=K+1 * L+1 * B+1 * B^2+1
+  majority_lift=1.195768 precision=0.608247423 hits=236/388 weight=4 bits=1010 combo=K+1 * L+1 * B-1 * B^2+1
+  majority_lift=1.195768 precision=0.608247423 hits=236/388 weight=4 bits=1000 combo=K+1 * B+1 * B^2+1 * A^2+60A+132
+  majority_lift=1.195768 precision=0.608247423 hits=236/388 weight=4 bits=1100 combo=K+1 * B-1 * B^2+1 * A^2+60A+132
+  majority_lift=1.194352 precision=0.607526882 hits=226/372 weight=4 bits=1000 combo=K+1 * L+1 * B^2+1 * 3A+10
+  majority_lift=1.194352 precision=0.607526882 hits=226/372 weight=4 bits=1000 combo=K+1 * B^2+1 * 3A+10 * A^2+60A+132
+  majority_lift=1.189508 precision=0.605063291 hits=239/395 weight=4 bits=0000 combo=L+1 * B+1 * B^2+1 * 3A+10
+  majority_lift=1.189508 precision=0.605063291 hits=239/395 weight=4 bits=0100 combo=L+1 * B-1 * B^2+1 * 3A+10
+  majority_lift=1.189508 precision=0.605063291 hits=239/395 weight=4 bits=0000 combo=B+1 * B^2+1 * 3A+10 * A^2+60A+132
+  majority_lift=1.189508 precision=0.605063291 hits=239/395 weight=4 bits=1000 combo=B-1 * B^2+1 * 3A+10 * A^2+60A+132
+  majority_lift=1.186333 precision=0.603448276 hits=210/348 weight=4 bits=1000 combo=L+1 * A+6 * A+14 * 3A+10
+p27_heldout_d4_stats:
+  minus_rows = 1574
+  plus_rows = 1478
+  scored_rows = 3052
+  target_missing = 2948
+p27_heldout_d4_baseline:
+  plus_rate = 0.484272608
+  majority_rate = 0.515727392
+p27_heldout_d4_best_parity_combos:
+  good=1644/3052 rate=0.538663172 majority_lift=1.044473 polarity=1 weight=4 combo=L+1 * B^2+1 * A+6 * 3A+10
+  good=1644/3052 rate=0.538663172 majority_lift=1.044473 polarity=1 weight=4 combo=B^2+1 * A+6 * 3A+10 * A^2+60A+132
+  good=1620/3052 rate=0.530799476 majority_lift=1.029225 polarity=1 weight=4 combo=L+1 * B+1 * B-1 * B^2+1
+  good=1620/3052 rate=0.530799476 majority_lift=1.029225 polarity=1 weight=4 combo=B+1 * B-1 * B^2+1 * A^2+60A+132
+  good=1616/3052 rate=0.529488860 majority_lift=1.026684 polarity=1 weight=4 combo=K+1 * K-1 * B^2+1 * 3A+10
+  good=1610/3052 rate=0.527522936 majority_lift=1.022872 polarity=1 weight=2 combo=B^2+1 * A+14
+  good=1610/3052 rate=0.527522936 majority_lift=1.022872 polarity=1 weight=3 combo=K * B^2+1 * A+14
+  good=1610/3052 rate=0.527522936 majority_lift=1.022872 polarity=1 weight=3 combo=K^2+4 * B^2+1 * A+14
+  good=1610/3052 rate=0.527522936 majority_lift=1.022872 polarity=1 weight=3 combo=L * B^2+1 * A+14
+  good=1610/3052 rate=0.527522936 majority_lift=1.022872 polarity=1 weight=3 combo=B+2 * B^2+1 * A+14
+  good=1610/3052 rate=0.527522936 majority_lift=1.022872 polarity=-1 weight=3 combo=B-2 * B^2+1 * A+14
+  good=1610/3052 rate=0.527522936 majority_lift=1.022872 polarity=-1 weight=3 combo=B^2+1 * B^2-4 * A+14
+p27_heldout_d4_best_buckets_min_count_24:
+  majority_lift=1.285869 precision=0.663157895 hits=126/190 weight=4 bits=1001 combo=B^2+1 * A+6 * A+14 * 3A+10
+  majority_lift=1.266292 precision=0.653061224 hits=128/196 weight=4 bits=1101 combo=K-1 * B^2+1 * A+14 * 3A+10
+  majority_lift=1.249169 precision=0.644230769 hits=134/208 weight=4 bits=1001 combo=B+1 * B-1 * A+6 * 3A+10
+  majority_lift=1.242954 precision=0.641025641 hits=100/156 weight=4 bits=1000 combo=K+1 * L+1 * B^2+1 * A+6
+  majority_lift=1.242954 precision=0.641025641 hits=100/156 weight=4 bits=1000 combo=K+1 * B^2+1 * A+6 * A^2+60A+132
+  majority_lift=1.233915 precision=0.636363636 hits=112/176 weight=4 bits=1101 combo=K+1 * B^2+1 * A+14 * 3A+10
+  majority_lift=1.230525 precision=0.634615385 hits=132/208 weight=4 bits=1101 combo=L+1 * B^2+1 * A+6 * 3A+10
+  majority_lift=1.230525 precision=0.634615385 hits=132/208 weight=4 bits=1011 combo=B^2+1 * A+6 * 3A+10 * A^2+60A+132
+  majority_lift=1.220857 precision=0.629629630 hits=136/216 weight=4 bits=0101 combo=K+1 * B+1 * B-1 * B^2+1
+  majority_lift=1.220857 precision=0.629629630 hits=136/216 weight=4 bits=0100 combo=K+1 * B^2+1 * A+6 * A+14
+  majority_lift=1.218503 precision=0.628415301 hits=115/183 weight=4 bits=1101 combo=B+1 * B^2+1 * A+14 * 3A+10
+  majority_lift=1.218503 precision=0.628415301 hits=115/183 weight=4 bits=0101 combo=B-1 * B^2+1 * A+14 * 3A+10
+q1607_enum_stats:
+  compact_not_target = 805
+  no_label2_candidate = 408
+q1607_legal_param_stats:
+  core_bucket_rows = 98
+  d3_minus_KA = 21
+  d3_plus_KA = 28
+  d4_minus_after_d3_KA = 9
+  d4_plus_after_d3_KA = 19
+  deduped_candidates = 784
+  group_size_16 = 49
+  legal_KA = 49
+  param_rows = 98
+  param_rows_per_KA_2 = 49
+q1607_d3_stats:
+  minus_rows = 42
+  plus_rows = 56
+  scored_rows = 98
+q1607_d3_baseline:
+  plus_rate = 0.571428571
+  majority_rate = 0.571428571
+q1607_d3_best_parity_combos:
+  good=68/98 rate=0.693877551 majority_lift=1.214286 polarity=-1 weight=4 combo=K+1 * K-1 * L+1 * B^2+1
+  good=68/98 rate=0.693877551 majority_lift=1.214286 polarity=-1 weight=4 combo=K+1 * K-1 * B^2+1 * A^2+60A+132
+  good=68/98 rate=0.693877551 majority_lift=1.214286 polarity=-1 weight=4 combo=L+1 * B^2+1 * A+6 * 3A+10
+  good=68/98 rate=0.693877551 majority_lift=1.214286 polarity=-1 weight=4 combo=B^2+1 * A+6 * 3A+10 * A^2+60A+132
+  good=66/98 rate=0.673469388 majority_lift=1.178571 polarity=-1 weight=4 combo=K-1 * B^2+1 * A+14 * 3A+10
+  good=64/98 rate=0.653061224 majority_lift=1.142857 polarity=1 weight=4 combo=K-1 * L+1 * B^2+1 * 3A+10
+  good=64/98 rate=0.653061224 majority_lift=1.142857 polarity=1 weight=4 combo=K-1 * B^2+1 * 3A+10 * A^2+60A+132
+  good=64/98 rate=0.653061224 majority_lift=1.142857 polarity=1 weight=4 combo=B+1 * B-1 * B^2+1 * 3A+10
+  good=63/98 rate=0.642857143 majority_lift=1.125000 polarity=-1 weight=4 combo=K+1 * B+1 * B^2+1 * A+14
+  good=63/98 rate=0.642857143 majority_lift=1.125000 polarity=1 weight=4 combo=K+1 * B-1 * B^2+1 * A+14
+  good=62/98 rate=0.632653061 majority_lift=1.107143 polarity=-1 weight=1 combo=A+14
+  good=62/98 rate=0.632653061 majority_lift=1.107143 polarity=-1 weight=2 combo=K * A+14
+q1607_d3_best_buckets_min_count_24:
+  majority_lift=1.346154 precision=0.769230769 hits=20/26 weight=2 bits=00 combo=K-1 * L+1
+  majority_lift=1.346154 precision=0.769230769 hits=20/26 weight=2 bits=01 combo=K-1 * A+14
+  majority_lift=1.346154 precision=0.769230769 hits=20/26 weight=2 bits=00 combo=K-1 * A^2+60A+132
+  majority_lift=1.346154 precision=0.769230769 hits=20/26 weight=3 bits=000 combo=K * K-1 * L+1
+  majority_lift=1.346154 precision=0.769230769 hits=20/26 weight=3 bits=001 combo=K * K-1 * A+14
+  majority_lift=1.346154 precision=0.769230769 hits=20/26 weight=3 bits=000 combo=K * K-1 * A^2+60A+132
+  majority_lift=1.346154 precision=0.769230769 hits=20/26 weight=3 bits=000 combo=K-1 * K^2+4 * L+1
+  majority_lift=1.346154 precision=0.769230769 hits=20/26 weight=3 bits=001 combo=K-1 * K^2+4 * A+14
+  majority_lift=1.346154 precision=0.769230769 hits=20/26 weight=3 bits=000 combo=K-1 * K^2+4 * A^2+60A+132
+  majority_lift=1.346154 precision=0.769230769 hits=20/26 weight=3 bits=000 combo=K-1 * L * L+1
+  majority_lift=1.346154 precision=0.769230769 hits=20/26 weight=3 bits=001 combo=K-1 * L * A+14
+  majority_lift=1.346154 precision=0.769230769 hits=20/26 weight=3 bits=000 combo=K-1 * L * A^2+60A+132
+q1607_d4_stats:
+  minus_rows = 18
+  plus_rows = 38
+  scored_rows = 56
+  target_missing = 42
+q1607_d4_baseline:
+  plus_rate = 0.678571429
+  majority_rate = 0.678571429
+q1607_d4_best_parity_combos:
+  good=42/56 rate=0.750000000 majority_lift=1.105263 polarity=-1 weight=3 combo=K+1 * B^2+1 * 3A+10
+  good=42/56 rate=0.750000000 majority_lift=1.105263 polarity=-1 weight=4 combo=K * K+1 * B^2+1 * 3A+10
+  good=42/56 rate=0.750000000 majority_lift=1.105263 polarity=-1 weight=4 combo=K+1 * K^2+4 * B^2+1 * 3A+10
+  good=42/56 rate=0.750000000 majority_lift=1.105263 polarity=-1 weight=4 combo=K+1 * L * B^2+1 * 3A+10
+  good=42/56 rate=0.750000000 majority_lift=1.105263 polarity=-1 weight=4 combo=K+1 * B+1 * A+6 * 3A+10
+  good=42/56 rate=0.750000000 majority_lift=1.105263 polarity=1 weight=4 combo=K+1 * B-1 * A+6 * 3A+10
+  good=42/56 rate=0.750000000 majority_lift=1.105263 polarity=-1 weight=4 combo=K+1 * B+2 * B^2+1 * 3A+10
+  good=42/56 rate=0.750000000 majority_lift=1.105263 polarity=1 weight=4 combo=K+1 * B-2 * B^2+1 * 3A+10
+  good=42/56 rate=0.750000000 majority_lift=1.105263 polarity=1 weight=4 combo=K+1 * B^2+1 * B^2-4 * 3A+10
+  good=42/56 rate=0.750000000 majority_lift=1.105263 polarity=-1 weight=4 combo=K+1 * B^2+1 * A+2 * 3A+10
+  good=42/56 rate=0.750000000 majority_lift=1.105263 polarity=1 weight=4 combo=K+1 * B^2+1 * A-2 * 3A+10
+  good=40/56 rate=0.714285714 majority_lift=1.052632 polarity=-1 weight=3 combo=K+1 * A+6 * A+14
+q1607_d4_best_buckets_min_count_24:
+  majority_lift=1.178947 precision=0.800000000 hits=24/30 weight=1 bits=0 combo=K-1
+  majority_lift=1.178947 precision=0.800000000 hits=24/30 weight=2 bits=00 combo=K * K-1
+  majority_lift=1.178947 precision=0.800000000 hits=24/30 weight=2 bits=00 combo=K-1 * K^2+4
+  majority_lift=1.178947 precision=0.800000000 hits=24/30 weight=2 bits=00 combo=K-1 * L
+  majority_lift=1.178947 precision=0.800000000 hits=24/30 weight=2 bits=00 combo=K-1 * B+2
+  majority_lift=1.178947 precision=0.800000000 hits=24/30 weight=2 bits=01 combo=K-1 * B-2
+  majority_lift=1.178947 precision=0.800000000 hits=24/30 weight=2 bits=01 combo=K-1 * B^2-4
+  majority_lift=1.178947 precision=0.800000000 hits=24/30 weight=2 bits=00 combo=K-1 * A+2
+  majority_lift=1.178947 precision=0.800000000 hits=24/30 weight=2 bits=01 combo=K-1 * A-2
+  majority_lift=1.178947 precision=0.800000000 hits=24/30 weight=3 bits=000 combo=K * K-1 * K^2+4
+  majority_lift=1.178947 precision=0.800000000 hits=24/30 weight=3 bits=000 combo=K * K-1 * L
+  majority_lift=1.178947 precision=0.800000000 hits=24/30 weight=3 bits=000 combo=K * K-1 * B+2
+q1847_enum_stats:
+  compact_not_target = 873
+  no_label2_candidate = 468
+q1847_legal_param_stats:
+  core_bucket_rows = 126
+  d3_minus_KA = 18
+  d3_plus_KA = 45
+  d4_minus_after_d3_KA = 26
+  d4_plus_after_d3_KA = 19
+  deduped_candidates = 1008
+  group_size_16 = 63
+  legal_KA = 63
+  param_rows = 126
+  param_rows_per_KA_2 = 63
+q1847_d3_stats:
+  minus_rows = 36
+  plus_rows = 90
+  scored_rows = 126
+q1847_d3_baseline:
+  plus_rate = 0.714285714
+  majority_rate = 0.714285714
+q1847_d3_best_parity_combos:
+  good=90/126 rate=0.714285714 majority_lift=1.000000 polarity=1 weight=0 combo=1
+  good=90/126 rate=0.714285714 majority_lift=1.000000 polarity=1 weight=1 combo=K
+  good=90/126 rate=0.714285714 majority_lift=1.000000 polarity=1 weight=1 combo=K^2+4
+  good=90/126 rate=0.714285714 majority_lift=1.000000 polarity=1 weight=1 combo=L
+  good=90/126 rate=0.714285714 majority_lift=1.000000 polarity=1 weight=1 combo=B+2
+  good=90/126 rate=0.714285714 majority_lift=1.000000 polarity=-1 weight=1 combo=B-2
+  good=90/126 rate=0.714285714 majority_lift=1.000000 polarity=-1 weight=1 combo=B^2-4
+  good=90/126 rate=0.714285714 majority_lift=1.000000 polarity=1 weight=1 combo=A+2
+  good=90/126 rate=0.714285714 majority_lift=1.000000 polarity=-1 weight=1 combo=A-2
+  good=90/126 rate=0.714285714 majority_lift=1.000000 polarity=-1 weight=2 combo=branch * B
+  good=90/126 rate=0.714285714 majority_lift=1.000000 polarity=1 weight=2 combo=K * K^2+4
+  good=90/126 rate=0.714285714 majority_lift=1.000000 polarity=1 weight=2 combo=K * L
+q1847_d3_best_buckets_min_count_24:
+  majority_lift=1.312500 precision=0.937500000 hits=30/32 weight=2 bits=11 combo=L+1 * A+6
+  majority_lift=1.312500 precision=0.937500000 hits=30/32 weight=2 bits=11 combo=A+6 * A^2+60A+132
+  majority_lift=1.312500 precision=0.937500000 hits=30/32 weight=3 bits=011 combo=K * L+1 * A+6
+  majority_lift=1.312500 precision=0.937500000 hits=30/32 weight=3 bits=011 combo=K * A+6 * A^2+60A+132
+  majority_lift=1.312500 precision=0.937500000 hits=30/32 weight=3 bits=011 combo=K^2+4 * L+1 * A+6
+  majority_lift=1.312500 precision=0.937500000 hits=30/32 weight=3 bits=011 combo=K^2+4 * A+6 * A^2+60A+132
+  majority_lift=1.312500 precision=0.937500000 hits=30/32 weight=3 bits=011 combo=L * L+1 * A+6
+  majority_lift=1.312500 precision=0.937500000 hits=30/32 weight=3 bits=011 combo=L * A+6 * A^2+60A+132
+  majority_lift=1.312500 precision=0.937500000 hits=30/32 weight=3 bits=101 combo=L+1 * B+2 * A+6
+  majority_lift=1.312500 precision=0.937500000 hits=30/32 weight=3 bits=111 combo=L+1 * B-2 * A+6
+  majority_lift=1.312500 precision=0.937500000 hits=30/32 weight=3 bits=111 combo=L+1 * B^2-4 * A+6
+  majority_lift=1.312500 precision=0.937500000 hits=30/32 weight=3 bits=101 combo=L+1 * A+2 * A+6
+q1847_d4_stats:
+  minus_rows = 52
+  plus_rows = 38
+  scored_rows = 90
+  target_missing = 36
+q1847_d4_baseline:
+  plus_rate = 0.422222222
+  majority_rate = 0.577777778
+q1847_d4_best_parity_combos:
+  good=62/90 rate=0.688888889 majority_lift=1.192308 polarity=1 weight=3 combo=K-1 * B^2+1 * A+14
+  good=62/90 rate=0.688888889 majority_lift=1.192308 polarity=1 weight=4 combo=K * K-1 * B^2+1 * A+14
+  good=62/90 rate=0.688888889 majority_lift=1.192308 polarity=1 weight=4 combo=K-1 * K^2+4 * B^2+1 * A+14
+  good=62/90 rate=0.688888889 majority_lift=1.192308 polarity=1 weight=4 combo=K-1 * L * B^2+1 * A+14
+  good=62/90 rate=0.688888889 majority_lift=1.192308 polarity=1 weight=4 combo=K-1 * B+2 * B^2+1 * A+14
+  good=62/90 rate=0.688888889 majority_lift=1.192308 polarity=-1 weight=4 combo=K-1 * B-2 * B^2+1 * A+14
+  good=62/90 rate=0.688888889 majority_lift=1.192308 polarity=-1 weight=4 combo=K-1 * B^2+1 * B^2-4 * A+14
+  good=62/90 rate=0.688888889 majority_lift=1.192308 polarity=1 weight=4 combo=K-1 * B^2+1 * A+2 * A+14
+  good=62/90 rate=0.688888889 majority_lift=1.192308 polarity=-1 weight=4 combo=K-1 * B^2+1 * A-2 * A+14
+  good=62/90 rate=0.688888889 majority_lift=1.192308 polarity=-1 weight=4 combo=B+1 * B-1 * A+6 * A+14
+  good=60/90 rate=0.666666667 majority_lift=1.153846 polarity=-1 weight=3 combo=K+1 * A+14 * 3A+10
+  good=60/90 rate=0.666666667 majority_lift=1.153846 polarity=1 weight=3 combo=K-1 * A+14 * 3A+10
+q1847_d4_best_buckets_min_count_24:
+  majority_lift=1.298077 precision=0.750000000 hits=30/40 weight=1 bits=0 combo=K-1
+  majority_lift=1.298077 precision=0.750000000 hits=30/40 weight=2 bits=00 combo=K * K-1
+  majority_lift=1.298077 precision=0.750000000 hits=30/40 weight=2 bits=00 combo=K-1 * K^2+4
+  majority_lift=1.298077 precision=0.750000000 hits=30/40 weight=2 bits=00 combo=K-1 * L
+  majority_lift=1.298077 precision=0.750000000 hits=30/40 weight=2 bits=00 combo=K-1 * B+2
+  majority_lift=1.298077 precision=0.750000000 hits=30/40 weight=2 bits=01 combo=K-1 * B-2
+  majority_lift=1.298077 precision=0.750000000 hits=30/40 weight=2 bits=01 combo=K-1 * B^2-4
+  majority_lift=1.298077 precision=0.750000000 hits=30/40 weight=2 bits=00 combo=K-1 * A+2
+  majority_lift=1.298077 precision=0.750000000 hits=30/40 weight=2 bits=01 combo=K-1 * A-2
+  majority_lift=1.298077 precision=0.750000000 hits=30/40 weight=3 bits=000 combo=K * K-1 * K^2+4
+  majority_lift=1.298077 precision=0.750000000 hits=30/40 weight=3 bits=000 combo=K * K-1 * L
+  majority_lift=1.298077 precision=0.750000000 hits=30/40 weight=3 bits=000 combo=K * K-1 * B+2
+q2087_enum_stats:
+  compact_not_target = 1109
+  no_label2_candidate = 520
+q2087_legal_param_stats:
+  core_bucket_rows = 114
+  d3_minus_KA = 32
+  d3_plus_KA = 25
+  d4_minus_after_d3_KA = 7
+  d4_plus_after_d3_KA = 18
+  deduped_candidates = 912
+  group_size_16 = 57
+  legal_KA = 57
+  param_rows = 114
+  param_rows_per_KA_2 = 57
+q2087_d3_stats:
+  minus_rows = 64
+  plus_rows = 50
+  scored_rows = 114
+q2087_d3_baseline:
+  plus_rate = 0.438596491
+  majority_rate = 0.561403509
+q2087_d3_best_parity_combos:
+  good=80/114 rate=0.701754386 majority_lift=1.250000 polarity=-1 weight=1 combo=K-1
+  good=80/114 rate=0.701754386 majority_lift=1.250000 polarity=-1 weight=2 combo=K * K-1
+  good=80/114 rate=0.701754386 majority_lift=1.250000 polarity=-1 weight=2 combo=K-1 * K^2+4
+  good=80/114 rate=0.701754386 majority_lift=1.250000 polarity=-1 weight=2 combo=K-1 * L
+  good=80/114 rate=0.701754386 majority_lift=1.250000 polarity=-1 weight=2 combo=K-1 * B+2
+  good=80/114 rate=0.701754386 majority_lift=1.250000 polarity=1 weight=2 combo=K-1 * B-2
+  good=80/114 rate=0.701754386 majority_lift=1.250000 polarity=1 weight=2 combo=K-1 * B^2-4
+  good=80/114 rate=0.701754386 majority_lift=1.250000 polarity=-1 weight=2 combo=K-1 * A+2
+  good=80/114 rate=0.701754386 majority_lift=1.250000 polarity=1 weight=2 combo=K-1 * A-2
+  good=80/114 rate=0.701754386 majority_lift=1.250000 polarity=1 weight=3 combo=branch * K-1 * B
+  good=80/114 rate=0.701754386 majority_lift=1.250000 polarity=-1 weight=3 combo=K * K-1 * K^2+4
+  good=80/114 rate=0.701754386 majority_lift=1.250000 polarity=-1 weight=3 combo=K * K-1 * L
+q2087_d3_best_buckets_min_count_24:
+  majority_lift=1.781250 precision=1.000000000 hits=26/26 weight=3 bits=010 combo=K-1 * L+1 * B^2+1
+  majority_lift=1.781250 precision=1.000000000 hits=26/26 weight=3 bits=001 combo=K-1 * B^2+1 * A^2+60A+132
+  majority_lift=1.781250 precision=1.000000000 hits=26/26 weight=4 bits=0010 combo=K * K-1 * L+1 * B^2+1
+  majority_lift=1.781250 precision=1.000000000 hits=26/26 weight=4 bits=0001 combo=K * K-1 * B^2+1 * A^2+60A+132
+  majority_lift=1.781250 precision=1.000000000 hits=26/26 weight=4 bits=0010 combo=K-1 * K^2+4 * L+1 * B^2+1
+  majority_lift=1.781250 precision=1.000000000 hits=26/26 weight=4 bits=0001 combo=K-1 * K^2+4 * B^2+1 * A^2+60A+132
+  majority_lift=1.781250 precision=1.000000000 hits=26/26 weight=4 bits=0010 combo=K-1 * L * L+1 * B^2+1
+  majority_lift=1.781250 precision=1.000000000 hits=26/26 weight=4 bits=0001 combo=K-1 * L * B^2+1 * A^2+60A+132
+  majority_lift=1.781250 precision=1.000000000 hits=26/26 weight=4 bits=0100 combo=K-1 * L+1 * B+2 * B^2+1
+  majority_lift=1.781250 precision=1.000000000 hits=26/26 weight=4 bits=0110 combo=K-1 * L+1 * B-2 * B^2+1
+  majority_lift=1.781250 precision=1.000000000 hits=26/26 weight=4 bits=0101 combo=K-1 * L+1 * B^2+1 * B^2-4
+  majority_lift=1.781250 precision=1.000000000 hits=26/26 weight=4 bits=0100 combo=K-1 * L+1 * B^2+1 * A+2
+q2087_d4_stats:
+  minus_rows = 14
+  plus_rows = 36
+  scored_rows = 50
+  target_missing = 64
+q2087_d4_baseline:
+  plus_rate = 0.720000000
+  majority_rate = 0.720000000
+q2087_d4_best_parity_combos:
+  good=40/50 rate=0.800000000 majority_lift=1.111111 polarity=1 weight=2 combo=B^2+1 * 3A+10
+  good=40/50 rate=0.800000000 majority_lift=1.111111 polarity=1 weight=3 combo=K * B^2+1 * 3A+10
+  good=40/50 rate=0.800000000 majority_lift=1.111111 polarity=1 weight=3 combo=K^2+4 * B^2+1 * 3A+10
+  good=40/50 rate=0.800000000 majority_lift=1.111111 polarity=1 weight=3 combo=L * B^2+1 * 3A+10
+  good=40/50 rate=0.800000000 majority_lift=1.111111 polarity=1 weight=3 combo=B+2 * B^2+1 * 3A+10
+  good=40/50 rate=0.800000000 majority_lift=1.111111 polarity=-1 weight=3 combo=B-2 * B^2+1 * 3A+10
+  good=40/50 rate=0.800000000 majority_lift=1.111111 polarity=-1 weight=3 combo=B^2+1 * B^2-4 * 3A+10
+  good=40/50 rate=0.800000000 majority_lift=1.111111 polarity=1 weight=3 combo=B^2+1 * A+2 * 3A+10
+  good=40/50 rate=0.800000000 majority_lift=1.111111 polarity=-1 weight=3 combo=B^2+1 * A-2 * 3A+10
+  good=40/50 rate=0.800000000 majority_lift=1.111111 polarity=-1 weight=4 combo=branch * B * B^2+1 * 3A+10
+  good=40/50 rate=0.800000000 majority_lift=1.111111 polarity=1 weight=4 combo=K * K^2+4 * B^2+1 * 3A+10
+  good=40/50 rate=0.800000000 majority_lift=1.111111 polarity=1 weight=4 combo=K * L * B^2+1 * 3A+10
+q2087_d4_best_buckets_min_count_24:
+  majority_lift=1.175214 precision=0.846153846 hits=22/26 weight=2 bits=10 combo=K-1 * A+6
+  majority_lift=1.175214 precision=0.846153846 hits=22/26 weight=3 bits=010 combo=K * K-1 * A+6
+  majority_lift=1.175214 precision=0.846153846 hits=22/26 weight=3 bits=100 combo=K-1 * K^2+4 * A+6
+  majority_lift=1.175214 precision=0.846153846 hits=22/26 weight=3 bits=100 combo=K-1 * L * A+6
+  majority_lift=1.175214 precision=0.846153846 hits=22/26 weight=3 bits=100 combo=K-1 * B+2 * A+6
+  majority_lift=1.175214 precision=0.846153846 hits=22/26 weight=3 bits=110 combo=K-1 * B-2 * A+6
+  majority_lift=1.175214 precision=0.846153846 hits=22/26 weight=3 bits=110 combo=K-1 * B^2-4 * A+6
+  majority_lift=1.175214 precision=0.846153846 hits=22/26 weight=3 bits=100 combo=K-1 * A+2 * A+6
+  majority_lift=1.175214 precision=0.846153846 hits=22/26 weight=3 bits=110 combo=K-1 * A-2 * A+6
+  majority_lift=1.175214 precision=0.846153846 hits=22/26 weight=4 bits=0100 combo=K * K-1 * K^2+4 * A+6
+  majority_lift=1.175214 precision=0.846153846 hits=22/26 weight=4 bits=0100 combo=K * K-1 * L * A+6
+  majority_lift=1.175214 precision=0.846153846 hits=22/26 weight=4 bits=0100 combo=K * K-1 * B+2 * A+6
+p27_kline_base_param_nextgate_probe_rows=1/1

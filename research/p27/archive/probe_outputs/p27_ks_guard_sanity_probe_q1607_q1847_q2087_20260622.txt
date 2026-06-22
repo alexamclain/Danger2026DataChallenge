@@ -1,0 +1,24 @@
+p27 K/S guard-field sanity probe
+checks = Sroot^2=K, K relation, Sroot linear relation, H90 Salpha, H90 norm
+q1607:
+  checked_points = 1604
+  chi_minus_one = -1
+  chi_two = 1
+  q_mod_16 = 7
+  skipped_denominator = 3
+  total_mismatches = 0
+q1847:
+  checked_points = 1844
+  chi_minus_one = -1
+  chi_two = 1
+  q_mod_16 = 7
+  skipped_denominator = 3
+  total_mismatches = 0
+q2087:
+  checked_points = 2084
+  chi_minus_one = -1
+  chi_two = 1
+  q_mod_16 = 7
+  skipped_denominator = 3
+  total_mismatches = 0
+p27_ks_guard_sanity_probe_rows=1/1

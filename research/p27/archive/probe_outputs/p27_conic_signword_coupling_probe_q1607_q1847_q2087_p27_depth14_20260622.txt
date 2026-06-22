@@ -1,0 +1,507 @@
+p27 conic sign-word coupling probe
+depth d corresponds to selected gate d_{d+2}
+test = all-plus prefix scaling for s_j=chi(r_j^2+c*r_j+1)
+max_depth = 14
+p27_train_sample_stats:
+  oriented_candidates = 16000
+  sample_candidate_invalid_not_nonsplit = 7812
+  sample_compact_not_target = 7712
+  sample_no_t = 7908
+  sample_no_w = 15562
+  sample_pair_incomplete = 3906
+  sample_rows = 4000
+  sample_x_draws = 31279
+  unique_ax = 4000
+p27_train:
+  depth10_prefix_plus = 0
+  depth10_prefix_rate_x1000000 = 0
+  depth10_previous_prefix = 6
+  depth10_scaled_x1000000 = 0
+  depth10_transition_rate_x1000000 = 0
+  depth11_prefix_plus = 0
+  depth11_prefix_rate_x1000000 = 0
+  depth11_previous_prefix = 0
+  depth11_scaled_x1000000 = 0
+  depth12_prefix_plus = 0
+  depth12_prefix_rate_x1000000 = 0
+  depth12_previous_prefix = 0
+  depth12_scaled_x1000000 = 0
+  depth13_prefix_plus = 0
+  depth13_prefix_rate_x1000000 = 0
+  depth13_previous_prefix = 0
+  depth13_scaled_x1000000 = 0
+  depth14_prefix_plus = 0
+  depth14_prefix_rate_x1000000 = 0
+  depth14_previous_prefix = 0
+  depth14_scaled_x1000000 = 0
+  depth1_prefix_plus = 1968
+  depth1_prefix_rate_x1000000 = 492000
+  depth1_previous_prefix = 4000
+  depth1_scaled_x1000000 = 984000
+  depth1_transition_rate_x1000000 = 492000
+  depth2_prefix_plus = 1020
+  depth2_prefix_rate_x1000000 = 255000
+  depth2_previous_prefix = 1968
+  depth2_scaled_x1000000 = 1020000
+  depth2_transition_rate_x1000000 = 518292
+  depth3_prefix_plus = 484
+  depth3_prefix_rate_x1000000 = 121000
+  depth3_previous_prefix = 1020
+  depth3_scaled_x1000000 = 968000
+  depth3_transition_rate_x1000000 = 474509
+  depth4_prefix_plus = 238
+  depth4_prefix_rate_x1000000 = 59500
+  depth4_previous_prefix = 484
+  depth4_scaled_x1000000 = 952000
+  depth4_transition_rate_x1000000 = 491735
+  depth5_prefix_plus = 126
+  depth5_prefix_rate_x1000000 = 31500
+  depth5_previous_prefix = 238
+  depth5_scaled_x1000000 = 1008000
+  depth5_transition_rate_x1000000 = 529411
+  depth6_prefix_plus = 68
+  depth6_prefix_rate_x1000000 = 17000
+  depth6_previous_prefix = 126
+  depth6_scaled_x1000000 = 1088000
+  depth6_transition_rate_x1000000 = 539682
+  depth7_prefix_plus = 32
+  depth7_prefix_rate_x1000000 = 8000
+  depth7_previous_prefix = 68
+  depth7_scaled_x1000000 = 1024000
+  depth7_transition_rate_x1000000 = 470588
+  depth8_prefix_plus = 14
+  depth8_prefix_rate_x1000000 = 3500
+  depth8_previous_prefix = 32
+  depth8_scaled_x1000000 = 896000
+  depth8_transition_rate_x1000000 = 437500
+  depth9_prefix_plus = 6
+  depth9_prefix_rate_x1000000 = 1500
+  depth9_previous_prefix = 14
+  depth9_scaled_x1000000 = 768000
+  depth9_transition_rate_x1000000 = 428571
+  first_stop_depth1 = 2032
+  first_stop_depth10 = 6
+  first_stop_depth2 = 948
+  first_stop_depth3 = 536
+  first_stop_depth4 = 246
+  first_stop_depth5 = 112
+  first_stop_depth6 = 58
+  first_stop_depth7 = 36
+  first_stop_depth8 = 18
+  first_stop_depth9 = 8
+  pattern_+++++++++-.... = 6
+  pattern_++++++++-..... = 8
+  pattern_+++++++-...... = 18
+  pattern_++++++-....... = 36
+  pattern_+++++-........ = 58
+  pattern_++++-......... = 112
+  pattern_+++-.......... = 246
+  pattern_++-........... = 536
+  pattern_+-............ = 948
+  pattern_-............. = 2032
+  rows = 4000
+p27_train_prefix_table:
+  depth previous plus transition_rate prefix_rate scaled_half_loss
+  1 4000 1968 0.492000000 0.492000000 0.984000000
+  2 1968 1020 0.518292683 0.255000000 1.020000000
+  3 1020 484 0.474509804 0.121000000 0.968000000
+  4 484 238 0.491735537 0.059500000 0.952000000
+  5 238 126 0.529411765 0.031500000 1.008000000
+  6 126 68 0.539682540 0.017000000 1.088000000
+  7 68 32 0.470588235 0.008000000 1.024000000
+  8 32 14 0.437500000 0.003500000 0.896000000
+  9 14 6 0.428571429 0.001500000 0.768000000
+  10 6 0 0.000000000 0.000000000 0.000000000
+  11 0 0 0.000000000 0.000000000 0.000000000
+  12 0 0 0.000000000 0.000000000 0.000000000
+  13 0 0 0.000000000 0.000000000 0.000000000
+  14 0 0 0.000000000 0.000000000 0.000000000
+p27_heldout_sample_stats:
+  oriented_candidates = 16000
+  sample_candidate_invalid_not_nonsplit = 8008
+  sample_compact_not_target = 8314
+  sample_no_t = 8256
+  sample_no_w = 16615
+  sample_pair_incomplete = 4004
+  sample_rows = 4000
+  sample_x_draws = 33030
+  unique_ax = 4000
+p27_heldout:
+  depth10_prefix_plus = 4
+  depth10_prefix_rate_x1000000 = 1000
+  depth10_previous_prefix = 4
+  depth10_scaled_x1000000 = 1024000
+  depth10_transition_rate_x1000000 = 1000000
+  depth11_prefix_plus = 2
+  depth11_prefix_rate_x1000000 = 500
+  depth11_previous_prefix = 4
+  depth11_scaled_x1000000 = 1024000
+  depth11_transition_rate_x1000000 = 500000
+  depth12_prefix_plus = 2
+  depth12_prefix_rate_x1000000 = 500
+  depth12_previous_prefix = 2
+  depth12_scaled_x1000000 = 2048000
+  depth12_transition_rate_x1000000 = 1000000
+  depth13_prefix_plus = 2
+  depth13_prefix_rate_x1000000 = 500
+  depth13_previous_prefix = 2
+  depth13_scaled_x1000000 = 4096000
+  depth13_transition_rate_x1000000 = 1000000
+  depth14_prefix_plus = 2
+  depth14_prefix_rate_x1000000 = 500
+  depth14_previous_prefix = 2
+  depth14_scaled_x1000000 = 8192000
+  depth14_transition_rate_x1000000 = 1000000
+  depth1_prefix_plus = 2010
+  depth1_prefix_rate_x1000000 = 502500
+  depth1_previous_prefix = 4000
+  depth1_scaled_x1000000 = 1005000
+  depth1_transition_rate_x1000000 = 502500
+  depth2_prefix_plus = 982
+  depth2_prefix_rate_x1000000 = 245500
+  depth2_previous_prefix = 2010
+  depth2_scaled_x1000000 = 982000
+  depth2_transition_rate_x1000000 = 488557
+  depth3_prefix_plus = 466
+  depth3_prefix_rate_x1000000 = 116500
+  depth3_previous_prefix = 982
+  depth3_scaled_x1000000 = 932000
+  depth3_transition_rate_x1000000 = 474541
+  depth4_prefix_plus = 238
+  depth4_prefix_rate_x1000000 = 59500
+  depth4_previous_prefix = 466
+  depth4_scaled_x1000000 = 952000
+  depth4_transition_rate_x1000000 = 510729
+  depth5_prefix_plus = 108
+  depth5_prefix_rate_x1000000 = 27000
+  depth5_previous_prefix = 238
+  depth5_scaled_x1000000 = 864000
+  depth5_transition_rate_x1000000 = 453781
+  depth6_prefix_plus = 70
+  depth6_prefix_rate_x1000000 = 17500
+  depth6_previous_prefix = 108
+  depth6_scaled_x1000000 = 1120000
+  depth6_transition_rate_x1000000 = 648148
+  depth7_prefix_plus = 32
+  depth7_prefix_rate_x1000000 = 8000
+  depth7_previous_prefix = 70
+  depth7_scaled_x1000000 = 1024000
+  depth7_transition_rate_x1000000 = 457142
+  depth8_prefix_plus = 16
+  depth8_prefix_rate_x1000000 = 4000
+  depth8_previous_prefix = 32
+  depth8_scaled_x1000000 = 1024000
+  depth8_transition_rate_x1000000 = 500000
+  depth9_prefix_plus = 4
+  depth9_prefix_rate_x1000000 = 1000
+  depth9_previous_prefix = 16
+  depth9_scaled_x1000000 = 512000
+  depth9_transition_rate_x1000000 = 250000
+  first_stop_depth1 = 1990
+  first_stop_depth11 = 2
+  first_stop_depth2 = 1028
+  first_stop_depth3 = 516
+  first_stop_depth4 = 228
+  first_stop_depth5 = 130
+  first_stop_depth6 = 38
+  first_stop_depth7 = 38
+  first_stop_depth8 = 16
+  first_stop_depth9 = 12
+  pattern_++++++++++++++ = 2
+  pattern_++++++++++-... = 2
+  pattern_++++++++-..... = 12
+  pattern_+++++++-...... = 16
+  pattern_++++++-....... = 38
+  pattern_+++++-........ = 38
+  pattern_++++-......... = 130
+  pattern_+++-.......... = 228
+  pattern_++-........... = 516
+  pattern_+-............ = 1028
+  pattern_-............. = 1990
+  rows = 4000
+  survives_depth14 = 2
+p27_heldout_prefix_table:
+  depth previous plus transition_rate prefix_rate scaled_half_loss
+  1 4000 2010 0.502500000 0.502500000 1.005000000
+  2 2010 982 0.488557214 0.245500000 0.982000000
+  3 982 466 0.474541752 0.116500000 0.932000000
+  4 466 238 0.510729614 0.059500000 0.952000000
+  5 238 108 0.453781513 0.027000000 0.864000000
+  6 108 70 0.648148148 0.017500000 1.120000000
+  7 70 32 0.457142857 0.008000000 1.024000000
+  8 32 16 0.500000000 0.004000000 1.024000000
+  9 16 4 0.250000000 0.001000000 0.512000000
+  10 4 4 1.000000000 0.001000000 1.024000000
+  11 4 2 0.500000000 0.000500000 1.024000000
+  12 2 2 1.000000000 0.000500000 2.048000000
+  13 2 2 1.000000000 0.000500000 4.096000000
+  14 2 2 1.000000000 0.000500000 8.192000000
+q1607_enum_stats:
+  enum_compact_not_target = 805
+  enum_no_label2_candidate = 408
+  legal_candidates = 784
+  unique_ax = 196
+q1607:
+  depth10_prefix_plus = 0
+  depth10_prefix_rate_x1000000 = 0
+  depth10_previous_prefix = 0
+  depth10_scaled_x1000000 = 0
+  depth11_prefix_plus = 0
+  depth11_prefix_rate_x1000000 = 0
+  depth11_previous_prefix = 0
+  depth11_scaled_x1000000 = 0
+  depth12_prefix_plus = 0
+  depth12_prefix_rate_x1000000 = 0
+  depth12_previous_prefix = 0
+  depth12_scaled_x1000000 = 0
+  depth13_prefix_plus = 0
+  depth13_prefix_rate_x1000000 = 0
+  depth13_previous_prefix = 0
+  depth13_scaled_x1000000 = 0
+  depth14_prefix_plus = 0
+  depth14_prefix_rate_x1000000 = 0
+  depth14_previous_prefix = 0
+  depth14_scaled_x1000000 = 0
+  depth1_prefix_plus = 112
+  depth1_prefix_rate_x1000000 = 571428
+  depth1_previous_prefix = 196
+  depth1_scaled_x1000000 = 1142857
+  depth1_transition_rate_x1000000 = 571428
+  depth2_prefix_plus = 76
+  depth2_prefix_rate_x1000000 = 387755
+  depth2_previous_prefix = 112
+  depth2_scaled_x1000000 = 1551020
+  depth2_transition_rate_x1000000 = 678571
+  depth3_prefix_plus = 76
+  depth3_prefix_rate_x1000000 = 387755
+  depth3_previous_prefix = 76
+  depth3_scaled_x1000000 = 3102040
+  depth3_transition_rate_x1000000 = 1000000
+  depth4_prefix_plus = 0
+  depth4_prefix_rate_x1000000 = 0
+  depth4_previous_prefix = 76
+  depth4_scaled_x1000000 = 0
+  depth4_transition_rate_x1000000 = 0
+  depth5_prefix_plus = 0
+  depth5_prefix_rate_x1000000 = 0
+  depth5_previous_prefix = 0
+  depth5_scaled_x1000000 = 0
+  depth6_prefix_plus = 0
+  depth6_prefix_rate_x1000000 = 0
+  depth6_previous_prefix = 0
+  depth6_scaled_x1000000 = 0
+  depth7_prefix_plus = 0
+  depth7_prefix_rate_x1000000 = 0
+  depth7_previous_prefix = 0
+  depth7_scaled_x1000000 = 0
+  depth8_prefix_plus = 0
+  depth8_prefix_rate_x1000000 = 0
+  depth8_previous_prefix = 0
+  depth8_scaled_x1000000 = 0
+  depth9_prefix_plus = 0
+  depth9_prefix_rate_x1000000 = 0
+  depth9_previous_prefix = 0
+  depth9_scaled_x1000000 = 0
+  first_stop_depth1 = 84
+  first_stop_depth2 = 36
+  first_stop_depth4 = 76
+  pattern_+++-.......... = 76
+  pattern_+-............ = 36
+  pattern_-............. = 84
+  rows = 196
+q1607_prefix_table:
+  depth previous plus transition_rate prefix_rate scaled_half_loss
+  1 196 112 0.571428571 0.571428571 1.142857143
+  2 112 76 0.678571429 0.387755102 1.551020408
+  3 76 76 1.000000000 0.387755102 3.102040816
+  4 76 0 0.000000000 0.000000000 0.000000000
+  5 0 0 0.000000000 0.000000000 0.000000000
+  6 0 0 0.000000000 0.000000000 0.000000000
+  7 0 0 0.000000000 0.000000000 0.000000000
+  8 0 0 0.000000000 0.000000000 0.000000000
+  9 0 0 0.000000000 0.000000000 0.000000000
+  10 0 0 0.000000000 0.000000000 0.000000000
+  11 0 0 0.000000000 0.000000000 0.000000000
+  12 0 0 0.000000000 0.000000000 0.000000000
+  13 0 0 0.000000000 0.000000000 0.000000000
+  14 0 0 0.000000000 0.000000000 0.000000000
+q1847_enum_stats:
+  enum_compact_not_target = 873
+  enum_no_label2_candidate = 468
+  legal_candidates = 1008
+  unique_ax = 252
+q1847:
+  depth10_prefix_plus = 0
+  depth10_prefix_rate_x1000000 = 0
+  depth10_previous_prefix = 0
+  depth10_scaled_x1000000 = 0
+  depth11_prefix_plus = 0
+  depth11_prefix_rate_x1000000 = 0
+  depth11_previous_prefix = 0
+  depth11_scaled_x1000000 = 0
+  depth12_prefix_plus = 0
+  depth12_prefix_rate_x1000000 = 0
+  depth12_previous_prefix = 0
+  depth12_scaled_x1000000 = 0
+  depth13_prefix_plus = 0
+  depth13_prefix_rate_x1000000 = 0
+  depth13_previous_prefix = 0
+  depth13_scaled_x1000000 = 0
+  depth14_prefix_plus = 0
+  depth14_prefix_rate_x1000000 = 0
+  depth14_previous_prefix = 0
+  depth14_scaled_x1000000 = 0
+  depth1_prefix_plus = 180
+  depth1_prefix_rate_x1000000 = 714285
+  depth1_previous_prefix = 252
+  depth1_scaled_x1000000 = 1428571
+  depth1_transition_rate_x1000000 = 714285
+  depth2_prefix_plus = 76
+  depth2_prefix_rate_x1000000 = 301587
+  depth2_previous_prefix = 180
+  depth2_scaled_x1000000 = 1206349
+  depth2_transition_rate_x1000000 = 422222
+  depth3_prefix_plus = 0
+  depth3_prefix_rate_x1000000 = 0
+  depth3_previous_prefix = 76
+  depth3_scaled_x1000000 = 0
+  depth3_transition_rate_x1000000 = 0
+  depth4_prefix_plus = 0
+  depth4_prefix_rate_x1000000 = 0
+  depth4_previous_prefix = 0
+  depth4_scaled_x1000000 = 0
+  depth5_prefix_plus = 0
+  depth5_prefix_rate_x1000000 = 0
+  depth5_previous_prefix = 0
+  depth5_scaled_x1000000 = 0
+  depth6_prefix_plus = 0
+  depth6_prefix_rate_x1000000 = 0
+  depth6_previous_prefix = 0
+  depth6_scaled_x1000000 = 0
+  depth7_prefix_plus = 0
+  depth7_prefix_rate_x1000000 = 0
+  depth7_previous_prefix = 0
+  depth7_scaled_x1000000 = 0
+  depth8_prefix_plus = 0
+  depth8_prefix_rate_x1000000 = 0
+  depth8_previous_prefix = 0
+  depth8_scaled_x1000000 = 0
+  depth9_prefix_plus = 0
+  depth9_prefix_rate_x1000000 = 0
+  depth9_previous_prefix = 0
+  depth9_scaled_x1000000 = 0
+  first_stop_depth1 = 72
+  first_stop_depth2 = 104
+  first_stop_depth3 = 76
+  pattern_++-........... = 76
+  pattern_+-............ = 104
+  pattern_-............. = 72
+  rows = 252
+q1847_prefix_table:
+  depth previous plus transition_rate prefix_rate scaled_half_loss
+  1 252 180 0.714285714 0.714285714 1.428571429
+  2 180 76 0.422222222 0.301587302 1.206349206
+  3 76 0 0.000000000 0.000000000 0.000000000
+  4 0 0 0.000000000 0.000000000 0.000000000
+  5 0 0 0.000000000 0.000000000 0.000000000
+  6 0 0 0.000000000 0.000000000 0.000000000
+  7 0 0 0.000000000 0.000000000 0.000000000
+  8 0 0 0.000000000 0.000000000 0.000000000
+  9 0 0 0.000000000 0.000000000 0.000000000
+  10 0 0 0.000000000 0.000000000 0.000000000
+  11 0 0 0.000000000 0.000000000 0.000000000
+  12 0 0 0.000000000 0.000000000 0.000000000
+  13 0 0 0.000000000 0.000000000 0.000000000
+  14 0 0 0.000000000 0.000000000 0.000000000
+q2087_enum_stats:
+  enum_compact_not_target = 1109
+  enum_no_label2_candidate = 520
+  legal_candidates = 912
+  unique_ax = 228
+q2087:
+  depth10_prefix_plus = 0
+  depth10_prefix_rate_x1000000 = 0
+  depth10_previous_prefix = 0
+  depth10_scaled_x1000000 = 0
+  depth11_prefix_plus = 0
+  depth11_prefix_rate_x1000000 = 0
+  depth11_previous_prefix = 0
+  depth11_scaled_x1000000 = 0
+  depth12_prefix_plus = 0
+  depth12_prefix_rate_x1000000 = 0
+  depth12_previous_prefix = 0
+  depth12_scaled_x1000000 = 0
+  depth13_prefix_plus = 0
+  depth13_prefix_rate_x1000000 = 0
+  depth13_previous_prefix = 0
+  depth13_scaled_x1000000 = 0
+  depth14_prefix_plus = 0
+  depth14_prefix_rate_x1000000 = 0
+  depth14_previous_prefix = 0
+  depth14_scaled_x1000000 = 0
+  depth1_prefix_plus = 100
+  depth1_prefix_rate_x1000000 = 438596
+  depth1_previous_prefix = 228
+  depth1_scaled_x1000000 = 877192
+  depth1_transition_rate_x1000000 = 438596
+  depth2_prefix_plus = 72
+  depth2_prefix_rate_x1000000 = 315789
+  depth2_previous_prefix = 100
+  depth2_scaled_x1000000 = 1263157
+  depth2_transition_rate_x1000000 = 720000
+  depth3_prefix_plus = 72
+  depth3_prefix_rate_x1000000 = 315789
+  depth3_previous_prefix = 72
+  depth3_scaled_x1000000 = 2526315
+  depth3_transition_rate_x1000000 = 1000000
+  depth4_prefix_plus = 72
+  depth4_prefix_rate_x1000000 = 315789
+  depth4_previous_prefix = 72
+  depth4_scaled_x1000000 = 5052631
+  depth4_transition_rate_x1000000 = 1000000
+  depth5_prefix_plus = 72
+  depth5_prefix_rate_x1000000 = 315789
+  depth5_previous_prefix = 72
+  depth5_scaled_x1000000 = 10105263
+  depth5_transition_rate_x1000000 = 1000000
+  depth6_prefix_plus = 0
+  depth6_prefix_rate_x1000000 = 0
+  depth6_previous_prefix = 72
+  depth6_scaled_x1000000 = 0
+  depth6_transition_rate_x1000000 = 0
+  depth7_prefix_plus = 0
+  depth7_prefix_rate_x1000000 = 0
+  depth7_previous_prefix = 0
+  depth7_scaled_x1000000 = 0
+  depth8_prefix_plus = 0
+  depth8_prefix_rate_x1000000 = 0
+  depth8_previous_prefix = 0
+  depth8_scaled_x1000000 = 0
+  depth9_prefix_plus = 0
+  depth9_prefix_rate_x1000000 = 0
+  depth9_previous_prefix = 0
+  depth9_scaled_x1000000 = 0
+  first_stop_depth1 = 128
+  first_stop_depth2 = 28
+  first_stop_depth6 = 72
+  pattern_+++++-........ = 72
+  pattern_+-............ = 28
+  pattern_-............. = 128
+  rows = 228
+q2087_prefix_table:
+  depth previous plus transition_rate prefix_rate scaled_half_loss
+  1 228 100 0.438596491 0.438596491 0.877192982
+  2 100 72 0.720000000 0.315789474 1.263157895
+  3 72 72 1.000000000 0.315789474 2.526315789
+  4 72 72 1.000000000 0.315789474 5.052631579
+  5 72 72 1.000000000 0.315789474 10.105263158
+  6 72 0 0.000000000 0.000000000 0.000000000
+  7 0 0 0.000000000 0.000000000 0.000000000
+  8 0 0 0.000000000 0.000000000 0.000000000
+  9 0 0 0.000000000 0.000000000 0.000000000
+  10 0 0 0.000000000 0.000000000 0.000000000
+  11 0 0 0.000000000 0.000000000 0.000000000
+  12 0 0 0.000000000 0.000000000 0.000000000
+  13 0 0 0.000000000 0.000000000 0.000000000
+  14 0 0 0.000000000 0.000000000 0.000000000
+p27_conic_signword_coupling_probe_rows=1/1

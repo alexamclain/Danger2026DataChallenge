@@ -1,0 +1,160 @@
+p27 A-level hidden-X power correspondence probe
+screen = d4(A) or d3(A) via A=B^2-2 projection of Belyi-conjugated X -> X^m
+powers = 2,3,4,5,6
+q1607_setup:
+  base_enum_compact_not_target = 805
+  base_enum_no_label2_candidate = 408
+  base_unique_A = 49
+  base_unique_ax = 196
+  chi_minus_one = -1
+  chi_two = 1
+  d3_A_rows = 49
+  d3_minus = 21
+  d3_plus = 28
+  d4_A_rows = 28
+  d4_minus = 9
+  d4_plus = 19
+  q_mod_16 = 7
+q1607_a_power_correspondence_stats:
+  correspondences_tested = 180
+  forward_best_coverage_x1000000 = 321428
+  forward_best_covered = 9
+  forward_best_match_x1000000 = 285714
+  forward_best_matches = 8
+  forward_best_mixed = 0
+  reverse_best_coverage_x1000000 = 224489
+  reverse_best_covered = 11
+  reverse_best_match_x1000000 = 142857
+  reverse_best_matches = 7
+  reverse_best_mixed = 0
+q1607_forward_d4_eq_d3_a_power_best:
+  -B-2 o X^3 o -B-2 polarity=1 covered=9/28 matches=8 mixed=0 branch_hits=9 undefined_branches=0
+  -4/(B+2) o X^3 o -2(B+2)/B polarity=1 covered=9/28 matches=8 mixed=0 branch_hits=9 undefined_branches=0
+  B o X^5 o -2B/(B+2) polarity=1 covered=9/28 matches=7 mixed=0 branch_hits=10 undefined_branches=0
+  -2B/(B+2) o X^5 o B polarity=1 covered=9/28 matches=7 mixed=0 branch_hits=10 undefined_branches=0
+  -4/(B+2) o X^2 o B polarity=1 covered=9/28 matches=6 mixed=0 branch_hits=10 undefined_branches=0
+  -4/(B+2) o X^2 o -2B/(B+2) polarity=1 covered=9/28 matches=6 mixed=0 branch_hits=10 undefined_branches=0
+  -4/(B+2) o X^6 o -B-2 polarity=1 covered=9/28 matches=5 mixed=0 branch_hits=9 undefined_branches=0
+  -4/(B+2) o X^6 o -2(B+2)/B polarity=1 covered=9/28 matches=5 mixed=0 branch_hits=9 undefined_branches=0
+  -4/(B+2) o X^6 o -B-2 polarity=-1 covered=9/28 matches=4 mixed=0 branch_hits=9 undefined_branches=0
+  -4/(B+2) o X^6 o -2(B+2)/B polarity=-1 covered=9/28 matches=4 mixed=0 branch_hits=9 undefined_branches=0
+  -4/(B+2) o X^2 o B polarity=-1 covered=9/28 matches=3 mixed=0 branch_hits=10 undefined_branches=0
+  -4/(B+2) o X^2 o -2B/(B+2) polarity=-1 covered=9/28 matches=3 mixed=0 branch_hits=10 undefined_branches=0
+q1607_reverse_d3_eq_d4_a_power_best:
+  -B-2 o X^3 o -B-2 polarity=1 covered=11/49 matches=7 mixed=0 branch_hits=11 undefined_branches=0
+  -4/(B+2) o X^3 o -2(B+2)/B polarity=1 covered=11/49 matches=7 mixed=0 branch_hits=11 undefined_branches=0
+  -B-2 o X^3 o -B-2 polarity=-1 covered=11/49 matches=4 mixed=0 branch_hits=11 undefined_branches=0
+  -4/(B+2) o X^3 o -2(B+2)/B polarity=-1 covered=11/49 matches=4 mixed=0 branch_hits=11 undefined_branches=0
+  4/B o X^3 o 4/B polarity=1 covered=10/49 matches=5 mixed=0 branch_hits=10 undefined_branches=0
+  4/B o X^3 o 4/B polarity=-1 covered=10/49 matches=5 mixed=0 branch_hits=10 undefined_branches=0
+  4/B o X^4 o -B-2 polarity=1 covered=10/49 matches=5 mixed=0 branch_hits=10 undefined_branches=0
+  4/B o X^4 o -B-2 polarity=-1 covered=10/49 matches=5 mixed=0 branch_hits=10 undefined_branches=0
+  4/B o X^4 o -2(B+2)/B polarity=1 covered=10/49 matches=5 mixed=0 branch_hits=10 undefined_branches=0
+  4/B o X^4 o -2(B+2)/B polarity=-1 covered=10/49 matches=5 mixed=0 branch_hits=10 undefined_branches=0
+  -2(B+2)/B o X^3 o -4/(B+2) polarity=1 covered=10/49 matches=5 mixed=0 branch_hits=10 undefined_branches=0
+  -2(B+2)/B o X^3 o -4/(B+2) polarity=-1 covered=10/49 matches=5 mixed=0 branch_hits=10 undefined_branches=0
+q1847_setup:
+  base_enum_compact_not_target = 873
+  base_enum_no_label2_candidate = 468
+  base_unique_A = 63
+  base_unique_ax = 252
+  chi_minus_one = -1
+  chi_two = 1
+  d3_A_rows = 63
+  d3_minus = 18
+  d3_plus = 45
+  d4_A_rows = 45
+  d4_minus = 26
+  d4_plus = 19
+  q_mod_16 = 7
+q1847_a_power_correspondence_stats:
+  correspondences_tested = 180
+  forward_best_coverage_x1000000 = 377777
+  forward_best_covered = 17
+  forward_best_match_x1000000 = 222222
+  forward_best_matches = 10
+  forward_best_mixed = 0
+  reverse_best_coverage_x1000000 = 317460
+  reverse_best_covered = 20
+  reverse_best_match_x1000000 = 158730
+  reverse_best_matches = 10
+  reverse_best_mixed = 0
+q1847_forward_d4_eq_d3_a_power_best:
+  B o X^3 o -2B/(B+2) polarity=-1 covered=17/45 matches=10 mixed=0 branch_hits=17 undefined_branches=0
+  -2B/(B+2) o X^3 o B polarity=-1 covered=17/45 matches=10 mixed=0 branch_hits=17 undefined_branches=0
+  4/B o X^2 o -B-2 polarity=1 covered=17/45 matches=9 mixed=0 branch_hits=19 undefined_branches=0
+  4/B o X^2 o -2(B+2)/B polarity=1 covered=17/45 matches=9 mixed=0 branch_hits=19 undefined_branches=0
+  -4/(B+2) o X^2 o -B-2 polarity=1 covered=17/45 matches=9 mixed=0 branch_hits=19 undefined_branches=0
+  -4/(B+2) o X^2 o -2(B+2)/B polarity=1 covered=17/45 matches=9 mixed=0 branch_hits=19 undefined_branches=0
+  4/B o X^2 o -B-2 polarity=-1 covered=17/45 matches=8 mixed=0 branch_hits=19 undefined_branches=0
+  4/B o X^2 o -2(B+2)/B polarity=-1 covered=17/45 matches=8 mixed=0 branch_hits=19 undefined_branches=0
+  -4/(B+2) o X^2 o -B-2 polarity=-1 covered=17/45 matches=8 mixed=0 branch_hits=19 undefined_branches=0
+  -4/(B+2) o X^2 o -2(B+2)/B polarity=-1 covered=17/45 matches=8 mixed=0 branch_hits=19 undefined_branches=0
+  B o X^3 o -2B/(B+2) polarity=1 covered=17/45 matches=7 mixed=0 branch_hits=17 undefined_branches=0
+  -2B/(B+2) o X^3 o B polarity=1 covered=17/45 matches=7 mixed=0 branch_hits=17 undefined_branches=0
+q1847_reverse_d3_eq_d4_a_power_best:
+  4/B o X^2 o -B-2 polarity=1 covered=20/63 matches=10 mixed=0 branch_hits=23 undefined_branches=0
+  4/B o X^2 o -B-2 polarity=-1 covered=20/63 matches=10 mixed=0 branch_hits=23 undefined_branches=0
+  4/B o X^2 o -2(B+2)/B polarity=1 covered=20/63 matches=10 mixed=0 branch_hits=23 undefined_branches=0
+  4/B o X^2 o -2(B+2)/B polarity=-1 covered=20/63 matches=10 mixed=0 branch_hits=23 undefined_branches=0
+  -4/(B+2) o X^2 o -B-2 polarity=1 covered=20/63 matches=10 mixed=0 branch_hits=23 undefined_branches=0
+  -4/(B+2) o X^2 o -B-2 polarity=-1 covered=20/63 matches=10 mixed=0 branch_hits=23 undefined_branches=0
+  -4/(B+2) o X^2 o -2(B+2)/B polarity=1 covered=20/63 matches=10 mixed=0 branch_hits=23 undefined_branches=0
+  -4/(B+2) o X^2 o -2(B+2)/B polarity=-1 covered=20/63 matches=10 mixed=0 branch_hits=23 undefined_branches=0
+  4/B o X^6 o 4/B polarity=1 covered=19/63 matches=11 mixed=0 branch_hits=19 undefined_branches=0
+  4/B o X^6 o -4/(B+2) polarity=1 covered=19/63 matches=11 mixed=0 branch_hits=19 undefined_branches=0
+  4/B o X^6 o 4/B polarity=-1 covered=19/63 matches=8 mixed=0 branch_hits=19 undefined_branches=0
+  4/B o X^6 o -4/(B+2) polarity=-1 covered=19/63 matches=8 mixed=0 branch_hits=19 undefined_branches=0
+q2087_setup:
+  base_enum_compact_not_target = 1109
+  base_enum_no_label2_candidate = 520
+  base_unique_A = 57
+  base_unique_ax = 228
+  chi_minus_one = -1
+  chi_two = 1
+  d3_A_rows = 57
+  d3_minus = 32
+  d3_plus = 25
+  d4_A_rows = 25
+  d4_minus = 7
+  d4_plus = 18
+  q_mod_16 = 7
+q2087_a_power_correspondence_stats:
+  correspondences_tested = 180
+  forward_best_coverage_x1000000 = 440000
+  forward_best_covered = 11
+  forward_best_match_x1000000 = 240000
+  forward_best_matches = 6
+  forward_best_mixed = 0
+  reverse_best_coverage_x1000000 = 175438
+  reverse_best_covered = 10
+  reverse_best_match_x1000000 = 122807
+  reverse_best_matches = 7
+  reverse_best_mixed = 0
+q2087_forward_d4_eq_d3_a_power_best:
+  -2B/(B+2) o X^2 o B polarity=1 covered=11/25 matches=6 mixed=0 branch_hits=11 undefined_branches=0
+  -2B/(B+2) o X^2 o -2B/(B+2) polarity=1 covered=11/25 matches=6 mixed=0 branch_hits=11 undefined_branches=0
+  -2B/(B+2) o X^2 o B polarity=-1 covered=11/25 matches=5 mixed=0 branch_hits=11 undefined_branches=0
+  -2B/(B+2) o X^2 o -2B/(B+2) polarity=-1 covered=11/25 matches=5 mixed=0 branch_hits=11 undefined_branches=0
+  -4/(B+2) o X^6 o -B-2 polarity=1 covered=10/25 matches=5 mixed=0 branch_hits=11 undefined_branches=0
+  -4/(B+2) o X^6 o -B-2 polarity=-1 covered=10/25 matches=5 mixed=0 branch_hits=11 undefined_branches=0
+  -4/(B+2) o X^6 o -2(B+2)/B polarity=1 covered=10/25 matches=5 mixed=0 branch_hits=11 undefined_branches=0
+  -4/(B+2) o X^6 o -2(B+2)/B polarity=-1 covered=10/25 matches=5 mixed=0 branch_hits=11 undefined_branches=0
+  -4/(B+2) o X^6 o 4/B polarity=1 covered=9/25 matches=6 mixed=1 branch_hits=12 undefined_branches=0
+  -4/(B+2) o X^6 o -4/(B+2) polarity=1 covered=9/25 matches=6 mixed=1 branch_hits=12 undefined_branches=0
+  -4/(B+2) o X^4 o B polarity=1 covered=9/25 matches=5 mixed=0 branch_hits=9 undefined_branches=0
+  -4/(B+2) o X^4 o -2B/(B+2) polarity=1 covered=9/25 matches=5 mixed=0 branch_hits=9 undefined_branches=0
+q2087_reverse_d3_eq_d4_a_power_best:
+  -4/(B+2) o X^2 o 4/B polarity=-1 covered=10/57 matches=7 mixed=0 branch_hits=11 undefined_branches=0
+  -4/(B+2) o X^2 o -4/(B+2) polarity=-1 covered=10/57 matches=7 mixed=0 branch_hits=11 undefined_branches=0
+  -4/(B+2) o X^2 o 4/B polarity=1 covered=10/57 matches=3 mixed=0 branch_hits=11 undefined_branches=0
+  -4/(B+2) o X^2 o -4/(B+2) polarity=1 covered=10/57 matches=3 mixed=0 branch_hits=11 undefined_branches=0
+  -4/(B+2) o X^4 o B polarity=1 covered=9/57 matches=6 mixed=0 branch_hits=9 undefined_branches=0
+  -4/(B+2) o X^4 o -2B/(B+2) polarity=1 covered=9/57 matches=6 mixed=0 branch_hits=9 undefined_branches=0
+  -4/(B+2) o X^4 o 4/B polarity=1 covered=9/57 matches=5 mixed=0 branch_hits=9 undefined_branches=0
+  -4/(B+2) o X^4 o -4/(B+2) polarity=1 covered=9/57 matches=5 mixed=0 branch_hits=9 undefined_branches=0
+  -4/(B+2) o X^4 o 4/B polarity=-1 covered=9/57 matches=4 mixed=0 branch_hits=9 undefined_branches=0
+  -4/(B+2) o X^4 o -4/(B+2) polarity=-1 covered=9/57 matches=4 mixed=0 branch_hits=9 undefined_branches=0
+  -4/(B+2) o X^4 o B polarity=-1 covered=9/57 matches=3 mixed=0 branch_hits=9 undefined_branches=0
+  -4/(B+2) o X^4 o -2B/(B+2) polarity=-1 covered=9/57 matches=3 mixed=0 branch_hits=9 undefined_branches=0
+p27_a_level_power_correspondence_probe_rows=1/1

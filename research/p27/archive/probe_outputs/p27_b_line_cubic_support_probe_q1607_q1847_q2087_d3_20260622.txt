@@ -1,0 +1,59 @@
+p27 B-line exact monic cubic support probe
+family = chi(B^3+aB^2+bB+c), global polarity allowed
+small_primes = 1607,1847,2087
+families = d3
+q=1607:
+q1607_d3_b_line_source_stats:
+  core_B = 200
+  d3_labeled_B = 49
+  d4_labeled_B = 28
+  enum_compact_not_target = 805
+  enum_no_label2_candidate = 408
+  legal_B = 49
+  legal_B_in_core = 49
+  legal_B_missing_core = 0
+q1607_d3_monic_cubic_support_stats:
+  ab_pairs = 2582449
+  exact_cubics = 0
+  minus_rows = 21
+  plus_rows = 28
+  rows = 49
+  target_weight = 21
+q1607_d3_monic_cubic_support_samples:
+q=1847:
+q1847_d3_b_line_source_stats:
+  core_B = 230
+  d3_labeled_B = 63
+  d4_labeled_B = 45
+  enum_compact_not_target = 873
+  enum_no_label2_candidate = 468
+  legal_B = 63
+  legal_B_in_core = 63
+  legal_B_missing_core = 0
+q1847_d3_monic_cubic_support_stats:
+  ab_pairs = 3411409
+  exact_cubics = 0
+  minus_rows = 18
+  plus_rows = 45
+  rows = 63
+  target_weight = 18
+q1847_d3_monic_cubic_support_samples:
+q=2087:
+q2087_d3_b_line_source_stats:
+  core_B = 260
+  d3_labeled_B = 57
+  d4_labeled_B = 25
+  enum_compact_not_target = 1109
+  enum_no_label2_candidate = 520
+  legal_B = 57
+  legal_B_in_core = 57
+  legal_B_missing_core = 0
+q2087_d3_monic_cubic_support_stats:
+  ab_pairs = 4355569
+  exact_cubics = 0
+  minus_rows = 32
+  plus_rows = 25
+  rows = 57
+  target_weight = 32
+q2087_d3_monic_cubic_support_samples:
+p27_b_line_cubic_support_probe_rows=1/1
