@@ -45,6 +45,7 @@ no-R coordinate degree profile = cubic B-orbit, quadratic fixed-B/fiber split
 no-R quadratic subcover classifier = W/T-only killed; beta_U and hidden_mixed remain
 no-R fixed-B character screen = beta_U support chi(B)=+1; no stable gamma law
 no-R beta_U norm descent = gamma is Norm(Unext+2), half-size/full-size fiber split
+no-R beta_U norm relation = no stable low-bidegree (B,Norm) plane curve
 reduced lift visible classifier = killed
 gamma visible square triviality = killed
 oriented alpha/beta word = tautological, not a source
@@ -155,6 +156,11 @@ gamma = chi_base(N_B)
 gamma+ rows have 16 beta_U points over B
 gamma- rows have 32 beta_U points over B
 ```
+
+Do not ask for a small visible `(B, N_B)` plane equation as the main route:
+the relation screen is negative through bidegree `B12_N16` in the stable guard
+fields.  The task is divisor/Kummer extraction of `N_B`, not another blind
+low-degree scan.
 
 4. Compute quotient/Prym structure under the available symmetries:
 

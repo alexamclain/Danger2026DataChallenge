@@ -91,6 +91,14 @@ gamma- rows: norm-value counts per B are 9, 12, 14, or 16
 This suggests the selected sign is tied to a splitting/branch profile inside
 the beta_U subcover, not to an arbitrary pointwise filter.
 
+Relation-screen follow-up:
+[P27 B-Line No-R Beta_U Norm Relation Screen](p27_b_line_noR_betaU_norm_relation_20260622.md).
+The named norm class does not collapse to a small visible plane curve in
+`(B, Norm(Unext+2))`: all/gamma+/gamma- point sets have zero stable extra
+nullity through bidegree `B12_N16` across `q=103,167,263,311`.  A lone
+`q=199` gamma- `B8_N12` signal disappears at `q=263` and `q=311`, so it is
+not promoted.
+
 ## Interpretation
 
 Positive:
@@ -135,6 +143,7 @@ continue = compare the beta_U norm class with f4/f3 after normalization
 
 kill = treating chi(B)=+1 support alone as a sampler
 kill = treating norm descent alone as sqrt-beating
+kill = small visible (B, Norm(Unext+2)) plane curve through B12_N16
 kill = GPU production before the norm class becomes a named source map
 ```
 

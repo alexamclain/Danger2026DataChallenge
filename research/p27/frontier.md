@@ -1267,6 +1267,11 @@ Across `q = 23, 71, 103, 167, 199, 263`, gamma descends as
 `chi_base(Norm(Unext+2))`, is uniform per active base `B`, and matches the
 `16` versus `32` beta_U fiber-size split.  The next beta_U CAS test is divisor
 extraction for this norm class on the `chi(B)=+1` support.
+The obvious plane-curve shortcut is now screened:
+[P27 B-Line No-R Beta_U Norm Relation Screen](evidence/p27_b_line_noR_betaU_norm_relation_20260622.md).
+`(B, Norm(Unext+2))` has no stable extra bidegree relation through `B12_N16`;
+the lone `q=199` signal dies at `q=263` and `q=311`.  Keep beta_U as a
+divisor/Kummer extraction target, not a low-degree plane-curve sampler.
 The B-line visible two-gate quartic shortcut is closed as well:
 [P27 B-Line Gate4-Prefix Quartic q1847 Screen](evidence/p27_b_line_gate4_prefix_quartic_q1847_screen_20260622.md).
 It scans `6,300,872,423` q1847 coefficient triples for
