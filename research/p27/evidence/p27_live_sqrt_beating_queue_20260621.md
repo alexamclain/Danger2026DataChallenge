@@ -226,6 +226,12 @@ It tests S3-conjugated `lambda -> lambda^m` maps for `m=2..12` on
 `lambda=-K^2/4`.  No exact `d3/d4` recurrence appears in q1471/q1607/q1847,
 and coverage is low.  Lambda is still a normalization coordinate for
 branch-class extraction, not a source or recurrence by itself.
+The post-map-family synthesis is now explicit:
+[P27 Post-Branch-Dynamics Test Frontier](p27_post_branch_dynamics_test_frontier_20260622.md).
+The remaining sqrt-beating tests are A/B/K normalized Kummer/divisor class
+extraction and the trace/norm half-norm phase identity.  GPU should be used
+only for bounded telemetry feeding those tests, or for a direct sampler once a
+class/source is named.
 The B/K-enhanced legal-pullback screen gives one positive staging coordinate:
 [P27 Conic-Pair B/K-Enhanced Pullback Screen](p27_conic_pair_b_enhanced_pullback_20260622.md).
 It finds the expected `B^2+c^2=4` and the stable surface
