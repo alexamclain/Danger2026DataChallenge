@@ -267,6 +267,12 @@ This tests exact monic quartic support on
 `K=x([2]P)` for `d3_on_K` over q1471/q1607/q1847.  It is the remaining
 low-genus polynomial source shape after degree `<=2` and q1471 cubics are
 killed; q1847 has expected random exact count about `2.52e-6`.
+The bridge between the two line coordinates is exact:
+[P27 B-Line / K-Line Bridge](p27_b_kline_bridge_20260622.md).
+Under `K^2=(B-2)^4/(8B(B+2)^2)`, every B d3/d4 row maps to a present signed K
+class with matching target sign in q1471/q1607/q1847/q2087.  So B-line and
+K-line quartics are coordinated coordinate tests for one descended class, not
+independent moonshot lanes.
 The first targeted B-line elimination proxy is negative:
 [P27 B-Line Reverse-Z Relation Screen](p27_b_line_reverse_z_relation_20260622.md).
 It keeps the actual d3 all-plus reverse-source root `z` with `x6=z^2` and

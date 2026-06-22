@@ -197,6 +197,13 @@ Use the frozen target packet:
 research/p27/archive/fixtures/p27_kline_quartic_targets_20260622.json
 ```
 
+Coordination note:
+[P27 B-Line / K-Line Bridge](p27_b_kline_bridge_20260622.md) proves that the
+B-line and K-line targets agree under
+`K^2=(B-2)^4/(8B(B+2)^2)` in q1471/q1607/q1847/q2087.  Run the two quartic
+screens as coordinate alternatives for one descended class, not as independent
+confirmation streams.
+
 ## Do Not Run Yet
 
 ```text

@@ -591,6 +591,13 @@ q1471/q1607/q1847 and tests exact monic quartic support
 `chi(K^4+aK^3+bK^2+cK+d)`.  A q1847 d3 hit would be highly non-random
 (`expected_exact ~= 2.52e-6`); no stable q1847/q1471/q1607 hit would close the
 visible degree-4 K-line source shape.
+The B/K coordinate bridge is now explicit:
+[P27 B-Line / K-Line Bridge](evidence/p27_b_kline_bridge_20260622.md).
+For q1471/q1607/q1847/q2087, the relation
+`K^2=(B-2)^4/(8B(B+2)^2)` maps every legal B d3/d4 row to a present signed K
+class with the same target sign.  The B-line and K-line quartic GPU screens
+are therefore coordinate alternatives for the same descended class, not
+independent confirmations.
 
 That ask is now packaged as a concrete handoff:
 [P27 Kummer Branch-Extraction Handoff](evidence/p27_kummer_branch_extraction_handoff_20260621.md).

@@ -19,6 +19,12 @@ source candidate on `P1_B`.  A stable negative would close the last obvious
 visible low-genus B-line support family after rational linears, split
 quadratics, monic cubics, combined-prefix cubics, and Belyi orbits.
 
+Bridge update: [P27 B-Line / K-Line Bridge](p27_b_kline_bridge_20260622.md)
+shows that the B-line and signed-doubling K-line target rows are the same
+descended d3/d4 classes under
+`K^2=(B-2)^4/(8B(B+2)^2)`.  Treat this as a coordinate alternative to the
+K-line quartic screen, not independent confirmation.
+
 ## Why This Is GPU-Worthy
 
 The exact cubic solver already uses the right method: hold all coefficients
@@ -280,6 +286,8 @@ Promotion artifact:
 ```text
 write the quartic examples
 build the genus-1 double cover z^2=f(B)
+compare/pull back against the K-line coordinate via
+  K^2=(B-2)^4/(8B(B+2)^2)
 ask CAS for the map/sourceability and relation to f3/f4
 only then consider a GPU sampler or p27 production mode
 ```

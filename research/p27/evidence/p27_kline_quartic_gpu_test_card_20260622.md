@@ -17,6 +17,12 @@ already reduced from `E'`; degree `<=2` support is killed, and the q1471 monic
 cubic promotion screen found no exact d3 cubic.  The remaining low-genus
 polynomial family is quartic.
 
+Bridge update: [P27 B-Line / K-Line Bridge](p27_b_kline_bridge_20260622.md)
+shows that the signed-doubling K-line and B-line target rows are the same
+descended d3/d4 classes under
+`K^2=(B-2)^4/(8B(B+2)^2)`.  Treat this as a coordinate alternative to the
+B-line quartic screen, not independent confirmation.
+
 ## Why This Is GPU-Worthy
 
 The search size is too large for local Python but natural for the same
@@ -211,6 +217,8 @@ Promotion artifact:
 ```text
 construct z^2=f(K)
 compute genus/sourceability and relation to the signed-doubling quotient
+compare/pull back against the B-line coordinate via
+  K^2=(B-2)^4/(8B(B+2)^2)
 compare against d4_on_K_after_d3 if d3 is tractable
 ```
 
