@@ -145,6 +145,11 @@ d4 = chi(-(L+a)(L-a)cR).
 GPU should report this selector only if the legal conic-pair variables are
 already available.  It is not a reason to run free random `(R,L)`.
 
+The d5 tower screen shows the same selector repeats one level later:
+[P27 Conic-Pair D5 Tower](p27_conic_pair_d5_tower_20260621.md).  GPU should
+treat this as tower telemetry or legal-pullback work, not as a production
+source until a legal tower sampler exists.
+
 Report:
 
 ```text

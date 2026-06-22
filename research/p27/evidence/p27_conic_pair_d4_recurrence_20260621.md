@@ -200,3 +200,8 @@ kill = GPU production from free (R,L)
 ```text
 p27_conic_pair_d4_recurrence_rows=1/1
 ```
+
+Update: the d5 recurrence test is positive.  See
+[P27 Conic-Pair D5 Tower](p27_conic_pair_d5_tower_20260621.md): the selector
+product repeats one level later with zero mismatches on q1607/q1847/q2087 and
+p27 train/heldout samples.

@@ -246,6 +246,11 @@ because the quotient with `R^2+cR+1` is `2` times a square and p27 has
 `chi(2)=+1`.  GPU should log this only when legal conic-pair variables are
 already available.  This is not a license to run raw random `(R,L)`.
 
+The same selector repeats at d5:
+[P27 Conic-Pair D5 Tower](p27_conic_pair_d5_tower_20260621.md).  Treat this as
+legal-tower telemetry or CAS/source work; it is still not a production GPU
+path without a legal tower sampler or quotient.
+
 Packet source warning:
 [P27 Label-2 E[2] Packet Source Probe](p27_label2_e2_packet_source_probe_20260621.md).
 The easy rational `E[2]` packet source has already been tested on p27 and gives

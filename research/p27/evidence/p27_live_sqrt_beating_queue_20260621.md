@@ -99,6 +99,11 @@ with `a=R-1/R` and `L=h-g-2r`,
 regime.  The selected next coordinate does not re-enter the original legal
 source in q1607/q1847/q2087, so the live route is the legal pullback plus this
 new Kummer divisor, not direct iteration.
+The d5 screen confirms this is a repeated tower identity: after adjoining the
+d4 selector root, the same product law gives d5 with zero mismatches on
+q1607/q1847/q2087 and p27 train/heldout samples.  The source-side obstruction
+remains unchanged: selected two-step coordinates also do not re-enter the
+original legal source.
 ```
 
 Concrete next K/S test:
@@ -262,8 +267,8 @@ raw free (R,L) remains the only conic-pair source
 Ranked next moves:
 
 ```text
-1. Theory/CAS: staged legal pullback / quotient decomposition of the
-   conic-chain/K/S layer, now including Z^2=-(L+a)(L-a)cR.
+1. Theory/CAS: staged legal pullback / quotient decomposition of the repeated
+   conic-chain Kummer tower with Z_j^2=-(L_j+a_j)(L_j-a_j)c*r_{j+1}.
 2. GPU/structure: recurrence telemetry and legal-pullback sampler only, not
    raw random `(R,L)`.
 3. Theory/lit/expert: trace/norm half-norm phase identity for pref vs h*vq.

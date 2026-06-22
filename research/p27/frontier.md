@@ -740,6 +740,15 @@ the original legal label-2/compactD source in the guard fields, so the live
 test is now the legal pullback with `Z^2=-(L+a)(L-a)cR`, not blind iteration of
 the same sampler.
 
+The repeated-tower check is positive:
+[P27 Conic-Pair D5 Tower](evidence/p27_conic_pair_d5_tower_20260621.md).
+After adjoining the d4 selector root, the same product law gives d5 with zero
+mismatches on q1607/q1847/q2087 and p27 train/heldout samples.  This promotes
+the conic-chain lead from a one-off d4 identity to a recursive Kummer selector
+tower.  The obstruction remains source-side: the selected one-step and
+two-step coordinates do not re-enter the original legal label-2/compactD
+source in the guard fields.
+
 The K-line now has a cleaner coordinate for that extraction:
 [P27 Kummer Belyi Structure Probe](evidence/p27_kummer_belyi_structure_probe_20260621.md).
 Symbolically,
