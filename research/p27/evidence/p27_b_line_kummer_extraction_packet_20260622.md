@@ -201,6 +201,12 @@ both B and K coordinates.  That makes this packet's offline normalization /
 Kummer-class route active rather than a fallback behind the visible d3 quartic
 screen.
 
+Update: the direct two-gate visible quartic is now negative too:
+[P27 B-Line Gate4-Prefix Quartic q1847 Screen](p27_b_line_gate4_prefix_quartic_q1847_screen_20260622.md).
+It exhausts `gate4_prefix_on_legalB` over q1847 and finds zero exact quartics,
+so the B-line quartic shortcut is closed in the decisive field for both d3 and
+the d3+d4 all-plus prefix.
+
 Update: the deep-prefix B-line telemetry lane is now separately packaged:
 [P27 B-Line Deep-Prefix GPU Telemetry Handoff](p27_b_line_deep_prefix_gpu_telemetry_handoff_20260622.md).
 That run should emit `Bplus` and selected bits `d3..dN` from the same p27
@@ -212,7 +218,7 @@ production hunt.
 
 ```text
 continue = run Magma/Sage normalization over P1_Bline in q1607/q1847/q2087
-continue = optional bounded gate4-prefix or q2087 quartic closure only if useful
+continue = optional q2087 quartic closure only if useful
 continue = bounded GPU deep-prefix telemetry if it feeds f3/f4/f5 extraction
 continue = if d3 is tractable, compare the B-line Kummer sequence f3,f4,f5
 continue = use GPU only after a source/sampler or recurrence is named
@@ -224,6 +230,7 @@ kill = visible monic quartic d3 promotion after the q1847 B/K negatives
 kill = degree-one rational B-line recurrence
 kill = hidden-X power-map B-line recurrence for m=2..6
 kill = monomial Belyi B-line recurrence u -> u^m for m=2..12
+kill = q1847 visible B-line monic quartic for d3+d4 all-plus
 ```
 
 ```text

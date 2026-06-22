@@ -29,6 +29,7 @@ B-line:
   full PGL2 maps B -> (aB+b)/(cB+d)
   hidden-X power maps from B=8X^2/(X^2-1)^2, X -> X^m, m=2..6
   monomial Belyi maps u=-B/2 -> u^m, m=2..12
+  q1847 monic quartic support for d3 and d3+d4 all-plus
 
 K/lambda:
   split degree <=4 lambda branch divisors for d3
@@ -85,6 +86,13 @@ Use:
 ```text
 research/p27/evidence/p27_b_line_kummer_extraction_packet_20260622.md
 ```
+
+The visible quartic shortcut is now closed in q1847 for both d3 and the direct
+two-gate prefix:
+[P27 Full Quartic q1847 D3 Screen](p27_full_quartic_q1847_d3_screen_20260622.md)
+and [P27 B-Line Gate4-Prefix Quartic q1847 Screen](p27_b_line_gate4_prefix_quartic_q1847_screen_20260622.md).
+So this lane now means actual class extraction, not another B-line quartic
+bucket.
 
 Compute:
 

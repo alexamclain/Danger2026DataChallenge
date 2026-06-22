@@ -240,6 +240,11 @@ negative:
 [P27 Lambda Quartic q1847 D3 Screen](p27_lambda_quartic_q1847_d3_screen_20260622.md).
 This kills GPU lambda quartic production unless a new theorem changes the
 target family; K/lambda now means actual K-level branch-class extraction.
+The B-line visible quartic route is now closed one step further:
+[P27 B-Line Gate4-Prefix Quartic q1847 Screen](p27_b_line_gate4_prefix_quartic_q1847_screen_20260622.md).
+After the q1847 B/K d3 quartic kills, the direct q1847 B-line d3+d4 all-plus
+quartic also has zero exact hits.  This leaves B-line Kummer/divisor class
+extraction as the live route, not B quartic GPU production.
 The post-map-family synthesis is now explicit:
 [P27 Post-Branch-Dynamics Test Frontier](p27_post_branch_dynamics_test_frontier_20260622.md).
 The remaining sqrt-beating tests are A/B/K normalized Kummer/divisor class

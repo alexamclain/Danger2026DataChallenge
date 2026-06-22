@@ -146,20 +146,24 @@ route in the decisive promotion field.  Remaining B/K routes are:
 
 ```text
 1. optional q2087/q1607 closure only as bookkeeping, not promotion;
-2. gate4-prefix quartic only if we still want to close the direct two-gate
-   visible source family;
+2. gate4-prefix q2087 only as bookkeeping, since q1847 is now negative;
 3. offline branch/genus/Kummer extraction over P1_B/P1_K;
 4. non-visible recurrence or higher-genus class sequence.
 ```
+
+Follow-up:
+[P27 B-Line Gate4-Prefix Quartic q1847 Screen](p27_b_line_gate4_prefix_quartic_q1847_screen_20260622.md)
+closes item 2 in the decisive q1847 field with zero exact quartics.
 
 ## Continue / Kill
 
 ```text
 continue = offline normalized Kummer/divisor extraction over P1_B/P1_K
 continue = use fast oracle for any future GPU quartic hit/chunk validation
-continue = optional full gate4-prefix q1847 quartic screen for two-gate closure
+continue = optional q2087 gate4-prefix closure only if a theorem needs it
 
 kill = d3 visible monic quartic source in the decisive q1847 field
+kill = d3+d4 visible monic quartic B-line source in the decisive q1847 field
 kill = expecting a stable B/K quartic d3 hit to beat sqrt
 kill = spending GPU production time on B/K d3 quartics without new evidence
 ```

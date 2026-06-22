@@ -1,0 +1,17 @@
+p27 quartic fast shard summary
+coordinate = B
+field = 1847
+family = gate4_prefix_on_legalB
+rows = 63
+plus = 19
+minus = 44
+total_triples = 10000000
+full_triples = 6300872423
+triples_scanned = 10000000
+polarity_-1_hits = 0
+polarity_1_hits = 0
+exact_quartics = 0
+wall_seconds = 0.978582
+wall_throughput_triples_per_second = 10218866.207
+hit_samples:
+p27_quartic_fast_shard_runner_rows=1/1

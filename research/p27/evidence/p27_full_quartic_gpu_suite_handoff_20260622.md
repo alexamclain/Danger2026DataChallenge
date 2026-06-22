@@ -4,8 +4,9 @@ Date: 2026-06-22
 
 ## Claim
 
-The full B-line/K-line monic quartic suite is now locally executable, and the
-decisive q1847 d3 screens are complete and negative.
+The full B-line/K-line monic quartic suite is now locally executable.  The
+decisive q1847 d3 screens are complete and negative, and the direct q1847
+B-line gate4-prefix screen is complete and negative too.
 
 Do not spend GPU time on smaller proxy families.  The obvious shortcuts are
 already killed:
@@ -28,12 +29,14 @@ The q1847 answer is no in both visible coordinates:
 ```text
 B q1847 d3_on_legalB: exact_quartics = 0
 K q1847 d3_on_K:      exact_quartics = 0
+B q1847 gate4_prefix_on_legalB: exact_quartics = 0
 ```
 
 See [P27 Full Quartic q1847 D3 Screen](p27_full_quartic_q1847_d3_screen_20260622.md).
-This kills the decisive q1847 visible monic-quartic d3 promotion route.  The
-remaining quartic jobs are optional closure or verification surfaces, not the
-front-door sqrt-beating lane.
+See also [P27 B-Line Gate4-Prefix Quartic q1847 Screen](p27_b_line_gate4_prefix_quartic_q1847_screen_20260622.md).
+This kills the decisive q1847 visible monic-quartic d3 and direct two-gate
+promotion routes.  The remaining quartic jobs are optional bookkeeping or
+verification surfaces, not the front-door sqrt-beating lane.
 
 ## Manifest
 
@@ -75,13 +78,13 @@ Status:
 ```text
 K q1847 d3_on_K:      done, exact_quartics = 0
 B q1847 d3_on_legalB: done, exact_quartics = 0
+B q1847 gate4_prefix_on_legalB: done, exact_quartics = 0
 ```
 
 Run these only for closure bookkeeping, two-gate closure, or if another agent
 reports a candidate requiring verification:
 
 ```text
-B q1847 gate4_prefix_on_legalB
 B q2087 gate4_prefix_on_legalB
 K q1847 d4_on_K_after_d3
 B q1847 legal_on_coreB

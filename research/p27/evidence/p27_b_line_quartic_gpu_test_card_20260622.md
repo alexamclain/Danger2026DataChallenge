@@ -42,6 +42,20 @@ q1607/q1847/q2087 for both `d3_on_legalB` and `gate4_prefix_on_legalB`.
 Therefore the full B-line quartic family was the right bounded screen, not a
 branch-involution-only proxy; the decisive q1847 d3 screen is now negative.
 
+Follow-up:
+[P27 B-Line Gate4-Prefix Quartic q1847 Screen](p27_b_line_gate4_prefix_quartic_q1847_screen_20260622.md)
+now exhausts the direct two-gate visible quartic family in the decisive q1847
+field and also finds zero exact quartics:
+
+```text
+q1847 gate4_prefix_on_legalB:
+  triples_scanned = 6300872423
+  exact_quartics = 0
+```
+
+So the visible B-line genus-1 quartic route is closed in q1847 both for d3
+itself and for the d3+d4 all-plus prefix.
+
 ## Why This Was GPU-Worthy
 
 The exact cubic solver already uses the right method: hold all coefficients
@@ -263,7 +277,7 @@ Original bounded GPU order and current status:
 
 3. q1847 gate4_prefix_on_legalB
    Purpose: direct two-gate source candidate.
-   Status: optional closure, not a d3 promotion path.
+   Status: complete, exact_quartics = 0.
 
 4. q2087 d3_on_legalB and q2087 gate4_prefix_on_legalB
    Purpose: guard-field confirmation if q1847 or q1607 is positive, or final
@@ -322,13 +336,13 @@ Kill:
 
 ```text
 no exact quartic for d3_on_legalB in decisive q1847
-no exact quartic for gate4_prefix_on_legalB in q1847 and q2087, if two-gate
-closure is still pursued
+no exact quartic for gate4_prefix_on_legalB in q1847
 ```
 
-The q1847 d3 kill closes the visible genus-1 B-line d3 promotion route.  The
-remaining B-line moonshot is actual offline normalization/class extraction,
-higher-genus structure, or a non-visible recurrence.
+The q1847 d3 and gate4-prefix kills close the visible genus-1 B-line quartic
+promotion route in the decisive field.  The remaining B-line moonshot is
+actual offline normalization/class extraction, higher-genus structure, or a
+non-visible recurrence.
 
 ```text
 p27_b_line_quartic_gpu_test_card_rows=1/1

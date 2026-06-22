@@ -937,6 +937,12 @@ It shows that selected prefix bits descend cleanly to both K and Sroot, but
 Sroot is only a doubled K grouping with identical all-plus prefix ratios.  This
 strengthens Sroot as the normalization coordinate for CAS and kills Sroot
 prefix buckets as a GPU/source shortcut.
+The B-line visible two-gate quartic shortcut is closed as well:
+[P27 B-Line Gate4-Prefix Quartic q1847 Screen](evidence/p27_b_line_gate4_prefix_quartic_q1847_screen_20260622.md).
+It scans `6,300,872,423` q1847 coefficient triples for
+`gate4_prefix_on_legalB` and finds zero exact quartics.  Together with the
+q1847 B/K d3 quartic kills, this pushes the B-line lane fully back to
+normalized Kummer/divisor class extraction.
 The direct sign-word coupling telemetry now agrees:
 [P27 Conic Sign-Word Coupling Probe](evidence/p27_conic_signword_coupling_20260622.md).
 On `4000 + 4000` p27 train/heldout unique `(A,x5)` rows, the all-plus conic
