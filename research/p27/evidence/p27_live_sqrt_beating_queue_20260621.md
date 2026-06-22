@@ -65,6 +65,10 @@ first-half saturation; q7 online Magma reports a dimension-1 scheme with
 62 basis polynomials, but genus/normalization exceeds the web memory limit.
 Exact single-section tests in `L(4O)=<1,U,U^2,V>` are killed on q599/q727/q919;
 q487 exact quadratic-U fits are local artifacts.
+The same exact single-section test on the original residual
+`E: W^2=X^3-X`, with basis `L(4O)=<1,X,X^2,W>`, is also killed:
+q487/q599/q727/q919/q1607 have zero d3 sections, and q1607 has zero
+non-degenerate d4 sections.  This closes the cheap low-pole E-section gap.
 Exact U-cubic tests also fail on q919/q967/q1063, despite local q487/q599/q727
 artifacts, so widening univariate U-polynomials is no longer a live source path.
 The reciprocal quotient `r=z^2+z^-2` is real, but it is not the selector:

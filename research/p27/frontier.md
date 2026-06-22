@@ -448,6 +448,18 @@ field.  The `q=1087` d4 exact pairs occur on only `40` rows and disappear at
 visible reducible-conic source; the next cheap algebraic step is irreducible
 conics or direct function-field extraction.
 
+The exact single-section follow-up now kills that cheap irreducible-conic-sized
+gap too:
+[P27 E-Quotient L(4O) Exact Section Screen](evidence/p27_equotient_l4_section_exact_screen_20260622.md).
+It exhaustively tested projective sections `a+bX+cX^2+dW` on
+`E: W^2=X^3-X`.  For d3, p27-compatible fields
+`q=487,599,727,919,1607` all have zero exact `L(4O)` sections.  For d4, the
+smaller p27-compatible fields are one-sided after conditioning on d3, but the
+non-degenerate `q=1607` check has `112` rows split `76/36` and also zero exact
+sections.  This closes the nearest low-pole E-section route.  The live E
+route is now actual double-cover/Kummer-class extraction, a higher named
+divisor class, or a recurrence arising from the normalized cover.
+
 The first broader recurrence screen is also negative:
 [P27 E-Quotient Affine-Walk Recurrence](evidence/p27_equotient_affine_walk_recurrence_20260621.md).
 It tested every map `P -> [m]P + Q` over `q=1087,1471,1607`, for
