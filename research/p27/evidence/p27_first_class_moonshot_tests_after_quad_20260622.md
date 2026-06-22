@@ -251,6 +251,15 @@ The finite-field layer count shows
 makes `d_next` square, compactD_R is not an independent first normalization
 layer.  Normalize the no-R reduced cover first.
 
+GPU phase-sequence handoff:
+[P27 B-Line Phase GPU Telemetry Handoff](p27_b_line_phase_gpu_telemetry_handoff_20260622.md).
+The V4 factorization gives `f_{j+1}=alpha_j*beta_j`, but the small p27 phase
+screen is negative.  The GPU task is therefore a bounded closure/promotion
+test: emit `alpha_j,beta_j,product` with raw-source denominators and promote
+only a heldout recurrence, telescoping product, sourceable sheet choice, or
+named Kummer/divisor hypothesis.  Do not run compactD_R, alpha, beta, or Bplus
+as standalone production filters.
+
 Required computation:
 
 ```text
@@ -264,6 +273,7 @@ compute degree/reducedness/irreducibility offline; do not rely on online Magma
 normalize F_A(u,v)=0 over the f3-plus B-u-H layer and extract div(v+2) modulo squares
 classify gamma as pullback, coboundary, translate, quotient class, or fresh half-cover
 extract alpha/beta phase classes and test whether they telescope across successive gates
+use GPU phase telemetry only as bounded support for that class test
 repeat the staged construction after f4-plus and compare the f5/f4 class with gamma
 use f5/f6 only as regression checks until larger data supports them
 ```

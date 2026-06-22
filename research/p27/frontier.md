@@ -1140,6 +1140,15 @@ conditional and costs a half split, below the source-normalized promotion bar.
 Guard-field all-plus/all-minus plateaus stop at different gates, so they are
 field-tail artifacts.  Keep alpha/beta as optional telemetry columns, not a
 production mode.
+The GPU-scale version is now pre-registered:
+[P27 B-Line Phase GPU Telemetry Handoff](evidence/p27_b_line_phase_gpu_telemetry_handoff_20260622.md)
+with manifest
+`research/p27/archive/fixtures/p27_b_line_phase_gpu_telemetry_suite_20260622.json`.
+It asks for bounded `x16blinephaseprobe` telemetry emitting
+`alpha_j,beta_j,alpha_j*beta_j` against actual selected bits with raw-source
+denominators.  Promotion requires heldout source-normalized recurrence or a
+named Kummer/divisor hypothesis; matching the small CPU half-loss screen is a
+kill.
 The extension-field denominator audit is also negative:
 [P27 B-Line Gamma Extension Count](evidence/p27_b_line_gamma_extension_count_20260622.md).
 The new finite-field engine replays `q=607` exactly against the earlier

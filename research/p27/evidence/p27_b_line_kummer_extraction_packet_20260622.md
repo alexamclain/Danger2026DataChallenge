@@ -232,6 +232,14 @@ sums through exponent `64` do not select f3, and the four-u polynomial
 coefficients are maximal-degree on legal B.  So this is not a GPU sampler; it
 is a sharper CAS model.
 
+Update: the V4 phase telemetry has a GPU-scale contract:
+[P27 B-Line Phase GPU Telemetry Handoff](p27_b_line_phase_gpu_telemetry_handoff_20260622.md).
+The class decomposition `f_{j+1}=alpha_j*beta_j` remains useful for Kummer
+extraction, but the small p27 phase sequence screen is negative as a sampler.
+The GPU run should therefore report phase recurrence/telescoping with
+raw-source denominators, and should be killed if it reproduces independent
+half-loss at larger scale.
+
 Update: the reduced-fiber low-degree plane relation screen is negative:
 [P27 B-Line Reduced-Fiber Relation Screen](p27_b_line_reduced_fiber_relation_20260622.md).
 The all-cover and f3 plus/minus subcovers have `extra_nullity=0` through total

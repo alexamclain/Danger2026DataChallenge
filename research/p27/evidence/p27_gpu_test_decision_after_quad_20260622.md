@@ -115,6 +115,13 @@ Unified quartic handoff:
 is now the entry point for Tests 3 and 4.  It includes the run order, frozen
 packets, verifiers, manifest, killed proxy families, and promotion/kill rules.
 
+B-line phase handoff:
+[P27 B-Line Phase GPU Telemetry Handoff](p27_b_line_phase_gpu_telemetry_handoff_20260622.md)
+is the concrete bounded test for the V4 gamma factors.  It should emit
+`alpha_j,beta_j,alpha_j*beta_j` and actual selected bits with raw-source
+denominators.  This is a closure/promotion test for recurrence or telescoping,
+not a production filter for `compactD_R`, alpha, beta, or Bplus buckets.
+
 ### Test 1: Recurrence-Coupling Telemetry
 
 Run same-stream p27 telemetry that emits the sign vector

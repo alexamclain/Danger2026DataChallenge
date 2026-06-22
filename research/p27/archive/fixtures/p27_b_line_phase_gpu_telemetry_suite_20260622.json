@@ -1,0 +1,90 @@
+{
+  "name": "p27_b_line_phase_gpu_telemetry_suite",
+  "date": "2026-06-22",
+  "target": {
+    "p": "1000000000000000000000000103",
+    "label": "p27"
+  },
+  "purpose": "bounded GPU telemetry for the B-line alpha/beta phase sequence; not a production search",
+  "candidate_mode": "x16blinephaseprobe",
+  "baseline_evidence": [
+    "research/p27/evidence/p27_b_line_gamma_v4_factorization_20260622.md",
+    "research/p27/evidence/p27_b_line_alpha_beta_phase_sequence_20260622.md",
+    "research/p27/evidence/p27_b_line_localized_cover_layer_count_20260622.md",
+    "research/p27/evidence/p27_b_line_reduced_cover_symbolic_packet_20260622.md"
+  ],
+  "do_not_test_as_production_filters": [
+    "compactD_R alone",
+    "alpha alone",
+    "beta alone",
+    "Bplus buckets alone",
+    "short phase words without raw source accounting"
+  ],
+  "phase_definitions": {
+    "A": "B^2 - 2",
+    "H_j": "H_j^2 = u_j + 2",
+    "R_j": "R_j^2 = H_j^2 - 4",
+    "S_j": "S_j^2 = B^2 + H_j^2 - 4",
+    "alpha_j": "chi(H_j + R_j)",
+    "beta_j": "chi(H_j + S_j)",
+    "product": "alpha_j * beta_j = f_{j+1}"
+  },
+  "required_validation": {
+    "alpha_beta_product_mismatches": 0,
+    "actual_gate_mismatches": 0,
+    "compactD_R_beta_ratio_mismatches_if_emitted": 0,
+    "raw_source_denominator_required": true
+  },
+  "run_tiers": [
+    {
+      "name": "implementation_smoke",
+      "raw_draws_per_seed_order": 1000000,
+      "seed_orders": ["identity"],
+      "purpose": "compile, replay, and mismatch check"
+    },
+    {
+      "name": "bounded_telemetry",
+      "raw_draws_per_seed_order": 100000000,
+      "seed_orders": ["identity", "splitmix"],
+      "purpose": "heldout phase-word and recurrence test"
+    },
+    {
+      "name": "promotion_only_if_signal",
+      "raw_draws_per_seed_order": 1000000000,
+      "seed_orders": ["identity", "splitmix"],
+      "purpose": "only after bounded telemetry shows a source-normalized signal"
+    }
+  ],
+  "required_report_fields": [
+    "commit_hash",
+    "gpu_model",
+    "compile_flags",
+    "exact_commands",
+    "raw_source_draws",
+    "accepted_candidates",
+    "legal_d2_rows",
+    "B_line_rows",
+    "phase_records_by_gate",
+    "alpha_plus_minus_by_gate",
+    "beta_plus_minus_by_gate",
+    "product_plus_minus_by_gate",
+    "actual_gate_plus_minus_by_gate",
+    "alpha_beta_product_mismatches",
+    "actual_gate_mismatches",
+    "phase_word_bucket_counts",
+    "heldout_lift_by_bucket",
+    "target_survivors_per_raw_source_draw",
+    "target_survivors_per_gpu_second",
+    "overhead_vs_baseline"
+  ],
+  "promotion_bar": {
+    "heldout_target_per_source_lift": 1.25,
+    "requires": "a low-complexity recurrence, telescoping product, sourceable sheet choice, or named Kummer/divisor hypothesis controlling multiple selected gates"
+  },
+  "kill_bar": [
+    "alpha/beta pairs remain fresh independent half-losses after source normalization",
+    "only conditional phase-word lift appears",
+    "telemetry overhead makes target/GPU-second worse than baseline",
+    "no named class or recurrence emerges from bounded telemetry"
+  ]
+}
