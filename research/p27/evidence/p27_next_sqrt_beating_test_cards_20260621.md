@@ -1008,6 +1008,36 @@ over the B-rationalized base curve, looking for genus <= 1 quotient,
 sourceable walk, or repeated multi-gate coupling.
 ```
 
+B-source descent update:
+[P27 B-Source Descent And Branch Support](p27_b_source_descent_and_branch_20260622.md).
+
+```text
+B = 8X^2/(X^2 - 1)^2
+A + 2 = B^2
+d3 descends to Bplus on legal d2 rows
+d4 after d3 also descends to Bplus in tested samples
+```
+
+Negative branch support:
+
+```text
+d2 legal on core B:
+  no product of <=4 rational linear factors over q1607/q1847/q2087
+
+d3 on legal B:
+  no product of <=4 rational linear factors over q1607/q1847/q2087
+  no one irreducible quadratic times <=2 rational linear factors over
+  q1607/q1847/q2087
+```
+
+Updated action:
+
+```text
+Promote B-line Kummer-class extraction as the next theorem/CAS card.
+Do not continue visible B-factor bucket scans unless they are part of a
+structured divisor extraction.
+```
+
 K/S first-half cover update:
 [P27 K/S First-Half Cover Magma Smoke](p27_ks_first_half_cover_magma_20260621.md).
 [P27 K/S First-Half Alpha-Lift Obstruction](p27_ks_first_half_alpha_lift_obstruction_20260621.md).

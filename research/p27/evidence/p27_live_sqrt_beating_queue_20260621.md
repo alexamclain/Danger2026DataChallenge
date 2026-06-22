@@ -174,6 +174,14 @@ the core B bucket remains exact, but B/K/A atom products do not stably predict
 winners disagree.  This kills B-bucket GPU scoring as a moonshot route and
 reframes the live B test as function-field/CAS extraction of the legal cover
 over the rationalized base.
+The B quotient itself is now explicit and positive: on the residual source,
+`A+2=(8X^2/(X^2-1)^2)^2`, and `d3` descends to
+`B=8X^2/(X^2-1)^2` on legal d2 rows in p27 train/heldout and
+q1607/q1847/q2087.  `d4` after d3 also descends to B in the tested samples.
+The nearest branch-support screens are negative: no degree-<=4 rational-linear
+support for d2 or d3 on the B-line, and no d3 support of the form one
+irreducible quadratic times <=2 rational linears in the promotion fields.  So
+the live B test is now exact Kummer-class/divisor extraction on `P1_B`.
 The two-step Kummer quotient screen is now negative too.  After adjoining the
 first root `Z0`, the next selector `S1`, and when available the second root
 `Z1`, all obvious selector/root pair systems are full-rank through degree 12 on

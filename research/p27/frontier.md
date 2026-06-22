@@ -957,6 +957,20 @@ majority-lift to only `1.015x` on heldout.  So the B route is no longer a GPU
 bucket-search route; it is a function-field/CAS cover-extraction route over
 the B-rationalized base curve.
 
+The B route now has its first real quotient theorem target:
+[P27 B-Source Descent And Branch Support](evidence/p27_b_source_descent_and_branch_20260622.md).
+Symbolically, on the residual source
+`A+2=(8X^2/(X^2-1)^2)^2`, so `B=8X^2/(X^2-1)^2` is a genus-0 quotient of the
+source, not merely a fitted square root.  In p27 train/heldout and
+q1607/q1847/q2087, `d3` and `d4` after `d3=+1` descend to `Bplus` with no
+mixed groups.  This is positive and narrows the moonshot to a Kummer class on
+`P1_B`.  The nearest branch supports are negative: `d2` on the B core and `d3`
+on legal B have no rational-linear support of weight `<=4`, and `d3` is not
+one irreducible quadratic times `<=2` rational linear factors in any promotion
+field.  The next serious test is Magma/Sage divisor extraction for the
+descended `d3(B)` class, not another B-bucket or low-degree visible-factor
+scan.
+
 The first Belyi-normalized source family is now killed:
 [P27 Lambda Branch-Divisor Screen](evidence/p27_lambda_branch_divisor_screen_20260621.md).
 It tested `z^2=f(lambda)` with `deg_lambda(f)<=4`, where
