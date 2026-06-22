@@ -370,6 +370,13 @@ involution and fixes `t,w`.  Magma confirms the quotient base
 degree `4` over it and genus `17`.  This turns the lane into a precise
 cyclic-quartic/Kummer-class extraction over an elliptic curve; it is still not
 a GPU source until that class splits, recurs, or couples to `d3`.
+The normalized quartic model is now explicit:
+[P27 Trace/Norm Dplus H90 Quartic Model](evidence/p27_trace_norm_dplus_h90_quartic_model_20260622.md).
+With `rho=s/((t+1)(t^2+2t-1))`, the cover satisfies
+`rho^4 - 2*U_eta*rho^2 + F*Sprime^2=0` over `E_h90`, and the four orientation
+components collapse to two cases `eta=eh*ev`.  Magma confirms both `eta`
+models are still genus `17`, degree `4` over `E_h90`.  The next test is branch
+divisor/Kummer extraction for these two eta classes.
 
 The naive orientation-source cover is now priced:
 [P27 Trace/Norm Source-Orientation Cover](evidence/p27_trace_norm_source_orientation_cover_20260621.md).

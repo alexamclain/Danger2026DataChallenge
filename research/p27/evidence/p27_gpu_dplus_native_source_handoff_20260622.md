@@ -40,6 +40,7 @@ research/p27/evidence/p27_trace_norm_source_orientation_cover_20260621.md
 research/p27/evidence/p27_trace_norm_dplus_quotient_symmetry_20260622.md
 research/p27/evidence/p27_trace_norm_dplus_relative_descent_20260622.md
 research/p27/evidence/p27_trace_norm_dplus_h90_quotient_20260622.md
+research/p27/evidence/p27_trace_norm_dplus_h90_quartic_model_20260622.md
 ```
 
 Do not retest these killed routes:
@@ -128,6 +129,7 @@ sample the conic quotient a=t-1/t, g=w/t only after the descended Kummer class
 do not treat the genus-17 relative cover as a production source unless a
   further quotient/Prym/source map is supplied
 do not treat E_h90 alone as a source; the hard object is the degree-4 cover
+use the two eta-normalized quartics if testing H90 branch/Kummer structure
 sample a partial source that provably covers a fixed Dplus component
 sample a fused recurrence source that emits Dplus plus a later selected gate
 ```
