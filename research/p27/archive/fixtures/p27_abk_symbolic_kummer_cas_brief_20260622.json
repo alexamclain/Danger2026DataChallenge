@@ -1,0 +1,181 @@
+{
+  "title": "P27 A/B/K Symbolic Kummer CAS Brief",
+  "date": "2026-06-22",
+  "target": {
+    "p": "1000000000000000000000000103",
+    "goal": "find a sourceable or recurrent Kummer relation that beats independent sqrt-scale half-loss"
+  },
+  "coordinate_views": {
+    "a_b": "A = B^2 - 2",
+    "a_conic": "A = 2 - c^2",
+    "x_conic": "x_j = r_j^2"
+  },
+  "equations": {
+    "conic_transition": [
+      "h_j^2 = r_j^2 + c*r_j + 1",
+      "g_j^2 = r_j^2 - c*r_j + 1",
+      "r_{j+1}^2 - (h_j + g_j)*r_{j+1} + 1 = 0"
+    ],
+    "conic_selector": [
+      "a_j = r_{j+1} - 1/r_{j+1}",
+      "L_j = h_j - g_j - 2*r_j",
+      "Z_j^2 = -(L_j + a_j)*(L_j - a_j)*c*r_{j+1}"
+    ],
+    "reduced_b_first_transition": [
+      "U = x6 + 1/x6",
+      "(U - 2*x5)^2 = 4*(x5^2 + A*x5 + 1)",
+      "f3 = chi(U + 2)"
+    ],
+    "f3_layer": "H^2 = U + 2",
+    "f4_transition": [
+      "F_A(U,V) = (V^2 - 4)^2 - 4*U*(V^2 - 4)*(V + A) + 16*(V + A)^2",
+      "F_A(U,V) = 0",
+      "gamma^2 = V + 2"
+    ],
+    "v4_factorization": [
+      "Y = V + 2",
+      "R^2 = H^2 - 4",
+      "S^2 = B^2 + H^2 - 4",
+      "Y = (H +/- R)*(H +/- S)",
+      "f4 = chi(H + R)*chi(H + S)"
+    ],
+    "first_magma_chart": [
+      "X*iX = 1",
+      "(X-1)*iXm = 1",
+      "(X+1)*iXp = 1",
+      "(T-2*X^2)*iTm = 1",
+      "(X^2+1)*iX2p = 1",
+      "U_den*iU = 1",
+      "E_W = 0",
+      "T_cover = 0",
+      "Bline_relation = 0",
+      "first_half_beta = 0",
+      "reduced_Unext = 0",
+      "H^2 = Unext + 2",
+      "F_A(Unext,V) = 0",
+      "gamma^2 = V + 2"
+    ],
+    "gamma4_gamma5_magma_chart": [
+      "F_A(Unext,V) = 0",
+      "gamma4^2 = V + 2",
+      "F_A(V,Wnext) = 0",
+      "gamma5^2 = Wnext + 2",
+      "use the same localized no-R source equations and inverse-variable chart as first_magma_chart"
+    ]
+  },
+  "positive_evidence": [
+    "selected gates descend to whole A fibers in p27 samples through d14",
+    "A, B, K, and Sroot fixtures are exact coordinate views of the same selected classes",
+    "Dplus post-gate d3/d4 descends to A",
+    "reduced B-line equation gives an explicit f3 cover",
+    "gamma transition gives an exact staged f4/f3 class",
+    "V4 factorization names alpha/beta phase classes"
+  ],
+  "negative_boundary": [
+    "visible A-line degree <= 4 branch support killed",
+    "A-line S3, affine, PGL2, hidden-X power, and Chebyshev recurrences killed",
+    "B/K/lambda visible quartic buckets killed",
+    "low-degree B-line plane relations for reduced fibers killed through degree 20",
+    "fixed prefix filters do not provide source-normalized shrink",
+    "online Magma is too small for the localized reduced-cover genus/component extraction"
+  ],
+  "cas_tasks": [
+    {
+      "name": "normalize_legal_core_f3_cover",
+      "required_outputs": [
+        "function field or normalized curve for selected legal/core source",
+        "components and fields of definition",
+        "genus of each relevant component",
+        "branch divisor degree and support field degrees for U+2",
+        "sign/reciprocal/B/A/K/Sroot quotient maps",
+        "comparison against q1607/q1847/q2087 fixture rows"
+      ]
+    },
+    {
+      "name": "extract_f4_over_f3",
+      "required_outputs": [
+        "normalize F_A(U,V)=0 over f3-plus base",
+        "compute div(V+2) modulo squares",
+        "classify gamma as pullback, coboundary, translate, quotient class, or fresh cover",
+        "record V4 alpha/beta transformations under H sign and sheet signs"
+      ]
+    },
+    {
+      "name": "repeat_one_layer",
+      "required_outputs": [
+        "construct the f5/f4 analogue after f4-plus",
+        "compare f5/f4 with f4/f3 gamma",
+        "decide pullback/translate/coboundary/iterate/recurrence versus fresh half-cover"
+      ]
+    },
+    {
+      "name": "source_denominator_test_if_relation_appears",
+      "required_outputs": [
+        "source parameters and denominator",
+        "legal rows emitted",
+        "prefix depth distribution",
+        "target/source_draw versus ordinary X1(16)",
+        "target/GPU-second if handed to GPU"
+      ]
+    }
+  ],
+  "promote_if": [
+    "genus <= 1 sourceable component appears",
+    "explicit quotient/Prym factor carries multiple selected classes",
+    "f3,f4,f5 share a pullback/translate/coboundary/iterate relation",
+    "direct sampler beats independent half-loss with source-normalized margin"
+  ],
+  "kill_if": [
+    "legal/core f3 cover is high-genus/generic after quotients",
+    "f4/f5 are fresh unrelated half-covers",
+    "only source is an all-chart artifact outside selected legal domain",
+    "only GPU proposal is a one-bit filter or phase bucket with no raw-source win"
+  ],
+  "linked_artifacts": [
+    "research/p27/evidence/p27_first_class_moonshot_tests_after_quad_20260622.md",
+    "research/p27/evidence/p27_a_level_kummer_extraction_packet_20260622.md",
+    "research/p27/evidence/p27_b_line_reduced_cover_symbolic_packet_20260622.md",
+    "research/p27/evidence/p27_b_line_reduced_domain_reconcile_20260622.md",
+    "research/p27/evidence/p27_b_line_gamma_class_handoff_20260622.md",
+    "research/p27/evidence/p27_b_line_gamma_v4_factorization_20260622.md",
+    "research/p27/evidence/p27_conic_tower_quotient_cas_handoff_20260622.md",
+    "research/p27/evidence/p27_trace_norm_dplus_a_descent_20260622.md",
+    "research/p27/evidence/p27_noR_quotient_prym_test_packet_20260622.md",
+    "research/p27/evidence/p27_abk_f3_f4_chart_count_20260622.md",
+    "research/p27/evidence/p27_abk_f4_f5_transition_count_20260622.md",
+    "research/p27/evidence/p27_gamma_chain_p27_20k_telemetry_20260622.md",
+    "research/p27/evidence/p27_gpu_recurrence_coupling_20260622.md",
+    "research/p27/evidence/p27_abk_gamma4_gamma5_cas_fixture_20260622.md"
+  ],
+  "magma_fixtures": [
+    "research/p27/archive/fixtures/p27_abk_f3_f4_localized_noR_q7_magma.m",
+    "research/p27/archive/fixtures/p27_abk_gamma4_gamma5_localized_noR_q7_magma.m"
+  ],
+  "online_outputs": [
+    {
+      "path": "research/p27/archive/probe_outputs/p27_abk_f3_f4_localized_noR_q7_magma_20260622.xml",
+      "status": "calculator temporarily disabled; no dimension/genus result yet"
+    },
+    {
+      "path": "research/p27/archive/probe_outputs/p27_abk_gamma4_gamma5_localized_noR_q7_magma_20260622.xml",
+      "status": "504 Gateway Timeout; no dimension/genus result yet"
+    }
+  ],
+  "finite_field_count_outputs": [
+    "research/p27/archive/probe_outputs/p27_abk_f3_f4_chart_count_probe_small_20260622.txt",
+    "research/p27/archive/probe_outputs/p27_abk_f3_f4_chart_count_probe_20260622.txt",
+    "research/p27/archive/probe_outputs/p27_abk_f4_f5_transition_count_probe_20260622.txt",
+    "research/p27/archive/probe_outputs/p27_b_line_alpha_beta_phase_sequence_probe_p27_20k_20260622.txt"
+  ],
+  "gpu_result_references": [
+    {
+      "branch": "codex/add-cuda-p26-search",
+      "commit": "11c89c8 Add p27 recurrence coupling GPU telemetry",
+      "paths": [
+        "results/p27/gpu_coupling_20260622T120157Z/",
+        "results/p27/gpu_coupling_g16_20260622T120332Z/"
+      ],
+      "verdict": "no sign-word/gamma bucket promoted; max heldout all-plus residual lift 1.053x below 1.25x bar"
+    }
+  ]
+}

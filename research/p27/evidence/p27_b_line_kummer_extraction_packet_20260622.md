@@ -232,6 +232,14 @@ sums through exponent `64` do not select f3, and the four-u polynomial
 coefficients are maximal-degree on legal B.  So this is not a GPU sampler; it
 is a sharper CAS model.
 
+Update: the V4 phase telemetry has a GPU-scale contract:
+[P27 B-Line Phase GPU Telemetry Handoff](p27_b_line_phase_gpu_telemetry_handoff_20260622.md).
+The class decomposition `f_{j+1}=alpha_j*beta_j` remains useful for Kummer
+extraction, but the small p27 phase sequence screen is negative as a sampler.
+The GPU run should therefore report phase recurrence/telescoping with
+raw-source denominators, and should be killed if it reproduces independent
+half-loss at larger scale.
+
 Update: the reduced-fiber low-degree plane relation screen is negative:
 [P27 B-Line Reduced-Fiber Relation Screen](p27_b_line_reduced_fiber_relation_20260622.md).
 The all-cover and f3 plus/minus subcovers have `extra_nullity=0` through total
@@ -247,12 +255,49 @@ It emits the B-line source equations plus
 selector mismatches.  This should be the first CAS normalization model before
 the full reverse `z,Y` cover.
 
+Update: the reduced-cover online Magma failure now has a charted workaround:
+[P27 B-Line Reduced-Cover Charted Magma Staging](p27_b_line_reduced_cover_charted_magma_20260622.md).
+Stepwise q7 saturation fails immediately at `Saturation(J,X)`.  Adding
+`X*iX=1` lets the no-R reduced cover saturate as a dimension-1 scheme; the
+full compactD_R cover is dimension 1 before remaining saturation; and a fully
+localized complete-intersection model with inverse variables for all
+denominator factors is dimension 1 with 12 equations.  Offline CAS should use
+that localized model or normalize the X-inverted no-R base first.
+
+Update: the compactD_R layer is now demoted after reduced_U:
+[P27 B-Line Localized Cover Layer Count](p27_b_line_localized_cover_layer_count_20260622.md).
+Over `607, 7^3, 7^4, 7^5, 7^6, 23^2, 23^3`, the finite-field check has zero
+mismatches for
+`chi(compactD_R_rhs / beta_rhs) = chi(d_next)`.  Thus compactD_R is not a
+fresh Kummer layer once the reduced `U_next` cover makes `d_next` square.  The
+first normalization target should be the no-R reduced cover; then prove this
+square relation and add compactD_R as a redundant/twinned layer.
+
+Update: the compactD_R demotion now has a function-field smoke:
+[P27 B-Line CompactD/Beta/Dnext Squareclass](p27_b_line_compact_beta_dnext_squareclass_20260622.md).
+Magma verifies over `GF(7)` and `GF(23)` that
+`compactD_R_rhs/(beta^2*d_next)` is a square in the staged function field
+with `Z=x5`, `beta=Z-1/Z`, and `d_next=Z*(U+A)`.
+
+Update: the no-R reduced cover has a first genus/component pressure test:
+[P27 B-Line No-R Genus Pressure](p27_b_line_noR_genus_pressure_20260622.md).
+Applying a one-component Hasse-Weil pressure bound to the existing layer
+counts gives genus-one violations in `5/7` tested fields and maximum
+`g_min = 11` under that reading.  If the cover is not one component, the same
+data is component or field-of-definition pressure.  The CAS target is therefore
+normalization with components, quotients, and Prym structure, not an obvious
+genus-0/1 source.
+
 ## Continue / Kill
 
 ```text
 continue = run Magma/Sage normalization over P1_Bline in q1607/q1847/q2087
 continue = normalize the reduced 4-u / 8-x d3 fiber cover if easier than the full source cover
 continue = use the reduced_Unext symbolic packet as the first CAS model
+continue = use the localized reduced-cover chart to avoid product saturation
+continue = normalize no-R reduced cover before compactD_R
+continue = compute no-R components/quotients/Prym after genus pressure
+continue = lift compactD_R/beta/d_next square relation beyond q7/q23
 continue = optional q2087 quartic closure only if useful
 continue = use the B-line Kummer fixture rows as the compact CAS/expert input
 continue = bounded GPU deep-prefix telemetry if it feeds f3/f4/f5 extraction
@@ -270,6 +315,9 @@ kill = hidden-X power-map B-line recurrence for m=2..6
 kill = monomial Belyi B-line recurrence u -> u^m for m=2..12
 kill = q1847 visible B-line monic quartic for d3+d4 all-plus
 kill = treating one-sided q1607/q1847/q2087 f5/f6 tails as recurrence evidence
+kill = saturation-first online Magma extraction of the reduced cover
+kill = compactD_R as an independent first-layer normalization target after reduced_U
+kill = expecting the no-R reduced cover to be an obvious genus-0/1 source
 ```
 
 ```text

@@ -79,11 +79,22 @@ No genus, component, branch divisor, quotient, or sampler was extracted.
 This gives no reason to promote a large GPU run.
 ```
 
+Update:
+[P27 B-Line Reduced-Cover Charted Magma Staging](p27_b_line_reduced_cover_charted_magma_20260622.md)
+revisits this failure with smaller charted fixtures.  The first wall is
+`Saturation(J,X)`.  Replacing it by `X*iX=1` lets the no-R reduced cover
+saturate online as a dimension-1 scheme; a fully localized full model with
+inverse variables for all denominator factors is also dimension 1 immediately.
+The online calculator still cannot compute genus or components, but offline
+CAS should now start from the localized chart rather than this product
+saturation fixture.
+
 ## Continue / Kill
 
 ```text
 continue = offline normalization of the reduced 4-u / 8-x cover
 continue = try variable elimination over Bline/A/Sroot before full saturation
+continue = use the localized chart from the charted Magma staging note
 continue = compare the extracted f3 class with f4/f3 only after d3 normalizes
 
 kill = online Magma as the extraction engine for this cover

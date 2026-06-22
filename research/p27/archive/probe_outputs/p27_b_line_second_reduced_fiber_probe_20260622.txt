@@ -1,0 +1,231 @@
+p27 B-line second reduced-fiber probe
+question = what is the reduced f4 fiber over the f3-plus B-domain?
+small_primes = 1607,1847,2087
+max_power = 64
+relation_degrees = 2,4,6,8,10,12,14,16,18,20
+q=1607:
+  B_groups_with_d4_sign = 28
+  B_groups_with_x7 = 28
+  d3_minus_B = 21
+  d3_plus_B = 28
+  d4_sign_-1 = 9
+  d4_sign_1 = 19
+  deduped_candidates = 784
+  enum_compact_not_target = 805
+  enum_no_label2_candidate = 408
+  occurrence_x7_roots_64 = 28
+  unique_v_roots_8 = 28
+  unique_x7_roots_16 = 28
+  v_plus_2_matches_d4 = 28
+  v_plus_2_sign_classes_1 = 28
+  x7_degree_hist = {16: 28}
+  x7_coeff_interpolation_degrees = [0, 27, 27, 27, 27, 27, 27, 27, 27, 27, 27, 27, 27, 27, 27, 27]
+  v_degree_hist = {8: 28}
+  v_coeff_interpolation_degrees = [27, 27, 27, 27, 27, 27, 27, 27]
+  x7_power_sum_exact_hits = none
+  reciprocal_power_sum_exact_hits = none
+  x7_power_sum_near_75pct = [(40, 21, 28, 0)]
+  reciprocal_power_sum_near_75pct = [(40, 21, 28, 0)]
+  relation_B_v:
+    rows = 224
+    unique = 224
+    deg2: monomials=6 rank=6 nullity=0 forced=0 extra=0
+    deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+    deg6: monomials=28 rank=28 nullity=0 forced=0 extra=0
+    deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+    deg10: monomials=66 rank=66 nullity=0 forced=0 extra=0
+    deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+    deg14: monomials=120 rank=120 nullity=0 forced=0 extra=0
+    deg16: monomials=153 rank=153 nullity=0 forced=0 extra=0
+    deg18: monomials=190 rank=190 nullity=0 forced=0 extra=0
+    deg20: monomials=231 rank=224 nullity=7 forced=7 extra=0
+  relation_B_vplus2:
+    rows = 224
+    unique = 224
+    deg2: monomials=6 rank=6 nullity=0 forced=0 extra=0
+    deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+    deg6: monomials=28 rank=28 nullity=0 forced=0 extra=0
+    deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+    deg10: monomials=66 rank=66 nullity=0 forced=0 extra=0
+    deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+    deg14: monomials=120 rank=120 nullity=0 forced=0 extra=0
+    deg16: monomials=153 rank=153 nullity=0 forced=0 extra=0
+    deg18: monomials=190 rank=190 nullity=0 forced=0 extra=0
+    deg20: monomials=231 rank=224 nullity=7 forced=7 extra=0
+  relation_B_v_plus:
+    rows = 152
+    unique = 152
+    deg2: monomials=6 rank=6 nullity=0 forced=0 extra=0
+    deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+    deg6: monomials=28 rank=28 nullity=0 forced=0 extra=0
+    deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+    deg10: monomials=66 rank=66 nullity=0 forced=0 extra=0
+    deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+    deg14: monomials=120 rank=120 nullity=0 forced=0 extra=0
+    deg16: monomials=153 rank=152 nullity=1 forced=1 extra=0
+    deg18: monomials=190 rank=152 nullity=38 forced=38 extra=0
+    deg20: monomials=231 rank=152 nullity=79 forced=79 extra=0
+  relation_B_v_minus:
+    rows = 72
+    unique = 72
+    deg2: monomials=6 rank=6 nullity=0 forced=0 extra=0
+    deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+    deg6: monomials=28 rank=28 nullity=0 forced=0 extra=0
+    deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+    deg10: monomials=66 rank=63 nullity=3 forced=0 extra=3
+    deg12: monomials=91 rank=72 nullity=19 forced=19 extra=0
+    deg14: monomials=120 rank=72 nullity=48 forced=48 extra=0
+    deg16: monomials=153 rank=72 nullity=81 forced=81 extra=0
+    deg18: monomials=190 rank=72 nullity=118 forced=118 extra=0
+    deg20: monomials=231 rank=72 nullity=159 forced=159 extra=0
+q=1847:
+  B_groups_with_d4_sign = 45
+  B_groups_with_x7 = 45
+  d3_minus_B = 18
+  d3_plus_B = 45
+  d4_sign_-1 = 26
+  d4_sign_1 = 19
+  deduped_candidates = 1008
+  enum_compact_not_target = 873
+  enum_no_label2_candidate = 468
+  occurrence_x7_roots_64 = 45
+  unique_v_roots_8 = 45
+  unique_x7_roots_16 = 45
+  v_plus_2_matches_d4 = 45
+  v_plus_2_sign_classes_1 = 45
+  x7_degree_hist = {16: 45}
+  x7_coeff_interpolation_degrees = [0, 44, 44, 44, 44, 44, 44, 44, 44, 44, 44, 44, 44, 44, 44, 44]
+  v_degree_hist = {8: 45}
+  v_coeff_interpolation_degrees = [44, 44, 44, 44, 44, 44, 44, 44]
+  x7_power_sum_exact_hits = none
+  reciprocal_power_sum_exact_hits = none
+  x7_power_sum_near_75pct = none
+  reciprocal_power_sum_near_75pct = none
+  relation_B_v:
+    rows = 360
+    unique = 360
+    deg2: monomials=6 rank=6 nullity=0 forced=0 extra=0
+    deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+    deg6: monomials=28 rank=28 nullity=0 forced=0 extra=0
+    deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+    deg10: monomials=66 rank=66 nullity=0 forced=0 extra=0
+    deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+    deg14: monomials=120 rank=120 nullity=0 forced=0 extra=0
+    deg16: monomials=153 rank=153 nullity=0 forced=0 extra=0
+    deg18: monomials=190 rank=190 nullity=0 forced=0 extra=0
+    deg20: monomials=231 rank=231 nullity=0 forced=0 extra=0
+  relation_B_vplus2:
+    rows = 360
+    unique = 360
+    deg2: monomials=6 rank=6 nullity=0 forced=0 extra=0
+    deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+    deg6: monomials=28 rank=28 nullity=0 forced=0 extra=0
+    deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+    deg10: monomials=66 rank=66 nullity=0 forced=0 extra=0
+    deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+    deg14: monomials=120 rank=120 nullity=0 forced=0 extra=0
+    deg16: monomials=153 rank=153 nullity=0 forced=0 extra=0
+    deg18: monomials=190 rank=190 nullity=0 forced=0 extra=0
+    deg20: monomials=231 rank=231 nullity=0 forced=0 extra=0
+  relation_B_v_plus:
+    rows = 152
+    unique = 152
+    deg2: monomials=6 rank=6 nullity=0 forced=0 extra=0
+    deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+    deg6: monomials=28 rank=28 nullity=0 forced=0 extra=0
+    deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+    deg10: monomials=66 rank=66 nullity=0 forced=0 extra=0
+    deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+    deg14: monomials=120 rank=120 nullity=0 forced=0 extra=0
+    deg16: monomials=153 rank=152 nullity=1 forced=1 extra=0
+    deg18: monomials=190 rank=152 nullity=38 forced=38 extra=0
+    deg20: monomials=231 rank=152 nullity=79 forced=79 extra=0
+  relation_B_v_minus:
+    rows = 208
+    unique = 208
+    deg2: monomials=6 rank=6 nullity=0 forced=0 extra=0
+    deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+    deg6: monomials=28 rank=28 nullity=0 forced=0 extra=0
+    deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+    deg10: monomials=66 rank=66 nullity=0 forced=0 extra=0
+    deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+    deg14: monomials=120 rank=120 nullity=0 forced=0 extra=0
+    deg16: monomials=153 rank=153 nullity=0 forced=0 extra=0
+    deg18: monomials=190 rank=190 nullity=0 forced=0 extra=0
+    deg20: monomials=231 rank=208 nullity=23 forced=23 extra=0
+q=2087:
+  B_groups_with_d4_sign = 25
+  B_groups_with_x7 = 25
+  d3_minus_B = 32
+  d3_plus_B = 25
+  d4_sign_-1 = 7
+  d4_sign_1 = 18
+  deduped_candidates = 912
+  enum_compact_not_target = 1109
+  enum_no_label2_candidate = 520
+  occurrence_x7_roots_64 = 25
+  unique_v_roots_8 = 25
+  unique_x7_roots_16 = 25
+  v_plus_2_matches_d4 = 25
+  v_plus_2_sign_classes_1 = 25
+  x7_degree_hist = {16: 25}
+  x7_coeff_interpolation_degrees = [0, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24]
+  v_degree_hist = {8: 25}
+  v_coeff_interpolation_degrees = [24, 24, 24, 24, 24, 24, 24, 24]
+  x7_power_sum_exact_hits = none
+  reciprocal_power_sum_exact_hits = none
+  x7_power_sum_near_75pct = [(14, 19, 25, 0), (24, 19, 25, 0)]
+  reciprocal_power_sum_near_75pct = [(14, 19, 25, 0), (24, 19, 25, 0)]
+  relation_B_v:
+    rows = 200
+    unique = 200
+    deg2: monomials=6 rank=6 nullity=0 forced=0 extra=0
+    deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+    deg6: monomials=28 rank=28 nullity=0 forced=0 extra=0
+    deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+    deg10: monomials=66 rank=66 nullity=0 forced=0 extra=0
+    deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+    deg14: monomials=120 rank=120 nullity=0 forced=0 extra=0
+    deg16: monomials=153 rank=153 nullity=0 forced=0 extra=0
+    deg18: monomials=190 rank=190 nullity=0 forced=0 extra=0
+    deg20: monomials=231 rank=200 nullity=31 forced=31 extra=0
+  relation_B_vplus2:
+    rows = 200
+    unique = 200
+    deg2: monomials=6 rank=6 nullity=0 forced=0 extra=0
+    deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+    deg6: monomials=28 rank=28 nullity=0 forced=0 extra=0
+    deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+    deg10: monomials=66 rank=66 nullity=0 forced=0 extra=0
+    deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+    deg14: monomials=120 rank=120 nullity=0 forced=0 extra=0
+    deg16: monomials=153 rank=153 nullity=0 forced=0 extra=0
+    deg18: monomials=190 rank=190 nullity=0 forced=0 extra=0
+    deg20: monomials=231 rank=200 nullity=31 forced=31 extra=0
+  relation_B_v_plus:
+    rows = 144
+    unique = 144
+    deg2: monomials=6 rank=6 nullity=0 forced=0 extra=0
+    deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+    deg6: monomials=28 rank=28 nullity=0 forced=0 extra=0
+    deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+    deg10: monomials=66 rank=66 nullity=0 forced=0 extra=0
+    deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+    deg14: monomials=120 rank=120 nullity=0 forced=0 extra=0
+    deg16: monomials=153 rank=144 nullity=9 forced=9 extra=0
+    deg18: monomials=190 rank=144 nullity=46 forced=46 extra=0
+    deg20: monomials=231 rank=144 nullity=87 forced=87 extra=0
+  relation_B_v_minus:
+    rows = 56
+    unique = 56
+    deg2: monomials=6 rank=6 nullity=0 forced=0 extra=0
+    deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+    deg6: monomials=28 rank=28 nullity=0 forced=0 extra=0
+    deg8: monomials=45 rank=42 nullity=3 forced=0 extra=3
+    deg10: monomials=66 rank=56 nullity=10 forced=10 extra=0
+    deg12: monomials=91 rank=56 nullity=35 forced=35 extra=0
+    deg14: monomials=120 rank=56 nullity=64 forced=64 extra=0
+    deg16: monomials=153 rank=56 nullity=97 forced=97 extra=0
+    deg18: monomials=190 rank=56 nullity=134 forced=134 extra=0
+    deg20: monomials=231 rank=56 nullity=175 forced=175 extra=0
+p27_b_line_second_reduced_fiber_probe_rows=1/1

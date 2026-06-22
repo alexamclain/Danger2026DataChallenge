@@ -1,0 +1,59 @@
+p27 B-line no-R beta_U norm-descent probe
+question = does gamma descend as chi_base Norm(Unext+2), uniformly per B?
+fields = 199^2,263^2
+
+GF(199^2) q=39601
+  active_beta_U_B = 24
+  base_B_chi_1 = 512
+  beta_U_points = 512
+  gamma_-1 = 256
+  gamma_1 = 256
+  norm_selector_chi_-1 = 256
+  norm_selector_chi_1 = 256
+  norm_values_per_B_1 = 8
+  norm_values_per_B_12 = 1
+  norm_values_per_B_16 = 3
+  norm_values_per_B_8 = 8
+  norm_values_per_B_9 = 4
+  trace_values_per_B_15 = 2
+  trace_values_per_B_16 = 6
+  trace_values_per_B_8 = 16
+  B_summary_top:
+    columns = chiB points gamma norm_values trace_values
+    (1, 16, 1, 1, 8) = 8
+    (1, 16, 1, 8, 8) = 8
+    (1, 32, -1, 9, 16) = 3
+    (1, 32, -1, 16, 16) = 2
+    (1, 32, -1, 16, 15) = 1
+    (1, 32, -1, 12, 16) = 1
+    (1, 32, -1, 9, 15) = 1
+
+GF(263^2) q=69169
+  active_beta_U_B = 32
+  base_B_chi_1 = 832
+  beta_U_points = 832
+  gamma_-1 = 640
+  gamma_1 = 192
+  norm_selector_chi_-1 = 640
+  norm_selector_chi_1 = 192
+  norm_values_per_B_1 = 6
+  norm_values_per_B_12 = 1
+  norm_values_per_B_14 = 1
+  norm_values_per_B_16 = 8
+  norm_values_per_B_8 = 6
+  norm_values_per_B_9 = 10
+  trace_values_per_B_15 = 6
+  trace_values_per_B_16 = 14
+  trace_values_per_B_8 = 12
+  B_summary_top:
+    columns = chiB points gamma norm_values trace_values
+    (1, 32, -1, 9, 16) = 7
+    (1, 16, 1, 1, 8) = 6
+    (1, 16, 1, 8, 8) = 6
+    (1, 32, -1, 16, 16) = 6
+    (1, 32, -1, 9, 15) = 3
+    (1, 32, -1, 16, 15) = 2
+    (1, 32, -1, 14, 16) = 1
+    (1, 32, -1, 12, 15) = 1
+
+p27_b_line_noR_betaU_norm_descent_probe_rows=1/1

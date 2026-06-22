@@ -16,12 +16,14 @@ No p27 hit is known yet.
 
 ## Current Ask
 
-Do not start with a giant production run unless explicitly requested. The first
-useful GPU task is now a bounded structure test for the conic-chain recurrence:
-[P27 GPU Conic-Chain Test Handoff](p27_gpu_conic_chain_test_handoff_20260621.md).
-Older line/trace telemetry remains useful as controls, but the conic-chain
-test is the first one that is plausibly source-shaped rather than just another
-fixed-prefix filter.
+Update 2026-06-22:
+[P27 GPU Dplus-Native Source Handoff](p27_gpu_dplus_native_source_handoff_20260622.md)
+is now the current front-door GPU task.  Do not start with a giant production
+run unless explicitly requested.  Test whether the real trace/norm `Dplus`
+scope shrink can be accessed through a fused/native implementation, and report
+raw-source denominators plus post-Dplus coupling telemetry.  The older
+conic-chain handoff remains useful background, but it is no longer the first
+GPU ask after the quadratic-gate and orientation-phase screens.
 
 CPU gate result:
 [P27 Trace/Norm Transfer Gate](p27_trace_norm_transfer_gate_20260621.md).

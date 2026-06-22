@@ -99,10 +99,28 @@ after a named sampler/source map exists.
 
 ## Next GPU Tests
 
+### Test 0: Dplus-Native Source / Fusion
+
+Current front-door GPU ask:
+[P27 GPU Dplus-Native Source Handoff](p27_gpu_dplus_native_source_handoff_20260622.md).
+
+The trace/norm `Dplus` stratum is an exact two-gate prefix with about `4x`
+conditional scope shrink, but the current classifier pays to inspect rejected
+raw-y draws.  GPU should test fused/native `Dplus` pricing and optional
+same-stream post-Dplus coupling telemetry, always with raw-source denominators.
+Do not launch a large p27 production run from the existing classifier alone.
+
 Unified quartic handoff:
 [P27 Full Quartic GPU Suite Handoff](p27_full_quartic_gpu_suite_handoff_20260622.md)
 is now the entry point for Tests 3 and 4.  It includes the run order, frozen
 packets, verifiers, manifest, killed proxy families, and promotion/kill rules.
+
+B-line phase handoff:
+[P27 B-Line Phase GPU Telemetry Handoff](p27_b_line_phase_gpu_telemetry_handoff_20260622.md)
+is the concrete bounded test for the V4 gamma factors.  It should emit
+`alpha_j,beta_j,alpha_j*beta_j` and actual selected bits with raw-source
+denominators.  This is a closure/promotion test for recurrence or telescoping,
+not a production filter for `compactD_R`, alpha, beta, or Bplus buckets.
 
 ### Test 1: Recurrence-Coupling Telemetry
 

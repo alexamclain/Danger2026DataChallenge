@@ -120,6 +120,24 @@ root-level d4 best train = 0.533140516, heldout = 0.498915401
 This is the expected signature of noise rather than a reusable trace/norm
 selector.
 
+## Orientation Follow-up
+
+Follow-up:
+[P27 Trace/Norm Orientation Phase Screen](p27_trace_norm_orientation_phase_screen_20260622.md).
+
+The exact cover orientation signs were then tested directly:
+
+```text
+eps_h = chi(t)
+eps_v = chi((t+1)C)
+```
+
+On seed groups `121,122` and `123,124`, the `d3` and `d4` rates by
+`eps_h/eps_v`, `H/VQ`, `eps_h/eps_v/T_line`, and
+`hcore_chi/vcore_chi` stayed near half.  Apparent high `d4` states did not
+replicate as the same named bucket.  This kills the simple orientation-bucket
+version of a post-Dplus recurrence.
+
 ## Interpretation
 
 Positive:
@@ -173,6 +191,7 @@ continue = E/E' function-field extraction for d3 and d4
 continue = online Magma small-field validation for named formulas
 
 kill = low-weight post-Dplus products from H,VQ,X,T_line/root atoms
+kill = eps_h/eps_v or H/VQ/T_line buckets as post-Dplus GPU filters
 kill = interpreting the Dplus 4x GPU lift as a recurrence
 kill = spending GPU production time on Dplus unless its implementation beats
        other ways to impose the same two gates

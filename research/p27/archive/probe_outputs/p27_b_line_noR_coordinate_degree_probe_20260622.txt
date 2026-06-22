@@ -1,0 +1,103 @@
+p27 B-line no-R coordinate-degree probe
+columns = B, X, W, T, beta, x5, U, selector, full point degree
+fields = 7^2,7^3,23^2,23^3
+
+GF(7^2) q=49
+  noR_U_points = 8
+  B_degree_1 = 8
+  gamma_chi_0 = 8
+  point_degree_2 = 8
+  points = 8
+  source_fiber_over_base_B = 8
+  source_fiber_over_base_B_gamma_0 = 8
+  degree_vector_top:
+    columns = B X W T beta x5 U selector point gamma_chi
+    (1, 1, 2, 1, 1, 1, 1, 1, 2, 0) = 4
+    (1, 1, 1, 2, 1, 1, 1, 1, 2, 0) = 4
+  B_point_gamma_top:
+    (1, 2, 0) = 8
+
+GF(7^3) q=343
+  noR_U_points = 288
+  B_degree_3 = 288
+  gamma_chi_-1 = 216
+  gamma_chi_1 = 72
+  point_degree_3 = 288
+  points = 288
+  source_B_orbit = 288
+  source_B_orbit_gamma_-1 = 216
+  source_B_orbit_gamma_1 = 72
+  degree_vector_top:
+    columns = B X W T beta x5 U selector point gamma_chi
+    (3, 3, 3, 3, 3, 3, 3, 3, 3, -1) = 180
+    (3, 3, 3, 3, 3, 3, 3, 3, 3, 1) = 54
+    (3, 3, 3, 3, 1, 1, 3, 3, 3, -1) = 18
+    (3, 3, 1, 3, 3, 3, 3, 3, 3, 1) = 12
+    (3, 3, 1, 3, 3, 3, 3, 3, 3, -1) = 12
+    (3, 3, 3, 3, 3, 3, 1, 1, 3, -1) = 6
+    (3, 3, 3, 3, 1, 1, 3, 3, 3, 1) = 6
+  B_point_gamma_top:
+    (3, 3, -1) = 216
+    (3, 3, 1) = 72
+
+GF(23^2) q=529
+  noR_U_points = 648
+  B_degree_1 = 264
+  B_degree_2 = 384
+  gamma_chi_-1 = 384
+  gamma_chi_0 = 8
+  gamma_chi_1 = 256
+  point_degree_2 = 648
+  points = 648
+  source_B_orbit = 384
+  source_B_orbit_gamma_-1 = 192
+  source_B_orbit_gamma_1 = 192
+  source_fiber_over_base_B = 264
+  source_fiber_over_base_B_gamma_-1 = 192
+  source_fiber_over_base_B_gamma_0 = 8
+  source_fiber_over_base_B_gamma_1 = 64
+  degree_vector_top:
+    columns = B X W T beta x5 U selector point gamma_chi
+    (2, 2, 2, 2, 2, 2, 2, 2, 2, -1) = 176
+    (2, 2, 2, 2, 2, 2, 2, 2, 2, 1) = 168
+    (1, 2, 2, 2, 2, 2, 2, 2, 2, -1) = 64
+    (1, 1, 1, 1, 2, 2, 2, 2, 2, -1) = 48
+    (1, 1, 2, 1, 2, 2, 2, 2, 2, -1) = 32
+    (1, 1, 2, 2, 2, 2, 2, 2, 2, -1) = 32
+    (1, 2, 2, 2, 2, 2, 2, 2, 2, 1) = 32
+    (1, 2, 1, 2, 2, 2, 2, 2, 2, 1) = 32
+    (2, 2, 2, 2, 2, 2, 1, 1, 2, 1) = 24
+    (1, 1, 1, 1, 1, 1, 2, 2, 2, -1) = 16
+    (2, 2, 2, 2, 1, 1, 2, 2, 2, -1) = 16
+    (1, 1, 2, 1, 1, 1, 1, 1, 2, 0) = 4
+    (1, 1, 1, 2, 1, 1, 1, 1, 2, 0) = 4
+  B_point_gamma_top:
+    (1, 2, -1) = 192
+    (2, 2, 1) = 192
+    (2, 2, -1) = 192
+    (1, 2, 1) = 64
+    (1, 2, 0) = 8
+
+GF(23^3) q=12167
+  noR_U_points = 12768
+  B_degree_3 = 12768
+  gamma_chi_-1 = 6120
+  gamma_chi_1 = 6648
+  point_degree_3 = 12768
+  points = 12768
+  source_B_orbit = 12768
+  source_B_orbit_gamma_-1 = 6120
+  source_B_orbit_gamma_1 = 6648
+  degree_vector_top:
+    columns = B X W T beta x5 U selector point gamma_chi
+    (3, 3, 3, 3, 3, 3, 3, 3, 3, 1) = 6624
+    (3, 3, 3, 3, 3, 3, 3, 3, 3, -1) = 6102
+    (3, 3, 3, 3, 3, 3, 1, 1, 3, 1) = 12
+    (3, 3, 1, 3, 3, 3, 3, 3, 3, 1) = 12
+    (3, 3, 1, 3, 3, 3, 3, 3, 3, -1) = 12
+    (3, 3, 3, 3, 3, 3, 1, 1, 3, -1) = 6
+  B_point_gamma_top:
+    (3, 3, 1) = 6648
+    (3, 3, -1) = 6120
+
+p27_b_line_noR_coordinate_degree_probe_rows=1/1

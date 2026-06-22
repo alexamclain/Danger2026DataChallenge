@@ -1,0 +1,61 @@
+p27 trace/norm Dplus reciprocal tower probe
+question = verify X -> U5 -> U6 reciprocal-coordinate tower
+p = 1000000000000000000000000103
+definitions:
+  t = y - 1
+  A = (t - 1/t)^4/4 - 2
+  X = xp + 1/xp = t^3 + 2*t^2 - 1/t
+  F_A(U,V) = (V^2-4)^2 - 4*U*(V^2-4)*(V+A) + 16*(V+A)^2
+  U5 = x5 + 1/x5
+  U6 = x6 + 1/x6
+seed_groups = 121,122;123,124
+chunks = 0,1
+tids = 0:64
+draws_per_thread = 512
+max_y = 0
+group1_seeds_121,122:
+  D_+1 = 16485
+  D_-1 = 16316
+  D_0 = 32965
+  Dplus_candidates = 16398
+  Dplus_no_valid_candidate = 8286
+  Dplus_y = 16485
+  U5_count_2 = 8199
+  U5_disc_+1 = 32796
+  U5_fiber_size_2 = 16398
+  U5_plusA_+1 = 32796
+  U6_count_4 = 8199
+  U6_disc_+1 = 65592
+  U6_fiber_size_2 = 32796
+  U6_plusA_+1 = 65592
+  analyzed_y = 8199
+  d1_+1 = 16398
+  d2_+1 = 32796
+  nonsplit_y = 65766
+  raw_y_draws = 131072
+  xp_reciprocal_pair = 8199
+group2_seeds_123,124:
+  D_+1 = 16454
+  D_-1 = 16293
+  D_0 = 32723
+  Dplus_candidates = 16122
+  Dplus_no_valid_candidate = 8393
+  Dplus_y = 16454
+  U5_count_2 = 8061
+  U5_disc_+1 = 32244
+  U5_fiber_size_2 = 16122
+  U5_plusA_+1 = 32244
+  U6_count_4 = 8061
+  U6_disc_+1 = 64488
+  U6_fiber_size_2 = 32244
+  U6_plusA_+1 = 64488
+  analyzed_y = 8061
+  d1_+1 = 16122
+  d2_+1 = 32244
+  nonsplit_y = 65470
+  raw_y_draws = 131072
+  xp_reciprocal_pair = 8061
+verdict:
+  reciprocal_tower_exact iff all mismatch/failure counters are zero
+  CAS target = normalize F_A(X,U5)=0 and F_A(U5,U6)=0 with square side conditions
+p27_trace_norm_dplus_reciprocal_tower_probe_rows=1/1

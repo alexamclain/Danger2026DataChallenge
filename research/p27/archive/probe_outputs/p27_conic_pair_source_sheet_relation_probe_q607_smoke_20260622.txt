@@ -1,0 +1,128 @@
+p27 conic-pair source-sheet relation probe
+rows = legal d3-plus source sheets joined to conic-pair preimages
+question = do X/W/T source sheets expose a second low-degree pullback relation?
+pair_degrees = [4, 8]
+triple_degrees = [4]
+quad_degrees = [4]
+q607_base:
+  d3plus_Ax = 64
+  d3plus_source_rows = 256
+  draws = 367236
+  enum_compact_not_target = 293
+  enum_no_label2_candidate = 184
+  joined_rows = 4096
+  unique_joined_Ax = 64
+  unique_joined_RL_source = 4096
+q607_X_s:
+  transform_rows = 4096
+  transform_unique = 128
+  transform_degenerate = 0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+q607_X_m:
+  transform_rows = 4096
+  transform_unique = 128
+  transform_degenerate = 0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+q607_X_R:
+  transform_rows = 4096
+  transform_unique = 256
+  transform_degenerate = 0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+q607_X_L:
+  transform_rows = 4096
+  transform_unique = 256
+  transform_degenerate = 0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+q607_W_s:
+  transform_rows = 4096
+  transform_unique = 256
+  transform_degenerate = 0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+q607_T_s:
+  transform_rows = 4096
+  transform_unique = 256
+  transform_degenerate = 0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+q607_B_s:
+  transform_rows = 4096
+  transform_unique = 128
+  transform_degenerate = 0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+q607_K_s:
+  transform_rows = 4096
+  transform_unique = 128
+  transform_degenerate = 0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+q607_X_s_m:
+  transform_rows = 4096
+  transform_unique = 256
+  transform_degenerate = 0
+  deg4: monomials=35 rank=35 nullity=0 forced=0 extra=0
+q607_X_s_w:
+  transform_rows = 4096
+  transform_unique = 256
+  transform_degenerate = 0
+  deg4: monomials=35 rank=35 nullity=0 forced=0 extra=0
+q607_X_R_L:
+  transform_rows = 4096
+  transform_unique = 1024
+  transform_degenerate = 0
+  deg4: monomials=35 rank=35 nullity=0 forced=0 extra=0
+q607_W_s_m:
+  transform_rows = 4096
+  transform_unique = 512
+  transform_degenerate = 0
+  deg4: monomials=35 rank=35 nullity=0 forced=0 extra=0
+q607_T_s_m:
+  transform_rows = 4096
+  transform_unique = 512
+  transform_degenerate = 0
+  deg4: monomials=35 rank=35 nullity=0 forced=0 extra=0
+q607_B_s_m:
+  transform_rows = 4096
+  transform_unique = 256
+  transform_degenerate = 0
+  deg4: monomials=35 rank=34 nullity=1 forced=0 extra=1
+  deg4_relation_terms=5 self_mismatches=0
+q607_K_s_m:
+  transform_rows = 4096
+  transform_unique = 256
+  transform_degenerate = 0
+  deg4: monomials=35 rank=35 nullity=0 forced=0 extra=0
+q607_X_W_s_m:
+  transform_rows = 4096
+  transform_unique = 512
+  transform_degenerate = 0
+  deg4: monomials=70 rank=65 nullity=5 forced=0 extra=5
+  deg4_relation_terms=3 self_mismatches=0
+q607_X_T_s_m:
+  transform_rows = 4096
+  transform_unique = 512
+  transform_degenerate = 0
+  deg4: monomials=70 rank=70 nullity=0 forced=0 extra=0
+q607_X_B_s_m:
+  transform_rows = 4096
+  transform_unique = 256
+  transform_degenerate = 0
+  deg4: monomials=70 rank=69 nullity=1 forced=0 extra=1
+  deg4_relation_terms=5 self_mismatches=0
+q607_X_s_m_w:
+  transform_rows = 4096
+  transform_unique = 512
+  transform_degenerate = 0
+  deg4: monomials=70 rank=69 nullity=1 forced=0 extra=1
+  deg4_relation_terms=9 self_mismatches=0
+q607_X_R_L_B:
+  transform_rows = 4096
+  transform_unique = 1024
+  transform_degenerate = 0
+  deg4: monomials=70 rank=70 nullity=0 forced=0 extra=0
+p27_conic_pair_source_sheet_relation_probe_rows=1/1

@@ -1,0 +1,87 @@
+p27 B-line reduced-lift classifier probe
+question = is the 0/mixed/full reduced-cover lift profile two visible B-line characters?
+small_primes = 1847,2087
+unit = 16
+quadratic_pair = True
+q1847_reduced_lift_profile_stats:
+  classifier_rows = 128
+  lift_units_0 = 19
+  lift_units_1 = 64
+  lift_units_2 = 45
+  pointcount_U_materialization_roots_0 = 1632
+  pointcount_U_materialization_roots_0_selector_chi_-1 = 608
+  pointcount_U_materialization_roots_0_selector_chi_1 = 1024
+  pointcount_U_materialization_roots_2 = 2464
+  pointcount_U_materialization_roots_2_selector_chi_-1 = 1024
+  pointcount_U_materialization_roots_2_selector_chi_1 = 1440
+  pointcount_bad_X_denominator = 3
+  pointcount_compactD_not_square = 868
+  pointcount_first_half_beta_not_square = 460
+  pointcount_legal_R_points = 1024
+  pointcount_legal_chart_points = 2048
+  pointcount_materialized_x6_from_selector_minus_U = 2048
+  pointcount_materialized_x6_from_selector_plus_U = 2880
+  pointcount_materialized_x6_points = 4928
+  pointcount_reduced_U_points = 4096
+  pointcount_selector_chi_-1 = 1632
+  pointcount_selector_chi_1 = 2464
+  pointcount_selector_gamma_points = 4928
+  pointcount_x6_chi_-1 = 2048
+  pointcount_x6_chi_1 = 2880
+q1847_target_masks:
+  target0_none = 19
+  target1_mixed = 64
+  target2_full = 45
+q1847_atom_pair_classifier_stats:
+  atom_masks = 10
+  atom_zero_or_pole = 1
+q1847_atom_pair_classifier_result: none
+q1847_linear_pair_classifier_stats:
+  linear_masks = 1719
+  linear_zero_skip = 128
+q1847_linear_pair_classifier_result: none
+q1847_quadratic_pair_classifier_stats:
+  irreducible_quadratic_masks = 1704781
+  unique_quadratic_masks = 3409562
+q1847_quadratic_pair_classifier_result: none
+q2087_reduced_lift_profile_stats:
+  classifier_rows = 114
+  lift_units_0 = 32
+  lift_units_1 = 57
+  lift_units_2 = 25
+  pointcount_U_materialization_roots_0 = 1936
+  pointcount_U_materialization_roots_0_selector_chi_-1 = 1024
+  pointcount_U_materialization_roots_0_selector_chi_1 = 912
+  pointcount_U_materialization_roots_2 = 1712
+  pointcount_U_materialization_roots_2_selector_chi_-1 = 912
+  pointcount_U_materialization_roots_2_selector_chi_1 = 800
+  pointcount_bad_X_denominator = 3
+  pointcount_compactD_not_square = 1104
+  pointcount_first_half_beta_not_square = 520
+  pointcount_legal_R_points = 912
+  pointcount_legal_chart_points = 1824
+  pointcount_materialized_x6_from_selector_minus_U = 1824
+  pointcount_materialized_x6_from_selector_plus_U = 1600
+  pointcount_materialized_x6_points = 3424
+  pointcount_reduced_U_points = 3648
+  pointcount_selector_chi_-1 = 1936
+  pointcount_selector_chi_1 = 1712
+  pointcount_selector_gamma_points = 3424
+  pointcount_x6_chi_-1 = 1824
+  pointcount_x6_chi_1 = 1600
+q2087_target_masks:
+  target0_none = 32
+  target1_mixed = 57
+  target2_full = 25
+q2087_atom_pair_classifier_stats:
+  atom_masks = 11
+q2087_atom_pair_classifier_result: none
+q2087_linear_pair_classifier_stats:
+  linear_masks = 1973
+  linear_zero_skip = 114
+q2087_linear_pair_classifier_result: none
+q2087_quadratic_pair_classifier_stats:
+  irreducible_quadratic_masks = 2176741
+  unique_quadratic_masks = 4353482
+q2087_quadratic_pair_classifier_result: none
+p27_b_line_reduced_lift_classifier_probe_rows=1/1

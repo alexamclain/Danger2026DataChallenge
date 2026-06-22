@@ -1,0 +1,174 @@
+p27 B-line no-R beta_U norm-fiber profile probe
+question = is gamma the low-support/ramified profile of Norm(Unext+2)?
+fields = 23^2,71^2,103^2,167^2
+
+GF(23^2) q=529
+  B_norm_sign_conflicts = 0
+  active_B = 2
+  gamma_-1_B = 2
+  gamma_-1_norm_values_10 = 1
+  gamma_-1_norm_values_9 = 1
+  gamma_-1_points = 64
+  norm_value_cutoff_8_mismatch = 0
+  profile_gamma_-1_32_10_2x4,4x6 = 1
+  profile_gamma_-1_32_9_2x8,16x1 = 1
+  profile_summary:
+    columns = gamma points distinct_norm_values multiplicity_profile count
+    -1 32 9 2x8,16x1 1
+    -1 32 10 2x4,4x6 1
+
+GF(71^2) q=5041
+  B_norm_sign_conflicts = 0
+  active_B = 8
+  gamma_1_B = 8
+  gamma_1_norm_values_1 = 4
+  gamma_1_norm_values_8 = 4
+  gamma_1_points = 128
+  norm_value_cutoff_8_mismatch = 0
+  profile_gamma_1_16_1_16x1 = 4
+  profile_gamma_1_16_8_2x8 = 4
+  profile_summary:
+    columns = gamma points distinct_norm_values multiplicity_profile count
+    1 16 1 16x1 4
+    1 16 8 2x8 4
+
+GF(103^2) q=10609
+  B_norm_sign_conflicts = 0
+  active_B = 12
+  gamma_-1_B = 12
+  gamma_-1_norm_values_12 = 1
+  gamma_-1_norm_values_14 = 1
+  gamma_-1_norm_values_16 = 4
+  gamma_-1_norm_values_9 = 6
+  gamma_-1_points = 384
+  norm_value_cutoff_8_mismatch = 0
+  profile_gamma_-1_32_12_2x8,4x4 = 1
+  profile_gamma_-1_32_14_2x12,4x2 = 1
+  profile_gamma_-1_32_16_2x16 = 4
+  profile_gamma_-1_32_9_2x8,16x1 = 6
+  profile_summary:
+    columns = gamma points distinct_norm_values multiplicity_profile count
+    -1 32 9 2x8,16x1 6
+    -1 32 12 2x8,4x4 1
+    -1 32 14 2x12,4x2 1
+    -1 32 16 2x16 4
+
+GF(167^2) q=27889
+  B_norm_sign_conflicts = 0
+  active_B = 20
+  gamma_-1_B = 14
+  gamma_-1_norm_values_12 = 2
+  gamma_-1_norm_values_14 = 1
+  gamma_-1_norm_values_16 = 4
+  gamma_-1_norm_values_9 = 7
+  gamma_-1_points = 448
+  gamma_1_B = 6
+  gamma_1_norm_values_1 = 3
+  gamma_1_norm_values_8 = 3
+  gamma_1_points = 96
+  norm_value_cutoff_8_mismatch = 0
+  profile_gamma_-1_32_12_2x8,4x4 = 2
+  profile_gamma_-1_32_14_2x12,4x2 = 1
+  profile_gamma_-1_32_16_2x16 = 4
+  profile_gamma_-1_32_9_2x8,16x1 = 7
+  profile_gamma_1_16_1_16x1 = 3
+  profile_gamma_1_16_8_2x8 = 3
+  profile_summary:
+    columns = gamma points distinct_norm_values multiplicity_profile count
+    -1 32 9 2x8,16x1 7
+    -1 32 12 2x8,4x4 2
+    -1 32 14 2x12,4x2 1
+    -1 32 16 2x16 4
+    1 16 1 16x1 3
+    1 16 8 2x8 3
+
+p27_b_line_noR_betaU_norm_fiber_profile_probe_rows=1/1
+p27 B-line no-R beta_U norm-fiber profile probe
+question = is gamma the low-support/ramified profile of Norm(Unext+2)?
+fields = 199^2,263^2,311^2
+
+GF(199^2) q=39601
+  B_norm_sign_conflicts = 0
+  active_B = 24
+  gamma_-1_B = 8
+  gamma_-1_norm_values_12 = 1
+  gamma_-1_norm_values_16 = 3
+  gamma_-1_norm_values_9 = 4
+  gamma_-1_points = 256
+  gamma_1_B = 16
+  gamma_1_norm_values_1 = 8
+  gamma_1_norm_values_8 = 8
+  gamma_1_points = 256
+  norm_value_cutoff_8_mismatch = 0
+  profile_gamma_-1_32_12_2x8,4x4 = 1
+  profile_gamma_-1_32_16_2x16 = 3
+  profile_gamma_-1_32_9_2x8,16x1 = 4
+  profile_gamma_1_16_1_16x1 = 8
+  profile_gamma_1_16_8_2x8 = 8
+  profile_summary:
+    columns = gamma points distinct_norm_values multiplicity_profile count
+    -1 32 9 2x8,16x1 4
+    -1 32 12 2x8,4x4 1
+    -1 32 16 2x16 3
+    1 16 1 16x1 8
+    1 16 8 2x8 8
+
+GF(263^2) q=69169
+  B_norm_sign_conflicts = 0
+  active_B = 32
+  gamma_-1_B = 20
+  gamma_-1_norm_values_12 = 1
+  gamma_-1_norm_values_14 = 1
+  gamma_-1_norm_values_16 = 8
+  gamma_-1_norm_values_9 = 10
+  gamma_-1_points = 640
+  gamma_1_B = 12
+  gamma_1_norm_values_1 = 6
+  gamma_1_norm_values_8 = 6
+  gamma_1_points = 192
+  norm_value_cutoff_8_mismatch = 0
+  profile_gamma_-1_32_12_2x8,4x4 = 1
+  profile_gamma_-1_32_14_2x12,4x2 = 1
+  profile_gamma_-1_32_16_2x16 = 8
+  profile_gamma_-1_32_9_2x8,16x1 = 10
+  profile_gamma_1_16_1_16x1 = 6
+  profile_gamma_1_16_8_2x8 = 6
+  profile_summary:
+    columns = gamma points distinct_norm_values multiplicity_profile count
+    -1 32 9 2x8,16x1 10
+    -1 32 12 2x8,4x4 1
+    -1 32 14 2x12,4x2 1
+    -1 32 16 2x16 8
+    1 16 1 16x1 6
+    1 16 8 2x8 6
+
+GF(311^2) q=96721
+  B_norm_sign_conflicts = 0
+  active_B = 38
+  gamma_-1_B = 22
+  gamma_-1_norm_values_12 = 1
+  gamma_-1_norm_values_14 = 2
+  gamma_-1_norm_values_16 = 8
+  gamma_-1_norm_values_9 = 11
+  gamma_-1_points = 704
+  gamma_1_B = 16
+  gamma_1_norm_values_1 = 8
+  gamma_1_norm_values_8 = 8
+  gamma_1_points = 256
+  norm_value_cutoff_8_mismatch = 0
+  profile_gamma_-1_32_12_2x8,4x4 = 1
+  profile_gamma_-1_32_14_2x12,4x2 = 2
+  profile_gamma_-1_32_16_2x16 = 8
+  profile_gamma_-1_32_9_2x8,16x1 = 11
+  profile_gamma_1_16_1_16x1 = 8
+  profile_gamma_1_16_8_2x8 = 8
+  profile_summary:
+    columns = gamma points distinct_norm_values multiplicity_profile count
+    -1 32 9 2x8,16x1 11
+    -1 32 12 2x8,4x4 1
+    -1 32 14 2x12,4x2 2
+    -1 32 16 2x16 8
+    1 16 1 16x1 8
+    1 16 8 2x8 8
+
+p27_b_line_noR_betaU_norm_fiber_profile_probe_rows=1/1

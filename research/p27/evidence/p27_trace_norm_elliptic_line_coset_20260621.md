@@ -145,6 +145,12 @@ The follow-up first 2-isogeny span is also negative:
 It scans all `65,536` products of visible branch and first 2-isogeny divisor
 characters and finds no exact survivors for either line bit.
 
+The later visible line-divisor screen is negative:
+[P27 Trace/Norm Elliptic Line-Divisor Screen](p27_trace_norm_elliptic_line_divisor_screen_20260622.md).
+On train and heldout samples, vertical divisors `u-c` and affine divisors
+`v+m*u+c` with `|m|,|c| <= 4` have no exact survivors; the best heldout
+target lift is only `1.011x` with a raw-source denominator.
+
 The later large-factor quotient collision audit is negative as well:
 [P27 Elliptic Large-Factor Collision Audit](p27_elliptic_large_factor_collision_20260621.md).
 Repeated classes for the p27-specific factor `345451` and small multiples are
@@ -180,14 +186,17 @@ kill = small torsion/coset explanation for domain_line or T_line
 kill = large-factor quotient-class explanation for m=345451 and small multiples
 kill = branch functions a, a±2, a^2±4, u, u±1, u^2±1 as exact bits
 kill = products of visible first 2-isogeny branch characters as exact bits
+kill = visible elliptic line divisors u-c and v+m*u+c with |m|,|c| <= 4
 ```
 
 ## Linked Artifacts
 
 - Gate: `research/p27/archive/gates/p27_trace_norm_elliptic_coset_gate.py`
 - Gate: `research/p27/archive/gates/p27_line_rational_evaluator.py`
+- Gate: `research/p27/archive/gates/p27_trace_norm_elliptic_line_divisor_probe.py`
 - Output: `research/p27/archive/probe_outputs/p27_trace_norm_elliptic_coset_32tid_2chunk_256draw_4096rows_20260621.txt`
 - Output: `research/p27/archive/probe_outputs/p27_line_rational_default_64tid_2chunk_256draw_8192rows_20260621.txt`
+- Output: `research/p27/archive/probe_outputs/p27_trace_norm_elliptic_line_divisor_probe_20260622.txt`
 
 ```text
 p27_trace_norm_elliptic_line_coset_rows=1/1

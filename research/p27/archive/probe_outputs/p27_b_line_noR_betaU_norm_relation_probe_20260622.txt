@@ -1,0 +1,122 @@
+p27 B-line no-R beta_U norm relation probe
+question = does (B, Norm(Unext+2)) have a small bidegree relation?
+fields = 103^2,167^2,199^2,263^2
+bidegrees = [(2, 4), (4, 8), (6, 8), (8, 12), (10, 16), (12, 16)]
+
+GF(103^2) q=10609
+  all:
+    rows = 384
+    unique = 144
+    B2_N4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+    B4_N8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+    B6_N8: monomials=63 rank=63 nullity=0 forced=0 extra=0
+    B8_N12: monomials=117 rank=117 nullity=0 forced=0 extra=0
+    B10_N16: monomials=187 rank=144 nullity=43 forced=43 extra=0
+    B12_N16: monomials=221 rank=144 nullity=77 forced=77 extra=0
+  gamma_plus:
+    rows = 0
+    unique = 0
+    B2_N4: monomials=15 rank=0 nullity=15 forced=15 extra=0
+    B4_N8: monomials=45 rank=0 nullity=45 forced=45 extra=0
+    B6_N8: monomials=63 rank=0 nullity=63 forced=63 extra=0
+    B8_N12: monomials=117 rank=0 nullity=117 forced=117 extra=0
+    B10_N16: monomials=187 rank=0 nullity=187 forced=187 extra=0
+    B12_N16: monomials=221 rank=0 nullity=221 forced=221 extra=0
+  gamma_minus:
+    rows = 384
+    unique = 144
+    B2_N4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+    B4_N8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+    B6_N8: monomials=63 rank=63 nullity=0 forced=0 extra=0
+    B8_N12: monomials=117 rank=117 nullity=0 forced=0 extra=0
+    B10_N16: monomials=187 rank=144 nullity=43 forced=43 extra=0
+    B12_N16: monomials=221 rank=144 nullity=77 forced=77 extra=0
+
+GF(167^2) q=27889
+  all:
+    rows = 544
+    unique = 192
+    B2_N4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+    B4_N8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+    B6_N8: monomials=63 rank=63 nullity=0 forced=0 extra=0
+    B8_N12: monomials=117 rank=117 nullity=0 forced=0 extra=0
+    B10_N16: monomials=187 rank=187 nullity=0 forced=0 extra=0
+    B12_N16: monomials=221 rank=192 nullity=29 forced=29 extra=0
+  gamma_plus:
+    rows = 96
+    unique = 27
+    B2_N4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+    B4_N8: monomials=45 rank=27 nullity=18 forced=18 extra=0
+    B6_N8: monomials=63 rank=27 nullity=36 forced=36 extra=0
+    B8_N12: monomials=117 rank=27 nullity=90 forced=90 extra=0
+    B10_N16: monomials=187 rank=27 nullity=160 forced=160 extra=0
+    B12_N16: monomials=221 rank=27 nullity=194 forced=194 extra=0
+  gamma_minus:
+    rows = 448
+    unique = 165
+    B2_N4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+    B4_N8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+    B6_N8: monomials=63 rank=63 nullity=0 forced=0 extra=0
+    B8_N12: monomials=117 rank=117 nullity=0 forced=0 extra=0
+    B10_N16: monomials=187 rank=165 nullity=22 forced=22 extra=0
+    B12_N16: monomials=221 rank=165 nullity=56 forced=56 extra=0
+
+GF(199^2) q=39601
+  all:
+    rows = 512
+    unique = 168
+    B2_N4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+    B4_N8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+    B6_N8: monomials=63 rank=63 nullity=0 forced=0 extra=0
+    B8_N12: monomials=117 rank=117 nullity=0 forced=0 extra=0
+    B10_N16: monomials=187 rank=168 nullity=19 forced=19 extra=0
+    B12_N16: monomials=221 rank=168 nullity=53 forced=53 extra=0
+  gamma_plus:
+    rows = 256
+    unique = 72
+    B2_N4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+    B4_N8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+    B6_N8: monomials=63 rank=63 nullity=0 forced=0 extra=0
+    B8_N12: monomials=117 rank=72 nullity=45 forced=45 extra=0
+    B10_N16: monomials=187 rank=72 nullity=115 forced=115 extra=0
+    B12_N16: monomials=221 rank=72 nullity=149 forced=149 extra=0
+  gamma_minus:
+    rows = 256
+    unique = 96
+    B2_N4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+    B4_N8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+    B6_N8: monomials=63 rank=63 nullity=0 forced=0 extra=0
+    B8_N12: monomials=117 rank=87 nullity=30 forced=21 extra=9
+    B10_N16: monomials=187 rank=96 nullity=91 forced=91 extra=0
+    B12_N16: monomials=221 rank=96 nullity=125 forced=125 extra=0
+
+GF(263^2) q=69169
+  all:
+    rows = 832
+    unique = 298
+    B2_N4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+    B4_N8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+    B6_N8: monomials=63 rank=63 nullity=0 forced=0 extra=0
+    B8_N12: monomials=117 rank=117 nullity=0 forced=0 extra=0
+    B10_N16: monomials=187 rank=187 nullity=0 forced=0 extra=0
+    B12_N16: monomials=221 rank=221 nullity=0 forced=0 extra=0
+  gamma_plus:
+    rows = 192
+    unique = 54
+    B2_N4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+    B4_N8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+    B6_N8: monomials=63 rank=54 nullity=9 forced=9 extra=0
+    B8_N12: monomials=117 rank=54 nullity=63 forced=63 extra=0
+    B10_N16: monomials=187 rank=54 nullity=133 forced=133 extra=0
+    B12_N16: monomials=221 rank=54 nullity=167 forced=167 extra=0
+  gamma_minus:
+    rows = 640
+    unique = 244
+    B2_N4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+    B4_N8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+    B6_N8: monomials=63 rank=63 nullity=0 forced=0 extra=0
+    B8_N12: monomials=117 rank=117 nullity=0 forced=0 extra=0
+    B10_N16: monomials=187 rank=187 nullity=0 forced=0 extra=0
+    B12_N16: monomials=221 rank=221 nullity=0 forced=0 extra=0
+
+p27_b_line_noR_betaU_norm_relation_probe_rows=1/1

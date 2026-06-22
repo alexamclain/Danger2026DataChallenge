@@ -1,0 +1,36 @@
+p27 B-line gamma class handoff
+
+Purpose:
+  Package the surviving B-line moonshot as a class-extraction task.
+  The first class to extract is gamma^2=v+2 on the generic transition
+  over the f3-plus B-u-H layer; rho^2=v^2-4 is materialization data.
+
+Equations:
+  base: A = B^2 - 2
+  f3_h90_layer: H^2 = u + 2; use p27_b_line_reduced_cover_symbolic_packet for the actual B-u source equations
+  transition: (v^2 - 4)^2 - 4*u*(v^2 - 4)*(v + A) + 16*(v + A)^2 = 0
+  materialization: rho^2 = v^2 - 4; actual selected source keeps chi(v^2-4)=chi(v+A)=+1
+  gamma_class: gamma^2 = v + 2
+  generic_gamma_norm: Norm_generic(v+2) = 16*(A-2)^2
+  actual_h90_quotient: for actual pair v0,v1: r=(v0+2)/(v1+2), r+1/r=u, (h+1/h)^2=u+2 when h^2=r
+
+Guard-field summaries:
+  q=1607: rows=112 B=28 f4=76/36 generic4=112 actual2=112 missing2=112
+  q=1847: rows=180 B=45 f4=76/104 generic4=180 actual2=180 missing2=180
+  q=2087: rows=100 B=25 f4=72/28 generic4=100 actual2=100 missing2=100
+
+Next concrete tests:
+  10. Normalize the f3-plus B-u-H base
+     promote: the f3-plus base has a low-genus/sourceable quotient carrying the selected sequence
+     kill: the base is already generic and high-genus with no useful quotient
+  20. Extract gamma divisor/Kummer class
+     promote: gamma is pullback/coboundary/low-genus/sourceable or controls more than one selected gate
+     kill: gamma is a fresh independent half-cover on every useful quotient
+  30. Compare with next gate
+     promote: one recurrence/source law couples gamma to the next selected class
+     kill: f5/f4 is another unrelated fresh half-cover with geometric half-loss
+
+JSON fixture:
+  research/p27/archive/fixtures/p27_b_line_gamma_class_handoff_20260622.json
+
+p27_b_line_gamma_class_handoff_rows=1/1

@@ -1,0 +1,101 @@
+p27 trace/norm Dplus H90 automorphism probe
+alpha = (t,z,w,s) -> (t,-z,w,z*S/s)
+S = (t-1)^3*(t+1)^4*(t^2+1)*(t^2+2t-1)^2
+quotient candidate = w^2=-(t^2+2t-1)(t^2-2t-1)
+q607_eh1_ev1:
+  alpha_undefined = 4
+  base_tw_points = 220
+  degree_scaled_x1000000 = 3981818
+  orbit_size_4 = 872
+  points = 876
+q607_eh1_ev-1:
+  alpha_undefined = 4
+  base_tw_points = 220
+  degree_scaled_x1000000 = 3981818
+  orbit_size_4 = 872
+  points = 876
+q607_eh-1_ev1:
+  alpha_undefined = 4
+  base_tw_points = 220
+  degree_scaled_x1000000 = 3981818
+  orbit_size_4 = 872
+  points = 876
+q607_eh-1_ev-1:
+  alpha_undefined = 4
+  base_tw_points = 220
+  degree_scaled_x1000000 = 3981818
+  orbit_size_4 = 872
+  points = 876
+q1607_eh1_ev1:
+  alpha_undefined = 4
+  base_tw_points = 402
+  degree_scaled_x1000000 = 3990049
+  orbit_size_4 = 1600
+  points = 1604
+q1607_eh1_ev-1:
+  alpha_undefined = 4
+  base_tw_points = 402
+  degree_scaled_x1000000 = 3990049
+  orbit_size_4 = 1600
+  points = 1604
+q1607_eh-1_ev1:
+  alpha_undefined = 4
+  base_tw_points = 402
+  degree_scaled_x1000000 = 3990049
+  orbit_size_4 = 1600
+  points = 1604
+q1607_eh-1_ev-1:
+  alpha_undefined = 4
+  base_tw_points = 402
+  degree_scaled_x1000000 = 3990049
+  orbit_size_4 = 1600
+  points = 1604
+q1847_eh1_ev1:
+  alpha_undefined = 4
+  base_tw_points = 488
+  degree_scaled_x1000000 = 3991803
+  orbit_size_4 = 1944
+  points = 1948
+q1847_eh1_ev-1:
+  alpha_undefined = 4
+  base_tw_points = 488
+  degree_scaled_x1000000 = 3991803
+  orbit_size_4 = 1944
+  points = 1948
+q1847_eh-1_ev1:
+  alpha_undefined = 4
+  base_tw_points = 488
+  degree_scaled_x1000000 = 3991803
+  orbit_size_4 = 1944
+  points = 1948
+q1847_eh-1_ev-1:
+  alpha_undefined = 4
+  base_tw_points = 488
+  degree_scaled_x1000000 = 3991803
+  orbit_size_4 = 1944
+  points = 1948
+q2087_eh1_ev1:
+  alpha_undefined = 4
+  base_tw_points = 490
+  degree_scaled_x1000000 = 3991836
+  orbit_size_4 = 1952
+  points = 1956
+q2087_eh1_ev-1:
+  alpha_undefined = 4
+  base_tw_points = 490
+  degree_scaled_x1000000 = 3991836
+  orbit_size_4 = 1952
+  points = 1956
+q2087_eh-1_ev1:
+  alpha_undefined = 4
+  base_tw_points = 490
+  degree_scaled_x1000000 = 3991836
+  orbit_size_4 = 1952
+  points = 1956
+q2087_eh-1_ev-1:
+  alpha_undefined = 4
+  base_tw_points = 490
+  degree_scaled_x1000000 = 3991836
+  orbit_size_4 = 1952
+  points = 1956
+p27_trace_norm_dplus_h90_automorphism_probe_rows=1/1

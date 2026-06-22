@@ -1,0 +1,96 @@
+p27 trace/norm Dplus x6/U-class probe
+question = after Dplus, does d3 reduce on the x6 reciprocal sheet?
+p = 1000000000000000000000000103
+definitions:
+  t = y - 1
+  A = (t - 1/t)^4/4 - 2
+  U = x6 + 1/x6
+  d3 = chi(x6^2 + A*x6 + 1) = chi(x6)*chi(U + A)
+seed_groups = 121,122;123,124
+chunks = 0,1
+tids = 0:64
+draws_per_thread = 512
+max_y = 0
+group1_seeds_121,122:
+  D_+1 = 16485
+  D_-1 = 16316
+  D_0 = 32965
+  Dplus_candidates = 16398
+  Dplus_no_valid_candidate = 8286
+  Dplus_y = 16485
+  U_chi_UplusA_signs_+1 = 32796
+  U_chix6_signs_+1 = 16596
+  U_chix6_signs_-1 = 16200
+  U_d3_signs_+1 = 16596
+  U_d3_signs_-1 = 16200
+  U_fiber_size_2 = 32796
+  analyzed_y = 8199
+  chi_Udisc_+1 = 65592
+  chi_UplusA_+1 = 65592
+  chi_x6_+1 = 33192
+  chi_x6_-1 = 32400
+  d1_+1 = 16398
+  d2_+1 = 32796
+  d3_branch_+1 = 33192
+  d3_branch_-1 = 32400
+  nonsplit_y = 65766
+  raw_y_draws = 131072
+  y_U_count_4 = 8199
+  y_UplusA_all_square = 8199
+  y_chi_UplusA_signs_+1 = 8199
+  y_chix6_constant = 8199
+  y_chix6_signs_+1 = 4149
+  y_chix6_signs_-1 = 4050
+  y_d3_constant = 8199
+  y_d3_constant_+1 = 4149
+  y_d3_constant_-1 = 4050
+  y_d3_signs_+1 = 4149
+  y_d3_signs_-1 = 4050
+  y_x5_count_4 = 8199
+  y_x6_count_8 = 8199
+  y_d3_constant_rate = 1.000000000
+  y_UplusA_all_square_rate = 1.000000000
+group2_seeds_123,124:
+  D_+1 = 16454
+  D_-1 = 16293
+  D_0 = 32723
+  Dplus_candidates = 16122
+  Dplus_no_valid_candidate = 8393
+  Dplus_y = 16454
+  U_chi_UplusA_signs_+1 = 32244
+  U_chix6_signs_+1 = 15944
+  U_chix6_signs_-1 = 16300
+  U_d3_signs_+1 = 15944
+  U_d3_signs_-1 = 16300
+  U_fiber_size_2 = 32244
+  analyzed_y = 8061
+  chi_Udisc_+1 = 64488
+  chi_UplusA_+1 = 64488
+  chi_x6_+1 = 31888
+  chi_x6_-1 = 32600
+  d1_+1 = 16122
+  d2_+1 = 32244
+  d3_branch_+1 = 31888
+  d3_branch_-1 = 32600
+  nonsplit_y = 65470
+  raw_y_draws = 131072
+  y_U_count_4 = 8061
+  y_UplusA_all_square = 8061
+  y_chi_UplusA_signs_+1 = 8061
+  y_chix6_constant = 8061
+  y_chix6_signs_+1 = 3986
+  y_chix6_signs_-1 = 4075
+  y_d3_constant = 8061
+  y_d3_constant_+1 = 3986
+  y_d3_constant_-1 = 4075
+  y_d3_signs_+1 = 3986
+  y_d3_signs_-1 = 4075
+  y_x5_count_4 = 8061
+  y_x6_count_8 = 8061
+  y_d3_constant_rate = 1.000000000
+  y_UplusA_all_square_rate = 1.000000000
+verdict:
+  UplusA_forced_square iff y_UplusA_not_all_square and chi_UplusA_-1 are zero
+  then d3 reduces to chi(x6) on the Dplus second-halving sheet
+  this is a CAS class target, not yet a source-space shrink
+p27_trace_norm_dplus_x6_uclass_probe_rows=1/1

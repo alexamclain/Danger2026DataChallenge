@@ -1,0 +1,187 @@
+{
+  "title": "P27 Sqrt-Beating Test Queue After Coupling Kill",
+  "date": "2026-06-22",
+  "target": {
+    "p": "1000000000000000000000000103",
+    "sqrt_floor": "31622776601683"
+  },
+  "current_boundary": {
+    "killed": [
+      "fixed sign-word buckets",
+      "gamma/sign-word GPU production",
+      "visible low-degree A/B/K formula fits",
+      "standalone H90 payload signs",
+      "Dplus as an expensive independent classifier"
+    ],
+    "live": [
+      "normalized A-level Kummer class sequence",
+      "gamma4/gamma5 repeated-Kummer CAS comparison",
+      "fused/native Dplus exchange-rate test",
+      "Dplus-to-A bridge reconstruction"
+    ]
+  },
+  "tests": [
+    {
+      "name": "a_level_kummer_sequence_extraction",
+      "kind": "offline_cas_math_mainline",
+      "question": "Are d3,d4,d5,... pullbacks, translates, coboundaries, iterates, or fresh independent half-covers on the normalized A-level surface?",
+      "inputs": [
+        "research/p27/evidence/p27_a_level_kummer_extraction_packet_20260622.md",
+        "research/p27/archive/fixtures/p27_a_level_kummer_extraction_packet_20260622.json",
+        "research/p27/evidence/p27_b_a_fixture_bridge_20260622.md",
+        "research/p27/evidence/p27_trace_norm_dplus_a_descent_20260622.md"
+      ],
+      "required_outputs": [
+        "normalized A-level cover carrying d3",
+        "branch divisor degree and support field degrees",
+        "genus/component count after obvious quotients",
+        "d4 class on the d3-plus prefix",
+        "first explicit relation or obstruction among d3,d4,d5,d6"
+      ],
+      "promote_if": "low-genus/sourceable class or named correspondence controls multiple selected gates source-normalized",
+      "kill_if": "d3 is high/generic after quotienting and d4/d5/d6 are fresh independent Kummer layers"
+    },
+    {
+      "name": "gamma4_gamma5_repeated_kummer_comparison",
+      "kind": "offline_cas_supporting_mainline",
+      "question": "Does the repeated transition F_A(U,V), gamma^2=V+2 reuse a Kummer class or add a fresh half-cover each layer?",
+      "inputs": [
+        "research/p27/evidence/p27_abk_symbolic_kummer_cas_brief_20260622.md",
+        "research/p27/evidence/p27_abk_gamma4_gamma5_cas_fixture_20260622.md",
+        "research/p27/archive/fixtures/p27_abk_gamma4_gamma5_localized_noR_q7_magma.m"
+      ],
+      "required_outputs": [
+        "normalize selected components of the localized no-R chart",
+        "compare div(V+2) and div(Wnext+2) modulo squares",
+        "decide square/pullback/translate/coboundary/norm relation for gamma5/gamma4"
+      ],
+      "promote_if": "gamma4 and gamma5 become related on a low-genus/sourceable quotient or produce a selected-chain sampler",
+      "kill_if": "gamma4 and gamma5 are unrelated fresh Kummer layers or only yield a sign-word bucket already killed at GPU scale"
+    },
+    {
+      "name": "dplus_fused_native_exchange_rate",
+      "kind": "gpu_engineering_pricing",
+      "question": "Can Dplus be imposed cheaper than ordinary first-two-gate halving failure?",
+      "inputs": [
+        "research/p27/evidence/p27_gpu_dplus_native_source_handoff_20260622.md",
+        "research/p27/evidence/p27_trace_norm_dplus_prefix_identity_20260621.md",
+        "research/p27/evidence/p27_trace_norm_post_dplus_screen_20260621.md"
+      ],
+      "required_outputs": [
+        "baseline ordinary raw_y_draws/sec and accepted roots/sec",
+        "fused/native Dplus raw_y_draws/sec and accepted roots/sec",
+        "depth-20/24/26/28/30 survivors",
+        "target/source_draw",
+        "target/sec",
+        "validation replay mismatch count"
+      ],
+      "promote_if": "effective survivor/sec at depth >= 26 improves by >=2x versus baseline and target/source_draw is not worse than the known two-gate denominator",
+      "math_promote_if": "the fused stream also exposes a later-gate source/recurrent class",
+      "kill_if": "fused path is slower than ordinary halving or only converts conditional enrichment into classifier cost"
+    },
+    {
+      "name": "dplus_to_a_bridge_reconstruction",
+      "kind": "gpu_cas_bridge_completed_coordinate_map",
+      "question": "Can the solved Dplus-to-A coordinate bridge be used to compare the H90 payload class with the pulled-back A-level d3 class?",
+      "status": "coordinate bridge solved by research/p27/evidence/p27_trace_norm_dplus_a_coordinate_bridge_20260622.md",
+      "coordinate_map": [
+        "t = y - 1",
+        "a = t - 1/t",
+        "A = (t^8 - 4*t^6 - 2*t^4 - 4*t^2 + 1)/(4*t^4)",
+        "A = a^4/4 - 2",
+        "A + 2 = ((t^2 - 1)^2/(2*t^2))^2",
+        "A - 2 = -(((t^2 + 1)*w)/(2*t^2))^2"
+      ],
+      "post_dplus_d3_reduction": {
+        "status": "x6/U class isolated by research/p27/evidence/p27_trace_norm_dplus_x6_uclass_20260622.md",
+        "facts": [
+          "each analyzed Dplus y has 4 U=x6+1/x6 values",
+          "each U fiber has the reciprocal pair x6,1/x6",
+          "each analyzed Dplus y has 8 x6 values",
+          "chi(U+A)=+1 on every tested branch",
+          "d3=chi(x6) on the second-halving sheet",
+          "all 8 x6 branches over one y have the same squareclass"
+        ]
+      },
+      "four_U_visible_formula_screen": {
+        "status": "negative through rational degree (20,20)",
+        "evidence": "research/p27/evidence/p27_trace_norm_dplus_ucover_rational_screen_20260622.md",
+        "variables": [
+          "t",
+          "a=t-1/t",
+          "A"
+        ],
+        "coefficients": [
+          "e1",
+          "e2",
+          "e3",
+          "e4"
+        ],
+        "verdict": "no low-degree visible rational formula for prod(Z-U_i) coefficients"
+      },
+            "reciprocal_tower_model": {
+                "status": "positive tower verified",
+                "evidence": "research/p27/evidence/p27_trace_norm_dplus_reciprocal_tower_20260622.md",
+                "magma_fixture": "research/p27/archive/fixtures/p27_trace_norm_dplus_reciprocal_tower_q7_magma.m",
+        "equations": [
+          "X = xp + 1/xp = t^3 + 2*t^2 - 1/t",
+          "F_A(X,U5) = 0",
+          "F_A(U5,U6) = 0",
+          "x6^2 - U6*x6 + 1 = 0"
+                ],
+                "class_to_compare": "chi(x6) versus H90 A_eta"
+            },
+            "reciprocal_tower_smallfield_descent": {
+                "status": "negative for naked tower source",
+                "evidence": "research/p27/evidence/p27_trace_norm_dplus_reciprocal_tower_smallfield_descent_20260622.md",
+                "probe": "research/p27/archive/gates/p27_trace_norm_dplus_reciprocal_tower_smallfield_probe.py",
+                "output": "research/p27/archive/probe_outputs/p27_trace_norm_dplus_reciprocal_tower_smallfield_probe_20260622.txt",
+                "fields": [
+                    607,
+                    1607,
+                    1847
+                ],
+                "result": "d3=chi(x6)=chi(U6+2) has mixed A/B fibers on the naked reciprocal tower, even with materialization filters",
+                "verdict": "keep the selected legal/core source cut before interpreting A/B descent or comparing to H90 A_eta"
+            },
+            "inputs": [
+                "research/p27/evidence/p27_trace_norm_dplus_h90_quartic_model_20260622.md",
+                "research/p27/evidence/p27_trace_norm_dplus_h90_branch_class_20260622.md",
+                "research/p27/evidence/p27_trace_norm_dplus_h90_payload_screen_20260622.md",
+                "research/p27/evidence/p27_trace_norm_dplus_a_descent_20260622.md",
+                "research/p27/evidence/p27_trace_norm_dplus_a_coordinate_bridge_20260622.md",
+                "research/p27/evidence/p27_trace_norm_dplus_x6_uclass_20260622.md",
+                "research/p27/evidence/p27_trace_norm_dplus_ucover_rational_screen_20260622.md",
+                "research/p27/evidence/p27_trace_norm_dplus_reciprocal_tower_20260622.md",
+                "research/p27/evidence/p27_trace_norm_dplus_reciprocal_tower_smallfield_descent_20260622.md"
+            ],
+      "same_stream_columns": [
+        "y",
+        "Dplus bit",
+        "t,w,z or enough trace/norm/H90 coordinates to recover them",
+        "eta",
+        "A",
+        "x5 or xp",
+        "d3,d4,d5",
+        "root/sheet ids needed for replay"
+      ],
+      "required_analysis": [
+                "use exact A = (t - 1/t)^4/4 - 2",
+                "use U=x6+1/x6 and the observed/target identity chi(U+A)=+1",
+                "use reciprocal tower equations F_A(X,U5)=0 and F_A(U5,U6)=0",
+                "keep the selected legal/core source cut because the naked reciprocal tower has mixed A/B fibers in q607/q1607/q1847",
+                "compare the x6 squareclass d3=chi(x6) with A_eta = U_eta + z*W_eta",
+                "record whether the x6 squareclass equals, differs by coboundary from, or shares a quotient/Prym factor with A_eta",
+                "do not retry low-degree rational coefficient fits for prod(Z-U_i) in t,a,A through degree 20"
+      ],
+      "promote_if": "quotient/Prym/coboundary relation between A_eta and the x6 squareclass, or sourceable recurrence controlling later gates",
+      "kill_if": "x6 squareclass is independent of the H90 payload and successive A-level classes"
+    }
+  ],
+  "priority_order": [
+    "a_level_kummer_sequence_extraction",
+    "dplus_fused_native_exchange_rate",
+    "dplus_to_a_bridge_reconstruction",
+    "gamma4_gamma5_repeated_kummer_comparison"
+  ]
+}

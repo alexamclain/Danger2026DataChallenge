@@ -222,8 +222,10 @@ Do not run a large p27 GPU production search from any branch-map family above.
 The post-quad first-class queue is consolidated in
 [P27 First-Class Moonshot Tests After Quadratic Probe](p27_first_class_moonshot_tests_after_quad_20260622.md).
 It keeps the surviving tests scoped to coordinated A/B/K/Sroot Kummer sequence
-extraction, BSM staged legal-pullback normalization, and the trace/norm
-half-norm phase identity.
+extraction and the trace/norm half-norm phase identity.  The later
+[P27 BSM Halving-Cover Identity](p27_bsm_halving_cover_identity_20260622.md)
+demotes BSM to a coordinate view of the known one-step halving cover unless a
+non-inherited selector is added.
 
 GPU becomes first-class again only for:
 

@@ -1,0 +1,4 @@
+RESULT h90_quartic_base 1 2 608
+RESULT h90_quartic_model 1 17 4 8
+RESULT h90_quartic_model -1 17 4 8
+

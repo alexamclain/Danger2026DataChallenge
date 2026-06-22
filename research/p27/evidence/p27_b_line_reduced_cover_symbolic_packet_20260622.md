@@ -128,6 +128,48 @@ terminates at the memory limit during `Saturation(I, bad)`.  This moves the
 next step to offline Magma/Sage or specialized elimination; it does not promote
 GPU production.
 
+Charted Magma follow-up:
+[P27 B-Line Reduced-Cover Charted Magma Staging](p27_b_line_reduced_cover_charted_magma_20260622.md).
+The first saturation wall is specifically the `X=0` artifact.  Replacing it
+with `X*iX=1` lets the no-R reduced cover saturate online as a dimension-1
+scheme with 6 basis equations.  The full compactD_R cover is dimension 1
+before saturation, and the fully localized full model, with inverse variables
+for all denominator factors, is immediately dimension 1 with 12 equations.
+Thus the next offline attack should normalize the localized model or the
+X-inverted no-R base, not restart product saturation.
+
+Layer-count follow-up:
+[P27 B-Line Localized Cover Layer Count](p27_b_line_localized_cover_layer_count_20260622.md).
+Across the tested prime and extension fields,
+`chi(compactD_R_rhs / beta_rhs) = chi(d_next)` with zero mismatches.  Since
+the reduced `U_next` equation makes `d_next` square, compactD_R becomes a
+twinned beta layer on the reduced cover.  The first CAS model should therefore
+be the no-R reduced cover; compactD_R can be added only after that base is
+understood.
+
+Function-field squareclass follow-up:
+[P27 B-Line CompactD/Beta/Dnext Squareclass](p27_b_line_compact_beta_dnext_squareclass_20260622.md).
+Magma verifies over `GF(7)` and `GF(23)` that
+`compactD_R_rhs/(beta^2*d_next)` is square in the staged function field.
+This strengthens the compactD_R demotion, but still does not compute genus or
+sourceability.
+
+Genus/component pressure follow-up:
+[P27 B-Line No-R Genus Pressure](p27_b_line_noR_genus_pressure_20260622.md).
+Treating the existing no-R layer counts as affine counts, the one-component
+Hasse-Weil pressure test violates genus `<= 1` in `5/7` fields and reaches
+`g_min = 11` in the strongest field.  If the counted object splits, the same
+numbers are evidence for component or field-of-definition structure.  The
+offline CAS target should compute components, quotients, and Prym factors, not
+assume the no-R base is an obvious genus-0/1 source.
+
+Direct finite-field point-count follow-up:
+[P27 B-Line Reduced-Cover Point Count](p27_b_line_reduced_cover_pointcount_20260622.md).
+The `U_next` layer is a clean two-valued cover over the legal chart in the
+promotion fields, but materialization through `x6^2-U*x6+1` and the selector
+cover `gamma^2=U+2` split by B-fiber.  Offline CAS should keep these layers
+attached; the bare `U` cover is not itself a source.
+
 Negative:
 
 ```text
@@ -144,11 +186,18 @@ The online calculator cannot provide that output for the reduced q7 fixture.
 ```text
 continue = run CAS normalization of the reduced_Unext cover over P1_Bline
 continue = use offline Magma/Sage or elimination; online Magma is too small
+continue = prefer the localized complete-intersection chart over product saturation
+continue = normalize the no-R reduced cover before compactD_R
+continue = lift compactD_R_rhs/(beta^2*d_next) squareclass beyond q7/q23 if possible
+continue = attach x6-materialization and gamma^2=Unext+2 to the offline model
 continue = compute genus/components/quotients and compare against the fixture
+continue = compute no-R quotient/Prym structure after genus pressure
 continue = only then pull back f4/f3
 
 kill = full reverse z/Y normalization as the first CAS attempt if reduced_Unext is feasible
+kill = saturation-first online workflow after the charted Magma smoke
 kill = GPU production before reduced-cover genus/sourceability is known
+kill = expecting the no-R reduced cover to be an obvious genus-0/1 source
 ```
 
 ```text

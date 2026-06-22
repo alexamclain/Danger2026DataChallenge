@@ -1,0 +1,9 @@
+BREDUCED_LOCALIZED_START 7 1 12
+
+Current total memory usage: 372.0MB, failed memory request: 350.3MB
+System Error: User memory limit has been reached
+
+Current total memory usage: 366.1MB, failed memory request: 66.5MB
+System Error: User memory limit has been reached
+RESULT p27_b_line_reduced_cover_localized_q7 done
+

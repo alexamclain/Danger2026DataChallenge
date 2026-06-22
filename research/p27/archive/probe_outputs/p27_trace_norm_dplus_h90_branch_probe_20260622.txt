@@ -1,0 +1,16 @@
+p27 trace/norm Dplus H90 branch probe
+E_h90: w^2=-(t^2+2t-1)(t^2-2t-1)
+quartic = rho^4 - 2*U_eta*rho^2 + F*Sprime^2
+U_eta:
+  2*t**2*(t - 1)*(t**2 + 1)**2*(eta*w + t**2 + 2*t - 1)
+W_eta:
+  (t - 1)*(t**2 + 1)*(eta*t**2*w + eta*w + 4*t**3)
+Delta_identity:
+  U_eta^2 - F*Sprime^2 = F*W_eta^2
+  exact = 1
+quartic_split_over_z2_F:
+  quartic = (rho^2 - (U_eta + z*W_eta))*(rho^2 - (U_eta - z*W_eta))
+  exact = 1
+second_layer:
+  rho^2 = U_eta + z*W_eta over z^2=F
+p27_trace_norm_dplus_h90_branch_probe_rows=1/1

@@ -1,0 +1,117 @@
+p27 B-line gamma norm/coboundary probe
+question = does gamma^2=v+2 have only old-square norm over the materialized pair?
+first_fixture = research/p27/archive/fixtures/p27_b_line_reduced_fiber_fixture_20260622.json
+max_weight = 4
+q=1607:
+  actual_B = 28
+  actual_edges = 224
+  actual_or_missing_gamma_norm_nonsquare = 0
+  actual_or_missing_scale_nonsquare = 0
+  actual_or_missing_scale_not_xroot = 224
+  actual_parent_pairs = 112
+  atom_missing_prod_zero_or_undefined = 1
+  atom_v_sum+1_zero_or_undefined = 2
+  d3_not_plus_-1 = 336
+  deduped_candidates = 784
+  enum_compact_not_target = 805
+  enum_no_label2_candidate = 408
+  f4_minus = 36
+  f4_plus = 76
+  generic_gamma_norm_formula_bad = 0
+  norm_rows = 112
+  pair_atoms_usable = 59
+  pair_best_match_x1000000 = 750000
+  pair_best_matches = 84
+  pair_best_weight = 3
+  pair_exact_products = 0
+  pair_products_tested = 489405
+  exact_pair_invariant_products:
+    none
+  best_pair_invariant_products:
+    matches=84/112 polarity=-1 weight=3 atoms=A * B-1 * A-4
+    matches=84/112 polarity=1 weight=3 atoms=A * B+1 * A-4
+    matches=84/112 polarity=1 weight=3 atoms=A * B+1 * A-1
+    matches=84/112 polarity=-1 weight=4 atoms=B * A * B-1 * A-4
+    matches=84/112 polarity=1 weight=4 atoms=B * A * B+1 * A-4
+    matches=84/112 polarity=1 weight=4 atoms=B * A * B+1 * A-1
+    matches=84/112 polarity=-1 weight=4 atoms=A * v_disc * B-1 * A-4
+    matches=84/112 polarity=1 weight=4 atoms=A * v_disc * B+1 * A-4
+    matches=84/112 polarity=1 weight=4 atoms=A * v_disc * B+1 * A-1
+    matches=84/112 polarity=-1 weight=4 atoms=A * gamma_actual_norm * B-1 * A-4
+    matches=84/112 polarity=1 weight=4 atoms=A * gamma_actual_norm * B+1 * A-4
+    matches=84/112 polarity=1 weight=4 atoms=A * gamma_actual_norm * B+1 * A-1
+q=1847:
+  actual_B = 45
+  actual_edges = 360
+  actual_or_missing_gamma_norm_nonsquare = 0
+  actual_or_missing_scale_nonsquare = 0
+  actual_or_missing_scale_not_xroot = 360
+  actual_parent_pairs = 180
+  atom_missing_prod_zero_or_undefined = 1
+  atom_v_prod-1_zero_or_undefined = 1
+  d3_not_plus_-1 = 288
+  deduped_candidates = 1008
+  enum_compact_not_target = 873
+  enum_no_label2_candidate = 468
+  f4_minus = 104
+  f4_plus = 76
+  generic_gamma_norm_formula_bad = 0
+  norm_rows = 180
+  pair_atoms_usable = 59
+  pair_best_match_x1000000 = 733333
+  pair_best_matches = 132
+  pair_best_weight = 2
+  pair_exact_products = 0
+  pair_products_tested = 489405
+  exact_pair_invariant_products:
+    none
+  best_pair_invariant_products:
+    matches=132/180 polarity=-1 weight=2 atoms=B-4 * B-1
+    matches=132/180 polarity=-1 weight=3 atoms=B * B-4 * B-1
+    matches=132/180 polarity=-1 weight=3 atoms=v_disc * B-4 * B-1
+    matches=132/180 polarity=-1 weight=3 atoms=gamma_actual_norm * B-4 * B-1
+    matches=132/180 polarity=-1 weight=3 atoms=gamma_missing_norm * B-4 * B-1
+    matches=132/180 polarity=-1 weight=3 atoms=gamma_generic_norm * B-4 * B-1
+    matches=132/180 polarity=-1 weight=3 atoms=actual_scale * B-4 * B-1
+    matches=132/180 polarity=-1 weight=3 atoms=missing_scale * B-4 * B-1
+    matches=132/180 polarity=1 weight=3 atoms=B-4 * B-2 * B-1
+    matches=132/180 polarity=-1 weight=3 atoms=B-4 * B-1 * B+2
+    matches=132/180 polarity=1 weight=3 atoms=B-4 * B-1 * A-2
+    matches=132/180 polarity=-1 weight=3 atoms=B-4 * B-1 * A+2
+q=2087:
+  actual_B = 25
+  actual_edges = 200
+  actual_or_missing_gamma_norm_nonsquare = 0
+  actual_or_missing_scale_nonsquare = 0
+  actual_or_missing_scale_not_xroot = 200
+  actual_parent_pairs = 100
+  d3_not_plus_-1 = 512
+  deduped_candidates = 912
+  enum_compact_not_target = 1109
+  enum_no_label2_candidate = 520
+  f4_minus = 28
+  f4_plus = 72
+  generic_gamma_norm_formula_bad = 0
+  norm_rows = 100
+  pair_atoms_usable = 61
+  pair_best_match_x1000000 = 800000
+  pair_best_matches = 80
+  pair_best_weight = 3
+  pair_exact_products = 0
+  pair_products_tested = 559736
+  exact_pair_invariant_products:
+    none
+  best_pair_invariant_products:
+    matches=80/100 polarity=-1 weight=3 atoms=A * B+1 * A-4
+    matches=80/100 polarity=-1 weight=4 atoms=B * A * B+1 * A-4
+    matches=80/100 polarity=-1 weight=4 atoms=A * v_disc * B+1 * A-4
+    matches=80/100 polarity=-1 weight=4 atoms=A * gamma_actual_norm * B+1 * A-4
+    matches=80/100 polarity=-1 weight=4 atoms=A * gamma_missing_norm * B+1 * A-4
+    matches=80/100 polarity=-1 weight=4 atoms=A * gamma_generic_norm * B+1 * A-4
+    matches=80/100 polarity=-1 weight=4 atoms=A * actual_scale * B+1 * A-4
+    matches=80/100 polarity=-1 weight=4 atoms=A * missing_scale * B+1 * A-4
+    matches=80/100 polarity=1 weight=4 atoms=A * B-2 * B+1 * A-4
+    matches=80/100 polarity=-1 weight=4 atoms=A * B-1 * A-4 * A+1
+    matches=80/100 polarity=-1 weight=4 atoms=A * B+1 * B+2 * A-4
+    matches=80/100 polarity=1 weight=4 atoms=A * B+1 * A-4 * A-2
+p27_b_line_gamma_norm_probe_rows=1/1

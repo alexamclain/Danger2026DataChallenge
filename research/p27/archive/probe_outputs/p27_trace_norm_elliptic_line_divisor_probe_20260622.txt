@@ -1,0 +1,103 @@
+p27 trace/norm elliptic line-divisor probe
+curve = E: v^2 = u^3 - u
+candidates = vertical u-c and affine lines v + m*u + c
+coefficient_bound = 4
+train_sample_stats:
+  F_chi_+1 = 32458
+  F_chi_-1 = 33046
+  K_chi_+1 = 32752
+  domain_records = 65504
+  k_points = 65504
+  nonsplit_y = 32752
+  quotient_quotient_rows = 32458
+  quotient_quotient_unique_rows = 32458
+  quotient_target_+1 = 16213
+  quotient_target_-1 = 16245
+  raw_draws = 65536
+  target_records = 32458
+train_domain_elliptic_line_screen:
+  rows = 65504
+  raw_draws = 65536
+  candidate_count = 90
+  exact_count = 0
+  top_by_lift:
+    name=line_v_-1u_+4 lift=1.009 orientation=-1 selected=32829 selected_plus=16414 zero=0 selected_per_source=0.500930786 target_per_source=0.250457763
+    name=line_v_+1u_-4 lift=1.009 orientation=1 selected=32829 selected_plus=16414 zero=0 selected_per_source=0.500930786 target_per_source=0.250457763
+    name=line_v_-2u_-3 lift=1.009 orientation=1 selected=32777 selected_plus=16388 zero=0 selected_per_source=0.500137329 target_per_source=0.250061035
+    name=line_v_+2u_+3 lift=1.009 orientation=-1 selected=32777 selected_plus=16388 zero=0 selected_per_source=0.500137329 target_per_source=0.250061035
+    name=line_v_-4u_-4 lift=1.007 orientation=-1 selected=32879 selected_plus=16417 zero=0 selected_per_source=0.501693725 target_per_source=0.250503540
+    name=line_v_+4u_+4 lift=1.007 orientation=1 selected=32879 selected_plus=16417 zero=0 selected_per_source=0.501693725 target_per_source=0.250503540
+    name=vertical_u_+4 lift=1.007 orientation=1 selected=32744 selected_plus=16354 zero=0 selected_per_source=0.499633789 target_per_source=0.249542236
+    name=vertical_u_-2 lift=1.006 orientation=1 selected=32760 selected_plus=16336 zero=0 selected_per_source=0.499877929 target_per_source=0.249267578
+    name=line_v_-3u_-3 lift=1.006 orientation=-1 selected=32668 selected_plus=16290 zero=0 selected_per_source=0.498474121 target_per_source=0.248565673
+    name=line_v_+3u_+3 lift=1.006 orientation=1 selected=32668 selected_plus=16290 zero=0 selected_per_source=0.498474121 target_per_source=0.248565673
+    name=line_v_-4u_+0 lift=1.006 orientation=-1 selected=32636 selected_plus=16279 zero=0 selected_per_source=0.497985839 target_per_source=0.248397827
+    name=line_v_+4u_+0 lift=1.006 orientation=1 selected=32636 selected_plus=16279 zero=0 selected_per_source=0.497985839 target_per_source=0.248397827
+train_target_elliptic_line_screen:
+  rows = 32458
+  raw_draws = 65536
+  candidate_count = 90
+  exact_count = 0
+  top_by_lift:
+    name=vertical_u_+4 lift=1.019 orientation=1 selected=16354 selected_plus=8388 zero=0 selected_per_source=0.249542236 target_per_source=0.127990722
+    name=vertical_u_-2 lift=1.016 orientation=-1 selected=16122 selected_plus=8244 zero=0 selected_per_source=0.246002197 target_per_source=0.125793457
+    name=line_v_-4u_+3 lift=1.011 orientation=-1 selected=16184 selected_plus=8230 zero=0 selected_per_source=0.246948242 target_per_source=0.125579833
+    name=line_v_+4u_-3 lift=1.011 orientation=1 selected=16184 selected_plus=8230 zero=0 selected_per_source=0.246948242 target_per_source=0.125579833
+    name=line_v_-1u_+3 lift=1.010 orientation=1 selected=16218 selected_plus=8244 zero=0 selected_per_source=0.247467041 target_per_source=0.125793457
+    name=line_v_+1u_-3 lift=1.010 orientation=-1 selected=16218 selected_plus=8244 zero=0 selected_per_source=0.247467041 target_per_source=0.125793457
+    name=line_v_-3u_+3 lift=1.009 orientation=-1 selected=16293 selected_plus=8273 zero=0 selected_per_source=0.248611450 target_per_source=0.126235961
+    name=line_v_+3u_-3 lift=1.009 orientation=1 selected=16293 selected_plus=8273 zero=0 selected_per_source=0.248611450 target_per_source=0.126235961
+    name=line_v_-2u_+4 lift=1.009 orientation=-1 selected=16152 selected_plus=8196 zero=0 selected_per_source=0.246459960 target_per_source=0.125061035
+    name=line_v_+2u_-4 lift=1.009 orientation=1 selected=16152 selected_plus=8196 zero=0 selected_per_source=0.246459960 target_per_source=0.125061035
+    name=line_v_-2u_+0 lift=1.009 orientation=1 selected=16123 selected_plus=8186 zero=0 selected_per_source=0.246017456 target_per_source=0.124908447
+    name=line_v_+2u_+0 lift=1.009 orientation=-1 selected=16123 selected_plus=8186 zero=0 selected_per_source=0.246017456 target_per_source=0.124908447
+heldout_sample_stats:
+  F_chi_+1 = 32662
+  F_chi_-1 = 32784
+  K_chi_+1 = 32723
+  domain_records = 65446
+  k_points = 65446
+  nonsplit_y = 32723
+  quotient_quotient_rows = 32662
+  quotient_quotient_unique_rows = 32662
+  quotient_target_+1 = 16288
+  quotient_target_-1 = 16374
+  raw_draws = 65536
+  target_records = 32662
+heldout_domain_elliptic_line_screen:
+  rows = 65446
+  raw_draws = 65536
+  candidate_count = 90
+  exact_count = 0
+  top_by_lift:
+    name=vertical_u_-4 lift=1.009 orientation=1 selected=33004 selected_plus=16620 zero=0 selected_per_source=0.503601074 target_per_source=0.253601074
+    name=line_v_+0u_-1 lift=1.009 orientation=-1 selected=32814 selected_plus=16531 zero=0 selected_per_source=0.500701904 target_per_source=0.252243041
+    name=line_v_+0u_+1 lift=1.009 orientation=1 selected=32814 selected_plus=16531 zero=0 selected_per_source=0.500701904 target_per_source=0.252243041
+    name=vertical_u_+4 lift=1.009 orientation=-1 selected=32792 selected_plus=16526 zero=0 selected_per_source=0.500366210 target_per_source=0.252166748
+    name=line_v_-1u_-4 lift=1.008 orientation=-1 selected=32705 selected_plus=16464 zero=0 selected_per_source=0.499038696 target_per_source=0.251220703
+    name=line_v_+1u_+4 lift=1.008 orientation=1 selected=32705 selected_plus=16464 zero=0 selected_per_source=0.499038696 target_per_source=0.251220703
+    name=line_v_-1u_-1 lift=1.007 orientation=-1 selected=32776 selected_plus=16481 zero=0 selected_per_source=0.500122070 target_per_source=0.251480102
+    name=line_v_+1u_+1 lift=1.007 orientation=1 selected=32776 selected_plus=16481 zero=0 selected_per_source=0.500122070 target_per_source=0.251480102
+    name=line_v_-2u_-3 lift=1.007 orientation=1 selected=32531 selected_plus=16362 zero=0 selected_per_source=0.496383666 target_per_source=0.249664306
+    name=line_v_+2u_+3 lift=1.007 orientation=-1 selected=32531 selected_plus=16362 zero=0 selected_per_source=0.496383666 target_per_source=0.249664306
+    name=line_v_-4u_+4 lift=1.006 orientation=1 selected=33144 selected_plus=16647 zero=0 selected_per_source=0.505737304 target_per_source=0.254013061
+    name=line_v_+4u_-4 lift=1.006 orientation=-1 selected=33144 selected_plus=16647 zero=0 selected_per_source=0.505737304 target_per_source=0.254013061
+heldout_target_elliptic_line_screen:
+  rows = 32662
+  raw_draws = 65536
+  candidate_count = 90
+  exact_count = 0
+  top_by_lift:
+    name=vertical_u_-4 lift=1.011 orientation=1 selected=16620 selected_plus=8436 zero=0 selected_per_source=0.253601074 target_per_source=0.128723144
+    name=line_v_-4u_-1 lift=1.010 orientation=1 selected=16399 selected_plus=8318 zero=0 selected_per_source=0.250228881 target_per_source=0.126922607
+    name=line_v_+4u_+1 lift=1.010 orientation=-1 selected=16399 selected_plus=8318 zero=0 selected_per_source=0.250228881 target_per_source=0.126922607
+    name=line_v_-1u_+0 lift=1.010 orientation=-1 selected=16313 selected_plus=8274 zero=0 selected_per_source=0.248916625 target_per_source=0.126251220
+    name=line_v_+1u_+0 lift=1.010 orientation=1 selected=16313 selected_plus=8274 zero=0 selected_per_source=0.248916625 target_per_source=0.126251220
+    name=line_v_-3u_-4 lift=1.010 orientation=-1 selected=16279 selected_plus=8259 zero=0 selected_per_source=0.248397827 target_per_source=0.126022338
+    name=line_v_+3u_+4 lift=1.010 orientation=1 selected=16279 selected_plus=8259 zero=0 selected_per_source=0.248397827 target_per_source=0.126022338
+    name=line_v_-2u_+0 lift=1.009 orientation=1 selected=16415 selected_plus=8321 zero=0 selected_per_source=0.250473022 target_per_source=0.126968383
+    name=line_v_+2u_+0 lift=1.009 orientation=-1 selected=16415 selected_plus=8321 zero=0 selected_per_source=0.250473022 target_per_source=0.126968383
+    name=vertical_u_+3 lift=1.009 orientation=-1 selected=16274 selected_plus=8250 zero=0 selected_per_source=0.248321533 target_per_source=0.125885009
+    name=line_v_-1u_-4 lift=1.009 orientation=1 selected=16198 selected_plus=8207 zero=0 selected_per_source=0.247161865 target_per_source=0.125228881
+    name=line_v_+1u_+4 lift=1.009 orientation=-1 selected=16198 selected_plus=8207 zero=0 selected_per_source=0.247161865 target_per_source=0.125228881
+p27_trace_norm_elliptic_line_divisor_probe_rows=1/1

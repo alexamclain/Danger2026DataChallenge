@@ -130,16 +130,26 @@ use BSM only after the legal B-cover or f3(B) class is named;
 do not continue low-degree relation scans on the raw/legal BSM surface.
 ```
 
+Update:
+[P27 BSM Halving-Cover Identity](p27_bsm_halving_cover_identity_20260622.md)
+further demotes the lane.  BSM is algebraically the same as the known
+one-step halving cover: `x=m^2/16` and `z=s^2` turn the BSM equation into a
+quadratic in `z` with discriminant `16*(x^2+A*x+1)`.  It should now be treated
+as notation for inherited halving structure unless an added selector creates a
+new quotient.
+
 ## Continue / Kill
 
 ```text
 continue = BSM as CAS staging after B-line f3 extraction
 continue = legal-cover/function-field normalization if a CAS system can handle it
 continue = compare any named BSM quotient against the B-line fixture rows
+continue = only with a non-inherited selector beyond x square and d square
 
 kill = BSM next-selector low-degree relation in (B,s), (B,m), (s,m), (B,s,m)
 kill = GPU sampling of legal-B-restricted BSM for d4+
 kill = treating the inherited BSM equation as multi-gate coupling
+kill = BSM as an independent first-class moonshot lane
 ```
 
 ```text

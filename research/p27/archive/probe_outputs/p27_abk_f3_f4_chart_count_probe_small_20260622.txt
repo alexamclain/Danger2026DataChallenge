@@ -1,0 +1,116 @@
+p27 ABK f3/f4 chart count probe
+chart = reduced_U, H^2=U+2, F_A(U,V)=0, gamma^2=V+2
+fields = 7,23,103
+modes = compactD,noR
+question = is f4/f3 gamma sourceable or another fresh half-cover?
+q=7 mode=noR:
+  A_B_identity_mismatch = 0
+  B_fibers = 0
+  bad_A_den = 0
+  bad_Bline = 0
+  bad_U_den = 0
+  bad_X_denominator = 3
+  compactD_not_square = 0
+  first_half_beta_not_square = 0
+  reduced_U_no_root = 0
+  reduced_U_points_per_legal_chart_points = 0.000000000
+  f3_plus_U_per_reduced_U_points = 0.000000000
+  HV_points_per_f3_plus_U = 0.000000000
+  gamma_points_per_HV_points = 0.000000000
+  gamma_chi_1_per_HV_points = 0.000000000
+  gamma_chi_-1_per_HV_points = 0.000000000
+q=7 mode=noR fiber_summary_top:
+q=7 mode=compactD:
+  A_B_identity_mismatch = 0
+  B_fibers = 0
+  bad_A_den = 0
+  bad_Bline = 0
+  bad_U_den = 0
+  bad_X_denominator = 3
+  compactD_not_square = 0
+  first_half_beta_not_square = 0
+  reduced_U_no_root = 0
+  reduced_U_points_per_legal_chart_points = 0.000000000
+  f3_plus_U_per_reduced_U_points = 0.000000000
+  HV_points_per_f3_plus_U = 0.000000000
+  gamma_points_per_HV_points = 0.000000000
+  gamma_chi_1_per_HV_points = 0.000000000
+  gamma_chi_-1_per_HV_points = 0.000000000
+q=7 mode=compactD fiber_summary_top:
+q=23 mode=noR:
+  A_B_identity_mismatch = 0
+  B_fibers = 1
+  bad_A_den = 0
+  bad_Bline = 0
+  bad_U_den = 0
+  bad_X_denominator = 3
+  compactD_not_square = 0
+  first_half_beta_not_square = 12
+  legal_chart_points = 8
+  reduced_U_no_root = 8
+  reduced_U_points_per_legal_chart_points = 0.000000000
+  f3_plus_U_per_reduced_U_points = 0.000000000
+  HV_points_per_f3_plus_U = 0.000000000
+  gamma_points_per_HV_points = 0.000000000
+  gamma_chi_1_per_HV_points = 0.000000000
+  gamma_chi_-1_per_HV_points = 0.000000000
+q=23 mode=noR fiber_summary_top:
+  f3_pm_pair_(0, 0) = 1
+  HV_gamma_pair_(0, 0) = 1
+  gamma_pm_pair_(0, 0) = 1
+q=23 mode=compactD:
+  A_B_identity_mismatch = 0
+  B_fibers = 0
+  bad_A_den = 0
+  bad_Bline = 0
+  bad_U_den = 0
+  bad_X_denominator = 3
+  compactD_not_square = 12
+  first_half_beta_not_square = 4
+  reduced_U_no_root = 0
+  reduced_U_points_per_legal_chart_points = 0.000000000
+  f3_plus_U_per_reduced_U_points = 0.000000000
+  HV_points_per_f3_plus_U = 0.000000000
+  gamma_points_per_HV_points = 0.000000000
+  gamma_chi_1_per_HV_points = 0.000000000
+  gamma_chi_-1_per_HV_points = 0.000000000
+q=23 mode=compactD fiber_summary_top:
+q=103 mode=noR:
+  A_B_identity_mismatch = 0
+  B_fibers = 6
+  bad_A_den = 0
+  bad_Bline = 0
+  bad_U_den = 0
+  bad_X_denominator = 3
+  compactD_not_square = 0
+  first_half_beta_not_square = 72
+  legal_chart_points = 48
+  reduced_U_no_root = 48
+  reduced_U_points_per_legal_chart_points = 0.000000000
+  f3_plus_U_per_reduced_U_points = 0.000000000
+  HV_points_per_f3_plus_U = 0.000000000
+  gamma_points_per_HV_points = 0.000000000
+  gamma_chi_1_per_HV_points = 0.000000000
+  gamma_chi_-1_per_HV_points = 0.000000000
+q=103 mode=noR fiber_summary_top:
+  f3_pm_pair_(0, 0) = 6
+  HV_gamma_pair_(0, 0) = 6
+  gamma_pm_pair_(0, 0) = 6
+q=103 mode=compactD:
+  A_B_identity_mismatch = 0
+  B_fibers = 0
+  bad_A_den = 0
+  bad_Bline = 0
+  bad_U_den = 0
+  bad_X_denominator = 3
+  compactD_not_square = 72
+  first_half_beta_not_square = 24
+  reduced_U_no_root = 0
+  reduced_U_points_per_legal_chart_points = 0.000000000
+  f3_plus_U_per_reduced_U_points = 0.000000000
+  HV_points_per_f3_plus_U = 0.000000000
+  gamma_points_per_HV_points = 0.000000000
+  gamma_chi_1_per_HV_points = 0.000000000
+  gamma_chi_-1_per_HV_points = 0.000000000
+q=103 mode=compactD fiber_summary_top:
+p27_abk_f3_f4_chart_count_probe_rows=1/1

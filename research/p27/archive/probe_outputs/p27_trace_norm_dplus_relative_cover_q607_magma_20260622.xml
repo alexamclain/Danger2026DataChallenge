@@ -1,0 +1,2 @@
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>2228741997</seed><version>2.29-8</version><time>0.550</time><memory>32.09MB</memory></headers><results><line>RESULT relative_base 2 2 5 4</line><line>RESULT relative_dplus_cover 1 1 17 8 2</line><line>RESULT relative_dplus_cover 1 -1 17 8 2</line><line>RESULT relative_dplus_cover -1 1 17 8 2</line><line>RESULT relative_dplus_cover -1 -1 17 8 2</line><line></line></results></calculator>

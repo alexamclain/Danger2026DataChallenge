@@ -1,0 +1,265 @@
+p27 A-line combined prefix support probe
+screen = all-plus selected prefix as chi(low-degree branch support on P1_A)
+selected_depth = 6
+prefix_depths = 2,3,4
+min_rows = 40
+max_split_weight = 4
+quadratic_prefixes = 2,3
+q1607_base:
+  enum_compact_not_target = 805
+  enum_no_label2_candidate = 408
+  sqrt_q_floor = 40
+  unique_A = 49
+  unique_ax = 196
+q1607_prefix2_through_d4_target_stats:
+  domain_A = 49
+  domain_points = 196
+  groups = 49
+  last_gate_d = 4
+  prefix_depth = 2
+  prefix_fail_A = 30
+  prefix_plus_A = 19
+  quad_pair_expected_exact_x1e12 = 2957967466
+  quad_plus_expected_exact_x1e12 = 5567696591
+  rows = 49
+  split_expected_exact_x1e12 = 871089725
+  split_family_size = 245189960212
+  split_verdict_code = 0
+q1607_prefix2_through_d4_split_support_stats:
+  candidate_linear_factors = 1558
+  minus_rows = 30
+  pair_xors = 1212903
+  plus_rows = 19
+  rows = 49
+  target_weight = 30
+q1607_prefix2_through_d4_split_support_result: none_weight_le_4
+q1607_prefix2_through_d4_quad_plus_linear_stats:
+  irreducible_quadratics_tested = 1290421
+  linear_factors = 1558
+  linear_pair_xors = 1212903
+q1607_prefix2_through_d4_quad_plus_linear_result: none_quad_plus_le_2_linear
+q1607_prefix2_through_d4_two_quadratic_stats:
+  irreducible_quadratics_tested = 1290421
+  minus_rows = 30
+  plus_rows = 19
+  rows = 49
+  target_weight = 30
+  unique_quadratic_masks = 1290421
+q1607_prefix2_through_d4_two_quadratic_result: none_two_irreducible_quadratics
+q1607_prefix3_through_d5_target_stats:
+  domain_A = 49
+  domain_points = 196
+  groups = 49
+  last_gate_d = 5
+  prefix_depth = 3
+  prefix_fail_A = 30
+  prefix_plus_A = 19
+  quad_pair_expected_exact_x1e12 = 2957967466
+  quad_plus_expected_exact_x1e12 = 5567696591
+  rows = 49
+  split_expected_exact_x1e12 = 871089725
+  split_family_size = 245189960212
+  split_verdict_code = 0
+q1607_prefix3_through_d5_split_support_stats:
+  candidate_linear_factors = 1558
+  minus_rows = 30
+  pair_xors = 1212903
+  plus_rows = 19
+  rows = 49
+  target_weight = 30
+q1607_prefix3_through_d5_split_support_result: none_weight_le_4
+q1607_prefix3_through_d5_quad_plus_linear_stats:
+  irreducible_quadratics_tested = 1290421
+  linear_factors = 1558
+  linear_pair_xors = 1212903
+q1607_prefix3_through_d5_quad_plus_linear_result: none_quad_plus_le_2_linear
+q1607_prefix3_through_d5_two_quadratic_stats:
+  irreducible_quadratics_tested = 1290421
+  minus_rows = 30
+  plus_rows = 19
+  rows = 49
+  target_weight = 30
+  unique_quadratic_masks = 1290421
+q1607_prefix3_through_d5_two_quadratic_result: none_two_irreducible_quadratics
+q1607_prefix4_through_d6_target_stats:
+  domain_A = 49
+  domain_points = 196
+  groups = 49
+  last_gate_d = 6
+  prefix_depth = 4
+  prefix_fail_A = 49
+  quad_pair_expected_exact_x1e12 = 2957967466
+  quad_plus_expected_exact_x1e12 = 5567696591
+  rows = 49
+  split_expected_exact_x1e12 = 871089725
+  split_family_size = 245189960212
+  split_verdict_code = 0
+q1607_prefix4_through_d6_split_support_result: skipped_one_sided
+q1847_base:
+  enum_compact_not_target = 873
+  enum_no_label2_candidate = 468
+  sqrt_q_floor = 42
+  unique_A = 63
+  unique_ax = 252
+q1847_prefix2_through_d4_target_stats:
+  domain_A = 63
+  domain_points = 252
+  groups = 63
+  last_gate_d = 4
+  prefix_depth = 2
+  prefix_fail_A = 44
+  prefix_plus_A = 19
+  quad_pair_expected_exact_x1e12 = 315099
+  quad_plus_expected_exact_x1e12 = 588589
+  rows = 63
+  split_expected_exact_x1e12 = 91416
+  split_family_size = 421582438830
+  split_verdict_code = 0
+q1847_prefix2_through_d4_split_support_stats:
+  candidate_linear_factors = 1784
+  minus_rows = 44
+  pair_xors = 1590436
+  plus_rows = 19
+  rows = 63
+  target_weight = 44
+q1847_prefix2_through_d4_split_support_result: none_weight_le_4
+q1847_prefix2_through_d4_quad_plus_linear_stats:
+  irreducible_quadratics_tested = 1704781
+  linear_factors = 1784
+  linear_pair_xors = 1590436
+q1847_prefix2_through_d4_quad_plus_linear_result: none_quad_plus_le_2_linear
+q1847_prefix2_through_d4_two_quadratic_stats:
+  irreducible_quadratics_tested = 1704781
+  minus_rows = 44
+  plus_rows = 19
+  rows = 63
+  target_weight = 44
+  unique_quadratic_masks = 1704781
+q1847_prefix2_through_d4_two_quadratic_result: none_two_irreducible_quadratics
+q1847_prefix3_through_d5_target_stats:
+  domain_A = 63
+  domain_points = 252
+  groups = 63
+  last_gate_d = 5
+  prefix_depth = 3
+  prefix_fail_A = 63
+  quad_pair_expected_exact_x1e12 = 315099
+  quad_plus_expected_exact_x1e12 = 588589
+  rows = 63
+  split_expected_exact_x1e12 = 91416
+  split_family_size = 421582438830
+  split_verdict_code = 0
+q1847_prefix3_through_d5_split_support_result: skipped_one_sided
+q1847_prefix4_through_d6_target_stats:
+  domain_A = 63
+  domain_points = 252
+  groups = 63
+  last_gate_d = 6
+  prefix_depth = 4
+  prefix_fail_A = 63
+  quad_pair_expected_exact_x1e12 = 315099
+  quad_plus_expected_exact_x1e12 = 588589
+  rows = 63
+  split_expected_exact_x1e12 = 91416
+  split_family_size = 421582438830
+  split_verdict_code = 0
+q1847_prefix4_through_d6_split_support_result: skipped_one_sided
+q2087_base:
+  enum_compact_not_target = 1109
+  enum_no_label2_candidate = 520
+  sqrt_q_floor = 45
+  unique_A = 57
+  unique_ax = 228
+q2087_prefix2_through_d4_target_stats:
+  domain_A = 57
+  domain_points = 228
+  groups = 57
+  last_gate_d = 4
+  prefix_depth = 2
+  prefix_fail_A = 39
+  prefix_plus_A = 18
+  quad_pair_expected_exact_x1e12 = 32877891
+  quad_plus_expected_exact_x1e12 = 62273485
+  rows = 57
+  split_expected_exact_x1e12 = 9809937
+  split_family_size = 706880471430
+  split_verdict_code = 0
+q2087_prefix2_through_d4_split_support_stats:
+  candidate_linear_factors = 2030
+  minus_rows = 39
+  pair_xors = 2059435
+  plus_rows = 18
+  rows = 57
+  target_weight = 39
+q2087_prefix2_through_d4_split_support_result: none_weight_le_4
+q2087_prefix2_through_d4_quad_plus_linear_stats:
+  irreducible_quadratics_tested = 2176741
+  linear_factors = 2030
+  linear_pair_xors = 2059435
+q2087_prefix2_through_d4_quad_plus_linear_result: none_quad_plus_le_2_linear
+q2087_prefix2_through_d4_two_quadratic_stats:
+  irreducible_quadratics_tested = 2176741
+  minus_rows = 39
+  plus_rows = 18
+  rows = 57
+  target_weight = 39
+  unique_quadratic_masks = 2176741
+q2087_prefix2_through_d4_two_quadratic_result: none_two_irreducible_quadratics
+q2087_prefix3_through_d5_target_stats:
+  domain_A = 57
+  domain_points = 228
+  groups = 57
+  last_gate_d = 5
+  prefix_depth = 3
+  prefix_fail_A = 39
+  prefix_plus_A = 18
+  quad_pair_expected_exact_x1e12 = 32877891
+  quad_plus_expected_exact_x1e12 = 62273485
+  rows = 57
+  split_expected_exact_x1e12 = 9809937
+  split_family_size = 706880471430
+  split_verdict_code = 0
+q2087_prefix3_through_d5_split_support_stats:
+  candidate_linear_factors = 2030
+  minus_rows = 39
+  pair_xors = 2059435
+  plus_rows = 18
+  rows = 57
+  target_weight = 39
+q2087_prefix3_through_d5_split_support_result: none_weight_le_4
+q2087_prefix3_through_d5_quad_plus_linear_stats:
+  irreducible_quadratics_tested = 2176741
+  linear_factors = 2030
+  linear_pair_xors = 2059435
+q2087_prefix3_through_d5_quad_plus_linear_result: none_quad_plus_le_2_linear
+q2087_prefix3_through_d5_two_quadratic_stats:
+  irreducible_quadratics_tested = 2176741
+  minus_rows = 39
+  plus_rows = 18
+  rows = 57
+  target_weight = 39
+  unique_quadratic_masks = 2176741
+q2087_prefix3_through_d5_two_quadratic_result: none_two_irreducible_quadratics
+q2087_prefix4_through_d6_target_stats:
+  domain_A = 57
+  domain_points = 228
+  groups = 57
+  last_gate_d = 6
+  prefix_depth = 4
+  prefix_fail_A = 39
+  prefix_plus_A = 18
+  quad_pair_expected_exact_x1e12 = 32877891
+  quad_plus_expected_exact_x1e12 = 62273485
+  rows = 57
+  split_expected_exact_x1e12 = 9809937
+  split_family_size = 706880471430
+  split_verdict_code = 0
+q2087_prefix4_through_d6_split_support_stats:
+  candidate_linear_factors = 2030
+  minus_rows = 39
+  pair_xors = 2059435
+  plus_rows = 18
+  rows = 57
+  target_weight = 39
+q2087_prefix4_through_d6_split_support_result: none_weight_le_4
+p27_a_line_prefix_support_probe_rows=1/1

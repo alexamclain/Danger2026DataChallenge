@@ -297,6 +297,19 @@ failures, confirming the reconstruction.  The next gate was flat:
 All low-weight products of the named `H`, `VQ`, `X_pref`, root, quotient, and
 `T_line` atoms failed, with the best train lifts collapsing to about `0.49` to
 `0.50` on heldout.  This kills the cheap post-Dplus trace/norm-character route.
+The exact orientation follow-up is also negative:
+[P27 Trace/Norm Orientation Phase Screen](evidence/p27_trace_norm_orientation_phase_screen_20260622.md).
+It attached the actual `D_plus` cover signs `eps_h=chi(t)` and
+`eps_v=chi((t+1)C)` to C-style rows.  Across heldout seed groups, `d3` and
+`d4` by `eps_h/eps_v`, `H/VQ`, `eps_h/eps_v/T_line`, and
+`hcore_chi/vcore_chi` stayed near half; the apparent high `d4` bucket moved
+between groups.  This kills orientation buckets as a GPU/source shortcut.
+The GPU ask is now sharply bounded:
+[P27 GPU Dplus-Native Source Handoff](evidence/p27_gpu_dplus_native_source_handoff_20260622.md).
+Ask for fused/native `D_plus` pricing and same-stream coupling telemetry, with
+raw-source denominators.  Promote only if `D_plus` is cheaper than letting the
+first two selected gates fail naturally or if a direct source reaches beyond
+those first two gates.
 The surviving trace/norm/quotient task is now formalized as a narrow test card:
 [P27 Trace/Norm Half-Norm Test Card](evidence/p27_trace_norm_halfnorm_test_card_20260622.md).
 It accepts only a finite-field squareclass, divisor/theta identity, or direct
@@ -328,6 +341,65 @@ selectors `eps_h=chi(t)` and `eps_v=chi((t+1)C)`, which explains why the
 current classifier pays fresh Legendre costs.  The next sqrt-beating test is a
 Magma/Sage quotient/Prym decomposition of the four orientation components, or
 a direct GPU source sampler if such a quotient is found.
+There is now a positive quotient handle:
+[P27 Trace/Norm Dplus Quotient Symmetry](evidence/p27_trace_norm_dplus_quotient_symmetry_20260622.md).
+Across `q=607,1607,1847,2087`, `Dplus` is invariant under `z -> -z` and under
+`t -> -1/t` paired with `w -> -w/t^2`.  Thus it descends to the conic quotient
+`a=t-1/t`, `g=w/t`, `a^2+g^2=4`.  Generic fibers have size four and no
+conflicts.  However, low-weight products of the tested `a/g/m` atoms do not
+hold out, so the next artifact must be the exact descended Kummer/divisor
+class on the conic, not another visible character bucket.
+That target has now been corrected symbolically:
+[P27 Trace/Norm Dplus Relative Descent](evidence/p27_trace_norm_dplus_relative_descent_20260622.md).
+Writing `u=-core=u0+u1*z` with
+`F=t(t^2+2t-1)(t^2+1)=z^2`, the verifier proves
+`Norm_z(u)=F*S^2`.  Thus the conic quotient constancy is conditional on the
+domain-spin root already existing; `Dplus` is not a standalone rational
+character on `a^2+g^2=4`.  The next serious CAS object is the relative
+Hilbert-90/Kummer class over the domain-spin cover, and the bare conic sampler
+is killed.  Online Magma over `q=607` prices this reduced relative cover at
+genus `17`, uniformly for the four fixed orientation sign pairs.  That is a
+real reduction from the naive genus-69 full orientation-source cover, but still
+not a direct production source without a special quotient/Prym or `d3`
+coupling.
+The H90 quotient is now explicit:
+[P27 Trace/Norm Dplus H90 Quotient](evidence/p27_trace_norm_dplus_h90_quotient_20260622.md).
+The lift `alpha(t,z,w,s)=(t,-z,w,z*S/s)` has `alpha^2` equal to the `s`-deck
+involution and fixes `t,w`.  Magma confirms the quotient base
+`w^2=-(t^2+2t-1)(t^2-2t-1)` has genus `1`, while the relative `Dplus` cover is
+degree `4` over it and genus `17`.  This turns the lane into a precise
+cyclic-quartic/Kummer-class extraction over an elliptic curve; it is still not
+a GPU source until that class splits, recurs, or couples to `d3`.
+The normalized quartic model is now explicit:
+[P27 Trace/Norm Dplus H90 Quartic Model](evidence/p27_trace_norm_dplus_h90_quartic_model_20260622.md).
+With `rho=s/((t+1)(t^2+2t-1))`, the cover satisfies
+`rho^4 - 2*U_eta*rho^2 + F*Sprime^2=0` over `E_h90`, and the four orientation
+components collapse to two cases `eta=eh*ev`.  Magma confirms both `eta`
+models are still genus `17`, degree `4` over `E_h90`.  The next test is branch
+divisor/Kummer extraction for these two eta classes.
+That branch extraction is now explicit:
+[P27 Trace/Norm Dplus H90 Branch Class](evidence/p27_trace_norm_dplus_h90_branch_class_20260622.md).
+The resolvent satisfies `U_eta^2 - F*Sprime^2 = F*W_eta^2`, so the first
+quadratic layer is exactly the already-known domain-spin cover `z^2=F`.
+The hard class is the second layer `rho^2=U_eta+z*W_eta` over the genus-5
+cover `E_h90(z)`.  Magma reports odd branch divisor degree `16` for this
+second layer, giving genus `17`.  This kills a hidden low-genus first-resolvent
+shortcut; the next real test is whether this named second-layer class equals,
+recurs with, or predicts `d3`.
+The cheap finite-field payload screen is now negative:
+[P27 Trace/Norm Dplus H90 Payload Screen](evidence/p27_trace_norm_dplus_h90_payload_screen_20260622.md).
+On `16,398` train and `16,122` heldout Dplus candidates, all `A_eta`
+squareclasses are already `+1`, including opposite-eta variants.  Products of
+`eta`, `U`, `W`, `rho`, and root-orientation features have no exact
+weight-`<=3` predictor; train skews such as `U_actual` for `d3` and
+`-eta*U_other` for `d4` collapse on heldout.  The remaining Dplus-H90 test is
+actual d3 Kummer/divisor extraction on `E_h90(z)`, not more sign buckets.
+The class comparison now has a routing result:
+[P27 Trace/Norm Dplus A-Descent Bridge](evidence/p27_trace_norm_dplus_a_descent_20260622.md).
+Across three p27 seed groups, post-Dplus `d3` and `d4` after `d3=+1` have zero
+mixed `A` groups.  Thus Dplus post-gate work should feed the A-level Kummer
+extraction lane; trace/norm remains useful for exact two-gate prefix pricing
+and source questions, not as an independent later-gate bucket family.
 
 The naive orientation-source cover is now priced:
 [P27 Trace/Norm Source-Orientation Cover](evidence/p27_trace_norm_source_orientation_cover_20260621.md).
@@ -860,6 +932,12 @@ Complete degree `<= 4` branch-support families on `P1_A` are killed for d3 in
 q1607/q1847/q2087, q1847 also kills d4, and nearby `7 mod 8` fields reject
 split degree `<= 4` d3 support.  Do not widen blind A-polynomial scans; the
 next real test is divisor/Kummer class extraction on the normalized A-cover.
+The combined-prefix version is negative too:
+[P27 A-Line Combined Prefix Support Screen](evidence/p27_a_line_prefix_support_20260622.md).
+The all-plus `d3&d4` prefix has no visible degree `<= 4` A-line character in
+q1607/q1847/q2087.  Three- and four-gate prefixes are either one-sided
+finite-field tails or repeat the same negative pattern.  This kills GPU
+A-prefix bucket production unless a named Kummer/source law is found.
 That extraction now has a concrete packet:
 [P27 A-Level Kummer Extraction Packet](evidence/p27_a_level_kummer_extraction_packet_20260622.md).
 It emits a JSON fixture of A-labeled d3/d4 rows over q1607/q1847/q2087 and
@@ -873,6 +951,12 @@ Across q1607/q1847/q2087 and gates d3/d4, `A=B^2-2` gives `267/267`
 row-level sign matches with no missing rows, uncovered A rows, or collisions.
 This folds A into the coordinated A/B/K/Sroot class-extraction problem; it is
 not a separate GPU A-bucket lane.
+The trace/norm bridge now points here too:
+[P27 Trace/Norm Dplus A-Descent Bridge](evidence/p27_trace_norm_dplus_a_descent_20260622.md).
+On three Dplus-conditioned p27 seed groups, `d3` and `d4` after `d3=+1`
+descend to whole `A` fibers with zero mixed groups.  This collapses the
+post-Dplus later-gate question into the same A-level Kummer class sequence,
+while leaving fused/native Dplus pricing as a separate engineering test.
 The cheap visible-transform recurrence is now closed:
 [P27 A-Line Named-Transform Recurrence Screen](evidence/p27_a_line_named_transform_recurrence_20260622.md).
 The S3 group preserving the visible A-branch set `{-2,2,infinity}` almost
@@ -935,8 +1019,9 @@ The compact synthesis after these closures is:
 [P27 Post-Branch-Dynamics Test Frontier](evidence/p27_post_branch_dynamics_test_frontier_20260622.md).
 It lists the closed branch-map families and the remaining first-class tests:
 coordinated A/B/K/Sroot Kummer extraction with the rational K-square stratum
-preserved, BSM staged legal-pullback normalization, and the trace/norm
-half-norm phase identity.  GPU is demoted to bounded telemetry or
+preserved and the trace/norm half-norm phase identity.  BSM is now demoted to
+a coordinate view of the one-step halving cover unless a non-inherited selector
+is added.  GPU is demoted to bounded telemetry or
 direct-sampler testing until one of those produces a named class or source.
 The K/Sroot density shortcut is now priced too:
 [P27 K/Sroot Prefix Profile](evidence/p27_sroot_prefix_profile_20260622.md).
@@ -990,6 +1075,270 @@ The first online Magma smoke for this reduced cover is cautionary:
 Even over q7, the saturation-only fixture exceeds the online calculator memory
 limit during `Saturation(I,bad)`.  The reduced cover remains the right first
 offline CAS/expert object, but this is not a GPU-production green light.
+A direct finite-field point-count probe then clarifies the offline object:
+[P27 B-Line Reduced-Cover Point Count](evidence/p27_b_line_reduced_cover_pointcount_20260622.md).
+In q1607/q1847/q2087, every legal chart point has two `U_next` roots, but the
+materialized `x6` layer and selector cover `gamma^2=U+2` split by B-fiber into
+0/middle/full lift profiles.  So the next CAS pass should attach those layers
+and extract their branch/Kummer classes; the bare U double cover is not a
+source and does not justify GPU production.
+The nearest visible classifier for those lift profiles is now negative:
+[P27 B-Line Reduced-Lift Classifier Screen](evidence/p27_b_line_reduced_lift_classifier_20260622.md).
+Across q1607/q1847/q2087, no pair of named atoms, rational-linear factors, or
+monic irreducible quadratic factors classifies the 0/mixed/full B-fiber lift
+profile.  This closes the obvious two-character sampler shortcut and keeps the
+lane pointed at actual branch/Kummer extraction.
+That result is now reconciled with the frozen legal B fixture:
+[P27 B-Line Reduced-Domain Reconciliation](evidence/p27_b_line_reduced_domain_reconcile_20260622.md).
+The legal fixture equals `legal_b_maps`, is contained in the point-count chart,
+and has no mixed fibers: `lift_units=2` is exactly `d3 plus`, while
+`lift_units=0` is exactly `d3 minus`.  The mixed point-count fibers are outside
+the selected-source legal domain, so the next CAS pass must impose that
+legal/core cut before extracting branch/Kummer classes.
+The first second-fiber artifact is now frozen:
+[P27 B-Line Second Reduced-Fiber Fixture](evidence/p27_b_line_second_reduced_fiber_20260622.md).
+On the legal `f3=+1` B-domain, each active row has `64` x7 occurrences,
+`16` distinct x7 roots, and `8` values of `v=x7+1/x7`, with
+`f4=chi(v+2)` throughout q1607/q1847/q2087.  Stable plane relations in
+`(B,v)` and `(B,v+2)` are absent through degree `20`, so the B-line ask is now
+a true f3-vs-f4 Kummer/divisor class comparison, not another GPU bucket.
+The transition/orientation layer is now explicit too:
+[P27 B-Line Transition Closure And Orientation](evidence/p27_b_line_transition_closure_orientation_20260622.md).
+The generic quotient transition
+`(v^2-4)^2 - 4*u*(v^2-4)*(v+A) + 16*(v+A)^2 = 0` has `4` v-roots per u-root,
+while the actual selected source keeps exactly the `2` roots with
+`chi(v^2-4)=chi(v+A)=+1`.  That half is just the visible lift from quotient
+`v` to actual `x7`; `chi(v+2)=f4(B)` is already constant on the larger generic
+transition.  The live CAS object is therefore the staged cover
+`F_A(u,v)=0`, `rho^2=v^2-4`, `gamma^2=v+2`, and the live question is whether
+`gamma` is a sourceable Kummer class rather than a fresh half-cover.
+The first gamma norm/coboundary screen is now bounded:
+[P27 B-Line Gamma Norm/Coboundary Boundary](evidence/p27_b_line_gamma_norm_coboundary_20260622.md).
+`Norm_4(v+2)=16*(A-2)^2`, and the actual/missing two-root gamma norms are
+always square in q1607/q1847/q2087.  But the naive parent-`x6` norm formula is
+false, and no visible pair-invariant product through weight `4` predicts
+`f4`.  This keeps a real H90/coboundary CAS question alive while killing
+gamma norm-triviality as a direct GPU/source rule.
+The explicit H90 quotient is now computed:
+[P27 B-Line Gamma H90 Quotient](evidence/p27_b_line_gamma_h90_quotient_20260622.md).
+For `r=(v1+2)/(v2+2)` and `h^2=r`, the identities `r+1/r=u` and
+`(h+1/h)^2=u+2` hold with zero failures.  Thus the quotient collapses to the
+already-imposed first reduced `f3` layer and does not predict `f4`; the live
+object is now `gamma` as a class over that f3/H90 layer.
+The visible f3/H90-layer screen is also negative:
+[P27 B-Line Gamma Over F3/H90 Layer Relation Screen](evidence/p27_b_line_gamma_f3_layer_relation_20260622.md).
+After adjoining both sheets `H=+/-(h+1/h)`, stable pair-coordinate screens in
+`(B,H)`, `(B,tau)`, `(B,H^2)`, and `(B,tau_sym)` do not expose `f4`.  The live
+B-line task is now actual divisor/Kummer-class extraction for `gamma` over the
+normalized f3/H90 layer, not another visible coordinate bucket.
+That extraction now has a compact handoff:
+[P27 B-Line Gamma Class Handoff](evidence/p27_b_line_gamma_class_handoff_20260622.md).
+It freezes q1607/q1847/q2087 rows for the staged object
+`A=B^2-2`, `H^2=u+2`, `F_A(u,v)=0`, and `gamma^2=v+2`.  Every active parent
+has four generic transition roots, two materialized roots, two discarded roots,
+constant `chi(v+2)` on the generic roots, and zero failures in the norm/H90
+identities.  The next accepted B-line result must classify this `gamma` class
+as pullback/coboundary/quotient/recurrent, or kill it as a fresh half-cover.
+The class now has an explicit V4 factorization:
+[P27 B-Line Gamma V4 Factorization](evidence/p27_b_line_gamma_v4_factorization_20260622.md).
+Writing `Y=v+2`, the quartic `P(Y)` has square discriminant and split cubic
+resolvent; after adjoining `R^2=H^2-4` and `S^2=B^2+H^2-4`, its roots are
+`(H +/- R)*(H +/- S)`.  Thus `f4=chi(v+2)=alpha*beta`, where
+`alpha=chi(H+R)` and `beta=chi(H+S)`.  Both factors flip under `H -> -H`,
+while the product is invariant and constant on active B.  This gives the next
+bounded GPU/CAS target: test the successive `alpha_j,beta_j` phase sequence
+for recurrence or telescoping; do not promote either factor as a standalone
+bucket.
+The visible gamma-square shortcut is now killed:
+[P27 B-Line Gamma Specialized Square Smoke](evidence/p27_b_line_gamma_specialized_square_smoke_20260622.md).
+In irreducible `GF(7)` and `GF(23)` one-parameter specializations of the
+`B/H/Y` transition, `Y=v+2` is not square while `Norm(Y)` remains the expected
+square.  So the V4 norm-square pattern does not trivialize gamma on the
+visible B/H layer; the remaining task is still normalized divisor/Kummer
+class extraction or a recurrence/telescoping relation.
+The first phase-sequence screen is negative:
+[P27 B-Line Alpha/Beta Phase Sequence Screen](evidence/p27_b_line_alpha_beta_phase_sequence_20260622.md).
+On `3000+3000` p27 train/heldout starts, the main next-product rates stay near
+random half-loss, and link products such as `alpha_j*alpha_{j+1}` remain near
+`1/2`.  The small gate4-to-gate5 phase-state skew is only about `1.1x`
+conditional and costs a half split, below the source-normalized promotion bar.
+Guard-field all-plus/all-minus plateaus stop at different gates, so they are
+field-tail artifacts.  Keep alpha/beta as optional telemetry columns, not a
+production mode.
+The natural sheet-orientation loophole is also closed:
+[P27 B-Line Oriented Phase-Word Screen](evidence/p27_b_line_oriented_phase_word_screen_20260622.md).
+With `H=(x+1)/sqrt(x)`, `alpha=+1` and `beta` equals the actual selected gate
+bit through gate 9 on `6000+6000` p27 starts.  The apparent conditional lifts
+keep the same target/source denominator as baseline, so this orientation is a
+tautological gate filter rather than a recurrence.
+The pre-registered phase-word source screen is negative too:
+[P27 B-Line Phase-Word Source Screen](evidence/p27_b_line_phase_word_source_screen_20260622.md).
+On `6000+6000` p27 train/heldout starts, natural V4 words
+(`alpha_j`, `beta_j`, adjacent products, and cumulative products) fail the
+`1.25x` conditional lift bar and all lose absolute target/source after the
+phase split.  This kills natural short phase words as production filters; GPU
+phase work is now only a scale/diagnostic test unless it finds a new named
+recurrence or sourceable sheet choice.
+The GPU-scale version is now pre-registered:
+[P27 B-Line Phase GPU Telemetry Handoff](evidence/p27_b_line_phase_gpu_telemetry_handoff_20260622.md)
+with manifest
+`research/p27/archive/fixtures/p27_b_line_phase_gpu_telemetry_suite_20260622.json`.
+It asks for bounded `x16blinephaseprobe` telemetry emitting
+`alpha_j,beta_j,alpha_j*beta_j` against actual selected bits with raw-source
+denominators.  Promotion requires heldout source-normalized recurrence or a
+named Kummer/divisor hypothesis; matching the small CPU half-loss screen is a
+kill.
+The extension-field denominator audit is also negative:
+[P27 B-Line Gamma Extension Count](evidence/p27_b_line_gamma_extension_count_20260622.md).
+The new finite-field engine replays `q=607` exactly against the earlier
+prime-field point-count probe, then counts `GF(7^3)`, `GF(7^4)`, `GF(7^5)`,
+`GF(23^2)`, and `GF(23^3)`.  In every tested field,
+`selector_gamma_points = materialized_x6_points`, and the larger odd
+extensions have near-half selector rates (`0.5169` for `GF(7^5)`, `0.5207`
+for `GF(23^3)`).  This says `gamma^2=U+2` is coupled to the ordinary
+materialized `x6` denominator, not a cheaper source stratum.  Continue with
+offline Kummer/divisor extraction only; do not run gamma bucket production.
+The reduced-cover CAS staging now has a better attack order:
+[P27 B-Line Reduced-Cover Charted Magma Staging](evidence/p27_b_line_reduced_cover_charted_magma_20260622.md).
+Online q7 product saturation fails first at `Saturation(J,X)`.  Adding an
+explicit chart variable `X*iX=1` makes the no-R reduced cover saturate as a
+dimension-1 scheme with 6 basis equations; the full compactD_R model is
+dimension 1 before remaining saturation; and the fully localized full model is
+dimension 1 with 12 equations and no saturation stage.  This is now the
+concrete offline Magma/Sage object for the B-line moonshot: normalize the
+localized complete intersection, then compute compactD/gamma branch classes.
+Follow-up invariant probes show the web endpoint cannot compute even
+degree/reducedness/irreducibility on that localized chart, so these invariants
+must also be part of the offline CAS ask.
+The layer-count follow-up gives a sharper simplification:
+[P27 B-Line Localized Cover Layer Count](evidence/p27_b_line_localized_cover_layer_count_20260622.md).
+Across `607`, `7^3`, `7^4`, `7^5`, `7^6`, `23^2`, and `23^3`, the probe finds
+zero mismatches for `chi(compactD_R_rhs / beta_rhs)=chi(d_next)`.  Since the
+reduced `U_next` equation makes `d_next` square, compactD_R is a twinned beta
+layer on the reduced cover, not a fresh first CAS layer.
+[P27 B-Line CompactD/Beta/Dnext Squareclass](evidence/p27_b_line_compact_beta_dnext_squareclass_20260622.md)
+then verifies the corresponding Magma function-field `IsSquare` check over
+`GF(7)` and `GF(23)`: `compactD_R_rhs/(beta^2*d_next)` is square with
+`root^2` checked in both fields.  The B-line normalization target is now the
+no-R reduced cover; the remaining squareclass task is lifting this witness
+beyond the q7/q23 smoke if CAS resources permit.
+The no-R reduced cover is also no longer a naive low-genus hope:
+[P27 B-Line No-R Genus Pressure](evidence/p27_b_line_noR_genus_pressure_20260622.md).
+A one-component Hasse-Weil pressure read of the same layer counts violates
+genus `<= 1` in `5/7` tested fields and reaches `g >= 11` under that reading.
+If the cover is reducible or field-of-definition sensitive, that is the next
+structure to compute.  The live CAS ask is components, quotients, and Prym
+decomposition of the no-R chart before compactD_R/gamma are added.
+That ask is now packaged as an executable packet:
+[P27 No-R Quotient/Prym Test Packet](evidence/p27_noR_quotient_prym_test_packet_20260622.md).
+Promote only a direct source map, a low-genus quotient carrying the selected
+class, or an f3/f4 coupling; kill constant-factor filters and GPU prechecks
+that pay a fresh classification toll.
+The extension behavior now has a sharper routing test:
+[P27 B-Line No-R Closed-Point Pressure](evidence/p27_b_line_noR_closed_point_pressure_20260622.md).
+Over both base `7` and base `23`, there are no degree-1 affine closed points
+but there are nonzero closed points in coprime degrees `2` and `3`.  This
+requires the CAS pass to compare degree-2 and degree-3 base changes and compute
+Frobenius component permutation/gamma descent, not just one small-field genus.
+The fiber-level localization is now recorded too:
+[P27 B-Line No-R Frobenius Fiber Profile](evidence/p27_b_line_noR_frobenius_fiber_20260622.md).
+Degree-3 activity sits over degree-3 `B` orbits in both base families, while
+quadratic activity can occur by fiber splitting over base-field `B` values.
+So the CAS pass must separate B-orbit degree from fiber-extension degree.
+The coordinate-degree microscope sharpens this split:
+[P27 B-Line No-R Coordinate Degree Profile](evidence/p27_b_line_noR_coordinate_degree_20260622.md).
+Cubic activity is a `B`-orbit phenomenon; quadratic activity includes fixed-`B`
+fiber extensions, with a clean `GF(7^2)` case where only `W` or `T` leaves the
+base field.  The next no-R CAS run should split into cubic B-orbit and
+quadratic fixed-B fiber subtests.
+The B-orbit invariant screen now closes the visible shortcut:
+[P27 B-Line No-R B-Orbit Invariant Screen](evidence/p27_b_line_noR_borbit_invariant_screen_20260622.md).
+Active degree-2 and degree-3 B-orbits have square `Norm(B)` and stable
+Frobenius signatures, so this is real component/support structure.  But
+`Norm(B)` is not a gamma selector: degree-2 orbits are mostly or exactly
+half/half, and the one exact cubic linear law in `GF(7^3)` fails at
+`GF(23^3)`.  Keep B-orbit as a quotient/Prym extraction target, not as a GPU
+bucket or trace/norm character sampler.
+The quadratic split has already killed one tempting branch:
+[P27 B-Line No-R Quadratic Subcover Classifier](evidence/p27_b_line_noR_quadratic_subcover_classifier_20260622.md).
+Across `q = 7, 23, 71, 103, 167`, the `W/T`-only fixed-`B` class is always an
+8-point `gamma=0` branch.  Keep only `beta_U_fixedB`, `hidden_mixed_fixedB`,
+and B-orbit quotient/component tests as active no-R CAS targets.
+The fixed-`B` character screen gives one support law:
+[P27 B-Line No-R Fixed-B Character Screen](evidence/p27_b_line_noR_fixedB_character_screen_20260622.md).
+`beta_U_fixedB` support is exactly `chi(B)=+1` on the tested fixed-`B` domain,
+but its gamma polarity is not stable; `hidden_mixed` small-field `B +/- 2`
+patterns fail at `q=167`.  This is a CAS support gate, not a GPU sampler.
+The beta_U class now has a named norm target:
+[P27 B-Line No-R Beta_U Norm Descent](evidence/p27_b_line_noR_betaU_norm_descent_20260622.md).
+Across `q = 23, 71, 103, 167, 199, 263`, gamma descends as
+`chi_base(Norm(Unext+2))`, is uniform per active base `B`, and matches the
+`16` versus `32` beta_U fiber-size split.  The next beta_U CAS test is divisor
+extraction for this norm class on the `chi(B)=+1` support.
+The norm map profile is sharper:
+[P27 B-Line No-R Beta_U Norm-Fiber Profile](evidence/p27_b_line_noR_betaU_norm_fiber_profile_20260622.md).
+In `23^2,71^2,103^2,167^2,199^2,263^2,311^2`, `gamma=+1` is exactly the
+low-support side of the norm map: each active `B` has `1` or `8` distinct
+`Norm(Unext+2)` values.  `gamma=-1` has `9`, `12`, `14`, or `16`.  This is a
+real branch/ramification target for CAS, but not a production sampler because
+the support count is obtained only after enumerating the beta_U fiber.
+The cheap visible precursor is now replayed and killed:
+[P27 B-Line No-R Beta_U B-Character Replay](evidence/p27_b_line_noR_betaU_b_character_replay_20260622.md).
+In q199/q263/q311, beta_U support is still exactly `chi(B)=+1`, but the
+`gamma=+1` / low-norm-support side is not any named atom, linear factor, or
+irreducible quadratic `B` character.  So the norm profile is CAS
+branch/ramification data, not a GPU B-bucket.
+The two-gate quotient is now killed too:
+[P27 B-Line No-R Beta_U Norm/F4 Descent](evidence/p27_b_line_noR_betaU_norm_f4_descent_20260622.md).
+After beta_U `gamma=+1`, `f4` remains mixed on `B`, on
+`N=Norm(Unext+2)`, and on the joint quotient `(B,N)` in
+`71^2,167^2,199^2,263^2,311^2`.  Thus beta_U is a clean f3/materialization
+class and norm-map branch target, but not a two-gate sampler.
+The obvious plane-curve shortcut is now screened:
+[P27 B-Line No-R Beta_U Norm Relation Screen](evidence/p27_b_line_noR_betaU_norm_relation_20260622.md).
+`(B, Norm(Unext+2))` has no stable extra bidegree relation through `B12_N16`;
+the lone `q=199` signal dies at `q=263` and `q=311`.  Keep beta_U as a
+divisor/Kummer extraction target, not a low-degree plane-curve sampler.
+The beta_U next-gate check draws the first hard boundary:
+[P27 B-Line No-R Beta_U Next-Gate Probe](evidence/p27_b_line_noR_betaU_next_gate_20260622.md).
+On gamma-positive beta_U rows, `Unext=x6+1/x6` materializes cleanly and
+`chi(v+2)=chi(x7)` for the next roots, but every active gamma-positive `B`
+row has both f4 signs.  Thus beta_U is a clean f3/materialization Kummer
+class, not a direct two-gate sampler.  Compare f4 only after normalization;
+do not send beta_U gamma-positive rows to GPU production.
+The pair-level f4 check sharpens that boundary:
+[P27 B-Line No-R Beta_U F4 Pair Probe](evidence/p27_b_line_noR_betaU_f4_pair_20260622.md).
+For each x6, the ordinary halving norm
+`x7_plus*x7_minus=-4*(A*x6+1)` holds exactly, explaining same-sign versus
+mixed x7 pairs.  But same-plus versus same-minus is still not selected, and
+reciprocal x6 pair products are not stable.  Carry `A*x6+1` into CAS as
+orientation data; do not promote x6-pair buckets.
+The visible same-sign selector screen is also negative:
+[P27 B-Line No-R Beta_U Same-Sign Selector Screen](evidence/p27_b_line_noR_betaU_same_sign_selector_20260622.md).
+After restricting to same-sign x7 pairs, natural x6-level atoms and products
+through weight `3` do not select same-plus versus same-minus.  Best labels are
+weak and field-dependent; `359^2` only reaches `276/456`.  This closes the
+visible beta_U f4-product route absent a named new coordinate.
+The fixed-`B` comparison now explains why beta_U remains first in that queue:
+[P27 B-Line No-R Fixed-B Norm Comparison](evidence/p27_b_line_noR_fixedB_norm_comparison_20260622.md).
+Across `q = 23, 71, 103, 167, 199, 263, 311`, both beta_U and hidden_mixed
+have zero norm-descent mismatches and zero per-`B` sign conflicts.  But
+hidden_mixed's visible fiber split is `chi(B)` (`32` points for square `B`,
+`64` for nonsquare `B`), while beta_U's `16/32` split is controlled by
+`gamma` itself.  So hidden_mixed stays as a second-pass Kummer comparison; the
+first CAS extraction target is still beta_U `Norm(Unext+2)` on
+`chi(B)=+1` support.
+The square-`B` relation is now explicit:
+[P27 B-Line No-R Fixed-B Norm Relation](evidence/p27_b_line_noR_fixedB_norm_relation_20260622.md).
+On the common square-`B` support, `gamma_hidden = gamma_beta` in every tested
+quadratic field.  This demotes hidden_mixed as an independent first-sign
+source; keep it as related component/Prym data for the beta_U class.
+The hidden_mixed next-gate check is also negative:
+[P27 B-Line No-R Hidden_Mixed Next-Gate Probe](evidence/p27_b_line_noR_hidden_mixed_next_gate_20260622.md).
+Gamma-positive nonsquare-`B` hidden_mixed rows do not materialize to x6.
+Gamma-positive square-`B` rows materialize, but every active `B` row has mixed
+f4.  This kills hidden_mixed gamma=+1 as a continuation sampler; keep it only
+as second-pass normalized Kummer/Prym comparison data.
 The B-line visible two-gate quartic shortcut is closed as well:
 [P27 B-Line Gate4-Prefix Quartic q1847 Screen](evidence/p27_b_line_gate4_prefix_quartic_q1847_screen_20260622.md).
 It scans `6,300,872,423` q1847 coefficient triples for
@@ -1014,6 +1363,16 @@ full-rank, but `(B,s,m)` has the stable equation
 Together with the tautology `B^2+c^2=4`, this is a cleaner CAS staging
 coordinate for the legal pullback.  It still does not select the sparse legal
 B-domain, so it is not a GPU sampler by itself.
+The source-sheet follow-up is negative:
+[P27 Conic-Pair Source-Sheet Relation Screen](evidence/p27_conic_pair_source_sheet_relation_20260622.md).
+Joining the staged conic preimages to actual residual source sheets `X,W,T`
+does not reveal a cheap second relation.  `(X,R,L)`, `(W,s,m)`, and `(T,s,m)`
+are full-rank through degree `12`, pair projections such as `(X,s)` and
+`(X,R)` are full-rank through degree `16`, and `(X,s,m)` has no relation
+through degree `8`.  The low-degree relations that do appear are inherited
+source/staging equations (`W^2=X^3-X`, the T-cover, `B(X)`, and `(B,s,m)`).
+So the conic route remains an offline normalization/Kummer-class problem, not
+a direct source-sheet GPU sampler.
 The incidence follow-up prices that surface:
 [P27 BSM Surface Incidence Probe](evidence/p27_bsm_surface_incidence_20260622.md).
 Over q1607/q1847/q2087 the BSM surface has about `q^2` points and hits
@@ -1037,6 +1396,14 @@ staged surface.  Across q1607/q1847/q2087, `(B,s)`, `(B,m)`, and `(s,m)` have
 no `d4+` extra relation through degree `12`, and `(B,s,m)` degree `4` is again
 only the inherited BSM equation shared by legal, `d3+`, `d4+`, and `d4-`.
 So BSM remains CAS staging, not a visible two-gate coupling.
+The BSM surface is now identified with the ordinary halving cover:
+[P27 BSM Halving-Cover Identity](evidence/p27_bsm_halving_cover_identity_20260622.md).
+With `A=B^2-2`, `x=m^2/16`, and `z=s^2`, the BSM equation becomes
+`z^2 - 4*(x+1)*z - 4*x*(B^2-4)=0`, whose discriminant is
+`16*(x^2+A*x+1)`.  Every nondegenerate BSM point has `x` square and
+halving-discriminant square; canonical d3-plus rows have exactly eight BSM
+lifts, while d3-minus rows have none.  This demotes BSM from a peer moonshot
+lane to a coordinate view of the known one-step selected halving cover.
 
 The first raw quotient screen is negative:
 [P27 Conic-Pair Low-Degree Relation Screen](evidence/p27_conic_pair_lowdegree_relation_20260621.md).
@@ -1496,6 +1863,12 @@ behavior on p27 samples.  Small torsion/coset projections and visible
 branch-coordinate rational functions are negative as explanations for
 `domain_line` or `T_line`.
 
+The first visible elliptic divisor follow-up is also negative:
+[P27 Trace/Norm Elliptic Line-Divisor Screen](evidence/p27_trace_norm_elliptic_line_divisor_screen_20260622.md).
+Vertical divisors `u-c` and affine divisors `v+m*u+c` with `|m|,|c| <= 4`
+produce no exact selector; the best heldout target lift is only `1.011x`.
+So there is no small `L(3O)` line-divisor bucket worth sending to GPU.
+
 The large-factor elliptic quotient route is also negative:
 [P27 Elliptic Large-Factor Collision Audit](evidence/p27_elliptic_large_factor_collision_20260621.md).
 For the p27-specific factor `345451` and small multiples through
@@ -1543,6 +1916,19 @@ Under `sigma(t)=-1/t`, both `pref=chi(y-2)` and `h*vq` pick up the same
 boundary `-chi(a)`, so `T=pref*h*vq` descends.  This gives a narrow expert ask:
 identify or exploit the descended quotient of two same-boundary Hilbert-90 sign
 objects on `C: b^2=16-a^4` / `E: v^2=u^3-u`.
+The visible automorphism quotient follow-up is now negative:
+[P27 Trace/Norm Automorphism Quotient Obstruction](evidence/p27_trace_norm_automorphism_quotient_obstruction_20260622.md).
+On four heldout seeds, `T_line` is invariant under `t -> -1/t` on `65120`
+comparable rows, while `pref` and `h*vq` both have the exact `-chi(a)`
+boundary.  But under `t -> 1/t` and `t -> -t`, `T_line` is mixed
+`32568/32552` with no exact reference sign.  Thus the remaining identity must
+live on the `C/E` quotient; it does not descend to a smaller visible
+automorphism quotient.
+
+The first visible divisor family on that quotient is now bounded negative:
+[P27 Trace/Norm Elliptic Line-Divisor Screen](evidence/p27_trace_norm_elliptic_line_divisor_screen_20260622.md).
+It checked `u-c` and `v+m*u+c` for `|m|,|c| <= 4`; exact counts were zero
+for train and heldout, with heldout target lift at only `1.011x`.
 
 A direct trace/anti-trace follow-up is negative:
 [P27 H/V Trace Coupling Audit](evidence/p27_hv_trace_coupling_audit_20260621.md).
@@ -1724,10 +2110,90 @@ The post-quad moonshot queue is now consolidated:
 [P27 First-Class Moonshot Tests After Quadratic Probe](evidence/p27_first_class_moonshot_tests_after_quad_20260622.md).
 After the GPU quadratic-gate validation and the q1847 B/K/lambda quartic
 closures, the first-class tests are coordinated A/B/K/Sroot Kummer-sequence
-extraction, BSM staged legal-pullback normalization, and the trace/norm
-half-norm phase identity.  GPU is reserved for bounded telemetry or a named
+extraction and the trace/norm half-norm phase identity.  BSM is demoted to
+halving-cover notation unless a non-inherited selector appears.  GPU is
+reserved for bounded telemetry or a named
 direct sampler; fixed one-bit filters and visible quartic buckets are not
 production moonshots.
+
+The coordinated CAS request is now compact:
+[P27 A/B/K Symbolic Kummer CAS Brief](evidence/p27_abk_symbolic_kummer_cas_brief_20260622.md).
+It puts the conic transition, reduced B-line first transition, f4/f3
+`F_A(U,V)` transition, and V4 gamma factorization into one normalization and
+Kummer-class extraction brief.  This is the current offline CAS/expert object
+that could still yield a below-sqrt source law; without such a named relation,
+GPU remains limited to `Dplus` fused pricing and bounded telemetry.
+The first executable q7 chart for that brief is
+`archive/fixtures/p27_abk_f3_f4_localized_noR_q7_magma.m`; the online Magma
+calculator was temporarily disabled when submitted, so no genus/dimension
+answer exists yet.
+Finite-field chart counts are now available:
+[P27 A/B/K F3/F4 Chart Count](evidence/p27_abk_f3_f4_chart_count_20260622.md).
+They show that the f3-plus-only B fibers reproduce the prior gamma handoff,
+while all-chart mixed fibers are staging artifacts.  This keeps the live task
+as selected-component Kummer extraction and kills all-chart gamma buckets as a
+GPU source.
+The next-layer count is positive as structure:
+[P27 A/B/K F4/F5 Transition Count](evidence/p27_abk_f4_f5_transition_count_20260622.md).
+On the selected `f4=+1` component, `chi(W+2)` is constant across
+`F_A(V,W)=0` and matches frozen `f5(B)` in q1607/q1847/q2087.  Because the
+guard-field `f5` rows are one-sided tails, this promotes CAS comparison of
+repeated gamma classes, not GPU production.
+P27 telemetry now sets the practical boundary:
+[P27 Gamma-Chain 20k Telemetry](evidence/p27_gamma_chain_p27_20k_telemetry_20260622.md).
+On `20k + 20k` train/heldout samples, gamma products and V4 phase links stay
+near ordinary half-gates.  The A/B/K gamma recurrence is therefore a CAS
+class-comparison lane, while GPU should stay limited to bounded named
+telemetry or `Dplus` fused pricing.
+The GPU-scale coupling run confirms the boundary:
+[P27 GPU Recurrence-Coupling Telemetry](evidence/p27_gpu_recurrence_coupling_20260622.md).
+On an A40, `200M` raw draws through gates `3..12` and `200M` raw draws through
+gates `3..16` validated the formulas with zero mismatches, but no sign-word
+bucket cleared promotion; max heldout all-plus lift was `1.053x` versus the
+`1.25x` bar.  This kills current sign-word/gamma GPU production and leaves
+CAS Kummer-class extraction plus separate `Dplus` fused pricing.
+The repeated-gamma CAS object is now executable:
+[P27 A/B/K Gamma4/Gamma5 CAS Fixture](evidence/p27_abk_gamma4_gamma5_cas_fixture_20260622.md).
+It stages `gamma4^2=V+2` and `gamma5^2=Wnext+2` on the localized no-R A/B/K
+chart.  Online Magma returned a gateway timeout, so this is an offline
+Magma/Sage normalization and Kummer-class comparison task.
+The current sqrt-beating queue is consolidated here:
+[P27 Sqrt-Beating Test Queue After Coupling Kill](evidence/p27_sqrt_beating_test_queue_after_coupling_kill_20260622.md).
+It makes the priority explicit: A-level Kummer extraction is the mathematical
+mainline, fused/native `Dplus` is the only immediate GPU engineering ask, and
+the new bridge test is reconstructing whether `Dplus` H90 coordinates map
+cheaply to the A-level `d3` surface.  More gamma/sign-word GPU buckets stay
+killed unless CAS names a quotient or source.
+The coordinate bridge part is now solved:
+[P27 Trace/Norm Dplus A-Coordinate Bridge](evidence/p27_trace_norm_dplus_a_coordinate_bridge_20260622.md).
+On same-stream `Dplus` rows, `A = (t - 1/t)^4/4 - 2` exactly matches the
+candidate A, so the next cross-lane question is not finding `A`; it is comparing
+the pulled-back A-level `d3` class with the H90 payload
+`A_eta = U_eta + z*W_eta`.  The bridge is not a source shrink by itself:
+`d3/d4` remain balanced half-gates in the probe.
+The pulled-back `d3` class is now sharper:
+[P27 Trace/Norm Dplus X6/U-Class](evidence/p27_trace_norm_dplus_x6_uclass_20260622.md).
+After `Dplus`, every tested y has four `U=x6+1/x6` values and eight `x6`
+values; `chi(U+A)=+1`, so `d3=chi(x6)` across the whole second-halving sheet.
+This makes the next CAS comparison `x6` squareclass versus H90 `A_eta`, not an
+undifferentiated A-level sign.
+The cheap visible formula for the four-`U` cover is negative:
+[P27 Trace/Norm Dplus Four-U Rational Screen](evidence/p27_trace_norm_dplus_ucover_rational_screen_20260622.md).
+No elementary coefficient of `prod(Z-U_i)` is a rational function of degree
+`(20,20)` in `t`, `a=t-1/t`, or `A` on the train/heldout screen.  Continue with
+cover normalization and class comparison, not coefficient fishing.
+The positive replacement is the reciprocal tower:
+[P27 Trace/Norm Dplus Reciprocal Tower](evidence/p27_trace_norm_dplus_reciprocal_tower_20260622.md).
+The candidate `xp` roots are reciprocal with `X=t^3+2*t^2-1/t`, and the tower
+is `F_A(X,U5)=0`, `F_A(U5,U6)=0`, then `x6^2-U6*x6+1=0`.  This is now the
+CAS object for comparing `chi(x6)` with H90 `A_eta`.
+The small-field descent audit then sets the boundary:
+[P27 Trace/Norm Dplus Reciprocal Tower Small-Field Descent](evidence/p27_trace_norm_dplus_reciprocal_tower_smallfield_descent_20260622.md).
+Over q607/q1607/q1847, the naked reciprocal tower has mixed `A`/`B` fibers for
+`d3=chi(x6)=chi(U6+2)`, even after materialization filters.  Thus the selected
+legal/core source cut is essential: do not hand GPU a naked `F_A` tower
+sampler, and do not compare the tower to H90 `A_eta` as if it were already the
+source-level A/B Kummer class.
 
 ### Card 4c: K-Line Fit Significance
 
@@ -1793,9 +2259,11 @@ Status: active theorem ask, narrowed.  Explain or exploit the coupling
 `T = chi(y-2)*h*vq`, where `vq` carries the `chi(a)` b-flip cocycle and `h`
 is b-invariant.  One-factor explanations and visible norm/branch-product
 explanations are killed; the current positive handle is the same-boundary
-Hilbert-90 involution identity.  Simple trace/anti-trace/norm evaluations of
-the H/V sections are also killed.  The easy quotient automorphism orbit
-explains `domain_line` but not `T_line`.
+Hilbert-90 involution identity under `t -> -1/t`.  The other visible
+automorphisms `t -> 1/t` and `t -> -t` mix `T_line`, so there is no smaller
+automorphism quotient.  Simple trace/anti-trace/norm evaluations of the H/V
+sections are also killed.  The easy quotient automorphism orbit explains
+`domain_line` but not `T_line`.
 
 ## Active Interpretation
 

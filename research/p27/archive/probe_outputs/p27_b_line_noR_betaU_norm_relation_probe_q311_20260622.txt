@@ -1,0 +1,35 @@
+p27 B-line no-R beta_U norm relation probe
+question = does (B, Norm(Unext+2)) have a small bidegree relation?
+fields = 311^2
+bidegrees = [(2, 4), (4, 8), (6, 8), (8, 12), (10, 16), (12, 16)]
+
+GF(311^2) q=96721
+  all:
+    rows = 960
+    unique = 339
+    B2_N4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+    B4_N8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+    B6_N8: monomials=63 rank=63 nullity=0 forced=0 extra=0
+    B8_N12: monomials=117 rank=117 nullity=0 forced=0 extra=0
+    B10_N16: monomials=187 rank=187 nullity=0 forced=0 extra=0
+    B12_N16: monomials=221 rank=221 nullity=0 forced=0 extra=0
+  gamma_plus:
+    rows = 256
+    unique = 72
+    B2_N4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+    B4_N8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+    B6_N8: monomials=63 rank=63 nullity=0 forced=0 extra=0
+    B8_N12: monomials=117 rank=72 nullity=45 forced=45 extra=0
+    B10_N16: monomials=187 rank=72 nullity=115 forced=115 extra=0
+    B12_N16: monomials=221 rank=72 nullity=149 forced=149 extra=0
+  gamma_minus:
+    rows = 704
+    unique = 267
+    B2_N4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+    B4_N8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+    B6_N8: monomials=63 rank=63 nullity=0 forced=0 extra=0
+    B8_N12: monomials=117 rank=117 nullity=0 forced=0 extra=0
+    B10_N16: monomials=187 rank=187 nullity=0 forced=0 extra=0
+    B12_N16: monomials=221 rank=221 nullity=0 forced=0 extra=0
+
+p27_b_line_noR_betaU_norm_relation_probe_rows=1/1

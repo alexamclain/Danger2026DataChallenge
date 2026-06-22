@@ -1,0 +1,111 @@
+p27 B-line transition closure probe
+question = is f4 over f3-plus exactly the generic u-to-v halving transition?
+transition = (v^2-4)^2 - 4*u*(v^2-4)*(v+A) + 16*(v+A)^2
+first_fixture = research/p27/archive/fixtures/p27_b_line_reduced_fiber_fixture_20260622.json
+second_fixture = research/p27/archive/fixtures/p27_b_line_second_reduced_fiber_fixture_20260622.json
+q=1607:
+  B_union_extra_fixture_roots = 224
+  B_union_mismatch_actual = 28
+  B_union_mismatch_second_fixture = 28
+  B_union_missing_fixture_roots = 0
+  actual_B = 28
+  actual_edges = 224
+  actual_parent_pairs = 112
+  actual_roots_per_u_2 = 112
+  d3_not_plus_-1 = 336
+  deduped_candidates = 784
+  enum_compact_not_target = 805
+  enum_no_label2_candidate = 408
+  first_plus_B = 28
+  fixture_v_roots_per_B_8 = 28
+  generic_roots_outside_second_fixture_parent = 112
+  generic_roots_per_u_4 = 112
+  generic_v_roots_per_B_16 = 28
+  generic_vplus2_matches_f4 = 28
+  generic_vplus2_sign_classes_1 = 28
+  parent_edge_extra_roots = 0
+  parent_edge_mismatch = 112
+  parent_edge_missing_roots = 224
+  second_collect_B = 28
+  second_collect_vplus2_sign_ok = 448
+  second_fixture_B = 28
+  parent_edge_mismatch_samples:
+    B=32 u=640 generic=[70, 477, 913, 1100] actual=[70, 913]
+    B=32 u=676 generic=[525, 609, 716, 854] actual=[525, 609]
+    B=32 u=1142 generic=[15, 275, 1306, 1365] actual=[275, 1365]
+    B=32 u=1340 generic=[237, 734, 1264, 1518] actual=[237, 1264]
+    B=49 u=427 generic=[6, 796, 1210, 1303] actual=[6, 796]
+    B=49 u=1011 generic=[619, 726, 1116, 1583] actual=[1116, 1583]
+    B=49 u=1107 generic=[66, 235, 1056, 1464] actual=[66, 1056]
+    B=49 u=1422 generic=[148, 420, 834, 1072] actual=[148, 420]
+q=1847:
+  B_union_extra_fixture_roots = 360
+  B_union_mismatch_actual = 45
+  B_union_mismatch_second_fixture = 45
+  B_union_missing_fixture_roots = 0
+  actual_B = 45
+  actual_edges = 360
+  actual_parent_pairs = 180
+  actual_roots_per_u_2 = 180
+  d3_not_plus_-1 = 288
+  deduped_candidates = 1008
+  enum_compact_not_target = 873
+  enum_no_label2_candidate = 468
+  first_plus_B = 45
+  fixture_v_roots_per_B_8 = 45
+  generic_roots_outside_second_fixture_parent = 180
+  generic_roots_per_u_4 = 180
+  generic_v_roots_per_B_16 = 45
+  generic_vplus2_matches_f4 = 45
+  generic_vplus2_sign_classes_1 = 45
+  parent_edge_extra_roots = 0
+  parent_edge_mismatch = 180
+  parent_edge_missing_roots = 360
+  second_collect_B = 45
+  second_collect_vplus2_sign_ok = 720
+  second_fixture_B = 45
+  parent_edge_mismatch_samples:
+    B=7 u=602 generic=[163, 887, 1529, 1676] actual=[887, 1676]
+    B=7 u=774 generic=[748, 827, 1671, 1697] actual=[748, 1671]
+    B=7 u=1101 generic=[327, 1179, 1396, 1502] actual=[1396, 1502]
+    B=7 u=1601 generic=[29, 588, 784, 1309] actual=[588, 784]
+    B=67 u=724 generic=[793, 895, 1230, 1825] actual=[895, 1230]
+    B=67 u=1136 generic=[774, 886, 1184, 1700] actual=[774, 1700]
+    B=67 u=1704 generic=[394, 479, 1009, 1240] actual=[394, 1009]
+    B=67 u=1740 generic=[295, 554, 763, 1654] actual=[554, 1654]
+q=2087:
+  B_union_extra_fixture_roots = 200
+  B_union_mismatch_actual = 25
+  B_union_mismatch_second_fixture = 25
+  B_union_missing_fixture_roots = 0
+  actual_B = 25
+  actual_edges = 200
+  actual_parent_pairs = 100
+  actual_roots_per_u_2 = 100
+  d3_not_plus_-1 = 512
+  deduped_candidates = 912
+  enum_compact_not_target = 1109
+  enum_no_label2_candidate = 520
+  first_plus_B = 25
+  fixture_v_roots_per_B_8 = 25
+  generic_roots_outside_second_fixture_parent = 100
+  generic_roots_per_u_4 = 100
+  generic_v_roots_per_B_16 = 25
+  generic_vplus2_matches_f4 = 25
+  generic_vplus2_sign_classes_1 = 25
+  parent_edge_extra_roots = 0
+  parent_edge_mismatch = 100
+  parent_edge_missing_roots = 200
+  second_collect_B = 25
+  second_collect_vplus2_sign_ok = 400
+  second_fixture_B = 25
+  parent_edge_mismatch_samples:
+    B=16 u=142 generic=[626, 730, 1502, 1884] actual=[730, 1884]
+    B=16 u=524 generic=[52, 675, 1430, 2026] actual=[52, 2026]
+    B=16 u=587 generic=[1242, 1648, 1798, 1834] actual=[1242, 1834]
+    B=16 u=1865 generic=[699, 770, 1896, 2008] actual=[699, 770]
+    B=147 u=1196 generic=[838, 1038, 1074, 1834] actual=[1038, 1834]
+    B=147 u=1612 generic=[138, 969, 1190, 2064] actual=[138, 1190]
+    B=147 u=1632 generic=[1134, 1647, 1863, 1884] actual=[1647, 1884]
+    B=147 u=1735 generic=[196, 383, 939, 1248] actual=[196, 383]
+p27_b_line_transition_closure_probe_rows=1/1
