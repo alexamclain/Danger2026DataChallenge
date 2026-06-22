@@ -116,6 +116,14 @@ useful math step is actual legal-cover normalization or the next Kummer
 selector on top of this staged surface, not more low-degree relation scans in
 the same `(B,s,m)` coordinates.
 
+Update: the next-selector version of this test is also negative:
+[P27 BSM Next-Selector Relation Screen](p27_bsm_next_selector_relation_20260622.md).
+It tests `d4+` after `d3+` in `(B,s)`, `(B,m)`, `(s,m)`, and `(B,s,m)`.
+Across q1607/q1847/q2087, `d4plus_minus_d3` is always zero in the screened
+pair systems through degree `12`, and the degree-4 triple relation is again
+only the inherited BSM equation shared by legal, `d3+`, `d4+`, and `d4-`.
+Thus the BSM surface does not visibly couple two selected gates.
+
 ## Continue / Kill
 
 ```text
@@ -126,6 +134,7 @@ continue = use BSM as a handoff equation for CAS/expert review
 kill = GPU sampling of legal-B-restricted BSM without a legal-B source
 kill = low-degree relation scans in (B,s), (B,m), (s,m), or (B,s,m)
 kill = treating the inherited degree-4 BSM equation as a target selector
+kill = BSM next-selector low-degree relation for d4+ in the screened coordinates
 ```
 
 ```text

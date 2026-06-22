@@ -124,6 +124,7 @@ Use:
 research/p27/evidence/p27_conic_pair_b_enhanced_pullback_20260622.md
 research/p27/evidence/p27_bsm_surface_incidence_20260622.md
 research/p27/evidence/p27_bsm_legal_restricted_relations_20260622.md
+research/p27/evidence/p27_bsm_next_selector_relation_20260622.md
 ```
 
 Staging equation:
@@ -138,6 +139,7 @@ Current pricing:
 surface size ~= q^2
 canonical d3-plus incidence remains constant/q
 legal-B-restricted relation screen finds no extra low-degree selector
+d4-plus next-selector screen finds no extra low-degree relation
 ```
 
 Required computation:
@@ -160,6 +162,7 @@ Kill if:
 ```text
 the staged model keeps the same legal-B denominator
 and the next selector is a fresh independent half-cover
+or BSM only contributes the inherited surface equation
 ```
 
 This is the best conic-chain CAS coordinate, but not a GPU source by itself.

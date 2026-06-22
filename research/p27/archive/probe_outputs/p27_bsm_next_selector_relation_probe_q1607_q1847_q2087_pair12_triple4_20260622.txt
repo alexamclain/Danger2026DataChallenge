@@ -1,0 +1,243 @@
+p27 BSM next-selector relation probe
+legal surface = BSM surface with B in legal B-domain
+targets = d3plus, d4plus_after_d3, d4minus_after_d3
+pair_degrees = [2, 4, 6, 8, 10, 12]
+triple_degrees = [2, 4]
+q1607_base:
+  d3plus_B = 28
+  d3plus_rows = 896
+  d3plus_rows_per_B_32 = 28
+  d4minus_after_d3_B = 9
+  d4minus_after_d3_rows = 288
+  d4minus_after_d3_rows_per_B_32 = 9
+  d4plus_after_d3_B = 19
+  d4plus_after_d3_rows = 608
+  d4plus_after_d3_rows_per_B_32 = 19
+  data_d3plus_bax = 112
+  data_d4minus_bax = 36
+  data_d4plus_bax = 76
+  data_enum_compact_not_target = 805
+  data_enum_no_label2_candidate = 408
+  data_legal_B = 49
+  data_legal_bax = 196
+  inconsistent_den0_pairs = 98
+  legal_surface_rows = 77368
+  skip_m0 = 147
+  surface_rows_per_B_1528 = 19
+  surface_rows_per_B_1592 = 21
+  surface_rows_per_B_1656 = 9
+q1607_B_s:
+  legal_rows = 77368
+  legal_unique = 38684
+  d3plus_rows = 896
+  d3plus_unique = 448
+  d4plus_after_d3_rows = 608
+  d4plus_after_d3_unique = 304
+  d4minus_after_d3_rows = 288
+  d4minus_after_d3_unique = 144
+  deg2: legal_extra=0 d3_extra=0 d3_minus_legal=0 d4plus_extra=0 d4plus_minus_d3=0 d4minus_extra=0 d4minus_minus_d3=0
+  deg4: legal_extra=0 d3_extra=0 d3_minus_legal=0 d4plus_extra=0 d4plus_minus_d3=0 d4minus_extra=0 d4minus_minus_d3=0
+  deg6: legal_extra=0 d3_extra=0 d3_minus_legal=0 d4plus_extra=0 d4plus_minus_d3=0 d4minus_extra=0 d4minus_minus_d3=0
+  deg8: legal_extra=0 d3_extra=0 d3_minus_legal=0 d4plus_extra=0 d4plus_minus_d3=0 d4minus_extra=0 d4minus_minus_d3=0
+  deg10: legal_extra=0 d3_extra=0 d3_minus_legal=0 d4plus_extra=0 d4plus_minus_d3=0 d4minus_extra=3 d4minus_minus_d3=3
+  deg12: legal_extra=0 d3_extra=0 d3_minus_legal=0 d4plus_extra=0 d4plus_minus_d3=0 d4minus_extra=10 d4minus_minus_d3=10
+q1607_B_m:
+  legal_rows = 77368
+  legal_unique = 19342
+  d3plus_rows = 896
+  d3plus_unique = 224
+  d4plus_after_d3_rows = 608
+  d4plus_after_d3_unique = 152
+  d4minus_after_d3_rows = 288
+  d4minus_after_d3_unique = 72
+  deg2: legal_extra=0 d3_extra=0 d3_minus_legal=0 d4plus_extra=0 d4plus_minus_d3=0 d4minus_extra=0 d4minus_minus_d3=0
+  deg4: legal_extra=0 d3_extra=0 d3_minus_legal=0 d4plus_extra=0 d4plus_minus_d3=0 d4minus_extra=0 d4minus_minus_d3=0
+  deg6: legal_extra=0 d3_extra=0 d3_minus_legal=0 d4plus_extra=0 d4plus_minus_d3=0 d4minus_extra=0 d4minus_minus_d3=0
+  deg8: legal_extra=0 d3_extra=0 d3_minus_legal=0 d4plus_extra=0 d4plus_minus_d3=0 d4minus_extra=0 d4minus_minus_d3=0
+  deg10: legal_extra=0 d3_extra=0 d3_minus_legal=0 d4plus_extra=0 d4plus_minus_d3=0 d4minus_extra=3 d4minus_minus_d3=3
+  deg12: legal_extra=0 d3_extra=0 d3_minus_legal=0 d4plus_extra=0 d4plus_minus_d3=0 d4minus_extra=0 d4minus_minus_d3=0
+q1607_s_m:
+  legal_rows = 77368
+  legal_unique = 77368
+  d3plus_rows = 896
+  d3plus_unique = 896
+  d4plus_after_d3_rows = 608
+  d4plus_after_d3_unique = 608
+  d4minus_after_d3_rows = 288
+  d4minus_after_d3_unique = 288
+  deg2: legal_extra=0 d3_extra=0 d3_minus_legal=0 d4plus_extra=0 d4plus_minus_d3=0 d4minus_extra=0 d4minus_minus_d3=0
+  deg4: legal_extra=0 d3_extra=0 d3_minus_legal=0 d4plus_extra=0 d4plus_minus_d3=0 d4minus_extra=0 d4minus_minus_d3=0
+  deg6: legal_extra=0 d3_extra=0 d3_minus_legal=0 d4plus_extra=0 d4plus_minus_d3=0 d4minus_extra=0 d4minus_minus_d3=0
+  deg8: legal_extra=0 d3_extra=0 d3_minus_legal=0 d4plus_extra=0 d4plus_minus_d3=0 d4minus_extra=0 d4minus_minus_d3=0
+  deg10: legal_extra=0 d3_extra=0 d3_minus_legal=0 d4plus_extra=0 d4plus_minus_d3=0 d4minus_extra=0 d4minus_minus_d3=0
+  deg12: legal_extra=0 d3_extra=0 d3_minus_legal=0 d4plus_extra=0 d4plus_minus_d3=0 d4minus_extra=0 d4minus_minus_d3=0
+q1607_B_s_m:
+  legal_rows = 77368
+  legal_unique = 77368
+  d3plus_rows = 896
+  d3plus_unique = 896
+  d4plus_after_d3_rows = 608
+  d4plus_after_d3_unique = 608
+  d4minus_after_d3_rows = 288
+  d4minus_after_d3_unique = 288
+  deg2: legal_extra=0 d3_extra=0 d3_minus_legal=0 d4plus_extra=0 d4plus_minus_d3=0 d4minus_extra=0 d4minus_minus_d3=0
+  deg4: legal_extra=1 d3_extra=1 d3_minus_legal=0 d4plus_extra=1 d4plus_minus_d3=0 d4minus_extra=1 d4minus_minus_d3=0
+q1847_base:
+  d3plus_B = 45
+  d3plus_rows = 1440
+  d3plus_rows_per_B_32 = 45
+  d4minus_after_d3_B = 26
+  d4minus_after_d3_rows = 832
+  d4minus_after_d3_rows_per_B_32 = 26
+  d4plus_after_d3_B = 19
+  d4plus_after_d3_rows = 608
+  d4plus_after_d3_rows_per_B_32 = 19
+  data_d3plus_bax = 180
+  data_d4minus_bax = 104
+  data_d4plus_bax = 76
+  data_enum_compact_not_target = 873
+  data_enum_no_label2_candidate = 468
+  data_legal_B = 63
+  data_legal_bax = 252
+  inconsistent_den0_pairs = 126
+  legal_surface_rows = 116872
+  skip_m0 = 189
+  surface_rows_per_B_1784 = 19
+  surface_rows_per_B_1848 = 18
+  surface_rows_per_B_1912 = 26
+q1847_B_s:
+  legal_rows = 116872
+  legal_unique = 58436
+  d3plus_rows = 1440
+  d3plus_unique = 720
+  d4plus_after_d3_rows = 608
+  d4plus_after_d3_unique = 304
+  d4minus_after_d3_rows = 832
+  d4minus_after_d3_unique = 416
+  deg2: legal_extra=0 d3_extra=0 d3_minus_legal=0 d4plus_extra=0 d4plus_minus_d3=0 d4minus_extra=0 d4minus_minus_d3=0
+  deg4: legal_extra=0 d3_extra=0 d3_minus_legal=0 d4plus_extra=0 d4plus_minus_d3=0 d4minus_extra=0 d4minus_minus_d3=0
+  deg6: legal_extra=0 d3_extra=0 d3_minus_legal=0 d4plus_extra=0 d4plus_minus_d3=0 d4minus_extra=0 d4minus_minus_d3=0
+  deg8: legal_extra=0 d3_extra=0 d3_minus_legal=0 d4plus_extra=0 d4plus_minus_d3=0 d4minus_extra=0 d4minus_minus_d3=0
+  deg10: legal_extra=0 d3_extra=0 d3_minus_legal=0 d4plus_extra=0 d4plus_minus_d3=0 d4minus_extra=0 d4minus_minus_d3=0
+  deg12: legal_extra=0 d3_extra=0 d3_minus_legal=0 d4plus_extra=0 d4plus_minus_d3=0 d4minus_extra=0 d4minus_minus_d3=0
+q1847_B_m:
+  legal_rows = 116872
+  legal_unique = 29218
+  d3plus_rows = 1440
+  d3plus_unique = 360
+  d4plus_after_d3_rows = 608
+  d4plus_after_d3_unique = 152
+  d4minus_after_d3_rows = 832
+  d4minus_after_d3_unique = 208
+  deg2: legal_extra=0 d3_extra=0 d3_minus_legal=0 d4plus_extra=0 d4plus_minus_d3=0 d4minus_extra=0 d4minus_minus_d3=0
+  deg4: legal_extra=0 d3_extra=0 d3_minus_legal=0 d4plus_extra=0 d4plus_minus_d3=0 d4minus_extra=0 d4minus_minus_d3=0
+  deg6: legal_extra=0 d3_extra=0 d3_minus_legal=0 d4plus_extra=0 d4plus_minus_d3=0 d4minus_extra=0 d4minus_minus_d3=0
+  deg8: legal_extra=0 d3_extra=0 d3_minus_legal=0 d4plus_extra=0 d4plus_minus_d3=0 d4minus_extra=0 d4minus_minus_d3=0
+  deg10: legal_extra=0 d3_extra=0 d3_minus_legal=0 d4plus_extra=0 d4plus_minus_d3=0 d4minus_extra=0 d4minus_minus_d3=0
+  deg12: legal_extra=0 d3_extra=0 d3_minus_legal=0 d4plus_extra=0 d4plus_minus_d3=0 d4minus_extra=0 d4minus_minus_d3=0
+q1847_s_m:
+  legal_rows = 116872
+  legal_unique = 116872
+  d3plus_rows = 1440
+  d3plus_unique = 1440
+  d4plus_after_d3_rows = 608
+  d4plus_after_d3_unique = 608
+  d4minus_after_d3_rows = 832
+  d4minus_after_d3_unique = 832
+  deg2: legal_extra=0 d3_extra=0 d3_minus_legal=0 d4plus_extra=0 d4plus_minus_d3=0 d4minus_extra=0 d4minus_minus_d3=0
+  deg4: legal_extra=0 d3_extra=0 d3_minus_legal=0 d4plus_extra=0 d4plus_minus_d3=0 d4minus_extra=0 d4minus_minus_d3=0
+  deg6: legal_extra=0 d3_extra=0 d3_minus_legal=0 d4plus_extra=0 d4plus_minus_d3=0 d4minus_extra=0 d4minus_minus_d3=0
+  deg8: legal_extra=0 d3_extra=0 d3_minus_legal=0 d4plus_extra=0 d4plus_minus_d3=0 d4minus_extra=0 d4minus_minus_d3=0
+  deg10: legal_extra=0 d3_extra=0 d3_minus_legal=0 d4plus_extra=0 d4plus_minus_d3=0 d4minus_extra=0 d4minus_minus_d3=0
+  deg12: legal_extra=0 d3_extra=0 d3_minus_legal=0 d4plus_extra=0 d4plus_minus_d3=0 d4minus_extra=0 d4minus_minus_d3=0
+q1847_B_s_m:
+  legal_rows = 116872
+  legal_unique = 116872
+  d3plus_rows = 1440
+  d3plus_unique = 1440
+  d4plus_after_d3_rows = 608
+  d4plus_after_d3_unique = 608
+  d4minus_after_d3_rows = 832
+  d4minus_after_d3_unique = 832
+  deg2: legal_extra=0 d3_extra=0 d3_minus_legal=0 d4plus_extra=0 d4plus_minus_d3=0 d4minus_extra=0 d4minus_minus_d3=0
+  deg4: legal_extra=1 d3_extra=1 d3_minus_legal=0 d4plus_extra=1 d4plus_minus_d3=0 d4minus_extra=1 d4minus_minus_d3=0
+q2087_base:
+  d3plus_B = 25
+  d3plus_rows = 800
+  d3plus_rows_per_B_32 = 25
+  d4minus_after_d3_B = 7
+  d4minus_after_d3_rows = 224
+  d4minus_after_d3_rows_per_B_32 = 7
+  d4plus_after_d3_B = 18
+  d4plus_after_d3_rows = 576
+  d4plus_after_d3_rows_per_B_32 = 18
+  data_d3plus_bax = 100
+  data_d4minus_bax = 28
+  data_d4plus_bax = 72
+  data_enum_compact_not_target = 1109
+  data_enum_no_label2_candidate = 520
+  data_legal_B = 57
+  data_legal_bax = 228
+  inconsistent_den0_pairs = 114
+  legal_surface_rows = 119224
+  skip_m0 = 171
+  surface_rows_per_B_2040 = 18
+  surface_rows_per_B_2104 = 32
+  surface_rows_per_B_2168 = 7
+q2087_B_s:
+  legal_rows = 119224
+  legal_unique = 59612
+  d3plus_rows = 800
+  d3plus_unique = 400
+  d4plus_after_d3_rows = 576
+  d4plus_after_d3_unique = 288
+  d4minus_after_d3_rows = 224
+  d4minus_after_d3_unique = 112
+  deg2: legal_extra=0 d3_extra=0 d3_minus_legal=0 d4plus_extra=0 d4plus_minus_d3=0 d4minus_extra=0 d4minus_minus_d3=0
+  deg4: legal_extra=0 d3_extra=0 d3_minus_legal=0 d4plus_extra=0 d4plus_minus_d3=0 d4minus_extra=0 d4minus_minus_d3=0
+  deg6: legal_extra=0 d3_extra=0 d3_minus_legal=0 d4plus_extra=0 d4plus_minus_d3=0 d4minus_extra=0 d4minus_minus_d3=0
+  deg8: legal_extra=0 d3_extra=0 d3_minus_legal=0 d4plus_extra=0 d4plus_minus_d3=0 d4minus_extra=3 d4minus_minus_d3=3
+  deg10: legal_extra=0 d3_extra=0 d3_minus_legal=0 d4plus_extra=0 d4plus_minus_d3=0 d4minus_extra=10 d4minus_minus_d3=10
+  deg12: legal_extra=0 d3_extra=0 d3_minus_legal=0 d4plus_extra=0 d4plus_minus_d3=0 d4minus_extra=21 d4minus_minus_d3=21
+q2087_B_m:
+  legal_rows = 119224
+  legal_unique = 29806
+  d3plus_rows = 800
+  d3plus_unique = 200
+  d4plus_after_d3_rows = 576
+  d4plus_after_d3_unique = 144
+  d4minus_after_d3_rows = 224
+  d4minus_after_d3_unique = 56
+  deg2: legal_extra=0 d3_extra=0 d3_minus_legal=0 d4plus_extra=0 d4plus_minus_d3=0 d4minus_extra=0 d4minus_minus_d3=0
+  deg4: legal_extra=0 d3_extra=0 d3_minus_legal=0 d4plus_extra=0 d4plus_minus_d3=0 d4minus_extra=0 d4minus_minus_d3=0
+  deg6: legal_extra=0 d3_extra=0 d3_minus_legal=0 d4plus_extra=0 d4plus_minus_d3=0 d4minus_extra=0 d4minus_minus_d3=0
+  deg8: legal_extra=0 d3_extra=0 d3_minus_legal=0 d4plus_extra=0 d4plus_minus_d3=0 d4minus_extra=3 d4minus_minus_d3=3
+  deg10: legal_extra=0 d3_extra=0 d3_minus_legal=0 d4plus_extra=0 d4plus_minus_d3=0 d4minus_extra=2 d4minus_minus_d3=2
+  deg12: legal_extra=0 d3_extra=0 d3_minus_legal=0 d4plus_extra=0 d4plus_minus_d3=0 d4minus_extra=0 d4minus_minus_d3=0
+q2087_s_m:
+  legal_rows = 119224
+  legal_unique = 119224
+  d3plus_rows = 800
+  d3plus_unique = 800
+  d4plus_after_d3_rows = 576
+  d4plus_after_d3_unique = 576
+  d4minus_after_d3_rows = 224
+  d4minus_after_d3_unique = 224
+  deg2: legal_extra=0 d3_extra=0 d3_minus_legal=0 d4plus_extra=0 d4plus_minus_d3=0 d4minus_extra=0 d4minus_minus_d3=0
+  deg4: legal_extra=0 d3_extra=0 d3_minus_legal=0 d4plus_extra=0 d4plus_minus_d3=0 d4minus_extra=0 d4minus_minus_d3=0
+  deg6: legal_extra=0 d3_extra=0 d3_minus_legal=0 d4plus_extra=0 d4plus_minus_d3=0 d4minus_extra=0 d4minus_minus_d3=0
+  deg8: legal_extra=0 d3_extra=0 d3_minus_legal=0 d4plus_extra=0 d4plus_minus_d3=0 d4minus_extra=0 d4minus_minus_d3=0
+  deg10: legal_extra=0 d3_extra=0 d3_minus_legal=0 d4plus_extra=0 d4plus_minus_d3=0 d4minus_extra=0 d4minus_minus_d3=0
+  deg12: legal_extra=0 d3_extra=0 d3_minus_legal=0 d4plus_extra=0 d4plus_minus_d3=0 d4minus_extra=0 d4minus_minus_d3=0
+q2087_B_s_m:
+  legal_rows = 119224
+  legal_unique = 119224
+  d3plus_rows = 800
+  d3plus_unique = 800
+  d4plus_after_d3_rows = 576
+  d4plus_after_d3_unique = 576
+  d4minus_after_d3_rows = 224
+  d4minus_after_d3_unique = 224
+  deg2: legal_extra=0 d3_extra=0 d3_minus_legal=0 d4plus_extra=0 d4plus_minus_d3=0 d4minus_extra=0 d4minus_minus_d3=0
+  deg4: legal_extra=1 d3_extra=1 d3_minus_legal=0 d4plus_extra=1 d4plus_minus_d3=0 d4minus_extra=1 d4minus_minus_d3=0
+p27_bsm_next_selector_relation_probe_rows=1/1

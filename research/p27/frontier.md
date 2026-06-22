@@ -977,6 +977,13 @@ equation on both the full legal surface and the target subset
 (`target_minus_legal_extra=0`).  This kills the legal-B BSM surface as a
 GPU-promotable bucket/source until a true legal-B cover or next Kummer selector
 is added.
+The next-selector version is now negative too:
+[P27 BSM Next-Selector Relation Screen](evidence/p27_bsm_next_selector_relation_20260622.md).
+It asks whether `d4+` after `d3+` gets a new low-degree relation on the same
+staged surface.  Across q1607/q1847/q2087, `(B,s)`, `(B,m)`, and `(s,m)` have
+no `d4+` extra relation through degree `12`, and `(B,s,m)` degree `4` is again
+only the inherited BSM equation shared by legal, `d3+`, `d4+`, and `d4-`.
+So BSM remains CAS staging, not a visible two-gate coupling.
 
 The first raw quotient screen is negative:
 [P27 Conic-Pair Low-Degree Relation Screen](evidence/p27_conic_pair_lowdegree_relation_20260621.md).
