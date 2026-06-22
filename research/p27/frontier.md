@@ -1634,6 +1634,13 @@ field-dependent gates: `GF(7^6)` dies at `d7`, `GF(23^3)` at `d9`, and
 below-sqrt sampler; the live B-line work is still Kummer-sequence extraction
 for `f3(B), f4(B), ...`.
 
+Subfield audit:
+[P27 B-Line Frobenius Plateau Audit](evidence/p27_b_line_frobenius_plateau_audit_20260622.md)
+then checks the obvious explanation for those plateaus.  In `GF(7^5)`,
+`GF(7^6)`, `GF(23^3)`, and `GF(103^2)`, every tested legal, survival, and
+first-stop B set has full extension degree and full Frobenius orbit size.
+So the local plateaus are not proper-subfield or short-orbit samplers.
+
 Follow-up: [P27 B-Line Reverse-Z Relation Screen](evidence/p27_b_line_reverse_z_relation_20260622.md)
 keeps the actual d3 reverse-source root and kills low-degree B-line plane
 models in `(B,z)` and nearby branch-normalized coordinates through degree `20`

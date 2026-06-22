@@ -71,6 +71,12 @@ Latest count-only falsifier:
 It keeps B-line extraction live, but kills B-prefix counts alone as a direct
 below-sqrt sampler.
 
+Follow-up:
+[P27 B-Line Frobenius Plateau Audit](p27_b_line_frobenius_plateau_audit_20260622.md).
+The local plateaus are not proper-subfield or short-Frobenius-orbit samplers;
+all tested plateau sets have full extension degree.  Use them as Kummer-class
+regression fixtures, not as production buckets.
+
 Required computation:
 
 ```text

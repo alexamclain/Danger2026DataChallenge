@@ -135,6 +135,14 @@ why the small-field plateaus should not be promoted without an extracted class
 or theorem: they are field-local Frobenius/torsion phenomena, not a stable
 source-normalized p27 law.
 
+Follow-up:
+[P27 B-Line Frobenius Plateau Audit](p27_b_line_frobenius_plateau_audit_20260622.md)
+checks whether the plateaus are at least proper-subfield or short-Frobenius
+orbit samplers.  They are not: in `GF(7^5)`, `GF(7^6)`, `GF(23^3)`, and
+`GF(103^2)`, every tested legal, survival, and first-stop B set consists
+entirely of full-degree Frobenius orbits.  This kills the obvious subfield
+sampler explanation while preserving the class-extraction question.
+
 ## Continue / Kill
 
 ```text

@@ -1,0 +1,99 @@
+p27 B-line Frobenius plateau probe
+question = are all-plus plateau sets subfield/Frobenius-short sources?
+max_gate = 10
+GF(23^3) N=12167 max_gate=10:
+  collect_stats:
+  B_degenerate = 1
+  B_group_size_16 = 399
+  candidate_invalid_not_nonsplit = 6080
+  candidates = 6384
+  compact_not_target = 5928
+  d2_plus_candidates = 6384
+  deduped_ax = 1596
+  legal_B = 399
+  skip_X_degenerate = 2
+  source_rows = 6232
+  all_legal_B:
+  count = 399
+  frobenius_orbit_3 = 399
+  min_subfield_degree_3 = 399
+  prefix_survival_sets:
+    gate3: count=216 rate=0.541353383 scaled=1.082706767
+      frobenius_orbit_3 = 216
+      min_subfield_degree_3 = 216
+    gate4: count=120 rate=0.300751880 scaled=1.203007519
+      frobenius_orbit_3 = 120
+      min_subfield_degree_3 = 120
+    gate5: count=84 rate=0.210526316 scaled=1.684210526
+      frobenius_orbit_3 = 84
+      min_subfield_degree_3 = 84
+    gate6: count=84 rate=0.210526316 scaled=3.368421053
+      frobenius_orbit_3 = 84
+      min_subfield_degree_3 = 84
+    gate7: count=84 rate=0.210526316 scaled=6.736842105
+      frobenius_orbit_3 = 84
+      min_subfield_degree_3 = 84
+    gate8: count=84 rate=0.210526316 scaled=13.473684211
+      frobenius_orbit_3 = 84
+      min_subfield_degree_3 = 84
+    gate9: count=0 rate=0.000000000 scaled=0.000000000
+    gate10: count=0 rate=0.000000000 scaled=0.000000000
+  first_stop_sets:
+    gate3_minus: count=183
+      frobenius_orbit_3 = 183
+      min_subfield_degree_3 = 183
+    gate4_minus: count=96
+      frobenius_orbit_3 = 96
+      min_subfield_degree_3 = 96
+    gate5_minus: count=36
+      frobenius_orbit_3 = 36
+      min_subfield_degree_3 = 36
+    gate9_minus: count=84
+      frobenius_orbit_3 = 84
+      min_subfield_degree_3 = 84
+GF(103^2) N=10609 max_gate=10:
+  collect_stats:
+  B_degenerate = 1
+  B_group_size_8 = 288
+  candidate_invalid_not_nonsplit = 5120
+  candidates = 4992
+  compact_not_target = 5072
+  d2_minus = 2688
+  d2_plus_candidates = 2304
+  deduped_ax = 1152
+  legal_B = 288
+  skip_X_degenerate = 2
+  source_rows = 5056
+  all_legal_B:
+  count = 288
+  frobenius_orbit_2 = 288
+  min_subfield_degree_2 = 288
+  prefix_survival_sets:
+    gate3: count=160 rate=0.555555556 scaled=1.111111111
+      frobenius_orbit_2 = 160
+      min_subfield_degree_2 = 160
+    gate4: count=96 rate=0.333333333 scaled=1.333333333
+      frobenius_orbit_2 = 96
+      min_subfield_degree_2 = 96
+    gate5: count=48 rate=0.166666667 scaled=1.333333333
+      frobenius_orbit_2 = 48
+      min_subfield_degree_2 = 48
+    gate6: count=0 rate=0.000000000 scaled=0.000000000
+    gate7: count=0 rate=0.000000000 scaled=0.000000000
+    gate8: count=0 rate=0.000000000 scaled=0.000000000
+    gate9: count=0 rate=0.000000000 scaled=0.000000000
+    gate10: count=0 rate=0.000000000 scaled=0.000000000
+  first_stop_sets:
+    gate3_minus: count=128
+      frobenius_orbit_2 = 128
+      min_subfield_degree_2 = 128
+    gate4_minus: count=64
+      frobenius_orbit_2 = 64
+      min_subfield_degree_2 = 64
+    gate5_minus: count=48
+      frobenius_orbit_2 = 48
+      min_subfield_degree_2 = 48
+    gate6_minus: count=48
+      frobenius_orbit_2 = 48
+      min_subfield_degree_2 = 48
+p27_b_line_frobenius_plateau_probe_rows=1/1
