@@ -113,6 +113,15 @@ views under `A=B^2-2`: `267/267` row-level sign matches and no collisions
 across q1607/q1847/q2087.  Treat A as a quotient/check coordinate for the same
 problem, not a separate GPU bucket or CAS lane.
 
+Conic-pair legal-pullback follow-up:
+[P27 Conic-Pair Source-Sheet Relation Screen](p27_conic_pair_source_sheet_relation_20260622.md).
+The B-enhanced surface `(B,s,m)` remains useful as a staged CAS coordinate, but
+joining actual source sheets `X,W,T` does not expose a direct low-degree source
+law.  The new relations are inherited source/staging equations, while
+`(X,R,L)`, `(W,s,m)`, and `(T,s,m)` are full-rank through degree `12`.
+Do not promote conic/source-sheet GPU buckets without a normalized quotient or
+new Kummer selector.
+
 Reduced fiber check:
 [P27 B-Line Fiber Invariant Probe](p27_b_line_fiber_invariant_probe_20260622.md).
 For every legal B in q1607/q1847/q2087, the d3 next-root fiber compresses

@@ -1229,6 +1229,16 @@ full-rank, but `(B,s,m)` has the stable equation
 Together with the tautology `B^2+c^2=4`, this is a cleaner CAS staging
 coordinate for the legal pullback.  It still does not select the sparse legal
 B-domain, so it is not a GPU sampler by itself.
+The source-sheet follow-up is negative:
+[P27 Conic-Pair Source-Sheet Relation Screen](evidence/p27_conic_pair_source_sheet_relation_20260622.md).
+Joining the staged conic preimages to actual residual source sheets `X,W,T`
+does not reveal a cheap second relation.  `(X,R,L)`, `(W,s,m)`, and `(T,s,m)`
+are full-rank through degree `12`, pair projections such as `(X,s)` and
+`(X,R)` are full-rank through degree `16`, and `(X,s,m)` has no relation
+through degree `8`.  The low-degree relations that do appear are inherited
+source/staging equations (`W^2=X^3-X`, the T-cover, `B(X)`, and `(B,s,m)`).
+So the conic route remains an offline normalization/Kummer-class problem, not
+a direct source-sheet GPU sampler.
 The incidence follow-up prices that surface:
 [P27 BSM Surface Incidence Probe](evidence/p27_bsm_surface_incidence_20260622.md).
 Over q1607/q1847/q2087 the BSM surface has about `q^2` points and hits

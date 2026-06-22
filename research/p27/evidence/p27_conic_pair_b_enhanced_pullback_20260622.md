@@ -160,6 +160,16 @@ So the next legal-pullback test is not another bucket scan.  It is to use the
 `(B,s,m)` equation as a staging coordinate and then add the legal B-cover /
 next Kummer selector, asking for components, genus, or a sourceable quotient.
 
+Follow-up:
+[P27 Conic-Pair Source-Sheet Relation Screen](p27_conic_pair_source_sheet_relation_20260622.md)
+joins the staged conic preimages to actual residual source sheets `X,W,T`.
+The result is negative for a direct low-degree pullback: `(X,R,L)`,
+`(W,s,m)`, and `(T,s,m)` are full-rank through degree `12`, pair projections
+such as `(X,s)` and `(X,R)` are full-rank through degree `16`, and `(X,s,m)`
+has no relation through degree `8`.  The only stable low-degree relations are
+the inherited source/staging equations.  Thus the `(B,s,m)` surface remains a
+CAS staging coordinate, not a GPU/source sampler.
+
 ## Continue / Kill
 
 ```text
@@ -168,6 +178,7 @@ continue = add the legal B-domain and next selector root to this staged model
 continue = compare against the B-line Kummer class sequence f3(B), f4(B), ...
 
 kill = B/K-enhanced GPU buckets from (B,R), (B,L), (K,R), or (K,L)
+kill = source-sheet GPU buckets from (X,s,m), (X,R,L), (W,s,m), or (T,s,m)
 kill = interpreting B^2+c^2=4 as a new source
 kill = treating the (B,s,m) surface alone as below-sqrt
 ```

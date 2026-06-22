@@ -1,0 +1,533 @@
+p27 conic-pair source-sheet relation probe
+rows = legal d3-plus source sheets joined to conic-pair preimages
+question = do X/W/T source sheets expose a second low-degree pullback relation?
+pair_degrees = [4, 8, 12, 16]
+triple_degrees = [4, 8, 12]
+quad_degrees = [4, 6, 8]
+q1607_base:
+  d3plus_Ax = 112
+  d3plus_source_rows = 448
+  draws = 2579236
+  enum_compact_not_target = 805
+  enum_no_label2_candidate = 408
+  joined_rows = 7168
+  unique_joined_Ax = 112
+  unique_joined_RL_source = 7168
+q1607_X_s:
+  transform_rows = 7168
+  transform_unique = 224
+  transform_degenerate = 0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+  deg16: monomials=153 rank=153 nullity=0 forced=0 extra=0
+q1607_X_m:
+  transform_rows = 7168
+  transform_unique = 224
+  transform_degenerate = 0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+  deg16: monomials=153 rank=153 nullity=0 forced=0 extra=0
+q1607_X_R:
+  transform_rows = 7168
+  transform_unique = 448
+  transform_degenerate = 0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+  deg16: monomials=153 rank=153 nullity=0 forced=0 extra=0
+q1607_X_L:
+  transform_rows = 7168
+  transform_unique = 448
+  transform_degenerate = 0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+  deg16: monomials=153 rank=153 nullity=0 forced=0 extra=0
+q1607_W_s:
+  transform_rows = 7168
+  transform_unique = 448
+  transform_degenerate = 0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+  deg16: monomials=153 rank=153 nullity=0 forced=0 extra=0
+q1607_T_s:
+  transform_rows = 7168
+  transform_unique = 448
+  transform_degenerate = 0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+  deg16: monomials=153 rank=153 nullity=0 forced=0 extra=0
+q1607_B_s:
+  transform_rows = 7168
+  transform_unique = 224
+  transform_degenerate = 0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+  deg16: monomials=153 rank=153 nullity=0 forced=0 extra=0
+q1607_K_s:
+  transform_rows = 7168
+  transform_unique = 224
+  transform_degenerate = 0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+  deg16: monomials=153 rank=153 nullity=0 forced=0 extra=0
+q1607_X_s_m:
+  transform_rows = 7168
+  transform_unique = 448
+  transform_degenerate = 0
+  deg4: monomials=35 rank=35 nullity=0 forced=0 extra=0
+  deg8: monomials=165 rank=165 nullity=0 forced=0 extra=0
+  deg12: monomials=455 rank=427 nullity=28 forced=7 extra=21
+  deg12_relation_terms=113 self_mismatches=0
+q1607_X_s_w:
+  transform_rows = 7168
+  transform_unique = 448
+  transform_degenerate = 0
+  deg4: monomials=35 rank=35 nullity=0 forced=0 extra=0
+  deg8: monomials=165 rank=165 nullity=0 forced=0 extra=0
+  deg12: monomials=455 rank=427 nullity=28 forced=7 extra=21
+  deg12_relation_terms=225 self_mismatches=0
+q1607_X_R_L:
+  transform_rows = 7168
+  transform_unique = 1792
+  transform_degenerate = 0
+  deg4: monomials=35 rank=35 nullity=0 forced=0 extra=0
+  deg8: monomials=165 rank=165 nullity=0 forced=0 extra=0
+  deg12: monomials=455 rank=455 nullity=0 forced=0 extra=0
+q1607_W_s_m:
+  transform_rows = 7168
+  transform_unique = 896
+  transform_degenerate = 0
+  deg4: monomials=35 rank=35 nullity=0 forced=0 extra=0
+  deg8: monomials=165 rank=165 nullity=0 forced=0 extra=0
+  deg12: monomials=455 rank=455 nullity=0 forced=0 extra=0
+q1607_T_s_m:
+  transform_rows = 7168
+  transform_unique = 896
+  transform_degenerate = 0
+  deg4: monomials=35 rank=35 nullity=0 forced=0 extra=0
+  deg8: monomials=165 rank=165 nullity=0 forced=0 extra=0
+  deg12: monomials=455 rank=455 nullity=0 forced=0 extra=0
+q1607_B_s_m:
+  transform_rows = 7168
+  transform_unique = 448
+  transform_degenerate = 0
+  deg4: monomials=35 rank=34 nullity=1 forced=0 extra=1
+  deg4_relation_terms=5 self_mismatches=0
+  deg8: monomials=165 rank=130 nullity=35 forced=0 extra=35
+  deg8_relation_terms=5 self_mismatches=0
+  deg12: monomials=455 rank=290 nullity=165 forced=7 extra=158
+  deg12_relation_terms=5 self_mismatches=0
+q1607_K_s_m:
+  transform_rows = 7168
+  transform_unique = 448
+  transform_degenerate = 0
+  deg4: monomials=35 rank=35 nullity=0 forced=0 extra=0
+  deg8: monomials=165 rank=165 nullity=0 forced=0 extra=0
+  deg12: monomials=455 rank=427 nullity=28 forced=7 extra=21
+  deg12_relation_terms=113 self_mismatches=0
+q1607_X_W_s_m:
+  transform_rows = 7168
+  transform_unique = 896
+  transform_degenerate = 0
+  deg4: monomials=70 rank=65 nullity=5 forced=0 extra=5
+  deg4_relation_terms=3 self_mismatches=0
+  deg6: monomials=210 rank=175 nullity=35 forced=0 extra=35
+  deg6_relation_terms=3 self_mismatches=0
+  deg8: monomials=495 rank=369 nullity=126 forced=0 extra=126
+  deg8_relation_terms=3 self_mismatches=0
+q1607_X_T_s_m:
+  transform_rows = 7168
+  transform_unique = 896
+  transform_degenerate = 0
+  deg4: monomials=70 rank=70 nullity=0 forced=0 extra=0
+  deg6: monomials=210 rank=205 nullity=5 forced=0 extra=5
+  deg6_relation_terms=5 self_mismatches=0
+  deg8: monomials=495 rank=459 nullity=36 forced=0 extra=36
+  deg8_relation_terms=5 self_mismatches=0
+q1607_X_B_s_m:
+  transform_rows = 7168
+  transform_unique = 448
+  transform_degenerate = 0
+  deg4: monomials=70 rank=69 nullity=1 forced=0 extra=1
+  deg4_relation_terms=5 self_mismatches=0
+  deg6: monomials=210 rank=190 nullity=20 forced=0 extra=20
+  deg6_relation_terms=5 self_mismatches=0
+  deg8: monomials=495 rank=373 nullity=122 forced=47 extra=75
+  deg8_relation_terms=5 self_mismatches=0
+q1607_X_s_m_w:
+  transform_rows = 7168
+  transform_unique = 896
+  transform_degenerate = 0
+  deg4: monomials=70 rank=69 nullity=1 forced=0 extra=1
+  deg4_relation_terms=9 self_mismatches=0
+  deg6: monomials=210 rank=195 nullity=15 forced=0 extra=15
+  deg6_relation_terms=9 self_mismatches=0
+  deg8: monomials=495 rank=425 nullity=70 forced=0 extra=70
+  deg8_relation_terms=9 self_mismatches=0
+q1607_X_R_L_B:
+  transform_rows = 7168
+  transform_unique = 1792
+  transform_degenerate = 0
+  deg4: monomials=70 rank=70 nullity=0 forced=0 extra=0
+  deg6: monomials=210 rank=205 nullity=5 forced=0 extra=5
+  deg6_relation_terms=4 self_mismatches=0
+  deg8: monomials=495 rank=460 nullity=35 forced=0 extra=35
+  deg8_relation_terms=4 self_mismatches=0
+q1847_base:
+  d3plus_Ax = 180
+  d3plus_source_rows = 720
+  draws = 3407716
+  enum_compact_not_target = 873
+  enum_no_label2_candidate = 468
+  joined_rows = 11520
+  unique_joined_Ax = 180
+  unique_joined_RL_source = 11520
+q1847_X_s:
+  transform_rows = 11520
+  transform_unique = 360
+  transform_degenerate = 0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+  deg16: monomials=153 rank=153 nullity=0 forced=0 extra=0
+q1847_X_m:
+  transform_rows = 11520
+  transform_unique = 360
+  transform_degenerate = 0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+  deg16: monomials=153 rank=153 nullity=0 forced=0 extra=0
+q1847_X_R:
+  transform_rows = 11520
+  transform_unique = 720
+  transform_degenerate = 0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+  deg16: monomials=153 rank=153 nullity=0 forced=0 extra=0
+q1847_X_L:
+  transform_rows = 11520
+  transform_unique = 720
+  transform_degenerate = 0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+  deg16: monomials=153 rank=153 nullity=0 forced=0 extra=0
+q1847_W_s:
+  transform_rows = 11520
+  transform_unique = 720
+  transform_degenerate = 0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+  deg16: monomials=153 rank=153 nullity=0 forced=0 extra=0
+q1847_T_s:
+  transform_rows = 11520
+  transform_unique = 720
+  transform_degenerate = 0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+  deg16: monomials=153 rank=153 nullity=0 forced=0 extra=0
+q1847_B_s:
+  transform_rows = 11520
+  transform_unique = 360
+  transform_degenerate = 0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+  deg16: monomials=153 rank=153 nullity=0 forced=0 extra=0
+q1847_K_s:
+  transform_rows = 11520
+  transform_unique = 360
+  transform_degenerate = 0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+  deg16: monomials=153 rank=153 nullity=0 forced=0 extra=0
+q1847_X_s_m:
+  transform_rows = 11520
+  transform_unique = 720
+  transform_degenerate = 0
+  deg4: monomials=35 rank=35 nullity=0 forced=0 extra=0
+  deg8: monomials=165 rank=165 nullity=0 forced=0 extra=0
+  deg12: monomials=455 rank=454 nullity=1 forced=0 extra=1
+  deg12_relation_terms=20 self_mismatches=0
+q1847_X_s_w:
+  transform_rows = 11520
+  transform_unique = 720
+  transform_degenerate = 0
+  deg4: monomials=35 rank=35 nullity=0 forced=0 extra=0
+  deg8: monomials=165 rank=165 nullity=0 forced=0 extra=0
+  deg12: monomials=455 rank=454 nullity=1 forced=0 extra=1
+  deg12_relation_terms=35 self_mismatches=0
+q1847_X_R_L:
+  transform_rows = 11520
+  transform_unique = 2880
+  transform_degenerate = 0
+  deg4: monomials=35 rank=35 nullity=0 forced=0 extra=0
+  deg8: monomials=165 rank=165 nullity=0 forced=0 extra=0
+  deg12: monomials=455 rank=455 nullity=0 forced=0 extra=0
+q1847_W_s_m:
+  transform_rows = 11520
+  transform_unique = 1440
+  transform_degenerate = 0
+  deg4: monomials=35 rank=35 nullity=0 forced=0 extra=0
+  deg8: monomials=165 rank=165 nullity=0 forced=0 extra=0
+  deg12: monomials=455 rank=455 nullity=0 forced=0 extra=0
+q1847_T_s_m:
+  transform_rows = 11520
+  transform_unique = 1440
+  transform_degenerate = 0
+  deg4: monomials=35 rank=35 nullity=0 forced=0 extra=0
+  deg8: monomials=165 rank=165 nullity=0 forced=0 extra=0
+  deg12: monomials=455 rank=455 nullity=0 forced=0 extra=0
+q1847_B_s_m:
+  transform_rows = 11520
+  transform_unique = 720
+  transform_degenerate = 0
+  deg4: monomials=35 rank=34 nullity=1 forced=0 extra=1
+  deg4_relation_terms=5 self_mismatches=0
+  deg8: monomials=165 rank=130 nullity=35 forced=0 extra=35
+  deg8_relation_terms=5 self_mismatches=0
+  deg12: monomials=455 rank=290 nullity=165 forced=0 extra=165
+  deg12_relation_terms=5 self_mismatches=0
+q1847_K_s_m:
+  transform_rows = 11520
+  transform_unique = 720
+  transform_degenerate = 0
+  deg4: monomials=35 rank=35 nullity=0 forced=0 extra=0
+  deg8: monomials=165 rank=165 nullity=0 forced=0 extra=0
+  deg12: monomials=455 rank=455 nullity=0 forced=0 extra=0
+q1847_X_W_s_m:
+  transform_rows = 11520
+  transform_unique = 1440
+  transform_degenerate = 0
+  deg4: monomials=70 rank=65 nullity=5 forced=0 extra=5
+  deg4_relation_terms=3 self_mismatches=0
+  deg6: monomials=210 rank=175 nullity=35 forced=0 extra=35
+  deg6_relation_terms=3 self_mismatches=0
+  deg8: monomials=495 rank=369 nullity=126 forced=0 extra=126
+  deg8_relation_terms=3 self_mismatches=0
+q1847_X_T_s_m:
+  transform_rows = 11520
+  transform_unique = 1440
+  transform_degenerate = 0
+  deg4: monomials=70 rank=70 nullity=0 forced=0 extra=0
+  deg6: monomials=210 rank=205 nullity=5 forced=0 extra=5
+  deg6_relation_terms=5 self_mismatches=0
+  deg8: monomials=495 rank=459 nullity=36 forced=0 extra=36
+  deg8_relation_terms=5 self_mismatches=0
+q1847_X_B_s_m:
+  transform_rows = 11520
+  transform_unique = 720
+  transform_degenerate = 0
+  deg4: monomials=70 rank=69 nullity=1 forced=0 extra=1
+  deg4_relation_terms=5 self_mismatches=0
+  deg6: monomials=210 rank=190 nullity=20 forced=0 extra=20
+  deg6_relation_terms=5 self_mismatches=0
+  deg8: monomials=495 rank=390 nullity=105 forced=0 extra=105
+  deg8_relation_terms=5 self_mismatches=0
+q1847_X_s_m_w:
+  transform_rows = 11520
+  transform_unique = 1440
+  transform_degenerate = 0
+  deg4: monomials=70 rank=69 nullity=1 forced=0 extra=1
+  deg4_relation_terms=9 self_mismatches=0
+  deg6: monomials=210 rank=195 nullity=15 forced=0 extra=15
+  deg6_relation_terms=9 self_mismatches=0
+  deg8: monomials=495 rank=425 nullity=70 forced=0 extra=70
+  deg8_relation_terms=9 self_mismatches=0
+q1847_X_R_L_B:
+  transform_rows = 11520
+  transform_unique = 2880
+  transform_degenerate = 0
+  deg4: monomials=70 rank=70 nullity=0 forced=0 extra=0
+  deg6: monomials=210 rank=205 nullity=5 forced=0 extra=5
+  deg6_relation_terms=4 self_mismatches=0
+  deg8: monomials=495 rank=460 nullity=35 forced=0 extra=35
+  deg8_relation_terms=4 self_mismatches=0
+q2087_base:
+  d3plus_Ax = 100
+  d3plus_source_rows = 400
+  draws = 4351396
+  enum_compact_not_target = 1109
+  enum_no_label2_candidate = 520
+  joined_rows = 6400
+  unique_joined_Ax = 100
+  unique_joined_RL_source = 6400
+q2087_X_s:
+  transform_rows = 6400
+  transform_unique = 200
+  transform_degenerate = 0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+  deg16: monomials=153 rank=153 nullity=0 forced=0 extra=0
+q2087_X_m:
+  transform_rows = 6400
+  transform_unique = 200
+  transform_degenerate = 0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+  deg16: monomials=153 rank=153 nullity=0 forced=0 extra=0
+q2087_X_R:
+  transform_rows = 6400
+  transform_unique = 400
+  transform_degenerate = 0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+  deg16: monomials=153 rank=153 nullity=0 forced=0 extra=0
+q2087_X_L:
+  transform_rows = 6400
+  transform_unique = 400
+  transform_degenerate = 0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+  deg16: monomials=153 rank=153 nullity=0 forced=0 extra=0
+q2087_W_s:
+  transform_rows = 6400
+  transform_unique = 400
+  transform_degenerate = 0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+  deg16: monomials=153 rank=153 nullity=0 forced=0 extra=0
+q2087_T_s:
+  transform_rows = 6400
+  transform_unique = 400
+  transform_degenerate = 0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+  deg16: monomials=153 rank=153 nullity=0 forced=0 extra=0
+q2087_B_s:
+  transform_rows = 6400
+  transform_unique = 200
+  transform_degenerate = 0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+  deg16: monomials=153 rank=153 nullity=0 forced=0 extra=0
+q2087_K_s:
+  transform_rows = 6400
+  transform_unique = 200
+  transform_degenerate = 0
+  deg4: monomials=15 rank=15 nullity=0 forced=0 extra=0
+  deg8: monomials=45 rank=45 nullity=0 forced=0 extra=0
+  deg12: monomials=91 rank=91 nullity=0 forced=0 extra=0
+  deg16: monomials=153 rank=153 nullity=0 forced=0 extra=0
+q2087_X_s_m:
+  transform_rows = 6400
+  transform_unique = 400
+  transform_degenerate = 0
+  deg4: monomials=35 rank=35 nullity=0 forced=0 extra=0
+  deg8: monomials=165 rank=165 nullity=0 forced=0 extra=0
+  deg12: monomials=455 rank=391 nullity=64 forced=55 extra=9
+  deg12_relation_terms=101 self_mismatches=0
+q2087_X_s_w:
+  transform_rows = 6400
+  transform_unique = 400
+  transform_degenerate = 0
+  deg4: monomials=35 rank=35 nullity=0 forced=0 extra=0
+  deg8: monomials=165 rank=165 nullity=0 forced=0 extra=0
+  deg12: monomials=455 rank=400 nullity=55 forced=55 extra=0
+q2087_X_R_L:
+  transform_rows = 6400
+  transform_unique = 1600
+  transform_degenerate = 0
+  deg4: monomials=35 rank=35 nullity=0 forced=0 extra=0
+  deg8: monomials=165 rank=165 nullity=0 forced=0 extra=0
+  deg12: monomials=455 rank=455 nullity=0 forced=0 extra=0
+q2087_W_s_m:
+  transform_rows = 6400
+  transform_unique = 800
+  transform_degenerate = 0
+  deg4: monomials=35 rank=35 nullity=0 forced=0 extra=0
+  deg8: monomials=165 rank=165 nullity=0 forced=0 extra=0
+  deg12: monomials=455 rank=455 nullity=0 forced=0 extra=0
+q2087_T_s_m:
+  transform_rows = 6400
+  transform_unique = 800
+  transform_degenerate = 0
+  deg4: monomials=35 rank=35 nullity=0 forced=0 extra=0
+  deg8: monomials=165 rank=165 nullity=0 forced=0 extra=0
+  deg12: monomials=455 rank=455 nullity=0 forced=0 extra=0
+q2087_B_s_m:
+  transform_rows = 6400
+  transform_unique = 400
+  transform_degenerate = 0
+  deg4: monomials=35 rank=34 nullity=1 forced=0 extra=1
+  deg4_relation_terms=5 self_mismatches=0
+  deg8: monomials=165 rank=130 nullity=35 forced=0 extra=35
+  deg8_relation_terms=5 self_mismatches=0
+  deg12: monomials=455 rank=290 nullity=165 forced=55 extra=110
+  deg12_relation_terms=5 self_mismatches=0
+q2087_K_s_m:
+  transform_rows = 6400
+  transform_unique = 400
+  transform_degenerate = 0
+  deg4: monomials=35 rank=35 nullity=0 forced=0 extra=0
+  deg8: monomials=165 rank=165 nullity=0 forced=0 extra=0
+  deg12: monomials=455 rank=391 nullity=64 forced=55 extra=9
+  deg12_relation_terms=101 self_mismatches=0
+q2087_X_W_s_m:
+  transform_rows = 6400
+  transform_unique = 800
+  transform_degenerate = 0
+  deg4: monomials=70 rank=65 nullity=5 forced=0 extra=5
+  deg4_relation_terms=3 self_mismatches=0
+  deg6: monomials=210 rank=175 nullity=35 forced=0 extra=35
+  deg6_relation_terms=3 self_mismatches=0
+  deg8: monomials=495 rank=369 nullity=126 forced=0 extra=126
+  deg8_relation_terms=3 self_mismatches=0
+q2087_X_T_s_m:
+  transform_rows = 6400
+  transform_unique = 800
+  transform_degenerate = 0
+  deg4: monomials=70 rank=70 nullity=0 forced=0 extra=0
+  deg6: monomials=210 rank=205 nullity=5 forced=0 extra=5
+  deg6_relation_terms=5 self_mismatches=0
+  deg8: monomials=495 rank=459 nullity=36 forced=0 extra=36
+  deg8_relation_terms=5 self_mismatches=0
+q2087_X_B_s_m:
+  transform_rows = 6400
+  transform_unique = 400
+  transform_degenerate = 0
+  deg4: monomials=70 rank=69 nullity=1 forced=0 extra=1
+  deg4_relation_terms=5 self_mismatches=0
+  deg6: monomials=210 rank=190 nullity=20 forced=0 extra=20
+  deg6_relation_terms=5 self_mismatches=0
+  deg8: monomials=495 rank=361 nullity=134 forced=95 extra=39
+  deg8_relation_terms=5 self_mismatches=0
+q2087_X_s_m_w:
+  transform_rows = 6400
+  transform_unique = 800
+  transform_degenerate = 0
+  deg4: monomials=70 rank=69 nullity=1 forced=0 extra=1
+  deg4_relation_terms=9 self_mismatches=0
+  deg6: monomials=210 rank=195 nullity=15 forced=0 extra=15
+  deg6_relation_terms=9 self_mismatches=0
+  deg8: monomials=495 rank=425 nullity=70 forced=0 extra=70
+  deg8_relation_terms=9 self_mismatches=0
+q2087_X_R_L_B:
+  transform_rows = 6400
+  transform_unique = 1600
+  transform_degenerate = 0
+  deg4: monomials=70 rank=70 nullity=0 forced=0 extra=0
+  deg6: monomials=210 rank=205 nullity=5 forced=0 extra=5
+  deg6_relation_terms=4 self_mismatches=0
+  deg8: monomials=495 rank=460 nullity=35 forced=0 extra=35
+  deg8_relation_terms=4 self_mismatches=0
+p27_conic_pair_source_sheet_relation_probe_rows=1/1
