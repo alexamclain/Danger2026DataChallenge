@@ -208,6 +208,10 @@ screen is now negative too: q1607/q1847/q2087 have zero cubics for both the
 legal B-domain and `d3(B)`, while d4 local cubics fail at q1847.  So the live
 B test is now exact Kummer-class/divisor extraction on `P1_B`, not another
 visible low-degree support scan.
+The combined-prefix cubic loophole is also closed: no monic cubic on `P1_B`
+selects the gate4 all-plus prefix in q1607/q1847/q2087, and the q1607/q2087
+gate5 plateau subsets also have zero exact cubics.  This kills the direct
+genus-1 "one source for multiple B gates" shortcut in the visible cubic family.
 The B-line result is now multi-gate: extension counts over `GF(7^n)` and
 `GF(23^n)` keep legal B inside the core bucket with no d3/d4 mixed groups,
 while p27 train/heldout deep-descent probes show no mixed B groups through

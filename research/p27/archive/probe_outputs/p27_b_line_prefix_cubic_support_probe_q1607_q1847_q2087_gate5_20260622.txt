@@ -1,0 +1,143 @@
+p27 B-line all-plus prefix cubic support probe
+target = legal B subset with d3..d_gate all plus
+family = chi(B^3+aB^2+bB+c), global polarity allowed
+small_primes = 1607,1847,2087
+max_gate = 5
+q1607_b_line_prefix_source_stats:
+  enum_compact_not_target = 805
+  enum_no_label2_candidate = 408
+  gate3_first_stop_minus_B = 21
+  gate3_first_stop_missing_B = 0
+  gate3_first_stop_mixed_B = 0
+  gate3_prefix_notplus_B = 21
+  gate3_prefix_plus_B = 28
+  gate4_first_stop_minus_B = 30
+  gate4_first_stop_missing_B = 0
+  gate4_first_stop_mixed_B = 0
+  gate4_prefix_notplus_B = 30
+  gate4_prefix_plus_B = 19
+  gate5_first_stop_minus_B = 30
+  gate5_first_stop_missing_B = 0
+  gate5_first_stop_mixed_B = 0
+  gate5_prefix_notplus_B = 30
+  gate5_prefix_plus_B = 19
+  group_B_group_size_16 = 49
+  group_B_groups = 49
+  group_d2_plus_candidates = 784
+  group_deduped_candidates = 784
+q1607_gate3_prefix_monic_cubic_support_stats:
+  ab_pairs = 2582449
+  exact_cubics = 0
+  minus_rows = 21
+  plus_rows = 28
+  rows = 49
+  target_weight = 21
+q1607_gate3_prefix_monic_cubic_support_samples:
+q1607_gate4_prefix_monic_cubic_support_stats:
+  ab_pairs = 2582449
+  exact_cubics = 0
+  minus_rows = 30
+  plus_rows = 19
+  rows = 49
+  target_weight = 30
+q1607_gate4_prefix_monic_cubic_support_samples:
+q1607_gate5_prefix_monic_cubic_support_stats:
+  ab_pairs = 2582449
+  exact_cubics = 0
+  minus_rows = 30
+  plus_rows = 19
+  rows = 49
+  target_weight = 30
+q1607_gate5_prefix_monic_cubic_support_samples:
+q1847_b_line_prefix_source_stats:
+  enum_compact_not_target = 873
+  enum_no_label2_candidate = 468
+  gate3_first_stop_minus_B = 18
+  gate3_first_stop_missing_B = 0
+  gate3_first_stop_mixed_B = 0
+  gate3_prefix_notplus_B = 18
+  gate3_prefix_plus_B = 45
+  gate4_first_stop_minus_B = 44
+  gate4_first_stop_missing_B = 0
+  gate4_first_stop_mixed_B = 0
+  gate4_prefix_notplus_B = 44
+  gate4_prefix_plus_B = 19
+  gate5_first_stop_minus_B = 63
+  gate5_first_stop_missing_B = 0
+  gate5_first_stop_mixed_B = 0
+  gate5_prefix_notplus_B = 63
+  gate5_prefix_plus_B = 0
+  group_B_group_size_16 = 63
+  group_B_groups = 63
+  group_d2_plus_candidates = 1008
+  group_deduped_candidates = 1008
+q1847_gate3_prefix_monic_cubic_support_stats:
+  ab_pairs = 3411409
+  exact_cubics = 0
+  minus_rows = 18
+  plus_rows = 45
+  rows = 63
+  target_weight = 18
+q1847_gate3_prefix_monic_cubic_support_samples:
+q1847_gate4_prefix_monic_cubic_support_stats:
+  ab_pairs = 3411409
+  exact_cubics = 0
+  minus_rows = 44
+  plus_rows = 19
+  rows = 63
+  target_weight = 44
+q1847_gate4_prefix_monic_cubic_support_samples:
+q1847_gate5_prefix_monic_cubic_support_stats:
+  minus_rows = 63
+  plus_rows = 0
+  rows = 63
+  skipped_one_sided = 1
+  target_weight = 63
+q1847_gate5_prefix_monic_cubic_support_samples:
+q2087_b_line_prefix_source_stats:
+  enum_compact_not_target = 1109
+  enum_no_label2_candidate = 520
+  gate3_first_stop_minus_B = 32
+  gate3_first_stop_missing_B = 0
+  gate3_first_stop_mixed_B = 0
+  gate3_prefix_notplus_B = 32
+  gate3_prefix_plus_B = 25
+  gate4_first_stop_minus_B = 39
+  gate4_first_stop_missing_B = 0
+  gate4_first_stop_mixed_B = 0
+  gate4_prefix_notplus_B = 39
+  gate4_prefix_plus_B = 18
+  gate5_first_stop_minus_B = 39
+  gate5_first_stop_missing_B = 0
+  gate5_first_stop_mixed_B = 0
+  gate5_prefix_notplus_B = 39
+  gate5_prefix_plus_B = 18
+  group_B_group_size_16 = 57
+  group_B_groups = 57
+  group_d2_plus_candidates = 912
+  group_deduped_candidates = 912
+q2087_gate3_prefix_monic_cubic_support_stats:
+  ab_pairs = 4355569
+  exact_cubics = 0
+  minus_rows = 32
+  plus_rows = 25
+  rows = 57
+  target_weight = 32
+q2087_gate3_prefix_monic_cubic_support_samples:
+q2087_gate4_prefix_monic_cubic_support_stats:
+  ab_pairs = 4355569
+  exact_cubics = 0
+  minus_rows = 39
+  plus_rows = 18
+  rows = 57
+  target_weight = 39
+q2087_gate4_prefix_monic_cubic_support_samples:
+q2087_gate5_prefix_monic_cubic_support_stats:
+  ab_pairs = 4355569
+  exact_cubics = 0
+  minus_rows = 39
+  plus_rows = 18
+  rows = 57
+  target_weight = 39
+q2087_gate5_prefix_monic_cubic_support_samples:
+p27_b_line_prefix_cubic_support_probe_rows=1/1

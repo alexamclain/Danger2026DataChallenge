@@ -1012,6 +1012,14 @@ q1607/q2087 on only 28/25 rows, but q1847 has 45 d4 rows and zero exact
 cubics, so those are interpolation artifacts.  This kills the visible cubic
 genus-1 B-line source; the remaining low-genus B cases must come from actual
 class extraction, not coefficient guessing.
+The stronger combined-prefix cubic shortcut is now closed as well:
+[P27 B-Line Prefix Cubic Support Screen](evidence/p27_b_line_prefix_cubic_support_20260622.md).
+This tests whether a single genus-1 cubic on `P1_B` selects the all-plus prefix
+directly, even if the individual `d3(B)` and `d4(B)` characters look generic.
+For the combined gate4 prefix, q1607/q1847/q2087 all have `exact_cubics = 0`.
+For gate5, q1607 and q2087 keep their small-field plateau subsets but still
+have zero exact cubics; q1847 is one-sided with no plus tail.  So the B-line
+plateaus are not visible cubic source laws.
 The visible Belyi orbit shortcut is also negative:
 [P27 B-Line Belyi-Orbit Screen](evidence/p27_b_line_belyi_orbit_20260622.md).
 The six Möbius transforms preserving `{0,-2,infinity}` send every non-identity
