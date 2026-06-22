@@ -203,6 +203,9 @@ B-line and K-line targets agree under
 `K^2=(B-2)^4/(8B(B+2)^2)` in q1471/q1607/q1847/q2087.  Run the two quartic
 screens as coordinate alternatives for one descended class, not as independent
 confirmation streams.
+[P27 B/K Signed-Root Relation Screen](p27_b_kline_signed_root_relation_20260622.md)
+then rules out the nearest shortcut: selecting the signed K root over B is not
+an extra low-degree plane relation beyond the bridge cover.
 
 ## Do Not Run Yet
 

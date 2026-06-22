@@ -598,6 +598,10 @@ For q1471/q1607/q1847/q2087, the relation
 class with the same target sign.  The B-line and K-line quartic GPU screens
 are therefore coordinate alternatives for the same descended class, not
 independent confirmations.
+The signed-root selector over that bridge is not a shortcut:
+[P27 B/K Signed-Root Relation Screen](evidence/p27_b_kline_signed_root_relation_20260622.md).
+The selected K sheet has no positive extra low-degree plane relation beyond
+the inherited bridge cover in q1471/q1607/q1847/q2087.
 
 That ask is now packaged as a concrete handoff:
 [P27 Kummer Branch-Extraction Handoff](evidence/p27_kummer_branch_extraction_handoff_20260621.md).

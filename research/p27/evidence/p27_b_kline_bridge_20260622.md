@@ -102,6 +102,13 @@ After a positive, the next step is not production search.  It is constructing
 the double cover `z^2=f(B)` or `z^2=f(K)`, checking genus/sourceability, and
 comparing the pullback across the B/K bridge.
 
+Follow-up:
+[P27 B/K Signed-Root Relation Screen](p27_b_kline_signed_root_relation_20260622.md)
+checks whether the chosen signed K root over each B is itself a low-degree
+plane-curve shortcut.  It is not: the selected sheet has no positive extra
+low-degree relation beyond the inherited two-root bridge cover through the
+meaningful degrees in q1471/q1607/q1847/q2087.
+
 ```text
 p27_b_kline_bridge_rows=1/1
 ```

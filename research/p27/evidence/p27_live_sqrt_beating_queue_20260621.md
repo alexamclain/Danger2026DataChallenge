@@ -273,6 +273,11 @@ Under `K^2=(B-2)^4/(8B(B+2)^2)`, every B d3/d4 row maps to a present signed K
 class with matching target sign in q1471/q1607/q1847/q2087.  So B-line and
 K-line quartics are coordinated coordinate tests for one descended class, not
 independent moonshot lanes.
+The signed-root shortcut over this bridge is negative:
+[P27 B/K Signed-Root Relation Screen](p27_b_kline_signed_root_relation_20260622.md).
+The selected K sheet has no positive extra low-degree relation in `(B,K)`
+beyond the bridge cover, so the root choice itself is not a simple plane-curve
+sampler.
 The first targeted B-line elimination proxy is negative:
 [P27 B-Line Reverse-Z Relation Screen](p27_b_line_reverse_z_relation_20260622.md).
 It keeps the actual d3 all-plus reverse-source root `z` with `x6=z^2` and
