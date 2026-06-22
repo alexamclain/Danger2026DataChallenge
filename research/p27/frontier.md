@@ -1046,6 +1046,17 @@ reverse-source fixture also returns `504`.  So the B-line CAS target is
 concrete, but online Magma is only a syntax/saturation sanity tool here.  The
 next real extraction needs offline Magma/Sage or a specialized elimination over
 `Bline`.
+The first specialized elimination proxy is negative:
+[P27 B-Line Reverse-Z Relation Screen](evidence/p27_b_line_reverse_z_relation_20260622.md).
+It keeps the actual d3 all-plus root `z` with `x6=z^2` and tests B-line plane
+models in `(B,z)`, `(B,x6)`, `(B,r)`, `z+/-1/z`, Belyi-normalized B
+coordinates, and branch-normalized `z` coordinates.  The actual `(B,z)` cover
+and branch-normalized systems are full-rank through total degree `20` in
+q1607/q1847/q2087, and a 1,000-row p27 sample is full-rank through degree
+`12`.  Only q1607 has degree-20 artifacts in compressed `z+/-1/z`
+projections, and they do not repeat.  This kills the nearest B-line
+reverse-root plane-model sampler; the surviving B route remains actual
+normalization / branch-divisor / genus extraction over `P1_B`.
 
 The first Belyi-normalized source family is now killed:
 [P27 Lambda Branch-Divisor Screen](evidence/p27_lambda_branch_divisor_screen_20260621.md).
@@ -1330,6 +1341,12 @@ named divisor/Kummer relation explains them and survives p27 rows.
 
 Status: B-line remains a clean Kummer-class extraction surface; do not run a
 large GPU production search based only on Bplus buckets.
+
+Follow-up: [P27 B-Line Reverse-Z Relation Screen](evidence/p27_b_line_reverse_z_relation_20260622.md)
+keeps the actual d3 reverse-source root and kills low-degree B-line plane
+models in `(B,z)` and nearby branch-normalized coordinates through degree `20`
+in q1607/q1847/q2087.  This reinforces that the B-line path needs real
+normalization/genus extraction, not a GPU sampler from obvious B projections.
 
 ### Card 4c: K-Line Fit Significance
 

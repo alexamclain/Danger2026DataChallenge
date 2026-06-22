@@ -225,6 +225,16 @@ q7 legal-cover saturation over `P1_B` succeeds as a dimension-1 scheme with
 legal+d3 fixture both return `504 Gateway Timeout`.  So use offline
 Magma/Sage or targeted elimination for B-line class extraction; online Magma is
 only a syntax/saturation sanity check here.
+The first targeted B-line elimination proxy is negative:
+[P27 B-Line Reverse-Z Relation Screen](p27_b_line_reverse_z_relation_20260622.md).
+It keeps the actual d3 all-plus reverse-source root `z` with `x6=z^2` and
+tests `(B,z)`, `(B,x6)`, `(B,r)`, `z+/-1/z`, Belyi-normalized B coordinates,
+and branch-normalized `z` coordinates.  The main systems are full-rank through
+degree 20 in q1607/q1847/q2087; a 1,000-row p27 sample is full-rank through
+degree 12.  The only extra-nullity rows are q1607-only degree-20 artifacts in
+compressed `z+/-1/z` projections and do not repeat.  This kills the obvious
+B-line reverse-root plane-model sampler and leaves actual normalization /
+branch-divisor / genus extraction over `P1_B`.
 The B-line prefix profile now gives the next verdict:
 [P27 B-Line Prefix Profile](p27_b_line_prefix_profile_20260622.md).  Exact
 small fields show late all-plus plateaus, but the plateau/kill gate changes
